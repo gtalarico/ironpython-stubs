@@ -1,4 +1,4 @@
-class XmlWriterTraceListener:
+class XmlWriterTraceListener(TextWriterTraceListener):
  """
  Directs tracing or debugging output as XML-encoded data to a System.IO.TextWriter or to a System.IO.Stream,such as a System.IO.FileStream.
  
@@ -9,11 +9,15 @@ class XmlWriterTraceListener:
  XmlWriterTraceListener(filename: str)
  XmlWriterTraceListener(filename: str,name: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return XmlWriterTraceListener()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: XmlWriterTraceListener)
-   Closes the System.Diagnostics.TextWriterTraceListener.Writer for this listener so that it 
-    no longer receives tracing or debugging output.
+   Closes the System.Diagnostics.TextWriterTraceListener.Writer for this listener so that it no longer receives tracing or debugging output.
   """
   pass
  def Dispose(self):
@@ -21,16 +25,13 @@ class XmlWriterTraceListener:
   Dispose(self: TextWriterTraceListener,disposing: bool)
    Disposes this System.Diagnostics.TextWriterTraceListener object.
   
-   disposing: true to release managed resources; if false,
-    System.Diagnostics.TextWriterTraceListener.Dispose(System.Boolean) has no effect.
+   disposing: true to release managed resources; if false,System.Diagnostics.TextWriterTraceListener.Dispose(System.Boolean) has no effect.
   """
   pass
  def Fail(self,message,detailMessage=None):
   """
   Fail(self: XmlWriterTraceListener,message: str,detailMessage: str)
-   Writes trace information including an error message and a detailed error message to the 
-    file or stream.
-  
+   Writes trace information including an error message and a detailed error message to the file or stream.
   
    message: The error message to write.
    detailMessage: The detailed error message to append to the error message.
@@ -41,8 +42,7 @@ class XmlWriterTraceListener:
   GetSupportedAttributes(self: TraceListener) -> Array[str]
   
    Gets the custom attributes supported by the trace listener.
-   Returns: A string array naming the custom attributes supported by the trace listener,or null if 
-    there are no custom attributes.
+   Returns: A string array naming the custom attributes supported by the trace listener,or null if there are no custom attributes.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -51,11 +51,9 @@ class XmlWriterTraceListener:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -69,9 +67,7 @@ class XmlWriterTraceListener:
   TraceData(self: XmlWriterTraceListener,eventCache: TraceEventCache,source: str,eventType: TraceEventType,id: int,data: object)
    Writes trace information,a data object,and event information to the file or stream.
   
-   eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID,thread ID,and 
-    stack trace information.
-  
+   eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID,thread ID,and stack trace information.
    source: The source name.
    eventType: One of the System.Diagnostics.TraceEventType values.
    id: A numeric identifier for the event.
@@ -79,9 +75,7 @@ class XmlWriterTraceListener:
   TraceData(self: XmlWriterTraceListener,eventCache: TraceEventCache,source: str,eventType: TraceEventType,id: int,*data: Array[object])
    Writes trace information,data objects,and event information to the file or stream.
   
-   eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID,thread ID,and 
-    stack trace information.
-  
+   eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID,thread ID,and stack trace information.
    source: The source name.
    eventType: One of the System.Diagnostics.TraceEventType values.
    id: A numeric identifier for the event.
@@ -91,26 +85,18 @@ class XmlWriterTraceListener:
  def TraceEvent(self,eventCache,source,eventType,id,*__args):
   """
   TraceEvent(self: XmlWriterTraceListener,eventCache: TraceEventCache,source: str,eventType: TraceEventType,id: int,format: str,*args: Array[object])
-   Writes trace information,a formatted message,and event information to the file or 
-    stream.
+   Writes trace information,a formatted message,and event information to the file or stream.
   
-  
-   eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID,thread ID,and 
-    stack trace information.
-  
+   eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID,thread ID,and stack trace information.
    source: The source name.
    eventType: One of the System.Diagnostics.TraceEventType values.
    id: A numeric identifier for the event.
-   format: A format string that contains zero or more format items that correspond to objects in the 
-    args array.
-  
+   format: A format string that contains zero or more format items that correspond to objects in the args array.
    args: An object array containing zero or more objects to format.
   TraceEvent(self: XmlWriterTraceListener,eventCache: TraceEventCache,source: str,eventType: TraceEventType,id: int,message: str)
    Writes trace information,a message,and event information to the file or stream.
   
-   eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID,thread ID,and 
-    stack trace information.
-  
+   eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID,thread ID,and stack trace information.
    source: The source name.
    eventType: One of the System.Diagnostics.TraceEventType values.
    id: A numeric identifier for the event.
@@ -120,13 +106,9 @@ class XmlWriterTraceListener:
  def TraceTransfer(self,eventCache,source,id,message,relatedActivityId):
   """
   TraceTransfer(self: XmlWriterTraceListener,eventCache: TraceEventCache,source: str,id: int,message: str,relatedActivityId: Guid)
-   Writes trace information including the identity of a related activity,a message,and 
-    event information to the file or stream.
+   Writes trace information including the identity of a related activity,a message,and event information to the file or stream.
   
-  
-   eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID,thread ID,and 
-    stack trace information.
-  
+   eventCache: A System.Diagnostics.TraceEventCache that contains the current process ID,thread ID,and stack trace information.
    source: The source name.
    id: A numeric identifier for the event.
    message: A trace message to write.
@@ -136,9 +118,7 @@ class XmlWriterTraceListener:
  def Write(self,*__args):
   """
   Write(self: XmlWriterTraceListener,message: str)
-   Writes a verbatim message without any additional context information to the file or 
-    stream.
-  
+   Writes a verbatim message without any additional context information to the file or stream.
   
    message: The message to write.
   """
@@ -146,16 +126,13 @@ class XmlWriterTraceListener:
  def WriteIndent(self,*args):
   """
   WriteIndent(self: TraceListener)
-   Writes the indent to the listener you create when you implement this class,and resets 
-    the System.Diagnostics.TraceListener.NeedIndent property to false.
+   Writes the indent to the listener you create when you implement this class,and resets the System.Diagnostics.TraceListener.NeedIndent property to false.
   """
   pass
  def WriteLine(self,*__args):
   """
   WriteLine(self: XmlWriterTraceListener,message: str)
-   Writes a verbatim message without any additional context information followed by the 
-    current line terminator to the file or stream.
-  
+   Writes a verbatim message without any additional context information followed by the current line terminator to the file or stream.
   
    message: The message to write.
   """

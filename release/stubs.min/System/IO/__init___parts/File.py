@@ -1,5 +1,10 @@
-class File:
+class File(object):
  """ Provides static methods for the creation,copying,deletion,moving,and opening of files,and aids in the creation of System.IO.FileStream objects. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return File()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def AppendAllLines(path,contents,encoding=None):
   """ AppendAllLines(path: str,contents: IEnumerable[str])AppendAllLines(path: str,contents: IEnumerable[str],encoding: Encoding) """
@@ -8,9 +13,8 @@ class File:
  def AppendAllText(path,contents,encoding=None):
   """
   AppendAllText(path: str,contents: str)
-   Opens a file,appends the specified string to the file,and then closes the file. If the 
-    file does not exist,this method creates a file,writes the specified string to the file,
-    then closes the file.
+   Opens a file,appends the specified string to the file,and then closes the file. If the file does not exist,this method creates a file,writes the specified string to the 
+    file,then closes the file.
   
   
    path: The file to append the specified string to.
@@ -65,35 +69,23 @@ class File:
   
    path: The name of the file.
    bufferSize: The number of bytes buffered for reads and writes to the file.
-   Returns: A System.IO.FileStream with the specified buffer size that provides read/write access to 
-    the file specified in path.
-  
+   Returns: A System.IO.FileStream with the specified buffer size that provides read/write access to the file specified in path.
   Create(path: str,bufferSize: int,options: FileOptions) -> FileStream
   
-   Creates or overwrites the specified file,specifying a buffer size and a 
-    System.IO.FileOptions value that describes how to create or overwrite the file.
-  
+   Creates or overwrites the specified file,specifying a buffer size and a System.IO.FileOptions value that describes how to create or overwrite the file.
   
    path: The name of the file.
    bufferSize: The number of bytes buffered for reads and writes to the file.
-   options: One of the System.IO.FileOptions values that describes how to create or overwrite the 
-    file.
-  
+   options: One of the System.IO.FileOptions values that describes how to create or overwrite the file.
    Returns: A new file with the specified buffer size.
   Create(path: str,bufferSize: int,options: FileOptions,fileSecurity: FileSecurity) -> FileStream
   
-   Creates or overwrites the specified file with the specified buffer size,file options,
-    and file security.
-  
+   Creates or overwrites the specified file with the specified buffer size,file options,and file security.
   
    path: The name of the file.
    bufferSize: The number of bytes buffered for reads and writes to the file.
-   options: One of the System.IO.FileOptions values that describes how to create or overwrite the 
-    file.
-  
-   fileSecurity: One of the System.Security.AccessControl.FileSecurity values that determines the access 
-    control and audit security for the file.
-  
+   options: One of the System.IO.FileOptions values that describes how to create or overwrite the file.
+   fileSecurity: One of the System.Security.AccessControl.FileSecurity values that determines the access control and audit security for the file.
    Returns: A new file with the specified buffer size,file options,and file security.
   """
   pass
@@ -112,9 +104,7 @@ class File:
  def Decrypt(path):
   """
   Decrypt(path: str)
-   Decrypts a file that was encrypted by the current account using the 
-    System.IO.File.Encrypt(System.String) method.
-  
+   Decrypts a file that was encrypted by the current account using the System.IO.File.Encrypt(System.String) method.
   
    path: A path that describes a file to decrypt.
   """
@@ -145,11 +135,9 @@ class File:
    Determines whether the specified file exists.
   
    path: The file to check.
-   Returns: true if the caller has the required permissions and path contains the name of an existing 
-    file; otherwise,false. This method also returns false if path is null,an invalid path,
-    or a zero-length string. If the caller does not have sufficient permissions to read the 
-    specified file,no exception is thrown and the method returns false regardless of the 
-    existence of path.
+   Returns: true if the caller has the required permissions and path contains the name of an existing file; otherwise,false. This method also returns false if path is null,an invalid 
+    path,or a zero-length string. If the caller does not have sufficient permissions to read the specified file,no exception is thrown and the method returns false regardless 
+    of the existence of path.
   """
   pass
  @staticmethod
@@ -157,30 +145,17 @@ class File:
   """
   GetAccessControl(path: str) -> FileSecurity
   
-   Gets a System.Security.AccessControl.FileSecurity object that encapsulates the access 
-    control list (ACL) entries for a specified file.
+   Gets a System.Security.AccessControl.FileSecurity object that encapsulates the access control list (ACL) entries for a specified file.
   
-  
-   path: The path to a file containing a System.Security.AccessControl.FileSecurity object that 
-    describes the file's access control list (ACL) information.
-  
-   Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the access control 
-    rules for the file described by the path parameter.
-  
+   path: The path to a file containing a System.Security.AccessControl.FileSecurity object that describes the file's access control list (ACL) information.
+   Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the access control rules for the file described by the path parameter.
   GetAccessControl(path: str,includeSections: AccessControlSections) -> FileSecurity
   
-   Gets a System.Security.AccessControl.FileSecurity object that encapsulates the specified 
-    type of access control list (ACL) entries for a particular file.
+   Gets a System.Security.AccessControl.FileSecurity object that encapsulates the specified type of access control list (ACL) entries for a particular file.
   
-  
-   path: The path to a file containing a System.Security.AccessControl.FileSecurity object that 
-    describes the file's access control list (ACL) information.
-  
-   includeSections: One of the System.Security.AccessControl.AccessControlSections values that specifies the 
-    type of access control list (ACL) information to receive.
-  
-   Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the access control 
-    rules for the file described by the path parameter.
+   path: The path to a file containing a System.Security.AccessControl.FileSecurity object that describes the file's access control list (ACL) information.
+   includeSections: One of the System.Security.AccessControl.AccessControlSections values that specifies the type of access control list (ACL) information to receive.
+   Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the access control rules for the file described by the path parameter.
   """
   pass
  @staticmethod
@@ -202,8 +177,7 @@ class File:
    Returns the creation date and time of the specified file or directory.
   
    path: The file or directory for which to obtain creation date and time information.
-   Returns: A System.DateTime structure set to the creation date and time for the specified file or 
-    directory. This value is expressed in local time.
+   Returns: A System.DateTime structure set to the creation date and time for the specified file or directory. This value is expressed in local time.
   """
   pass
  @staticmethod
@@ -211,13 +185,10 @@ class File:
   """
   GetCreationTimeUtc(path: str) -> DateTime
   
-   Returns the creation date and time,in coordinated universal time (UTC),of the specified 
-    file or directory.
-  
+   Returns the creation date and time,in coordinated universal time (UTC),of the specified file or directory.
   
    path: The file or directory for which to obtain creation date and time information.
-   Returns: A System.DateTime structure set to the creation date and time for the specified file or 
-    directory. This value is expressed in UTC time.
+   Returns: A System.DateTime structure set to the creation date and time for the specified file or directory. This value is expressed in UTC time.
   """
   pass
  @staticmethod
@@ -228,8 +199,7 @@ class File:
    Returns the date and time the specified file or directory was last accessed.
   
    path: The file or directory for which to obtain access date and time information.
-   Returns: A System.DateTime structure set to the date and time that the specified file or directory 
-    was last accessed. This value is expressed in local time.
+   Returns: A System.DateTime structure set to the date and time that the specified file or directory was last accessed. This value is expressed in local time.
   """
   pass
  @staticmethod
@@ -237,13 +207,10 @@ class File:
   """
   GetLastAccessTimeUtc(path: str) -> DateTime
   
-   Returns the date and time,in coordinated universal time (UTC),that the specified file 
-    or directory was last accessed.
-  
+   Returns the date and time,in coordinated universal time (UTC),that the specified file or directory was last accessed.
   
    path: The file or directory for which to obtain access date and time information.
-   Returns: A System.DateTime structure set to the date and time that the specified file or directory 
-    was last accessed. This value is expressed in UTC time.
+   Returns: A System.DateTime structure set to the date and time that the specified file or directory was last accessed. This value is expressed in UTC time.
   """
   pass
  @staticmethod
@@ -254,8 +221,7 @@ class File:
    Returns the date and time the specified file or directory was last written to.
   
    path: The file or directory for which to obtain write date and time information.
-   Returns: A System.DateTime structure set to the date and time that the specified file or directory 
-    was last written to. This value is expressed in local time.
+   Returns: A System.DateTime structure set to the date and time that the specified file or directory was last written to. This value is expressed in local time.
   """
   pass
  @staticmethod
@@ -263,13 +229,10 @@ class File:
   """
   GetLastWriteTimeUtc(path: str) -> DateTime
   
-   Returns the date and time,in coordinated universal time (UTC),that the specified file 
-    or directory was last written to.
-  
+   Returns the date and time,in coordinated universal time (UTC),that the specified file or directory was last written to.
   
    path: The file or directory for which to obtain write date and time information.
-   Returns: A System.DateTime structure set to the date and time that the specified file or directory 
-    was last written to. This value is expressed in UTC time.
+   Returns: A System.DateTime structure set to the date and time that the specified file or directory was last written to. This value is expressed in UTC time.
   """
   pass
  @staticmethod
@@ -290,42 +253,25 @@ class File:
    Opens a System.IO.FileStream on the specified path with read/write access.
   
    path: The file to open.
-   mode: A System.IO.FileMode value that specifies whether a file is created if one does not 
-    exist,and determines whether the contents of existing files are retained or overwritten.
-  
-   Returns: A System.IO.FileStream opened in the specified mode and path,with read/write access and 
-    not shared.
-  
+   mode: A System.IO.FileMode value that specifies whether a file is created if one does not exist,and determines whether the contents of existing files are retained or overwritten.
+   Returns: A System.IO.FileStream opened in the specified mode and path,with read/write access and not shared.
   Open(path: str,mode: FileMode,access: FileAccess) -> FileStream
   
    Opens a System.IO.FileStream on the specified path,with the specified mode and access.
   
    path: The file to open.
-   mode: A System.IO.FileMode value that specifies whether a file is created if one does not 
-    exist,and determines whether the contents of existing files are retained or overwritten.
-  
-   access: A System.IO.FileAccess value that specifies the operations that can be performed on the 
-    file.
-  
-   Returns: An unshared System.IO.FileStream that provides access to the specified file,with the 
-    specified mode and access.
-  
+   mode: A System.IO.FileMode value that specifies whether a file is created if one does not exist,and determines whether the contents of existing files are retained or overwritten.
+   access: A System.IO.FileAccess value that specifies the operations that can be performed on the file.
+   Returns: An unshared System.IO.FileStream that provides access to the specified file,with the specified mode and access.
   Open(path: str,mode: FileMode,access: FileAccess,share: FileShare) -> FileStream
   
-   Opens a System.IO.FileStream on the specified path,having the specified mode with read,
-    write,or read/write access and the specified sharing option.
-  
+   Opens a System.IO.FileStream on the specified path,having the specified mode with read,write,or read/write access and the specified sharing option.
   
    path: The file to open.
-   mode: A System.IO.FileMode value that specifies whether a file is created if one does not 
-    exist,and determines whether the contents of existing files are retained or overwritten.
-  
-   access: A System.IO.FileAccess value that specifies the operations that can be performed on the 
-    file.
-  
+   mode: A System.IO.FileMode value that specifies whether a file is created if one does not exist,and determines whether the contents of existing files are retained or overwritten.
+   access: A System.IO.FileAccess value that specifies the operations that can be performed on the file.
    share: A System.IO.FileShare value specifying the type of access other threads have to the file.
-   Returns: A System.IO.FileStream on the specified path,having the specified mode with read,write,
-    or read/write access and the specified sharing option.
+   Returns: A System.IO.FileStream on the specified path,having the specified mode with read,write,or read/write access and the specified sharing option.
   """
   pass
  @staticmethod
@@ -358,8 +304,7 @@ class File:
    Opens an existing file or creates a new file for writing.
   
    path: The file to be opened for writing.
-   Returns: An unshared System.IO.FileStream object on the specified path with 
-    System.IO.FileAccess.Write access.
+   Returns: An unshared System.IO.FileStream object on the specified path with System.IO.FileAccess.Write access.
   """
   pass
  @staticmethod
@@ -367,9 +312,7 @@ class File:
   """
   ReadAllBytes(path: str) -> Array[Byte]
   
-   Opens a binary file,reads the contents of the file into a byte array,and then closes 
-    the file.
-  
+   Opens a binary file,reads the contents of the file into a byte array,and then closes the file.
   
    path: The file to open for reading.
    Returns: A byte array containing the contents of the file.
@@ -386,9 +329,7 @@ class File:
    Returns: A string array containing all lines of the file.
   ReadAllLines(path: str,encoding: Encoding) -> Array[str]
   
-   Opens a file,reads all lines of the file with the specified encoding,and then closes 
-    the file.
-  
+   Opens a file,reads all lines of the file with the specified encoding,and then closes the file.
   
    path: The file to open for reading.
    encoding: The encoding applied to the contents of the file.
@@ -406,9 +347,7 @@ class File:
    Returns: A string containing all lines of the file.
   ReadAllText(path: str,encoding: Encoding) -> str
   
-   Opens a file,reads all lines of the file with the specified encoding,and then closes 
-    the file.
-  
+   Opens a file,reads all lines of the file with the specified encoding,and then closes the file.
   
    path: The file to open for reading.
    encoding: The encoding applied to the contents of the file.
@@ -437,37 +376,30 @@ class File:
  def Replace(sourceFileName,destinationFileName,destinationBackupFileName,ignoreMetadataErrors=None):
   """
   Replace(sourceFileName: str,destinationFileName: str,destinationBackupFileName: str)
-   Replaces the contents of a specified file with the contents of another file,deleting the 
-    original file,and creating a backup of the replaced file.
-  
+   Replaces the contents of a specified file with the contents of another file,deleting the original file,and creating a backup of the replaced file.
   
    sourceFileName: The name of a file that replaces the file specified by destinationFileName.
    destinationFileName: The name of the file being replaced.
    destinationBackupFileName: The name of the backup file.
   Replace(sourceFileName: str,destinationFileName: str,destinationBackupFileName: str,ignoreMetadataErrors: bool)
-   Replaces the contents of a specified file with the contents of another file,deleting the 
-    original file,and creating a backup of the replaced file and optionally ignores merge 
-    errors.
+   Replaces the contents of a specified file with the contents of another file,deleting the original file,and creating a backup of the replaced file and optionally ignores 
+    merge errors.
   
   
    sourceFileName: The name of a file that replaces the file specified by destinationFileName.
    destinationFileName: The name of the file being replaced.
    destinationBackupFileName: The name of the backup file.
-   ignoreMetadataErrors: true to ignore merge errors (such as attributes and access control lists (ACLs)) from the 
-    replaced file to the replacement file; otherwise,false.
+   ignoreMetadataErrors: true to ignore merge errors (such as attributes and access control lists (ACLs)) from the replaced file to the replacement file; otherwise,false.
   """
   pass
  @staticmethod
  def SetAccessControl(path,fileSecurity):
   """
   SetAccessControl(path: str,fileSecurity: FileSecurity)
-   Applies access control list (ACL) entries described by a 
-    System.Security.AccessControl.FileSecurity object to the specified file.
-  
+   Applies access control list (ACL) entries described by a System.Security.AccessControl.FileSecurity object to the specified file.
   
    path: A file to add or remove access control list (ACL) entries from.
-   fileSecurity: A System.Security.AccessControl.FileSecurity object that describes an ACL entry to apply 
-    to the file described by the path parameter.
+   fileSecurity: A System.Security.AccessControl.FileSecurity object that describes an ACL entry to apply to the file described by the path parameter.
   """
   pass
  @staticmethod
@@ -487,8 +419,7 @@ class File:
    Sets the date and time the file was created.
   
    path: The file for which to set the creation date and time information.
-   creationTime: A System.DateTime containing the value to set for the creation date and time of path. 
-    This value is expressed in local time.
+   creationTime: A System.DateTime containing the value to set for the creation date and time of path. This value is expressed in local time.
   """
   pass
  @staticmethod
@@ -498,8 +429,7 @@ class File:
    Sets the date and time,in coordinated universal time (UTC),that the file was created.
   
    path: The file for which to set the creation date and time information.
-   creationTimeUtc: A System.DateTime containing the value to set for the creation date and time of path. 
-    This value is expressed in UTC time.
+   creationTimeUtc: A System.DateTime containing the value to set for the creation date and time of path. This value is expressed in UTC time.
   """
   pass
  @staticmethod
@@ -509,21 +439,17 @@ class File:
    Sets the date and time the specified file was last accessed.
   
    path: The file for which to set the access date and time information.
-   lastAccessTime: A System.DateTime containing the value to set for the last access date and time of path. 
-    This value is expressed in local time.
+   lastAccessTime: A System.DateTime containing the value to set for the last access date and time of path. This value is expressed in local time.
   """
   pass
  @staticmethod
  def SetLastAccessTimeUtc(path,lastAccessTimeUtc):
   """
   SetLastAccessTimeUtc(path: str,lastAccessTimeUtc: DateTime)
-   Sets the date and time,in coordinated universal time (UTC),that the specified file was 
-    last accessed.
-  
+   Sets the date and time,in coordinated universal time (UTC),that the specified file was last accessed.
   
    path: The file for which to set the access date and time information.
-   lastAccessTimeUtc: A System.DateTime containing the value to set for the last access date and time of path. 
-    This value is expressed in UTC time.
+   lastAccessTimeUtc: A System.DateTime containing the value to set for the last access date and time of path. This value is expressed in UTC time.
   """
   pass
  @staticmethod
@@ -533,30 +459,24 @@ class File:
    Sets the date and time that the specified file was last written to.
   
    path: The file for which to set the date and time information.
-   lastWriteTime: A System.DateTime containing the value to set for the last write date and time of path. 
-    This value is expressed in local time.
+   lastWriteTime: A System.DateTime containing the value to set for the last write date and time of path. This value is expressed in local time.
   """
   pass
  @staticmethod
  def SetLastWriteTimeUtc(path,lastWriteTimeUtc):
   """
   SetLastWriteTimeUtc(path: str,lastWriteTimeUtc: DateTime)
-   Sets the date and time,in coordinated universal time (UTC),that the specified file was 
-    last written to.
-  
+   Sets the date and time,in coordinated universal time (UTC),that the specified file was last written to.
   
    path: The file for which to set the date and time information.
-   lastWriteTimeUtc: A System.DateTime containing the value to set for the last write date and time of path. 
-    This value is expressed in UTC time.
+   lastWriteTimeUtc: A System.DateTime containing the value to set for the last write date and time of path. This value is expressed in UTC time.
   """
   pass
  @staticmethod
  def WriteAllBytes(path,bytes):
   """
   WriteAllBytes(path: str,bytes: Array[Byte])
-   Creates a new file,writes the specified byte array to the file,and then closes the 
-    file. If the target file already exists,it is overwritten.
-  
+   Creates a new file,writes the specified byte array to the file,and then closes the file. If the target file already exists,it is overwritten.
   
    path: The file to write to.
    bytes: The bytes to write to the file.
@@ -566,22 +486,16 @@ class File:
  def WriteAllLines(path,contents,encoding=None):
   """
   WriteAllLines(path: str,contents: Array[str])
-   Creates a new file,write the specified string array to the file,and then closes the 
-    file.
-  
+   Creates a new file,write the specified string array to the file,and then closes the file.
   
    path: The file to write to.
    contents: The string array to write to the file.
   WriteAllLines(path: str,contents: Array[str],encoding: Encoding)
-   Creates a new file,writes the specified string array to the file by using the specified 
-    encoding,and then closes the file.
-  
+   Creates a new file,writes the specified string array to the file by using the specified encoding,and then closes the file.
   
    path: The file to write to.
    contents: The string array to write to the file.
-   encoding: An System.Text.Encoding object that represents the character encoding applied to the 
-    string array.
-  
+   encoding: An System.Text.Encoding object that represents the character encoding applied to the string array.
   WriteAllLines(path: str,contents: IEnumerable[str])WriteAllLines(path: str,contents: IEnumerable[str],encoding: Encoding)
   """
   pass
@@ -589,16 +503,12 @@ class File:
  def WriteAllText(path,contents,encoding=None):
   """
   WriteAllText(path: str,contents: str)
-   Creates a new file,writes the specified string to the file,and then closes the file. If 
-    the target file already exists,it is overwritten.
-  
+   Creates a new file,writes the specified string to the file,and then closes the file. If the target file already exists,it is overwritten.
   
    path: The file to write to.
    contents: The string to write to the file.
   WriteAllText(path: str,contents: str,encoding: Encoding)
-   Creates a new file,writes the specified string to the file using the specified encoding,
-    and then closes the file. If the target file already exists,it is overwritten.
-  
+   Creates a new file,writes the specified string to the file using the specified encoding,and then closes the file. If the target file already exists,it is overwritten.
   
    path: The file to write to.
    contents: The string to write to the file.

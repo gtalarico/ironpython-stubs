@@ -7,6 +7,11 @@ class DataObjectFieldAttribute:
  DataObjectFieldAttribute(primaryKey: bool,isIdentity: bool,isNullable: bool)
  DataObjectFieldAttribute(primaryKey: bool,isIdentity: bool,isNullable: bool,length: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DataObjectFieldAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: DataObjectFieldAttribute,obj: object) -> bool
@@ -14,8 +19,7 @@ class DataObjectFieldAttribute:
    Returns a value indicating whether this instance is equal to a specified object.
   
    obj: An object to compare with this instance of System.ComponentModel.DataObjectFieldAttribute.
-   Returns: true if this instance is the same as the instance specified by the obj parameter; 
-    otherwise,false.
+   Returns: true if this instance is the same as the instance specified by the obj parameter; otherwise,false.
   """
   pass
  def GetHashCode(self):

@@ -1,9 +1,13 @@
-class CharacterRange:
+class CharacterRange(object):
  """
  Specifies a range of character positions within a string.
  
  CharacterRange(First: int,Length: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return CharacterRange()
+
  def Equals(self,obj):
   """
   Equals(self: CharacterRange,obj: object) -> bool
@@ -11,9 +15,7 @@ class CharacterRange:
    Gets a value indicating whether this object is equivalent to the specified object.
   
    obj: The object to compare to for equality.
-   Returns: true to indicate the specified object is an instance with the same 
-    System.Drawing.CharacterRange.First and System.Drawing.CharacterRange.Length value as 
-    this instance; otherwise,false.
+   Returns: true to indicate the specified object is an instance with the same System.Drawing.CharacterRange.First and System.Drawing.CharacterRange.Length value as this instance; otherwise,false.
   """
   pass
  def GetHashCode(self):

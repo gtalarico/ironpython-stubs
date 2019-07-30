@@ -1,61 +1,88 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.Workflow calls itself Workflow
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class Activity:
+class Activity(object):
  """ Activity() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Activity()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Current=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Current(self: Activity) -> Decimal
+ """The current progress
+
+Get: Current(self: Activity) -> Decimal
 
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: Activity) -> str
+ """A description of the activity
+
+Get: Description(self: Activity) -> str
 
 Set: Description(self: Activity)=value
 """
 
  Progress=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Progress(self: Activity) -> List[Progress]
+ """Collection with the progress made in different measurements
+
+Get: Progress(self: Activity) -> List[Progress]
 
 """
 
  StartedAt=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StartedAt(self: Activity) -> DateTime
+ """The moment when the activity started
+
+Get: StartedAt(self: Activity) -> DateTime
 
 Set: StartedAt(self: Activity)=value
 """
 
  TimeSpent=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TimeSpent(self: Activity) -> int
+ """The total amount of time spent on the workflow (in seconds)
+
+Get: TimeSpent(self: Activity) -> int
 
 """
 
  Title=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Title(self: Activity) -> str
+ """The title to show to the user
+
+Get: Title(self: Activity) -> str
 
 """
 
  Total=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Total(self: Activity) -> Decimal
+ """The max of the progress
+
+Get: Total(self: Activity) -> Decimal
 
 """
 
  Workers=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Workers(self: Activity) -> List[str]
+ """List of the names of people working at this activity
+
+Get: Workers(self: Activity) -> List[str]
 
 """
 
 
 
-class Progress:
+class Progress(object):
  """ Progress() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Progress()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Current=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Current(self: Progress) -> Decimal
 

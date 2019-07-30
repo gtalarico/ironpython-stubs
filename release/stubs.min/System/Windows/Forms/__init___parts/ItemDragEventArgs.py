@@ -1,10 +1,14 @@
-class ItemDragEventArgs:
+class ItemDragEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ListView.ItemDrag event of the System.Windows.Forms.ListView and System.Windows.Forms.TreeView controls.
  
  ItemDragEventArgs(button: MouseButtons)
  ItemDragEventArgs(button: MouseButtons,item: object)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ItemDragEventArgs()
+
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass

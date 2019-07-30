@@ -1,12 +1,16 @@
-class Switch:
+class Switch(object):
  """ Provides an abstract base class to create new debugging and tracing switches. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Switch()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetSupportedAttributes(self,*args):
   """
   GetSupportedAttributes(self: Switch) -> Array[str]
   
    Gets the custom attributes supported by the switch.
-   Returns: A string array that contains the names of the custom attributes supported by the switch,
-    or null if there no custom attributes are supported.
+   Returns: A string array that contains the names of the custom attributes supported by the switch,or null if there no custom attributes are supported.
   """
   pass
  def OnSwitchSettingChanged(self,*args):

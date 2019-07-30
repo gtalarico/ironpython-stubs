@@ -1,132 +1,181 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.Inbound calls itself Inbound
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class PreReceipt:
+class PreReceipt(DbObject):
  """ PreReceipt() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PreReceipt()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  def __reduce_ex__(self,*args):
   pass
  Date=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Date(self: PreReceipt) -> DateTime
+ """
+
+Get: Date(self: PreReceipt) -> DateTime
 
 Set: Date(self: PreReceipt)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: PreReceipt) -> str
+ """
+
+Get: Description(self: PreReceipt) -> str
 
 Set: Description(self: PreReceipt)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: PreReceipt) -> int
+ """
+
+Get: Id(self: PreReceipt) -> int
 
 Set: Id(self: PreReceipt)=value
 """
 
  Notes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Notes(self: PreReceipt) -> str
+ """
+
+Get: Notes(self: PreReceipt) -> str
 
 Set: Notes(self: PreReceipt)=value
 """
 
  NumberOfCollo=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NumberOfCollo(self: PreReceipt) -> int
+ """
+
+Get: NumberOfCollo(self: PreReceipt) -> int
 
 Set: NumberOfCollo(self: PreReceipt)=value
 """
 
  PendingOrderCount=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PendingOrderCount(self: PreReceipt) -> int
+ """
+
+Get: PendingOrderCount(self: PreReceipt) -> int
 
 Set: PendingOrderCount(self: PreReceipt)=value
 """
 
  PercentageReceived=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PercentageReceived(self: PreReceipt) -> int
+ """Percentage of Prereceipt products (quantity) that is delivered (0-100).
+   Excluded the amount that was over delivered (more delivered than expected).
+
+Get: PercentageReceived(self: PreReceipt) -> int
 
 """
 
  Status=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Status(self: PreReceipt) -> PreReceiptStatus
+ """
+
+Get: Status(self: PreReceipt) -> PreReceiptStatus
 
 Set: Status(self: PreReceipt)=value
 """
 
  Tags=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Tags(self: PreReceipt) -> str
+ """
+
+Get: Tags(self: PreReceipt) -> str
 
 Set: Tags(self: PreReceipt)=value
 """
 
  TotalOrderLines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalOrderLines(self: PreReceipt) -> int
+ """
+
+Get: TotalOrderLines(self: PreReceipt) -> int
 
 Set: TotalOrderLines(self: PreReceipt)=value
 """
 
  TotalOrderLinesReceived=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalOrderLinesReceived(self: PreReceipt) -> int
+ """Amount of lines that are already received/completed
+
+Get: TotalOrderLinesReceived(self: PreReceipt) -> int
 
 Set: TotalOrderLinesReceived(self: PreReceipt)=value
 """
 
  TotalOrderLinesToReceive=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalOrderLinesToReceive(self: PreReceipt) -> int
+ """Amount of lines where quantityReceived reach quantity expected
+
+Get: TotalOrderLinesToReceive(self: PreReceipt) -> int
 
 Set: TotalOrderLinesToReceive(self: PreReceipt)=value
 """
 
  TotalQuantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalQuantity(self: PreReceipt) -> Decimal
+ """Total quantity expecting to receive (QuantityToReceive).
+
+Get: TotalQuantity(self: PreReceipt) -> Decimal
 
 Set: TotalQuantity(self: PreReceipt)=value
 """
 
  TotalQuantityReceived=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalQuantityReceived(self: PreReceipt) -> Decimal
+ """Total amount of Quantity received
+   Excluded the amount that was received per line more than expected (see query)
+
+Get: TotalQuantityReceived(self: PreReceipt) -> Decimal
 
 Set: TotalQuantityReceived(self: PreReceipt)=value
 """
 
 
 
-class CreatePreReceiptArgs:
+class CreatePreReceiptArgs(PreReceipt):
  """ CreatePreReceiptArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CreatePreReceiptArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  def __reduce_ex__(self,*args):
   pass
  Lines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Lines(self: CreatePreReceiptArgs) -> List[PreReceiptLine]
+ """
+
+Get: Lines(self: CreatePreReceiptArgs) -> List[PreReceiptLine]
 
 Set: Lines(self: CreatePreReceiptArgs)=value
 """
 
  OrderIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderIds(self: CreatePreReceiptArgs) -> List[int]
+ """
+
+Get: OrderIds(self: CreatePreReceiptArgs) -> List[int]
 
 Set: OrderIds(self: CreatePreReceiptArgs)=value
 """
 
  OrderLineIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderLineIds(self: CreatePreReceiptArgs) -> List[int]
+ """
+
+Get: OrderLineIds(self: CreatePreReceiptArgs) -> List[int]
 
 Set: OrderLineIds(self: CreatePreReceiptArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: CreatePreReceiptArgs) -> str
+ """
+
+Get: WarehouseCode(self: CreatePreReceiptArgs) -> str
 
 Set: WarehouseCode(self: CreatePreReceiptArgs)=value
 """
@@ -135,6 +184,11 @@ Set: WarehouseCode(self: CreatePreReceiptArgs)=value
 
 class ErpInboundLocationMode:
  """ enum ErpInboundLocationMode,values: DefaultItemLocation (1),DefaultWarehouseLocation (0) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ErpInboundLocationMode()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -163,23 +217,37 @@ class ErpInboundLocationMode:
  value__=None
 
 
-class ErpProcessInboundOrderResult:
+class ErpProcessInboundOrderResult(ErpProcessPurchaseOrderLinesResult):
  """ ErpProcessInboundOrderResult() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ErpProcessInboundOrderResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CreatedOrder=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CreatedOrder(self: ErpProcessInboundOrderResult) -> InboundOrder
+ """
+
+Get: CreatedOrder(self: ErpProcessInboundOrderResult) -> InboundOrder
 
 Set: CreatedOrder(self: ErpProcessInboundOrderResult)=value
 """
 
  HasOrder=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HasOrder(self: ErpProcessInboundOrderResult) -> bool
+ """
+
+Get: HasOrder(self: ErpProcessInboundOrderResult) -> bool
 
 """
 
 
 
-class InboundOrder:
+class InboundOrder(DbObject):
  """ InboundOrder() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InboundOrder()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHashCode(self):
   """ GetHashCode(self: InboundOrder) -> int """
   pass
@@ -189,99 +257,134 @@ class InboundOrder:
  def __reduce_ex__(self,*args):
   pass
  BusinessUnit=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BusinessUnit(self: InboundOrder) -> str
+ """
+
+Get: BusinessUnit(self: InboundOrder) -> str
 
 Set: BusinessUnit(self: InboundOrder)=value
 """
 
  DateFirstExpected=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DateFirstExpected(self: InboundOrder) -> DateTime
+ """
+
+Get: DateFirstExpected(self: InboundOrder) -> DateTime
 
 Set: DateFirstExpected(self: InboundOrder)=value
 """
 
  DateOrdered=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DateOrdered(self: InboundOrder) -> DateTime
+ """
+
+Get: DateOrdered(self: InboundOrder) -> DateTime
 
 Set: DateOrdered(self: InboundOrder)=value
 """
 
  DeliveryMethod=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DeliveryMethod(self: InboundOrder) -> str
+ """
+
+Get: DeliveryMethod(self: InboundOrder) -> str
 
 Set: DeliveryMethod(self: InboundOrder)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: InboundOrder) -> str
+ """
+
+Get: Description(self: InboundOrder) -> str
 
 Set: Description(self: InboundOrder)=value
 """
 
  GroupKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupKey(self: InboundOrder) -> int
+ """
+
+Get: GroupKey(self: InboundOrder) -> int
 
 Set: GroupKey(self: InboundOrder)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: InboundOrder) -> int
+ """
+
+Get: Id(self: InboundOrder) -> int
 
 Set: Id(self: InboundOrder)=value
 """
 
  Notes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Notes(self: InboundOrder) -> str
+ """This property can be used to store notes of a PurchaseOrder.
+
+Get: Notes(self: InboundOrder) -> str
 
 Set: Notes(self: InboundOrder)=value
 """
 
  Number=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Number(self: InboundOrder) -> str
+ """
+
+Get: Number(self: InboundOrder) -> str
 
 Set: Number(self: InboundOrder)=value
 """
 
  PendingOrderLines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PendingOrderLines(self: InboundOrder) -> int
+ """Indicates how many order lines are pending.
+
+Get: PendingOrderLines(self: InboundOrder) -> int
 
 Set: PendingOrderLines(self: InboundOrder)=value
 """
 
  ProjectCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ProjectCode(self: InboundOrder) -> str
+ """
+
+Get: ProjectCode(self: InboundOrder) -> str
 
 Set: ProjectCode(self: InboundOrder)=value
 """
 
  ProjectName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ProjectName(self: InboundOrder) -> str
+ """
+
+Get: ProjectName(self: InboundOrder) -> str
 
 Set: ProjectName(self: InboundOrder)=value
 """
 
  SelectionCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SelectionCode(self: InboundOrder) -> str
+ """
+
+Get: SelectionCode(self: InboundOrder) -> str
 
 Set: SelectionCode(self: InboundOrder)=value
 """
 
  SelectionCodeDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SelectionCodeDescription(self: InboundOrder) -> str
+ """
+
+Get: SelectionCodeDescription(self: InboundOrder) -> str
 
 Set: SelectionCodeDescription(self: InboundOrder)=value
 """
 
  Warehouse=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Warehouse(self: InboundOrder) -> str
+ """
+
+Get: Warehouse(self: InboundOrder) -> str
 
 Set: Warehouse(self: InboundOrder)=value
 """
 
 
 
-class InboundOrderLine:
+class InboundOrderLine(object):
  """ InboundOrderLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InboundOrderLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddReceiving(self,*__args):
   """
   AddReceiving(self: InboundOrderLine,quantity: Decimal) -> bool
@@ -299,15 +402,41 @@ class InboundOrderLine:
   """ GetHashCode(self: InboundOrderLine) -> int """
   pass
  def IsBatchNumberItemCheck(self,checkRegistration):
-  """ IsBatchNumberItemCheck(self: InboundOrderLine,checkRegistration: bool) -> bool """
+  """
+  IsBatchNumberItemCheck(self: InboundOrderLine,checkRegistration: bool) -> bool
+  
+   Checks if the item is a batchnumber item.
+  
+   checkRegistration: True if the batchnumber registration should be checked,false if just the property should be returned.
+   Returns: True if the check is ignored and the item is a batch item,or when the itemid registration is set to
+     complete (means the numers are registered throughout the 
+    whole process).
+     False if the check is ignored and the item is not a batch item,or when the itemids are registered
+     during delivery only.
+  """
   pass
  def IsSerialNumberItemCheck(self,checkRegistration):
-  """ IsSerialNumberItemCheck(self: InboundOrderLine,checkRegistration: bool) -> bool """
+  """
+  IsSerialNumberItemCheck(self: InboundOrderLine,checkRegistration: bool) -> bool
+  
+   Checks if the item is a serialnumber item.
+  
+   checkRegistration: True if the serialnumber registration should be checked,false if just the property should be returned.
+   Returns: True if the check is ignored and the item is a serial item,or when the itemid registration is set to
+     complete (means the numers are registered throughout the 
+    whole process).
+     False if the check is ignored and the item is not a serial item,or when the itemids are registered
+     during delivery only.
+  """
   pass
  def PutBack(self,*__args):
   """
   PutBack(self: InboundOrderLine,quantity: Decimal) -> Decimal
-  PutBack(self: InboundOrderLine,itemId: ItemIdentification) -> Decimal
+  
+   quantity: Positive quantity to put back
+   Returns: the amount that is put back. (positive)
+  PutBack(self: InboundOrderLine,itemId: ItemIdentification) -> Decimal
+   Returns: the amount that is put back. (positive)
   """
   pass
  def __init__(self,*args):
@@ -319,177 +448,240 @@ class InboundOrderLine:
   """ __repr__(self: object) -> str """
   pass
  CustomErpFields=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomErpFields(self: InboundOrderLine) -> SerializableDictionary[str,object]
+ """Can be used for none standard data input towards Erp (while processing) - Profit rma order only at this moment 
+   Expected key: Erp field property name,e.g: "V1Cd" (Profit cost center field)
+   Expected value: Erp field property value (NOTE: use same Type as eventual Erp Type to avoid conversion errors)
+
+Get: CustomErpFields(self: InboundOrderLine) -> SerializableDictionary[str,object]
 
 Set: CustomErpFields(self: InboundOrderLine)=value
 """
 
  CustomFields=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomFields(self: InboundOrderLine) -> SerializableDictionary[str,object]
+ """
+
+Get: CustomFields(self: InboundOrderLine) -> SerializableDictionary[str,object]
 
 Set: CustomFields(self: InboundOrderLine)=value
 """
 
  DateExpected=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DateExpected(self: InboundOrderLine) -> DateTime
+ """
+
+Get: DateExpected(self: InboundOrderLine) -> DateTime
 
 Set: DateExpected(self: InboundOrderLine)=value
 """
 
  DefaultVendorBarcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultVendorBarcode(self: InboundOrderLine) -> str
+ """
+
+Get: DefaultVendorBarcode(self: InboundOrderLine) -> str
 
 Set: DefaultVendorBarcode(self: InboundOrderLine)=value
 """
 
  DefaultVendorItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultVendorItemCode(self: InboundOrderLine) -> str
+ """
+
+Get: DefaultVendorItemCode(self: InboundOrderLine) -> str
 
 Set: DefaultVendorItemCode(self: InboundOrderLine)=value
 """
 
  GTINCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GTINCode(self: InboundOrderLine) -> str
+ """The GS1 GTIN code of this item
+
+Get: GTINCode(self: InboundOrderLine) -> str
 
 Set: GTINCode(self: InboundOrderLine)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: InboundOrderLine) -> int
+ """
+
+Get: Id(self: InboundOrderLine) -> int
 
 Set: Id(self: InboundOrderLine)=value
 """
 
  IsBatchNumberItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsBatchNumberItem(self: InboundOrderLine) -> bool
+ """
+
+Get: IsBatchNumberItem(self: InboundOrderLine) -> bool
 
 Set: IsBatchNumberItem(self: InboundOrderLine)=value
 """
 
  IsFractionAllowed=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsFractionAllowed(self: InboundOrderLine) -> bool
+ """
+
+Get: IsFractionAllowed(self: InboundOrderLine) -> bool
 
 Set: IsFractionAllowed(self: InboundOrderLine)=value
 """
 
  IsProcessed=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsProcessed(self: InboundOrderLine) -> bool
+ """
+
+Get: IsProcessed(self: InboundOrderLine) -> bool
 
 Set: IsProcessed(self: InboundOrderLine)=value
 """
 
  IsSerialNumberItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsSerialNumberItem(self: InboundOrderLine) -> bool
+ """
+
+Get: IsSerialNumberItem(self: InboundOrderLine) -> bool
 
 Set: IsSerialNumberItem(self: InboundOrderLine)=value
 """
 
  ItemBrand=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemBrand(self: InboundOrderLine) -> str
+ """
+
+Get: ItemBrand(self: InboundOrderLine) -> str
 
 Set: ItemBrand(self: InboundOrderLine)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: InboundOrderLine) -> str
+ """
+
+Get: ItemCode(self: InboundOrderLine) -> str
 
 Set: ItemCode(self: InboundOrderLine)=value
 """
 
  ItemDefaultLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemDefaultLocation(self: InboundOrderLine) -> str
+ """
+
+Get: ItemDefaultLocation(self: InboundOrderLine) -> str
 
 Set: ItemDefaultLocation(self: InboundOrderLine)=value
 """
 
  ItemDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemDescription(self: InboundOrderLine) -> str
+ """
+
+Get: ItemDescription(self: InboundOrderLine) -> str
 
 Set: ItemDescription(self: InboundOrderLine)=value
 """
 
  ItemIdRegistration=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIdRegistration(self: InboundOrderLine) -> ItemIdentificationRegistration
+ """
+
+Get: ItemIdRegistration(self: InboundOrderLine) -> ItemIdentificationRegistration
 
 Set: ItemIdRegistration(self: InboundOrderLine)=value
 """
 
  ItemIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIds(self: InboundOrderLine) -> ItemIdentifications
+ """
+
+Get: ItemIds(self: InboundOrderLine) -> ItemIdentifications
 
 Set: ItemIds(self: InboundOrderLine)=value
 """
 
  ItemWeight=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemWeight(self: InboundOrderLine) -> Decimal
+ """
+
+Get: ItemWeight(self: InboundOrderLine) -> Decimal
 
 Set: ItemWeight(self: InboundOrderLine)=value
 """
 
  LineCurrencyCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LineCurrencyCode(self: InboundOrderLine) -> str
+ """
+
+Get: LineCurrencyCode(self: InboundOrderLine) -> str
 
 Set: LineCurrencyCode(self: InboundOrderLine)=value
 """
 
  LineDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LineDescription(self: InboundOrderLine) -> str
+ """
+
+Get: LineDescription(self: InboundOrderLine) -> str
 
 Set: LineDescription(self: InboundOrderLine)=value
 """
 
  LineInstruction=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LineInstruction(self: InboundOrderLine) -> str
+ """
+
+Get: LineInstruction(self: InboundOrderLine) -> str
 
 Set: LineInstruction(self: InboundOrderLine)=value
 """
 
  LineNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LineNumber(self: InboundOrderLine) -> int
+ """
+
+Get: LineNumber(self: InboundOrderLine) -> int
 
 Set: LineNumber(self: InboundOrderLine)=value
 """
 
  OrderId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderId(self: InboundOrderLine) -> int
+ """
+
+Get: OrderId(self: InboundOrderLine) -> int
 
 Set: OrderId(self: InboundOrderLine)=value
 """
 
  OrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumber(self: InboundOrderLine) -> str
+ """
+
+Get: OrderNumber(self: InboundOrderLine) -> str
 
 Set: OrderNumber(self: InboundOrderLine)=value
 """
 
  QuantityOrdered=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityOrdered(self: InboundOrderLine) -> Decimal
+ """
+
+Get: QuantityOrdered(self: InboundOrderLine) -> Decimal
 
 Set: QuantityOrdered(self: InboundOrderLine)=value
 """
 
  QuantityReceived=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityReceived(self: InboundOrderLine) -> Decimal
+ """
+
+Get: QuantityReceived(self: InboundOrderLine) -> Decimal
 
 Set: QuantityReceived(self: InboundOrderLine)=value
 """
 
  QuantityToReceive=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityToReceive(self: InboundOrderLine) -> Decimal
+ """
+
+Get: QuantityToReceive(self: InboundOrderLine) -> Decimal
 
 Set: QuantityToReceive(self: InboundOrderLine)=value
 """
 
  UnitCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UnitCode(self: InboundOrderLine) -> str
+ """
+
+Get: UnitCode(self: InboundOrderLine) -> str
 
 Set: UnitCode(self: InboundOrderLine)=value
 """
 
 
 
-class InboundOrderLines:
+class InboundOrderLines(FindableList):
  """ InboundOrderLines() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InboundOrderLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHashCode(self):
   """ GetHashCode(self: InboundOrderLines) -> int """
   pass
@@ -508,12 +700,16 @@ class InboundOrderLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: InboundOrderLines) -> bool
+ """
+
+Get: IsDisposable(self: InboundOrderLines) -> bool
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: InboundOrderLines) -> bool
+ """
+
+Get: PreserveState(self: InboundOrderLines) -> bool
 
 """
 
@@ -522,8 +718,13 @@ class InboundOrderLines:
  ValueMember='Id'
 
 
-class InboundOrders:
+class InboundOrders(FindableList):
  """ InboundOrders() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InboundOrders()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(list):
   """ FromIEnumerable(list: IEnumerable[InboundOrder]) -> InboundOrders """
@@ -549,12 +750,16 @@ class InboundOrders:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  DisplayMember=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DisplayMember(self: InboundOrders) -> str
+ """
+
+Get: DisplayMember(self: InboundOrders) -> str
 
 """
 
  ValueMember=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ValueMember(self: InboundOrders) -> str
+ """
+
+Get: ValueMember(self: InboundOrders) -> str
 
 """
 
@@ -562,6 +767,11 @@ class InboundOrders:
 
 class InboundOrderTypeEnum:
  """ enum InboundOrderTypeEnum,values: AdhocPurchase (2),AdhocRma (3),AdhocRmaTouch (4),PreReceipt (5),Purchase (0),Rma (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InboundOrderTypeEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -594,8 +804,17 @@ class InboundOrderTypeEnum:
  value__=None
 
 
-class InboundReceiveLine:
- """ InboundReceiveLine() """
+class InboundReceiveLine(object):
+ """
+ Contains the orderlines of the same item of inbound orders.
+ 
+ InboundReceiveLine()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InboundReceiveLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: InboundReceiveLine) -> object """
   pass
@@ -616,9 +835,13 @@ class InboundReceiveLine:
  def Receive(self,*__args):
   """
   Receive(self: InboundReceiveLine,orderNumber: str,quantity: Decimal) -> bool
+   Returns: false if not all picked items have been added to the PurchaseOrderLines.
   Receive(self: InboundReceiveLine,orderId: int,quantity: Decimal) -> bool
+   Returns: false if not all picked items have been added to the PurchaseOrderLines.
   Receive(self: InboundReceiveLine,orderNumber: str,itemId: ItemIdentification) -> bool
-  Receive(self: InboundReceiveLine,orderId: int,itemId: ItemIdentification) -> bool
+   Returns: false if not all picked items have been added to the PurchaseOrderLines.
+  Receive(self: InboundReceiveLine,orderId: int,itemId: ItemIdentification) -> bool
+   Returns: false if not all picked items have been added to the PurchaseOrderLines.
   """
   pass
  def ValidateOrderIdWithOrderLine(self,*args):
@@ -662,7 +885,7 @@ Set: BarcodePresent(self: InboundReceiveLine)=value
 """
 
  Instructions=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Instructions(self: InboundReceiveLine) -> Array[str]
+ """Get: Instructions(self: InboundReceiveLine) -> IEnumerable[str]
 
 """
 
@@ -709,17 +932,23 @@ Set: ItemIdRegistration(self: InboundReceiveLine)=value
 """
 
  QuantityOrdered=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityOrdered(self: InboundReceiveLine) -> Decimal
+ """Cumulative quantity of all the Purchaseorderlines in this object
+
+Get: QuantityOrdered(self: InboundReceiveLine) -> Decimal
 
 """
 
  QuantityReceived=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityReceived(self: InboundReceiveLine) -> Decimal
+ """Cumulative delivered quantity of all the Purchaseorderlines in this object
+
+Get: QuantityReceived(self: InboundReceiveLine) -> Decimal
 
 """
 
  QuantityToReceive=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityToReceive(self: InboundReceiveLine) -> Decimal
+ """
+
+Get: QuantityToReceive(self: InboundReceiveLine) -> Decimal
 
 """
 
@@ -737,11 +966,16 @@ Set: UnitCode(self: InboundReceiveLine)=value
 
 
 
-class InboundReceiveLines:
+class InboundReceiveLines(FindableList):
  """
  InboundReceiveLines(collection: IEnumerable[InboundReceiveLine])
  InboundReceiveLines()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InboundReceiveLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddLinesFrom(self,orderLines):
   """ AddLinesFrom(self: InboundReceiveLines,orderLines: InboundOrderLines) """
   pass
@@ -768,10 +1002,18 @@ class InboundReceiveLines:
   """ GetKey(self: InboundReceiveLines) -> int """
   pass
  def GetOrderLines(self):
-  """ GetOrderLines(self: InboundReceiveLines) -> InboundOrderLines """
+  """
+  GetOrderLines(self: InboundReceiveLines) -> InboundOrderLines
+  
+   Returns all orderlines,used for processing.
+  """
   pass
  def GetOrderLinesByOrderId(self,orderId):
-  """ GetOrderLinesByOrderId(self: InboundReceiveLines,orderId: int) -> InboundOrderLines """
+  """
+  GetOrderLinesByOrderId(self: InboundReceiveLines,orderId: int) -> InboundOrderLines
+  
+   Returns the lines of the given order,used for processing.
+  """
   pass
  def GetQuantityReceived(self,predicate):
   """ GetQuantityReceived(self: InboundReceiveLines,predicate: Predicate[InboundReceiveLine]) -> Decimal """
@@ -789,10 +1031,18 @@ class InboundReceiveLines:
   """ GetQuantityToReceiveOfItem(self: InboundReceiveLines,receiveLineId: str) -> Decimal """
   pass
  def GetReceivedOrderLines(self):
-  """ GetReceivedOrderLines(self: InboundReceiveLines) -> InboundOrderLines """
+  """
+  GetReceivedOrderLines(self: InboundReceiveLines) -> InboundOrderLines
+  
+   Returns all received orderlines,used for processing.
+  """
   pass
  def GetReceivedOrderLinesByOrderId(self,orderId):
-  """ GetReceivedOrderLinesByOrderId(self: InboundReceiveLines,orderId: int) -> InboundOrderLines """
+  """
+  GetReceivedOrderLinesByOrderId(self: InboundReceiveLines,orderId: int) -> InboundOrderLines
+  
+   Returns the received lines of the given order,used for processing.
+  """
   pass
  def IndexOf(self,item,index=None,count=None):
   """ IndexOf(self: InboundReceiveLines,lineId: str) -> int """
@@ -834,72 +1084,98 @@ class InboundReceiveLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  CustomerNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerNumber(self: InboundReceiveLines) -> str
+ """
+
+Get: CustomerNumber(self: InboundReceiveLines) -> str
 
 Set: CustomerNumber(self: InboundReceiveLines)=value
 """
 
  GroupGuid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupGuid(self: InboundReceiveLines) -> Guid
+ """
+
+Get: GroupGuid(self: InboundReceiveLines) -> Guid
 
 Set: GroupGuid(self: InboundReceiveLines)=value
 """
 
  HasLicensePlates=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HasLicensePlates(self: InboundReceiveLines) -> bool
+ """
+
+Get: HasLicensePlates(self: InboundReceiveLines) -> bool
 
 """
 
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: InboundReceiveLines) -> bool
+ """
+
+Get: IsDisposable(self: InboundReceiveLines) -> bool
 
 """
 
  LicensePlateItems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LicensePlateItems(self: InboundReceiveLines) -> LicensePlateItems
+ """
+
+Get: LicensePlateItems(self: InboundReceiveLines) -> LicensePlateItems
 
 """
 
  LicensePlates=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LicensePlates(self: InboundReceiveLines) -> LicensePlates
+ """
+
+Get: LicensePlates(self: InboundReceiveLines) -> LicensePlates
 
 """
 
  Notes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Notes(self: InboundReceiveLines) -> str
+ """
+
+Get: Notes(self: InboundReceiveLines) -> str
 
 Set: Notes(self: InboundReceiveLines)=value
 """
 
  OrderIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderIds(self: InboundReceiveLines) -> Dictionary[int,str]
+ """key is the orderID,value is orderNumber
+
+Get: OrderIds(self: InboundReceiveLines) -> Dictionary[int,str]
 
 """
 
  OrderNumberList=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumberList(self: InboundReceiveLines) -> str
+ """
+
+Get: OrderNumberList(self: InboundReceiveLines) -> str
 
 """
 
  OrderType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderType(self: InboundReceiveLines) -> InboundOrderTypeEnum
+ """
+
+Get: OrderType(self: InboundReceiveLines) -> InboundOrderTypeEnum
 
 Set: OrderType(self: InboundReceiveLines)=value
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: InboundReceiveLines) -> bool
+ """
+
+Get: PreserveState(self: InboundReceiveLines) -> bool
 
 """
 
  ProcessState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ProcessState(self: InboundReceiveLines) -> ProcessReceiveLinesStepsEnum
+ """
+
+Get: ProcessState(self: InboundReceiveLines) -> ProcessReceiveLinesStepsEnum
 
 Set: ProcessState(self: InboundReceiveLines)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: InboundReceiveLines) -> str
+ """
+
+Get: WarehouseCode(self: InboundReceiveLines) -> str
 
 Set: WarehouseCode(self: InboundReceiveLines)=value
 """
@@ -908,8 +1184,13 @@ Set: WarehouseCode(self: InboundReceiveLines)=value
  ValueMember='Id'
 
 
-class PrepareAdhocRmaReceiveLinesArgs:
+class PrepareAdhocRmaReceiveLinesArgs(object):
  """ PrepareAdhocRmaReceiveLinesArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrepareAdhocRmaReceiveLinesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHashCode(self):
   """ GetHashCode(self: PrepareAdhocRmaReceiveLinesArgs) -> int """
   pass
@@ -917,46 +1198,65 @@ class PrepareAdhocRmaReceiveLinesArgs:
   """ ToPrepareInboundReceiveLinesArgs(self: PrepareAdhocRmaReceiveLinesArgs) -> PrepareInboundReceiveLinesArgs """
   pass
  Customer=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Customer(self: PrepareAdhocRmaReceiveLinesArgs) -> Customer
+ """
+
+Get: Customer(self: PrepareAdhocRmaReceiveLinesArgs) -> Customer
 
 Set: Customer(self: PrepareAdhocRmaReceiveLinesArgs)=value
 """
 
  HistoryOutboundOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HistoryOutboundOrders(self: PrepareAdhocRmaReceiveLinesArgs) -> HistoryOutboundOrders
+ """
+
+Get: HistoryOutboundOrders(self: PrepareAdhocRmaReceiveLinesArgs) -> HistoryOutboundOrders
 
 Set: HistoryOutboundOrders(self: PrepareAdhocRmaReceiveLinesArgs)=value
 """
 
  OrderType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderType(self: PrepareAdhocRmaReceiveLinesArgs) -> InboundOrderTypeEnum
+ """
+
+Get: OrderType(self: PrepareAdhocRmaReceiveLinesArgs) -> InboundOrderTypeEnum
 
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: PrepareAdhocRmaReceiveLinesArgs) -> str
+ """
+
+Get: WarehouseCode(self: PrepareAdhocRmaReceiveLinesArgs) -> str
 
 Set: WarehouseCode(self: PrepareAdhocRmaReceiveLinesArgs)=value
 """
 
 
 
-class PrepareInboundReceiveLinesArgs:
+class PrepareInboundReceiveLinesArgs(object):
  """ PrepareInboundReceiveLinesArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrepareInboundReceiveLinesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CustomerNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerNumber(self: PrepareInboundReceiveLinesArgs) -> str
+ """
+
+Get: CustomerNumber(self: PrepareInboundReceiveLinesArgs) -> str
 
 Set: CustomerNumber(self: PrepareInboundReceiveLinesArgs)=value
 """
 
  OrderType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderType(self: PrepareInboundReceiveLinesArgs) -> InboundOrderTypeEnum
+ """
+
+Get: OrderType(self: PrepareInboundReceiveLinesArgs) -> InboundOrderTypeEnum
 
 Set: OrderType(self: PrepareInboundReceiveLinesArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: PrepareInboundReceiveLinesArgs) -> str
+ """
+
+Get: WarehouseCode(self: PrepareInboundReceiveLinesArgs) -> str
 
 Set: WarehouseCode(self: PrepareInboundReceiveLinesArgs)=value
 """
@@ -965,14 +1265,23 @@ Set: WarehouseCode(self: PrepareInboundReceiveLinesArgs)=value
 
 class PreReceiptArgs:
  """ PreReceiptArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PreReceiptArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  IncludeCompleted=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IncludeCompleted(self: PreReceiptArgs) -> bool
+ """
+
+Get: IncludeCompleted(self: PreReceiptArgs) -> bool
 
 Set: IncludeCompleted(self: PreReceiptArgs)=value
 """
 
  Paging=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Paging(self: PreReceiptArgs) -> PagingParams
+ """
+
+Get: Paging(self: PreReceiptArgs) -> PagingParams
 
 Set: Paging(self: PreReceiptArgs)=value
 """
@@ -985,34 +1294,49 @@ Set: StatusFlags(self: PreReceiptArgs)=value
 
 
 
-class PreReceiptLine:
+class PreReceiptLine(object):
  """ PreReceiptLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PreReceiptLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CurrentVendorItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CurrentVendorItemCode(self: PreReceiptLine) -> str
+ """
+
+Get: CurrentVendorItemCode(self: PreReceiptLine) -> str
 
 Set: CurrentVendorItemCode(self: PreReceiptLine)=value
 """
 
  DateReceipt=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DateReceipt(self: PreReceiptLine) -> DateTime
+ """
+
+Get: DateReceipt(self: PreReceiptLine) -> DateTime
 
 Set: DateReceipt(self: PreReceiptLine)=value
 """
 
  DefaultVendorItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultVendorItemCode(self: PreReceiptLine) -> str
+ """
+
+Get: DefaultVendorItemCode(self: PreReceiptLine) -> str
 
 Set: DefaultVendorItemCode(self: PreReceiptLine)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: PreReceiptLine) -> int
+ """Id of the prereceipt line. Unqiue for every line.
+
+Get: Id(self: PreReceiptLine) -> int
 
 Set: Id(self: PreReceiptLine)=value
 """
 
  IsBatchNumberItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsBatchNumberItem(self: PreReceiptLine) -> bool
+ """
+
+Get: IsBatchNumberItem(self: PreReceiptLine) -> bool
 
 Set: IsBatchNumberItem(self: PreReceiptLine)=value
 """
@@ -1023,31 +1347,41 @@ Set: IsBatchNumberItem(self: PreReceiptLine)=value
 """
 
  IsSerialNumberItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsSerialNumberItem(self: PreReceiptLine) -> bool
+ """
+
+Get: IsSerialNumberItem(self: PreReceiptLine) -> bool
 
 Set: IsSerialNumberItem(self: PreReceiptLine)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: PreReceiptLine) -> str
+ """Product for this line.
+
+Get: ItemCode(self: PreReceiptLine) -> str
 
 Set: ItemCode(self: PreReceiptLine)=value
 """
 
  ItemDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemDescription(self: PreReceiptLine) -> str
+ """
+
+Get: ItemDescription(self: PreReceiptLine) -> str
 
 Set: ItemDescription(self: PreReceiptLine)=value
 """
 
  ItemIdRegistration=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIdRegistration(self: PreReceiptLine) -> ItemIdentificationRegistration
+ """
+
+Get: ItemIdRegistration(self: PreReceiptLine) -> ItemIdentificationRegistration
 
 Set: ItemIdRegistration(self: PreReceiptLine)=value
 """
 
  ItemIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIds(self: PreReceiptLine) -> ItemIdentifications
+ """
+
+Get: ItemIds(self: PreReceiptLine) -> ItemIdentifications
 
 Set: ItemIds(self: PreReceiptLine)=value
 """
@@ -1071,123 +1405,173 @@ Set: LineInstruction(self: PreReceiptLine)=value
 """
 
  PercentageReceived=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PercentageReceived(self: PreReceiptLine) -> int
+ """
+
+Get: PercentageReceived(self: PreReceiptLine) -> int
 
 """
 
  PreReceiptId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreReceiptId(self: PreReceiptLine) -> int
+ """Id that identifies from which Wms.RemotingObjects.Inbound.PreReceipt this line is from.
+
+Get: PreReceiptId(self: PreReceiptLine) -> int
 
 Set: PreReceiptId(self: PreReceiptLine)=value
 """
 
  PurchaseOrderId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PurchaseOrderId(self: PreReceiptLine) -> int
+ """
+
+Get: PurchaseOrderId(self: PreReceiptLine) -> int
 
 Set: PurchaseOrderId(self: PreReceiptLine)=value
 """
 
  PurchaseOrderLineId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PurchaseOrderLineId(self: PreReceiptLine) -> int
+ """
+
+Get: PurchaseOrderLineId(self: PreReceiptLine) -> int
 
 Set: PurchaseOrderLineId(self: PreReceiptLine)=value
 """
 
  PurchaseOrderLineNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PurchaseOrderLineNumber(self: PreReceiptLine) -> int
+ """
+
+Get: PurchaseOrderLineNumber(self: PreReceiptLine) -> int
 
 Set: PurchaseOrderLineNumber(self: PreReceiptLine)=value
 """
 
  PurchaseOrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PurchaseOrderNumber(self: PreReceiptLine) -> str
+ """
+
+Get: PurchaseOrderNumber(self: PreReceiptLine) -> str
 
 Set: PurchaseOrderNumber(self: PreReceiptLine)=value
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: PreReceiptLine) -> Decimal
+ """
+
+Get: Quantity(self: PreReceiptLine) -> Decimal
 
 Set: Quantity(self: PreReceiptLine)=value
 """
 
  QuantityOrdered=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityOrdered(self: PreReceiptLine) -> Decimal
+ """
+
+Get: QuantityOrdered(self: PreReceiptLine) -> Decimal
 
 Set: QuantityOrdered(self: PreReceiptLine)=value
 """
 
  QuantitySupplierPackageSlip=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantitySupplierPackageSlip(self: PreReceiptLine) -> Decimal
+ """
+
+Get: QuantitySupplierPackageSlip(self: PreReceiptLine) -> Decimal
 
 Set: QuantitySupplierPackageSlip(self: PreReceiptLine)=value
 """
 
  QuantityToReceive=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityToReceive(self: PreReceiptLine) -> Decimal
+ """
+
+Get: QuantityToReceive(self: PreReceiptLine) -> Decimal
 
 """
 
  SalesUnitCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SalesUnitCode(self: PreReceiptLine) -> str
+ """
+
+Get: SalesUnitCode(self: PreReceiptLine) -> str
 
 Set: SalesUnitCode(self: PreReceiptLine)=value
 """
 
  SalesUnitFactor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SalesUnitFactor(self: PreReceiptLine) -> Decimal
+ """
+
+Get: SalesUnitFactor(self: PreReceiptLine) -> Decimal
 
 Set: SalesUnitFactor(self: PreReceiptLine)=value
 """
 
  SupplierCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SupplierCode(self: PreReceiptLine) -> str
+ """
+
+Get: SupplierCode(self: PreReceiptLine) -> str
 
 Set: SupplierCode(self: PreReceiptLine)=value
 """
 
  SupplierName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SupplierName(self: PreReceiptLine) -> str
+ """
+
+Get: SupplierName(self: PreReceiptLine) -> str
 
 Set: SupplierName(self: PreReceiptLine)=value
 """
 
  UnitCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UnitCode(self: PreReceiptLine) -> str
+ """
+
+Get: UnitCode(self: PreReceiptLine) -> str
 
 Set: UnitCode(self: PreReceiptLine)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: PreReceiptLine) -> str
+ """
+
+Get: WarehouseCode(self: PreReceiptLine) -> str
 
 Set: WarehouseCode(self: PreReceiptLine)=value
 """
 
 
 
-class PreReceiptLinesArgs:
- """ PreReceiptLinesArgs() """
+class PreReceiptLinesArgs(object):
+ """
+ Mdoel to retreive Wms.RemotingObjects.Inbound.PreReceiptLines
+ 
+ PreReceiptLinesArgs()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PreReceiptLinesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Filter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Filter(self: PreReceiptLinesArgs) -> str
+ """Filters out all receipt lines not containing this filter. in code,description etc
+
+Get: Filter(self: PreReceiptLinesArgs) -> str
 
 Set: Filter(self: PreReceiptLinesArgs)=value
 """
 
  IncludeCompleted=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IncludeCompleted(self: PreReceiptLinesArgs) -> bool
+ """If you want to include already completed prereceipts.
+   (Wms.RemotingObjects.Inbound.PreReceiptLine.QuantitySupplierPackageSlip - Wms.RemotingObjects.Inbound.PreReceiptLine.Quantity > 0)
+
+Get: IncludeCompleted(self: PreReceiptLinesArgs) -> bool
 
 Set: IncludeCompleted(self: PreReceiptLinesArgs)=value
 """
 
  PreReceiptIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreReceiptIds(self: PreReceiptLinesArgs) -> Array[int]
+ """Filters,only returns Lines that are part of one of these PreReceipts.
+
+Get: PreReceiptIds(self: PreReceiptLinesArgs) -> Array[int]
 
 Set: PreReceiptIds(self: PreReceiptLinesArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: PreReceiptLinesArgs) -> str
+ """Filter,only show lines with this warehousecode.
+
+Get: WarehouseCode(self: PreReceiptLinesArgs) -> str
 
 Set: WarehouseCode(self: PreReceiptLinesArgs)=value
 """
@@ -1196,6 +1580,11 @@ Set: WarehouseCode(self: PreReceiptLinesArgs)=value
 
 class PreReceiptReceiveLines:
  """ PreReceiptReceiveLines() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PreReceiptReceiveLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetIdsOfReceivedOrders(self):
   """ GetIdsOfReceivedOrders(self: PreReceiptReceiveLines) -> List[int] """
   pass
@@ -1217,15 +1606,22 @@ class PreReceiptReceiveLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  PreReceiptId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreReceiptId(self: PreReceiptReceiveLines) -> int
+ """
+
+Get: PreReceiptId(self: PreReceiptReceiveLines) -> int
 
 Set: PreReceiptId(self: PreReceiptReceiveLines)=value
 """
 
 
 
-class PreReceipts:
+class PreReceipts(PagedList):
  """ PreReceipts() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PreReceipts()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(list):
   """ FromIEnumerable(list: IEnumerable[PreReceipt]) -> PreReceipts """
@@ -1247,6 +1643,11 @@ class PreReceipts:
 
 class PreReceiptStatus:
  """ enum (flags) PreReceiptStatus,values: Active (2),Archived (16),InProcess (4),PartiallyReceived (8),Pending (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PreReceiptStatus()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -1278,8 +1679,13 @@ class PreReceiptStatus:
  value__=None
 
 
-class PreReceiptSummaries:
+class PreReceiptSummaries(List):
  """ PreReceiptSummaries() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PreReceiptSummaries()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -1295,7 +1701,9 @@ class PreReceiptSummaries:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  UniquePreReceiptsAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UniquePreReceiptsAsString(self: PreReceiptSummaries) -> str
+ """
+
+Get: UniquePreReceiptsAsString(self: PreReceiptSummaries) -> str
 
 """
 
@@ -1303,75 +1711,110 @@ class PreReceiptSummaries:
  Delimiter=None
 
 
-class PreReceiptSummary:
+class PreReceiptSummary(object):
  """ PreReceiptSummary() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PreReceiptSummary()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: PreReceiptSummary) -> int
+ """
+
+Get: Id(self: PreReceiptSummary) -> int
 
 Set: Id(self: PreReceiptSummary)=value
 """
 
  IdAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IdAsString(self: PreReceiptSummary) -> str
+ """
+
+Get: IdAsString(self: PreReceiptSummary) -> str
 
 """
 
  OrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumber(self: PreReceiptSummary) -> str
+ """
+
+Get: OrderNumber(self: PreReceiptSummary) -> str
 
 Set: OrderNumber(self: PreReceiptSummary)=value
 """
 
 
 
-class ProcessInboundReceiveLinesArgs:
+class ProcessInboundReceiveLinesArgs(object):
  """ ProcessInboundReceiveLinesArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessInboundReceiveLinesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CacheKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CacheKey(self: ProcessInboundReceiveLinesArgs) -> CacheKey
+ """Cachekey of the cached ReceiveLines
+
+Get: CacheKey(self: ProcessInboundReceiveLinesArgs) -> CacheKey
 
 Set: CacheKey(self: ProcessInboundReceiveLinesArgs)=value
 """
 
  CacheKeyOfResults=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CacheKeyOfResults(self: ProcessInboundReceiveLinesArgs) -> CacheKey
+ """
+
+Get: CacheKeyOfResults(self: ProcessInboundReceiveLinesArgs) -> CacheKey
 
 Set: CacheKeyOfResults(self: ProcessInboundReceiveLinesArgs)=value
 """
 
  DefaultReceiptLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultReceiptLocation(self: ProcessInboundReceiveLinesArgs) -> str
+ """
+
+Get: DefaultReceiptLocation(self: ProcessInboundReceiveLinesArgs) -> str
 
 Set: DefaultReceiptLocation(self: ProcessInboundReceiveLinesArgs)=value
 """
 
  OrderDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderDescription(self: ProcessInboundReceiveLinesArgs) -> str
+ """Order description used for FreeReceipt inboundorder creation.
+
+Get: OrderDescription(self: ProcessInboundReceiveLinesArgs) -> str
 
 Set: OrderDescription(self: ProcessInboundReceiveLinesArgs)=value
 """
 
  PreReceiptId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreReceiptId(self: ProcessInboundReceiveLinesArgs) -> int
+ """PreReceipt id is only available for PreReceipts. It's needed for lookup after processing
+
+Get: PreReceiptId(self: ProcessInboundReceiveLinesArgs) -> int
 
 Set: PreReceiptId(self: ProcessInboundReceiveLinesArgs)=value
 """
 
  PrintLines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrintLines(self: ProcessInboundReceiveLinesArgs) -> PrintLinesBase
+ """The print lines of the received items,these can be used for labelprinting.
+
+Get: PrintLines(self: ProcessInboundReceiveLinesArgs) -> PrintLinesBase
 
 Set: PrintLines(self: ProcessInboundReceiveLinesArgs)=value
 """
 
  YourReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: YourReference(self: ProcessInboundReceiveLinesArgs) -> str
+ """The user's reference for this receipt.
+
+Get: YourReference(self: ProcessInboundReceiveLinesArgs) -> str
 
 Set: YourReference(self: ProcessInboundReceiveLinesArgs)=value
 """
 
 
 
-class ProcessInboundReceiveLinesResult:
+class ProcessInboundReceiveLinesResult(CacheObject):
  """ ProcessInboundReceiveLinesResult() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessInboundReceiveLinesResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetKey(self):
   """ GetKey(self: ProcessInboundReceiveLinesResult) -> str """
   pass
@@ -1381,17 +1824,23 @@ class ProcessInboundReceiveLinesResult:
  def __reduce_ex__(self,*args):
   pass
  Lifetime=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Lifetime(self: ProcessInboundReceiveLinesResult) -> CacheLifeTimes
+ """
+
+Get: Lifetime(self: ProcessInboundReceiveLinesResult) -> CacheLifeTimes
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: ProcessInboundReceiveLinesResult) -> bool
+ """Make sure state is preserved for this object
+
+Get: PreserveState(self: ProcessInboundReceiveLinesResult) -> bool
 
 """
 
  Results=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Results(self: ProcessInboundReceiveLinesResult) -> Dictionary[InboundOrder,ErpProcessPurchaseOrderLinesResult]
+ """
+
+Get: Results(self: ProcessInboundReceiveLinesResult) -> Dictionary[InboundOrder,ErpProcessPurchaseOrderLinesResult]
 
 Set: Results(self: ProcessInboundReceiveLinesResult)=value
 """
@@ -1400,6 +1849,11 @@ Set: Results(self: ProcessInboundReceiveLinesResult)=value
 
 class ProcessReceiveLinesStepsEnum:
  """ enum ProcessReceiveLinesStepsEnum,values: CreatePrintLines (2),Done (7),LogReceiveLines (1),PrintErpReceipt (5),PrintReceipt (6),ProcessReceiveLines (0),UpdateLicensePlates (4),UpdateStock (3) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessReceiveLinesStepsEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -1436,6 +1890,11 @@ class ProcessReceiveLinesStepsEnum:
 
 class ReceiptTypeEnum:
  """ enum ReceiptTypeEnum,values: PreReceipt (0),Purchase (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReceiptTypeEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -1464,103 +1923,145 @@ class ReceiptTypeEnum:
  value__=None
 
 
-class ReceiveArgs:
+class ReceiveArgs(object):
  """ ReceiveArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReceiveArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CacheKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CacheKey(self: ReceiveArgs) -> CacheKey
+ """
+
+Get: CacheKey(self: ReceiveArgs) -> CacheKey
 
 Set: CacheKey(self: ReceiveArgs)=value
 """
 
  EndDate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: EndDate(self: ReceiveArgs) -> Nullable[DateTime]
+ """
+
+Get: EndDate(self: ReceiveArgs) -> Nullable[DateTime]
 
 Set: EndDate(self: ReceiveArgs)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: ReceiveArgs) -> str
+ """
+
+Get: ItemCode(self: ReceiveArgs) -> str
 
 Set: ItemCode(self: ReceiveArgs)=value
 """
 
  ItemIdNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIdNumber(self: ReceiveArgs) -> str
+ """
+
+Get: ItemIdNumber(self: ReceiveArgs) -> str
 
 Set: ItemIdNumber(self: ReceiveArgs)=value
 """
 
  LabelArgs=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LabelArgs(self: ReceiveArgs) -> PrintLabelArgs
+ """
+
+Get: LabelArgs(self: ReceiveArgs) -> PrintLabelArgs
 
 Set: LabelArgs(self: ReceiveArgs)=value
 """
 
  OrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumber(self: ReceiveArgs) -> str
+ """
+
+Get: OrderNumber(self: ReceiveArgs) -> str
 
 Set: OrderNumber(self: ReceiveArgs)=value
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: ReceiveArgs) -> Decimal
+ """
+
+Get: Quantity(self: ReceiveArgs) -> Decimal
 
 Set: Quantity(self: ReceiveArgs)=value
 """
 
  ReceiveLineId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReceiveLineId(self: ReceiveArgs) -> str
+ """
+
+Get: ReceiveLineId(self: ReceiveArgs) -> str
 
 Set: ReceiveLineId(self: ReceiveArgs)=value
 """
 
  UnitCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UnitCode(self: ReceiveArgs) -> str
+ """
+
+Get: UnitCode(self: ReceiveArgs) -> str
 
 Set: UnitCode(self: ReceiveArgs)=value
 """
 
 
 
-class ReceiveItemIdMultiArgs:
+class ReceiveItemIdMultiArgs(object):
  """ ReceiveItemIdMultiArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReceiveItemIdMultiArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CacheKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CacheKey(self: ReceiveItemIdMultiArgs) -> CacheKey
+ """
+
+Get: CacheKey(self: ReceiveItemIdMultiArgs) -> CacheKey
 
 Set: CacheKey(self: ReceiveItemIdMultiArgs)=value
 """
 
  InboundReceiveLineUpdatet=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: InboundReceiveLineUpdatet(self: ReceiveItemIdMultiArgs) -> InboundReceiveLine
+ """
+
+Get: InboundReceiveLineUpdatet(self: ReceiveItemIdMultiArgs) -> InboundReceiveLine
 
 Set: InboundReceiveLineUpdatet(self: ReceiveItemIdMultiArgs)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: ReceiveItemIdMultiArgs) -> str
+ """
+
+Get: ItemCode(self: ReceiveItemIdMultiArgs) -> str
 
 Set: ItemCode(self: ReceiveItemIdMultiArgs)=value
 """
 
  ItemIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIds(self: ReceiveItemIdMultiArgs) -> ItemIdentifications
+ """
+
+Get: ItemIds(self: ReceiveItemIdMultiArgs) -> ItemIdentifications
 
 Set: ItemIds(self: ReceiveItemIdMultiArgs)=value
 """
 
  OrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumber(self: ReceiveItemIdMultiArgs) -> str
+ """
+
+Get: OrderNumber(self: ReceiveItemIdMultiArgs) -> str
 
 Set: OrderNumber(self: ReceiveItemIdMultiArgs)=value
 """
 
  ReceiveArgs=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReceiveArgs(self: ReceiveItemIdMultiArgs) -> ReceiveArgs
+ """
+
+Get: ReceiveArgs(self: ReceiveItemIdMultiArgs) -> ReceiveArgs
 
 """
 
  ReceiveLineId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReceiveLineId(self: ReceiveItemIdMultiArgs) -> str
+ """
+
+Get: ReceiveLineId(self: ReceiveItemIdMultiArgs) -> str
 
 Set: ReceiveLineId(self: ReceiveItemIdMultiArgs)=value
 """
@@ -1569,90 +2070,134 @@ Set: ReceiveLineId(self: ReceiveItemIdMultiArgs)=value
 
 class ReceiveItemIdRangeArgs:
  """ ReceiveItemIdRangeArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReceiveItemIdRangeArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CacheKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CacheKey(self: ReceiveItemIdRangeArgs) -> CacheKey
+ """
+
+Get: CacheKey(self: ReceiveItemIdRangeArgs) -> CacheKey
 
 Set: CacheKey(self: ReceiveItemIdRangeArgs)=value
 """
 
  OrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumber(self: ReceiveItemIdRangeArgs) -> str
+ """
+
+Get: OrderNumber(self: ReceiveItemIdRangeArgs) -> str
 
 Set: OrderNumber(self: ReceiveItemIdRangeArgs)=value
 """
 
  ReceiveArgs=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReceiveArgs(self: ReceiveItemIdRangeArgs) -> ReceiveArgs
+ """
+
+Get: ReceiveArgs(self: ReceiveItemIdRangeArgs) -> ReceiveArgs
 
 Set: ReceiveArgs(self: ReceiveItemIdRangeArgs)=value
 """
 
  ReceiveLineId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReceiveLineId(self: ReceiveItemIdRangeArgs) -> str
+ """
+
+Get: ReceiveLineId(self: ReceiveItemIdRangeArgs) -> str
 
 Set: ReceiveLineId(self: ReceiveItemIdRangeArgs)=value
 """
 
 
 
-class ReceiveLinesForPreReceiptArgs:
+class ReceiveLinesForPreReceiptArgs(object):
  """ ReceiveLinesForPreReceiptArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReceiveLinesForPreReceiptArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  PreReceiptId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreReceiptId(self: ReceiveLinesForPreReceiptArgs) -> int
+ """
+
+Get: PreReceiptId(self: ReceiveLinesForPreReceiptArgs) -> int
 
 Set: PreReceiptId(self: ReceiveLinesForPreReceiptArgs)=value
 """
 
  Result=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Result(self: ReceiveLinesForPreReceiptArgs) -> InboundReceiveLines
+ """
+
+Get: Result(self: ReceiveLinesForPreReceiptArgs) -> InboundReceiveLines
 
 Set: Result(self: ReceiveLinesForPreReceiptArgs)=value
 """
 
  VendorNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorNumber(self: ReceiveLinesForPreReceiptArgs) -> str
+ """
+
+Get: VendorNumber(self: ReceiveLinesForPreReceiptArgs) -> str
 
 Set: VendorNumber(self: ReceiveLinesForPreReceiptArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: ReceiveLinesForPreReceiptArgs) -> str
+ """
+
+Get: WarehouseCode(self: ReceiveLinesForPreReceiptArgs) -> str
 
 Set: WarehouseCode(self: ReceiveLinesForPreReceiptArgs)=value
 """
 
 
 
-class ReceiveWithLicensePlateArgs:
+class ReceiveWithLicensePlateArgs(ReceiveArgs):
  """ ReceiveWithLicensePlateArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReceiveWithLicensePlateArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  AddNewLicensePlate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AddNewLicensePlate(self: ReceiveWithLicensePlateArgs) -> bool
+ """
+
+Get: AddNewLicensePlate(self: ReceiveWithLicensePlateArgs) -> bool
 
 Set: AddNewLicensePlate(self: ReceiveWithLicensePlateArgs)=value
 """
 
  LicensePlateId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LicensePlateId(self: ReceiveWithLicensePlateArgs) -> int
+ """
+
+Get: LicensePlateId(self: ReceiveWithLicensePlateArgs) -> int
 
 Set: LicensePlateId(self: ReceiveWithLicensePlateArgs)=value
 """
 
  ModifiedLicensePlateItems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ModifiedLicensePlateItems(self: ReceiveWithLicensePlateArgs) -> LicensePlateItems
+ """
+
+Get: ModifiedLicensePlateItems(self: ReceiveWithLicensePlateArgs) -> LicensePlateItems
 
 Set: ModifiedLicensePlateItems(self: ReceiveWithLicensePlateArgs)=value
 """
 
  NewLicensePlates=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NewLicensePlates(self: ReceiveWithLicensePlateArgs) -> LicensePlates
+ """
+
+Get: NewLicensePlates(self: ReceiveWithLicensePlateArgs) -> LicensePlates
 
 Set: NewLicensePlates(self: ReceiveWithLicensePlateArgs)=value
 """
 
 
 
-class UpdatePreReceiptStatusArgs:
+class UpdatePreReceiptStatusArgs(object):
  """ UpdatePreReceiptStatusArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UpdatePreReceiptStatusArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  NewStatus=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: NewStatus(self: UpdatePreReceiptStatusArgs) -> PreReceiptStatus
 

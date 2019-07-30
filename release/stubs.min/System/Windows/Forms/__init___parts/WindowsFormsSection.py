@@ -1,9 +1,13 @@
-class WindowsFormsSection:
+class WindowsFormsSection(ConfigurationSection):
  """
  Defines a new System.Configuration.ConfigurationSection for parsing application settings. This class cannot be inherited.
  
  WindowsFormsSection()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return WindowsFormsSection()
+
  ElementProperty=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 

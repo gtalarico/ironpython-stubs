@@ -1,12 +1,15 @@
-class Buffer:
+class Buffer(object):
  """ Manipulates arrays of primitive types. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Buffer()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def BlockCopy(src,srcOffset,dst,dstOffset,count):
   """
   BlockCopy(src: Array,srcOffset: int,dst: Array,dstOffset: int,count: int)
-   Copies a specified number of bytes from a source array starting at a particular offset to 
-    a destination array starting at a particular offset.
-  
+   Copies a specified number of bytes from a source array starting at a particular offset to a destination array starting at a particular offset.
   
    src: The source buffer.
    srcOffset: The zero-based byte offset into src.

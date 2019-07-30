@@ -1,15 +1,16 @@
-class Application:
+class Application(object):
  """ Provides static methods and properties to manage an application,such as methods to start and stop an application,to process Windows messages,and properties to get information about an application. This class cannot be inherited. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Application()
+
  @staticmethod
  def AddMessageFilter(value):
   """
   AddMessageFilter(value: IMessageFilter)
-   Adds a message filter to monitor Windows messages as they are routed to their 
-    destinations.
+   Adds a message filter to monitor Windows messages as they are routed to their destinations.
   
-  
-   value: The implementation of the System.Windows.Forms.IMessageFilter interface you want to 
-    install.
+   value: The implementation of the System.Windows.Forms.IMessageFilter interface you want to install.
   """
   pass
  @staticmethod
@@ -30,13 +31,9 @@ class Application:
  def Exit(e=None):
   """
   Exit()
-   Informs all message pumps that they must terminate,and then closes all application 
-    windows after the messages have been processed.
-  
+   Informs all message pumps that they must terminate,and then closes all application windows after the messages have been processed.
   Exit(e: CancelEventArgs)
-   Informs all message pumps that they must terminate,and then closes all application 
-    windows after the messages have been processed.
-  
+   Informs all message pumps that they must terminate,and then closes all application windows after the messages have been processed.
   
    e: Returns whether any System.Windows.Forms.Form within the application cancelled the exit.
   """
@@ -96,8 +93,7 @@ class Application:
   RemoveMessageFilter(value: IMessageFilter)
    Removes a message filter from the message pump of the application.
   
-   value: The implementation of the System.Windows.Forms.IMessageFilter to remove from the 
-    application.
+   value: The implementation of the System.Windows.Forms.IMessageFilter to remove from the application.
   """
   pass
  @staticmethod
@@ -113,15 +109,11 @@ class Application:
   Run()
    Begins running a standard application message loop on the current thread,without a form.
   Run(mainForm: Form)
-   Begins running a standard application message loop on the current thread,and makes the 
-    specified form visible.
-  
+   Begins running a standard application message loop on the current thread,and makes the specified form visible.
   
    mainForm: A System.Windows.Forms.Form that represents the form to make visible.
   Run(context: ApplicationContext)
-   Begins running a standard application message loop on the current thread,with an 
-    System.Windows.Forms.ApplicationContext.
-  
+   Begins running a standard application message loop on the current thread,with an System.Windows.Forms.ApplicationContext.
   
    context: An System.Windows.Forms.ApplicationContext in which the application is run.
   """
@@ -130,14 +122,9 @@ class Application:
  def SetCompatibleTextRenderingDefault(defaultValue):
   """
   SetCompatibleTextRenderingDefault(defaultValue: bool)
-   Sets the application-wide default for the UseCompatibleTextRendering property defined on 
-    certain controls.
+   Sets the application-wide default for the UseCompatibleTextRendering property defined on certain controls.
   
-  
-   defaultValue: The default value to use for new controls. If true,new controls that support 
-    UseCompatibleTextRendering use the GDI+ based System.Drawing.Graphics class for text 
-    rendering; if false,new controls use the GDI�based System.Windows.Forms.TextRenderer 
-    class.
+   defaultValue: The default value to use for new controls. If true,new controls that support UseCompatibleTextRendering use the GDI+ based System.Drawing.Graphics class for text rendering; if false,new controls use the GDI�based System.Windows.Forms.TextRenderer class.
   """
   pass
  @staticmethod
@@ -147,15 +134,9 @@ class Application:
   
    Suspends or hibernates the system,or requests that the system be suspended or hibernated.
   
-   state: A System.Windows.Forms.PowerState indicating the power activity mode to which to 
-    transition.
-  
-   force: true to force the suspended mode immediately; false to cause Windows to send a suspend 
-    request to every application.
-  
-   disableWakeEvent: true to disable restoring the system's power status to active on a wake event,false to 
-    enable restoring the system's power status to active on a wake event.
-  
+   state: A System.Windows.Forms.PowerState indicating the power activity mode to which to transition.
+   force: true to force the suspended mode immediately; false to cause Windows to send a suspend request to every application.
+   disableWakeEvent: true to disable restoring the system's power status to active on a wake event,false to enable restoring the system's power status to active on a wake event.
    Returns: true if the system is being suspended,otherwise,false.
   """
   pass
@@ -165,17 +146,11 @@ class Application:
   SetUnhandledExceptionMode(mode: UnhandledExceptionMode)
    Instructs the application how to respond to unhandled exceptions.
   
-   mode: An System.Windows.Forms.UnhandledExceptionMode value describing how the application 
-    should behave if an exception is thrown without being caught.
-  
+   mode: An System.Windows.Forms.UnhandledExceptionMode value describing how the application should behave if an exception is thrown without being caught.
   SetUnhandledExceptionMode(mode: UnhandledExceptionMode,threadScope: bool)
-   Instructs the application how to respond to unhandled exceptions,optionally applying 
-    thread-specific behavior.
+   Instructs the application how to respond to unhandled exceptions,optionally applying thread-specific behavior.
   
-  
-   mode: An System.Windows.Forms.UnhandledExceptionMode value describing how the application 
-    should behave if an exception is thrown without being caught.
-  
+   mode: An System.Windows.Forms.UnhandledExceptionMode value describing how the application should behave if an exception is thrown without being caught.
    threadScope: true to set the thread exception mode; otherwise,false.
   """
   pass
@@ -183,14 +158,13 @@ class Application:
  def UnregisterMessageLoop():
   """
   UnregisterMessageLoop()
-   Unregisters the message loop callback made with 
-    System.Windows.Forms.Application.RegisterMessageLoop(System.Windows.Forms.Application.Mess
-    ageLoopCallback).
+   Unregisters the message loop callback made with System.Windows.Forms.Application.RegisterMessageLoop(System.Windows.Forms.Application.MessageLoopCallback).
   """
   pass
  AllowQuit=False
  ApplicationExit=None
  CommonAppDataPath='C:\\ProgramData\\IronPython Team\\IronPython\\IronPython 2.7.9 final 0'
+ CommonAppDataRegistry=None
  CompanyName='IronPython Team'
  CurrentCulture=None
  CurrentInputLanguage=None

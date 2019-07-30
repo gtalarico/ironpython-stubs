@@ -1,9 +1,13 @@
-class MouseEventArgs:
+class MouseEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.Control.MouseUp,System.Windows.Forms.Control.MouseDown,and System.Windows.Forms.Control.MouseMove events.
  
  MouseEventArgs(button: MouseButtons,clicks: int,x: int,y: int,delta: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return MouseEventArgs()
+
  @staticmethod
  def __new__(self,button,clicks,x,y,delta):
   """ __new__(cls: type,button: MouseButtons,clicks: int,x: int,y: int,delta: int) """

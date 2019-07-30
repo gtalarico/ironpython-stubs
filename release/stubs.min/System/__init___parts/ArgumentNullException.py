@@ -1,4 +1,4 @@
-class ArgumentNullException:
+class ArgumentNullException(ArgumentException):
  """
  The exception that is thrown when a null reference (Nothing in Visual Basic) is passed to a method that does not accept it as a valid argument.
  
@@ -7,6 +7,11 @@ class ArgumentNullException:
  ArgumentNullException(message: str,innerException: Exception)
  ArgumentNullException(paramName: str,message: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ArgumentNullException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

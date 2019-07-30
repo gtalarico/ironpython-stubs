@@ -4,6 +4,11 @@ class Base64FormattingOptions:
  
  enum (flags) Base64FormattingOptions,values: InsertLineBreaks (1),None (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Base64FormattingOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

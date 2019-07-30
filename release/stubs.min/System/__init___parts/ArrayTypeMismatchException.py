@@ -1,4 +1,4 @@
-class ArrayTypeMismatchException:
+class ArrayTypeMismatchException(SystemException):
  """
  The exception that is thrown when an attempt is made to store an element of the wrong type within an array.
  
@@ -6,6 +6,11 @@ class ArrayTypeMismatchException:
  ArrayTypeMismatchException(message: str)
  ArrayTypeMismatchException(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ArrayTypeMismatchException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

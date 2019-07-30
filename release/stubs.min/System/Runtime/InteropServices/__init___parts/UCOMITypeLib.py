@@ -1,5 +1,10 @@
 class UCOMITypeLib:
  """ Use System.Runtime.InteropServices.ComTypes.ITypeLib instead. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UCOMITypeLib()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def FindName(self,szNameBuf,lHashVal,ppTInfo,rgMemId,pcFound):
   """
   FindName(self: UCOMITypeLib,szNameBuf: str,lHashVal: int,pcFound: Int16) -> (Array[UCOMITypeInfo],Array[int],Int16)
@@ -7,22 +12,16 @@ class UCOMITypeLib:
    Finds occurrences of a type description in a type library.
   
    szNameBuf: The name to search for.
-   lHashVal: A hash value to speed up the search,computed by the LHashValOfNameSys function. If 
-    lHashVal is 0,a value is computed.
-  
-   pcFound: On entry,indicates how many instances to look for. For example,pcFound=1 can be 
-    called to find the first occurrence. The search stops when one instance is found.On exit,
-    indicates the number of instances that were found. If the in and out values of pcFound 
-    are identical,there might be more type descriptions that contain the name.
+   lHashVal: A hash value to speed up the search,computed by the LHashValOfNameSys function. If lHashVal is 0,a value is computed.
+   pcFound: On entry,indicates how many instances to look for. For example,pcFound=1 can be called to find the first occurrence. The search stops when one instance is found.On 
+    exit,indicates the number of instances that were found. If the in and out values of pcFound are identical,there might be more type descriptions that contain the name.
   """
   pass
  def GetDocumentation(self,index,strName,strDocString,dwHelpContext,strHelpFile):
   """
   GetDocumentation(self: UCOMITypeLib,index: int) -> (str,str,int,str)
   
-   Retrieves the library's documentation string,the complete Help file name and path,and 
-    the context identifier for the library Help topic in the Help file.
-  
+   Retrieves the library's documentation string,the complete Help file name and path,and the context identifier for the library Help topic in the Help file.
   
    index: Index of the type description whose documentation is to be returned.
   """
@@ -38,8 +37,7 @@ class UCOMITypeLib:
   """
   GetTypeComp(self: UCOMITypeLib) -> UCOMITypeComp
   
-   Enables a client compiler to bind to a library's types,variables,constants,and global 
-    functions.
+   Enables a client compiler to bind to a library's types,variables,constants,and global functions.
   """
   pass
  def GetTypeInfo(self,index,ppTI):
@@ -81,9 +79,7 @@ class UCOMITypeLib:
   """
   IsName(self: UCOMITypeLib,szNameBuf: str,lHashVal: int) -> bool
   
-   Indicates whether a passed-in string contains the name of a type or member described in 
-    the library.
-  
+   Indicates whether a passed-in string contains the name of a type or member described in the library.
   
    szNameBuf: The string to test.
    lHashVal: The hash value of szNameBuf.
@@ -93,9 +89,7 @@ class UCOMITypeLib:
  def ReleaseTLibAttr(self,pTLibAttr):
   """
   ReleaseTLibAttr(self: UCOMITypeLib,pTLibAttr: IntPtr)
-   Releases the System.Runtime.InteropServices.TYPELIBATTR originally obtained from 
-    System.Runtime.InteropServices.UCOMITypeLib.GetLibAttr(System.IntPtr@).
-  
+   Releases the System.Runtime.InteropServices.TYPELIBATTR originally obtained from System.Runtime.InteropServices.UCOMITypeLib.GetLibAttr(System.IntPtr@).
   
    pTLibAttr: The TLIBATTR to release.
   """

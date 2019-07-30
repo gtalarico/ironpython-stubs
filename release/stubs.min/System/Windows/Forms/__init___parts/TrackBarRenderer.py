@@ -1,5 +1,9 @@
-class TrackBarRenderer:
+class TrackBarRenderer(object):
  """ Provides methods used to render a track bar control with visual styles. This class cannot be inherited. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TrackBarRenderer()
+
  @staticmethod
  def DrawBottomPointingThumb(g,bounds,state):
   """
@@ -8,8 +12,7 @@ class TrackBarRenderer:
   
    g: The System.Drawing.Graphics used to draw the track bar slider.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the track bar slider.
-   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the 
-    visual state of the track bar slider.
+   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the visual state of the track bar slider.
   """
   pass
  @staticmethod
@@ -20,8 +23,7 @@ class TrackBarRenderer:
   
    g: The System.Drawing.Graphics used to draw the track bar slider.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the track bar slider.
-   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the 
-    visual state of the track bar slider.
+   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the visual state of the track bar slider.
   """
   pass
  @staticmethod
@@ -54,8 +56,7 @@ class TrackBarRenderer:
   
    g: The System.Drawing.Graphics used to draw the track bar slider.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the track bar slider.
-   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the 
-    visual state of the track bar slider.
+   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the visual state of the track bar slider.
   """
   pass
  @staticmethod
@@ -66,8 +67,7 @@ class TrackBarRenderer:
   
    g: The System.Drawing.Graphics used to draw the track bar slider.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the track bar slider.
-   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the 
-    visual state of the track bar slider.
+   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the visual state of the track bar slider.
   """
   pass
  @staticmethod
@@ -78,8 +78,7 @@ class TrackBarRenderer:
   
    g: The System.Drawing.Graphics used to draw the track bar slider.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the track bar slider.
-   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the 
-    visual state of the track bar slider.
+   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the visual state of the track bar slider.
   """
   pass
  @staticmethod
@@ -90,8 +89,7 @@ class TrackBarRenderer:
   
    g: The System.Drawing.Graphics used to draw the track bar slider.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the track bar slider.
-   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the 
-    visual state of the track bar slider.
+   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the visual state of the track bar slider.
   """
   pass
  @staticmethod
@@ -121,14 +119,10 @@ class TrackBarRenderer:
   """
   GetBottomPointingThumbSize(g: Graphics,state: TrackBarThumbState) -> Size
   
-   Returns the size,in pixels,of the track bar slider (also known as the thumb) that 
-    points down.
-  
+   Returns the size,in pixels,of the track bar slider (also known as the thumb) that points down.
   
    g: The System.Drawing.Graphics this operation will use.
-   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the 
-    visual state of the track bar slider.
-  
+   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the visual state of the track bar slider.
    Returns: A System.Drawing.Size that specifies the size,in pixels,of the slider.
   """
   pass
@@ -137,14 +131,10 @@ class TrackBarRenderer:
   """
   GetLeftPointingThumbSize(g: Graphics,state: TrackBarThumbState) -> Size
   
-   Returns the size,in pixels,of the track bar slider (also known as the thumb) that 
-    points to the left.
-  
+   Returns the size,in pixels,of the track bar slider (also known as the thumb) that points to the left.
   
    g: The System.Drawing.Graphics this operation will use.
-   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the 
-    visual state of the slider.
-  
+   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the visual state of the slider.
    Returns: A System.Drawing.Size that specifies the size,in pixels,of the slider.
   """
   pass
@@ -153,14 +143,10 @@ class TrackBarRenderer:
   """
   GetRightPointingThumbSize(g: Graphics,state: TrackBarThumbState) -> Size
   
-   Returns the size,in pixels,of the track bar slider (also known as the thumb) that 
-    points to the right.
-  
+   Returns the size,in pixels,of the track bar slider (also known as the thumb) that points to the right.
   
    g: The System.Drawing.Graphics this operation will use.
-   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the 
-    visual state of the slider.
-  
+   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the visual state of the slider.
    Returns: A System.Drawing.Size that specifies the size,in pixels,of the slider.
   """
   pass
@@ -169,14 +155,10 @@ class TrackBarRenderer:
   """
   GetTopPointingThumbSize(g: Graphics,state: TrackBarThumbState) -> Size
   
-   Returns the size,in pixels,of the track bar slider (also known as the thumb) that 
-    points up.
-  
+   Returns the size,in pixels,of the track bar slider (also known as the thumb) that points up.
   
    g: The System.Drawing.Graphics this operation will use.
-   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the 
-    visual state of the slider.
-  
+   state: One of the System.Windows.Forms.VisualStyles.TrackBarThumbState values that specifies the visual state of the slider.
    Returns: A System.Drawing.Size that specifies the size,in pixels,of the slider.
   """
   pass

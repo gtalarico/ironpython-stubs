@@ -1,15 +1,22 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.BackgroundAgents calls itself BackgroundAgents
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # no functions
 # classes
 
-class DatabaseBackgroundAgentHealthMonitor:
+class DatabaseBackgroundAgentHealthMonitor(object):
  """ DatabaseBackgroundAgentHealthMonitor() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DatabaseBackgroundAgentHealthMonitor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreateOrUpdateBackgroundAgent(self,arg):
   """ CreateOrUpdateBackgroundAgent(self: DatabaseBackgroundAgentHealthMonitor,arg: DataFlowObject[BackgroundAgent]) -> DataFlowObject[BackgroundAgent] """
   pass
@@ -37,6 +44,11 @@ class DatabaseBackgroundAgentHealthMonitor:
 
 class IBackgroundAgentHealthMonitor:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IBackgroundAgentHealthMonitor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreateOrUpdateBackgroundAgent(self,arg):
   """ CreateOrUpdateBackgroundAgent(self: IBackgroundAgentHealthMonitor,arg: DataFlowObject[BackgroundAgent]) -> DataFlowObject[BackgroundAgent] """
   pass
@@ -59,8 +71,13 @@ class IBackgroundAgentHealthMonitor:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class InMemoryBackgroundAgentHealthMonitor:
+class InMemoryBackgroundAgentHealthMonitor(object):
  """ InMemoryBackgroundAgentHealthMonitor() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InMemoryBackgroundAgentHealthMonitor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreateOrUpdateBackgroundAgent(self,arg):
   """ CreateOrUpdateBackgroundAgent(self: InMemoryBackgroundAgentHealthMonitor,arg: DataFlowObject[BackgroundAgent]) -> DataFlowObject[BackgroundAgent] """
   pass

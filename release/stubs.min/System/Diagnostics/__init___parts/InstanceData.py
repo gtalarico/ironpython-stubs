@@ -1,9 +1,14 @@
-class InstanceData:
+class InstanceData(object):
  """
  Holds instance data associated with a performance counter sample.
  
  InstanceData(instanceName: str,sample: CounterSample)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InstanceData()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,instanceName,sample):
   """ __new__(cls: type,instanceName: str,sample: CounterSample) """

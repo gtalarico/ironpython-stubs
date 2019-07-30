@@ -1,4 +1,4 @@
-class MenuItem:
+class MenuItem(Menu,IComponent,IDisposable):
  """
  Represents an individual item that is displayed within a System.Windows.Forms.MainMenu or System.Windows.Forms.ContextMenu. Although System.Windows.Forms.ToolStripMenuItem replaces and adds functionality to the System.Windows.Forms.MenuItem control of previous versions,System.Windows.Forms.MenuItem is retained for both backward compatibility and future use if you choose.
  
@@ -9,6 +9,10 @@ class MenuItem:
  MenuItem(text: str,items: Array[MenuItem])
  MenuItem(mergeType: MenuMerge,mergeOrder: int,shortcut: Shortcut,text: str,onClick: EventHandler,onPopup: EventHandler,onSelect: EventHandler,items: Array[MenuItem])
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return MenuItem()
+
  def CloneMenu(self):
   """
   CloneMenu(self: MenuItem) -> MenuItem
@@ -30,8 +34,7 @@ class MenuItem:
   Dispose(self: MenuItem,disposing: bool)
    Disposes of the resources (other than memory) used by the System.Windows.Forms.MenuItem.
   
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def FindMergePosition(self,*args):
@@ -48,14 +51,10 @@ class MenuItem:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -64,12 +63,7 @@ class MenuItem:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -81,9 +75,7 @@ class MenuItem:
   """
   MergeMenu(self: MenuItem) -> MenuItem
   
-   Merges this System.Windows.Forms.MenuItem with another System.Windows.Forms.MenuItem and 
-    returns the resulting merged System.Windows.Forms.MenuItem.
-  
+   Merges this System.Windows.Forms.MenuItem with another System.Windows.Forms.MenuItem and returns the resulting merged System.Windows.Forms.MenuItem.
    Returns: A System.Windows.Forms.MenuItem that represents the merged menu item.
   MergeMenu(self: MenuItem,itemSrc: MenuItem)
    Merges another menu item with this menu item.
@@ -142,8 +134,7 @@ class MenuItem:
  def PerformClick(self):
   """
   PerformClick(self: MenuItem)
-   Generates a System.Windows.Forms.Control.Click event for the 
-    System.Windows.Forms.MenuItem,simulating a click by a user.
+   Generates a System.Windows.Forms.Control.Click event for the System.Windows.Forms.MenuItem,simulating a click by a user.
   """
   pass
  def PerformSelect(self):
@@ -158,9 +149,7 @@ class MenuItem:
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference that represents the window message to 
-    process.
-  
+   msg: A System.Windows.Forms.Message,passed by reference that represents the window message to process.
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
   """
@@ -170,8 +159,7 @@ class MenuItem:
   ToString(self: MenuItem) -> str
   
    Returns a string that represents the System.Windows.Forms.MenuItem.
-   Returns: A string that represents the current System.Windows.Forms.MenuItem. The string includes 
-    the type and the System.Windows.Forms.MenuItem.Text property of the control.
+   Returns: A string that represents the current System.Windows.Forms.MenuItem. The string includes the type and the System.Windows.Forms.MenuItem.Text property of the control.
   """
   pass
  def __enter__(self,*args):

@@ -1,4 +1,4 @@
-class UriBuilder:
+class UriBuilder(object):
  """
  Provides a custom constructor for uniform resource identifiers (URIs) and modifies URIs for the System.Uri class.
  
@@ -10,17 +10,19 @@ class UriBuilder:
  UriBuilder(scheme: str,host: str,port: int,pathValue: str)
  UriBuilder(scheme: str,host: str,port: int,path: str,extraValue: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UriBuilder()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,rparam):
   """
   Equals(self: UriBuilder,rparam: object) -> bool
   
-   Compares an existing System.Uri instance with the contents of the System.UriBuilder for 
-    equality.
-  
+   Compares an existing System.Uri instance with the contents of the System.UriBuilder for equality.
   
    rparam: The object to compare with the current instance.
-   Returns: true if rparam represents the same System.Uri as the System.Uri constructed by this 
-    System.UriBuilder instance; otherwise,false.
+   Returns: true if rparam represents the same System.Uri as the System.Uri constructed by this System.UriBuilder instance; otherwise,false.
   """
   pass
  def GetHashCode(self):

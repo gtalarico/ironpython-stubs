@@ -1,5 +1,10 @@
-class Double:
+class Double(object):
  """ Represents a double-precision floating-point number. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Double()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def as_integer_ratio(self,*args):
   """ as_integer_ratio(self: float) -> tuple """
   pass

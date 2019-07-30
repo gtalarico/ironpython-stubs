@@ -1,4 +1,4 @@
-class MemoryStream:
+class MemoryStream(Stream):
  """
  Creates a stream whose backing store is memory.
  
@@ -10,6 +10,11 @@ class MemoryStream:
  MemoryStream(buffer: Array[Byte],index: int,count: int,writable: bool)
  MemoryStream(buffer: Array[Byte],index: int,count: int,writable: bool,publiclyVisible: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MemoryStream()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CopyToAsync(self,destination,bufferSize=None,cancellationToken=None):
   """ CopyToAsync(self: MemoryStream,destination: Stream,bufferSize: int,cancellationToken: CancellationToken) -> Task """
   pass
@@ -24,12 +29,9 @@ class MemoryStream:
  def Dispose(self):
   """
   Dispose(self: MemoryStream,disposing: bool)
-   Releases the unmanaged resources used by the System.IO.MemoryStream class and optionally 
-    releases the managed resources.
+   Releases the unmanaged resources used by the System.IO.MemoryStream class and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def Flush(self):
@@ -46,8 +48,7 @@ class MemoryStream:
   GetBuffer(self: MemoryStream) -> Array[Byte]
   
    Returns the array of unsigned bytes from which this stream was created.
-   Returns: The byte array from which this stream was created,or the underlying array if a byte 
-    array was not provided to the System.IO.MemoryStream constructor during construction of 
+   Returns: The byte array from which this stream was created,or the underlying array if a byte array was not provided to the System.IO.MemoryStream constructor during construction of 
     the current instance.
   """
   pass
@@ -57,11 +58,9 @@ class MemoryStream:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -82,13 +81,10 @@ class MemoryStream:
   
    Reads a block of bytes from the current stream and writes the data to a buffer.
   
-   offset: The zero-based byte offset in buffer at which to begin storing data from the current 
-    stream.
-  
+   offset: The zero-based byte offset in buffer at which to begin storing data from the current stream.
    count: The maximum number of bytes to read.
-   Returns: The total number of bytes written into the buffer. This can be less than the number of 
-    bytes requested if that number of bytes are not currently available,or zero if the end 
-    of the stream is reached before any bytes are read.
+   Returns: The total number of bytes written into the buffer. This can be less than the number of bytes requested if that number of bytes are not currently available,or zero if the 
+    end of the stream is reached before any bytes are read.
   """
   pass
  def ReadAsync(self,buffer,offset,count,cancellationToken=None):
@@ -108,12 +104,9 @@ class MemoryStream:
   
    Sets the position within the current stream to the specified value.
   
-   offset: The new position within the stream. This is relative to the loc parameter,and can be 
-    positive or negative.
-  
+   offset: The new position within the stream. This is relative to the loc parameter,and can be positive or negative.
    loc: A value of type System.IO.SeekOrigin,which acts as the seek reference point.
-   Returns: The new position within the stream,calculated by combining the initial reference point 
-    and the offset.
+   Returns: The new position within the stream,calculated by combining the initial reference point and the offset.
   """
   pass
  def SetLength(self,value):
@@ -128,9 +121,7 @@ class MemoryStream:
   """
   ToArray(self: MemoryStream) -> Array[Byte]
   
-   Writes the stream contents to a byte array,regardless of the 
-    System.IO.MemoryStream.Position property.
-  
+   Writes the stream contents to a byte array,regardless of the System.IO.MemoryStream.Position property.
    Returns: A new byte array.
   """
   pass
@@ -143,9 +134,7 @@ class MemoryStream:
    Writes a block of bytes to the current stream using data read from a buffer.
   
    buffer: The buffer to write data from.
-   offset: The zero-based byte offset in buffer at which to begin copying bytes to the current 
-    stream.
-  
+   offset: The zero-based byte offset in buffer at which to begin copying bytes to the current stream.
    count: The maximum number of bytes to write.
   """
   pass

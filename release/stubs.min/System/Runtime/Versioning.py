@@ -3,13 +3,18 @@
 # from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
 
-class CompatibilitySwitch:
+class CompatibilitySwitch(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CompatibilitySwitch()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetValue(compatibilitySwitchName):
   """ GetValue(compatibilitySwitchName: str) -> str """
@@ -30,6 +35,11 @@ class ComponentGuaranteesAttribute:
  
  ComponentGuaranteesAttribute(guarantees: ComponentGuaranteesOptions)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ComponentGuaranteesAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -52,6 +62,11 @@ class ComponentGuaranteesOptions:
  
  enum (flags) ComponentGuaranteesOptions,values: Exchange (1),None (0),SideBySide (4),Stable (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ComponentGuaranteesOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -82,7 +97,7 @@ class ComponentGuaranteesOptions:
  value__=None
 
 
-class FrameworkName:
+class FrameworkName(object):
  """
  Represents the name of a version of the .NET Framework.
  
@@ -90,28 +105,27 @@ class FrameworkName:
  FrameworkName(identifier: str,version: Version,profile: str)
  FrameworkName(frameworkName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FrameworkName()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,*__args):
   """
   Equals(self: FrameworkName,obj: object) -> bool
   
-   Returns a value that indicates whether this System.Runtime.Versioning.FrameworkName 
-    instance represents the same .NET Framework version as a specified object.
-  
+   Returns a value that indicates whether this System.Runtime.Versioning.FrameworkName instance represents the same .NET Framework version as a specified object.
   
    obj: The object to compare to the current instance.
-   Returns: true if every component of the current System.Runtime.Versioning.FrameworkName object 
-    matches the corresponding component of obj; otherwise,false.
-  
+   Returns: true if every component of the current System.Runtime.Versioning.FrameworkName object matches the corresponding component of obj; otherwise,false.
   Equals(self: FrameworkName,other: FrameworkName) -> bool
   
-   Returns a value that indicates whether this System.Runtime.Versioning.FrameworkName 
-    instance represents the same .NET Framework version as a specified 
+   Returns a value that indicates whether this System.Runtime.Versioning.FrameworkName instance represents the same .NET Framework version as a specified 
     System.Runtime.Versioning.FrameworkName instance.
   
   
    other: The object to compare to the current instance.
-   Returns: true if every component of the current System.Runtime.Versioning.FrameworkName object 
-    matches the corresponding component of other; otherwise,false.
+   Returns: true if every component of the current System.Runtime.Versioning.FrameworkName object matches the corresponding component of other; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -190,6 +204,11 @@ class ResourceConsumptionAttribute:
  ResourceConsumptionAttribute(resourceScope: ResourceScope)
  ResourceConsumptionAttribute(resourceScope: ResourceScope,consumptionScope: ResourceScope)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ResourceConsumptionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -222,6 +241,11 @@ class ResourceExposureAttribute:
  
  ResourceExposureAttribute(exposureLevel: ResourceScope)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ResourceExposureAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -244,6 +268,11 @@ class ResourceScope:
  
  enum (flags) ResourceScope,values: AppDomain (4),Assembly (32),Library (8),Machine (1),None (0),Private (16),Process (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ResourceScope()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -283,6 +312,11 @@ class TargetFrameworkAttribute:
  
  TargetFrameworkAttribute(frameworkName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TargetFrameworkAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -307,16 +341,19 @@ Get: FrameworkName(self: TargetFrameworkAttribute) -> str
 
 
 
-class VersioningHelper:
+class VersioningHelper(object):
  """ Provides methods to aid developers in writing version-safe code. This class cannot be inherited. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return VersioningHelper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def MakeVersionSafeName(name,from_,to,type=None):
   """
   MakeVersionSafeName(name: str,from: ResourceScope,to: ResourceScope,type: Type) -> str
   
-   Returns a version-safe name based on the specified resource name,the intended resource 
-    consumption scope,and the type using the resource.
-  
+   Returns a version-safe name based on the specified resource name,the intended resource consumption scope,and the type using the resource.
   
    name: The name of the resource.
    from: The beginning of the scope range.
@@ -325,9 +362,7 @@ class VersioningHelper:
    Returns: A version-safe name.
   MakeVersionSafeName(name: str,from: ResourceScope,to: ResourceScope) -> str
   
-   Returns a version-safe name based on the specified resource name and the intended 
-    resource consumption source.
-  
+   Returns a version-safe name based on the specified resource name and the intended resource consumption source.
   
    name: The name of the resource.
    from: The scope of the resource.

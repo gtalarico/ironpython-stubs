@@ -4,6 +4,11 @@ class PerformanceCounterPermissionAccess:
  
  enum (flags) PerformanceCounterPermissionAccess,values: Administer (7),Browse (1),Instrument (3),None (0),Read (1),Write (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PerformanceCounterPermissionAccess()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

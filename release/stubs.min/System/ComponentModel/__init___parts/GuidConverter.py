@@ -1,16 +1,19 @@
-class GuidConverter:
+class GuidConverter(TypeConverter):
  """
  Provides a type converter to convert System.Guid objects to and from various other representations.
  
  GuidConverter()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GuidConverter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CanConvertFrom(self,*__args):
   """
   CanConvertFrom(self: GuidConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object in the given source 
-    type to a GUID object using the context.
-  
+   Gets a value indicating whether this converter can convert an object in the given source type to a GUID object using the context.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    sourceType: A System.Type that represents the type you wish to convert from.
@@ -21,9 +24,7 @@ class GuidConverter:
   """
   CanConvertTo(self: GuidConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object to the given 
-    destination type using the context.
-  
+   Gets a value indicating whether this converter can convert an object to the given destination type using the context.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    destinationType: A System.Type that represents the type you wish to convert to.
@@ -37,9 +38,7 @@ class GuidConverter:
    Converts the given object to a GUID object.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   culture: An optional System.Globalization.CultureInfo. If not supplied,the current culture is 
-    assumed.
-  
+   culture: An optional System.Globalization.CultureInfo. If not supplied,the current culture is assumed.
    value: The System.Object to convert.
    Returns: An System.Object that represents the converted value.
   """

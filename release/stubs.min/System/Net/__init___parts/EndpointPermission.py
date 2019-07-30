@@ -1,16 +1,18 @@
-class EndpointPermission:
+class EndpointPermission(object):
  """ Defines an endpoint that is authorized by a System.Net.SocketPermission instance. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EndpointPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: EndpointPermission,obj: object) -> bool
   
-   Determines whether the specified System.Object is equal to the current 
-    System.Net.SocketPermission instance.
-  
+   Determines whether the specified System.Object is equal to the current System.Net.SocketPermission instance.
   
    obj: The specified System.Object
-   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,
-    false.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
   """
   pass
  def GetHashCode(self):

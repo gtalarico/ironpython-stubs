@@ -1,4 +1,4 @@
-class BinaryReader:
+class BinaryReader(object):
  """
  Reads primitive data types as binary values in a specific encoding.
  
@@ -6,6 +6,11 @@ class BinaryReader:
  BinaryReader(input: Stream,encoding: Encoding)
  BinaryReader(input: Stream,encoding: Encoding,leaveOpen: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BinaryReader()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: BinaryReader)
@@ -31,43 +36,35 @@ class BinaryReader:
   PeekChar(self: BinaryReader) -> int
   
    Returns the next available character and does not advance the byte or character position.
-   Returns: The next available character,or -1 if no more characters are available or the stream 
-    does not support seeking.
+   Returns: The next available character,or -1 if no more characters are available or the stream does not support seeking.
   """
   pass
  def Read(self,buffer=None,index=None,count=None):
   """
   Read(self: BinaryReader) -> int
   
-   Reads characters from the underlying stream and advances the current position of the 
-    stream in accordance with the Encoding used and the specific character being read from 
+   Reads characters from the underlying stream and advances the current position of the stream in accordance with the Encoding used and the specific character being read from 
     the stream.
   
    Returns: The next character from the input stream,or -1 if no characters are currently available.
   Read(self: BinaryReader,buffer: Array[Char],index: int,count: int) -> int
   
-   Reads the specified number of characters from the stream,starting from a specified point 
-    in the character array.
-  
+   Reads the specified number of characters from the stream,starting from a specified point in the character array.
   
    buffer: The buffer to read data into.
    index: The starting point in the buffer at which to begin reading into the buffer.
    count: The number of characters to read.
-   Returns: The total number of characters read into the buffer. This might be less than the number 
-    of characters requested if that many characters are not currently available,or it might 
-    be zero if the end of the stream is reached.
+   Returns: The total number of characters read into the buffer. This might be less than the number of characters requested if that many characters are not currently available,or it 
+    might be zero if the end of the stream is reached.
   
   Read(self: BinaryReader,buffer: Array[Byte],index: int,count: int) -> int
   
-   Reads the specified number of bytes from the stream,starting from a specified point in 
-    the byte array.
-  
+   Reads the specified number of bytes from the stream,starting from a specified point in the byte array.
   
    buffer: The buffer to read data into.
    index: The starting point in the buffer at which to begin reading into the buffer.
    count: The number of bytes to read.
-   Returns: The number of bytes read into buffer. This might be less than the number of bytes 
-    requested if that many bytes are not available,or it might be zero if the end of the 
+   Returns: The number of bytes read into buffer. This might be less than the number of bytes requested if that many bytes are not available,or it might be zero if the end of the 
     stream is reached.
   """
   pass
@@ -83,9 +80,7 @@ class BinaryReader:
   """
   ReadBoolean(self: BinaryReader) -> bool
   
-   Reads a Boolean value from the current stream and advances the current position of the 
-    stream by one byte.
-  
+   Reads a Boolean value from the current stream and advances the current position of the stream by one byte.
    Returns: true if the byte is nonzero; otherwise,false.
   """
   pass
@@ -93,9 +88,7 @@ class BinaryReader:
   """
   ReadByte(self: BinaryReader) -> Byte
   
-   Reads the next byte from the current stream and advances the current position of the 
-    stream by one byte.
-  
+   Reads the next byte from the current stream and advances the current position of the stream by one byte.
    Returns: The next byte read from the current stream.
   """
   pass
@@ -103,22 +96,18 @@ class BinaryReader:
   """
   ReadBytes(self: BinaryReader,count: int) -> Array[Byte]
   
-   Reads the specified number of bytes from the current stream into a byte array and 
-    advances the current position by that number of bytes.
-  
+   Reads the specified number of bytes from the current stream into a byte array and advances the current position by that number of bytes.
   
    count: The number of bytes to read.
-   Returns: A byte array containing data read from the underlying stream. This might be less than the 
-    number of bytes requested if the end of the stream is reached.
+   Returns: A byte array containing data read from the underlying stream. This might be less than the number of bytes requested if the end of the stream is reached.
   """
   pass
  def ReadChar(self):
   """
   ReadChar(self: BinaryReader) -> Char
   
-   Reads the next character from the current stream and advances the current position of the 
-    stream in accordance with the Encoding used and the specific character being read from 
-    the stream.
+   Reads the next character from the current stream and advances the current position of the stream in accordance with the Encoding used and the specific character being read 
+    from the stream.
   
    Returns: A character read from the current stream.
   """
@@ -127,23 +116,19 @@ class BinaryReader:
   """
   ReadChars(self: BinaryReader,count: int) -> Array[Char]
   
-   Reads the specified number of characters from the current stream,returns the data in a 
-    character array,and advances the current position in accordance with the Encoding used 
-    and the specific character being read from the stream.
+   Reads the specified number of characters from the current stream,returns the data in a character array,and advances the current position in accordance with the Encoding 
+    used and the specific character being read from the stream.
   
   
    count: The number of characters to read.
-   Returns: A character array containing data read from the underlying stream. This might be less 
-    than the number of characters requested if the end of the stream is reached.
+   Returns: A character array containing data read from the underlying stream. This might be less than the number of characters requested if the end of the stream is reached.
   """
   pass
  def ReadDecimal(self):
   """
   ReadDecimal(self: BinaryReader) -> Decimal
   
-   Reads a decimal value from the current stream and advances the current position of the 
-    stream by sixteen bytes.
-  
+   Reads a decimal value from the current stream and advances the current position of the stream by sixteen bytes.
    Returns: A decimal value read from the current stream.
   """
   pass
@@ -151,9 +136,7 @@ class BinaryReader:
   """
   ReadDouble(self: BinaryReader) -> float
   
-   Reads an 8-byte floating point value from the current stream and advances the current 
-    position of the stream by eight bytes.
-  
+   Reads an 8-byte floating point value from the current stream and advances the current position of the stream by eight bytes.
    Returns: An 8-byte floating point value read from the current stream.
   """
   pass
@@ -161,9 +144,7 @@ class BinaryReader:
   """
   ReadInt16(self: BinaryReader) -> Int16
   
-   Reads a 2-byte signed integer from the current stream and advances the current position 
-    of the stream by two bytes.
-  
+   Reads a 2-byte signed integer from the current stream and advances the current position of the stream by two bytes.
    Returns: A 2-byte signed integer read from the current stream.
   """
   pass
@@ -171,9 +152,7 @@ class BinaryReader:
   """
   ReadInt32(self: BinaryReader) -> int
   
-   Reads a 4-byte signed integer from the current stream and advances the current position 
-    of the stream by four bytes.
-  
+   Reads a 4-byte signed integer from the current stream and advances the current position of the stream by four bytes.
    Returns: A 4-byte signed integer read from the current stream.
   """
   pass
@@ -181,9 +160,7 @@ class BinaryReader:
   """
   ReadInt64(self: BinaryReader) -> Int64
   
-   Reads an 8-byte signed integer from the current stream and advances the current position 
-    of the stream by eight bytes.
-  
+   Reads an 8-byte signed integer from the current stream and advances the current position of the stream by eight bytes.
    Returns: An 8-byte signed integer read from the current stream.
   """
   pass
@@ -191,9 +168,7 @@ class BinaryReader:
   """
   ReadSByte(self: BinaryReader) -> SByte
   
-   Reads a signed byte from this stream and advances the current position of the stream by 
-    one byte.
-  
+   Reads a signed byte from this stream and advances the current position of the stream by one byte.
    Returns: A signed byte read from the current stream.
   """
   pass
@@ -201,9 +176,7 @@ class BinaryReader:
   """
   ReadSingle(self: BinaryReader) -> Single
   
-   Reads a 4-byte floating point value from the current stream and advances the current 
-    position of the stream by four bytes.
-  
+   Reads a 4-byte floating point value from the current stream and advances the current position of the stream by four bytes.
    Returns: A 4-byte floating point value read from the current stream.
   """
   pass
@@ -211,9 +184,7 @@ class BinaryReader:
   """
   ReadString(self: BinaryReader) -> str
   
-   Reads a string from the current stream. The string is prefixed with the length,encoded 
-    as an integer seven bits at a time.
-  
+   Reads a string from the current stream. The string is prefixed with the length,encoded as an integer seven bits at a time.
    Returns: The string being read.
   """
   pass
@@ -221,9 +192,7 @@ class BinaryReader:
   """
   ReadUInt16(self: BinaryReader) -> UInt16
   
-   Reads a 2-byte unsigned integer from the current stream using little-endian encoding and 
-    advances the position of the stream by two bytes.
-  
+   Reads a 2-byte unsigned integer from the current stream using little-endian encoding and advances the position of the stream by two bytes.
    Returns: A 2-byte unsigned integer read from this stream.
   """
   pass
@@ -231,9 +200,7 @@ class BinaryReader:
   """
   ReadUInt32(self: BinaryReader) -> UInt32
   
-   Reads a 4-byte unsigned integer from the current stream and advances the position of the 
-    stream by four bytes.
-  
+   Reads a 4-byte unsigned integer from the current stream and advances the position of the stream by four bytes.
    Returns: A 4-byte unsigned integer read from this stream.
   """
   pass
@@ -241,9 +208,7 @@ class BinaryReader:
   """
   ReadUInt64(self: BinaryReader) -> UInt64
   
-   Reads an 8-byte unsigned integer from the current stream and advances the position of the 
-    stream by eight bytes.
-  
+   Reads an 8-byte unsigned integer from the current stream and advances the position of the stream by eight bytes.
    Returns: An 8-byte unsigned integer read from this stream.
   """
   pass

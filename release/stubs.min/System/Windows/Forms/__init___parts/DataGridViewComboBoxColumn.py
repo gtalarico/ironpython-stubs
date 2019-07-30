@@ -1,23 +1,25 @@
-class DataGridViewComboBoxColumn:
+class DataGridViewComboBoxColumn(DataGridViewColumn,ICloneable,IDisposable,IComponent):
  """
  Represents a column of System.Windows.Forms.DataGridViewComboBoxCell objects.
  
  DataGridViewComboBoxColumn()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewComboBoxColumn()
+
  def Clone(self):
   """
   Clone(self: DataGridViewComboBoxColumn) -> object
   
    Creates an exact copy of this column.
-   Returns: An System.Object that represents the cloned 
-    System.Windows.Forms.DataGridViewComboBoxColumn.
+   Returns: An System.Object that represents the cloned System.Windows.Forms.DataGridViewComboBoxColumn.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: DataGridViewColumn,disposing: bool)
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def OnDataGridViewChanged(self,*args):

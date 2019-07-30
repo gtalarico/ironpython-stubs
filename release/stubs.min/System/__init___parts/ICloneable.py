@@ -1,5 +1,10 @@
 class ICloneable:
  """ Supports cloning,which creates a new instance of a class with the same value as an existing instance. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ICloneable()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """
   Clone(self: ICloneable) -> object

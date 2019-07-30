@@ -4,6 +4,11 @@ class VARFLAGS:
  
  enum (flags) VARFLAGS,values: VARFLAG_FBINDABLE (4),VARFLAG_FDEFAULTBIND (32),VARFLAG_FDEFAULTCOLLELEM (256),VARFLAG_FDISPLAYBIND (16),VARFLAG_FHIDDEN (64),VARFLAG_FIMMEDIATEBIND (4096),VARFLAG_FNONBROWSABLE (1024),VARFLAG_FREADONLY (1),VARFLAG_FREPLACEABLE (2048),VARFLAG_FREQUESTEDIT (8),VARFLAG_FRESTRICTED (128),VARFLAG_FSOURCE (2),VARFLAG_FUIDEFAULT (512)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return VARFLAGS()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

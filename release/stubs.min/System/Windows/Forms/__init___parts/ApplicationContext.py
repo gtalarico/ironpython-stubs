@@ -1,10 +1,14 @@
-class ApplicationContext:
+class ApplicationContext(object,IDisposable):
  """
  Specifies the contextual information about an application thread.
  
  ApplicationContext()
  ApplicationContext(mainForm: Form)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ApplicationContext()
+
  def Dispose(self):
   """
   Dispose(self: ApplicationContext)
@@ -26,9 +30,7 @@ class ApplicationContext:
  def OnMainFormClosed(self,*args):
   """
   OnMainFormClosed(self: ApplicationContext,sender: object,e: EventArgs)
-   Calls System.Windows.Forms.ApplicationContext.ExitThreadCore,which raises the 
-    System.Windows.Forms.ApplicationContext.ThreadExit event.
-  
+   Calls System.Windows.Forms.ApplicationContext.ExitThreadCore,which raises the System.Windows.Forms.ApplicationContext.ThreadExit event.
   
    sender: The object that raised the event.
    e: The System.EventArgs that contains the event data.

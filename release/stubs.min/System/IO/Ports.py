@@ -3,7 +3,7 @@
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
@@ -14,6 +14,11 @@ class Handshake:
  
  enum Handshake,values: None (0),RequestToSend (2),RequestToSendXOnXOff (3),XOnXOff (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Handshake()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -50,6 +55,11 @@ class Parity:
  
  enum Parity,values: Even (2),Mark (3),None (0),Odd (1),Space (4)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Parity()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -87,6 +97,11 @@ class SerialData:
  
  enum SerialData,values: Chars (1),Eof (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SerialData()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -115,8 +130,13 @@ class SerialData:
  value__=None
 
 
-class SerialDataReceivedEventArgs:
+class SerialDataReceivedEventArgs(EventArgs):
  """ Provides data for the System.IO.Ports.SerialPort.DataReceived event. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SerialDataReceivedEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  EventType=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets or sets the event type.
 
@@ -126,12 +146,17 @@ Get: EventType(self: SerialDataReceivedEventArgs) -> SerialData
 
 
 
-class SerialDataReceivedEventHandler:
+class SerialDataReceivedEventHandler(MulticastDelegate):
  """
  Represents the method that will handle the System.IO.Ports.SerialPort.DataReceived event of a System.IO.Ports.SerialPort object.
  
  SerialDataReceivedEventHandler(object: object,method: IntPtr)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SerialDataReceivedEventHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInvoke(self,sender,e,callback,object):
   """ BeginInvoke(self: SerialDataReceivedEventHandler,sender: object,e: SerialDataReceivedEventArgs,callback: AsyncCallback,object: object) -> IAsyncResult """
   pass
@@ -151,8 +176,7 @@ class SerialDataReceivedEventHandler:
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the 
-    current delegate.-or- null,if the method represented by the current delegate does not 
+   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not 
     require arguments.
   
    Returns: The object returned by the method represented by the delegate.
@@ -176,13 +200,10 @@ class SerialDataReceivedEventHandler:
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is 
-    equal to the specified delegate.
-  
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate 
-    without value in its invocation list; otherwise,this instance with its original 
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original 
     invocation list.
   """
   pass
@@ -202,6 +223,11 @@ class SerialError:
  
  enum SerialError,values: Frame (8),Overrun (2),RXOver (1),RXParity (4),TXFull (256)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SerialError()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -233,8 +259,13 @@ class SerialError:
  value__=None
 
 
-class SerialErrorReceivedEventArgs:
+class SerialErrorReceivedEventArgs(EventArgs):
  """ Prepares data for the System.IO.Ports.SerialPort.ErrorReceived event. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SerialErrorReceivedEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  EventType=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets or sets the event type.
 
@@ -244,12 +275,17 @@ Get: EventType(self: SerialErrorReceivedEventArgs) -> SerialError
 
 
 
-class SerialErrorReceivedEventHandler:
+class SerialErrorReceivedEventHandler(MulticastDelegate):
  """
  Represents the method that will handle the System.IO.Ports.SerialPort.ErrorReceived event of a System.IO.Ports.SerialPort object.
  
  SerialErrorReceivedEventHandler(object: object,method: IntPtr)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SerialErrorReceivedEventHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInvoke(self,sender,e,callback,object):
   """ BeginInvoke(self: SerialErrorReceivedEventHandler,sender: object,e: SerialErrorReceivedEventArgs,callback: AsyncCallback,object: object) -> IAsyncResult """
   pass
@@ -269,8 +305,7 @@ class SerialErrorReceivedEventHandler:
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the 
-    current delegate.-or- null,if the method represented by the current delegate does not 
+   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not 
     require arguments.
   
    Returns: The object returned by the method represented by the delegate.
@@ -294,13 +329,10 @@ class SerialErrorReceivedEventHandler:
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is 
-    equal to the specified delegate.
-  
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate 
-    without value in its invocation list; otherwise,this instance with its original 
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original 
     invocation list.
   """
   pass
@@ -320,6 +352,11 @@ class SerialPinChange:
  
  enum SerialPinChange,values: Break (64),CDChanged (32),CtsChanged (8),DsrChanged (16),Ring (256)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SerialPinChange()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -351,8 +388,13 @@ class SerialPinChange:
  value__=None
 
 
-class SerialPinChangedEventArgs:
+class SerialPinChangedEventArgs(EventArgs):
  """ Provides data for the System.IO.Ports.SerialPort.PinChanged event. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SerialPinChangedEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  EventType=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets or sets the event type.
 
@@ -362,12 +404,17 @@ Get: EventType(self: SerialPinChangedEventArgs) -> SerialPinChange
 
 
 
-class SerialPinChangedEventHandler:
+class SerialPinChangedEventHandler(MulticastDelegate):
  """
  Represents the method that will handle the System.IO.Ports.SerialPort.PinChanged event of a System.IO.Ports.SerialPort object.
  
  SerialPinChangedEventHandler(object: object,method: IntPtr)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SerialPinChangedEventHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInvoke(self,sender,e,callback,object):
   """ BeginInvoke(self: SerialPinChangedEventHandler,sender: object,e: SerialPinChangedEventArgs,callback: AsyncCallback,object: object) -> IAsyncResult """
   pass
@@ -387,8 +434,7 @@ class SerialPinChangedEventHandler:
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the 
-    current delegate.-or- null,if the method represented by the current delegate does not 
+   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not 
     require arguments.
   
    Returns: The object returned by the method represented by the delegate.
@@ -412,13 +458,10 @@ class SerialPinChangedEventHandler:
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is 
-    equal to the specified delegate.
-  
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate 
-    without value in its invocation list; otherwise,this instance with its original 
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original 
     invocation list.
   """
   pass
@@ -432,7 +475,7 @@ class SerialPinChangedEventHandler:
  def __reduce_ex__(self,*args):
   pass
 
-class SerialPort:
+class SerialPort(Component):
  """
  Represents a serial port resource.
  
@@ -444,11 +487,15 @@ class SerialPort:
  SerialPort(portName: str,baudRate: int,parity: Parity,dataBits: int)
  SerialPort(portName: str,baudRate: int,parity: Parity,dataBits: int,stopBits: StopBits)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SerialPort()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: SerialPort)
-   Closes the port connection,sets the System.IO.Ports.SerialPort.IsOpen property to false,
-    and disposes of the internal System.IO.Stream object.
+   Closes the port connection,sets the System.IO.Ports.SerialPort.IsOpen property to false,and disposes of the internal System.IO.Stream object.
   """
   pass
  def DiscardInBuffer(self):
@@ -466,12 +513,9 @@ class SerialPort:
  def Dispose(self):
   """
   Dispose(self: SerialPort,disposing: bool)
-   Releases the unmanaged resources used by the System.IO.Ports.SerialPort and optionally 
-    releases the managed resources.
+   Releases the unmanaged resources used by the System.IO.Ports.SerialPort and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  @staticmethod
@@ -487,14 +531,11 @@ class SerialPort:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified 
+    service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -503,11 +544,9 @@ class SerialPort:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -526,9 +565,7 @@ class SerialPort:
   """
   Read(self: SerialPort,buffer: Array[Byte],offset: int,count: int) -> int
   
-   Reads a number of bytes from the System.IO.Ports.SerialPort input buffer and writes those 
-    bytes into a byte array at the specified offset.
-  
+   Reads a number of bytes from the System.IO.Ports.SerialPort input buffer and writes those bytes into a byte array at the specified offset.
   
    buffer: The byte array to write the input to.
    offset: The offset in the buffer array to begin writing.
@@ -536,9 +573,7 @@ class SerialPort:
    Returns: The number of bytes read.
   Read(self: SerialPort,buffer: Array[Char],offset: int,count: int) -> int
   
-   Reads a number of characters from the System.IO.Ports.SerialPort input buffer and writes 
-    them into an array of characters at a given offset.
-  
+   Reads a number of characters from the System.IO.Ports.SerialPort input buffer and writes them into an array of characters at a given offset.
   
    buffer: The character array to write the input to.
    offset: The offset in the buffer array to begin writing.
@@ -566,9 +601,7 @@ class SerialPort:
   """
   ReadExisting(self: SerialPort) -> str
   
-   Reads all immediately available bytes,based on the encoding,in both the stream and the 
-    input buffer of the System.IO.Ports.SerialPort object.
-  
+   Reads all immediately available bytes,based on the encoding,in both the stream and the input buffer of the System.IO.Ports.SerialPort object.
    Returns: The contents of the stream and the input buffer of the System.IO.Ports.SerialPort object.
   """
   pass
@@ -577,8 +610,7 @@ class SerialPort:
   ReadLine(self: SerialPort) -> str
   
    Reads up to the System.IO.Ports.SerialPort.NewLine value in the input buffer.
-   Returns: The contents of the input buffer up to the first occurrence of a 
-    System.IO.Ports.SerialPort.NewLine value.
+   Returns: The contents of the input buffer up to the first occurrence of a System.IO.Ports.SerialPort.NewLine value.
   """
   pass
  def ReadTo(self,value):
@@ -601,26 +633,20 @@ class SerialPort:
    Writes a specified number of characters to the serial port using data from a buffer.
   
    buffer: The character array that contains the data to write to the port.
-   offset: The zero-based byte offset in the buffer parameter at which to begin copying bytes to the 
-    port.
-  
+   offset: The zero-based byte offset in the buffer parameter at which to begin copying bytes to the port.
    count: The number of characters to write.
   Write(self: SerialPort,buffer: Array[Byte],offset: int,count: int)
    Writes a specified number of bytes to the serial port using data from a buffer.
   
    buffer: The byte array that contains the data to write to the port.
-   offset: The zero-based byte offset in the buffer parameter at which to begin copying bytes to the 
-    port.
-  
+   offset: The zero-based byte offset in the buffer parameter at which to begin copying bytes to the port.
    count: The number of bytes to write.
   """
   pass
  def WriteLine(self,text):
   """
   WriteLine(self: SerialPort,text: str)
-   Writes the specified string and the System.IO.Ports.SerialPort.NewLine value to the 
-    output buffer.
-  
+   Writes the specified string and the System.IO.Ports.SerialPort.NewLine value to the output buffer.
   
    text: The string to write to the output buffer.
   """
@@ -869,6 +895,11 @@ class StopBits:
  
  enum StopBits,values: None (0),One (1),OnePointFive (3),Two (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StopBits()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -4,6 +4,11 @@ class AuditFlags:
  
  enum (flags) AuditFlags,values: Failure (2),None (0),Success (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AuditFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

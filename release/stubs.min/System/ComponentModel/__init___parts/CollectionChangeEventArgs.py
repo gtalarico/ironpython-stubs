@@ -1,9 +1,14 @@
-class CollectionChangeEventArgs:
+class CollectionChangeEventArgs(EventArgs):
  """
  Provides data for the System.Data.DataColumnCollection.CollectionChanged event.
  
  CollectionChangeEventArgs(action: CollectionChangeAction,element: object)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CollectionChangeEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,action,element):
   """ __new__(cls: type,action: CollectionChangeAction,element: object) """

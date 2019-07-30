@@ -1,4 +1,4 @@
-class SEHException:
+class SEHException(ExternalException):
  """
  Represents structured exception handling (SEH) errors.
  
@@ -6,13 +6,16 @@ class SEHException:
  SEHException(message: str)
  SEHException(message: str,inner: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SEHException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CanResume(self):
   """
   CanResume(self: SEHException) -> bool
   
-   Indicates whether the exception can be recovered from,and whether the code can continue 
-    from the point at which the exception was thrown.
-  
+   Indicates whether the exception can be recovered from,and whether the code can continue from the point at which the exception was thrown.
    Returns: Always false,because resumable exceptions are not implemented.
   """
   pass

@@ -1,15 +1,17 @@
-class BindingContext:
+class BindingContext(object,ICollection,IEnumerable):
  """
  Manages the collection of System.Windows.Forms.BindingManagerBase objects for any object that inherits from the System.Windows.Forms.Control class.
  
  BindingContext()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return BindingContext()
+
  def Add(self,*args):
   """
   Add(self: BindingContext,dataSource: object,listManager: BindingManagerBase)
-   Adds the System.Windows.Forms.BindingManagerBase associated with a specific data source 
-    to the collection.
-  
+   Adds the System.Windows.Forms.BindingManagerBase associated with a specific data source to the collection.
   
    dataSource: The System.Object associated with the System.Windows.Forms.BindingManagerBase.
    listManager: The System.Windows.Forms.BindingManagerBase to add.
@@ -18,9 +20,7 @@ class BindingContext:
  def AddCore(self,*args):
   """
   AddCore(self: BindingContext,dataSource: object,listManager: BindingManagerBase)
-   Adds the System.Windows.Forms.BindingManagerBase associated with a specific data source 
-    to the collection.
-  
+   Adds the System.Windows.Forms.BindingManagerBase associated with a specific data source to the collection.
   
    dataSource: The object associated with the System.Windows.Forms.BindingManagerBase.
    listManager: The System.Windows.Forms.BindingManagerBase to add.
@@ -42,25 +42,17 @@ class BindingContext:
   """
   Contains(self: BindingContext,dataSource: object) -> bool
   
-   Gets a value indicating whether the System.Windows.Forms.BindingContext contains the 
-    System.Windows.Forms.BindingManagerBase associated with the specified data source.
-  
+   Gets a value indicating whether the System.Windows.Forms.BindingContext contains the System.Windows.Forms.BindingManagerBase associated with the specified data source.
   
    dataSource: An System.Object that represents the data source.
-   Returns: true if the System.Windows.Forms.BindingContext contains the specified 
-    System.Windows.Forms.BindingManagerBase; otherwise,false.
-  
+   Returns: true if the System.Windows.Forms.BindingContext contains the specified System.Windows.Forms.BindingManagerBase; otherwise,false.
   Contains(self: BindingContext,dataSource: object,dataMember: str) -> bool
   
-   Gets a value indicating whether the System.Windows.Forms.BindingContext contains the 
-    System.Windows.Forms.BindingManagerBase associated with the specified data source and 
-    data member.
-  
+   Gets a value indicating whether the System.Windows.Forms.BindingContext contains the System.Windows.Forms.BindingManagerBase associated with the specified data source and data member.
   
    dataSource: An System.Object that represents the data source.
    dataMember: The information needed to resolve to a specific System.Windows.Forms.BindingManagerBase.
-   Returns: true if the System.Windows.Forms.BindingContext contains the specified 
-    System.Windows.Forms.BindingManagerBase; otherwise,false.
+   Returns: true if the System.Windows.Forms.BindingContext contains the specified System.Windows.Forms.BindingManagerBase; otherwise,false.
   """
   pass
  def OnCollectionChanged(self,*args):
@@ -74,9 +66,7 @@ class BindingContext:
  def Remove(self,*args):
   """
   Remove(self: BindingContext,dataSource: object)
-   Deletes the System.Windows.Forms.BindingManagerBase associated with the specified data 
-    source.
-  
+   Deletes the System.Windows.Forms.BindingManagerBase associated with the specified data source.
   
    dataSource: The data source associated with the System.Windows.Forms.BindingManagerBase to remove.
   """
@@ -84,9 +74,7 @@ class BindingContext:
  def RemoveCore(self,*args):
   """
   RemoveCore(self: BindingContext,dataSource: object)
-   Removes the System.Windows.Forms.BindingManagerBase associated with the specified data 
-    source.
-  
+   Removes the System.Windows.Forms.BindingManagerBase associated with the specified data source.
   
    dataSource: The data source associated with the System.Windows.Forms.BindingManagerBase to remove.
   """
@@ -97,11 +85,8 @@ class BindingContext:
   UpdateBinding(newBindingContext: BindingContext,binding: Binding)
    Associates a System.Windows.Forms.Binding with a new System.Windows.Forms.BindingContext.
   
-   newBindingContext: The new System.Windows.Forms.BindingContext to associate with the 
-    System.Windows.Forms.Binding.
-  
-   binding: The System.Windows.Forms.Binding to associate with the new 
-    System.Windows.Forms.BindingContext.
+   newBindingContext: The new System.Windows.Forms.BindingContext to associate with the System.Windows.Forms.Binding.
+   binding: The System.Windows.Forms.Binding to associate with the new System.Windows.Forms.BindingContext.
   """
   pass
  def __getitem__(self,*args):

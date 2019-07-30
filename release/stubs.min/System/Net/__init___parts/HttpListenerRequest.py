@@ -1,17 +1,18 @@
-class HttpListenerRequest:
+class HttpListenerRequest(object):
  """ Describes an incoming HTTP request to an System.Net.HttpListener object. This class cannot be inherited. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HttpListenerRequest()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginGetClientCertificate(self,requestCallback,state):
   """
   BeginGetClientCertificate(self: HttpListenerRequest,requestCallback: AsyncCallback,state: object) -> IAsyncResult
   
    Begins an asynchronous request for the client's X.509 v.3 certificate.
   
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation 
-    is complete.
-  
-   state: A user-defined object that contains information about the operation. This object is 
-    passed to the callback delegate when the operation completes.
-  
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
+   state: A user-defined object that contains information about the operation. This object is passed to the callback delegate when the operation completes.
    Returns: An System.IAsyncResult that indicates the status of the operation.
   """
   pass
@@ -30,8 +31,7 @@ class HttpListenerRequest:
   GetClientCertificate(self: HttpListenerRequest) -> X509Certificate2
   
    Retrieves the client's X.509 v.3 certificate.
-   Returns: A System.Security.Cryptography.X509Certificates object that contains the client's X.509 
-    v.3 certificate.
+   Returns: A System.Security.Cryptography.X509Certificates object that contains the client's X.509 v.3 certificate.
   """
   pass
  def GetClientCertificateAsync(self):

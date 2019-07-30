@@ -1,5 +1,9 @@
-class DataGridViewCellValidatingEventArgs:
+class DataGridViewCellValidatingEventArgs(CancelEventArgs):
  """ Provides data for the System.Windows.Forms.DataGridView.CellValidating event of a System.Windows.Forms.DataGridView control. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewCellValidatingEventArgs()
+
  ColumnIndex=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets the column index of the cell that needs to be validated.
 

@@ -1,8 +1,13 @@
-class Progress:
+class Progress(object):
  """
  Progress[T]()
  Progress[T](handler: Action[T])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Progress()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def OnReport(self,*args):
   """ OnReport(self: Progress[T],value: T) """
   pass

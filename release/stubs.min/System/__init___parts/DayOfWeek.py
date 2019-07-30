@@ -4,6 +4,11 @@ class DayOfWeek:
  
  enum DayOfWeek,values: Friday (5),Monday (1),Saturday (6),Sunday (0),Thursday (4),Tuesday (2),Wednesday (3)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DayOfWeek()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

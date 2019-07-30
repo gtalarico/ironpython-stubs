@@ -1,9 +1,13 @@
-class PropertyManager:
+class PropertyManager(BindingManagerBase):
  """
  Maintains a System.Windows.Forms.Binding between an object's property and a data-bound control property.
  
  PropertyManager()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return PropertyManager()
+
  def AddNew(self):
   """ AddNew(self: PropertyManager) """
   pass
@@ -17,27 +21,20 @@ class PropertyManager:
   """
   GetItemProperties(self: BindingManagerBase,dataSources: ArrayList,listAccessors: ArrayList) -> PropertyDescriptorCollection
   
-   Gets the collection of property descriptors for the binding using the specified 
-    System.Collections.ArrayList.
-  
+   Gets the collection of property descriptors for the binding using the specified System.Collections.ArrayList.
   
    dataSources: An System.Collections.ArrayList containing the data sources.
    listAccessors: An System.Collections.ArrayList containing the table's bound properties.
-   Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the property 
-    descriptors for the binding.
-  
+   Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the property descriptors for the binding.
   GetItemProperties(self: BindingManagerBase,listType: Type,offset: int,dataSources: ArrayList,listAccessors: ArrayList) -> PropertyDescriptorCollection
   
-   Gets the list of properties of the items managed by this 
-    System.Windows.Forms.BindingManagerBase.
-  
+   Gets the list of properties of the items managed by this System.Windows.Forms.BindingManagerBase.
   
    listType: The System.Type of the bound list.
    offset: A counter used to recursively call the method.
    dataSources: An System.Collections.ArrayList containing the data sources.
    listAccessors: An System.Collections.ArrayList containing the table's bound properties.
-   Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the property 
-    descriptors for the binding.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the property descriptors for the binding.
   """
   pass
  def RemoveAt(self,index):

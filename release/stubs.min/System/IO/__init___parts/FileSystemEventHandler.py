@@ -1,9 +1,14 @@
-class FileSystemEventHandler:
+class FileSystemEventHandler(MulticastDelegate):
  """
  Represents the method that will handle the System.IO.FileSystemWatcher.Changed,System.IO.FileSystemWatcher.Created,or System.IO.FileSystemWatcher.Deleted event of a System.IO.FileSystemWatcher class.
  
  FileSystemEventHandler(object: object,method: IntPtr)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileSystemEventHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInvoke(self,sender,e,callback,object):
   """ BeginInvoke(self: FileSystemEventHandler,sender: object,e: FileSystemEventArgs,callback: AsyncCallback,object: object) -> IAsyncResult """
   pass
@@ -23,8 +28,7 @@ class FileSystemEventHandler:
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the 
-    current delegate.-or- null,if the method represented by the current delegate does not 
+   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not 
     require arguments.
   
    Returns: The object returned by the method represented by the delegate.
@@ -48,13 +52,10 @@ class FileSystemEventHandler:
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is 
-    equal to the specified delegate.
-  
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate 
-    without value in its invocation list; otherwise,this instance with its original 
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original 
     invocation list.
   """
   pass

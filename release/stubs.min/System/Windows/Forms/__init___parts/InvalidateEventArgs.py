@@ -1,9 +1,13 @@
-class InvalidateEventArgs:
+class InvalidateEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.Control.Invalidated event.
  
  InvalidateEventArgs(invalidRect: Rectangle)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return InvalidateEventArgs()
+
  @staticmethod
  def __new__(self,invalidRect):
   """ __new__(cls: type,invalidRect: Rectangle) """

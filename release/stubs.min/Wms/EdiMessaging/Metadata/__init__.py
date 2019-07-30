@@ -1,9 +1,11 @@
 # encoding: utf-8
 # module Wms.EdiMessaging.Metadata calls itself Metadata
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # functions
 
@@ -15,8 +17,13 @@ def MessagePublisherDescriptor(handlerType,createInstance,IMessagePublisher): # 
  pass
 # classes
 
-class ObjectDescriptor:
+class ObjectDescriptor(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ObjectDescriptor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ExtractAttribute(self):
   """ ExtractAttribute(self: ObjectDescriptor) -> DescriptorAttribute """
   pass

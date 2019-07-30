@@ -1,9 +1,13 @@
-class AnchorStyles:
+class AnchorStyles(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies how a control anchors to the edges of its container.
  
  enum (flags) AnchorStyles,values: Bottom (2),Left (4),None (0),Right (8),Top (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return AnchorStyles()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

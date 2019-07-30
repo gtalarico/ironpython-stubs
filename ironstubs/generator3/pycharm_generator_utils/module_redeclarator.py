@@ -3,6 +3,7 @@ import keyword
 from util_methods import *
 from constants import *
 import re
+import os
 
 class emptylistdict(dict):
     """defaultdict not available before 2.5; simplest reimplementation using [] as default"""
@@ -618,6 +619,9 @@ class ModuleRedeclarator(object):
         @param p_modname name of module
         @param seen {class: name} map of classes already seen in the same namespace
         """
+
+
+
         action("redoing class %r of module %r", p_name, p_modname)
         if seen is not None:
             if p_class in seen:
@@ -662,14 +666,28 @@ class ModuleRedeclarator(object):
                     if local_import:
                         out(indent, local_import)
 
-        regex = "([\[]).*?([\]]+)"
-        if p_name == "Dictionary":
-            print base_def
-            print re.sub(regex, "", base_def)
-        out(indent, "class ", p_name,"" , ":",          #re.sub(regex, "", base_def)                               #fix kevin ana 3/inherited classes showed up in constructor/base def replaced with ""
+        regex1 = "([\[]).*?([\]]+)"
+        regex2 = "(\\bI|_).*?((?:\,)|(?:\)))|\\bEnum,?|\\bAttribute,?|\\bCachable,?"
+        filtered = re.sub(regex1, "", base_def)
+        filtered = re.sub(regex2, "", filtered)
+        filtered = filtered.replace(" ","")
+        if filtered.endswith(","):
+            filtered = filtered[:-1] + ')'
+        if filtered.endswith('('):
+            filtered = filtered[:-1]
+        
+
+        out(indent, "class ", p_name, filtered , ":",          #re.sub(regex, "", base_def)    #fix kevin ana 3/inherited classes showed up in constructor/base def replaced with ""
             skipped_bases and " # skipped bases: " + ", ".join(skipped_bases) or "")  # we dont do anything with python objects so why bother 
         out_doc_attr(out, p_class, indent + 1)
         # inner parts
+        # out(indent+1, "Instance = ",p_name)
+        # out(indent+1, '"""hardcoded/returns an instance of the class"""')      #fix kevin ana added instance to every class #quickfix since instance doesn't get recognized
+        out(indent+1, "def ZZZ(self):")
+        out(indent+2, '"""hardcoded/mock instance of the class"""')
+        out(indent+2, "return ",p_name,"()")
+        out(indent+1, "instance = ZZZ()")
+        out(indent+1, '"""hardcoded/returns an instance of the class"""')    #fix for linter
         methods = {}
         properties = {}
         others = {}
@@ -717,7 +735,7 @@ class ModuleRedeclarator(object):
             init_method = getattr(p_class, '__init__', None)
             if init_method:
                 methods['__init__'] = init_method
-
+        
         #
         seen_funcs = {}
         for item_name in sorted_no_case(methods.keys()):
@@ -1002,8 +1020,8 @@ class ModuleRedeclarator(object):
                 for i in range(ins_index):
                     maybe_child_bases = cls_list[i][1]
                     if cls in maybe_child_bases:
-                        ins_index = i # we could not go farther than current ins_index
-                        break         # ...and need not go fartehr than first known child
+                        ins_index = i # we could not go further than current ins_index
+                        break         # ...and need not go further than first known child
                 cls_list.insert(ins_index, (cls_name, get_mro(cls)))
             self.split_modules = self.mod_filename and len(cls_list) >= 30
             for item_name in [cls_item[0] for cls_item in cls_list]:
@@ -1073,7 +1091,18 @@ class ModuleRedeclarator(object):
                 # imports: last, because previous parts could alter used_imports or hidden_imports
         self.output_import_froms()
         if self.imports_buf.isEmpty():
+
             self.imports_buf.out(0, "# no imports")
+            # self.imports_buf.out(0, "2",self.mod_filename)
+            # self.imports_buf.out(0, "3",self.outfile)
+            # self.imports_buf.out(0, 'yes' if 'Wms\\'in self.outfile else 'no')
+            if('Wms\\'in self.outfile):
+                if ('init' in self.outfile):
+                    #self.imports_buf.out(0, "from Stubs.Wms.Generic import *") #TODO (only for wms)import standard things like system collection and init #fix/TODO kevin
+                    self.imports_buf.out(0, "from System.Collections.Generic import *")
+                    self.imports_buf.out(0, "from ..__init__ import *")
+                else:
+                    self.imports_buf.out(0, "from __init__ import *")
         self.imports_buf.out(0, "") # empty line after imports
 
     def output_import_froms(self):

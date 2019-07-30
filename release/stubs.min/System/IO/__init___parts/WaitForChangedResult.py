@@ -1,5 +1,10 @@
-class WaitForChangedResult:
+class WaitForChangedResult(object):
  """ Contains information on the change that occurred. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WaitForChangedResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ChangeType=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets or sets the type of change that occurred.
 

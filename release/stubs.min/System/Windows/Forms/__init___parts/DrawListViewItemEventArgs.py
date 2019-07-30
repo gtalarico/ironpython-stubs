@@ -1,14 +1,17 @@
-class DrawListViewItemEventArgs:
+class DrawListViewItemEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ListView.DrawItem event.
  
  DrawListViewItemEventArgs(graphics: Graphics,item: ListViewItem,bounds: Rectangle,itemIndex: int,state: ListViewItemStates)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DrawListViewItemEventArgs()
+
  def DrawBackground(self):
   """
   DrawBackground(self: DrawListViewItemEventArgs)
-   Draws the background of the System.Windows.Forms.ListViewItem using its current 
-    background color.
+   Draws the background of the System.Windows.Forms.ListViewItem using its current background color.
   """
   pass
  def DrawFocusRectangle(self):
@@ -20,13 +23,9 @@ class DrawListViewItemEventArgs:
  def DrawText(self,flags=None):
   """
   DrawText(self: DrawListViewItemEventArgs)
-   Draws the text of the System.Windows.Forms.ListViewItem using its current foreground 
-    color.
-  
+   Draws the text of the System.Windows.Forms.ListViewItem using its current foreground color.
   DrawText(self: DrawListViewItemEventArgs,flags: TextFormatFlags)
-   Draws the text of the System.Windows.Forms.ListViewItem using its current foreground 
-    color and formatting it with the specified System.Windows.Forms.TextFormatFlags values.
-  
+   Draws the text of the System.Windows.Forms.ListViewItem using its current foreground color and formatting it with the specified System.Windows.Forms.TextFormatFlags values.
   
    flags: A bitwise combination of System.Windows.Forms.TextFormatFlags values.
   """

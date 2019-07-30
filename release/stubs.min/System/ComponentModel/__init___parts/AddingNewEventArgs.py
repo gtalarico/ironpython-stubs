@@ -1,10 +1,15 @@
-class AddingNewEventArgs:
+class AddingNewEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.BindingSource.AddingNew event.
  
  AddingNewEventArgs()
  AddingNewEventArgs(newObject: object)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AddingNewEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,newObject=None):
   """

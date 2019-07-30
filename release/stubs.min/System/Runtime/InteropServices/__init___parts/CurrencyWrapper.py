@@ -1,10 +1,15 @@
-class CurrencyWrapper:
+class CurrencyWrapper(object):
  """
  Wraps objects the marshaler should marshal as a VT_CY.
  
  CurrencyWrapper(obj: Decimal)
  CurrencyWrapper(obj: object)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CurrencyWrapper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,obj):
   """

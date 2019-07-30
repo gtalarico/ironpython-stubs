@@ -1,19 +1,20 @@
-class Rectangle:
+class Rectangle(object):
  """
  Stores a set of four integers that represent the location and size of a rectangle
  
  Rectangle(x: int,y: int,width: int,height: int)
  Rectangle(location: Point,size: Size)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Rectangle()
+
  @staticmethod
  def Ceiling(value):
   """
   Ceiling(value: RectangleF) -> Rectangle
   
-   Converts the specified System.Drawing.RectangleF structure to a System.Drawing.Rectangle 
-    structure by rounding the System.Drawing.RectangleF values to the next higher integer 
-    values.
-  
+   Converts the specified System.Drawing.RectangleF structure to a System.Drawing.Rectangle structure by rounding the System.Drawing.RectangleF values to the next higher integer values.
   
    value: The System.Drawing.RectangleF structure to be converted.
    Returns: Returns a System.Drawing.Rectangle.
@@ -23,49 +24,33 @@ class Rectangle:
   """
   Contains(self: Rectangle,x: int,y: int) -> bool
   
-   Determines if the specified point is contained within this System.Drawing.Rectangle 
-    structure.
-  
+   Determines if the specified point is contained within this System.Drawing.Rectangle structure.
   
    x: The x-coordinate of the point to test.
    y: The y-coordinate of the point to test.
-   Returns: This method returns true if the point defined by x and y is contained within this 
-    System.Drawing.Rectangle structure; otherwise false.
-  
+   Returns: This method returns true if the point defined by x and y is contained within this System.Drawing.Rectangle structure; otherwise false.
   Contains(self: Rectangle,pt: Point) -> bool
   
-   Determines if the specified point is contained within this System.Drawing.Rectangle 
-    structure.
-  
+   Determines if the specified point is contained within this System.Drawing.Rectangle structure.
   
    pt: The System.Drawing.Point to test.
-   Returns: This method returns true if the point represented by pt is contained within this 
-    System.Drawing.Rectangle structure; otherwise false.
-  
+   Returns: This method returns true if the point represented by pt is contained within this System.Drawing.Rectangle structure; otherwise false.
   Contains(self: Rectangle,rect: Rectangle) -> bool
   
-   Determines if the rectangular region represented by rect is entirely contained within 
-    this System.Drawing.Rectangle structure.
-  
+   Determines if the rectangular region represented by rect is entirely contained within this System.Drawing.Rectangle structure.
   
    rect: The System.Drawing.Rectangle to test.
-   Returns: This method returns true if the rectangular region represented by rect is entirely 
-    contained within this System.Drawing.Rectangle structure; otherwise false.
+   Returns: This method returns true if the rectangular region represented by rect is entirely contained within this System.Drawing.Rectangle structure; otherwise false.
   """
   pass
  def Equals(self,obj):
   """
   Equals(self: Rectangle,obj: object) -> bool
   
-   Tests whether obj is a System.Drawing.Rectangle structure with the same location and size 
-    of this System.Drawing.Rectangle structure.
-  
+   Tests whether obj is a System.Drawing.Rectangle structure with the same location and size of this System.Drawing.Rectangle structure.
   
    obj: The System.Object to test.
-   Returns: This method returns true if obj is a System.Drawing.Rectangle structure and its 
-    System.Drawing.Rectangle.X,System.Drawing.Rectangle.Y,System.Drawing.Rectangle.Width,
-    and System.Drawing.Rectangle.Height properties are equal to the corresponding properties 
-    of this System.Drawing.Rectangle structure; otherwise,false.
+   Returns: This method returns true if obj is a System.Drawing.Rectangle structure and its System.Drawing.Rectangle.X,System.Drawing.Rectangle.Y,System.Drawing.Rectangle.Width,and System.Drawing.Rectangle.Height properties are equal to the corresponding properties of this System.Drawing.Rectangle structure; otherwise,false.
   """
   pass
  @staticmethod
@@ -86,9 +71,7 @@ class Rectangle:
   """
   GetHashCode(self: Rectangle) -> int
   
-   Returns the hash code for this System.Drawing.Rectangle structure. For information about 
-    the use of hash codes,see System.Object.GetHashCode .
-  
+   Returns the hash code for this System.Drawing.Rectangle structure. For information about the use of hash codes,see System.Object.GetHashCode .
    Returns: An integer that represents the hash code for this rectangle.
   """
   pass
@@ -105,10 +88,7 @@ class Rectangle:
    size: The amount to inflate this rectangle.
   Inflate(rect: Rectangle,x: int,y: int) -> Rectangle
   
-   Creates and returns an enlarged copy of the specified System.Drawing.Rectangle structure. 
-    The copy is enlarged by the specified amount. The original System.Drawing.Rectangle 
-    structure remains unmodified.
-  
+   Creates and returns an enlarged copy of the specified System.Drawing.Rectangle structure. The copy is enlarged by the specified amount. The original System.Drawing.Rectangle structure remains unmodified.
   
    rect: The System.Drawing.Rectangle with which to start. This rectangle is not modified.
    x: The amount to inflate this System.Drawing.Rectangle horizontally.
@@ -119,17 +99,12 @@ class Rectangle:
  def Intersect(self,*__args):
   """
   Intersect(self: Rectangle,rect: Rectangle)
-   Replaces this System.Drawing.Rectangle with the intersection of itself and the specified 
-    System.Drawing.Rectangle.
-  
+   Replaces this System.Drawing.Rectangle with the intersection of itself and the specified System.Drawing.Rectangle.
   
    rect: The System.Drawing.Rectangle with which to intersect.
   Intersect(a: Rectangle,b: Rectangle) -> Rectangle
   
-   Returns a third System.Drawing.Rectangle structure that represents the intersection of 
-    two other System.Drawing.Rectangle structures. If there is no intersection,an empty 
-    System.Drawing.Rectangle is returned.
-  
+   Returns a third System.Drawing.Rectangle structure that represents the intersection of two other System.Drawing.Rectangle structures. If there is no intersection,an empty System.Drawing.Rectangle is returned.
   
    a: A rectangle to intersect.
    b: A rectangle to intersect.
@@ -164,9 +139,7 @@ class Rectangle:
   """
   Round(value: RectangleF) -> Rectangle
   
-   Converts the specified System.Drawing.RectangleF to a System.Drawing.Rectangle by 
-    rounding the System.Drawing.RectangleF values to the nearest integer values.
-  
+   Converts the specified System.Drawing.RectangleF to a System.Drawing.Rectangle by rounding the System.Drawing.RectangleF values to the nearest integer values.
   
    value: The System.Drawing.RectangleF to be converted.
    Returns: A System.Drawing.Rectangle.
@@ -177,8 +150,7 @@ class Rectangle:
   ToString(self: Rectangle) -> str
   
    Converts the attributes of this System.Drawing.Rectangle to a human-readable string.
-   Returns: A string that contains the position,width,and height of this System.Drawing.Rectangle 
-    structure � for example,{X=20,Y=20,Width=100,Height=50}
+   Returns: A string that contains the position,width,and height of this System.Drawing.Rectangle structure � for example,{X=20,Y=20,Width=100,Height=50}
   """
   pass
  @staticmethod
@@ -186,9 +158,7 @@ class Rectangle:
   """
   Truncate(value: RectangleF) -> Rectangle
   
-   Converts the specified System.Drawing.RectangleF to a System.Drawing.Rectangle by 
-    truncating the System.Drawing.RectangleF values.
-  
+   Converts the specified System.Drawing.RectangleF to a System.Drawing.Rectangle by truncating the System.Drawing.RectangleF values.
   
    value: The System.Drawing.RectangleF to be converted.
    Returns: A System.Drawing.Rectangle.
@@ -199,14 +169,11 @@ class Rectangle:
   """
   Union(a: Rectangle,b: Rectangle) -> Rectangle
   
-   Gets a System.Drawing.Rectangle structure that contains the union of two 
-    System.Drawing.Rectangle structures.
-  
+   Gets a System.Drawing.Rectangle structure that contains the union of two System.Drawing.Rectangle structures.
   
    a: A rectangle to union.
    b: A rectangle to union.
-   Returns: A System.Drawing.Rectangle structure that bounds the union of the two 
-    System.Drawing.Rectangle structures.
+   Returns: A System.Drawing.Rectangle structure that bounds the union of the two System.Drawing.Rectangle structures.
   """
   pass
  def __eq__(self,*args):

@@ -1,9 +1,13 @@
-class ListViewHitTestInfo:
+class ListViewHitTestInfo(object):
  """
  Contains information about an area of a System.Windows.Forms.ListView control or a System.Windows.Forms.ListViewItem.
  
  ListViewHitTestInfo(hitItem: ListViewItem,hitSubItem: ListViewSubItem,hitLocation: ListViewHitTestLocations)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ListViewHitTestInfo()
+
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass

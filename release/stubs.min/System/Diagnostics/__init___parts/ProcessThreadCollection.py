@@ -1,9 +1,14 @@
-class ProcessThreadCollection:
+class ProcessThreadCollection(ReadOnlyCollectionBase):
  """
  Provides a strongly typed collection of System.Diagnostics.ProcessThread objects.
  
  ProcessThreadCollection(processThreads: Array[ProcessThread])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessThreadCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,thread):
   """
   Add(self: ProcessThreadCollection,thread: ProcessThread) -> int
@@ -20,18 +25,14 @@ class ProcessThreadCollection:
   
    Determines whether the specified process thread exists in the collection.
   
-   thread: A System.Diagnostics.ProcessThread instance that indicates the thread to find in this 
-    collection.
-  
+   thread: A System.Diagnostics.ProcessThread instance that indicates the thread to find in this collection.
    Returns: true if the thread exists in the collection; otherwise,false.
   """
   pass
  def CopyTo(self,array,index):
   """
   CopyTo(self: ProcessThreadCollection,array: Array[ProcessThread],index: int)
-   Copies an array of System.Diagnostics.ProcessThread instances to the collection,at the 
-    specified index.
-  
+   Copies an array of System.Diagnostics.ProcessThread instances to the collection,at the specified index.
   
    array: An array of System.Diagnostics.ProcessThread instances to add to the collection.
    index: The location at which to add the new instances.
@@ -44,8 +45,7 @@ class ProcessThreadCollection:
    Provides the location of a specified thread within the collection.
   
    thread: The System.Diagnostics.ProcessThread whose index is retrieved.
-   Returns: The zero-based index that defines the location of the thread within the 
-    System.Diagnostics.ProcessThreadCollection.
+   Returns: The zero-based index that defines the location of the thread within the System.Diagnostics.ProcessThreadCollection.
   """
   pass
  def Insert(self,index,thread):

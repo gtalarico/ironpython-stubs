@@ -1,5 +1,10 @@
 class IComNativeDescriptorHandler:
  """ Provides a top-level mapping layer between a COM object and a System.ComponentModel.TypeDescriptor. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IComNativeDescriptorHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetAttributes(self,component):
   """
   GetAttributes(self: IComNativeDescriptorHandler,component: object) -> AttributeCollection

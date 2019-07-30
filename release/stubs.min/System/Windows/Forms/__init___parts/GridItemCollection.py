@@ -1,5 +1,9 @@
-class GridItemCollection:
+class GridItemCollection(object,ICollection,IEnumerable):
  """ Contains a collection of System.Windows.Forms.GridItem objects. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return GridItemCollection()
+
  def GetEnumerator(self):
   """
   GetEnumerator(self: GridItemCollection) -> IEnumerator

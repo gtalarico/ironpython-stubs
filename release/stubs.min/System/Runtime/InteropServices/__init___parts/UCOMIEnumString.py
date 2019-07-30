@@ -1,5 +1,10 @@
 class UCOMIEnumString:
  """ Use System.Runtime.InteropServices.ComTypes.IEnumString instead. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UCOMIEnumString()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self,ppenum):
   """
   Clone(self: UCOMIEnumString) -> UCOMIEnumString

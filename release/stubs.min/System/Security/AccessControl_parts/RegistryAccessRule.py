@@ -1,4 +1,4 @@
-class RegistryAccessRule:
+class RegistryAccessRule(AccessRule):
  """
  Represents a set of access rights allowed or denied for a user or group. This class cannot be inherited.
  
@@ -7,6 +7,11 @@ class RegistryAccessRule:
  RegistryAccessRule(identity: IdentityReference,registryRights: RegistryRights,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,type: AccessControlType)
  RegistryAccessRule(identity: str,registryRights: RegistryRights,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,type: AccessControlType)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RegistryAccessRule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,identity,registryRights,*__args):
   """

@@ -1,10 +1,14 @@
-class HandledMouseEventArgs:
+class HandledMouseEventArgs(MouseEventArgs):
  """
  Allows a custom control to prevent the System.Windows.Forms.Control.MouseWheel event from being sent to its parent container.
  
  HandledMouseEventArgs(button: MouseButtons,clicks: int,x: int,y: int,delta: int)
  HandledMouseEventArgs(button: MouseButtons,clicks: int,x: int,y: int,delta: int,defaultHandledValue: bool)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return HandledMouseEventArgs()
+
  @staticmethod
  def __new__(self,button,clicks,x,y,delta,defaultHandledValue=None):
   """

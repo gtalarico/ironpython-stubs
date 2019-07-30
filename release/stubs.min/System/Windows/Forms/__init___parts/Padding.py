@@ -1,10 +1,14 @@
-class Padding:
+class Padding(object):
  """
  Represents padding or margin information associated with a user interface (UI) element.
  
  Padding(all: int)
  Padding(left: int,top: int,right: int,bottom: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Padding()
+
  @staticmethod
  def Add(p1,p2):
   """
@@ -14,17 +18,14 @@ class Padding:
   
    p1: A System.Windows.Forms.Padding.
    p2: A System.Windows.Forms.Padding.
-   Returns: A System.Windows.Forms.Padding that contains the sum of the two specified 
-    System.Windows.Forms.Padding values.
+   Returns: A System.Windows.Forms.Padding that contains the sum of the two specified System.Windows.Forms.Padding values.
   """
   pass
  def Equals(self,other):
   """
   Equals(self: Padding,other: object) -> bool
   
-   Determines whether the value of the specified object is equivalent to the current 
-    System.Windows.Forms.Padding.
-  
+   Determines whether the value of the specified object is equivalent to the current System.Windows.Forms.Padding.
   
    other: The object to compare to the current System.Windows.Forms.Padding.
    Returns: true if the System.Windows.Forms.Padding objects are equivalent; otherwise,false.
@@ -47,8 +48,7 @@ class Padding:
   
    p1: A System.Windows.Forms.Padding.
    p2: A System.Windows.Forms.Padding.
-   Returns: A System.Windows.Forms.Padding that contains the result of the subtraction of one 
-    specified System.Windows.Forms.Padding value from another.
+   Returns: A System.Windows.Forms.Padding that contains the result of the subtraction of one specified System.Windows.Forms.Padding value from another.
   """
   pass
  def ToString(self):
@@ -80,9 +80,7 @@ class Padding:
   """
   __radd__(p1: Padding,p2: Padding) -> Padding
   
-   Performs vector addition on the two specified System.Windows.Forms.Padding objects,
-    resulting in a new System.Windows.Forms.Padding.
-  
+   Performs vector addition on the two specified System.Windows.Forms.Padding objects,resulting in a new System.Windows.Forms.Padding.
   
    p1: The first System.Windows.Forms.Padding to add.
    p2: The second System.Windows.Forms.Padding to add.
@@ -93,9 +91,7 @@ class Padding:
   """
   __rsub__(p1: Padding,p2: Padding) -> Padding
   
-   Performs vector subtraction on the two specified System.Windows.Forms.Padding objects,
-    resulting in a new System.Windows.Forms.Padding.
-  
+   Performs vector subtraction on the two specified System.Windows.Forms.Padding objects,resulting in a new System.Windows.Forms.Padding.
   
    p1: The System.Windows.Forms.Padding to subtract from (the minuend).
    p2: The System.Windows.Forms.Padding to subtract from (the subtrahend).

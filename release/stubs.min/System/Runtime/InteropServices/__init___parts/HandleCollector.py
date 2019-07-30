@@ -1,10 +1,15 @@
-class HandleCollector:
+class HandleCollector(object):
  """
  Tracks outstanding handles and forces a garbage collection when the specified threshold is reached.
  
  HandleCollector(name: str,initialThreshold: int)
  HandleCollector(name: str,initialThreshold: int,maximumThreshold: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HandleCollector()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self):
   """
   Add(self: HandleCollector)

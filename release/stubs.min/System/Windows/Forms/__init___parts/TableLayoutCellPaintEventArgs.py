@@ -1,18 +1,19 @@
-class TableLayoutCellPaintEventArgs:
+class TableLayoutCellPaintEventArgs(PaintEventArgs,IDisposable):
  """
  Provides data for the System.Windows.Forms.TableLayoutPanel.CellPaint event.
  
  TableLayoutCellPaintEventArgs(g: Graphics,clipRectangle: Rectangle,cellBounds: Rectangle,column: int,row: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TableLayoutCellPaintEventArgs()
+
  def Dispose(self):
   """
   Dispose(self: PaintEventArgs,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.PaintEventArgs and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.PaintEventArgs and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def __enter__(self,*args):

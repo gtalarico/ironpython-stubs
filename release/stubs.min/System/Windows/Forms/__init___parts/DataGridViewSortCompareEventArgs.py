@@ -1,9 +1,13 @@
-class DataGridViewSortCompareEventArgs:
+class DataGridViewSortCompareEventArgs(HandledEventArgs):
  """
  Provides data for the System.Windows.Forms.DataGridView.SortCompare event.
  
  DataGridViewSortCompareEventArgs(dataGridViewColumn: DataGridViewColumn,cellValue1: object,cellValue2: object,rowIndex1: int,rowIndex2: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewSortCompareEventArgs()
+
  @staticmethod
  def __new__(self,dataGridViewColumn,cellValue1,cellValue2,rowIndex1,rowIndex2):
   """ __new__(cls: type,dataGridViewColumn: DataGridViewColumn,cellValue1: object,cellValue2: object,rowIndex1: int,rowIndex2: int) """

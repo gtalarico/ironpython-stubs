@@ -1,9 +1,13 @@
-class DataGridViewRowsRemovedEventArgs:
+class DataGridViewRowsRemovedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.DataGridView.RowsRemoved event.
  
  DataGridViewRowsRemovedEventArgs(rowIndex: int,rowCount: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewRowsRemovedEventArgs()
+
  @staticmethod
  def __new__(self,rowIndex,rowCount):
   """ __new__(cls: type,rowIndex: int,rowCount: int) """

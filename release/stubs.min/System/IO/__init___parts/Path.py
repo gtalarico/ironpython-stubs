@@ -1,5 +1,10 @@
-class Path:
+class Path(object):
  """ Performs operations on System.String instances that contain file or directory path information. These operations are performed in a cross-platform manner. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Path()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def ChangeExtension(path,extension):
   """
@@ -7,17 +12,11 @@ class Path:
   
    Changes the extension of a path string.
   
-   path: The path information to modify. The path cannot contain any of the characters defined in 
-    System.IO.Path.GetInvalidPathChars.
-  
-   extension: The new extension (with or without a leading period). Specify null to remove an existing 
-    extension from path.
-  
-   Returns: The modified path information.On Windows-based desktop platforms,if path is null or an 
-    empty string (""),the path information is returned unmodified. If extension is null,the 
-    returned string contains the specified path with its extension removed. If path has no 
-    extension,and extension is not null,the returned path string contains extension 
-    appended to the end of path.
+   path: The path information to modify. The path cannot contain any of the characters defined in System.IO.Path.GetInvalidPathChars.
+   extension: The new extension (with or without a leading period). Specify null to remove an existing extension from path.
+   Returns: The modified path information.On Windows-based desktop platforms,if path is null or an empty string (""),the path information is returned unmodified. If extension is 
+    null,the returned string contains the specified path with its extension removed. If path has no extension,and extension is not null,the returned path string contains 
+    extension appended to the end of path.
   """
   pass
  @staticmethod
@@ -29,9 +28,7 @@ class Path:
   
    path1: The first path to combine.
    path2: The second path to combine.
-   Returns: The combined paths. If one of the specified paths is a zero-length string,this method 
-    returns the other path. If path2 contains an absolute path,this method returns path2.
-  
+   Returns: The combined paths. If one of the specified paths is a zero-length string,this method returns the other path. If path2 contains an absolute path,this method returns path2.
   Combine(path1: str,path2: str,path3: str) -> str
   
    Combines three strings into a path.
@@ -65,8 +62,7 @@ class Path:
    Returns the directory information for the specified path string.
   
    path: The path of a file or directory.
-   Returns: Directory information for path,or null if path denotes a root directory or is null. 
-    Returns System.String.Empty if path does not contain directory information.
+   Returns: Directory information for path,or null if path denotes a root directory or is null. Returns System.String.Empty if path does not contain directory information.
   """
   pass
  @staticmethod
@@ -77,10 +73,8 @@ class Path:
    Returns the extension of the specified path string.
   
    path: The path string from which to get the extension.
-   Returns: The extension of the specified path (including the period "."),or null,or 
-    System.String.Empty. If path is null,System.IO.Path.GetExtension(System.String) returns 
-    null. If path does not have extension information,
-    System.IO.Path.GetExtension(System.String) returns System.String.Empty.
+   Returns: The extension of the specified path (including the period "."),or null,or System.String.Empty. If path is null,System.IO.Path.GetExtension(System.String) returns null. 
+    If path does not have extension information,System.IO.Path.GetExtension(System.String) returns System.String.Empty.
   """
   pass
  @staticmethod
@@ -91,9 +85,8 @@ class Path:
    Returns the file name and extension of the specified path string.
   
    path: The path string from which to obtain the file name and extension.
-   Returns: The characters after the last directory character in path. If the last character of path 
-    is a directory or volume separator character,this method returns System.String.Empty. If 
-    path is null,this method returns null.
+   Returns: The characters after the last directory character in path. If the last character of path is a directory or volume separator character,this method returns 
+    System.String.Empty. If path is null,this method returns null.
   """
   pass
  @staticmethod
@@ -104,8 +97,7 @@ class Path:
    Returns the file name of the specified path string without the extension.
   
    path: The path of the file.
-   Returns: The string returned by System.IO.Path.GetFileName(System.String),minus the last period 
-    (.) and all characters following it.
+   Returns: The string returned by System.IO.Path.GetFileName(System.String),minus the last period (.) and all characters following it.
   """
   pass
  @staticmethod
@@ -145,8 +137,7 @@ class Path:
    Gets the root directory information of the specified path.
   
    path: The path from which to obtain root directory information.
-   Returns: The root directory of path,such as "C:\",or null if path is null,or an empty string if 
-    path does not contain root directory information.
+   Returns: The root directory of path,such as "C:\",or null if path is null,or an empty string if path does not contain root directory information.
   """
   pass
  @staticmethod
@@ -163,9 +154,7 @@ class Path:
   """
   GetTempFileName() -> str
   
-   Creates a uniquely named,zero-byte temporary file on disk and returns the full path of 
-    that file.
-  
+   Creates a uniquely named,zero-byte temporary file on disk and returns the full path of that file.
    Returns: The full path of the temporary file.
   """
   pass
@@ -186,8 +175,7 @@ class Path:
    Determines whether a path includes a file name extension.
   
    path: The path to search for an extension.
-   Returns: true if the characters that follow the last directory separator (\\ or /) or volume 
-    separator (:) in the path include a period (.) followed by one or more characters; 
+   Returns: true if the characters that follow the last directory separator (\\ or /) or volume separator (:) in the path include a period (.) followed by one or more characters; 
     otherwise,false.
   """
   pass

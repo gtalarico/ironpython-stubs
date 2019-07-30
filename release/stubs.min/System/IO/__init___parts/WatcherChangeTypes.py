@@ -4,6 +4,11 @@ class WatcherChangeTypes:
  
  enum (flags) WatcherChangeTypes,values: All (15),Changed (4),Created (1),Deleted (2),Renamed (8)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WatcherChangeTypes()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

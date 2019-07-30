@@ -1,18 +1,17 @@
 class ICurrencyManagerProvider:
  """ Provides custom binding management for components. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ICurrencyManagerProvider()
+
  def GetRelatedCurrencyManager(self,dataMember):
   """
   GetRelatedCurrencyManager(self: ICurrencyManagerProvider,dataMember: str) -> CurrencyManager
   
-   Gets the System.Windows.Forms.CurrencyManager for this 
-    System.Windows.Forms.ICurrencyManagerProvider and the specified data member.
+   Gets the System.Windows.Forms.CurrencyManager for this System.Windows.Forms.ICurrencyManagerProvider and the specified data member.
   
-  
-   dataMember: The name of the column or list,within the data source,to obtain the 
-    System.Windows.Forms.CurrencyManager for.
-  
-   Returns: The related System.Windows.Forms.CurrencyManager obtained from this 
-    System.Windows.Forms.ICurrencyManagerProvider and the specified data member.
+   dataMember: The name of the column or list,within the data source,to obtain the System.Windows.Forms.CurrencyManager for.
+   Returns: The related System.Windows.Forms.CurrencyManager obtained from this System.Windows.Forms.ICurrencyManagerProvider and the specified data member.
   """
   pass
  def __init__(self,*args):

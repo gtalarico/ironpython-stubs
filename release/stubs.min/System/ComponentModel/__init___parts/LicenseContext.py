@@ -1,21 +1,23 @@
-class LicenseContext:
+class LicenseContext(object):
  """
  Specifies when you can use a licensed object and provides a way of obtaining additional services needed to support licenses running within its domain.
  
  LicenseContext()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LicenseContext()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetSavedLicenseKey(self,type,resourceAssembly):
   """
   GetSavedLicenseKey(self: LicenseContext,type: Type,resourceAssembly: Assembly) -> str
   
-   When overridden in a derived class,returns a saved license key for the specified type,
-    from the specified resource assembly.
-  
+   When overridden in a derived class,returns a saved license key for the specified type,from the specified resource assembly.
   
    type: A System.Type that represents the type of component.
    resourceAssembly: An System.Reflection.Assembly with the license key.
-   Returns: The System.ComponentModel.License.LicenseKey for the specified type. This method returns 
-    null unless you override it.
+   Returns: The System.ComponentModel.License.LicenseKey for the specified type. This method returns null unless you override it.
   """
   pass
  def GetService(self,type):

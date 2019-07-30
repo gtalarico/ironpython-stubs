@@ -1,5 +1,10 @@
-class TraceListenerCollection:
+class TraceListenerCollection(object):
  """ Provides a thread-safe list of System.Diagnostics.TraceListener objects. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TraceListenerCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,listener):
   """
   Add(self: TraceListenerCollection,listener: TraceListener) -> int
@@ -41,9 +46,7 @@ class TraceListenerCollection:
  def CopyTo(self,listeners,index):
   """
   CopyTo(self: TraceListenerCollection,listeners: Array[TraceListener],index: int)
-   Copies a section of the current System.Diagnostics.TraceListenerCollection list to the 
-    specified array at the specified index.
-  
+   Copies a section of the current System.Diagnostics.TraceListenerCollection list to the specified array at the specified index.
   
    listeners: An array of type System.Array to copy the elements into.
    index: The starting index number in the current list to copy from.
@@ -83,9 +86,7 @@ class TraceListenerCollection:
   
    listener: A System.Diagnostics.TraceListener to remove from the list.
   Remove(self: TraceListenerCollection,name: str)
-   Removes from the collection the first System.Diagnostics.TraceListener with the specified 
-    name.
-  
+   Removes from the collection the first System.Diagnostics.TraceListener with the specified name.
   
    name: The name of the System.Diagnostics.TraceListener to remove from the list.
   """

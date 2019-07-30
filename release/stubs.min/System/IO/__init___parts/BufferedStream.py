@@ -1,10 +1,15 @@
-class BufferedStream:
+class BufferedStream(Stream):
  """
  Adds a buffering layer to read and write operations on another stream. This class cannot be inherited.
  
  BufferedStream(stream: Stream)
  BufferedStream(stream: Stream,bufferSize: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BufferedStream()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginRead(self,buffer,offset,count,callback,state):
   """ BeginRead(self: BufferedStream,buffer: Array[Byte],offset: int,count: int,callback: AsyncCallback,state: object) -> IAsyncResult """
   pass
@@ -31,8 +36,7 @@ class BufferedStream:
  def Flush(self):
   """
   Flush(self: BufferedStream)
-   Clears all buffers for this stream and causes any buffered data to be written to the 
-    underlying device.
+   Clears all buffers for this stream and causes any buffered data to be written to the underlying device.
   """
   pass
  def FlushAsync(self,cancellationToken=None):
@@ -44,11 +48,9 @@ class BufferedStream:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -71,8 +73,7 @@ class BufferedStream:
   
    offset: The byte offset in the buffer at which to begin reading bytes.
    count: The number of bytes to be read.
-   Returns: The total number of bytes read into array. This can be less than the number of bytes 
-    requested if that many bytes are not currently available,or 0 if the end of the stream 
+   Returns: The total number of bytes read into array. This can be less than the number of bytes requested if that many bytes are not currently available,or 0 if the end of the stream 
     has been reached before any data can be read.
   """
   pass
@@ -83,9 +84,7 @@ class BufferedStream:
   """
   ReadByte(self: BufferedStream) -> int
   
-   Reads a byte from the underlying stream and returns the byte cast to an int,or returns 
-    -1 if reading from the end of the stream.
-  
+   Reads a byte from the underlying stream and returns the byte cast to an int,or returns -1 if reading from the end of the stream.
    Returns: The byte cast to an int,or -1 if reading from the end of the stream.
   """
   pass
@@ -96,9 +95,7 @@ class BufferedStream:
    Sets the position within the current buffered stream.
   
    offset: A byte offset relative to origin.
-   origin: A value of type System.IO.SeekOrigin indicating the reference point from which to obtain 
-    the new position.
-  
+   origin: A value of type System.IO.SeekOrigin indicating the reference point from which to obtain the new position.
    Returns: The new position within the current buffered stream.
   """
   pass
@@ -113,9 +110,7 @@ class BufferedStream:
  def Write(self,array,offset,count):
   """
   Write(self: BufferedStream,array: Array[Byte],offset: int,count: int)
-   Copies bytes to the buffered stream and advances the current position within the buffered 
-    stream by the number of bytes written.
-  
+   Copies bytes to the buffered stream and advances the current position within the buffered stream by the number of bytes written.
   
    array: The byte array from which to copy count bytes to the current buffered stream.
    offset: The offset in the buffer at which to begin copying bytes to the current buffered stream.

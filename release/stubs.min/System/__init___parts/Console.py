@@ -1,14 +1,17 @@
-class Console:
+class Console(object):
  """ Represents the standard input,output,and error streams for console applications. This class cannot be inherited. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Console()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Beep(frequency=None,duration=None):
   """
   Beep()
    Plays the sound of a beep through the console speaker.
   Beep(frequency: int,duration: int)
-   Plays the sound of a beep of a specified frequency and duration through the console 
-    speaker.
-  
+   Plays the sound of a beep of a specified frequency and duration through the console speaker.
   
    frequency: The frequency of the beep,ranging from 37 to 32767 hertz.
    duration: The duration of the beep measured in milliseconds.
@@ -98,8 +101,7 @@ class Console:
   Read() -> int
   
    Reads the next character from the standard input stream.
-   Returns: The next character from the input stream,or negative one (-1) if there are currently no 
-    more characters to be read.
+   Returns: The next character from the input stream,or negative one (-1) if there are currently no more characters to be read.
   """
   pass
  @staticmethod
@@ -107,29 +109,19 @@ class Console:
   """
   ReadKey() -> ConsoleKeyInfo
   
-   Obtains the next character or function key pressed by the user. The pressed key is 
-    displayed in the console window.
-  
-   Returns: A System.ConsoleKeyInfo object that describes the System.ConsoleKey constant and Unicode 
-    character,if any,that correspond to the pressed console key. The System.ConsoleKeyInfo 
-    object also describes,in a bitwise combination of System.ConsoleModifiers values,
-    whether one or more SHIFT,ALT,or CTRL modifier keys was pressed simultaneously with the 
-    console key.
+   Obtains the next character or function key pressed by the user. The pressed key is displayed in the console window.
+   Returns: A System.ConsoleKeyInfo object that describes the System.ConsoleKey constant and Unicode character,if any,that correspond to the pressed console key. The 
+    System.ConsoleKeyInfo object also describes,in a bitwise combination of System.ConsoleModifiers values,whether one or more SHIFT,ALT,or CTRL modifier keys was pressed 
+    simultaneously with the console key.
   
   ReadKey(intercept: bool) -> ConsoleKeyInfo
   
-   Obtains the next character or function key pressed by the user. The pressed key is 
-    optionally displayed in the console window.
+   Obtains the next character or function key pressed by the user. The pressed key is optionally displayed in the console window.
   
-  
-   intercept: Determines whether to display the pressed key in the console window. true to not display 
-    the pressed key; otherwise,false.
-  
-   Returns: A System.ConsoleKeyInfo object that describes the System.ConsoleKey constant and Unicode 
-    character,if any,that correspond to the pressed console key. The System.ConsoleKeyInfo 
-    object also describes,in a bitwise combination of System.ConsoleModifiers values,
-    whether one or more SHIFT,ALT,or CTRL modifier keys was pressed simultaneously with the 
-    console key.
+   intercept: Determines whether to display the pressed key in the console window. true to not display the pressed key; otherwise,false.
+   Returns: A System.ConsoleKeyInfo object that describes the System.ConsoleKey constant and Unicode character,if any,that correspond to the pressed console key. The 
+    System.ConsoleKeyInfo object also describes,in a bitwise combination of System.ConsoleModifiers values,whether one or more SHIFT,ALT,or CTRL modifier keys was pressed 
+    simultaneously with the console key.
   """
   pass
  @staticmethod
@@ -219,52 +211,36 @@ class Console:
  def Write(*__args):
   """
   Write(format: str,arg0: object)
-   Writes the text representation of the specified object to the standard output stream 
-    using the specified format information.
-  
+   Writes the text representation of the specified object to the standard output stream using the specified format information.
   
    format: A composite format string (see Remarks).
    arg0: An object to write using format.
   Write(value: UInt64)
-   Writes the text representation of the specified 64-bit unsigned integer value to the 
-    standard output stream.
-  
+   Writes the text representation of the specified 64-bit unsigned integer value to the standard output stream.
   
    value: The value to write.
   Write(value: Int64)
-   Writes the text representation of the specified 64-bit signed integer value to the 
-    standard output stream.
-  
+   Writes the text representation of the specified 64-bit signed integer value to the standard output stream.
   
    value: The value to write.
   Write(value: UInt32)
-   Writes the text representation of the specified 32-bit unsigned integer value to the 
-    standard output stream.
-  
+   Writes the text representation of the specified 32-bit unsigned integer value to the standard output stream.
   
    value: The value to write.
   Write(value: int)
-   Writes the text representation of the specified 32-bit signed integer value to the 
-    standard output stream.
-  
+   Writes the text representation of the specified 32-bit signed integer value to the standard output stream.
   
    value: The value to write.
   Write(value: Single)
-   Writes the text representation of the specified single-precision floating-point value to 
-    the standard output stream.
-  
+   Writes the text representation of the specified single-precision floating-point value to the standard output stream.
   
    value: The value to write.
   Write(value: Decimal)
-   Writes the text representation of the specified System.Decimal value to the standard 
-    output stream.
-  
+   Writes the text representation of the specified System.Decimal value to the standard output stream.
   
    value: The value to write.
   Write(value: float)
-   Writes the text representation of the specified double-precision floating-point value to 
-    the standard output stream.
-  
+   Writes the text representation of the specified double-precision floating-point value to the standard output stream.
   
    value: The value to write.
   Write(buffer: Array[Char],index: int,count: int)
@@ -282,22 +258,16 @@ class Console:
   
    value: The value to write.
   Write(value: bool)
-   Writes the text representation of the specified Boolean value to the standard output 
-    stream.
-  
+   Writes the text representation of the specified Boolean value to the standard output stream.
   
    value: The value to write.
   Write(format: str,*arg: Array[object])
-   Writes the text representation of the specified array of objects to the standard output 
-    stream using the specified format information.
-  
+   Writes the text representation of the specified array of objects to the standard output stream using the specified format information.
   
    format: A composite format string (see Remarks).
    arg: An array of objects to write using format.
   Write(format: str,arg0: object,arg1: object,arg2: object,arg3: object)
-   Writes the text representation of the specified objects and variable-length parameter 
-    list to the standard output stream using the specified format information.
-  
+   Writes the text representation of the specified objects and variable-length parameter list to the standard output stream using the specified format information.
   
    format: A composite format string (see Remarks).
    arg0: The first object to write using format.
@@ -305,18 +275,14 @@ class Console:
    arg2: The third object to write using format.
    arg3: The fourth object to write using format.
   Write(format: str,arg0: object,arg1: object,arg2: object)
-   Writes the text representation of the specified objects to the standard output stream 
-    using the specified format information.
-  
+   Writes the text representation of the specified objects to the standard output stream using the specified format information.
   
    format: A composite format string (see Remarks).
    arg0: The first object to write using format.
    arg1: The second object to write using format.
    arg2: The third object to write using format.
   Write(format: str,arg0: object,arg1: object)
-   Writes the text representation of the specified objects to the standard output stream 
-    using the specified format information.
-  
+   Writes the text representation of the specified objects to the standard output stream using the specified format information.
   
    format: A composite format string (see Remarks).
    arg0: The first object to write using format.
@@ -337,56 +303,41 @@ class Console:
   WriteLine()
    Writes the current line terminator to the standard output stream.
   WriteLine(format: str,arg0: object,arg1: object,arg2: object)
-   Writes the text representation of the specified objects,followed by the current line 
-    terminator,to the standard output stream using the specified format information.
-  
+   Writes the text representation of the specified objects,followed by the current line terminator,to the standard output stream using the specified format information.
   
    format: A composite format string (see Remarks).
    arg0: The first object to write using format.
    arg1: The second object to write using format.
    arg2: The third object to write using format.
   WriteLine(format: str,arg0: object,arg1: object)
-   Writes the text representation of the specified objects,followed by the current line 
-    terminator,to the standard output stream using the specified format information.
-  
+   Writes the text representation of the specified objects,followed by the current line terminator,to the standard output stream using the specified format information.
   
    format: A composite format string (see Remarks).
    arg0: The first object to write using format.
    arg1: The second object to write using format.
   WriteLine(format: str,arg0: object)
-   Writes the text representation of the specified object,followed by the current line 
-    terminator,to the standard output stream using the specified format information.
-  
+   Writes the text representation of the specified object,followed by the current line terminator,to the standard output stream using the specified format information.
   
    format: A composite format string (see Remarks).
    arg0: An object to write using format.
   WriteLine(value: str)
-   Writes the specified string value,followed by the current line terminator,to the 
-    standard output stream.
-  
+   Writes the specified string value,followed by the current line terminator,to the standard output stream.
   
    value: The value to write.
   WriteLine(value: object)
-   Writes the text representation of the specified object,followed by the current line 
-    terminator,to the standard output stream.
-  
+   Writes the text representation of the specified object,followed by the current line terminator,to the standard output stream.
   
    value: The value to write.
   WriteLine(value: UInt64)
-   Writes the text representation of the specified 64-bit unsigned integer value,followed 
-    by the current line terminator,to the standard output stream.
-  
+   Writes the text representation of the specified 64-bit unsigned integer value,followed by the current line terminator,to the standard output stream.
   
    value: The value to write.
   WriteLine(value: Int64)
-   Writes the text representation of the specified 64-bit signed integer value,followed by 
-    the current line terminator,to the standard output stream.
-  
+   Writes the text representation of the specified 64-bit signed integer value,followed by the current line terminator,to the standard output stream.
   
    value: The value to write.
   WriteLine(format: str,arg0: object,arg1: object,arg2: object,arg3: object)
-   Writes the text representation of the specified objects and variable-length parameter 
-    list,followed by the current line terminator,to the standard output stream using the 
+   Writes the text representation of the specified objects and variable-length parameter list,followed by the current line terminator,to the standard output stream using the 
     specified format information.
   
   
@@ -396,64 +347,46 @@ class Console:
    arg2: The third object to write using format.
    arg3: The fourth object to write using format.
   WriteLine(value: UInt32)
-   Writes the text representation of the specified 32-bit unsigned integer value,followed 
-    by the current line terminator,to the standard output stream.
-  
+   Writes the text representation of the specified 32-bit unsigned integer value,followed by the current line terminator,to the standard output stream.
   
    value: The value to write.
   WriteLine(value: Single)
-   Writes the text representation of the specified single-precision floating-point value,
-    followed by the current line terminator,to the standard output stream.
-  
+   Writes the text representation of the specified single-precision floating-point value,followed by the current line terminator,to the standard output stream.
   
    value: The value to write.
   WriteLine(value: float)
-   Writes the text representation of the specified double-precision floating-point value,
-    followed by the current line terminator,to the standard output stream.
-  
+   Writes the text representation of the specified double-precision floating-point value,followed by the current line terminator,to the standard output stream.
   
    value: The value to write.
   WriteLine(value: Decimal)
-   Writes the text representation of the specified System.Decimal value,followed by the 
-    current line terminator,to the standard output stream.
-  
+   Writes the text representation of the specified System.Decimal value,followed by the current line terminator,to the standard output stream.
   
    value: The value to write.
   WriteLine(buffer: Array[Char],index: int,count: int)
-   Writes the specified subarray of Unicode characters,followed by the current line 
-    terminator,to the standard output stream.
-  
+   Writes the specified subarray of Unicode characters,followed by the current line terminator,to the standard output stream.
   
    buffer: An array of Unicode characters.
    index: The starting position in buffer.
    count: The number of characters to write.
   WriteLine(buffer: Array[Char])
-   Writes the specified array of Unicode characters,followed by the current line 
-    terminator,to the standard output stream.
-  
+   Writes the specified array of Unicode characters,followed by the current line terminator,to the standard output stream.
   
    buffer: A Unicode character array.
   WriteLine(value: Char)
-   Writes the specified Unicode character,followed by the current line terminator,value to 
-    the standard output stream.
-  
+   Writes the specified Unicode character,followed by the current line terminator,value to the standard output stream.
   
    value: The value to write.
   WriteLine(value: bool)
-   Writes the text representation of the specified Boolean value,followed by the current 
-    line terminator,to the standard output stream.
-  
+   Writes the text representation of the specified Boolean value,followed by the current line terminator,to the standard output stream.
   
    value: The value to write.
   WriteLine(value: int)
-   Writes the text representation of the specified 32-bit signed integer value,followed by 
-    the current line terminator,to the standard output stream.
-  
+   Writes the text representation of the specified 32-bit signed integer value,followed by the current line terminator,to the standard output stream.
   
    value: The value to write.
   WriteLine(format: str,*arg: Array[object])
-   Writes the text representation of the specified array of objects,followed by the current 
-    line terminator,to the standard output stream using the specified format information.
+   Writes the text representation of the specified array of objects,followed by the current line terminator,to the standard output stream using the specified format 
+    information.
   
   
    format: A composite format string (see Remarks).
@@ -461,13 +394,13 @@ class Console:
   """
   pass
  BackgroundColor=None
- BufferHeight=9001
- BufferWidth=120
+ BufferHeight=3000
+ BufferWidth=203
  CancelKeyPress=None
  CapsLock=False
  CursorLeft=0
  CursorSize=25
- CursorTop=4012
+ CursorTop=2649
  CursorVisible=True
  Error=None
  ForegroundColor=None
@@ -477,17 +410,17 @@ class Console:
  IsInputRedirected=False
  IsOutputRedirected=False
  KeyAvailable=False
- LargestWindowHeight=86
- LargestWindowWidth=430
+ LargestWindowHeight=275
+ LargestWindowWidth=1146
  NumberLock=True
  Out=None
  OutputEncoding=None
- Title='Command Prompt - ipy  -m ironstubs make --all --overwrite'
+ Title='Administrator:  '
  TreatControlCAsInput=False
- WindowHeight=30
+ WindowHeight=14
  WindowLeft=0
- WindowTop=3983
- WindowWidth=120
+ WindowTop=2636
+ WindowWidth=203
  __all__=[
   'Beep',
   'CancelKeyPress',

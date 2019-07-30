@@ -1,9 +1,13 @@
-class DataGridViewCellValueEventArgs:
+class DataGridViewCellValueEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.DataGridView.CellValueNeeded and System.Windows.Forms.DataGridView.CellValuePushed events of the System.Windows.Forms.DataGridView control.
  
  DataGridViewCellValueEventArgs(columnIndex: int,rowIndex: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewCellValueEventArgs()
+
  @staticmethod
  def __new__(self,columnIndex,rowIndex):
   """ __new__(cls: type,columnIndex: int,rowIndex: int) """

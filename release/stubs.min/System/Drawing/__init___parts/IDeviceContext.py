@@ -1,5 +1,9 @@
-class IDeviceContext:
+class IDeviceContext(IDisposable):
  """ Defines methods for obtaining and releasing an existing handle to a Windows device context. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return IDeviceContext()
+
  def GetHdc(self):
   """
   GetHdc(self: IDeviceContext) -> IntPtr

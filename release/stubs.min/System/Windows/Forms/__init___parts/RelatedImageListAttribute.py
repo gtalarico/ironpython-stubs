@@ -1,9 +1,13 @@
-class RelatedImageListAttribute:
+class RelatedImageListAttribute(Attribute,_Attribute):
  """
  Indicates which System.Windows.Forms.ImageList a property is related to.
  
  RelatedImageListAttribute(relatedImageList: str)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return RelatedImageListAttribute()
+
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

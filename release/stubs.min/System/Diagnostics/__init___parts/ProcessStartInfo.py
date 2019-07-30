@@ -1,4 +1,4 @@
-class ProcessStartInfo:
+class ProcessStartInfo(object):
  """
  Specifies a set of values that are used when you start a process.
  
@@ -6,6 +6,11 @@ class ProcessStartInfo:
  ProcessStartInfo(fileName: str)
  ProcessStartInfo(fileName: str,arguments: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessStartInfo()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,fileName=None,arguments=None):
   """

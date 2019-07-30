@@ -1,4 +1,4 @@
-class Point:
+class Point(object):
  """
  Represents an ordered pair of integer x- and y-coordinates that defines a point in a two-dimensional plane.
  
@@ -6,6 +6,10 @@ class Point:
  Point(sz: Size)
  Point(dw: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Point()
+
  @staticmethod
  def Add(pt,sz):
   """
@@ -23,9 +27,7 @@ class Point:
   """
   Ceiling(value: PointF) -> Point
   
-   Converts the specified System.Drawing.PointF to a System.Drawing.Point by rounding the 
-    values of the System.Drawing.PointF to the next higher integer values.
-  
+   Converts the specified System.Drawing.PointF to a System.Drawing.Point by rounding the values of the System.Drawing.PointF to the next higher integer values.
   
    value: The System.Drawing.PointF to convert.
    Returns: The System.Drawing.Point this method converts to.
@@ -35,13 +37,10 @@ class Point:
   """
   Equals(self: Point,obj: object) -> bool
   
-   Specifies whether this System.Drawing.Point contains the same coordinates as the 
-    specified System.Object.
-  
+   Specifies whether this System.Drawing.Point contains the same coordinates as the specified System.Object.
   
    obj: The System.Object to test.
-   Returns: true if obj is a System.Drawing.Point and has the same coordinates as this 
-    System.Drawing.Point.
+   Returns: true if obj is a System.Drawing.Point and has the same coordinates as this System.Drawing.Point.
   """
   pass
  def GetHashCode(self):
@@ -70,9 +69,7 @@ class Point:
   """
   Round(value: PointF) -> Point
   
-   Converts the specified System.Drawing.PointF to a System.Drawing.Point object by rounding 
-    the System.Drawing.Point values to the nearest integer.
-  
+   Converts the specified System.Drawing.PointF to a System.Drawing.Point object by rounding the System.Drawing.Point values to the nearest integer.
   
    value: The System.Drawing.PointF to convert.
    Returns: The System.Drawing.Point this method converts to.
@@ -83,9 +80,7 @@ class Point:
   """
   Subtract(pt: Point,sz: Size) -> Point
   
-   Returns the result of subtracting specified System.Drawing.Size from the specified 
-    System.Drawing.Point.
-  
+   Returns the result of subtracting specified System.Drawing.Size from the specified System.Drawing.Point.
   
    pt: The System.Drawing.Point to be subtracted from.
    sz: The System.Drawing.Size to subtract from the System.Drawing.Point.
@@ -105,9 +100,7 @@ class Point:
   """
   Truncate(value: PointF) -> Point
   
-   Converts the specified System.Drawing.PointF to a System.Drawing.Point by truncating the 
-    values of the System.Drawing.Point.
-  
+   Converts the specified System.Drawing.PointF to a System.Drawing.Point by truncating the values of the System.Drawing.Point.
   
    value: The System.Drawing.PointF to convert.
    Returns: The System.Drawing.Point this method converts to.

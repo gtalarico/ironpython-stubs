@@ -1,15 +1,22 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.Batches calls itself Batches
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # no functions
 # classes
 
-class BatchesExtensions:
+class BatchesExtensions(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchesExtensions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def ExtractFastLookupDictionaries(this,batchNames,orderNumbers,lineNumbers,barcodes):
   """ ExtractFastLookupDictionaries(this: Batches) -> (Dictionary[str,str],Dictionary[str,str],Dictionary[str,str],Dictionary[str,str]) """
@@ -24,8 +31,13 @@ class BatchesExtensions:
  ]
 
 
-class BatchManager:
+class BatchManager(object):
  """ BatchManager() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchManager()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def CalculateAge(createdAt):
   """ CalculateAge(createdAt: DateTime) -> str """
@@ -89,8 +101,13 @@ class BatchManager:
  SyncLock=None
 
 
-class BatchPackManager:
+class BatchPackManager(object):
  """ BatchPackManager(stockManager: IStockManager,transportPackages: TransportPackages) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchPackManager()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddCodAmountToFirstPackage(self,result):
   """ AddCodAmountToFirstPackage(self: BatchPackManager,result: ErpProcessSalesOrderLinesResult) """
   pass
@@ -189,8 +206,13 @@ class BatchPackManager:
   """ __repr__(self: object) -> str """
   pass
 
-class BatchPickManager:
+class BatchPickManager(object):
  """ BatchPickManager(batch: Batch,stock: IStockManager,settings: AllocationSettings) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchPickManager()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CheckBatchScanForItem(self,args):
   """ CheckBatchScanForItem(self: BatchPickManager,args: BatchScanArgs) -> BatchScanResult """
   pass
@@ -290,8 +312,13 @@ class BatchPickManager:
  BoxColors=None
 
 
-class ColliRegistrationResult:
+class ColliRegistrationResult(object):
  """ ColliRegistrationResult() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ColliRegistrationResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddCount(self,count):
   """ AddCount(self: ColliRegistrationResult,count: Count) """
   pass
@@ -316,8 +343,13 @@ Set: AreColliHandled(self: ColliRegistrationResult)=value
 
 
 
-class ColliRegistrator:
+class ColliRegistrator(object):
  """ ColliRegistrator(transportPackages: TransportPackages) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ColliRegistrator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """ Dispose(self: ColliRegistrator) """
   pass
@@ -348,8 +380,13 @@ class ColliRegistrator:
   """ __repr__(self: object) -> str """
   pass
 
-class CountForColliRegistration:
+class CountForColliRegistration(object):
  """ CountForColliRegistration() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CountForColliRegistration()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: ItemCode(self: CountForColliRegistration) -> str
 
@@ -382,8 +419,13 @@ Set: WarehouseLocationCode(self: CountForColliRegistration)=value
 
 
 
-class PickingList:
+class PickingList(object):
  """ PickingList() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PickingList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Create(self,batch):
   """ Create(self: PickingList,batch: Batch) -> BatchPickLocations """
   pass

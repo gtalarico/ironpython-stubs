@@ -1,8 +1,13 @@
-class BindingList:
+class BindingList(Collection):
  """
  BindingList[T]()
  BindingList[T](list: IList[T])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BindingList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddNew(self):
   """
   AddNew(self: BindingList[T]) -> T
@@ -22,9 +27,7 @@ class BindingList:
  def ApplySortCore(self,*args):
   """
   ApplySortCore(self: BindingList[T],prop: PropertyDescriptor,direction: ListSortDirection)
-   Sorts the items if overridden in a derived class; otherwise,throws a 
-    System.NotSupportedException.
-  
+   Sorts the items if overridden in a derived class; otherwise,throws a System.NotSupportedException.
   
    prop: A System.ComponentModel.PropertyDescriptor that specifies the property to sort on.
    direction: One of the System.ComponentModel.ListSortDirection  values.
@@ -56,15 +59,13 @@ class BindingList:
   """
   FindCore(self: BindingList[T],prop: PropertyDescriptor,key: object) -> int
   
-   Searches for the index of the item that has the specified property descriptor with the 
-    specified value,if searching is implemented in a derived class; otherwise,a 
+   Searches for the index of the item that has the specified property descriptor with the specified value,if searching is implemented in a derived class; otherwise,a 
     System.NotSupportedException.
   
   
    prop: The System.ComponentModel.PropertyDescriptor to search for.
    key: The value of property to match.
-   Returns: The zero-based index of the item that matches the property descriptor and contains the 
-    specified value.
+   Returns: The zero-based index of the item that matches the property descriptor and contains the specified value.
   """
   pass
  def InsertItem(self,*args):
@@ -103,23 +104,19 @@ class BindingList:
  def RemoveSortCore(self,*args):
   """
   RemoveSortCore(self: BindingList[T])
-   Removes any sort applied with System.ComponentModel.BindingList if sorting is implemented 
-    in a derived class; otherwise,raises System.NotSupportedException.
+   Removes any sort applied with System.ComponentModel.BindingList if sorting is implemented in a derived class; otherwise,raises System.NotSupportedException.
   """
   pass
  def ResetBindings(self):
   """
   ResetBindings(self: BindingList[T])
-   Raises a System.ComponentModel.BindingList event of type 
-    System.ComponentModel.ListChangedType.Reset.
+   Raises a System.ComponentModel.BindingList event of type System.ComponentModel.ListChangedType.Reset.
   """
   pass
  def ResetItem(self,position):
   """
   ResetItem(self: BindingList[T],position: int)
-   Raises a System.ComponentModel.BindingList event of type 
-    System.ComponentModel.ListChangedType.ItemChanged for the item at the specified position.
-  
+   Raises a System.ComponentModel.BindingList event of type System.ComponentModel.ListChangedType.ItemChanged for the item at the specified position.
   
    position: A zero-based index of the item to be reset.
   """
@@ -130,8 +127,7 @@ class BindingList:
    Replaces the item at the specified index with the specified item.
   
    index: The zero-based index of the item to replace.
-   item: The new value for the item at the specified index. The value can be null for reference 
-    types.
+   item: The new value for the item at the specified index. The value can be null for reference types.
   """
   pass
  def __getitem__(self,*args):

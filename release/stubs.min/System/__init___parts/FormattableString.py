@@ -1,5 +1,10 @@
-class FormattableString:
+class FormattableString(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FormattableString()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetArgument(self,index):
   """ GetArgument(self: FormattableString,index: int) -> object """
   pass

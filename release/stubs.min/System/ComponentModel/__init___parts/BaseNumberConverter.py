@@ -1,12 +1,15 @@
-class BaseNumberConverter:
+class BaseNumberConverter(TypeConverter):
  """ Provides a base type converter for nonfloating-point numerical types. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BaseNumberConverter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CanConvertFrom(self,*__args):
   """
   CanConvertFrom(self: BaseNumberConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Determines if this converter can convert an object in the given source type to the native 
-    type of the converter.
-  
+   Determines if this converter can convert an object in the given source type to the native type of the converter.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    sourceType: A System.Type that represents the type from which you want to convert.
@@ -17,9 +20,7 @@ class BaseNumberConverter:
   """
   CanConvertTo(self: BaseNumberConverter,context: ITypeDescriptorContext,t: Type) -> bool
   
-   Returns a value indicating whether this converter can convert an object to the given 
-    destination type using the context.
-  
+   Returns a value indicating whether this converter can convert an object to the given destination type using the context.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    t: A System.Type that represents the type to which you want to convert.

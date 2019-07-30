@@ -1,4 +1,4 @@
-class ListViewGroup:
+class ListViewGroup(object,ISerializable):
  """
  Represents a group of items displayed within a System.Windows.Forms.ListView control.
  
@@ -7,6 +7,10 @@ class ListViewGroup:
  ListViewGroup(header: str)
  ListViewGroup(header: str,headerAlignment: HorizontalAlignment)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ListViewGroup()
+
  def ToString(self):
   """
   ToString(self: ListViewGroup) -> str

@@ -1,16 +1,19 @@
-class StringConverter:
+class StringConverter(TypeConverter):
  """
  Provides a type converter to convert string objects to and from other representations.
  
  StringConverter()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StringConverter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CanConvertFrom(self,*__args):
   """
   CanConvertFrom(self: StringConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object in the given source 
-    type to a string using the specified context.
-  
+   Gets a value indicating whether this converter can convert an object in the given source type to a string using the specified context.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    sourceType: A System.Type that represents the type you wish to convert from.

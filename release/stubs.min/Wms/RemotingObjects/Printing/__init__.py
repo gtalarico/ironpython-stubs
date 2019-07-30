@@ -1,20 +1,31 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.Printing calls itself Printing
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # no functions
 # classes
 
-class PrintLineBase:
- # no doc
+class PrintLineBase(object):
+ """  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintLineBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """ Equals(self: PrintLineBase,obj: object) -> bool """
   pass
  def GetHashCode(self):
-  """ GetHashCode(self: PrintLineBase) -> int """
+  """
+  GetHashCode(self: PrintLineBase) -> int
+  
+   Best practice to override as well if Equals is overridden
+  """
   pass
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==y """
@@ -22,32 +33,45 @@ class PrintLineBase:
  def __ne__(self,*args):
   pass
  GroupKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupKey(self: PrintLineBase) -> str
+ """
+
+Get: GroupKey(self: PrintLineBase) -> str
 
 """
 
  NumberOfCopies=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NumberOfCopies(self: PrintLineBase) -> Decimal
+ """
+
+Get: NumberOfCopies(self: PrintLineBase) -> Decimal
 
 Set: NumberOfCopies(self: PrintLineBase)=value
 """
 
  PrintLineItems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrintLineItems(self: PrintLineBase) -> PrintLinesBase
+ """
+
+Get: PrintLineItems(self: PrintLineBase) -> PrintLinesBase
 
 Set: PrintLineItems(self: PrintLineBase)=value
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: PrintLineBase) -> Decimal
+ """
+
+Get: Quantity(self: PrintLineBase) -> Decimal
 
 Set: Quantity(self: PrintLineBase)=value
 """
 
 
 
-class BarcodePrintLine:
+class BarcodePrintLine(PrintLineBase):
  """ BarcodePrintLine(barcode: str) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BarcodePrintLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHashCode(self):
   """ GetHashCode(self: BarcodePrintLine) -> int """
   pass
@@ -56,20 +80,29 @@ class BarcodePrintLine:
   """ __new__(cls: type,barcode: str) """
   pass
  Barcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Barcode(self: BarcodePrintLine) -> str
+ """
+
+Get: Barcode(self: BarcodePrintLine) -> str
 
 Set: Barcode(self: BarcodePrintLine)=value
 """
 
  GroupKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupKey(self: BarcodePrintLine) -> str
+ """
+
+Get: GroupKey(self: BarcodePrintLine) -> str
 
 """
 
 
 
-class PrintLinesBase:
- # no doc
+class PrintLinesBase(FindableList):
+ """  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintLinesBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddRange(self,collection):
   """ AddRange(self: PrintLinesBase,collection: IEnumerable[PrintLineBase]) -> List[PrintLineBase] """
   pass
@@ -90,11 +123,16 @@ class PrintLinesBase:
  UniqueId='GroupKey'
 
 
-class BarcodePrintLines:
+class BarcodePrintLines(PrintLinesBase):
  """
  BarcodePrintLines()
  BarcodePrintLines(collection: IEnumerable[BarcodePrintLine])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BarcodePrintLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -117,17 +155,24 @@ class BarcodePrintLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: BarcodePrintLines) -> bool
+ """
+
+Get: IsDisposable(self: BarcodePrintLines) -> bool
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: BarcodePrintLines) -> bool
+ """
+
+Get: PreserveState(self: BarcodePrintLines) -> bool
 
 """
 
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: BarcodePrintLines) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: BarcodePrintLines) -> Int64
 
 Set: TotalRowsMatched(self: BarcodePrintLines)=value
 """
@@ -137,13 +182,20 @@ Set: TotalRowsMatched(self: BarcodePrintLines)=value
  ValueMember=None
 
 
-class InboundOrderPrintLine:
+class InboundOrderPrintLine(PrintLineBase):
  """ InboundOrderPrintLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InboundOrderPrintLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHashCode(self):
   """ GetHashCode(self: InboundOrderPrintLine) -> int """
   pass
  Barcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Barcode(self: InboundOrderPrintLine) -> str
+ """DEFAULT supplier barcode
+
+Get: Barcode(self: InboundOrderPrintLine) -> str
 
 Set: Barcode(self: InboundOrderPrintLine)=value
 """
@@ -154,79 +206,108 @@ Set: Barcode(self: InboundOrderPrintLine)=value
 """
 
  GroupKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupKey(self: InboundOrderPrintLine) -> str
+ """
+
+Get: GroupKey(self: InboundOrderPrintLine) -> str
 
 """
 
  GTINCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GTINCode(self: InboundOrderPrintLine) -> str
+ """The GS1 GTIN code of this item
+
+Get: GTINCode(self: InboundOrderPrintLine) -> str
 
 Set: GTINCode(self: InboundOrderPrintLine)=value
 """
 
  IsBatchItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsBatchItem(self: InboundOrderPrintLine) -> bool
+ """
+
+Get: IsBatchItem(self: InboundOrderPrintLine) -> bool
 
 Set: IsBatchItem(self: InboundOrderPrintLine)=value
 """
 
  IsSerialItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsSerialItem(self: InboundOrderPrintLine) -> bool
+ """
+
+Get: IsSerialItem(self: InboundOrderPrintLine) -> bool
 
 Set: IsSerialItem(self: InboundOrderPrintLine)=value
 """
 
  ItemBrand=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemBrand(self: InboundOrderPrintLine) -> str
+ """
+
+Get: ItemBrand(self: InboundOrderPrintLine) -> str
 
 Set: ItemBrand(self: InboundOrderPrintLine)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: InboundOrderPrintLine) -> str
+ """
+
+Get: ItemCode(self: InboundOrderPrintLine) -> str
 
 Set: ItemCode(self: InboundOrderPrintLine)=value
 """
 
  ItemDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemDescription(self: InboundOrderPrintLine) -> str
+ """
+
+Get: ItemDescription(self: InboundOrderPrintLine) -> str
 
 Set: ItemDescription(self: InboundOrderPrintLine)=value
 """
 
  ItemIdentification=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIdentification(self: InboundOrderPrintLine) -> str
+ """Pure for displaying in PrintLines form.
+
+Get: ItemIdentification(self: InboundOrderPrintLine) -> str
 
 """
 
  ItemIdentifications=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIdentifications(self: InboundOrderPrintLine) -> List[ItemIdentification]
+ """
+
+Get: ItemIdentifications(self: InboundOrderPrintLine) -> List[ItemIdentification]
 
 Set: ItemIdentifications(self: InboundOrderPrintLine)=value
 """
 
  OrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumber(self: InboundOrderPrintLine) -> str
+ """
+
+Get: OrderNumber(self: InboundOrderPrintLine) -> str
 
 Set: OrderNumber(self: InboundOrderPrintLine)=value
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: InboundOrderPrintLine) -> Decimal
+ """
+
+Get: Quantity(self: InboundOrderPrintLine) -> Decimal
 
 Set: Quantity(self: InboundOrderPrintLine)=value
 """
 
  SupplierCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SupplierCode(self: InboundOrderPrintLine) -> str
+ """DEFAULT supplier code.
+
+Get: SupplierCode(self: InboundOrderPrintLine) -> str
 
 Set: SupplierCode(self: InboundOrderPrintLine)=value
 """
 
 
 
-class ItemPrintLine:
+class ItemPrintLine(PrintLineBase):
  """ ItemPrintLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemPrintLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Create(item):
   """ Create(item: Item) -> ItemPrintLine """
@@ -235,83 +316,112 @@ class ItemPrintLine:
   """ GetHashCode(self: ItemPrintLine) -> int """
   pass
  Barcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Barcode(self: ItemPrintLine) -> str
+ """
+
+Get: Barcode(self: ItemPrintLine) -> str
 
 Set: Barcode(self: ItemPrintLine)=value
 """
 
  DefaultSalesPrice=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultSalesPrice(self: ItemPrintLine) -> Decimal
+ """
+
+Get: DefaultSalesPrice(self: ItemPrintLine) -> Decimal
 
 Set: DefaultSalesPrice(self: ItemPrintLine)=value
 """
 
  DefaultVendorName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultVendorName(self: ItemPrintLine) -> str
+ """
+
+Get: DefaultVendorName(self: ItemPrintLine) -> str
 
 Set: DefaultVendorName(self: ItemPrintLine)=value
 """
 
  DefaultVendorNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultVendorNumber(self: ItemPrintLine) -> str
+ """
+
+Get: DefaultVendorNumber(self: ItemPrintLine) -> str
 
 Set: DefaultVendorNumber(self: ItemPrintLine)=value
 """
 
  GroupKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupKey(self: ItemPrintLine) -> str
+ """
+
+Get: GroupKey(self: ItemPrintLine) -> str
 
 """
 
  GTINCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GTINCode(self: ItemPrintLine) -> str
+ """The GS1 GTIN code of this item
+
+Get: GTINCode(self: ItemPrintLine) -> str
 
 Set: GTINCode(self: ItemPrintLine)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: ItemPrintLine) -> str
+ """
+
+Get: ItemCode(self: ItemPrintLine) -> str
 
 Set: ItemCode(self: ItemPrintLine)=value
 """
 
  ItemDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemDescription(self: ItemPrintLine) -> str
+ """
+
+Get: ItemDescription(self: ItemPrintLine) -> str
 
 Set: ItemDescription(self: ItemPrintLine)=value
 """
 
  ItemGroupCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemGroupCode(self: ItemPrintLine) -> str
+ """
+
+Get: ItemGroupCode(self: ItemPrintLine) -> str
 
 Set: ItemGroupCode(self: ItemPrintLine)=value
 """
 
  ItemGroupDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemGroupDescription(self: ItemPrintLine) -> str
+ """
+
+Get: ItemGroupDescription(self: ItemPrintLine) -> str
 
 Set: ItemGroupDescription(self: ItemPrintLine)=value
 """
 
  SupplierCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SupplierCode(self: ItemPrintLine) -> str
+ """
+
+Get: SupplierCode(self: ItemPrintLine) -> str
 
 Set: SupplierCode(self: ItemPrintLine)=value
 """
 
  UnitCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UnitCode(self: ItemPrintLine) -> str
+ """
+
+Get: UnitCode(self: ItemPrintLine) -> str
 
 Set: UnitCode(self: ItemPrintLine)=value
 """
 
 
 
-class ItemPrintLines:
+class ItemPrintLines(PrintLinesBase):
  """
  ItemPrintLines()
  ItemPrintLines(collection: IEnumerable[ItemPrintLine])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemPrintLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -334,17 +444,24 @@ class ItemPrintLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: ItemPrintLines) -> bool
+ """
+
+Get: IsDisposable(self: ItemPrintLines) -> bool
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: ItemPrintLines) -> bool
+ """
+
+Get: PreserveState(self: ItemPrintLines) -> bool
 
 """
 
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: ItemPrintLines) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: ItemPrintLines) -> Int64
 
 Set: TotalRowsMatched(self: ItemPrintLines)=value
 """
@@ -354,8 +471,13 @@ Set: TotalRowsMatched(self: ItemPrintLines)=value
  ValueMember='ItemCode'
 
 
-class ItemWithItemIdPrintLine:
+class ItemWithItemIdPrintLine(PrintLineBase):
  """ ItemWithItemIdPrintLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemWithItemIdPrintLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Create(item,itemIdentificationNumber):
   """ Create(item: Item,itemIdentificationNumber: str) -> ItemWithItemIdPrintLine """
@@ -399,7 +521,9 @@ Set: ExpiryDate(self: ItemWithItemIdPrintLine)=value
 """
 
  GTINCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GTINCode(self: ItemWithItemIdPrintLine) -> str
+ """The GS1 GTIN code of this item
+
+Get: GTINCode(self: ItemWithItemIdPrintLine) -> str
 
 Set: GTINCode(self: ItemWithItemIdPrintLine)=value
 """
@@ -456,6 +580,11 @@ Set: UnitCode(self: ItemWithItemIdPrintLine)=value
 
 class LabelFieldType:
  """ enum LabelFieldType,values: Barcode (2),BarcodeDescription (3),String (1),Unknown (0) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LabelFieldType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -486,104 +615,147 @@ class LabelFieldType:
  value__=None
 
 
-class LicenseOptions:
+class LicenseOptions(object):
  """ LicenseOptions() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LicenseOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  PdfPrintNetCompany=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PdfPrintNetCompany(self: LicenseOptions) -> str
+ """PdfPrintNet License company name
+
+Get: PdfPrintNetCompany(self: LicenseOptions) -> str
 
 Set: PdfPrintNetCompany(self: LicenseOptions)=value
 """
 
  PdfPrintNetLicenseKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PdfPrintNetLicenseKey(self: LicenseOptions) -> str
+ """PdfPrintNet License key
+
+Get: PdfPrintNetLicenseKey(self: LicenseOptions) -> str
 
 Set: PdfPrintNetLicenseKey(self: LicenseOptions)=value
 """
 
 
 
-class LicensePlatePrintLine:
+class LicensePlatePrintLine(PrintLineBase):
  """ LicensePlatePrintLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LicensePlatePrintLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Create(item):
   """ Create(item: LicensePlate) -> LicensePlatePrintLine """
   pass
  Barcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Barcode(self: LicensePlatePrintLine) -> str
+ """
+
+Get: Barcode(self: LicensePlatePrintLine) -> str
 
 """
 
  BestBeforeDate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BestBeforeDate(self: LicensePlatePrintLine) -> Nullable[DateTime]
+ """
+
+Get: BestBeforeDate(self: LicensePlatePrintLine) -> Nullable[DateTime]
 
 Set: BestBeforeDate(self: LicensePlatePrintLine)=value
 """
 
  Code=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Code(self: LicensePlatePrintLine) -> str
+ """
+
+Get: Code(self: LicensePlatePrintLine) -> str
 
 Set: Code(self: LicensePlatePrintLine)=value
 """
 
  CreatedBy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CreatedBy(self: LicensePlatePrintLine) -> str
+ """
+
+Get: CreatedBy(self: LicensePlatePrintLine) -> str
 
 Set: CreatedBy(self: LicensePlatePrintLine)=value
 """
 
  CreatedOn=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CreatedOn(self: LicensePlatePrintLine) -> Nullable[DateTime]
+ """
+
+Get: CreatedOn(self: LicensePlatePrintLine) -> Nullable[DateTime]
 
 Set: CreatedOn(self: LicensePlatePrintLine)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: LicensePlatePrintLine) -> str
+ """
+
+Get: Description(self: LicensePlatePrintLine) -> str
 
 Set: Description(self: LicensePlatePrintLine)=value
 """
 
  GroupKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupKey(self: LicensePlatePrintLine) -> str
+ """
+
+Get: GroupKey(self: LicensePlatePrintLine) -> str
 
 """
 
  LocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LocationCode(self: LicensePlatePrintLine) -> str
+ """
+
+Get: LocationCode(self: LicensePlatePrintLine) -> str
 
 Set: LocationCode(self: LicensePlatePrintLine)=value
 """
 
  NoOfItems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NoOfItems(self: LicensePlatePrintLine) -> int
+ """
+
+Get: NoOfItems(self: LicensePlatePrintLine) -> int
 
 Set: NoOfItems(self: LicensePlatePrintLine)=value
 """
 
  Status=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Status(self: LicensePlatePrintLine) -> LicensePlateStatusEnum
+ """
+
+Get: Status(self: LicensePlatePrintLine) -> LicensePlateStatusEnum
 
 Set: Status(self: LicensePlatePrintLine)=value
 """
 
  StatusAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StatusAsString(self: LicensePlatePrintLine) -> str
+ """
+
+Get: StatusAsString(self: LicensePlatePrintLine) -> str
 
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: LicensePlatePrintLine) -> str
+ """
+
+Get: WarehouseCode(self: LicensePlatePrintLine) -> str
 
 Set: WarehouseCode(self: LicensePlatePrintLine)=value
 """
 
 
 
-class LicensePlatePrintLines:
+class LicensePlatePrintLines(PrintLinesBase):
  """
  LicensePlatePrintLines()
  LicensePlatePrintLines(collection: IEnumerable[LicensePlatePrintLine])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LicensePlatePrintLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -606,17 +778,24 @@ class LicensePlatePrintLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: LicensePlatePrintLines) -> bool
+ """
+
+Get: IsDisposable(self: LicensePlatePrintLines) -> bool
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: LicensePlatePrintLines) -> bool
+ """
+
+Get: PreserveState(self: LicensePlatePrintLines) -> bool
 
 """
 
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: LicensePlatePrintLines) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: LicensePlatePrintLines) -> Int64
 
 Set: TotalRowsMatched(self: LicensePlatePrintLines)=value
 """
@@ -626,8 +805,13 @@ Set: TotalRowsMatched(self: LicensePlatePrintLines)=value
  ValueMember='Code'
 
 
-class PickbatchPrintLine:
+class PickbatchPrintLine(PrintLineBase):
  """ PickbatchPrintLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PickbatchPrintLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Create(batch):
   """ Create(batch: Batch) -> PickbatchPrintLine """
@@ -666,7 +850,9 @@ Set: CreatedOn(self: PickbatchPrintLine)=value
 """
 
  GroupKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupKey(self: PickbatchPrintLine) -> str
+ """
+
+Get: GroupKey(self: PickbatchPrintLine) -> str
 
 """
 
@@ -696,11 +882,16 @@ Set: Tags(self: PickbatchPrintLine)=value
 
 
 
-class PickbatchPrintLines:
+class PickbatchPrintLines(PrintLinesBase):
  """
  PickbatchPrintLines()
  PickbatchPrintLines(collection: IEnumerable[PickbatchPrintLine])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PickbatchPrintLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -723,17 +914,24 @@ class PickbatchPrintLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: PickbatchPrintLines) -> bool
+ """
+
+Get: IsDisposable(self: PickbatchPrintLines) -> bool
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: PickbatchPrintLines) -> bool
+ """
+
+Get: PreserveState(self: PickbatchPrintLines) -> bool
 
 """
 
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: PickbatchPrintLines) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: PickbatchPrintLines) -> Int64
 
 Set: TotalRowsMatched(self: PickbatchPrintLines)=value
 """
@@ -743,11 +941,18 @@ Set: TotalRowsMatched(self: PickbatchPrintLines)=value
  ValueMember='BatchId'
 
 
-class PrintBaseArgs:
+class PrintBaseArgs(object):
  """
+ Base class for requesting a print of some document.
+ 
  PrintBaseArgs()
  PrintBaseArgs(printerName: str,options: PrintingOptions)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintBaseArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,printerName=None,options=None):
   """
@@ -756,37 +961,57 @@ class PrintBaseArgs:
   """
   pass
  Label=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Label(self: PrintBaseArgs) -> str
+ """A descriptive label for print job
+
+Get: Label(self: PrintBaseArgs) -> str
 
 Set: Label(self: PrintBaseArgs)=value
 """
 
  PrinterName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrinterName(self: PrintBaseArgs) -> str
+ """Override: id of printer to print from.
+   Leave empty to let the Print rule engine decide the printer.
+
+Get: PrinterName(self: PrintBaseArgs) -> str
 
 Set: PrinterName(self: PrintBaseArgs)=value
 """
 
  PrintingOptions=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrintingOptions(self: PrintBaseArgs) -> PrintingOptions
+ """Printing options for printing.
+   Overrides the print rule printer options and the default printer options.
+
+Get: PrintingOptions(self: PrintBaseArgs) -> PrintingOptions
 
 Set: PrintingOptions(self: PrintBaseArgs)=value
 """
 
 
 
-class PrintDuplicateLabelArgs:
+class PrintDuplicateLabelArgs(PrintBaseArgs):
  """ PrintDuplicateLabelArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintDuplicateLabelArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ShipmentId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ShipmentId(self: PrintDuplicateLabelArgs) -> int
+ """
+
+Get: ShipmentId(self: PrintDuplicateLabelArgs) -> int
 
 Set: ShipmentId(self: PrintDuplicateLabelArgs)=value
 """
 
 
 
-class PrintLabel:
+class PrintLabel(DbObject):
  """ PrintLabel() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintLabel()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -805,7 +1030,9 @@ Set: Description(self: PrintLabel)=value
 """
 
  DisplayName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DisplayName(self: PrintLabel) -> str
+ """
+
+Get: DisplayName(self: PrintLabel) -> str
 
 """
 
@@ -816,13 +1043,17 @@ Set: FieldRegEx(self: PrintLabel)=value
 """
 
  Height=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Height(self: PrintLabel) -> int
+ """The height of the label in dots (dpi). So far it's only implemented for colli labels.
+
+Get: Height(self: PrintLabel) -> int
 
 Set: Height(self: PrintLabel)=value
 """
 
  ID=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ID(self: PrintLabel) -> int
+ """
+
+Get: ID(self: PrintLabel) -> int
 
 Set: ID(self: PrintLabel)=value
 """
@@ -840,7 +1071,9 @@ Set: IsActive(self: PrintLabel)=value
 """
 
  Mappings=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Mappings(self: PrintLabel) -> Mappings[str,str,str]
+ """The keys are the fields in the label,the values are the properties of the dataset.
+
+Get: Mappings(self: PrintLabel) -> Mappings[str,str,str]
 
 Set: Mappings(self: PrintLabel)=value
 """
@@ -852,7 +1085,10 @@ Set: Name(self: PrintLabel)=value
 """
 
  OneLabelPerPrintAction=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OneLabelPerPrintAction(self: PrintLabel) -> bool
+ """Instead of that the entered qty is used for nr Of Labels,
+   1 label is printed with the possibility to add the input qty on the label.
+
+Get: OneLabelPerPrintAction(self: PrintLabel) -> bool
 
 Set: OneLabelPerPrintAction(self: PrintLabel)=value
 """
@@ -864,7 +1100,9 @@ Set: PrinterCode(self: PrintLabel)=value
 """
 
  SingleLabelDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SingleLabelDescription(self: PrintLabel) -> str
+ """
+
+Get: SingleLabelDescription(self: PrintLabel) -> str
 
 Set: SingleLabelDescription(self: PrintLabel)=value
 """
@@ -877,60 +1115,89 @@ Set: Sys(self: PrintLabel)=value
 
 
 
-class PrintLabelArgs:
+class PrintLabelArgs(object):
  """ PrintLabelArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintLabelArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  PrintLabels=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrintLabels(self: PrintLabelArgs) -> bool
+ """
+
+Get: PrintLabels(self: PrintLabelArgs) -> bool
 
 Set: PrintLabels(self: PrintLabelArgs)=value
 """
 
  SelectedLabel=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SelectedLabel(self: PrintLabelArgs) -> PrintLabel
+ """
+
+Get: SelectedLabel(self: PrintLabelArgs) -> PrintLabel
 
 Set: SelectedLabel(self: PrintLabelArgs)=value
 """
 
 
 
-class PrintLabelItemProperties:
+class PrintLabelItemProperties(object):
  """ PrintLabelItemProperties() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintLabelItemProperties()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  EndElement=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: EndElement(self: PrintLabelItemProperties) -> Match
+ """
+
+Get: EndElement(self: PrintLabelItemProperties) -> Match
 
 Set: EndElement(self: PrintLabelItemProperties)=value
 """
 
  EndPosition=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: EndPosition(self: PrintLabelItemProperties) -> int
+ """
+
+Get: EndPosition(self: PrintLabelItemProperties) -> int
 
 Set: EndPosition(self: PrintLabelItemProperties)=value
 """
 
  Height=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Height(self: PrintLabelItemProperties) -> int
+ """
+
+Get: Height(self: PrintLabelItemProperties) -> int
 
 """
 
  StartElement=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StartElement(self: PrintLabelItemProperties) -> Match
+ """
+
+Get: StartElement(self: PrintLabelItemProperties) -> Match
 
 Set: StartElement(self: PrintLabelItemProperties)=value
 """
 
  StartPosition=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StartPosition(self: PrintLabelItemProperties) -> int
+ """
+
+Get: StartPosition(self: PrintLabelItemProperties) -> int
 
 Set: StartPosition(self: PrintLabelItemProperties)=value
 """
 
 
 
-class PrintLabelMapping:
+class PrintLabelMapping(object):
  """
  PrintLabelMapping(placeholder: str,datasetField: str,transformation: str)
  PrintLabelMapping()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintLabelMapping()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,placeholder=None,datasetField=None,transformation=None):
   """
@@ -939,27 +1206,38 @@ class PrintLabelMapping:
   """
   pass
  DatasetField=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DatasetField(self: PrintLabelMapping) -> str
+ """
+
+Get: DatasetField(self: PrintLabelMapping) -> str
 
 Set: DatasetField(self: PrintLabelMapping)=value
 """
 
  Placeholder=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Placeholder(self: PrintLabelMapping) -> str
+ """
+
+Get: Placeholder(self: PrintLabelMapping) -> str
 
 Set: Placeholder(self: PrintLabelMapping)=value
 """
 
  Transformation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Transformation(self: PrintLabelMapping) -> str
+ """
+
+Get: Transformation(self: PrintLabelMapping) -> str
 
 Set: Transformation(self: PrintLabelMapping)=value
 """
 
 
 
-class PrintLabelMappings:
+class PrintLabelMappings(FindableList):
  """ PrintLabelMappings() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintLabelMappings()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def ConstructFrom(mappings):
   """ ConstructFrom(mappings: Mappings[str,str,str]) -> PrintLabelMappings """
@@ -988,8 +1266,13 @@ class PrintLabelMappings:
  ValueMember='Placeholder'
 
 
-class PrintLabels:
+class PrintLabels(FindableList):
  """ PrintLabels() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintLabels()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -1008,80 +1291,129 @@ class PrintLabels:
  ValueMember='ID'
 
 
-class PrintPackageSlipArgs:
+class PrintPackageSlipArgs(PrintBaseArgs):
  """ PrintPackageSlipArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintPackageSlipArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ShipmentId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ShipmentId(self: PrintPackageSlipArgs) -> int
+ """Id of the shipment to print the package slip for.
+
+Get: ShipmentId(self: PrintPackageSlipArgs) -> int
 
 Set: ShipmentId(self: PrintPackageSlipArgs)=value
 """
 
 
 
-class PrintPickbatchLabelArgs:
+class PrintPickbatchLabelArgs(PrintBaseArgs):
  """ PrintPickbatchLabelArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintPickbatchLabelArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  BatchIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BatchIds(self: PrintPickbatchLabelArgs) -> List[Guid]
+ """Ids of the Wms.RemotingObjects.BatchPicking.Batch to print the label for
+
+Get: BatchIds(self: PrintPickbatchLabelArgs) -> List[Guid]
 
 Set: BatchIds(self: PrintPickbatchLabelArgs)=value
 """
 
  PrintLabel=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrintLabel(self: PrintPickbatchLabelArgs) -> PrintLabel
+ """Name of the Pickbatch Label layout
+
+Get: PrintLabel(self: PrintPickbatchLabelArgs) -> PrintLabel
 
 Set: PrintLabel(self: PrintPickbatchLabelArgs)=value
 """
 
 
 
-class PrintPickingListArgs:
- """ PrintPickingListArgs() """
+class PrintPickingListArgs(PrintBaseArgs):
+ """
+ Options for requesting a print of a picklist
+ 
+ PrintPickingListArgs()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintPickingListArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  BatchIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BatchIds(self: PrintPickingListArgs) -> List[Guid]
+ """Ids of the batches to print a picklist for.
+
+Get: BatchIds(self: PrintPickingListArgs) -> List[Guid]
 
 Set: BatchIds(self: PrintPickingListArgs)=value
 """
 
  Report=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Report(self: PrintPickingListArgs) -> ReportItem
+ """Report used to generate the picklist
+
+Get: Report(self: PrintPickingListArgs) -> ReportItem
 
 Set: Report(self: PrintPickingListArgs)=value
 """
 
 
 
-class PrintShipmentDocumentArgs:
+class PrintShipmentDocumentArgs(PrintBaseArgs):
  """ PrintShipmentDocumentArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintShipmentDocumentArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ShipmentId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ShipmentId(self: PrintShipmentDocumentArgs) -> int
+ """
+
+Get: ShipmentId(self: PrintShipmentDocumentArgs) -> int
 
 Set: ShipmentId(self: PrintShipmentDocumentArgs)=value
 """
 
 
 
-class PrintSSCCLabelsArgs:
+class PrintSSCCLabelsArgs(object):
  """ PrintSSCCLabelsArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintSSCCLabelsArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CacheKeyOfTransportPackages=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CacheKeyOfTransportPackages(self: PrintSSCCLabelsArgs) -> CacheKey
+ """Wms.RemotingObjects.Caching.CacheKey of the Wms.RemotingObjects.ShippingLayers.TransportPackages to print the labels for
+
+Get: CacheKeyOfTransportPackages(self: PrintSSCCLabelsArgs) -> CacheKey
 
 Set: CacheKeyOfTransportPackages(self: PrintSSCCLabelsArgs)=value
 """
 
  LabelHomogeneousPallet=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LabelHomogeneousPallet(self: PrintSSCCLabelsArgs) -> str
+ """Name of the homogeneous pallet label layout
+
+Get: LabelHomogeneousPallet(self: PrintSSCCLabelsArgs) -> str
 
 Set: LabelHomogeneousPallet(self: PrintSSCCLabelsArgs)=value
 """
 
  LabelMixedPallet=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LabelMixedPallet(self: PrintSSCCLabelsArgs) -> str
+ """Name of the mixed pallet layout
+
+Get: LabelMixedPallet(self: PrintSSCCLabelsArgs) -> str
 
 Set: LabelMixedPallet(self: PrintSSCCLabelsArgs)=value
 """
 
  SelectedPackageId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SelectedPackageId(self: PrintSSCCLabelsArgs) -> Guid
+ """The System.Guid of a Wms.RemotingObjects.ShippingLayers.TransportPackage if you want to print the label of a specific package />
+
+Get: SelectedPackageId(self: PrintSSCCLabelsArgs) -> Guid
 
 Set: SelectedPackageId(self: PrintSSCCLabelsArgs)=value
 """
@@ -1090,14 +1422,23 @@ Set: SelectedPackageId(self: PrintSSCCLabelsArgs)=value
 
 class PurchaseOrderPrintLine:
  """ PurchaseOrderPrintLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PurchaseOrderPrintLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CurrentBarcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CurrentBarcode(self: PurchaseOrderPrintLine) -> str
+ """CURRENT vendor Barcode
+
+Get: CurrentBarcode(self: PurchaseOrderPrintLine) -> str
 
 Set: CurrentBarcode(self: PurchaseOrderPrintLine)=value
 """
 
  CurrentSupplierCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CurrentSupplierCode(self: PurchaseOrderPrintLine) -> str
+ """Current vendor code.
+
+Get: CurrentSupplierCode(self: PurchaseOrderPrintLine) -> str
 
 Set: CurrentSupplierCode(self: PurchaseOrderPrintLine)=value
 """
@@ -1109,18 +1450,25 @@ Set: InboundLocation(self: PurchaseOrderPrintLine)=value
 """
 
  YourReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: YourReference(self: PurchaseOrderPrintLine) -> str
+ """
+
+Get: YourReference(self: PurchaseOrderPrintLine) -> str
 
 Set: YourReference(self: PurchaseOrderPrintLine)=value
 """
 
 
 
-class PurchaseOrderPrintLines:
+class PurchaseOrderPrintLines(PrintLinesBase):
  """
  PurchaseOrderPrintLines()
  PurchaseOrderPrintLines(collection: IEnumerable[PurchaseOrderPrintLine])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PurchaseOrderPrintLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -1143,17 +1491,24 @@ class PurchaseOrderPrintLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: PurchaseOrderPrintLines) -> bool
+ """
+
+Get: IsDisposable(self: PurchaseOrderPrintLines) -> bool
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: PurchaseOrderPrintLines) -> bool
+ """
+
+Get: PreserveState(self: PurchaseOrderPrintLines) -> bool
 
 """
 
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: PurchaseOrderPrintLines) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: PurchaseOrderPrintLines) -> Int64
 
 Set: TotalRowsMatched(self: PurchaseOrderPrintLines)=value
 """
@@ -1163,36 +1518,54 @@ Set: TotalRowsMatched(self: PurchaseOrderPrintLines)=value
  ValueMember='ItemCode'
 
 
-class ReportItem:
+class ReportItem(object):
  """ ReportItem() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReportItem()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  DataSource=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DataSource(self: ReportItem) -> str
+ """
+
+Get: DataSource(self: ReportItem) -> str
 
 Set: DataSource(self: ReportItem)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: ReportItem) -> str
+ """
+
+Get: Description(self: ReportItem) -> str
 
 Set: Description(self: ReportItem)=value
 """
 
  FileName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: FileName(self: ReportItem) -> str
+ """
+
+Get: FileName(self: ReportItem) -> str
 
 Set: FileName(self: ReportItem)=value
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name(self: ReportItem) -> str
+ """
+
+Get: Name(self: ReportItem) -> str
 
 Set: Name(self: ReportItem)=value
 """
 
 
 
-class ReportItems:
+class ReportItems(List):
  """ ReportItems() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReportItems()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(list):
   """ FromIEnumerable(list: IEnumerable[ReportItem]) -> ReportItems """
@@ -1217,19 +1590,31 @@ class ReportItems:
 
 class RmaOrderPrintLine:
  """ RmaOrderPrintLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RmaOrderPrintLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHashCode(self):
   """ GetHashCode(self: RmaOrderPrintLine) -> int """
   pass
  Reason=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Reason(self: RmaOrderPrintLine) -> str
+ """
+
+Get: Reason(self: RmaOrderPrintLine) -> str
 
 Set: Reason(self: RmaOrderPrintLine)=value
 """
 
 
 
-class RmaOrderPrintLines:
+class RmaOrderPrintLines(PrintLinesBase):
  """ RmaOrderPrintLines() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RmaOrderPrintLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -1245,12 +1630,16 @@ class RmaOrderPrintLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: RmaOrderPrintLines) -> bool
+ """
+
+Get: IsDisposable(self: RmaOrderPrintLines) -> bool
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: RmaOrderPrintLines) -> bool
+ """
+
+Get: PreserveState(self: RmaOrderPrintLines) -> bool
 
 """
 
@@ -1258,8 +1647,13 @@ class RmaOrderPrintLines:
  DisplayMember='ItemDescription'
 
 
-class SSCCBasePrintLine:
+class SSCCBasePrintLine(PrintLineBase):
  """ SSCCBasePrintLine(barcode: str,barcodeReadable: str) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SSCCBasePrintLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHashCode(self):
   """ GetHashCode(self: SSCCBasePrintLine) -> int """
   pass
@@ -1268,29 +1662,40 @@ class SSCCBasePrintLine:
   """ __new__(cls: type,barcode: str,barcodeReadable: str) """
   pass
  Barcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Barcode(self: SSCCBasePrintLine) -> str
+ """
+
+Get: Barcode(self: SSCCBasePrintLine) -> str
 
 Set: Barcode(self: SSCCBasePrintLine)=value
 """
 
  BarcodeReadable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BarcodeReadable(self: SSCCBasePrintLine) -> str
+ """
+
+Get: BarcodeReadable(self: SSCCBasePrintLine) -> str
 
 Set: BarcodeReadable(self: SSCCBasePrintLine)=value
 """
 
  GroupKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupKey(self: SSCCBasePrintLine) -> str
+ """
+
+Get: GroupKey(self: SSCCBasePrintLine) -> str
 
 """
 
 
 
-class SSCCBasePrintLines:
+class SSCCBasePrintLines(PrintLinesBase):
  """
  SSCCBasePrintLines()
  SSCCBasePrintLines(collection: IEnumerable[SSCCBasePrintLine])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SSCCBasePrintLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -1313,17 +1718,24 @@ class SSCCBasePrintLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: SSCCBasePrintLines) -> bool
+ """
+
+Get: IsDisposable(self: SSCCBasePrintLines) -> bool
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: SSCCBasePrintLines) -> bool
+ """
+
+Get: PreserveState(self: SSCCBasePrintLines) -> bool
 
 """
 
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: SSCCBasePrintLines) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: SSCCBasePrintLines) -> Int64
 
 Set: TotalRowsMatched(self: SSCCBasePrintLines)=value
 """
@@ -1333,11 +1745,16 @@ Set: TotalRowsMatched(self: SSCCBasePrintLines)=value
  ValueMember=None
 
 
-class SSCCHeterogeneousPrintLine:
+class SSCCHeterogeneousPrintLine(SSCCBasePrintLine):
  """
  SSCCHeterogeneousPrintLine(barcode: str,barcodeReadable: str)
  SSCCHeterogeneousPrintLine(barcode: str,barcodeReadable: str,packages: TransportPackages)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SSCCHeterogeneousPrintLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHashCode(self):
   """ GetHashCode(self: SSCCHeterogeneousPrintLine) -> int """
   pass
@@ -1385,7 +1802,9 @@ Set: FromZipCode(self: SSCCHeterogeneousPrintLine)=value
 """
 
  GroupKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupKey(self: SSCCHeterogeneousPrintLine) -> str
+ """
+
+Get: GroupKey(self: SSCCHeterogeneousPrintLine) -> str
 
 """
 
@@ -1433,11 +1852,16 @@ Set: ToZipCode(self: SSCCHeterogeneousPrintLine)=value
 
 
 
-class SSCCHeterogeneousPrintLines:
+class SSCCHeterogeneousPrintLines(PrintLinesBase):
  """
  SSCCHeterogeneousPrintLines()
  SSCCHeterogeneousPrintLines(collection: IEnumerable[SSCCHeterogeneousPrintLine])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SSCCHeterogeneousPrintLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -1460,17 +1884,24 @@ class SSCCHeterogeneousPrintLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: SSCCHeterogeneousPrintLines) -> bool
+ """
+
+Get: IsDisposable(self: SSCCHeterogeneousPrintLines) -> bool
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: SSCCHeterogeneousPrintLines) -> bool
+ """
+
+Get: PreserveState(self: SSCCHeterogeneousPrintLines) -> bool
 
 """
 
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: SSCCHeterogeneousPrintLines) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: SSCCHeterogeneousPrintLines) -> Int64
 
 Set: TotalRowsMatched(self: SSCCHeterogeneousPrintLines)=value
 """
@@ -1480,11 +1911,16 @@ Set: TotalRowsMatched(self: SSCCHeterogeneousPrintLines)=value
  ValueMember=None
 
 
-class SSCCHomogeneousPrintLine:
+class SSCCHomogeneousPrintLine(SSCCHeterogeneousPrintLine):
  """
  SSCCHomogeneousPrintLine(barcode: str,barcodeReadable: str)
  SSCCHomogeneousPrintLine(barcode: str,barcodeReadable: str,packages: TransportPackages)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SSCCHomogeneousPrintLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHashCode(self):
   """ GetHashCode(self: SSCCHomogeneousPrintLine) -> int """
   pass
@@ -1533,11 +1969,16 @@ Set: UnitCount(self: SSCCHomogeneousPrintLine)=value
 
 
 
-class SSCCHomogeneousPrintLines:
+class SSCCHomogeneousPrintLines(PrintLinesBase):
  """
  SSCCHomogeneousPrintLines()
  SSCCHomogeneousPrintLines(collection: IEnumerable[SSCCHomogeneousPrintLine])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SSCCHomogeneousPrintLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -1560,17 +2001,24 @@ class SSCCHomogeneousPrintLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: SSCCHomogeneousPrintLines) -> bool
+ """
+
+Get: IsDisposable(self: SSCCHomogeneousPrintLines) -> bool
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: SSCCHomogeneousPrintLines) -> bool
+ """
+
+Get: PreserveState(self: SSCCHomogeneousPrintLines) -> bool
 
 """
 
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: SSCCHomogeneousPrintLines) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: SSCCHomogeneousPrintLines) -> Int64
 
 Set: TotalRowsMatched(self: SSCCHomogeneousPrintLines)=value
 """
@@ -1580,56 +2028,80 @@ Set: TotalRowsMatched(self: SSCCHomogeneousPrintLines)=value
  ValueMember=None
 
 
-class TransportPackageItemPrintLine:
+class TransportPackageItemPrintLine(PrintLineBase):
  """ TransportPackageItemPrintLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TransportPackageItemPrintLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Barcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Barcode(self: TransportPackageItemPrintLine) -> str
+ """
+
+Get: Barcode(self: TransportPackageItemPrintLine) -> str
 
 Set: Barcode(self: TransportPackageItemPrintLine)=value
 """
 
  GroupKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupKey(self: TransportPackageItemPrintLine) -> str
+ """
+
+Get: GroupKey(self: TransportPackageItemPrintLine) -> str
 
 """
 
  GTINCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GTINCode(self: TransportPackageItemPrintLine) -> str
+ """The GS1 GTIN code of this item
+
+Get: GTINCode(self: TransportPackageItemPrintLine) -> str
 
 Set: GTINCode(self: TransportPackageItemPrintLine)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: TransportPackageItemPrintLine) -> str
+ """
+
+Get: ItemCode(self: TransportPackageItemPrintLine) -> str
 
 Set: ItemCode(self: TransportPackageItemPrintLine)=value
 """
 
  ItemDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemDescription(self: TransportPackageItemPrintLine) -> str
+ """
+
+Get: ItemDescription(self: TransportPackageItemPrintLine) -> str
 
 Set: ItemDescription(self: TransportPackageItemPrintLine)=value
 """
 
  ItemQuantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemQuantity(self: TransportPackageItemPrintLine) -> Decimal
+ """
+
+Get: ItemQuantity(self: TransportPackageItemPrintLine) -> Decimal
 
 Set: ItemQuantity(self: TransportPackageItemPrintLine)=value
 """
 
  UnitCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UnitCode(self: TransportPackageItemPrintLine) -> str
+ """
+
+Get: UnitCode(self: TransportPackageItemPrintLine) -> str
 
 Set: UnitCode(self: TransportPackageItemPrintLine)=value
 """
 
 
 
-class TransportPackageItemsPrintLine:
+class TransportPackageItemsPrintLine(PrintLinesBase):
  """
  TransportPackageItemsPrintLine()
  TransportPackageItemsPrintLine(collection: IEnumerable[TransportPackageItemPrintLine])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TransportPackageItemsPrintLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -1652,17 +2124,24 @@ class TransportPackageItemsPrintLine:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: TransportPackageItemsPrintLine) -> bool
+ """
+
+Get: IsDisposable(self: TransportPackageItemsPrintLine) -> bool
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: TransportPackageItemsPrintLine) -> bool
+ """
+
+Get: PreserveState(self: TransportPackageItemsPrintLine) -> bool
 
 """
 
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: TransportPackageItemsPrintLine) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: TransportPackageItemsPrintLine) -> Int64
 
 Set: TotalRowsMatched(self: TransportPackageItemsPrintLine)=value
 """
@@ -1672,314 +2151,424 @@ Set: TotalRowsMatched(self: TransportPackageItemsPrintLine)=value
  ValueMember='GroupKey'
 
 
-class TransportPackagePrintLine:
+class TransportPackagePrintLine(PrintLineBase):
  """ TransportPackagePrintLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TransportPackagePrintLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Create(transportPackage):
   """ Create(transportPackage: TransportPackage) -> TransportPackagePrintLine """
   pass
  CustomerDeliveryAddresLine1=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerDeliveryAddresLine1(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerDeliveryAddresLine1(self: TransportPackagePrintLine) -> str
 
 Set: CustomerDeliveryAddresLine1(self: TransportPackagePrintLine)=value
 """
 
  CustomerDeliveryAddresLine2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerDeliveryAddresLine2(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerDeliveryAddresLine2(self: TransportPackagePrintLine) -> str
 
 Set: CustomerDeliveryAddresLine2(self: TransportPackagePrintLine)=value
 """
 
  CustomerDeliveryAddresLine3=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerDeliveryAddresLine3(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerDeliveryAddresLine3(self: TransportPackagePrintLine) -> str
 
 Set: CustomerDeliveryAddresLine3(self: TransportPackagePrintLine)=value
 """
 
  CustomerDeliveryCity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerDeliveryCity(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerDeliveryCity(self: TransportPackagePrintLine) -> str
 
 Set: CustomerDeliveryCity(self: TransportPackagePrintLine)=value
 """
 
  CustomerDeliveryCountryCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerDeliveryCountryCode(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerDeliveryCountryCode(self: TransportPackagePrintLine) -> str
 
 Set: CustomerDeliveryCountryCode(self: TransportPackagePrintLine)=value
 """
 
  CustomerDeliveryCountryName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerDeliveryCountryName(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerDeliveryCountryName(self: TransportPackagePrintLine) -> str
 
 Set: CustomerDeliveryCountryName(self: TransportPackagePrintLine)=value
 """
 
  CustomerDeliveryEmail=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerDeliveryEmail(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerDeliveryEmail(self: TransportPackagePrintLine) -> str
 
 Set: CustomerDeliveryEmail(self: TransportPackagePrintLine)=value
 """
 
  CustomerDeliveryName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerDeliveryName(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerDeliveryName(self: TransportPackagePrintLine) -> str
 
 Set: CustomerDeliveryName(self: TransportPackagePrintLine)=value
 """
 
  CustomerDeliveryName2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerDeliveryName2(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerDeliveryName2(self: TransportPackagePrintLine) -> str
 
 Set: CustomerDeliveryName2(self: TransportPackagePrintLine)=value
 """
 
  CustomerDeliveryPhoneNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerDeliveryPhoneNumber(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerDeliveryPhoneNumber(self: TransportPackagePrintLine) -> str
 
 Set: CustomerDeliveryPhoneNumber(self: TransportPackagePrintLine)=value
 """
 
  CustomerDeliveryStateCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerDeliveryStateCode(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerDeliveryStateCode(self: TransportPackagePrintLine) -> str
 
 Set: CustomerDeliveryStateCode(self: TransportPackagePrintLine)=value
 """
 
  CustomerDeliveryZipCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerDeliveryZipCode(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerDeliveryZipCode(self: TransportPackagePrintLine) -> str
 
 Set: CustomerDeliveryZipCode(self: TransportPackagePrintLine)=value
 """
 
  CustomerInvoiceAddresLine1=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerInvoiceAddresLine1(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerInvoiceAddresLine1(self: TransportPackagePrintLine) -> str
 
 Set: CustomerInvoiceAddresLine1(self: TransportPackagePrintLine)=value
 """
 
  CustomerInvoiceAddresLine2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerInvoiceAddresLine2(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerInvoiceAddresLine2(self: TransportPackagePrintLine) -> str
 
 Set: CustomerInvoiceAddresLine2(self: TransportPackagePrintLine)=value
 """
 
  CustomerInvoiceAddresLine3=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerInvoiceAddresLine3(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerInvoiceAddresLine3(self: TransportPackagePrintLine) -> str
 
 Set: CustomerInvoiceAddresLine3(self: TransportPackagePrintLine)=value
 """
 
  CustomerInvoiceCity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerInvoiceCity(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerInvoiceCity(self: TransportPackagePrintLine) -> str
 
 Set: CustomerInvoiceCity(self: TransportPackagePrintLine)=value
 """
 
  CustomerInvoiceCountryCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerInvoiceCountryCode(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerInvoiceCountryCode(self: TransportPackagePrintLine) -> str
 
 Set: CustomerInvoiceCountryCode(self: TransportPackagePrintLine)=value
 """
 
  CustomerInvoiceCountryName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerInvoiceCountryName(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerInvoiceCountryName(self: TransportPackagePrintLine) -> str
 
 Set: CustomerInvoiceCountryName(self: TransportPackagePrintLine)=value
 """
 
  CustomerInvoiceEmail=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerInvoiceEmail(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerInvoiceEmail(self: TransportPackagePrintLine) -> str
 
 Set: CustomerInvoiceEmail(self: TransportPackagePrintLine)=value
 """
 
  CustomerInvoiceName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerInvoiceName(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerInvoiceName(self: TransportPackagePrintLine) -> str
 
 Set: CustomerInvoiceName(self: TransportPackagePrintLine)=value
 """
 
  CustomerInvoiceName2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerInvoiceName2(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerInvoiceName2(self: TransportPackagePrintLine) -> str
 
 Set: CustomerInvoiceName2(self: TransportPackagePrintLine)=value
 """
 
  CustomerInvoicePhoneNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerInvoicePhoneNumber(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerInvoicePhoneNumber(self: TransportPackagePrintLine) -> str
 
 Set: CustomerInvoicePhoneNumber(self: TransportPackagePrintLine)=value
 """
 
  CustomerInvoiceStateCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerInvoiceStateCode(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerInvoiceStateCode(self: TransportPackagePrintLine) -> str
 
 Set: CustomerInvoiceStateCode(self: TransportPackagePrintLine)=value
 """
 
  CustomerInvoiceZipCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerInvoiceZipCode(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerInvoiceZipCode(self: TransportPackagePrintLine) -> str
 
 Set: CustomerInvoiceZipCode(self: TransportPackagePrintLine)=value
 """
 
  CustomerReferences=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerReferences(self: TransportPackagePrintLine) -> str
+ """
+
+Get: CustomerReferences(self: TransportPackagePrintLine) -> str
 
 Set: CustomerReferences(self: TransportPackagePrintLine)=value
 """
 
  GroupKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupKey(self: TransportPackagePrintLine) -> str
+ """
+
+Get: GroupKey(self: TransportPackagePrintLine) -> str
 
 """
 
  ItemBarcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemBarcode(self: TransportPackagePrintLine) -> str
+ """Only here to map the print line to the dataset
+
+Get: ItemBarcode(self: TransportPackagePrintLine) -> str
 
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: TransportPackagePrintLine) -> str
+ """Only here to map the print line to the dataset
+
+Get: ItemCode(self: TransportPackagePrintLine) -> str
 
 """
 
  ItemDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemDescription(self: TransportPackagePrintLine) -> str
+ """Only here to map the print line to the dataset
+
+Get: ItemDescription(self: TransportPackagePrintLine) -> str
 
 """
 
  OurReferences=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OurReferences(self: TransportPackagePrintLine) -> str
+ """
+
+Get: OurReferences(self: TransportPackagePrintLine) -> str
 
 Set: OurReferences(self: TransportPackagePrintLine)=value
 """
 
  PackageBarcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackageBarcode(self: TransportPackagePrintLine) -> str
+ """
+
+Get: PackageBarcode(self: TransportPackagePrintLine) -> str
 
 Set: PackageBarcode(self: TransportPackagePrintLine)=value
 """
 
  PackageDimensions=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackageDimensions(self: TransportPackagePrintLine) -> str
+ """
+
+Get: PackageDimensions(self: TransportPackagePrintLine) -> str
 
 Set: PackageDimensions(self: TransportPackagePrintLine)=value
 """
 
  PackageGuid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackageGuid(self: TransportPackagePrintLine) -> str
+ """
+
+Get: PackageGuid(self: TransportPackagePrintLine) -> str
 
 Set: PackageGuid(self: TransportPackagePrintLine)=value
 """
 
  PackageIdentification=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackageIdentification(self: TransportPackagePrintLine) -> str
+ """
+
+Get: PackageIdentification(self: TransportPackagePrintLine) -> str
 
 Set: PackageIdentification(self: TransportPackagePrintLine)=value
 """
 
  PackageItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackageItemCode(self: TransportPackagePrintLine) -> str
+ """
+
+Get: PackageItemCode(self: TransportPackagePrintLine) -> str
 
 Set: PackageItemCode(self: TransportPackagePrintLine)=value
 """
 
  PackageNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackageNumber(self: TransportPackagePrintLine) -> str
+ """
+
+Get: PackageNumber(self: TransportPackagePrintLine) -> str
 
 Set: PackageNumber(self: TransportPackagePrintLine)=value
 """
 
  PackageType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackageType(self: TransportPackagePrintLine) -> str
+ """
+
+Get: PackageType(self: TransportPackagePrintLine) -> str
 
 Set: PackageType(self: TransportPackagePrintLine)=value
 """
 
  PackageWeight=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackageWeight(self: TransportPackagePrintLine) -> str
+ """
+
+Get: PackageWeight(self: TransportPackagePrintLine) -> str
 
 Set: PackageWeight(self: TransportPackagePrintLine)=value
 """
 
  SenderAddresLine1=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SenderAddresLine1(self: TransportPackagePrintLine) -> str
+ """
+
+Get: SenderAddresLine1(self: TransportPackagePrintLine) -> str
 
 Set: SenderAddresLine1(self: TransportPackagePrintLine)=value
 """
 
  SenderAddresLine2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SenderAddresLine2(self: TransportPackagePrintLine) -> str
+ """
+
+Get: SenderAddresLine2(self: TransportPackagePrintLine) -> str
 
 Set: SenderAddresLine2(self: TransportPackagePrintLine)=value
 """
 
  SenderAddresLine3=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SenderAddresLine3(self: TransportPackagePrintLine) -> str
+ """
+
+Get: SenderAddresLine3(self: TransportPackagePrintLine) -> str
 
 Set: SenderAddresLine3(self: TransportPackagePrintLine)=value
 """
 
  SenderCity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SenderCity(self: TransportPackagePrintLine) -> str
+ """
+
+Get: SenderCity(self: TransportPackagePrintLine) -> str
 
 Set: SenderCity(self: TransportPackagePrintLine)=value
 """
 
  SenderCountryCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SenderCountryCode(self: TransportPackagePrintLine) -> str
+ """
+
+Get: SenderCountryCode(self: TransportPackagePrintLine) -> str
 
 Set: SenderCountryCode(self: TransportPackagePrintLine)=value
 """
 
  SenderCountryName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SenderCountryName(self: TransportPackagePrintLine) -> str
+ """
+
+Get: SenderCountryName(self: TransportPackagePrintLine) -> str
 
 Set: SenderCountryName(self: TransportPackagePrintLine)=value
 """
 
  SenderEmail=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SenderEmail(self: TransportPackagePrintLine) -> str
+ """
+
+Get: SenderEmail(self: TransportPackagePrintLine) -> str
 
 Set: SenderEmail(self: TransportPackagePrintLine)=value
 """
 
  SenderName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SenderName(self: TransportPackagePrintLine) -> str
+ """
+
+Get: SenderName(self: TransportPackagePrintLine) -> str
 
 Set: SenderName(self: TransportPackagePrintLine)=value
 """
 
  SenderPhoneNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SenderPhoneNumber(self: TransportPackagePrintLine) -> str
+ """
+
+Get: SenderPhoneNumber(self: TransportPackagePrintLine) -> str
 
 Set: SenderPhoneNumber(self: TransportPackagePrintLine)=value
 """
 
  SenderStateCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SenderStateCode(self: TransportPackagePrintLine) -> str
+ """
+
+Get: SenderStateCode(self: TransportPackagePrintLine) -> str
 
 Set: SenderStateCode(self: TransportPackagePrintLine)=value
 """
 
  SenderZipCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SenderZipCode(self: TransportPackagePrintLine) -> str
+ """
+
+Get: SenderZipCode(self: TransportPackagePrintLine) -> str
 
 Set: SenderZipCode(self: TransportPackagePrintLine)=value
 """
 
  UnitCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UnitCode(self: TransportPackagePrintLine) -> str
+ """Only here to map the print line to the dataset
+
+Get: UnitCode(self: TransportPackagePrintLine) -> str
 
 """
 
 
 
-class TransportPackagePrintLines:
+class TransportPackagePrintLines(PrintLinesBase):
  """
  TransportPackagePrintLines()
  TransportPackagePrintLines(collection: IEnumerable[TransportPackagePrintLine])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TransportPackagePrintLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Create(transportPackages):
   """ Create(transportPackages: TransportPackages) -> TransportPackagePrintLines """
@@ -2006,17 +2595,24 @@ class TransportPackagePrintLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: TransportPackagePrintLines) -> bool
+ """
+
+Get: IsDisposable(self: TransportPackagePrintLines) -> bool
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: TransportPackagePrintLines) -> bool
+ """
+
+Get: PreserveState(self: TransportPackagePrintLines) -> bool
 
 """
 
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: TransportPackagePrintLines) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: TransportPackagePrintLines) -> Int64
 
 Set: TotalRowsMatched(self: TransportPackagePrintLines)=value
 """

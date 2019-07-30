@@ -1,9 +1,13 @@
-class DataGridViewCellCancelEventArgs:
+class DataGridViewCellCancelEventArgs(CancelEventArgs):
  """
  Provides data for System.Windows.Forms.DataGridView.CellBeginEdit and System.Windows.Forms.DataGridView.RowValidating events.
  
  DataGridViewCellCancelEventArgs(columnIndex: int,rowIndex: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewCellCancelEventArgs()
+
  @staticmethod
  def __new__(self,columnIndex,rowIndex):
   """ __new__(cls: type,columnIndex: int,rowIndex: int) """

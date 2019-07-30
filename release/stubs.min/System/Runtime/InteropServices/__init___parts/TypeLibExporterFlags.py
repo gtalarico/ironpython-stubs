@@ -4,6 +4,11 @@ class TypeLibExporterFlags:
  
  enum (flags) TypeLibExporterFlags,values: CallerResolvedReferences (2),ExportAs32Bit (16),ExportAs64Bit (32),None (0),OldNames (4),OnlyReferenceRegistered (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TypeLibExporterFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

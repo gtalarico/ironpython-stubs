@@ -1,5 +1,10 @@
-class Int64:
+class Int64(object):
  """ Represents a 64-bit signed integer. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Int64()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def bit_length(self,*args):
   """ bit_length(value: Int64) -> int """
   pass
@@ -7,25 +12,19 @@ class Int64:
   """
   CompareTo(self: Int64,value: object) -> int
   
-   Compares this instance to a specified object and returns an indication of their relative 
-    values.
-  
+   Compares this instance to a specified object and returns an indication of their relative values.
   
    value: An object to compare,or null.
-   Returns: A signed number indicating the relative values of this instance and value.Return Value 
-    Description Less than zero This instance is less than value. Zero This instance is equal 
-    to value. Greater than zero This instance is greater than value.-or- value is null.
+   Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is 
+    equal to value. Greater than zero This instance is greater than value.-or- value is null.
   
   CompareTo(self: Int64,value: Int64) -> int
   
-   Compares this instance to a specified 64-bit signed integer and returns an indication of 
-    their relative values.
-  
+   Compares this instance to a specified 64-bit signed integer and returns an indication of their relative values.
   
    value: An integer to compare.
-   Returns: A signed number indicating the relative values of this instance and value.Return Value 
-    Description Less than zero This instance is less than value. Zero This instance is equal 
-    to value. Greater than zero This instance is greater than value.
+   Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is 
+    equal to value. Greater than zero This instance is greater than value.
   """
   pass
  def conjugate(self,*args):
@@ -38,14 +37,10 @@ class Int64:
    Returns a value indicating whether this instance is equal to a specified object.
   
    obj: An object to compare with this instance.
-   Returns: true if obj is an instance of an System.Int64 and equals the value of this instance; 
-    otherwise,false.
-  
+   Returns: true if obj is an instance of an System.Int64 and equals the value of this instance; otherwise,false.
   Equals(self: Int64,obj: Int64) -> bool
   
-   Returns a value indicating whether this instance is equal to a specified System.Int64 
-    value.
-  
+   Returns a value indicating whether this instance is equal to a specified System.Int64 value.
   
    obj: An System.Int64 value to compare to this instance.
    Returns: true if obj has the same value as this instance; otherwise,false.
@@ -78,34 +73,27 @@ class Int64:
    Returns: A 64-bit signed integer equivalent to the number contained in s.
   Parse(s: str,style: NumberStyles) -> Int64
   
-   Converts the string representation of a number in a specified style to its 64-bit signed 
-    integer equivalent.
-  
+   Converts the string representation of a number in a specified style to its 64-bit signed integer equivalent.
   
    s: A string containing a number to convert.
-   style: A bitwise combination of System.Globalization.NumberStyles values that indicates the 
-    permitted format of s. A typical value to specify is 
+   style: A bitwise combination of System.Globalization.NumberStyles values that indicates the permitted format of s. A typical value to specify is 
     System.Globalization.NumberStyles.Integer.
   
    Returns: A 64-bit signed integer equivalent to the number specified in s.
   Parse(s: str,provider: IFormatProvider) -> Int64
   
-   Converts the string representation of a number in a specified culture-specific format to 
-    its 64-bit signed integer equivalent.
-  
+   Converts the string representation of a number in a specified culture-specific format to its 64-bit signed integer equivalent.
   
    s: A string containing a number to convert.
    provider: An object that supplies culture-specific formatting information about s.
    Returns: A 64-bit signed integer equivalent to the number specified in s.
   Parse(s: str,style: NumberStyles,provider: IFormatProvider) -> Int64
   
-   Converts the string representation of a number in a specified style and culture-specific 
-    format to its 64-bit signed integer equivalent.
-  
+   Converts the string representation of a number in a specified style and culture-specific format to its 64-bit signed integer equivalent.
   
    s: A string containing a number to convert.
-   style: A bitwise combination of enumeration values that indicates the style elements that can be 
-    present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
+   style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
+    System.Globalization.NumberStyles.Integer.
   
    provider: An System.IFormatProvider that supplies culture-specific formatting information about s.
    Returns: A 64-bit signed integer equivalent to the number specified in s.
@@ -116,36 +104,28 @@ class Int64:
   ToString(self: Int64) -> str
   
    Converts the numeric value of this instance to its equivalent string representation.
-   Returns: The string representation of the value of this instance,consisting of a minus sign if 
-    the value is negative,and a sequence of digits ranging from 0 to 9 with no leading 
+   Returns: The string representation of the value of this instance,consisting of a minus sign if the value is negative,and a sequence of digits ranging from 0 to 9 with no leading 
     zeroes.
   
   ToString(self: Int64,provider: IFormatProvider) -> str
   
-   Converts the numeric value of this instance to its equivalent string representation using 
-    the specified culture-specific format information.
-  
+   Converts the numeric value of this instance to its equivalent string representation using the specified culture-specific format information.
   
    provider: An System.IFormatProvider that supplies culture-specific formatting information.
    Returns: The string representation of the value of this instance as specified by provider.
   ToString(self: Int64,format: str) -> str
   
-   Converts the numeric value of this instance to its equivalent string representation,
-    using the specified format.
-  
+   Converts the numeric value of this instance to its equivalent string representation,using the specified format.
   
    format: A numeric format string.
    Returns: The string representation of the value of this instance as specified by format.
   ToString(self: Int64,format: str,provider: IFormatProvider) -> str
   
-   Converts the numeric value of this instance to its equivalent string representation using 
-    the specified format and culture-specific format information.
-  
+   Converts the numeric value of this instance to its equivalent string representation using the specified format and culture-specific format information.
   
    format: A numeric format string.
    provider: An object that supplies culture-specific formatting information about this instance.
-   Returns: The string representation of the value of this instance as specified by format and 
-    provider.
+   Returns: The string representation of the value of this instance as specified by format and provider.
   """
   pass
  @staticmethod
@@ -153,24 +133,19 @@ class Int64:
   """
   TryParse(s: str) -> (bool,Int64)
   
-   Converts the string representation of a number to its 64-bit signed integer equivalent. A 
-    return value indicates whether the conversion succeeded or failed.
-  
+   Converts the string representation of a number to its 64-bit signed integer equivalent. A return value indicates whether the conversion succeeded or failed.
   
    s: A string containing a number to convert.
    Returns: true if s was converted successfully; otherwise,false.
   TryParse(s: str,style: NumberStyles,provider: IFormatProvider) -> (bool,Int64)
   
-   Converts the string representation of a number in a specified style and culture-specific 
-    format to its 64-bit signed integer equivalent. A return value indicates whether the 
-    conversion succeeded or failed.
+   Converts the string representation of a number in a specified style and culture-specific format to its 64-bit signed integer equivalent. A return value indicates whether 
+    the conversion succeeded or failed.
   
   
-   s: A string containing a number to convert. The string is interpreted using the style 
-    specified by style.
-  
-   style: A bitwise combination of enumeration values that indicates the style elements that can be 
-    present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
+   s: A string containing a number to convert. The string is interpreted using the style specified by style.
+   style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
+    System.Globalization.NumberStyles.Integer.
   
    provider: An object that supplies culture-specific formatting information about s.
    Returns: true if s was converted successfully; otherwise,false.

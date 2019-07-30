@@ -1,9 +1,13 @@
-class ToolStripItemClickedEventArgs:
+class ToolStripItemClickedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ToolStrip.ItemClicked event.
  
  ToolStripItemClickedEventArgs(clickedItem: ToolStripItem)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripItemClickedEventArgs()
+
  @staticmethod
  def __new__(self,clickedItem):
   """ __new__(cls: type,clickedItem: ToolStripItem) """

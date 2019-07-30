@@ -4,6 +4,11 @@ class StringComparison:
  
  enum StringComparison,values: CurrentCulture (0),CurrentCultureIgnoreCase (1),InvariantCulture (2),InvariantCultureIgnoreCase (3),Ordinal (4),OrdinalIgnoreCase (5)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StringComparison()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

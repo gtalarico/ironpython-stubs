@@ -1,9 +1,13 @@
-class UICues:
+class UICues(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies the state of the user interface.
  
  enum (flags) UICues,values: Changed (12),ChangeFocus (4),ChangeKeyboard (8),None (0),ShowFocus (1),ShowKeyboard (2),Shown (3)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return UICues()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

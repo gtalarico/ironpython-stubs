@@ -8,6 +8,11 @@ class PropertyTabAttribute:
  PropertyTabAttribute(tabClass: Type,tabScope: PropertyTabScope)
  PropertyTabAttribute(tabClassName: str,tabScope: PropertyTabScope)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PropertyTabAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,other):
   """
   Equals(self: PropertyTabAttribute,other: object) -> bool
@@ -15,16 +20,13 @@ class PropertyTabAttribute:
    Returns a value indicating whether this instance is equal to a specified object.
   
    other: An object to compare to this instance,or null.
-   Returns: true if other refers to the same System.ComponentModel.PropertyTabAttribute instance; 
-    otherwise,false.
-  
+   Returns: true if other refers to the same System.ComponentModel.PropertyTabAttribute instance; otherwise,false.
   Equals(self: PropertyTabAttribute,other: PropertyTabAttribute) -> bool
   
    Returns a value indicating whether this instance is equal to a specified attribute.
   
    other: A System.ComponentModel.PropertyTabAttribute to compare to this instance,or null.
-   Returns: true if the System.ComponentModel.PropertyTabAttribute instances are equal; otherwise,
-    false.
+   Returns: true if the System.ComponentModel.PropertyTabAttribute instances are equal; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -38,30 +40,18 @@ class PropertyTabAttribute:
  def InitializeArrays(self,*args):
   """
   InitializeArrays(self: PropertyTabAttribute,tabClassNames: Array[str],tabScopes: Array[PropertyTabScope])
-   Initializes the attribute using the specified names of tab classes and array of tab 
-    scopes.
+   Initializes the attribute using the specified names of tab classes and array of tab scopes.
   
-  
-   tabClassNames: An array of fully qualified type names of the types to create for tabs on the Properties 
-    window.
-  
-   tabScopes: The scope of each tab. If the scope is System.ComponentModel.PropertyTabScope.Component,
-    it is shown only for components with the corresponding 
-    System.ComponentModel.PropertyTabAttribute. If it is 
-    System.ComponentModel.PropertyTabScope.Document,it is shown for all components on the 
-    document.
+   tabClassNames: An array of fully qualified type names of the types to create for tabs on the Properties window.
+   tabScopes: The scope of each tab. If the scope is System.ComponentModel.PropertyTabScope.Component,it is shown only for components with the corresponding 
+    System.ComponentModel.PropertyTabAttribute. If it is System.ComponentModel.PropertyTabScope.Document,it is shown for all components on the document.
   
   InitializeArrays(self: PropertyTabAttribute,tabClasses: Array[Type],tabScopes: Array[PropertyTabScope])
-   Initializes the attribute using the specified names of tab classes and array of tab 
-    scopes.
-  
+   Initializes the attribute using the specified names of tab classes and array of tab scopes.
   
    tabClasses: The types of tabs to create.
-   tabScopes: The scope of each tab. If the scope is System.ComponentModel.PropertyTabScope.Component,
-    it is shown only for components with the corresponding 
-    System.ComponentModel.PropertyTabAttribute. If it is 
-    System.ComponentModel.PropertyTabScope.Document,it is shown for all components on the 
-    document.
+   tabScopes: The scope of each tab. If the scope is System.ComponentModel.PropertyTabScope.Component,it is shown only for components with the corresponding 
+    System.ComponentModel.PropertyTabAttribute. If it is System.ComponentModel.PropertyTabScope.Document,it is shown for all components on the document.
   """
   pass
  def __eq__(self,*args):

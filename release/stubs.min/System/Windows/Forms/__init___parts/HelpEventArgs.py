@@ -1,9 +1,13 @@
-class HelpEventArgs:
+class HelpEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.Control.HelpRequested event.
  
  HelpEventArgs(mousePos: Point)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return HelpEventArgs()
+
  @staticmethod
  def __new__(self,mousePos):
   """ __new__(cls: type,mousePos: Point) """

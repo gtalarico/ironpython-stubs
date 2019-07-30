@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.Reports.RDL calls itself RDL
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class RDLIsolatedReportRendererExecutor:
+class RDLIsolatedReportRendererExecutor(MarshalledObject):
  """ RDLIsolatedReportRendererExecutor(lifetime: TimeSpan) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RDLIsolatedReportRendererExecutor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Export(self,args,dataArgs):
   """ Export(self: RDLIsolatedReportRendererExecutor,args: ReportExportArgs,dataArgs: ReportDataArgs) -> ReportExport """
   pass
@@ -29,8 +35,13 @@ class RDLIsolatedReportRendererExecutor:
 
 
 
-class RDLReportRenderer:
+class RDLReportRenderer(object):
  """ RDLReportRenderer() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RDLReportRenderer()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Export(self,*__args):
   """
   Export[T](self: RDLReportRenderer,provider: T) -> ReportExport
@@ -47,8 +58,13 @@ class RDLReportRenderer:
   """ __repr__(self: object) -> str """
   pass
 
-class Utilities:
+class Utilities(object):
  """ Utilities() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Utilities()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def LoadNativeAssemblies(rootApplicationPath):
   """ LoadNativeAssemblies(rootApplicationPath: str) """

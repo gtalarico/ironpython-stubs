@@ -4,6 +4,11 @@ class ExtenderProvidedPropertyAttribute:
  
  ExtenderProvidedPropertyAttribute()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ExtenderProvidedPropertyAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: ExtenderProvidedPropertyAttribute,obj: object) -> bool
@@ -11,8 +16,7 @@ class ExtenderProvidedPropertyAttribute:
    Determines whether the specified System.Object is equal to the current System.Object.
   
    obj: An System.Object to compare with this instance or null.
-   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,
-    false.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -27,9 +31,7 @@ class ExtenderProvidedPropertyAttribute:
   """
   IsDefaultAttribute(self: ExtenderProvidedPropertyAttribute) -> bool
   
-   Provides an indication whether the value of this instance is the default value for the 
-    derived class.
-  
+   Provides an indication whether the value of this instance is the default value for the derived class.
    Returns: true if this instance is the default attribute for the class; otherwise,false.
   """
   pass

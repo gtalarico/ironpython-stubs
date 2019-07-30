@@ -1,4 +1,4 @@
-class Authorization:
+class Authorization(object):
  """
  Contains an authentication message for an Internet server.
  
@@ -6,6 +6,11 @@ class Authorization:
  Authorization(token: str,finished: bool)
  Authorization(token: str,finished: bool,connectionGroupId: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Authorization()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,token,finished=None,connectionGroupId=None):
   """

@@ -1,5 +1,10 @@
 class UCOMITypeInfo:
  """ Use System.Runtime.InteropServices.ComTypes.ITypeInfo instead. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UCOMITypeInfo()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddressOfMember(self,memid,invKind,ppv):
   """
   AddressOfMember(self: UCOMITypeInfo,memid: int,invKind: INVOKEKIND) -> IntPtr
@@ -17,16 +22,14 @@ class UCOMITypeInfo:
    Creates a new instance of a type that describes a component class (coclass).
   
    pUnkOuter: Object which acts as the controlling IUnknown.
-   riid: The IID of the interface that the caller will use to communicate with the resulting 
-    object.
+   riid: The IID of the interface that the caller will use to communicate with the resulting object.
   """
   pass
  def GetContainingTypeLib(self,ppTLB,pIndex):
   """
   GetContainingTypeLib(self: UCOMITypeInfo) -> (UCOMITypeLib,int)
   
-   Retrieves the type library that contains this type description and its index within that 
-    type library.
+   Retrieves the type library that contains this type description and its index within that type library.
   """
   pass
  def GetDllEntry(self,memid,invKind,pBstrDllName,pBstrName,pwOrdinal):
@@ -43,9 +46,7 @@ class UCOMITypeInfo:
   """
   GetDocumentation(self: UCOMITypeInfo,index: int) -> (str,str,int,str)
   
-   Retrieves the documentation string,the complete Help file name and path,and the context 
-    ID for the Help topic for a specified type description.
-  
+   Retrieves the documentation string,the complete Help file name and path,and the context ID for the Help topic for a specified type description.
   
    index: ID of the member whose documentation is to be returned.
   """
@@ -54,9 +55,7 @@ class UCOMITypeInfo:
   """
   GetFuncDesc(self: UCOMITypeInfo,index: int) -> IntPtr
   
-   Retrieves the System.Runtime.InteropServices.FUNCDESC structure that contains information 
-    about a specified function.
-  
+   Retrieves the System.Runtime.InteropServices.FUNCDESC structure that contains information about a specified function.
   
    index: Index of the function description to return.
   """
@@ -75,9 +74,7 @@ class UCOMITypeInfo:
   """
   GetImplTypeFlags(self: UCOMITypeInfo,index: int) -> int
   
-   Retrieves the System.Runtime.InteropServices.IMPLTYPEFLAGS value for one implemented 
-    interface or base interface in a type description.
-  
+   Retrieves the System.Runtime.InteropServices.IMPLTYPEFLAGS value for one implemented interface or base interface in a type description.
   
    index: Index of the implemented interface or base interface.
   """
@@ -95,9 +92,7 @@ class UCOMITypeInfo:
   """
   GetNames(self: UCOMITypeInfo,memid: int,cMaxNames: int) -> (Array[str],int)
   
-   Retrieves the variable with the specified member ID (or the name of the property or 
-    method and its parameters) that correspond to the specified function ID.
-  
+   Retrieves the variable with the specified member ID (or the name of the property or method and its parameters) that correspond to the specified function ID.
   
    memid: The ID of the member whose name (or names) is to be returned.
    cMaxNames: Length of the rgBstrNames array.
@@ -107,9 +102,7 @@ class UCOMITypeInfo:
   """
   GetRefTypeInfo(self: UCOMITypeInfo,hRef: int) -> UCOMITypeInfo
   
-   If a type description references other type descriptions,it retrieves the referenced 
-    type descriptions.
-  
+   If a type description references other type descriptions,it retrieves the referenced type descriptions.
   
    hRef: Handle to the referenced type description to return.
   """
@@ -118,9 +111,7 @@ class UCOMITypeInfo:
   """
   GetRefTypeOfImplType(self: UCOMITypeInfo,index: int) -> int
   
-   If a type description describes a COM class,it retrieves the type description of the 
-    implemented interface types.
-  
+   If a type description describes a COM class,it retrieves the type description of the implemented interface types.
   
    index: Index of the implemented type whose handle is returned.
   """
@@ -129,16 +120,14 @@ class UCOMITypeInfo:
   """
   GetTypeAttr(self: UCOMITypeInfo) -> IntPtr
   
-   Retrieves a System.Runtime.InteropServices.TYPEATTR structure that contains the 
-    attributes of the type description.
+   Retrieves a System.Runtime.InteropServices.TYPEATTR structure that contains the attributes of the type description.
   """
   pass
  def GetTypeComp(self,ppTComp):
   """
   GetTypeComp(self: UCOMITypeInfo) -> UCOMITypeComp
   
-   Retrieves the ITypeComp interface for the type description,which enables a client 
-    compiler to bind to the type description's members.
+   Retrieves the ITypeComp interface for the type description,which enables a client compiler to bind to the type description's members.
   """
   pass
  def GetVarDesc(self,index,ppVarDesc):
@@ -154,23 +143,18 @@ class UCOMITypeInfo:
   """
   Invoke(self: UCOMITypeInfo,pvInstance: object,memid: int,wFlags: Int16,pDispParams: DISPPARAMS) -> (DISPPARAMS,object,EXCEPINFO,int)
   
-   Invokes a method,or accesses a property of an object,that implements the interface 
-    described by the type description.
-  
+   Invokes a method,or accesses a property of an object,that implements the interface described by the type description.
   
    pvInstance: Reference to the interface described by this type description.
    memid: Identifies the interface member.
    wFlags: Flags describing the context of the invoke call.
-   pDispParams: Reference to a structure that contains an array of arguments,an array of DISPIDs for 
-    named arguments,and counts of the number of elements in each array.
+   pDispParams: Reference to a structure that contains an array of arguments,an array of DISPIDs for named arguments,and counts of the number of elements in each array.
   """
   pass
  def ReleaseFuncDesc(self,pFuncDesc):
   """
   ReleaseFuncDesc(self: UCOMITypeInfo,pFuncDesc: IntPtr)
-   Releases a System.Runtime.InteropServices.FUNCDESC previously returned by 
-    System.Runtime.InteropServices.UCOMITypeInfo.GetFuncDesc(System.Int32,System.IntPtr@).
-  
+   Releases a System.Runtime.InteropServices.FUNCDESC previously returned by System.Runtime.InteropServices.UCOMITypeInfo.GetFuncDesc(System.Int32,System.IntPtr@).
   
    pFuncDesc: Reference to the FUNCDESC to release.
   """
@@ -178,9 +162,7 @@ class UCOMITypeInfo:
  def ReleaseTypeAttr(self,pTypeAttr):
   """
   ReleaseTypeAttr(self: UCOMITypeInfo,pTypeAttr: IntPtr)
-   Releases a System.Runtime.InteropServices.TYPEATTR previously returned by 
-    System.Runtime.InteropServices.UCOMITypeInfo.GetTypeAttr(System.IntPtr@).
-  
+   Releases a System.Runtime.InteropServices.TYPEATTR previously returned by System.Runtime.InteropServices.UCOMITypeInfo.GetTypeAttr(System.IntPtr@).
   
    pTypeAttr: Reference to the TYPEATTR to release.
   """
@@ -188,9 +170,7 @@ class UCOMITypeInfo:
  def ReleaseVarDesc(self,pVarDesc):
   """
   ReleaseVarDesc(self: UCOMITypeInfo,pVarDesc: IntPtr)
-   Releases a VARDESC previously returned by 
-    System.Runtime.InteropServices.UCOMITypeInfo.GetVarDesc(System.Int32,System.IntPtr@).
-  
+   Releases a VARDESC previously returned by System.Runtime.InteropServices.UCOMITypeInfo.GetVarDesc(System.Int32,System.IntPtr@).
   
    pVarDesc: Reference to the VARDESC to release.
   """

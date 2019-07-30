@@ -1,10 +1,14 @@
-class FileDialogCustomPlace:
+class FileDialogCustomPlace(object):
  """
  Represents an entry in a System.Windows.Forms.FileDialog custom place collection for Windows Vista.
  
  FileDialogCustomPlace(path: str)
  FileDialogCustomPlace(knownFolderGuid: Guid)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return FileDialogCustomPlace()
+
  def ToString(self):
   """
   ToString(self: FileDialogCustomPlace) -> str

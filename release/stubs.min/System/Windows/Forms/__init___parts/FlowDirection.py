@@ -1,9 +1,13 @@
-class FlowDirection:
+class FlowDirection(Enum,IComparable,IFormattable,IConvertible):
  """
  Defines constants that specify the direction in which consecutive user interface (UI) elements are placed in a linear layout container
  
  enum FlowDirection,values: BottomUp (3),LeftToRight (0),RightToLeft (2),TopDown (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return FlowDirection()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

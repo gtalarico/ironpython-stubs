@@ -7,17 +7,19 @@ class EditorAttribute:
  EditorAttribute(typeName: str,baseType: Type)
  EditorAttribute(type: Type,baseType: Type)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EditorAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: EditorAttribute,obj: object) -> bool
   
-   Returns whether the value of the given object is equal to the current 
-    System.ComponentModel.EditorAttribute.
-  
+   Returns whether the value of the given object is equal to the current System.ComponentModel.EditorAttribute.
   
    obj: The object to test the value equality of.
-   Returns: true if the value of the given object is equal to that of the current object; otherwise,
-    false.
+   Returns: true if the value of the given object is equal to that of the current object; otherwise,false.
   """
   pass
  def GetHashCode(self):

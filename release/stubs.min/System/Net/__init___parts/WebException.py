@@ -8,12 +8,15 @@ class WebException:
  WebException(message: str,status: WebExceptionStatus)
  WebException(message: str,innerException: Exception,status: WebExceptionStatus,response: WebResponse)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,serializationInfo,streamingContext):
   """
   GetObjectData(self: WebException,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo instance with the data needed 
-    to serialize the System.Net.WebException.
-  
+   Populates a System.Runtime.Serialization.SerializationInfo instance with the data needed to serialize the System.Net.WebException.
   
    serializationInfo: The System.Runtime.Serialization.SerializationInfo to be used.
    streamingContext: The System.Runtime.Serialization.StreamingContext to be used.

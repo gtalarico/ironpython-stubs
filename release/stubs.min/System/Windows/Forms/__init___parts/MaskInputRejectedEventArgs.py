@@ -1,9 +1,13 @@
-class MaskInputRejectedEventArgs:
+class MaskInputRejectedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.MaskedTextBox.MaskInputRejected event.
  
  MaskInputRejectedEventArgs(position: int,rejectionHint: MaskedTextResultHint)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return MaskInputRejectedEventArgs()
+
  @staticmethod
  def __new__(self,position,rejectionHint):
   """ __new__(cls: type,position: int,rejectionHint: MaskedTextResultHint) """

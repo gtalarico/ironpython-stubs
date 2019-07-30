@@ -4,6 +4,11 @@ class HttpRequestHeader:
  
  enum HttpRequestHeader,values: Accept (20),AcceptCharset (21),AcceptEncoding (22),AcceptLanguage (23),Allow (10),Authorization (24),CacheControl (0),Connection (1),ContentEncoding (13),ContentLanguage (14),ContentLength (11),ContentLocation (15),ContentMd5 (16),ContentRange (17),ContentType (12),Cookie (25),Date (2),Expect (26),Expires (18),From (27),Host (28),IfMatch (29),IfModifiedSince (30),IfNoneMatch (31),IfRange (32),IfUnmodifiedSince (33),KeepAlive (3),LastModified (19),MaxForwards (34),Pragma (4),ProxyAuthorization (35),Range (37),Referer (36),Te (38),Trailer (5),TransferEncoding (6),Translate (39),Upgrade (7),UserAgent (40),Via (8),Warning (9)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HttpRequestHeader()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

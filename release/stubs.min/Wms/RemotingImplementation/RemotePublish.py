@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.RemotePublish calls itself RemotePublish
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class RemotePublishingInboundFileListener:
+class RemotePublishingInboundFileListener(GcloudInboundFileListenerBase):
  """ RemotePublishingInboundFileListener(appSetttings: RemotePublishingInboundFileOptions,general: General,messaging: Messaging,api: RemotePublishing) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RemotePublishingInboundFileListener()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def DownloadFile(self,*args):
   """ DownloadFile(self: RemotePublishingInboundFileListener,filepath: str) -> Task[Stream] """
   pass
@@ -31,15 +37,25 @@ class RemotePublishingInboundFileListener:
  _messaging=None
 
 
-class RemotePublishingInboundFileOptions:
+class RemotePublishingInboundFileOptions(GcloudInboundFileListenerOptions):
  """ RemotePublishingInboundFileOptions(appSettings: IApplicationSettings) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RemotePublishingInboundFileOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,appSettings):
   """ __new__(cls: type,appSettings: IApplicationSettings) """
   pass
 
-class RemotePublishingInboundFileUploadedEvent:
+class RemotePublishingInboundFileUploadedEvent(object):
  """ RemotePublishingInboundFileUploadedEvent() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RemotePublishingInboundFileUploadedEvent()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Event=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Event(self: RemotePublishingInboundFileUploadedEvent) -> str
 

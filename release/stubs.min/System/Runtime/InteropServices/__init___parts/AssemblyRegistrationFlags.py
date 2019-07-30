@@ -4,6 +4,11 @@ class AssemblyRegistrationFlags:
  
  enum (flags) AssemblyRegistrationFlags,values: None (0),SetCodeBase (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AssemblyRegistrationFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

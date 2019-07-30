@@ -1,4 +1,4 @@
-class ArgumentOutOfRangeException:
+class ArgumentOutOfRangeException(ArgumentException):
  """
  The exception that is thrown when the value of an argument is outside the allowable range of values as defined by the invoked method.
  
@@ -8,12 +8,15 @@ class ArgumentOutOfRangeException:
  ArgumentOutOfRangeException(message: str,innerException: Exception)
  ArgumentOutOfRangeException(paramName: str,actualValue: object,message: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ArgumentOutOfRangeException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: ArgumentOutOfRangeException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the invalid argument 
-    value and additional exception information.
-  
+   Sets the System.Runtime.Serialization.SerializationInfo object with the invalid argument value and additional exception information.
   
    info: The object that holds the serialized object data.
    context: An object that describes the source or destination of the serialized data.

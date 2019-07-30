@@ -1,9 +1,13 @@
-class DataGridViewColumnHeadersHeightSizeMode:
+class DataGridViewColumnHeadersHeightSizeMode(Enum,IComparable,IFormattable,IConvertible):
  """
  Defines values for specifying how the height of the column headers is adjusted.
  
  enum DataGridViewColumnHeadersHeightSizeMode,values: AutoSize (2),DisableResizing (1),EnableResizing (0)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewColumnHeadersHeightSizeMode()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

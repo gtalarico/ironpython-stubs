@@ -4,6 +4,11 @@ class LoaderOptimization:
  
  enum LoaderOptimization,values: DisallowBindings (4),DomainMask (3),MultiDomain (2),MultiDomainHost (3),NotSpecified (0),SingleDomain (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LoaderOptimization()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

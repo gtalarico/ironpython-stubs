@@ -1,19 +1,24 @@
 # encoding: utf-8
 # module NCrontab
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
 
-class CrontabException:
+class CrontabException(Exception):
  """
  CrontabException()
  CrontabException(message: str)
  CrontabException(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CrontabException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -33,8 +38,13 @@ class CrontabException:
  SerializeObjectState=None
 
 
-class CrontabField:
+class CrontabField(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CrontabField()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Contains(self,value):
   """ Contains(self: CrontabField,value: int) -> bool """
   pass
@@ -95,8 +105,13 @@ class CrontabField:
  def __str__(self,*args):
   pass
 
-class CrontabFieldAccumulator:
+class CrontabFieldAccumulator(MulticastDelegate):
  """ CrontabFieldAccumulator(object: object,method: IntPtr) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CrontabFieldAccumulator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInvoke(self,start,end,interval,onError,callback,object):
   """ BeginInvoke(self: CrontabFieldAccumulator,start: int,end: int,interval: int,onError: ExceptionHandler,callback: AsyncCallback,object: object) -> IAsyncResult """
   pass
@@ -116,8 +131,7 @@ class CrontabFieldAccumulator:
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the 
-    current delegate.-or- null,if the method represented by the current delegate does not 
+   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not 
     require arguments.
   
    Returns: The object returned by the method represented by the delegate.
@@ -141,13 +155,10 @@ class CrontabFieldAccumulator:
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is 
-    equal to the specified delegate.
-  
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate 
-    without value in its invocation list; otherwise,this instance with its original 
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original 
     invocation list.
   """
   pass
@@ -161,8 +172,13 @@ class CrontabFieldAccumulator:
  def __reduce_ex__(self,*args):
   pass
 
-class CrontabFieldImpl:
+class CrontabFieldImpl(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CrontabFieldImpl()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Format(self,field,writer,noNames=None):
   """ Format(self: CrontabFieldImpl,field: ICrontabField,writer: TextWriter)Format(self: CrontabFieldImpl,field: ICrontabField,writer: TextWriter,noNames: bool) """
   pass
@@ -214,6 +230,11 @@ class CrontabFieldImpl:
 
 class CrontabFieldKind:
  """ enum CrontabFieldKind,values: Day (2),DayOfWeek (4),Hour (1),Minute (0),Month (3) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CrontabFieldKind()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -245,8 +266,13 @@ class CrontabFieldKind:
  value__=None
 
 
-class CrontabSchedule:
+class CrontabSchedule(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CrontabSchedule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetNextOccurrence(self,baseTime,endTime=None):
   """
   GetNextOccurrence(self: CrontabSchedule,baseTime: DateTime) -> DateTime
@@ -268,8 +294,13 @@ class CrontabSchedule:
   """ TryParse(expression: str) -> ValueOrError[CrontabSchedule] """
   pass
 
-class ExceptionHandler:
+class ExceptionHandler(MulticastDelegate):
  """ ExceptionHandler(object: object,method: IntPtr) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ExceptionHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInvoke(self,e,callback,object):
   """ BeginInvoke(self: ExceptionHandler,e: Exception,callback: AsyncCallback,object: object) -> IAsyncResult """
   pass
@@ -289,8 +320,7 @@ class ExceptionHandler:
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the 
-    current delegate.-or- null,if the method represented by the current delegate does not 
+   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not 
     require arguments.
   
    Returns: The object returned by the method represented by the delegate.
@@ -314,13 +344,10 @@ class ExceptionHandler:
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is 
-    equal to the specified delegate.
-  
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate 
-    without value in its invocation list; otherwise,this instance with its original 
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original 
     invocation list.
   """
   pass
@@ -334,8 +361,13 @@ class ExceptionHandler:
  def __reduce_ex__(self,*args):
   pass
 
-class ExceptionProvider:
+class ExceptionProvider(MulticastDelegate):
  """ ExceptionProvider(object: object,method: IntPtr) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ExceptionProvider()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInvoke(self,callback,object):
   """ BeginInvoke(self: ExceptionProvider,callback: AsyncCallback,object: object) -> IAsyncResult """
   pass
@@ -355,8 +387,7 @@ class ExceptionProvider:
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the 
-    current delegate.-or- null,if the method represented by the current delegate does not 
+   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not 
     require arguments.
   
    Returns: The object returned by the method represented by the delegate.
@@ -380,13 +411,10 @@ class ExceptionProvider:
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is 
-    equal to the specified delegate.
-  
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate 
-    without value in its invocation list; otherwise,this instance with its original 
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original 
     invocation list.
   """
   pass
@@ -402,6 +430,11 @@ class ExceptionProvider:
 
 class ICrontabField:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ICrontabField()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Contains(self,value):
   """ Contains(self: ICrontabField,value: int) -> bool """
   pass
@@ -415,12 +448,17 @@ class ICrontabField:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class ValueOrError:
+class ValueOrError(object):
  """
  ValueOrError[T](value: T)
  ValueOrError[T](error: Exception)
  ValueOrError[T](provider: ExceptionProvider)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ValueOrError()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToString(self):
   """ ToString(self: ValueOrError[T]) -> str """
   pass

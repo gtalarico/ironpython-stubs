@@ -4,6 +4,11 @@ class RefreshPropertiesAttribute:
  
  RefreshPropertiesAttribute(refresh: RefreshProperties)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RefreshPropertiesAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,value):
   """
   Equals(self: RefreshPropertiesAttribute,value: object) -> bool
@@ -26,9 +31,7 @@ class RefreshPropertiesAttribute:
   """
   IsDefaultAttribute(self: RefreshPropertiesAttribute) -> bool
   
-   Gets a value indicating whether the current value of the attribute is the default value 
-    for the attribute.
-  
+   Gets a value indicating whether the current value of the attribute is the default value for the attribute.
    Returns: true if the current value of the attribute is the default; otherwise,false.
   """
   pass

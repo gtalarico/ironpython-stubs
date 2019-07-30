@@ -1,9 +1,14 @@
-class TypeLibConverter:
+class TypeLibConverter(object):
  """
  Provides a set of services that convert a managed assembly to a COM type library and vice versa.
  
  TypeLibConverter()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TypeLibConverter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ConvertAssemblyToTypeLib(self,assembly,strTypeLibName,flags,notifySink):
   """
   ConvertAssemblyToTypeLib(self: TypeLibConverter,assembly: Assembly,strTypeLibName: str,flags: TypeLibExporterFlags,notifySink: ITypeLibExporterNotifySink) -> object
@@ -12,12 +17,8 @@ class TypeLibConverter:
   
    assembly: The assembly to convert.
    strTypeLibName: The file name of the resulting type library.
-   flags: A System.Runtime.InteropServices.TypeLibExporterFlags value indicating any special 
-    settings.
-  
-   notifySink: The System.Runtime.InteropServices.ITypeLibExporterNotifySink interface implemented by 
-    the caller.
-  
+   flags: A System.Runtime.InteropServices.TypeLibExporterFlags value indicating any special settings.
+   notifySink: The System.Runtime.InteropServices.ITypeLibExporterNotifySink interface implemented by the caller.
    Returns: An object that implements the ITypeLib interface.
   """
   pass
@@ -29,20 +30,12 @@ class TypeLibConverter:
   
    typeLib: The object that implements the ITypeLib interface.
    asmFileName: The file name of the resulting assembly.
-   flags: A System.Runtime.InteropServices.TypeLibImporterFlags value indicating any special 
-    settings.
-  
-   notifySink: System.Runtime.InteropServices.ITypeLibImporterNotifySink interface implemented by the 
-    caller.
-  
+   flags: A System.Runtime.InteropServices.TypeLibImporterFlags value indicating any special settings.
+   notifySink: System.Runtime.InteropServices.ITypeLibImporterNotifySink interface implemented by the caller.
    publicKey: A byte array containing the public key.
-   keyPair: A System.Reflection.StrongNameKeyPair object containing the public and private 
-    cryptographic key pair.
-  
-   unsafeInterfaces: If true,the interfaces require link time checks for 
-    System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode permission. If false,
-    the interfaces require run time checks that require a stack walk and are more expensive,
-    but help provide greater protection.
+   keyPair: A System.Reflection.StrongNameKeyPair object containing the public and private cryptographic key pair.
+   unsafeInterfaces: If true,the interfaces require link time checks for System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode permission. If false,the interfaces require run time 
+    checks that require a stack walk and are more expensive,but help provide greater protection.
   
    Returns: An System.Reflection.Emit.AssemblyBuilder object containing the converted type library.
   ConvertTypeLibToAssembly(self: TypeLibConverter,typeLib: object,asmFileName: str,flags: TypeLibImporterFlags,notifySink: ITypeLibImporterNotifySink,publicKey: Array[Byte],keyPair: StrongNameKeyPair,asmNamespace: str,asmVersion: Version) -> AssemblyBuilder
@@ -51,16 +44,10 @@ class TypeLibConverter:
   
    typeLib: The object that implements the ITypeLib interface.
    asmFileName: The file name of the resulting assembly.
-   flags: A System.Runtime.InteropServices.TypeLibImporterFlags value indicating any special 
-    settings.
-  
-   notifySink: System.Runtime.InteropServices.ITypeLibImporterNotifySink interface implemented by the 
-    caller.
-  
+   flags: A System.Runtime.InteropServices.TypeLibImporterFlags value indicating any special settings.
+   notifySink: System.Runtime.InteropServices.ITypeLibImporterNotifySink interface implemented by the caller.
    publicKey: A byte array containing the public key.
-   keyPair: A System.Reflection.StrongNameKeyPair object containing the public and private 
-    cryptographic key pair.
-  
+   keyPair: A System.Reflection.StrongNameKeyPair object containing the public and private cryptographic key pair.
    asmNamespace: The namespace for the resulting assembly.
    asmVersion: The version of the resulting assembly. If null,the version of the type library is used.
    Returns: An System.Reflection.Emit.AssemblyBuilder object containing the converted type library.

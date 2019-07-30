@@ -1,4 +1,4 @@
-class RowStyle:
+class RowStyle(TableLayoutStyle):
  """
  Represents the look and feel of a row in a table layout.
  
@@ -6,6 +6,10 @@ class RowStyle:
  RowStyle()
  RowStyle(sizeType: SizeType)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return RowStyle()
+
  @staticmethod
  def __new__(self,sizeType=None,height=None):
   """

@@ -1,5 +1,9 @@
 class IMessageFilter:
  """ Defines a message filter interface. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return IMessageFilter()
+
  def PreFilterMessage(self,m):
   """
   PreFilterMessage(self: IMessageFilter,m: Message) -> (bool,Message)
@@ -7,8 +11,7 @@ class IMessageFilter:
    Filters out a message before it is dispatched.
   
    m: The message to be dispatched. You cannot modify this message.
-   Returns: true to filter the message and stop it from being dispatched; false to allow the message 
-    to continue to the next filter or control.
+   Returns: true to filter the message and stop it from being dispatched; false to allow the message to continue to the next filter or control.
   """
   pass
  def __init__(self,*args):

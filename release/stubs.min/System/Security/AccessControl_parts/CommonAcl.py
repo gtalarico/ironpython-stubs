@@ -1,23 +1,23 @@
-class CommonAcl:
+class CommonAcl(GenericAcl):
  """ Represents an access control list (ACL) and is the base class for the System.Security.AccessControl.DiscretionaryAcl and System.Security.AccessControl.SystemAcl classes. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CommonAcl()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetBinaryForm(self,binaryForm,offset):
   """
   GetBinaryForm(self: CommonAcl,binaryForm: Array[Byte],offset: int)
-   Marshals the contents of the System.Security.AccessControl.CommonAcl object into the 
-    specified byte array beginning at the specified offset.
+   Marshals the contents of the System.Security.AccessControl.CommonAcl object into the specified byte array beginning at the specified offset.
   
-  
-   binaryForm: The byte array into which the contents of the System.Security.AccessControl.CommonAcl is 
-    marshaled.
-  
+   binaryForm: The byte array into which the contents of the System.Security.AccessControl.CommonAcl is marshaled.
    offset: The offset at which to start marshaling.
   """
   pass
  def Purge(self,sid):
   """
   Purge(self: CommonAcl,sid: SecurityIdentifier)
-   Removes all access control entries (ACEs) contained by this 
-    System.Security.AccessControl.CommonAcl object that are associated with the specified 
+   Removes all access control entries (ACEs) contained by this System.Security.AccessControl.CommonAcl object that are associated with the specified 
     System.Security.Principal.SecurityIdentifier object.
   
   
@@ -27,8 +27,7 @@ class CommonAcl:
  def RemoveInheritedAces(self):
   """
   RemoveInheritedAces(self: CommonAcl)
-   Removes all inherited access control entries (ACEs) from this 
-    System.Security.AccessControl.CommonAcl object.
+   Removes all inherited access control entries (ACEs) from this System.Security.AccessControl.CommonAcl object.
   """
   pass
  def __getitem__(self,*args):

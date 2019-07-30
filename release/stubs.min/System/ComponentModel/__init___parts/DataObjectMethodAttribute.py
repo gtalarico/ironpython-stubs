@@ -5,17 +5,19 @@ class DataObjectMethodAttribute:
  DataObjectMethodAttribute(methodType: DataObjectMethodType)
  DataObjectMethodAttribute(methodType: DataObjectMethodType,isDefault: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DataObjectMethodAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: DataObjectMethodAttribute,obj: object) -> bool
   
    Returns a value indicating whether this instance is equal to a specified object.
   
-   obj: An object to compare with this instance of 
-    System.ComponentModel.DataObjectMethodAttribute.
-  
-   Returns: true if this instance is the same as the instance specified by the obj parameter; 
-    otherwise,false.
+   obj: An object to compare with this instance of System.ComponentModel.DataObjectMethodAttribute.
+   Returns: true if this instance is the same as the instance specified by the obj parameter; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -30,15 +32,10 @@ class DataObjectMethodAttribute:
   """
   Match(self: DataObjectMethodAttribute,obj: object) -> bool
   
-   Gets a value indicating whether this instance shares a common pattern with a specified 
-    attribute.
+   Gets a value indicating whether this instance shares a common pattern with a specified attribute.
   
-  
-   obj: An object to compare with this instance of 
-    System.ComponentModel.DataObjectMethodAttribute.
-  
-   Returns: true if this instance is the same as the instance specified by the obj parameter; 
-    otherwise,false.
+   obj: An object to compare with this instance of System.ComponentModel.DataObjectMethodAttribute.
+   Returns: true if this instance is the same as the instance specified by the obj parameter; otherwise,false.
   """
   pass
  def __eq__(self,*args):

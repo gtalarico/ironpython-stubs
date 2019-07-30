@@ -1,5 +1,10 @@
-class FileWebRequest:
+class FileWebRequest(WebRequest):
  """ Provides a file system implementation of the System.Net.WebRequest class. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileWebRequest()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Abort(self):
   """
   Abort(self: FileWebRequest)
@@ -32,9 +37,7 @@ class FileWebRequest:
   """
   EndGetRequestStream(self: FileWebRequest,asyncResult: IAsyncResult) -> Stream
   
-   Ends an asynchronous request for a System.IO.Stream instance that the application uses to 
-    write data.
-  
+   Ends an asynchronous request for a System.IO.Stream instance that the application uses to write data.
   
    asyncResult: An System.IAsyncResult that references the pending request for a stream.
    Returns: A System.IO.Stream object that the application uses to write data.
@@ -53,13 +56,10 @@ class FileWebRequest:
  def GetObjectData(self,*args):
   """
   GetObjectData(self: FileWebRequest,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data needed to 
-    serialize the target object.
-  
+   Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the target object.
   
    serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-   streamingContext: A System.Runtime.Serialization.StreamingContext  that specifies the destination for this 
-    serialization.
+   streamingContext: A System.Runtime.Serialization.StreamingContext  that specifies the destination for this serialization.
   """
   pass
  def GetRequestStream(self):
@@ -84,11 +84,9 @@ class FileWebRequest:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object

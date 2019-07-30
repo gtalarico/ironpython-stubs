@@ -4,6 +4,11 @@ class InheritanceLevel:
  
  enum InheritanceLevel,values: Inherited (1),InheritedReadOnly (2),NotInherited (3)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InheritanceLevel()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

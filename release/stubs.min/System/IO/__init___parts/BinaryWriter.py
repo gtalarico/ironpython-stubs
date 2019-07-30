@@ -1,4 +1,4 @@
-class BinaryWriter:
+class BinaryWriter(object):
  """
  Writes primitive types in binary to a stream and supports writing strings in a specific encoding.
  
@@ -6,6 +6,11 @@ class BinaryWriter:
  BinaryWriter(output: Stream,encoding: Encoding)
  BinaryWriter(output: Stream,encoding: Encoding,leaveOpen: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BinaryWriter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: BinaryWriter)
@@ -21,8 +26,7 @@ class BinaryWriter:
  def Flush(self):
   """
   Flush(self: BinaryWriter)
-   Clears all buffers for the current writer and causes any buffered data to be written to 
-    the underlying device.
+   Clears all buffers for the current writer and causes any buffered data to be written to the underlying device.
   """
   pass
  def Seek(self,offset,origin):
@@ -32,71 +36,50 @@ class BinaryWriter:
    Sets the position within the current stream.
   
    offset: A byte offset relative to origin.
-   origin: A field of System.IO.SeekOrigin indicating the reference point from which the new 
-    position is to be obtained.
-  
+   origin: A field of System.IO.SeekOrigin indicating the reference point from which the new position is to be obtained.
    Returns: The position with the current stream.
   """
   pass
  def Write(self,*__args):
   """
   Write(self: BinaryWriter,value: bool)
-   Writes a one-byte Boolean value to the current stream,with 0 representing false and 1 
-    representing true.
-  
+   Writes a one-byte Boolean value to the current stream,with 0 representing false and 1 representing true.
   
    value: The Boolean value to write (0 or 1).
   Write(self: BinaryWriter,value: UInt64)
-   Writes an eight-byte unsigned integer to the current stream and advances the stream 
-    position by eight bytes.
-  
+   Writes an eight-byte unsigned integer to the current stream and advances the stream position by eight bytes.
   
    value: The eight-byte unsigned integer to write.
   Write(self: BinaryWriter,value: Int64)
-   Writes an eight-byte signed integer to the current stream and advances the stream 
-    position by eight bytes.
-  
+   Writes an eight-byte signed integer to the current stream and advances the stream position by eight bytes.
   
    value: The eight-byte signed integer to write.
   Write(self: BinaryWriter,value: UInt32)
-   Writes a four-byte unsigned integer to the current stream and advances the stream 
-    position by four bytes.
-  
+   Writes a four-byte unsigned integer to the current stream and advances the stream position by four bytes.
   
    value: The four-byte unsigned integer to write.
   Write(self: BinaryWriter,value: int)
-   Writes a four-byte signed integer to the current stream and advances the stream position 
-    by four bytes.
-  
+   Writes a four-byte signed integer to the current stream and advances the stream position by four bytes.
   
    value: The four-byte signed integer to write.
   Write(self: BinaryWriter,value: UInt16)
-   Writes a two-byte unsigned integer to the current stream and advances the stream position 
-    by two bytes.
-  
+   Writes a two-byte unsigned integer to the current stream and advances the stream position by two bytes.
   
    value: The two-byte unsigned integer to write.
   Write(self: BinaryWriter,value: Int16)
-   Writes a two-byte signed integer to the current stream and advances the stream position 
-    by two bytes.
-  
+   Writes a two-byte signed integer to the current stream and advances the stream position by two bytes.
   
    value: The two-byte signed integer to write.
   Write(self: BinaryWriter,value: Decimal)
-   Writes a decimal value to the current stream and advances the stream position by sixteen 
-    bytes.
-  
+   Writes a decimal value to the current stream and advances the stream position by sixteen bytes.
   
    value: The decimal value to write.
   Write(self: BinaryWriter,value: float)
-   Writes an eight-byte floating-point value to the current stream and advances the stream 
-    position by eight bytes.
-  
+   Writes an eight-byte floating-point value to the current stream and advances the stream position by eight bytes.
   
    value: The eight-byte floating-point value to write.
   Write(self: BinaryWriter,chars: Array[Char],index: int,count: int)
-   Writes a section of a character array to the current stream,and advances the current 
-    position of the stream in accordance with the Encoding used and perhaps the specific 
+   Writes a section of a character array to the current stream,and advances the current position of the stream in accordance with the Encoding used and perhaps the specific 
     characters being written to the stream.
   
   
@@ -104,16 +87,14 @@ class BinaryWriter:
    index: The starting point in chars from which to begin writing.
    count: The number of characters to write.
   Write(self: BinaryWriter,chars: Array[Char])
-   Writes a character array to the current stream and advances the current position of the 
-    stream in accordance with the Encoding used and the specific characters being written to 
-    the stream.
+   Writes a character array to the current stream and advances the current position of the stream in accordance with the Encoding used and the specific characters being 
+    written to the stream.
   
   
    chars: A character array containing the data to write.
   Write(self: BinaryWriter,ch: Char)
-   Writes a Unicode character to the current stream and advances the current position of the 
-    stream in accordance with the Encoding used and the specific characters being written to 
-    the stream.
+   Writes a Unicode character to the current stream and advances the current position of the stream in accordance with the Encoding used and the specific characters being 
+    written to the stream.
   
   
    ch: The non-surrogate,Unicode character to write.
@@ -132,21 +113,16 @@ class BinaryWriter:
   
    value: The signed byte to write.
   Write(self: BinaryWriter,value: Byte)
-   Writes an unsigned byte to the current stream and advances the stream position by one 
-    byte.
-  
+   Writes an unsigned byte to the current stream and advances the stream position by one byte.
   
    value: The unsigned byte to write.
   Write(self: BinaryWriter,value: Single)
-   Writes a four-byte floating-point value to the current stream and advances the stream 
-    position by four bytes.
-  
+   Writes a four-byte floating-point value to the current stream and advances the stream position by four bytes.
   
    value: The four-byte floating-point value to write.
   Write(self: BinaryWriter,value: str)
-   Writes a length-prefixed string to this stream in the current encoding of the 
-    System.IO.BinaryWriter,and advances the current position of the stream in accordance 
-    with the encoding used and the specific characters being written to the stream.
+   Writes a length-prefixed string to this stream in the current encoding of the System.IO.BinaryWriter,and advances the current position of the stream in accordance with the 
+    encoding used and the specific characters being written to the stream.
   
   
    value: The value to write.

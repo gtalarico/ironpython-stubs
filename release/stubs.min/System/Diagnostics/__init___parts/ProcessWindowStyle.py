@@ -4,6 +4,11 @@ class ProcessWindowStyle:
  
  enum ProcessWindowStyle,values: Hidden (1),Maximized (3),Minimized (2),Normal (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessWindowStyle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

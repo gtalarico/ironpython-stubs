@@ -8,12 +8,15 @@ class FileNotFoundException:
  FileNotFoundException(message: str,fileName: str)
  FileNotFoundException(message: str,fileName: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileNotFoundException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: FileNotFoundException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the file name and 
-    additional exception information.
-  
+   Sets the System.Runtime.Serialization.SerializationInfo object with the file name and additional exception information.
   
    info: The object that holds the serialized object data about the exception being thrown.
    context: The object that contains contextual information about the source or destination.
@@ -23,11 +26,8 @@ class FileNotFoundException:
   """
   ToString(self: FileNotFoundException) -> str
   
-   Returns the fully qualified name of this exception and possibly the error message,the 
-    name of the inner exception,and the stack trace.
-  
-   Returns: The fully qualified name of this exception and possibly the error message,the name of 
-    the inner exception,and the stack trace.
+   Returns the fully qualified name of this exception and possibly the error message,the name of the inner exception,and the stack trace.
+   Returns: The fully qualified name of this exception and possibly the error message,the name of the inner exception,and the stack trace.
   """
   pass
  def __init__(self,*args):

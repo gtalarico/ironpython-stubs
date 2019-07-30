@@ -1,5 +1,10 @@
 class DllImportSearchPath:
  """ enum (flags) DllImportSearchPath,values: ApplicationDirectory (512),AssemblyDirectory (2),LegacyBehavior (0),SafeDirectories (4096),System32 (2048),UseDllDirectoryForDependencies (256),UserDirectories (1024) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DllImportSearchPath()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

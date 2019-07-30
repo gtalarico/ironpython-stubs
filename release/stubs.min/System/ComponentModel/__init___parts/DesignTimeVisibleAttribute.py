@@ -5,6 +5,11 @@ class DesignTimeVisibleAttribute:
  DesignTimeVisibleAttribute(visible: bool)
  DesignTimeVisibleAttribute()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DesignTimeVisibleAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: DesignTimeVisibleAttribute,obj: object) -> bool
@@ -19,11 +24,8 @@ class DesignTimeVisibleAttribute:
   """
   IsDefaultAttribute(self: DesignTimeVisibleAttribute) -> bool
   
-   Gets a value indicating if this instance is equal to the 
-    System.ComponentModel.DesignTimeVisibleAttribute.Default value.
-  
-   Returns: true,if this instance is equal to the 
-    System.ComponentModel.DesignTimeVisibleAttribute.Default value; otherwise,false.
+   Gets a value indicating if this instance is equal to the System.ComponentModel.DesignTimeVisibleAttribute.Default value.
+   Returns: true,if this instance is equal to the System.ComponentModel.DesignTimeVisibleAttribute.Default value; otherwise,false.
   """
   pass
  def __eq__(self,*args):

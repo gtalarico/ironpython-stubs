@@ -1,5 +1,10 @@
 class IWebProxy:
  """ Provides the base interface for implementation of proxy access for the System.Net.WebRequest class. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IWebProxy()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetProxy(self,destination):
   """
   GetProxy(self: IWebProxy,destination: Uri) -> Uri

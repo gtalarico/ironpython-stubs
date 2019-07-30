@@ -1,4 +1,4 @@
-class StringWriter:
+class StringWriter(TextWriter):
  """
  Implements a System.IO.TextWriter for writing information to a string. The information is stored in an underlying System.Text.StringBuilder.
  
@@ -7,6 +7,11 @@ class StringWriter:
  StringWriter(sb: StringBuilder)
  StringWriter(sb: StringBuilder,formatProvider: IFormatProvider)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StringWriter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: StringWriter)
@@ -16,12 +21,9 @@ class StringWriter:
  def Dispose(self):
   """
   Dispose(self: StringWriter,disposing: bool)
-   Releases the unmanaged resources used by the System.IO.StringWriter and optionally 
-    releases the managed resources.
+   Releases the unmanaged resources used by the System.IO.StringWriter and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def FlushAsync(self):
@@ -41,11 +43,9 @@ class StringWriter:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object

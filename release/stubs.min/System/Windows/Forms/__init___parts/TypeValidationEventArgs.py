@@ -1,9 +1,13 @@
-class TypeValidationEventArgs:
+class TypeValidationEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.MaskedTextBox.TypeValidationCompleted event.
  
  TypeValidationEventArgs(validatingType: Type,isValidInput: bool,returnValue: object,message: str)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TypeValidationEventArgs()
+
  @staticmethod
  def __new__(self,validatingType,isValidInput,returnValue,message):
   """ __new__(cls: type,validatingType: Type,isValidInput: bool,returnValue: object,message: str) """

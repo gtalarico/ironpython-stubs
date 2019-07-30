@@ -1,5 +1,9 @@
 class IFileReaderService:
  """ Defines a method that opens a file from the current directory. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return IFileReaderService()
+
  def OpenFileFromSource(self,relativePath):
   """
   OpenFileFromSource(self: IFileReaderService,relativePath: str) -> Stream

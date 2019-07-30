@@ -4,6 +4,11 @@ class NotifyParentPropertyAttribute:
  
  NotifyParentPropertyAttribute(notifyParent: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NotifyParentPropertyAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: NotifyParentPropertyAttribute,obj: object) -> bool
@@ -26,11 +31,8 @@ class NotifyParentPropertyAttribute:
   """
   IsDefaultAttribute(self: NotifyParentPropertyAttribute) -> bool
   
-   Gets a value indicating whether the current value of the attribute is the default value 
-    for the attribute.
-  
-   Returns: true if the current value of the attribute is the default value of the attribute; 
-    otherwise,false.
+   Gets a value indicating whether the current value of the attribute is the default value for the attribute.
+   Returns: true if the current value of the attribute is the default value of the attribute; otherwise,false.
   """
   pass
  def __eq__(self,*args):

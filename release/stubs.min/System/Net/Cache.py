@@ -3,7 +3,7 @@
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
@@ -14,6 +14,11 @@ class HttpCacheAgeControl:
  
  enum HttpCacheAgeControl,values: MaxAge (2),MaxAgeAndMaxStale (6),MaxAgeAndMinFresh (3),MaxStale (4),MinFresh (1),None (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HttpCacheAgeControl()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -52,6 +57,11 @@ class HttpRequestCacheLevel:
  
  enum HttpRequestCacheLevel,values: BypassCache (1),CacheIfAvailable (3),CacheOnly (2),CacheOrNextCacheOnly (7),Default (0),NoCacheNoStore (6),Refresh (8),Reload (5),Revalidate (4)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HttpRequestCacheLevel()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -87,20 +97,24 @@ class HttpRequestCacheLevel:
  value__=None
 
 
-class RequestCachePolicy:
+class RequestCachePolicy(object):
  """
  Defines an application's caching requirements for resources obtained by using System.Net.WebRequest objects.
  
  RequestCachePolicy()
  RequestCachePolicy(level: RequestCacheLevel)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RequestCachePolicy()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToString(self):
   """
   ToString(self: RequestCachePolicy) -> str
   
    Returns a string representation of this instance.
-   Returns: A System.String containing the System.Net.Cache.RequestCachePolicy.Level for this 
-    instance.
+   Returns: A System.String containing the System.Net.Cache.RequestCachePolicy.Level for this instance.
   """
   pass
  @staticmethod
@@ -119,7 +133,7 @@ Get: Level(self: RequestCachePolicy) -> RequestCacheLevel
 
 
 
-class HttpRequestCachePolicy:
+class HttpRequestCachePolicy(RequestCachePolicy):
  """
  Defines an application's caching requirements for resources obtained by using System.Net.HttpWebRequest objects.
  
@@ -130,6 +144,11 @@ class HttpRequestCachePolicy:
  HttpRequestCachePolicy(cacheSyncDate: DateTime)
  HttpRequestCachePolicy(cacheAgeControl: HttpCacheAgeControl,maxAge: TimeSpan,freshOrStale: TimeSpan,cacheSyncDate: DateTime)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HttpRequestCachePolicy()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToString(self):
   """
   ToString(self: HttpRequestCachePolicy) -> str
@@ -192,6 +211,11 @@ class RequestCacheLevel:
  
  enum RequestCacheLevel,values: BypassCache (1),CacheIfAvailable (3),CacheOnly (2),Default (0),NoCacheNoStore (6),Reload (5),Revalidate (4)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RequestCacheLevel()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

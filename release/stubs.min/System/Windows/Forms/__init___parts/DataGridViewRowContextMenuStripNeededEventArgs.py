@@ -1,9 +1,13 @@
-class DataGridViewRowContextMenuStripNeededEventArgs:
+class DataGridViewRowContextMenuStripNeededEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.DataGridView.RowContextMenuStripNeeded event.
  
  DataGridViewRowContextMenuStripNeededEventArgs(rowIndex: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewRowContextMenuStripNeededEventArgs()
+
  @staticmethod
  def __new__(self,rowIndex):
   """ __new__(cls: type,rowIndex: int) """

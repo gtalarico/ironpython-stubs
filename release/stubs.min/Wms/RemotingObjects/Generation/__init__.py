@@ -1,18 +1,25 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.Generation calls itself Generation
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # no functions
 # classes
 
-class AddUsedNumberArgs:
+class AddUsedNumberArgs(object):
  """
  AddUsedNumberArgs()
  AddUsedNumberArgs(number: str,type: NumberRangeType)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AddUsedNumberArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,number=None,type=None):
   """
@@ -34,8 +41,13 @@ Set: Type(self: AddUsedNumberArgs)=value
 
 
 
-class UsedNumberArgs:
+class UsedNumberArgs(object):
  """ UsedNumberArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UsedNumberArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CheckAfterDate=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: CheckAfterDate(self: UsedNumberArgs) -> Nullable[DateTime]
 

@@ -1,4 +1,4 @@
-class SafeArrayTypeMismatchException:
+class SafeArrayTypeMismatchException(SystemException):
  """
  The exception thrown when the type of the incoming SAFEARRAY does not match the type specified in the managed signature.
  
@@ -6,6 +6,11 @@ class SafeArrayTypeMismatchException:
  SafeArrayTypeMismatchException(message: str)
  SafeArrayTypeMismatchException(message: str,inner: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeArrayTypeMismatchException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

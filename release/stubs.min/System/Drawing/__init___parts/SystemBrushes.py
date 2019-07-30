@@ -1,5 +1,9 @@
-class SystemBrushes:
+class SystemBrushes(object):
  """ Each property of the System.Drawing.SystemBrushes class is a System.Drawing.SolidBrush that is the color of a Windows display element. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SystemBrushes()
+
  @staticmethod
  def FromSystemColor(c):
   """

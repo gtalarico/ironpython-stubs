@@ -1,4 +1,4 @@
-class Region:
+class Region(MarshalByRefObject,IDisposable):
  """
  Describes the interior of a graphics shape composed of rectangles and paths. This class cannot be inherited.
  
@@ -8,6 +8,10 @@ class Region:
  Region(rect: RectangleF)
  Region(rgnData: RegionData)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Region()
+
  def Clone(self):
   """
   Clone(self: Region) -> Region
@@ -19,30 +23,19 @@ class Region:
  def Complement(self,*__args):
   """
   Complement(self: Region,rect: RectangleF)
-   Updates this System.Drawing.Region to contain the portion of the specified 
-    System.Drawing.RectangleF structure that does not intersect with this 
-    System.Drawing.Region.
-  
+   Updates this System.Drawing.Region to contain the portion of the specified System.Drawing.RectangleF structure that does not intersect with this System.Drawing.Region.
   
    rect: The System.Drawing.RectangleF structure to complement this System.Drawing.Region.
   Complement(self: Region,rect: Rectangle)
-   Updates this System.Drawing.Region to contain the portion of the specified 
-    System.Drawing.Rectangle structure that does not intersect with this 
-    System.Drawing.Region.
-  
+   Updates this System.Drawing.Region to contain the portion of the specified System.Drawing.Rectangle structure that does not intersect with this System.Drawing.Region.
   
    rect: The System.Drawing.Rectangle structure to complement this System.Drawing.Region.
   Complement(self: Region,path: GraphicsPath)
-   Updates this System.Drawing.Region to contain the portion of the specified 
-    System.Drawing.Drawing2D.GraphicsPath that does not intersect with this 
-    System.Drawing.Region.
-  
+   Updates this System.Drawing.Region to contain the portion of the specified System.Drawing.Drawing2D.GraphicsPath that does not intersect with this System.Drawing.Region.
   
    path: The System.Drawing.Drawing2D.GraphicsPath to complement this System.Drawing.Region.
   Complement(self: Region,region: Region)
-   Updates this System.Drawing.Region to contain the portion of the specified 
-    System.Drawing.Region that does not intersect with this System.Drawing.Region.
-  
+   Updates this System.Drawing.Region to contain the portion of the specified System.Drawing.Region that does not intersect with this System.Drawing.Region.
   
    region: The System.Drawing.Region object to complement this System.Drawing.Region object.
   """
@@ -57,40 +50,29 @@ class Region:
   """
   Equals(self: Region,region: Region,g: Graphics) -> bool
   
-   Tests whether the specified System.Drawing.Region is identical to this 
-    System.Drawing.Region on the specified drawing surface.
-  
+   Tests whether the specified System.Drawing.Region is identical to this System.Drawing.Region on the specified drawing surface.
   
    region: The System.Drawing.Region to test.
    g: A System.Drawing.Graphics that represents a drawing surface.
-   Returns: true if the interior of region is identical to the interior of this region when the 
-    transformation associated with the g parameter is applied; otherwise,false.
+   Returns: true if the interior of region is identical to the interior of this region when the transformation associated with the g parameter is applied; otherwise,false.
   """
   pass
  def Exclude(self,*__args):
   """
   Exclude(self: Region,rect: Rectangle)
-   Updates this System.Drawing.Region to contain only the portion of its interior that does 
-    not intersect with the specified System.Drawing.Rectangle structure.
-  
+   Updates this System.Drawing.Region to contain only the portion of its interior that does not intersect with the specified System.Drawing.Rectangle structure.
   
    rect: The System.Drawing.Rectangle structure to exclude from this System.Drawing.Region.
   Exclude(self: Region,rect: RectangleF)
-   Updates this System.Drawing.Region to contain only the portion of its interior that does 
-    not intersect with the specified System.Drawing.RectangleF structure.
-  
+   Updates this System.Drawing.Region to contain only the portion of its interior that does not intersect with the specified System.Drawing.RectangleF structure.
   
    rect: The System.Drawing.RectangleF structure to exclude from this System.Drawing.Region.
   Exclude(self: Region,path: GraphicsPath)
-   Updates this System.Drawing.Region to contain only the portion of its interior that does 
-    not intersect with the specified System.Drawing.Drawing2D.GraphicsPath.
-  
+   Updates this System.Drawing.Region to contain only the portion of its interior that does not intersect with the specified System.Drawing.Drawing2D.GraphicsPath.
   
    path: The System.Drawing.Drawing2D.GraphicsPath to exclude from this System.Drawing.Region.
   Exclude(self: Region,region: Region)
-   Updates this System.Drawing.Region to contain only the portion of its interior that does 
-    not intersect with the specified System.Drawing.Region.
-  
+   Updates this System.Drawing.Region to contain only the portion of its interior that does not intersect with the specified System.Drawing.Region.
   
    region: The System.Drawing.Region to exclude from this System.Drawing.Region.
   """
@@ -100,9 +82,7 @@ class Region:
   """
   FromHrgn(hrgn: IntPtr) -> Region
   
-   Initializes a new System.Drawing.Region from a handle to the specified existing GDI 
-    region.
-  
+   Initializes a new System.Drawing.Region from a handle to the specified existing GDI region.
   
    hrgn: A handle to an existing System.Drawing.Region.
    Returns: The new System.Drawing.Region.
@@ -112,13 +92,10 @@ class Region:
   """
   GetBounds(self: Region,g: Graphics) -> RectangleF
   
-   Gets a System.Drawing.RectangleF structure that represents a rectangle that bounds this 
-    System.Drawing.Region on the drawing surface of a System.Drawing.Graphics object.
-  
+   Gets a System.Drawing.RectangleF structure that represents a rectangle that bounds this System.Drawing.Region on the drawing surface of a System.Drawing.Graphics object.
   
    g: The System.Drawing.Graphics on which this System.Drawing.Region is drawn.
-   Returns: A System.Drawing.RectangleF structure that represents the bounding rectangle for this 
-    System.Drawing.Region on the specified drawing surface.
+   Returns: A System.Drawing.RectangleF structure that represents the bounding rectangle for this System.Drawing.Region on the specified drawing surface.
   """
   pass
  def GetHrgn(self,g):
@@ -135,52 +112,36 @@ class Region:
   """
   GetRegionData(self: Region) -> RegionData
   
-   Returns a System.Drawing.Drawing2D.RegionData that represents the information that 
-    describes this System.Drawing.Region.
-  
-   Returns: A System.Drawing.Drawing2D.RegionData that represents the information that describes this 
-    System.Drawing.Region.
+   Returns a System.Drawing.Drawing2D.RegionData that represents the information that describes this System.Drawing.Region.
+   Returns: A System.Drawing.Drawing2D.RegionData that represents the information that describes this System.Drawing.Region.
   """
   pass
  def GetRegionScans(self,matrix):
   """
   GetRegionScans(self: Region,matrix: Matrix) -> Array[RectangleF]
   
-   Returns an array of System.Drawing.RectangleF structures that approximate this 
-    System.Drawing.Region after the specified matrix transformation is applied.
+   Returns an array of System.Drawing.RectangleF structures that approximate this System.Drawing.Region after the specified matrix transformation is applied.
   
-  
-   matrix: A System.Drawing.Drawing2D.Matrix that represents a geometric transformation to apply to 
-    the region.
-  
-   Returns: An array of System.Drawing.RectangleF structures that approximate this 
-    System.Drawing.Region after the specified matrix transformation is applied.
+   matrix: A System.Drawing.Drawing2D.Matrix that represents a geometric transformation to apply to the region.
+   Returns: An array of System.Drawing.RectangleF structures that approximate this System.Drawing.Region after the specified matrix transformation is applied.
   """
   pass
  def Intersect(self,*__args):
   """
   Intersect(self: Region,region: Region)
-   Updates this System.Drawing.Region to the intersection of itself with the specified 
-    System.Drawing.Region.
-  
+   Updates this System.Drawing.Region to the intersection of itself with the specified System.Drawing.Region.
   
    region: The System.Drawing.Region to intersect with this System.Drawing.Region.
   Intersect(self: Region,rect: RectangleF)
-   Updates this System.Drawing.Region to the intersection of itself with the specified 
-    System.Drawing.RectangleF structure.
-  
+   Updates this System.Drawing.Region to the intersection of itself with the specified System.Drawing.RectangleF structure.
   
    rect: The System.Drawing.RectangleF structure to intersect with this System.Drawing.Region.
   Intersect(self: Region,rect: Rectangle)
-   Updates this System.Drawing.Region to the intersection of itself with the specified 
-    System.Drawing.Rectangle structure.
-  
+   Updates this System.Drawing.Region to the intersection of itself with the specified System.Drawing.Rectangle structure.
   
    rect: The System.Drawing.Rectangle structure to intersect with this System.Drawing.Region.
   Intersect(self: Region,path: GraphicsPath)
-   Updates this System.Drawing.Region to the intersection of itself with the specified 
-    System.Drawing.Drawing2D.GraphicsPath.
-  
+   Updates this System.Drawing.Region to the intersection of itself with the specified System.Drawing.Drawing2D.GraphicsPath.
   
    path: The System.Drawing.Drawing2D.GraphicsPath to intersect with this System.Drawing.Region.
   """
@@ -189,26 +150,20 @@ class Region:
   """
   IsEmpty(self: Region,g: Graphics) -> bool
   
-   Tests whether this System.Drawing.Region has an empty interior on the specified drawing 
-    surface.
-  
+   Tests whether this System.Drawing.Region has an empty interior on the specified drawing surface.
   
    g: A System.Drawing.Graphics that represents a drawing surface.
-   Returns: true if the interior of this System.Drawing.Region is empty when the transformation 
-    associated with g is applied; otherwise,false.
+   Returns: true if the interior of this System.Drawing.Region is empty when the transformation associated with g is applied; otherwise,false.
   """
   pass
  def IsInfinite(self,g):
   """
   IsInfinite(self: Region,g: Graphics) -> bool
   
-   Tests whether this System.Drawing.Region has an infinite interior on the specified 
-    drawing surface.
-  
+   Tests whether this System.Drawing.Region has an infinite interior on the specified drawing surface.
   
    g: A System.Drawing.Graphics that represents a drawing surface.
-   Returns: true if the interior of this System.Drawing.Region is infinite when the transformation 
-    associated with g is applied; otherwise,false.
+   Returns: true if the interior of this System.Drawing.Region is infinite when the transformation associated with g is applied; otherwise,false.
   """
   pass
  def IsVisible(self,*__args):
@@ -219,162 +174,113 @@ class Region:
   
    x: The x-coordinate of the point to test.
    y: The y-coordinate of the point to test.
-   Returns: true when the specified point is contained within this System.Drawing.Region; otherwise,
-    false.
-  
+   Returns: true when the specified point is contained within this System.Drawing.Region; otherwise,false.
   IsVisible(self: Region,point: PointF) -> bool
   
-   Tests whether the specified System.Drawing.PointF structure is contained within this 
-    System.Drawing.Region.
-  
+   Tests whether the specified System.Drawing.PointF structure is contained within this System.Drawing.Region.
   
    point: The System.Drawing.PointF structure to test.
    Returns: true when point is contained within this System.Drawing.Region; otherwise,false.
   IsVisible(self: Region,x: Single,y: Single,g: Graphics) -> bool
   
-   Tests whether the specified point is contained within this System.Drawing.Region when 
-    drawn using the specified System.Drawing.Graphics.
-  
+   Tests whether the specified point is contained within this System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
   
    x: The x-coordinate of the point to test.
    y: The y-coordinate of the point to test.
    g: A System.Drawing.Graphics that represents a graphics context.
-   Returns: true when the specified point is contained within this System.Drawing.Region; otherwise,
-    false.
-  
+   Returns: true when the specified point is contained within this System.Drawing.Region; otherwise,false.
   IsVisible(self: Region,point: PointF,g: Graphics) -> bool
   
-   Tests whether the specified System.Drawing.PointF structure is contained within this 
-    System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
-  
+   Tests whether the specified System.Drawing.PointF structure is contained within this System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
   
    point: The System.Drawing.PointF structure to test.
    g: A System.Drawing.Graphics that represents a graphics context.
    Returns: true when point is contained within this System.Drawing.Region; otherwise,false.
   IsVisible(self: Region,x: Single,y: Single,width: Single,height: Single) -> bool
   
-   Tests whether any portion of the specified rectangle is contained within this 
-    System.Drawing.Region.
-  
+   Tests whether any portion of the specified rectangle is contained within this System.Drawing.Region.
   
    x: The x-coordinate of the upper-left corner of the rectangle to test.
    y: The y-coordinate of the upper-left corner of the rectangle to test.
    width: The width of the rectangle to test.
    height: The height of the rectangle to test.
-   Returns: true when any portion of the specified rectangle is contained within this 
-    System.Drawing.Region object; otherwise,false.
-  
+   Returns: true when any portion of the specified rectangle is contained within this System.Drawing.Region object; otherwise,false.
   IsVisible(self: Region,rect: RectangleF) -> bool
   
-   Tests whether any portion of the specified System.Drawing.RectangleF structure is 
-    contained within this System.Drawing.Region.
-  
+   Tests whether any portion of the specified System.Drawing.RectangleF structure is contained within this System.Drawing.Region.
   
    rect: The System.Drawing.RectangleF structure to test.
-   Returns: true when any portion of rect is contained within this System.Drawing.Region; otherwise,
-    false.
-  
+   Returns: true when any portion of rect is contained within this System.Drawing.Region; otherwise,false.
   IsVisible(self: Region,x: Single,y: Single,width: Single,height: Single,g: Graphics) -> bool
   
-   Tests whether any portion of the specified rectangle is contained within this 
-    System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
-  
+   Tests whether any portion of the specified rectangle is contained within this System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
   
    x: The x-coordinate of the upper-left corner of the rectangle to test.
    y: The y-coordinate of the upper-left corner of the rectangle to test.
    width: The width of the rectangle to test.
    height: The height of the rectangle to test.
    g: A System.Drawing.Graphics that represents a graphics context.
-   Returns: true when any portion of the specified rectangle is contained within this 
-    System.Drawing.Region; otherwise,false.
-  
+   Returns: true when any portion of the specified rectangle is contained within this System.Drawing.Region; otherwise,false.
   IsVisible(self: Region,rect: RectangleF,g: Graphics) -> bool
   
-   Tests whether any portion of the specified System.Drawing.RectangleF structure is 
-    contained within this System.Drawing.Region when drawn using the specified 
-    System.Drawing.Graphics.
-  
+   Tests whether any portion of the specified System.Drawing.RectangleF structure is contained within this System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
   
    rect: The System.Drawing.RectangleF structure to test.
    g: A System.Drawing.Graphics that represents a graphics context.
    Returns: true when rect is contained within this System.Drawing.Region; otherwise,false.
   IsVisible(self: Region,x: int,y: int,g: Graphics) -> bool
   
-   Tests whether the specified point is contained within this System.Drawing.Region object 
-    when drawn using the specified System.Drawing.Graphics object.
-  
+   Tests whether the specified point is contained within this System.Drawing.Region object when drawn using the specified System.Drawing.Graphics object.
   
    x: The x-coordinate of the point to test.
    y: The y-coordinate of the point to test.
    g: A System.Drawing.Graphics that represents a graphics context.
-   Returns: true when the specified point is contained within this System.Drawing.Region; otherwise,
-    false.
-  
+   Returns: true when the specified point is contained within this System.Drawing.Region; otherwise,false.
   IsVisible(self: Region,point: Point) -> bool
   
-   Tests whether the specified System.Drawing.Point structure is contained within this 
-    System.Drawing.Region.
-  
+   Tests whether the specified System.Drawing.Point structure is contained within this System.Drawing.Region.
   
    point: The System.Drawing.Point structure to test.
    Returns: true when point is contained within this System.Drawing.Region; otherwise,false.
   IsVisible(self: Region,point: Point,g: Graphics) -> bool
   
-   Tests whether the specified System.Drawing.Point structure is contained within this 
-    System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
-  
+   Tests whether the specified System.Drawing.Point structure is contained within this System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
   
    point: The System.Drawing.Point structure to test.
    g: A System.Drawing.Graphics that represents a graphics context.
    Returns: true when point is contained within this System.Drawing.Region; otherwise,false.
   IsVisible(self: Region,x: int,y: int,width: int,height: int) -> bool
   
-   Tests whether any portion of the specified rectangle is contained within this 
-    System.Drawing.Region.
-  
+   Tests whether any portion of the specified rectangle is contained within this System.Drawing.Region.
   
    x: The x-coordinate of the upper-left corner of the rectangle to test.
    y: The y-coordinate of the upper-left corner of the rectangle to test.
    width: The width of the rectangle to test.
    height: The height of the rectangle to test.
-   Returns: true when any portion of the specified rectangle is contained within this 
-    System.Drawing.Region; otherwise,false.
-  
+   Returns: true when any portion of the specified rectangle is contained within this System.Drawing.Region; otherwise,false.
   IsVisible(self: Region,rect: Rectangle) -> bool
   
-   Tests whether any portion of the specified System.Drawing.Rectangle structure is 
-    contained within this System.Drawing.Region.
-  
+   Tests whether any portion of the specified System.Drawing.Rectangle structure is contained within this System.Drawing.Region.
   
    rect: The System.Drawing.Rectangle structure to test.
-   Returns: This method returns true when any portion of rect is contained within this 
-    System.Drawing.Region; otherwise,false.
-  
+   Returns: This method returns true when any portion of rect is contained within this System.Drawing.Region; otherwise,false.
   IsVisible(self: Region,x: int,y: int,width: int,height: int,g: Graphics) -> bool
   
-   Tests whether any portion of the specified rectangle is contained within this 
-    System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
-  
+   Tests whether any portion of the specified rectangle is contained within this System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
   
    x: The x-coordinate of the upper-left corner of the rectangle to test.
    y: The y-coordinate of the upper-left corner of the rectangle to test.
    width: The width of the rectangle to test.
    height: The height of the rectangle to test.
    g: A System.Drawing.Graphics that represents a graphics context.
-   Returns: true when any portion of the specified rectangle is contained within this 
-    System.Drawing.Region; otherwise,false.
-  
+   Returns: true when any portion of the specified rectangle is contained within this System.Drawing.Region; otherwise,false.
   IsVisible(self: Region,rect: Rectangle,g: Graphics) -> bool
   
-   Tests whether any portion of the specified System.Drawing.Rectangle structure is 
-    contained within this System.Drawing.Region when drawn using the specified 
-    System.Drawing.Graphics.
-  
+   Tests whether any portion of the specified System.Drawing.Rectangle structure is contained within this System.Drawing.Region when drawn using the specified System.Drawing.Graphics.
   
    rect: The System.Drawing.Rectangle structure to test.
    g: A System.Drawing.Graphics that represents a graphics context.
-   Returns: true when any portion of the rect is contained within this System.Drawing.Region; 
-    otherwise,false.
+   Returns: true when any portion of the rect is contained within this System.Drawing.Region; otherwise,false.
   """
   pass
  def MakeEmpty(self):
@@ -395,12 +301,7 @@ class Region:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -441,27 +342,19 @@ class Region:
  def Union(self,*__args):
   """
   Union(self: Region,rect: Rectangle)
-   Updates this System.Drawing.Region to the union of itself and the specified 
-    System.Drawing.Rectangle structure.
-  
+   Updates this System.Drawing.Region to the union of itself and the specified System.Drawing.Rectangle structure.
   
    rect: The System.Drawing.Rectangle structure to unite with this System.Drawing.Region.
   Union(self: Region,rect: RectangleF)
-   Updates this System.Drawing.Region to the union of itself and the specified 
-    System.Drawing.RectangleF structure.
-  
+   Updates this System.Drawing.Region to the union of itself and the specified System.Drawing.RectangleF structure.
   
    rect: The System.Drawing.RectangleF structure to unite with this System.Drawing.Region.
   Union(self: Region,path: GraphicsPath)
-   Updates this System.Drawing.Region to the union of itself and the specified 
-    System.Drawing.Drawing2D.GraphicsPath.
-  
+   Updates this System.Drawing.Region to the union of itself and the specified System.Drawing.Drawing2D.GraphicsPath.
   
    path: The System.Drawing.Drawing2D.GraphicsPath to unite with this System.Drawing.Region.
   Union(self: Region,region: Region)
-   Updates this System.Drawing.Region to the union of itself and the specified 
-    System.Drawing.Region.
-  
+   Updates this System.Drawing.Region to the union of itself and the specified System.Drawing.Region.
   
    region: The System.Drawing.Region to unite with this System.Drawing.Region.
   """
@@ -469,37 +362,21 @@ class Region:
  def Xor(self,*__args):
   """
   Xor(self: Region,rect: RectangleF)
-   Updates this System.Drawing.Region to the union minus the intersection of itself with the 
-    specified System.Drawing.RectangleF structure.
+   Updates this System.Drawing.Region to the union minus the intersection of itself with the specified System.Drawing.RectangleF structure.
   
-  
-   rect: The System.Drawing.RectangleF structure to 
-    System.Drawing.Region.Xor(System.Drawing.Drawing2D.GraphicsPath) with this 
-    System.Drawing.Region.
-  
+   rect: The System.Drawing.RectangleF structure to System.Drawing.Region.Xor(System.Drawing.Drawing2D.GraphicsPath) with this System.Drawing.Region.
   Xor(self: Region,rect: Rectangle)
-   Updates this System.Drawing.Region to the union minus the intersection of itself with the 
-    specified System.Drawing.Rectangle structure.
+   Updates this System.Drawing.Region to the union minus the intersection of itself with the specified System.Drawing.Rectangle structure.
   
-  
-   rect: The System.Drawing.Rectangle structure to erload:System.Drawing.Region.Xor with this 
-    System.Drawing.Region.
-  
+   rect: The System.Drawing.Rectangle structure to erload:System.Drawing.Region.Xor with this System.Drawing.Region.
   Xor(self: Region,path: GraphicsPath)
-   Updates this System.Drawing.Region to the union minus the intersection of itself with the 
-    specified System.Drawing.Drawing2D.GraphicsPath.
+   Updates this System.Drawing.Region to the union minus the intersection of itself with the specified System.Drawing.Drawing2D.GraphicsPath.
   
-  
-   path: The System.Drawing.Drawing2D.GraphicsPath to erload:System.Drawing.Region.Xor with this 
-    System.Drawing.Region.
-  
+   path: The System.Drawing.Drawing2D.GraphicsPath to erload:System.Drawing.Region.Xor with this System.Drawing.Region.
   Xor(self: Region,region: Region)
-   Updates this System.Drawing.Region to the union minus the intersection of itself with the 
-    specified System.Drawing.Region.
+   Updates this System.Drawing.Region to the union minus the intersection of itself with the specified System.Drawing.Region.
   
-  
-   region: The System.Drawing.Region to erload:System.Drawing.Region.Xor with this 
-    System.Drawing.Region.
+   region: The System.Drawing.Region to erload:System.Drawing.Region.Xor with this System.Drawing.Region.
   """
   pass
  def __enter__(self,*args):

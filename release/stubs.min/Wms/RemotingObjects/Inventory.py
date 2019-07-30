@@ -1,18 +1,24 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.Inventory calls itself Inventory
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class AddWarehouseTransferItemIdentitificationArgs:
+class AddWarehouseTransferItemIdentitificationArgs(object):
  """
  AddWarehouseTransferItemIdentitificationArgs()
  AddWarehouseTransferItemIdentitificationArgs(itemId: str,quantity: Decimal)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AddWarehouseTransferItemIdentitificationArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,itemId=None,quantity=None):
   """
@@ -21,61 +27,87 @@ class AddWarehouseTransferItemIdentitificationArgs:
   """
   pass
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: AddWarehouseTransferItemIdentitificationArgs) -> str
+ """
+
+Get: ItemCode(self: AddWarehouseTransferItemIdentitificationArgs) -> str
 
 Set: ItemCode(self: AddWarehouseTransferItemIdentitificationArgs)=value
 """
 
  ItemIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIds(self: AddWarehouseTransferItemIdentitificationArgs) -> List[ItemIdentification]
+ """
+
+Get: ItemIds(self: AddWarehouseTransferItemIdentitificationArgs) -> List[ItemIdentification]
 
 Set: ItemIds(self: AddWarehouseTransferItemIdentitificationArgs)=value
 """
 
  ItemType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemType(self: AddWarehouseTransferItemIdentitificationArgs) -> ItemTypeEnum
+ """
+
+Get: ItemType(self: AddWarehouseTransferItemIdentitificationArgs) -> ItemTypeEnum
 
 Set: ItemType(self: AddWarehouseTransferItemIdentitificationArgs)=value
 """
 
  OverwriteIfExists=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OverwriteIfExists(self: AddWarehouseTransferItemIdentitificationArgs) -> bool
+ """
+
+Get: OverwriteIfExists(self: AddWarehouseTransferItemIdentitificationArgs) -> bool
 
 Set: OverwriteIfExists(self: AddWarehouseTransferItemIdentitificationArgs)=value
 """
 
 
 
-class AddWarehouseTransferQuantityArgs:
+class AddWarehouseTransferQuantityArgs(object):
  """ AddWarehouseTransferQuantityArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AddWarehouseTransferQuantityArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: AddWarehouseTransferQuantityArgs) -> str
+ """
+
+Get: ItemCode(self: AddWarehouseTransferQuantityArgs) -> str
 
 Set: ItemCode(self: AddWarehouseTransferQuantityArgs)=value
 """
 
  ItemType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemType(self: AddWarehouseTransferQuantityArgs) -> ItemTypeEnum
+ """
+
+Get: ItemType(self: AddWarehouseTransferQuantityArgs) -> ItemTypeEnum
 
 Set: ItemType(self: AddWarehouseTransferQuantityArgs)=value
 """
 
  OverwriteIfExists=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OverwriteIfExists(self: AddWarehouseTransferQuantityArgs) -> bool
+ """
+
+Get: OverwriteIfExists(self: AddWarehouseTransferQuantityArgs) -> bool
 
 Set: OverwriteIfExists(self: AddWarehouseTransferQuantityArgs)=value
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: AddWarehouseTransferQuantityArgs) -> Decimal
+ """
+
+Get: Quantity(self: AddWarehouseTransferQuantityArgs) -> Decimal
 
 Set: Quantity(self: AddWarehouseTransferQuantityArgs)=value
 """
 
 
 
-class AllocatedStockItem:
+class AllocatedStockItem(object):
  """ AllocatedStockItem() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AllocatedStockItem()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: AllocatedStockItem) -> object """
   pass
@@ -171,11 +203,16 @@ Set: WarehouseLocationCode(self: AllocatedStockItem)=value
 
 
 
-class AllocatedStockItemReference:
+class AllocatedStockItemReference(object):
  """
  AllocatedStockItemReference()
  AllocatedStockItemReference(type: AllocatedStockItemTypesEnum,id: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AllocatedStockItemReference()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: AllocatedStockItemReference) -> AllocatedStockItemReference """
   pass
@@ -187,13 +224,24 @@ class AllocatedStockItemReference:
   pass
  @staticmethod
  def Get(expandedReference):
-  """ Get(expandedReference: str) -> AllocatedStockItemReference """
+  """
+  Get(expandedReference: str) -> AllocatedStockItemReference
+  
+   Returns an Wms.RemotingObjects.Inventory.AllocatedStockItemReference object created from the specified expanded name.
+  
+   expandedReference: A string containing an expanded Reference name in the format: {Type}id.
+   Returns: An Wms.RemotingObjects.Inventory.AllocatedStockItemReference object constructed from the specified expanded name.
+  """
   pass
  def GetHashCode(self):
   """ GetHashCode(self: AllocatedStockItemReference) -> int """
   pass
  def ToString(self):
-  """ ToString(self: AllocatedStockItemReference) -> str """
+  """
+  ToString(self: AllocatedStockItemReference) -> str
+  
+   Returns the expanded reference string representation: : {type}Id.
+  """
   pass
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==y """
@@ -233,6 +281,11 @@ Set: Type(self: AllocatedStockItemReference)=value
 
 class AllocatedStockItemTypesEnum:
  """ enum AllocatedStockItemTypesEnum,values: Batch (0),DirectOrder (2),MessageQueue (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AllocatedStockItemTypesEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -264,6 +317,11 @@ class AllocatedStockItemTypesEnum:
 
 class AssignedItemIdsFilterType:
  """ enum AssignedItemIdsFilterType,values: AssignedOnly (2),Exclude (1),Include (0) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AssignedItemIdsFilterType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -295,6 +353,11 @@ class AssignedItemIdsFilterType:
 
 class AssignType:
  """ enum AssignType,values: All (5),ItemId (2),None (0),Production (4),Purchase (3),Stock (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AssignType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -327,12 +390,17 @@ class AssignType:
  value__=None
 
 
-class BatchItemLocationBase:
+class BatchItemLocationBase(object):
  """
  BatchItemLocationBase()
  BatchItemLocationBase(itemId: ItemIdentification)
  BatchItemLocationBase(quantity: Decimal)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchItemLocationBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -342,25 +410,33 @@ class BatchItemLocationBase:
   """
   pass
  ItemIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIds(self: BatchItemLocationBase) -> ItemIdentifications
+ """
+
+Get: ItemIds(self: BatchItemLocationBase) -> ItemIdentifications
 
 Set: ItemIds(self: BatchItemLocationBase)=value
 """
 
  LocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LocationCode(self: BatchItemLocationBase) -> str
+ """
+
+Get: LocationCode(self: BatchItemLocationBase) -> str
 
 Set: LocationCode(self: BatchItemLocationBase)=value
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: BatchItemLocationBase) -> Decimal
+ """
+
+Get: Quantity(self: BatchItemLocationBase) -> Decimal
 
 Set: Quantity(self: BatchItemLocationBase)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: BatchItemLocationBase) -> str
+ """
+
+Get: WarehouseCode(self: BatchItemLocationBase) -> str
 
 Set: WarehouseCode(self: BatchItemLocationBase)=value
 """
@@ -369,76 +445,116 @@ Set: WarehouseCode(self: BatchItemLocationBase)=value
  _itemIds=None
 
 
-class ChangeLicensePlateStatusArgs:
+class ChangeLicensePlateStatusArgs(object):
  """ ChangeLicensePlateStatusArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ChangeLicensePlateStatusArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: ChangeLicensePlateStatusArgs) -> str
+ """
+
+Get: Description(self: ChangeLicensePlateStatusArgs) -> str
 
 Set: Description(self: ChangeLicensePlateStatusArgs)=value
 """
 
  LicensePlateId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LicensePlateId(self: ChangeLicensePlateStatusArgs) -> int
+ """
+
+Get: LicensePlateId(self: ChangeLicensePlateStatusArgs) -> int
 
 Set: LicensePlateId(self: ChangeLicensePlateStatusArgs)=value
 """
 
  NewStatus=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NewStatus(self: ChangeLicensePlateStatusArgs) -> LicensePlateStatusEnum
+ """
+
+Get: NewStatus(self: ChangeLicensePlateStatusArgs) -> LicensePlateStatusEnum
 
 Set: NewStatus(self: ChangeLicensePlateStatusArgs)=value
 """
 
 
 
-class CheckLicensePlateIntegrityArgs:
+class CheckLicensePlateIntegrityArgs(object):
  """ CheckLicensePlateIntegrityArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CheckLicensePlateIntegrityArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  AutoChangeStateToActiveIfNotBroken=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AutoChangeStateToActiveIfNotBroken(self: CheckLicensePlateIntegrityArgs) -> bool
+ """Auto changes the state of the lp to Active when it passes the integrity check.
+
+Get: AutoChangeStateToActiveIfNotBroken(self: CheckLicensePlateIntegrityArgs) -> bool
 
 Set: AutoChangeStateToActiveIfNotBroken(self: CheckLicensePlateIntegrityArgs)=value
 """
 
  AutoChangeStateToBrokenIfNot=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AutoChangeStateToBrokenIfNot(self: CheckLicensePlateIntegrityArgs) -> bool
+ """Auto changes the state of the lp to Broken when it does not pass the integrity check.
+
+Get: AutoChangeStateToBrokenIfNot(self: CheckLicensePlateIntegrityArgs) -> bool
 
 Set: AutoChangeStateToBrokenIfNot(self: CheckLicensePlateIntegrityArgs)=value
 """
 
  LicensePlateId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LicensePlateId(self: CheckLicensePlateIntegrityArgs) -> int
+ """
+
+Get: LicensePlateId(self: CheckLicensePlateIntegrityArgs) -> int
 
 Set: LicensePlateId(self: CheckLicensePlateIntegrityArgs)=value
 """
 
 
 
-class CheckLicensePlateIntegrityResult:
+class CheckLicensePlateIntegrityResult(object):
  """ CheckLicensePlateIntegrityResult() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CheckLicensePlateIntegrityResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ErrorMessage=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ErrorMessage(self: CheckLicensePlateIntegrityResult) -> str
+ """
+
+Get: ErrorMessage(self: CheckLicensePlateIntegrityResult) -> str
 
 Set: ErrorMessage(self: CheckLicensePlateIntegrityResult)=value
 """
 
  IsValid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsValid(self: CheckLicensePlateIntegrityResult) -> bool
+ """
+
+Get: IsValid(self: CheckLicensePlateIntegrityResult) -> bool
 
 Set: IsValid(self: CheckLicensePlateIntegrityResult)=value
 """
 
 
 
-class CreateLicensePlateFromReceiptArgs:
+class CreateLicensePlateFromReceiptArgs(object):
  """ CreateLicensePlateFromReceiptArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CreateLicensePlateFromReceiptArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Lp=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Lp(self: CreateLicensePlateFromReceiptArgs) -> LicensePlate
+ """
+
+Get: Lp(self: CreateLicensePlateFromReceiptArgs) -> LicensePlate
 
 Set: Lp(self: CreateLicensePlateFromReceiptArgs)=value
 """
 
  Reference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Reference(self: CreateLicensePlateFromReceiptArgs) -> str
+ """Use this field to store an extra reference on the license plate
+
+Get: Reference(self: CreateLicensePlateFromReceiptArgs) -> str
 
 Set: Reference(self: CreateLicensePlateFromReceiptArgs)=value
 """
@@ -447,6 +563,11 @@ Set: Reference(self: CreateLicensePlateFromReceiptArgs)=value
 
 class EnhancedStockAllocations:
  """ EnhancedStockAllocations() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EnhancedStockAllocations()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetSchema(self):
   """ GetSchema(self: EnhancedStockAllocations) -> XmlSchema """
   pass
@@ -485,6 +606,11 @@ class EnhancedStockAllocations:
 
 class FilterOptions:
  """ enum FilterOptions,values: EmptyLocations (2),None (0),StockLocations (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FilterOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -514,11 +640,16 @@ class FilterOptions:
  value__=None
 
 
-class GenerateReplenishmentOrdersArgs:
+class GenerateReplenishmentOrdersArgs(object):
  """
  GenerateReplenishmentOrdersArgs()
  GenerateReplenishmentOrdersArgs(warehouseCodes: List[str])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GenerateReplenishmentOrdersArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,warehouseCodes=None):
   """
@@ -527,15 +658,26 @@ class GenerateReplenishmentOrdersArgs:
   """
   pass
  WarehouseCodes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCodes(self: GenerateReplenishmentOrdersArgs) -> List[str]
+ """
+
+Get: WarehouseCodes(self: GenerateReplenishmentOrdersArgs) -> List[str]
 
 Set: WarehouseCodes(self: GenerateReplenishmentOrdersArgs)=value
 """
 
 
 
-class GetAllItemIdentificationsArgs:
- """ GetAllItemIdentificationsArgs() """
+class GetAllItemIdentificationsArgs(object):
+ """
+ Arguments which are used for retrieving the stock list of an item.
+ 
+ GetAllItemIdentificationsArgs()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetAllItemIdentificationsArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  FilterDate=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: FilterDate(self: GetAllItemIdentificationsArgs) -> DateTime
 
@@ -563,33 +705,51 @@ Set: SearchText(self: GetAllItemIdentificationsArgs)=value
  Default=None
 
 
-class GetAllocationsArgs:
+class GetAllocationsArgs(object):
  """ GetAllocationsArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetAllocationsArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: GetAllocationsArgs) -> str
+ """
+
+Get: ItemCode(self: GetAllocationsArgs) -> str
 
 Set: ItemCode(self: GetAllocationsArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: GetAllocationsArgs) -> str
+ """
+
+Get: WarehouseCode(self: GetAllocationsArgs) -> str
 
 Set: WarehouseCode(self: GetAllocationsArgs)=value
 """
 
  WarehouseLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseLocationCode(self: GetAllocationsArgs) -> str
+ """
+
+Get: WarehouseLocationCode(self: GetAllocationsArgs) -> str
 
 Set: WarehouseLocationCode(self: GetAllocationsArgs)=value
 """
 
 
 
-class GetItemArgs:
+class GetItemArgs(object):
  """
+ Arguments wich are used for retrieving items.
+ 
  GetItemArgs()
  GetItemArgs(itemCode: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetItemArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,itemCode=None):
   """
@@ -598,7 +758,9 @@ class GetItemArgs:
   """
   pass
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: GetItemArgs) -> str
+ """
+
+Get: ItemCode(self: GetItemArgs) -> str
 
 Set: ItemCode(self: GetItemArgs)=value
 """
@@ -607,14 +769,21 @@ Set: ItemCode(self: GetItemArgs)=value
  Default=None
 
 
-class GetItemIdentificationArgs:
+class GetItemIdentificationArgs(object):
  """
+ Arguments wich are used to check if the identification of an item is available.
+ 
  GetItemIdentificationArgs()
  GetItemIdentificationArgs(item: Item,warehouseCode: str,warehouseLocationCode: str)
  GetItemIdentificationArgs(item: Item,warehouseCode: str,warehouseLocationCode: str,onlyActive: bool)
  GetItemIdentificationArgs(item: Item,warehouseCode: str,warehouseLocationCode: str,itemId: str,onlyActive: bool)
  GetItemIdentificationArgs(item: Item,warehouseCode: str,warehouseLocationCode: str,itemId: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetItemIdentificationArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -632,31 +801,41 @@ class GetItemIdentificationArgs:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  Item=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Item(self: GetItemIdentificationArgs) -> Item
+ """
+
+Get: Item(self: GetItemIdentificationArgs) -> Item
 
 Set: Item(self: GetItemIdentificationArgs)=value
 """
 
  ItemId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemId(self: GetItemIdentificationArgs) -> str
+ """
+
+Get: ItemId(self: GetItemIdentificationArgs) -> str
 
 Set: ItemId(self: GetItemIdentificationArgs)=value
 """
 
  OnlyActive=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OnlyActive(self: GetItemIdentificationArgs) -> bool
+ """
+
+Get: OnlyActive(self: GetItemIdentificationArgs) -> bool
 
 Set: OnlyActive(self: GetItemIdentificationArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: GetItemIdentificationArgs) -> str
+ """
+
+Get: WarehouseCode(self: GetItemIdentificationArgs) -> str
 
 Set: WarehouseCode(self: GetItemIdentificationArgs)=value
 """
 
  WarehouseLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseLocationCode(self: GetItemIdentificationArgs) -> str
+ """
+
+Get: WarehouseLocationCode(self: GetItemIdentificationArgs) -> str
 
 Set: WarehouseLocationCode(self: GetItemIdentificationArgs)=value
 """
@@ -665,13 +844,20 @@ Set: WarehouseLocationCode(self: GetItemIdentificationArgs)=value
  Default=None
 
 
-class GetItemLocationsArgs:
+class GetItemLocationsArgs(object):
  """
+ Arguments wich are used for retrieving the locations of an item.
+ 
  GetItemLocationsArgs()
  GetItemLocationsArgs(paging: PagingParams,itemCode: str,warehouseCode: str,onlyDefaultLocation: bool)
  GetItemLocationsArgs(itemCode: str,warehouseCode: str,onlyDefaultLocation: bool)
  GetItemLocationsArgs(itemCode: str,warehouseCode: str,warehouseLocationCode: str,filter: str,onlyDefaultLocation: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetItemLocationsArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -682,43 +868,57 @@ class GetItemLocationsArgs:
   """
   pass
  Filter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Filter(self: GetItemLocationsArgs) -> str
+ """
+
+Get: Filter(self: GetItemLocationsArgs) -> str
 
 Set: Filter(self: GetItemLocationsArgs)=value
 """
 
  ForceRefreshOfCachedLocations=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ForceRefreshOfCachedLocations(self: GetItemLocationsArgs) -> bool
+ """
+
+Get: ForceRefreshOfCachedLocations(self: GetItemLocationsArgs) -> bool
 
 Set: ForceRefreshOfCachedLocations(self: GetItemLocationsArgs)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: GetItemLocationsArgs) -> str
+ """
+
+Get: ItemCode(self: GetItemLocationsArgs) -> str
 
 Set: ItemCode(self: GetItemLocationsArgs)=value
 """
 
  OnlyDefaultLocations=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OnlyDefaultLocations(self: GetItemLocationsArgs) -> bool
+ """Won't be used when retrieving the default location of an item.
+
+Get: OnlyDefaultLocations(self: GetItemLocationsArgs) -> bool
 
 Set: OnlyDefaultLocations(self: GetItemLocationsArgs)=value
 """
 
  Paging=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Paging(self: GetItemLocationsArgs) -> PagingParams
+ """
+
+Get: Paging(self: GetItemLocationsArgs) -> PagingParams
 
 Set: Paging(self: GetItemLocationsArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: GetItemLocationsArgs) -> str
+ """
+
+Get: WarehouseCode(self: GetItemLocationsArgs) -> str
 
 Set: WarehouseCode(self: GetItemLocationsArgs)=value
 """
 
  WarehouseLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseLocationCode(self: GetItemLocationsArgs) -> str
+ """
+
+Get: WarehouseLocationCode(self: GetItemLocationsArgs) -> str
 
 Set: WarehouseLocationCode(self: GetItemLocationsArgs)=value
 """
@@ -727,42 +927,66 @@ Set: WarehouseLocationCode(self: GetItemLocationsArgs)=value
  Default=None
 
 
-class GetItemsArgs:
- """ GetItemsArgs() """
+class GetItemsArgs(object):
+ """
+ Arguments wich are used for retrieving items.
+ 
+ GetItemsArgs()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetItemsArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  IncludeBlockedItems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IncludeBlockedItems(self: GetItemsArgs) -> bool
+ """
+
+Get: IncludeBlockedItems(self: GetItemsArgs) -> bool
 
 Set: IncludeBlockedItems(self: GetItemsArgs)=value
 """
 
  IncludeCostItems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IncludeCostItems(self: GetItemsArgs) -> bool
+ """
+
+Get: IncludeCostItems(self: GetItemsArgs) -> bool
 
 Set: IncludeCostItems(self: GetItemsArgs)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: GetItemsArgs) -> str
+ """
+
+Get: ItemCode(self: GetItemsArgs) -> str
 
 Set: ItemCode(self: GetItemsArgs)=value
 """
 
  SearchText=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SearchText(self: GetItemsArgs) -> str
+ """
+
+Get: SearchText(self: GetItemsArgs) -> str
 
 Set: SearchText(self: GetItemsArgs)=value
 """
 
 
 
-class GetItemsOnLocationArgs:
+class GetItemsOnLocationArgs(object):
  """
+ Arguments wich are used for retrieving items on a specific location.
+ 
  GetItemsOnLocationArgs()
  GetItemsOnLocationArgs(warehouseCode: str,warehouseLocationCode: str)
  GetItemsOnLocationArgs(warehouseCode: str,warehouseLocationCode: str,itemCode: str)
  GetItemsOnLocationArgs(paging: PagingParams,warehouseCode: str,warehouseLocationCode: str)
  GetItemsOnLocationArgs(paging: PagingParams,warehouseCode: str,warehouseLocationCode: str,itemCode: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetItemsOnLocationArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -774,43 +998,57 @@ class GetItemsOnLocationArgs:
   """
   pass
  IncludeItemsWithoutStock=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IncludeItemsWithoutStock(self: GetItemsOnLocationArgs) -> bool
+ """
+
+Get: IncludeItemsWithoutStock(self: GetItemsOnLocationArgs) -> bool
 
 Set: IncludeItemsWithoutStock(self: GetItemsOnLocationArgs)=value
 """
 
  IncludeLicensePlates=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IncludeLicensePlates(self: GetItemsOnLocationArgs) -> bool
+ """
+
+Get: IncludeLicensePlates(self: GetItemsOnLocationArgs) -> bool
 
 Set: IncludeLicensePlates(self: GetItemsOnLocationArgs)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: GetItemsOnLocationArgs) -> str
+ """
+
+Get: ItemCode(self: GetItemsOnLocationArgs) -> str
 
 Set: ItemCode(self: GetItemsOnLocationArgs)=value
 """
 
  Paging=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Paging(self: GetItemsOnLocationArgs) -> PagingParams
+ """
+
+Get: Paging(self: GetItemsOnLocationArgs) -> PagingParams
 
 Set: Paging(self: GetItemsOnLocationArgs)=value
 """
 
  SearchText=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SearchText(self: GetItemsOnLocationArgs) -> str
+ """
+
+Get: SearchText(self: GetItemsOnLocationArgs) -> str
 
 Set: SearchText(self: GetItemsOnLocationArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: GetItemsOnLocationArgs) -> str
+ """
+
+Get: WarehouseCode(self: GetItemsOnLocationArgs) -> str
 
 Set: WarehouseCode(self: GetItemsOnLocationArgs)=value
 """
 
  WarehouseLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseLocationCode(self: GetItemsOnLocationArgs) -> str
+ """
+
+Get: WarehouseLocationCode(self: GetItemsOnLocationArgs) -> str
 
 Set: WarehouseLocationCode(self: GetItemsOnLocationArgs)=value
 """
@@ -819,28 +1057,44 @@ Set: WarehouseLocationCode(self: GetItemsOnLocationArgs)=value
  Default=None
 
 
-class GetItemsOnLocationLeftToAddToLpArgs:
+class GetItemsOnLocationLeftToAddToLpArgs(object):
  """ GetItemsOnLocationLeftToAddToLpArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetItemsOnLocationLeftToAddToLpArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  LocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LocationCode(self: GetItemsOnLocationLeftToAddToLpArgs) -> str
+ """
+
+Get: LocationCode(self: GetItemsOnLocationLeftToAddToLpArgs) -> str
 
 Set: LocationCode(self: GetItemsOnLocationLeftToAddToLpArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: GetItemsOnLocationLeftToAddToLpArgs) -> str
+ """
+
+Get: WarehouseCode(self: GetItemsOnLocationLeftToAddToLpArgs) -> str
 
 Set: WarehouseCode(self: GetItemsOnLocationLeftToAddToLpArgs)=value
 """
 
 
 
-class GetItemStockListArgs:
+class GetItemStockListArgs(object):
  """
+ Arguments wich are used for retrieving the stock list of an item.
+ 
  GetItemStockListArgs()
  GetItemStockListArgs(itemCode: str,warehouseCode: str,warehouseLocationCode: str)
  GetItemStockListArgs(itemCode: str,warehouseCode: str,warehouseLocationCode: str,filter: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetItemStockListArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,itemCode=None,warehouseCode=None,warehouseLocationCode=None,filter=None):
   """
@@ -856,25 +1110,33 @@ Set: Filter(self: GetItemStockListArgs)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: GetItemStockListArgs) -> str
+ """
+
+Get: ItemCode(self: GetItemStockListArgs) -> str
 
 Set: ItemCode(self: GetItemStockListArgs)=value
 """
 
  OnlyDefaultLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OnlyDefaultLocation(self: GetItemStockListArgs) -> bool
+ """
+
+Get: OnlyDefaultLocation(self: GetItemStockListArgs) -> bool
 
 Set: OnlyDefaultLocation(self: GetItemStockListArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: GetItemStockListArgs) -> str
+ """
+
+Get: WarehouseCode(self: GetItemStockListArgs) -> str
 
 Set: WarehouseCode(self: GetItemStockListArgs)=value
 """
 
  WarehouseLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseLocationCode(self: GetItemStockListArgs) -> str
+ """
+
+Get: WarehouseLocationCode(self: GetItemStockListArgs) -> str
 
 Set: WarehouseLocationCode(self: GetItemStockListArgs)=value
 """
@@ -883,122 +1145,195 @@ Set: WarehouseLocationCode(self: GetItemStockListArgs)=value
  Default=None
 
 
-class GetItemStockTotalsArgs:
- """ GetItemStockTotalsArgs() """
+class GetItemStockTotalsArgs(object):
+ """
+ Args objects used to filter stocktotals result
+ 
+ GetItemStockTotalsArgs()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetItemStockTotalsArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: GetItemStockTotalsArgs) -> str
+ """
+
+Get: ItemCode(self: GetItemStockTotalsArgs) -> str
 
 Set: ItemCode(self: GetItemStockTotalsArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: GetItemStockTotalsArgs) -> str
+ """
+
+Get: WarehouseCode(self: GetItemStockTotalsArgs) -> str
 
 Set: WarehouseCode(self: GetItemStockTotalsArgs)=value
 """
 
 
 
-class GetLicensePlateByCodeArgs:
+class GetLicensePlateByCodeArgs(object):
  """ GetLicensePlateByCodeArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetLicensePlateByCodeArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Code=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Code(self: GetLicensePlateByCodeArgs) -> str
+ """
+
+Get: Code(self: GetLicensePlateByCodeArgs) -> str
 
 Set: Code(self: GetLicensePlateByCodeArgs)=value
 """
 
  Statusses=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Statusses(self: GetLicensePlateByCodeArgs) -> LicensePlateStatusEnum
+ """
+
+Get: Statusses(self: GetLicensePlateByCodeArgs) -> LicensePlateStatusEnum
 
 Set: Statusses(self: GetLicensePlateByCodeArgs)=value
 """
 
 
 
-class GetLicensePlateItemAuditLogEntriesArgs:
+class GetLicensePlateItemAuditLogEntriesArgs(object):
  """ GetLicensePlateItemAuditLogEntriesArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetLicensePlateItemAuditLogEntriesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  LicensePlateId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LicensePlateId(self: GetLicensePlateItemAuditLogEntriesArgs) -> int
+ """
+
+Get: LicensePlateId(self: GetLicensePlateItemAuditLogEntriesArgs) -> int
 
 Set: LicensePlateId(self: GetLicensePlateItemAuditLogEntriesArgs)=value
 """
 
 
 
-class GetLicensePlateItemsArgs:
+class GetLicensePlateItemsArgs(object):
  """ GetLicensePlateItemsArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetLicensePlateItemsArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  FilterText=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: FilterText(self: GetLicensePlateItemsArgs) -> str
+ """
+
+Get: FilterText(self: GetLicensePlateItemsArgs) -> str
 
 Set: FilterText(self: GetLicensePlateItemsArgs)=value
 """
 
  LicensePlateId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LicensePlateId(self: GetLicensePlateItemsArgs) -> int
+ """
+
+Get: LicensePlateId(self: GetLicensePlateItemsArgs) -> int
 
 Set: LicensePlateId(self: GetLicensePlateItemsArgs)=value
 """
 
 
 
-class GetLicensePlatesArgs:
+class GetLicensePlatesArgs(object):
  """ GetLicensePlatesArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetLicensePlatesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Code=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Code(self: GetLicensePlatesArgs) -> str
+ """
+
+Get: Code(self: GetLicensePlatesArgs) -> str
 
 Set: Code(self: GetLicensePlatesArgs)=value
 """
 
  FilterText=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: FilterText(self: GetLicensePlatesArgs) -> str
+ """Should filter license plate nummer,artikelnummer,locatie code
+
+Get: FilterText(self: GetLicensePlatesArgs) -> str
 
 Set: FilterText(self: GetLicensePlatesArgs)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: GetLicensePlatesArgs) -> int
+ """
+
+Get: Id(self: GetLicensePlatesArgs) -> int
 
 Set: Id(self: GetLicensePlatesArgs)=value
 """
 
  LocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LocationCode(self: GetLicensePlatesArgs) -> str
+ """
+
+Get: LocationCode(self: GetLicensePlatesArgs) -> str
 
 Set: LocationCode(self: GetLicensePlatesArgs)=value
 """
 
  Statusses=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Statusses(self: GetLicensePlatesArgs) -> LicensePlateStatusEnum
+ """
+
+Get: Statusses(self: GetLicensePlatesArgs) -> LicensePlateStatusEnum
 
 Set: Statusses(self: GetLicensePlatesArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: GetLicensePlatesArgs) -> str
+ """
+
+Get: WarehouseCode(self: GetLicensePlatesArgs) -> str
 
 Set: WarehouseCode(self: GetLicensePlatesArgs)=value
 """
 
 
 
-class GetStockListArgs:
+class GetStockListArgs(object):
  """ GetStockListArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetStockListArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Items=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Items(self: GetStockListArgs) -> Items
+ """
+
+Get: Items(self: GetStockListArgs) -> Items
 
 Set: Items(self: GetStockListArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: GetStockListArgs) -> str
+ """
+
+Get: WarehouseCode(self: GetStockListArgs) -> str
 
 Set: WarehouseCode(self: GetStockListArgs)=value
 """
 
 
 
-class GetStockManagerListArgs:
- """ GetStockManagerListArgs() """
+class GetStockManagerListArgs(object):
+ """
+ Arguments which are used for retrieving the stock list of an item.
+ 
+ GetStockManagerListArgs()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetStockManagerListArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  AssignType=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: AssignType(self: GetStockManagerListArgs) -> AssignType
 
@@ -1074,14 +1409,22 @@ Set: WarehouseCode(self: GetStockManagerListArgs)=value
  Default=None
 
 
-class GetWarehouseLocationsArgs:
+class GetWarehouseLocationsArgs(object):
  """
+ This object is used as filter to retrieve warehouse locations. 
+    Each property can be used on it's own,keep this in mind when implementing the methods using this object.
+ 
  GetWarehouseLocationsArgs()
  GetWarehouseLocationsArgs(warehouseCode: str)
  GetWarehouseLocationsArgs(paging: PagingParams,warehouseCode: str)
  GetWarehouseLocationsArgs(paging: PagingParams,warehouseCode: str,warehouseLocationCode: str,filter: str)
  GetWarehouseLocationsArgs(warehouseLocationCodeFrom: str,warehouseLocationCodeTo: str,warehouseCode: str,paging: PagingParams)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetWarehouseLocationsArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHashCode(self):
   """ GetHashCode(self: GetWarehouseLocationsArgs) -> int """
   pass
@@ -1096,37 +1439,49 @@ class GetWarehouseLocationsArgs:
   """
   pass
  Filter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Filter(self: GetWarehouseLocationsArgs) -> str
+ """
+
+Get: Filter(self: GetWarehouseLocationsArgs) -> str
 
 Set: Filter(self: GetWarehouseLocationsArgs)=value
 """
 
  Paging=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Paging(self: GetWarehouseLocationsArgs) -> PagingParams
+ """
+
+Get: Paging(self: GetWarehouseLocationsArgs) -> PagingParams
 
 Set: Paging(self: GetWarehouseLocationsArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: GetWarehouseLocationsArgs) -> str
+ """
+
+Get: WarehouseCode(self: GetWarehouseLocationsArgs) -> str
 
 Set: WarehouseCode(self: GetWarehouseLocationsArgs)=value
 """
 
  WarehouseLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseLocationCode(self: GetWarehouseLocationsArgs) -> str
+ """
+
+Get: WarehouseLocationCode(self: GetWarehouseLocationsArgs) -> str
 
 Set: WarehouseLocationCode(self: GetWarehouseLocationsArgs)=value
 """
 
  WarehouseLocationCodeFrom=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseLocationCodeFrom(self: GetWarehouseLocationsArgs) -> str
+ """
+
+Get: WarehouseLocationCodeFrom(self: GetWarehouseLocationsArgs) -> str
 
 Set: WarehouseLocationCodeFrom(self: GetWarehouseLocationsArgs)=value
 """
 
  WarehouseLocationCodeTo=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseLocationCodeTo(self: GetWarehouseLocationsArgs) -> str
+ """
+
+Get: WarehouseLocationCodeTo(self: GetWarehouseLocationsArgs) -> str
 
 Set: WarehouseLocationCodeTo(self: GetWarehouseLocationsArgs)=value
 """
@@ -1135,8 +1490,11 @@ Set: WarehouseLocationCodeTo(self: GetWarehouseLocationsArgs)=value
  Default=None
 
 
-class GetWarehousesArgs:
+class GetWarehousesArgs(object):
  """
+ This object is used as filter to retrieve warehouses. Each property can be used on it's own,keep this
+    in mind when implementing the methods using this object.
+ 
  GetWarehousesArgs()
  GetWarehousesArgs(warehouseCode: str)
  GetWarehousesArgs(active: bool)
@@ -1144,6 +1502,11 @@ class GetWarehousesArgs:
  GetWarehousesArgs(warehouseLocationCode: str,active: bool)
  GetWarehousesArgs(warehouseCode: str,warehouseLocationCode: str,active: bool,defaultInboundLocation: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetWarehousesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -1156,31 +1519,41 @@ class GetWarehousesArgs:
   """
   pass
  Active=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Active(self: GetWarehousesArgs) -> Nullable[bool]
+ """
+
+Get: Active(self: GetWarehousesArgs) -> Nullable[bool]
 
 Set: Active(self: GetWarehousesArgs)=value
 """
 
  DefaultInboundLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultInboundLocation(self: GetWarehousesArgs) -> str
+ """
+
+Get: DefaultInboundLocation(self: GetWarehousesArgs) -> str
 
 Set: DefaultInboundLocation(self: GetWarehousesArgs)=value
 """
 
  HasDefaultInboundLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HasDefaultInboundLocation(self: GetWarehousesArgs) -> Nullable[bool]
+ """
+
+Get: HasDefaultInboundLocation(self: GetWarehousesArgs) -> Nullable[bool]
 
 Set: HasDefaultInboundLocation(self: GetWarehousesArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: GetWarehousesArgs) -> str
+ """
+
+Get: WarehouseCode(self: GetWarehousesArgs) -> str
 
 Set: WarehouseCode(self: GetWarehousesArgs)=value
 """
 
  WarehouseLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseLocationCode(self: GetWarehousesArgs) -> str
+ """
+
+Get: WarehouseLocationCode(self: GetWarehousesArgs) -> str
 
 Set: WarehouseLocationCode(self: GetWarehousesArgs)=value
 """
@@ -1189,8 +1562,13 @@ Set: WarehouseLocationCode(self: GetWarehousesArgs)=value
  Default=None
 
 
-class HistoryReplenishmentOrder:
+class HistoryReplenishmentOrder(HistoryOutboundOrder):
  """ HistoryReplenishmentOrder() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryReplenishmentOrder()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: HistoryReplenishmentOrder) -> object """
   pass
@@ -1200,36 +1578,51 @@ class HistoryReplenishmentOrder:
  def __reduce_ex__(self,*args):
   pass
  Number=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Number(self: HistoryReplenishmentOrder) -> str
+ """
+
+Get: Number(self: HistoryReplenishmentOrder) -> str
 
 Set: Number(self: HistoryReplenishmentOrder)=value
 """
 
  ReplenishToLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReplenishToLocation(self: HistoryReplenishmentOrder) -> Location
+ """
+
+Get: ReplenishToLocation(self: HistoryReplenishmentOrder) -> Location
 
 Set: ReplenishToLocation(self: HistoryReplenishmentOrder)=value
 """
 
  ReplenishToLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReplenishToLocationCode(self: HistoryReplenishmentOrder) -> str
+ """
+
+Get: ReplenishToLocationCode(self: HistoryReplenishmentOrder) -> str
 
 """
 
  ReplenishToWarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReplenishToWarehouseCode(self: HistoryReplenishmentOrder) -> str
+ """
+
+Get: ReplenishToWarehouseCode(self: HistoryReplenishmentOrder) -> str
 
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Type(self: HistoryReplenishmentOrder) -> OutboundOrderTypeEnum
+ """
+
+Get: Type(self: HistoryReplenishmentOrder) -> OutboundOrderTypeEnum
 
 """
 
 
 
-class HistoryReplenishmentOrders:
+class HistoryReplenishmentOrders(HistoryOutboundOrders):
  """ HistoryReplenishmentOrders() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryReplenishmentOrders()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(list):
   """ FromIEnumerable(list: IEnumerable[HistoryOutboundOrder]) -> HistoryReplenishmentOrders """
@@ -1251,6 +1644,11 @@ class HistoryReplenishmentOrders:
 
 class IAllocatedStockItem:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IAllocatedStockItem()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -1315,16 +1713,43 @@ Set: WarehouseLocationCode(self: IAllocatedStockItem)=value
 
 
 
-class Item:
+class Item(CacheObject):
  """ Item() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Item()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ExpectedScanType(self,checkRegistration):
   """ ExpectedScanType(self: Item,checkRegistration: bool) -> ExpectScanOfEnum """
   pass
  def IsBatchNumberItemCheck(self,checkRegistration):
-  """ IsBatchNumberItemCheck(self: Item,checkRegistration: bool) -> bool """
+  """
+  IsBatchNumberItemCheck(self: Item,checkRegistration: bool) -> bool
+  
+   Checks if the item is a batch item.
+  
+   checkRegistration: True if the batchnumber registration should be checked,false if just the property should be returned.
+   Returns: True if the check is ignored and the item is a batch item,or when the itemid registration is set to
+     complete (means the numers are registered throughout the 
+    whole process).
+     False if the check is ignored and the item is not a batch item,or when the itemids are registered
+     during delivery only.
+  """
   pass
  def IsSerialNumberItemCheck(self,checkRegistration):
-  """ IsSerialNumberItemCheck(self: Item,checkRegistration: bool) -> bool """
+  """
+  IsSerialNumberItemCheck(self: Item,checkRegistration: bool) -> bool
+  
+   Checks if the item is a serialnumber item.
+  
+   checkRegistration: True if the serialnumber registration should be checked,false if just the property should be returned.
+   Returns: True if the check is ignored and the item is a serial item,or when the itemid registration is set to
+     complete (means the numers are registered throughout the 
+    whole process).
+     False if the check is ignored and the item is not a serial item,or when the itemids are registered
+     during delivery only.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1332,188 +1757,258 @@ class Item:
  def __reduce_ex__(self,*args):
   pass
  Active=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Active(self: Item) -> bool
+ """
+
+Get: Active(self: Item) -> bool
 
 Set: Active(self: Item)=value
 """
 
  Code=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Code(self: Item) -> str
+ """
+
+Get: Code(self: Item) -> str
 
 Set: Code(self: Item)=value
 """
 
  CodeSupplier=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CodeSupplier(self: Item) -> str
+ """The itemcode as registered at the supplier.
+
+Get: CodeSupplier(self: Item) -> str
 
 Set: CodeSupplier(self: Item)=value
 """
 
  DefaultCostPrice=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultCostPrice(self: Item) -> Decimal
+ """
+
+Get: DefaultCostPrice(self: Item) -> Decimal
 
 Set: DefaultCostPrice(self: Item)=value
 """
 
  DefaultSalesPrice=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultSalesPrice(self: Item) -> Decimal
+ """
+
+Get: DefaultSalesPrice(self: Item) -> Decimal
 
 Set: DefaultSalesPrice(self: Item)=value
 """
 
  DefaultVendorBarcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultVendorBarcode(self: Item) -> str
+ """
+
+Get: DefaultVendorBarcode(self: Item) -> str
 
 Set: DefaultVendorBarcode(self: Item)=value
 """
 
  DefaultVendorName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultVendorName(self: Item) -> str
+ """
+
+Get: DefaultVendorName(self: Item) -> str
 
 Set: DefaultVendorName(self: Item)=value
 """
 
  DefaultVendorNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultVendorNumber(self: Item) -> str
+ """
+
+Get: DefaultVendorNumber(self: Item) -> str
 
 Set: DefaultVendorNumber(self: Item)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: Item) -> str
+ """
+
+Get: Description(self: Item) -> str
 
 Set: Description(self: Item)=value
 """
 
  ExpirationDateRequired=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ExpirationDateRequired(self: Item) -> bool
+ """
+
+Get: ExpirationDateRequired(self: Item) -> bool
 
 Set: ExpirationDateRequired(self: Item)=value
 """
 
  GTINCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GTINCode(self: Item) -> str
+ """The GS1 GTIN code of this item
+
+Get: GTINCode(self: Item) -> str
 
 Set: GTINCode(self: Item)=value
 """
 
  IsBatchNumberItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Set: IsBatchNumberItem(self: Item)=value
+ """
+
+Set: IsBatchNumberItem(self: Item)=value
 """
 
  IsCostItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsCostItem(self: Item) -> bool
+ """
+
+Get: IsCostItem(self: Item) -> bool
 
 Set: IsCostItem(self: Item)=value
 """
 
  IsFractionAllowed=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsFractionAllowed(self: Item) -> bool
+ """
+
+Get: IsFractionAllowed(self: Item) -> bool
 
 Set: IsFractionAllowed(self: Item)=value
 """
 
  IsSerialNumberItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Set: IsSerialNumberItem(self: Item)=value
+ """
+
+Set: IsSerialNumberItem(self: Item)=value
 """
 
  ItemGroupCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemGroupCode(self: Item) -> str
+ """
+
+Get: ItemGroupCode(self: Item) -> str
 
 Set: ItemGroupCode(self: Item)=value
 """
 
  ItemGroupDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemGroupDescription(self: Item) -> str
+ """
+
+Get: ItemGroupDescription(self: Item) -> str
 
 Set: ItemGroupDescription(self: Item)=value
 """
 
  ItemIdRegistration=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIdRegistration(self: Item) -> ItemIdentificationRegistration
+ """
+
+Get: ItemIdRegistration(self: Item) -> ItemIdentificationRegistration
 
 Set: ItemIdRegistration(self: Item)=value
 """
 
  ItemType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemType(self: Item) -> ItemTypeEnum
+ """
+
+Get: ItemType(self: Item) -> ItemTypeEnum
 
 Set: ItemType(self: Item)=value
 """
 
  ItemWeight=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemWeight(self: Item) -> Decimal
+ """
+
+Get: ItemWeight(self: Item) -> Decimal
 
 Set: ItemWeight(self: Item)=value
 """
 
  Lifetime=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Lifetime(self: Item) -> CacheLifeTimes
+ """
+
+Get: Lifetime(self: Item) -> CacheLifeTimes
 
 """
 
  TextDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TextDescription(self: Item) -> str
+ """
+
+Get: TextDescription(self: Item) -> str
 
 Set: TextDescription(self: Item)=value
 """
 
  UnitCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UnitCode(self: Item) -> str
+ """
+
+Get: UnitCode(self: Item) -> str
 
 Set: UnitCode(self: Item)=value
 """
 
  UnitType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UnitType(self: Item) -> UnitTypeEnum
+ """
+
+Get: UnitType(self: Item) -> UnitTypeEnum
 
 Set: UnitType(self: Item)=value
 """
 
 
 
-class ItemBelongsToLicensePlateArgs:
+class ItemBelongsToLicensePlateArgs(object):
  """ ItemBelongsToLicensePlateArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemBelongsToLicensePlateArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: ItemBelongsToLicensePlateArgs) -> str
+ """
+
+Get: ItemCode(self: ItemBelongsToLicensePlateArgs) -> str
 
 Set: ItemCode(self: ItemBelongsToLicensePlateArgs)=value
 """
 
  ItemIdentifications=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIdentifications(self: ItemBelongsToLicensePlateArgs) -> ItemIdentifications
+ """
+
+Get: ItemIdentifications(self: ItemBelongsToLicensePlateArgs) -> ItemIdentifications
 
 Set: ItemIdentifications(self: ItemBelongsToLicensePlateArgs)=value
 """
 
  LocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LocationCode(self: ItemBelongsToLicensePlateArgs) -> str
+ """
+
+Get: LocationCode(self: ItemBelongsToLicensePlateArgs) -> str
 
 Set: LocationCode(self: ItemBelongsToLicensePlateArgs)=value
 """
 
  LpStatussesToCheck=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LpStatussesToCheck(self: ItemBelongsToLicensePlateArgs) -> LicensePlateStatusEnum
+ """
+
+Get: LpStatussesToCheck(self: ItemBelongsToLicensePlateArgs) -> LicensePlateStatusEnum
 
 Set: LpStatussesToCheck(self: ItemBelongsToLicensePlateArgs)=value
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: ItemBelongsToLicensePlateArgs) -> Decimal
+ """
+
+Get: Quantity(self: ItemBelongsToLicensePlateArgs) -> Decimal
 
 Set: Quantity(self: ItemBelongsToLicensePlateArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: ItemBelongsToLicensePlateArgs) -> str
+ """
+
+Get: WarehouseCode(self: ItemBelongsToLicensePlateArgs) -> str
 
 Set: WarehouseCode(self: ItemBelongsToLicensePlateArgs)=value
 """
 
 
 
-class ItemIdentificationBase:
+class ItemIdentificationBase(object):
  """ ItemIdentificationBase() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemIdentificationBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  BeginDate=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: BeginDate(self: ItemIdentificationBase) -> Nullable[DateTime]
 
@@ -1542,11 +2037,18 @@ Set: Quantity(self: ItemIdentificationBase)=value
 
 class ItemIdentification:
  """
+ Contains a serial or batch of a specific item.
+ 
  ItemIdentification()
  ItemIdentification(number: str,quantity: Decimal,endDate: Nullable[DateTime])
  ItemIdentification(number: str,quantityReceived: Decimal,quantityUsed: Decimal,quantityAvailable: Decimal,quantityAssigned: Decimal,beginDate: Nullable[DateTime],endDate: Nullable[DateTime],blocked: bool,quantity: Decimal)
  ItemIdentification(number: str,itemCode: str,quantityReceived: Decimal,quantityUsed: Decimal,quantityAvailable: Decimal,quantityAssigned: Decimal,quantityAllocated: Decimal,quantityAllocatedOriginal: Decimal,quantityOriginal: Decimal,beginDate: Nullable[DateTime],endDate: Nullable[DateTime],blocked: bool,quantity: Decimal,warehouseCode: str,warehouseLocationCode: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemIdentification()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: ItemIdentification) -> object """
   pass
@@ -1580,133 +2082,181 @@ class ItemIdentification:
   """ x.__sub__(y) <==> x-y """
   pass
  AllocationAndStockQuantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AllocationAndStockQuantity(self: ItemIdentification) -> str
+ """
+
+Get: AllocationAndStockQuantity(self: ItemIdentification) -> str
 
 """
 
  Blocked=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Blocked(self: ItemIdentification) -> bool
+ """
+
+Get: Blocked(self: ItemIdentification) -> bool
 
 Set: Blocked(self: ItemIdentification)=value
 """
 
  BoxNumbers=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BoxNumbers(self: ItemIdentification) -> List[int]
+ """
+
+Get: BoxNumbers(self: ItemIdentification) -> List[int]
 
 Set: BoxNumbers(self: ItemIdentification)=value
 """
 
  DatesAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DatesAsString(self: ItemIdentification) -> str
+ """
+
+Get: DatesAsString(self: ItemIdentification) -> str
 
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: ItemIdentification) -> str
+ """
+
+Get: Description(self: ItemIdentification) -> str
 
 """
 
  IsMarkedAsPicked=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsMarkedAsPicked(self: ItemIdentification) -> bool
+ """
+
+Get: IsMarkedAsPicked(self: ItemIdentification) -> bool
 
 Set: IsMarkedAsPicked(self: ItemIdentification)=value
 """
 
  IsPicked=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsPicked(self: ItemIdentification) -> bool
+ """
+
+Get: IsPicked(self: ItemIdentification) -> bool
 
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: ItemIdentification) -> str
+ """
+
+Get: ItemCode(self: ItemIdentification) -> str
 
 Set: ItemCode(self: ItemIdentification)=value
 """
 
  Number=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Number(self: ItemIdentification) -> str
+ """The serial or batchnumber.
+
+Get: Number(self: ItemIdentification) -> str
 
 Set: Number(self: ItemIdentification)=value
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: ItemIdentification) -> Decimal
+ """Quantity picked of the serial or batch item. Always 1 when adding a serial,and 1 or more when adding a 
+   batch.
+
+Get: Quantity(self: ItemIdentification) -> Decimal
 
 Set: Quantity(self: ItemIdentification)=value
 """
 
  QuantityAllocated=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityAllocated(self: ItemIdentification) -> Decimal
+ """Quantity assigned to batches minus the quantity from alternative locations.
+
+Get: QuantityAllocated(self: ItemIdentification) -> Decimal
 
 Set: QuantityAllocated(self: ItemIdentification)=value
 """
 
  QuantityAllocatedOriginal=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityAllocatedOriginal(self: ItemIdentification) -> Decimal
+ """
+
+Get: QuantityAllocatedOriginal(self: ItemIdentification) -> Decimal
 
 Set: QuantityAllocatedOriginal(self: ItemIdentification)=value
 """
 
  QuantityAssigned=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityAssigned(self: ItemIdentification) -> Decimal
+ """Quantity assigned from ERP
+
+Get: QuantityAssigned(self: ItemIdentification) -> Decimal
 
 Set: QuantityAssigned(self: ItemIdentification)=value
 """
 
  QuantityAssignedString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityAssignedString(self: ItemIdentification) -> str
+ """
+
+Get: QuantityAssignedString(self: ItemIdentification) -> str
 
 """
 
  QuantityAvailable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityAvailable(self: ItemIdentification) -> Decimal
+ """Quantity available to pick (stock - QuantityAssigned - QuantityAllocated).
+
+Get: QuantityAvailable(self: ItemIdentification) -> Decimal
 
 Set: QuantityAvailable(self: ItemIdentification)=value
 """
 
  QuantityOriginal=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityOriginal(self: ItemIdentification) -> Decimal
+ """
+
+Get: QuantityOriginal(self: ItemIdentification) -> Decimal
 
 Set: QuantityOriginal(self: ItemIdentification)=value
 """
 
  QuantityProcessed=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityProcessed(self: ItemIdentification) -> Decimal
+ """
+
+Get: QuantityProcessed(self: ItemIdentification) -> Decimal
 
 Set: QuantityProcessed(self: ItemIdentification)=value
 """
 
  QuantityReceived=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityReceived(self: ItemIdentification) -> Decimal
+ """
+
+Get: QuantityReceived(self: ItemIdentification) -> Decimal
 
 Set: QuantityReceived(self: ItemIdentification)=value
 """
 
  QuantityUsed=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityUsed(self: ItemIdentification) -> Decimal
+ """The quantity which is already used in previous orders (so not available!)
+
+Get: QuantityUsed(self: ItemIdentification) -> Decimal
 
 Set: QuantityUsed(self: ItemIdentification)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: ItemIdentification) -> str
+ """
+
+Get: WarehouseCode(self: ItemIdentification) -> str
 
 Set: WarehouseCode(self: ItemIdentification)=value
 """
 
  WarehouseLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseLocationCode(self: ItemIdentification) -> str
+ """
+
+Get: WarehouseLocationCode(self: ItemIdentification) -> str
 
 Set: WarehouseLocationCode(self: ItemIdentification)=value
 """
 
 
 
-class ItemIdentificationMetaData:
+class ItemIdentificationMetaData(object):
  """
  ItemIdentificationMetaData()
  ItemIdentificationMetaData(itemCode: str,itemId: str,isBlocked: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemIdentificationMetaData()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,itemCode=None,itemId=None,isBlocked=None):
   """
@@ -1736,6 +2286,11 @@ Set: ItemId(self: ItemIdentificationMetaData)=value
 
 class ItemIdentificationRegistration:
  """ enum (flags) ItemIdentificationRegistration,values: Complete (1),OnlyOutbound (2),Unknown (0) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemIdentificationRegistration()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -1765,18 +2320,30 @@ class ItemIdentificationRegistration:
  value__=None
 
 
-class ItemIdentifications:
+class ItemIdentifications(FindableList):
  """
+ Container for the Wms.RemotingObjects.Inventory.ItemIdentification objects.
+ 
  ItemIdentifications()
  ItemIdentifications(itemId: ItemIdentification)
  ItemIdentifications(collection: IEnumerable[ItemIdentification])
  ItemIdentifications(collection: List[ItemIdentification])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemIdentifications()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddRange(self,collection):
   """ AddRange(self: ItemIdentifications,collection: IEnumerable[ItemIdentification]) -> List[ItemIdentification] """
   pass
  def Clear(self):
-  """ Clear(self: ItemIdentifications) """
+  """
+  Clear(self: ItemIdentifications)
+   Clears the list,calls TrimExcess,and resets the non-public field _version to 0. This is done so
+     the object will be back in its initial state. Used for (for 
+    example) removal of PurchaseReceiveLines.
+  """
   pass
  def Clone(self):
   """ Clone(self: ItemIdentifications) -> object """
@@ -1821,12 +2388,16 @@ class ItemIdentifications:
   """ x.__sub__(y) <==> x-y """
   pass
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: ItemIdentifications) -> bool
+ """
+
+Get: IsDisposable(self: ItemIdentifications) -> bool
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: ItemIdentifications) -> bool
+ """
+
+Get: PreserveState(self: ItemIdentifications) -> bool
 
 """
 
@@ -1835,8 +2406,13 @@ class ItemIdentifications:
  ValueMember='Quantity'
 
 
-class ItemIdGenerateArgs:
+class ItemIdGenerateArgs(object):
  """ ItemIdGenerateArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemIdGenerateArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddGeneratedNumber(self,itemId):
   """ AddGeneratedNumber(self: ItemIdGenerateArgs,itemId: ItemIdentification) """
   pass
@@ -1844,239 +2420,345 @@ class ItemIdGenerateArgs:
   """ UpdateNumberInfo(self: ItemIdGenerateArgs,prefix: str,suffix: str,hasLeadingZeroes: bool,staticSerialNumberLength: int,serialNumberFromAsNumber: Decimal,serialNumberToAsNumber: Decimal,numbersToGenerate: int) """
   pass
  BatchPickLocationUpdated=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BatchPickLocationUpdated(self: ItemIdGenerateArgs) -> BatchPickLocation
+ """
+
+Get: BatchPickLocationUpdated(self: ItemIdGenerateArgs) -> BatchPickLocation
 
 Set: BatchPickLocationUpdated(self: ItemIdGenerateArgs)=value
 """
 
  GeneratedItemIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GeneratedItemIds(self: ItemIdGenerateArgs) -> ItemIdentifications
+ """
+
+Get: GeneratedItemIds(self: ItemIdGenerateArgs) -> ItemIdentifications
 
 """
 
  HasLeadingZeroes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HasLeadingZeroes(self: ItemIdGenerateArgs) -> bool
+ """
+
+Get: HasLeadingZeroes(self: ItemIdGenerateArgs) -> bool
 
 """
 
  InboundReceiveLineUpdatet=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: InboundReceiveLineUpdatet(self: ItemIdGenerateArgs) -> InboundReceiveLine
+ """
+
+Get: InboundReceiveLineUpdatet(self: ItemIdGenerateArgs) -> InboundReceiveLine
 
 Set: InboundReceiveLineUpdatet(self: ItemIdGenerateArgs)=value
 """
 
  NumbersToGenerate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NumbersToGenerate(self: ItemIdGenerateArgs) -> int
+ """
+
+Get: NumbersToGenerate(self: ItemIdGenerateArgs) -> int
 
 """
 
  Prefix=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Prefix(self: ItemIdGenerateArgs) -> str
+ """
+
+Get: Prefix(self: ItemIdGenerateArgs) -> str
 
 """
 
  SerialNumberFrom=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SerialNumberFrom(self: ItemIdGenerateArgs) -> str
+ """
+
+Get: SerialNumberFrom(self: ItemIdGenerateArgs) -> str
 
 Set: SerialNumberFrom(self: ItemIdGenerateArgs)=value
 """
 
  SerialNumberFromAsNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SerialNumberFromAsNumber(self: ItemIdGenerateArgs) -> Decimal
+ """
+
+Get: SerialNumberFromAsNumber(self: ItemIdGenerateArgs) -> Decimal
 
 """
 
  SerialNumberTo=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SerialNumberTo(self: ItemIdGenerateArgs) -> str
+ """
+
+Get: SerialNumberTo(self: ItemIdGenerateArgs) -> str
 
 Set: SerialNumberTo(self: ItemIdGenerateArgs)=value
 """
 
  SerialNumberToAsNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SerialNumberToAsNumber(self: ItemIdGenerateArgs) -> Decimal
+ """
+
+Get: SerialNumberToAsNumber(self: ItemIdGenerateArgs) -> Decimal
 
 """
 
  StaticSerialNumberLength=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StaticSerialNumberLength(self: ItemIdGenerateArgs) -> int
+ """
+
+Get: StaticSerialNumberLength(self: ItemIdGenerateArgs) -> int
 
 """
 
  Suffix=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Suffix(self: ItemIdGenerateArgs) -> str
+ """
+
+Get: Suffix(self: ItemIdGenerateArgs) -> str
 
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: ItemIdGenerateArgs) -> str
+ """
+
+Get: WarehouseCode(self: ItemIdGenerateArgs) -> str
 
 Set: WarehouseCode(self: ItemIdGenerateArgs)=value
 """
 
  WarehouseLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseLocationCode(self: ItemIdGenerateArgs) -> str
+ """
+
+Get: WarehouseLocationCode(self: ItemIdGenerateArgs) -> str
 
 Set: WarehouseLocationCode(self: ItemIdGenerateArgs)=value
 """
 
 
 
-class ItemInfo:
- """ ItemInfo() """
+class ItemInfo(CacheObject):
+ """
+ Barcode scan result object
+ 
+ ItemInfo()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemInfo()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  def __reduce_ex__(self,*args):
   pass
  Barcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Barcode(self: ItemInfo) -> str
+ """Barcode that was used to find this result.
+
+Get: Barcode(self: ItemInfo) -> str
 
 Set: Barcode(self: ItemInfo)=value
 """
 
  BaseQuantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BaseQuantity(self: ItemInfo) -> Decimal
+ """Base quantity of the product.
+   eg: Product a Pieces is the base quantity of 1,Quantity type `Box` has 12 pieces,Base type quantity is still 1,even if `Box` quantity is scanned
+
+Get: BaseQuantity(self: ItemInfo) -> Decimal
 
 Set: BaseQuantity(self: ItemInfo)=value
 """
 
  Factor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Factor(self: ItemInfo) -> Decimal
+ """The amount the base quantity increases.
+   eg: `Box` is scanned the factor of base quantity is 12 (Wms.RemotingObjects.Inventory.ItemInfo.BaseQuantity)
+
+Get: Factor(self: ItemInfo) -> Decimal
 
 Set: Factor(self: ItemInfo)=value
 """
 
  IsBatchNumberItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsBatchNumberItem(self: ItemInfo) -> bool
+ """Whether the found item is a Batch item.
+
+Get: IsBatchNumberItem(self: ItemInfo) -> bool
 
 Set: IsBatchNumberItem(self: ItemInfo)=value
 """
 
  IsSerialNumberItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsSerialNumberItem(self: ItemInfo) -> bool
+ """Whether the found item is a Serial item
+
+Get: IsSerialNumberItem(self: ItemInfo) -> bool
 
 Set: IsSerialNumberItem(self: ItemInfo)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: ItemInfo) -> str
+ """Itemcode of the found product.
+
+Get: ItemCode(self: ItemInfo) -> str
 
 Set: ItemCode(self: ItemInfo)=value
 """
 
  Lifetime=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Lifetime(self: ItemInfo) -> CacheLifeTimes
+ """Cache lifetime of object. (LiveIntermediate)
+
+Get: Lifetime(self: ItemInfo) -> CacheLifeTimes
 
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: ItemInfo) -> Decimal
+ """The amount of items found
+
+Get: Quantity(self: ItemInfo) -> Decimal
 
 """
 
  UnitCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UnitCode(self: ItemInfo) -> str
+ """Code of the quantity type found for this product (eg,quantity type: Kilos,code defined is: Kg)
+
+Get: UnitCode(self: ItemInfo) -> str
 
 Set: UnitCode(self: ItemInfo)=value
 """
 
 
 
-class LocationBase:
- # no doc
+class LocationBase(object):
+ """  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LocationBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Code=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Code(self: LocationBase) -> str
+ """
+
+Get: Code(self: LocationBase) -> str
 
 Set: Code(self: LocationBase)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: LocationBase) -> str
+ """
+
+Get: Id(self: LocationBase) -> str
 
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: LocationBase) -> str
+ """
+
+Get: WarehouseCode(self: LocationBase) -> str
 
 Set: WarehouseCode(self: LocationBase)=value
 """
 
 
 
-class Location:
- """ Location() """
+class Location(LocationBase):
+ """
+ Represents a single location.
+ 
+ Location()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Location()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: Location) -> str
+ """
+
+Get: Description(self: Location) -> str
 
 Set: Description(self: Location)=value
 """
 
  FixedItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: FixedItemCode(self: Location) -> str
+ """
+
+Get: FixedItemCode(self: Location) -> str
 
 Set: FixedItemCode(self: Location)=value
 """
 
  IsBlockedInbound=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsBlockedInbound(self: Location) -> bool
+ """
+
+Get: IsBlockedInbound(self: Location) -> bool
 
 Set: IsBlockedInbound(self: Location)=value
 """
 
  IsBlockedOutbound=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsBlockedOutbound(self: Location) -> bool
+ """
+
+Get: IsBlockedOutbound(self: Location) -> bool
 
 Set: IsBlockedOutbound(self: Location)=value
 """
 
  MaximumStock=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: MaximumStock(self: Location) -> Decimal
+ """
+
+Get: MaximumStock(self: Location) -> Decimal
 
 Set: MaximumStock(self: Location)=value
 """
 
  MinimumStock=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: MinimumStock(self: Location) -> Decimal
+ """
+
+Get: MinimumStock(self: Location) -> Decimal
 
 Set: MinimumStock(self: Location)=value
 """
 
  PickType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PickType(self: Location) -> LocationPickTypeEnum
+ """
+
+Get: PickType(self: Location) -> LocationPickTypeEnum
 
 Set: PickType(self: Location)=value
 """
 
  PickTypeAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PickTypeAsString(self: Location) -> str
+ """
+
+Get: PickTypeAsString(self: Location) -> str
 
 """
 
  PickTypeName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PickTypeName(self: Location) -> str
+ """
+
+Get: PickTypeName(self: Location) -> str
 
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Type(self: Location) -> LocationTypeEnum
+ """
+
+Get: Type(self: Location) -> LocationTypeEnum
 
 Set: Type(self: Location)=value
 """
 
  TypeAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TypeAsString(self: Location) -> str
+ """
+
+Get: TypeAsString(self: Location) -> str
 
 """
 
  TypeName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TypeName(self: Location) -> str
+ """
+
+Get: TypeName(self: Location) -> str
 
 """
 
 
 
-class ItemLocation:
+class ItemLocation(Location):
  """ ItemLocation() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemLocation()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: ItemLocation) -> object """
   pass
@@ -2097,21 +2779,30 @@ class ItemLocation:
  def __reduce_ex__(self,*args):
   pass
  IsDefaultLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDefaultLocation(self: ItemLocation) -> bool
+ """
+
+Get: IsDefaultLocation(self: ItemLocation) -> bool
 
 Set: IsDefaultLocation(self: ItemLocation)=value
 """
 
  Stock=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Stock(self: ItemLocation) -> Decimal
+ """
+
+Get: Stock(self: ItemLocation) -> Decimal
 
 Set: Stock(self: ItemLocation)=value
 """
 
 
 
-class ItemLocationComparer:
+class ItemLocationComparer(object):
  """ ItemLocationComparer() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemLocationComparer()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Compare(self,x,y):
   """ Compare(self: ItemLocationComparer,x: ItemLocation,y: ItemLocation) -> int """
   pass
@@ -2125,8 +2816,13 @@ class ItemLocationComparer:
   """ __repr__(self: object) -> str """
   pass
 
-class ItemLocations:
+class ItemLocations(FindableList):
  """ ItemLocations() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemLocations()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -2142,7 +2838,9 @@ class ItemLocations:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: ItemLocations) -> Int64
+ """
+
+Get: TotalRowsMatched(self: ItemLocations) -> Int64
 
 Set: TotalRowsMatched(self: ItemLocations)=value
 """
@@ -2153,11 +2851,16 @@ Set: TotalRowsMatched(self: ItemLocations)=value
  ValueMember='Code'
 
 
-class ItemPackLocation:
+class ItemPackLocation(BatchItemLocationBase):
  """
  ItemPackLocation()
  ItemPackLocation(boxGuid: Guid,quantity: Decimal,isContainer: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemPackLocation()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: ItemPackLocation) -> object """
   pass
@@ -2174,31 +2877,41 @@ class ItemPackLocation:
  def __reduce_ex__(self,*args):
   pass
  BoxGuid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BoxGuid(self: ItemPackLocation) -> Guid
+ """
+
+Get: BoxGuid(self: ItemPackLocation) -> Guid
 
 Set: BoxGuid(self: ItemPackLocation)=value
 """
 
  InnerReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: InnerReference(self: ItemPackLocation) -> str
+ """Optional. The inner reference of the item (carton or the like)
+
+Get: InnerReference(self: ItemPackLocation) -> str
 
 Set: InnerReference(self: ItemPackLocation)=value
 """
 
  IsContainer=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsContainer(self: ItemPackLocation) -> bool
+ """
+
+Get: IsContainer(self: ItemPackLocation) -> bool
 
 Set: IsContainer(self: ItemPackLocation)=value
 """
 
  OuterReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OuterReference(self: ItemPackLocation) -> str
+ """Optional. The outer reference of an item (SSCC)
+
+Get: OuterReference(self: ItemPackLocation) -> str
 
 Set: OuterReference(self: ItemPackLocation)=value
 """
 
  QuantityProcessed=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityProcessed(self: ItemPackLocation) -> Decimal
+ """
+
+Get: QuantityProcessed(self: ItemPackLocation) -> Decimal
 
 Set: QuantityProcessed(self: ItemPackLocation)=value
 """
@@ -2207,8 +2920,13 @@ Set: QuantityProcessed(self: ItemPackLocation)=value
  _itemIds=None
 
 
-class ItemPackLocations:
+class ItemPackLocations(List):
  """ ItemPackLocations() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemPackLocations()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ClearExceptForContainer(self):
   """ ClearExceptForContainer(self: ItemPackLocations) """
   pass
@@ -2237,7 +2955,9 @@ class ItemPackLocations:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  QuantityPacked=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityPacked(self: ItemPackLocations) -> Decimal
+ """
+
+Get: QuantityPacked(self: ItemPackLocations) -> Decimal
 
 """
 
@@ -2246,8 +2966,13 @@ class ItemPackLocations:
  ValueMember=None
 
 
-class ItemPickLocation:
+class ItemPickLocation(BatchItemLocationBase):
  """ ItemPickLocation() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemPickLocation()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: ItemPickLocation) -> object """
   pass
@@ -2263,30 +2988,40 @@ class ItemPickLocation:
   """ x.__sub__(y) <==> x-y """
   pass
  IsMarkedAsPicked=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsMarkedAsPicked(self: ItemPickLocation) -> bool
+ """
+
+Get: IsMarkedAsPicked(self: ItemPickLocation) -> bool
 
 Set: IsMarkedAsPicked(self: ItemPickLocation)=value
 """
 
  IsPicked=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsPicked(self: ItemPickLocation) -> bool
+ """
+
+Get: IsPicked(self: ItemPickLocation) -> bool
 
 """
 
  ItemIdRegistration=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIdRegistration(self: ItemPickLocation) -> ItemIdentificationRegistration
+ """
+
+Get: ItemIdRegistration(self: ItemPickLocation) -> ItemIdentificationRegistration
 
 Set: ItemIdRegistration(self: ItemPickLocation)=value
 """
 
  ItemScanned=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemScanned(self: ItemPickLocation) -> bool
+ """True if the last Item confirmation was done by scanning
+
+Get: ItemScanned(self: ItemPickLocation) -> bool
 
 Set: ItemScanned(self: ItemPickLocation)=value
 """
 
  LocationScanned=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LocationScanned(self: ItemPickLocation) -> bool
+ """True if the last location confirmation was done by scanning
+
+Get: LocationScanned(self: ItemPickLocation) -> bool
 
 Set: LocationScanned(self: ItemPickLocation)=value
 """
@@ -2298,13 +3033,18 @@ Set: ProcessState(self: ItemPickLocation)=value
 """
 
  QuantityAllocated=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityAllocated(self: ItemPickLocation) -> Decimal
+ """The allocated quantity for an item on this location. This quantity will change when an item is
+   processed for a next step or when the location differs from the route.
+
+Get: QuantityAllocated(self: ItemPickLocation) -> Decimal
 
 Set: QuantityAllocated(self: ItemPickLocation)=value
 """
 
  QuantityAllocatedOriginal=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityAllocatedOriginal(self: ItemPickLocation) -> Decimal
+ """
+
+Get: QuantityAllocatedOriginal(self: ItemPickLocation) -> Decimal
 
 Set: QuantityAllocatedOriginal(self: ItemPickLocation)=value
 """
@@ -2313,8 +3053,13 @@ Set: QuantityAllocatedOriginal(self: ItemPickLocation)=value
  _itemIds=None
 
 
-class ItemPickLocations:
+class ItemPickLocations(List):
  """ ItemPickLocations() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemPickLocations()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,*__args):
   """ Add(self: ItemPickLocations,itemPickLocation: ItemPickLocation) """
   pass
@@ -2346,8 +3091,17 @@ class ItemPickLocations:
  ValueMember=None
 
 
-class ItemStock:
- """ ItemStock() """
+class ItemStock(object):
+ """
+ Contains all stock info of an item.
+ 
+ ItemStock()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemStock()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: ItemStock) -> object """
   pass
@@ -2359,7 +3113,19 @@ class ItemStock:
   """ GetUniqueHashCode(self: ItemStock) -> str """
   pass
  def IsSerialBatchItemCheck(self,checkRegistration):
-  """ IsSerialBatchItemCheck(self: ItemStock,checkRegistration: bool) -> bool """
+  """
+  IsSerialBatchItemCheck(self: ItemStock,checkRegistration: bool) -> bool
+  
+   Checks if the item is a serial / batch item.
+  
+   checkRegistration: True if the serial / batchnumber registration should be checked,false if just the property should be returned.
+   Returns: True if the check is ignored and the item is a serial / batch item,or when the itemid registration is set to
+     complete (means the numers are registered 
+    throughout the whole process).
+     False if the check is ignored and the item is not a batch item,or when the itemids are registered
+     during delivery 
+    only.
+  """
   pass
  def Subtract(self,items):
   """ Subtract(self: ItemStock,items: IEnumerable[AllocatedStockItem]) -> ItemStock """
@@ -2376,13 +3142,17 @@ class ItemStock:
   """ x.__sub__(y) <==> x-y """
   pass
  AssignedSalesOrderId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AssignedSalesOrderId(self: ItemStock) -> str
+ """The number of the assigned salesorder.
+
+Get: AssignedSalesOrderId(self: ItemStock) -> str
 
 Set: AssignedSalesOrderId(self: ItemStock)=value
 """
 
  AssignedSalesOrderLineId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AssignedSalesOrderLineId(self: ItemStock) -> str
+ """The number of the assigned salesorderline.
+
+Get: AssignedSalesOrderLineId(self: ItemStock) -> str
 
 Set: AssignedSalesOrderLineId(self: ItemStock)=value
 """
@@ -2394,13 +3164,17 @@ Set: AssignedSalesOrderNo(self: ItemStock)=value
 """
 
  AssignType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AssignType(self: ItemStock) -> AssignType
+ """
+
+Get: AssignType(self: ItemStock) -> AssignType
 
 Set: AssignType(self: ItemStock)=value
 """
 
  AssignTypeAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AssignTypeAsString(self: ItemStock) -> str
+ """
+
+Get: AssignTypeAsString(self: ItemStock) -> str
 
 """
 
@@ -2417,19 +3191,25 @@ Set: IsBlockedOutbound(self: ItemStock)=value
 """
 
  IsSerialBatchItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsSerialBatchItem(self: ItemStock) -> bool
+ """
+
+Get: IsSerialBatchItem(self: ItemStock) -> bool
 
 Set: IsSerialBatchItem(self: ItemStock)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: ItemStock) -> str
+ """
+
+Get: ItemCode(self: ItemStock) -> str
 
 Set: ItemCode(self: ItemStock)=value
 """
 
  ItemDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemDescription(self: ItemStock) -> str
+ """
+
+Get: ItemDescription(self: ItemStock) -> str
 
 Set: ItemDescription(self: ItemStock)=value
 """
@@ -2441,13 +3221,17 @@ Set: ItemId(self: ItemStock)=value
 """
 
  ItemIdRegistration=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIdRegistration(self: ItemStock) -> ItemIdentificationRegistration
+ """
+
+Get: ItemIdRegistration(self: ItemStock) -> ItemIdentificationRegistration
 
 Set: ItemIdRegistration(self: ItemStock)=value
 """
 
  ItemIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIds(self: ItemStock) -> ItemIdentifications
+ """
+
+Get: ItemIds(self: ItemStock) -> ItemIdentifications
 
 Set: ItemIds(self: ItemStock)=value
 """
@@ -2465,13 +3249,20 @@ Set: PickType(self: ItemStock)=value
 """
 
  Stock=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Stock(self: ItemStock) -> Decimal
+ """The free stock of an item on this location. For purchase order assigned stock: if the pruchase order
+   is not received completley,then this value will remain 0. Otherwise it can be set with the assigned
+   value. For assigned free stock: the assigned quantity of a salesorder.
+
+Get: Stock(self: ItemStock) -> Decimal
 
 Set: Stock(self: ItemStock)=value
 """
 
  StockOnShelve=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StockOnShelve(self: ItemStock) -> Decimal
+ """The shelf stock of an item (including assigned stock) on a location. Will remain empty for assigned 
+   stock.
+
+Get: StockOnShelve(self: ItemStock) -> Decimal
 
 Set: StockOnShelve(self: ItemStock)=value
 """
@@ -2483,24 +3274,39 @@ Set: UnitCode(self: ItemStock)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: ItemStock) -> str
+ """
+
+Get: WarehouseCode(self: ItemStock) -> str
 
 Set: WarehouseCode(self: ItemStock)=value
 """
 
  WarehouseLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseLocationCode(self: ItemStock) -> str
+ """
+
+Get: WarehouseLocationCode(self: ItemStock) -> str
 
 Set: WarehouseLocationCode(self: ItemStock)=value
 """
 
+ WarehouseLocationDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: WarehouseLocationDescription(self: ItemStock) -> str
+
+Set: WarehouseLocationDescription(self: ItemStock)=value
+"""
 
 
-class ItemStockAllocation:
+
+class ItemStockAllocation(AllocatedStockItem):
  """
  ItemStockAllocation()
  ItemStockAllocation(allocatedStockItem: AllocatedStockItem)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemStockAllocation()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: ItemStockAllocation) -> ItemStockAllocation """
   pass
@@ -2517,44 +3323,61 @@ class ItemStockAllocation:
  def __reduce_ex__(self,*args):
   pass
  BatchName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BatchName(self: ItemStockAllocation) -> str
+ """
+
+Get: BatchName(self: ItemStockAllocation) -> str
 
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: ItemStockAllocation) -> str
+ """
+
+Get: Description(self: ItemStockAllocation) -> str
 
 Set: Description(self: ItemStockAllocation)=value
 """
 
  ItemId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemId(self: ItemStockAllocation) -> str
+ """
+
+Get: ItemId(self: ItemStockAllocation) -> str
 
 Set: ItemId(self: ItemStockAllocation)=value
 """
 
  Key=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Key(self: ItemStockAllocation) -> str
+ """
+
+Get: Key(self: ItemStockAllocation) -> str
 
 Set: Key(self: ItemStockAllocation)=value
 """
 
  OrderLineNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderLineNumber(self: ItemStockAllocation) -> str
+ """
+
+Get: OrderLineNumber(self: ItemStockAllocation) -> str
 
 Set: OrderLineNumber(self: ItemStockAllocation)=value
 """
 
  OrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumber(self: ItemStockAllocation) -> str
+ """
+
+Get: OrderNumber(self: ItemStockAllocation) -> str
 
 Set: OrderNumber(self: ItemStockAllocation)=value
 """
 
 
 
-class ItemStockAllocationList:
+class ItemStockAllocationList(FindableList):
  """ ItemStockAllocationList() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemStockAllocationList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(allocations):
   """ FromIEnumerable(allocations: IEnumerable[ItemStockAllocation]) -> ItemStockAllocationList """
@@ -2574,21 +3397,31 @@ class ItemStockAllocationList:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  HasAllocationsWithoutBatches=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HasAllocationsWithoutBatches(self: ItemStockAllocationList) -> bool
+ """
+
+Get: HasAllocationsWithoutBatches(self: ItemStockAllocationList) -> bool
 
 Set: HasAllocationsWithoutBatches(self: ItemStockAllocationList)=value
 """
 
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: ItemStockAllocationList) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: ItemStockAllocationList) -> Int64
 
 Set: TotalRowsMatched(self: ItemStockAllocationList)=value
 """
 
 
 
-class ItemStockEqualityComparer:
+class ItemStockEqualityComparer(EqualityComparer):
  """ ItemStockEqualityComparer() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemStockEqualityComparer()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,*__args):
   """ Equals(self: ItemStockEqualityComparer,x: ItemStock,y: ItemStock) -> bool """
   pass
@@ -2602,10 +3435,23 @@ class ItemStockEqualityComparer:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class ItemStockList:
- """ ItemStockList() """
+class ItemStockList(FindableList):
+ """
+ Container for Wms.RemotingObjects.Inventory.ItemStock objects.
+ 
+ ItemStockList()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemStockList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def FindFirstItemStock(self,itemCode,itemId):
-  """ FindFirstItemStock(self: ItemStockList,itemCode: str,itemId: str) -> ItemStock """
+  """
+  FindFirstItemStock(self: ItemStockList,itemCode: str,itemId: str) -> ItemStock
+  
+   itemId: Optional. A serial- or batchnumber.
+  """
   pass
  @staticmethod
  def FromIEnumerable(list):
@@ -2626,49 +3472,82 @@ class ItemStockList:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: ItemStockList) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: ItemStockList) -> Int64
 
 Set: TotalRowsMatched(self: ItemStockList)=value
 """
 
 
 
-class ItemStockLocation:
+class ItemStockLocation(LocationBase):
  """ ItemStockLocation() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemStockLocation()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  IsDefaultLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDefaultLocation(self: ItemStockLocation) -> bool
+ """
+
+Get: IsDefaultLocation(self: ItemStockLocation) -> bool
 
 Set: IsDefaultLocation(self: ItemStockLocation)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: ItemStockLocation) -> str
+ """
+
+Get: ItemCode(self: ItemStockLocation) -> str
 
 Set: ItemCode(self: ItemStockLocation)=value
 """
 
  OriginalStock=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OriginalStock(self: ItemStockLocation) -> Decimal
+ """
+
+Get: OriginalStock(self: ItemStockLocation) -> Decimal
 
 Set: OriginalStock(self: ItemStockLocation)=value
 """
 
+ PickType=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: PickType(self: ItemStockLocation) -> LocationPickTypeEnum
+
+Set: PickType(self: ItemStockLocation)=value
+"""
+
  Stock=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Stock(self: ItemStockLocation) -> Decimal
+ """
+
+Get: Stock(self: ItemStockLocation) -> Decimal
 
 Set: Stock(self: ItemStockLocation)=value
 """
 
  WarehouseLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseLocationCode(self: ItemStockLocation) -> str
+ """
+
+Get: WarehouseLocationCode(self: ItemStockLocation) -> str
 
 Set: WarehouseLocationCode(self: ItemStockLocation)=value
 """
 
 
 
-class ItemStockLocationList:
- """ ItemStockLocationList() """
+class ItemStockLocationList(FindableList):
+ """
+ Container for the Wms.RemotingObjects.Inventory.ItemStockLocation objects.
+ 
+ ItemStockLocationList()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemStockLocationList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(list):
   """ FromIEnumerable(list: IEnumerable[ItemStockLocation]) -> ItemStockLocationList """
@@ -2690,28 +3569,45 @@ class ItemStockLocationList:
  UniqueIdMember='Id'
 
 
-class ItemStockTotals:
- """ ItemStockTotals() """
+class ItemStockTotals(object):
+ """
+ Contains stock total result for an item
+ 
+ ItemStockTotals()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemStockTotals()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: ItemStockTotals) -> str
+ """
+
+Get: ItemCode(self: ItemStockTotals) -> str
 
 Set: ItemCode(self: ItemStockTotals)=value
 """
 
  StockAssignedToBatches=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StockAssignedToBatches(self: ItemStockTotals) -> Decimal
+ """Total qty assigned to pickbatches in StockManager
+
+Get: StockAssignedToBatches(self: ItemStockTotals) -> Decimal
 
 Set: StockAssignedToBatches(self: ItemStockTotals)=value
 """
 
  StockFreeInErp=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StockFreeInErp(self: ItemStockTotals) -> Decimal
+ """Free stock in ERP,StockOnShelf - Assigned
+
+Get: StockFreeInErp(self: ItemStockTotals) -> Decimal
 
 Set: StockFreeInErp(self: ItemStockTotals)=value
 """
 
  StockOnShelf=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StockOnShelf(self: ItemStockTotals) -> Decimal
+ """Stock on shelf in ERP
+
+Get: StockOnShelf(self: ItemStockTotals) -> Decimal
 
 Set: StockOnShelf(self: ItemStockTotals)=value
 """
@@ -2723,6 +3619,11 @@ class ItemStockWithAllocations:
  ItemStockWithAllocations()
  ItemStockWithAllocations(stock: ItemStock)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemStockWithAllocations()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddAllocations(self,allocations):
   """ AddAllocations(self: ItemStockWithAllocations,allocations: List[ItemStockAllocation]) -> bool """
   pass
@@ -2744,27 +3645,38 @@ class ItemStockWithAllocations:
 """
 
  Allocations=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Allocations(self: ItemStockWithAllocations) -> ItemStockAllocationList
+ """
+
+Get: Allocations(self: ItemStockWithAllocations) -> ItemStockAllocationList
 
 Set: Allocations(self: ItemStockWithAllocations)=value
 """
 
  HasAllocationsWithoutBatches=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HasAllocationsWithoutBatches(self: ItemStockWithAllocations) -> bool
+ """
+
+Get: HasAllocationsWithoutBatches(self: ItemStockWithAllocations) -> bool
 
 Set: HasAllocationsWithoutBatches(self: ItemStockWithAllocations)=value
 """
 
  QuantityAllocated=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityAllocated(self: ItemStockWithAllocations) -> Decimal
+ """
+
+Get: QuantityAllocated(self: ItemStockWithAllocations) -> Decimal
 
 Set: QuantityAllocated(self: ItemStockWithAllocations)=value
 """
 
 
 
-class ItemStockWithAllocationsList:
+class ItemStockWithAllocationsList(FindableList):
  """ ItemStockWithAllocationsList() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemStockWithAllocationsList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(allocations):
   """ FromIEnumerable(allocations: IEnumerable[ItemStockWithAllocations]) -> ItemStockWithAllocationsList """
@@ -2784,15 +3696,23 @@ class ItemStockWithAllocationsList:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: ItemStockWithAllocationsList) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: ItemStockWithAllocationsList) -> Int64
 
 Set: TotalRowsMatched(self: ItemStockWithAllocationsList)=value
 """
 
 
 
-class ItemStockWithLocations:
+class ItemStockWithLocations(object):
  """ ItemStockWithLocations() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemStockWithLocations()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  BeginDate=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: BeginDate(self: ItemStockWithLocations) -> DateTime
 
@@ -2839,6 +3759,11 @@ Set: WarehouseCode(self: ItemStockWithLocations)=value
 
 class ItemTypeEnum:
  """ enum ItemTypeEnum,values: LicensePlate (1),Regular (0) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemTypeEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -2867,125 +3792,174 @@ class ItemTypeEnum:
  value__=None
 
 
-class LicensePlate:
+class LicensePlate(DbObject):
  """ LicensePlate() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LicensePlate()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  def __reduce_ex__(self,*args):
   pass
  BestBeforeDate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BestBeforeDate(self: LicensePlate) -> Nullable[DateTime]
+ """
+
+Get: BestBeforeDate(self: LicensePlate) -> Nullable[DateTime]
 
 Set: BestBeforeDate(self: LicensePlate)=value
 """
 
  Code=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Code(self: LicensePlate) -> str
+ """
+
+Get: Code(self: LicensePlate) -> str
 
 Set: Code(self: LicensePlate)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: LicensePlate) -> str
+ """
+
+Get: Description(self: LicensePlate) -> str
 
 Set: Description(self: LicensePlate)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: LicensePlate) -> int
+ """
+
+Get: Id(self: LicensePlate) -> int
 
 Set: Id(self: LicensePlate)=value
 """
 
  LocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LocationCode(self: LicensePlate) -> str
+ """
+
+Get: LocationCode(self: LicensePlate) -> str
 
 Set: LocationCode(self: LicensePlate)=value
 """
 
  NoOfItems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NoOfItems(self: LicensePlate) -> int
+ """
+
+Get: NoOfItems(self: LicensePlate) -> int
 
 Set: NoOfItems(self: LicensePlate)=value
 """
 
  Reference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Reference(self: LicensePlate) -> str
+ """
+
+Get: Reference(self: LicensePlate) -> str
 
 Set: Reference(self: LicensePlate)=value
 """
 
  Status=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Status(self: LicensePlate) -> LicensePlateStatusEnum
+ """
+
+Get: Status(self: LicensePlate) -> LicensePlateStatusEnum
 
 Set: Status(self: LicensePlate)=value
 """
 
  StatusAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StatusAsString(self: LicensePlate) -> str
+ """
+
+Get: StatusAsString(self: LicensePlate) -> str
 
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: LicensePlate) -> str
+ """
+
+Get: WarehouseCode(self: LicensePlate) -> str
 
 Set: WarehouseCode(self: LicensePlate)=value
 """
 
 
 
-class LicensePlateAuditLog:
+class LicensePlateAuditLog(DbObject):
  """ LicensePlateAuditLog() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LicensePlateAuditLog()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  def __reduce_ex__(self,*args):
   pass
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: LicensePlateAuditLog) -> str
+ """
+
+Get: Description(self: LicensePlateAuditLog) -> str
 
 Set: Description(self: LicensePlateAuditLog)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: LicensePlateAuditLog) -> int
+ """
+
+Get: Id(self: LicensePlateAuditLog) -> int
 
 Set: Id(self: LicensePlateAuditLog)=value
 """
 
  LicensePlateId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LicensePlateId(self: LicensePlateAuditLog) -> int
+ """
+
+Get: LicensePlateId(self: LicensePlateAuditLog) -> int
 
 Set: LicensePlateId(self: LicensePlateAuditLog)=value
 """
 
  NewStatus=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NewStatus(self: LicensePlateAuditLog) -> LicensePlateStatusEnum
+ """
+
+Get: NewStatus(self: LicensePlateAuditLog) -> LicensePlateStatusEnum
 
 Set: NewStatus(self: LicensePlateAuditLog)=value
 """
 
  NewStatusAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NewStatusAsString(self: LicensePlateAuditLog) -> str
+ """
+
+Get: NewStatusAsString(self: LicensePlateAuditLog) -> str
 
 """
 
  OldStatus=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OldStatus(self: LicensePlateAuditLog) -> Nullable[LicensePlateStatusEnum]
+ """
+
+Get: OldStatus(self: LicensePlateAuditLog) -> Nullable[LicensePlateStatusEnum]
 
 Set: OldStatus(self: LicensePlateAuditLog)=value
 """
 
  OldStatusAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OldStatusAsString(self: LicensePlateAuditLog) -> str
+ """
+
+Get: OldStatusAsString(self: LicensePlateAuditLog) -> str
 
 """
 
 
 
-class LicensePlateAuditLogs:
+class LicensePlateAuditLogs(FindableList):
  """ LicensePlateAuditLogs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LicensePlateAuditLogs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -3001,7 +3975,10 @@ class LicensePlateAuditLogs:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: LicensePlateAuditLogs) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: LicensePlateAuditLogs) -> Int64
 
 Set: TotalRowsMatched(self: LicensePlateAuditLogs)=value
 """
@@ -3011,99 +3988,140 @@ Set: TotalRowsMatched(self: LicensePlateAuditLogs)=value
  ValueMember=None
 
 
-class LicensePlateBarcodeStructureInfo:
+class LicensePlateBarcodeStructureInfo(object):
  """ LicensePlateBarcodeStructureInfo() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LicensePlateBarcodeStructureInfo()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  BestBeforeDate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BestBeforeDate(self: LicensePlateBarcodeStructureInfo) -> Nullable[DateTime]
+ """
+
+Get: BestBeforeDate(self: LicensePlateBarcodeStructureInfo) -> Nullable[DateTime]
 
 Set: BestBeforeDate(self: LicensePlateBarcodeStructureInfo)=value
 """
 
  Code=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Code(self: LicensePlateBarcodeStructureInfo) -> str
+ """
+
+Get: Code(self: LicensePlateBarcodeStructureInfo) -> str
 
 Set: Code(self: LicensePlateBarcodeStructureInfo)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: LicensePlateBarcodeStructureInfo) -> str
+ """
+
+Get: Description(self: LicensePlateBarcodeStructureInfo) -> str
 
 Set: Description(self: LicensePlateBarcodeStructureInfo)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: LicensePlateBarcodeStructureInfo) -> int
+ """
+
+Get: Id(self: LicensePlateBarcodeStructureInfo) -> int
 
 Set: Id(self: LicensePlateBarcodeStructureInfo)=value
 """
 
  NoOfItems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NoOfItems(self: LicensePlateBarcodeStructureInfo) -> int
+ """
+
+Get: NoOfItems(self: LicensePlateBarcodeStructureInfo) -> int
 
 Set: NoOfItems(self: LicensePlateBarcodeStructureInfo)=value
 """
 
 
 
-class LicensePlateItem:
+class LicensePlateItem(DbObject):
  """ LicensePlateItem() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LicensePlateItem()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  def __reduce_ex__(self,*args):
   pass
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: LicensePlateItem) -> int
+ """
+
+Get: Id(self: LicensePlateItem) -> int
 
 Set: Id(self: LicensePlateItem)=value
 """
 
  IsBatchItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsBatchItem(self: LicensePlateItem) -> bool
+ """
+
+Get: IsBatchItem(self: LicensePlateItem) -> bool
 
 Set: IsBatchItem(self: LicensePlateItem)=value
 """
 
  IsSerialItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsSerialItem(self: LicensePlateItem) -> bool
+ """
+
+Get: IsSerialItem(self: LicensePlateItem) -> bool
 
 Set: IsSerialItem(self: LicensePlateItem)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: LicensePlateItem) -> str
+ """
+
+Get: ItemCode(self: LicensePlateItem) -> str
 
 Set: ItemCode(self: LicensePlateItem)=value
 """
 
  ItemDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemDescription(self: LicensePlateItem) -> str
+ """
+
+Get: ItemDescription(self: LicensePlateItem) -> str
 
 Set: ItemDescription(self: LicensePlateItem)=value
 """
 
  ItemId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemId(self: LicensePlateItem) -> str
+ """
+
+Get: ItemId(self: LicensePlateItem) -> str
 
 Set: ItemId(self: LicensePlateItem)=value
 """
 
  LicensePlateId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LicensePlateId(self: LicensePlateItem) -> int
+ """
+
+Get: LicensePlateId(self: LicensePlateItem) -> int
 
 Set: LicensePlateId(self: LicensePlateItem)=value
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: LicensePlateItem) -> Decimal
+ """
+
+Get: Quantity(self: LicensePlateItem) -> Decimal
 
 Set: Quantity(self: LicensePlateItem)=value
 """
 
 
 
-class LicensePlateItems:
+class LicensePlateItems(FindableList):
  """ LicensePlateItems() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LicensePlateItems()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -3119,7 +4137,10 @@ class LicensePlateItems:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: LicensePlateItems) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: LicensePlateItems) -> Int64
 
 Set: TotalRowsMatched(self: LicensePlateItems)=value
 """
@@ -3129,8 +4150,17 @@ Set: TotalRowsMatched(self: LicensePlateItems)=value
  ValueMember='Id'
 
 
-class LicensePlates:
- """ LicensePlates() """
+class LicensePlates(FindableList):
+ """
+ Container for the Wms.RemotingObjects.Inventory.LicensePlate objects.
+ 
+ LicensePlates()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LicensePlates()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -3146,7 +4176,10 @@ class LicensePlates:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: LicensePlates) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: LicensePlates) -> Int64
 
 Set: TotalRowsMatched(self: LicensePlates)=value
 """
@@ -3158,6 +4191,11 @@ Set: TotalRowsMatched(self: LicensePlates)=value
 
 class LicensePlateStatusEnum:
  """ enum (flags) LicensePlateStatusEnum,values: Active (1),Archived (16),Broken (8),Inactive (4),InTransfer (32),Pending (2) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LicensePlateStatusEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -3192,47 +4230,73 @@ class LicensePlateStatusEnum:
 
 class LocationItem:
  """ LocationItem() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LocationItem()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  def __reduce_ex__(self,*args):
   pass
  ItemDefaultLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemDefaultLocation(self: LocationItem) -> str
+ """
+
+Get: ItemDefaultLocation(self: LocationItem) -> str
 
 Set: ItemDefaultLocation(self: LocationItem)=value
 """
 
  ItemsOnStock=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemsOnStock(self: LocationItem) -> Decimal
+ """
+
+Get: ItemsOnStock(self: LocationItem) -> Decimal
 
 """
 
  ItemStock=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemStock(self: LocationItem) -> ItemStockLocation
+ """
+
+Get: ItemStock(self: LocationItem) -> ItemStockLocation
 
 Set: ItemStock(self: LocationItem)=value
 """
 
  ItemStockLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemStockLocation(self: LocationItem) -> str
+ """
+
+Get: ItemStockLocation(self: LocationItem) -> str
 
 """
 
  ItemStockWarehouse=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemStockWarehouse(self: LocationItem) -> str
+ """
+
+Get: ItemStockWarehouse(self: LocationItem) -> str
 
 """
 
  UniqueId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UniqueId(self: LocationItem) -> str
+ """
+
+Get: UniqueId(self: LocationItem) -> str
 
 """
 
 
 
-class LocationItems:
- """ LocationItems() """
+class LocationItems(FindableList):
+ """
+ Container for the Wms.RemotingObjects.Inventory.Item objects.
+ 
+ LocationItems()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LocationItems()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -3248,7 +4312,9 @@ class LocationItems:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: LocationItems) -> Int64
+ """
+
+Get: TotalRowsMatched(self: LocationItems) -> Int64
 
 Set: TotalRowsMatched(self: LocationItems)=value
 """
@@ -3260,7 +4326,18 @@ Set: TotalRowsMatched(self: LocationItems)=value
 
 
 class LocationPickTypeEnum:
- """ enum (flags) LocationPickTypeEnum,values: Bulk (1),Pick (0),Unspecified (2) """
+ """
+ !!!!!!!! IMPORTANT !!!!!!!!!!!
+     Do not change ordering of these values because they have an imported
+     role in sorting the location @ pick batch generation.
+ 
+ enum (flags) LocationPickTypeEnum,values: Bulk (1),Pick (0),Unspecified (2)
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LocationPickTypeEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -3290,8 +4367,13 @@ class LocationPickTypeEnum:
  value__=None
 
 
-class LocationPickTypeEnumExtensions:
- # no doc
+class LocationPickTypeEnumExtensions(object):
+ """  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LocationPickTypeEnumExtensions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def IsTypeInValue(val,type):
   """ IsTypeInValue(val: LocationPickTypeEnum,type: LocationPickTypeEnum) -> bool """
@@ -3301,8 +4383,13 @@ class LocationPickTypeEnumExtensions:
  ]
 
 
-class Locations:
+class Locations(FindableList):
  """ Locations() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Locations()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromItemLocations(itemLocations):
   """ FromItemLocations(itemLocations: ItemLocations) -> Locations """
@@ -3322,7 +4409,9 @@ class Locations:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: Locations) -> Int64
+ """
+
+Get: TotalRowsMatched(self: Locations) -> Int64
 
 Set: TotalRowsMatched(self: Locations)=value
 """
@@ -3333,8 +4422,13 @@ Set: TotalRowsMatched(self: Locations)=value
  ValueMember='Code'
 
 
-class LocationsBase:
- # no doc
+class LocationsBase(FindableList):
+ """  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LocationsBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -3351,7 +4445,12 @@ class LocationsBase:
   pass
 
 class LocationTypeEnum:
- """ enum LocationTypeEnum,values: FixedItemLocation (1),MultipleItemLocation (0),VariableItemLocation (2) """
+ """ enum LocationTypeEnum,values: FixedItemLocation (1),MultipleItemLocation (0),Unspecified (3),VariableItemLocation (2) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LocationTypeEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -3377,74 +4476,108 @@ class LocationTypeEnum:
   pass
  FixedItemLocation=None
  MultipleItemLocation=None
+ Unspecified=None
  value__=None
  VariableItemLocation=None
 
 
-class LpLocationItem:
+class LpLocationItem(object):
  """ LpLocationItem() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LpLocationItem()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  IsBatchItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsBatchItem(self: LpLocationItem) -> bool
+ """
+
+Get: IsBatchItem(self: LpLocationItem) -> bool
 
 Set: IsBatchItem(self: LpLocationItem)=value
 """
 
  IsSerialItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsSerialItem(self: LpLocationItem) -> bool
+ """
+
+Get: IsSerialItem(self: LpLocationItem) -> bool
 
 Set: IsSerialItem(self: LpLocationItem)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: LpLocationItem) -> str
+ """
+
+Get: ItemCode(self: LpLocationItem) -> str
 
 Set: ItemCode(self: LpLocationItem)=value
 """
 
  ItemDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemDescription(self: LpLocationItem) -> str
+ """
+
+Get: ItemDescription(self: LpLocationItem) -> str
 
 Set: ItemDescription(self: LpLocationItem)=value
 """
 
  ItemId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemId(self: LpLocationItem) -> str
+ """
+
+Get: ItemId(self: LpLocationItem) -> str
 
 Set: ItemId(self: LpLocationItem)=value
 """
 
  QuantityToAdd=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityToAdd(self: LpLocationItem) -> Decimal
+ """
+
+Get: QuantityToAdd(self: LpLocationItem) -> Decimal
 
 Set: QuantityToAdd(self: LpLocationItem)=value
 """
 
  Stock=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Stock(self: LpLocationItem) -> Decimal
+ """
+
+Get: Stock(self: LpLocationItem) -> Decimal
 
 Set: Stock(self: LpLocationItem)=value
 """
 
 
 
-class PrintLicensePlateLabelArgs:
+class PrintLicensePlateLabelArgs(PrintBaseArgs):
  """ PrintLicensePlateLabelArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintLicensePlateLabelArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  LabelName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LabelName(self: PrintLicensePlateLabelArgs) -> str
+ """
+
+Get: LabelName(self: PrintLicensePlateLabelArgs) -> str
 
 Set: LabelName(self: PrintLicensePlateLabelArgs)=value
 """
 
  LicensePlateId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LicensePlateId(self: PrintLicensePlateLabelArgs) -> int
+ """
+
+Get: LicensePlateId(self: PrintLicensePlateLabelArgs) -> int
 
 Set: LicensePlateId(self: PrintLicensePlateLabelArgs)=value
 """
 
 
 
-class ProcessWarehouseTransferArgs:
+class ProcessWarehouseTransferArgs(object):
  """ ProcessWarehouseTransferArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessWarehouseTransferArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CacheKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: CacheKey(self: ProcessWarehouseTransferArgs) -> CacheKey
 
@@ -3459,8 +4592,13 @@ Set: CustomReference(self: ProcessWarehouseTransferArgs)=value
 
 
 
-class ReplenishmentOrder:
+class ReplenishmentOrder(OutboundOrder):
  """ ReplenishmentOrder() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReplenishmentOrder()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: ReplenishmentOrder) -> object """
   pass
@@ -3470,62 +4608,90 @@ class ReplenishmentOrder:
  def __reduce_ex__(self,*args):
   pass
  Approved=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Approved(self: ReplenishmentOrder) -> bool
+ """
+
+Get: Approved(self: ReplenishmentOrder) -> bool
 
 Set: Approved(self: ReplenishmentOrder)=value
 """
 
  Number=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Number(self: ReplenishmentOrder) -> str
+ """
+
+Get: Number(self: ReplenishmentOrder) -> str
 
 Set: Number(self: ReplenishmentOrder)=value
 """
 
  ReplenishToLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReplenishToLocation(self: ReplenishmentOrder) -> Location
+ """
+
+Get: ReplenishToLocation(self: ReplenishmentOrder) -> Location
 
 Set: ReplenishToLocation(self: ReplenishmentOrder)=value
 """
 
  ReplenishToLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReplenishToLocationCode(self: ReplenishmentOrder) -> str
+ """
+
+Get: ReplenishToLocationCode(self: ReplenishmentOrder) -> str
 
 """
 
  ReplenishToWarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReplenishToWarehouseCode(self: ReplenishmentOrder) -> str
+ """
+
+Get: ReplenishToWarehouseCode(self: ReplenishmentOrder) -> str
 
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Type(self: ReplenishmentOrder) -> OutboundOrderTypeEnum
+ """
+
+Get: Type(self: ReplenishmentOrder) -> OutboundOrderTypeEnum
 
 """
 
 
 
-class ReplenishmentOrderLine:
+class ReplenishmentOrderLine(OutboundOrderLine):
  """ ReplenishmentOrderLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReplenishmentOrderLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  def __reduce_ex__(self,*args):
   pass
  OrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumber(self: ReplenishmentOrderLine) -> str
+ """for Replenishment orders,this is an auto-property. When converting sales orders to
+   replenishment orders,you will want to set the ordernumber explicitly to make sure joins will
+   return results.
+
+Get: OrderNumber(self: ReplenishmentOrderLine) -> str
 
 Set: OrderNumber(self: ReplenishmentOrderLine)=value
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Type(self: ReplenishmentOrderLine) -> OutboundOrderTypeEnum
+ """
+
+Get: Type(self: ReplenishmentOrderLine) -> OutboundOrderTypeEnum
 
 """
 
 
 
-class ReplenishmentOrderLines:
+class ReplenishmentOrderLines(OutboundOrderLines):
  """ ReplenishmentOrderLines() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReplenishmentOrderLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(list):
   """
@@ -3548,15 +4714,22 @@ class ReplenishmentOrderLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: ReplenishmentOrderLines) -> Int64
+ """
+
+Get: TotalRowsMatched(self: ReplenishmentOrderLines) -> Int64
 
 Set: TotalRowsMatched(self: ReplenishmentOrderLines)=value
 """
 
 
 
-class ReplenishmentOrders:
+class ReplenishmentOrders(OutboundOrders):
  """ ReplenishmentOrders() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReplenishmentOrders()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(list):
   """ FromIEnumerable(list: IEnumerable[OutboundOrder]) -> ReplenishmentOrders """
@@ -3576,111 +4749,159 @@ class ReplenishmentOrders:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
 
-class Warehouse:
- """ Warehouse() """
+class Warehouse(object):
+ """
+ Represents a single warehouse. Contains all general information of a warehouse.
+ 
+ Warehouse()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Warehouse()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Active=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Active(self: Warehouse) -> bool
+ """
+
+Get: Active(self: Warehouse) -> bool
 
 Set: Active(self: Warehouse)=value
 """
 
  AddressLine1=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AddressLine1(self: Warehouse) -> str
+ """
+
+Get: AddressLine1(self: Warehouse) -> str
 
 Set: AddressLine1(self: Warehouse)=value
 """
 
  AddressLine2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AddressLine2(self: Warehouse) -> str
+ """
+
+Get: AddressLine2(self: Warehouse) -> str
 
 Set: AddressLine2(self: Warehouse)=value
 """
 
  AddressLine3=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AddressLine3(self: Warehouse) -> str
+ """
+
+Get: AddressLine3(self: Warehouse) -> str
 
 Set: AddressLine3(self: Warehouse)=value
 """
 
  City=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: City(self: Warehouse) -> str
+ """
+
+Get: City(self: Warehouse) -> str
 
 Set: City(self: Warehouse)=value
 """
 
  Code=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Code(self: Warehouse) -> str
+ """
+
+Get: Code(self: Warehouse) -> str
 
 Set: Code(self: Warehouse)=value
 """
 
  Contact=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Contact(self: Warehouse) -> str
+ """
+
+Get: Contact(self: Warehouse) -> str
 
 Set: Contact(self: Warehouse)=value
 """
 
  ContactEmail=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ContactEmail(self: Warehouse) -> str
+ """
+
+Get: ContactEmail(self: Warehouse) -> str
 
 Set: ContactEmail(self: Warehouse)=value
 """
 
  CountryCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CountryCode(self: Warehouse) -> str
+ """
+
+Get: CountryCode(self: Warehouse) -> str
 
 Set: CountryCode(self: Warehouse)=value
 """
 
  CountryName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CountryName(self: Warehouse) -> str
+ """
+
+Get: CountryName(self: Warehouse) -> str
 
 Set: CountryName(self: Warehouse)=value
 """
 
  DefaultInboundLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultInboundLocation(self: Warehouse) -> str
+ """
+
+Get: DefaultInboundLocation(self: Warehouse) -> str
 
 Set: DefaultInboundLocation(self: Warehouse)=value
 """
 
  DefaultOutboundLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultOutboundLocation(self: Warehouse) -> str
+ """
+
+Get: DefaultOutboundLocation(self: Warehouse) -> str
 
 Set: DefaultOutboundLocation(self: Warehouse)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: Warehouse) -> str
+ """
+
+Get: Description(self: Warehouse) -> str
 
 Set: Description(self: Warehouse)=value
 """
 
  PhoneNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PhoneNumber(self: Warehouse) -> str
+ """
+
+Get: PhoneNumber(self: Warehouse) -> str
 
 Set: PhoneNumber(self: Warehouse)=value
 """
 
  State=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: State(self: Warehouse) -> str
+ """
+
+Get: State(self: Warehouse) -> str
 
 Set: State(self: Warehouse)=value
 """
 
  Zipcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Zipcode(self: Warehouse) -> str
+ """
+
+Get: Zipcode(self: Warehouse) -> str
 
 Set: Zipcode(self: Warehouse)=value
 """
 
 
 
-class Warehouses:
+class Warehouses(FindableList):
  """
+ Container for the Wms.RemotingObjects.Inventory.Warehouse objects.
+ 
  Warehouses()
  Warehouses(filterWarehouses: IEnumerable[Warehouse])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Warehouses()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -3706,8 +4927,17 @@ class Warehouses:
  ValueMember='Code'
 
 
-class WarehouseTransfer:
- """ WarehouseTransfer() """
+class WarehouseTransfer(CacheObject):
+ """
+ Used when an item is transferred from one locaction to another location.
+ 
+ WarehouseTransfer()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WarehouseTransfer()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHashCode(self):
   """ GetHashCode(self: WarehouseTransfer) -> int """
   pass
@@ -3717,58 +4947,79 @@ class WarehouseTransfer:
  def __reduce_ex__(self,*args):
   pass
  BatchId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BatchId(self: WarehouseTransfer) -> Guid
+ """
+
+Get: BatchId(self: WarehouseTransfer) -> Guid
 
 Set: BatchId(self: WarehouseTransfer)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: WarehouseTransfer) -> str
+ """
+
+Get: Description(self: WarehouseTransfer) -> str
 
 Set: Description(self: WarehouseTransfer)=value
 """
 
  GroupGuid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupGuid(self: WarehouseTransfer) -> Guid
+ """
+
+Get: GroupGuid(self: WarehouseTransfer) -> Guid
 
 """
 
  Items=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Items(self: WarehouseTransfer) -> WarehouseTransferItems
+ """
+
+Get: Items(self: WarehouseTransfer) -> WarehouseTransferItems
 
 """
 
  Lifetime=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Lifetime(self: WarehouseTransfer) -> CacheLifeTimes
+ """
+
+Get: Lifetime(self: WarehouseTransfer) -> CacheLifeTimes
 
 """
 
  LocationFrom=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LocationFrom(self: WarehouseTransfer) -> Location
+ """
+
+Get: LocationFrom(self: WarehouseTransfer) -> Location
 
 Set: LocationFrom(self: WarehouseTransfer)=value
 """
 
  LocationTo=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LocationTo(self: WarehouseTransfer) -> Location
+ """
+
+Get: LocationTo(self: WarehouseTransfer) -> Location
 
 Set: LocationTo(self: WarehouseTransfer)=value
 """
 
  ValidateTransferWithStockManager=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ValidateTransferWithStockManager(self: WarehouseTransfer) -> bool
+ """Indicates if the transfer quantity should be validated with the allocated stock in the stockmanager.
+   Default is 'True'.
+
+Get: ValidateTransferWithStockManager(self: WarehouseTransfer) -> bool
 
 Set: ValidateTransferWithStockManager(self: WarehouseTransfer)=value
 """
 
  WarehouseCodeFrom=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCodeFrom(self: WarehouseTransfer) -> str
+ """
+
+Get: WarehouseCodeFrom(self: WarehouseTransfer) -> str
 
 Set: WarehouseCodeFrom(self: WarehouseTransfer)=value
 """
 
  WarehouseCodeTo=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCodeTo(self: WarehouseTransfer) -> str
+ """
+
+Get: WarehouseCodeTo(self: WarehouseTransfer) -> str
 
 Set: WarehouseCodeTo(self: WarehouseTransfer)=value
 """
@@ -3778,52 +5029,73 @@ Set: WarehouseCodeTo(self: WarehouseTransfer)=value
  Type=None
 
 
-class WarehouseTransferItem:
+class WarehouseTransferItem(object):
  """ WarehouseTransferItem() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WarehouseTransferItem()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: WarehouseTransferItem) -> str
+ """
+
+Get: Description(self: WarehouseTransferItem) -> str
 
 Set: Description(self: WarehouseTransferItem)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: WarehouseTransferItem) -> str
+ """
+
+Get: ItemCode(self: WarehouseTransferItem) -> str
 
 Set: ItemCode(self: WarehouseTransferItem)=value
 """
 
  ItemType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemType(self: WarehouseTransferItem) -> ItemTypeEnum
+ """
+
+Get: ItemType(self: WarehouseTransferItem) -> ItemTypeEnum
 
 Set: ItemType(self: WarehouseTransferItem)=value
 """
 
  LocationFrom=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LocationFrom(self: WarehouseTransferItem) -> Location
+ """
+
+Get: LocationFrom(self: WarehouseTransferItem) -> Location
 
 Set: LocationFrom(self: WarehouseTransferItem)=value
 """
 
  LocationTo=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LocationTo(self: WarehouseTransferItem) -> Location
+ """
+
+Get: LocationTo(self: WarehouseTransferItem) -> Location
 
 Set: LocationTo(self: WarehouseTransferItem)=value
 """
 
  NewQuantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NewQuantity(self: WarehouseTransferItem) -> Decimal
+ """
+
+Get: NewQuantity(self: WarehouseTransferItem) -> Decimal
 
 Set: NewQuantity(self: WarehouseTransferItem)=value
 """
 
  Parent=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Parent(self: WarehouseTransferItem) -> WarehouseTransfer
+ """
+
+Get: Parent(self: WarehouseTransferItem) -> WarehouseTransfer
 
 Set: Parent(self: WarehouseTransferItem)=value
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: WarehouseTransferItem) -> Decimal
+ """
+
+Get: Quantity(self: WarehouseTransferItem) -> Decimal
 
 Set: Quantity(self: WarehouseTransferItem)=value
 """
@@ -3833,11 +5105,16 @@ Set: Quantity(self: WarehouseTransferItem)=value
  ProcessDate=None
 
 
-class WarehouseTransferItems:
+class WarehouseTransferItems(List):
  """
  WarehouseTransferItems()
  WarehouseTransferItems(parent: WarehouseTransfer)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WarehouseTransferItems()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,item):
   """ Add(self: WarehouseTransferItems,item: WarehouseTransferItem) """
   pass
@@ -3877,6 +5154,11 @@ class WarehouseTransferItems:
 
 class WarehouseTransferType:
  """ enum WarehouseTransferType,values: DirectTransfer (3),InterBranch (1),LicensePlateItems (2),Normal (0) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WarehouseTransferType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

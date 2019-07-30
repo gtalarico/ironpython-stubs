@@ -1,18 +1,20 @@
-class EventLogPermissionAttribute:
+class EventLogPermissionAttribute(CodeAccessSecurityAttribute):
  """
  Allows declaritive permission checks for event logging.
  
  EventLogPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EventLogPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
   CreatePermission(self: EventLogPermissionAttribute) -> IPermission
   
-   Creates the permission based on the 
-    System.Diagnostics.EventLogPermissionAttribute.MachineName property and the requested 
-    access levels that are set through the 
-    System.Diagnostics.EventLogPermissionAttribute.PermissionAccess property on the 
-    attribute.
+   Creates the permission based on the System.Diagnostics.EventLogPermissionAttribute.MachineName property and the requested access levels that are set through the 
+    System.Diagnostics.EventLogPermissionAttribute.PermissionAccess property on the attribute.
   
    Returns: An System.Security.IPermission that represents the created permission.
   """

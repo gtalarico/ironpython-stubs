@@ -1,4 +1,4 @@
-class Icon:
+class Icon(MarshalByRefObject,ISerializable,ICloneable,IDisposable):
  """
  Represents a Windows icon,which is a small bitmap image that is used to represent an object. Icons can be thought of as transparent bitmaps,although their size is determined by the system.
  
@@ -12,6 +12,10 @@ class Icon:
  Icon(fileName: str,width: int,height: int)
  Icon(stream: Stream,size: Size)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Icon()
+
  def Clone(self):
   """
   Clone(self: Icon) -> object
@@ -34,8 +38,7 @@ class Icon:
    Returns an icon representation of an image that is contained in the specified file.
   
    filePath: The path to the file that contains an image.
-   Returns: The System.Drawing.Icon representation of the image that is contained in the specified 
-    file.
+   Returns: The System.Drawing.Icon representation of the image that is contained in the specified file.
   """
   pass
  @staticmethod
@@ -55,12 +58,7 @@ class Icon:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   

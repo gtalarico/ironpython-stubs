@@ -1,9 +1,13 @@
-class KeyPressEventArgs:
+class KeyPressEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.Control.KeyPress event.
  
  KeyPressEventArgs(keyChar: Char)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return KeyPressEventArgs()
+
  @staticmethod
  def __new__(self,keyChar):
   """ __new__(cls: type,keyChar: Char) """

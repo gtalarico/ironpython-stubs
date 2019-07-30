@@ -1,57 +1,45 @@
-class RectangleF:
+class RectangleF(object):
  """
  Stores a set of four floating-point numbers that represent the location and size of a rectangle. For more advanced region functions,use a System.Drawing.Region object.
  
  RectangleF(x: Single,y: Single,width: Single,height: Single)
  RectangleF(location: PointF,size: SizeF)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return RectangleF()
+
  def Contains(self,*__args):
   """
   Contains(self: RectangleF,x: Single,y: Single) -> bool
   
-   Determines if the specified point is contained within this System.Drawing.RectangleF 
-    structure.
-  
+   Determines if the specified point is contained within this System.Drawing.RectangleF structure.
   
    x: The x-coordinate of the point to test.
    y: The y-coordinate of the point to test.
-   Returns: This method returns true if the point defined by x and y is contained within this 
-    System.Drawing.RectangleF structure; otherwise false.
-  
+   Returns: This method returns true if the point defined by x and y is contained within this System.Drawing.RectangleF structure; otherwise false.
   Contains(self: RectangleF,pt: PointF) -> bool
   
-   Determines if the specified point is contained within this System.Drawing.RectangleF 
-    structure.
-  
+   Determines if the specified point is contained within this System.Drawing.RectangleF structure.
   
    pt: The System.Drawing.PointF to test.
-   Returns: This method returns true if the point represented by the pt parameter is contained within 
-    this System.Drawing.RectangleF structure; otherwise false.
-  
+   Returns: This method returns true if the point represented by the pt parameter is contained within this System.Drawing.RectangleF structure; otherwise false.
   Contains(self: RectangleF,rect: RectangleF) -> bool
   
-   Determines if the rectangular region represented by rect is entirely contained within 
-    this System.Drawing.RectangleF structure.
-  
+   Determines if the rectangular region represented by rect is entirely contained within this System.Drawing.RectangleF structure.
   
    rect: The System.Drawing.RectangleF to test.
-   Returns: This method returns true if the rectangular region represented by rect is entirely 
-    contained within the rectangular region represented by this System.Drawing.RectangleF; 
-    otherwise false.
+   Returns: This method returns true if the rectangular region represented by rect is entirely contained within the rectangular region represented by this System.Drawing.RectangleF; otherwise false.
   """
   pass
  def Equals(self,obj):
   """
   Equals(self: RectangleF,obj: object) -> bool
   
-   Tests whether obj is a System.Drawing.RectangleF with the same location and size of this 
-    System.Drawing.RectangleF.
-  
+   Tests whether obj is a System.Drawing.RectangleF with the same location and size of this System.Drawing.RectangleF.
   
    obj: The System.Object to test.
-   Returns: This method returns true if obj is a System.Drawing.RectangleF and its X,Y,Width,and 
-    Height properties are equal to the corresponding properties of this 
-    System.Drawing.RectangleF; otherwise,false.
+   Returns: This method returns true if obj is a System.Drawing.RectangleF and its X,Y,Width,and Height properties are equal to the corresponding properties of this System.Drawing.RectangleF; otherwise,false.
   """
   pass
  @staticmethod
@@ -59,9 +47,7 @@ class RectangleF:
   """
   FromLTRB(left: Single,top: Single,right: Single,bottom: Single) -> RectangleF
   
-   Creates a System.Drawing.RectangleF structure with upper-left corner and lower-right 
-    corner at the specified locations.
-  
+   Creates a System.Drawing.RectangleF structure with upper-left corner and lower-right corner at the specified locations.
   
    left: The x-coordinate of the upper-left corner of the rectangular region.
    top: The y-coordinate of the upper-left corner of the rectangular region.
@@ -74,9 +60,7 @@ class RectangleF:
   """
   GetHashCode(self: RectangleF) -> int
   
-   Gets the hash code for this System.Drawing.RectangleF structure. For information about 
-    the use of hash codes,see Object.GetHashCode.
-  
+   Gets the hash code for this System.Drawing.RectangleF structure. For information about the use of hash codes,see Object.GetHashCode.
    Returns: The hash code for this System.Drawing.RectangleF.
   """
   pass
@@ -93,10 +77,7 @@ class RectangleF:
    size: The amount to inflate this rectangle.
   Inflate(rect: RectangleF,x: Single,y: Single) -> RectangleF
   
-   Creates and returns an enlarged copy of the specified System.Drawing.RectangleF 
-    structure. The copy is enlarged by the specified amount and the original rectangle 
-    remains unmodified.
-  
+   Creates and returns an enlarged copy of the specified System.Drawing.RectangleF structure. The copy is enlarged by the specified amount and the original rectangle remains unmodified.
   
    rect: The System.Drawing.RectangleF to be copied. This rectangle is not modified.
    x: The amount to enlarge the copy of the rectangle horizontally.
@@ -107,21 +88,16 @@ class RectangleF:
  def Intersect(self,*__args):
   """
   Intersect(self: RectangleF,rect: RectangleF)
-   Replaces this System.Drawing.RectangleF structure with the intersection of itself and the 
-    specified System.Drawing.RectangleF structure.
-  
+   Replaces this System.Drawing.RectangleF structure with the intersection of itself and the specified System.Drawing.RectangleF structure.
   
    rect: The rectangle to intersect.
   Intersect(a: RectangleF,b: RectangleF) -> RectangleF
   
-   Returns a System.Drawing.RectangleF structure that represents the intersection of two 
-    rectangles. If there is no intersection,and empty System.Drawing.RectangleF is returned.
-  
+   Returns a System.Drawing.RectangleF structure that represents the intersection of two rectangles. If there is no intersection,and empty System.Drawing.RectangleF is returned.
   
    a: A rectangle to intersect.
    b: A rectangle to intersect.
-   Returns: A third System.Drawing.RectangleF structure the size of which represents the overlapped 
-    area of the two specified rectangles.
+   Returns: A third System.Drawing.RectangleF structure the size of which represents the overlapped area of the two specified rectangles.
   """
   pass
  def IntersectsWith(self,rect):
@@ -151,11 +127,8 @@ class RectangleF:
   """
   ToString(self: RectangleF) -> str
   
-   Converts the Location and System.Drawing.Size of this System.Drawing.RectangleF to a 
-    human-readable string.
-  
-   Returns: A string that contains the position,width,and height of this System.Drawing.RectangleF 
-    structure. For example,"{X=20,Y=20,Width=100,Height=50}".
+   Converts the Location and System.Drawing.Size of this System.Drawing.RectangleF to a human-readable string.
+   Returns: A string that contains the position,width,and height of this System.Drawing.RectangleF structure. For example,"{X=20,Y=20,Width=100,Height=50}".
   """
   pass
  @staticmethod
@@ -163,14 +136,11 @@ class RectangleF:
   """
   Union(a: RectangleF,b: RectangleF) -> RectangleF
   
-   Creates the smallest possible third rectangle that can contain both of two rectangles 
-    that form a union.
-  
+   Creates the smallest possible third rectangle that can contain both of two rectangles that form a union.
   
    a: A rectangle to union.
    b: A rectangle to union.
-   Returns: A third System.Drawing.RectangleF structure that contains both of the two rectangles that 
-    form the union.
+   Returns: A third System.Drawing.RectangleF structure that contains both of the two rectangles that form the union.
   """
   pass
  def __eq__(self,*args):

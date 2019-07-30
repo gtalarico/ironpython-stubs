@@ -1,35 +1,36 @@
-class Process:
+class Process(Component):
  """
  Provides access to local and remote processes and enables you to start and stop local system processes.
  
  Process()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Process()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginErrorReadLine(self):
   """
   BeginErrorReadLine(self: Process)
-   Begins asynchronous read operations on the redirected 
-    System.Diagnostics.Process.StandardError stream of the application.
+   Begins asynchronous read operations on the redirected System.Diagnostics.Process.StandardError stream of the application.
   """
   pass
  def BeginOutputReadLine(self):
   """
   BeginOutputReadLine(self: Process)
-   Begins asynchronous read operations on the redirected 
-    System.Diagnostics.Process.StandardOutput stream of the application.
+   Begins asynchronous read operations on the redirected System.Diagnostics.Process.StandardOutput stream of the application.
   """
   pass
  def CancelErrorRead(self):
   """
   CancelErrorRead(self: Process)
-   Cancels the asynchronous read operation on the redirected 
-    System.Diagnostics.Process.StandardError stream of an application.
+   Cancels the asynchronous read operation on the redirected System.Diagnostics.Process.StandardError stream of an application.
   """
   pass
  def CancelOutputRead(self):
   """
   CancelOutputRead(self: Process)
-   Cancels the asynchronous read operation on the redirected 
-    System.Diagnostics.Process.StandardOutput stream of an application.
+   Cancels the asynchronous read operation on the redirected System.Diagnostics.Process.StandardOutput stream of an application.
   """
   pass
  def Close(self):
@@ -43,9 +44,8 @@ class Process:
   CloseMainWindow(self: Process) -> bool
   
    Closes a process that has a user interface by sending a close message to its main window.
-   Returns: true if the close message was successfully sent; false if the associated process does not 
-    have a main window or if the main window is disabled (for example if a modal dialog is 
-    being shown).
+   Returns: true if the close message was successfully sent; false if the associated process does not have a main window or if the main window is disabled (for example if a modal 
+    dialog is being shown).
   """
   pass
  def Dispose(self):
@@ -53,17 +53,15 @@ class Process:
   Dispose(self: Process,disposing: bool)
    Release all resources used by this process.
   
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  @staticmethod
  def EnterDebugMode():
   """
   EnterDebugMode()
-   Puts a System.Diagnostics.Process component in state to interact with operating system 
-    processes that run in a special mode by enabling the native property SeDebugPrivilege on 
-    the current thread.
+   Puts a System.Diagnostics.Process component in state to interact with operating system processes that run in a special mode by enabling the native property SeDebugPrivilege 
+    on the current thread.
   """
   pass
  @staticmethod
@@ -71,11 +69,8 @@ class Process:
   """
   GetCurrentProcess() -> Process
   
-   Gets a new System.Diagnostics.Process component and associates it with the currently 
-    active process.
-  
-   Returns: A new System.Diagnostics.Process component associated with the process resource that is 
-    running the calling application.
+   Gets a new System.Diagnostics.Process component and associates it with the currently active process.
+   Returns: A new System.Diagnostics.Process component associated with the process resource that is running the calling application.
   """
   pass
  @staticmethod
@@ -83,24 +78,17 @@ class Process:
   """
   GetProcessById(processId: int,machineName: str) -> Process
   
-   Returns a new System.Diagnostics.Process component,given a process identifier and the 
-    name of a computer on the network.
-  
+   Returns a new System.Diagnostics.Process component,given a process identifier and the name of a computer on the network.
   
    processId: The system-unique identifier of a process resource.
    machineName: The name of a computer on the network.
-   Returns: A System.Diagnostics.Process component that is associated with a remote process resource 
-    identified by the processId parameter.
-  
+   Returns: A System.Diagnostics.Process component that is associated with a remote process resource identified by the processId parameter.
   GetProcessById(processId: int) -> Process
   
-   Returns a new System.Diagnostics.Process component,given the identifier of a process on 
-    the local computer.
-  
+   Returns a new System.Diagnostics.Process component,given the identifier of a process on the local computer.
   
    processId: The system-unique identifier of a process resource.
-   Returns: A System.Diagnostics.Process component that is associated with the local process resource 
-    identified by the processId parameter.
+   Returns: A System.Diagnostics.Process component that is associated with the local process resource identified by the processId parameter.
   """
   pass
  @staticmethod
@@ -108,21 +96,14 @@ class Process:
   """
   GetProcesses() -> Array[Process]
   
-   Creates a new System.Diagnostics.Process component for each process resource on the local 
-    computer.
-  
-   Returns: An array of type System.Diagnostics.Process that represents all the process resources 
-    running on the local computer.
-  
+   Creates a new System.Diagnostics.Process component for each process resource on the local computer.
+   Returns: An array of type System.Diagnostics.Process that represents all the process resources running on the local computer.
   GetProcesses(machineName: str) -> Array[Process]
   
-   Creates a new System.Diagnostics.Process component for each process resource on the 
-    specified computer.
-  
+   Creates a new System.Diagnostics.Process component for each process resource on the specified computer.
   
    machineName: The computer from which to read the list of processes.
-   Returns: An array of type System.Diagnostics.Process that represents all the process resources 
-    running on the specified computer.
+   Returns: An array of type System.Diagnostics.Process that represents all the process resources running on the specified computer.
   """
   pass
  @staticmethod
@@ -130,38 +111,28 @@ class Process:
   """
   GetProcessesByName(processName: str) -> Array[Process]
   
-   Creates an array of new System.Diagnostics.Process components and associates them with 
-    all the process resources on the local computer that share the specified process name.
-  
+   Creates an array of new System.Diagnostics.Process components and associates them with all the process resources on the local computer that share the specified process name.
   
    processName: The friendly name of the process.
-   Returns: An array of type System.Diagnostics.Process that represents the process resources running 
-    the specified application or file.
-  
+   Returns: An array of type System.Diagnostics.Process that represents the process resources running the specified application or file.
   GetProcessesByName(processName: str,machineName: str) -> Array[Process]
   
-   Creates an array of new System.Diagnostics.Process components and associates them with 
-    all the process resources on a remote computer that share the specified process name.
-  
+   Creates an array of new System.Diagnostics.Process components and associates them with all the process resources on a remote computer that share the specified process name.
   
    processName: The friendly name of the process.
    machineName: The name of a computer on the network.
-   Returns: An array of type System.Diagnostics.Process that represents the process resources running 
-    the specified application or file.
+   Returns: An array of type System.Diagnostics.Process that represents the process resources running the specified application or file.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified 
+    service.
   """
   pass
  def Kill(self):
@@ -174,8 +145,7 @@ class Process:
  def LeaveDebugMode():
   """
   LeaveDebugMode()
-   Takes a System.Diagnostics.Process component out of the state that lets it interact with 
-    operating system processes that run in a special mode.
+   Takes a System.Diagnostics.Process component out of the state that lets it interact with operating system processes that run in a special mode.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -184,11 +154,9 @@ class Process:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -206,91 +174,69 @@ class Process:
  def Refresh(self):
   """
   Refresh(self: Process)
-   Discards any information about the associated process that has been cached inside the 
-    process component.
+   Discards any information about the associated process that has been cached inside the process component.
   """
   pass
  def Start(self,*__args):
   """
   Start(self: Process) -> bool
   
-   Starts (or reuses) the process resource that is specified by the 
-    System.Diagnostics.Process.StartInfo property of this System.Diagnostics.Process 
-    component and associates it with the component.
+   Starts (or reuses) the process resource that is specified by the System.Diagnostics.Process.StartInfo property of this System.Diagnostics.Process component and associates 
+    it with the component.
   
-   Returns: true if a process resource is started; false if no new process resource is started (for 
-    example,if an existing process is reused).
-  
+   Returns: true if a process resource is started; false if no new process resource is started (for example,if an existing process is reused).
   Start(fileName: str,userName: str,password: SecureString,domain: str) -> Process
   
-   Starts a process resource by specifying the name of an application,a user name,a 
-    password,and a domain and associates the resource with a new System.Diagnostics.Process 
+   Starts a process resource by specifying the name of an application,a user name,a password,and a domain and associates the resource with a new System.Diagnostics.Process 
     component.
   
   
    fileName: The name of an application file to run in the process.
    userName: The user name to use when starting the process.
-   password: A System.Security.SecureString that contains the password to use when starting the 
-    process.
-  
+   password: A System.Security.SecureString that contains the password to use when starting the process.
    domain: The domain to use when starting the process.
-   Returns: A new System.Diagnostics.Process component that is associated with the process resource,
-    or null if no process resource is started (for example,if an existing process is 
+   Returns: A new System.Diagnostics.Process component that is associated with the process resource,or null if no process resource is started (for example,if an existing process is 
     reused).
   
   Start(fileName: str,arguments: str,userName: str,password: SecureString,domain: str) -> Process
   
-   Starts a process resource by specifying the name of an application,a set of command-line 
-    arguments,a user name,a password,and a domain and associates the resource with a new 
-    System.Diagnostics.Process component.
+   Starts a process resource by specifying the name of an application,a set of command-line arguments,a user name,a password,and a domain and associates the resource with 
+    a new System.Diagnostics.Process component.
   
   
    fileName: The name of an application file to run in the process.
    arguments: Command-line arguments to pass when starting the process.
    userName: The user name to use when starting the process.
-   password: A System.Security.SecureString that contains the password to use when starting the 
-    process.
-  
+   password: A System.Security.SecureString that contains the password to use when starting the process.
    domain: The domain to use when starting the process.
-   Returns: A new System.Diagnostics.Process component that is associated with the process resource,
-    or null if no process resource is started (for example,if an existing process is 
+   Returns: A new System.Diagnostics.Process component that is associated with the process resource,or null if no process resource is started (for example,if an existing process is 
     reused).
   
   Start(fileName: str) -> Process
   
-   Starts a process resource by specifying the name of a document or application file and 
-    associates the resource with a new System.Diagnostics.Process component.
-  
+   Starts a process resource by specifying the name of a document or application file and associates the resource with a new System.Diagnostics.Process component.
   
    fileName: The name of a document or application file to run in the process.
-   Returns: A new System.Diagnostics.Process component that is associated with the process resource,
-    or null,if no process resource is started (for example,if an existing process is 
+   Returns: A new System.Diagnostics.Process component that is associated with the process resource,or null,if no process resource is started (for example,if an existing process is 
     reused).
   
   Start(fileName: str,arguments: str) -> Process
   
-   Starts a process resource by specifying the name of an application and a set of 
-    command-line arguments,and associates the resource with a new System.Diagnostics.Process 
+   Starts a process resource by specifying the name of an application and a set of command-line arguments,and associates the resource with a new System.Diagnostics.Process 
     component.
   
   
    fileName: The name of an application file to run in the process.
    arguments: Command-line arguments to pass when starting the process.
-   Returns: A new System.Diagnostics.Process component that is associated with the process,or null,
-    if no process resource is started (for example,if an existing process is reused).
-  
+   Returns: A new System.Diagnostics.Process component that is associated with the process,or null,if no process resource is started (for example,if an existing process is reused).
   Start(startInfo: ProcessStartInfo) -> Process
   
-   Starts the process resource that is specified by the parameter containing process start 
-    information (for example,the file name of the process to start) and associates the 
+   Starts the process resource that is specified by the parameter containing process start information (for example,the file name of the process to start) and associates the 
     resource with a new System.Diagnostics.Process component.
   
   
-   startInfo: The System.Diagnostics.ProcessStartInfo that contains the information that is used to 
-    start the process,including the file name and any command-line arguments.
-  
-   Returns: A new System.Diagnostics.Process component that is associated with the process resource,
-    or null if no process resource is started (for example,if an existing process is 
+   startInfo: The System.Diagnostics.ProcessStartInfo that contains the information that is used to start the process,including the file name and any command-line arguments.
+   Returns: A new System.Diagnostics.Process component that is associated with the process resource,or null if no process resource is started (for example,if an existing process is 
     reused).
   """
   pass
@@ -298,49 +244,39 @@ class Process:
   """
   ToString(self: Process) -> str
   
-   Formats the process's name as a string,combined with the parent component type,if 
-    applicable.
-  
-   Returns: The System.Diagnostics.Process.ProcessName,combined with the base component's 
-    System.Object.ToString return value.
+   Formats the process's name as a string,combined with the parent component type,if applicable.
+   Returns: The System.Diagnostics.Process.ProcessName,combined with the base component's System.Object.ToString return value.
   """
   pass
  def WaitForExit(self,milliseconds=None):
   """
   WaitForExit(self: Process,milliseconds: int) -> bool
   
-   Instructs the System.Diagnostics.Process component to wait the specified number of 
-    milliseconds for the associated process to exit.
+   Instructs the System.Diagnostics.Process component to wait the specified number of milliseconds for the associated process to exit.
   
-  
-   milliseconds: The amount of time,in milliseconds,to wait for the associated process to exit. The 
-    maximum is the largest possible value of a 32-bit integer,which represents infinity to 
+   milliseconds: The amount of time,in milliseconds,to wait for the associated process to exit. The maximum is the largest possible value of a 32-bit integer,which represents infinity to 
     the operating system.
   
    Returns: true if the associated process has exited; otherwise,false.
   WaitForExit(self: Process)
-   Instructs the System.Diagnostics.Process component to wait indefinitely for the 
-    associated process to exit.
+   Instructs the System.Diagnostics.Process component to wait indefinitely for the associated process to exit.
   """
   pass
  def WaitForInputIdle(self,milliseconds=None):
   """
   WaitForInputIdle(self: Process,milliseconds: int) -> bool
   
-   Causes the System.Diagnostics.Process component to wait the specified number of 
-    milliseconds for the associated process to enter an idle state. This overload applies 
-    only to processes with a user interface and,therefore,a message loop.
+   Causes the System.Diagnostics.Process component to wait the specified number of milliseconds for the associated process to enter an idle state. This overload applies only 
+    to processes with a user interface and,therefore,a message loop.
   
   
-   milliseconds: A value of 1 to System.Int32.MaxValue that specifies the amount of time,in milliseconds,
-    to wait for the associated process to become idle. A value of 0 specifies an immediate 
-    return,and a value of -1 specifies an infinite wait.
+   milliseconds: A value of 1 to System.Int32.MaxValue that specifies the amount of time,in milliseconds,to wait for the associated process to become idle. A value of 0 specifies an 
+    immediate return,and a value of -1 specifies an infinite wait.
   
    Returns: true if the associated process has reached an idle state; otherwise,false.
   WaitForInputIdle(self: Process) -> bool
   
-   Causes the System.Diagnostics.Process component to wait indefinitely for the associated 
-    process to enter an idle state. This overload applies only to processes with a user 
+   Causes the System.Diagnostics.Process component to wait indefinitely for the associated process to enter an idle state. This overload applies only to processes with a user 
     interface and,therefore,a message loop.
   
    Returns: true if the associated process has reached an idle state.

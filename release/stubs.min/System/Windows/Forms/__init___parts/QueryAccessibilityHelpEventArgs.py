@@ -1,10 +1,14 @@
-class QueryAccessibilityHelpEventArgs:
+class QueryAccessibilityHelpEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.Control.QueryAccessibilityHelp event.
  
  QueryAccessibilityHelpEventArgs()
  QueryAccessibilityHelpEventArgs(helpNamespace: str,helpString: str,helpKeyword: str)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return QueryAccessibilityHelpEventArgs()
+
  @staticmethod
  def __new__(self,helpNamespace=None,helpString=None,helpKeyword=None):
   """

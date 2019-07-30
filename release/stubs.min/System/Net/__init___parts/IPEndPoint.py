@@ -1,10 +1,15 @@
-class IPEndPoint:
+class IPEndPoint(EndPoint):
  """
  Represents a network endpoint as an IP address and a port number.
  
  IPEndPoint(address: Int64,port: int)
  IPEndPoint(address: IPAddress,port: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IPEndPoint()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Create(self,socketAddress):
   """
   Create(self: IPEndPoint,socketAddress: SocketAddress) -> EndPoint
@@ -19,13 +24,10 @@ class IPEndPoint:
   """
   Equals(self: IPEndPoint,comparand: object) -> bool
   
-   Determines whether the specified System.Object is equal to the current 
-    System.Net.IPEndPoint instance.
-  
+   Determines whether the specified System.Object is equal to the current System.Net.IPEndPoint instance.
   
    comparand: The specified System.Object to compare with the current System.Net.IPEndPoint instance.
-   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,
-    false.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -49,8 +51,7 @@ class IPEndPoint:
   ToString(self: IPEndPoint) -> str
   
    Returns the IP address and port number of the specified endpoint.
-   Returns: A string containing the IP address and the port number of the specified endpoint (for 
-    example,192.168.1.2:80).
+   Returns: A string containing the IP address and the port number of the specified endpoint (for example,192.168.1.2:80).
   """
   pass
  def __eq__(self,*args):

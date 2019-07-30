@@ -1,11 +1,14 @@
 class _EventInfo:
  """ Exposes the public members of the System.Reflection.EventInfo class to unmanaged code. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return _EventInfo()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddEventHandler(self,target,handler):
   """
   AddEventHandler(self: _EventInfo,target: object,handler: Delegate)
-   Provides COM objects with version-independent access to the 
-    System.Reflection.EventInfo.AddEventHandler(System.Object,System.Delegate) method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.EventInfo.AddEventHandler(System.Object,System.Delegate) method.
   
    target: The event source.
    handler: A method or methods to be invoked when the event is raised by the target.
@@ -15,69 +18,48 @@ class _EventInfo:
   """
   Equals(self: _EventInfo,other: object) -> bool
   
-   Provides COM objects with version-independent access to the 
-    System.Object.Equals(System.Object) method.
-  
+   Provides COM objects with version-independent access to the System.Object.Equals(System.Object) method.
   
    other: The System.Object to compare with the current System.Object.
-   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,
-    false.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
   """
   pass
  def GetAddMethod(self,nonPublic=None):
   """
   GetAddMethod(self: _EventInfo,nonPublic: bool) -> MethodInfo
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.EventInfo.GetAddMethod(System.Boolean) method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.EventInfo.GetAddMethod(System.Boolean) method.
   
    nonPublic: true to return non-public methods; otherwise,false.
-   Returns: A System.Reflection.MethodInfo object representing the method used to add an 
-    event-handler delegate to the event source.
-  
+   Returns: A System.Reflection.MethodInfo object representing the method used to add an event-handler delegate to the event source.
   GetAddMethod(self: _EventInfo) -> MethodInfo
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.EventInfo.GetAddMethod method.
-  
-   Returns: A System.Reflection.MethodInfo object representing the method used to add an 
-    event-handler delegate to the event source.
+   Provides COM objects with version-independent access to the System.Reflection.EventInfo.GetAddMethod method.
+   Returns: A System.Reflection.MethodInfo object representing the method used to add an event-handler delegate to the event source.
   """
   pass
  def GetCustomAttributes(self,*__args):
   """
   GetCustomAttributes(self: _EventInfo,attributeType: Type,inherit: bool) -> Array[object]
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.MemberInfo.GetCustomAttributes(System.Type,System.Boolean) method.
+   Provides COM objects with version-independent access to the System.Reflection.MemberInfo.GetCustomAttributes(System.Type,System.Boolean) method.
   
-  
-   attributeType: The type of attribute to search for. Only attributes that are assignable to this type are 
-    returned.
-  
+   attributeType: The type of attribute to search for. Only attributes that are assignable to this type are returned.
    inherit: true to search this member's inheritance chain to find the attributes; otherwise,false.
-   Returns: An array of custom attributes applied to this member,or an array with zero (0) elements 
-    if no attributes have been applied.
-  
+   Returns: An array of custom attributes applied to this member,or an array with zero (0) elements if no attributes have been applied.
   GetCustomAttributes(self: _EventInfo,inherit: bool) -> Array[object]
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
   
    inherit: true to search a member's inheritance chain to find the attributes; otherwise,false.
-   Returns: An array that contains all the custom attributes,or an array with zero (0) elements if 
-    no attributes are defined.
+   Returns: An array that contains all the custom attributes,or an array with zero (0) elements if no attributes are defined.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: _EventInfo) -> int
   
-   Provides COM objects with version-independent access to the System.Object.GetHashCode 
-    method.
-  
+   Provides COM objects with version-independent access to the System.Object.GetHashCode method.
    Returns: The hash code for the current instance.
   """
   pass
@@ -98,17 +80,13 @@ class _EventInfo:
   """
   GetRaiseMethod(self: _EventInfo,nonPublic: bool) -> MethodInfo
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.EventInfo.GetRaiseMethod(System.Boolean) method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.EventInfo.GetRaiseMethod(System.Boolean) method.
   
    nonPublic: true to return non-public methods; otherwise,false.
    Returns: The System.Reflection.MethodInfo object that was called when the event was raised.
   GetRaiseMethod(self: _EventInfo) -> MethodInfo
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.EventInfo.GetRaiseMethod method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.EventInfo.GetRaiseMethod method.
    Returns: The method that is called when the event is raised.
   """
   pass
@@ -116,21 +94,14 @@ class _EventInfo:
   """
   GetRemoveMethod(self: _EventInfo,nonPublic: bool) -> MethodInfo
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.EventInfo.GetRemoveMethod(System.Boolean) method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.EventInfo.GetRemoveMethod(System.Boolean) method.
   
    nonPublic: true to return non-public methods; otherwise,false.
-   Returns: A System.Reflection.MethodInfo object representing the method used to remove an 
-    event-handler delegate from the event source.
-  
+   Returns: A System.Reflection.MethodInfo object representing the method used to remove an event-handler delegate from the event source.
   GetRemoveMethod(self: _EventInfo) -> MethodInfo
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.EventInfo.GetRemoveMethod method.
-  
-   Returns: A System.Reflection.MethodInfo object representing the method used to remove an 
-    event-handler delegate from the event source.
+   Provides COM objects with version-independent access to the System.Reflection.EventInfo.GetRemoveMethod method.
+   Returns: A System.Reflection.MethodInfo object representing the method used to remove an event-handler delegate from the event source.
   """
   pass
  def GetType(self):
@@ -144,9 +115,7 @@ class _EventInfo:
  def GetTypeInfo(self,iTInfo,lcid,ppTInfo):
   """
   GetTypeInfo(self: _EventInfo,iTInfo: UInt32,lcid: UInt32,ppTInfo: IntPtr)
-   Retrieves the type information for an object,which can be used to get the type 
-    information for an interface.
-  
+   Retrieves the type information for an object,which can be used to get the type information for an interface.
   
    iTInfo: The type information to return.
    lcid: The locale identifier for the type information.
@@ -157,8 +126,7 @@ class _EventInfo:
   """
   GetTypeInfoCount(self: _EventInfo) -> UInt32
   
-   Retrieves the number of type information interfaces that an object provides (either 0 or 
-    1).
+   Retrieves the number of type information interfaces that an object provides (either 0 or 1).
   """
   pass
  def Invoke(self,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr):
@@ -171,9 +139,7 @@ class _EventInfo:
    riid: Reserved for future use. Must be IID_NULL.
    lcid: The locale context in which to interpret arguments.
    wFlags: Flags describing the context of the call.
-   pDispParams: A pointer to a structure containing an array of arguments,an array of argument DISPIDs 
-    for named arguments,and counts for the number of elements in the arrays.
-  
+   pDispParams: A pointer to a structure containing an array of arguments,an array of argument DISPIDs for named arguments,and counts for the number of elements in the arrays.
    pVarResult: A pointer to the location where the result will be stored.
    pExcepInfo: A pointer to a structure that contains exception information.
    puArgErr: The index of the first argument that has an error.
@@ -183,22 +149,17 @@ class _EventInfo:
   """
   IsDefined(self: _EventInfo,attributeType: Type,inherit: bool) -> bool
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.MemberInfo.IsDefined(System.Type,System.Boolean) method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.MemberInfo.IsDefined(System.Type,System.Boolean) method.
   
    attributeType: The Type object to which the custom attributes are applied.
    inherit: true to search this member's inheritance chain to find the attributes; otherwise,false.
-   Returns: true if one or more instance of the attributeType parameter is applied to this member; 
-    otherwise,false.
+   Returns: true if one or more instance of the attributeType parameter is applied to this member; otherwise,false.
   """
   pass
  def RemoveEventHandler(self,target,handler):
   """
   RemoveEventHandler(self: _EventInfo,target: object,handler: Delegate)
-   Provides COM objects with version-independent access to the 
-    System.Reflection.EventInfo.RemoveEventHandler(System.Object,System.Delegate) method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.EventInfo.RemoveEventHandler(System.Object,System.Delegate) method.
   
    target: The event source.
    handler: The delegate to be disassociated from the events raised by target.

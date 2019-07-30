@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.Logging.NLogExtensions.Targets calls itself Targets
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class ExceptionExtensions:
+class ExceptionExtensions(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ExceptionExtensions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def IsLoggedToInternalLogger(exception):
   """ IsLoggedToInternalLogger(exception: Exception) -> bool """
@@ -29,8 +35,13 @@ class ExceptionExtensions:
  ]
 
 
-class LogLevelExtensions:
+class LogLevelExtensions(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LogLevelExtensions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def ToSeverity(level):
   """ ToSeverity(level: LogLevel) -> LogSeverity """
@@ -40,11 +51,16 @@ class LogLevelExtensions:
  ]
 
 
-class StackdriverLabel:
+class StackdriverLabel(object):
  """
  StackdriverLabel()
  StackdriverLabel(parameterName: str,parameterLayout: Layout)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StackdriverLabel()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,parameterName=None,parameterLayout=None):
   """
@@ -66,84 +82,36 @@ Set: Name(self: StackdriverLabel)=value
 
 
 
-class StackDriverLoggingTarget:
+class StackDriverLoggingTarget(TargetWithLayout):
  """ StackDriverLoggingTarget() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StackDriverLoggingTarget()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CloseTarget(self,*args):
   """ CloseTarget(self: StackDriverLoggingTarget) """
   pass
  def Dispose(self):
-  """
-  Dispose(self: Target,disposing: bool)
-   Releases unmanaged and - optionally - managed resources.
-  
-   disposing: True to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
-  """
+  """ Dispose(self: Target,disposing: bool) """
   pass
  def FlushAsync(self,*args):
-  """
-  FlushAsync(self: Target,asyncContinuation: AsyncContinuation)
-   Flush any pending log messages asynchronously (in case of asynchronous targets).
-  
-   asyncContinuation: The asynchronous continuation.
-  """
+  """ FlushAsync(self: Target,asyncContinuation: AsyncContinuation) """
   pass
  def InitializeTarget(self,*args):
-  """
-  InitializeTarget(self: Target)
-   Initializes the target. Can be used by inheriting classes
-     to initialize 
-    logging.
-  """
+  """ InitializeTarget(self: Target) """
   pass
  def MergeEventProperties(self,*args):
-  """
-  MergeEventProperties(self: Target,logEvent: LogEventInfo)
-   Merges (copies) the event context properties from any event info object stored in
-      
-      parameters of the given event info object.
-  
-  
-   logEvent: The event info object to perform the merge to.
-  """
+  """ MergeEventProperties(self: Target,logEvent: LogEventInfo) """
   pass
  def RenderLogEvent(self,*args):
-  """
-  RenderLogEvent(self: Target,layout: Layout,logEvent: LogEventInfo) -> str
-  
-   Renders the event info in layout.
-  
-   layout: The layout.
-   logEvent: The event info.
-   Returns: String representing log event.
-  """
+  """ RenderLogEvent(self: Target,layout: Layout,logEvent: LogEventInfo) -> str """
   pass
  def Write(self,*args):
-  """
-  Write(self: StackDriverLoggingTarget,logEvent: LogEventInfo)Write(self: StackDriverLoggingTarget,logEvents: Array[AsyncLogEventInfo])Write(self: Target,logEvent: AsyncLogEventInfo)
-   Writes async log event to the log target.
-  
-   logEvent: Async Log event to be written out.
-  Write(self: Target,logEvents: IList[AsyncLogEventInfo])
-  """
+  """ Write(self: StackDriverLoggingTarget,logEvent: LogEventInfo)Write(self: StackDriverLoggingTarget,logEvents: Array[AsyncLogEventInfo])Write(self: Target,logEvent: AsyncLogEventInfo)Write(self: Target,logEvents: IList[AsyncLogEventInfo]) """
   pass
  def WriteAsyncThreadSafe(self,*args):
-  """
-  WriteAsyncThreadSafe(self: Target,logEvent: AsyncLogEventInfo)
-   Writes a log event to the log target,in a thread safe manner.
-  
-   logEvent: Log event to be written out.
-  WriteAsyncThreadSafe(self: Target,logEvents: Array[AsyncLogEventInfo])
-   NOTE! Obsolete,instead override WriteAsyncThreadSafe(IList{AsyncLogEventInfo} logEvents)
-    
-     
-     Writes an array of logging events to the log target,in a 
-    thread safe manner.
-  
-  
-   logEvents: Logging events to be written out.
-  WriteAsyncThreadSafe(self: Target,logEvents: IList[AsyncLogEventInfo])
-  """
+  """ WriteAsyncThreadSafe(self: Target,logEvent: AsyncLogEventInfo)WriteAsyncThreadSafe(self: Target,logEvents: Array[AsyncLogEventInfo])WriteAsyncThreadSafe(self: Target,logEvents: IList[AsyncLogEventInfo]) """
   pass
  def WriteToStackDriver(self,projectId,logId,logEvent):
   """ WriteToStackDriver(self: StackDriverLoggingTarget,projectId: str,logId: str,logEvent: LogEventInfo) """
@@ -166,9 +134,6 @@ Set: Client(self: StackDriverLoggingTarget)=value
 """
 
  IsInitialized=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a value indicating whether the target has been initialized.
-
-"""
 
  Labels=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Labels(self: StackDriverLoggingTarget) -> IList[StackdriverLabel]
@@ -176,9 +141,6 @@ Set: Client(self: StackDriverLoggingTarget)=value
 """
 
  LoggingConfiguration=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the logging configuration this target is part of.
-
-"""
 
  LogId=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: LogId(self: StackDriverLoggingTarget) -> str
@@ -193,9 +155,6 @@ Set: ProjectId(self: StackDriverLoggingTarget)=value
 """
 
  SyncRoot=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the object which can be used to synchronize asynchronous operations that must rely on the .
-
-"""
 
 
 

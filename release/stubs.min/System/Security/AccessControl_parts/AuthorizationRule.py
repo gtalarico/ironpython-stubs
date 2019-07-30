@@ -1,5 +1,10 @@
-class AuthorizationRule:
+class AuthorizationRule(object):
  """ Determines access to securable objects. The derived classes System.Security.AccessControl.AccessRule and System.Security.AccessControl.AuditRule offer specializations for access and audit functionality. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AuthorizationRule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*args): #cannot find CLR constructor
   """ __new__(cls: type,identity: IdentityReference,accessMask: int,isInherited: bool,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags) """

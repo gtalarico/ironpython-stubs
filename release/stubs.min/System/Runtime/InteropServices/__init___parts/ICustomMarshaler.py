@@ -1,5 +1,10 @@
 class ICustomMarshaler:
  """ Provides custom wrappers for handling method calls. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ICustomMarshaler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CleanUpManagedData(self,ManagedObj):
   """
   CleanUpManagedData(self: ICustomMarshaler,ManagedObj: object)

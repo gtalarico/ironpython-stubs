@@ -1,16 +1,18 @@
-class ContextMenu:
+class ContextMenu(Menu,IComponent,IDisposable):
  """
  Represents a shortcut menu. Although System.Windows.Forms.ContextMenuStrip replaces and adds functionality to the System.Windows.Forms.ContextMenu control of previous versions,System.Windows.Forms.ContextMenu is retained for both backward compatibility and future use if you choose.
  
  ContextMenu()
  ContextMenu(menuItems: Array[MenuItem])
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ContextMenu()
+
  def CloneMenu(self,*args):
   """
   CloneMenu(self: Menu,menuSrc: Menu)
-   Copies the System.Windows.Forms.Menu that is passed as a parameter to the current 
-    System.Windows.Forms.Menu.
-  
+   Copies the System.Windows.Forms.Menu that is passed as a parameter to the current System.Windows.Forms.Menu.
   
    menuSrc: The System.Windows.Forms.Menu to copy.
   """
@@ -28,8 +30,7 @@ class ContextMenu:
   Dispose(self: Menu,disposing: bool)
    Disposes of the resources,other than memory,used by the System.Windows.Forms.Menu.
   
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def FindMergePosition(self,*args):
@@ -46,14 +47,10 @@ class ContextMenu:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -62,12 +59,7 @@ class ContextMenu:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -97,9 +89,7 @@ class ContextMenu:
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    control: The control to which the command key applies.
    Returns: true if the character was processed by the control; otherwise,false.
@@ -107,9 +97,7 @@ class ContextMenu:
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference that represents the window message to 
-    process.
-  
+   msg: A System.Windows.Forms.Message,passed by reference that represents the window message to process.
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
   """
@@ -119,25 +107,14 @@ class ContextMenu:
   Show(self: ContextMenu,control: Control,pos: Point)
    Displays the shortcut menu at the specified position.
   
-   control: A System.Windows.Forms.Control that specifies the control with which this shortcut menu 
-    is associated.
-  
-   pos: A System.Drawing.Point that specifies the coordinates at which to display the menu. These 
-    coordinates are specified relative to the client coordinates of the control specified in 
-    the control parameter.
-  
+   control: A System.Windows.Forms.Control that specifies the control with which this shortcut menu is associated.
+   pos: A System.Drawing.Point that specifies the coordinates at which to display the menu. These coordinates are specified relative to the client coordinates of the control specified in the control parameter.
   Show(self: ContextMenu,control: Control,pos: Point,alignment: LeftRightAlignment)
    Displays the shortcut menu at the specified position and with the specified alignment.
   
-   control: A System.Windows.Forms.Control that specifies the control with which this shortcut menu 
-    is associated.
-  
-   pos: A System.Drawing.Point that specifies the coordinates at which to display the menu. These 
-    coordinates are specified relative to the client coordinates of the control specified in 
-    the control parameter.
-  
-   alignment: A System.Windows.Forms.LeftRightAlignment that specifies the alignment of the control 
-    relative to the pos parameter.
+   control: A System.Windows.Forms.Control that specifies the control with which this shortcut menu is associated.
+   pos: A System.Drawing.Point that specifies the coordinates at which to display the menu. These coordinates are specified relative to the client coordinates of the control specified in the control parameter.
+   alignment: A System.Windows.Forms.LeftRightAlignment that specifies the alignment of the control relative to the pos parameter.
   """
   pass
  def __enter__(self,*args):

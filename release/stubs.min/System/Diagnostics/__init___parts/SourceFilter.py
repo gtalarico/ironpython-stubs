@@ -1,9 +1,14 @@
-class SourceFilter:
+class SourceFilter(TraceFilter):
  """
  Indicates whether a listener should trace a message based on the source of a trace.
  
  SourceFilter(source: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SourceFilter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ShouldTrace(self,cache,source,eventType,id,formatOrMessage,args,data1,data):
   """
   ShouldTrace(self: SourceFilter,cache: TraceEventCache,source: str,eventType: TraceEventType,id: int,formatOrMessage: str,args: Array[object],data1: object,data: Array[object]) -> bool

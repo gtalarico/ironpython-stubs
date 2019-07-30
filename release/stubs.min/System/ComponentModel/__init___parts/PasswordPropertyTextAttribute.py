@@ -5,19 +5,19 @@ class PasswordPropertyTextAttribute:
  PasswordPropertyTextAttribute()
  PasswordPropertyTextAttribute(password: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PasswordPropertyTextAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,o):
   """
   Equals(self: PasswordPropertyTextAttribute,o: object) -> bool
   
-   Determines whether two System.ComponentModel.PasswordPropertyTextAttribute instances are 
-    equal.
+   Determines whether two System.ComponentModel.PasswordPropertyTextAttribute instances are equal.
   
-  
-   o: The System.ComponentModel.PasswordPropertyTextAttribute to compare with the current 
-    System.ComponentModel.PasswordPropertyTextAttribute.
-  
-   Returns: true if the specified System.ComponentModel.PasswordPropertyTextAttribute is equal to the 
-    current System.ComponentModel.PasswordPropertyTextAttribute; otherwise,false.
+   o: The System.ComponentModel.PasswordPropertyTextAttribute to compare with the current System.ComponentModel.PasswordPropertyTextAttribute.
+   Returns: true if the specified System.ComponentModel.PasswordPropertyTextAttribute is equal to the current System.ComponentModel.PasswordPropertyTextAttribute; otherwise,false.
   """
   pass
  def GetHashCode(self):

@@ -1,5 +1,10 @@
-class TypeDescriptionProvider:
+class TypeDescriptionProvider(object):
  """ Provides supplemental metadata to the System.ComponentModel.TypeDescriptor. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TypeDescriptionProvider()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreateInstance(self,provider,objectType,argTypes,args):
   """
   CreateInstance(self: TypeDescriptionProvider,provider: IServiceProvider,objectType: Type,argTypes: Array[Type],args: Array[object]) -> object
@@ -8,9 +13,7 @@ class TypeDescriptionProvider:
   
    provider: An optional service provider.
    objectType: The type of object to create. This parameter is never null.
-   argTypes: An optional array of types that represent the parameter types to be passed to the 
-    object's constructor. This array can be null or of zero length.
-  
+   argTypes: An optional array of types that represent the parameter types to be passed to the object's constructor. This array can be null or of zero length.
    args: An optional array of parameter values to pass to the object's constructor.
    Returns: The substitute System.Object.
   """
@@ -22,8 +25,7 @@ class TypeDescriptionProvider:
    Gets a per-object cache,accessed as an System.Collections.IDictionary of key/value pairs.
   
    instance: The object for which to get the cache.
-   Returns: An System.Collections.IDictionary if the provided object supports caching; otherwise,
-    null.
+   Returns: An System.Collections.IDictionary if the provided object supports caching; otherwise,null.
   """
   pass
  def GetExtendedTypeDescriptor(self,instance):
@@ -33,8 +35,7 @@ class TypeDescriptionProvider:
    Gets an extended custom type descriptor for the given object.
   
    instance: The object for which to get the extended type descriptor.
-   Returns: An System.ComponentModel.ICustomTypeDescriptor that can provide extended metadata for the 
-    object.
+   Returns: An System.ComponentModel.ICustomTypeDescriptor that can provide extended metadata for the object.
   """
   pass
  def GetExtenderProviders(self,*args):
@@ -102,18 +103,14 @@ class TypeDescriptionProvider:
   
    Gets a custom type descriptor for the given object.
   
-   instance: An instance of the type. Can be null if no instance was passed to the 
-    System.ComponentModel.TypeDescriptor.
-  
+   instance: An instance of the type. Can be null if no instance was passed to the System.ComponentModel.TypeDescriptor.
    Returns: An System.ComponentModel.ICustomTypeDescriptor that can provide metadata for the type.
   GetTypeDescriptor(self: TypeDescriptionProvider,objectType: Type,instance: object) -> ICustomTypeDescriptor
   
    Gets a custom type descriptor for the given type and object.
   
    objectType: The type of object for which to retrieve the type descriptor.
-   instance: An instance of the type. Can be null if no instance was passed to the 
-    System.ComponentModel.TypeDescriptor.
-  
+   instance: An instance of the type. Can be null if no instance was passed to the System.ComponentModel.TypeDescriptor.
    Returns: An System.ComponentModel.ICustomTypeDescriptor that can provide metadata for the type.
   """
   pass
@@ -121,13 +118,10 @@ class TypeDescriptionProvider:
   """
   IsSupportedType(self: TypeDescriptionProvider,type: Type) -> bool
   
-   Gets a value that indicates whether the specified type is compatible with the type 
-    description and its chain of type description providers.
-  
+   Gets a value that indicates whether the specified type is compatible with the type description and its chain of type description providers.
   
    type: The type to test for compatibility.
-   Returns: true if type is compatible with the type description and its chain of type description 
-    providers; otherwise,false.
+   Returns: true if type is compatible with the type description and its chain of type description providers; otherwise,false.
   """
   pass
  @staticmethod

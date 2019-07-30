@@ -1,5 +1,9 @@
-class HtmlElementEventArgs:
+class HtmlElementEventArgs(EventArgs):
  """ Provides data for the events defined on System.Windows.Forms.HtmlDocument and System.Windows.Forms.HtmlElement. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return HtmlElementEventArgs()
+
  AltKeyPressed=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Indicates whether the ALT key was pressed when this event occurred.
 

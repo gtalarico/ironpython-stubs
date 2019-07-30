@@ -1,47 +1,39 @@
-class ToolStripPanelRow:
+class ToolStripPanelRow(Component,IComponent,IDisposable,IArrangedElement):
  """
  Represents a row of a System.Windows.Forms.ToolStripPanel that can contain controls.
  
  ToolStripPanelRow(parent: ToolStripPanel)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripPanelRow()
+
  def CanMove(self,toolStripToDrag):
   """
   CanMove(self: ToolStripPanelRow,toolStripToDrag: ToolStrip) -> bool
   
-   Gets or sets a value indicating whether a System.Windows.Forms.ToolStrip can be dragged 
-    and dropped into a System.Windows.Forms.ToolStripPanelRow.
+   Gets or sets a value indicating whether a System.Windows.Forms.ToolStrip can be dragged and dropped into a System.Windows.Forms.ToolStripPanelRow.
   
-  
-   toolStripToDrag: The System.Windows.Forms.ToolStrip to be dragged and dropped into the 
-    System.Windows.Forms.ToolStripPanelRow.
-  
-   Returns: true if there is enough space in the System.Windows.Forms.ToolStripPanelRow to receive 
-    the System.Windows.Forms.ToolStrip; otherwise,false.
+   toolStripToDrag: The System.Windows.Forms.ToolStrip to be dragged and dropped into the System.Windows.Forms.ToolStripPanelRow.
+   Returns: true if there is enough space in the System.Windows.Forms.ToolStripPanelRow to receive the System.Windows.Forms.ToolStrip; otherwise,false.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: ToolStripPanelRow,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.ToolStripPanelRow and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.ToolStripPanelRow and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -50,12 +42,7 @@ class ToolStripPanelRow:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -101,8 +88,7 @@ class ToolStripPanelRow:
  def OnOrientationChanged(self,*args):
   """
   OnOrientationChanged(self: ToolStripPanelRow)
-   Occurs when the value of the System.Windows.Forms.ToolStripPanelRow.Orientation property 
-    changes.
+   Occurs when the value of the System.Windows.Forms.ToolStripPanelRow.Orientation property changes.
   """
   pass
  def __enter__(self,*args):

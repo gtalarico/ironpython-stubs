@@ -1,12 +1,14 @@
-class TableLayoutSettings:
+class TableLayoutSettings(LayoutSettings,ISerializable):
  """ Collects the characteristics associated with table layouts. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TableLayoutSettings()
+
  def GetCellPosition(self,control):
   """
   GetCellPosition(self: TableLayoutSettings,control: object) -> TableLayoutPanelCellPosition
   
-   Gets the System.Windows.Forms.TableLayoutPanelCellPosition that represents the row and 
-    the column of the cell.
-  
+   Gets the System.Windows.Forms.TableLayoutPanelCellPosition that represents the row and the column of the cell.
   
    control: A control contained within a cell.
    Returns: A System.Windows.Forms.TableLayoutPanelCellPosition that represents the cell position.
@@ -55,9 +57,7 @@ class TableLayoutSettings:
  def SetCellPosition(self,control,cellPosition):
   """
   SetCellPosition(self: TableLayoutSettings,control: object,cellPosition: TableLayoutPanelCellPosition)
-   Sets the System.Windows.Forms.TableLayoutPanelCellPosition that represents the row and 
-    the column of the cell.
-  
+   Sets the System.Windows.Forms.TableLayoutPanelCellPosition that represents the row and the column of the cell.
   
    control: A control contained within a cell.
    cellPosition: A System.Windows.Forms.TableLayoutPanelCellPosition  that represents the cell position.

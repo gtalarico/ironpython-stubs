@@ -1,5 +1,10 @@
-class SafeHandle:
+class SafeHandle(CriticalFinalizerObject):
  """ Represents a wrapper class for operating system handles. This class must be inherited. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: SafeHandle)
@@ -10,9 +15,7 @@ class SafeHandle:
   """
   DangerousAddRef(self: SafeHandle,success: bool) -> bool
   
-   Manually increments the reference counter on System.Runtime.InteropServices.SafeHandle 
-    instances.
-  
+   Manually increments the reference counter on System.Runtime.InteropServices.SafeHandle instances.
   
    success: true if the reference counter was successfully incremented; otherwise,false.
   """
@@ -22,17 +25,14 @@ class SafeHandle:
   DangerousGetHandle(self: SafeHandle) -> IntPtr
   
    Returns the value of the System.Runtime.InteropServices.SafeHandle.handle field.
-   Returns: An IntPtr representing the value of the System.Runtime.InteropServices.SafeHandle.handle 
-    field. If the handle has been marked invalid with 
-    System.Runtime.InteropServices.SafeHandle.SetHandleAsInvalid,this method still returns 
-    the original handle value,which can be a stale value.
+   Returns: An IntPtr representing the value of the System.Runtime.InteropServices.SafeHandle.handle field. If the handle has been marked invalid with 
+    System.Runtime.InteropServices.SafeHandle.SetHandleAsInvalid,this method still returns the original handle value,which can be a stale value.
   """
   pass
  def DangerousRelease(self):
   """
   DangerousRelease(self: SafeHandle)
-   Manually decrements the reference counter on a System.Runtime.InteropServices.SafeHandle 
-    instance.
+   Manually decrements the reference counter on a System.Runtime.InteropServices.SafeHandle instance.
   """
   pass
  def Dispose(self):
@@ -46,9 +46,8 @@ class SafeHandle:
   ReleaseHandle(self: SafeHandle) -> bool
   
    When overridden in a derived class,executes the code required to free the handle.
-   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic 
-    failure,false. In this case,it generates a releaseHandleFailed MDA Managed Debugging 
-    Assistant.
+   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,false. In this case,it generates a releaseHandleFailed MDA Managed 
+    Debugging Assistant.
   """
   pass
  def SetHandle(self,*args):

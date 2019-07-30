@@ -1,5 +1,9 @@
-class Brushes:
+class Brushes(object):
  """ Brushes for all the standard colors. This class cannot be inherited. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Brushes()
+
  AliceBlue=None
  AntiqueWhite=None
  Aqua=None

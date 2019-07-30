@@ -1,20 +1,21 @@
-class RawAcl:
+class RawAcl(GenericAcl):
  """
  Represents an Access Control List (ACL).
  
  RawAcl(revision: Byte,capacity: int)
  RawAcl(binaryForm: Array[Byte],offset: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RawAcl()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetBinaryForm(self,binaryForm,offset):
   """
   GetBinaryForm(self: RawAcl,binaryForm: Array[Byte],offset: int)
-   Marshals the contents of the System.Security.AccessControl.RawAcl object into the 
-    specified byte array beginning at the specified offset.
+   Marshals the contents of the System.Security.AccessControl.RawAcl object into the specified byte array beginning at the specified offset.
   
-  
-   binaryForm: The byte array into which the contents of the System.Security.AccessControl.RawAcl is 
-    marshaled.
-  
+   binaryForm: The byte array into which the contents of the System.Security.AccessControl.RawAcl is marshaled.
    offset: The offset at which to start marshaling.
   """
   pass
@@ -23,8 +24,7 @@ class RawAcl:
   InsertAce(self: RawAcl,index: int,ace: GenericAce)
    Inserts the specified Access Control Entry (ACE) at the specified index.
   
-   index: The position at which to add the new ACE. Specify the value of the 
-    System.Security.AccessControl.RawAcl.Count property to insert an ACE at the end of the 
+   index: The position at which to add the new ACE. Specify the value of the System.Security.AccessControl.RawAcl.Count property to insert an ACE at the end of the 
     System.Security.AccessControl.RawAcl object.
   
    ace: The ACE to insert.

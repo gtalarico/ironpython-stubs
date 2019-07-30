@@ -1,9 +1,13 @@
-class TreeViewCancelEventArgs:
+class TreeViewCancelEventArgs(CancelEventArgs):
  """
  Provides data for the System.Windows.Forms.TreeView.BeforeCheck,System.Windows.Forms.TreeView.BeforeCollapse,System.Windows.Forms.TreeView.BeforeExpand,and System.Windows.Forms.TreeView.BeforeSelect events of a System.Windows.Forms.TreeView control.
  
  TreeViewCancelEventArgs(node: TreeNode,cancel: bool,action: TreeViewAction)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TreeViewCancelEventArgs()
+
  @staticmethod
  def __new__(self,node,cancel,action):
   """ __new__(cls: type,node: TreeNode,cancel: bool,action: TreeViewAction) """

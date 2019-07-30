@@ -4,6 +4,11 @@ class MutexRights:
  
  enum (flags) MutexRights,values: ChangePermissions (262144),Delete (65536),FullControl (2031617),Modify (1),ReadPermissions (131072),Synchronize (1048576),TakeOwnership (524288)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MutexRights()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

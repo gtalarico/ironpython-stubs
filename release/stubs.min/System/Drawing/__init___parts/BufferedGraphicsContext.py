@@ -1,32 +1,29 @@
-class BufferedGraphicsContext:
+class BufferedGraphicsContext(object,IDisposable):
  """
  Provides methods for creating graphics buffers that can be used for double buffering.
  
  BufferedGraphicsContext()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return BufferedGraphicsContext()
+
  def Allocate(self,*__args):
   """
   Allocate(self: BufferedGraphicsContext,targetGraphics: Graphics,targetRectangle: Rectangle) -> BufferedGraphics
   
-   Creates a graphics buffer of the specified size using the pixel format of the specified 
-    System.Drawing.Graphics.
-  
+   Creates a graphics buffer of the specified size using the pixel format of the specified System.Drawing.Graphics.
   
    targetGraphics: The System.Drawing.Graphics to match the pixel format for the new buffer to.
    targetRectangle: A System.Drawing.Rectangle indicating the size of the buffer to create.
-   Returns: A System.Drawing.BufferedGraphics that can be used to draw to a buffer of the specified 
-    dimensions.
-  
+   Returns: A System.Drawing.BufferedGraphics that can be used to draw to a buffer of the specified dimensions.
   Allocate(self: BufferedGraphicsContext,targetDC: IntPtr,targetRectangle: Rectangle) -> BufferedGraphics
   
-   Creates a graphics buffer of the specified size using the pixel format of the specified 
-    System.Drawing.Graphics.
-  
+   Creates a graphics buffer of the specified size using the pixel format of the specified System.Drawing.Graphics.
   
    targetDC: An System.IntPtr to a device context to match the pixel format of the new buffer to.
    targetRectangle: A System.Drawing.Rectangle indicating the size of the buffer to create.
-   Returns: A System.Drawing.BufferedGraphics that can be used to draw to a buffer of the specified 
-    dimensions.
+   Returns: A System.Drawing.BufferedGraphics that can be used to draw to a buffer of the specified dimensions.
   """
   pass
  def Dispose(self):
@@ -38,8 +35,7 @@ class BufferedGraphicsContext:
  def Invalidate(self):
   """
   Invalidate(self: BufferedGraphicsContext)
-   Disposes of the current graphics buffer,if a buffer has been allocated and has not yet 
-    been disposed.
+   Disposes of the current graphics buffer,if a buffer has been allocated and has not yet been disposed.
   """
   pass
  def __enter__(self,*args):

@@ -1,5 +1,10 @@
 class IBindingList:
  """ Provides the features required to support both complex and simple scenarios when binding to a data source. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IBindingList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddIndex(self,property):
   """
   AddIndex(self: IBindingList,property: PropertyDescriptor)
@@ -19,9 +24,7 @@ class IBindingList:
  def ApplySort(self,property,direction):
   """
   ApplySort(self: IBindingList,property: PropertyDescriptor,direction: ListSortDirection)
-   Sorts the list based on a System.ComponentModel.PropertyDescriptor and a 
-    System.ComponentModel.ListSortDirection.
-  
+   Sorts the list based on a System.ComponentModel.PropertyDescriptor and a System.ComponentModel.ListSortDirection.
   
    property: The System.ComponentModel.PropertyDescriptor to sort by.
    direction: One of the System.ComponentModel.ListSortDirection values.
@@ -43,16 +46,13 @@ class IBindingList:
   RemoveIndex(self: IBindingList,property: PropertyDescriptor)
    Removes the System.ComponentModel.PropertyDescriptor from the indexes used for searching.
   
-   property: The System.ComponentModel.PropertyDescriptor to remove from the indexes used for 
-    searching.
+   property: The System.ComponentModel.PropertyDescriptor to remove from the indexes used for searching.
   """
   pass
  def RemoveSort(self):
   """
   RemoveSort(self: IBindingList)
-   Removes any sort applied using 
-    System.ComponentModel.IBindingList.ApplySort(System.ComponentModel.PropertyDescriptor,Syst
-    em.ComponentModel.ListSortDirection).
+   Removes any sort applied using System.ComponentModel.IBindingList.ApplySort(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection).
   """
   pass
  def __contains__(self,*args):

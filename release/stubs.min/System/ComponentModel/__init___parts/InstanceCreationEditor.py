@@ -1,5 +1,10 @@
-class InstanceCreationEditor:
+class InstanceCreationEditor(object):
  """ Creates an instance of a particular type of property from a drop-down box within the System.Windows.Forms.PropertyGrid. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InstanceCreationEditor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreateInstance(self,context,instanceType):
   """
   CreateInstance(self: InstanceCreationEditor,context: ITypeDescriptorContext,instanceType: Type) -> object

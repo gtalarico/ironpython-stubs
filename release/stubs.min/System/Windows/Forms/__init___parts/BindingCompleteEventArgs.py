@@ -1,4 +1,4 @@
-class BindingCompleteEventArgs:
+class BindingCompleteEventArgs(CancelEventArgs):
  """
  Provides data for the System.Windows.Forms.Binding.BindingComplete event.
  
@@ -7,6 +7,10 @@ class BindingCompleteEventArgs:
  BindingCompleteEventArgs(binding: Binding,state: BindingCompleteState,context: BindingCompleteContext,errorText: str)
  BindingCompleteEventArgs(binding: Binding,state: BindingCompleteState,context: BindingCompleteContext)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return BindingCompleteEventArgs()
+
  @staticmethod
  def __new__(self,binding,state,context,errorText=None,exception=None,cancel=None):
   """

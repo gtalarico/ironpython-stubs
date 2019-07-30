@@ -1,15 +1,42 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.Purchase calls itself Purchase
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class ErpProcessPurchaseOrderLinesResult:
+class DtoErrorDetails(object):
+ """ DtoErrorDetails() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DtoErrorDetails()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
+ ItemCodes=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: ItemCodes(self: DtoErrorDetails) -> List[str]
+
+Set: ItemCodes(self: DtoErrorDetails)=value
+"""
+
+ Messages=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Messages(self: DtoErrorDetails) -> Dictionary[str,str]
+
+Set: Messages(self: DtoErrorDetails)=value
+"""
+
+
+
+class ErpProcessPurchaseOrderLinesResult(object):
  """ ErpProcessPurchaseOrderLinesResult() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ErpProcessPurchaseOrderLinesResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  DefaultItemLocations=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: DefaultItemLocations(self: ErpProcessPurchaseOrderLinesResult) -> Dictionary[str,str]
 
@@ -28,40 +55,75 @@ Set: DefaultReceiptLocation(self: ErpProcessPurchaseOrderLinesResult)=value
 Set: EntryNumber(self: ErpProcessPurchaseOrderLinesResult)=value
 """
 
+ ErrorDetails=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: ErrorDetails(self: ErpProcessPurchaseOrderLinesResult) -> DtoErrorDetails
+
+Set: ErrorDetails(self: ErpProcessPurchaseOrderLinesResult)=value
+"""
+
+ ErrorMessages=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: ErrorMessages(self: ErpProcessPurchaseOrderLinesResult) -> Dictionary[str,str]
+
+Set: ErrorMessages(self: ErpProcessPurchaseOrderLinesResult)=value
+"""
+
  HasDocument=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: HasDocument(self: ErpProcessPurchaseOrderLinesResult) -> bool
 
 """
 
+ HasErrors=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: HasErrors(self: ErpProcessPurchaseOrderLinesResult) -> bool
+
+"""
+
  Reports=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Reports(self: ErpProcessPurchaseOrderLinesResult) -> List[Attachment]
+ """The reports that are generated during the fulfillment
+
+Get: Reports(self: ErpProcessPurchaseOrderLinesResult) -> List[Attachment]
 
 Set: Reports(self: ErpProcessPurchaseOrderLinesResult)=value
 """
 
 
 
-class ErpProcessReceiptResult:
+class ErpProcessReceiptResult(ErpProcessPurchaseOrderLinesResult):
  """ ErpProcessReceiptResult() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ErpProcessReceiptResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CreatedPurchaseOrder=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CreatedPurchaseOrder(self: ErpProcessReceiptResult) -> PurchaseOrder
+ """
+
+Get: CreatedPurchaseOrder(self: ErpProcessReceiptResult) -> PurchaseOrder
 
 Set: CreatedPurchaseOrder(self: ErpProcessReceiptResult)=value
 """
 
  HasPurchaseOrder=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HasPurchaseOrder(self: ErpProcessReceiptResult) -> bool
+ """
+
+Get: HasPurchaseOrder(self: ErpProcessReceiptResult) -> bool
 
 """
 
 
 
-class GetHistoryPurchaseOrderPrintLinesArgs:
+class GetHistoryPurchaseOrderPrintLinesArgs(object):
  """
+ Used to retrieve the order lines of a purchase order.
+ 
  GetHistoryPurchaseOrderPrintLinesArgs()
  GetHistoryPurchaseOrderPrintLinesArgs(purchaseReceiptGuid: Guid)
  GetHistoryPurchaseOrderPrintLinesArgs(purchaseReceiptGuid: Guid,pagingParams: PagingParams)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetHistoryPurchaseOrderPrintLinesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,purchaseReceiptGuid=None,pagingParams=None):
   """
@@ -71,30 +133,41 @@ class GetHistoryPurchaseOrderPrintLinesArgs:
   """
   pass
  PagingParams=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PagingParams(self: GetHistoryPurchaseOrderPrintLinesArgs) -> PagingParams
+ """
+
+Get: PagingParams(self: GetHistoryPurchaseOrderPrintLinesArgs) -> PagingParams
 
 Set: PagingParams(self: GetHistoryPurchaseOrderPrintLinesArgs)=value
 """
 
  PurchaseReceiptGuid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PurchaseReceiptGuid(self: GetHistoryPurchaseOrderPrintLinesArgs) -> Guid
+ """
+
+Get: PurchaseReceiptGuid(self: GetHistoryPurchaseOrderPrintLinesArgs) -> Guid
 
 Set: PurchaseReceiptGuid(self: GetHistoryPurchaseOrderPrintLinesArgs)=value
 """
 
  SearchText=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SearchText(self: GetHistoryPurchaseOrderPrintLinesArgs) -> str
+ """
+
+Get: SearchText(self: GetHistoryPurchaseOrderPrintLinesArgs) -> str
 
 Set: SearchText(self: GetHistoryPurchaseOrderPrintLinesArgs)=value
 """
 
 
 
-class GetItemsOfVendorArgs:
+class GetItemsOfVendorArgs(object):
  """
  GetItemsOfVendorArgs()
  GetItemsOfVendorArgs(vendorNumber: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetItemsOfVendorArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,vendorNumber=None):
   """
@@ -103,36 +176,51 @@ class GetItemsOfVendorArgs:
   """
   pass
  Filter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Filter(self: GetItemsOfVendorArgs) -> str
+ """
+
+Get: Filter(self: GetItemsOfVendorArgs) -> str
 
 Set: Filter(self: GetItemsOfVendorArgs)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: GetItemsOfVendorArgs) -> str
+ """Use as an alternative for Wms.RemotingObjects.Purchase.GetItemsOfVendorArgs.Filter to filter on a specific item.
+
+Get: ItemCode(self: GetItemsOfVendorArgs) -> str
 
 Set: ItemCode(self: GetItemsOfVendorArgs)=value
 """
 
  Paging=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Paging(self: GetItemsOfVendorArgs) -> PagingParams
+ """
+
+Get: Paging(self: GetItemsOfVendorArgs) -> PagingParams
 
 Set: Paging(self: GetItemsOfVendorArgs)=value
 """
 
  VendorNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorNumber(self: GetItemsOfVendorArgs) -> str
+ """
+
+Get: VendorNumber(self: GetItemsOfVendorArgs) -> str
 
 Set: VendorNumber(self: GetItemsOfVendorArgs)=value
 """
 
 
 
-class GetItemVendorsArgs:
+class GetItemVendorsArgs(object):
  """
+ Arguments wich are used to retrieve the vendors for a specific item.
+ 
  GetItemVendorsArgs()
  GetItemVendorsArgs(itemCode: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetItemVendorsArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,itemCode=None):
   """
@@ -141,7 +229,9 @@ class GetItemVendorsArgs:
   """
   pass
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: GetItemVendorsArgs) -> str
+ """
+
+Get: ItemCode(self: GetItemVendorsArgs) -> str
 
 Set: ItemCode(self: GetItemVendorsArgs)=value
 """
@@ -150,11 +240,18 @@ Set: ItemCode(self: GetItemVendorsArgs)=value
  Default=None
 
 
-class GetPurchaseOrderLinesArgs:
+class GetPurchaseOrderLinesArgs(object):
  """
+ Used to retrieve the order lines of a purchase order.
+ 
  GetPurchaseOrderLinesArgs()
  GetPurchaseOrderLinesArgs(purchaseOrderIds: IEnumerable[int])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetPurchaseOrderLinesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,purchaseOrderIds=None):
   """
@@ -163,7 +260,9 @@ class GetPurchaseOrderLinesArgs:
   """
   pass
  Filter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Filter(self: GetPurchaseOrderLinesArgs) -> str
+ """Filter,only orders will be found that contain this text.
+
+Get: Filter(self: GetPurchaseOrderLinesArgs) -> str
 
 Set: Filter(self: GetPurchaseOrderLinesArgs)=value
 """
@@ -172,32 +271,47 @@ Set: Filter(self: GetPurchaseOrderLinesArgs)=value
  PurchaseOrderIds=None
 
 
-class InboundOrderArgsBase:
+class InboundOrderArgsBase(object):
  """ InboundOrderArgsBase() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InboundOrderArgsBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Filter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Filter(self: InboundOrderArgsBase) -> str
+ """
+
+Get: Filter(self: InboundOrderArgsBase) -> str
 
 Set: Filter(self: InboundOrderArgsBase)=value
 """
 
  FromDate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: FromDate(self: InboundOrderArgsBase) -> Nullable[DateTime]
+ """
+
+Get: FromDate(self: InboundOrderArgsBase) -> Nullable[DateTime]
 
 """
 
  TimeSpan=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TimeSpan(self: InboundOrderArgsBase) -> TimeFilterEnum
+ """
+
+Get: TimeSpan(self: InboundOrderArgsBase) -> TimeFilterEnum
 
 Set: TimeSpan(self: InboundOrderArgsBase)=value
 """
 
  ToDate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ToDate(self: InboundOrderArgsBase) -> DateTime
+ """
+
+Get: ToDate(self: InboundOrderArgsBase) -> DateTime
 
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: InboundOrderArgsBase) -> str
+ """
+
+Get: WarehouseCode(self: InboundOrderArgsBase) -> str
 
 Set: WarehouseCode(self: InboundOrderArgsBase)=value
 """
@@ -206,9 +320,16 @@ Set: WarehouseCode(self: InboundOrderArgsBase)=value
 
 class GetPurchaseOrderVendorArgs:
  """
+ Used to provide arguments for retrieving the vendor of a purchase orders.
+ 
  GetPurchaseOrderVendorArgs()
  GetPurchaseOrderVendorArgs(warehouseCode: str,filterText: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetPurchaseOrderVendorArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,warehouseCode=None,filterText=None):
   """
@@ -217,13 +338,17 @@ class GetPurchaseOrderVendorArgs:
   """
   pass
  IncludePreReceipts=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IncludePreReceipts(self: GetPurchaseOrderVendorArgs) -> bool
+ """
+
+Get: IncludePreReceipts(self: GetPurchaseOrderVendorArgs) -> bool
 
 Set: IncludePreReceipts(self: GetPurchaseOrderVendorArgs)=value
 """
 
  IncludePurchaseOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IncludePurchaseOrders(self: GetPurchaseOrderVendorArgs) -> bool
+ """
+
+Get: IncludePurchaseOrders(self: GetPurchaseOrderVendorArgs) -> bool
 
 Set: IncludePurchaseOrders(self: GetPurchaseOrderVendorArgs)=value
 """
@@ -232,14 +357,21 @@ Set: IncludePurchaseOrders(self: GetPurchaseOrderVendorArgs)=value
  Default=None
 
 
-class GetVendorsArgs:
+class GetVendorsArgs(object):
  """
+ Arguments wich are used to retrieve the vendors for a specific item.
+ 
  GetVendorsArgs()
  GetVendorsArgs(vendorNumber: str)
  GetVendorsArgs(vendorNumber: str,filterText: str)
  GetVendorsArgs(id: int)
  GetVendorsArgs(id: int,filterText: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetVendorsArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -251,25 +383,33 @@ class GetVendorsArgs:
   """
   pass
  FilterText=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: FilterText(self: GetVendorsArgs) -> str
+ """
+
+Get: FilterText(self: GetVendorsArgs) -> str
 
 Set: FilterText(self: GetVendorsArgs)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: GetVendorsArgs) -> int
+ """
+
+Get: Id(self: GetVendorsArgs) -> int
 
 Set: Id(self: GetVendorsArgs)=value
 """
 
  Paging=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Paging(self: GetVendorsArgs) -> PagingParams
+ """
+
+Get: Paging(self: GetVendorsArgs) -> PagingParams
 
 Set: Paging(self: GetVendorsArgs)=value
 """
 
  VendorNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorNumber(self: GetVendorsArgs) -> str
+ """
+
+Get: VendorNumber(self: GetVendorsArgs) -> str
 
 Set: VendorNumber(self: GetVendorsArgs)=value
 """
@@ -280,6 +420,11 @@ Set: VendorNumber(self: GetVendorsArgs)=value
 
 class PurchaseOrder:
  """ PurchaseOrder() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PurchaseOrder()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def CreateDummyFromVendor(orderNumber,warehouseCode,vendor):
   """ CreateDummyFromVendor(orderNumber: str,warehouseCode: str,vendor: Vendor) -> PurchaseOrder """
@@ -293,115 +438,156 @@ class PurchaseOrder:
  def __reduce_ex__(self,*args):
   pass
  HasPreReceipt=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HasPreReceipt(self: PurchaseOrder) -> bool
+ """
+
+Get: HasPreReceipt(self: PurchaseOrder) -> bool
 
 """
 
  PreReceipts=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreReceipts(self: PurchaseOrder) -> PreReceiptSummaries
+ """
+
+Get: PreReceipts(self: PurchaseOrder) -> PreReceiptSummaries
 
 Set: PreReceipts(self: PurchaseOrder)=value
 """
 
  UniquePreReceiptsAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UniquePreReceiptsAsString(self: PurchaseOrder) -> str
+ """
+
+Get: UniquePreReceiptsAsString(self: PurchaseOrder) -> str
 
 """
 
  VendorAddressLine1=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorAddressLine1(self: PurchaseOrder) -> str
+ """Address of the vendor,containing the street name and number.
+
+Get: VendorAddressLine1(self: PurchaseOrder) -> str
 
 Set: VendorAddressLine1(self: PurchaseOrder)=value
 """
 
  VendorAddressLine2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorAddressLine2(self: PurchaseOrder) -> str
+ """Second address of the vendor,containing the street name and number.
+
+Get: VendorAddressLine2(self: PurchaseOrder) -> str
 
 Set: VendorAddressLine2(self: PurchaseOrder)=value
 """
 
  VendorAddressLine3=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorAddressLine3(self: PurchaseOrder) -> str
+ """Third address of the vendor,containing the street name and number.
+
+Get: VendorAddressLine3(self: PurchaseOrder) -> str
 
 Set: VendorAddressLine3(self: PurchaseOrder)=value
 """
 
  VendorCity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorCity(self: PurchaseOrder) -> str
+ """Necessary for Userinterface BOXwise Mobile
+
+Get: VendorCity(self: PurchaseOrder) -> str
 
 Set: VendorCity(self: PurchaseOrder)=value
 """
 
  VendorContact=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorContact(self: PurchaseOrder) -> str
+ """
+
+Get: VendorContact(self: PurchaseOrder) -> str
 
 Set: VendorContact(self: PurchaseOrder)=value
 """
 
  VendorContactEmail=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorContactEmail(self: PurchaseOrder) -> str
+ """
+
+Get: VendorContactEmail(self: PurchaseOrder) -> str
 
 Set: VendorContactEmail(self: PurchaseOrder)=value
 """
 
  VendorCountryCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorCountryCode(self: PurchaseOrder) -> str
+ """Necessary for Userinterface BOXwise Mobile
+
+Get: VendorCountryCode(self: PurchaseOrder) -> str
 
 Set: VendorCountryCode(self: PurchaseOrder)=value
 """
 
  VendorCountryName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorCountryName(self: PurchaseOrder) -> str
+ """
+
+Get: VendorCountryName(self: PurchaseOrder) -> str
 
 Set: VendorCountryName(self: PurchaseOrder)=value
 """
 
  VendorName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorName(self: PurchaseOrder) -> str
+ """Necessary for Userinterface BOXwise Mobile
+
+Get: VendorName(self: PurchaseOrder) -> str
 
 Set: VendorName(self: PurchaseOrder)=value
 """
 
  VendorNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorNumber(self: PurchaseOrder) -> str
+ """Necessary for Userinterface BOXwise Mobile
+
+Get: VendorNumber(self: PurchaseOrder) -> str
 
 Set: VendorNumber(self: PurchaseOrder)=value
 """
 
  VendorPhoneNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorPhoneNumber(self: PurchaseOrder) -> str
+ """
+
+Get: VendorPhoneNumber(self: PurchaseOrder) -> str
 
 Set: VendorPhoneNumber(self: PurchaseOrder)=value
 """
 
  VendorState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorState(self: PurchaseOrder) -> str
+ """
+
+Get: VendorState(self: PurchaseOrder) -> str
 
 Set: VendorState(self: PurchaseOrder)=value
 """
 
  VendorZipCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorZipCode(self: PurchaseOrder) -> str
+ """
+
+Get: VendorZipCode(self: PurchaseOrder) -> str
 
 Set: VendorZipCode(self: PurchaseOrder)=value
 """
 
 
 
-class HistoryPurchaseOrder:
+class HistoryPurchaseOrder(PurchaseOrder):
  """ HistoryPurchaseOrder() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryPurchaseOrder()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  def __reduce_ex__(self,*args):
   pass
  DateReceived=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DateReceived(self: HistoryPurchaseOrder) -> DateTime
+ """
+
+Get: DateReceived(self: HistoryPurchaseOrder) -> DateTime
 
 """
 
  GroupGuid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupGuid(self: HistoryPurchaseOrder) -> Guid
+ """
+
+Get: GroupGuid(self: HistoryPurchaseOrder) -> Guid
 
 Set: GroupGuid(self: HistoryPurchaseOrder)=value
 """
@@ -425,15 +611,22 @@ Set: PreReceiptTransactionId(self: HistoryPurchaseOrder)=value
 """
 
  YourReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: YourReference(self: HistoryPurchaseOrder) -> str
+ """
+
+Get: YourReference(self: HistoryPurchaseOrder) -> str
 
 Set: YourReference(self: HistoryPurchaseOrder)=value
 """
 
 
 
-class HistoryPurchaseOrders:
+class HistoryPurchaseOrders(FindableList):
  """ HistoryPurchaseOrders() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryPurchaseOrders()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -449,15 +642,23 @@ class HistoryPurchaseOrders:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: HistoryPurchaseOrders) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: HistoryPurchaseOrders) -> Int64
 
 Set: TotalRowsMatched(self: HistoryPurchaseOrders)=value
 """
 
 
 
-class HistoryPurchaseOrdersFilter:
+class HistoryPurchaseOrdersFilter(HistoryFilterBase):
  """ HistoryPurchaseOrdersFilter() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryPurchaseOrdersFilter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: WarehouseCode(self: HistoryPurchaseOrdersFilter) -> str
 
@@ -466,147 +667,217 @@ Set: WarehouseCode(self: HistoryPurchaseOrdersFilter)=value
 
 
 
-class Vendor:
- """ Vendor() """
+class Vendor(object):
+ """
+ Represents a single vendor. Contains all general information of a vendor.
+ 
+ Vendor()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Vendor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHashCode(self):
   """ GetHashCode(self: Vendor) -> int """
   pass
  AddressLine1=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AddressLine1(self: Vendor) -> str
+ """Address of a vendor,containing a street name and number.
+
+Get: AddressLine1(self: Vendor) -> str
 
 Set: AddressLine1(self: Vendor)=value
 """
 
  AddressLine2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AddressLine2(self: Vendor) -> str
+ """Second address of a vendor,containing a street name and number.
+
+Get: AddressLine2(self: Vendor) -> str
 
 Set: AddressLine2(self: Vendor)=value
 """
 
  AddressLine3=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AddressLine3(self: Vendor) -> str
+ """Third address of a vendor,containing a street name and number.
+
+Get: AddressLine3(self: Vendor) -> str
 
 Set: AddressLine3(self: Vendor)=value
 """
 
  City=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: City(self: Vendor) -> str
+ """
+
+Get: City(self: Vendor) -> str
 
 Set: City(self: Vendor)=value
 """
 
  Contact=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Contact(self: Vendor) -> str
+ """
+
+Get: Contact(self: Vendor) -> str
 
 Set: Contact(self: Vendor)=value
 """
 
  ContactEmail=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ContactEmail(self: Vendor) -> str
+ """
+
+Get: ContactEmail(self: Vendor) -> str
 
 Set: ContactEmail(self: Vendor)=value
 """
 
  CountryCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CountryCode(self: Vendor) -> str
+ """
+
+Get: CountryCode(self: Vendor) -> str
 
 Set: CountryCode(self: Vendor)=value
 """
 
  CountryName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CountryName(self: Vendor) -> str
+ """
+
+Get: CountryName(self: Vendor) -> str
 
 Set: CountryName(self: Vendor)=value
 """
 
  GroupKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupKey(self: Vendor) -> int
+ """
+
+Get: GroupKey(self: Vendor) -> int
 
 Set: GroupKey(self: Vendor)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: Vendor) -> int
+ """
+
+Get: Id(self: Vendor) -> int
 
 Set: Id(self: Vendor)=value
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name(self: Vendor) -> str
+ """The full name of a vendor.
+
+Get: Name(self: Vendor) -> str
 
 Set: Name(self: Vendor)=value
 """
 
  Number=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Number(self: Vendor) -> str
+ """
+
+Get: Number(self: Vendor) -> str
 
 Set: Number(self: Vendor)=value
 """
 
  PhoneNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PhoneNumber(self: Vendor) -> str
+ """
+
+Get: PhoneNumber(self: Vendor) -> str
 
 Set: PhoneNumber(self: Vendor)=value
 """
 
  ReceiptType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReceiptType(self: Vendor) -> ReceiptTypeEnum
+ """
+
+Get: ReceiptType(self: Vendor) -> ReceiptTypeEnum
 
 Set: ReceiptType(self: Vendor)=value
 """
 
  State=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: State(self: Vendor) -> str
+ """
+
+Get: State(self: Vendor) -> str
 
 Set: State(self: Vendor)=value
 """
 
  UniqueId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UniqueId(self: Vendor) -> str
+ """This property is used for GUI interaction only.
+   This makes sure that an incidentally same grouping key is made unique.
+
+Get: UniqueId(self: Vendor) -> str
 
 """
 
  ZipCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ZipCode(self: Vendor) -> str
+ """
+
+Get: ZipCode(self: Vendor) -> str
 
 Set: ZipCode(self: Vendor)=value
 """
 
 
 
-class ItemVendor:
- """ ItemVendor() """
+class ItemVendor(Vendor):
+ """
+ Represents a single vendor. Contains all general information of a vendor.
+ 
+ ItemVendor()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemVendor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHashCode(self):
   """ GetHashCode(self: ItemVendor) -> int """
   pass
  Barcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Barcode(self: ItemVendor) -> str
+ """
+
+Get: Barcode(self: ItemVendor) -> str
 
 Set: Barcode(self: ItemVendor)=value
 """
 
  IsMainVendor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsMainVendor(self: ItemVendor) -> bool
+ """
+
+Get: IsMainVendor(self: ItemVendor) -> bool
 
 Set: IsMainVendor(self: ItemVendor)=value
 """
 
  PurchaseUnitCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PurchaseUnitCode(self: ItemVendor) -> str
+ """
+
+Get: PurchaseUnitCode(self: ItemVendor) -> str
 
 Set: PurchaseUnitCode(self: ItemVendor)=value
 """
 
  SalesUnitFactor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SalesUnitFactor(self: ItemVendor) -> Decimal
+ """
+
+Get: SalesUnitFactor(self: ItemVendor) -> Decimal
 
 Set: SalesUnitFactor(self: ItemVendor)=value
 """
 
 
 
-class ItemVendors:
- """ ItemVendors() """
+class ItemVendors(FindableList):
+ """
+ Container for the Wms.RemotingObjects.Purchase.Vendor objects.
+ 
+ ItemVendors()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemVendors()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -625,8 +896,13 @@ class ItemVendors:
  ValueMember='Number'
 
 
-class ProcessPurchaseOrderLinesArgs:
+class ProcessPurchaseOrderLinesArgs(object):
  """ ProcessPurchaseOrderLinesArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessPurchaseOrderLinesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  DefaultInboundLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: DefaultInboundLocation(self: ProcessPurchaseOrderLinesArgs) -> str
 
@@ -634,41 +910,64 @@ Set: DefaultInboundLocation(self: ProcessPurchaseOrderLinesArgs)=value
 """
 
  YourReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: YourReference(self: ProcessPurchaseOrderLinesArgs) -> str
+ """The reference for the received purchase order lines.
+
+Get: YourReference(self: ProcessPurchaseOrderLinesArgs) -> str
 
 Set: YourReference(self: ProcessPurchaseOrderLinesArgs)=value
 """
 
 
 
-class ProcessReceiptArgs:
+class ProcessReceiptArgs(object):
  """ ProcessReceiptArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessReceiptArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  DocumentPrinter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DocumentPrinter(self: ProcessReceiptArgs) -> str
+ """
+
+Get: DocumentPrinter(self: ProcessReceiptArgs) -> str
 
 Set: DocumentPrinter(self: ProcessReceiptArgs)=value
 """
 
  OrderDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderDescription(self: ProcessReceiptArgs) -> str
+ """Add a description to the FreeReceipts Order
+
+Get: OrderDescription(self: ProcessReceiptArgs) -> str
 
 Set: OrderDescription(self: ProcessReceiptArgs)=value
 """
 
  VendorNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: VendorNumber(self: ProcessReceiptArgs) -> str
+ """
+
+Get: VendorNumber(self: ProcessReceiptArgs) -> str
 
 Set: VendorNumber(self: ProcessReceiptArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: ProcessReceiptArgs) -> str
+ """
+
+Get: WarehouseCode(self: ProcessReceiptArgs) -> str
 
 Set: WarehouseCode(self: ProcessReceiptArgs)=value
 """
 
+ WarehouseDefaultInboundLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: WarehouseDefaultInboundLocationCode(self: ProcessReceiptArgs) -> str
+
+Set: WarehouseDefaultInboundLocationCode(self: ProcessReceiptArgs)=value
+"""
+
  YourReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: YourReference(self: ProcessReceiptArgs) -> str
+ """The reference for the received purchase order lines.
+
+Get: YourReference(self: ProcessReceiptArgs) -> str
 
 Set: YourReference(self: ProcessReceiptArgs)=value
 """
@@ -677,6 +976,8 @@ Set: YourReference(self: ProcessReceiptArgs)=value
 
 class PurchaseOrderArgs:
  """
+ Provides a filter for purchase orders.
+ 
  PurchaseOrderArgs()
  PurchaseOrderArgs(id: int)
  PurchaseOrderArgs(warehouseCode: str)
@@ -685,6 +986,11 @@ class PurchaseOrderArgs:
  PurchaseOrderArgs(warehouseCode: str,vendorNumber: str,searchText: str)
  PurchaseOrderArgs(warehouseCode: str,vendorNumber: str,searchText: str,timeSpan: TimeFilterEnum)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PurchaseOrderArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -698,7 +1004,10 @@ class PurchaseOrderArgs:
   """
   pass
  Paging=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Paging(self: PurchaseOrderArgs) -> PagingParams
+ """Paging the result set. Currently done outside of ERP Link!
+   Todo move this usage/logic to ERP connections
+
+Get: Paging(self: PurchaseOrderArgs) -> PagingParams
 
 Set: Paging(self: PurchaseOrderArgs)=value
 """
@@ -710,7 +1019,16 @@ Set: Paging(self: PurchaseOrderArgs)=value
 
 
 class PurchaseOrderLine:
- """ PurchaseOrderLine() """
+ """
+ Represents a single order line of a purchase order.
+ 
+ PurchaseOrderLine()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PurchaseOrderLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromItem(item,itemDefaultLocation):
   """ FromItem(item: Item,itemDefaultLocation: str) -> PurchaseOrderLine """
@@ -724,67 +1042,96 @@ class PurchaseOrderLine:
  def __reduce_ex__(self,*args):
   pass
  CurrentVendorBarcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CurrentVendorBarcode(self: PurchaseOrderLine) -> str
+ """
+
+Get: CurrentVendorBarcode(self: PurchaseOrderLine) -> str
 
 Set: CurrentVendorBarcode(self: PurchaseOrderLine)=value
 """
 
  CurrentVendorItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CurrentVendorItemCode(self: PurchaseOrderLine) -> str
+ """
+
+Get: CurrentVendorItemCode(self: PurchaseOrderLine) -> str
 
 Set: CurrentVendorItemCode(self: PurchaseOrderLine)=value
 """
 
  CurrentVendorNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CurrentVendorNumber(self: PurchaseOrderLine) -> str
+ """
+
+Get: CurrentVendorNumber(self: PurchaseOrderLine) -> str
 
 Set: CurrentVendorNumber(self: PurchaseOrderLine)=value
 """
 
  DefaultVendorNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultVendorNumber(self: PurchaseOrderLine) -> str
+ """
+
+Get: DefaultVendorNumber(self: PurchaseOrderLine) -> str
 
 Set: DefaultVendorNumber(self: PurchaseOrderLine)=value
 """
 
  HasPreReceipt=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HasPreReceipt(self: PurchaseOrderLine) -> bool
+ """
+
+Get: HasPreReceipt(self: PurchaseOrderLine) -> bool
 
 """
 
  ItemPurchasePrice=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemPurchasePrice(self: PurchaseOrderLine) -> Decimal
+ """
+
+Get: ItemPurchasePrice(self: PurchaseOrderLine) -> Decimal
 
 Set: ItemPurchasePrice(self: PurchaseOrderLine)=value
 """
 
  PreReceipts=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreReceipts(self: PurchaseOrderLine) -> List[PreReceiptSummary]
+ """
+
+Get: PreReceipts(self: PurchaseOrderLine) -> List[PreReceiptSummary]
 
 Set: PreReceipts(self: PurchaseOrderLine)=value
 """
 
  SalesUnitCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SalesUnitCode(self: PurchaseOrderLine) -> str
+ """
+
+Get: SalesUnitCode(self: PurchaseOrderLine) -> str
 
 Set: SalesUnitCode(self: PurchaseOrderLine)=value
 """
 
  SalesUnitFactor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SalesUnitFactor(self: PurchaseOrderLine) -> Decimal
+ """
+
+Get: SalesUnitFactor(self: PurchaseOrderLine) -> Decimal
 
 Set: SalesUnitFactor(self: PurchaseOrderLine)=value
 """
 
  UniquePreReceiptsAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UniquePreReceiptsAsString(self: PurchaseOrderLine) -> List[str]
+ """
+
+Get: UniquePreReceiptsAsString(self: PurchaseOrderLine) -> List[str]
 
 """
 
 
 
 class PurchaseOrderLines:
- """ PurchaseOrderLines() """
+ """
+ Container for the Wms.RemotingObjects.Purchase.PurchaseOrderLine objects.
+ 
+ PurchaseOrderLines()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PurchaseOrderLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(inboundOrderLines):
   """ FromIEnumerable(inboundOrderLines: IEnumerable[InboundOrderLine]) -> PurchaseOrderLines """
@@ -807,12 +1154,16 @@ class PurchaseOrderLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: PurchaseOrderLines) -> bool
+ """
+
+Get: IsDisposable(self: PurchaseOrderLines) -> bool
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: PurchaseOrderLines) -> bool
+ """
+
+Get: PreserveState(self: PurchaseOrderLines) -> bool
 
 """
 
@@ -823,6 +1174,11 @@ class PurchaseOrderLines:
 
 class PurchaseOrders:
  """ PurchaseOrders() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PurchaseOrders()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(list):
   """ FromIEnumerable(list: IEnumerable[InboundOrder]) -> PurchaseOrders """
@@ -848,7 +1204,9 @@ class PurchaseOrders:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: PurchaseOrders) -> Int64
+ """
+
+Get: TotalRowsMatched(self: PurchaseOrders) -> Int64
 
 Set: TotalRowsMatched(self: PurchaseOrders)=value
 """
@@ -858,16 +1216,29 @@ Set: TotalRowsMatched(self: PurchaseOrders)=value
  ValueMember='Id'
 
 
-class PurchaseOrderVendor:
- """ PurchaseOrderVendor() """
+class PurchaseOrderVendor(Vendor):
+ """
+ Represents a single vendor. Contains all general information of a vendor.
+ 
+ PurchaseOrderVendor()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PurchaseOrderVendor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Barcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Barcode(self: PurchaseOrderVendor) -> str
+ """
+
+Get: Barcode(self: PurchaseOrderVendor) -> str
 
 Set: Barcode(self: PurchaseOrderVendor)=value
 """
 
  DateOldestPurchaseOrder=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DateOldestPurchaseOrder(self: PurchaseOrderVendor) -> DateTime
+ """
+
+Get: DateOldestPurchaseOrder(self: PurchaseOrderVendor) -> DateTime
 
 Set: DateOldestPurchaseOrder(self: PurchaseOrderVendor)=value
 """
@@ -879,15 +1250,26 @@ Set: NumberOfCollo(self: PurchaseOrderVendor)=value
 """
 
  PendingOrderCount=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PendingOrderCount(self: PurchaseOrderVendor) -> int
+ """
+
+Get: PendingOrderCount(self: PurchaseOrderVendor) -> int
 
 Set: PendingOrderCount(self: PurchaseOrderVendor)=value
 """
 
 
 
-class PurchaseOrderVendors:
- """ PurchaseOrderVendors() """
+class PurchaseOrderVendors(FindableList):
+ """
+ Container for the Wms.RemotingObjects.Purchase.Vendor objects.
+ 
+ PurchaseOrderVendors()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PurchaseOrderVendors()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -906,8 +1288,17 @@ class PurchaseOrderVendors:
  ValueMember='Number'
 
 
-class Vendors:
- """ Vendors() """
+class Vendors(FindableList):
+ """
+ Container for the Wms.RemotingObjects.Purchase.Vendor objects.
+ 
+ Vendors()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Vendors()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass

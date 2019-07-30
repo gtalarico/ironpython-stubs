@@ -1,5 +1,10 @@
 class INestedContainer:
  """ Provides functionality for nested containers,which logically contain zero or more other components and are owned by a parent component. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return INestedContainer()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __enter__(self,*args):
   """ __enter__(self: IDisposable) -> object """
   pass

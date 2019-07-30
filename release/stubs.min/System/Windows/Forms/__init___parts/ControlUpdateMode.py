@@ -1,9 +1,13 @@
-class ControlUpdateMode:
+class ControlUpdateMode(Enum,IComparable,IFormattable,IConvertible):
  """
  Determines when changes to a data source value get propagated to the corresponding data-bound control property.
  
  enum ControlUpdateMode,values: Never (1),OnPropertyChanged (0)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ControlUpdateMode()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

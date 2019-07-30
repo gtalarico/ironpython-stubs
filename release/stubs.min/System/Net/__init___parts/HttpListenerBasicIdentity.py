@@ -1,9 +1,14 @@
-class HttpListenerBasicIdentity:
+class HttpListenerBasicIdentity(GenericIdentity):
  """
  Holds the user name and password from a basic authentication request.
  
  HttpListenerBasicIdentity(username: str,password: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HttpListenerBasicIdentity()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreateClaim(self,*args):
   """ CreateClaim(self: ClaimsIdentity,reader: BinaryReader) -> Claim """
   pass

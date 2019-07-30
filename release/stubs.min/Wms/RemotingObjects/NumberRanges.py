@@ -1,18 +1,24 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.NumberRanges calls itself NumberRanges
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class GenerateArgs:
+class GenerateArgs(object):
  """
  GenerateArgs()
  GenerateArgs(numberRange: NumberRange)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GenerateArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,numberRange=None):
   """
@@ -52,12 +58,17 @@ Set: Suffix(self: GenerateArgs)=value
 
 
 
-class GenerateNumbersBaseArgs:
+class GenerateNumbersBaseArgs(object):
  """
  GenerateNumbersBaseArgs()
  GenerateNumbersBaseArgs(id: int,type: NumberRangeType)
  GenerateNumbersBaseArgs(id: int,type: NumberRangeType,numbersToGenerate: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GenerateNumbersBaseArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddGenerationArgs(self,args,numbersToGenerate):
   """ AddGenerationArgs(self: GenerateNumbersBaseArgs,args: GenerateArgs,numbersToGenerate: int) """
   pass
@@ -65,10 +76,18 @@ class GenerateNumbersBaseArgs:
   """ AddGenerator(self: GenerateNumbersBaseArgs,generator: IGenerator,args: GenerateArgs,numbersToGenerate: int) """
   pass
  def Generate(self):
-  """ Generate(self: GenerateNumbersBaseArgs) -> IEnumerable[IGeneratedBarcode] """
+  """
+  Generate(self: GenerateNumbersBaseArgs) -> IEnumerable[IGeneratedBarcode]
+  
+   Generates a range of numbers
+  """
   pass
  def GenerateOne(self):
-  """ GenerateOne(self: GenerateNumbersBaseArgs) -> IGeneratedBarcode """
+  """
+  GenerateOne(self: GenerateNumbersBaseArgs) -> IGeneratedBarcode
+  
+   Generates a single number
+  """
   pass
  @staticmethod
  def __new__(self,id=None,type=None,numbersToGenerate=None):
@@ -79,53 +98,72 @@ class GenerateNumbersBaseArgs:
   """
   pass
  AdditionalArguments=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AdditionalArguments(self: GenerateNumbersBaseArgs) -> SerializableDictionary[str,object]
+ """
+
+Get: AdditionalArguments(self: GenerateNumbersBaseArgs) -> SerializableDictionary[str,object]
 
 """
 
  Ascending=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Ascending(self: GenerateNumbersBaseArgs) -> bool
+ """
+
+Get: Ascending(self: GenerateNumbersBaseArgs) -> bool
 
 Set: Ascending(self: GenerateNumbersBaseArgs)=value
 """
 
  HasGenerator=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HasGenerator(self: GenerateNumbersBaseArgs) -> bool
+ """
+
+Get: HasGenerator(self: GenerateNumbersBaseArgs) -> bool
 
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: GenerateNumbersBaseArgs) -> int
+ """The ID of the number range
+
+Get: Id(self: GenerateNumbersBaseArgs) -> int
 
 Set: Id(self: GenerateNumbersBaseArgs)=value
 """
 
  NumbersToGenerate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NumbersToGenerate(self: GenerateNumbersBaseArgs) -> int
+ """Amount of numbers to generate (default=1)
+
+Get: NumbersToGenerate(self: GenerateNumbersBaseArgs) -> int
 
 Set: NumbersToGenerate(self: GenerateNumbersBaseArgs)=value
 """
 
  RegisterNumbersAsUsed=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: RegisterNumbersAsUsed(self: GenerateNumbersBaseArgs) -> bool
+ """Set to True to register the numbers as used within BOXwise so they cannot be reused.
+
+Get: RegisterNumbersAsUsed(self: GenerateNumbersBaseArgs) -> bool
 
 Set: RegisterNumbersAsUsed(self: GenerateNumbersBaseArgs)=value
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Type(self: GenerateNumbersBaseArgs) -> NumberRangeType
+ """Type of numbers to generate
+
+Get: Type(self: GenerateNumbersBaseArgs) -> NumberRangeType
 
 Set: Type(self: GenerateNumbersBaseArgs)=value
 """
 
 
 
-class GenerateBarcodeLabelArgs:
+class GenerateBarcodeLabelArgs(GenerateNumbersBaseArgs):
  """
  GenerateBarcodeLabelArgs()
  GenerateBarcodeLabelArgs(id: int,type: NumberRangeType)
  GenerateBarcodeLabelArgs(id: int,type: NumberRangeType,numbersToGenerate: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GenerateBarcodeLabelArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,id=None,type=None,numbersToGenerate=None):
   """
@@ -135,27 +173,38 @@ class GenerateBarcodeLabelArgs:
   """
   pass
  LabelName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LabelName(self: GenerateBarcodeLabelArgs) -> str
+ """
+
+Get: LabelName(self: GenerateBarcodeLabelArgs) -> str
 
 Set: LabelName(self: GenerateBarcodeLabelArgs)=value
 """
 
  Printer=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Printer(self: GenerateBarcodeLabelArgs) -> str
+ """Override printer,otherwise printer is chosen through printer rules.
+
+Get: Printer(self: GenerateBarcodeLabelArgs) -> str
 
 Set: Printer(self: GenerateBarcodeLabelArgs)=value
 """
 
  PrintingOptions=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrintingOptions(self: GenerateBarcodeLabelArgs) -> PrintingOptions
+ """Override printing options,otherwise options is chosen through printer rules.
+
+Get: PrintingOptions(self: GenerateBarcodeLabelArgs) -> PrintingOptions
 
 Set: PrintingOptions(self: GenerateBarcodeLabelArgs)=value
 """
 
 
 
-class GetNumberRangeArgs:
+class GetNumberRangeArgs(object):
  """ GetNumberRangeArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetNumberRangeArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Filter=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Filter(self: GetNumberRangeArgs) -> str
 
@@ -184,75 +233,102 @@ Set: Type(self: GetNumberRangeArgs)=value
  Default=None
 
 
-class NumberRange:
+class NumberRange(DbObject):
  """ NumberRange() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NumberRange()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  def __reduce_ex__(self,*args):
   pass
  Current=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Current(self: NumberRange) -> int
+ """The current number
+
+Get: Current(self: NumberRange) -> int
 
 Set: Current(self: NumberRange)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: NumberRange) -> str
+ """The description
+
+Get: Description(self: NumberRange) -> str
 
 Set: Description(self: NumberRange)=value
 """
 
  From=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: From(self: NumberRange) -> int
+ """The starting number
+
+Get: From(self: NumberRange) -> int
 
 Set: From(self: NumberRange)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: NumberRange) -> int
+ """The ID of the range
+
+Get: Id(self: NumberRange) -> int
 
 Set: Id(self: NumberRange)=value
 """
 
  Length=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Length(self: NumberRange) -> int
+ """Eventually fixed length of the generated number (Left padded with 0)
+
+Get: Length(self: NumberRange) -> int
 
 Set: Length(self: NumberRange)=value
 """
 
  Prefix=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Prefix(self: NumberRange) -> str
+ """Optional. The prefix for the generated numbers
+
+Get: Prefix(self: NumberRange) -> str
 
 Set: Prefix(self: NumberRange)=value
 """
 
  RangeType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: RangeType(self: NumberRange) -> NumberRangeType
+ """
+
+Get: RangeType(self: NumberRange) -> NumberRangeType
 
 Set: RangeType(self: NumberRange)=value
 """
 
  ResetBy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ResetBy(self: NumberRange) -> str
+ """The user who performed the reset
+
+Get: ResetBy(self: NumberRange) -> str
 
 Set: ResetBy(self: NumberRange)=value
 """
 
  ResetOn=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ResetOn(self: NumberRange) -> DateTime
+ """Date on which this range was reset
+
+Get: ResetOn(self: NumberRange) -> DateTime
 
 Set: ResetOn(self: NumberRange)=value
 """
 
  Suffix=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Suffix(self: NumberRange) -> str
+ """Optional. The suffix for the generated numbers
+
+Get: Suffix(self: NumberRange) -> str
 
 Set: Suffix(self: NumberRange)=value
 """
 
  To=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: To(self: NumberRange) -> int
+ """The end number
+
+Get: To(self: NumberRange) -> int
 
 Set: To(self: NumberRange)=value
 """
@@ -261,6 +337,11 @@ Set: To(self: NumberRange)=value
 
 class NumberRangeType:
  """ enum NumberRangeType,values: PickBatch (2),Regular (0),SSCC (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NumberRangeType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

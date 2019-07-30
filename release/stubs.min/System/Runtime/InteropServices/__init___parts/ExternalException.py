@@ -1,4 +1,4 @@
-class ExternalException:
+class ExternalException(SystemException):
  """
  The base exception type for all COM interop exceptions and structured exception handling (SEH) exceptions.
  
@@ -7,6 +7,11 @@ class ExternalException:
  ExternalException(message: str,inner: Exception)
  ExternalException(message: str,errorCode: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ExternalException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToString(self):
   """
   ToString(self: ExternalException) -> str

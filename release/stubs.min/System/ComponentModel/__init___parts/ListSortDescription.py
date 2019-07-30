@@ -1,9 +1,14 @@
-class ListSortDescription:
+class ListSortDescription(object):
  """
  Provides a description of the sort operation applied to a data source.
  
  ListSortDescription(property: PropertyDescriptor,direction: ListSortDirection)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ListSortDescription()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,property,direction):
   """ __new__(cls: type,property: PropertyDescriptor,direction: ListSortDirection) """

@@ -5,6 +5,11 @@ class ParenthesizePropertyNameAttribute:
  ParenthesizePropertyNameAttribute()
  ParenthesizePropertyNameAttribute(needParenthesis: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ParenthesizePropertyNameAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,o):
   """
   Equals(self: ParenthesizePropertyNameAttribute,o: object) -> bool
@@ -27,11 +32,8 @@ class ParenthesizePropertyNameAttribute:
   """
   IsDefaultAttribute(self: ParenthesizePropertyNameAttribute) -> bool
   
-   Gets a value indicating whether the current value of the attribute is the default value 
-    for the attribute.
-  
-   Returns: true if the current value of the attribute is the default value of the attribute; 
-    otherwise,false.
+   Gets a value indicating whether the current value of the attribute is the default value for the attribute.
+   Returns: true if the current value of the attribute is the default value of the attribute; otherwise,false.
   """
   pass
  def __eq__(self,*args):

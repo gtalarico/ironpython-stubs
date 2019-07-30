@@ -1,4 +1,4 @@
-class TypeLoadException:
+class TypeLoadException(SystemException):
  """
  The exception that is thrown when type-loading failures occur.
  
@@ -6,12 +6,15 @@ class TypeLoadException:
  TypeLoadException(message: str)
  TypeLoadException(message: str,inner: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TypeLoadException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: TypeLoadException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the class name,
-    method name,resource ID,and additional exception information.
-  
+   Sets the System.Runtime.Serialization.SerializationInfo object with the class name,method name,resource ID,and additional exception information.
   
    info: The object that holds the serialized object data.
    context: The contextual information about the source or destination.

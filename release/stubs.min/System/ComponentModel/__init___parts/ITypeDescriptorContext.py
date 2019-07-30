@@ -1,5 +1,10 @@
 class ITypeDescriptorContext:
  """ Provides contextual information about a component,such as its container and property descriptor. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ITypeDescriptorContext()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def OnComponentChanged(self):
   """
   OnComponentChanged(self: ITypeDescriptorContext)

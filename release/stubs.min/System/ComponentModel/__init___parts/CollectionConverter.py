@@ -1,9 +1,14 @@
-class CollectionConverter:
+class CollectionConverter(TypeConverter):
  """
  Provides a type converter to convert collection objects to and from various other representations.
  
  CollectionConverter()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CollectionConverter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ConvertTo(self,*__args):
   """
   ConvertTo(self: CollectionConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object,destinationType: Type) -> object
@@ -12,9 +17,7 @@ class CollectionConverter:
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    culture: The culture to which value will be converted.
-   value: The System.Object to convert. This parameter must inherit from 
-    System.Collections.ICollection.
-  
+   value: The System.Object to convert. This parameter must inherit from System.Collections.ICollection.
    destinationType: The System.Type to convert the value to.
    Returns: An System.Object that represents the converted value.
   """
@@ -23,15 +26,13 @@ class CollectionConverter:
   """
   GetProperties(self: CollectionConverter,context: ITypeDescriptorContext,value: object,attributes: Array[Attribute]) -> PropertyDescriptorCollection
   
-   Gets a collection of properties for the type of array specified by the value parameter 
-    using the specified context and attributes.
-  
+   Gets a collection of properties for the type of array specified by the value parameter using the specified context and attributes.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    value: An System.Object that specifies the type of array to get the properties for.
    attributes: An array of type System.Attribute that will be used as a filter.
-   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed 
-    for this data type,or null if there are no properties. This method always returns null.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for this data type,or null if there are no properties. This method always returns 
+    null.
   """
   pass
  def GetPropertiesSupported(self,context=None):
@@ -41,9 +42,7 @@ class CollectionConverter:
    Gets a value indicating whether this object supports properties.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   Returns: false because 
-    System.ComponentModel.CollectionConverter.GetProperties(System.ComponentModel.ITypeDescrip
-    torContext,System.Object,System.Attribute[]) should not be called to find the properties 
-    of this object. This method never returns true.
+   Returns: false because System.ComponentModel.CollectionConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[]) should not be called to 
+    find the properties of this object. This method never returns true.
   """
   pass

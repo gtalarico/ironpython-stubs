@@ -1,10 +1,14 @@
-class StatusBarDrawItemEventArgs:
+class StatusBarDrawItemEventArgs(DrawItemEventArgs):
  """
  Provides data for the System.Windows.Forms.StatusBar.DrawItem event.
  
  StatusBarDrawItemEventArgs(g: Graphics,font: Font,r: Rectangle,itemId: int,itemState: DrawItemState,panel: StatusBarPanel)
  StatusBarDrawItemEventArgs(g: Graphics,font: Font,r: Rectangle,itemId: int,itemState: DrawItemState,panel: StatusBarPanel,foreColor: Color,backColor: Color)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return StatusBarDrawItemEventArgs()
+
  @staticmethod
  def __new__(self,g,font,r,itemId,itemState,panel,foreColor=None,backColor=None):
   """

@@ -1,4 +1,4 @@
-class ColumnStyle:
+class ColumnStyle(TableLayoutStyle):
  """
  Represents the look and feel of a column in a table layout.
  
@@ -6,6 +6,10 @@ class ColumnStyle:
  ColumnStyle()
  ColumnStyle(sizeType: SizeType)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ColumnStyle()
+
  @staticmethod
  def __new__(self,sizeType=None,width=None):
   """

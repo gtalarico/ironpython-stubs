@@ -5,6 +5,11 @@ class ToolboxItemFilterAttribute:
  ToolboxItemFilterAttribute(filterString: str)
  ToolboxItemFilterAttribute(filterString: str,filterType: ToolboxItemFilterType)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ToolboxItemFilterAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: ToolboxItemFilterAttribute,obj: object) -> bool

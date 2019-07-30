@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.DefaultLocation calls itself DefaultLocation
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class DefaultLocationCacheDTO:
+class DefaultLocationCacheDTO(object):
  """ DefaultLocationCacheDTO() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DefaultLocationCacheDTO()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: ItemCode(self: DefaultLocationCacheDTO) -> str
 
@@ -36,15 +42,25 @@ Set: WarehouseCode(self: DefaultLocationCacheDTO)=value
 
 
 
-class DefaultLocationCacheUpdater:
+class DefaultLocationCacheUpdater(object):
  """ DefaultLocationCacheUpdater() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DefaultLocationCacheUpdater()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Update(updateCacheDto):
   """ Update(updateCacheDto: DefaultLocationCacheDTO) """
   pass
 
-class DefaultLocationHelper:
+class DefaultLocationHelper(MarshalByRefObject):
  """ DefaultLocationHelper() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DefaultLocationHelper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetDefaultItemLocationsByItemCode(self,itemCode):
   """ GetDefaultItemLocationsByItemCode(self: DefaultLocationHelper,itemCode: str) -> ResultObject[FindableList[WarehouseItemLocation]] """
   pass
@@ -60,11 +76,9 @@ class DefaultLocationHelper:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object

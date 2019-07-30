@@ -1,15 +1,22 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.Logging calls itself Logging
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # no functions
 # classes
 
-class CleanUpLogTask:
+class CleanUpLogTask(TaskBase):
  """ CleanUpLogTask(settings: SystemSettings) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CleanUpLogTask()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Run(self):
   """ Run(self: CleanUpLogTask) """
   pass
@@ -25,14 +32,24 @@ Set: Settings(self: CleanUpLogTask)=value
 
 
 
-class NLogLoggingBootstrapper:
+class NLogLoggingBootstrapper(object):
  """ NLogLoggingBootstrapper() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NLogLoggingBootstrapper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Init(self):
   """ Init(self: NLogLoggingBootstrapper) """
   pass
 
-class NLogLoggingService:
+class NLogLoggingService(Logger):
  """ NLogLoggingService() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NLogLoggingService()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Error(self,*__args):
   """ Error(self: NLogLoggingService,exception: Exception) """
   pass
@@ -44,12 +61,7 @@ class NLogLoggingService:
   """ GetLoggingService() -> ILoggingService """
   pass
  def OnLoggerReconfigured(self,*args):
-  """
-  OnLoggerReconfigured(self: Logger,e: EventArgs)
-   Raises the event when the logger is reconfigured.
-  
-   e: Event arguments
-  """
+  """ OnLoggerReconfigured(self: Logger,e: EventArgs) """
   pass
  def Warn(self,*__args):
   """ Warn(self: NLogLoggingService,exception: Exception) """
@@ -93,8 +105,13 @@ class NLogLoggingService:
  KeyZoneName='bw-zonename'
 
 
-class NLogTraceLoggingService:
+class NLogTraceLoggingService(Logger):
  """ NLogTraceLoggingService() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NLogTraceLoggingService()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetTraceLoggingService():
   """ GetTraceLoggingService() -> ITraceLoggingService """
@@ -103,12 +120,7 @@ class NLogTraceLoggingService:
   """ IsTracingEnabled(self: NLogTraceLoggingService) -> bool """
   pass
  def OnLoggerReconfigured(self,*args):
-  """
-  OnLoggerReconfigured(self: Logger,e: EventArgs)
-   Raises the event when the logger is reconfigured.
-  
-   e: Event arguments
-  """
+  """ OnLoggerReconfigured(self: Logger,e: EventArgs) """
   pass
  def ToggleEnableTracing(self):
   """ ToggleEnableTracing(self: NLogTraceLoggingService) -> bool """

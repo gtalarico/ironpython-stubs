@@ -1,4 +1,4 @@
-class ToolStripTextBox:
+class ToolStripTextBox(ToolStripControlHost,IComponent,IDisposable,IDropTarget,ISupportOleDropSource,IArrangedElement):
  """
  Represents a text box in a System.Windows.Forms.ToolStrip that allows the user to enter text.
  
@@ -6,6 +6,10 @@ class ToolStripTextBox:
  ToolStripTextBox(name: str)
  ToolStripTextBox(c: Control)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripTextBox()
+
  def AppendText(self,text):
   """
   AppendText(self: ToolStripTextBox,text: str)
@@ -23,15 +27,13 @@ class ToolStripTextBox:
  def ClearUndo(self):
   """
   ClearUndo(self: ToolStripTextBox)
-   Clears information about the most recent operation from the undo buffer of the 
-    System.Windows.Forms.ToolStripTextBox.
+   Clears information about the most recent operation from the undo buffer of the System.Windows.Forms.ToolStripTextBox.
   """
   pass
  def Copy(self):
   """
   Copy(self: ToolStripTextBox)
-   Copies the current selection in the System.Windows.Forms.ToolStripTextBox to the 
-    Clipboard.
+   Copies the current selection in the System.Windows.Forms.ToolStripTextBox to the Clipboard.
   """
   pass
  def CreateAccessibilityInstance(self,*args):
@@ -46,19 +48,15 @@ class ToolStripTextBox:
  def DeselectAll(self):
   """
   DeselectAll(self: ToolStripTextBox)
-   Specifies that the value of the System.Windows.Forms.ToolStripTextBox.SelectionLength 
-    property is zero so that no characters are selected in the control.
+   Specifies that the value of the System.Windows.Forms.ToolStripTextBox.SelectionLength property is zero so that no characters are selected in the control.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: ToolStripControlHost,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.ToolStripControlHost 
-    and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.ToolStripControlHost and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetCharFromPosition(self,pt):
@@ -103,9 +101,7 @@ class ToolStripTextBox:
   """
   GetLineFromCharIndex(self: ToolStripTextBox,index: int) -> int
   
-   Retrieves the line number from the specified character position within the text of the 
-    control.
-  
+   Retrieves the line number from the specified character position within the text of the control.
   
    index: The character index position to search.
    Returns: The zero-based line number in which the character index is located.
@@ -126,22 +122,17 @@ class ToolStripTextBox:
   GetPreferredSize(self: ToolStripTextBox,constrainingSize: Size) -> Size
   
    constrainingSize: The custom-sized area for a control.
-   Returns: An ordered pair of type System.Drawing.Size representing the width and height of a 
-    rectangle.
+   Returns: An ordered pair of type System.Drawing.Size representing the width and height of a rectangle.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def IsInputChar(self,*args):
@@ -151,17 +142,14 @@ class ToolStripTextBox:
    Determines whether a character is an input character that the item recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the item and not preprocessed; 
-    otherwise,false.
+   Returns: true if the character should be sent directly to the item and not preprocessed; otherwise,false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: ToolStripItem,keyData: Keys) -> bool
   
-   Determines whether the specified key is a regular input key or a special key that 
-    requires preprocessing.
-  
+   Determines whether the specified key is a regular input key or a special key that requires preprocessing.
   
    keyData: One of the System.Windows.Forms.Keys values.
    Returns: true if the specified key is a regular input key; otherwise,false.
@@ -173,12 +161,7 @@ class ToolStripTextBox:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -473,10 +456,7 @@ class ToolStripTextBox:
  def OnOwnerFontChanged(self,*args):
   """
   OnOwnerFontChanged(self: ToolStripItem,e: EventArgs)
-   Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.ToolStripItem.Font property has changed on the parent of the 
-    System.Windows.Forms.ToolStripItem.
-  
+   Raises the System.Windows.Forms.Control.FontChanged event when the System.Windows.Forms.ToolStripItem.Font property has changed on the parent of the System.Windows.Forms.ToolStripItem.
   
    e: A System.EventArgs that contains the event data.
   """
@@ -505,10 +485,7 @@ class ToolStripTextBox:
  def OnParentEnabledChanged(self,*args):
   """
   OnParentEnabledChanged(self: ToolStripItem,e: EventArgs)
-   Raises the System.Windows.Forms.ToolStripItem.EnabledChanged event when the 
-    System.Windows.Forms.ToolStripItem.Enabled property value of the item's container 
-    changes.
-  
+   Raises the System.Windows.Forms.ToolStripItem.EnabledChanged event when the System.Windows.Forms.ToolStripItem.Enabled property value of the item's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -609,9 +586,7 @@ class ToolStripTextBox:
   
    Processes a command key.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: false in all cases.
   """
@@ -662,8 +637,7 @@ class ToolStripTextBox:
   SetBounds(self: ToolStripItem,bounds: Rectangle)
    Sets the size and location of the item.
   
-   bounds: A System.Drawing.Rectangle that represents the size and location of the 
-    System.Windows.Forms.ToolStripItem
+   bounds: A System.Drawing.Rectangle that represents the size and location of the System.Windows.Forms.ToolStripItem
   """
   pass
  def SetVisibleCore(self,*args):

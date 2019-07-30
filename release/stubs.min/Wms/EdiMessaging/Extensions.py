@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.EdiMessaging.Extensions calls itself Extensions
-# from Wms.EdiMessaging,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.EdiMessaging,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class MessageExtensions:
+class MessageExtensions(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MessageExtensions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def AppendLogLine(message,line):
   """ AppendLogLine(message: IMessage,line: str) """

@@ -1,10 +1,14 @@
-class ToolStripItemTextRenderEventArgs:
+class ToolStripItemTextRenderEventArgs(ToolStripItemRenderEventArgs):
  """
  Provides data for the System.Windows.Forms.ToolStripRenderer.RenderItemText event.
  
  ToolStripItemTextRenderEventArgs(g: Graphics,item: ToolStripItem,text: str,textRectangle: Rectangle,textColor: Color,textFont: Font,format: TextFormatFlags)
  ToolStripItemTextRenderEventArgs(g: Graphics,item: ToolStripItem,text: str,textRectangle: Rectangle,textColor: Color,textFont: Font,textAlign: ContentAlignment)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripItemTextRenderEventArgs()
+
  @staticmethod
  def __new__(self,g,item,text,textRectangle,textColor,textFont,*__args):
   """

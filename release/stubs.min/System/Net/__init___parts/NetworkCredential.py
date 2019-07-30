@@ -1,4 +1,4 @@
-class NetworkCredential:
+class NetworkCredential(object):
  """
  Provides credentials for password-based authentication schemes such as basic,digest,NTLM,and Kerberos authentication.
  
@@ -8,32 +8,28 @@ class NetworkCredential:
  NetworkCredential(userName: str,password: str,domain: str)
  NetworkCredential(userName: str,password: SecureString,domain: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NetworkCredential()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetCredential(self,*__args):
   """
   GetCredential(self: NetworkCredential,uri: Uri,authType: str) -> NetworkCredential
   
-   Returns an instance of the System.Net.NetworkCredential class for the specified Uniform 
-    Resource Identifier (URI) and authentication type.
-  
+   Returns an instance of the System.Net.NetworkCredential class for the specified Uniform Resource Identifier (URI) and authentication type.
   
    uri: The URI that the client provides authentication for.
-   authType: The type of authentication requested,as defined in the 
-    System.Net.IAuthenticationModule.AuthenticationType property.
-  
+   authType: The type of authentication requested,as defined in the System.Net.IAuthenticationModule.AuthenticationType property.
    Returns: A System.Net.NetworkCredential object.
   GetCredential(self: NetworkCredential,host: str,port: int,authenticationType: str) -> NetworkCredential
   
-   Returns an instance of the System.Net.NetworkCredential class for the specified host,
-    port,and authentication type.
-  
+   Returns an instance of the System.Net.NetworkCredential class for the specified host,port,and authentication type.
   
    host: The host computer that authenticates the client.
    port: The port on the host that the client communicates with.
-   authenticationType: The type of authentication requested,as defined in the 
-    System.Net.IAuthenticationModule.AuthenticationType property.
-  
-   Returns: A System.Net.NetworkCredential for the specified host,port,and authentication protocol,
-    or null if there are no credentials available for the specified host,port,and 
+   authenticationType: The type of authentication requested,as defined in the System.Net.IAuthenticationModule.AuthenticationType property.
+   Returns: A System.Net.NetworkCredential for the specified host,port,and authentication protocol,or null if there are no credentials available for the specified host,port,and 
     authentication protocol.
   """
   pass

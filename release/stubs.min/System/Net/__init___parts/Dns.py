@@ -1,5 +1,10 @@
-class Dns:
+class Dns(object):
  """ Provides simple domain name resolution functionality. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Dns()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def BeginGetHostAddresses(hostNameOrAddress,requestCallback,state):
   """
@@ -8,12 +13,8 @@ class Dns:
    Asynchronously returns the Internet Protocol (IP) addresses for the specified host.
   
    hostNameOrAddress: The host name or IP address to resolve.
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation 
-    is complete.
-  
-   state: A user-defined object that contains information about the operation. This object is 
-    passed to the requestCallback delegate when the operation is complete.
-  
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
+   state: A user-defined object that contains information about the operation. This object is passed to the requestCallback delegate when the operation is complete.
    Returns: An System.IAsyncResult instance that references the asynchronous request.
   """
   pass
@@ -22,17 +23,11 @@ class Dns:
   """
   BeginGetHostByName(hostName: str,requestCallback: AsyncCallback,stateObject: object) -> IAsyncResult
   
-   Begins an asynchronous request for System.Net.IPHostEntry information about the specified 
-    DNS host name.
-  
+   Begins an asynchronous request for System.Net.IPHostEntry information about the specified DNS host name.
   
    hostName: The DNS name of the host.
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation 
-    is complete.
-  
-   stateObject: A user-defined object that contains information about the operation. This object is 
-    passed to the requestCallback delegate when the operation is complete.
-  
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
+   stateObject: A user-defined object that contains information about the operation. This object is passed to the requestCallback delegate when the operation is complete.
    Returns: An System.IAsyncResult instance that references the asynchronous request.
   """
   pass
@@ -44,24 +39,16 @@ class Dns:
    Asynchronously resolves a host name or IP address to an System.Net.IPHostEntry instance.
   
    hostNameOrAddress: The host name or IP address to resolve.
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation 
-    is complete.
-  
-   stateObject: A user-defined object that contains information about the operation. This object is 
-    passed to the requestCallback delegate when the operation is complete.
-  
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
+   stateObject: A user-defined object that contains information about the operation. This object is passed to the requestCallback delegate when the operation is complete.
    Returns: An System.IAsyncResult instance that references the asynchronous request.
   BeginGetHostEntry(address: IPAddress,requestCallback: AsyncCallback,stateObject: object) -> IAsyncResult
   
    Asynchronously resolves an IP address to an System.Net.IPHostEntry instance.
   
    address: The IP address to resolve.
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation 
-    is complete.
-  
-   stateObject: A user-defined object that contains information about the operation. This object is 
-    passed to the requestCallback delegate when the operation is complete.
-  
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
+   stateObject: A user-defined object that contains information about the operation. This object is passed to the requestCallback delegate when the operation is complete.
    Returns: An System.IAsyncResult instance that references the asynchronous request.
   """
   pass
@@ -70,17 +57,11 @@ class Dns:
   """
   BeginResolve(hostName: str,requestCallback: AsyncCallback,stateObject: object) -> IAsyncResult
   
-   Begins an asynchronous request to resolve a DNS host name or IP address to an 
-    System.Net.IPAddress instance.
-  
+   Begins an asynchronous request to resolve a DNS host name or IP address to an System.Net.IPAddress instance.
   
    hostName: The DNS name of the host.
-   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation 
-    is complete.
-  
-   stateObject: A user-defined object that contains information about the operation. This object is 
-    passed to the requestCallback delegate when the operation is complete.
-  
+   requestCallback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
+   stateObject: A user-defined object that contains information about the operation. This object is passed to the requestCallback delegate when the operation is complete.
    Returns: An System.IAsyncResult instance that references the asynchronous request.
   """
   pass
@@ -91,12 +72,8 @@ class Dns:
   
    Ends an asynchronous request for DNS information.
   
-   asyncResult: An System.IAsyncResult instance returned by a call to the 
-    System.Net.Dns.BeginGetHostAddresses(System.String,System.AsyncCallback,System.Object) 
-    method.
-  
-   Returns: An array of type System.Net.IPAddress that holds the IP addresses for the host specified 
-    by the hostNameOrAddress parameter of 
+   asyncResult: An System.IAsyncResult instance returned by a call to the System.Net.Dns.BeginGetHostAddresses(System.String,System.AsyncCallback,System.Object) method.
+   Returns: An array of type System.Net.IPAddress that holds the IP addresses for the host specified by the hostNameOrAddress parameter of 
     System.Net.Dns.BeginGetHostAddresses(System.String,System.AsyncCallback,System.Object).
   """
   pass
@@ -107,10 +84,7 @@ class Dns:
   
    Ends an asynchronous request for DNS information.
   
-   asyncResult: An System.IAsyncResult instance that is returned by a call to the 
-    System.Net.Dns.BeginGetHostByName(System.String,System.AsyncCallback,System.Object) 
-    method.
-  
+   asyncResult: An System.IAsyncResult instance that is returned by a call to the System.Net.Dns.BeginGetHostByName(System.String,System.AsyncCallback,System.Object) method.
    Returns: An System.Net.IPHostEntry object that contains DNS information about a host.
   """
   pass
@@ -121,9 +95,7 @@ class Dns:
   
    Ends an asynchronous request for DNS information.
   
-   asyncResult: An System.IAsyncResult instance returned by a call to an 
-    erload:System.Net.Dns.BeginGetHostEntry method.
-  
+   asyncResult: An System.IAsyncResult instance returned by a call to an erload:System.Net.Dns.BeginGetHostEntry method.
    Returns: An System.Net.IPHostEntry instance that contains address information about the host.
   """
   pass
@@ -134,9 +106,7 @@ class Dns:
   
    Ends an asynchronous request for DNS information.
   
-   asyncResult: An System.IAsyncResult instance that is returned by a call to the 
-    System.Net.Dns.BeginResolve(System.String,System.AsyncCallback,System.Object) method.
-  
+   asyncResult: An System.IAsyncResult instance that is returned by a call to the System.Net.Dns.BeginResolve(System.String,System.AsyncCallback,System.Object) method.
    Returns: An System.Net.IPHostEntry object that contains DNS information about a host.
   """
   pass
@@ -148,8 +118,7 @@ class Dns:
    Returns the Internet Protocol (IP) addresses for the specified host.
   
    hostNameOrAddress: The host name or IP address to resolve.
-   Returns: An array of type System.Net.IPAddress that holds the IP addresses for the host that is 
-    specified by the hostNameOrAddress parameter.
+   Returns: An array of type System.Net.IPAddress that holds the IP addresses for the host that is specified by the hostNameOrAddress parameter.
   """
   pass
  @staticmethod
@@ -181,8 +150,7 @@ class Dns:
    Gets the DNS information for the specified DNS host name.
   
    hostName: The DNS name of the host.
-   Returns: An System.Net.IPHostEntry object that contains host information for the address specified 
-    in hostName.
+   Returns: An System.Net.IPHostEntry object that contains host information for the address specified in hostName.
   """
   pass
  @staticmethod
@@ -193,16 +161,13 @@ class Dns:
    Resolves a host name or IP address to an System.Net.IPHostEntry instance.
   
    hostNameOrAddress: The host name or IP address to resolve.
-   Returns: An System.Net.IPHostEntry instance that contains address information about the host 
-    specified in hostNameOrAddress.
-  
+   Returns: An System.Net.IPHostEntry instance that contains address information about the host specified in hostNameOrAddress.
   GetHostEntry(address: IPAddress) -> IPHostEntry
   
    Resolves an IP address to an System.Net.IPHostEntry instance.
   
    address: An IP address.
-   Returns: An System.Net.IPHostEntry instance that contains address information about the host 
-    specified in address.
+   Returns: An System.Net.IPHostEntry instance that contains address information about the host specified in address.
   """
   pass
  @staticmethod
@@ -229,8 +194,7 @@ class Dns:
    Resolves a DNS host name or IP address to an System.Net.IPHostEntry instance.
   
    hostName: A DNS-style host name or IP address.
-   Returns: An System.Net.IPHostEntry instance that contains address information about the host 
-    specified in hostName.
+   Returns: An System.Net.IPHostEntry instance that contains address information about the host specified in hostName.
   """
   pass
  __all__=[

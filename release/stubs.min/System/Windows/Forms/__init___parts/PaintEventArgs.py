@@ -1,9 +1,13 @@
-class PaintEventArgs:
+class PaintEventArgs(EventArgs,IDisposable):
  """
  Provides data for the System.Windows.Forms.Control.Paint event.
  
  PaintEventArgs(graphics: Graphics,clipRect: Rectangle)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return PaintEventArgs()
+
  def Dispose(self):
   """
   Dispose(self: PaintEventArgs)

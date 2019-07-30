@@ -1,5 +1,10 @@
-class Stream:
+class Stream(MarshalByRefObject):
  """ Provides a generic view of a sequence of bytes. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Stream()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginRead(self,buffer,offset,count,callback,state):
   """
   BeginRead(self: Stream,buffer: Array[Byte],offset: int,count: int,callback: AsyncCallback,state: object) -> IAsyncResult
@@ -10,11 +15,8 @@ class Stream:
    offset: The byte offset in buffer at which to begin writing data read from the stream.
    count: The maximum number of bytes to read.
    callback: An optional asynchronous callback,to be called when the read is complete.
-   state: A user-provided object that distinguishes this particular asynchronous read request from 
-    other requests.
-  
-   Returns: An System.IAsyncResult that represents the asynchronous read,which could still be 
-    pending.
+   state: A user-provided object that distinguishes this particular asynchronous read request from other requests.
+   Returns: An System.IAsyncResult that represents the asynchronous read,which could still be pending.
   """
   pass
  def BeginWrite(self,buffer,offset,count,callback,state):
@@ -27,17 +29,14 @@ class Stream:
    offset: The byte offset in buffer from which to begin writing.
    count: The maximum number of bytes to write.
    callback: An optional asynchronous callback,to be called when the write is complete.
-   state: A user-provided object that distinguishes this particular asynchronous write request from 
-    other requests.
-  
+   state: A user-provided object that distinguishes this particular asynchronous write request from other requests.
    Returns: An IAsyncResult that represents the asynchronous write,which could still be pending.
   """
   pass
  def Close(self):
   """
   Close(self: Stream)
-   Closes the current stream and releases any resources (such as sockets and file handles) 
-    associated with the current stream.
+   Closes the current stream and releases any resources (such as sockets and file handles) associated with the current stream.
   """
   pass
  def CopyTo(self,destination,bufferSize=None):
@@ -47,9 +46,7 @@ class Stream:
   
    destination: The stream that will contain the contents of the current stream.
   CopyTo(self: Stream,destination: Stream,bufferSize: int)
-   Reads all the bytes from the current stream and writes them to a destination stream,
-    using a specified buffer size.
-  
+   Reads all the bytes from the current stream and writes them to a destination stream,using a specified buffer size.
   
    destination: The stream that will contain the contents of the current stream.
    bufferSize: The size of the buffer. This value must be greater than zero. The default size is 4096.
@@ -83,9 +80,8 @@ class Stream:
    Waits for the pending asynchronous read to complete.
   
    asyncResult: The reference to the pending asynchronous request to finish.
-   Returns: The number of bytes read from the stream,between zero (0) and the number of bytes you 
-    requested. Streams return zero (0) only at the end of the stream,otherwise,they should 
-    block until at least one byte is available.
+   Returns: The number of bytes read from the stream,between zero (0) and the number of bytes you requested. Streams return zero (0) only at the end of the stream,otherwise,they 
+    should block until at least one byte is available.
   """
   pass
  def EndWrite(self,asyncResult):
@@ -99,8 +95,7 @@ class Stream:
  def Flush(self):
   """
   Flush(self: Stream)
-   When overridden in a derived class,clears all buffers for this stream and causes any 
-    buffered data to be written to the underlying device.
+   When overridden in a derived class,clears all buffers for this stream and causes any buffered data to be written to the underlying device.
   """
   pass
  def FlushAsync(self,cancellationToken=None):
@@ -115,11 +110,9 @@ class Stream:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -138,17 +131,12 @@ class Stream:
   """
   Read(self: Stream,offset: int,count: int) -> (int,Array[Byte])
   
-   When overridden in a derived class,reads a sequence of bytes from the current stream and 
-    advances the position within the stream by the number of bytes read.
+   When overridden in a derived class,reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.
   
-  
-   offset: The zero-based byte offset in buffer at which to begin storing the data read from the 
-    current stream.
-  
+   offset: The zero-based byte offset in buffer at which to begin storing the data read from the current stream.
    count: The maximum number of bytes to be read from the current stream.
-   Returns: The total number of bytes read into the buffer. This can be less than the number of bytes 
-    requested if that many bytes are not currently available,or zero (0) if the end of the 
-    stream has been reached.
+   Returns: The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available,or zero (0) if the end 
+    of the stream has been reached.
   """
   pass
  def ReadAsync(self,buffer,offset,count,cancellationToken=None):
@@ -161,9 +149,7 @@ class Stream:
   """
   ReadByte(self: Stream) -> int
   
-   Reads a byte from the stream and advances the position within the stream by one byte,or 
-    returns -1 if at the end of the stream.
-  
+   Reads a byte from the stream and advances the position within the stream by one byte,or returns -1 if at the end of the stream.
    Returns: The unsigned byte cast to an Int32,or -1 if at the end of the stream.
   """
   pass
@@ -174,9 +160,7 @@ class Stream:
    When overridden in a derived class,sets the position within the current stream.
   
    offset: A byte offset relative to the origin parameter.
-   origin: A value of type System.IO.SeekOrigin indicating the reference point used to obtain the 
-    new position.
-  
+   origin: A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.
    Returns: The new position within the current stream.
   """
   pass
@@ -202,14 +186,10 @@ class Stream:
  def Write(self,buffer,offset,count):
   """
   Write(self: Stream,buffer: Array[Byte],offset: int,count: int)
-   When overridden in a derived class,writes a sequence of bytes to the current stream and 
-    advances the current position within this stream by the number of bytes written.
-  
+   When overridden in a derived class,writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
   
    buffer: An array of bytes. This method copies count bytes from buffer to the current stream.
-   offset: The zero-based byte offset in buffer at which to begin copying bytes to the current 
-    stream.
-  
+   offset: The zero-based byte offset in buffer at which to begin copying bytes to the current stream.
    count: The number of bytes to be written to the current stream.
   """
   pass
@@ -222,9 +202,7 @@ class Stream:
  def WriteByte(self,value):
   """
   WriteByte(self: Stream,value: Byte)
-   Writes a byte to the current position in the stream and advances the position within the 
-    stream by one byte.
-  
+   Writes a byte to the current position in the stream and advances the position within the stream by one byte.
   
    value: The byte to write to the stream.
   """

@@ -1,9 +1,13 @@
-class DataGridViewDataErrorEventArgs:
+class DataGridViewDataErrorEventArgs(DataGridViewCellCancelEventArgs):
  """
  Provides data for the System.Windows.Forms.DataGridView.DataError event.
  
  DataGridViewDataErrorEventArgs(exception: Exception,columnIndex: int,rowIndex: int,context: DataGridViewDataErrorContexts)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewDataErrorEventArgs()
+
  @staticmethod
  def __new__(self,exception,columnIndex,rowIndex,context):
   """ __new__(cls: type,exception: Exception,columnIndex: int,rowIndex: int,context: DataGridViewDataErrorContexts) """

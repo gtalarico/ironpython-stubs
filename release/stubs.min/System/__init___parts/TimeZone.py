@@ -1,5 +1,10 @@
-class TimeZone:
+class TimeZone(object):
  """ Represents a time zone. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TimeZone()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetDaylightChanges(self,year):
   """
   GetDaylightChanges(self: TimeZone,year: int) -> DaylightTime
@@ -7,8 +12,7 @@ class TimeZone:
    Returns the daylight saving time period for a particular year.
   
    year: The year that the daylight saving time period applies to.
-   Returns: A System.Globalization.DaylightTime object that contains the start and end date for 
-    daylight saving time in year.
+   Returns: A System.Globalization.DaylightTime object that contains the start and end date for daylight saving time in year.
   """
   pass
  def GetUtcOffset(self,time):
@@ -25,17 +29,13 @@ class TimeZone:
   """
   IsDaylightSavingTime(self: TimeZone,time: DateTime) -> bool
   
-   Returns a value indicating whether the specified date and time is within a daylight 
-    saving time period.
-  
+   Returns a value indicating whether the specified date and time is within a daylight saving time period.
   
    time: A date and time.
    Returns: true if time is in a daylight saving time period; otherwise,false.
   IsDaylightSavingTime(time: DateTime,daylightTimes: DaylightTime) -> bool
   
-   Returns a value indicating whether the specified date and time is within the specified 
-    daylight saving time period.
-  
+   Returns a value indicating whether the specified date and time is within the specified daylight saving time period.
   
    time: A date and time.
    daylightTimes: A daylight saving time period.
@@ -59,8 +59,7 @@ class TimeZone:
    Returns the Coordinated Universal Time (UTC) that corresponds to a specified time.
   
    time: A date and time.
-   Returns: A System.DateTime object whose value is the Coordinated Universal Time (UTC) that 
-    corresponds to time.
+   Returns: A System.DateTime object whose value is the Coordinated Universal Time (UTC) that corresponds to time.
   """
   pass
  DaylightName=property(lambda self: object(),lambda self,v: None,lambda self: None)

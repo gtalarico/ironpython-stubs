@@ -1,5 +1,10 @@
 class IWebProxyScript:
  """ Provides the base interface to load and execute scripts for automatic proxy detection. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IWebProxyScript()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: IWebProxyScript)

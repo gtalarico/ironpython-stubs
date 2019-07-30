@@ -1,4 +1,4 @@
-class DelimitedListTraceListener:
+class DelimitedListTraceListener(TextWriterTraceListener):
  """
  Directs tracing or debugging output to a text writer,such as a stream writer,or to a stream,such as a file stream.
  
@@ -9,13 +9,17 @@ class DelimitedListTraceListener:
  DelimitedListTraceListener(fileName: str)
  DelimitedListTraceListener(fileName: str,name: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DelimitedListTraceListener()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: TextWriterTraceListener,disposing: bool)
    Disposes this System.Diagnostics.TextWriterTraceListener object.
   
-   disposing: true to release managed resources; if false,
-    System.Diagnostics.TextWriterTraceListener.Dispose(System.Boolean) has no effect.
+   disposing: true to release managed resources; if false,System.Diagnostics.TextWriterTraceListener.Dispose(System.Boolean) has no effect.
   """
   pass
  def GetSupportedAttributes(self,*args):
@@ -32,11 +36,9 @@ class DelimitedListTraceListener:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -48,35 +50,19 @@ class DelimitedListTraceListener:
  def TraceData(self,eventCache,source,eventType,id,data):
   """
   TraceData(self: DelimitedListTraceListener,eventCache: TraceEventCache,source: str,eventType: TraceEventType,id: int,data: object)
-   Writes trace information,a data object,and event information to the output file or 
-    stream.
+   Writes trace information,a data object,and event information to the output file or stream.
   
-  
-   eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID,thread 
-    ID,and stack trace information.
-  
-   source: A name used to identify the output,typically the name of the application that generated 
-    the trace event.
-  
-   eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has 
-    caused the trace.
-  
+   eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID,thread ID,and stack trace information.
+   source: A name used to identify the output,typically the name of the application that generated the trace event.
+   eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has caused the trace.
    id: A numeric identifier for the event.
    data: A data object to write to the output file or stream.
   TraceData(self: DelimitedListTraceListener,eventCache: TraceEventCache,source: str,eventType: TraceEventType,id: int,*data: Array[object])
-   Writes trace information,an array of data objects,and event information to the output 
-    file or stream.
+   Writes trace information,an array of data objects,and event information to the output file or stream.
   
-  
-   eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID,thread 
-    ID,and stack trace information.
-  
-   source: A name used to identify the output,typically the name of the application that generated 
-    the trace event.
-  
-   eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has 
-    caused the trace.
-  
+   eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID,thread ID,and stack trace information.
+   source: A name used to identify the output,typically the name of the application that generated the trace event.
+   eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has caused the trace.
    id: A numeric identifier for the event.
    data: An array of data objects to write to the output file or stream.
   """
@@ -84,36 +70,20 @@ class DelimitedListTraceListener:
  def TraceEvent(self,eventCache,source,eventType,id,*__args):
   """
   TraceEvent(self: DelimitedListTraceListener,eventCache: TraceEventCache,source: str,eventType: TraceEventType,id: int,format: str,*args: Array[object])
-   Writes trace information,a formatted array of objects,and event information to the 
-    output file or stream.
+   Writes trace information,a formatted array of objects,and event information to the output file or stream.
   
-  
-   eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID,thread 
-    ID,and stack trace information.
-  
-   source: A name used to identify the output,typically the name of the application that generated 
-    the trace event.
-  
-   eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has 
-    caused the trace.
-  
+   eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID,thread ID,and stack trace information.
+   source: A name used to identify the output,typically the name of the application that generated the trace event.
+   eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has caused the trace.
    id: A numeric identifier for the event.
-   format: A format string that contains zero or more format items that correspond to objects in the 
-    args array.
-  
+   format: A format string that contains zero or more format items that correspond to objects in the args array.
    args: An array containing zero or more objects to format.
   TraceEvent(self: DelimitedListTraceListener,eventCache: TraceEventCache,source: str,eventType: TraceEventType,id: int,message: str)
    Writes trace information,a message,and event information to the output file or stream.
   
-   eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID,thread 
-    ID,and stack trace information.
-  
-   source: A name used to identify the output,typically the name of the application that generated 
-    the trace event.
-  
-   eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has 
-    caused the trace.
-  
+   eventCache: A System.Diagnostics.TraceEventCache object that contains the current process ID,thread ID,and stack trace information.
+   source: A name used to identify the output,typically the name of the application that generated the trace event.
+   eventType: One of the System.Diagnostics.TraceEventType values specifying the type of event that has caused the trace.
    id: A numeric identifier for the event.
    message: The trace message to write to the output file or stream.
   """
@@ -121,8 +91,7 @@ class DelimitedListTraceListener:
  def WriteIndent(self,*args):
   """
   WriteIndent(self: TraceListener)
-   Writes the indent to the listener you create when you implement this class,and resets 
-    the System.Diagnostics.TraceListener.NeedIndent property to false.
+   Writes the indent to the listener you create when you implement this class,and resets the System.Diagnostics.TraceListener.NeedIndent property to false.
   """
   pass
  def __enter__(self,*args):

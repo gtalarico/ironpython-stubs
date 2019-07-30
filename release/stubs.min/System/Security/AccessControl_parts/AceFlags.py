@@ -4,6 +4,11 @@ class AceFlags:
  
  enum (flags) AceFlags,values: AuditFlags (192),ContainerInherit (2),FailedAccess (128),InheritanceFlags (15),Inherited (16),InheritOnly (8),None (0),NoPropagateInherit (4),ObjectInherit (1),SuccessfulAccess (64)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AceFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

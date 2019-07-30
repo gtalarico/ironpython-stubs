@@ -1,4 +1,4 @@
-class FileSystemAuditRule:
+class FileSystemAuditRule(AuditRule):
  """
  Represents an abstraction of an access control entry (ACE) that defines an audit rule for a file or directory. This class cannot be inherited.
  
@@ -7,6 +7,11 @@ class FileSystemAuditRule:
  FileSystemAuditRule(identity: str,fileSystemRights: FileSystemRights,flags: AuditFlags)
  FileSystemAuditRule(identity: str,fileSystemRights: FileSystemRights,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,flags: AuditFlags)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileSystemAuditRule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,identity,fileSystemRights,*__args):
   """

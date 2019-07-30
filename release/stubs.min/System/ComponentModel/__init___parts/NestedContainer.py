@@ -1,9 +1,14 @@
-class NestedContainer:
+class NestedContainer(Container):
  """
  Provides the base implementation for the System.ComponentModel.INestedContainer interface,which enables containers to have an owning component.
  
  NestedContainer(owner: IComponent)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NestedContainer()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreateSite(self,*args):
   """
   CreateSite(self: NestedContainer,component: IComponent,name: str) -> ISite
@@ -20,8 +25,7 @@ class NestedContainer:
   Dispose(self: NestedContainer,disposing: bool)
    Releases the resources used by the nested container.
   
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetService(self,*args):
@@ -31,16 +35,13 @@ class NestedContainer:
    Gets the service object of the specified type,if it is available.
   
    service: The System.Type of the service to retrieve.
-   Returns: An System.Object that implements the requested service,or null if the service cannot be 
-    resolved.
+   Returns: An System.Object that implements the requested service,or null if the service cannot be resolved.
   """
   pass
  def RemoveWithoutUnsiting(self,*args):
   """
   RemoveWithoutUnsiting(self: Container,component: IComponent)
-   Removes a component from the System.ComponentModel.Container without setting 
-    System.ComponentModel.IComponent.Site to null.
-  
+   Removes a component from the System.ComponentModel.Container without setting System.ComponentModel.IComponent.Site to null.
   
    component: The component to remove.
   """

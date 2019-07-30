@@ -1,16 +1,20 @@
-class SocketPermissionAttribute:
+class SocketPermissionAttribute(CodeAccessSecurityAttribute):
  """
  Specifies security actions to control System.Net.Sockets.Socket connections. This class cannot be inherited.
  
  SocketPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SocketPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
   CreatePermission(self: SocketPermissionAttribute) -> IPermission
   
    Creates and returns a new instance of the System.Net.SocketPermission class.
-   Returns: An instance of the System.Net.SocketPermission class that corresponds to the security 
-    declaration.
+   Returns: An instance of the System.Net.SocketPermission class that corresponds to the security declaration.
   """
   pass
  def __init__(self,*args):

@@ -1,5 +1,9 @@
 class ICommandExecutor:
  """ Defines a method that executes a certain action on the type that implements this interface. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ICommandExecutor()
+
  def Execute(self):
   """
   Execute(self: ICommandExecutor)

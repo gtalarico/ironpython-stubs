@@ -1,10 +1,14 @@
-class ToolStripProfessionalRenderer:
+class ToolStripProfessionalRenderer(ToolStripRenderer):
  """
  Handles the painting functionality for System.Windows.Forms.ToolStrip objects,applying a custom palette and a streamlined style.
  
  ToolStripProfessionalRenderer()
  ToolStripProfessionalRenderer(professionalColorTable: ProfessionalColorTable)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripProfessionalRenderer()
+
  @staticmethod
  def __new__(self,professionalColorTable=None):
   """

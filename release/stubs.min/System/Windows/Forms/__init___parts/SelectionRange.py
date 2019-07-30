@@ -1,4 +1,4 @@
-class SelectionRange:
+class SelectionRange(object):
  """
  Represents a date selection range in a month calendar control.
  
@@ -6,6 +6,10 @@ class SelectionRange:
  SelectionRange(lower: DateTime,upper: DateTime)
  SelectionRange(range: SelectionRange)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SelectionRange()
+
  def ToString(self):
   """
   ToString(self: SelectionRange) -> str

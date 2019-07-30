@@ -1,14 +1,16 @@
 class IBindingListView:
  """ Extends the System.ComponentModel.IBindingList interface by providing advanced sorting and filtering capabilities. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IBindingListView()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ApplySort(self,sorts):
   """
   ApplySort(self: IBindingListView,sorts: ListSortDescriptionCollection)
-   Sorts the data source based on the given 
-    System.ComponentModel.ListSortDescriptionCollection.
+   Sorts the data source based on the given System.ComponentModel.ListSortDescriptionCollection.
   
-  
-   sorts: The System.ComponentModel.ListSortDescriptionCollection containing the sorts to apply to 
-    the data source.
+   sorts: The System.ComponentModel.ListSortDescriptionCollection containing the sorts to apply to the data source.
   """
   pass
  def RemoveFilter(self):

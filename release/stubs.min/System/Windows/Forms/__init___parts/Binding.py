@@ -1,4 +1,4 @@
-class Binding:
+class Binding(object):
  """
  Represents the simple binding between the property value of an object and the property value of a control.
  
@@ -9,6 +9,10 @@ class Binding:
  Binding(propertyName: str,dataSource: object,dataMember: str,formattingEnabled: bool,dataSourceUpdateMode: DataSourceUpdateMode,nullValue: object,formatString: str)
  Binding(propertyName: str,dataSource: object,dataMember: str,formattingEnabled: bool,dataSourceUpdateMode: DataSourceUpdateMode,nullValue: object,formatString: str,formatInfo: IFormatProvider)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Binding()
+
  def OnBindingComplete(self,*args):
   """
   OnBindingComplete(self: Binding,e: BindingCompleteEventArgs)

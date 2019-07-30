@@ -4,6 +4,11 @@ class TYPEKIND:
  
  enum TYPEKIND,values: TKIND_ALIAS (6),TKIND_COCLASS (5),TKIND_DISPATCH (4),TKIND_ENUM (0),TKIND_INTERFACE (3),TKIND_MAX (8),TKIND_MODULE (2),TKIND_RECORD (1),TKIND_UNION (7)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TYPEKIND()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

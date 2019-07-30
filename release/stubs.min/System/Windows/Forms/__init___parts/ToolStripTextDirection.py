@@ -1,9 +1,13 @@
-class ToolStripTextDirection:
+class ToolStripTextDirection(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies the text orientation to use with a particular System.Windows.Forms.ToolStrip.LayoutStyle.
  
  enum ToolStripTextDirection,values: Horizontal (1),Inherit (0),Vertical270 (3),Vertical90 (2)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripTextDirection()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

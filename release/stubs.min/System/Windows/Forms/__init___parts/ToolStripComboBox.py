@@ -1,4 +1,4 @@
-class ToolStripComboBox:
+class ToolStripComboBox(ToolStripControlHost,IComponent,IDisposable,IDropTarget,ISupportOleDropSource,IArrangedElement):
  """
  Represents a System.Windows.Forms.ToolStripComboBox that is properly rendered in a System.Windows.Forms.ToolStrip.
  
@@ -6,11 +6,14 @@ class ToolStripComboBox:
  ToolStripComboBox(name: str)
  ToolStripComboBox(c: Control)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripComboBox()
+
  def BeginUpdate(self):
   """
   BeginUpdate(self: ToolStripComboBox)
-   Maintains performance when items are added to the System.Windows.Forms.ToolStripComboBox 
-    one at a time.
+   Maintains performance when items are added to the System.Windows.Forms.ToolStripComboBox one at a time.
   """
   pass
  def CreateAccessibilityInstance(self,*args):
@@ -19,28 +22,22 @@ class ToolStripComboBox:
  def Dispose(self):
   """
   Dispose(self: ToolStripControlHost,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.ToolStripControlHost 
-    and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.ToolStripControlHost and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def EndUpdate(self):
   """
   EndUpdate(self: ToolStripComboBox)
-   Resumes painting the System.Windows.Forms.ToolStripComboBox control after painting is 
-    suspended by the System.Windows.Forms.ToolStripComboBox.BeginUpdate method.
+   Resumes painting the System.Windows.Forms.ToolStripComboBox control after painting is suspended by the System.Windows.Forms.ToolStripComboBox.BeginUpdate method.
   """
   pass
  def FindString(self,s,startIndex=None):
   """
   FindString(self: ToolStripComboBox,s: str) -> int
   
-   Finds the first item in the System.Windows.Forms.ToolStripComboBox that starts with the 
-    specified string.
-  
+   Finds the first item in the System.Windows.Forms.ToolStripComboBox that starts with the specified string.
   
    s: The System.String to search for.
    Returns: The zero-based index of the first item found; returns -1 if no match is found.
@@ -49,9 +46,7 @@ class ToolStripComboBox:
    Finds the first item after the given index which starts with the given string.
   
    s: The System.String to search for.
-   startIndex: The zero-based index of the item before the first item to be searched. Set to -1 to 
-    search from the beginning of the control.
-  
+   startIndex: The zero-based index of the item before the first item to be searched. Set to -1 to search from the beginning of the control.
    Returns: The zero-based index of the first item found; returns -1 if no match is found.
   """
   pass
@@ -59,9 +54,7 @@ class ToolStripComboBox:
   """
   FindStringExact(self: ToolStripComboBox,s: str) -> int
   
-   Finds the first item in the System.Windows.Forms.ToolStripComboBox that exactly matches 
-    the specified string.
-  
+   Finds the first item in the System.Windows.Forms.ToolStripComboBox that exactly matches the specified string.
   
    s: The System.String to search for.
    Returns: The zero-based index of the first item found; -1 if no match is found.
@@ -70,9 +63,7 @@ class ToolStripComboBox:
    Finds the first item after the specified index that exactly matches the specified string.
   
    s: The System.String to search for.
-   startIndex: The zero-based index of the item before the first item to be searched. Set to -1 to 
-    search from the beginning of the control.
-  
+   startIndex: The zero-based index of the item before the first item to be searched. Set to -1 to search from the beginning of the control.
    Returns: The zero-based index of the first item found; returns -1 if no match is found.
   """
   pass
@@ -93,22 +84,17 @@ class ToolStripComboBox:
    Retrieves the size of a rectangular area into which a control can be fitted.
   
    constrainingSize: The custom-sized area for a control.
-   Returns: An ordered pair of type System.Drawing.Size representing the width and height of a 
-    rectangle.
+   Returns: An ordered pair of type System.Drawing.Size representing the width and height of a rectangle.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def IsInputChar(self,*args):
@@ -118,17 +104,14 @@ class ToolStripComboBox:
    Determines whether a character is an input character that the item recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the item and not preprocessed; 
-    otherwise,false.
+   Returns: true if the character should be sent directly to the item and not preprocessed; otherwise,false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: ToolStripItem,keyData: Keys) -> bool
   
-   Determines whether the specified key is a regular input key or a special key that 
-    requires preprocessing.
-  
+   Determines whether the specified key is a regular input key or a special key that requires preprocessing.
   
    keyData: One of the System.Windows.Forms.Keys values.
    Returns: true if the specified key is a regular input key; otherwise,false.
@@ -140,12 +123,7 @@ class ToolStripComboBox:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -424,10 +402,7 @@ class ToolStripComboBox:
  def OnOwnerFontChanged(self,*args):
   """
   OnOwnerFontChanged(self: ToolStripItem,e: EventArgs)
-   Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.ToolStripItem.Font property has changed on the parent of the 
-    System.Windows.Forms.ToolStripItem.
-  
+   Raises the System.Windows.Forms.Control.FontChanged event when the System.Windows.Forms.ToolStripItem.Font property has changed on the parent of the System.Windows.Forms.ToolStripItem.
   
    e: A System.EventArgs that contains the event data.
   """
@@ -456,10 +431,7 @@ class ToolStripComboBox:
  def OnParentEnabledChanged(self,*args):
   """
   OnParentEnabledChanged(self: ToolStripItem,e: EventArgs)
-   Raises the System.Windows.Forms.ToolStripItem.EnabledChanged event when the 
-    System.Windows.Forms.ToolStripItem.Enabled property value of the item's container 
-    changes.
-  
+   Raises the System.Windows.Forms.ToolStripItem.EnabledChanged event when the System.Windows.Forms.ToolStripItem.Enabled property value of the item's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -574,9 +546,7 @@ class ToolStripComboBox:
   
    Processes a command key.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: false in all cases.
   """
@@ -604,9 +574,7 @@ class ToolStripComboBox:
  def Select(self,start=None,length=None):
   """
   Select(self: ToolStripComboBox,start: int,length: int)
-   Selects a range of text in the editable portion of the 
-    System.Windows.Forms.ToolStripComboBox.
-  
+   Selects a range of text in the editable portion of the System.Windows.Forms.ToolStripComboBox.
   
    start: The position of the first character in the current text selection within the text box.
    length: The number of characters to select.
@@ -615,8 +583,7 @@ class ToolStripComboBox:
  def SelectAll(self):
   """
   SelectAll(self: ToolStripComboBox)
-   Selects all the text in the editable portion of the 
-    System.Windows.Forms.ToolStripComboBox.
+   Selects all the text in the editable portion of the System.Windows.Forms.ToolStripComboBox.
   """
   pass
  def SetBounds(self,*args):
@@ -624,8 +591,7 @@ class ToolStripComboBox:
   SetBounds(self: ToolStripItem,bounds: Rectangle)
    Sets the size and location of the item.
   
-   bounds: A System.Drawing.Rectangle that represents the size and location of the 
-    System.Windows.Forms.ToolStripItem
+   bounds: A System.Drawing.Rectangle that represents the size and location of the System.Windows.Forms.ToolStripItem
   """
   pass
  def SetVisibleCore(self,*args):

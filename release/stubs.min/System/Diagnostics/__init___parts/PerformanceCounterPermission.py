@@ -1,4 +1,4 @@
-class PerformanceCounterPermission:
+class PerformanceCounterPermission(ResourcePermissionBase):
  """
  Allows control of code access permissions for System.Diagnostics.PerformanceCounter.
  
@@ -7,6 +7,11 @@ class PerformanceCounterPermission:
  PerformanceCounterPermission(permissionAccess: PerformanceCounterPermissionAccess,machineName: str,categoryName: str)
  PerformanceCounterPermission(permissionAccessEntries: Array[PerformanceCounterPermissionEntry])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PerformanceCounterPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddPermissionAccess(self,*args):
   """
   AddPermissionAccess(self: ResourcePermissionBase,entry: ResourcePermissionBaseEntry)
@@ -25,11 +30,8 @@ class PerformanceCounterPermission:
   """
   GetPermissionEntries(self: ResourcePermissionBase) -> Array[ResourcePermissionBaseEntry]
   
-   Returns an array of the System.Security.Permissions.ResourcePermissionBaseEntry objects 
-    added to this permission.
-  
-   Returns: An array of System.Security.Permissions.ResourcePermissionBaseEntry objects that were 
-    added to this permission.
+   Returns an array of the System.Security.Permissions.ResourcePermissionBaseEntry objects added to this permission.
+   Returns: An array of System.Security.Permissions.ResourcePermissionBaseEntry objects that were added to this permission.
   """
   pass
  def RemovePermissionAccess(self,*args):

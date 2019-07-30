@@ -5,6 +5,11 @@ class DisplayNameAttribute:
  DisplayNameAttribute()
  DisplayNameAttribute(displayName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DisplayNameAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: DisplayNameAttribute,obj: object) -> bool
@@ -12,8 +17,7 @@ class DisplayNameAttribute:
    Determines whether two System.ComponentModel.DisplayNameAttribute instances are equal.
   
    obj: The System.ComponentModel.DisplayNameAttribute to test the value equality of.
-   Returns: true if the value of the given object is equal to that of the current object; otherwise,
-    false.
+   Returns: true if the value of the given object is equal to that of the current object; otherwise,false.
   """
   pass
  def GetHashCode(self):

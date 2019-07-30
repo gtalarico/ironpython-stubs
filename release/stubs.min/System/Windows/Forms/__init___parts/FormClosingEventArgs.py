@@ -1,9 +1,13 @@
-class FormClosingEventArgs:
+class FormClosingEventArgs(CancelEventArgs):
  """
  Provides data for the System.Windows.Forms.Form.FormClosing event.
  
  FormClosingEventArgs(closeReason: CloseReason,cancel: bool)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return FormClosingEventArgs()
+
  @staticmethod
  def __new__(self,closeReason,cancel):
   """ __new__(cls: type,closeReason: CloseReason,cancel: bool) """

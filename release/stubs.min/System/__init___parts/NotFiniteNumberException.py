@@ -1,4 +1,4 @@
-class NotFiniteNumberException:
+class NotFiniteNumberException(ArithmeticException):
  """
  The exception that is thrown when a floating-point value is positive infinity,negative infinity,or Not-a-Number (NaN).
  
@@ -9,12 +9,15 @@ class NotFiniteNumberException:
  NotFiniteNumberException(message: str,innerException: Exception)
  NotFiniteNumberException(message: str,offendingNumber: float,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NotFiniteNumberException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: NotFiniteNumberException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the invalid number 
-    and additional exception information.
-  
+   Sets the System.Runtime.Serialization.SerializationInfo object with the invalid number and additional exception information.
   
    info: The object that holds the serialized object data.
    context: The contextual information about the source or destination.

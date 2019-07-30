@@ -1,5 +1,10 @@
 class IWebRequestCreate:
  """ Provides the base interface for creating System.Net.WebRequest instances. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IWebRequestCreate()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Create(self,uri):
   """
   Create(self: IWebRequestCreate,uri: Uri) -> WebRequest

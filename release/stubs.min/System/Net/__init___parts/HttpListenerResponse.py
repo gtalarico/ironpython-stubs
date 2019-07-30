@@ -1,5 +1,10 @@
-class HttpListenerResponse:
+class HttpListenerResponse(object):
  """ Represents a response to a request being handled by an System.Net.HttpListener object. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HttpListenerResponse()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Abort(self):
   """
   Abort(self: HttpListenerResponse)
@@ -35,15 +40,12 @@ class HttpListenerResponse:
  def Close(self,responseEntity=None,willBlock=None):
   """
   Close(self: HttpListenerResponse,responseEntity: Array[Byte],willBlock: bool)
-   Returns the specified byte array to the client and releases the resources held by this 
-    System.Net.HttpListenerResponse instance.
-  
+   Returns the specified byte array to the client and releases the resources held by this System.Net.HttpListenerResponse instance.
   
    responseEntity: A System.Byte array that contains the response to send to the client.
    willBlock: true to block execution while flushing the stream to the client; otherwise,false.
   Close(self: HttpListenerResponse)
-   Sends the response to the client and releases the resources held by this 
-    System.Net.HttpListenerResponse instance.
+   Sends the response to the client and releases the resources held by this System.Net.HttpListenerResponse instance.
   """
   pass
  def CopyFrom(self,templateResponse):

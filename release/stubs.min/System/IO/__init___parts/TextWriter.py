@@ -1,5 +1,10 @@
-class TextWriter:
+class TextWriter(MarshalByRefObject):
  """ Represents a writer that can write a sequential series of characters. This class is abstract. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TextWriter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: TextWriter)
@@ -15,8 +20,7 @@ class TextWriter:
  def Flush(self):
   """
   Flush(self: TextWriter)
-   Clears all buffers for the current writer and causes any buffered data to be written to 
-    the underlying device.
+   Clears all buffers for the current writer and causes any buffered data to be written to the underlying device.
   """
   pass
  def FlushAsync(self):
@@ -28,11 +32,9 @@ class TextWriter:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -59,24 +61,18 @@ class TextWriter:
   
    value: The character to write to the text stream.
   Write(self: TextWriter,format: str,arg0: object,arg1: object)
-   Writes out a formatted string,using the same semantics as 
-    System.String.Format(System.String,System.Object).
-  
+   Writes out a formatted string,using the same semantics as System.String.Format(System.String,System.Object).
   
    format: The formatting string.
    arg0: An object to write into the formatted string.
    arg1: An object to write into the formatted string.
   Write(self: TextWriter,format: str,arg0: object)
-   Writes out a formatted string,using the same semantics as 
-    System.String.Format(System.String,System.Object).
-  
+   Writes out a formatted string,using the same semantics as System.String.Format(System.String,System.Object).
   
    format: The formatting string.
    arg0: An object to write into the formatted string.
   Write(self: TextWriter,value: object)
-   Writes the text representation of an object to the text stream by calling ToString on 
-    that object.
-  
+   Writes the text representation of an object to the text stream by calling ToString on that object.
   
    value: The object to write.
   Write(self: TextWriter,value: str)
@@ -92,9 +88,7 @@ class TextWriter:
   
    value: The 8-byte floating-point value to write.
   Write(self: TextWriter,format: str,arg0: object,arg1: object,arg2: object)
-   Writes out a formatted string,using the same semantics as 
-    System.String.Format(System.String,System.Object).
-  
+   Writes out a formatted string,using the same semantics as System.String.Format(System.String,System.Object).
   
    format: The formatting string.
    arg0: An object to write into the formatted string.
@@ -135,9 +129,7 @@ class TextWriter:
   
    value: The 8-byte unsigned integer to write.
   Write(self: TextWriter,format: str,*arg: Array[object])
-   Writes out a formatted string,using the same semantics as 
-    System.String.Format(System.String,System.Object).
-  
+   Writes out a formatted string,using the same semantics as System.String.Format(System.String,System.Object).
   
    format: The formatting string.
    arg: The object array to write into the formatted string.
@@ -156,24 +148,18 @@ class TextWriter:
   WriteLine(self: TextWriter)
    Writes a line terminator to the text stream.
   WriteLine(self: TextWriter,format: str,arg0: object,arg1: object)
-   Writes out a formatted string and a new line,using the same semantics as 
-    System.String.Format(System.String,System.Object).
-  
+   Writes out a formatted string and a new line,using the same semantics as System.String.Format(System.String,System.Object).
   
    format: The formatting string.
    arg0: The object to write into the format string.
    arg1: The object to write into the format string.
   WriteLine(self: TextWriter,format: str,arg0: object)
-   Writes out a formatted string and a new line,using the same semantics as 
-    System.String.Format(System.String,System.Object).
-  
+   Writes out a formatted string and a new line,using the same semantics as System.String.Format(System.String,System.Object).
   
    format: The formatted string.
    arg0: The object to write into the formatted string.
   WriteLine(self: TextWriter,value: object)
-   Writes the text representation of an object by calling ToString on this object,followed 
-    by a line terminator to the text stream.
-  
+   Writes the text representation of an object by calling ToString on this object,followed by a line terminator to the text stream.
   
    value: The object to write. If value is null,only the line termination characters are written.
   WriteLine(self: TextWriter,value: str)
@@ -181,51 +167,35 @@ class TextWriter:
   
    value: The string to write. If value is null,only the line termination characters are written.
   WriteLine(self: TextWriter,value: Decimal)
-   Writes the text representation of a decimal value followed by a line terminator to the 
-    text stream.
-  
+   Writes the text representation of a decimal value followed by a line terminator to the text stream.
   
    value: The decimal value to write.
   WriteLine(self: TextWriter,value: float)
-   Writes the text representation of a 8-byte floating-point value followed by a line 
-    terminator to the text stream.
-  
+   Writes the text representation of a 8-byte floating-point value followed by a line terminator to the text stream.
   
    value: The 8-byte floating-point value to write.
   WriteLine(self: TextWriter,value: Single)
-   Writes the text representation of a 4-byte floating-point value followed by a line 
-    terminator to the text stream.
-  
+   Writes the text representation of a 4-byte floating-point value followed by a line terminator to the text stream.
   
    value: The 4-byte floating-point value to write.
   WriteLine(self: TextWriter,value: UInt64)
-   Writes the text representation of an 8-byte unsigned integer followed by a line 
-    terminator to the text stream.
-  
+   Writes the text representation of an 8-byte unsigned integer followed by a line terminator to the text stream.
   
    value: The 8-byte unsigned integer to write.
   WriteLine(self: TextWriter,value: Int64)
-   Writes the text representation of an 8-byte signed integer followed by a line terminator 
-    to the text stream.
-  
+   Writes the text representation of an 8-byte signed integer followed by a line terminator to the text stream.
   
    value: The 8-byte signed integer to write.
   WriteLine(self: TextWriter,value: UInt32)
-   Writes the text representation of a 4-byte unsigned integer followed by a line terminator 
-    to the text stream.
-  
+   Writes the text representation of a 4-byte unsigned integer followed by a line terminator to the text stream.
   
    value: The 4-byte unsigned integer to write.
   WriteLine(self: TextWriter,value: int)
-   Writes the text representation of a 4-byte signed integer followed by a line terminator 
-    to the text stream.
-  
+   Writes the text representation of a 4-byte signed integer followed by a line terminator to the text stream.
   
    value: The 4-byte signed integer to write.
   WriteLine(self: TextWriter,value: bool)
-   Writes the text representation of a Boolean followed by a line terminator to the text 
-    stream.
-  
+   Writes the text representation of a Boolean followed by a line terminator to the text stream.
   
    value: The Boolean to write.
   WriteLine(self: TextWriter,buffer: Array[Char],index: int,count: int)
@@ -243,18 +213,14 @@ class TextWriter:
   
    value: The character to write to the text stream.
   WriteLine(self: TextWriter,format: str,arg0: object,arg1: object,arg2: object)
-   Writes out a formatted string and a new line,using the same semantics as 
-    System.String.Format(System.String,System.Object).
-  
+   Writes out a formatted string and a new line,using the same semantics as System.String.Format(System.String,System.Object).
   
    format: The formatting string.
    arg0: The object to write into the format string.
    arg1: The object to write into the format string.
    arg2: The object to write into the format string.
   WriteLine(self: TextWriter,format: str,*arg: Array[object])
-   Writes out a formatted string and a new line,using the same semantics as 
-    System.String.Format(System.String,System.Object).
-  
+   Writes out a formatted string and a new line,using the same semantics as System.String.Format(System.String,System.Object).
   
    format: The formatting string.
    arg: The object array to write into format string.

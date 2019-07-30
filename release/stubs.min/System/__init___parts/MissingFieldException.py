@@ -1,4 +1,4 @@
-class MissingFieldException:
+class MissingFieldException(MissingMemberException):
  """
  The exception that is thrown when there is an attempt to dynamically access a field that does not exist.
  
@@ -7,6 +7,11 @@ class MissingFieldException:
  MissingFieldException(message: str,inner: Exception)
  MissingFieldException(className: str,fieldName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MissingFieldException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

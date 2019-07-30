@@ -1,10 +1,14 @@
-class NodeLabelEditEventArgs:
+class NodeLabelEditEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.TreeView.BeforeLabelEdit and System.Windows.Forms.TreeView.AfterLabelEdit events.
  
  NodeLabelEditEventArgs(node: TreeNode)
  NodeLabelEditEventArgs(node: TreeNode,label: str)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return NodeLabelEditEventArgs()
+
  @staticmethod
  def __new__(self,node,label=None):
   """

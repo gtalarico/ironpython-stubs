@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.Caching.Removal calls itself Removal
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class CachedDirectOrderRemovalHandler:
+class CachedDirectOrderRemovalHandler(CacheObjectRemovalHandlerBase):
  """ CachedDirectOrderRemovalHandler(stockManager: IStockManager) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CachedDirectOrderRemovalHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Handle(self,cachable):
   """ Handle(self: CachedDirectOrderRemovalHandler,cachable: DirectOrder) """
   pass
@@ -21,8 +27,13 @@ class CachedDirectOrderRemovalHandler:
   """ __new__(cls: type,stockManager: IStockManager) """
   pass
 
-class CachedEnhancedStockAllocationsRemovalHandler:
+class CachedEnhancedStockAllocationsRemovalHandler(CacheObjectRemovalHandlerBase):
  """ CachedEnhancedStockAllocationsRemovalHandler(stockManager: IStockManager) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CachedEnhancedStockAllocationsRemovalHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Handle(self,cachable):
   """ Handle(self: CachedEnhancedStockAllocationsRemovalHandler,cachable: EnhancedStockAllocations) """
   pass
@@ -34,8 +45,13 @@ class CachedEnhancedStockAllocationsRemovalHandler:
   """ __new__(cls: type,stockManager: IStockManager) """
   pass
 
-class CachedInboundReceiveLinesRemovalHandler:
+class CachedInboundReceiveLinesRemovalHandler(CacheObjectRemovalHandlerBase):
  """ CachedInboundReceiveLinesRemovalHandler(inbound: Inbound) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CachedInboundReceiveLinesRemovalHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Handle(self,cachable):
   """ Handle(self: CachedInboundReceiveLinesRemovalHandler,cachable: InboundReceiveLines) """
   pass
@@ -47,8 +63,13 @@ class CachedInboundReceiveLinesRemovalHandler:
   """ __new__(cls: type,inbound: Inbound) """
   pass
 
-class CachedRmaReceiveLinesRemovalHandler:
+class CachedRmaReceiveLinesRemovalHandler(CacheObjectRemovalHandlerBase):
  """ CachedRmaReceiveLinesRemovalHandler(inbound: Inbound) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CachedRmaReceiveLinesRemovalHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Handle(self,cachable):
   """ Handle(self: CachedRmaReceiveLinesRemovalHandler,cachable: RmaReceiveLines) """
   pass
@@ -60,8 +81,13 @@ class CachedRmaReceiveLinesRemovalHandler:
   """ __new__(cls: type,inbound: Inbound) """
   pass
 
-class CacheObjectRemovalHandlerBase:
+class CacheObjectRemovalHandlerBase(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CacheObjectRemovalHandlerBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Handle(self,cachable):
   """ Handle(self: CacheObjectRemovalHandlerBase[T],cachable: object)Handle(self: CacheObjectRemovalHandlerBase[T],cachable: T) """
   pass
@@ -74,6 +100,11 @@ class CacheObjectRemovalHandlerBase:
 
 class ICacheObjectRemovalHandler:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ICacheObjectRemovalHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Handle(self,cachable):
   """ Handle(self: ICacheObjectRemovalHandler[T],cachable: object)Handle(self: ICacheObjectRemovalHandler[T],cachable: T) """
   pass

@@ -1,15 +1,22 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.Reports calls itself Reports
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # no functions
 # classes
 
 class IReportDataArgsProvider:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IReportDataArgsProvider()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -22,6 +29,11 @@ class IReportDataArgsProvider:
 
 class IReportExportArgsProvider:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IReportExportArgsProvider()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -34,6 +46,11 @@ class IReportExportArgsProvider:
 
 class IReportPrintArgsProvider:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IReportPrintArgsProvider()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -46,6 +63,11 @@ class IReportPrintArgsProvider:
 
 class IReportRenderer:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IReportRenderer()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Export(self,*__args):
   """
   Export[T](self: IReportRenderer,provider: T) -> ReportExport
@@ -59,8 +81,13 @@ class IReportRenderer:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class ReportArgs:
+class ReportArgs(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReportArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ReportFile=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: ReportFile(self: ReportArgs) -> str
 
@@ -75,8 +102,13 @@ Set: ReportParameters(self: ReportArgs)=value
 
 
 
-class ReportDataArgs:
+class ReportDataArgs(object):
  """ ReportDataArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReportDataArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  DataSources=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: DataSources(self: ReportDataArgs) -> Dictionary[str,object]
 
@@ -91,8 +123,13 @@ Set: MetaData(self: ReportDataArgs)=value
 
 
 
-class ReportExport:
+class ReportExport(object):
  """ ReportExport() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReportExport()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Buffer=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Buffer(self: ReportExport) -> Array[Byte]
 
@@ -131,8 +168,13 @@ Set: NumberOfPages(self: ReportExport)=value
 
 
 
-class ReportExportArgs:
+class ReportExportArgs(ReportArgs):
  """ ReportExportArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReportExportArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Format=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Format(self: ReportExportArgs) -> ReportExportFormat
 
@@ -143,6 +185,11 @@ Set: Format(self: ReportExportArgs)=value
 
 class ReportExportFormat:
  """ enum ReportExportFormat,values: Excel (1),Image (3),PDF (0),Word (2) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReportExportFormat()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -173,8 +220,13 @@ class ReportExportFormat:
  Word=None
 
 
-class ReportPrintArgs:
+class ReportPrintArgs(ReportArgs):
  """ ReportPrintArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReportPrintArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  DocumentName=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: DocumentName(self: ReportPrintArgs) -> str
 

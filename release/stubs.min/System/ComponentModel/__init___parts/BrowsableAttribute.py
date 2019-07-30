@@ -4,6 +4,11 @@ class BrowsableAttribute:
  
  BrowsableAttribute(browsable: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BrowsableAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: BrowsableAttribute,obj: object) -> bool

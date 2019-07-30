@@ -1,48 +1,42 @@
-class CommonDialog:
+class CommonDialog(Component,IComponent,IDisposable):
  """
  Specifies the base class used for displaying dialog boxes on the screen.
  
  CommonDialog()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return CommonDialog()
+
  def Dispose(self):
   """
   Dispose(self: Component,disposing: bool)
-   Releases the unmanaged resources used by the System.ComponentModel.Component and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.ComponentModel.Component and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def HookProc(self,*args):
   """
   HookProc(self: CommonDialog,hWnd: IntPtr,msg: int,wparam: IntPtr,lparam: IntPtr) -> IntPtr
   
-   Defines the common dialog box hook procedure that is overridden to add specific 
-    functionality to a common dialog box.
-  
+   Defines the common dialog box hook procedure that is overridden to add specific functionality to a common dialog box.
   
    hWnd: The handle to the dialog box window.
    msg: The message being received.
    wparam: Additional information about the message.
    lparam: Additional information about the message.
-   Returns: A zero value if the default dialog box procedure processes the message; a nonzero value 
-    if the default dialog box procedure ignores the message.
+   Returns: A zero value if the default dialog box procedure processes the message; a nonzero value if the default dialog box procedure ignores the message.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -51,12 +45,7 @@ class CommonDialog:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -76,9 +65,7 @@ class CommonDialog:
   """
   OwnerWndProc(self: CommonDialog,hWnd: IntPtr,msg: int,wparam: IntPtr,lparam: IntPtr) -> IntPtr
   
-   Defines the owner window procedure that is overridden to add specific functionality to a 
-    common dialog box.
-  
+   Defines the owner window procedure that is overridden to add specific functionality to a common dialog box.
   
    hWnd: The window handle of the message to send.
    msg: The Win32 message to send.
@@ -90,8 +77,7 @@ class CommonDialog:
  def Reset(self):
   """
   Reset(self: CommonDialog)
-   When overridden in a derived class,resets the properties of a common dialog box to their 
-    default values.
+   When overridden in a derived class,resets the properties of a common dialog box to their default values.
   """
   pass
  def RunDialog(self,*args):
@@ -109,18 +95,13 @@ class CommonDialog:
   ShowDialog(self: CommonDialog) -> DialogResult
   
    Runs a common dialog box with a default owner.
-   Returns: System.Windows.Forms.DialogResult.OK if the user clicks OK in the dialog box; otherwise,
-    System.Windows.Forms.DialogResult.Cancel.
-  
+   Returns: System.Windows.Forms.DialogResult.OK if the user clicks OK in the dialog box; otherwise,System.Windows.Forms.DialogResult.Cancel.
   ShowDialog(self: CommonDialog,owner: IWin32Window) -> DialogResult
   
    Runs a common dialog box with the specified owner.
   
-   owner: Any object that implements System.Windows.Forms.IWin32Window that represents the 
-    top-level window that will own the modal dialog box.
-  
-   Returns: System.Windows.Forms.DialogResult.OK if the user clicks OK in the dialog box; otherwise,
-    System.Windows.Forms.DialogResult.Cancel.
+   owner: Any object that implements System.Windows.Forms.IWin32Window that represents the top-level window that will own the modal dialog box.
+   Returns: System.Windows.Forms.DialogResult.OK if the user clicks OK in the dialog box; otherwise,System.Windows.Forms.DialogResult.Cancel.
   """
   pass
  def __enter__(self,*args):

@@ -1,4 +1,4 @@
-class InsufficientMemoryException:
+class InsufficientMemoryException(OutOfMemoryException):
  """
  The exception that is thrown when a check for sufficient available memory fails. This class cannot be inherited.
  
@@ -6,6 +6,11 @@ class InsufficientMemoryException:
  InsufficientMemoryException(message: str)
  InsufficientMemoryException(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InsufficientMemoryException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

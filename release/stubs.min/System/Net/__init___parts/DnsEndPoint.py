@@ -1,10 +1,15 @@
-class DnsEndPoint:
+class DnsEndPoint(EndPoint):
  """
  Represents a network endpoint as a host name or a string representation of an IP address and a port number.
  
  DnsEndPoint(host: str,port: int)
  DnsEndPoint(host: str,port: int,addressFamily: AddressFamily)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DnsEndPoint()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,comparand):
   """
   Equals(self: DnsEndPoint,comparand: object) -> bool
@@ -27,11 +32,8 @@ class DnsEndPoint:
   """
   ToString(self: DnsEndPoint) -> str
   
-   Returns the host name or string representation of the IP address and port number of the 
-    System.Net.DnsEndPoint.
-  
-   Returns: A string containing the address family,host name or IP address string,and the port 
-    number of the specified System.Net.DnsEndPoint.
+   Returns the host name or string representation of the IP address and port number of the System.Net.DnsEndPoint.
+   Returns: A string containing the address family,host name or IP address string,and the port number of the specified System.Net.DnsEndPoint.
   """
   pass
  def __eq__(self,*args):

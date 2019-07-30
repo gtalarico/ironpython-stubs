@@ -1,4 +1,4 @@
-class Version:
+class Version(object):
  """
  Represents the version number of an assembly,operating system,or the common language runtime. This class cannot be inherited.
  
@@ -8,13 +8,16 @@ class Version:
  Version(version: str)
  Version()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Version()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """
   Clone(self: Version) -> object
   
-   Returns a new System.Version object whose value is the same as the current System.Version 
-    object.
-  
+   Returns a new System.Version object whose value is the same as the current System.Version object.
    Returns: A new System.Object whose values are a copy of the current System.Version object.
   """
   pass
@@ -22,53 +25,39 @@ class Version:
   """
   CompareTo(self: Version,version: object) -> int
   
-   Compares the current System.Version object to a specified object and returns an 
-    indication of their relative values.
-  
+   Compares the current System.Version object to a specified object and returns an indication of their relative values.
   
    version: An object to compare,or null.
-   Returns: A signed integer that indicates the relative values of the two objects,as shown in the 
-    following table.Return value Meaning Less than zero The current System.Version object is 
-    a version before version. Zero The current System.Version object is the same version as 
-    version. Greater than zero The current System.Version object is a version subsequent to 
-    version.-or- version is null.
+   Returns: A signed integer that indicates the relative values of the two objects,as shown in the following table.Return value Meaning Less than zero The current System.Version 
+    object is a version before version. Zero The current System.Version object is the same version as version. Greater than zero The current System.Version object is a version 
+    subsequent to version.-or- version is null.
   
   CompareTo(self: Version,value: Version) -> int
   
-   Compares the current System.Version object to a specified System.Version object and 
-    returns an indication of their relative values.
-  
+   Compares the current System.Version object to a specified System.Version object and returns an indication of their relative values.
   
    value: A System.Version object to compare to the current System.Version object,or null.
-   Returns: A signed integer that indicates the relative values of the two objects,as shown in the 
-    following table.Return value Meaning Less than zero The current System.Version object is 
-    a version before value. Zero The current System.Version object is the same version as 
-    value. Greater than zero The current System.Version object is a version subsequent to 
-    value. -or-value is null.
+   Returns: A signed integer that indicates the relative values of the two objects,as shown in the following table.Return value Meaning Less than zero The current System.Version 
+    object is a version before value. Zero The current System.Version object is the same version as value. Greater than zero The current System.Version object is a version 
+    subsequent to value. -or-value is null.
   """
   pass
  def Equals(self,obj):
   """
   Equals(self: Version,obj: object) -> bool
   
-   Returns a value indicating whether the current System.Version object is equal to a 
-    specified object.
-  
+   Returns a value indicating whether the current System.Version object is equal to a specified object.
   
    obj: An object to compare with the current System.Version object,or null.
-   Returns: true if the current System.Version object and obj are both System.Version objects,and 
-    every component of the current System.Version object matches the corresponding component 
-    of obj; otherwise,false.
+   Returns: true if the current System.Version object and obj are both System.Version objects,and every component of the current System.Version object matches the corresponding 
+    component of obj; otherwise,false.
   
   Equals(self: Version,obj: Version) -> bool
   
-   Returns a value indicating whether the current System.Version object and a specified 
-    System.Version object represent the same value.
-  
+   Returns a value indicating whether the current System.Version object and a specified System.Version object represent the same value.
   
    obj: A System.Version object to compare to the current System.Version object,or null.
-   Returns: true if every component of the current System.Version object matches the corresponding 
-    component of the obj parameter; otherwise,false.
+   Returns: true if every component of the current System.Version object matches the corresponding component of the obj parameter; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -84,9 +73,7 @@ class Version:
   """
   Parse(input: str) -> Version
   
-   Converts the string representation of a version number to an equivalent System.Version 
-    object.
-  
+   Converts the string representation of a version number to an equivalent System.Version object.
   
    input: A string that contains a version number to convert.
    Returns: An object that is equivalent to the version number specified in the input parameter.
@@ -96,32 +83,21 @@ class Version:
   """
   ToString(self: Version) -> str
   
-   Converts the value of the current System.Version object to its equivalent System.String 
-    representation.
-  
-   Returns: The System.String representation of the values of the major,minor,build,and revision 
-    components of the current System.Version object,as depicted in the following format. 
-    Each component is separated by a period character ('.'). Square brackets ('[' and ']') 
-    indicate a component that will not appear in the return value if the component is not 
-    defined: major.minor[.build[.revision]] For example,if you create a System.Version 
-    object using the constructor Version(1,1),the returned string is "1.1". If you create a 
-    System.Version object using the constructor Version(1,3,4,2),the returned string is 
-    "1.3.4.2".
+   Converts the value of the current System.Version object to its equivalent System.String representation.
+   Returns: The System.String representation of the values of the major,minor,build,and revision components of the current System.Version object,as depicted in the following 
+    format. Each component is separated by a period character ('.'). Square brackets ('[' and ']') indicate a component that will not appear in the return value if the 
+    component is not defined: major.minor[.build[.revision]] For example,if you create a System.Version object using the constructor Version(1,1),the returned string is 
+    "1.1". If you create a System.Version object using the constructor Version(1,3,4,2),the returned string is "1.3.4.2".
   
   ToString(self: Version,fieldCount: int) -> str
   
-   Converts the value of the current System.Version object to its equivalent System.String 
-    representation. A specified count indicates the number of components to return.
-  
+   Converts the value of the current System.Version object to its equivalent System.String representation. A specified count indicates the number of components to return.
   
    fieldCount: The number of components to return. The fieldCount ranges from 0 to 4.
-   Returns: The System.String representation of the values of the major,minor,build,and revision 
-    components of the current System.Version object,each separated by a period character 
-    ('.'). The fieldCount parameter determines how many components are returned.fieldCount 
-    Return Value 0 An empty string (""). 1 major 2 major.minor 3 major.minor.build 4 
-    major.minor.build.revision For example,if you create System.Version object using the 
-    constructor Version(1,3,5),ToString(2) returns "1.3" and ToString(4) throws an 
-    exception.
+   Returns: The System.String representation of the values of the major,minor,build,and revision components of the current System.Version object,each separated by a period 
+    character ('.'). The fieldCount parameter determines how many components are returned.fieldCount Return Value 0 An empty string (""). 1 major 2 major.minor 3 
+    major.minor.build 4 major.minor.build.revision For example,if you create System.Version object using the constructor Version(1,3,5),ToString(2) returns "1.3" and 
+    ToString(4) throws an exception.
   """
   pass
  @staticmethod
@@ -129,10 +105,7 @@ class Version:
   """
   TryParse(input: str) -> (bool,Version)
   
-   Tries to convert the string representation of a version number to an equivalent 
-    System.Version object,and returns a value that indicates whether the conversion 
-    succeeded.
-  
+   Tries to convert the string representation of a version number to an equivalent System.Version object,and returns a value that indicates whether the conversion succeeded.
   
    input: A string that contains a version number to convert.
    Returns: true if the input parameter was converted successfully; otherwise,false.

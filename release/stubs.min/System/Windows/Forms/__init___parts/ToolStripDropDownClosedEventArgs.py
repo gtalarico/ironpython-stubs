@@ -1,9 +1,13 @@
-class ToolStripDropDownClosedEventArgs:
+class ToolStripDropDownClosedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ToolStripDropDown.Closed event.
  
  ToolStripDropDownClosedEventArgs(reason: ToolStripDropDownCloseReason)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripDropDownClosedEventArgs()
+
  @staticmethod
  def __new__(self,reason):
   """ __new__(cls: type,reason: ToolStripDropDownCloseReason) """

@@ -1,9 +1,13 @@
-class DragEventArgs:
+class DragEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.Control.DragDrop,System.Windows.Forms.Control.DragEnter,or System.Windows.Forms.Control.DragOver event.
  
  DragEventArgs(data: IDataObject,keyState: int,x: int,y: int,allowedEffect: DragDropEffects,effect: DragDropEffects)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DragEventArgs()
+
  @staticmethod
  def __new__(self,data,keyState,x,y,allowedEffect,effect):
   """ __new__(cls: type,data: IDataObject,keyState: int,x: int,y: int,allowedEffect: DragDropEffects,effect: DragDropEffects) """

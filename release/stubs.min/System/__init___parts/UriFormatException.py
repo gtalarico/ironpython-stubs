@@ -1,4 +1,4 @@
-class UriFormatException:
+class UriFormatException(FormatException):
  """
  The exception that is thrown when an invalid Uniform Resource Identifier (URI) is detected.
  
@@ -6,6 +6,11 @@ class UriFormatException:
  UriFormatException(textString: str)
  UriFormatException(textString: str,e: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UriFormatException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

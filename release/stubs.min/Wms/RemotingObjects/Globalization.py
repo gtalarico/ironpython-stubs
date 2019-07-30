@@ -1,43 +1,63 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.Globalization calls itself Globalization
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class SaveTranslationArgs:
+class SaveTranslationArgs(object):
  """ SaveTranslationArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SaveTranslationArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  LocaleId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LocaleId(self: SaveTranslationArgs) -> str
+ """Langauge it is translated to
+
+Get: LocaleId(self: SaveTranslationArgs) -> str
 
 Set: LocaleId(self: SaveTranslationArgs)=value
 """
 
  ResourceId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ResourceId(self: SaveTranslationArgs) -> str
+ """Key for the translation
+
+Get: ResourceId(self: SaveTranslationArgs) -> str
 
 Set: ResourceId(self: SaveTranslationArgs)=value
 """
 
  ResourceSet=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ResourceSet(self: SaveTranslationArgs) -> str
+ """Resource set,a way to group localizations together.
+   Default: Portal
+
+Get: ResourceSet(self: SaveTranslationArgs) -> str
 
 Set: ResourceSet(self: SaveTranslationArgs)=value
 """
 
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Value(self: SaveTranslationArgs) -> str
+ """The translation of the Wms.RemotingObjects.Globalization.SaveTranslationArgs.ResourceId in Wms.RemotingObjects.Globalization.SaveTranslationArgs.LocaleId.
+
+Get: Value(self: SaveTranslationArgs) -> str
 
 Set: Value(self: SaveTranslationArgs)=value
 """
 
 
 
-class Translation:
+class Translation(object):
  """ Translation() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Translation()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def LoadFromRegistry():
   """ LoadFromRegistry() -> str """
@@ -50,33 +70,46 @@ class Translation:
   """ ToString(self: Translation) -> str """
   pass
  Culture=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Culture(self: Translation) -> str
+ """
+
+Get: Culture(self: Translation) -> str
 
 Set: Culture(self: Translation)=value
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name(self: Translation) -> str
+ """
+
+Get: Name(self: Translation) -> str
 
 Set: Name(self: Translation)=value
 """
 
  Resources=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Resources(self: Translation) -> Dictionary[str,object]
+ """
+
+Get: Resources(self: Translation) -> Dictionary[str,object]
 
 Set: Resources(self: Translation)=value
 """
 
  ResourseSet=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ResourseSet(self: Translation) -> str
+ """
+
+Get: ResourseSet(self: Translation) -> str
 
 Set: ResourseSet(self: Translation)=value
 """
 
 
 
-class Translations:
+class Translations(List):
  """ Translations() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Translations()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,*__args):
   """ Add(self: Translations,culture: str,resourseSet: str) """
   pass

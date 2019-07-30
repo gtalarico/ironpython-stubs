@@ -1,9 +1,13 @@
-class SearchForVirtualItemEventArgs:
+class SearchForVirtualItemEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ListView.SearchForVirtualItem event.
  
  SearchForVirtualItemEventArgs(isTextSearch: bool,isPrefixSearch: bool,includeSubItemsInSearch: bool,text: str,startingPoint: Point,direction: SearchDirectionHint,startIndex: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SearchForVirtualItemEventArgs()
+
  @staticmethod
  def __new__(self,isTextSearch,isPrefixSearch,includeSubItemsInSearch,text,startingPoint,direction,startIndex):
   """ __new__(cls: type,isTextSearch: bool,isPrefixSearch: bool,includeSubItemsInSearch: bool,text: str,startingPoint: Point,direction: SearchDirectionHint,startIndex: int) """

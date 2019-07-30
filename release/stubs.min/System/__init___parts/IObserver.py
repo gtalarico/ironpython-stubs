@@ -1,5 +1,10 @@
 class IObserver:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IObserver()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def OnCompleted(self):
   """
   OnCompleted(self: IObserver[T])

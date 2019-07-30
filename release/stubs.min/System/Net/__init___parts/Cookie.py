@@ -1,4 +1,4 @@
-class Cookie:
+class Cookie(object):
  """
  Provides a set of properties and methods that are used to manage cookies. This class cannot be inherited.
  
@@ -7,6 +7,11 @@ class Cookie:
  Cookie(name: str,value: str,path: str)
  Cookie(name: str,value: str,path: str,domain: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Cookie()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,comparand):
   """
   Equals(self: Cookie,comparand: object) -> bool
@@ -14,11 +19,9 @@ class Cookie:
    Overrides the System.Object.Equals(System.Object) method.
   
    comparand: A reference to a System.Net.Cookie.
-   Returns: Returns true if the System.Net.Cookie is equal to comparand. Two System.Net.Cookie 
-    instances are equal if their System.Net.Cookie.Name,System.Net.Cookie.Value,
-    System.Net.Cookie.Path,System.Net.Cookie.Domain,and System.Net.Cookie.Version 
-    properties are equal. System.Net.Cookie.Name and System.Net.Cookie.Domain string 
-    comparisons are case-insensitive.
+   Returns: Returns true if the System.Net.Cookie is equal to comparand. Two System.Net.Cookie instances are equal if their System.Net.Cookie.Name,System.Net.Cookie.Value,
+    System.Net.Cookie.Path,System.Net.Cookie.Domain,and System.Net.Cookie.Version properties are equal. System.Net.Cookie.Name and System.Net.Cookie.Domain string comparisons 
+    are case-insensitive.
   """
   pass
  def GetHashCode(self):
@@ -34,8 +37,7 @@ class Cookie:
   ToString(self: Cookie) -> str
   
    Overrides the System.Object.ToString method.
-   Returns: Returns a string representation of this System.Net.Cookie object that is suitable for 
-    including in a HTTP Cookie: request header.
+   Returns: Returns a string representation of this System.Net.Cookie object that is suitable for including in a HTTP Cookie: request header.
   """
   pass
  def __eq__(self,*args):

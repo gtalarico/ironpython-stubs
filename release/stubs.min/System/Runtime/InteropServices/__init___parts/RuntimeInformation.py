@@ -1,5 +1,10 @@
-class RuntimeInformation:
+class RuntimeInformation(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RuntimeInformation()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def IsOSPlatform(osPlatform):
   """ IsOSPlatform(osPlatform: OSPlatform) -> bool """

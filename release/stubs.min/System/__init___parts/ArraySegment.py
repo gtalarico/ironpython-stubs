@@ -1,8 +1,13 @@
-class ArraySegment:
+class ArraySegment(object):
  """
  ArraySegment[T](array: Array[T])
  ArraySegment[T](array: Array[T],offset: int,count: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ArraySegment()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: ArraySegment[T],obj: object) -> bool
@@ -10,18 +15,13 @@ class ArraySegment:
    Determines whether the specified object is equal to the current instance.
   
    obj: The object to be compared with the current instance.
-   Returns: true if the specified object is a System.ArraySegment structure and is equal to the 
-    current instance; otherwise,false.
-  
+   Returns: true if the specified object is a System.ArraySegment structure and is equal to the current instance; otherwise,false.
   Equals(self: ArraySegment[T],obj: ArraySegment[T]) -> bool
   
-   Determines whether the specified System.ArraySegment structure is equal to the current 
-    instance.
-  
+   Determines whether the specified System.ArraySegment structure is equal to the current instance.
   
    obj: The System.ArraySegment structure to be compared with the current instance.
-   Returns: true if the specified System.ArraySegment structure is equal to the current instance; 
-    otherwise,false.
+   Returns: true if the specified System.ArraySegment structure is equal to the current instance; otherwise,false.
   """
   pass
  def GetHashCode(self):

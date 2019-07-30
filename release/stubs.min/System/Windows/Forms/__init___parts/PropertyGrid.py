@@ -1,28 +1,24 @@
-class PropertyGrid:
+class PropertyGrid(ContainerControl,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceObject,IOleInPlaceActiveObject,IOleWindow,IViewObject,IViewObject2,IPersist,IPersistStreamInit,IPersistPropertyBag,IPersistStorage,IQuickActivate,ISupportOleDropSource,IDropTarget,ISynchronizeInvoke,IWin32Window,IArrangedElement,IBindableComponent,IContainerControl,IComPropertyBrowser,IPropertyNotifySink):
  """
  Provides a user interface for browsing the properties of an object.
  
  PropertyGrid()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return PropertyGrid()
+
  def AccessibilityNotifyClients(self,*args):
   """
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
-   Notifies the accessibility client applications of the specified 
-    System.Windows.Forms.AccessibleEvents for the specified child control.
+   Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control.
   
-  
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications 
-    of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,objectID: int,childID: int)
-   Notifies the accessibility client applications of the specified 
-    System.Windows.Forms.AccessibleEvents for the specified child control .
+   Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control .
   
-  
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications 
-    of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
@@ -65,9 +61,7 @@ class PropertyGrid:
   """
   CreatePropertyTab(self: PropertyGrid,tabType: Type) -> PropertyTab
   
-   When overridden in a derived class,enables the creation of a 
-    System.Windows.Forms.Design.PropertyTab.
-  
+   When overridden in a derived class,enables the creation of a System.Windows.Forms.Design.PropertyTab.
   
    tabType: The type of tab to create.
    Returns: The newly created property tab. Returns null in its default implementation.
@@ -91,12 +85,9 @@ class PropertyGrid:
  def Dispose(self):
   """
   Dispose(self: PropertyGrid,disposing: bool)
-   Disposes of the resources (other than memory) used by the 
-    System.Windows.Forms.PropertyGrid.
+   Disposes of the resources (other than memory) used by the System.Windows.Forms.PropertyGrid.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def ExpandAllGridItems(self):
@@ -119,9 +110,7 @@ class PropertyGrid:
   """
   GetAutoSizeMode(self: Control) -> AutoSizeMode
   
-   Retrieves a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
-  
+   Retrieves a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
    Returns: One of the System.Windows.Forms.AutoSizeMode values.
   """
   pass
@@ -131,13 +120,9 @@ class PropertyGrid:
   
    Retrieves the bounds within which the control is scaled.
   
-   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display 
-    bounds.
-  
+   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display bounds.
    factor: The height and width of the control's bounds.
-   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of 
-    the control to use when defining its size and position.
-  
+   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of the control to use when defining its size and position.
    Returns: A System.Drawing.Rectangle representing the bounds within which the control is scaled.
   """
   pass
@@ -155,14 +140,10 @@ class PropertyGrid:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -212,9 +193,7 @@ class PropertyGrid:
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event 
-    to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -223,9 +202,7 @@ class PropertyGrid:
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event 
-    to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -234,9 +211,7 @@ class PropertyGrid:
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event 
-    to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -247,17 +222,14 @@ class PropertyGrid:
    Determines if a character is an input character that the control recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the control and not preprocessed; 
-    otherwise,false.
+   Returns: true if the character should be sent directly to the control and not preprocessed; otherwise,false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: Control,keyData: Keys) -> bool
   
-   Determines whether the specified key is a regular input key or a special key that 
-    requires preprocessing.
-  
+   Determines whether the specified key is a regular input key or a special key that requires preprocessing.
   
    keyData: One of the System.Windows.Forms.Keys values.
    Returns: true if the specified key is a regular input key; otherwise,false.
@@ -269,12 +241,7 @@ class PropertyGrid:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -285,9 +252,7 @@ class PropertyGrid:
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the 
-    control to invalidate.
-  
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control to invalidate.
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
   """
@@ -375,10 +340,7 @@ class PropertyGrid:
  def OnComComponentNameChanged(self,*args):
   """
   OnComComponentNameChanged(self: PropertyGrid,e: ComponentRenameEventArgs)
-   Raises the 
-    System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.ComComponentNameChange
-    d event.
-  
+   Raises the System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.ComComponentNameChanged event.
   
    e: A System.ComponentModel.Design.ComponentRenameEventArgs that contains the event data.
   """
@@ -727,9 +689,7 @@ class PropertyGrid:
  def OnNotifyPropertyValueUIItemsChanged(self,*args):
   """
   OnNotifyPropertyValueUIItemsChanged(self: PropertyGrid,sender: object,e: EventArgs)
-   Raises the 
-    System.Drawing.Design.IPropertyValueUIService.NotifyPropertyValueUIItemsChanged event.
-  
+   Raises the System.Drawing.Design.IPropertyValueUIService.NotifyPropertyValueUIItemsChanged event.
   
    sender: The source of the event.
    e: A System.EventArgs that contains the event data.
@@ -762,9 +722,7 @@ class PropertyGrid:
  def OnParentBackColorChanged(self,*args):
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.BackColorChanged event when the System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -772,10 +730,7 @@ class PropertyGrid:
  def OnParentBackgroundImageChanged(self,*args):
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -783,10 +738,7 @@ class PropertyGrid:
  def OnParentBindingContextChanged(self,*args):
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.BindingContextChanged event when the System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -808,9 +760,7 @@ class PropertyGrid:
  def OnParentEnabledChanged(self,*args):
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.EnabledChanged event when the System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -818,9 +768,7 @@ class PropertyGrid:
  def OnParentFontChanged(self,*args):
   """
   OnParentFontChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.FontChanged event when the System.Windows.Forms.Control.Font property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -828,9 +776,7 @@ class PropertyGrid:
  def OnParentForeColorChanged(self,*args):
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.ForeColorChanged event when the System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -838,10 +784,7 @@ class PropertyGrid:
  def OnParentRightToLeftChanged(self,*args):
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.RightToLeftChanged event when the System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -849,9 +792,7 @@ class PropertyGrid:
  def OnParentVisibleChanged(self,*args):
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.VisibleChanged event when the System.Windows.Forms.Control.Visible property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1026,9 +967,7 @@ class PropertyGrid:
   """
   ProcessCmdKey(self: ContainerControl,msg: Message,keyData: Keys) -> (bool,Message)
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
   """
@@ -1057,9 +996,7 @@ class PropertyGrid:
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1069,9 +1006,7 @@ class PropertyGrid:
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1081,9 +1016,7 @@ class PropertyGrid:
   
    Previews a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1101,9 +1034,7 @@ class PropertyGrid:
   
    Selects the next available control and makes it the active control.
   
-   forward: true to cycle forward through the controls in the System.Windows.Forms.ContainerControl; 
-    otherwise,false.
-  
+   forward: true to cycle forward through the controls in the System.Windows.Forms.ContainerControl; otherwise,false.
    Returns: true if a control is selected; otherwise,false.
   """
   pass
@@ -1179,25 +1110,19 @@ class PropertyGrid:
   """
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
-    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
    Returns: One of the System.Windows.Forms.HorizontalAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
-    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: ContentAlignment) -> ContentAlignment
   
-   Converts the specified System.Drawing.ContentAlignment to the appropriate 
-    System.Drawing.ContentAlignment to support right-to-left text.
-  
+   Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
   
    align: One of the System.Drawing.ContentAlignment values.
    Returns: One of the System.Drawing.ContentAlignment values.
@@ -1207,9 +1132,7 @@ class PropertyGrid:
   """
   RtlTranslateContent(self: Control,align: ContentAlignment) -> ContentAlignment
   
-   Converts the specified System.Drawing.ContentAlignment to the appropriate 
-    System.Drawing.ContentAlignment to support right-to-left text.
-  
+   Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
   
    align: One of the System.Drawing.ContentAlignment values.
    Returns: One of the System.Drawing.ContentAlignment values.
@@ -1219,9 +1142,7 @@ class PropertyGrid:
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
-    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
    Returns: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1231,9 +1152,7 @@ class PropertyGrid:
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
-    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1243,8 +1162,7 @@ class PropertyGrid:
   """
   ScaleControl(self: ScrollableControl,factor: SizeF,specified: BoundsSpecified)
    factor: The factor by which the height and width of the control will be scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to 
-    use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -1263,8 +1181,7 @@ class PropertyGrid:
    Calculates the scroll offset to the specified child control.
   
    activeControl: The child control to scroll into view.
-   Returns: The upper-left hand System.Drawing.Point of the display area relative to the client area 
-    required to scroll the control into view.
+   Returns: The upper-left hand System.Drawing.Point of the display area relative to the client area required to scroll the control into view.
   """
   pass
  def Select(self):
@@ -1277,9 +1194,7 @@ class PropertyGrid:
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
-  
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
   """
@@ -1357,9 +1272,7 @@ class PropertyGrid:
   
    Determines the size of the entire control from the height and width of its client area.
   
-   clientSize: A System.Drawing.Size value representing the height and width of the control's client 
-    area.
-  
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
    Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass

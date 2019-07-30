@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.Caching.KeyConstruction calls itself KeyConstruction
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class CountCacheKeyConstructor:
+class CountCacheKeyConstructor(object):
  """ CountCacheKeyConstructor(hashCodeProvider: IUniqueHashCodeProvider,identityProvider: IRemotingIdentityProvider) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CountCacheKeyConstructor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Construct(self,cachable):
   """ Construct(self: CountCacheKeyConstructor,cachable: Count) -> CacheKey """
   pass
@@ -26,6 +32,11 @@ class CountCacheKeyConstructor:
 
 class ICacheKeyConstructor:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ICacheKeyConstructor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Construct(self,cachable):
   """ Construct(self: ICacheKeyConstructor[T],cachable: T) -> CacheKey """
   pass

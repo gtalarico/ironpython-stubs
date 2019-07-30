@@ -1,18 +1,24 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.Mailing calls itself Mailing
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class FileLocationMailAttachment:
+class FileLocationMailAttachment(object):
  """
  FileLocationMailAttachment(filepath: str)
  FileLocationMailAttachment(filepath: str,sendAsFilename: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileLocationMailAttachment()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetContentBytes(self):
   """ GetContentBytes(self: FileLocationMailAttachment) -> Array[Byte] """
   pass
@@ -38,6 +44,11 @@ class FileLocationMailAttachment:
 
 class IMailAttachment:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IMailAttachment()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetContentBytes(self):
   """ GetContentBytes(self: IMailAttachment) -> Array[Byte] """
   pass
@@ -53,6 +64,11 @@ class IMailAttachment:
 
 class IMailer:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IMailer()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def SendHtmlAsync(self,args,bodyHtml):
   """ SendHtmlAsync(self: IMailer,args: SendMailArgs,bodyHtml: str) -> Task """
   pass
@@ -69,8 +85,13 @@ class IMailer:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class MailAttachment:
+class MailAttachment(object):
  """ MailAttachment(filename: str,filecontent: Array[Byte]) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MailAttachment()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetContentBytes(self):
   """ GetContentBytes(self: MailAttachment) -> Array[Byte] """
   pass
@@ -92,8 +113,13 @@ Set: Filename(self: MailAttachment)=value
 
 
 
-class MailerBase:
+class MailerBase(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MailerBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def SendHtmlAsync(self,args,bodyHtml):
   """ SendHtmlAsync(self: MailerBase,args: SendMailArgs,bodyHtml: str) -> Task """
   pass
@@ -116,12 +142,17 @@ class MailerBase:
   """ __repr__(self: object) -> str """
   pass
 
-class MailerException:
+class MailerException(Exception):
  """
  MailerException()
  MailerException(message: str)
  MailerException(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MailerException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -139,11 +170,16 @@ class MailerException:
  SerializeObjectState=None
 
 
-class MailgunException:
+class MailgunException(MailerException):
  """
  MailgunException(message: str)
  MailgunException(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MailgunException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -159,8 +195,13 @@ class MailgunException:
  SerializeObjectState=None
 
 
-class MailgunMailer:
+class MailgunMailer(MailerBase):
  """ MailgunMailer(settings: MailgunSettings) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MailgunMailer()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def SendMail(self,*args):
   """ SendMail(self: MailgunMailer,args: SendMailArgs,body: str,bodyIsHtml: bool) -> Task """
   pass
@@ -175,8 +216,13 @@ class MailgunMailer:
 
 
 
-class MailgunResponse:
+class MailgunResponse(object):
  """ MailgunResponse() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MailgunResponse()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Id(self: MailgunResponse) -> str
 
@@ -191,8 +237,13 @@ Set: Message(self: MailgunResponse)=value
 
 
 
-class MailgunSettings:
+class MailgunSettings(object):
  """ MailgunSettings() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MailgunSettings()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  MailgunApiKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: MailgunApiKey(self: MailgunSettings) -> str
 
@@ -219,8 +270,13 @@ Set: MailgunDomainBoxwise(self: MailgunSettings)=value
 
 
 
-class SendMailArgs:
+class SendMailArgs(object):
  """ SendMailArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SendMailArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  AddressesBcc=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: AddressesBcc(self: SendMailArgs) -> List[str]
 
@@ -259,8 +315,13 @@ Set: Subject(self: SendMailArgs)=value
 
 
 
-class SynchronousMailExtensions:
+class SynchronousMailExtensions(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SynchronousMailExtensions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def SendHtml(mailer,args,bodyHtml):
   """ SendHtml(mailer: IMailer,args: SendMailArgs,bodyHtml: str) """

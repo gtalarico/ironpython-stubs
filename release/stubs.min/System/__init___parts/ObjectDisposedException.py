@@ -6,18 +6,18 @@ class ObjectDisposedException:
  ObjectDisposedException(objectName: str,message: str)
  ObjectDisposedException(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ObjectDisposedException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: ObjectDisposedException,info: SerializationInfo,context: StreamingContext)
-   Retrieves the System.Runtime.Serialization.SerializationInfo object with the parameter 
-    name and additional exception information.
+   Retrieves the System.Runtime.Serialization.SerializationInfo object with the parameter name and additional exception information.
   
-  
-   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data 
-    about the exception being thrown.
-  
-   context: The System.Runtime.Serialization.StreamingContext that contains contextual information 
-    about the source or destination.
+   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about the exception being thrown.
+   context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the source or destination.
   """
   pass
  def __init__(self,*args):

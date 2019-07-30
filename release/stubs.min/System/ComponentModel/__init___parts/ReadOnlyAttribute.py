@@ -4,6 +4,11 @@ class ReadOnlyAttribute:
  
  ReadOnlyAttribute(isReadOnly: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReadOnlyAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,value):
   """
   Equals(self: ReadOnlyAttribute,value: object) -> bool

@@ -1,5 +1,10 @@
-class SyntaxCheck:
+class SyntaxCheck(object):
  """ Provides methods to verify the machine name and path conform to a specific syntax. This class cannot be inherited. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SyntaxCheck()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def CheckMachineName(value):
   """

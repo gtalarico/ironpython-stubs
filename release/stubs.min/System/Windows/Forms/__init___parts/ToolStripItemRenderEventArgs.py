@@ -1,9 +1,13 @@
-class ToolStripItemRenderEventArgs:
+class ToolStripItemRenderEventArgs(EventArgs):
  """
  Provides data for the events that render the background of objects derived from System.Windows.Forms.ToolStripItem in the System.Windows.Forms.ToolStripRenderer class.
  
  ToolStripItemRenderEventArgs(g: Graphics,item: ToolStripItem)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripItemRenderEventArgs()
+
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass

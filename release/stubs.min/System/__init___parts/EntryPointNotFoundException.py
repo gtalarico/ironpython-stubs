@@ -1,4 +1,4 @@
-class EntryPointNotFoundException:
+class EntryPointNotFoundException(TypeLoadException):
  """
  The exception that is thrown when an attempt to load a class fails due to the absence of an entry method.
  
@@ -6,6 +6,11 @@ class EntryPointNotFoundException:
  EntryPointNotFoundException(message: str)
  EntryPointNotFoundException(message: str,inner: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EntryPointNotFoundException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

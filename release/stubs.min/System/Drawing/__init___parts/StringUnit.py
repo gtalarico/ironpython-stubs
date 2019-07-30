@@ -1,9 +1,13 @@
-class StringUnit:
+class StringUnit(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies the units of measure for a text string.
  
  enum StringUnit,values: Display (1),Document (5),Em (32),Inch (4),Millimeter (6),Pixel (2),Point (3),World (0)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return StringUnit()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

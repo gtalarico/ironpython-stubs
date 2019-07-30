@@ -1,11 +1,15 @@
 class UCOMIBindCtx:
  """ Use System.Runtime.InteropServices.ComTypes.BIND_OPTS instead. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UCOMIBindCtx()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def EnumObjectParam(self,ppenum):
   """
   EnumObjectParam(self: UCOMIBindCtx) -> UCOMIEnumString
   
-   Enumerate the strings which are the keys of the internally-maintained table of contextual 
-    object parameters.
+   Enumerate the strings which are the keys of the internally-maintained table of contextual object parameters.
   """
   pass
  def GetBindOptions(self,pbindopts):
@@ -21,9 +25,7 @@ class UCOMIBindCtx:
   """
   GetObjectParam(self: UCOMIBindCtx,pszKey: str) -> object
   
-   Lookup the given key in the internally-maintained table of contextual object parameters 
-    and return the corresponding object,if one exists.
-  
+   Lookup the given key in the internally-maintained table of contextual object parameters and return the corresponding object,if one exists.
   
    pszKey: The name of the object to search for.
   """
@@ -38,9 +40,7 @@ class UCOMIBindCtx:
  def RegisterObjectBound(self,punk):
   """
   RegisterObjectBound(self: UCOMIBindCtx,punk: object)
-   Register the passed object as one of the objects that has been bound during a moniker 
-    operation and which should be released when it is complete.
-  
+   Register the passed object as one of the objects that has been bound during a moniker operation and which should be released when it is complete.
   
    punk: The object to register for release.
   """
@@ -48,9 +48,7 @@ class UCOMIBindCtx:
  def RegisterObjectParam(self,pszKey,punk):
   """
   RegisterObjectParam(self: UCOMIBindCtx,pszKey: str,punk: object)
-   Register the given object pointer under the specified name in the internally-maintained 
-    table of object pointers.
-  
+   Register the given object pointer under the specified name in the internally-maintained table of object pointers.
   
    pszKey: The name to register punk with.
    punk: The object to register.
@@ -59,8 +57,7 @@ class UCOMIBindCtx:
  def ReleaseBoundObjects(self):
   """
   ReleaseBoundObjects(self: UCOMIBindCtx)
-   Releases all the objects currently registered with the bind context by 
-    System.Runtime.InteropServices.UCOMIBindCtx.RegisterObjectBound(System.Object).
+   Releases all the objects currently registered with the bind context by System.Runtime.InteropServices.UCOMIBindCtx.RegisterObjectBound(System.Object).
   """
   pass
  def RevokeObjectBound(self,punk):
@@ -74,8 +71,7 @@ class UCOMIBindCtx:
  def RevokeObjectParam(self,pszKey):
   """
   RevokeObjectParam(self: UCOMIBindCtx,pszKey: str)
-   Revoke the registration of the object currently found under this key in the 
-    internally-maintained table of contextual object parameters,if any such key is currently 
+   Revoke the registration of the object currently found under this key in the internally-maintained table of contextual object parameters,if any such key is currently 
     registered.
   
   
@@ -86,9 +82,7 @@ class UCOMIBindCtx:
   """
   SetBindOptions(self: UCOMIBindCtx,pbindopts: BIND_OPTS) -> BIND_OPTS
   
-   Store in the bind context a block of parameters that will apply to later UCOMIMoniker 
-    operations using this bind context.
-  
+   Store in the bind context a block of parameters that will apply to later UCOMIMoniker operations using this bind context.
   
    pbindopts: The structure containing the binding options to set.
   """

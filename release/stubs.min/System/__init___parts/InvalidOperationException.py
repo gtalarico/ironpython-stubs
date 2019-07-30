@@ -1,4 +1,4 @@
-class InvalidOperationException:
+class InvalidOperationException(SystemException):
  """
  The exception that is thrown when a method call is invalid for the object's current state.
  
@@ -6,6 +6,11 @@ class InvalidOperationException:
  InvalidOperationException(message: str)
  InvalidOperationException(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InvalidOperationException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

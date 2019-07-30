@@ -1,5 +1,10 @@
 class IEquatable:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IEquatable()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,other):
   """
   Equals(self: IEquatable[T],other: T) -> bool

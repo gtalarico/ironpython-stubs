@@ -1,9 +1,14 @@
-class AttributeCollection:
+class AttributeCollection(object):
  """
  Represents a collection of attributes.
  
  AttributeCollection(*attributes: Array[Attribute])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AttributeCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Contains(self,*__args):
   """
   Contains(self: AttributeCollection,attribute: Attribute) -> bool
@@ -11,14 +16,10 @@ class AttributeCollection:
    Determines whether this collection of attributes has the specified attribute.
   
    attribute: An System.Attribute to find in the collection.
-   Returns: true if the collection contains the attribute or is the default attribute for the type of 
-    attribute; otherwise,false.
-  
+   Returns: true if the collection contains the attribute or is the default attribute for the type of attribute; otherwise,false.
   Contains(self: AttributeCollection,attributes: Array[Attribute]) -> bool
   
-   Determines whether this attribute collection contains all the specified attributes in the 
-    attribute array.
-  
+   Determines whether this attribute collection contains all the specified attributes in the attribute array.
   
    attributes: An array of type System.Attribute to find in the collection.
    Returns: true if the collection contains all the attributes; otherwise,false.
@@ -38,14 +39,10 @@ class AttributeCollection:
   """
   FromExisting(existing: AttributeCollection,*newAttributes: Array[Attribute]) -> AttributeCollection
   
-   Creates a new System.ComponentModel.AttributeCollection from an existing 
-    System.ComponentModel.AttributeCollection.
-  
+   Creates a new System.ComponentModel.AttributeCollection from an existing System.ComponentModel.AttributeCollection.
   
    existing: An System.ComponentModel.AttributeCollection from which to create the copy.
-   newAttributes: An array of type System.Attribute that provides the attributes for this collection. Can 
-    be null.
-  
+   newAttributes: An array of type System.Attribute that provides the attributes for this collection. Can be null.
    Returns: A new System.ComponentModel.AttributeCollection that is a copy of existing.
   """
   pass
@@ -74,20 +71,13 @@ class AttributeCollection:
    Determines whether a specified attribute is the same as an attribute in the collection.
   
    attribute: An instance of System.Attribute to compare with the attributes in this collection.
-   Returns: true if the attribute is contained within the collection and has the same value as the 
-    attribute in the collection; otherwise,false.
-  
+   Returns: true if the attribute is contained within the collection and has the same value as the attribute in the collection; otherwise,false.
   Matches(self: AttributeCollection,attributes: Array[Attribute]) -> bool
   
-   Determines whether the attributes in the specified array are the same as the attributes 
-    in the collection.
+   Determines whether the attributes in the specified array are the same as the attributes in the collection.
   
-  
-   attributes: An array of System.CodeDom.MemberAttributes to compare with the attributes in this 
-    collection.
-  
-   Returns: true if all the attributes in the array are contained in the collection and have the same 
-    values as the attributes in the collection; otherwise,false.
+   attributes: An array of System.CodeDom.MemberAttributes to compare with the attributes in this collection.
+   Returns: true if all the attributes in the array are contained in the collection and have the same values as the attributes in the collection; otherwise,false.
   """
   pass
  def __getitem__(self,*args):

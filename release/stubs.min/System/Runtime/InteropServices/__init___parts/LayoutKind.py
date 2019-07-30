@@ -4,6 +4,11 @@ class LayoutKind:
  
  enum LayoutKind,values: Auto (3),Explicit (2),Sequential (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LayoutKind()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

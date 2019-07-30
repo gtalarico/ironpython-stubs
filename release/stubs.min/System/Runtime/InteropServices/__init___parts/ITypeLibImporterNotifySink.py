@@ -1,5 +1,10 @@
 class ITypeLibImporterNotifySink:
  """ Provides a callback mechanism for the type library converter to inform the caller of the status of the conversion,and involve the caller in the conversion process itself. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ITypeLibImporterNotifySink()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ReportEvent(self,eventKind,eventCode,eventMsg):
   """
   ReportEvent(self: ITypeLibImporterNotifySink,eventKind: ImporterEventKind,eventCode: int,eventMsg: str)

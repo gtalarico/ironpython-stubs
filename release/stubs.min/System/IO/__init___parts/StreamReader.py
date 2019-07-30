@@ -1,4 +1,4 @@
-class StreamReader:
+class StreamReader(TextReader):
  """
  Implements a System.IO.TextReader that reads characters from a byte stream in a particular encoding.
  
@@ -14,11 +14,15 @@ class StreamReader:
  StreamReader(path: str,encoding: Encoding,detectEncodingFromByteOrderMarks: bool)
  StreamReader(path: str,encoding: Encoding,detectEncodingFromByteOrderMarks: bool,bufferSize: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StreamReader()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: StreamReader)
-   Closes the System.IO.StreamReader object and the underlying stream,and releases any 
-    system resources associated with the reader.
+   Closes the System.IO.StreamReader object and the underlying stream,and releases any system resources associated with the reader.
   """
   pass
  def DiscardBufferedData(self):
@@ -30,12 +34,9 @@ class StreamReader:
  def Dispose(self):
   """
   Dispose(self: StreamReader,disposing: bool)
-   Closes the underlying stream,releases the unmanaged resources used by the 
-    System.IO.StreamReader,and optionally releases the managed resources.
+   Closes the underlying stream,releases the unmanaged resources used by the System.IO.StreamReader,and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -44,11 +45,9 @@ class StreamReader:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -62,31 +61,23 @@ class StreamReader:
   Peek(self: StreamReader) -> int
   
    Returns the next available character but does not consume it.
-   Returns: An integer representing the next character to be read,or -1 if there are no characters 
-    to be read or if the stream does not support seeking.
+   Returns: An integer representing the next character to be read,or -1 if there are no characters to be read or if the stream does not support seeking.
   """
   pass
  def Read(self,buffer=None,index=None,count=None):
   """
   Read(self: StreamReader) -> int
   
-   Reads the next character from the input stream and advances the character position by one 
-    character.
-  
-   Returns: The next character from the input stream represented as an System.Int32 object,or -1 if 
-    no more characters are available.
-  
+   Reads the next character from the input stream and advances the character position by one character.
+   Returns: The next character from the input stream represented as an System.Int32 object,or -1 if no more characters are available.
   Read(self: StreamReader,index: int,count: int) -> (int,Array[Char])
   
-   Reads a specified maximum of characters from the current stream into a buffer,beginning 
-    at the specified index.
-  
+   Reads a specified maximum of characters from the current stream into a buffer,beginning at the specified index.
   
    index: The index of buffer at which to begin writing.
    count: The maximum number of characters to read.
-   Returns: The number of characters that have been read,or 0 if at the end of the stream and no 
-    data was read. The number will be less than or equal to the count parameter,depending on 
-    whether the data is available within the stream.
+   Returns: The number of characters that have been read,or 0 if at the end of the stream and no data was read. The number will be less than or equal to the count parameter,depending 
+    on whether the data is available within the stream.
   """
   pass
  def ReadAsync(self,buffer,index,count):
@@ -114,8 +105,7 @@ class StreamReader:
   ReadToEnd(self: StreamReader) -> str
   
    Reads the stream from the current position to the end of the stream.
-   Returns: The rest of the stream as a string,from the current position to the end. If the current 
-    position is at the end of the stream,returns an empty string ("").
+   Returns: The rest of the stream as a string,from the current position to the end. If the current position is at the end of the stream,returns an empty string ("").
   """
   pass
  def ReadToEndAsync(self):

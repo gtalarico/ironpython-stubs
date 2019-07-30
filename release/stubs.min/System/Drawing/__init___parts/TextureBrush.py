@@ -1,4 +1,4 @@
-class TextureBrush:
+class TextureBrush(Brush,ICloneable,IDisposable):
  """
  Each property of the System.Drawing.TextureBrush class is a System.Drawing.Brush object that uses an image to fill the interior of a shape. This class cannot be inherited.
  
@@ -11,24 +11,24 @@ class TextureBrush:
  TextureBrush(image: Image,dstRect: Rectangle)
  TextureBrush(image: Image,dstRect: Rectangle,imageAttr: ImageAttributes)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TextureBrush()
+
  def Clone(self):
   """
   Clone(self: TextureBrush) -> object
   
    Creates an exact copy of this System.Drawing.TextureBrush object.
-   Returns: The System.Drawing.TextureBrush object this method creates,cast as an System.Object 
-    object.
+   Returns: The System.Drawing.TextureBrush object this method creates,cast as an System.Object object.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: Brush,disposing: bool)
-   Releases the unmanaged resources used by the System.Drawing.Brush and optionally releases 
-    the managed resources.
+   Releases the unmanaged resources used by the System.Drawing.Brush and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -37,12 +37,7 @@ class TextureBrush:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -53,26 +48,14 @@ class TextureBrush:
  def MultiplyTransform(self,matrix,order=None):
   """
   MultiplyTransform(self: TextureBrush,matrix: Matrix)
-   Multiplies the System.Drawing.Drawing2D.Matrix object that represents the local geometric 
-    transformation of this System.Drawing.TextureBrush object by the specified 
-    System.Drawing.Drawing2D.Matrix object by prepending the specified 
-    System.Drawing.Drawing2D.Matrix object.
+   Multiplies the System.Drawing.Drawing2D.Matrix object that represents the local geometric transformation of this System.Drawing.TextureBrush object by the specified System.Drawing.Drawing2D.Matrix object by prepending the specified System.Drawing.Drawing2D.Matrix object.
   
-  
-   matrix: The System.Drawing.Drawing2D.Matrix object by which to multiply the geometric 
-    transformation.
-  
+   matrix: The System.Drawing.Drawing2D.Matrix object by which to multiply the geometric transformation.
   MultiplyTransform(self: TextureBrush,matrix: Matrix,order: MatrixOrder)
-   Multiplies the System.Drawing.Drawing2D.Matrix object that represents the local geometric 
-    transformation of this System.Drawing.TextureBrush object by the specified 
-    System.Drawing.Drawing2D.Matrix object in the specified order.
+   Multiplies the System.Drawing.Drawing2D.Matrix object that represents the local geometric transformation of this System.Drawing.TextureBrush object by the specified System.Drawing.Drawing2D.Matrix object in the specified order.
   
-  
-   matrix: The System.Drawing.Drawing2D.Matrix object by which to multiply the geometric 
-    transformation.
-  
-   order: A System.Drawing.Drawing2D.MatrixOrder enumeration that specifies the order in which to 
-    multiply the two matrices.
+   matrix: The System.Drawing.Drawing2D.Matrix object by which to multiply the geometric transformation.
+   order: A System.Drawing.Drawing2D.MatrixOrder enumeration that specifies the order in which to multiply the two matrices.
   """
   pass
  def ResetTransform(self):
@@ -84,39 +67,29 @@ class TextureBrush:
  def RotateTransform(self,angle,order=None):
   """
   RotateTransform(self: TextureBrush,angle: Single)
-   Rotates the local geometric transformation of this System.Drawing.TextureBrush object by 
-    the specified amount. This method prepends the rotation to the transformation.
-  
+   Rotates the local geometric transformation of this System.Drawing.TextureBrush object by the specified amount. This method prepends the rotation to the transformation.
   
    angle: The angle of rotation.
   RotateTransform(self: TextureBrush,angle: Single,order: MatrixOrder)
-   Rotates the local geometric transformation of this System.Drawing.TextureBrush object by 
-    the specified amount in the specified order.
-  
+   Rotates the local geometric transformation of this System.Drawing.TextureBrush object by the specified amount in the specified order.
   
    angle: The angle of rotation.
-   order: A System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether to append or 
-    prepend the rotation matrix.
+   order: A System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether to append or prepend the rotation matrix.
   """
   pass
  def ScaleTransform(self,sx,sy,order=None):
   """
   ScaleTransform(self: TextureBrush,sx: Single,sy: Single)
-   Scales the local geometric transformation of this System.Drawing.TextureBrush object by 
-    the specified amounts. This method prepends the scaling matrix to the transformation.
-  
+   Scales the local geometric transformation of this System.Drawing.TextureBrush object by the specified amounts. This method prepends the scaling matrix to the transformation.
   
    sx: The amount by which to scale the transformation in the x direction.
    sy: The amount by which to scale the transformation in the y direction.
   ScaleTransform(self: TextureBrush,sx: Single,sy: Single,order: MatrixOrder)
-   Scales the local geometric transformation of this System.Drawing.TextureBrush object by 
-    the specified amounts in the specified order.
-  
+   Scales the local geometric transformation of this System.Drawing.TextureBrush object by the specified amounts in the specified order.
   
    sx: The amount by which to scale the transformation in the x direction.
    sy: The amount by which to scale the transformation in the y direction.
-   order: A System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether to append or 
-    prepend the scaling matrix.
+   order: A System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether to append or prepend the scaling matrix.
   """
   pass
  def SetNativeBrush(self,*args):
@@ -130,16 +103,12 @@ class TextureBrush:
  def TranslateTransform(self,dx,dy,order=None):
   """
   TranslateTransform(self: TextureBrush,dx: Single,dy: Single)
-   Translates the local geometric transformation of this System.Drawing.TextureBrush object 
-    by the specified dimensions. This method prepends the translation to the transformation.
-  
+   Translates the local geometric transformation of this System.Drawing.TextureBrush object by the specified dimensions. This method prepends the translation to the transformation.
   
    dx: The dimension by which to translate the transformation in the x direction.
    dy: The dimension by which to translate the transformation in the y direction.
   TranslateTransform(self: TextureBrush,dx: Single,dy: Single,order: MatrixOrder)
-   Translates the local geometric transformation of this System.Drawing.TextureBrush object 
-    by the specified dimensions in the specified order.
-  
+   Translates the local geometric transformation of this System.Drawing.TextureBrush object by the specified dimensions in the specified order.
   
    dx: The dimension by which to translate the transformation in the x direction.
    dy: The dimension by which to translate the transformation in the y direction.

@@ -1,5 +1,9 @@
-class ProgressBarRenderer:
+class ProgressBarRenderer(object):
  """ Provides methods used to render a progress bar control with visual styles. This class cannot be inherited. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ProgressBarRenderer()
+
  @staticmethod
  def DrawHorizontalBar(g,bounds):
   """
@@ -17,8 +21,7 @@ class ProgressBarRenderer:
    Draws a set of progress bar pieces that fill a horizontal progress bar.
   
    g: The System.Drawing.Graphics used to draw the progress bar.
-   bounds: The System.Drawing.Rectangle that specifies the bounds to be filled by progress bar 
-    pieces.
+   bounds: The System.Drawing.Rectangle that specifies the bounds to be filled by progress bar pieces.
   """
   pass
  @staticmethod
@@ -38,8 +41,7 @@ class ProgressBarRenderer:
    Draws a set of progress bar pieces that fill a vertical progress bar.
   
    g: The System.Drawing.Graphics used to draw the progress bar.
-   bounds: The System.Drawing.Rectangle that specifies the bounds to be filled by progress bar 
-    pieces.
+   bounds: The System.Drawing.Rectangle that specifies the bounds to be filled by progress bar pieces.
   """
   pass
  ChunkSpaceThickness=0

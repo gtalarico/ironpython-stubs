@@ -4,6 +4,11 @@ class ListChangedType:
  
  enum ListChangedType,values: ItemAdded (1),ItemChanged (4),ItemDeleted (2),ItemMoved (3),PropertyDescriptorAdded (5),PropertyDescriptorChanged (7),PropertyDescriptorDeleted (6),Reset (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ListChangedType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

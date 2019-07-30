@@ -1,51 +1,42 @@
 class _FieldInfo:
  """ Exposes the public members of the System.Reflection.FieldInfo class to unmanaged code. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return _FieldInfo()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,other):
   """
   Equals(self: _FieldInfo,other: object) -> bool
   
-   Provides COM objects with version-independent access to the 
-    System.Object.Equals(System.Object) method.
-  
+   Provides COM objects with version-independent access to the System.Object.Equals(System.Object) method.
   
    other: The System.Object to compare with the current System.Object.
-   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,
-    false.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
   """
   pass
  def GetCustomAttributes(self,*__args):
   """
   GetCustomAttributes(self: _FieldInfo,attributeType: Type,inherit: bool) -> Array[object]
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.MemberInfo.GetCustomAttributes(System.Type,System.Boolean) method.
+   Provides COM objects with version-independent access to the System.Reflection.MemberInfo.GetCustomAttributes(System.Type,System.Boolean) method.
   
-  
-   attributeType: The type of attribute to search for. Only attributes that are assignable to this type are 
-    returned.
-  
+   attributeType: The type of attribute to search for. Only attributes that are assignable to this type are returned.
    inherit: Specifies whether to search this member's inheritance chain to find the attributes.
-   Returns: An array of custom attributes applied to this member,or an array with zero (0) elements 
-    if no attributes have been applied.
-  
+   Returns: An array of custom attributes applied to this member,or an array with zero (0) elements if no attributes have been applied.
   GetCustomAttributes(self: _FieldInfo,inherit: bool) -> Array[object]
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
   
    inherit: Specifies whether to search this member's inheritance chain to find the attributes.
-   Returns: An array that contains all the custom attributes,or an array with zero elements if no 
-    attributes are defined.
+   Returns: An array that contains all the custom attributes,or an array with zero elements if no attributes are defined.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: _FieldInfo) -> int
   
-   Provides COM objects with version-independent access to the System.Object.GetHashCode 
-    method.
-  
+   Provides COM objects with version-independent access to the System.Object.GetHashCode method.
    Returns: The hash code for the current instance.
   """
   pass
@@ -73,9 +64,7 @@ class _FieldInfo:
  def GetTypeInfo(self,iTInfo,lcid,ppTInfo):
   """
   GetTypeInfo(self: _FieldInfo,iTInfo: UInt32,lcid: UInt32,ppTInfo: IntPtr)
-   Retrieves the type information for an object,which can then be used to get the type 
-    information for an interface.
-  
+   Retrieves the type information for an object,which can then be used to get the type information for an interface.
   
    iTInfo: The type information to return.
    lcid: The locale identifier for the type information.
@@ -86,17 +75,14 @@ class _FieldInfo:
   """
   GetTypeInfoCount(self: _FieldInfo) -> UInt32
   
-   Retrieves the number of type information interfaces that an object provides (either 0 or 
-    1).
+   Retrieves the number of type information interfaces that an object provides (either 0 or 1).
   """
   pass
  def GetValue(self,obj):
   """
   GetValue(self: _FieldInfo,obj: object) -> object
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.FieldInfo.GetValue(System.Object) method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.FieldInfo.GetValue(System.Object) method.
   
    obj: The object whose field value will be returned.
    Returns: An object containing the value of the field reflected by this instance.
@@ -106,13 +92,9 @@ class _FieldInfo:
   """
   GetValueDirect(self: _FieldInfo,obj: TypedReference) -> object
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.FieldInfo.GetValueDirect(System.TypedReference) method.
+   Provides COM objects with version-independent access to the System.Reflection.FieldInfo.GetValueDirect(System.TypedReference) method.
   
-  
-   obj: A System.TypedReference structure that encapsulates a managed pointer to a location and a 
-    runtime representation of the type that might be stored at that location.
-  
+   obj: A System.TypedReference structure that encapsulates a managed pointer to a location and a runtime representation of the type that might be stored at that location.
    Returns: An System.Object containing a field value.
   """
   pass
@@ -126,9 +108,7 @@ class _FieldInfo:
    riid: Reserved for future use. Must be IID_NULL.
    lcid: The locale context in which to interpret arguments.
    wFlags: Flags describing the context of the call.
-   pDispParams: Pointer to a structure containing an array of arguments,an array of argument DISPIDs for 
-    named arguments,and counts for the number of elements in the arrays.
-  
+   pDispParams: Pointer to a structure containing an array of arguments,an array of argument DISPIDs for named arguments,and counts for the number of elements in the arrays.
    pVarResult: Pointer to the location where the result is to be stored.
    pExcepInfo: Pointer to a structure that contains exception information.
    puArgErr: The index of the first argument that has an error.
@@ -138,9 +118,7 @@ class _FieldInfo:
   """
   IsDefined(self: _FieldInfo,attributeType: Type,inherit: bool) -> bool
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.MemberInfo.IsDefined(System.Type,System.Boolean) method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.MemberInfo.IsDefined(System.Type,System.Boolean) method.
   
    attributeType: The System.Type object to which the custom attributes are applied.
    inherit: Specifies whether to search this member's inheritance chain to find the attributes.
@@ -151,24 +129,19 @@ class _FieldInfo:
   """
   SetValue(self: _FieldInfo,obj: object,value: object,invokeAttr: BindingFlags,binder: Binder,culture: CultureInfo)
    Provides COM objects with version-independent access to the 
-    System.Reflection.PropertyInfo.SetValue(System.Object,System.Object,System.Reflection.Bind
-    ingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo) 
-    method.
+    System.Reflection.PropertyInfo.SetValue(System.Object,System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)
+     method.
   
   
    obj: The object whose field value will be set.
    value: The value to assign to the field.
-   invokeAttr: A field of System.Reflection.Binder that specifies the type of binding that is desired 
-    (for example,Binder.CreateInstance or Binder.ExactBinding).
-  
-   binder: A set of properties that enables the binding,coercion of argument types,and invocation 
-    of members through reflection. If binder is null,then Binder.DefaultBinding is used.
+   invokeAttr: A field of System.Reflection.Binder that specifies the type of binding that is desired (for example,Binder.CreateInstance or Binder.ExactBinding).
+   binder: A set of properties that enables the binding,coercion of argument types,and invocation of members through reflection. If binder is null,then Binder.DefaultBinding is 
+    used.
   
    culture: The software preferences of a particular culture.
   SetValue(self: _FieldInfo,obj: object,value: object)
-   Provides COM objects with version-independent access to the 
-    System.Reflection.FieldInfo.SetValue(System.Object,System.Object) method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.FieldInfo.SetValue(System.Object,System.Object) method.
   
    obj: The object whose field value will be set.
    value: The value to assign to the field.
@@ -177,9 +150,7 @@ class _FieldInfo:
  def SetValueDirect(self,obj,value):
   """
   SetValueDirect(self: _FieldInfo,obj: TypedReference,value: object)
-   Provides COM objects with version-independent access to the 
-    System.Reflection.FieldInfo.SetValueDirect(System.TypedReference,System.Object) method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.FieldInfo.SetValueDirect(System.TypedReference,System.Object) method.
   
    obj: The object whose field value will be set.
    value: The value to assign to the field.

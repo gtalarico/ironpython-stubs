@@ -1,5 +1,10 @@
 class ITypeLibExporterNameProvider:
  """ Provides control over the casing of names when exported to a type library. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ITypeLibExporterNameProvider()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetNames(self):
   """
   GetNames(self: ITypeLibExporterNameProvider) -> Array[str]

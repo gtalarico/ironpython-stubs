@@ -1,9 +1,13 @@
-class DataGridViewRowDividerDoubleClickEventArgs:
+class DataGridViewRowDividerDoubleClickEventArgs(HandledMouseEventArgs):
  """
  Provides data for the System.Windows.Forms.DataGridView.RowDividerDoubleClick event of a System.Windows.Forms.DataGridView.
  
  DataGridViewRowDividerDoubleClickEventArgs(rowIndex: int,e: HandledMouseEventArgs)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewRowDividerDoubleClickEventArgs()
+
  @staticmethod
  def __new__(self,rowIndex,e):
   """ __new__(cls: type,rowIndex: int,e: HandledMouseEventArgs) """

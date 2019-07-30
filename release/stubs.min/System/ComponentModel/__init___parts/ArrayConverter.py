@@ -1,9 +1,14 @@
-class ArrayConverter:
+class ArrayConverter(CollectionConverter):
  """
  Provides a type converter to convert System.Array objects to and from various other representations.
  
  ArrayConverter()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ArrayConverter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ConvertTo(self,*__args):
   """
   ConvertTo(self: ArrayConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object,destinationType: Type) -> object
@@ -26,8 +31,7 @@ class ArrayConverter:
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    value: An System.Object that specifies the type of array to get the properties for.
    attributes: An array of type System.Attribute that will be used as a filter.
-   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed 
-    for an array,or null if there are no properties.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for an array,or null if there are no properties.
   """
   pass
  def GetPropertiesSupported(self,context=None):
@@ -37,9 +41,7 @@ class ArrayConverter:
    Gets a value indicating whether this object supports properties.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   Returns: true because 
-    System.ComponentModel.ArrayConverter.GetProperties(System.ComponentModel.ITypeDescriptorCo
-    ntext,System.Object,System.Attribute[]) should be called to find the properties of this 
-    object. This method never returns false.
+   Returns: true because System.ComponentModel.ArrayConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[]) should be called to find the 
+    properties of this object. This method never returns false.
   """
   pass

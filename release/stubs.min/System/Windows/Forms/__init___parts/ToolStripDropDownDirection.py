@@ -1,9 +1,13 @@
-class ToolStripDropDownDirection:
+class ToolStripDropDownDirection(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies the direction in which a System.Windows.Forms.ToolStripDropDown control is displayed relative to its parent control.
  
  enum ToolStripDropDownDirection,values: AboveLeft (0),AboveRight (1),BelowLeft (2),BelowRight (3),Default (7),Left (4),Right (5)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripDropDownDirection()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

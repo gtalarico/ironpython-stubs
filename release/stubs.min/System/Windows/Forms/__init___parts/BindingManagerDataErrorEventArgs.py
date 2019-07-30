@@ -1,9 +1,13 @@
-class BindingManagerDataErrorEventArgs:
+class BindingManagerDataErrorEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.BindingManagerBase.DataError event.
  
  BindingManagerDataErrorEventArgs(exception: Exception)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return BindingManagerDataErrorEventArgs()
+
  @staticmethod
  def __new__(self,exception):
   """ __new__(cls: type,exception: Exception) """

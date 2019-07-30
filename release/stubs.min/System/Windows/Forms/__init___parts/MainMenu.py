@@ -1,4 +1,4 @@
-class MainMenu:
+class MainMenu(Menu,IComponent,IDisposable):
  """
  Represents the menu structure of a form. Although System.Windows.Forms.MenuStrip replaces and adds functionality to the System.Windows.Forms.MainMenu control of previous versions,System.Windows.Forms.MainMenu is retained for both backward compatibility and future use if you choose.
  
@@ -6,13 +6,15 @@ class MainMenu:
  MainMenu(container: IContainer)
  MainMenu(items: Array[MenuItem])
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return MainMenu()
+
  def CloneMenu(self):
   """
   CloneMenu(self: MainMenu) -> MainMenu
   
-   Creates a new System.Windows.Forms.MainMenu that is a duplicate of the current 
-    System.Windows.Forms.MainMenu.
-  
+   Creates a new System.Windows.Forms.MainMenu that is a duplicate of the current System.Windows.Forms.MainMenu.
    Returns: A System.Windows.Forms.MainMenu that represents the cloned menu.
   """
   pass
@@ -27,8 +29,7 @@ class MainMenu:
   Dispose(self: MainMenu,disposing: bool)
    Disposes of the resources,other than memory,used by the System.Windows.Forms.MainMenu.
   
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def FindMergePosition(self,*args):
@@ -46,22 +47,17 @@ class MainMenu:
   GetForm(self: MainMenu) -> Form
   
    Gets the System.Windows.Forms.Form that contains this control.
-   Returns: A System.Windows.Forms.Form that is the container for this control. Returns null if the 
-    System.Windows.Forms.MainMenu is not currently hosted on a form.
+   Returns: A System.Windows.Forms.Form that is the container for this control. Returns null if the System.Windows.Forms.MainMenu is not currently hosted on a form.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -70,12 +66,7 @@ class MainMenu:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -97,9 +88,7 @@ class MainMenu:
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference that represents the window message to 
-    process.
-  
+   msg: A System.Windows.Forms.Message,passed by reference that represents the window message to process.
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
   """

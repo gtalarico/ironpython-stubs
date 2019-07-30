@@ -1,24 +1,23 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.Razor calls itself Razor
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class BasePage:
+class BasePage(TemplateBase):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BasePage()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ResolveLayout(self,*args):
-  """
-  ResolveLayout(self: TemplateBase[TModel],name: str) -> ITemplate
-  
-   Resolves the layout template.
-  
-   name: The name of the layout template.
-   Returns: An instance of RazorEngine.Templating.ITemplate.
-  """
+  """ ResolveLayout(self: TemplateBase[TModel],name: str) -> ITemplate """
   pass
  def T(self,key):
   """ T(self: BasePage[TModel],key: str) -> object """
@@ -33,9 +32,6 @@ class BasePage:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  HasDynamicModel=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Determines whether this template has a dynamic model.
-
-"""
 
 
  _context=None
@@ -43,6 +39,11 @@ class BasePage:
 
 class ILocalizeable:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ILocalizeable()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

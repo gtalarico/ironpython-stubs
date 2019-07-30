@@ -1,9 +1,13 @@
-class DrawListViewColumnHeaderEventArgs:
+class DrawListViewColumnHeaderEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ListView.DrawColumnHeader event.
  
  DrawListViewColumnHeaderEventArgs(graphics: Graphics,bounds: Rectangle,columnIndex: int,header: ColumnHeader,state: ListViewItemStates,foreColor: Color,backColor: Color,font: Font)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DrawListViewColumnHeaderEventArgs()
+
  def DrawBackground(self):
   """
   DrawBackground(self: DrawListViewColumnHeaderEventArgs)
@@ -15,9 +19,7 @@ class DrawListViewColumnHeaderEventArgs:
   DrawText(self: DrawListViewColumnHeaderEventArgs)
    Draws the column header text using the default formatting.
   DrawText(self: DrawListViewColumnHeaderEventArgs,flags: TextFormatFlags)
-   Draws the column header text,formatting it with the specified 
-    System.Windows.Forms.TextFormatFlags values.
-  
+   Draws the column header text,formatting it with the specified System.Windows.Forms.TextFormatFlags values.
   
    flags: A bitwise combination of System.Windows.Forms.TextFormatFlags values.
   """

@@ -1,9 +1,14 @@
-class PropertyChangingEventArgs:
+class PropertyChangingEventArgs(EventArgs):
  """
  Provides data for the System.ComponentModel.INotifyPropertyChanging.PropertyChanging event.
  
  PropertyChangingEventArgs(propertyName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PropertyChangingEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,propertyName):
   """ __new__(cls: type,propertyName: str) """

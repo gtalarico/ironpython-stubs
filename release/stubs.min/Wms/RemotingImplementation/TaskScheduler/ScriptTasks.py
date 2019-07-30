@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.TaskScheduler.ScriptTasks calls itself ScriptTasks
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class AutoDisposeTask:
+class AutoDisposeTask(TaskBase):
  """ AutoDisposeTask(settings: SystemSettings) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AutoDisposeTask()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Run(self):
   """ Run(self: AutoDisposeTask) """
   pass
@@ -25,8 +31,13 @@ Set: Settings(self: AutoDisposeTask)=value
 
 
 
-class NotificationCleanupTask:
+class NotificationCleanupTask(TaskBase):
  """ NotificationCleanupTask(settings: SystemSettings) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NotificationCleanupTask()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Run(self):
   """ Run(self: NotificationCleanupTask) """
   pass
@@ -35,17 +46,27 @@ class NotificationCleanupTask:
   """ __new__(cls: type,settings: SystemSettings) """
   pass
 
-class NotificationSummaryTask:
+class NotificationSummaryTask(TaskBase):
  """ NotificationSummaryTask() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NotificationSummaryTask()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Run(self):
   """ Run(self: NotificationSummaryTask) """
   pass
 
-class PythonScriptTask:
+class PythonScriptTask(TaskBase):
  """
  PythonScriptTask()
  PythonScriptTask(task: ScriptTask)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PythonScriptTask()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,task=None):
   """

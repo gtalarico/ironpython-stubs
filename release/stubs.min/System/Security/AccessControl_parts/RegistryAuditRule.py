@@ -1,10 +1,15 @@
-class RegistryAuditRule:
+class RegistryAuditRule(AuditRule):
  """
  Represents a set of access rights to be audited for a user or group. This class cannot be inherited.
  
  RegistryAuditRule(identity: IdentityReference,registryRights: RegistryRights,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,flags: AuditFlags)
  RegistryAuditRule(identity: str,registryRights: RegistryRights,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,flags: AuditFlags)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RegistryAuditRule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,identity,registryRights,inheritanceFlags,propagationFlags,flags):
   """

@@ -1,5 +1,9 @@
-class BufferedGraphics:
+class BufferedGraphics(object,IDisposable):
  """ Provides a graphics buffer for double buffering. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return BufferedGraphics()
+
  def Dispose(self):
   """
   Dispose(self: BufferedGraphics)
@@ -11,18 +15,13 @@ class BufferedGraphics:
   Render(self: BufferedGraphics)
    Writes the contents of the graphics buffer to the default device.
   Render(self: BufferedGraphics,target: Graphics)
-   Writes the contents of the graphics buffer to the specified System.Drawing.Graphics 
-    object.
-  
+   Writes the contents of the graphics buffer to the specified System.Drawing.Graphics object.
   
    target: A System.Drawing.Graphics object to which to write the contents of the graphics buffer.
   Render(self: BufferedGraphics,targetDC: IntPtr)
-   Writes the contents of the graphics buffer to the device context associated with the 
-    specified System.IntPtr handle.
+   Writes the contents of the graphics buffer to the device context associated with the specified System.IntPtr handle.
   
-  
-   targetDC: An System.IntPtr that points to the device context to which to write the contents of the 
-    graphics buffer.
+   targetDC: An System.IntPtr that points to the device context to which to write the contents of the graphics buffer.
   """
   pass
  def __enter__(self,*args):

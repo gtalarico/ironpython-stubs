@@ -1,5 +1,9 @@
-class DataGridViewSelectedRowCollection:
+class DataGridViewSelectedRowCollection(BaseCollection,ICollection,IEnumerable,IList):
  """ Represents a collection of System.Windows.Forms.DataGridViewRow objects that are selected in a System.Windows.Forms.DataGridView. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewSelectedRowCollection()
+
  def Clear(self):
   """
   Clear(self: DataGridViewSelectedRowCollection)
@@ -12,22 +16,16 @@ class DataGridViewSelectedRowCollection:
   
    Determines whether the specified row is contained in the collection.
   
-   dataGridViewRow: The System.Windows.Forms.DataGridViewRow to locate in the 
-    System.Windows.Forms.DataGridViewSelectedRowCollection.
-  
+   dataGridViewRow: The System.Windows.Forms.DataGridViewRow to locate in the System.Windows.Forms.DataGridViewSelectedRowCollection.
    Returns: true if dataGridViewRow is in the collection; otherwise,false.
   """
   pass
  def CopyTo(self,*__args):
   """
   CopyTo(self: DataGridViewSelectedRowCollection,array: Array[DataGridViewRow],index: int)
-   Copies the elements of the collection to the specified array,starting at the specified 
-    index.
+   Copies the elements of the collection to the specified array,starting at the specified index.
   
-  
-   array: The one-dimensional array that is the destination of the elements copied from the 
-    collection. The array must have zero-based indexing.
-  
+   array: The one-dimensional array that is the destination of the elements copied from the collection. The array must have zero-based indexing.
    index: The zero-based index in the array at which copying begins.
   """
   pass
@@ -37,8 +35,7 @@ class DataGridViewSelectedRowCollection:
    Inserts a row into the collection at the specified position.
   
    index: The zero-based index at which dataGridViewRow should be inserted.
-   dataGridViewRow: The System.Windows.Forms.DataGridViewRow to insert into the 
-    System.Windows.Forms.DataGridViewSelectedRowCollection.
+   dataGridViewRow: The System.Windows.Forms.DataGridViewRow to insert into the System.Windows.Forms.DataGridViewSelectedRowCollection.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -47,12 +44,7 @@ class DataGridViewSelectedRowCollection:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   

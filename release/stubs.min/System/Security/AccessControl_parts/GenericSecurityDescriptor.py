@@ -1,15 +1,16 @@
-class GenericSecurityDescriptor:
+class GenericSecurityDescriptor(object):
  """ Represents a security descriptor. A security descriptor includes an owner,a primary group,a Discretionary Access Control List (DACL),and a System Access Control List (SACL). """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GenericSecurityDescriptor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetBinaryForm(self,binaryForm,offset):
   """
   GetBinaryForm(self: GenericSecurityDescriptor,binaryForm: Array[Byte],offset: int)
-   Returns an array of byte values that represents the information contained in this 
-    System.Security.AccessControl.GenericSecurityDescriptor object.
+   Returns an array of byte values that represents the information contained in this System.Security.AccessControl.GenericSecurityDescriptor object.
   
-  
-   binaryForm: The byte array into which the contents of the 
-    System.Security.AccessControl.GenericSecurityDescriptor is marshaled.
-  
+   binaryForm: The byte array into which the contents of the System.Security.AccessControl.GenericSecurityDescriptor is marshaled.
    offset: The offset at which to start marshaling.
   """
   pass
@@ -17,16 +18,12 @@ class GenericSecurityDescriptor:
   """
   GetSddlForm(self: GenericSecurityDescriptor,includeSections: AccessControlSections) -> str
   
-   Returns the Security Descriptor Definition Language (SDDL) representation of the 
-    specified sections of the security descriptor that this 
+   Returns the Security Descriptor Definition Language (SDDL) representation of the specified sections of the security descriptor that this 
     System.Security.AccessControl.GenericSecurityDescriptor object represents.
   
   
-   includeSections: Specifies which sections (access rules,audit rules,primary group,owner) of the 
-    security descriptor to get.
-  
-   Returns: The SDDL representation of the specified sections of the security descriptor associated 
-    with this System.Security.AccessControl.GenericSecurityDescriptor object.
+   includeSections: Specifies which sections (access rules,audit rules,primary group,owner) of the security descriptor to get.
+   Returns: The SDDL representation of the specified sections of the security descriptor associated with this System.Security.AccessControl.GenericSecurityDescriptor object.
   """
   pass
  @staticmethod
@@ -34,13 +31,11 @@ class GenericSecurityDescriptor:
   """
   IsSddlConversionSupported() -> bool
   
-   Returns a boolean value that specifies whether the security descriptor associated with 
-    this  System.Security.AccessControl.GenericSecurityDescriptor object can be converted to 
-    the Security Descriptor Definition Language (SDDL) format.
+   Returns a boolean value that specifies whether the security descriptor associated with this  System.Security.AccessControl.GenericSecurityDescriptor object can be converted 
+    to the Security Descriptor Definition Language (SDDL) format.
   
-   Returns: true if the security descriptor associated with this  
-    System.Security.AccessControl.GenericSecurityDescriptor object can be converted to the 
-    Security Descriptor Definition Language (SDDL) format; otherwise,false.
+   Returns: true if the security descriptor associated with this  System.Security.AccessControl.GenericSecurityDescriptor object can be converted to the Security Descriptor Definition 
+    Language (SDDL) format; otherwise,false.
   """
   pass
  BinaryLength=property(lambda self: object(),lambda self,v: None,lambda self: None)

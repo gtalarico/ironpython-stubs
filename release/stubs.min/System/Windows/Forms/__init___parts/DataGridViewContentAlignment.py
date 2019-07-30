@@ -1,9 +1,13 @@
-class DataGridViewContentAlignment:
+class DataGridViewContentAlignment(Enum,IComparable,IFormattable,IConvertible):
  """
  Defines constants that indicate the alignment of content within a System.Windows.Forms.DataGridView cell.
  
  enum DataGridViewContentAlignment,values: BottomCenter (512),BottomLeft (256),BottomRight (1024),MiddleCenter (32),MiddleLeft (16),MiddleRight (64),NotSet (0),TopCenter (2),TopLeft (1),TopRight (4)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewContentAlignment()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

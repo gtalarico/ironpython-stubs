@@ -1,18 +1,24 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.DataFlow calls itself DataFlow
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class DataFlowObject:
+class DataFlowObject(object):
  """
  DataFlowObject[T]()
  DataFlowObject[T](subject: T)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DataFlowObject()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddError(self,error,details=None):
   """
   AddError(self: DataFlowObject[T],error: Error) -> DataFlowObject[T]
@@ -66,31 +72,41 @@ class DataFlowObject:
   """ __repr__(self: object) -> str """
   pass
  Errors=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Errors(self: DataFlowObject[T]) -> Errors
+ """
+
+Get: Errors(self: DataFlowObject[T]) -> Errors
 
 Set: Errors(self: DataFlowObject[T])=value
 """
 
  Questions=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Questions(self: DataFlowObject[T]) -> Questions
+ """
+
+Get: Questions(self: DataFlowObject[T]) -> Questions
 
 Set: Questions(self: DataFlowObject[T])=value
 """
 
  Result=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Result(self: DataFlowObject[T]) -> DataFlowResultEnum
+ """
+
+Get: Result(self: DataFlowObject[T]) -> DataFlowResultEnum
 
 Set: Result(self: DataFlowObject[T])=value
 """
 
  Subject=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Subject(self: DataFlowObject[T]) -> T
+ """
+
+Get: Subject(self: DataFlowObject[T]) -> T
 
 Set: Subject(self: DataFlowObject[T])=value
 """
 
  Warnings=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Warnings(self: DataFlowObject[T]) -> Warnings
+ """
+
+Get: Warnings(self: DataFlowObject[T]) -> Warnings
 
 Set: Warnings(self: DataFlowObject[T])=value
 """
@@ -98,7 +114,16 @@ Set: Warnings(self: DataFlowObject[T])=value
 
 
 class DataFlowResultEnum:
- """ enum DataFlowResultEnum,values: Failure (0),Success (1),SuccessWithWarning (3),Unspecified (256),UserInputRequired (2) """
+ """
+ Result types of Wms.RemotingObjects.DataFlow object.
+ 
+ enum DataFlowResultEnum,values: Failure (0),Success (1),SuccessWithWarning (3),Unspecified (256),UserInputRequired (2)
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DataFlowResultEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -132,6 +157,11 @@ class DataFlowResultEnum:
 
 class IDataFlowObject:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IDataFlowObject()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def IsValid(self):
   """ IsValid(self: IDataFlowObject[T]) -> bool """
   pass

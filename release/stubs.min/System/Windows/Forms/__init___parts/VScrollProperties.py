@@ -1,9 +1,13 @@
-class VScrollProperties:
+class VScrollProperties(ScrollProperties):
  """
  Provides basic properties for the System.Windows.Forms.VScrollBar class.
  
  VScrollProperties(container: ScrollableControl)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return VScrollProperties()
+
  @staticmethod
  def __new__(self,container):
   """ __new__(cls: type,container: ScrollableControl) """

@@ -1,4 +1,4 @@
-class DataGridTableStyle:
+class DataGridTableStyle(Component,IComponent,IDisposable,IDataGridEditingService):
  """
  Represents the table drawn by the System.Windows.Forms.DataGrid control at run time.
  
@@ -6,6 +6,10 @@ class DataGridTableStyle:
  DataGridTableStyle()
  DataGridTableStyle(listManager: CurrencyManager)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridTableStyle()
+
  def BeginEdit(self,gridColumn,rowNumber):
   """
   BeginEdit(self: DataGridTableStyle,gridColumn: DataGridColumnStyle,rowNumber: int) -> bool
@@ -21,35 +25,25 @@ class DataGridTableStyle:
   """
   CreateGridColumn(self: DataGridTableStyle,prop: PropertyDescriptor) -> DataGridColumnStyle
   
-   Creates a System.Windows.Forms.DataGridColumnStyle,using the specified property 
-    descriptor.
-  
+   Creates a System.Windows.Forms.DataGridColumnStyle,using the specified property descriptor.
   
    prop: The System.ComponentModel.PropertyDescriptor used to create the column style object.
    Returns: The newly created System.Windows.Forms.DataGridColumnStyle.
   CreateGridColumn(self: DataGridTableStyle,prop: PropertyDescriptor,isDefault: bool) -> DataGridColumnStyle
   
-   Creates a System.Windows.Forms.DataGridColumnStyle using the specified property 
-    descriptor. Specifies whether the System.Windows.Forms.DataGridColumnStyle is a default 
-    column style.
-  
+   Creates a System.Windows.Forms.DataGridColumnStyle using the specified property descriptor. Specifies whether the System.Windows.Forms.DataGridColumnStyle is a default column style.
   
    prop: The System.ComponentModel.PropertyDescriptor used to create the column style object.
-   isDefault: Specifies whether the System.Windows.Forms.DataGridColumnStyle is a default column style. 
-    This parameter is read-only.
-  
+   isDefault: Specifies whether the System.Windows.Forms.DataGridColumnStyle is a default column style. This parameter is read-only.
    Returns: The newly created System.Windows.Forms.DataGridColumnStyle.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: DataGridTableStyle,disposing: bool)
-   Disposes of the resources (other than memory) used by the 
-    System.Windows.Forms.DataGridTableStyle.
+   Disposes of the resources (other than memory) used by the System.Windows.Forms.DataGridTableStyle.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def EndEdit(self,gridColumn,rowNumber,shouldAbort):
@@ -60,9 +54,7 @@ class DataGridTableStyle:
   
    gridColumn: The System.Windows.Forms.DataGridColumnStyle to edit.
    rowNumber: The number of the edited row.
-   shouldAbort: A value indicating whether the operation should be stopped; true if it should stop; 
-    otherwise,false.
-  
+   shouldAbort: A value indicating whether the operation should be stopped; true if it should stop; otherwise,false.
    Returns: true if the edit operation ends successfully; otherwise,false.
   """
   pass
@@ -70,14 +62,10 @@ class DataGridTableStyle:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -86,12 +74,7 @@ class DataGridTableStyle:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -262,87 +245,74 @@ class DataGridTableStyle:
  def ResetAlternatingBackColor(self):
   """
   ResetAlternatingBackColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.AlternatingBackColor property to its 
-    default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.AlternatingBackColor property to its default value.
   """
   pass
  def ResetBackColor(self):
   """
   ResetBackColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.BackColor property to its default 
-    value.
+   Resets the System.Windows.Forms.DataGridTableStyle.BackColor property to its default value.
   """
   pass
  def ResetForeColor(self):
   """
   ResetForeColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.ForeColor property to its default 
-    value.
+   Resets the System.Windows.Forms.DataGridTableStyle.ForeColor property to its default value.
   """
   pass
  def ResetGridLineColor(self):
   """
   ResetGridLineColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.GridLineColor property to its default 
-    value.
+   Resets the System.Windows.Forms.DataGridTableStyle.GridLineColor property to its default value.
   """
   pass
  def ResetHeaderBackColor(self):
   """
   ResetHeaderBackColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.HeaderBackColor property to its 
-    default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.HeaderBackColor property to its default value.
   """
   pass
  def ResetHeaderFont(self):
   """
   ResetHeaderFont(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.HeaderFont property to its default 
-    value.
+   Resets the System.Windows.Forms.DataGridTableStyle.HeaderFont property to its default value.
   """
   pass
  def ResetHeaderForeColor(self):
   """
   ResetHeaderForeColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.HeaderForeColor property to its 
-    default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.HeaderForeColor property to its default value.
   """
   pass
  def ResetLinkColor(self):
   """
   ResetLinkColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.LinkColor property to its default 
-    value.
+   Resets the System.Windows.Forms.DataGridTableStyle.LinkColor property to its default value.
   """
   pass
  def ResetLinkHoverColor(self):
   """
   ResetLinkHoverColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.LinkHoverColor property to its default 
-    value.
+   Resets the System.Windows.Forms.DataGridTableStyle.LinkHoverColor property to its default value.
   """
   pass
  def ResetSelectionBackColor(self):
   """
   ResetSelectionBackColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.SelectionBackColor property to its 
-    default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.SelectionBackColor property to its default value.
   """
   pass
  def ResetSelectionForeColor(self):
   """
   ResetSelectionForeColor(self: DataGridTableStyle)
-   Resets the System.Windows.Forms.DataGridTableStyle.SelectionForeColor property to its 
-    default value.
+   Resets the System.Windows.Forms.DataGridTableStyle.SelectionForeColor property to its default value.
   """
   pass
  def ShouldSerializeAlternatingBackColor(self,*args):
   """
   ShouldSerializeAlternatingBackColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.AlternatingBackColor 
-    property should be persisted.
-  
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.AlternatingBackColor property should be persisted.
    Returns: true if the property value has changed from its default; otherwise,false.
   """
   pass
@@ -350,9 +320,7 @@ class DataGridTableStyle:
   """
   ShouldSerializeBackColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.BackColor property should 
-    be persisted.
-  
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.BackColor property should be persisted.
    Returns: true if the property value has changed from its default; otherwise,false.
   """
   pass
@@ -360,9 +328,7 @@ class DataGridTableStyle:
   """
   ShouldSerializeForeColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.ForeColor property should 
-    be persisted.
-  
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.ForeColor property should be persisted.
    Returns: true if the property value has changed from its default; otherwise,false.
   """
   pass
@@ -370,9 +336,7 @@ class DataGridTableStyle:
   """
   ShouldSerializeGridLineColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.GridLineColor property 
-    should be persisted.
-  
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.GridLineColor property should be persisted.
    Returns: true if the property value has changed from its default; otherwise,false.
   """
   pass
@@ -380,9 +344,7 @@ class DataGridTableStyle:
   """
   ShouldSerializeHeaderBackColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.HeaderBackColor property 
-    should be persisted.
-  
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.HeaderBackColor property should be persisted.
    Returns: true if the property value has changed from its default; otherwise,false.
   """
   pass
@@ -390,9 +352,7 @@ class DataGridTableStyle:
   """
   ShouldSerializeHeaderForeColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.HeaderForeColor property 
-    should be persisted.
-  
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.HeaderForeColor property should be persisted.
    Returns: true if the property value has changed from its default; otherwise,false.
   """
   pass
@@ -400,9 +360,7 @@ class DataGridTableStyle:
   """
   ShouldSerializeLinkColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.LinkColor property should 
-    be persisted.
-  
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.LinkColor property should be persisted.
    Returns: true if the property value has changed from its default; otherwise,false.
   """
   pass
@@ -410,9 +368,7 @@ class DataGridTableStyle:
   """
   ShouldSerializeLinkHoverColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.LinkHoverColor property 
-    should be persisted.
-  
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.LinkHoverColor property should be persisted.
    Returns: true if the property value has changed from its default; otherwise,false.
   """
   pass
@@ -420,9 +376,7 @@ class DataGridTableStyle:
   """
   ShouldSerializePreferredRowHeight(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.PreferredRowHeight property 
-    should be persisted.
-  
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.PreferredRowHeight property should be persisted.
    Returns: true if the property value has changed from its default; otherwise,false.
   """
   pass
@@ -430,9 +384,7 @@ class DataGridTableStyle:
   """
   ShouldSerializeSelectionBackColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.SelectionBackColor property 
-    should be persisted.
-  
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.SelectionBackColor property should be persisted.
    Returns: true if the property value has changed from its default; otherwise,false.
   """
   pass
@@ -440,9 +392,7 @@ class DataGridTableStyle:
   """
   ShouldSerializeSelectionForeColor(self: DataGridTableStyle) -> bool
   
-   Indicates whether the System.Windows.Forms.DataGridTableStyle.SelectionForeColor property 
-    should be persisted.
-  
+   Indicates whether the System.Windows.Forms.DataGridTableStyle.SelectionForeColor property should be persisted.
    Returns: true if the property value has changed from its default; otherwise,false.
   """
   pass

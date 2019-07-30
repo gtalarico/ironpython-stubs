@@ -1,10 +1,15 @@
-class UnmanagedMemoryAccessor:
+class UnmanagedMemoryAccessor(object):
  """
  Provides random access to unmanaged blocks of memory from managed code.
  
  UnmanagedMemoryAccessor(buffer: SafeBuffer,offset: Int64,capacity: Int64)
  UnmanagedMemoryAccessor(buffer: SafeBuffer,offset: Int64,capacity: Int64,access: FileAccess)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UnmanagedMemoryAccessor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: UnmanagedMemoryAccessor)
@@ -19,8 +24,7 @@ class UnmanagedMemoryAccessor:
    buffer: The buffer to contain the accessor.
    offset: The byte at which to start the accessor.
    capacity: The size,in bytes,of memory to allocate.
-   access: The type of access allowed to the memory. The default is 
-    System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite.
+   access: The type of access allowed to the memory. The default is System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite.
   """
   pass
  def Read(self,position,structure):

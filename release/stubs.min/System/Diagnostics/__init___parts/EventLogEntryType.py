@@ -4,6 +4,11 @@ class EventLogEntryType:
  
  enum EventLogEntryType,values: Error (1),FailureAudit (16),Information (4),SuccessAudit (8),Warning (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EventLogEntryType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

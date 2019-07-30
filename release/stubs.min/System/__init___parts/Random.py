@@ -1,10 +1,15 @@
-class Random:
+class Random(object):
  """
  Represents a pseudo-random number generator,a device that produces a sequence of numbers that meet certain statistical requirements for randomness.
  
  Random()
  Random(Seed: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Random()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Next(self,*__args):
   """
   Next(self: Random) -> int
@@ -16,22 +21,16 @@ class Random:
    Returns a random number within a specified range.
   
    minValue: The inclusive lower bound of the random number returned.
-   maxValue: The exclusive upper bound of the random number returned. maxValue must be greater than or 
-    equal to minValue.
-  
-   Returns: A 32-bit signed integer greater than or equal to minValue and less than maxValue; that 
-    is,the range of return values includes minValue but not maxValue. If minValue equals 
+   maxValue: The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.
+   Returns: A 32-bit signed integer greater than or equal to minValue and less than maxValue; that is,the range of return values includes minValue but not maxValue. If minValue equals 
     maxValue,minValue is returned.
   
   Next(self: Random,maxValue: int) -> int
   
    Returns a nonnegative random number less than the specified maximum.
   
-   maxValue: The exclusive upper bound of the random number to be generated. maxValue must be greater 
-    than or equal to zero.
-  
-   Returns: A 32-bit signed integer greater than or equal to zero,and less than maxValue; that is,
-    the range of return values ordinarily includes zero but not maxValue. However,if 
+   maxValue: The exclusive upper bound of the random number to be generated. maxValue must be greater than or equal to zero.
+   Returns: A 32-bit signed integer greater than or equal to zero,and less than maxValue; that is,the range of return values ordinarily includes zero but not maxValue. However,if 
     maxValue equals zero,maxValue is returned.
   """
   pass

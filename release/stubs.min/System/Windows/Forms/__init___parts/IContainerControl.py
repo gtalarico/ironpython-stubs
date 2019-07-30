@@ -1,5 +1,9 @@
 class IContainerControl:
  """ Provides the functionality for a control to act as a parent for other controls. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return IContainerControl()
+
  def ActivateControl(self,active):
   """
   ActivateControl(self: IContainerControl,active: Control) -> bool

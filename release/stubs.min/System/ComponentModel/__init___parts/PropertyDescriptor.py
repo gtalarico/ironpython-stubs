@@ -1,5 +1,10 @@
-class PropertyDescriptor:
+class PropertyDescriptor(MemberDescriptor):
  """ Provides an abstraction of a property on a class. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PropertyDescriptor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddValueChanged(self,component,handler):
   """
   AddValueChanged(self: PropertyDescriptor,component: object,handler: EventHandler)
@@ -47,32 +52,23 @@ class PropertyDescriptor:
    Returns: A System.ComponentModel.PropertyDescriptorCollection.
   GetChildProperties(self: PropertyDescriptor,filter: Array[Attribute]) -> PropertyDescriptorCollection
   
-   Returns a System.ComponentModel.PropertyDescriptorCollection using a specified array of 
-    attributes as a filter.
-  
+   Returns a System.ComponentModel.PropertyDescriptorCollection using a specified array of attributes as a filter.
   
    filter: An array of type System.Attribute to use as a filter.
-   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that match the 
-    specified attributes.
-  
+   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that match the specified attributes.
   GetChildProperties(self: PropertyDescriptor,instance: object) -> PropertyDescriptorCollection
   
    Returns a System.ComponentModel.PropertyDescriptorCollection for a given object.
   
    instance: A component to get the properties for.
-   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties for the 
-    specified component.
-  
+   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties for the specified component.
   GetChildProperties(self: PropertyDescriptor,instance: object,filter: Array[Attribute]) -> PropertyDescriptorCollection
   
-   Returns a System.ComponentModel.PropertyDescriptorCollection for a given object using a 
-    specified array of attributes as a filter.
-  
+   Returns a System.ComponentModel.PropertyDescriptorCollection for a given object using a specified array of attributes as a filter.
   
    instance: A component to get the properties for.
    filter: An array of type System.Attribute to use as a filter.
-   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that match the 
-    specified attributes for the specified component.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that match the specified attributes for the specified component.
   """
   pass
  def GetEditor(self,editorBaseType):
@@ -81,9 +77,7 @@ class PropertyDescriptor:
   
    Gets an editor of the specified type.
   
-   editorBaseType: The base type of editor,which is used to differentiate between multiple editors that a 
-    property supports.
-  
+   editorBaseType: The base type of editor,which is used to differentiate between multiple editors that a property supports.
    Returns: An instance of the requested editor type,or null if an editor cannot be found.
   """
   pass
@@ -122,8 +116,7 @@ class PropertyDescriptor:
    Retrieves the current set of ValueChanged event handlers for a specific component
   
    component: The component for which to retrieve event handlers.
-   Returns: A combined multicast event handler,or null if no event handlers are currently assigned 
-    to component.
+   Returns: A combined multicast event handler,or null if no event handlers are currently assigned to component.
   """
   pass
  def OnValueChanged(self,*args):
@@ -147,9 +140,7 @@ class PropertyDescriptor:
  def ResetValue(self,component):
   """
   ResetValue(self: PropertyDescriptor,component: object)
-   When overridden in a derived class,resets the value for this property of the component 
-    to the default value.
-  
+   When overridden in a derived class,resets the value for this property of the component to the default value.
   
    component: The component with the property value that is to be reset to the default value.
   """
@@ -167,9 +158,7 @@ class PropertyDescriptor:
   """
   ShouldSerializeValue(self: PropertyDescriptor,component: object) -> bool
   
-   When overridden in a derived class,determines a value indicating whether the value of 
-    this property needs to be persisted.
-  
+   When overridden in a derived class,determines a value indicating whether the value of this property needs to be persisted.
   
    component: The component with the property to be examined for persistence.
    Returns: true if the property should be persisted; otherwise,false.

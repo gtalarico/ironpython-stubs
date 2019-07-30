@@ -1,9 +1,14 @@
-class EventSourceCreationData:
+class EventSourceCreationData(object):
  """
  Represents the configuration settings used to create an event log source on the local computer or a remote computer.
  
  EventSourceCreationData(source: str,logName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EventSourceCreationData()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,source,logName):
   """ __new__(cls: type,source: str,logName: str) """

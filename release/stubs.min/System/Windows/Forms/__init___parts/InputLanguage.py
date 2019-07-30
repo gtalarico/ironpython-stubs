@@ -1,5 +1,9 @@
-class InputLanguage:
+class InputLanguage(object):
  """ Provides methods and fields to manage the input language. This class cannot be inherited. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return InputLanguage()
+
  def Equals(self,value):
   """
   Equals(self: InputLanguage,value: object) -> bool
@@ -18,8 +22,7 @@ class InputLanguage:
    Returns the input language associated with the specified culture.
   
    culture: The System.Globalization.CultureInfo that specifies the culture to convert from.
-   Returns: An System.Windows.Forms.InputLanguage that represents the previously selected input 
-    language.
+   Returns: An System.Windows.Forms.InputLanguage that represents the previously selected input language.
   """
   pass
  def GetHashCode(self):

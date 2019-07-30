@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.Properties.DataSources calls itself DataSources
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class DataSetPickListPtP:
+class DataSetPickListPtP(DataSet):
  """ DataSetPickListPtP() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DataSetPickListPtP()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: DataSetPickListPtP) -> DataSet """
   pass
@@ -19,38 +25,27 @@ class DataSetPickListPtP:
   
    Determines the System.Data.DataSet.SchemaSerializationMode for a System.Data.DataSet.
   
-      System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Se
-    rialization.StreamingContext) is invoked with during deserialization in remoting 
+      System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext) is invoked with during deserialization in remoting 
     scenarios.
   
-      System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Se
-    rialization.StreamingContext) is invoked with during deserialization in remoting 
+      System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext) is invoked with during deserialization in remoting 
     scenarios.
   
-   Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema information 
-    has been omitted from the payload.
-  
+   Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema information has been omitted from the payload.
   DetermineSchemaSerializationMode(self: DataSet,reader: XmlReader) -> SchemaSerializationMode
   
    Determines the System.Data.DataSet.SchemaSerializationMode for a System.Data.DataSet.
   
-   reader: The System.Xml.XmlReader instance that is passed during deserialization of the 
-    System.Data.DataSet.
-  
-   Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema information 
-    has been omitted from the payload.
+   reader: The System.Xml.XmlReader instance that is passed during deserialization of the System.Data.DataSet.
+   Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema information has been omitted from the payload.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: MarshalByValueComponent,disposing: bool)
-   Releases the unmanaged resources used by the 
-    System.ComponentModel.MarshalByValueComponent and optionally releases the managed 
-    resources.
+   Releases the unmanaged resources used by the System.ComponentModel.MarshalByValueComponent and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetSchemaSerializable(self,*args):
@@ -80,17 +75,13 @@ class DataSetPickListPtP:
   
    info: The System.Runtime.Serialization.SerializationInfo object.
    context: The System.Runtime.Serialization.StreamingContext object.
-   Returns: true if the specified System.Runtime.Serialization.SerializationInfo represents a DataSet 
-    serialized in its binary format,false otherwise.
+   Returns: true if the specified System.Runtime.Serialization.SerializationInfo represents a DataSet serialized in its binary format,false otherwise.
   """
   pass
  def OnPropertyChanging(self,*args):
   """
   OnPropertyChanging(self: DataSet,pcevent: PropertyChangedEventArgs)
-   Raises the 
-    System.Data.DataSet.OnPropertyChanging(System.ComponentModel.PropertyChangedEventArgs) 
-    event.
-  
+   Raises the System.Data.DataSet.OnPropertyChanging(System.ComponentModel.PropertyChangedEventArgs) event.
   
    pcevent: A System.ComponentModel.PropertyChangedEventArgs that contains the event data.
   """

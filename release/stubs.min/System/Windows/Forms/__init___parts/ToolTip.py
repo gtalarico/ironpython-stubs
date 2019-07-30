@@ -1,21 +1,22 @@
-class ToolTip:
+class ToolTip(Component,IComponent,IDisposable,IExtenderProvider):
  """
  Represents a small rectangular pop-up window that displays a brief description of a control's purpose when the user rests the pointer on the control.
  
  ToolTip(cont: IContainer)
  ToolTip()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolTip()
+
  def CanExtend(self,target):
   """
   CanExtend(self: ToolTip,target: object) -> bool
   
-   Returns true if the ToolTip can offer an extender property to the specified target 
-    component.
-  
+   Returns true if the ToolTip can offer an extender property to the specified target component.
   
    target: The target object to add an extender property to.
-   Returns: true if the System.Windows.Forms.ToolTip class can offer one or more extender properties; 
-    otherwise,false.
+   Returns: true if the System.Windows.Forms.ToolTip class can offer one or more extender properties; otherwise,false.
   """
   pass
  def Dispose(self):
@@ -23,22 +24,17 @@ class ToolTip:
   Dispose(self: ToolTip,disposing: bool)
    Disposes of the System.Windows.Forms.ToolTip component.
   
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetToolTip(self,control):
@@ -47,9 +43,7 @@ class ToolTip:
   
    Retrieves the ToolTip text associated with the specified control.
   
-   control: The System.Windows.Forms.Control for which to retrieve the System.Windows.Forms.ToolTip 
-    text.
-  
+   control: The System.Windows.Forms.Control for which to retrieve the System.Windows.Forms.ToolTip text.
    Returns: A System.String containing the ToolTip text for the specified control.
   """
   pass
@@ -58,8 +52,7 @@ class ToolTip:
   Hide(self: ToolTip,win: IWin32Window)
    Hides the specified ToolTip window.
   
-   win: The System.Windows.Forms.IWin32Window of the associated window or control that the 
-    ToolTip is associated with.
+   win: The System.Windows.Forms.IWin32Window of the associated window or control that the ToolTip is associated with.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -68,12 +61,7 @@ class ToolTip:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -99,67 +87,43 @@ class ToolTip:
  def Show(self,text,window,*__args):
   """
   Show(self: ToolTip,text: str,window: IWin32Window)
-   Sets the ToolTip text associated with the specified control,and displays the ToolTip 
-    modally.
-  
+   Sets the ToolTip text associated with the specified control,and displays the ToolTip modally.
   
    text: A System.String containing the new ToolTip text.
    window: The System.Windows.Forms.Control to display the ToolTip for.
   Show(self: ToolTip,text: str,window: IWin32Window,duration: int)
-   Sets the ToolTip text associated with the specified control,and then displays the 
-    ToolTip for the specified duration.
-  
+   Sets the ToolTip text associated with the specified control,and then displays the ToolTip for the specified duration.
   
    text: A System.String containing the new ToolTip text.
    window: The System.Windows.Forms.Control to display the ToolTip for.
    duration: An System.Int32 containing the duration,in milliseconds,to display the ToolTip.
   Show(self: ToolTip,text: str,window: IWin32Window,point: Point)
-   Sets the ToolTip text associated with the specified control,and then displays the 
-    ToolTip modally at the specified relative position.
-  
+   Sets the ToolTip text associated with the specified control,and then displays the ToolTip modally at the specified relative position.
   
    text: A System.String containing the new ToolTip text.
    window: The System.Windows.Forms.Control to display the ToolTip for.
-   point: A System.Drawing.Point containing the offset,in pixels,relative to the upper-left 
-    corner of the associated control window,to display the ToolTip.
-  
+   point: A System.Drawing.Point containing the offset,in pixels,relative to the upper-left corner of the associated control window,to display the ToolTip.
   Show(self: ToolTip,text: str,window: IWin32Window,point: Point,duration: int)
-   Sets the ToolTip text associated with the specified control,and then displays the 
-    ToolTip for the specified duration at the specified relative position.
-  
+   Sets the ToolTip text associated with the specified control,and then displays the ToolTip for the specified duration at the specified relative position.
   
    text: A System.String containing the new ToolTip text.
    window: The System.Windows.Forms.Control to display the ToolTip for.
-   point: A System.Drawing.Point containing the offset,in pixels,relative to the upper-left 
-    corner of the associated control window,to display the ToolTip.
-  
+   point: A System.Drawing.Point containing the offset,in pixels,relative to the upper-left corner of the associated control window,to display the ToolTip.
    duration: An System.Int32 containing the duration,in milliseconds,to display the ToolTip.
   Show(self: ToolTip,text: str,window: IWin32Window,x: int,y: int)
-   Sets the ToolTip text associated with the specified control,and then displays the 
-    ToolTip modally at the specified relative position.
-  
+   Sets the ToolTip text associated with the specified control,and then displays the ToolTip modally at the specified relative position.
   
    text: A System.String containing the new ToolTip text.
    window: The System.Windows.Forms.Control to display the ToolTip for.
-   x: The horizontal offset,in pixels,relative to the upper-left corner of the associated 
-    control window,to display the ToolTip.
-  
-   y: The vertical offset,in pixels,relative to the upper-left corner of the associated 
-    control window,to display the ToolTip.
-  
+   x: The horizontal offset,in pixels,relative to the upper-left corner of the associated control window,to display the ToolTip.
+   y: The vertical offset,in pixels,relative to the upper-left corner of the associated control window,to display the ToolTip.
   Show(self: ToolTip,text: str,window: IWin32Window,x: int,y: int,duration: int)
-   Sets the ToolTip text associated with the specified control,and then displays the 
-    ToolTip for the specified duration at the specified relative position.
-  
+   Sets the ToolTip text associated with the specified control,and then displays the ToolTip for the specified duration at the specified relative position.
   
    text: A System.String containing the new ToolTip text.
    window: The System.Windows.Forms.Control to display the ToolTip for.
-   x: The horizontal offset,in pixels,relative to the upper-left corner of the associated 
-    control window,to display the ToolTip.
-  
-   y: The vertical offset,in pixels,relative to the upper-left corner of the associated 
-    control window,to display the ToolTip.
-  
+   x: The horizontal offset,in pixels,relative to the upper-left corner of the associated control window,to display the ToolTip.
+   y: The vertical offset,in pixels,relative to the upper-left corner of the associated control window,to display the ToolTip.
    duration: An System.Int32 containing the duration,in milliseconds,to display the ToolTip.
   """
   pass

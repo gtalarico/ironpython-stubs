@@ -14,13 +14,16 @@ class DefaultValueAttribute:
  DefaultValueAttribute(value: str)
  DefaultValueAttribute(value: object)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DefaultValueAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: DefaultValueAttribute,obj: object) -> bool
   
-   Returns whether the value of the given object is equal to the current 
-    System.ComponentModel.DefaultValueAttribute.
-  
+   Returns whether the value of the given object is equal to the current System.ComponentModel.DefaultValueAttribute.
   
    obj: The object to test the value equality of.
    Returns: true if the value of the given object is equal to that of the current; otherwise,false.

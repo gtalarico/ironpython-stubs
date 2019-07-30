@@ -1,9 +1,13 @@
-class LinkClickedEventArgs:
+class LinkClickedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.RichTextBox.LinkClicked event.
  
  LinkClickedEventArgs(linkText: str)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return LinkClickedEventArgs()
+
  @staticmethod
  def __new__(self,linkText):
   """ __new__(cls: type,linkText: str) """

@@ -1,9 +1,13 @@
-class CreateParams:
+class CreateParams(object):
  """
  Encapsulates the information needed when creating a control.
  
  CreateParams()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return CreateParams()
+
  def ToString(self):
   """
   ToString(self: CreateParams) -> str

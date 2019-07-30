@@ -1,9 +1,14 @@
-class OperatingSystem:
+class OperatingSystem(object):
  """
  Represents information about an operating system,such as the version and platform identifier. This class cannot be inherited.
  
  OperatingSystem(platform: PlatformID,version: Version)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OperatingSystem()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """
   Clone(self: OperatingSystem) -> object
@@ -15,9 +20,7 @@ class OperatingSystem:
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: OperatingSystem,info: SerializationInfo,context: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo object with the data necessary 
-    to deserialize this instance.
-  
+   Populates a System.Runtime.Serialization.SerializationInfo object with the data necessary to deserialize this instance.
   
    info: The object to populate with serialization information.
    context: The place to store and retrieve serialized data. Reserved for future use.
@@ -27,11 +30,8 @@ class OperatingSystem:
   """
   ToString(self: OperatingSystem) -> str
   
-   Converts the value of this System.OperatingSystem object to its equivalent string 
-    representation.
-  
-   Returns: The string representation of the values returned by the System.OperatingSystem.Platform,
-    System.OperatingSystem.Version,and System.OperatingSystem.ServicePack properties.
+   Converts the value of this System.OperatingSystem object to its equivalent string representation.
+   Returns: The string representation of the values returned by the System.OperatingSystem.Platform,System.OperatingSystem.Version,and System.OperatingSystem.ServicePack properties.
   """
   pass
  def __init__(self,*args):

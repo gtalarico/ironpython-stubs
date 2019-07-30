@@ -5,6 +5,11 @@ class InheritanceAttribute:
  InheritanceAttribute()
  InheritanceAttribute(inheritanceLevel: InheritanceLevel)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InheritanceAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,value):
   """
   Equals(self: InheritanceAttribute,value: object) -> bool
@@ -27,9 +32,7 @@ class InheritanceAttribute:
   """
   IsDefaultAttribute(self: InheritanceAttribute) -> bool
   
-   Gets a value indicating whether the current value of the attribute is the default value 
-    for the attribute.
-  
+   Gets a value indicating whether the current value of the attribute is the default value for the attribute.
    Returns: true if the current value of the attribute is the default; otherwise,false.
   """
   pass

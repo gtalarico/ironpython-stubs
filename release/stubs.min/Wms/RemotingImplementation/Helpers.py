@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.Helpers calls itself Helpers
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class DataFlowObjectHelper:
+class DataFlowObjectHelper(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DataFlowObjectHelper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def AreAllQuestionAnsweredPositive(dfObject):
   """ AreAllQuestionAnsweredPositive[T](dfObject: DataFlowObject[T]) -> DataFlowObject[T] """
@@ -34,8 +40,13 @@ class DataFlowObjectHelper:
  ]
 
 
-class DecimalExtensions:
+class DecimalExtensions(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DecimalExtensions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FormatDecimal(value):
   """ FormatDecimal(value: Decimal) -> str """
@@ -45,8 +56,13 @@ class DecimalExtensions:
  ]
 
 
-class GlobalizationHelper:
+class GlobalizationHelper(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GlobalizationHelper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def ClearResourceCache():
   """ ClearResourceCache() """
@@ -71,8 +87,13 @@ class GlobalizationHelper:
  ]
 
 
-class LabelHelper:
+class LabelHelper(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LabelHelper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetPlaceholders(label,systemFieldsRegEx):
   """ GetPlaceholders(label: PrintLabel,systemFieldsRegEx: str) -> List[str] """
@@ -90,8 +111,13 @@ class LabelHelper:
  ]
 
 
-class OrderMatchesCustomerValidator:
+class OrderMatchesCustomerValidator(object):
  """ OrderMatchesCustomerValidator() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OrderMatchesCustomerValidator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def OrderMatchesCustomer(self,order,customer):
   """ OrderMatchesCustomer(self: OrderMatchesCustomerValidator,order: OutboundOrder,customer: Customer) -> bool """
   pass
@@ -111,8 +137,13 @@ Set: OrderMatchesCustomerDelegate(self: OrderMatchesCustomerValidator)=value
  OnOrderMatchesCustomerDelegate=None
 
 
-class SettingsHelper:
+class SettingsHelper(object):
  """ SettingsHelper(settingsObject: object) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SettingsHelper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """ Dispose(self: SettingsHelper) """
   pass
@@ -145,8 +176,13 @@ class SettingsHelper:
   """ __repr__(self: object) -> str """
   pass
 
-class StringHelpers:
+class StringHelpers(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StringHelpers()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def CreateMessageFromCollection(message,collection):
   """ CreateMessageFromCollection(message: str,collection: IEnumerable[str]) -> str """

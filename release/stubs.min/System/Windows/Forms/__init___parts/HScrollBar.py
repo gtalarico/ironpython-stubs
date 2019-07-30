@@ -1,28 +1,24 @@
-class HScrollBar:
+class HScrollBar(ScrollBar,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceObject,IOleInPlaceActiveObject,IOleWindow,IViewObject,IViewObject2,IPersist,IPersistStreamInit,IPersistPropertyBag,IPersistStorage,IQuickActivate,ISupportOleDropSource,IDropTarget,ISynchronizeInvoke,IWin32Window,IArrangedElement,IBindableComponent):
  """
  Represents a standard Windows horizontal scroll bar.
  
  HScrollBar()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return HScrollBar()
+
  def AccessibilityNotifyClients(self,*args):
   """
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
-   Notifies the accessibility client applications of the specified 
-    System.Windows.Forms.AccessibleEvents for the specified child control.
+   Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control.
   
-  
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications 
-    of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,objectID: int,childID: int)
-   Notifies the accessibility client applications of the specified 
-    System.Windows.Forms.AccessibleEvents for the specified child control .
+   Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control .
   
-  
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications 
-    of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
@@ -67,12 +63,9 @@ class HScrollBar:
  def Dispose(self):
   """
   Dispose(self: Control,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.Control and its child 
-    controls and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.Control and its child controls and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetAccessibilityObjectById(self,*args):
@@ -89,9 +82,7 @@ class HScrollBar:
   """
   GetAutoSizeMode(self: Control) -> AutoSizeMode
   
-   Retrieves a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
-  
+   Retrieves a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
    Returns: One of the System.Windows.Forms.AutoSizeMode values.
   """
   pass
@@ -99,19 +90,11 @@ class HScrollBar:
   """
   GetScaledBounds(self: ScrollBar,bounds: Rectangle,factor: SizeF,specified: BoundsSpecified) -> Rectangle
   
-   Returns the bounds to use when the System.Windows.Forms.ScrollBar is scaled by a 
-    specified amount.
-  
+   Returns the bounds to use when the System.Windows.Forms.ScrollBar is scaled by a specified amount.
   
    bounds: A System.Drawing.Rectangle that specifies the initial bounds.
-   factor: A System.Drawing.SizeF that indicates the amount the current bounds should be increased 
-    by.
-  
-   specified: A bitwise combination of the System.Windows.Forms.BoundsSpecified values that indicate 
-    the how to define the control's size and position returned by 
-    System.Windows.Forms.ScrollBar.GetScaledBounds(System.Drawing.Rectangle,System.Drawing.Siz
-    eF,System.Windows.Forms.BoundsSpecified).
-  
+   factor: A System.Drawing.SizeF that indicates the amount the current bounds should be increased by.
+   specified: A bitwise combination of the System.Windows.Forms.BoundsSpecified values that indicate the how to define the control's size and position returned by System.Windows.Forms.ScrollBar.GetScaledBounds(System.Drawing.Rectangle,System.Drawing.SizeF,System.Windows.Forms.BoundsSpecified).
    Returns: A System.Drawing.Rectangle specifying the scaled bounds.
   """
   pass
@@ -119,14 +102,10 @@ class HScrollBar:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -176,9 +155,7 @@ class HScrollBar:
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event 
-    to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -187,9 +164,7 @@ class HScrollBar:
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event 
-    to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -198,9 +173,7 @@ class HScrollBar:
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event 
-    to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -211,17 +184,14 @@ class HScrollBar:
    Determines if a character is an input character that the control recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the control and not preprocessed; 
-    otherwise,false.
+   Returns: true if the character should be sent directly to the control and not preprocessed; otherwise,false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: Control,keyData: Keys) -> bool
   
-   Determines whether the specified key is a regular input key or a special key that 
-    requires preprocessing.
-  
+   Determines whether the specified key is a regular input key or a special key that requires preprocessing.
   
    keyData: One of the System.Windows.Forms.Keys values.
    Returns: true if the specified key is a regular input key; otherwise,false.
@@ -233,12 +203,7 @@ class HScrollBar:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -249,9 +214,7 @@ class HScrollBar:
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the 
-    control to invalidate.
-  
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control to invalidate.
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
   """
@@ -693,16 +656,13 @@ class HScrollBar:
   OnPaintBackground(self: Control,pevent: PaintEventArgs)
    Paints the background of the control.
   
-   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to 
-    paint.
+   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to paint.
   """
   pass
  def OnParentBackColorChanged(self,*args):
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.BackColorChanged event when the System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -710,10 +670,7 @@ class HScrollBar:
  def OnParentBackgroundImageChanged(self,*args):
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -721,10 +678,7 @@ class HScrollBar:
  def OnParentBindingContextChanged(self,*args):
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.BindingContextChanged event when the System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -748,9 +702,7 @@ class HScrollBar:
  def OnParentEnabledChanged(self,*args):
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.EnabledChanged event when the System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -758,9 +710,7 @@ class HScrollBar:
  def OnParentFontChanged(self,*args):
   """
   OnParentFontChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.FontChanged event when the System.Windows.Forms.Control.Font property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -768,9 +718,7 @@ class HScrollBar:
  def OnParentForeColorChanged(self,*args):
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.ForeColorChanged event when the System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -778,10 +726,7 @@ class HScrollBar:
  def OnParentRightToLeftChanged(self,*args):
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.RightToLeftChanged event when the System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -789,9 +734,7 @@ class HScrollBar:
  def OnParentVisibleChanged(self,*args):
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.VisibleChanged event when the System.Windows.Forms.Control.Visible property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -938,9 +881,7 @@ class HScrollBar:
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
   """
@@ -971,9 +912,7 @@ class HScrollBar:
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -983,9 +922,7 @@ class HScrollBar:
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -995,9 +932,7 @@ class HScrollBar:
   
    Previews a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1066,25 +1001,19 @@ class HScrollBar:
   """
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
-    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
    Returns: One of the System.Windows.Forms.HorizontalAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
-    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: ContentAlignment) -> ContentAlignment
   
-   Converts the specified System.Drawing.ContentAlignment to the appropriate 
-    System.Drawing.ContentAlignment to support right-to-left text.
-  
+   Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
   
    align: One of the System.Drawing.ContentAlignment values.
    Returns: One of the System.Drawing.ContentAlignment values.
@@ -1094,9 +1023,7 @@ class HScrollBar:
   """
   RtlTranslateContent(self: Control,align: ContentAlignment) -> ContentAlignment
   
-   Converts the specified System.Drawing.ContentAlignment to the appropriate 
-    System.Drawing.ContentAlignment to support right-to-left text.
-  
+   Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
   
    align: One of the System.Drawing.ContentAlignment values.
    Returns: One of the System.Drawing.ContentAlignment values.
@@ -1106,9 +1033,7 @@ class HScrollBar:
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
-    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
    Returns: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1118,9 +1043,7 @@ class HScrollBar:
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
-    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1132,8 +1055,7 @@ class HScrollBar:
    Scales a control's location,size,padding and margin.
   
    factor: The factor by which the height and width of the control will be scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to 
-    use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -1148,9 +1070,7 @@ class HScrollBar:
  def Select(self):
   """
   Select(self: Control,directed: bool,forward: bool)
-   Activates a child control. Optionally specifies the direction in the tab order to select 
-    the control from.
-  
+   Activates a child control. Optionally specifies the direction in the tab order to select the control from.
   
    directed: true to specify the direction of the control to select; otherwise,false.
    forward: true to move forward in the tab order; false to move backward in the tab order.
@@ -1159,9 +1079,7 @@ class HScrollBar:
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
-  
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
   """
@@ -1218,9 +1136,7 @@ class HScrollBar:
   
    Determines the size of the entire control from the height and width of its client area.
   
-   clientSize: A System.Drawing.Size value representing the height and width of the control's client 
-    area.
-  
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
    Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass

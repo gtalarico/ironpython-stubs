@@ -5,13 +5,16 @@ class EditorBrowsableAttribute:
  EditorBrowsableAttribute(state: EditorBrowsableState)
  EditorBrowsableAttribute()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EditorBrowsableAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: EditorBrowsableAttribute,obj: object) -> bool
   
-   Returns whether the value of the given object is equal to the current 
-    System.ComponentModel.EditorBrowsableAttribute.
-  
+   Returns whether the value of the given object is equal to the current System.ComponentModel.EditorBrowsableAttribute.
   
    obj: The object to test the value equality of.
    Returns: true if the value of the given object is equal to that of the current; otherwise,false.

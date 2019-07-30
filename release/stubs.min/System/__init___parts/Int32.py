@@ -1,5 +1,10 @@
-class Int32:
+class Int32(object):
  """ Represents a 32-bit signed integer. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Int32()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def bit_length(self,*args):
   """ bit_length(value: int) -> int """
   pass

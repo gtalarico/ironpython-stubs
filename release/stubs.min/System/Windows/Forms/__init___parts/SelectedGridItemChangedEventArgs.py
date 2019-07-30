@@ -1,9 +1,13 @@
-class SelectedGridItemChangedEventArgs:
+class SelectedGridItemChangedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.PropertyGrid.SelectedGridItemChanged event of the System.Windows.Forms.PropertyGrid control.
  
  SelectedGridItemChangedEventArgs(oldSel: GridItem,newSel: GridItem)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SelectedGridItemChangedEventArgs()
+
  @staticmethod
  def __new__(self,oldSel,newSel):
   """ __new__(cls: type,oldSel: GridItem,newSel: GridItem) """

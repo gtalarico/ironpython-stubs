@@ -1,4 +1,4 @@
-class BindingSource:
+class BindingSource(Component,IComponent,IDisposable,IBindingListView,IBindingList,IList,ICollection,IEnumerable,ITypedList,ICancelAddNew,ISupportInitializeNotification,ISupportInitialize,ICurrencyManagerProvider):
  """
  Encapsulates the data source for a form.
  
@@ -6,6 +6,10 @@ class BindingSource:
  BindingSource(dataSource: object,dataMember: str)
  BindingSource(container: IContainer)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return BindingSource()
+
  def Add(self,value):
   """
   Add(self: BindingSource,value: object) -> int
@@ -13,8 +17,7 @@ class BindingSource:
    Adds an existing item to the internal list.
   
    value: An System.Object to be added to the internal list.
-   Returns: The zero-based index at which value was added to the underlying list represented by the 
-    System.Windows.Forms.BindingSource.List property.
+   Returns: The zero-based index at which value was added to the underlying list represented by the System.Windows.Forms.BindingSource.List property.
   """
   pass
  def AddNew(self):
@@ -30,15 +33,12 @@ class BindingSource:
   ApplySort(self: BindingSource,property: PropertyDescriptor,sort: ListSortDirection)
    Sorts the data source using the specified property descriptor and sort direction.
   
-   property: A System.ComponentModel.PropertyDescriptor that describes the property by which to sort 
-    the data source.
-  
+   property: A System.ComponentModel.PropertyDescriptor that describes the property by which to sort the data source.
    sort: A System.ComponentModel.ListSortDirection indicating how the list should be sorted.
   ApplySort(self: BindingSource,sorts: ListSortDescriptionCollection)
    Sorts the data source with the specified sort descriptions.
   
-   sorts: A System.ComponentModel.ListSortDescriptionCollection containing the sort descriptions to 
-    apply to the data source.
+   sorts: A System.ComponentModel.ListSortDescriptionCollection containing the sort descriptions to apply to the data source.
   """
   pass
  def CancelEdit(self):
@@ -59,19 +59,14 @@ class BindingSource:
   
    Determines whether an object is an item in the list.
   
-   value: The System.Object to locate in the underlying list represented by the 
-    System.Windows.Forms.BindingSource.List property. The value can be null.
-  
-   Returns: true if the value parameter is found in the System.Windows.Forms.BindingSource.List; 
-    otherwise,false.
+   value: The System.Object to locate in the underlying list represented by the System.Windows.Forms.BindingSource.List property. The value can be null.
+   Returns: true if the value parameter is found in the System.Windows.Forms.BindingSource.List; otherwise,false.
   """
   pass
  def CopyTo(self,arr,index):
   """
   CopyTo(self: BindingSource,arr: Array,index: int)
-   Copies the contents of the System.Windows.Forms.BindingSource.List to the specified 
-    array,starting at the specified index value.
-  
+   Copies the contents of the System.Windows.Forms.BindingSource.List to the specified array,starting at the specified index value.
   
    arr: The destination array.
    index: The index in the destination array at which to start the copy operation.
@@ -80,12 +75,9 @@ class BindingSource:
  def Dispose(self):
   """
   Dispose(self: BindingSource,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.BindingSource and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.BindingSource and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def EndEdit(self):
@@ -109,8 +101,7 @@ class BindingSource:
   
    prop: The System.ComponentModel.PropertyDescriptor to search for.
    key: The value of prop to match.
-   Returns: The zero-based index of the item that has the given value for 
-    System.ComponentModel.PropertyDescriptor.
+   Returns: The zero-based index of the item that has the given value for System.ComponentModel.PropertyDescriptor.
   """
   pass
  def GetEnumerator(self):
@@ -125,15 +116,10 @@ class BindingSource:
   """
   GetItemProperties(self: BindingSource,listAccessors: Array[PropertyDescriptor]) -> PropertyDescriptorCollection
   
-   Retrieves an array of System.ComponentModel.PropertyDescriptor objects representing the 
-    bindable properties of the data source list type.
+   Retrieves an array of System.ComponentModel.PropertyDescriptor objects representing the bindable properties of the data source list type.
   
-  
-   listAccessors: An array of System.ComponentModel.PropertyDescriptor objects to find in the list as 
-    bindable.
-  
-   Returns: An array of System.ComponentModel.PropertyDescriptor objects that represents the 
-    properties on this list type used to bind data.
+   listAccessors: An array of System.ComponentModel.PropertyDescriptor objects to find in the list as bindable.
+   Returns: An array of System.ComponentModel.PropertyDescriptor objects that represents the properties on this list type used to bind data.
   """
   pass
  def GetListName(self,listAccessors):
@@ -142,9 +128,7 @@ class BindingSource:
   
    Gets the name of the list supplying data for the binding.
   
-   listAccessors: An array of System.ComponentModel.PropertyDescriptor objects to find in the list as 
-    bindable.
-  
+   listAccessors: An array of System.ComponentModel.PropertyDescriptor objects to find in the list as bindable.
    Returns: The name of the list supplying the data for binding.
   """
   pass
@@ -162,29 +146,20 @@ class BindingSource:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def IndexOf(self,value):
   """
   IndexOf(self: BindingSource,value: object) -> int
   
-   Searches for the specified object and returns the index of the first occurrence within 
-    the entire list.
+   Searches for the specified object and returns the index of the first occurrence within the entire list.
   
-  
-   value: The System.Object to locate in the underlying list represented by the 
-    System.Windows.Forms.BindingSource.List property. The value can be null.
-  
-   Returns: The zero-based index of the first occurrence of the value parameter; otherwise,-1 if 
-    value is not in the list.
+   value: The System.Object to locate in the underlying list represented by the System.Windows.Forms.BindingSource.List property. The value can be null.
+   Returns: The zero-based index of the first occurrence of the value parameter; otherwise,-1 if value is not in the list.
   """
   pass
  def Insert(self,index,value):
@@ -202,12 +177,7 @@ class BindingSource:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -316,8 +286,7 @@ class BindingSource:
   Remove(self: BindingSource,value: object)
    Removes the specified item from the list.
   
-   value: The item to remove from the underlying list represented by the 
-    System.Windows.Forms.BindingSource.List property.
+   value: The item to remove from the underlying list represented by the System.Windows.Forms.BindingSource.List property.
   """
   pass
  def RemoveAt(self,index):
@@ -355,9 +324,7 @@ class BindingSource:
  def ResetBindings(self,metadataChanged):
   """
   ResetBindings(self: BindingSource,metadataChanged: bool)
-   Causes a control bound to the System.Windows.Forms.BindingSource to reread all the items 
-    in the list and refresh their displayed values.
-  
+   Causes a control bound to the System.Windows.Forms.BindingSource to reread all the items in the list and refresh their displayed values.
   
    metadataChanged: true if the data schema has changed; false if only values have changed.
   """
@@ -365,16 +332,13 @@ class BindingSource:
  def ResetCurrentItem(self):
   """
   ResetCurrentItem(self: BindingSource)
-   Causes a control bound to the System.Windows.Forms.BindingSource to reread the currently 
-    selected item and refresh its displayed value.
+   Causes a control bound to the System.Windows.Forms.BindingSource to reread the currently selected item and refresh its displayed value.
   """
   pass
  def ResetItem(self,itemIndex):
   """
   ResetItem(self: BindingSource,itemIndex: int)
-   Causes a control bound to the System.Windows.Forms.BindingSource to reread the item at 
-    the specified index,and refresh its displayed value.
-  
+   Causes a control bound to the System.Windows.Forms.BindingSource to reread the item at the specified index,and refresh its displayed value.
   
    itemIndex: The zero-based index of the item that has changed.
   """

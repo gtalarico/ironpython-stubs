@@ -1,5 +1,9 @@
-class Image:
+class Image(MarshalByRefObject,ISerializable,ICloneable,IDisposable):
  """ An abstract base class that provides functionality for the System.Drawing.Bitmap and System.Drawing.Imaging.Metafile descended classes. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Image()
+
  def Clone(self):
   """
   Clone(self: Image) -> object
@@ -25,14 +29,10 @@ class Image:
    Returns: The System.Drawing.Image this method creates.
   FromFile(filename: str,useEmbeddedColorManagement: bool) -> Image
   
-   Creates an System.Drawing.Image from the specified file using embedded color management 
-    information in that file.
-  
+   Creates an System.Drawing.Image from the specified file using embedded color management information in that file.
   
    filename: A string that contains the name of the file from which to create the System.Drawing.Image.
-   useEmbeddedColorManagement: Set to true to use color management information embedded in the image file; otherwise,
-    false.
-  
+   useEmbeddedColorManagement: Set to true to use color management information embedded in the image file; otherwise,false.
    Returns: The System.Drawing.Image this method creates.
   """
   pass
@@ -47,14 +47,10 @@ class Image:
    Returns: The System.Drawing.Bitmap this method creates.
   FromHbitmap(hbitmap: IntPtr,hpalette: IntPtr) -> Bitmap
   
-   Creates a System.Drawing.Bitmap from a handle to a GDI bitmap and a handle to a GDI 
-    palette.
-  
+   Creates a System.Drawing.Bitmap from a handle to a GDI bitmap and a handle to a GDI palette.
   
    hbitmap: The GDI bitmap handle from which to create the System.Drawing.Bitmap.
-   hpalette: A handle to a GDI palette used to define the bitmap colors if the bitmap specified in the 
-    hBitmap parameter is not a device-independent bitmap (DIB).
-  
+   hpalette: A handle to a GDI palette used to define the bitmap colors if the bitmap specified in the hBitmap parameter is not a device-independent bitmap (DIB).
    Returns: The System.Drawing.Bitmap this method creates.
   """
   pass
@@ -69,18 +65,14 @@ class Image:
    Returns: The System.Drawing.Image this method creates.
   FromStream(stream: Stream,useEmbeddedColorManagement: bool) -> Image
   
-   Creates an System.Drawing.Image from the specified data stream,optionally using embedded 
-    color management information in that stream.
-  
+   Creates an System.Drawing.Image from the specified data stream,optionally using embedded color management information in that stream.
   
    stream: A System.IO.Stream that contains the data for this System.Drawing.Image.
    useEmbeddedColorManagement: true to use color management information embedded in the data stream; otherwise,false.
    Returns: The System.Drawing.Image this method creates.
   FromStream(stream: Stream,useEmbeddedColorManagement: bool,validateImageData: bool) -> Image
   
-   Creates an System.Drawing.Image from the specified data stream,optionally using embedded 
-    color management information and validating the image data.
-  
+   Creates an System.Drawing.Image from the specified data stream,optionally using embedded color management information and validating the image data.
   
    stream: A System.IO.Stream that contains the data for this System.Drawing.Image.
    useEmbeddedColorManagement: true to use color management information embedded in the data stream; otherwise,false.
@@ -94,11 +86,8 @@ class Image:
   
    Gets the bounds of the image in the specified unit.
   
-   pageUnit: One of the System.Drawing.GraphicsUnit values indicating the unit of measure for the 
-    bounding rectangle.
-  
-   Returns: The System.Drawing.RectangleF that represents the bounds of the image,in the specified 
-    unit.
+   pageUnit: One of the System.Drawing.GraphicsUnit values indicating the unit of measure for the bounding rectangle.
+   Returns: The System.Drawing.RectangleF that represents the bounds of the image,in the specified unit.
   """
   pass
  def GetEncoderParameterList(self,encoder):
@@ -108,10 +97,7 @@ class Image:
    Returns information about the parameters supported by the specified image encoder.
   
    encoder: A GUID that specifies the image encoder.
-   Returns: An System.Drawing.Imaging.EncoderParameters that contains an array of 
-    System.Drawing.Imaging.EncoderParameter objects. Each 
-    System.Drawing.Imaging.EncoderParameter contains information about one of the parameters 
-    supported by the specified image encoder.
+   Returns: An System.Drawing.Imaging.EncoderParameters that contains an array of System.Drawing.Imaging.EncoderParameter objects. Each System.Drawing.Imaging.EncoderParameter contains information about one of the parameters supported by the specified image encoder.
   """
   pass
  def GetFrameCount(self,dimension):
@@ -131,9 +117,7 @@ class Image:
   
    Returns the color depth,in number of bits per pixel,of the specified pixel format.
   
-   pixfmt: The System.Drawing.Imaging.PixelFormat member that specifies the format for which to find 
-    the size.
-  
+   pixfmt: The System.Drawing.Imaging.PixelFormat member that specifies the format for which to find the size.
    Returns: The color depth of the specified pixel format.
   """
   pass
@@ -155,9 +139,7 @@ class Image:
   """
   IsAlphaPixelFormat(pixfmt: PixelFormat) -> bool
   
-   Returns a value that indicates whether the pixel format for this System.Drawing.Image 
-    contains alpha information.
-  
+   Returns a value that indicates whether the pixel format for this System.Drawing.Image contains alpha information.
   
    pixfmt: The System.Drawing.Imaging.PixelFormat to test.
    Returns: true if pixfmt contains alpha information; otherwise,false.
@@ -191,12 +173,7 @@ class Image:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -217,8 +194,7 @@ class Image:
   RotateFlip(self: Image,rotateFlipType: RotateFlipType)
    Rotates,flips,or rotates and flips the System.Drawing.Image.
   
-   rotateFlipType: A System.Drawing.RotateFlipType member that specifies the type of rotation and flip to 
-    apply to the image.
+   rotateFlipType: A System.Drawing.RotateFlipType member that specifies the type of rotation and flip to apply to the image.
   """
   pass
  def Save(self,*__args):
@@ -233,9 +209,7 @@ class Image:
    filename: A string that contains the name of the file to which to save this System.Drawing.Image.
    format: The System.Drawing.Imaging.ImageFormat for this System.Drawing.Image.
   Save(self: Image,filename: str,encoder: ImageCodecInfo,encoderParams: EncoderParameters)
-   Saves this System.Drawing.Image to the specified file,with the specified encoder and 
-    image-encoder parameters.
-  
+   Saves this System.Drawing.Image to the specified file,with the specified encoder and image-encoder parameters.
   
    filename: A string that contains the name of the file to which to save this System.Drawing.Image.
    encoder: The System.Drawing.Imaging.ImageCodecInfo for this System.Drawing.Image.
@@ -246,35 +220,24 @@ class Image:
    stream: The System.IO.Stream where the image will be saved.
    format: An System.Drawing.Imaging.ImageFormat that specifies the format of the saved image.
   Save(self: Image,stream: Stream,encoder: ImageCodecInfo,encoderParams: EncoderParameters)
-   Saves this image to the specified stream,with the specified encoder and image encoder 
-    parameters.
-  
+   Saves this image to the specified stream,with the specified encoder and image encoder parameters.
   
    stream: The System.IO.Stream where the image will be saved.
    encoder: The System.Drawing.Imaging.ImageCodecInfo for this System.Drawing.Image.
-   encoderParams: An System.Drawing.Imaging.EncoderParameters that specifies parameters used by the image 
-    encoder.
+   encoderParams: An System.Drawing.Imaging.EncoderParameters that specifies parameters used by the image encoder.
   """
   pass
  def SaveAdd(self,*__args):
   """
   SaveAdd(self: Image,encoderParams: EncoderParameters)
-   Adds a frame to the file or stream specified in a previous call to the 
-    erload:System.Drawing.Image.Save method. Use this method to save selected frames from a 
-    multiple-frame image to another multiple-frame image.
+   Adds a frame to the file or stream specified in a previous call to the erload:System.Drawing.Image.Save method. Use this method to save selected frames from a multiple-frame image to another multiple-frame image.
   
-  
-   encoderParams: An System.Drawing.Imaging.EncoderParameters that holds parameters required by the image 
-    encoder that is used by the save-add operation.
-  
+   encoderParams: An System.Drawing.Imaging.EncoderParameters that holds parameters required by the image encoder that is used by the save-add operation.
   SaveAdd(self: Image,image: Image,encoderParams: EncoderParameters)
-   Adds a frame to the file or stream specified in a previous call to the 
-    erload:System.Drawing.Image.Save method.
-  
+   Adds a frame to the file or stream specified in a previous call to the erload:System.Drawing.Image.Save method.
   
    image: An System.Drawing.Image that contains the frame to add.
-   encoderParams: An System.Drawing.Imaging.EncoderParameters that holds parameters required by the image 
-    encoder that is used by the save-add operation.
+   encoderParams: An System.Drawing.Imaging.EncoderParameters that holds parameters required by the image encoder that is used by the save-add operation.
   """
   pass
  def SelectActiveFrame(self,dimension,frameIndex):

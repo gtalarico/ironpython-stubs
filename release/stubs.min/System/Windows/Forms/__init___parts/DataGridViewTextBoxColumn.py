@@ -1,14 +1,17 @@
-class DataGridViewTextBoxColumn:
+class DataGridViewTextBoxColumn(DataGridViewColumn,ICloneable,IDisposable,IComponent):
  """
  Hosts a collection of System.Windows.Forms.DataGridViewTextBoxCell cells.
  
  DataGridViewTextBoxColumn()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewTextBoxColumn()
+
  def Dispose(self):
   """
   Dispose(self: DataGridViewColumn,disposing: bool)
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def OnDataGridViewChanged(self,*args):

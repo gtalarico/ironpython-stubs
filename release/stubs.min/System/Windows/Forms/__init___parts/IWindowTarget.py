@@ -1,5 +1,9 @@
 class IWindowTarget:
  """ Defines the communication layer between a control and the Win32 API. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return IWindowTarget()
+
  def OnHandleChange(self,newHandle):
   """
   OnHandleChange(self: IWindowTarget,newHandle: IntPtr)

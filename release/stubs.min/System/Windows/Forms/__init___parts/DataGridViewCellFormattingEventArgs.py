@@ -1,9 +1,13 @@
-class DataGridViewCellFormattingEventArgs:
+class DataGridViewCellFormattingEventArgs(ConvertEventArgs):
  """
  Provides data for the System.Windows.Forms.DataGridView.CellFormatting event of a System.Windows.Forms.DataGridView.
  
  DataGridViewCellFormattingEventArgs(columnIndex: int,rowIndex: int,value: object,desiredType: Type,cellStyle: DataGridViewCellStyle)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewCellFormattingEventArgs()
+
  @staticmethod
  def __new__(self,columnIndex,rowIndex,value,desiredType,cellStyle):
   """ __new__(cls: type,columnIndex: int,rowIndex: int,value: object,desiredType: Type,cellStyle: DataGridViewCellStyle) """

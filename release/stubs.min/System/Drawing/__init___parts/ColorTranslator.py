@@ -1,5 +1,9 @@
-class ColorTranslator:
+class ColorTranslator(object):
  """ Translates colors to and from GDI+ System.Drawing.Color structures. This class cannot be inherited. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ColorTranslator()
+
  @staticmethod
  def FromHtml(htmlColor):
   """
@@ -8,8 +12,7 @@ class ColorTranslator:
    Translates an HTML color representation to a GDI+ System.Drawing.Color structure.
   
    htmlColor: The string representation of the Html color to translate.
-   Returns: The System.Drawing.Color structure that represents the translated HTML color or 
-    System.Drawing.Color.Empty if htmlColor is null.
+   Returns: The System.Drawing.Color structure that represents the translated HTML color or System.Drawing.Color.Empty if htmlColor is null.
   """
   pass
  @staticmethod
@@ -39,9 +42,7 @@ class ColorTranslator:
   """
   ToHtml(c: Color) -> str
   
-   Translates the specified System.Drawing.Color structure to an HTML string color 
-    representation.
-  
+   Translates the specified System.Drawing.Color structure to an HTML string color representation.
   
    c: The System.Drawing.Color structure to translate.
    Returns: The string that represents the HTML color.

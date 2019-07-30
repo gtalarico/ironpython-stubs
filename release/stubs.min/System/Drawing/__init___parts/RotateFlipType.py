@@ -1,9 +1,13 @@
-class RotateFlipType:
+class RotateFlipType(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies how much an image is rotated and the axis used to flip the image.
  
  enum RotateFlipType,values: Rotate180FlipNone (2),Rotate180FlipX (6),Rotate180FlipXY (0),Rotate180FlipY (4),Rotate270FlipNone (3),Rotate270FlipX (7),Rotate270FlipXY (1),Rotate270FlipY (5),Rotate90FlipNone (1),Rotate90FlipX (5),Rotate90FlipXY (3),Rotate90FlipY (7),RotateNoneFlipNone (0),RotateNoneFlipX (4),RotateNoneFlipXY (2),RotateNoneFlipY (6)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return RotateFlipType()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

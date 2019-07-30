@@ -1,10 +1,14 @@
-class LabelEditEventArgs:
+class LabelEditEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ListView.BeforeLabelEdit and System.Windows.Forms.ListView.AfterLabelEdit events.
  
  LabelEditEventArgs(item: int)
  LabelEditEventArgs(item: int,label: str)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return LabelEditEventArgs()
+
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass

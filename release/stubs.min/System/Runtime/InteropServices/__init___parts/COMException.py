@@ -1,4 +1,4 @@
-class COMException:
+class COMException(ExternalException):
  """
  The exception that is thrown when an unrecognized HRESULT is returned from a COM method call.
  
@@ -7,14 +7,17 @@ class COMException:
  COMException(message: str,inner: Exception)
  COMException(message: str,errorCode: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return COMException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToString(self):
   """
   ToString(self: COMException) -> str
   
    Converts the contents of the exception to a string.
-   Returns: A string containing the System.Exception.HResult,System.Exception.Message,
-    System.Exception.InnerException,and System.Exception.StackTrace properties of the 
-    exception.
+   Returns: A string containing the System.Exception.HResult,System.Exception.Message,System.Exception.InnerException,and System.Exception.StackTrace properties of the exception.
   """
   pass
  def __init__(self,*args):

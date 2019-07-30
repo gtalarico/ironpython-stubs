@@ -4,6 +4,11 @@ class DataObjectMethodType:
  
  enum DataObjectMethodType,values: Delete (4),Fill (0),Insert (3),Select (1),Update (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DataObjectMethodType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

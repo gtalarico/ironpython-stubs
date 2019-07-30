@@ -1,5 +1,10 @@
 class UCOMIEnumMoniker:
  """ Use System.Runtime.InteropServices.ComTypes.IEnumMoniker instead. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UCOMIEnumMoniker()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self,ppenum):
   """
   Clone(self: UCOMIEnumMoniker) -> UCOMIEnumMoniker

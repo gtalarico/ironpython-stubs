@@ -1,9 +1,13 @@
-class KeyEventArgs:
+class KeyEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.Control.KeyDown or System.Windows.Forms.Control.KeyUp event.
  
  KeyEventArgs(keyData: Keys)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return KeyEventArgs()
+
  @staticmethod
  def __new__(self,keyData):
   """ __new__(cls: type,keyData: Keys) """

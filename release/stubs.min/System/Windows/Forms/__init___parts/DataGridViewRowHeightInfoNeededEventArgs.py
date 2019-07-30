@@ -1,5 +1,9 @@
-class DataGridViewRowHeightInfoNeededEventArgs:
+class DataGridViewRowHeightInfoNeededEventArgs(EventArgs):
  """ Provides data for the System.Windows.Forms.DataGridView.RowHeightInfoNeeded event of a System.Windows.Forms.DataGridView. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewRowHeightInfoNeededEventArgs()
+
  Height=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets or sets the height of the row the event occurred for.
 

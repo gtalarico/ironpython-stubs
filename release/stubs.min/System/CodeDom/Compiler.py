@@ -3,13 +3,18 @@
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
 
 class ICodeGenerator:
  """ Defines an interface for generating code. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ICodeGenerator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreateEscapedIdentifier(self,value):
   """
   CreateEscapedIdentifier(self: ICodeGenerator,value: str) -> str
@@ -33,66 +38,51 @@ class ICodeGenerator:
  def GenerateCodeFromCompileUnit(self,e,w,o):
   """
   GenerateCodeFromCompileUnit(self: ICodeGenerator,e: CodeCompileUnit,w: TextWriter,o: CodeGeneratorOptions)
-   Generates code for the specified Code Document Object Model (CodeDOM) compilation unit 
-    and outputs it to the specified text writer using the specified options.
-  
+   Generates code for the specified Code Document Object Model (CodeDOM) compilation unit and outputs it to the specified text writer using the specified options.
   
    e: A System.CodeDom.CodeCompileUnit to generate code for.
    w: The System.IO.TextWriter to output code to.
-   o: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for 
-    generating code.
+   o: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for generating code.
   """
   pass
  def GenerateCodeFromExpression(self,e,w,o):
   """
   GenerateCodeFromExpression(self: ICodeGenerator,e: CodeExpression,w: TextWriter,o: CodeGeneratorOptions)
-   Generates code for the specified Code Document Object Model (CodeDOM) expression and 
-    outputs it to the specified text writer.
-  
+   Generates code for the specified Code Document Object Model (CodeDOM) expression and outputs it to the specified text writer.
   
    e: A System.CodeDom.CodeExpression that indicates the expression to generate code for.
    w: The System.IO.TextWriter to output code to.
-   o: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for 
-    generating code.
+   o: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for generating code.
   """
   pass
  def GenerateCodeFromNamespace(self,e,w,o):
   """
   GenerateCodeFromNamespace(self: ICodeGenerator,e: CodeNamespace,w: TextWriter,o: CodeGeneratorOptions)
-   Generates code for the specified Code Document Object Model (CodeDOM) namespace and 
-    outputs it to the specified text writer using the specified options.
-  
+   Generates code for the specified Code Document Object Model (CodeDOM) namespace and outputs it to the specified text writer using the specified options.
   
    e: A System.CodeDom.CodeNamespace that indicates the namespace to generate code for.
    w: The System.IO.TextWriter to output code to.
-   o: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for 
-    generating code.
+   o: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for generating code.
   """
   pass
  def GenerateCodeFromStatement(self,e,w,o):
   """
   GenerateCodeFromStatement(self: ICodeGenerator,e: CodeStatement,w: TextWriter,o: CodeGeneratorOptions)
-   Generates code for the specified Code Document Object Model (CodeDOM) statement and 
-    outputs it to the specified text writer using the specified options.
-  
+   Generates code for the specified Code Document Object Model (CodeDOM) statement and outputs it to the specified text writer using the specified options.
   
    e: A System.CodeDom.CodeStatement containing the CodeDOM elements to translate.
    w: The System.IO.TextWriter to output code to.
-   o: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for 
-    generating code.
+   o: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for generating code.
   """
   pass
  def GenerateCodeFromType(self,e,w,o):
   """
   GenerateCodeFromType(self: ICodeGenerator,e: CodeTypeDeclaration,w: TextWriter,o: CodeGeneratorOptions)
-   Generates code for the specified Code Document Object Model (CodeDOM) type declaration 
-    and outputs it to the specified text writer using the specified options.
-  
+   Generates code for the specified Code Document Object Model (CodeDOM) type declaration and outputs it to the specified text writer using the specified options.
   
    e: A System.CodeDom.CodeTypeDeclaration that indicates the type to generate code for.
    w: The System.IO.TextWriter to output code to.
-   o: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for 
-    generating code.
+   o: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for generating code.
   """
   pass
  def GetTypeOutput(self,type):
@@ -102,8 +92,7 @@ class ICodeGenerator:
    Gets the type indicated by the specified System.CodeDom.CodeTypeReference.
   
    type: A System.CodeDom.CodeTypeReference that indicates the type to return.
-   Returns: A text representation of the specified type for the language this code generator is 
-    designed to generate code in. For example,in Visual Basic,passing in type System.Int32 
+   Returns: A text representation of the specified type for the language this code generator is designed to generate code in. For example,in Visual Basic,passing in type System.Int32 
     will return "Integer".
   """
   pass
@@ -111,9 +100,7 @@ class ICodeGenerator:
   """
   IsValidIdentifier(self: ICodeGenerator,value: str) -> bool
   
-   Gets a value that indicates whether the specified value is a valid identifier for the 
-    current language.
-  
+   Gets a value that indicates whether the specified value is a valid identifier for the current language.
   
    value: The value to test for being a valid identifier.
    Returns: true if the value parameter is a valid identifier; otherwise,false.
@@ -123,9 +110,7 @@ class ICodeGenerator:
   """
   Supports(self: ICodeGenerator,supports: GeneratorSupport) -> bool
   
-   Gets a value indicating whether the generator provides support for the language features 
-    represented by the specified System.CodeDom.Compiler.GeneratorSupport object.
-  
+   Gets a value indicating whether the generator provides support for the language features represented by the specified System.CodeDom.Compiler.GeneratorSupport object.
   
    supports: The capabilities to test the generator for.
    Returns: true if the specified capabilities are supported; otherwise,false.
@@ -143,8 +128,13 @@ class ICodeGenerator:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class CodeGenerator:
+class CodeGenerator(object):
  """ Provides an example implementation of the System.CodeDom.Compiler.ICodeGenerator interface. This class is abstract. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeGenerator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ContinueOnNewLine(self,*args):
   """
   ContinueOnNewLine(self: CodeGenerator,st: str)
@@ -178,8 +168,7 @@ class CodeGenerator:
   GenerateArgumentReferenceExpression(self: CodeGenerator,e: CodeArgumentReferenceExpression)
    Generates code for the specified argument reference expression.
   
-   e: A System.CodeDom.CodeArgumentReferenceExpression that indicates the expression to 
-    generate code for.
+   e: A System.CodeDom.CodeArgumentReferenceExpression that indicates the expression to generate code for.
   """
   pass
  def GenerateArrayCreateExpression(self,*args):
@@ -187,8 +176,7 @@ class CodeGenerator:
   GenerateArrayCreateExpression(self: CodeGenerator,e: CodeArrayCreateExpression)
    Generates code for the specified array creation expression.
   
-   e: A System.CodeDom.CodeArrayCreateExpression that indicates the expression to generate code 
-    for.
+   e: A System.CodeDom.CodeArrayCreateExpression that indicates the expression to generate code for.
   """
   pass
  def GenerateArrayIndexerExpression(self,*args):
@@ -196,8 +184,7 @@ class CodeGenerator:
   GenerateArrayIndexerExpression(self: CodeGenerator,e: CodeArrayIndexerExpression)
    Generates code for the specified array indexer expression.
   
-   e: A System.CodeDom.CodeArrayIndexerExpression that indicates the expression to generate 
-    code for.
+   e: A System.CodeDom.CodeArrayIndexerExpression that indicates the expression to generate code for.
   """
   pass
  def GenerateAssignStatement(self,*args):
@@ -213,8 +200,7 @@ class CodeGenerator:
   GenerateAttachEventStatement(self: CodeGenerator,e: CodeAttachEventStatement)
    Generates code for the specified attach event statement.
   
-   e: A System.CodeDom.CodeAttachEventStatement that indicates the statement to generate code 
-    for.
+   e: A System.CodeDom.CodeAttachEventStatement that indicates the statement to generate code for.
   """
   pass
  def GenerateAttributeDeclarationsEnd(self,*args):
@@ -222,8 +208,7 @@ class CodeGenerator:
   GenerateAttributeDeclarationsEnd(self: CodeGenerator,attributes: CodeAttributeDeclarationCollection)
    Generates code for the specified attribute block end.
   
-   attributes: A System.CodeDom.CodeAttributeDeclarationCollection that indicates the end of the 
-    attribute block to generate code for.
+   attributes: A System.CodeDom.CodeAttributeDeclarationCollection that indicates the end of the attribute block to generate code for.
   """
   pass
  def GenerateAttributeDeclarationsStart(self,*args):
@@ -231,8 +216,7 @@ class CodeGenerator:
   GenerateAttributeDeclarationsStart(self: CodeGenerator,attributes: CodeAttributeDeclarationCollection)
    Generates code for the specified attribute block start.
   
-   attributes: A System.CodeDom.CodeAttributeDeclarationCollection that indicates the start of the 
-    attribute block to generate code for.
+   attributes: A System.CodeDom.CodeAttributeDeclarationCollection that indicates the start of the attribute block to generate code for.
   """
   pass
  def GenerateBaseReferenceExpression(self,*args):
@@ -240,8 +224,7 @@ class CodeGenerator:
   GenerateBaseReferenceExpression(self: CodeGenerator,e: CodeBaseReferenceExpression)
    Generates code for the specified base reference expression.
   
-   e: A System.CodeDom.CodeBaseReferenceExpression that indicates the expression to generate 
-    code for.
+   e: A System.CodeDom.CodeBaseReferenceExpression that indicates the expression to generate code for.
   """
   pass
  def GenerateBinaryOperatorExpression(self,*args):
@@ -249,8 +232,7 @@ class CodeGenerator:
   GenerateBinaryOperatorExpression(self: CodeGenerator,e: CodeBinaryOperatorExpression)
    Generates code for the specified binary operator expression.
   
-   e: A System.CodeDom.CodeBinaryOperatorExpression that indicates the expression to generate 
-    code for.
+   e: A System.CodeDom.CodeBinaryOperatorExpression that indicates the expression to generate code for.
   """
   pass
  def GenerateCastExpression(self,*args):
@@ -264,9 +246,7 @@ class CodeGenerator:
  def GenerateCodeFromMember(self,member,writer,options):
   """
   GenerateCodeFromMember(self: CodeGenerator,member: CodeTypeMember,writer: TextWriter,options: CodeGeneratorOptions)
-   Generates code for the specified class member using the specified text writer and code 
-    generator options.
-  
+   Generates code for the specified class member using the specified text writer and code generator options.
   
    member: The class member to generate code for.
    writer: The text writer to output code to.
@@ -871,8 +851,7 @@ class CodeGenerator:
   OutputMemberAccessModifier(self: CodeGenerator,attributes: MemberAttributes)
    Generates code for the specified member access modifier.
   
-   attributes: One of the enumeration values that indicates the member access modifier to generate code 
-    for.
+   attributes: One of the enumeration values that indicates the member access modifier to generate code for.
   """
   pass
  def OutputMemberScopeModifier(self,*args):
@@ -880,8 +859,7 @@ class CodeGenerator:
   OutputMemberScopeModifier(self: CodeGenerator,attributes: MemberAttributes)
    Generates code for the specified member scope modifier.
   
-   attributes: One of the enumeration values that indicates the member scope modifier to generate code 
-    for.
+   attributes: One of the enumeration values that indicates the member scope modifier to generate code for.
   """
   pass
  def OutputOperator(self,*args):
@@ -959,9 +937,7 @@ class CodeGenerator:
  def ValidateIdentifiers(e):
   """
   ValidateIdentifiers(e: CodeObject)
-   Attempts to validate each identifier field contained in the specified 
-    System.CodeDom.CodeObject or System.CodeDom tree.
-  
+   Attempts to validate each identifier field contained in the specified System.CodeDom.CodeObject or System.CodeDom tree.
   
    e: An object to test for invalid identifiers.
   """
@@ -1041,115 +1017,93 @@ class CodeGenerator:
 
 class ICodeCompiler:
  """ Defines an interface for invoking compilation of source code or a CodeDOM tree using a specific compiler. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ICodeCompiler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CompileAssemblyFromDom(self,options,compilationUnit):
   """
   CompileAssemblyFromDom(self: ICodeCompiler,options: CompilerParameters,compilationUnit: CodeCompileUnit) -> CompilerResults
   
-   Compiles an assembly from the System.CodeDom tree contained in the specified 
-    System.CodeDom.CodeCompileUnit,using the specified compiler settings.
+   Compiles an assembly from the System.CodeDom tree contained in the specified System.CodeDom.CodeCompileUnit,using the specified compiler settings.
   
-  
-   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for 
-    compilation.
-  
+   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for compilation.
    compilationUnit: A System.CodeDom.CodeCompileUnit that indicates the code to compile.
-   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of 
-    compilation.
+   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of compilation.
   """
   pass
  def CompileAssemblyFromDomBatch(self,options,compilationUnits):
   """
   CompileAssemblyFromDomBatch(self: ICodeCompiler,options: CompilerParameters,compilationUnits: Array[CodeCompileUnit]) -> CompilerResults
   
-   Compiles an assembly based on the System.CodeDom trees contained in the specified array 
-    of System.CodeDom.CodeCompileUnit objects,using the specified compiler settings.
+   Compiles an assembly based on the System.CodeDom trees contained in the specified array of System.CodeDom.CodeCompileUnit objects,using the specified compiler settings.
   
-  
-   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for 
-    compilation.
-  
+   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for compilation.
    compilationUnits: An array of type System.CodeDom.CodeCompileUnit that indicates the code to compile.
-   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of 
-    compilation.
+   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of compilation.
   """
   pass
  def CompileAssemblyFromFile(self,options,fileName):
   """
   CompileAssemblyFromFile(self: ICodeCompiler,options: CompilerParameters,fileName: str) -> CompilerResults
   
-   Compiles an assembly from the source code contained within the specified file,using the 
-    specified compiler settings.
+   Compiles an assembly from the source code contained within the specified file,using the specified compiler settings.
   
-  
-   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for 
-    compilation.
-  
+   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for compilation.
    fileName: The file name of the file that contains the source code to compile.
-   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of 
-    compilation.
+   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of compilation.
   """
   pass
  def CompileAssemblyFromFileBatch(self,options,fileNames):
   """
   CompileAssemblyFromFileBatch(self: ICodeCompiler,options: CompilerParameters,fileNames: Array[str]) -> CompilerResults
   
-   Compiles an assembly from the source code contained within the specified files,using the 
-    specified compiler settings.
+   Compiles an assembly from the source code contained within the specified files,using the specified compiler settings.
   
-  
-   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for 
-    compilation.
-  
+   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for compilation.
    fileNames: The file names of the files to compile.
-   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of 
-    compilation.
+   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of compilation.
   """
   pass
  def CompileAssemblyFromSource(self,options,source):
   """
   CompileAssemblyFromSource(self: ICodeCompiler,options: CompilerParameters,source: str) -> CompilerResults
   
-   Compiles an assembly from the specified string containing source code,using the 
-    specified compiler settings.
+   Compiles an assembly from the specified string containing source code,using the specified compiler settings.
   
-  
-   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for 
-    compilation.
-  
+   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for compilation.
    source: The source code to compile.
-   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of 
-    compilation.
+   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of compilation.
   """
   pass
  def CompileAssemblyFromSourceBatch(self,options,sources):
   """
   CompileAssemblyFromSourceBatch(self: ICodeCompiler,options: CompilerParameters,sources: Array[str]) -> CompilerResults
   
-   Compiles an assembly from the specified array of strings containing source code,using 
-    the specified compiler settings.
+   Compiles an assembly from the specified array of strings containing source code,using the specified compiler settings.
   
-  
-   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for 
-    compilation.
-  
+   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for compilation.
    sources: The source code strings to compile.
-   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of 
-    compilation.
+   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of compilation.
   """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class CodeCompiler:
+class CodeCompiler(CodeGenerator):
  """ Provides an example implementation of the System.CodeDom.Compiler.ICodeCompiler interface. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeCompiler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CmdArgsFromParameters(self,*args):
   """
   CmdArgsFromParameters(self: CodeCompiler,options: CompilerParameters) -> str
   
-   Gets the command arguments to be passed to the compiler from the specified 
-    System.CodeDom.Compiler.CompilerParameters.
-  
+   Gets the command arguments to be passed to the compiler from the specified System.CodeDom.Compiler.CompilerParameters.
   
    options: A System.CodeDom.Compiler.CompilerParameters that indicates the compiler options.
    Returns: The command arguments.
@@ -1187,9 +1141,7 @@ class CodeCompiler:
   """
   FromDom(self: CodeCompiler,options: CompilerParameters,e: CodeCompileUnit) -> CompilerResults
   
-   Compiles the specified compile unit using the specified options,and returns the results 
-    from the compilation.
-  
+   Compiles the specified compile unit using the specified options,and returns the results from the compilation.
   
    options: A System.CodeDom.Compiler.CompilerParameters object that indicates the compiler options.
    e: A System.CodeDom.CodeCompileUnit object that indicates the source to compile.
@@ -1200,9 +1152,7 @@ class CodeCompiler:
   """
   FromDomBatch(self: CodeCompiler,options: CompilerParameters,ea: Array[CodeCompileUnit]) -> CompilerResults
   
-   Compiles the specified compile units using the specified options,and returns the results 
-    from the compilation.
-  
+   Compiles the specified compile units using the specified options,and returns the results from the compilation.
   
    options: A System.CodeDom.Compiler.CompilerParameters object that indicates the compiler options.
    ea: An array of System.CodeDom.CodeCompileUnit objects that indicates the source to compile.
@@ -1213,9 +1163,7 @@ class CodeCompiler:
   """
   FromFile(self: CodeCompiler,options: CompilerParameters,fileName: str) -> CompilerResults
   
-   Compiles the specified file using the specified options,and returns the results from the 
-    compilation.
-  
+   Compiles the specified file using the specified options,and returns the results from the compilation.
   
    options: A System.CodeDom.Compiler.CompilerParameters object that indicates the compiler options.
    fileName: The file name to compile.
@@ -1226,9 +1174,7 @@ class CodeCompiler:
   """
   FromFileBatch(self: CodeCompiler,options: CompilerParameters,fileNames: Array[str]) -> CompilerResults
   
-   Compiles the specified files using the specified options,and returns the results from 
-    the compilation.
-  
+   Compiles the specified files using the specified options,and returns the results from the compilation.
   
    options: A System.CodeDom.Compiler.CompilerParameters object that indicates the compiler options.
    fileNames: An array of strings that indicates the file names of the files to compile.
@@ -1239,9 +1185,7 @@ class CodeCompiler:
   """
   FromSource(self: CodeCompiler,options: CompilerParameters,source: str) -> CompilerResults
   
-   Compiles the specified source code string using the specified options,and returns the 
-    results from the compilation.
-  
+   Compiles the specified source code string using the specified options,and returns the results from the compilation.
   
    options: A System.CodeDom.Compiler.CompilerParameters object that indicates the compiler options.
    source: The source code string to compile.
@@ -1252,9 +1196,7 @@ class CodeCompiler:
   """
   FromSourceBatch(self: CodeCompiler,options: CompilerParameters,sources: Array[str]) -> CompilerResults
   
-   Compiles the specified source code strings using the specified options,and returns the 
-    results from the compilation.
-  
+   Compiles the specified source code strings using the specified options,and returns the results from the compilation.
   
    options: A System.CodeDom.Compiler.CompilerParameters object that indicates the compiler options.
    sources: An array of strings containing the source code to compile.
@@ -1266,8 +1208,7 @@ class CodeCompiler:
   GenerateArgumentReferenceExpression(self: CodeGenerator,e: CodeArgumentReferenceExpression)
    Generates code for the specified argument reference expression.
   
-   e: A System.CodeDom.CodeArgumentReferenceExpression that indicates the expression to 
-    generate code for.
+   e: A System.CodeDom.CodeArgumentReferenceExpression that indicates the expression to generate code for.
   """
   pass
  def GenerateArrayCreateExpression(self,*args):
@@ -1275,8 +1216,7 @@ class CodeCompiler:
   GenerateArrayCreateExpression(self: CodeGenerator,e: CodeArrayCreateExpression)
    Generates code for the specified array creation expression.
   
-   e: A System.CodeDom.CodeArrayCreateExpression that indicates the expression to generate code 
-    for.
+   e: A System.CodeDom.CodeArrayCreateExpression that indicates the expression to generate code for.
   """
   pass
  def GenerateArrayIndexerExpression(self,*args):
@@ -1284,8 +1224,7 @@ class CodeCompiler:
   GenerateArrayIndexerExpression(self: CodeGenerator,e: CodeArrayIndexerExpression)
    Generates code for the specified array indexer expression.
   
-   e: A System.CodeDom.CodeArrayIndexerExpression that indicates the expression to generate 
-    code for.
+   e: A System.CodeDom.CodeArrayIndexerExpression that indicates the expression to generate code for.
   """
   pass
  def GenerateAssignStatement(self,*args):
@@ -1301,8 +1240,7 @@ class CodeCompiler:
   GenerateAttachEventStatement(self: CodeGenerator,e: CodeAttachEventStatement)
    Generates code for the specified attach event statement.
   
-   e: A System.CodeDom.CodeAttachEventStatement that indicates the statement to generate code 
-    for.
+   e: A System.CodeDom.CodeAttachEventStatement that indicates the statement to generate code for.
   """
   pass
  def GenerateAttributeDeclarationsEnd(self,*args):
@@ -1310,8 +1248,7 @@ class CodeCompiler:
   GenerateAttributeDeclarationsEnd(self: CodeGenerator,attributes: CodeAttributeDeclarationCollection)
    Generates code for the specified attribute block end.
   
-   attributes: A System.CodeDom.CodeAttributeDeclarationCollection that indicates the end of the 
-    attribute block to generate code for.
+   attributes: A System.CodeDom.CodeAttributeDeclarationCollection that indicates the end of the attribute block to generate code for.
   """
   pass
  def GenerateAttributeDeclarationsStart(self,*args):
@@ -1319,8 +1256,7 @@ class CodeCompiler:
   GenerateAttributeDeclarationsStart(self: CodeGenerator,attributes: CodeAttributeDeclarationCollection)
    Generates code for the specified attribute block start.
   
-   attributes: A System.CodeDom.CodeAttributeDeclarationCollection that indicates the start of the 
-    attribute block to generate code for.
+   attributes: A System.CodeDom.CodeAttributeDeclarationCollection that indicates the start of the attribute block to generate code for.
   """
   pass
  def GenerateBaseReferenceExpression(self,*args):
@@ -1328,8 +1264,7 @@ class CodeCompiler:
   GenerateBaseReferenceExpression(self: CodeGenerator,e: CodeBaseReferenceExpression)
    Generates code for the specified base reference expression.
   
-   e: A System.CodeDom.CodeBaseReferenceExpression that indicates the expression to generate 
-    code for.
+   e: A System.CodeDom.CodeBaseReferenceExpression that indicates the expression to generate code for.
   """
   pass
  def GenerateBinaryOperatorExpression(self,*args):
@@ -1337,8 +1272,7 @@ class CodeCompiler:
   GenerateBinaryOperatorExpression(self: CodeGenerator,e: CodeBinaryOperatorExpression)
    Generates code for the specified binary operator expression.
   
-   e: A System.CodeDom.CodeBinaryOperatorExpression that indicates the expression to generate 
-    code for.
+   e: A System.CodeDom.CodeBinaryOperatorExpression that indicates the expression to generate code for.
   """
   pass
  def GenerateCastExpression(self,*args):
@@ -1866,8 +1800,7 @@ class CodeCompiler:
   
    options: A System.CodeDom.Compiler.CompilerParameters object that indicates the compiler options.
    cmdArgs: A command arguments string.
-   Returns: The command arguments to use to generate a response file,or null if there are no 
-    response file arguments.
+   Returns: The command arguments to use to generate a response file,or null if there are no response file arguments.
   """
   pass
  def GetTypeOutput(self,*args):
@@ -1959,8 +1892,7 @@ class CodeCompiler:
   OutputMemberAccessModifier(self: CodeGenerator,attributes: MemberAttributes)
    Generates code for the specified member access modifier.
   
-   attributes: One of the enumeration values that indicates the member access modifier to generate code 
-    for.
+   attributes: One of the enumeration values that indicates the member access modifier to generate code for.
   """
   pass
  def OutputMemberScopeModifier(self,*args):
@@ -1968,8 +1900,7 @@ class CodeCompiler:
   OutputMemberScopeModifier(self: CodeGenerator,attributes: MemberAttributes)
    Generates code for the specified member scope modifier.
   
-   attributes: One of the enumeration values that indicates the member scope modifier to generate code 
-    for.
+   attributes: One of the enumeration values that indicates the member scope modifier to generate code for.
   """
   pass
  def OutputOperator(self,*args):
@@ -2132,54 +2063,44 @@ class CodeCompiler:
 
 
 
-class CodeDomProvider:
+class CodeDomProvider(Component):
  """ Provides a base class for System.CodeDom.Compiler.CodeDomProvider implementations. This class is abstract. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeDomProvider()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CompileAssemblyFromDom(self,options,compilationUnits):
   """
   CompileAssemblyFromDom(self: CodeDomProvider,options: CompilerParameters,*compilationUnits: Array[CodeCompileUnit]) -> CompilerResults
   
-   Compiles an assembly based on the System.CodeDom trees contained in the specified array 
-    of System.CodeDom.CodeCompileUnit objects,using the specified compiler settings.
+   Compiles an assembly based on the System.CodeDom trees contained in the specified array of System.CodeDom.CodeCompileUnit objects,using the specified compiler settings.
   
-  
-   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for the 
-    compilation.
-  
+   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for the compilation.
    compilationUnits: An array of type System.CodeDom.CodeCompileUnit that indicates the code to compile.
-   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of the 
-    compilation.
+   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of the compilation.
   """
   pass
  def CompileAssemblyFromFile(self,options,fileNames):
   """
   CompileAssemblyFromFile(self: CodeDomProvider,options: CompilerParameters,*fileNames: Array[str]) -> CompilerResults
   
-   Compiles an assembly from the source code contained in the specified files,using the 
-    specified compiler settings.
+   Compiles an assembly from the source code contained in the specified files,using the specified compiler settings.
   
-  
-   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for the 
-    compilation.
-  
+   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for the compilation.
    fileNames: An array of the names of the files to compile.
-   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of 
-    compilation.
+   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of compilation.
   """
   pass
  def CompileAssemblyFromSource(self,options,sources):
   """
   CompileAssemblyFromSource(self: CodeDomProvider,options: CompilerParameters,*sources: Array[str]) -> CompilerResults
   
-   Compiles an assembly from the specified array of strings containing source code,using 
-    the specified compiler settings.
+   Compiles an assembly from the specified array of strings containing source code,using the specified compiler settings.
   
-  
-   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the compiler settings 
-    for this compilation.
-  
+   options: A System.CodeDom.Compiler.CompilerParameters object that indicates the compiler settings for this compilation.
    sources: An array of source code strings to compile.
-   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of 
-    compilation.
+   Returns: A System.CodeDom.Compiler.CompilerResults object that indicates the results of compilation.
   """
   pass
  def CreateCompiler(self):
@@ -2187,8 +2108,7 @@ class CodeDomProvider:
   CreateCompiler(self: CodeDomProvider) -> ICodeCompiler
   
    When overridden in a derived class,creates a new code compiler.
-   Returns: An System.CodeDom.Compiler.ICodeCompiler that can be used for compilation of 
-    System.CodeDom based source code representations.
+   Returns: An System.CodeDom.Compiler.ICodeCompiler that can be used for compilation of System.CodeDom based source code representations.
   """
   pass
  def CreateEscapedIdentifier(self,value):
@@ -2206,28 +2126,19 @@ class CodeDomProvider:
   CreateGenerator(self: CodeDomProvider) -> ICodeGenerator
   
    When overridden in a derived class,creates a new code generator.
-   Returns: An System.CodeDom.Compiler.ICodeGenerator that can be used to generate System.CodeDom 
-    based source code representations.
-  
+   Returns: An System.CodeDom.Compiler.ICodeGenerator that can be used to generate System.CodeDom based source code representations.
   CreateGenerator(self: CodeDomProvider,output: TextWriter) -> ICodeGenerator
   
-   When overridden in a derived class,creates a new code generator using the specified 
-    System.IO.TextWriter for output.
-  
+   When overridden in a derived class,creates a new code generator using the specified System.IO.TextWriter for output.
   
    output: A System.IO.TextWriter to use to output.
-   Returns: An System.CodeDom.Compiler.ICodeGenerator that can be used to generate System.CodeDom 
-    based source code representations.
-  
+   Returns: An System.CodeDom.Compiler.ICodeGenerator that can be used to generate System.CodeDom based source code representations.
   CreateGenerator(self: CodeDomProvider,fileName: str) -> ICodeGenerator
   
-   When overridden in a derived class,creates a new code generator using the specified file 
-    name for output.
-  
+   When overridden in a derived class,creates a new code generator using the specified file name for output.
   
    fileName: The file name to output to.
-   Returns: An System.CodeDom.Compiler.ICodeGenerator that can be used to generate System.CodeDom 
-    based source code representations.
+   Returns: An System.CodeDom.Compiler.ICodeGenerator that can be used to generate System.CodeDom based source code representations.
   """
   pass
  def CreateParser(self):
@@ -2235,8 +2146,7 @@ class CodeDomProvider:
   CreateParser(self: CodeDomProvider) -> ICodeParser
   
    When overridden in a derived class,creates a new code parser.
-   Returns: An System.CodeDom.Compiler.ICodeParser that can be used to parse source code. The base 
-    implementation always returns null.
+   Returns: An System.CodeDom.Compiler.ICodeParser that can be used to parse source code. The base implementation always returns null.
   """
   pass
  @staticmethod
@@ -2264,98 +2174,69 @@ class CodeDomProvider:
  def Dispose(self):
   """
   Dispose(self: Component,disposing: bool)
-   Releases the unmanaged resources used by the System.ComponentModel.Component and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.ComponentModel.Component and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GenerateCodeFromCompileUnit(self,compileUnit,writer,options):
   """
   GenerateCodeFromCompileUnit(self: CodeDomProvider,compileUnit: CodeCompileUnit,writer: TextWriter,options: CodeGeneratorOptions)
-   Generates code for the specified Code Document Object Model (CodeDOM) compilation unit 
-    and sends it to the specified text writer,using the specified options.
-  
+   Generates code for the specified Code Document Object Model (CodeDOM) compilation unit and sends it to the specified text writer,using the specified options.
   
    compileUnit: A System.CodeDom.CodeCompileUnit for which to generate code.
    writer: The System.IO.TextWriter to which the output code is sent.
-   options: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for 
-    generating code.
+   options: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for generating code.
   """
   pass
  def GenerateCodeFromExpression(self,expression,writer,options):
   """
   GenerateCodeFromExpression(self: CodeDomProvider,expression: CodeExpression,writer: TextWriter,options: CodeGeneratorOptions)
-   Generates code for the specified Code Document Object Model (CodeDOM) expression and 
-    sends it to the specified text writer,using the specified options.
+   Generates code for the specified Code Document Object Model (CodeDOM) expression and sends it to the specified text writer,using the specified options.
   
-  
-   expression: A System.CodeDom.CodeExpression object that indicates the expression for which to 
-    generate code.
-  
+   expression: A System.CodeDom.CodeExpression object that indicates the expression for which to generate code.
    writer: The System.IO.TextWriter to which output code is sent.
-   options: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for 
-    generating code.
+   options: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for generating code.
   """
   pass
  def GenerateCodeFromMember(self,member,writer,options):
   """
   GenerateCodeFromMember(self: CodeDomProvider,member: CodeTypeMember,writer: TextWriter,options: CodeGeneratorOptions)
-   Generates code for the specified Code Document Object Model (CodeDOM) member declaration 
-    and sends it to the specified text writer,using the specified options.
+   Generates code for the specified Code Document Object Model (CodeDOM) member declaration and sends it to the specified text writer,using the specified options.
   
-  
-   member: A System.CodeDom.CodeTypeMember object that indicates the member for which to generate 
-    code.
-  
+   member: A System.CodeDom.CodeTypeMember object that indicates the member for which to generate code.
    writer: The System.IO.TextWriter to which output code is sent.
-   options: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for 
-    generating code.
+   options: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for generating code.
   """
   pass
  def GenerateCodeFromNamespace(self,codeNamespace,writer,options):
   """
   GenerateCodeFromNamespace(self: CodeDomProvider,codeNamespace: CodeNamespace,writer: TextWriter,options: CodeGeneratorOptions)
-   Generates code for the specified Code Document Object Model (CodeDOM) namespace and sends 
-    it to the specified text writer,using the specified options.
+   Generates code for the specified Code Document Object Model (CodeDOM) namespace and sends it to the specified text writer,using the specified options.
   
-  
-   codeNamespace: A System.CodeDom.CodeNamespace object that indicates the namespace for which to generate 
-    code.
-  
+   codeNamespace: A System.CodeDom.CodeNamespace object that indicates the namespace for which to generate code.
    writer: The System.IO.TextWriter to which output code is sent.
-   options: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for 
-    generating code.
+   options: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for generating code.
   """
   pass
  def GenerateCodeFromStatement(self,statement,writer,options):
   """
   GenerateCodeFromStatement(self: CodeDomProvider,statement: CodeStatement,writer: TextWriter,options: CodeGeneratorOptions)
-   Generates code for the specified Code Document Object Model (CodeDOM) statement and sends 
-    it to the specified text writer,using the specified options.
-  
+   Generates code for the specified Code Document Object Model (CodeDOM) statement and sends it to the specified text writer,using the specified options.
   
    statement: A System.CodeDom.CodeStatement containing the CodeDOM elements for which to generate code.
    writer: The System.IO.TextWriter to which output code is sent.
-   options: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for 
-    generating code.
+   options: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for generating code.
   """
   pass
  def GenerateCodeFromType(self,codeType,writer,options):
   """
   GenerateCodeFromType(self: CodeDomProvider,codeType: CodeTypeDeclaration,writer: TextWriter,options: CodeGeneratorOptions)
-   Generates code for the specified Code Document Object Model (CodeDOM) type declaration 
-    and sends it to the specified text writer,using the specified options.
+   Generates code for the specified Code Document Object Model (CodeDOM) type declaration and sends it to the specified text writer,using the specified options.
   
-  
-   codeType: A System.CodeDom.CodeTypeDeclaration object that indicates the type for which to generate 
-    code.
-  
+   codeType: A System.CodeDom.CodeTypeDeclaration object that indicates the type for which to generate code.
    writer: The System.IO.TextWriter to which output code is sent.
-   options: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for 
-    generating code.
+   options: A System.CodeDom.Compiler.CodeGeneratorOptions that indicates the options to use for generating code.
   """
   pass
  @staticmethod
@@ -2364,8 +2245,7 @@ class CodeDomProvider:
   GetAllCompilerInfo() -> Array[CompilerInfo]
   
    Returns the language provider and compiler configuration settings for this computer.
-   Returns: An array of type System.CodeDom.Compiler.CompilerInfo representing the settings of all 
-    configured System.CodeDom.Compiler.CodeDomProvider implementations.
+   Returns: An array of type System.CodeDom.Compiler.CompilerInfo representing the settings of all configured System.CodeDom.Compiler.CodeDomProvider implementations.
   """
   pass
  @staticmethod
@@ -2373,13 +2253,10 @@ class CodeDomProvider:
   """
   GetCompilerInfo(language: str) -> CompilerInfo
   
-   Returns the language provider and compiler configuration settings for the specified 
-    language.
-  
+   Returns the language provider and compiler configuration settings for the specified language.
   
    language: A language name.
-   Returns: A System.CodeDom.Compiler.CompilerInfo object populated with settings of the configured 
-    System.CodeDom.Compiler.CodeDomProvider implementation.
+   Returns: A System.CodeDom.Compiler.CompilerInfo object populated with settings of the configured System.CodeDom.Compiler.CodeDomProvider implementation.
   """
   pass
  def GetConverter(self,type):
@@ -2389,8 +2266,7 @@ class CodeDomProvider:
    Gets a System.ComponentModel.TypeConverter for the specified data type.
   
    type: The type of object to retrieve a type converter for.
-   Returns: A System.ComponentModel.TypeConverter for the specified type,or null if a 
-    System.ComponentModel.TypeConverter for the specified type cannot be found.
+   Returns: A System.ComponentModel.TypeConverter for the specified type,or null if a System.ComponentModel.TypeConverter for the specified type cannot be found.
   """
   pass
  @staticmethod
@@ -2398,27 +2274,21 @@ class CodeDomProvider:
   """
   GetLanguageFromExtension(extension: str) -> str
   
-   Returns a language name associated with the specified file name extension,as configured 
-    in the System.CodeDom.Compiler.CodeDomProvider compiler configuration section.
-  
+   Returns a language name associated with the specified file name extension,as configured in the System.CodeDom.Compiler.CodeDomProvider compiler configuration section.
   
    extension: A file name extension.
-   Returns: A language name associated with the file name extension,as configured in the 
-    System.CodeDom.Compiler.CodeDomProvider compiler configuration settings.
+   Returns: A language name associated with the file name extension,as configured in the System.CodeDom.Compiler.CodeDomProvider compiler configuration settings.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified 
+    service.
   """
   pass
  def GetTypeOutput(self,type):
@@ -2428,8 +2298,7 @@ class CodeDomProvider:
    Gets the type indicated by the specified System.CodeDom.CodeTypeReference.
   
    type: A System.CodeDom.CodeTypeReference that indicates the type to return.
-   Returns: A text representation of the specified type,formatted for the language in which code is 
-    generated by this code generator. In Visual Basic,for example,passing in a 
+   Returns: A text representation of the specified type,formatted for the language in which code is generated by this code generator. In Visual Basic,for example,passing in a 
     System.CodeDom.CodeTypeReference for the System.Int32 type will return "Integer".
   """
   pass
@@ -2438,13 +2307,10 @@ class CodeDomProvider:
   """
   IsDefinedExtension(extension: str) -> bool
   
-   Tests whether a file name extension has an associated 
-    System.CodeDom.Compiler.CodeDomProvider implementation configured on the computer.
-  
+   Tests whether a file name extension has an associated System.CodeDom.Compiler.CodeDomProvider implementation configured on the computer.
   
    extension: A file name extension.
-   Returns: true if a System.CodeDom.Compiler.CodeDomProvider implementation is configured for the 
-    specified file name extension; otherwise,false.
+   Returns: true if a System.CodeDom.Compiler.CodeDomProvider implementation is configured for the specified file name extension; otherwise,false.
   """
   pass
  @staticmethod
@@ -2452,22 +2318,17 @@ class CodeDomProvider:
   """
   IsDefinedLanguage(language: str) -> bool
   
-   Tests whether a language has a System.CodeDom.Compiler.CodeDomProvider implementation 
-    configured on the computer.
-  
+   Tests whether a language has a System.CodeDom.Compiler.CodeDomProvider implementation configured on the computer.
   
    language: The language name.
-   Returns: true if a System.CodeDom.Compiler.CodeDomProvider implementation is configured for the 
-    specified language; otherwise,false.
+   Returns: true if a System.CodeDom.Compiler.CodeDomProvider implementation is configured for the specified language; otherwise,false.
   """
   pass
  def IsValidIdentifier(self,value):
   """
   IsValidIdentifier(self: CodeDomProvider,value: str) -> bool
   
-   Returns a value that indicates whether the specified value is a valid identifier for the 
-    current language.
-  
+   Returns a value that indicates whether the specified value is a valid identifier for the current language.
   
    value: The value to verify as a valid identifier.
    Returns: true if the value parameter is a valid identifier; otherwise,false.
@@ -2479,11 +2340,9 @@ class CodeDomProvider:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -2496,9 +2355,7 @@ class CodeDomProvider:
   """
   Parse(self: CodeDomProvider,codeStream: TextReader) -> CodeCompileUnit
   
-   Compiles the code read from the specified text stream into a 
-    System.CodeDom.CodeCompileUnit.
-  
+   Compiles the code read from the specified text stream into a System.CodeDom.CodeCompileUnit.
   
    codeStream: A System.IO.TextReader object that is used to read the code to be parsed.
    Returns: A System.CodeDom.CodeCompileUnit that contains a representation of the parsed code.
@@ -2510,9 +2367,7 @@ class CodeDomProvider:
   
    Returns a value indicating whether the specified code generation support is provided.
   
-   generatorSupport: A System.CodeDom.Compiler.GeneratorSupport object that indicates the type of code 
-    generation support to verify.
-  
+   generatorSupport: A System.CodeDom.Compiler.GeneratorSupport object that indicates the type of code generation support to verify.
    Returns: true if the specified code generation support is provided; otherwise,false.
   """
   pass
@@ -2558,12 +2413,17 @@ Get: LanguageOptions(self: CodeDomProvider) -> LanguageOptions
 
 
 
-class CodeGeneratorOptions:
+class CodeGeneratorOptions(object):
  """
  Represents a set of options used by a code generator.
  
  CodeGeneratorOptions()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeGeneratorOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -2612,8 +2472,13 @@ Set: VerbatimOrder(self: CodeGeneratorOptions)=value
 
 
 
-class CodeParser:
+class CodeParser(object):
  """ Provides an empty implementation of the System.CodeDom.Compiler.ICodeParser interface. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeParser()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Parse(self,codeStream):
   """
   Parse(self: CodeParser,codeStream: TextReader) -> CodeCompileUnit
@@ -2631,13 +2496,18 @@ class CodeParser:
   """ __repr__(self: object) -> str """
   pass
 
-class CompilerError:
+class CompilerError(object):
  """
  Represents a compiler error or warning.
  
  CompilerError()
  CompilerError(fileName: str,line: int,column: int,errorNumber: str,errorText: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CompilerError()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToString(self):
   """
   ToString(self: CompilerError) -> str
@@ -2703,7 +2573,7 @@ Set: Line(self: CompilerError)=value
 
 
 
-class CompilerErrorCollection:
+class CompilerErrorCollection(CollectionBase):
  """
  Represents a collection of System.CodeDom.Compiler.CompilerError objects.
  
@@ -2711,6 +2581,11 @@ class CompilerErrorCollection:
  CompilerErrorCollection(value: CompilerErrorCollection)
  CompilerErrorCollection(value: Array[CompilerError])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CompilerErrorCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CompilerErrorCollection,value: CompilerError) -> int
@@ -2726,41 +2601,29 @@ class CompilerErrorCollection:
   AddRange(self: CompilerErrorCollection,value: Array[CompilerError])
    Copies the elements of an array to the end of the error collection.
   
-   value: An array of type System.CodeDom.Compiler.CompilerError that contains the objects to add 
-    to the collection.
-  
+   value: An array of type System.CodeDom.Compiler.CompilerError that contains the objects to add to the collection.
   AddRange(self: CompilerErrorCollection,value: CompilerErrorCollection)
-   Adds the contents of the specified compiler error collection to the end of the error 
-    collection.
+   Adds the contents of the specified compiler error collection to the end of the error collection.
   
-  
-   value: A System.CodeDom.Compiler.CompilerErrorCollection object that contains the objects to add 
-    to the collection.
+   value: A System.CodeDom.Compiler.CompilerErrorCollection object that contains the objects to add to the collection.
   """
   pass
  def Contains(self,value):
   """
   Contains(self: CompilerErrorCollection,value: CompilerError) -> bool
   
-   Gets a value that indicates whether the collection contains the specified 
-    System.CodeDom.Compiler.CompilerError object.
-  
+   Gets a value that indicates whether the collection contains the specified System.CodeDom.Compiler.CompilerError object.
   
    value: The System.CodeDom.Compiler.CompilerError to locate.
-   Returns: true if the System.CodeDom.Compiler.CompilerError is contained in the collection; 
-    otherwise,false.
+   Returns: true if the System.CodeDom.Compiler.CompilerError is contained in the collection; otherwise,false.
   """
   pass
  def CopyTo(self,array,index):
   """
   CopyTo(self: CompilerErrorCollection,array: Array[CompilerError],index: int)
-   Copies the collection values to a one-dimensional System.Array instance at the specified 
-    index.
+   Copies the collection values to a one-dimensional System.Array instance at the specified index.
   
-  
-   array: The one-dimensional System.Array that is the destination of the values copied from 
-    System.CodeDom.Compiler.CompilerErrorCollection.
-  
+   array: The one-dimensional System.Array that is the destination of the values copied from System.CodeDom.Compiler.CompilerErrorCollection.
    index: The index in the array at which to start copying.
   """
   pass
@@ -2768,21 +2631,16 @@ class CompilerErrorCollection:
   """
   IndexOf(self: CompilerErrorCollection,value: CompilerError) -> int
   
-   Gets the index of the specified System.CodeDom.Compiler.CompilerError object in the 
-    collection,if it exists in the collection.
-  
+   Gets the index of the specified System.CodeDom.Compiler.CompilerError object in the collection,if it exists in the collection.
   
    value: The System.CodeDom.Compiler.CompilerError to locate.
-   Returns: The index of the specified System.CodeDom.Compiler.CompilerError in the 
-    System.CodeDom.Compiler.CompilerErrorCollection,if found; otherwise,-1.
+   Returns: The index of the specified System.CodeDom.Compiler.CompilerError in the System.CodeDom.Compiler.CompilerErrorCollection,if found; otherwise,-1.
   """
   pass
  def Insert(self,index,value):
   """
   Insert(self: CompilerErrorCollection,index: int,value: CompilerError)
-   Inserts the specified System.CodeDom.Compiler.CompilerError into the collection at the 
-    specified index.
-  
+   Inserts the specified System.CodeDom.Compiler.CompilerError into the collection at the specified index.
   
    index: The zero-based index where the compiler error should be inserted.
    value: The System.CodeDom.Compiler.CompilerError to insert.
@@ -2791,23 +2649,19 @@ class CompilerErrorCollection:
  def OnClear(self,*args):
   """
   OnClear(self: CollectionBase)
-   Performs additional custom processes when clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes when clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnClearComplete(self,*args):
   """
   OnClearComplete(self: CollectionBase)
-   Performs additional custom processes after clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes after clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnInsert(self,*args):
   """
   OnInsert(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes before inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -2816,9 +2670,7 @@ class CompilerErrorCollection:
  def OnInsertComplete(self,*args):
   """
   OnInsertComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -2827,9 +2679,7 @@ class CompilerErrorCollection:
  def OnRemove(self,*args):
   """
   OnRemove(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes when removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes when removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -2838,9 +2688,7 @@ class CompilerErrorCollection:
  def OnRemoveComplete(self,*args):
   """
   OnRemoveComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -2849,9 +2697,7 @@ class CompilerErrorCollection:
  def OnSet(self,*args):
   """
   OnSet(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes before setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -2861,9 +2707,7 @@ class CompilerErrorCollection:
  def OnSetComplete(self,*args):
   """
   OnSetComplete(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes after setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -2883,8 +2727,7 @@ class CompilerErrorCollection:
   Remove(self: CompilerErrorCollection,value: CompilerError)
    Removes a specific System.CodeDom.Compiler.CompilerError from the collection.
   
-   value: The System.CodeDom.Compiler.CompilerError to remove from the 
-    System.CodeDom.Compiler.CompilerErrorCollection.
+   value: The System.CodeDom.Compiler.CompilerError to remove from the System.CodeDom.Compiler.CompilerErrorCollection.
   """
   pass
  def __add__(self,*args):
@@ -2938,15 +2781,19 @@ Get: HasWarnings(self: CompilerErrorCollection) -> bool
 
 
 
-class CompilerInfo:
+class CompilerInfo(object):
  """ Represents the configuration settings of a language provider. This class cannot be inherited. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CompilerInfo()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreateDefaultCompilerParameters(self):
   """
   CreateDefaultCompilerParameters(self: CompilerInfo) -> CompilerParameters
   
    Gets the configured compiler settings for the language provider implementation.
-   Returns: A read-only System.CodeDom.Compiler.CompilerParameters instance that contains the 
-    compiler options and settings configured for the language provider.
+   Returns: A read-only System.CodeDom.Compiler.CompilerParameters instance that contains the compiler options and settings configured for the language provider.
   """
   pass
  def CreateProvider(self,providerOptions=None):
@@ -2954,9 +2801,7 @@ class CompilerInfo:
   CreateProvider(self: CompilerInfo,providerOptions: IDictionary[str,str]) -> CodeDomProvider
   CreateProvider(self: CompilerInfo) -> CodeDomProvider
   
-   Returns a System.CodeDom.Compiler.CodeDomProvider instance for the current language 
-    provider settings.
-  
+   Returns a System.CodeDom.Compiler.CodeDomProvider instance for the current language provider settings.
    Returns: A CodeDOM provider associated with the language provider configuration.
   """
   pass
@@ -2964,13 +2809,10 @@ class CompilerInfo:
   """
   Equals(self: CompilerInfo,o: object) -> bool
   
-   Determines whether the specified object represents the same language provider and 
-    compiler settings as the current System.CodeDom.Compiler.CompilerInfo.
-  
+   Determines whether the specified object represents the same language provider and compiler settings as the current System.CodeDom.Compiler.CompilerInfo.
   
    o: The object to compare with the current System.CodeDom.Compiler.CompilerInfo.
-   Returns: true if o is a System.CodeDom.Compiler.CompilerInfo object and its value is the same as 
-    this instance; otherwise,false.
+   Returns: true if o is a System.CodeDom.Compiler.CompilerInfo object and its value is the same as this instance; otherwise,false.
   """
   pass
  def GetExtensions(self):
@@ -2986,8 +2828,7 @@ class CompilerInfo:
   GetHashCode(self: CompilerInfo) -> int
   
    Returns the hash code for the current instance.
-   Returns: A 32-bit signed integer hash code for the current System.CodeDom.Compiler.CompilerInfo 
-    instance,suitable for use in hashing algorithms and data structures such as a hash 
+   Returns: A 32-bit signed integer hash code for the current System.CodeDom.Compiler.CompilerInfo instance,suitable for use in hashing algorithms and data structures such as a hash 
     table.
   """
   pass
@@ -3020,7 +2861,7 @@ Get: IsCodeDomProviderTypeValid(self: CompilerInfo) -> bool
 
 
 
-class CompilerParameters:
+class CompilerParameters(object):
  """
  Represents the parameters used to invoke a compiler.
  
@@ -3029,6 +2870,11 @@ class CompilerParameters:
  CompilerParameters(assemblyNames: Array[str])
  CompilerParameters(assemblyNames: Array[str],outputName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CompilerParameters()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,assemblyNames=None,outputName=None,includeDebugInformation=None):
   """
@@ -3163,12 +3009,17 @@ Set: Win32Resource(self: CompilerParameters)=value
 
 
 
-class CompilerResults:
+class CompilerResults(object):
  """
  Represents the results of compilation that are returned from a compiler.
  
  CompilerResults(tempFiles: TempFileCollection)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CompilerResults()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,tempFiles):
   """ __new__(cls: type,tempFiles: TempFileCollection) """
@@ -3229,8 +3080,13 @@ Set: TempFiles(self: CompilerResults)=value
 
 
 
-class Executor:
+class Executor(object):
  """ Provides command execution functions for invoking compilers. This class cannot be inherited. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Executor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def ExecWait(cmd,tempFiles):
   """
@@ -3238,8 +3094,7 @@ class Executor:
    Executes the command using the specified temporary files and waits for the call to return.
   
    cmd: The command to execute.
-   tempFiles: A System.CodeDom.Compiler.TempFileCollection with which to manage and store references to 
-    intermediate files generated during compilation.
+   tempFiles: A System.CodeDom.Compiler.TempFileCollection with which to manage and store references to intermediate files generated during compilation.
   """
   pass
  @staticmethod
@@ -3247,61 +3102,49 @@ class Executor:
   """
   ExecWaitWithCapture(cmd: str,tempFiles: TempFileCollection,outputName: str,errorName: str) -> (int,str,str)
   
-   Executes the specified command using the specified temporary files and waits for the call 
-    to return,storing output and error information from the compiler in the specified 
+   Executes the specified command using the specified temporary files and waits for the call to return,storing output and error information from the compiler in the specified 
     strings.
   
   
    cmd: The command to execute.
-   tempFiles: A System.CodeDom.Compiler.TempFileCollection with which to manage and store references to 
-    intermediate files generated during compilation.
-  
+   tempFiles: A System.CodeDom.Compiler.TempFileCollection with which to manage and store references to intermediate files generated during compilation.
    outputName: A reference to a string that will store the compiler's message output.
    errorName: A reference to a string that will store the name of the error or errors encountered.
    Returns: The return value from the compiler.
   ExecWaitWithCapture(cmd: str,currentDir: str,tempFiles: TempFileCollection,outputName: str,errorName: str) -> (int,str,str)
   
-   Executes the specified command using the specified current directory and temporary files,
-    and waits for the call to return,storing output and error information from the compiler 
-    in the specified strings.
+   Executes the specified command using the specified current directory and temporary files,and waits for the call to return,storing output and error information from the 
+    compiler in the specified strings.
   
   
    cmd: The command to execute.
    currentDir: The current directory.
-   tempFiles: A System.CodeDom.Compiler.TempFileCollection with which to manage and store references to 
-    intermediate files generated during compilation.
-  
+   tempFiles: A System.CodeDom.Compiler.TempFileCollection with which to manage and store references to intermediate files generated during compilation.
    outputName: A reference to a string that will store the compiler's message output.
    errorName: A reference to a string that will store the name of the error or errors encountered.
    Returns: The return value from the compiler.
   ExecWaitWithCapture(userToken: IntPtr,cmd: str,tempFiles: TempFileCollection,outputName: str,errorName: str) -> (int,str,str)
   
-   Executes the specified command using the specified user token and temporary files,and 
-    waits for the call to return,storing output and error information from the compiler in 
-    the specified strings.
+   Executes the specified command using the specified user token and temporary files,and waits for the call to return,storing output and error information from the compiler 
+    in the specified strings.
   
   
    userToken: The token to start the compiler process with.
    cmd: The command to execute.
-   tempFiles: A System.CodeDom.Compiler.TempFileCollection with which to manage and store references to 
-    intermediate files generated during compilation.
-  
+   tempFiles: A System.CodeDom.Compiler.TempFileCollection with which to manage and store references to intermediate files generated during compilation.
    outputName: A reference to a string that will store the compiler's message output.
    errorName: A reference to a string that will store the name of the error or errors encountered.
    Returns: The return value from the compiler.
   ExecWaitWithCapture(userToken: IntPtr,cmd: str,currentDir: str,tempFiles: TempFileCollection,outputName: str,errorName: str) -> (int,str,str)
   
-   Executes the specified command using the specified user token,current directory,and 
-    temporary files; then waits for the call to return,storing output and error information 
-    from the compiler in the specified strings.
+   Executes the specified command using the specified user token,current directory,and temporary files; then waits for the call to return,storing output and error 
+    information from the compiler in the specified strings.
   
   
    userToken: The token to start the compiler process with.
    cmd: The command to execute.
    currentDir: The directory to start the process in.
-   tempFiles: A System.CodeDom.Compiler.TempFileCollection with which to manage and store references to 
-    intermediate files generated during compilation.
-  
+   tempFiles: A System.CodeDom.Compiler.TempFileCollection with which to manage and store references to intermediate files generated during compilation.
    outputName: A reference to a string that will store the compiler's message output.
    errorName: A reference to a string that will store the name of the error or errors encountered.
    Returns: The return value from the compiler.
@@ -3319,6 +3162,11 @@ class GeneratedCodeAttribute:
  
  GeneratedCodeAttribute(tool: str,version: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GeneratedCodeAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -3348,6 +3196,11 @@ class GeneratorSupport:
  
  enum (flags) GeneratorSupport,values: ArraysOfArrays (1),AssemblyAttributes (4096),ChainedConstructorArguments (32768),ComplexExpressions (524288),DeclareDelegates (512),DeclareEnums (256),DeclareEvents (2048),DeclareIndexerProperties (33554432),DeclareInterfaces (1024),DeclareValueTypes (128),EntryPointMethod (2),GenericTypeDeclaration (16777216),GenericTypeReference (8388608),GotoStatements (4),MultidimensionalArrays (8),MultipleInterfaceMembers (131072),NestedTypes (65536),ParameterAttributes (8192),PartialTypes (4194304),PublicStaticMembers (262144),ReferenceParameters (16384),Resources (2097152),ReturnTypeAttributes (64),StaticConstructors (16),TryCatchStatements (32),Win32Resources (1048576)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GeneratorSupport()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -3402,13 +3255,16 @@ class GeneratorSupport:
 
 class ICodeParser:
  """ Defines an interface for parsing code into a System.CodeDom.CodeCompileUnit. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ICodeParser()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Parse(self,codeStream):
   """
   Parse(self: ICodeParser,codeStream: TextReader) -> CodeCompileUnit
   
-   When implemented in a derived class,compiles the specified text stream into a 
-    System.CodeDom.CodeCompileUnit.
-  
+   When implemented in a derived class,compiles the specified text stream into a System.CodeDom.CodeCompileUnit.
   
    codeStream: A System.IO.TextReader that can be used to read the code to be compiled.
    Returns: A System.CodeDom.CodeCompileUnit that contains a representation of the parsed code.
@@ -3418,13 +3274,18 @@ class ICodeParser:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class IndentedTextWriter:
+class IndentedTextWriter(TextWriter):
  """
  Provides a text writer that can indent new lines by a tab string token.
  
  IndentedTextWriter(writer: TextWriter,tabString: str)
  IndentedTextWriter(writer: TextWriter)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IndentedTextWriter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: IndentedTextWriter)
@@ -3434,12 +3295,9 @@ class IndentedTextWriter:
  def Dispose(self):
   """
   Dispose(self: TextWriter,disposing: bool)
-   Releases the unmanaged resources used by the System.IO.TextWriter and optionally releases 
-    the managed resources.
+   Releases the unmanaged resources used by the System.IO.TextWriter and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def Flush(self):
@@ -3454,11 +3312,9 @@ class IndentedTextWriter:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -3470,8 +3326,7 @@ class IndentedTextWriter:
  def OutputTabs(self,*args):
   """
   OutputTabs(self: IndentedTextWriter)
-   Outputs the tab string once for each level of indentation according to the 
-    System.CodeDom.Compiler.IndentedTextWriter.Indent property.
+   Outputs the tab string once for each level of indentation according to the System.CodeDom.Compiler.IndentedTextWriter.Indent property.
   """
   pass
  def Write(self,*__args):
@@ -3545,9 +3400,7 @@ class IndentedTextWriter:
   WriteLine(self: IndentedTextWriter)
    Writes a line terminator.
   WriteLine(self: IndentedTextWriter,value: bool)
-   Writes the text representation of a Boolean,followed by a line terminator,to the text 
-    stream.
-  
+   Writes the text representation of a Boolean,followed by a line terminator,to the text stream.
   
    value: The Boolean to write.
   WriteLine(self: IndentedTextWriter,value: Char)
@@ -3565,61 +3418,43 @@ class IndentedTextWriter:
    index: Starting index in the buffer.
    count: The number of characters to write.
   WriteLine(self: IndentedTextWriter,value: float)
-   Writes the text representation of a Double,followed by a line terminator,to the text 
-    stream.
-  
+   Writes the text representation of a Double,followed by a line terminator,to the text stream.
   
    value: The double to write.
   WriteLine(self: IndentedTextWriter,value: Single)
-   Writes the text representation of a Single,followed by a line terminator,to the text 
-    stream.
-  
+   Writes the text representation of a Single,followed by a line terminator,to the text stream.
   
    value: The single to write.
   WriteLine(self: IndentedTextWriter,value: int)
-   Writes the text representation of an integer,followed by a line terminator,to the text 
-    stream.
-  
+   Writes the text representation of an integer,followed by a line terminator,to the text stream.
   
    value: The integer to write.
   WriteLine(self: IndentedTextWriter,value: Int64)
-   Writes the text representation of an 8-byte integer,followed by a line terminator,to 
-    the text stream.
-  
+   Writes the text representation of an 8-byte integer,followed by a line terminator,to the text stream.
   
    value: The 8-byte integer to write.
   WriteLine(self: IndentedTextWriter,value: object)
-   Writes the text representation of an object,followed by a line terminator,to the text 
-    stream.
-  
+   Writes the text representation of an object,followed by a line terminator,to the text stream.
   
    value: The object to write.
   WriteLine(self: IndentedTextWriter,format: str,arg0: object)
-   Writes out a formatted string,followed by a line terminator,using the same semantics as 
-    specified.
-  
+   Writes out a formatted string,followed by a line terminator,using the same semantics as specified.
   
    format: The formatting string.
    arg0: The object to write into the formatted string.
   WriteLine(self: IndentedTextWriter,format: str,arg0: object,arg1: object)
-   Writes out a formatted string,followed by a line terminator,using the same semantics as 
-    specified.
-  
+   Writes out a formatted string,followed by a line terminator,using the same semantics as specified.
   
    format: The formatting string to use.
    arg0: The first object to write into the formatted string.
    arg1: The second object to write into the formatted string.
   WriteLine(self: IndentedTextWriter,format: str,*arg: Array[object])
-   Writes out a formatted string,followed by a line terminator,using the same semantics as 
-    specified.
-  
+   Writes out a formatted string,followed by a line terminator,using the same semantics as specified.
   
    format: The formatting string to use.
    arg: The argument array to output.
   WriteLine(self: IndentedTextWriter,value: UInt32)
-   Writes the text representation of a UInt32,followed by a line terminator,to the text 
-    stream.
-  
+   Writes the text representation of a UInt32,followed by a line terminator,to the text stream.
   
    value: A UInt32 to output.
   """
@@ -3689,6 +3524,11 @@ class LanguageOptions:
  
  enum (flags) LanguageOptions,values: CaseInsensitive (1),None (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LanguageOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -3717,7 +3557,7 @@ class LanguageOptions:
  value__=None
 
 
-class TempFileCollection:
+class TempFileCollection(object):
  """
  Represents a collection of temporary files.
  
@@ -3725,34 +3565,32 @@ class TempFileCollection:
  TempFileCollection()
  TempFileCollection(tempDir: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TempFileCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddExtension(self,fileExtension,keepFile=None):
   """
   AddExtension(self: TempFileCollection,fileExtension: str,keepFile: bool) -> str
   
-   Adds a file name with the specified file name extension to the collection,using the 
-    specified value indicating whether the file should be deleted or retained.
+   Adds a file name with the specified file name extension to the collection,using the specified value indicating whether the file should be deleted or retained.
   
-  
-   fileExtension: The file name extension for the auto-generated temporary file name to add to the 
-    collection.
-  
+   fileExtension: The file name extension for the auto-generated temporary file name to add to the collection.
    keepFile: true if the file should be kept after use; false if the file should be deleted.
    Returns: A file name with the specified extension that was just added to the collection.
   AddExtension(self: TempFileCollection,fileExtension: str) -> str
   
    Adds a file name with the specified file name extension to the collection.
   
-   fileExtension: The file name extension for the auto-generated temporary file name to add to the 
-    collection.
-  
+   fileExtension: The file name extension for the auto-generated temporary file name to add to the collection.
    Returns: A file name with the specified extension that was just added to the collection.
   """
   pass
  def AddFile(self,fileName,keepFile):
   """
   AddFile(self: TempFileCollection,fileName: str,keepFile: bool)
-   Adds the specified file to the collection,using the specified value indicating whether 
-    to keep the file after the collection is disposed or when the 
+   Adds the specified file to the collection,using the specified value indicating whether to keep the file after the collection is disposed or when the 
     System.CodeDom.Compiler.TempFileCollection.Delete method is called.
   
   
@@ -3763,9 +3601,7 @@ class TempFileCollection:
  def CopyTo(self,fileNames,start):
   """
   CopyTo(self: TempFileCollection,fileNames: Array[str],start: int)
-   Copies the members of the collection to the specified string,beginning at the specified 
-    index.
-  
+   Copies the members of the collection to the specified string,beginning at the specified index.
   
    fileNames: The array of strings to copy to.
    start: The index of the array to begin copying to.
@@ -3780,12 +3616,9 @@ class TempFileCollection:
  def Dispose(self,*args):
   """
   Dispose(self: TempFileCollection,disposing: bool)
-   Releases the unmanaged resources used by the System.CodeDom.Compiler.TempFileCollection 
-    and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.CodeDom.Compiler.TempFileCollection and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetEnumerator(self):

@@ -1,4 +1,4 @@
-class ErrorProvider:
+class ErrorProvider(Component,IComponent,IDisposable,IExtenderProvider,ISupportInitialize):
  """
  Provides a user interface for indicating that a control on a form has an error associated with it.
  
@@ -6,18 +6,17 @@ class ErrorProvider:
  ErrorProvider(parentControl: ContainerControl)
  ErrorProvider(container: IContainer)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ErrorProvider()
+
  def BindToDataAndErrors(self,newDataSource,newDataMember):
   """
   BindToDataAndErrors(self: ErrorProvider,newDataSource: object,newDataMember: str)
-   Provides a method to set both the System.Windows.Forms.ErrorProvider.DataSource and 
-    System.Windows.Forms.ErrorProvider.DataMember at run time.
+   Provides a method to set both the System.Windows.Forms.ErrorProvider.DataSource and System.Windows.Forms.ErrorProvider.DataMember at run time.
   
-  
-   newDataSource: A data set based on the System.Collections.IList interface to be monitored for errors. 
-    Typically,this is a System.Data.DataSet to be monitored for errors.
-  
-   newDataMember: A collection within the newDataSource to monitor for errors. Typically,this will be a 
-    System.Data.DataTable.
+   newDataSource: A data set based on the System.Collections.IList interface to be monitored for errors. Typically,this is a System.Data.DataSet to be monitored for errors.
+   newDataMember: A collection within the newDataSource to monitor for errors. Typically,this will be a System.Data.DataTable.
   """
   pass
  def CanExtend(self,extendee):
@@ -27,9 +26,7 @@ class ErrorProvider:
    Gets a value indicating whether a control can be extended.
   
    extendee: The control to be extended.
-   Returns: true if the control can be extended; otherwise,false.This property will be true if the 
-    object is a System.Windows.Forms.Control and is not a System.Windows.Forms.Form or 
-    System.Windows.Forms.ToolBar.
+   Returns: true if the control can be extended; otherwise,false.This property will be true if the object is a System.Windows.Forms.Control and is not a System.Windows.Forms.Form or System.Windows.Forms.ToolBar.
   """
   pass
  def Clear(self):
@@ -41,8 +38,7 @@ class ErrorProvider:
  def Dispose(self):
   """
   Dispose(self: ErrorProvider,disposing: bool)
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetError(self,control):
@@ -62,8 +58,7 @@ class ErrorProvider:
    Gets a value indicating where the error icon should be placed in relation to the control.
   
    control: The control to get the icon location for.
-   Returns: One of the System.Windows.Forms.ErrorIconAlignment values. The default icon alignment is 
-    System.Windows.Forms.ErrorIconAlignment.MiddleRight.
+   Returns: One of the System.Windows.Forms.ErrorIconAlignment values. The default icon alignment is System.Windows.Forms.ErrorIconAlignment.MiddleRight.
   """
   pass
  def GetIconPadding(self,control):
@@ -80,14 +75,10 @@ class ErrorProvider:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -96,12 +87,7 @@ class ErrorProvider:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -147,9 +133,7 @@ class ErrorProvider:
  def UpdateBinding(self):
   """
   UpdateBinding(self: ErrorProvider)
-   Provides a method to update the bindings of the 
-    System.Windows.Forms.ErrorProvider.DataSource,
-    System.Windows.Forms.ErrorProvider.DataMember,and the error text.
+   Provides a method to update the bindings of the System.Windows.Forms.ErrorProvider.DataSource,System.Windows.Forms.ErrorProvider.DataMember,and the error text.
   """
   pass
  def __enter__(self,*args):

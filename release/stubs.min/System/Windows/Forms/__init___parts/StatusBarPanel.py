@@ -1,9 +1,13 @@
-class StatusBarPanel:
+class StatusBarPanel(Component,IComponent,IDisposable,ISupportInitialize):
  """
  Represents a panel in a System.Windows.Forms.StatusBar control. Although the System.Windows.Forms.StatusStrip control replaces and adds functionality to the System.Windows.Forms.StatusBar control of previous versions,System.Windows.Forms.StatusBar is retained for both backward compatibility and future use if you choose.
  
  StatusBarPanel()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return StatusBarPanel()
+
  def BeginInit(self):
   """
   BeginInit(self: StatusBarPanel)
@@ -13,12 +17,9 @@ class StatusBarPanel:
  def Dispose(self):
   """
   Dispose(self: StatusBarPanel,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.StatusBarPanel and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.StatusBarPanel and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def EndInit(self):
@@ -31,14 +32,10 @@ class StatusBarPanel:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -47,12 +44,7 @@ class StatusBarPanel:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   

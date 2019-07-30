@@ -1,9 +1,13 @@
-class ListBindingConverter:
+class ListBindingConverter(TypeConverter):
  """
  Provides a type converter to convert System.Windows.Forms.Binding objects to and from various other representations.
  
  ListBindingConverter()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ListBindingConverter()
+
  def CanConvertTo(self,*__args):
   """
   CanConvertTo(self: ListBindingConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
@@ -30,8 +34,7 @@ class ListBindingConverter:
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    propertyValues: An System.Collections.IDictionary of new property values.
-   Returns: An System.Object representing the given System.Collections.IDictionary,or null if the 
-    object cannot be created. This method always returns null.
+   Returns: An System.Object representing the given System.Collections.IDictionary,or null if the object cannot be created. This method always returns null.
   """
   pass
  def GetCreateInstanceSupported(self,context=None):
@@ -39,8 +42,6 @@ class ListBindingConverter:
   GetCreateInstanceSupported(self: ListBindingConverter,context: ITypeDescriptorContext) -> bool
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   Returns: true if changing a property on this object requires a call to 
-    System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to 
-    create a new value; otherwise,false.
+   Returns: true if changing a property on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new value; otherwise,false.
   """
   pass

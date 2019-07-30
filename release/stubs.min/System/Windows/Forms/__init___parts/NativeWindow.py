@@ -1,9 +1,13 @@
-class NativeWindow:
+class NativeWindow(MarshalByRefObject,IWin32Window):
  """
  Provides a low-level encapsulation of a window handle and a window procedure.
  
  NativeWindow()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return NativeWindow()
+
  def AssignHandle(self,handle):
   """
   AssignHandle(self: NativeWindow,handle: IntPtr)
@@ -17,8 +21,7 @@ class NativeWindow:
   CreateHandle(self: NativeWindow,cp: CreateParams)
    Creates a window and its handle with the specified creation parameters.
   
-   cp: A System.Windows.Forms.CreateParams that specifies the creation parameters for this 
-    window.
+   cp: A System.Windows.Forms.CreateParams that specifies the creation parameters for this window.
   """
   pass
  def DefWndProc(self,m):
@@ -44,8 +47,7 @@ class NativeWindow:
    Retrieves the window associated with the specified handle.
   
    handle: A handle to a window.
-   Returns: The System.Windows.Forms.NativeWindow associated with the specified handle. This method 
-    returns null when the handle does not have an associated window.
+   Returns: The System.Windows.Forms.NativeWindow associated with the specified handle. This method returns null when the handle does not have an associated window.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -54,12 +56,7 @@ class NativeWindow:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   

@@ -1,5 +1,9 @@
-class FlowLayoutSettings:
+class FlowLayoutSettings(LayoutSettings):
  """ Collects the characteristics associated with flow layouts. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return FlowLayoutSettings()
+
  def GetFlowBreak(self,child):
   """
   GetFlowBreak(self: FlowLayoutSettings,child: object) -> bool

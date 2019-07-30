@@ -1,5 +1,10 @@
-class CorrelationManager:
+class CorrelationManager(object):
  """ Correlates traces that are part of a logical transaction. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CorrelationManager()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def StartLogicalOperation(self,operationId=None):
   """
   StartLogicalOperation(self: CorrelationManager,operationId: object)

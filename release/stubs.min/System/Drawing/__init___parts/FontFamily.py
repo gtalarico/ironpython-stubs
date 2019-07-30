@@ -1,4 +1,4 @@
-class FontFamily:
+class FontFamily(MarshalByRefObject,IDisposable):
  """
  Defines a group of type faces having a similar basic design and certain variations in styles. This class cannot be inherited.
  
@@ -6,6 +6,10 @@ class FontFamily:
  FontFamily(name: str,fontCollection: FontCollection)
  FontFamily(genericFamily: GenericFontFamilies)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return FontFamily()
+
  def Dispose(self):
   """
   Dispose(self: FontFamily)
@@ -16,39 +20,30 @@ class FontFamily:
   """
   Equals(self: FontFamily,obj: object) -> bool
   
-   Indicates whether the specified object is a System.Drawing.FontFamily and is identical to 
-    this System.Drawing.FontFamily.
-  
+   Indicates whether the specified object is a System.Drawing.FontFamily and is identical to this System.Drawing.FontFamily.
   
    obj: The object to test.
-   Returns: true if obj is a System.Drawing.FontFamily and is identical to this 
-    System.Drawing.FontFamily; otherwise,false.
+   Returns: true if obj is a System.Drawing.FontFamily and is identical to this System.Drawing.FontFamily; otherwise,false.
   """
   pass
  def GetCellAscent(self,style):
   """
   GetCellAscent(self: FontFamily,style: FontStyle) -> int
   
-   Returns the cell ascent,in design units,of the System.Drawing.FontFamily of the 
-    specified style.
-  
+   Returns the cell ascent,in design units,of the System.Drawing.FontFamily of the specified style.
   
    style: A System.Drawing.FontStyle that contains style information for the font.
-   Returns: The cell ascent for this System.Drawing.FontFamily that uses the specified 
-    System.Drawing.FontStyle.
+   Returns: The cell ascent for this System.Drawing.FontFamily that uses the specified System.Drawing.FontStyle.
   """
   pass
  def GetCellDescent(self,style):
   """
   GetCellDescent(self: FontFamily,style: FontStyle) -> int
   
-   Returns the cell descent,in design units,of the System.Drawing.FontFamily of the 
-    specified style.
-  
+   Returns the cell descent,in design units,of the System.Drawing.FontFamily of the specified style.
   
    style: A System.Drawing.FontStyle that contains style information for the font.
-   Returns: The cell descent metric for this System.Drawing.FontFamily that uses the specified 
-    System.Drawing.FontStyle.
+   Returns: The cell descent metric for this System.Drawing.FontFamily that uses the specified System.Drawing.FontStyle.
   """
   pass
  def GetEmHeight(self,style):
@@ -66,13 +61,10 @@ class FontFamily:
   """
   GetFamilies(graphics: Graphics) -> Array[FontFamily]
   
-   Returns an array that contains all the System.Drawing.FontFamily objects available for 
-    the specified graphics context.
-  
+   Returns an array that contains all the System.Drawing.FontFamily objects available for the specified graphics context.
   
    graphics: The System.Drawing.Graphics object from which to return System.Drawing.FontFamily objects.
-   Returns: An array of System.Drawing.FontFamily objects available for the specified 
-    System.Drawing.Graphics object.
+   Returns: An array of System.Drawing.FontFamily objects available for the specified System.Drawing.Graphics object.
   """
   pass
  def GetHashCode(self):
@@ -87,10 +79,7 @@ class FontFamily:
   """
   GetLineSpacing(self: FontFamily,style: FontStyle) -> int
   
-   Returns the line spacing,in design units,of the System.Drawing.FontFamily of the 
-    specified style. The line spacing is the vertical distance between the base lines of two 
-    consecutive lines of text.
-  
+   Returns the line spacing,in design units,of the System.Drawing.FontFamily of the specified style. The line spacing is the vertical distance between the base lines of two consecutive lines of text.
   
    style: The System.Drawing.FontStyle to apply.
    Returns: The distance between two consecutive lines of text.
@@ -103,8 +92,7 @@ class FontFamily:
    Returns the name,in the specified language,of this System.Drawing.FontFamily.
   
    language: The language in which the name is returned.
-   Returns: A System.String that represents the name,in the specified language,of this 
-    System.Drawing.FontFamily.
+   Returns: A System.String that represents the name,in the specified language,of this System.Drawing.FontFamily.
   """
   pass
  def IsStyleAvailable(self,style):
@@ -123,12 +111,7 @@ class FontFamily:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   

@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingInterface calls itself RemotingInterface
-# from Wms.RemotingInterface,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingInterface,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class DataChangedEventHandler:
+class DataChangedEventHandler(MulticastDelegate):
  """ DataChangedEventHandler(object: object,method: IntPtr) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DataChangedEventHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInvoke(self,sender,callback,object):
   """ BeginInvoke(self: DataChangedEventHandler,sender: object,callback: AsyncCallback,object: object) -> IAsyncResult """
   pass
@@ -29,8 +35,7 @@ class DataChangedEventHandler:
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the 
-    current delegate.-or- null,if the method represented by the current delegate does not 
+   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not 
     require arguments.
   
    Returns: The object returned by the method represented by the delegate.
@@ -54,13 +59,10 @@ class DataChangedEventHandler:
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is 
-    equal to the specified delegate.
-  
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate 
-    without value in its invocation list; otherwise,this instance with its original 
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original 
     invocation list.
   """
   pass
@@ -76,6 +78,11 @@ class DataChangedEventHandler:
 
 class IClientService:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IClientService()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeepContinuous(self):
   """ BeepContinuous(self: IClientService) """
   pass
@@ -106,6 +113,11 @@ class IClientService:
 
 class IDefaultItemLocationHelper:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IDefaultItemLocationHelper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetDefaultItemLocationsByItemCode(self,itemCode):
   """ GetDefaultItemLocationsByItemCode(self: IDefaultItemLocationHelper,itemCode: str) -> ResultObject[FindableList[WarehouseItemLocation]] """
   pass
@@ -121,6 +133,11 @@ class IDefaultItemLocationHelper:
 
 class IDocumentQueue:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IDocumentQueue()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CopyPrintRule(self,printRuleId):
   """ CopyPrintRule(self: IDocumentQueue,printRuleId: int) -> PrintRule """
   pass
@@ -196,6 +213,11 @@ class IDocumentQueue:
 
 class IGeneral:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IGeneral()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddOrUpdateErpLock(self,lock):
   """ AddOrUpdateErpLock(self: IGeneral,lock: ErpLock) -> int """
   pass
@@ -932,6 +954,11 @@ Set: CurrentLicense(self: IGeneral)=value
 
 class IInbound:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IInbound()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddOrUpdateLicensePlateToReceipt(self,cacheKey,licensePlate):
   """ AddOrUpdateLicensePlateToReceipt(self: IInbound,cacheKey: CacheKey,licensePlate: LicensePlate) -> LicensePlate """
   pass
@@ -1097,6 +1124,11 @@ class IInbound:
 
 class IInventory:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IInventory()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddCountItemIdentitification(self,key,itemId,overwriteIfExists):
   """ AddCountItemIdentitification(self: IInventory,key: CacheKey,itemId: ItemIdentification,overwriteIfExists: bool) -> bool """
   pass
@@ -1268,11 +1300,11 @@ class IInventory:
  def GetReplenishmentOrders(self,filterBy,replenishmentOrders):
   """ GetReplenishmentOrders(self: IInventory,filterBy: ReplenishmentOrderArgs) -> (int,ReplenishmentOrders) """
   pass
- def GetStockByFilterExact(self,args):
-  """ GetStockByFilterExact(self: IInventory,args: GetStockManagerListArgs) -> FindableList[ItemStockWithLocations] """
-  pass
  def GetStockManagerList(self,filterBy,pagingParams,stockList):
   """ GetStockManagerList(self: IInventory,filterBy: GetStockManagerListArgs,pagingParams: PagingParams) -> (int,ItemStockWithAllocationsList) """
+  pass
+ def GetStockOnMatchingFilter(self,args):
+  """ GetStockOnMatchingFilter(self: IInventory,args: GetStockManagerListArgs) -> FindableList[ItemStockWithLocations] """
   pass
  def GetWarehousesWithPendingCounts(self,warehouses):
   """ GetWarehousesWithPendingCounts(self: IInventory) -> (int,Warehouses) """
@@ -1373,6 +1405,11 @@ class IInventory:
 
 class IMessaging:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IMessaging()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ChangeMessagesStatus(self,messageIds,newStatus):
   """ ChangeMessagesStatus(self: IMessaging,messageIds: List[Guid],newStatus: MessageStatus) """
   pass
@@ -1430,6 +1467,11 @@ class IMessaging:
 
 class INotificationCenter:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return INotificationCenter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddNotification(self,notificationToInsert):
   """ AddNotification(self: INotificationCenter,notificationToInsert: InsertNotificationArgs) """
   pass
@@ -1466,6 +1508,11 @@ class INotificationCenter:
 
 class INotificationSummary:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return INotificationSummary()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def DeleteConfiguration(self,notificationSummaryId):
   """ DeleteConfiguration(self: INotificationSummary,notificationSummaryId: int) """
   pass
@@ -1496,6 +1543,11 @@ class INotificationSummary:
 
 class INumberGeneration:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return INumberGeneration()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddUsedNumber(self,args):
   """ AddUsedNumber(self: INumberGeneration,args: AddUsedNumberArgs) """
   pass
@@ -1529,6 +1581,11 @@ class INumberGeneration:
 
 class IOfflineScanning:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IOfflineScanning()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddScanner(self,args):
   """ AddScanner(self: IOfflineScanning,args: AddScannerArgs) """
   pass
@@ -1568,6 +1625,11 @@ class IOfflineScanning:
 
 class IOutbound:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IOutbound()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddDirectOrder(self,args):
   """ AddDirectOrder(self: IOutbound,args: DirectOrderCrudArgs) -> DataFlowObject[DirectOrder] """
   pass
@@ -1892,6 +1954,11 @@ class IOutbound:
 
 class IPrinting:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IPrinting()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetPickListsAll(self,pickLists):
   """ GetPickListsAll(self: IPrinting) -> (int,ReportItems) """
   pass
@@ -1910,6 +1977,11 @@ class IPrinting:
 
 class IRemotePublishing:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IRemotePublishing()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddRemotePublisher(self,args):
   """ AddRemotePublisher(self: IRemotePublishing,args: AddRemotePublisherArgs) -> Publisher """
   pass

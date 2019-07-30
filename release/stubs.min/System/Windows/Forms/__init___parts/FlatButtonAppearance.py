@@ -1,5 +1,9 @@
-class FlatButtonAppearance:
+class FlatButtonAppearance(object):
  """ Provides properties that specify the appearance of System.Windows.Forms.Button controls whose System.Windows.Forms.FlatStyle is System.Windows.Forms.FlatStyle.Flat. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return FlatButtonAppearance()
+
  BorderColor=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets or sets the color of the border around the button.
 

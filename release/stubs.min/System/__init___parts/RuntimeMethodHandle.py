@@ -1,5 +1,10 @@
-class RuntimeMethodHandle:
+class RuntimeMethodHandle(object):
  """ System.RuntimeMethodHandle is a handle to the internal metadata representation of a method. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RuntimeMethodHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,*__args):
   """
   Equals(self: RuntimeMethodHandle,obj: object) -> bool
@@ -7,9 +12,7 @@ class RuntimeMethodHandle:
    Indicates whether this instance is equal to a specified object.
   
    obj: A System.Object to compare to this instance.
-   Returns: true if obj is a System.RuntimeMethodHandle and equal to the value of this instance; 
-    otherwise,false.
-  
+   Returns: true if obj is a System.RuntimeMethodHandle and equal to the value of this instance; otherwise,false.
   Equals(self: RuntimeMethodHandle,handle: RuntimeMethodHandle) -> bool
   
    Indicates whether this instance is equal to a specified System.RuntimeMethodHandle.
@@ -37,9 +40,7 @@ class RuntimeMethodHandle:
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: RuntimeMethodHandle,info: SerializationInfo,context: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data necessary to 
-    deserialize the field represented by this instance.
-  
+   Populates a System.Runtime.Serialization.SerializationInfo with the data necessary to deserialize the field represented by this instance.
   
    info: The object to populate with serialization information.
    context: (Reserved) The place to store and retrieve serialized data.

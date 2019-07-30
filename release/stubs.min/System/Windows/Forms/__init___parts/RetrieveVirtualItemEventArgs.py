@@ -1,9 +1,13 @@
-class RetrieveVirtualItemEventArgs:
+class RetrieveVirtualItemEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ListView.RetrieveVirtualItem event.
  
  RetrieveVirtualItemEventArgs(itemIndex: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return RetrieveVirtualItemEventArgs()
+
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass

@@ -4,6 +4,11 @@ class RegistryRights:
  
  enum (flags) RegistryRights,values: ChangePermissions (262144),CreateLink (32),CreateSubKey (4),Delete (65536),EnumerateSubKeys (8),ExecuteKey (131097),FullControl (983103),Notify (16),QueryValues (1),ReadKey (131097),ReadPermissions (131072),SetValue (2),TakeOwnership (524288),WriteKey (131078)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RegistryRights()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

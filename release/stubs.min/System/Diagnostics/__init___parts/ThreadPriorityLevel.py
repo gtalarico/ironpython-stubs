@@ -4,6 +4,11 @@ class ThreadPriorityLevel:
  
  enum ThreadPriorityLevel,values: AboveNormal (1),BelowNormal (-1),Highest (2),Idle (-15),Lowest (-2),Normal (0),TimeCritical (15)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ThreadPriorityLevel()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

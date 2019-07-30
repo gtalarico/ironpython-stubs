@@ -1,17 +1,17 @@
-class DBNull:
+class DBNull(object):
  """ Represents a nonexistent value. This class cannot be inherited. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DBNull()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: DBNull,info: SerializationInfo,context: StreamingContext)
-   Implements the System.Runtime.Serialization.ISerializable interface and returns the data 
-    needed to serialize the System.DBNull object.
+   Implements the System.Runtime.Serialization.ISerializable interface and returns the data needed to serialize the System.DBNull object.
   
-  
-   info: A System.Runtime.Serialization.SerializationInfo object containing information required 
-    to serialize the System.DBNull object.
-  
-   context: A System.Runtime.Serialization.StreamingContext object containing the source and 
-    destination of the serialized stream associated with the System.DBNull object.
+   info: A System.Runtime.Serialization.SerializationInfo object containing information required to serialize the System.DBNull object.
+   context: A System.Runtime.Serialization.StreamingContext object containing the source and destination of the serialized stream associated with the System.DBNull object.
   """
   pass
  def GetTypeCode(self):
@@ -32,9 +32,7 @@ class DBNull:
   
    Returns an empty string using the specified System.IFormatProvider.
   
-   provider: The System.IFormatProvider to be used to format the return value.-or- null to obtain the 
-    format information from the current locale setting of the operating system.
-  
+   provider: The System.IFormatProvider to be used to format the return value.-or- null to obtain the format information from the current locale setting of the operating system.
    Returns: An empty string (System.String.Empty).
   """
   pass

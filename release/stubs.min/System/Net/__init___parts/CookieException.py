@@ -1,22 +1,21 @@
-class CookieException:
+class CookieException(FormatException):
  """
  The exception that is thrown when an error is made adding a System.Net.Cookie to a System.Net.CookieContainer.
  
  CookieException()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CookieException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,serializationInfo,streamingContext):
   """
   GetObjectData(self: CookieException,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo instance with the data needed 
-    to serialize the System.Net.CookieException.
+   Populates a System.Runtime.Serialization.SerializationInfo instance with the data needed to serialize the System.Net.CookieException.
   
-  
-   serializationInfo: The object that holds the serialized object data. The 
-    System.Runtime.Serialization.SerializationInfo to populate with data.
-  
-   streamingContext: The contextual information about the source or destination. A 
-    System.Runtime.Serialization.StreamingContext that specifies the destination for this 
-    serialization.
+   serializationInfo: The object that holds the serialized object data. The System.Runtime.Serialization.SerializationInfo to populate with data.
+   streamingContext: The contextual information about the source or destination. A System.Runtime.Serialization.StreamingContext that specifies the destination for this serialization.
   """
   pass
  def __init__(self,*args):

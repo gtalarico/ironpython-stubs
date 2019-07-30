@@ -1,5 +1,10 @@
-class CharEnumerator:
+class CharEnumerator(object):
  """ Supports iterating over a System.String object and reading its individual characters. This class cannot be inherited. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CharEnumerator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """
   Clone(self: CharEnumerator) -> object
@@ -18,11 +23,8 @@ class CharEnumerator:
   """
   MoveNext(self: CharEnumerator) -> bool
   
-   Increments the internal index of the current System.CharEnumerator object to the next 
-    character of the enumerated string.
-  
-   Returns: true if the index is successfully incremented and within the enumerated string; 
-    otherwise,false.
+   Increments the internal index of the current System.CharEnumerator object to the next character of the enumerated string.
+   Returns: true if the index is successfully incremented and within the enumerated string; otherwise,false.
   """
   pass
  def next(self,*args):
@@ -31,8 +33,7 @@ class CharEnumerator:
  def Reset(self):
   """
   Reset(self: CharEnumerator)
-   Initializes the index to a position logically before the first character of the 
-    enumerated string.
+   Initializes the index to a position logically before the first character of the enumerated string.
   """
   pass
  def __contains__(self,*args):

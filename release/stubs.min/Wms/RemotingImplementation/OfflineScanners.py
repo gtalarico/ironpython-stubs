@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.OfflineScanners calls itself OfflineScanners
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class GcloudInboundFileListenerBase:
+class GcloudInboundFileListenerBase(object):
  """ GcloudInboundFileListenerBase(appSetttings: GcloudInboundFileListenerOptions,general: General,messaging: Messaging) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GcloudInboundFileListenerBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def DownloadFile(self,*args):
   """ DownloadFile(self: GcloudInboundFileListenerBase,filepath: str) -> Task[Stream] """
   pass
@@ -44,8 +50,13 @@ class GcloudInboundFileListenerBase:
  _messaging=None
 
 
-class BosInboundFileListener:
+class BosInboundFileListener(GcloudInboundFileListenerBase):
  """ BosInboundFileListener(appSetttings: BosInboundFileOptions,general: General,messaging: Messaging,offlineScanning: OfflineScanning) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BosInboundFileListener()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def DownloadFile(self,*args):
   """ DownloadFile(self: BosInboundFileListener,filepath: str) -> Task[Stream] """
   pass
@@ -67,8 +78,13 @@ class BosInboundFileListener:
  _messaging=None
 
 
-class GcloudInboundFileListenerOptions:
+class GcloudInboundFileListenerOptions(object):
  """ GcloudInboundFileListenerOptions() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GcloudInboundFileListenerOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Enabled=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Enabled(self: GcloudInboundFileListenerOptions) -> bool
 
@@ -89,15 +105,25 @@ Set: GCloudPubSubPrefix(self: GcloudInboundFileListenerOptions)=value
 
 
 
-class BosInboundFileOptions:
+class BosInboundFileOptions(GcloudInboundFileListenerOptions):
  """ BosInboundFileOptions(appSettings: IApplicationSettings) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BosInboundFileOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,appSettings):
   """ __new__(cls: type,appSettings: IApplicationSettings) """
   pass
 
-class BosInboundFileUploadedEvent:
+class BosInboundFileUploadedEvent(object):
  """ BosInboundFileUploadedEvent() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BosInboundFileUploadedEvent()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Event=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Event(self: BosInboundFileUploadedEvent) -> str
 
@@ -138,6 +164,11 @@ Set: Size(self: BosInboundFileUploadedEvent)=value
 
 class IGcloudInboundFileListener:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IGcloudInboundFileListener()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def PullAllMessages(self,token):
   """ PullAllMessages(self: IGcloudInboundFileListener,token: CancellationToken) -> Task[int] """
   pass
@@ -154,8 +185,13 @@ class IGcloudInboundFileListener:
 
 
 
-class ModuleOptions:
+class ModuleOptions(object):
  """ ModuleOptions() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ModuleOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  OfflineScanning='OS'
  RemotePublishing='RP'
 

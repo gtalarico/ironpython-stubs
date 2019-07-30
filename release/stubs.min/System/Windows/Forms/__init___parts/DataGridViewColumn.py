@@ -1,10 +1,14 @@
-class DataGridViewColumn:
+class DataGridViewColumn(DataGridViewBand,ICloneable,IDisposable,IComponent):
  """
  Represents a column in a System.Windows.Forms.DataGridView control.
  
  DataGridViewColumn()
  DataGridViewColumn(cellTemplate: DataGridViewCell)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewColumn()
+
  def Clone(self):
   """
   Clone(self: DataGridViewColumn) -> object
@@ -14,8 +18,7 @@ class DataGridViewColumn:
  def Dispose(self):
   """
   Dispose(self: DataGridViewColumn,disposing: bool)
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetPreferredWidth(self,autoSizeColumnMode,fixedHeight):
@@ -24,12 +27,8 @@ class DataGridViewColumn:
   
    Calculates the ideal width of the column based on the specified criteria.
   
-   autoSizeColumnMode: A System.Windows.Forms.DataGridViewAutoSizeColumnMode value that specifies an automatic 
-    sizing mode.
-  
-   fixedHeight: true to calculate the width of the column based on the current row heights; false to 
-    calculate the width with the expectation that the row heights will be adjusted.
-  
+   autoSizeColumnMode: A System.Windows.Forms.DataGridViewAutoSizeColumnMode value that specifies an automatic sizing mode.
+   fixedHeight: true to calculate the width of the column based on the current row heights; false to calculate the width with the expectation that the row heights will be adjusted.
    Returns: The ideal width,in pixels,of the column.
   """
   pass

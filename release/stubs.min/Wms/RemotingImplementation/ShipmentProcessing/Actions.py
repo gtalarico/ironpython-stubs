@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.ShipmentProcessing.Actions calls itself Actions
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class BaseState:
+class BaseState(State):
  """ BaseState() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BaseState()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Next(self):
   """ Next(self: BaseState) -> State """
   pass
@@ -42,8 +48,13 @@ Set: TransportPackages(self: BaseState)=value
 
 
 
-class FinalizeState:
+class FinalizeState(BaseState):
  """ FinalizeState() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FinalizeState()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Next(self):
   """ Next(self: FinalizeState) -> State """
   pass

@@ -4,6 +4,11 @@ class PARAMFLAG:
  
  enum (flags) PARAMFLAG,values: PARAMFLAG_FHASCUSTDATA (64),PARAMFLAG_FHASDEFAULT (32),PARAMFLAG_FIN (1),PARAMFLAG_FLCID (4),PARAMFLAG_FOPT (16),PARAMFLAG_FOUT (2),PARAMFLAG_FRETVAL (8),PARAMFLAG_NONE (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PARAMFLAG()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

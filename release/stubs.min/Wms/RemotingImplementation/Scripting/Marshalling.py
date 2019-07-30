@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.Scripting.Marshalling calls itself Marshalling
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class MarshalledPythonScriptEvaluator:
+class MarshalledPythonScriptEvaluator(MarshalledObject):
  """ MarshalledPythonScriptEvaluator(lifetime: TimeSpan) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MarshalledPythonScriptEvaluator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetLibRoot():
   """ GetLibRoot() -> str """
@@ -29,17 +35,19 @@ class MarshalledPythonScriptEvaluator:
 
 
 
-class PythonStdoutInterProcessLogger:
+class PythonStdoutInterProcessLogger(StreamWriter):
  """ PythonStdoutInterProcessLogger(loggerProxy: IMarshalledLogger,stream: Stream) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PythonStdoutInterProcessLogger()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: StreamWriter,disposing: bool)
-   Releases the unmanaged resources used by the System.IO.StreamWriter and optionally 
-    releases the managed resources.
+   Releases the unmanaged resources used by the System.IO.StreamWriter and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -48,11 +56,9 @@ class PythonStdoutInterProcessLogger:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object

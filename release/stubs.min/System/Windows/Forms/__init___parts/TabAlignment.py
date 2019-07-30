@@ -1,9 +1,13 @@
-class TabAlignment:
+class TabAlignment(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies the locations of the tabs in a tab control.
  
  enum TabAlignment,values: Bottom (1),Left (2),Right (3),Top (0)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TabAlignment()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

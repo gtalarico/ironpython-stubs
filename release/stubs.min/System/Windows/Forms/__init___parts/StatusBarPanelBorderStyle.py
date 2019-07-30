@@ -1,9 +1,13 @@
-class StatusBarPanelBorderStyle:
+class StatusBarPanelBorderStyle(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies the appearance of the border for a System.Windows.Forms.StatusBarPanel on a System.Windows.Forms.StatusBar control.
  
  enum StatusBarPanelBorderStyle,values: None (1),Raised (2),Sunken (3)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return StatusBarPanelBorderStyle()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

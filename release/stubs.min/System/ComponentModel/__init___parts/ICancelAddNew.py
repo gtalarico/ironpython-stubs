@@ -1,5 +1,10 @@
 class ICancelAddNew:
  """ Adds transactional capability when adding a new item to a collection. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ICancelAddNew()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CancelNew(self,itemIndex):
   """
   CancelNew(self: ICancelAddNew,itemIndex: int)

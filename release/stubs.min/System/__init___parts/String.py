@@ -1,4 +1,4 @@
-class String:
+class String(object):
  """
  Represents text as a series of Unicode characters.
  
@@ -11,6 +11,11 @@ class String:
  str(value: Array[Char])
  str(c: Char,count: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return String()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def capitalize(self,*args):
   """ capitalize(self: str) -> str """
   pass

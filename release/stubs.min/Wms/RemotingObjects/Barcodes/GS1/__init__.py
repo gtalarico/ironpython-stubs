@@ -1,15 +1,22 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.Barcodes.GS1 calls itself GS1
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # no functions
 # classes
 
-class ApplicationIdentifiers:
+class ApplicationIdentifiers(object):
  """ ApplicationIdentifiers() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ApplicationIdentifiers()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  AdditionalProductIdentification='240'
  AmountDue_DefinedValutaBand='390n'
  AmountDue_WithISOValutaCode='391n'
@@ -131,21 +138,36 @@ class ApplicationIdentifiers:
  ZipCodeOfRecipient_withoutCountryCode='420'
 
 
-class GS1Barcode:
+class GS1Barcode(object):
  """
  GS1Barcode()
  GS1Barcode(applicationIdentifier: str,value: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GS1Barcode()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToBarcode(self,includeApplicationIdentifier=None):
   """
   ToBarcode(self: GS1Barcode) -> str
+  
+   Converts this Wms.RemotingObjects.Barcodes.GS1.GS1Barcode to a System.String,usable for barcodes (HRI)
   ToBarcode(self: GS1Barcode,includeApplicationIdentifier: bool) -> str
   """
   pass
  def ToReadableCode(self,includeApplicationIdentifier=None):
   """
   ToReadableCode(self: GS1Barcode) -> str
-  ToReadableCode(self: GS1Barcode,includeApplicationIdentifier: bool) -> str
+  
+   Converts this Wms.RemotingObjects.Barcodes.GS1.GS1Barcode to a System.String,readable for humans (Non-HRI)
+  ToReadableCode(self: GS1Barcode,includeApplicationIdentifier: bool) -> str
+  
+   Creates a readable System.String of the barcode
+  
+   includeApplicationIdentifier: True to include the Application Identifier in 
+     the result System.String,otherwise false
+   Returns: System.String with the readable barcode
   """
   pass
  def ToString(self):
@@ -169,43 +191,90 @@ class GS1Barcode:
  def __str__(self,*args):
   pass
 
-class ItemNumberHelper:
- # no doc
+class ItemNumberHelper(object):
+ """ A class to validate GS1 article numbers """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemNumberHelper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetItemNumberType(articleNumber):
-  """ GetItemNumberType(articleNumber: str) -> ItemNumberType """
+  """
+  GetItemNumberType(articleNumber: str) -> ItemNumberType
+  
+   Get ItemNumberType
+  
+   articleNumber: ASIN,EAN8,EAN13,GTIN,ISBN10,ISBN13,UPC
+  """
   pass
  @staticmethod
  def IsValidAsin(asin):
-  """ IsValidAsin(asin: str) -> bool """
+  """
+  IsValidAsin(asin: str) -> bool
+  
+   Validate ASIN
+  """
   pass
  @staticmethod
  def IsValidEan(code):
-  """ IsValidEan(code: str) -> bool """
+  """
+  IsValidEan(code: str) -> bool
+  
+   Validate European Article Number
+  """
   pass
  @staticmethod
  def IsValidGtin(code):
-  """ IsValidGtin(code: str) -> bool """
+  """
+  IsValidGtin(code: str) -> bool
+  
+   Validate Global Trade Item Number
+  """
   pass
  @staticmethod
  def IsValidIsbn10(isbn10):
-  """ IsValidIsbn10(isbn10: str) -> bool """
+  """
+  IsValidIsbn10(isbn10: str) -> bool
+  
+   Validate ISBN10
+  """
   pass
  @staticmethod
  def IsValidIsbn13(isbn13):
-  """ IsValidIsbn13(isbn13: str) -> bool """
+  """
+  IsValidIsbn13(isbn13: str) -> bool
+  
+   Validate ISBN13
+  """
   pass
  @staticmethod
  def IsValidIssn(code):
-  """ IsValidIssn(code: str) -> bool """
+  """
+  IsValidIssn(code: str) -> bool
+  
+   Validate ISSN
+  """
   pass
  @staticmethod
  def IsValidUpc(code):
-  """ IsValidUpc(code: str) -> bool """
+  """
+  IsValidUpc(code: str) -> bool
+  
+   Validate a UPC
+   Returns: Whether or not the code is a valid UPC.
+  """
   pass
  @staticmethod
  def TryConvertToGtin(code,gtin):
-  """ TryConvertToGtin(code: str) -> (bool,str) """
+  """
+  TryConvertToGtin(code: str) -> (bool,str)
+  
+   Attempts to convert a UPC or EAN13 to a GTIN.
+  
+   code: Code to convert
+   Returns: True on success,false on failure
+  """
   pass
  __all__=[
   '__reduce_ex__',
@@ -223,6 +292,11 @@ class ItemNumberHelper:
 
 class ItemNumberType:
  """ enum ItemNumberType,values: ASIN (1),EAN13 (3),EAN8 (2),GTIN (4),ISBN10 (5),ISBN13 (6),ISSN (9),SKU (7),Unknown (0),UPC (8) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ItemNumberType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -1,5 +1,9 @@
 class IDropTarget:
  """ Defines mouse events. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return IDropTarget()
+
  def OnDragDrop(self,e):
   """
   OnDragDrop(self: IDropTarget,e: DragEventArgs)

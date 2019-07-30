@@ -1,4 +1,4 @@
-class EventLogTraceListener:
+class EventLogTraceListener(TraceListener):
  """
  Provides a simple listener that directs tracing or debugging output to an System.Diagnostics.EventLog.
  
@@ -6,6 +6,11 @@ class EventLogTraceListener:
  EventLogTraceListener(eventLog: EventLog)
  EventLogTraceListener(source: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EventLogTraceListener()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: EventLogTraceListener)
@@ -20,8 +25,7 @@ class EventLogTraceListener:
   GetSupportedAttributes(self: TraceListener) -> Array[str]
   
    Gets the custom attributes supported by the trace listener.
-   Returns: A string array naming the custom attributes supported by the trace listener,or null if 
-    there are no custom attributes.
+   Returns: A string array naming the custom attributes supported by the trace listener,or null if there are no custom attributes.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -30,11 +34,9 @@ class EventLogTraceListener:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -49,60 +51,38 @@ class EventLogTraceListener:
    Writes trace information,a data object,and event information to the event log.
   
    eventCache: An object that contains the current process ID,thread ID,and stack trace information.
-   source: A name used to identify the output; typically the name of the application that generated 
-    the trace event.
-  
+   source: A name used to identify the output; typically the name of the application that generated the trace event.
    severity: One of the enumeration values that specifies the type of event that has caused the trace.
-   id: A numeric identifier for the event. The combination of source and id uniquely identifies 
-    an event.
-  
+   id: A numeric identifier for the event. The combination of source and id uniquely identifies an event.
    data: A data object to write to the output file or stream.
   TraceData(self: EventLogTraceListener,eventCache: TraceEventCache,source: str,severity: TraceEventType,id: int,*data: Array[object])
-   Writes trace information,an array of data objects,and event information to the event 
-    log.
-  
+   Writes trace information,an array of data objects,and event information to the event log.
   
    eventCache: An object that contains the current process ID,thread ID,and stack trace information.
-   source: A name used to identify the output; typically the name of the application that generated 
-    the trace event.
-  
+   source: A name used to identify the output; typically the name of the application that generated the trace event.
    severity: One of the enumeration values that specifies the type of event that has caused the trace.
-   id: A numeric identifier for the event. The combination of source and id uniquely identifies 
-    an event.
-  
+   id: A numeric identifier for the event. The combination of source and id uniquely identifies an event.
    data: An array of data objects.
   """
   pass
  def TraceEvent(self,eventCache,source,*__args):
   """
   TraceEvent(self: EventLogTraceListener,eventCache: TraceEventCache,source: str,severity: TraceEventType,id: int,format: str,*args: Array[object])
-   Writes trace information,a formatted array of objects,and event information to the 
-    event log.
-  
+   Writes trace information,a formatted array of objects,and event information to the event log.
   
    eventCache: An object that contains the current process ID,thread ID,and stack trace information.
-   source: A name used to identify the output; typically the name of the application that generated 
-    the trace event.
-  
+   source: A name used to identify the output; typically the name of the application that generated the trace event.
    severity: One of the enumeration values that specifies the type of event that has caused the trace.
-   id: A numeric identifier for the event. The combination of source and id uniquely identifies 
-    an event.
-  
-   format: A format string that contains zero or more format items that correspond to objects in the 
-    args array.
-  
+   id: A numeric identifier for the event. The combination of source and id uniquely identifies an event.
+   format: A format string that contains zero or more format items that correspond to objects in the args array.
    args: An object array containing zero or more objects to format.
   TraceEvent(self: EventLogTraceListener,eventCache: TraceEventCache,source: str,severity: TraceEventType,id: int,message: str)
    Writes trace information,a message,and event information to the event log.
   
    eventCache: An object that contains the current process ID,thread ID,and stack trace information.
-   source: A name used to identify the output; typically the name of the application that generated 
-    the trace event.
-  
+   source: A name used to identify the output; typically the name of the application that generated the trace event.
    severity: One of the enumeration values that specifies the type of event that has caused the trace.
-   id: A numeric identifier for the event. The combination of source and id uniquely identifies 
-    an event.
-  
+   id: A numeric identifier for the event. The combination of source and id uniquely identifies an event.
    message: The trace message.
   """
   pass
@@ -117,8 +97,7 @@ class EventLogTraceListener:
  def WriteIndent(self,*args):
   """
   WriteIndent(self: TraceListener)
-   Writes the indent to the listener you create when you implement this class,and resets 
-    the System.Diagnostics.TraceListener.NeedIndent property to false.
+   Writes the indent to the listener you create when you implement this class,and resets the System.Diagnostics.TraceListener.NeedIndent property to false.
   """
   pass
  def WriteLine(self,*__args):

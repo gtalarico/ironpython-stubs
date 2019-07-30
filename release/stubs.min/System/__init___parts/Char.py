@@ -1,32 +1,31 @@
-class Char:
+class Char(object):
  """ Represents a character as a UTF-16 code unit. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Char()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CompareTo(self,value):
   """
   CompareTo(self: Char,value: object) -> int
   
-   Compares this instance to a specified object and indicates whether this instance 
-    precedes,follows,or appears in the same position in the sort order as the specified 
+   Compares this instance to a specified object and indicates whether this instance precedes,follows,or appears in the same position in the sort order as the specified 
     System.Object.
   
   
    value: An object to compare this instance to,or null.
-   Returns: A signed number indicating the position of this instance in the sort order in relation to 
-    the value parameter.Return Value Description Less than zero This instance precedes value. 
-    Zero This instance has the same position in the sort order as value. Greater than zero 
-    This instance follows value.-or- value is null.
+   Returns: A signed number indicating the position of this instance in the sort order in relation to the value parameter.Return Value Description Less than zero This instance precedes 
+    value. Zero This instance has the same position in the sort order as value. Greater than zero This instance follows value.-or- value is null.
   
   CompareTo(self: Char,value: Char) -> int
   
-   Compares this instance to a specified System.Char object and indicates whether this 
-    instance precedes,follows,or appears in the same position in the sort order as the 
+   Compares this instance to a specified System.Char object and indicates whether this instance precedes,follows,or appears in the same position in the sort order as the 
     specified System.Char object.
   
   
    value: A System.Char object to compare.
-   Returns: A signed number indicating the position of this instance in the sort order in relation to 
-    the value parameter.Return Value Description Less than zero This instance precedes value. 
-    Zero This instance has the same position in the sort order as value. Greater than zero 
-    This instance follows value.
+   Returns: A signed number indicating the position of this instance in the sort order in relation to the value parameter.Return Value Description Less than zero This instance precedes 
+    value. Zero This instance has the same position in the sort order as value. Greater than zero This instance follows value.
   """
   pass
  @staticmethod
@@ -37,8 +36,7 @@ class Char:
    Converts the specified Unicode code point into a UTF-16 encoded string.
   
    utf32: A 21-bit Unicode code point.
-   Returns: A string consisting of one System.Char object or a surrogate pair of System.Char objects 
-    equivalent to the code point specified by the utf32 parameter.
+   Returns: A string consisting of one System.Char object or a surrogate pair of System.Char objects equivalent to the code point specified by the utf32 parameter.
   """
   pass
  @staticmethod
@@ -50,19 +48,14 @@ class Char:
   
    highSurrogate: A high surrogate code unit (that is,a code unit ranging from U+D800 through U+DBFF).
    lowSurrogate: A low surrogate code unit (that is,a code unit ranging from U+DC00 through U+DFFF).
-   Returns: The 21-bit Unicode code point represented by the highSurrogate and lowSurrogate 
-    parameters.
-  
+   Returns: The 21-bit Unicode code point represented by the highSurrogate and lowSurrogate parameters.
   ConvertToUtf32(s: str,index: int) -> int
   
-   Converts the value of a UTF-16 encoded character or surrogate pair at a specified 
-    position in a string into a Unicode code point.
-  
+   Converts the value of a UTF-16 encoded character or surrogate pair at a specified position in a string into a Unicode code point.
   
    s: A string that contains a character or surrogate pair.
    index: The index position of the character or surrogate pair in s.
-   Returns: The 21-bit Unicode code point represented by the character or surrogate pair at the 
-    position in the s parameter specified by the index parameter.
+   Returns: The 21-bit Unicode code point represented by the character or surrogate pair at the position in the s parameter specified by the index parameter.
   """
   pass
  def Equals(self,obj):
@@ -72,14 +65,10 @@ class Char:
    Returns a value that indicates whether this instance is equal to a specified object.
   
    obj: An object to compare with this instance or null.
-   Returns: true if obj is an instance of System.Char and equals the value of this instance; 
-    otherwise,false.
-  
+   Returns: true if obj is an instance of System.Char and equals the value of this instance; otherwise,false.
   Equals(self: Char,obj: Char) -> bool
   
-   Returns a value that indicates whether this instance is equal to the specified 
-    System.Char object.
-  
+   Returns a value that indicates whether this instance is equal to the specified System.Char object.
   
    obj: An object to compare to this instance.
    Returns: true if the obj parameter equals the value of this instance; otherwise,false.
@@ -98,22 +87,17 @@ class Char:
   """
   GetNumericValue(c: Char) -> float
   
-   Converts the specified numeric Unicode character to a double-precision floating point 
-    number.
-  
+   Converts the specified numeric Unicode character to a double-precision floating point number.
   
    c: The Unicode character to convert.
    Returns: The numeric value of c if that character represents a number; otherwise,-1.0.
   GetNumericValue(s: str,index: int) -> float
   
-   Converts the numeric Unicode character at the specified position in a specified string to 
-    a double-precision floating point number.
-  
+   Converts the numeric Unicode character at the specified position in a specified string to a double-precision floating point number.
   
    s: A System.String.
    index: The character position in s.
-   Returns: The numeric value of the character at position index in s if that character represents a 
-    number; otherwise,-1.
+   Returns: The numeric value of the character at position index in s if that character represents a number; otherwise,-1.
   """
   pass
  def GetTypeCode(self):
@@ -129,22 +113,17 @@ class Char:
   """
   GetUnicodeCategory(c: Char) -> UnicodeCategory
   
-   Categorizes a specified Unicode character into a group identified by one of the 
-    System.Globalization.UnicodeCategory values.
-  
+   Categorizes a specified Unicode character into a group identified by one of the System.Globalization.UnicodeCategory values.
   
    c: The Unicode character to categorize.
    Returns: A System.Globalization.UnicodeCategory value that identifies the group that contains c.
   GetUnicodeCategory(s: str,index: int) -> UnicodeCategory
   
-   Categorizes the character at the specified position in a specified string into a group 
-    identified by one of the System.Globalization.UnicodeCategory values.
-  
+   Categorizes the character at the specified position in a specified string into a group identified by one of the System.Globalization.UnicodeCategory values.
   
    s: A System.String.
    index: The character position in s.
-   Returns: A System.Globalization.UnicodeCategory enumerated constant that identifies the group that 
-    contains the character at position index in s.
+   Returns: A System.Globalization.UnicodeCategory enumerated constant that identifies the group that contains the character at position index in s.
   """
   pass
  @staticmethod
@@ -158,9 +137,7 @@ class Char:
    Returns: true if c is a control character; otherwise,false.
   IsControl(s: str,index: int) -> bool
   
-   Indicates whether the character at the specified position in a specified string is 
-    categorized as a control character.
-  
+   Indicates whether the character at the specified position in a specified string is categorized as a control character.
   
    s: A string.
    index: The position of the character to evaluate in s.
@@ -178,9 +155,7 @@ class Char:
    Returns: true if c is a decimal digit; otherwise,false.
   IsDigit(s: str,index: int) -> bool
   
-   Indicates whether the character at the specified position in a specified string is 
-    categorized as a decimal digit.
-  
+   Indicates whether the character at the specified position in a specified string is categorized as a decimal digit.
   
    s: A string.
    index: The position of the character to evaluate in s.
@@ -195,19 +170,14 @@ class Char:
    Indicates whether the specified System.Char object is a high surrogate.
   
    c: The Unicode character to evaluate.
-   Returns: true if the numeric value of the c parameter ranges from U+D800 through U+DBFF; 
-    otherwise,false.
-  
+   Returns: true if the numeric value of the c parameter ranges from U+D800 through U+DBFF; otherwise,false.
   IsHighSurrogate(s: str,index: int) -> bool
   
-   Indicates whether the System.Char object at the specified position in a string is a high 
-    surrogate.
-  
+   Indicates whether the System.Char object at the specified position in a string is a high surrogate.
   
    s: A string.
    index: The position of the character to evaluate in s.
-   Returns: true if the numeric value of the specified character in the s parameter ranges from 
-    U+D800 through U+DBFF; otherwise,false.
+   Returns: true if the numeric value of the specified character in the s parameter ranges from U+D800 through U+DBFF; otherwise,false.
   """
   pass
  @staticmethod
@@ -221,9 +191,7 @@ class Char:
    Returns: true if c is a letter; otherwise,false.
   IsLetter(s: str,index: int) -> bool
   
-   Indicates whether the character at the specified position in a specified string is 
-    categorized as a Unicode letter.
-  
+   Indicates whether the character at the specified position in a specified string is categorized as a Unicode letter.
   
    s: A string.
    index: The position of the character to evaluate in s.
@@ -235,22 +203,17 @@ class Char:
   """
   IsLetterOrDigit(c: Char) -> bool
   
-   Indicates whether the specified Unicode character is categorized as a letter or a decimal 
-    digit.
-  
+   Indicates whether the specified Unicode character is categorized as a letter or a decimal digit.
   
    c: The Unicode character to evaluate.
    Returns: true if c is a letter or a decimal digit; otherwise,false.
   IsLetterOrDigit(s: str,index: int) -> bool
   
-   Indicates whether the character at the specified position in a specified string is 
-    categorized as a letter or a decimal digit.
-  
+   Indicates whether the character at the specified position in a specified string is categorized as a letter or a decimal digit.
   
    s: A string.
    index: The position of the character to evaluate in s.
-   Returns: true if the character at position index in s is a letter or a decimal digit; otherwise,
-    false.
+   Returns: true if the character at position index in s is a letter or a decimal digit; otherwise,false.
   """
   pass
  @staticmethod
@@ -264,9 +227,7 @@ class Char:
    Returns: true if c is a lowercase letter; otherwise,false.
   IsLower(s: str,index: int) -> bool
   
-   Indicates whether the character at the specified position in a specified string is 
-    categorized as a lowercase letter.
-  
+   Indicates whether the character at the specified position in a specified string is categorized as a lowercase letter.
   
    s: A string.
    index: The position of the character to evaluate in s.
@@ -281,19 +242,14 @@ class Char:
    Indicates whether the specified System.Char object is a low surrogate.
   
    c: The character to evaluate.
-   Returns: true if the numeric value of the c parameter ranges from U+DC00 through U+DFFF; 
-    otherwise,false.
-  
+   Returns: true if the numeric value of the c parameter ranges from U+DC00 through U+DFFF; otherwise,false.
   IsLowSurrogate(s: str,index: int) -> bool
   
-   Indicates whether the System.Char object at the specified position in a string is a low 
-    surrogate.
-  
+   Indicates whether the System.Char object at the specified position in a string is a low surrogate.
   
    s: A string.
    index: The position of the character to evaluate in s.
-   Returns: true if the numeric value of the specified character in the s parameter ranges from 
-    U+DC00 through U+DFFF; otherwise,false.
+   Returns: true if the numeric value of the specified character in the s parameter ranges from U+DC00 through U+DFFF; otherwise,false.
   """
   pass
  @staticmethod
@@ -307,9 +263,7 @@ class Char:
    Returns: true if c is a number; otherwise,false.
   IsNumber(s: str,index: int) -> bool
   
-   Indicates whether the character at the specified position in a specified string is 
-    categorized as a number.
-  
+   Indicates whether the character at the specified position in a specified string is categorized as a number.
   
    s: A string.
    index: The position of the character to evaluate in s.
@@ -327,9 +281,7 @@ class Char:
    Returns: true if c is a punctuation mark; otherwise,false.
   IsPunctuation(s: str,index: int) -> bool
   
-   Indicates whether the character at the specified position in a specified string is 
-    categorized as a punctuation mark.
-  
+   Indicates whether the character at the specified position in a specified string is categorized as a punctuation mark.
   
    s: A string.
    index: The position of the character to evaluate in s.
@@ -347,9 +299,7 @@ class Char:
    Returns: true if c is a separator character; otherwise,false.
   IsSeparator(s: str,index: int) -> bool
   
-   Indicates whether the character at the specified position in a specified string is 
-    categorized as a separator character.
-  
+   Indicates whether the character at the specified position in a specified string is categorized as a separator character.
   
    s: A string.
    index: The position of the character to evaluate in s.
@@ -367,14 +317,11 @@ class Char:
    Returns: true if c is either a high surrogate or a low surrogate; otherwise,false.
   IsSurrogate(s: str,index: int) -> bool
   
-   Indicates whether the character at the specified position in a specified string has a 
-    surrogate code unit.
-  
+   Indicates whether the character at the specified position in a specified string has a surrogate code unit.
   
    s: A string.
    index: The position of the character to evaluate in s.
-   Returns: true if the character at position index in s is a either a high surrogate or a low 
-    surrogate; otherwise,false.
+   Returns: true if the character at position index in s is a either a high surrogate or a low surrogate; otherwise,false.
   """
   pass
  @staticmethod
@@ -382,16 +329,12 @@ class Char:
   """
   IsSurrogatePair(s: str,index: int) -> bool
   
-   Indicates whether two adjacent System.Char objects at a specified position in a string 
-    form a surrogate pair.
-  
+   Indicates whether two adjacent System.Char objects at a specified position in a string form a surrogate pair.
   
    s: A string.
    index: The starting position of the pair of characters to evaluate within s.
-   Returns: true if the s parameter includes adjacent characters at positions index and index + 1,
-    and the numeric value of the character at position index ranges from U+D800 through 
-    U+DBFF,and the numeric value of the character at position index+1 ranges from U+DC00 
-    through U+DFFF; otherwise,false.
+   Returns: true if the s parameter includes adjacent characters at positions index and index + 1,and the numeric value of the character at position index ranges from U+D800 through 
+    U+DBFF,and the numeric value of the character at position index+1 ranges from U+DC00 through U+DFFF; otherwise,false.
   
   IsSurrogatePair(highSurrogate: Char,lowSurrogate: Char) -> bool
   
@@ -399,8 +342,7 @@ class Char:
   
    highSurrogate: The character to evaluate as the high surrogate of a surrogate pair.
    lowSurrogate: The character to evaluate as the low surrogate of a surrogate pair.
-   Returns: true if the numeric value of the highSurrogate parameter ranges from U+D800 through 
-    U+DBFF,and the numeric value of the lowSurrogate parameter ranges from U+DC00 through 
+   Returns: true if the numeric value of the highSurrogate parameter ranges from U+D800 through U+DBFF,and the numeric value of the lowSurrogate parameter ranges from U+DC00 through 
     U+DFFF; otherwise,false.
   """
   pass
@@ -415,9 +357,7 @@ class Char:
    Returns: true if c is a symbol character; otherwise,false.
   IsSymbol(s: str,index: int) -> bool
   
-   Indicates whether the character at the specified position in a specified string is 
-    categorized as a symbol character.
-  
+   Indicates whether the character at the specified position in a specified string is categorized as a symbol character.
   
    s: A string.
    index: The position of the character to evaluate in s.
@@ -435,9 +375,7 @@ class Char:
    Returns: true if c is an uppercase letter; otherwise,false.
   IsUpper(s: str,index: int) -> bool
   
-   Indicates whether the character at the specified position in a specified string is 
-    categorized as an uppercase letter.
-  
+   Indicates whether the character at the specified position in a specified string is categorized as an uppercase letter.
   
    s: A string.
    index: The position of the character to evaluate in s.
@@ -455,9 +393,7 @@ class Char:
    Returns: true if c is white space; otherwise,false.
   IsWhiteSpace(s: str,index: int) -> bool
   
-   Indicates whether the character at the specified position in a specified string is 
-    categorized as white space.
-  
+   Indicates whether the character at the specified position in a specified string is categorized as white space.
   
    s: A string.
    index: The position of the character to evaluate in s.
@@ -480,22 +416,17 @@ class Char:
   """
   ToLower(c: Char,culture: CultureInfo) -> Char
   
-   Converts the value of a specified Unicode character to its lowercase equivalent using 
-    specified culture-specific formatting information.
-  
+   Converts the value of a specified Unicode character to its lowercase equivalent using specified culture-specific formatting information.
   
    c: The Unicode character to convert.
    culture: An object that supplies culture-specific casing rules.
-   Returns: The lowercase equivalent of c,modified according to culture,or the unchanged value of 
-    c,if c is already lowercase or not alphabetic.
-  
+   Returns: The lowercase equivalent of c,modified according to culture,or the unchanged value of c,if c is already lowercase or not alphabetic.
   ToLower(c: Char) -> Char
   
    Converts the value of a Unicode character to its lowercase equivalent.
   
    c: The Unicode character to convert.
-   Returns: The lowercase equivalent of c,or the unchanged value of c,if c is already lowercase or 
-    not alphabetic.
+   Returns: The lowercase equivalent of c,or the unchanged value of c,if c is already lowercase or not alphabetic.
   """
   pass
  @staticmethod
@@ -503,13 +434,10 @@ class Char:
   """
   ToLowerInvariant(c: Char) -> Char
   
-   Converts the value of a Unicode character to its lowercase equivalent using the casing 
-    rules of the invariant culture.
-  
+   Converts the value of a Unicode character to its lowercase equivalent using the casing rules of the invariant culture.
   
    c: The Unicode character to convert.
-   Returns: The lowercase equivalent of the c parameter,or the unchanged value of c,if c is already 
-    lowercase or not alphabetic.
+   Returns: The lowercase equivalent of the c parameter,or the unchanged value of c,if c is already lowercase or not alphabetic.
   """
   pass
  def ToString(self,*__args):
@@ -520,9 +448,7 @@ class Char:
    Returns: The string representation of the value of this instance.
   ToString(self: Char,provider: IFormatProvider) -> str
   
-   Converts the value of this instance to its equivalent string representation using the 
-    specified culture-specific format information.
-  
+   Converts the value of this instance to its equivalent string representation using the specified culture-specific format information.
   
    provider: (Reserved) An object that supplies culture-specific formatting information.
    Returns: The string representation of the value of this instance as specified by provider.
@@ -539,22 +465,17 @@ class Char:
   """
   ToUpper(c: Char,culture: CultureInfo) -> Char
   
-   Converts the value of a specified Unicode character to its uppercase equivalent using 
-    specified culture-specific formatting information.
-  
+   Converts the value of a specified Unicode character to its uppercase equivalent using specified culture-specific formatting information.
   
    c: The Unicode character to convert.
    culture: An object that supplies culture-specific casing rules.
-   Returns: The uppercase equivalent of c,modified according to culture,or the unchanged value of c 
-    if c is already uppercase,has no uppercase equivalent,or is not alphabetic.
-  
+   Returns: The uppercase equivalent of c,modified according to culture,or the unchanged value of c if c is already uppercase,has no uppercase equivalent,or is not alphabetic.
   ToUpper(c: Char) -> Char
   
    Converts the value of a Unicode character to its uppercase equivalent.
   
    c: The Unicode character to convert.
-   Returns: The uppercase equivalent of c,or the unchanged value of c if c is already uppercase,has 
-    no uppercase equivalent,or is not alphabetic.
+   Returns: The uppercase equivalent of c,or the unchanged value of c if c is already uppercase,has no uppercase equivalent,or is not alphabetic.
   """
   pass
  @staticmethod
@@ -562,13 +483,10 @@ class Char:
   """
   ToUpperInvariant(c: Char) -> Char
   
-   Converts the value of a Unicode character to its uppercase equivalent using the casing 
-    rules of the invariant culture.
-  
+   Converts the value of a Unicode character to its uppercase equivalent using the casing rules of the invariant culture.
   
    c: The Unicode character to convert.
-   Returns: The uppercase equivalent of the c parameter,or the unchanged value of c,if c is already 
-    uppercase or not alphabetic.
+   Returns: The uppercase equivalent of the c parameter,or the unchanged value of c,if c is already uppercase or not alphabetic.
   """
   pass
  @staticmethod
@@ -576,9 +494,7 @@ class Char:
   """
   TryParse(s: str) -> (bool,Char)
   
-   Converts the value of the specified string to its equivalent Unicode character. A return 
-    code indicates whether the conversion succeeded or failed.
-  
+   Converts the value of the specified string to its equivalent Unicode character. A return code indicates whether the conversion succeeded or failed.
   
    s: A string that contains a single character,or null.
    Returns: true if the s parameter was converted successfully; otherwise,false.

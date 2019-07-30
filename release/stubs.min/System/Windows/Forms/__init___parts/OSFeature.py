@@ -1,16 +1,17 @@
-class OSFeature:
+class OSFeature(FeatureSupport,IFeatureSupport):
  """ Provides operating-system specific feature queries. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return OSFeature()
+
  def GetVersionPresent(self,feature):
   """
   GetVersionPresent(self: OSFeature,feature: object) -> Version
   
    Retrieves the version of the specified feature currently available on the system.
   
-   feature: The feature whose version is requested,either 
-    System.Windows.Forms.OSFeature.LayeredWindows or System.Windows.Forms.OSFeature.Themes.
-  
-   Returns: A System.Version representing the version of the specified operating system feature 
-    currently available on the system; or null if the feature cannot be found.
+   feature: The feature whose version is requested,either System.Windows.Forms.OSFeature.LayeredWindows or System.Windows.Forms.OSFeature.Themes.
+   Returns: A System.Version representing the version of the specified operating system feature currently available on the system; or null if the feature cannot be found.
   """
   pass
  @staticmethod
@@ -18,9 +19,7 @@ class OSFeature:
   """
   IsPresent(enumVal: SystemParameter) -> bool
   
-   Retrieves a value indicating whether the operating system supports the specified feature 
-    or metric.
-  
+   Retrieves a value indicating whether the operating system supports the specified feature or metric.
   
    enumVal: A System.Windows.Forms.SystemParameter representing the feature to search for.
    Returns: true if the feature is available on the system; otherwise,false.

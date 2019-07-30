@@ -1,9 +1,14 @@
-class MutexAuditRule:
+class MutexAuditRule(AuditRule):
  """
  Represents a set of access rights to be audited for a user or group. This class cannot be inherited.
  
  MutexAuditRule(identity: IdentityReference,eventRights: MutexRights,flags: AuditFlags)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MutexAuditRule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,identity,eventRights,flags):
   """ __new__(cls: type,identity: IdentityReference,eventRights: MutexRights,flags: AuditFlags) """

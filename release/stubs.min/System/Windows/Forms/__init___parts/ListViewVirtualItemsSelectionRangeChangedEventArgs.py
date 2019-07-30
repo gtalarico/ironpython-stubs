@@ -1,9 +1,13 @@
-class ListViewVirtualItemsSelectionRangeChangedEventArgs:
+class ListViewVirtualItemsSelectionRangeChangedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ListView.VirtualItemsSelectionRangeChanged event.
  
  ListViewVirtualItemsSelectionRangeChangedEventArgs(startIndex: int,endIndex: int,isSelected: bool)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ListViewVirtualItemsSelectionRangeChangedEventArgs()
+
  @staticmethod
  def __new__(self,startIndex,endIndex,isSelected):
   """ __new__(cls: type,startIndex: int,endIndex: int,isSelected: bool) """

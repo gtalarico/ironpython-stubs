@@ -4,6 +4,11 @@ class INVOKEKIND:
  
  enum INVOKEKIND,values: INVOKE_FUNC (1),INVOKE_PROPERTYGET (2),INVOKE_PROPERTYPUT (4),INVOKE_PROPERTYPUTREF (8)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return INVOKEKIND()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

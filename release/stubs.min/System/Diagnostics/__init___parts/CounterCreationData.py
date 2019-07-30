@@ -1,10 +1,15 @@
-class CounterCreationData:
+class CounterCreationData(object):
  """
  Defines the counter type,name,and Help string for a custom counter.
  
  CounterCreationData(counterName: str,counterHelp: str,counterType: PerformanceCounterType)
  CounterCreationData()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CounterCreationData()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,counterName=None,counterHelp=None,counterType=None):
   """

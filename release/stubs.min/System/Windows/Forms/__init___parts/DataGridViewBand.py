@@ -1,5 +1,9 @@
-class DataGridViewBand:
+class DataGridViewBand(DataGridViewElement,ICloneable,IDisposable):
  """ Represents a linear collection of elements in a System.Windows.Forms.DataGridView control. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewBand()
+
  def Clone(self):
   """
   Clone(self: DataGridViewBand) -> object

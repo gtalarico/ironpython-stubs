@@ -1,9 +1,13 @@
-class Appearance:
+class Appearance(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies the appearance of a control.
  
  enum Appearance,values: Button (1),Normal (0)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Appearance()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -1,10 +1,15 @@
-class EntryWrittenEventArgs:
+class EntryWrittenEventArgs(EventArgs):
  """
  Provides data for the System.Diagnostics.EventLog.EntryWritten event.
  
  EntryWrittenEventArgs()
  EntryWrittenEventArgs(entry: EventLogEntry)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EntryWrittenEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,entry=None):
   """

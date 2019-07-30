@@ -1,9 +1,13 @@
-class GiveFeedbackEventArgs:
+class GiveFeedbackEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.Control.GiveFeedback event,which occurs during a drag operation.
  
  GiveFeedbackEventArgs(effect: DragDropEffects,useDefaultCursors: bool)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return GiveFeedbackEventArgs()
+
  @staticmethod
  def __new__(self,effect,useDefaultCursors):
   """ __new__(cls: type,effect: DragDropEffects,useDefaultCursors: bool) """

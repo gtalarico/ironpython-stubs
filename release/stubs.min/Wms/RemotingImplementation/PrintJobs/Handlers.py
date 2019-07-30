@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.PrintJobs.Handlers calls itself Handlers
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class ChangePrintJobStatusHandler:
+class ChangePrintJobStatusHandler(MessageHandlerBase):
  """ ChangePrintJobStatusHandler() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ChangePrintJobStatusHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Handle(self,message):
   """ Handle(self: ChangePrintJobStatusHandler,message: ChangePrintJobStatusMessage) """
   pass
@@ -17,8 +23,13 @@ class ChangePrintJobStatusHandler:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class PrintJobDispatchedHandler:
+class PrintJobDispatchedHandler(MessageHandlerBase):
  """ PrintJobDispatchedHandler() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintJobDispatchedHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Handle(self,message):
   """ Handle(self: PrintJobDispatchedHandler,message: PrintJobDispatchedMessage) """
   pass

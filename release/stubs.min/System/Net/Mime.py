@@ -3,26 +3,28 @@
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
 
-class ContentDisposition:
+class ContentDisposition(object):
  """
  Represents a MIME protocol Content-Disposition header.
  
  ContentDisposition()
  ContentDisposition(disposition: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ContentDisposition()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,rparam):
   """
   Equals(self: ContentDisposition,rparam: object) -> bool
   
-   Determines whether the content-disposition header of the specified 
-    System.Net.Mime.ContentDisposition object is equal to the content-disposition header of 
-    this object.
-  
+   Determines whether the content-disposition header of the specified System.Net.Mime.ContentDisposition object is equal to the content-disposition header of this object.
   
    rparam: The System.Net.Mime.ContentDisposition object to compare with this object.
    Returns: true if the content-disposition headers are the same; otherwise false.
@@ -121,20 +123,23 @@ Set: Size(self: ContentDisposition)=value
 
 
 
-class ContentType:
+class ContentType(object):
  """
  Represents a MIME protocol Content-Type header.
  
  ContentType()
  ContentType(contentType: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ContentType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,rparam):
   """
   Equals(self: ContentType,rparam: object) -> bool
   
-   Determines whether the content-type header of the specified System.Net.Mime.ContentType 
-    object is equal to the content-type header of this object.
-  
+   Determines whether the content-type header of the specified System.Net.Mime.ContentType object is equal to the content-type header of this object.
   
    rparam: The System.Net.Mime.ContentType object to compare with this object.
    Returns: true if the content-type headers are the same; otherwise false.
@@ -209,8 +214,13 @@ Get: Parameters(self: ContentType) -> StringDictionary
 
 
 
-class DispositionTypeNames:
+class DispositionTypeNames(object):
  """ Supplies the strings used to specify the disposition type for an e-mail attachment. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DispositionTypeNames()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Attachment='attachment'
  Inline='inline'
  __all__=[
@@ -219,8 +229,13 @@ class DispositionTypeNames:
  ]
 
 
-class MediaTypeNames:
+class MediaTypeNames(object):
  """ Specifies the media type information for an e-mail message attachment. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MediaTypeNames()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Application=None
  Image=None
  Text=None
@@ -237,6 +252,11 @@ class TransferEncoding:
  
  enum TransferEncoding,values: Base64 (1),EightBit (3),QuotedPrintable (0),SevenBit (2),Unknown (-1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TransferEncoding()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

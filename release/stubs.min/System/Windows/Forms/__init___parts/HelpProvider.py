@@ -1,9 +1,13 @@
-class HelpProvider:
+class HelpProvider(Component,IComponent,IDisposable,IExtenderProvider):
  """
  Provides pop-up or online Help for controls.
  
  HelpProvider()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return HelpProvider()
+
  def CanExtend(self,target):
   """
   CanExtend(self: HelpProvider,target: object) -> bool
@@ -17,12 +21,9 @@ class HelpProvider:
  def Dispose(self):
   """
   Dispose(self: Component,disposing: bool)
-   Releases the unmanaged resources used by the System.ComponentModel.Component and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.ComponentModel.Component and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetHelpKeyword(self,ctl):
@@ -32,9 +33,7 @@ class HelpProvider:
    Returns the Help keyword for the specified control.
   
    ctl: A System.Windows.Forms.Control from which to retrieve the Help topic.
-   Returns: The Help keyword associated with this control,or null if the 
-    System.Windows.Forms.HelpProvider is currently configured to display the entire Help file 
-    or is configured to provide a Help string.
+   Returns: The Help keyword associated with this control,or null if the System.Windows.Forms.HelpProvider is currently configured to display the entire Help file or is configured to provide a Help string.
   """
   pass
  def GetHelpNavigator(self,ctl):
@@ -44,8 +43,7 @@ class HelpProvider:
    Returns the current System.Windows.Forms.HelpNavigator setting for the specified control.
   
    ctl: A System.Windows.Forms.Control from which to retrieve the Help navigator.
-   Returns: The System.Windows.Forms.HelpNavigator setting for the specified control. The default is 
-    System.Windows.Forms.HelpNavigator.AssociateIndex.
+   Returns: The System.Windows.Forms.HelpNavigator setting for the specified control. The default is System.Windows.Forms.HelpNavigator.AssociateIndex.
   """
   pass
  def GetHelpString(self,ctl):
@@ -62,14 +60,10 @@ class HelpProvider:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetShowHelp(self,ctl):
@@ -88,12 +82,7 @@ class HelpProvider:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -112,9 +101,7 @@ class HelpProvider:
  def SetHelpKeyword(self,ctl,keyword):
   """
   SetHelpKeyword(self: HelpProvider,ctl: Control,keyword: str)
-   Specifies the keyword used to retrieve Help when the user invokes Help for the specified 
-    control.
-  
+   Specifies the keyword used to retrieve Help when the user invokes Help for the specified control.
   
    ctl: A System.Windows.Forms.Control that specifies the control for which to set the Help topic.
    keyword: The Help keyword to associate with the control.
@@ -123,9 +110,7 @@ class HelpProvider:
  def SetHelpNavigator(self,ctl,navigator):
   """
   SetHelpNavigator(self: HelpProvider,ctl: Control,navigator: HelpNavigator)
-   Specifies the Help command to use when retrieving Help from the Help file for the 
-    specified control.
-  
+   Specifies the Help command to use when retrieving Help from the Help file for the specified control.
   
    ctl: A System.Windows.Forms.Control for which to set the Help keyword.
    navigator: One of the System.Windows.Forms.HelpNavigator values.

@@ -1,5 +1,9 @@
-class IBindableComponent:
+class IBindableComponent(IComponent,IDisposable):
  """ Enables a non-control component to emulate the data-binding behavior of a Windows Forms control. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return IBindableComponent()
+
  def __enter__(self,*args):
   """ __enter__(self: IDisposable) -> object """
   pass

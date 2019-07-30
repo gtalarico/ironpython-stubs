@@ -1,10 +1,14 @@
-class LayoutEventArgs:
+class LayoutEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.Control.Layout event. This class cannot be inherited.
  
  LayoutEventArgs(affectedComponent: IComponent,affectedProperty: str)
  LayoutEventArgs(affectedControl: Control,affectedProperty: str)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return LayoutEventArgs()
+
  @staticmethod
  def __new__(self,*__args):
   """

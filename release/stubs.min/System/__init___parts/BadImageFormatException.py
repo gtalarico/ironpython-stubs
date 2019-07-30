@@ -1,4 +1,4 @@
-class BadImageFormatException:
+class BadImageFormatException(SystemException):
  """
  The exception that is thrown when the file image of a dynamic link library (DLL) or an executable program is invalid.
  
@@ -8,29 +8,26 @@ class BadImageFormatException:
  BadImageFormatException(message: str,fileName: str)
  BadImageFormatException(message: str,fileName: str,inner: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BadImageFormatException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: BadImageFormatException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the file name,
-    assembly cache log,and additional exception information.
+   Sets the System.Runtime.Serialization.SerializationInfo object with the file name,assembly cache log,and additional exception information.
   
-  
-   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data 
-    about the exception being thrown.
-  
-   context: The System.Runtime.Serialization.StreamingContext that contains contextual information 
-    about the source or destination.
+   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about the exception being thrown.
+   context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the source or destination.
   """
   pass
  def ToString(self):
   """
   ToString(self: BadImageFormatException) -> str
   
-   Returns the fully qualified name of this exception and possibly the error message,the 
-    name of the inner exception,and the stack trace.
-  
-   Returns: A string containing the fully qualified name of this exception and possibly the error 
-    message,the name of the inner exception,and the stack trace.
+   Returns the fully qualified name of this exception and possibly the error message,the name of the inner exception,and the stack trace.
+   Returns: A string containing the fully qualified name of this exception and possibly the error message,the name of the inner exception,and the stack trace.
   """
   pass
  def __init__(self,*args):

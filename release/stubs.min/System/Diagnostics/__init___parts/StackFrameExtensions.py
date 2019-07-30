@@ -1,5 +1,10 @@
-class StackFrameExtensions:
+class StackFrameExtensions(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StackFrameExtensions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetNativeImageBase(stackFrame):
   """ GetNativeImageBase(stackFrame: StackFrame) -> IntPtr """

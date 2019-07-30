@@ -1,9 +1,13 @@
-class RichTextBoxWordPunctuations:
+class RichTextBoxWordPunctuations(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies the types of punctuation tables that can be used with the System.Windows.Forms.RichTextBox control's word-wrapping and word-breaking features.
  
  enum RichTextBoxWordPunctuations,values: All (896),Custom (512),Level1 (128),Level2 (256)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return RichTextBoxWordPunctuations()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

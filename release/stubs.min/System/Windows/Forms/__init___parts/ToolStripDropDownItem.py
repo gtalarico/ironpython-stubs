@@ -1,5 +1,9 @@
-class ToolStripDropDownItem:
+class ToolStripDropDownItem(ToolStripItem,IComponent,IDisposable,IDropTarget,ISupportOleDropSource,IArrangedElement):
  """ Provides basic functionality for controls that display a System.Windows.Forms.ToolStripDropDown when a System.Windows.Forms.ToolStripDropDownButton,System.Windows.Forms.ToolStripMenuItem,or System.Windows.Forms.ToolStripSplitButton control is clicked. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripDropDownItem()
+
  def CreateAccessibilityInstance(self,*args):
   """ CreateAccessibilityInstance(self: ToolStripDropDownItem) -> AccessibleObject """
   pass
@@ -14,26 +18,19 @@ class ToolStripDropDownItem:
  def Dispose(self):
   """
   Dispose(self: ToolStripDropDownItem,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.ToolStripDropDownItem 
-    and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.ToolStripDropDownItem and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def HideDropDown(self):
@@ -49,17 +46,14 @@ class ToolStripDropDownItem:
    Determines whether a character is an input character that the item recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the item and not preprocessed; 
-    otherwise,false.
+   Returns: true if the character should be sent directly to the item and not preprocessed; otherwise,false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: ToolStripItem,keyData: Keys) -> bool
   
-   Determines whether the specified key is a regular input key or a special key that 
-    requires preprocessing.
-  
+   Determines whether the specified key is a regular input key or a special key that requires preprocessing.
   
    keyData: One of the System.Windows.Forms.Keys values.
    Returns: true if the specified key is a regular input key; otherwise,false.
@@ -71,12 +65,7 @@ class ToolStripDropDownItem:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -306,10 +295,7 @@ class ToolStripDropDownItem:
  def OnOwnerFontChanged(self,*args):
   """
   OnOwnerFontChanged(self: ToolStripItem,e: EventArgs)
-   Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.ToolStripItem.Font property has changed on the parent of the 
-    System.Windows.Forms.ToolStripItem.
-  
+   Raises the System.Windows.Forms.Control.FontChanged event when the System.Windows.Forms.ToolStripItem.Font property has changed on the parent of the System.Windows.Forms.ToolStripItem.
   
    e: A System.EventArgs that contains the event data.
   """
@@ -342,10 +328,7 @@ class ToolStripDropDownItem:
  def OnParentEnabledChanged(self,*args):
   """
   OnParentEnabledChanged(self: ToolStripItem,e: EventArgs)
-   Raises the System.Windows.Forms.ToolStripItem.EnabledChanged event when the 
-    System.Windows.Forms.ToolStripItem.Enabled property value of the item's container 
-    changes.
-  
+   Raises the System.Windows.Forms.ToolStripItem.EnabledChanged event when the System.Windows.Forms.ToolStripItem.Enabled property value of the item's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -402,9 +385,7 @@ class ToolStripDropDownItem:
   
    Processes a command key.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: false in all cases.
   """
@@ -434,8 +415,7 @@ class ToolStripDropDownItem:
   SetBounds(self: ToolStripItem,bounds: Rectangle)
    Sets the size and location of the item.
   
-   bounds: A System.Drawing.Rectangle that represents the size and location of the 
-    System.Windows.Forms.ToolStripItem
+   bounds: A System.Drawing.Rectangle that represents the size and location of the System.Windows.Forms.ToolStripItem
   """
   pass
  def SetVisibleCore(self,*args):
@@ -449,8 +429,7 @@ class ToolStripDropDownItem:
  def ShowDropDown(self):
   """
   ShowDropDown(self: ToolStripDropDownItem)
-   Displays the System.Windows.Forms.ToolStripDropDownItem control associated with this 
-    System.Windows.Forms.ToolStripDropDownItem.
+   Displays the System.Windows.Forms.ToolStripDropDownItem control associated with this System.Windows.Forms.ToolStripDropDownItem.
   """
   pass
  def __enter__(self,*args):

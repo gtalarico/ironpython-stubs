@@ -1,5 +1,9 @@
-class HtmlElementErrorEventArgs:
+class HtmlElementErrorEventArgs(EventArgs):
  """ Provides data for the System.Windows.Forms.HtmlWindow.Error event. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return HtmlElementErrorEventArgs()
+
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets the descriptive string corresponding to the error.
 

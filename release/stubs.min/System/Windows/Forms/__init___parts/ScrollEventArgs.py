@@ -1,4 +1,4 @@
-class ScrollEventArgs:
+class ScrollEventArgs(EventArgs):
  """
  Provides data for the Scroll event.
  
@@ -7,6 +7,10 @@ class ScrollEventArgs:
  ScrollEventArgs(type: ScrollEventType,oldValue: int,newValue: int)
  ScrollEventArgs(type: ScrollEventType,oldValue: int,newValue: int,scroll: ScrollOrientation)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ScrollEventArgs()
+
  @staticmethod
  def __new__(self,type,*__args):
   """

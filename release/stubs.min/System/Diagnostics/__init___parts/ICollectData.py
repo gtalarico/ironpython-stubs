@@ -1,5 +1,10 @@
 class ICollectData:
  """ Prepares performance data for the performance DLL the system loads when working with performance counters. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ICollectData()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CloseData(self):
   """
   CloseData(self: ICollectData)

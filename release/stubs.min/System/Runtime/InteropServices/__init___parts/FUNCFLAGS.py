@@ -4,6 +4,11 @@ class FUNCFLAGS:
  
  enum (flags) FUNCFLAGS,values: FUNCFLAG_FBINDABLE (4),FUNCFLAG_FDEFAULTBIND (32),FUNCFLAG_FDEFAULTCOLLELEM (256),FUNCFLAG_FDISPLAYBIND (16),FUNCFLAG_FHIDDEN (64),FUNCFLAG_FIMMEDIATEBIND (4096),FUNCFLAG_FNONBROWSABLE (1024),FUNCFLAG_FREPLACEABLE (2048),FUNCFLAG_FREQUESTEDIT (8),FUNCFLAG_FRESTRICTED (1),FUNCFLAG_FSOURCE (2),FUNCFLAG_FUIDEFAULT (512),FUNCFLAG_FUSESGETLASTERROR (128)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FUNCFLAGS()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

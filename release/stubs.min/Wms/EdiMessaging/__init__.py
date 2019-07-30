@@ -1,15 +1,22 @@
 # encoding: utf-8
 # module Wms.EdiMessaging calls itself EdiMessaging
-# from Wms.EdiMessaging,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null,Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.EdiMessaging,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null,Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # no functions
 # classes
 
-class HandleResult:
+class HandleResult(object):
  """ HandleResult() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HandleResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Messages=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Messages(self: HandleResult) -> StringBuilder
 
@@ -26,76 +33,106 @@ Set: Success(self: HandleResult)=value
 
 class IMessage:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IMessage()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  Body=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Body(self: IMessage) -> Array[Byte]
+ """
+
+Get: Body(self: IMessage) -> Array[Byte]
 
 Set: Body(self: IMessage)=value
 """
 
  BodyMimeType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BodyMimeType(self: IMessage) -> str
+ """
+
+Get: BodyMimeType(self: IMessage) -> str
 
 Set: BodyMimeType(self: IMessage)=value
 """
 
  HasStockAllocations=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HasStockAllocations(self: IMessage) -> bool
+ """An indication wether this message has stock allocations.
+   if set to True,on certain events,the allocations will be automatically removed.
+
+Get: HasStockAllocations(self: IMessage) -> bool
 
 Set: HasStockAllocations(self: IMessage)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: IMessage) -> Guid
+ """Guid of the message. Should be created on instance creation.
+
+Get: Id(self: IMessage) -> Guid
 
 """
 
  Label=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Label(self: IMessage) -> str
+ """
+
+Get: Label(self: IMessage) -> str
 
 Set: Label(self: IMessage)=value
 """
 
  Log=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Log(self: IMessage) -> str
+ """
+
+Get: Log(self: IMessage) -> str
 
 Set: Log(self: IMessage)=value
 """
 
  ParentId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ParentId(self: IMessage) -> Nullable[Guid]
+ """
+
+Get: ParentId(self: IMessage) -> Nullable[Guid]
 
 Set: ParentId(self: IMessage)=value
 """
 
  Priority=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Priority(self: IMessage) -> MessagePriority
+ """
+
+Get: Priority(self: IMessage) -> MessagePriority
 
 Set: Priority(self: IMessage)=value
 """
 
  ReferenceId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReferenceId(self: IMessage) -> Nullable[Guid]
+ """A reference which remain the same when messages are resubmitted.
+
+Get: ReferenceId(self: IMessage) -> Nullable[Guid]
 
 Set: ReferenceId(self: IMessage)=value
 """
 
  Source=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Source(self: IMessage) -> str
+ """
+
+Get: Source(self: IMessage) -> str
 
 Set: Source(self: IMessage)=value
 """
 
  Status=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Status(self: IMessage) -> MessageStatus
+ """
+
+Get: Status(self: IMessage) -> MessageStatus
 
 Set: Status(self: IMessage)=value
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Type(self: IMessage) -> str
+ """
+
+Get: Type(self: IMessage) -> str
 
 Set: Type(self: IMessage)=value
 """
@@ -104,6 +141,11 @@ Set: Type(self: IMessage)=value
 
 class IMessageHandler:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IMessageHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CanHandle(self,message):
   """ CanHandle(self: IMessageHandler,message: IMessage) -> bool """
   pass
@@ -140,6 +182,11 @@ Set: OnLogWarning(self: IMessageHandler)=value
 
 class IMessagePublisher:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IMessagePublisher()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Start(self,onStoreMessage):
   """ Start(self: IMessagePublisher,onStoreMessage: OnStoreMessage) """
   pass
@@ -173,6 +220,11 @@ Set: OnLogWarning(self: IMessagePublisher)=value
 
 class IMessagingProvider:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IMessagingProvider()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHandlers(self):
   """ GetHandlers(self: IMessagingProvider) -> IEnumerable[MessageHandlerDescriptor] """
   pass
@@ -188,6 +240,11 @@ class IMessagingProvider:
 
 class IQueueProvider:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IQueueProvider()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetQueueListener(self):
   """ GetQueueListener(self: IQueueProvider) -> IQueueListener """
   pass
@@ -198,8 +255,13 @@ class IQueueProvider:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class MessageBase:
+class MessageBase(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MessageBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -209,80 +271,109 @@ class MessageBase:
   """ __repr__(self: object) -> str """
   pass
  Body=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Body(self: MessageBase) -> Array[Byte]
+ """
+
+Get: Body(self: MessageBase) -> Array[Byte]
 
 Set: Body(self: MessageBase)=value
 """
 
  BodyMimeType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BodyMimeType(self: MessageBase) -> str
+ """
+
+Get: BodyMimeType(self: MessageBase) -> str
 
 Set: BodyMimeType(self: MessageBase)=value
 """
 
  HasStockAllocations=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HasStockAllocations(self: MessageBase) -> bool
+ """
+
+Get: HasStockAllocations(self: MessageBase) -> bool
 
 Set: HasStockAllocations(self: MessageBase)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: MessageBase) -> Guid
+ """
+
+Get: Id(self: MessageBase) -> Guid
 
 """
 
  Label=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Label(self: MessageBase) -> str
+ """
+
+Get: Label(self: MessageBase) -> str
 
 Set: Label(self: MessageBase)=value
 """
 
  Log=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Log(self: MessageBase) -> str
+ """
+
+Get: Log(self: MessageBase) -> str
 
 Set: Log(self: MessageBase)=value
 """
 
  ParentId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ParentId(self: MessageBase) -> Nullable[Guid]
+ """
+
+Get: ParentId(self: MessageBase) -> Nullable[Guid]
 
 Set: ParentId(self: MessageBase)=value
 """
 
  Priority=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Priority(self: MessageBase) -> MessagePriority
+ """
+
+Get: Priority(self: MessageBase) -> MessagePriority
 
 Set: Priority(self: MessageBase)=value
 """
 
  ReferenceId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReferenceId(self: MessageBase) -> Nullable[Guid]
+ """
+
+Get: ReferenceId(self: MessageBase) -> Nullable[Guid]
 
 Set: ReferenceId(self: MessageBase)=value
 """
 
  Source=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Source(self: MessageBase) -> str
+ """
+
+Get: Source(self: MessageBase) -> str
 
 Set: Source(self: MessageBase)=value
 """
 
  Status=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Status(self: MessageBase) -> MessageStatus
+ """
+
+Get: Status(self: MessageBase) -> MessageStatus
 
 Set: Status(self: MessageBase)=value
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Type(self: MessageBase) -> str
+ """
+
+Get: Type(self: MessageBase) -> str
 
 Set: Type(self: MessageBase)=value
 """
 
 
 
-class MessageHandlerBase:
+class MessageHandlerBase(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MessageHandlerBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CanHandle(self,message):
   """ CanHandle(self: MessageHandlerBase,message: IMessage) -> bool """
   pass
@@ -296,24 +387,32 @@ class MessageHandlerBase:
   """ __repr__(self: object) -> str """
   pass
  MetaData=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: MetaData(self: MessageHandlerBase) -> HandlerDescriptorAttribute
+ """
+
+Get: MetaData(self: MessageHandlerBase) -> HandlerDescriptorAttribute
 
 """
 
  OnLogError=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OnLogError(self: MessageHandlerBase) -> OnLogMessage
+ """
+
+Get: OnLogError(self: MessageHandlerBase) -> OnLogMessage
 
 Set: OnLogError(self: MessageHandlerBase)=value
 """
 
  OnLogMessage=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OnLogMessage(self: MessageHandlerBase) -> OnLogMessage
+ """
+
+Get: OnLogMessage(self: MessageHandlerBase) -> OnLogMessage
 
 Set: OnLogMessage(self: MessageHandlerBase)=value
 """
 
  OnLogWarning=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OnLogWarning(self: MessageHandlerBase) -> OnLogMessage
+ """
+
+Get: OnLogWarning(self: MessageHandlerBase) -> OnLogMessage
 
 Set: OnLogWarning(self: MessageHandlerBase)=value
 """
@@ -322,6 +421,11 @@ Set: OnLogWarning(self: MessageHandlerBase)=value
 
 class MessagePriority:
  """ enum MessagePriority,values: AboveNormal (4),High (5),Highest (7),Low (2),Lowest (0),Normal (3),VeryHigh (6),VeryLow (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MessagePriority()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -356,8 +460,13 @@ class MessagePriority:
  VeryLow=None
 
 
-class MessagePublisherBase:
+class MessagePublisherBase(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MessagePublisherBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Start(self,onStoreMessage):
   """ Start(self: MessagePublisherBase,onStoreMessage: OnStoreMessage) """
   pass
@@ -368,24 +477,32 @@ class MessagePublisherBase:
   """ __repr__(self: object) -> str """
   pass
  MetaData=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: MetaData(self: MessagePublisherBase) -> PublisherDescriptorAttribute
+ """
+
+Get: MetaData(self: MessagePublisherBase) -> PublisherDescriptorAttribute
 
 """
 
  OnLogError=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OnLogError(self: MessagePublisherBase) -> OnLogMessage
+ """
+
+Get: OnLogError(self: MessagePublisherBase) -> OnLogMessage
 
 Set: OnLogError(self: MessagePublisherBase)=value
 """
 
  OnLogMessage=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OnLogMessage(self: MessagePublisherBase) -> OnLogMessage
+ """
+
+Get: OnLogMessage(self: MessagePublisherBase) -> OnLogMessage
 
 Set: OnLogMessage(self: MessagePublisherBase)=value
 """
 
  OnLogWarning=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OnLogWarning(self: MessagePublisherBase) -> OnLogMessage
+ """
+
+Get: OnLogWarning(self: MessagePublisherBase) -> OnLogMessage
 
 Set: OnLogWarning(self: MessagePublisherBase)=value
 """
@@ -394,6 +511,11 @@ Set: OnLogWarning(self: MessagePublisherBase)=value
 
 class MessageStatus:
  """ enum MessageStatus,values: Enqueued (10),Handled (20),HandledWithErrors (30),Handling (15),New (0),ReSubmitted (40),Undefined (-1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MessageStatus()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -427,11 +549,21 @@ class MessageStatus:
  value__=None
 
 
-class MessagingProviderInitializationArguments:
+class MessagingProviderInitializationArguments(object):
  """ MessagingProviderInitializationArguments() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MessagingProviderInitializationArguments()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
 
-class MessagingProvidersFactory:
+class MessagingProvidersFactory(object):
  """ MessagingProvidersFactory() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MessagingProvidersFactory()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetAll():
   """ GetAll() -> IEnumerable[IMessagingProvider] """
@@ -449,8 +581,13 @@ class MessagingProvidersFactory:
   """ InitializeAll() -> IEnumerable[IMessagingProvider] """
   pass
 
-class MsmqProvider:
+class MsmqProvider(object):
  """ MsmqProvider(options: MsmqOptions) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MsmqProvider()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetQueueListener(self):
   """ GetQueueListener(self: MsmqProvider) -> IQueueListener """
   pass

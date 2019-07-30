@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.Generation.Ranges calls itself Ranges
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class BaseRange:
+class BaseRange(object):
  """ BaseRange(numberGeneration: INumberGeneration) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BaseRange()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddGenerationArgs(self,*args):
   """ AddGenerationArgs[T](self: BaseRange,dfObject: DataFlowObject[T],numberRange: NumberRange,numbersToGenerate: int) """
   pass
@@ -48,8 +54,13 @@ class BaseRange:
  _numberGeneration=None
 
 
-class NumberRangeFactory:
+class NumberRangeFactory(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NumberRangeFactory()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetRange(rangeType):
   """ GetRange(rangeType: NumberRangeType) -> BaseRange """
@@ -59,8 +70,13 @@ class NumberRangeFactory:
  ]
 
 
-class SSCCRange:
+class SSCCRange(BaseRange):
  """ SSCCRange(numberGeneration: INumberGeneration) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SSCCRange()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ResetRange(self,dfObject,manualReset):
   """ ResetRange(self: SSCCRange,dfObject: DataFlowObject[NumberRange],manualReset: bool) -> DataFlowObject[NumberRange] """
   pass

@@ -1,41 +1,60 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.DocumentQueue calls itself DocumentQueue
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # no functions
 # classes
 
-class AddPrintJob:
+class AddPrintJob(object):
  """ AddPrintJob() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AddPrintJob()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Attributes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Attributes(self: AddPrintJob) -> SerializableDictionary[str,str]
+ """Extra attributes to store on the print message,
+   this is not mandatory here since direct print job doesn't pass the print rules but instead uses printerId that is provided.
+
+Get: Attributes(self: AddPrintJob) -> SerializableDictionary[str,str]
 
 Set: Attributes(self: AddPrintJob)=value
 """
 
  DocumentSource=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DocumentSource(self: AddPrintJob) -> IDocumentSource
+ """Source to get the document from to store it in blob storage.
+
+Get: DocumentSource(self: AddPrintJob) -> IDocumentSource
 
 Set: DocumentSource(self: AddPrintJob)=value
 """
 
  DocumentType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DocumentType(self: AddPrintJob) -> DocumentTypeEnum
+ """(file) type of the document you are printing.
+
+Get: DocumentType(self: AddPrintJob) -> DocumentTypeEnum
 
 Set: DocumentType(self: AddPrintJob)=value
 """
 
  JobType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: JobType(self: AddPrintJob) -> str
+ """A name for the type/category of document to print
+   Eg: Picklist,ERP packageslip,SendLabel,etc.
+
+Get: JobType(self: AddPrintJob) -> str
 
 Set: JobType(self: AddPrintJob)=value
 """
 
  Label=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Label(self: AddPrintJob) -> str
+ """Name for the print job.
+
+Get: Label(self: AddPrintJob) -> str
 
 Set: Label(self: AddPrintJob)=value
 """
@@ -47,55 +66,87 @@ Set: NumberOfPages(self: AddPrintJob)=value
 """
 
  PrinterId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrinterId(self: AddPrintJob) -> str
+ """Id of the printer that you want to use.
+   If not provided a printer will be chosen through the rule engine
+
+Get: PrinterId(self: AddPrintJob) -> str
 
 Set: PrinterId(self: AddPrintJob)=value
 """
 
  PrintingOptions=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrintingOptions(self: AddPrintJob) -> PrintingOptions
+ """Extra (override) print options for this specific print job.
+
+Get: PrintingOptions(self: AddPrintJob) -> PrintingOptions
 
 Set: PrintingOptions(self: AddPrintJob)=value
 """
 
 
 
-class Attachment:
- """ Attachment() """
+class Attachment(object):
+ """
+ A is a printable document.
+ 
+ Attachment()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Attachment()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Document=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Document(self: Attachment) -> Array[Byte]
+ """Raw bytes to be printed.
+
+Get: Document(self: Attachment) -> Array[Byte]
 
 Set: Document(self: Attachment)=value
 """
 
  DocumentType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DocumentType(self: Attachment) -> DocumentTypeEnum
+ """Type of document,eg:
+   PDF - pdf file (printed using external tool (printpdf.bat)).
+   ZPL - Zebra label (printed by label printer).
+   Rest is printed as raw bytes document.
+
+Get: DocumentType(self: Attachment) -> DocumentTypeEnum
 
 Set: DocumentType(self: Attachment)=value
 """
 
  JobType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: JobType(self: Attachment) -> str
+ """A key to identify the type of this attachment
+
+Get: JobType(self: Attachment) -> str
 
 Set: JobType(self: Attachment)=value
 """
 
  Label=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Label(self: Attachment) -> str
+ """The name of this document
+
+Get: Label(self: Attachment) -> str
 
 Set: Label(self: Attachment)=value
 """
 
  Metadata=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Metadata(self: Attachment) -> SerializableDictionary[str,str]
+ """The meta data of this attachment
+
+Get: Metadata(self: Attachment) -> SerializableDictionary[str,str]
 
 Set: Metadata(self: Attachment)=value
 """
 
 
 
-class AttributeValue:
+class AttributeValue(object):
  """ AttributeValue() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AttributeValue()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Code=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Code(self: AttributeValue) -> str
 
@@ -110,11 +161,16 @@ Set: Description(self: AttributeValue)=value
 
 
 
-class DocumentDescriptor:
+class DocumentDescriptor(object):
  """
  DocumentDescriptor()
  DocumentDescriptor(code: str,description: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DocumentDescriptor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,code=None,description=None):
   """
@@ -123,21 +179,30 @@ class DocumentDescriptor:
   """
   pass
  Code=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Code(self: DocumentDescriptor) -> str
+ """A unique code to identify the type of document
+
+Get: Code(self: DocumentDescriptor) -> str
 
 Set: Code(self: DocumentDescriptor)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: DocumentDescriptor) -> str
+ """A readable description of the document
+
+Get: Description(self: DocumentDescriptor) -> str
 
 Set: Description(self: DocumentDescriptor)=value
 """
 
 
 
-class GetPrinterRulesArgs:
+class GetPrinterRulesArgs(object):
  """ GetPrinterRulesArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetPrinterRulesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  FileTypes=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: FileTypes(self: GetPrinterRulesArgs) -> Array[str]
 
@@ -164,10 +229,17 @@ Set: JobTypes(self: GetPrinterRulesArgs)=value
 
 
 
-class GetPrintJobAttributesArgs:
+class GetPrintJobAttributesArgs(object):
  """ GetPrintJobAttributesArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetPrintJobAttributesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  DefaultAttributesOnly=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultAttributesOnly(self: GetPrintJobAttributesArgs) -> bool
+ """Indicates if only the default set of attributes should be retrieved
+
+Get: DefaultAttributesOnly(self: GetPrintJobAttributesArgs) -> bool
 
 Set: DefaultAttributesOnly(self: GetPrintJobAttributesArgs)=value
 """
@@ -180,8 +252,13 @@ Set: JobType(self: GetPrintJobAttributesArgs)=value
 
 
 
-class GetPrintJobAuditLogArgs:
+class GetPrintJobAuditLogArgs(object):
  """ GetPrintJobAuditLogArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetPrintJobAuditLogArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  JobId=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: JobId(self: GetPrintJobAuditLogArgs) -> int
 
@@ -196,8 +273,13 @@ Set: PagingParams(self: GetPrintJobAuditLogArgs)=value
 
 
 
-class GetPrintJobsArgs:
+class GetPrintJobsArgs(object):
  """ GetPrintJobsArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetPrintJobsArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Filter=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Filter(self: GetPrintJobsArgs) -> str
 
@@ -219,19 +301,37 @@ Set: Status(self: GetPrintJobsArgs)=value
 
 
 class IAddPrintJob:
- # no doc
+ """
+ Interface abstraction for adding print jobs.
+    Needed for projects who can't directly use RemotingImplementation
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IAddPrintJob()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddPrintJob(self,printjob):
-  """ AddPrintJob(self: IAddPrintJob,printjob: AddPrintJob) -> Task[Guid] """
+  """
+  AddPrintJob(self: IAddPrintJob,printjob: AddPrintJob) -> Task[Guid]
+  
+   Add print job.
+     Returns guid id of job when job has been queued.
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class Operator:
+class Operator(object):
  """
  Operator()
  Operator(code: str,description: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Operator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,code=None,description=None):
   """
@@ -253,12 +353,17 @@ Set: Description(self: Operator)=value
 
 
 
-class PrintJobAttribute:
+class PrintJobAttribute(object):
  """
  PrintJobAttribute()
  PrintJobAttribute(code: str)
  PrintJobAttribute(code: str,description: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintJobAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,code=None,description=None):
   """
@@ -281,8 +386,13 @@ Set: Description(self: PrintJobAttribute)=value
 
 
 
-class PrintJobAuditLogEntry:
+class PrintJobAuditLogEntry(DbObject):
  """ PrintJobAuditLogEntry() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintJobAuditLogEntry()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -320,8 +430,13 @@ Set: StatusChangedOn(self: PrintJobAuditLogEntry)=value
 
 
 
-class PrintJobConstants:
+class PrintJobConstants(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintJobConstants()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  QueueFromAgentResolverKey='BwPrintJobsReturn'
  QueueToAgentResolverKey='BwPrintJobs'
  __all__=[
@@ -332,6 +447,11 @@ class PrintJobConstants:
 
 class PrintJobStatus:
  """ enum PrintJobStatus,values: Dispatched (18),Enqueued (10),Handled (20),HandledWithErrors (30),Handling (15),New (0),ReSubmitted (40),Unknown (50) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintJobStatus()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -366,11 +486,16 @@ class PrintJobStatus:
  value__=None
 
 
-class PrintJobType:
+class PrintJobType(object):
  """
  PrintJobType()
  PrintJobType(id: str,description: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintJobType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,id=None,description=None):
   """
@@ -392,8 +517,13 @@ Set: Id(self: PrintJobType)=value
 
 
 
-class PrintRule:
+class PrintRule(DbObject):
  """ PrintRule() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintRule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,*__args):
   """
   Equals(self: PrintRule,obj: object) -> bool
@@ -513,12 +643,17 @@ Set: ZoneId(self: PrintRule)=value
 
 
 
-class PrintRuleLine:
+class PrintRuleLine(DbObject):
  """
  PrintRuleLine()
  PrintRuleLine(field: str,operator: str,value: str)
  PrintRuleLine(field: str,operator: str,values: IEnumerable[str])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintRuleLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -563,69 +698,95 @@ Set: Values(self: PrintRuleLine)=value
 
 
 
-class QueuedPrintJob:
+class QueuedPrintJob(DbObject):
  """ QueuedPrintJob() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return QueuedPrintJob()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  def __reduce_ex__(self,*args):
   pass
  BlobId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BlobId(self: QueuedPrintJob) -> int
+ """Id of the blob content
+
+Get: BlobId(self: QueuedPrintJob) -> int
 
 Set: BlobId(self: QueuedPrintJob)=value
 """
 
  Copies=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Copies(self: QueuedPrintJob) -> int
+ """Number of copies
+
+Get: Copies(self: QueuedPrintJob) -> int
 
 Set: Copies(self: QueuedPrintJob)=value
 """
 
  Device=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Device(self: QueuedPrintJob) -> str
+ """Name of the computer/client that created this print job.
+
+Get: Device(self: QueuedPrintJob) -> str
 
 Set: Device(self: QueuedPrintJob)=value
 """
 
  DocumentType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DocumentType(self: QueuedPrintJob) -> DocumentTypeEnum
+ """Type of file to print
+
+Get: DocumentType(self: QueuedPrintJob) -> DocumentTypeEnum
 
 Set: DocumentType(self: QueuedPrintJob)=value
 """
 
  FileSize=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: FileSize(self: QueuedPrintJob) -> int
+ """Size of the file to print in bytes.
+
+Get: FileSize(self: QueuedPrintJob) -> int
 
 Set: FileSize(self: QueuedPrintJob)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: QueuedPrintJob) -> Guid
+ """Identifying Id of the print job
+
+Get: Id(self: QueuedPrintJob) -> Guid
 
 Set: Id(self: QueuedPrintJob)=value
 """
 
  JobType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: JobType(self: QueuedPrintJob) -> str
+ """A key to defince the type of this job (ie a PrintJobTypeItemLabel or PrintJobTypePickingList).
+   This key can be used to translate it to a readable description to display.
+
+Get: JobType(self: QueuedPrintJob) -> str
 
 Set: JobType(self: QueuedPrintJob)=value
 """
 
  Label=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Label(self: QueuedPrintJob) -> str
+ """Informative name of the print job
+
+Get: Label(self: QueuedPrintJob) -> str
 
 Set: Label(self: QueuedPrintJob)=value
 """
 
  PageSize=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PageSize(self: QueuedPrintJob) -> str
+ """Number of pages
+
+Get: PageSize(self: QueuedPrintJob) -> str
 
 Set: PageSize(self: QueuedPrintJob)=value
 """
 
  PrinterId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrinterId(self: QueuedPrintJob) -> str
+ """Id of the printer,where the job will be printed on.
+
+Get: PrinterId(self: QueuedPrintJob) -> str
 
 Set: PrinterId(self: QueuedPrintJob)=value
 """
@@ -637,39 +798,54 @@ Set: PrinterName(self: QueuedPrintJob)=value
 """
 
  PrintRuleId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrintRuleId(self: QueuedPrintJob) -> Nullable[int]
+ """Id of the printrule that was used to decide the printer to print from.
+
+Get: PrintRuleId(self: QueuedPrintJob) -> Nullable[int]
 
 Set: PrintRuleId(self: QueuedPrintJob)=value
 """
 
  Resubmitted=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Resubmitted(self: QueuedPrintJob) -> bool
+ """Indicates if this print job was resubmitted
+
+Get: Resubmitted(self: QueuedPrintJob) -> bool
 
 Set: Resubmitted(self: QueuedPrintJob)=value
 """
 
  Status=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Status(self: QueuedPrintJob) -> PrintJobStatus
+ """Current state of the print job.
+
+Get: Status(self: QueuedPrintJob) -> PrintJobStatus
 
 Set: Status(self: QueuedPrintJob)=value
 """
 
  UserName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UserName(self: QueuedPrintJob) -> str
+ """Name of the user that created this print job.
+
+Get: UserName(self: QueuedPrintJob) -> str
 
 Set: UserName(self: QueuedPrintJob)=value
 """
 
  ZoneId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ZoneId(self: QueuedPrintJob) -> int
+ """The id of the zone of which the print job was created
+
+Get: ZoneId(self: QueuedPrintJob) -> int
 
 Set: ZoneId(self: QueuedPrintJob)=value
 """
 
 
 
-class RedispatchPrintJobArgs:
+class RedispatchPrintJobArgs(object):
  """ RedispatchPrintJobArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RedispatchPrintJobArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  JobIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: JobIds(self: RedispatchPrintJobArgs) -> Array[Guid]
 

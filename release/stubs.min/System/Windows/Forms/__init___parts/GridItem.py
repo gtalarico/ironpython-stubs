@@ -1,12 +1,14 @@
-class GridItem:
+class GridItem(object):
  """ Implements one row in a System.Windows.Forms.PropertyGrid. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return GridItem()
+
  def Select(self):
   """
   Select(self: GridItem) -> bool
   
-   When overridden in a derived class,selects this System.Windows.Forms.GridItem in the 
-    System.Windows.Forms.PropertyGrid.
-  
+   When overridden in a derived class,selects this System.Windows.Forms.GridItem in the System.Windows.Forms.PropertyGrid.
    Returns: true if the selection is successful; otherwise,false.
   """
   pass

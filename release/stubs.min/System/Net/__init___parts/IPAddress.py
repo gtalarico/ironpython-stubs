@@ -1,4 +1,4 @@
-class IPAddress:
+class IPAddress(object):
  """
  Provides an Internet Protocol (IP) address.
  
@@ -6,6 +6,11 @@ class IPAddress:
  IPAddress(address: Array[Byte],scopeid: Int64)
  IPAddress(address: Array[Byte])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IPAddress()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,comparand):
   """
   Equals(self: IPAddress,comparand: object) -> bool
@@ -102,9 +107,7 @@ class IPAddress:
   
    Converts an IP address string to an System.Net.IPAddress instance.
   
-   ipString: A string that contains an IP address in dotted-quad notation for IPv4 and in 
-    colon-hexadecimal notation for IPv6.
-  
+   ipString: A string that contains an IP address in dotted-quad notation for IPv4 and in colon-hexadecimal notation for IPv6.
    Returns: An System.Net.IPAddress instance.
   """
   pass
@@ -113,8 +116,7 @@ class IPAddress:
   ToString(self: IPAddress) -> str
   
    Converts an Internet address to its standard notation.
-   Returns: A string that contains the IP address in either IPv4 dotted-quad or in IPv6 
-    colon-hexadecimal notation.
+   Returns: A string that contains the IP address in either IPv4 dotted-quad or in IPv6 colon-hexadecimal notation.
   """
   pass
  @staticmethod

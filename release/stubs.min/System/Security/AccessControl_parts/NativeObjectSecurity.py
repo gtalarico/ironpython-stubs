@@ -1,5 +1,10 @@
-class NativeObjectSecurity:
+class NativeObjectSecurity(CommonObjectSecurity):
  """ Provides the ability to control access to native objects without direct manipulation of Access Control Lists (ACLs). Native object types are defined by the System.Security.AccessControl.ResourceType enumeration. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NativeObjectSecurity()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*args): #cannot find CLR constructor
   """

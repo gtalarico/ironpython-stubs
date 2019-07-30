@@ -1,5 +1,9 @@
-class Cursors:
+class Cursors(object):
  """ Provides a collection of System.Windows.Forms.Cursor objects for use by a Windows Forms application. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Cursors()
+
  AppStarting=None
  Arrow=None
  Cross=None

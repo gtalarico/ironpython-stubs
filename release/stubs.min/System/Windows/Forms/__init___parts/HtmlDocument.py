@@ -1,5 +1,9 @@
-class HtmlDocument:
+class HtmlDocument(object):
  """ Provides top-level programmatic access to an HTML document hosted by the System.Windows.Forms.WebBrowser control. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return HtmlDocument()
+
  def AttachEventHandler(self,eventName,eventHandler):
   """
   AttachEventHandler(self: HtmlDocument,eventName: str,eventHandler: EventHandler)
@@ -33,8 +37,7 @@ class HtmlDocument:
   Equals(self: HtmlDocument,obj: object) -> bool
   
    obj: The object to compare with the current object.
-   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,
-    false.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
   """
   pass
  def ExecCommand(self,command,showUI,value):
@@ -57,13 +60,10 @@ class HtmlDocument:
   """
   GetElementById(self: HtmlDocument,id: str) -> HtmlElement
   
-   Retrieves a single System.Windows.Forms.HtmlElement using the element's ID attribute as a 
-    search key.
-  
+   Retrieves a single System.Windows.Forms.HtmlElement using the element's ID attribute as a search key.
   
    id: The ID attribute of the element to retrieve.
-   Returns: Returns the first object with the same ID attribute as the specified value,or null if 
-    the id cannot be found.
+   Returns: Returns the first object with the same ID attribute as the specified value,or null if the id cannot be found.
   """
   pass
  def GetElementFromPoint(self,point):
@@ -72,9 +72,7 @@ class HtmlDocument:
   
    Retrieves the HTML element located at the specified client coordinates.
   
-   point: The x,y position of the element on the screen,relative to the top-left corner of the 
-    document.
-  
+   point: The x,y position of the element on the screen,relative to the top-left corner of the document.
    Returns: The System.Windows.Forms.HtmlElement at the specified screen location in the document.
   """
   pass
@@ -84,9 +82,7 @@ class HtmlDocument:
   
    Retrieve a collection of elements with the specified HTML tag.
   
-   tagName: The name of the HTML tag for the System.Windows.Forms.HtmlElement objects you want to 
-    retrieve.
-  
+   tagName: The name of the HTML tag for the System.Windows.Forms.HtmlElement objects you want to retrieve.
    Returns: The collection of elements who tag name is equal to the tagName argument.
   """
   pass
@@ -117,13 +113,9 @@ class HtmlDocument:
   """
   OpenNew(self: HtmlDocument,replaceInHistory: bool) -> HtmlDocument
   
-   Gets a new System.Windows.Forms.HtmlDocument to use with the 
-    System.Windows.Forms.HtmlDocument.Write(System.String) method.
+   Gets a new System.Windows.Forms.HtmlDocument to use with the System.Windows.Forms.HtmlDocument.Write(System.String) method.
   
-  
-   replaceInHistory: Whether the new window's navigation should replace the previous element in the navigation 
-    history of the DOM.
-  
+   replaceInHistory: Whether the new window's navigation should replace the previous element in the navigation history of the DOM.
    Returns: A new document for writing.
   """
   pass

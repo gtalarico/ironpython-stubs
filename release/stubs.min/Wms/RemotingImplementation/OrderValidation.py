@@ -1,18 +1,24 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.OrderValidation calls itself OrderValidation
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class OrderValidator:
+class OrderValidator(object):
  """
  OrderValidator(orderNumber: str,orderType: OrderTypeEnum)
  OrderValidator(orderNumber: str,orderType: OrderTypeEnum,orderLines: IEnumerable[OutboundOrderLine])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OrderValidator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """ Dispose(self: OrderValidator) """
   pass
@@ -46,8 +52,13 @@ class OrderValidator:
  Result=None
 
 
-class OrderValidatorFactory:
+class OrderValidatorFactory(object):
  """ OrderValidatorFactory(orderNumber: str,orderType: OrderTypeEnum) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OrderValidatorFactory()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Create(self):
   """ Create(self: OrderValidatorFactory) -> OrderValidator """
   pass
@@ -56,8 +67,13 @@ class OrderValidatorFactory:
   """ __new__(cls: type,orderNumber: str,orderType: OrderTypeEnum) """
   pass
 
-class PurchasOrderValidator:
+class PurchasOrderValidator(OrderValidator):
  """ PurchasOrderValidator(orderNumber: str,orderType: OrderTypeEnum) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PurchasOrderValidator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def IsOrderValid(self):
   """ IsOrderValid(self: PurchasOrderValidator) -> OrderValidationResult """
   pass
@@ -79,8 +95,13 @@ class PurchasOrderValidator:
  Result=None
 
 
-class ReplenishmentOrderValidator:
+class ReplenishmentOrderValidator(OrderValidator):
  """ ReplenishmentOrderValidator(orderNumber: str,orderType: OrderTypeEnum) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReplenishmentOrderValidator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def IsOrderValid(self):
   """ IsOrderValid(self: ReplenishmentOrderValidator) -> OrderValidationResult """
   pass
@@ -102,8 +123,13 @@ class ReplenishmentOrderValidator:
  Result=None
 
 
-class RmaOrderValidator:
+class RmaOrderValidator(OrderValidator):
  """ RmaOrderValidator(orderNumber: str,orderType: OrderTypeEnum) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RmaOrderValidator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def IsOrderValid(self):
   """ IsOrderValid(self: RmaOrderValidator) -> OrderValidationResult """
   pass
@@ -125,8 +151,13 @@ class RmaOrderValidator:
  Result=None
 
 
-class SalesOrderValidator:
+class SalesOrderValidator(OrderValidator):
  """ SalesOrderValidator(orderNumber: str,orderType: OrderTypeEnum) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SalesOrderValidator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def IsOrderValid(self):
   """ IsOrderValid(self: SalesOrderValidator) -> OrderValidationResult """
   pass

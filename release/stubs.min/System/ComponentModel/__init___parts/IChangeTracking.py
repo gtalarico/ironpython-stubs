@@ -1,5 +1,10 @@
 class IChangeTracking:
  """ Defines the mechanism for querying the object for changes and resetting of the changed status. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IChangeTracking()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AcceptChanges(self):
   """
   AcceptChanges(self: IChangeTracking)

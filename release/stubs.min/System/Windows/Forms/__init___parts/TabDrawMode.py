@@ -1,9 +1,13 @@
-class TabDrawMode:
+class TabDrawMode(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies whether the tabs in a tab control are owner-drawn (drawn by the parent window),or drawn by the operating system.
  
  enum TabDrawMode,values: Normal (0),OwnerDrawFixed (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TabDrawMode()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

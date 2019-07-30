@@ -1,9 +1,13 @@
-class PreviewKeyDownEventArgs:
+class PreviewKeyDownEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.Control.PreviewKeyDown event.
  
  PreviewKeyDownEventArgs(keyData: Keys)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return PreviewKeyDownEventArgs()
+
  @staticmethod
  def __new__(self,keyData):
   """ __new__(cls: type,keyData: Keys) """

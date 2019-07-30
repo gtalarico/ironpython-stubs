@@ -1,4 +1,4 @@
-class DataGridTextBoxColumn:
+class DataGridTextBoxColumn(DataGridColumnStyle,IComponent,IDisposable,IDataGridColumnStyleEditingNotificationService):
  """
  Hosts a System.Windows.Forms.TextBox control in a cell of a System.Windows.Forms.DataGridColumnStyle for editing strings.
  
@@ -8,6 +8,10 @@ class DataGridTextBoxColumn:
  DataGridTextBoxColumn(prop: PropertyDescriptor,format: str,isDefault: bool)
  DataGridTextBoxColumn(prop: PropertyDescriptor,isDefault: bool)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridTextBoxColumn()
+
  def Abort(self,*args):
   """
   Abort(self: DataGridTextBoxColumn,rowNum: int)
@@ -19,16 +23,13 @@ class DataGridTextBoxColumn:
  def BeginUpdate(self,*args):
   """
   BeginUpdate(self: DataGridColumnStyle)
-   Suspends the painting of the column until the 
-    System.Windows.Forms.DataGridColumnStyle.EndUpdate method is called.
+   Suspends the painting of the column until the System.Windows.Forms.DataGridColumnStyle.EndUpdate method is called.
   """
   pass
  def CheckValidDataSource(self,*args):
   """
   CheckValidDataSource(self: DataGridColumnStyle,value: CurrencyManager)
-   Throws an exception if the System.Windows.Forms.DataGrid does not have a valid data 
-    source,or if this column is not mapped to a valid property in the data source.
-  
+   Throws an exception if the System.Windows.Forms.DataGrid does not have a valid data source,or if this column is not mapped to a valid property in the data source.
   
    value: A System.Windows.Forms.CurrencyManager to check.
   """
@@ -47,9 +48,7 @@ class DataGridTextBoxColumn:
   
    Inititates a request to complete an editing procedure.
   
-   dataSource: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid control the 
-    column belongs to.
-  
+   dataSource: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid control the column belongs to.
    rowNum: The number of the edited row.
    Returns: true if the value was successfully committed; otherwise,false.
   """
@@ -71,12 +70,9 @@ class DataGridTextBoxColumn:
  def Dispose(self):
   """
   Dispose(self: Component,disposing: bool)
-   Releases the unmanaged resources used by the System.ComponentModel.Component and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.ComponentModel.Component and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def Edit(self,*args):
@@ -84,38 +80,26 @@ class DataGridTextBoxColumn:
   Edit(self: DataGridTextBoxColumn,source: CurrencyManager,rowNum: int,bounds: Rectangle,readOnly: bool,displayText: str,cellIsVisible: bool)
    Prepares a cell for editing.
   
-   source: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid control the 
-    column belongs to.
-  
+   source: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid control the column belongs to.
    rowNum: The row number in this column being edited.
    bounds: The bounding System.Drawing.Rectangle in which the control is to be sited.
-   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; 
-    otherwise,false.
-  
+   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; otherwise,false.
    displayText: The text to display in the control.
-   cellIsVisible: A value indicating whether the cell is visible. true if the cell is visible; otherwise,
-    false.
-  
+   cellIsVisible: A value indicating whether the cell is visible. true if the cell is visible; otherwise,false.
   Edit(self: DataGridColumnStyle,source: CurrencyManager,rowNum: int,bounds: Rectangle,readOnly: bool)
    Prepares a cell for editing.
   
    source: The System.Windows.Forms.CurrencyManager for the System.Windows.Forms.DataGridColumnStyle.
    rowNum: The row number to edit.
    bounds: The bounding System.Drawing.Rectangle in which the control is to be sited.
-   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; 
-    otherwise,false.
-  
+   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; otherwise,false.
   Edit(self: DataGridColumnStyle,source: CurrencyManager,rowNum: int,bounds: Rectangle,readOnly: bool,displayText: str)
-   Prepares the cell for editing using the specified System.Windows.Forms.CurrencyManager,
-    row number,and System.Drawing.Rectangle parameters.
-  
+   Prepares the cell for editing using the specified System.Windows.Forms.CurrencyManager,row number,and System.Drawing.Rectangle parameters.
   
    source: The System.Windows.Forms.CurrencyManager for the System.Windows.Forms.DataGridColumnStyle.
    rowNum: The row number in this column which is being edited.
    bounds: The System.Drawing.Rectangle in which the control is to be sited.
-   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; 
-    otherwise,false.
-  
+   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; otherwise,false.
    displayText: The text to display in the control.
   """
   pass
@@ -128,8 +112,7 @@ class DataGridTextBoxColumn:
  def EndUpdate(self,*args):
   """
   EndUpdate(self: DataGridColumnStyle)
-   Resumes the painting of columns suspended by calling the 
-    System.Windows.Forms.DataGridColumnStyle.BeginUpdate method.
+   Resumes the painting of columns suspended by calling the System.Windows.Forms.DataGridColumnStyle.BeginUpdate method.
   """
   pass
  def EnterNullValue(self,*args):
@@ -142,9 +125,7 @@ class DataGridTextBoxColumn:
   """
   GetColumnValueAtRow(self: DataGridColumnStyle,source: CurrencyManager,rowNum: int) -> object
   
-   Gets the value in the specified row from the specified 
-    System.Windows.Forms.CurrencyManager.
-  
+   Gets the value in the specified row from the specified System.Windows.Forms.CurrencyManager.
   
    source: The System.Windows.Forms.CurrencyManager containing the data.
    rowNum: The row number containing the data.
@@ -174,9 +155,7 @@ class DataGridTextBoxColumn:
   """
   GetPreferredSize(self: DataGridTextBoxColumn,g: Graphics,value: object) -> Size
   
-   Returns the optimum width and height of the cell in a specified row relative to the 
-    specified value.
-  
+   Returns the optimum width and height of the cell in a specified row relative to the specified value.
   
    g: A System.Drawing.Graphics object used to draw shapes on the screen.
    value: The value to draw.
@@ -187,21 +166,16 @@ class DataGridTextBoxColumn:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def HideEditBox(self,*args):
   """
   HideEditBox(self: DataGridTextBoxColumn)
-   Hides the System.Windows.Forms.DataGridTextBox control and moves the focus to the 
-    System.Windows.Forms.DataGrid control.
+   Hides the System.Windows.Forms.DataGridTextBox control and moves the focus to the System.Windows.Forms.DataGrid control.
   """
   pass
  def Invalidate(self,*args):
@@ -216,12 +190,7 @@ class DataGridTextBoxColumn:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -232,48 +201,30 @@ class DataGridTextBoxColumn:
  def Paint(self,*args):
   """
   Paint(self: DataGridTextBoxColumn,g: Graphics,bounds: Rectangle,source: CurrencyManager,rowNum: int)
-   Paints the a System.Windows.Forms.DataGridColumnStyle with the specified 
-    System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,
-    and row number.
-  
+   Paints the a System.Windows.Forms.DataGridColumnStyle with the specified System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,and row number.
   
    g: The System.Drawing.Graphics object to draw to.
    bounds: The bounding System.Drawing.Rectangle to paint into.
-   source: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid the that 
-    contains the column.
-  
+   source: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid the that contains the column.
    rowNum: The number of the row in the underlying data table.
   Paint(self: DataGridTextBoxColumn,g: Graphics,bounds: Rectangle,source: CurrencyManager,rowNum: int,alignToRight: bool)
-   Paints a System.Windows.Forms.DataGridColumnStyle with the specified 
-    System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,
-    row number,and alignment.
-  
+   Paints a System.Windows.Forms.DataGridColumnStyle with the specified System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,row number,and alignment.
   
    g: The System.Drawing.Graphics object to draw to.
    bounds: The bounding System.Drawing.Rectangle to paint into.
-   source: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid the that 
-    contains the column.
-  
+   source: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid the that contains the column.
    rowNum: The number of the row in the underlying data table.
-   alignToRight: A value indicating whether to align the column's content to the right. true if the 
-    content should be aligned to the right; otherwise,false.
-  
+   alignToRight: A value indicating whether to align the column's content to the right. true if the content should be aligned to the right; otherwise,false.
   Paint(self: DataGridTextBoxColumn,g: Graphics,bounds: Rectangle,source: CurrencyManager,rowNum: int,backBrush: Brush,foreBrush: Brush,alignToRight: bool)
-   Paints a System.Windows.Forms.DataGridColumnStyle with the specified 
-    System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,
-    row number,System.Drawing.Brush,and foreground color.
-  
+   Paints a System.Windows.Forms.DataGridColumnStyle with the specified System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,row number,System.Drawing.Brush,and foreground color.
   
    g: The System.Drawing.Graphics object to draw to.
    bounds: The bounding System.Drawing.Rectangle to paint into.
-   source: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid the that 
-    contains the column.
-  
+   source: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid the that contains the column.
    rowNum: The number of the row in the underlying data table.
    backBrush: A System.Drawing.Brush that paints the background.
    foreBrush: A System.Drawing.Brush that paints the foreground color.
-   alignToRight: A value indicating whether to align the column's content to the right. true if the 
-    content should be aligned to the right; otherwise,false.
+   alignToRight: A value indicating whether to align the column's content to the right. true if the content should be aligned to the right; otherwise,false.
   """
   pass
  def PaintText(self,*args):
@@ -286,9 +237,7 @@ class DataGridTextBoxColumn:
    text: The string to be drawn to the screen.
    alignToRight: A value indicating whether the text is right-aligned.
   PaintText(self: DataGridTextBoxColumn,g: Graphics,textBounds: Rectangle,text: str,backBrush: Brush,foreBrush: Brush,alignToRight: bool)
-   Draws the text and rectangle at the specified location with the specified colors and 
-    alignment.
-  
+   Draws the text and rectangle at the specified location with the specified colors and alignment.
   
    g: A System.Drawing.Graphics object used to draw the string.
    textBounds: A System.Drawing.Rectangle which contains the boundary data of the rectangle.
@@ -301,20 +250,15 @@ class DataGridTextBoxColumn:
  def ReleaseHostedControl(self,*args):
   """
   ReleaseHostedControl(self: DataGridTextBoxColumn)
-   Removes the reference that the System.Windows.Forms.DataGrid holds to the control used to 
-    edit data.
+   Removes the reference that the System.Windows.Forms.DataGrid holds to the control used to edit data.
   """
   pass
  def SetColumnValueAtRow(self,*args):
   """
   SetColumnValueAtRow(self: DataGridColumnStyle,source: CurrencyManager,rowNum: int,value: object)
-   Sets the value in a specified row with the value from a specified 
-    System.Windows.Forms.CurrencyManager.
+   Sets the value in a specified row with the value from a specified System.Windows.Forms.CurrencyManager.
   
-  
-   source: A System.Windows.Forms.CurrencyManager associated with the 
-    System.Windows.Forms.DataGridColumnStyle.
-  
+   source: A System.Windows.Forms.CurrencyManager associated with the System.Windows.Forms.DataGridColumnStyle.
    rowNum: The number of the row.
    value: The value to set.
   """
@@ -330,12 +274,9 @@ class DataGridTextBoxColumn:
  def SetDataGridInColumn(self,*args):
   """
   SetDataGridInColumn(self: DataGridTextBoxColumn,value: DataGrid)
-   Adds a System.Windows.Forms.TextBox control to the System.Windows.Forms.DataGrid 
-    control's System.Windows.Forms.Control.ControlCollection.
+   Adds a System.Windows.Forms.TextBox control to the System.Windows.Forms.DataGrid control's System.Windows.Forms.Control.ControlCollection.
   
-  
-   value: The System.Windows.Forms.DataGrid control the System.Windows.Forms.TextBox control is 
-    added to.
+   value: The System.Windows.Forms.DataGrid control the System.Windows.Forms.TextBox control is added to.
   """
   pass
  def UpdateUI(self,*args):

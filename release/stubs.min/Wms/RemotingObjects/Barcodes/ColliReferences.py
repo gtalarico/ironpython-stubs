@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.Barcodes.ColliReferences calls itself ColliReferences
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class ColliBarcodeResult:
+class ColliBarcodeResult(object):
  """ ColliBarcodeResult() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ColliBarcodeResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Barcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Barcode(self: ColliBarcodeResult) -> str
 
@@ -23,7 +29,9 @@ Set: FaultMessage(self: ColliBarcodeResult)=value
 """
 
  IsOwnCompanySSCC=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsOwnCompanySSCC(self: ColliBarcodeResult) -> bool
+ """Specifies if the barcode is a SSCC barcode of this company
+
+Get: IsOwnCompanySSCC(self: ColliBarcodeResult) -> bool
 
 Set: IsOwnCompanySSCC(self: ColliBarcodeResult)=value
 """
@@ -36,11 +44,16 @@ Set: Type(self: ColliBarcodeResult)=value
 
 
 
-class ValidateColliReferencesArgs:
+class ValidateColliReferencesArgs(object):
  """
  ValidateColliReferencesArgs()
  ValidateColliReferencesArgs(innerReference: str,outerReference: str,*exclusion: Array[object])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ValidateColliReferencesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,innerReference=None,outerReference=None,exclusion=None):
   """
@@ -74,11 +87,16 @@ Set: Result(self: ValidateColliReferencesArgs)=value
 
 
 
-class ValidateColliReferencesResult:
+class ValidateColliReferencesResult(object):
  """
  ValidateColliReferencesResult()
  ValidateColliReferencesResult(isInnerReferenceValid: bool,isOuterReferenceValid: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ValidateColliReferencesResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,isInnerReferenceValid=None,isOuterReferenceValid=None):
   """

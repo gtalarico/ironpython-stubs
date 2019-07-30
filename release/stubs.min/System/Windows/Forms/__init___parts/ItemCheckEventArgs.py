@@ -1,9 +1,13 @@
-class ItemCheckEventArgs:
+class ItemCheckEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.CheckedListBox.ItemCheck event of the System.Windows.Forms.CheckedListBox and System.Windows.Forms.ListView controls.
  
  ItemCheckEventArgs(index: int,newCheckValue: CheckState,currentValue: CheckState)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ItemCheckEventArgs()
+
  @staticmethod
  def __new__(self,index,newCheckValue,currentValue):
   """ __new__(cls: type,index: int,newCheckValue: CheckState,currentValue: CheckState) """

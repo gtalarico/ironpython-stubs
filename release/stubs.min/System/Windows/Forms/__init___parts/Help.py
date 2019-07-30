@@ -1,5 +1,9 @@
-class Help:
+class Help(object):
  """ Encapsulates the HTML Help 1.0 engine. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Help()
+
  @staticmethod
  def ShowHelp(parent,url,*__args):
   """
@@ -47,7 +51,6 @@ class Help:
   
    parent: A System.Windows.Forms.Control that identifies the parent of the Help dialog box.
    caption: The message to display in the pop-up window.
-   location: A value that specifies the horizontal and vertical coordinates at which to display the 
-    pop-up window,relative to the upper-left corner of the screen.
+   location: A value that specifies the horizontal and vertical coordinates at which to display the pop-up window,relative to the upper-left corner of the screen.
   """
   pass

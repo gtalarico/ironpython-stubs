@@ -1,4 +1,4 @@
-class ListChangedEventArgs:
+class ListChangedEventArgs(EventArgs):
  """
  Provides data for the System.ComponentModel.IBindingList.ListChanged event.
  
@@ -7,6 +7,11 @@ class ListChangedEventArgs:
  ListChangedEventArgs(listChangedType: ListChangedType,propDesc: PropertyDescriptor)
  ListChangedEventArgs(listChangedType: ListChangedType,newIndex: int,oldIndex: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ListChangedEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,listChangedType,*__args):
   """

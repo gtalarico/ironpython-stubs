@@ -1,5 +1,9 @@
-class Brush:
+class Brush(MarshalByRefObject,ICloneable,IDisposable):
  """ Defines objects used to fill the interiors of graphical shapes such as rectangles,ellipses,pies,polygons,and paths. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Brush()
+
  def Clone(self):
   """
   Clone(self: Brush) -> object
@@ -20,12 +24,7 @@ class Brush:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   

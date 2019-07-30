@@ -1,10 +1,14 @@
-class InputLanguageChangedEventArgs:
+class InputLanguageChangedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.Form.InputLanguageChanged event.
  
  InputLanguageChangedEventArgs(culture: CultureInfo,charSet: Byte)
  InputLanguageChangedEventArgs(inputLanguage: InputLanguage,charSet: Byte)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return InputLanguageChangedEventArgs()
+
  @staticmethod
  def __new__(self,*__args):
   """

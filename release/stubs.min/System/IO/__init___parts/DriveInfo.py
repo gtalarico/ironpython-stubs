@@ -1,9 +1,14 @@
-class DriveInfo:
+class DriveInfo(object):
  """
  Provides access to information on a drive.
  
  DriveInfo(driveName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DriveInfo()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetDrives():
   """

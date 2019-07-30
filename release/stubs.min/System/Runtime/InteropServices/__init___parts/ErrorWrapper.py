@@ -1,4 +1,4 @@
-class ErrorWrapper:
+class ErrorWrapper(object):
  """
  Wraps objects the marshaler should marshal as a VT_ERROR.
  
@@ -6,6 +6,11 @@ class ErrorWrapper:
  ErrorWrapper(errorCode: object)
  ErrorWrapper(e: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ErrorWrapper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """

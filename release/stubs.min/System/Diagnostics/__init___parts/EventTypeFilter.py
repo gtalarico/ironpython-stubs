@@ -1,18 +1,21 @@
-class EventTypeFilter:
+class EventTypeFilter(TraceFilter):
  """
  Indicates whether a listener should trace based on the event type.
  
  EventTypeFilter(level: SourceLevels)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EventTypeFilter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ShouldTrace(self,cache,source,eventType,id,formatOrMessage,args,data1,data):
   """
   ShouldTrace(self: EventTypeFilter,cache: TraceEventCache,source: str,eventType: TraceEventType,id: int,formatOrMessage: str,args: Array[object],data1: object,data: Array[object]) -> bool
   
    Determines whether the trace listener should trace the event.
   
-   cache: A System.Diagnostics.TraceEventCache that represents the information cache for the trace 
-    event.
-  
+   cache: A System.Diagnostics.TraceEventCache that represents the information cache for the trace event.
    source: The name of the source.
    eventType: One of the System.Diagnostics.TraceEventType values.
    id: A trace identifier number.

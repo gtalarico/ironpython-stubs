@@ -1,13 +1,15 @@
-class GridTablesFactory:
+class GridTablesFactory(object):
  """ Provides the System.Windows.Forms.GridTablesFactory.CreateGridTables(System.Windows.Forms.DataGridTableStyle,System.Object,System.String,System.Windows.Forms.BindingContext) method. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return GridTablesFactory()
+
  @staticmethod
  def CreateGridTables(gridTable,dataSource,dataMember,bindingManager):
   """
   CreateGridTables(gridTable: DataGridTableStyle,dataSource: object,dataMember: str,bindingManager: BindingContext) -> Array[DataGridTableStyle]
   
-   Returns the specified System.Windows.Forms.DataGridColumnStyle.DataGridTableStyle in a 
-    one-element array.
-  
+   Returns the specified System.Windows.Forms.DataGridColumnStyle.DataGridTableStyle in a one-element array.
   
    gridTable: A System.Windows.Forms.DataGridTableStyle.
    dataSource: An System.Object.

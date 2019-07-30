@@ -1,4 +1,4 @@
-class SizeF:
+class SizeF(object):
  """
  Stores an ordered pair of floating-point numbers,typically the width and height of a rectangle.
  
@@ -6,14 +6,16 @@ class SizeF:
  SizeF(pt: PointF)
  SizeF(width: Single,height: Single)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SizeF()
+
  @staticmethod
  def Add(sz1,sz2):
   """
   Add(sz1: SizeF,sz2: SizeF) -> SizeF
   
-   Adds the width and height of one System.Drawing.SizeF structure to the width and height 
-    of another System.Drawing.SizeF structure.
-  
+   Adds the width and height of one System.Drawing.SizeF structure to the width and height of another System.Drawing.SizeF structure.
   
    sz1: The first System.Drawing.SizeF structure to add.
    sz2: The second System.Drawing.SizeF structure to add.
@@ -24,13 +26,10 @@ class SizeF:
   """
   Equals(self: SizeF,obj: object) -> bool
   
-   Tests to see whether the specified object is a System.Drawing.SizeF structure with the 
-    same dimensions as this System.Drawing.SizeF structure.
-  
+   Tests to see whether the specified object is a System.Drawing.SizeF structure with the same dimensions as this System.Drawing.SizeF structure.
   
    obj: The System.Object to test.
-   Returns: This method returns true if obj is a System.Drawing.SizeF and has the same width and 
-    height as this System.Drawing.SizeF; otherwise,false.
+   Returns: This method returns true if obj is a System.Drawing.SizeF and has the same width and height as this System.Drawing.SizeF; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -46,9 +45,7 @@ class SizeF:
   """
   Subtract(sz1: SizeF,sz2: SizeF) -> SizeF
   
-   Subtracts the width and height of one System.Drawing.SizeF structure from the width and 
-    height of another System.Drawing.SizeF structure.
-  
+   Subtracts the width and height of one System.Drawing.SizeF structure from the width and height of another System.Drawing.SizeF structure.
   
    sz1: The System.Drawing.SizeF structure on the left side of the subtraction operator.
    sz2: The System.Drawing.SizeF structure on the right side of the subtraction operator.
@@ -101,9 +98,7 @@ class SizeF:
   """
   __radd__(sz1: SizeF,sz2: SizeF) -> SizeF
   
-   Adds the width and height of one System.Drawing.SizeF structure to the width and height 
-    of another System.Drawing.SizeF structure.
-  
+   Adds the width and height of one System.Drawing.SizeF structure to the width and height of another System.Drawing.SizeF structure.
   
    sz1: The first System.Drawing.SizeF structure to add.
    sz2: The second System.Drawing.SizeF structure to add.
@@ -114,9 +109,7 @@ class SizeF:
   """
   __rsub__(sz1: SizeF,sz2: SizeF) -> SizeF
   
-   Subtracts the width and height of one System.Drawing.SizeF structure from the width and 
-    height of another System.Drawing.SizeF structure.
-  
+   Subtracts the width and height of one System.Drawing.SizeF structure from the width and height of another System.Drawing.SizeF structure.
   
    sz1: The System.Drawing.SizeF structure on the left side of the subtraction operator.
    sz2: The System.Drawing.SizeF structure on the right side of the subtraction operator.

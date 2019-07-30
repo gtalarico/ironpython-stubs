@@ -4,6 +4,11 @@ class ThreadState:
  
  enum ThreadState,values: Initialized (0),Ready (1),Running (2),Standby (3),Terminated (4),Transition (6),Unknown (7),Wait (5)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ThreadState()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

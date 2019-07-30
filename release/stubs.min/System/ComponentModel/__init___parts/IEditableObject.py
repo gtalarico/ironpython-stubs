@@ -1,5 +1,10 @@
 class IEditableObject:
  """ Provides functionality to commit or rollback changes to an object that is used as a data source. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IEditableObject()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginEdit(self):
   """
   BeginEdit(self: IEditableObject)
@@ -15,8 +20,7 @@ class IEditableObject:
  def EndEdit(self):
   """
   EndEdit(self: IEditableObject)
-   Pushes changes since the last System.ComponentModel.IEditableObject.BeginEdit or 
-    System.ComponentModel.IBindingList.AddNew call into the underlying object.
+   Pushes changes since the last System.ComponentModel.IEditableObject.BeginEdit or System.ComponentModel.IBindingList.AddNew call into the underlying object.
   """
   pass
  def __init__(self,*args):

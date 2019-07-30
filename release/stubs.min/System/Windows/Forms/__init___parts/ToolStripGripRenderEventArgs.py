@@ -1,9 +1,13 @@
-class ToolStripGripRenderEventArgs:
+class ToolStripGripRenderEventArgs(ToolStripRenderEventArgs):
  """
  Provides data for the System.Windows.Forms.ToolStripRenderer.RenderGrip event.
  
  ToolStripGripRenderEventArgs(g: Graphics,toolStrip: ToolStrip)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripGripRenderEventArgs()
+
  @staticmethod
  def __new__(self,g,toolStrip):
   """ __new__(cls: type,g: Graphics,toolStrip: ToolStrip) """

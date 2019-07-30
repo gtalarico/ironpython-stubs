@@ -6,6 +6,11 @@ class LicenseProviderAttribute:
  LicenseProviderAttribute(typeName: str)
  LicenseProviderAttribute(type: Type)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LicenseProviderAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,value):
   """
   Equals(self: LicenseProviderAttribute,value: object) -> bool

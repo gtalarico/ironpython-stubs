@@ -1,4 +1,4 @@
-class InvalidComObjectException:
+class InvalidComObjectException(SystemException):
  """
  The exception thrown when an invalid COM object is used.
  
@@ -6,6 +6,11 @@ class InvalidComObjectException:
  InvalidComObjectException(message: str)
  InvalidComObjectException(message: str,inner: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InvalidComObjectException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

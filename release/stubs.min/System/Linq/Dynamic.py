@@ -1,21 +1,31 @@
 # encoding: utf-8
 # module System.Linq.Dynamic calls itself Dynamic
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
 
-class DynamicClass:
+class DynamicClass(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DynamicClass()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToString(self):
   """ ToString(self: DynamicClass) -> str """
   pass
 
-class DynamicExpression:
+class DynamicExpression(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DynamicExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def CreateClass(properties):
   """
@@ -42,8 +52,13 @@ class DynamicExpression:
  ]
 
 
-class DynamicProperty:
+class DynamicProperty(object):
  """ DynamicProperty(name: str,type: Type) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DynamicProperty()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,name,type):
   """ __new__(cls: type,name: str,type: Type) """
@@ -60,8 +75,13 @@ class DynamicProperty:
 
 
 
-class DynamicQueryable:
+class DynamicQueryable(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DynamicQueryable()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Any(source):
   """ Any(source: IQueryable) -> bool """
@@ -112,8 +132,13 @@ class DynamicQueryable:
  ]
 
 
-class ParseException:
+class ParseException(Exception):
  """ ParseException(message: str,position: int) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ParseException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToString(self):
   """ ToString(self: ParseException) -> str """
   pass

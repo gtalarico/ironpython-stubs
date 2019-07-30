@@ -1,9 +1,13 @@
-class ControlEventArgs:
+class ControlEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.Control.ControlAdded and System.Windows.Forms.Control.ControlRemoved events.
  
  ControlEventArgs(control: Control)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ControlEventArgs()
+
  @staticmethod
  def __new__(self,control):
   """ __new__(cls: type,control: Control) """

@@ -1,9 +1,13 @@
-class WebBrowserNavigatingEventArgs:
+class WebBrowserNavigatingEventArgs(CancelEventArgs):
  """
  Provides data for the System.Windows.Forms.WebBrowser.Navigating event.
  
  WebBrowserNavigatingEventArgs(url: Uri,targetFrameName: str)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return WebBrowserNavigatingEventArgs()
+
  @staticmethod
  def __new__(self,url,targetFrameName):
   """ __new__(cls: type,url: Uri,targetFrameName: str) """

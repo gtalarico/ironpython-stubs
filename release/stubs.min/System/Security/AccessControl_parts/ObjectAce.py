@@ -1,19 +1,20 @@
-class ObjectAce:
+class ObjectAce(QualifiedAce):
  """
  Controls access to Directory Services objects. This class represents an Access Control Entry (ACE) associated with a directory object.
  
  ObjectAce(aceFlags: AceFlags,qualifier: AceQualifier,accessMask: int,sid: SecurityIdentifier,flags: ObjectAceFlags,type: Guid,inheritedType: Guid,isCallback: bool,opaque: Array[Byte])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ObjectAce()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetBinaryForm(self,binaryForm,offset):
   """
   GetBinaryForm(self: ObjectAce,binaryForm: Array[Byte],offset: int)
-   Marshals the contents of the System.Security.AccessControl.ObjectAce object into the 
-    specified byte array beginning at the specified offset.
+   Marshals the contents of the System.Security.AccessControl.ObjectAce object into the specified byte array beginning at the specified offset.
   
-  
-   binaryForm: The byte array into which the contents of the System.Security.AccessControl.ObjectAce is 
-    marshaled.
-  
+   binaryForm: The byte array into which the contents of the System.Security.AccessControl.ObjectAce is marshaled.
    offset: The offset at which to start marshaling.
   """
   pass
@@ -22,13 +23,10 @@ class ObjectAce:
   """
   MaxOpaqueLength(isCallback: bool) -> int
   
-   Returns the maximum allowed length,in bytes,of an opaque data BLOB for callback Access 
-    Control Entries (ACEs).
-  
+   Returns the maximum allowed length,in bytes,of an opaque data BLOB for callback Access Control Entries (ACEs).
   
    isCallback: True if the System.Security.AccessControl.ObjectAce is a callback ACE type.
-   Returns: The maximum allowed length,in bytes,of an opaque data BLOB for callback Access Control 
-    Entries (ACEs).
+   Returns: The maximum allowed length,in bytes,of an opaque data BLOB for callback Access Control Entries (ACEs).
   """
   pass
  @staticmethod

@@ -4,6 +4,11 @@ class CryptoKeyRights:
  
  enum (flags) CryptoKeyRights,values: ChangePermissions (262144),Delete (65536),FullControl (2032027),GenericAll (268435456),GenericExecute (536870912),GenericRead (-2147483648),GenericWrite (1073741824),ReadAttributes (128),ReadData (1),ReadExtendedAttributes (8),ReadPermissions (131072),Synchronize (1048576),TakeOwnership (524288),WriteAttributes (256),WriteData (2),WriteExtendedAttributes (16)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CryptoKeyRights()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -1,5 +1,9 @@
-class ComboBoxRenderer:
+class ComboBoxRenderer(object):
  """ Provides methods used to render a combo box control with visual styles. This class cannot be inherited. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ComboBoxRenderer()
+
  @staticmethod
  def DrawDropDownButton(g,bounds,state):
   """
@@ -8,8 +12,7 @@ class ComboBoxRenderer:
   
    g: The System.Drawing.Graphics used to draw the drop-down arrow.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the drop-down arrow.
-   state: One of the System.Windows.Forms.VisualStyles.ComboBoxState values that specifies the 
-    visual state of the drop-down arrow.
+   state: One of the System.Windows.Forms.VisualStyles.ComboBoxState values that specifies the visual state of the drop-down arrow.
   """
   pass
  @staticmethod
@@ -20,9 +23,7 @@ class ComboBoxRenderer:
   
    g: The System.Drawing.Graphics used to draw the text box.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the text box.
-   state: One of the System.Windows.Forms.VisualStyles.ComboBoxState values that specifies the 
-    visual state of the text box.
-  
+   state: One of the System.Windows.Forms.VisualStyles.ComboBoxState values that specifies the visual state of the text box.
   DrawTextBox(g: Graphics,bounds: Rectangle,comboBoxText: str,font: Font,state: ComboBoxState)
    Draws a text box in the specified state and bounds,with the specified text.
   
@@ -30,39 +31,27 @@ class ComboBoxRenderer:
    bounds: The System.Drawing.Rectangle that specifies the bounds of the text box.
    comboBoxText: The System.String to draw in the text box.
    font: The System.Drawing.Font to apply to comboBoxText.
-   state: One of the System.Windows.Forms.VisualStyles.ComboBoxState values that specifies the 
-    visual state of the text box.
-  
+   state: One of the System.Windows.Forms.VisualStyles.ComboBoxState values that specifies the visual state of the text box.
   DrawTextBox(g: Graphics,bounds: Rectangle,comboBoxText: str,font: Font,textBounds: Rectangle,state: ComboBoxState)
-   Draws a text box in the specified state and bounds,with the specified text and text 
-    bounds.
-  
+   Draws a text box in the specified state and bounds,with the specified text and text bounds.
   
    g: The System.Drawing.Graphics used to draw the text box.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the text box.
    comboBoxText: The System.String to draw in the text box.
    font: The System.Drawing.Font to apply to comboBoxText.
    textBounds: The System.Drawing.Rectangle that specifies the bounds in which to draw comboBoxText.
-   state: One of the System.Windows.Forms.VisualStyles.ComboBoxState values that specifies the 
-    visual state of the text box.
-  
+   state: One of the System.Windows.Forms.VisualStyles.ComboBoxState values that specifies the visual state of the text box.
   DrawTextBox(g: Graphics,bounds: Rectangle,comboBoxText: str,font: Font,flags: TextFormatFlags,state: ComboBoxState)
-   Draws a text box in the specified state and bounds,with the specified text and text 
-    formatting.
-  
+   Draws a text box in the specified state and bounds,with the specified text and text formatting.
   
    g: The System.Drawing.Graphics used to draw the text box.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the text box.
    comboBoxText: The System.String to draw in the text box.
    font: The System.Drawing.Font to apply to comboBoxText.
    flags: A bitwise combination of the System.Windows.Forms.TextFormatFlags values.
-   state: One of the System.Windows.Forms.VisualStyles.ComboBoxState values that specifies the 
-    visual state of the text box.
-  
+   state: One of the System.Windows.Forms.VisualStyles.ComboBoxState values that specifies the visual state of the text box.
   DrawTextBox(g: Graphics,bounds: Rectangle,comboBoxText: str,font: Font,textBounds: Rectangle,flags: TextFormatFlags,state: ComboBoxState)
-   Draws a text box in the specified state and bounds,with the specified text,text 
-    formatting,and text bounds.
-  
+   Draws a text box in the specified state and bounds,with the specified text,text formatting,and text bounds.
   
    g: The System.Drawing.Graphics used to draw the text box.
    bounds: The System.Drawing.Rectangle that specifies the bounds of the text box.
@@ -70,8 +59,7 @@ class ComboBoxRenderer:
    font: The System.Drawing.Font to apply to comboBoxText.
    textBounds: The System.Drawing.Rectangle that specifies the bounds in which to draw comboBoxText.
    flags: A bitwise combination of the System.Windows.Forms.TextFormatFlags values.
-   state: One of the System.Windows.Forms.VisualStyles.ComboBoxState values that specifies the 
-    visual state of the text box.
+   state: One of the System.Windows.Forms.VisualStyles.ComboBoxState values that specifies the visual state of the text box.
   """
   pass
  IsSupported=True

@@ -1,5 +1,9 @@
-class ScrollProperties:
+class ScrollProperties(object):
  """ Encapsulates properties related to scrolling. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ScrollProperties()
+
  @staticmethod
  def __new__(self,*args): #cannot find CLR constructor
   """ __new__(cls: type,container: ScrollableControl) """

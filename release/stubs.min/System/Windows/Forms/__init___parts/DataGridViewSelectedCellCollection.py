@@ -1,5 +1,9 @@
-class DataGridViewSelectedCellCollection:
+class DataGridViewSelectedCellCollection(BaseCollection,ICollection,IEnumerable,IList):
  """ Represents a collection of cells that are selected in a System.Windows.Forms.DataGridView. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewSelectedCellCollection()
+
  def Clear(self):
   """
   Clear(self: DataGridViewSelectedCellCollection)
@@ -12,24 +16,16 @@ class DataGridViewSelectedCellCollection:
   
    Determines whether the specified cell is contained in the collection.
   
-   dataGridViewCell: The System.Windows.Forms.DataGridViewCell to locate in the 
-    System.Windows.Forms.DataGridViewSelectedCellCollection.
-  
-   Returns: true if dataGridViewCell is in the 
-    System.Windows.Forms.DataGridViewSelectedCellCollection; otherwise,false.
+   dataGridViewCell: The System.Windows.Forms.DataGridViewCell to locate in the System.Windows.Forms.DataGridViewSelectedCellCollection.
+   Returns: true if dataGridViewCell is in the System.Windows.Forms.DataGridViewSelectedCellCollection; otherwise,false.
   """
   pass
  def CopyTo(self,*__args):
   """
   CopyTo(self: DataGridViewSelectedCellCollection,array: Array[DataGridViewCell],index: int)
-   Copies the elements of the collection to the specified 
-    System.Windows.Forms.DataGridViewCell array,starting at the specified index.
+   Copies the elements of the collection to the specified System.Windows.Forms.DataGridViewCell array,starting at the specified index.
   
-  
-   array: The one-dimensional array of type System.Windows.Forms.DataGridViewCell that is the 
-    destination of the elements copied from the collection. The array must have zero-based 
-    indexing.
-  
+   array: The one-dimensional array of type System.Windows.Forms.DataGridViewCell that is the destination of the elements copied from the collection. The array must have zero-based indexing.
    index: The zero-based index in array at which copying begins.
   """
   pass
@@ -48,12 +44,7 @@ class DataGridViewSelectedCellCollection:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   

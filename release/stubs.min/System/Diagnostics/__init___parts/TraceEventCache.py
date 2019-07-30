@@ -1,9 +1,14 @@
-class TraceEventCache:
+class TraceEventCache(object):
  """
  Provides trace event data specific to a thread and a process.
  
  TraceEventCache()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TraceEventCache()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Callstack=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets the call stack for the current thread.
 

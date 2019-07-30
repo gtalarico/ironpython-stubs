@@ -1,4 +1,4 @@
-class StackTrace:
+class StackTrace(object):
  """
  Represents a stack trace,which is an ordered collection of one or more stack frames.
  
@@ -13,6 +13,11 @@ class StackTrace:
  StackTrace(frame: StackFrame)
  StackTrace(targetThread: Thread,needFileInfo: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StackTrace()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetFrame(self,index):
   """
   GetFrame(self: StackTrace,index: int) -> StackFrame
@@ -28,8 +33,7 @@ class StackTrace:
   GetFrames(self: StackTrace) -> Array[StackFrame]
   
    Returns a copy of all stack frames in the current stack trace.
-   Returns: An array of type System.Diagnostics.StackFrame representing the function calls in the 
-    stack trace.
+   Returns: An array of type System.Diagnostics.StackFrame representing the function calls in the stack trace.
   """
   pass
  def ToString(self):

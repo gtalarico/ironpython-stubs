@@ -1,10 +1,15 @@
-class BooleanSwitch:
+class BooleanSwitch(Switch):
  """
  Provides a simple on/off switch that controls debugging and tracing output.
  
  BooleanSwitch(displayName: str,description: str)
  BooleanSwitch(displayName: str,description: str,defaultSwitchValue: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BooleanSwitch()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,displayName,description,defaultSwitchValue=None):
   """

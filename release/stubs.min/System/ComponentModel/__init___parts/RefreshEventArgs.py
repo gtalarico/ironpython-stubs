@@ -1,10 +1,15 @@
-class RefreshEventArgs:
+class RefreshEventArgs(EventArgs):
  """
  Provides data for the System.ComponentModel.TypeDescriptor.Refreshed event.
  
  RefreshEventArgs(componentChanged: object)
  RefreshEventArgs(typeChanged: Type)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RefreshEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """

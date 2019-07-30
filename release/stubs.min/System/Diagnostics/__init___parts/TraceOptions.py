@@ -4,6 +4,11 @@ class TraceOptions:
  
  enum (flags) TraceOptions,values: Callstack (32),DateTime (2),LogicalOperationStack (1),None (0),ProcessId (8),ThreadId (16),Timestamp (4)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TraceOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

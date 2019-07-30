@@ -1,9 +1,13 @@
-class TabControlEventArgs:
+class TabControlEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.TabControl.Selected and System.Windows.Forms.TabControl.Deselected events of a System.Windows.Forms.TabControl control.
  
  TabControlEventArgs(tabPage: TabPage,tabPageIndex: int,action: TabControlAction)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TabControlEventArgs()
+
  @staticmethod
  def __new__(self,tabPage,tabPageIndex,action):
   """ __new__(cls: type,tabPage: TabPage,tabPageIndex: int,action: TabControlAction) """

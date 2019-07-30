@@ -1,20 +1,20 @@
-class OpacityConverter:
+class OpacityConverter(TypeConverter):
  """
  Provides a type converter to convert opacity values to and from a string.
  
  OpacityConverter()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return OpacityConverter()
+
  def CanConvertFrom(self,*__args):
   """
   CanConvertFrom(self: OpacityConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Returns a value indicating whether this converter can convert an object of the specified 
-    source type to the native type of the converter that uses the specified context.
+   Returns a value indicating whether this converter can convert an object of the specified source type to the native type of the converter that uses the specified context.
   
-  
-   context: A System.ComponentModel.ITypeDescriptorContext that provides information about the 
-    context of a type converter.
-  
+   context: A System.ComponentModel.ITypeDescriptorContext that provides information about the context of a type converter.
    sourceType: The System.Type that represents the type you want to convert from.
    Returns: true if this converter can perform the conversion; otherwise,false.
   """
@@ -25,9 +25,7 @@ class OpacityConverter:
   
    Converts the specified object to the converter's native type.
   
-   context: A System.ComponentModel.ITypeDescriptorContext that provides information about the 
-    context of a type converter.
-  
+   context: A System.ComponentModel.ITypeDescriptorContext that provides information about the context of a type converter.
    culture: The locale information for the conversion.
    value: The object to convert.
    Returns: An System.Object that represents the converted value.
@@ -39,9 +37,7 @@ class OpacityConverter:
   
    Converts from the converter's native type to a value of the destination type.
   
-   context: A System.ComponentModel.ITypeDescriptorContext that provides information about the 
-    context of a type converter.
-  
+   context: A System.ComponentModel.ITypeDescriptorContext that provides information about the context of a type converter.
    culture: The locale information for the conversion.
    value: The value to convert.
    destinationType: The type to convert the object to.

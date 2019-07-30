@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.Activities calls itself Activities
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class GetActivityProgressArgs:
+class GetActivityProgressArgs(object):
  """ GetActivityProgressArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetActivityProgressArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CacheKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: CacheKey(self: GetActivityProgressArgs) -> CacheKey
 
@@ -38,6 +44,11 @@ Set: ProgressBarType(self: GetActivityProgressArgs)=value
 
 class ProgressBarType:
  """ enum ProgressBarType,values: Mobile (0) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProgressBarType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

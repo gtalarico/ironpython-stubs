@@ -1,11 +1,14 @@
-class CommonObjectSecurity:
+class CommonObjectSecurity(ObjectSecurity):
  """ Controls access to objects without direct manipulation of access control lists (ACLs). This class is the abstract base class for the System.Security.AccessControl.NativeObjectSecurity class. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CommonObjectSecurity()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddAccessRule(self,*args):
   """
   AddAccessRule(self: CommonObjectSecurity,rule: AccessRule)
-   Adds the specified access rule to the Discretionary Access Control List (DACL) associated 
-    with this System.Security.AccessControl.CommonObjectSecurity object.
-  
+   Adds the specified access rule to the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
   
    rule: The access rule to add.
   """
@@ -13,9 +16,7 @@ class CommonObjectSecurity:
  def AddAuditRule(self,*args):
   """
   AddAuditRule(self: CommonObjectSecurity,rule: AuditRule)
-   Adds the specified audit rule to the System Access Control List (SACL) associated with 
-    this System.Security.AccessControl.CommonObjectSecurity object.
-  
+   Adds the specified audit rule to the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
   
    rule: The audit rule to add.
   """
@@ -28,13 +29,10 @@ class CommonObjectSecurity:
   
    includeExplicit: true to include access rules explicitly set for the object.
    includeInherited: true to include inherited access rules.
-   targetType: Specifies whether the security identifier for which to retrieve access rules is of type 
-    T:System.Security.Principal.SecurityIdentifier or type 
-    T:System.Security.Principal.NTAccount. The value of this parameter must be a type that 
-    can be translated to  the System.Security.Principal.SecurityIdentifier type.
+   targetType: Specifies whether the security identifier for which to retrieve access rules is of type T:System.Security.Principal.SecurityIdentifier or type 
+    T:System.Security.Principal.NTAccount. The value of this parameter must be a type that can be translated to  the System.Security.Principal.SecurityIdentifier type.
   
-   Returns: The collection of access rules associated with the specified 
-    System.Security.Principal.SecurityIdentifier object.
+   Returns: The collection of access rules associated with the specified System.Security.Principal.SecurityIdentifier object.
   """
   pass
  def GetAuditRules(self,includeExplicit,includeInherited,targetType):
@@ -45,20 +43,16 @@ class CommonObjectSecurity:
   
    includeExplicit: true to include audit rules explicitly set for the object.
    includeInherited: true to include inherited audit rules.
-   targetType: The security identifier for which to retrieve audit rules. This must be an object that 
-    can be cast as a System.Security.Principal.SecurityIdentifier object.
-  
-   Returns: The collection of audit rules associated with the specified 
-    System.Security.Principal.SecurityIdentifier object.
+   targetType: The security identifier for which to retrieve audit rules. This must be an object that can be cast as a System.Security.Principal.SecurityIdentifier object.
+   Returns: The collection of audit rules associated with the specified System.Security.Principal.SecurityIdentifier object.
   """
   pass
  def RemoveAccessRule(self,*args):
   """
   RemoveAccessRule(self: CommonObjectSecurity,rule: AccessRule) -> bool
   
-   Removes access rules that contain the same security identifier and access mask as the 
-    specified access rule from the Discretionary Access Control List (DACL) associated with 
-    this System.Security.AccessControl.CommonObjectSecurity object.
+   Removes access rules that contain the same security identifier and access mask as the specified access rule from the Discretionary Access Control List (DACL) associated 
+    with this System.Security.AccessControl.CommonObjectSecurity object.
   
   
    rule: The access rule to remove.
@@ -68,8 +62,7 @@ class CommonObjectSecurity:
  def RemoveAccessRuleAll(self,*args):
   """
   RemoveAccessRuleAll(self: CommonObjectSecurity,rule: AccessRule)
-   Removes all access rules that have the same security identifier as the specified access 
-    rule from the Discretionary Access Control List (DACL) associated with this 
+   Removes all access rules that have the same security identifier as the specified access rule from the Discretionary Access Control List (DACL) associated with this 
     System.Security.AccessControl.CommonObjectSecurity object.
   
   
@@ -79,8 +72,7 @@ class CommonObjectSecurity:
  def RemoveAccessRuleSpecific(self,*args):
   """
   RemoveAccessRuleSpecific(self: CommonObjectSecurity,rule: AccessRule)
-   Removes all access rules that exactly match the specified access rule from the 
-    Discretionary Access Control List (DACL) associated with this 
+   Removes all access rules that exactly match the specified access rule from the Discretionary Access Control List (DACL) associated with this 
     System.Security.AccessControl.CommonObjectSecurity object.
   
   
@@ -91,8 +83,7 @@ class CommonObjectSecurity:
   """
   RemoveAuditRule(self: CommonObjectSecurity,rule: AuditRule) -> bool
   
-   Removes audit rules that contain the same security identifier and access mask as the 
-    specified audit rule from the System Access Control List (SACL) associated with this 
+   Removes audit rules that contain the same security identifier and access mask as the specified audit rule from the System Access Control List (SACL) associated with this 
     System.Security.AccessControl.CommonObjectSecurity object.
   
   
@@ -103,8 +94,7 @@ class CommonObjectSecurity:
  def RemoveAuditRuleAll(self,*args):
   """
   RemoveAuditRuleAll(self: CommonObjectSecurity,rule: AuditRule)
-   Removes all audit rules that have the same security identifier as the specified audit 
-    rule from the System Access Control List (SACL) associated with this 
+   Removes all audit rules that have the same security identifier as the specified audit rule from the System Access Control List (SACL) associated with this 
     System.Security.AccessControl.CommonObjectSecurity object.
   
   
@@ -114,8 +104,7 @@ class CommonObjectSecurity:
  def RemoveAuditRuleSpecific(self,*args):
   """
   RemoveAuditRuleSpecific(self: CommonObjectSecurity,rule: AuditRule)
-   Removes all audit rules that exactly match the specified audit rule from the System 
-    Access Control List (SACL) associated with this 
+   Removes all audit rules that exactly match the specified audit rule from the System Access Control List (SACL) associated with this 
     System.Security.AccessControl.CommonObjectSecurity object.
   
   
@@ -125,8 +114,7 @@ class CommonObjectSecurity:
  def ResetAccessRule(self,*args):
   """
   ResetAccessRule(self: CommonObjectSecurity,rule: AccessRule)
-   Removes all access rules in the Discretionary Access Control List (DACL) associated with 
-    this System.Security.AccessControl.CommonObjectSecurity object and then adds the 
+   Removes all access rules in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds the 
     specified access rule.
   
   
@@ -136,10 +124,8 @@ class CommonObjectSecurity:
  def SetAccessRule(self,*args):
   """
   SetAccessRule(self: CommonObjectSecurity,rule: AccessRule)
-   Removes all access rules that contain the same security identifier and qualifier as the 
-    specified access rule in the Discretionary Access Control List (DACL) associated with 
-    this System.Security.AccessControl.CommonObjectSecurity object and then adds the 
-    specified access rule.
+   Removes all access rules that contain the same security identifier and qualifier as the specified access rule in the Discretionary Access Control List (DACL) associated 
+    with this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified access rule.
   
   
    rule: The access rule to set.
@@ -148,10 +134,8 @@ class CommonObjectSecurity:
  def SetAuditRule(self,*args):
   """
   SetAuditRule(self: CommonObjectSecurity,rule: AuditRule)
-   Removes all audit rules that contain the same security identifier and qualifier as the 
-    specified audit rule in the System Access Control List (SACL) associated with this 
-    System.Security.AccessControl.CommonObjectSecurity object and then adds the specified 
-    audit rule.
+   Removes all audit rules that contain the same security identifier and qualifier as the specified audit rule in the System Access Control List (SACL) associated with this 
+    System.Security.AccessControl.CommonObjectSecurity object and then adds the specified audit rule.
   
   
    rule: The audit rule to set.

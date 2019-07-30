@@ -1,5 +1,10 @@
-class RuntimeFieldHandle:
+class RuntimeFieldHandle(object):
  """ Represents a field using an internal metadata token. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RuntimeFieldHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,*__args):
   """
   Equals(self: RuntimeFieldHandle,obj: object) -> bool
@@ -7,18 +12,13 @@ class RuntimeFieldHandle:
    Indicates whether the current instance is equal to the specified object.
   
    obj: The object to compare to the current instance.
-   Returns: true if obj is a System.RuntimeFieldHandle and equal to the value of the current 
-    instance; otherwise,false.
-  
+   Returns: true if obj is a System.RuntimeFieldHandle and equal to the value of the current instance; otherwise,false.
   Equals(self: RuntimeFieldHandle,handle: RuntimeFieldHandle) -> bool
   
-   Indicates whether the current instance is equal to the specified 
-    System.RuntimeFieldHandle.
-  
+   Indicates whether the current instance is equal to the specified System.RuntimeFieldHandle.
   
    handle: The System.RuntimeFieldHandle to compare to the current instance.
-   Returns: true if the value of handle is equal to the value of the current instance; otherwise,
-    false.
+   Returns: true if the value of handle is equal to the value of the current instance; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -27,13 +27,9 @@ class RuntimeFieldHandle:
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: RuntimeFieldHandle,info: SerializationInfo,context: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data necessary to 
-    deserialize the field represented by the current instance.
+   Populates a System.Runtime.Serialization.SerializationInfo with the data necessary to deserialize the field represented by the current instance.
   
-  
-   info: The System.Runtime.Serialization.SerializationInfo object to populate with serialization 
-    information.
-  
+   info: The System.Runtime.Serialization.SerializationInfo object to populate with serialization information.
    context: (Reserved) The place to store and retrieve serialized data.
   """
   pass

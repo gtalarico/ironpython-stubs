@@ -1,14 +1,17 @@
-class DrawToolTipEventArgs:
+class DrawToolTipEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ToolTip.Draw event.
  
  DrawToolTipEventArgs(graphics: Graphics,associatedWindow: IWin32Window,associatedControl: Control,bounds: Rectangle,toolTipText: str,backColor: Color,foreColor: Color,font: Font)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DrawToolTipEventArgs()
+
  def DrawBackground(self):
   """
   DrawBackground(self: DrawToolTipEventArgs)
-   Draws the background of the System.Windows.Forms.ToolTip using the system background 
-    color.
+   Draws the background of the System.Windows.Forms.ToolTip using the system background color.
   """
   pass
  def DrawBorder(self):
@@ -22,13 +25,9 @@ class DrawToolTipEventArgs:
   DrawText(self: DrawToolTipEventArgs)
    Draws the text of the System.Windows.Forms.ToolTip using the system text color and font.
   DrawText(self: DrawToolTipEventArgs,flags: TextFormatFlags)
-   Draws the text of the System.Windows.Forms.ToolTip using the system text color and font,
-    and the specified text layout.
+   Draws the text of the System.Windows.Forms.ToolTip using the system text color and font,and the specified text layout.
   
-  
-   flags: A System.Windows.Forms.TextFormatFlags containing a bitwise combination of values that 
-    specifies the display and layout for the 
-    System.Windows.Forms.DrawToolTipEventArgs.ToolTipText.
+   flags: A System.Windows.Forms.TextFormatFlags containing a bitwise combination of values that specifies the display and layout for the System.Windows.Forms.DrawToolTipEventArgs.ToolTipText.
   """
   pass
  @staticmethod

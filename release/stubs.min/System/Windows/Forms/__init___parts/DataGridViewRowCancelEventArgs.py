@@ -1,9 +1,13 @@
-class DataGridViewRowCancelEventArgs:
+class DataGridViewRowCancelEventArgs(CancelEventArgs):
  """
  Provides data for the System.Windows.Forms.DataGridView.UserDeletingRow event of a System.Windows.Forms.DataGridView.
  
  DataGridViewRowCancelEventArgs(dataGridViewRow: DataGridViewRow)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewRowCancelEventArgs()
+
  @staticmethod
  def __new__(self,dataGridViewRow):
   """ __new__(cls: type,dataGridViewRow: DataGridViewRow) """

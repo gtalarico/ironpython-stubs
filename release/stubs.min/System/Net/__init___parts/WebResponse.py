@@ -1,5 +1,10 @@
-class WebResponse:
+class WebResponse(MarshalByRefObject):
  """ Provides a response from a Uniform Resource Identifier (URI). This is an abstract class. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebResponse()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: WebResponse)
@@ -12,13 +17,10 @@ class WebResponse:
  def GetObjectData(self,*args):
   """
   GetObjectData(self: WebResponse,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data that is needed 
-    to serialize the target object.
-  
+   Populates a System.Runtime.Serialization.SerializationInfo with the data that is needed to serialize the target object.
   
    serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
-    serialization.
+   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this serialization.
   """
   pass
  def GetResponseStream(self):
@@ -35,11 +37,9 @@ class WebResponse:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object

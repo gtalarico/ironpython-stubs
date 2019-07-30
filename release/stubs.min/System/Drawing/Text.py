@@ -8,8 +8,12 @@
 # no functions
 # classes
 
-class FontCollection:
+class FontCollection(object,IDisposable):
  """ Provides a base class for installed and private font collections. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return FontCollection()
+
  def Dispose(self):
   """
   Dispose(self: FontCollection)
@@ -37,12 +41,16 @@ Get: Families(self: FontCollection) -> Array[FontFamily]
 
 
 
-class GenericFontFamilies:
+class GenericFontFamilies(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies a generic System.Drawing.FontFamily object.
  
  enum GenericFontFamilies,values: Monospace (2),SansSerif (1),Serif (0)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return GenericFontFamilies()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -72,12 +80,16 @@ class GenericFontFamilies:
  value__=None
 
 
-class HotkeyPrefix:
+class HotkeyPrefix(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies the type of display for hot-key prefixes that relate to text.
  
  enum HotkeyPrefix,values: Hide (2),None (0),Show (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return HotkeyPrefix()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -107,21 +119,22 @@ class HotkeyPrefix:
  value__=None
 
 
-class InstalledFontCollection:
+class InstalledFontCollection(FontCollection,IDisposable):
  """
  Represents the fonts installed on the system. This class cannot be inherited.
  
  InstalledFontCollection()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return InstalledFontCollection()
+
  def Dispose(self):
   """
   Dispose(self: FontCollection,disposing: bool)
-   Releases the unmanaged resources used by the System.Drawing.Text.FontCollection and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Drawing.Text.FontCollection and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def __enter__(self,*args):
@@ -134,12 +147,16 @@ class InstalledFontCollection:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class PrivateFontCollection:
+class PrivateFontCollection(FontCollection,IDisposable):
  """
  Provides a collection of font families built from font files that are provided by the client application.
  
  PrivateFontCollection()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return PrivateFontCollection()
+
  def AddFontFile(self,filename):
   """
   AddFontFile(self: PrivateFontCollection,filename: str)
@@ -170,12 +187,16 @@ class PrivateFontCollection:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class TextRenderingHint:
+class TextRenderingHint(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies the quality of text rendering.
  
  enum TextRenderingHint,values: AntiAlias (4),AntiAliasGridFit (3),ClearTypeGridFit (5),SingleBitPerPixel (2),SingleBitPerPixelGridFit (1),SystemDefault (0)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TextRenderingHint()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

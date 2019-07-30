@@ -1,5 +1,10 @@
-class AppContext:
+class AppContext(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AppContext()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetData(name):
   """ GetData(name: str) -> object """

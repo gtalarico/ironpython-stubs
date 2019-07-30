@@ -4,6 +4,11 @@ class UriHostNameType:
  
  enum UriHostNameType,values: Basic (1),Dns (2),IPv4 (3),IPv6 (4),Unknown (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UriHostNameType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

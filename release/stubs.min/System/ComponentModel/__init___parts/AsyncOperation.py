@@ -1,5 +1,10 @@
-class AsyncOperation:
+class AsyncOperation(object):
  """ Tracks the lifetime of an asynchronous operation. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AsyncOperation()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def OperationCompleted(self):
   """
   OperationCompleted(self: AsyncOperation)
@@ -11,9 +16,7 @@ class AsyncOperation:
   Post(self: AsyncOperation,d: SendOrPostCallback,arg: object)
    Invokes a delegate on the thread or context appropriate for the application model.
   
-   d: A System.Threading.SendOrPostCallback object that wraps the delegate to be called when 
-    the operation ends.
-  
+   d: A System.Threading.SendOrPostCallback object that wraps the delegate to be called when the operation ends.
    arg: An argument for the delegate contained in the d parameter.
   """
   pass
@@ -22,9 +25,7 @@ class AsyncOperation:
   PostOperationCompleted(self: AsyncOperation,d: SendOrPostCallback,arg: object)
    Ends the lifetime of an asynchronous operation.
   
-   d: A System.Threading.SendOrPostCallback object that wraps the delegate to be called when 
-    the operation ends.
-  
+   d: A System.Threading.SendOrPostCallback object that wraps the delegate to be called when the operation ends.
    arg: An argument for the delegate contained in the d parameter.
   """
   pass

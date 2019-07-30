@@ -1,9 +1,13 @@
-class ListControlConvertEventArgs:
+class ListControlConvertEventArgs(ConvertEventArgs):
  """
  Provides data for the System.Windows.Forms.ListControl.Format event.
  
  ListControlConvertEventArgs(value: object,desiredType: Type,listItem: object)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ListControlConvertEventArgs()
+
  @staticmethod
  def __new__(self,value,desiredType,listItem):
   """ __new__(cls: type,value: object,desiredType: Type,listItem: object) """

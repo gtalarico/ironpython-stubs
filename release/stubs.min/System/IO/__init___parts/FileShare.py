@@ -4,6 +4,11 @@ class FileShare:
  
  enum (flags) FileShare,values: Delete (4),Inheritable (16),None (0),Read (1),ReadWrite (3),Write (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileShare()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

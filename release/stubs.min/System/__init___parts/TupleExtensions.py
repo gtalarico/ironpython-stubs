@@ -1,5 +1,10 @@
-class TupleExtensions:
+class TupleExtensions(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TupleExtensions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Deconstruct(value,item1,item2=None,item3=None,item4=None,item5=None,item6=None,item7=None,item8=None,item9=None,item10=None,item11=None,item12=None,item13=None,item14=None,item15=None,item16=None,item17=None,item18=None,item19=None,item20=None,item21=None):
   """

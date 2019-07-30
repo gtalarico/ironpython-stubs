@@ -1,9 +1,14 @@
-class ApplicationId:
+class ApplicationId(object):
  """
  Contains information used to uniquely identify a manifest-based application. This class cannot be inherited.
  
  ApplicationId(publicKeyToken: Array[Byte],name: str,version: Version,processorArchitecture: str,culture: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ApplicationId()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
   Copy(self: ApplicationId) -> ApplicationId
@@ -16,13 +21,10 @@ class ApplicationId:
   """
   Equals(self: ApplicationId,o: object) -> bool
   
-   Determines whether the specified System.ApplicationId object is equivalent to the current 
-    System.ApplicationId.
-  
+   Determines whether the specified System.ApplicationId object is equivalent to the current System.ApplicationId.
   
    o: The System.ApplicationId object to compare to the current System.ApplicationId.
-   Returns: true if the specified System.ApplicationId object is equivalent to the current 
-    System.ApplicationId; otherwise,false.
+   Returns: true if the specified System.ApplicationId object is equivalent to the current System.ApplicationId; otherwise,false.
   """
   pass
  def GetHashCode(self):

@@ -1,17 +1,19 @@
-class DockingAttribute:
+class DockingAttribute(Attribute,_Attribute):
  """
  Specifies the default docking behavior for a control.
  
  DockingAttribute()
  DockingAttribute(dockingBehavior: DockingBehavior)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DockingAttribute()
+
  def Equals(self,obj):
   """
   Equals(self: DockingAttribute,obj: object) -> bool
   
-   Compares an arbitrary object with the System.Windows.Forms.DockingAttribute object for 
-    equality.
-  
+   Compares an arbitrary object with the System.Windows.Forms.DockingAttribute object for equality.
   
    obj: The System.Object against which to compare this System.Windows.Forms.DockingAttribute.
    Returns: true is obj is equal to this System.Windows.Forms.DockingAttribute; otherwise,false.
@@ -29,11 +31,8 @@ class DockingAttribute:
   """
   IsDefaultAttribute(self: DockingAttribute) -> bool
   
-   Specifies whether this System.Windows.Forms.DockingAttribute is the default docking 
-    attribute.
-  
-   Returns: true is the current System.Windows.Forms.DockingAttribute is the default; otherwise,
-    false.
+   Specifies whether this System.Windows.Forms.DockingAttribute is the default docking attribute.
+   Returns: true is the current System.Windows.Forms.DockingAttribute is the default; otherwise,false.
   """
   pass
  def __eq__(self,*args):

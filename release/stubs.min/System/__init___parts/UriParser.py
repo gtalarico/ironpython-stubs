@@ -1,5 +1,10 @@
-class UriParser:
+class UriParser(object):
  """ Parses a new URI scheme. This is an abstract class. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UriParser()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetComponents(self,*args):
   """
   GetComponents(self: UriParser,uri: Uri,components: UriComponents,format: UriFormat) -> str
@@ -85,9 +90,7 @@ class UriParser:
   """
   Resolve(self: UriParser,baseUri: Uri,relativeUri: Uri) -> (str,UriFormatException)
   
-   Called by System.Uri constructors and erload:System.Uri.TryCreate to resolve a relative 
-    URI.
-  
+   Called by System.Uri constructors and erload:System.Uri.TryCreate to resolve a relative URI.
   
    baseUri: A base URI.
    relativeUri: A relative URI.

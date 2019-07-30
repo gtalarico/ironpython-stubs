@@ -1,9 +1,13 @@
-class ConvertEventArgs:
+class ConvertEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.Binding.Format and System.Windows.Forms.Binding.Parse events.
  
  ConvertEventArgs(value: object,desiredType: Type)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ConvertEventArgs()
+
  @staticmethod
  def __new__(self,value,desiredType):
   """ __new__(cls: type,value: object,desiredType: Type) """

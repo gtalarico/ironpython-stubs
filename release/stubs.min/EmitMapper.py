@@ -1,15 +1,20 @@
 # encoding: utf-8
 # module EmitMapper
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
 
-class Mapper:
+class Mapper(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Mapper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def MapTo(source,dest,config=None):
   """

@@ -1,4 +1,4 @@
-class CounterCreationDataCollection:
+class CounterCreationDataCollection(CollectionBase):
  """
  Provides a strongly typed collection of System.Diagnostics.CounterCreationData objects.
  
@@ -6,6 +6,11 @@ class CounterCreationDataCollection:
  CounterCreationDataCollection(value: CounterCreationDataCollection)
  CounterCreationDataCollection(value: Array[CounterCreationData])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CounterCreationDataCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CounterCreationDataCollection,value: CounterCreationData) -> int
@@ -19,41 +24,29 @@ class CounterCreationDataCollection:
  def AddRange(self,value):
   """
   AddRange(self: CounterCreationDataCollection,value: Array[CounterCreationData])
-   Adds the specified array of System.Diagnostics.CounterCreationData instances to the 
-    collection.
+   Adds the specified array of System.Diagnostics.CounterCreationData instances to the collection.
   
-  
-   value: An array of System.Diagnostics.CounterCreationData instances to append to the existing 
-    collection.
-  
+   value: An array of System.Diagnostics.CounterCreationData instances to append to the existing collection.
   AddRange(self: CounterCreationDataCollection,value: CounterCreationDataCollection)
-   Adds the specified collection of System.Diagnostics.CounterCreationData instances to the 
-    collection.
+   Adds the specified collection of System.Diagnostics.CounterCreationData instances to the collection.
   
-  
-   value: A collection of System.Diagnostics.CounterCreationData instances to append to the 
-    existing collection.
+   value: A collection of System.Diagnostics.CounterCreationData instances to append to the existing collection.
   """
   pass
  def Contains(self,value):
   """
   Contains(self: CounterCreationDataCollection,value: CounterCreationData) -> bool
   
-   Determines whether a System.Diagnostics.CounterCreationData instance exists in the 
-    collection.
-  
+   Determines whether a System.Diagnostics.CounterCreationData instance exists in the collection.
   
    value: The System.Diagnostics.CounterCreationData object to find in the collection.
-   Returns: true if the specified System.Diagnostics.CounterCreationData object exists in the 
-    collection; otherwise,false.
+   Returns: true if the specified System.Diagnostics.CounterCreationData object exists in the collection; otherwise,false.
   """
   pass
  def CopyTo(self,array,index):
   """
   CopyTo(self: CounterCreationDataCollection,array: Array[CounterCreationData],index: int)
-   Copies the elements of the System.Diagnostics.CounterCreationData to an array,starting 
-    at the specified index of the array.
-  
+   Copies the elements of the System.Diagnostics.CounterCreationData to an array,starting at the specified index of the array.
   
    array: An array of System.Diagnostics.CounterCreationData instances to add to the collection.
    index: The location at which to add the new instances.
@@ -66,43 +59,34 @@ class CounterCreationDataCollection:
    Returns the index of a System.Diagnostics.CounterCreationData object in the collection.
   
    value: The System.Diagnostics.CounterCreationData object to locate in the collection.
-   Returns: The zero-based index of the specified System.Diagnostics.CounterCreationData,if it is 
-    found,in the collection; otherwise,-1.
+   Returns: The zero-based index of the specified System.Diagnostics.CounterCreationData,if it is found,in the collection; otherwise,-1.
   """
   pass
  def Insert(self,index,value):
   """
   Insert(self: CounterCreationDataCollection,index: int,value: CounterCreationData)
-   Inserts a System.Diagnostics.CounterCreationData object into the collection,at the 
-    specified index.
+   Inserts a System.Diagnostics.CounterCreationData object into the collection,at the specified index.
   
-  
-   index: The zero-based index of the location at which the System.Diagnostics.CounterCreationData 
-    is to be inserted.
-  
+   index: The zero-based index of the location at which the System.Diagnostics.CounterCreationData is to be inserted.
    value: The System.Diagnostics.CounterCreationData to insert into the collection.
   """
   pass
  def OnClear(self,*args):
   """
   OnClear(self: CollectionBase)
-   Performs additional custom processes when clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes when clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnClearComplete(self,*args):
   """
   OnClearComplete(self: CollectionBase)
-   Performs additional custom processes after clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes after clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnInsert(self,*args):
   """
   OnInsert(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes before inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -111,9 +95,7 @@ class CounterCreationDataCollection:
  def OnInsertComplete(self,*args):
   """
   OnInsertComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -122,9 +104,7 @@ class CounterCreationDataCollection:
  def OnRemove(self,*args):
   """
   OnRemove(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes when removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes when removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -133,9 +113,7 @@ class CounterCreationDataCollection:
  def OnRemoveComplete(self,*args):
   """
   OnRemoveComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -144,9 +122,7 @@ class CounterCreationDataCollection:
  def OnSet(self,*args):
   """
   OnSet(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes before setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -156,9 +132,7 @@ class CounterCreationDataCollection:
  def OnSetComplete(self,*args):
   """
   OnSetComplete(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes after setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -168,9 +142,7 @@ class CounterCreationDataCollection:
  def OnValidate(self,*args):
   """
   OnValidate(self: CounterCreationDataCollection,value: object)
-   Checks the specified object to determine whether it is a valid 
-    System.Diagnostics.CounterCreationData type.
-  
+   Checks the specified object to determine whether it is a valid System.Diagnostics.CounterCreationData type.
   
    value: The object that will be validated.
   """

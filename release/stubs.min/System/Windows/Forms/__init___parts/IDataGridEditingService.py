@@ -1,5 +1,9 @@
 class IDataGridEditingService:
  """ Represents methods that process editing requests. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return IDataGridEditingService()
+
  def BeginEdit(self,gridColumn,rowNumber):
   """
   BeginEdit(self: IDataGridEditingService,gridColumn: DataGridColumnStyle,rowNumber: int) -> bool

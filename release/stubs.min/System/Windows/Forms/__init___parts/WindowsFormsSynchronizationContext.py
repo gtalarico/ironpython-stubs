@@ -1,9 +1,13 @@
-class WindowsFormsSynchronizationContext:
+class WindowsFormsSynchronizationContext(SynchronizationContext,IDisposable):
  """
  Provides a synchronization context for the Windows Forms application model.
  
  WindowsFormsSynchronizationContext()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return WindowsFormsSynchronizationContext()
+
  def CreateCopy(self):
   """
   CreateCopy(self: WindowsFormsSynchronizationContext) -> SynchronizationContext
@@ -15,8 +19,7 @@ class WindowsFormsSynchronizationContext:
  def Dispose(self):
   """
   Dispose(self: WindowsFormsSynchronizationContext)
-   Releases all resources used by the 
-    System.Windows.Forms.WindowsFormsSynchronizationContext.
+   Releases all resources used by the System.Windows.Forms.WindowsFormsSynchronizationContext.
   """
   pass
  def Post(self,d,state):
@@ -40,17 +43,14 @@ class WindowsFormsSynchronizationContext:
  def SetWaitNotificationRequired(self,*args):
   """
   SetWaitNotificationRequired(self: SynchronizationContext)
-   Sets notification that wait notification is required and prepares the callback method so 
-    it can be called more reliably when a wait occurs.
+   Sets notification that wait notification is required and prepares the callback method so it can be called more reliably when a wait occurs.
   """
   pass
  @staticmethod
  def Uninstall():
   """
   Uninstall()
-   Uninstalls the currently installed 
-    System.Windows.Forms.WindowsFormsSynchronizationContext and replaces it with the 
-    previously installed context.
+   Uninstalls the currently installed System.Windows.Forms.WindowsFormsSynchronizationContext and replaces it with the previously installed context.
   """
   pass
  def __enter__(self,*args):

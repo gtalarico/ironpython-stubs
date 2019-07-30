@@ -1,9 +1,13 @@
-class ToolStripItemEventArgs:
+class ToolStripItemEventArgs(EventArgs):
  """
  Provides data for System.Windows.Forms.ToolStripItem events.
  
  ToolStripItemEventArgs(item: ToolStripItem)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripItemEventArgs()
+
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass

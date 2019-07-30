@@ -4,17 +4,19 @@ class RunInstallerAttribute:
  
  RunInstallerAttribute(runInstaller: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RunInstallerAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: RunInstallerAttribute,obj: object) -> bool
   
-   Determines whether the value of the specified System.ComponentModel.RunInstallerAttribute 
-    is equivalent to the current System.ComponentModel.RunInstallerAttribute.
-  
+   Determines whether the value of the specified System.ComponentModel.RunInstallerAttribute is equivalent to the current System.ComponentModel.RunInstallerAttribute.
   
    obj: The object to compare.
-   Returns: true if the specified System.ComponentModel.RunInstallerAttribute is equal to the current 
-    System.ComponentModel.RunInstallerAttribute; otherwise,false.
+   Returns: true if the specified System.ComponentModel.RunInstallerAttribute is equal to the current System.ComponentModel.RunInstallerAttribute; otherwise,false.
   """
   pass
  def GetHashCode(self):

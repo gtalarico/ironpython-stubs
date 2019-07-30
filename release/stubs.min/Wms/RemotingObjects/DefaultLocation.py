@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.DefaultLocation calls itself DefaultLocation
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
 class ChangeDefaultLocation:
  """ enum ChangeDefaultLocation,values: Always (0),Ask (2),Never (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ChangeDefaultLocation()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -39,8 +45,13 @@ class ChangeDefaultLocation:
  value__=None
 
 
-class UpdateItemDefaultLocationArgs:
+class UpdateItemDefaultLocationArgs(object):
  """ UpdateItemDefaultLocationArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UpdateItemDefaultLocationArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  IsDirectTransfer=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: IsDirectTransfer(self: UpdateItemDefaultLocationArgs) -> bool
 
@@ -73,11 +84,16 @@ Set: WarehouseCode(self: UpdateItemDefaultLocationArgs)=value
 
 
 
-class WarehouseItemLocation:
+class WarehouseItemLocation(object):
  """
  WarehouseItemLocation()
  WarehouseItemLocation(warehouseCode: str,warehouseDescription: str,warehouseLocationCode: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WarehouseItemLocation()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,warehouseCode=None,warehouseDescription=None,warehouseLocationCode=None):
   """

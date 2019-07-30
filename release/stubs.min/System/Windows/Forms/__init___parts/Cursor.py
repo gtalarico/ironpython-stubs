@@ -1,4 +1,4 @@
-class Cursor:
+class Cursor(object,IDisposable,ISerializable):
  """
  Represents the image used to paint the mouse pointer.
  
@@ -7,6 +7,10 @@ class Cursor:
  Cursor(fileName: str)
  Cursor(type: Type,resource: str)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Cursor()
+
  def CopyHandle(self):
   """
   CopyHandle(self: Cursor) -> IntPtr
@@ -27,33 +31,26 @@ class Cursor:
    Draws the cursor on the specified surface,within the specified bounds.
   
    g: The System.Drawing.Graphics surface on which to draw the System.Windows.Forms.Cursor.
-   targetRect: The System.Drawing.Rectangle that represents the bounds of the 
-    System.Windows.Forms.Cursor.
+   targetRect: The System.Drawing.Rectangle that represents the bounds of the System.Windows.Forms.Cursor.
   """
   pass
  def DrawStretched(self,g,targetRect):
   """
   DrawStretched(self: Cursor,g: Graphics,targetRect: Rectangle)
-   Draws the cursor in a stretched format on the specified surface,within the specified 
-    bounds.
-  
+   Draws the cursor in a stretched format on the specified surface,within the specified bounds.
   
    g: The System.Drawing.Graphics surface on which to draw the System.Windows.Forms.Cursor.
-   targetRect: The System.Drawing.Rectangle that represents the bounds of the 
-    System.Windows.Forms.Cursor.
+   targetRect: The System.Drawing.Rectangle that represents the bounds of the System.Windows.Forms.Cursor.
   """
   pass
  def Equals(self,obj):
   """
   Equals(self: Cursor,obj: object) -> bool
   
-   Returns a value indicating whether this cursor is equal to the specified 
-    System.Windows.Forms.Cursor.
-  
+   Returns a value indicating whether this cursor is equal to the specified System.Windows.Forms.Cursor.
   
    obj: The System.Windows.Forms.Cursor to compare.
-   Returns: true if this cursor is equal to the specified System.Windows.Forms.Cursor; otherwise,
-    false.
+   Returns: true if this cursor is equal to the specified System.Windows.Forms.Cursor; otherwise,false.
   """
   pass
  def GetHashCode(self):

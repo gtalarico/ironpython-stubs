@@ -1,9 +1,13 @@
-class DataGridViewAutoSizeColumnModeEventArgs:
+class DataGridViewAutoSizeColumnModeEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.DataGridView.AutoSizeColumnModeChanged event.
  
  DataGridViewAutoSizeColumnModeEventArgs(dataGridViewColumn: DataGridViewColumn,previousMode: DataGridViewAutoSizeColumnMode)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewAutoSizeColumnModeEventArgs()
+
  @staticmethod
  def __new__(self,dataGridViewColumn,previousMode):
   """ __new__(cls: type,dataGridViewColumn: DataGridViewColumn,previousMode: DataGridViewAutoSizeColumnMode) """

@@ -1,9 +1,13 @@
-class SplitterCancelEventArgs:
+class SplitterCancelEventArgs(CancelEventArgs):
  """
  Provides data for splitter events.
  
  SplitterCancelEventArgs(mouseCursorX: int,mouseCursorY: int,splitX: int,splitY: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SplitterCancelEventArgs()
+
  @staticmethod
  def __new__(self,mouseCursorX,mouseCursorY,splitX,splitY):
   """ __new__(cls: type,mouseCursorX: int,mouseCursorY: int,splitX: int,splitY: int) """

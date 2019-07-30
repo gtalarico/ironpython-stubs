@@ -1,10 +1,14 @@
-class QuestionEventArgs:
+class QuestionEventArgs(EventArgs):
  """
  Provides data for events that need a true or false answer to a question.
  
  QuestionEventArgs()
  QuestionEventArgs(response: bool)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return QuestionEventArgs()
+
  @staticmethod
  def __new__(self,response=None):
   """

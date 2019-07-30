@@ -1,9 +1,13 @@
-class ColumnReorderedEventArgs:
+class ColumnReorderedEventArgs(CancelEventArgs):
  """
  Provides data for the System.Windows.Forms.ListView.ColumnReordered event.
  
  ColumnReorderedEventArgs(oldDisplayIndex: int,newDisplayIndex: int,header: ColumnHeader)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ColumnReorderedEventArgs()
+
  @staticmethod
  def __new__(self,oldDisplayIndex,newDisplayIndex,header):
   """ __new__(cls: type,oldDisplayIndex: int,newDisplayIndex: int,header: ColumnHeader) """

@@ -1,5 +1,10 @@
 class UCOMIEnumConnections:
  """ Use System.Runtime.InteropServices.ComTypes.IEnumConnections instead. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UCOMIEnumConnections()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self,ppenum):
   """
   Clone(self: UCOMIEnumConnections) -> UCOMIEnumConnections

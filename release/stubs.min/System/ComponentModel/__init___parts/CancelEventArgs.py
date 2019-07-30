@@ -1,10 +1,15 @@
-class CancelEventArgs:
+class CancelEventArgs(EventArgs):
  """
  Provides data for a cancelable event.
  
  CancelEventArgs()
  CancelEventArgs(cancel: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CancelEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,cancel=None):
   """

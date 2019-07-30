@@ -3,13 +3,18 @@
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
 
-class ElapsedEventArgs:
+class ElapsedEventArgs(EventArgs):
  """ Provides data for the System.Timers.Timer.Elapsed event. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ElapsedEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  SignalTime=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets the time the System.Timers.Timer.Elapsed event was raised.
 
@@ -19,12 +24,17 @@ Get: SignalTime(self: ElapsedEventArgs) -> DateTime
 
 
 
-class ElapsedEventHandler:
+class ElapsedEventHandler(MulticastDelegate):
  """
  Represents the method that will handle the System.Timers.Timer.Elapsed event of a System.Timers.Timer.
  
  ElapsedEventHandler(object: object,method: IntPtr)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ElapsedEventHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInvoke(self,sender,e,callback,object):
   """ BeginInvoke(self: ElapsedEventHandler,sender: object,e: ElapsedEventArgs,callback: AsyncCallback,object: object) -> IAsyncResult """
   pass
@@ -44,8 +54,7 @@ class ElapsedEventHandler:
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the 
-    current delegate.-or- null,if the method represented by the current delegate does not 
+   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not 
     require arguments.
   
    Returns: The object returned by the method represented by the delegate.
@@ -69,13 +78,10 @@ class ElapsedEventHandler:
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is 
-    equal to the specified delegate.
-  
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate 
-    without value in its invocation list; otherwise,this instance with its original 
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original 
     invocation list.
   """
   pass
@@ -89,18 +95,22 @@ class ElapsedEventHandler:
  def __reduce_ex__(self,*args):
   pass
 
-class Timer:
+class Timer(Component):
  """
  Generates recurring events in an application.
  
  Timer()
  Timer(interval: float)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Timer()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInit(self):
   """
   BeginInit(self: Timer)
-   Begins the run-time initialization of a System.Timers.Timer that is used on a form or by 
-    another component.
+   Begins the run-time initialization of a System.Timers.Timer that is used on a form or by another component.
   """
   pass
  def Close(self):
@@ -114,29 +124,24 @@ class Timer:
   Dispose(self: Timer,disposing: bool)
    Releases all resources used by the current System.Timers.Timer.
   
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def EndInit(self):
   """
   EndInit(self: Timer)
-   Ends the run-time initialization of a System.Timers.Timer that is used on a form or by 
-    another component.
+   Ends the run-time initialization of a System.Timers.Timer that is used on a form or by another component.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified 
+    service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -145,11 +150,9 @@ class Timer:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -161,15 +164,13 @@ class Timer:
  def Start(self):
   """
   Start(self: Timer)
-   Starts raising the System.Timers.Timer.Elapsed event by setting 
-    System.Timers.Timer.Enabled to true.
+   Starts raising the System.Timers.Timer.Elapsed event by setting System.Timers.Timer.Enabled to true.
   """
   pass
  def Stop(self):
   """
   Stop(self: Timer)
-   Stops raising the System.Timers.Timer.Elapsed event by setting 
-    System.Timers.Timer.Enabled to false.
+   Stops raising the System.Timers.Timer.Elapsed event by setting System.Timers.Timer.Enabled to false.
   """
   pass
  def __enter__(self,*args):
@@ -249,12 +250,17 @@ Set: SynchronizingObject(self: Timer)=value
  Elapsed=None
 
 
-class TimersDescriptionAttribute:
+class TimersDescriptionAttribute(DescriptionAttribute):
  """
  Sets the description that visual designers can display when referencing an event,extender,or property.
  
  TimersDescriptionAttribute(description: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TimersDescriptionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

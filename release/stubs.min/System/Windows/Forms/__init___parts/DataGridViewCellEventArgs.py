@@ -1,9 +1,13 @@
-class DataGridViewCellEventArgs:
+class DataGridViewCellEventArgs(EventArgs):
  """
  Provides data for System.Windows.Forms.DataGridView events related to cell and row operations.
  
  DataGridViewCellEventArgs(columnIndex: int,rowIndex: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewCellEventArgs()
+
  @staticmethod
  def __new__(self,columnIndex,rowIndex):
   """ __new__(cls: type,columnIndex: int,rowIndex: int) """

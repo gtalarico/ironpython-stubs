@@ -1,10 +1,14 @@
-class TextReader:
+class TextReader(MarshalByRefObject):
  """ Represents a reader that can read a sequential series of characters. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TextReader()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: TextReader)
-   Closes the System.IO.TextReader and releases any system resources associated with the 
-    TextReader.
+   Closes the System.IO.TextReader and releases any system resources associated with the TextReader.
   """
   pass
  def Dispose(self):
@@ -19,11 +23,9 @@ class TextReader:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -36,37 +38,26 @@ class TextReader:
   """
   Peek(self: TextReader) -> int
   
-   Reads the next character without changing the state of the reader or the character 
-    source. Returns the next available character without actually reading it from the input 
+   Reads the next character without changing the state of the reader or the character source. Returns the next available character without actually reading it from the input 
     stream.
   
-   Returns: An integer representing the next character to be read,or -1 if no more characters are 
-    available or the stream does not support seeking.
+   Returns: An integer representing the next character to be read,or -1 if no more characters are available or the stream does not support seeking.
   """
   pass
  def Read(self,buffer=None,index=None,count=None):
   """
   Read(self: TextReader) -> int
   
-   Reads the next character from the input stream and advances the character position by one 
-    character.
-  
-   Returns: The next character from the input stream,or -1 if no more characters are available. The 
-    default implementation returns -1.
-  
+   Reads the next character from the input stream and advances the character position by one character.
+   Returns: The next character from the input stream,or -1 if no more characters are available. The default implementation returns -1.
   Read(self: TextReader,index: int,count: int) -> (int,Array[Char])
   
-   Reads a maximum of count characters from the current stream and writes the data to 
-    buffer,beginning at index.
-  
+   Reads a maximum of count characters from the current stream and writes the data to buffer,beginning at index.
   
    index: The position in buffer at which to begin writing.
-   count: The maximum number of characters to read. If the end of the stream is reached before 
-    count of characters is read into buffer,the current method returns.
-  
-   Returns: The number of characters that have been read. The number will be less than or equal to 
-    count,depending on whether the data is available within the stream. This method returns 
-    zero if called when no more characters are left to read.
+   count: The maximum number of characters to read. If the end of the stream is reached before count of characters is read into buffer,the current method returns.
+   Returns: The number of characters that have been read. The number will be less than or equal to count,depending on whether the data is available within the stream. This method 
+    returns zero if called when no more characters are left to read.
   """
   pass
  def ReadAsync(self,buffer,index,count):
@@ -76,15 +67,12 @@ class TextReader:
   """
   ReadBlock(self: TextReader,index: int,count: int) -> (int,Array[Char])
   
-   Reads a maximum of count characters from the current stream,and writes the data to 
-    buffer,beginning at index.
-  
+   Reads a maximum of count characters from the current stream,and writes the data to buffer,beginning at index.
   
    index: The position in buffer at which to begin writing.
    count: The maximum number of characters to read.
-   Returns: The position of the underlying stream is advanced by the number of characters that were 
-    read into buffer.The number of characters that have been read. The number will be less 
-    than or equal to count,depending on whether all input characters have been read.
+   Returns: The position of the underlying stream is advanced by the number of characters that were read into buffer.The number of characters that have been read. The number will be 
+    less than or equal to count,depending on whether all input characters have been read.
   """
   pass
  def ReadBlockAsync(self,buffer,index,count):
@@ -105,9 +93,7 @@ class TextReader:
   """
   ReadToEnd(self: TextReader) -> str
   
-   Reads all characters from the current position to the end of the TextReader and returns 
-    them as one string.
-  
+   Reads all characters from the current position to the end of the TextReader and returns them as one string.
    Returns: A string containing all characters from the current position to the end of the TextReader.
   """
   pass

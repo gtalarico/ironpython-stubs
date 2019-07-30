@@ -1,5 +1,9 @@
-class PowerStatus:
+class PowerStatus(object):
  """ Indicates current system power status information. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return PowerStatus()
+
  BatteryChargeStatus=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets the current battery charge status.
 

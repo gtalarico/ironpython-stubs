@@ -3,20 +3,22 @@
 # from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
 
-class CriticalHandleMinusOneIsInvalid:
+class CriticalHandleMinusOneIsInvalid(CriticalHandle):
  """ Provides a base class for Win32 critical handle implementations in which the value of -1 indicates an invalid handle. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CriticalHandleMinusOneIsInvalid()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: CriticalHandle,disposing: bool)
-   Releases the unmanaged resources used by the 
-    System.Runtime.InteropServices.CriticalHandle class specifying whether to perform a 
-    normal dispose operation.
-  
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.CriticalHandle class specifying whether to perform a normal dispose operation.
   
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
@@ -26,9 +28,8 @@ class CriticalHandleMinusOneIsInvalid:
   ReleaseHandle(self: CriticalHandle) -> bool
   
    When overridden in a derived class,executes the code required to free the handle.
-   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic 
-    failure,false. In this case,it generates a releaseHandleFailed MDA Managed Debugging 
-    Assistant.
+   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,false. In this case,it generates a releaseHandleFailed MDA Managed 
+    Debugging Assistant.
   """
   pass
  def SetHandle(self,*args):
@@ -59,15 +60,17 @@ Get: IsInvalid(self: CriticalHandleMinusOneIsInvalid) -> bool
  handle=None
 
 
-class CriticalHandleZeroOrMinusOneIsInvalid:
+class CriticalHandleZeroOrMinusOneIsInvalid(CriticalHandle):
  """ Provides a base class for Win32 critical handle implementations in which the value of either 0 or -1 indicates an invalid handle. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CriticalHandleZeroOrMinusOneIsInvalid()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: CriticalHandle,disposing: bool)
-   Releases the unmanaged resources used by the 
-    System.Runtime.InteropServices.CriticalHandle class specifying whether to perform a 
-    normal dispose operation.
-  
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.CriticalHandle class specifying whether to perform a normal dispose operation.
   
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
@@ -77,9 +80,8 @@ class CriticalHandleZeroOrMinusOneIsInvalid:
   ReleaseHandle(self: CriticalHandle) -> bool
   
    When overridden in a derived class,executes the code required to free the handle.
-   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic 
-    failure,false. In this case,it generates a releaseHandleFailed MDA Managed Debugging 
-    Assistant.
+   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,false. In this case,it generates a releaseHandleFailed MDA Managed 
+    Debugging Assistant.
   """
   pass
  def SetHandle(self,*args):
@@ -110,14 +112,17 @@ Get: IsInvalid(self: CriticalHandleZeroOrMinusOneIsInvalid) -> bool
  handle=None
 
 
-class SafeAccessTokenHandle:
+class SafeAccessTokenHandle(SafeHandle):
  """ SafeAccessTokenHandle(handle: IntPtr) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeAccessTokenHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: SafeHandle,disposing: bool)
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
-    class specifying whether to perform a normal dispose operation.
-  
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
   
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
@@ -156,14 +161,17 @@ class SafeAccessTokenHandle:
  InvalidHandle=None
 
 
-class SafeHandleZeroOrMinusOneIsInvalid:
+class SafeHandleZeroOrMinusOneIsInvalid(SafeHandle):
  """ Provides a base class for Win32 safe handle implementations in which the value of either 0 or -1 indicates an invalid handle. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeHandleZeroOrMinusOneIsInvalid()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: SafeHandle,disposing: bool)
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
-    class specifying whether to perform a normal dispose operation.
-  
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
   
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
@@ -173,9 +181,8 @@ class SafeHandleZeroOrMinusOneIsInvalid:
   ReleaseHandle(self: SafeHandle) -> bool
   
    When overridden in a derived class,executes the code required to free the handle.
-   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic 
-    failure,false. In this case,it generates a releaseHandleFailed MDA Managed Debugging 
-    Assistant.
+   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,false. In this case,it generates a releaseHandleFailed MDA Managed 
+    Debugging Assistant.
   """
   pass
  def SetHandle(self,*args):
@@ -210,18 +217,21 @@ Get: IsInvalid(self: SafeHandleZeroOrMinusOneIsInvalid) -> bool
  handle=None
 
 
-class SafeFileHandle:
+class SafeFileHandle(SafeHandleZeroOrMinusOneIsInvalid):
  """
  Represents a wrapper class for a file handle.
  
  SafeFileHandle(preexistingHandle: IntPtr,ownsHandle: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeFileHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: SafeHandle,disposing: bool)
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
-    class specifying whether to perform a normal dispose operation.
-  
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
   
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
@@ -253,14 +263,17 @@ class SafeFileHandle:
  handle=None
 
 
-class SafeHandleMinusOneIsInvalid:
+class SafeHandleMinusOneIsInvalid(SafeHandle):
  """ Provides a base class for Win32 safe handle implementations in which the value of -1 indicates an invalid handle. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeHandleMinusOneIsInvalid()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: SafeHandle,disposing: bool)
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
-    class specifying whether to perform a normal dispose operation.
-  
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
   
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
@@ -270,9 +283,8 @@ class SafeHandleMinusOneIsInvalid:
   ReleaseHandle(self: SafeHandle) -> bool
   
    When overridden in a derived class,executes the code required to free the handle.
-   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic 
-    failure,false. In this case,it generates a releaseHandleFailed MDA Managed Debugging 
-    Assistant.
+   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,false. In this case,it generates a releaseHandleFailed MDA Managed 
+    Debugging Assistant.
   """
   pass
  def SetHandle(self,*args):
@@ -307,14 +319,17 @@ Get: IsInvalid(self: SafeHandleMinusOneIsInvalid) -> bool
  handle=None
 
 
-class SafeProcessHandle:
+class SafeProcessHandle(SafeHandleZeroOrMinusOneIsInvalid):
  """ SafeProcessHandle(existingHandle: IntPtr,ownsHandle: bool) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeProcessHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: SafeHandle,disposing: bool)
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
-    class specifying whether to perform a normal dispose operation.
-  
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
   
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
@@ -346,18 +361,21 @@ class SafeProcessHandle:
  handle=None
 
 
-class SafeRegistryHandle:
+class SafeRegistryHandle(SafeHandleZeroOrMinusOneIsInvalid):
  """
  Represents a safe handle to the Windows registry.
  
  SafeRegistryHandle(preexistingHandle: IntPtr,ownsHandle: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeRegistryHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: SafeHandle,disposing: bool)
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
-    class specifying whether to perform a normal dispose operation.
-  
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
   
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
@@ -389,18 +407,21 @@ class SafeRegistryHandle:
  handle=None
 
 
-class SafeWaitHandle:
+class SafeWaitHandle(SafeHandleZeroOrMinusOneIsInvalid):
  """
  Represents a wrapper class for a wait handle.
  
  SafeWaitHandle(existingHandle: IntPtr,ownsHandle: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeWaitHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: SafeHandle,disposing: bool)
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
-    class specifying whether to perform a normal dispose operation.
-  
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
   
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
@@ -432,14 +453,17 @@ class SafeWaitHandle:
  handle=None
 
 
-class SafeX509ChainHandle:
+class SafeX509ChainHandle(SafeHandleZeroOrMinusOneIsInvalid):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeX509ChainHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: SafeHandle,disposing: bool)
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
-    class specifying whether to perform a normal dispose operation.
-  
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
   
    disposing: true for a normal dispose operation; false to finalize the handle.
   """

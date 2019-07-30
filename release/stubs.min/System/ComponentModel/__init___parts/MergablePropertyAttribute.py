@@ -4,6 +4,11 @@ class MergablePropertyAttribute:
  
  MergablePropertyAttribute(allowMerge: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MergablePropertyAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: MergablePropertyAttribute,obj: object) -> bool

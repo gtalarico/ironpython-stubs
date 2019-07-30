@@ -1,5 +1,10 @@
 class IDataErrorInfo:
  """ Provides the functionality to offer custom error information that a user interface can bind to. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IDataErrorInfo()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass

@@ -1,5 +1,10 @@
 class INotifyDataErrorInfo:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return INotifyDataErrorInfo()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetErrors(self,propertyName):
   """ GetErrors(self: INotifyDataErrorInfo,propertyName: str) -> IEnumerable """
   pass

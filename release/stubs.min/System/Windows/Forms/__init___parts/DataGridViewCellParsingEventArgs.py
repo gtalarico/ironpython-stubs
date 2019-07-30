@@ -1,9 +1,13 @@
-class DataGridViewCellParsingEventArgs:
+class DataGridViewCellParsingEventArgs(ConvertEventArgs):
  """
  Provides data for the System.Windows.Forms.DataGridView.CellParsing event of a System.Windows.Forms.DataGridView control.
  
  DataGridViewCellParsingEventArgs(rowIndex: int,columnIndex: int,value: object,desiredType: Type,inheritedCellStyle: DataGridViewCellStyle)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewCellParsingEventArgs()
+
  @staticmethod
  def __new__(self,rowIndex,columnIndex,value,desiredType,inheritedCellStyle):
   """ __new__(cls: type,rowIndex: int,columnIndex: int,value: object,desiredType: Type,inheritedCellStyle: DataGridViewCellStyle) """

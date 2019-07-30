@@ -1,19 +1,20 @@
-class CompoundAce:
+class CompoundAce(KnownAce):
  """
  Represents a compound Access Control Entry (ACE).
  
  CompoundAce(flags: AceFlags,accessMask: int,compoundAceType: CompoundAceType,sid: SecurityIdentifier)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CompoundAce()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetBinaryForm(self,binaryForm,offset):
   """
   GetBinaryForm(self: CompoundAce,binaryForm: Array[Byte],offset: int)
-   Marshals the contents of the System.Security.AccessControl.CompoundAce object into the 
-    specified byte array beginning at the specified offset.
+   Marshals the contents of the System.Security.AccessControl.CompoundAce object into the specified byte array beginning at the specified offset.
   
-  
-   binaryForm: The byte array into which the contents of the System.Security.AccessControl.CompoundAce 
-    is marshaled.
-  
+   binaryForm: The byte array into which the contents of the System.Security.AccessControl.CompoundAce is marshaled.
    offset: The offset at which to start marshaling.
   """
   pass

@@ -1,4 +1,4 @@
-class RawSecurityDescriptor:
+class RawSecurityDescriptor(GenericSecurityDescriptor):
  """
  Represents a security descriptor. A security descriptor includes an owner,a primary group,a Discretionary Access Control List (DACL),and a System Access Control List (SACL).
  
@@ -6,15 +6,17 @@ class RawSecurityDescriptor:
  RawSecurityDescriptor(sddlForm: str)
  RawSecurityDescriptor(binaryForm: Array[Byte],offset: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RawSecurityDescriptor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def SetFlags(self,flags):
   """
   SetFlags(self: RawSecurityDescriptor,flags: ControlFlags)
-   Sets the System.Security.AccessControl.RawSecurityDescriptor.ControlFlags property of 
-    this System.Security.AccessControl.RawSecurityDescriptor object to the specified value.
+   Sets the System.Security.AccessControl.RawSecurityDescriptor.ControlFlags property of this System.Security.AccessControl.RawSecurityDescriptor object to the specified value.
   
-  
-   flags: One or more values of the System.Security.AccessControl.ControlFlags enumeration combined 
-    with a logical OR operation.
+   flags: One or more values of the System.Security.AccessControl.ControlFlags enumeration combined with a logical OR operation.
   """
   pass
  @staticmethod

@@ -1,5 +1,10 @@
 class ICertificatePolicy:
  """ Validates a server certificate. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ICertificatePolicy()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CheckValidationResult(self,srvPoint,certificate,request,certificateProblem):
   """
   CheckValidationResult(self: ICertificatePolicy,srvPoint: ServicePoint,certificate: X509Certificate,request: WebRequest,certificateProblem: int) -> bool

@@ -1,9 +1,13 @@
-class LinkState:
+class LinkState(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies constants that define the state of the link.
  
  enum LinkState,values: Active (2),Hover (1),Normal (0),Visited (4)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return LinkState()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

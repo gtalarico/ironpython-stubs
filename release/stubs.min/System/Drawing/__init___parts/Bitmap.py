@@ -1,4 +1,4 @@
-class Bitmap:
+class Bitmap(Image,ISerializable,ICloneable,IDisposable):
  """
  Encapsulates a GDI+ bitmap,which consists of the pixel data for a graphics image and its attributes. A System.Drawing.Bitmap is an object used to work with images defined by pixel data.
  
@@ -15,44 +15,34 @@ class Bitmap:
  Bitmap(original: Image,width: int,height: int)
  Bitmap(original: Image,newSize: Size)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Bitmap()
+
  def Clone(self,rect=None,format=None):
   """
   Clone(self: Bitmap,rect: Rectangle,format: PixelFormat) -> Bitmap
   
-   Creates a copy of the section of this System.Drawing.Bitmap defined by 
-    System.Drawing.Rectangle structure and with a specified 
-    System.Drawing.Imaging.PixelFormat enumeration.
+   Creates a copy of the section of this System.Drawing.Bitmap defined by System.Drawing.Rectangle structure and with a specified System.Drawing.Imaging.PixelFormat enumeration.
   
-  
-   rect: Defines the portion of this System.Drawing.Bitmap to copy. Coordinates are relative to 
-    this System.Drawing.Bitmap.
-  
-   format: The pixel format for the new System.Drawing.Bitmap. This must specify a value that begins 
-    with Format.
-  
+   rect: Defines the portion of this System.Drawing.Bitmap to copy. Coordinates are relative to this System.Drawing.Bitmap.
+   format: The pixel format for the new System.Drawing.Bitmap. This must specify a value that begins with Format.
    Returns: The new System.Drawing.Bitmap that this method creates.
   Clone(self: Bitmap,rect: RectangleF,format: PixelFormat) -> Bitmap
   
-   Creates a copy of the section of this System.Drawing.Bitmap defined with a specified 
-    System.Drawing.Imaging.PixelFormat enumeration.
-  
+   Creates a copy of the section of this System.Drawing.Bitmap defined with a specified System.Drawing.Imaging.PixelFormat enumeration.
   
    rect: Defines the portion of this System.Drawing.Bitmap to copy.
-   format: Specifies the System.Drawing.Imaging.PixelFormat enumeration for the destination 
-    System.Drawing.Bitmap.
-  
+   format: Specifies the System.Drawing.Imaging.PixelFormat enumeration for the destination System.Drawing.Bitmap.
    Returns: The System.Drawing.Bitmap that this method creates.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: Image,disposing: bool)
-   Releases the unmanaged resources used by the System.Drawing.Image and optionally releases 
-    the managed resources.
+   Releases the unmanaged resources used by the System.Drawing.Image and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  @staticmethod
@@ -88,9 +78,7 @@ class Bitmap:
   
    Creates a GDI bitmap object from this System.Drawing.Bitmap.
   
-   background: A System.Drawing.Color structure that specifies the background color. This parameter is 
-    ignored if the bitmap is totally opaque.
-  
+   background: A System.Drawing.Color structure that specifies the background color. This parameter is ignored if the bitmap is totally opaque.
    Returns: A handle to the GDI bitmap object that this method creates.
   """
   pass
@@ -119,27 +107,17 @@ class Bitmap:
   
    Locks a System.Drawing.Bitmap into system memory.
   
-   rect: A System.Drawing.Rectangle structure that specifies the portion of the 
-    System.Drawing.Bitmap to lock.
-  
-   flags: An System.Drawing.Imaging.ImageLockMode enumeration that specifies the access level 
-    (read/write) for the System.Drawing.Bitmap.
-  
-   format: A System.Drawing.Imaging.PixelFormat enumeration that specifies the data format of this 
-    System.Drawing.Bitmap.
-  
+   rect: A System.Drawing.Rectangle structure that specifies the portion of the System.Drawing.Bitmap to lock.
+   flags: An System.Drawing.Imaging.ImageLockMode enumeration that specifies the access level (read/write) for the System.Drawing.Bitmap.
+   format: A System.Drawing.Imaging.PixelFormat enumeration that specifies the data format of this System.Drawing.Bitmap.
    Returns: A System.Drawing.Imaging.BitmapData that contains information about this lock operation.
   LockBits(self: Bitmap,rect: Rectangle,flags: ImageLockMode,format: PixelFormat,bitmapData: BitmapData) -> BitmapData
   
    Locks a System.Drawing.Bitmap into system memory
   
    rect: A rectangle structure that specifies the portion of the System.Drawing.Bitmap to lock.
-   flags: One of the System.Drawing.Imaging.ImageLockMode values that specifies the access level 
-    (read/write) for the System.Drawing.Bitmap.
-  
-   format: One of the System.Drawing.Imaging.PixelFormat values that specifies the data format of 
-    the System.Drawing.Bitmap.
-  
+   flags: One of the System.Drawing.Imaging.ImageLockMode values that specifies the access level (read/write) for the System.Drawing.Bitmap.
+   format: One of the System.Drawing.Imaging.PixelFormat values that specifies the data format of the System.Drawing.Bitmap.
    bitmapData: A System.Drawing.Imaging.BitmapData that contains information about the lock operation.
    Returns: A System.Drawing.Imaging.BitmapData that contains information about the lock operation.
   """
@@ -160,12 +138,7 @@ class Bitmap:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -180,8 +153,7 @@ class Bitmap:
   
    x: The x-coordinate of the pixel to set.
    y: The y-coordinate of the pixel to set.
-   color: A System.Drawing.Color structure that represents the color to assign to the specified 
-    pixel.
+   color: A System.Drawing.Color structure that represents the color to assign to the specified pixel.
   """
   pass
  def SetResolution(self,xDpi,yDpi):

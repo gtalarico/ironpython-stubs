@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.SharedInfra.Cryptography.PasswordHashing calls itself PasswordHashing
-# from Wms.SharedInfra,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.SharedInfra,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class HashBytes:
+class HashBytes(object):
  """ HashBytes() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HashBytes()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def CreateFromString(key,salt):
   """ CreateFromString(key: str,salt: str) -> HashBytes """
@@ -18,8 +24,13 @@ class HashBytes:
  Salt=None
 
 
-class HashBytesExtensions:
+class HashBytesExtensions(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HashBytesExtensions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromString(hashBytes,key,salt):
   """ FromString(hashBytes: HashBytes,key: str,salt: str) -> HashBytes """
@@ -41,6 +52,11 @@ class HashBytesExtensions:
 
 class IPasswordHasher:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IPasswordHasher()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Hash(self,password,saltLength=None,keyLength=None,iterations=None):
   """
   Hash(self: IPasswordHasher,password: str,saltLength: int,keyLength: int,iterations: int) -> HashBytes
@@ -57,8 +73,13 @@ class IPasswordHasher:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class PBKDF2PasswordHasher:
+class PBKDF2PasswordHasher(object):
  """ PBKDF2PasswordHasher() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PBKDF2PasswordHasher()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Hash(self,password,saltLength=None,keyLength=None,iterations=None):
   """
   Hash(self: PBKDF2PasswordHasher,password: str,saltLength: int,keyLength: int,iterations: int) -> HashBytes

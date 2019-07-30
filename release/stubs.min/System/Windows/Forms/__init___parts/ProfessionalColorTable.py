@@ -1,9 +1,13 @@
-class ProfessionalColorTable:
+class ProfessionalColorTable(object):
  """
  Provides colors used for Microsoft Office display elements.
  
  ProfessionalColorTable()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ProfessionalColorTable()
+
  ButtonCheckedGradientBegin=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets the starting color of the gradient used when the button is checked.
 

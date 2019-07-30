@@ -1,5 +1,9 @@
-class SystemColors:
+class SystemColors(object):
  """ Each property of the System.Drawing.SystemColors class is a System.Drawing.Color structure that is the color of a Windows display element. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SystemColors()
+
  ActiveBorder=None
  ActiveCaption=None
  ActiveCaptionText=None

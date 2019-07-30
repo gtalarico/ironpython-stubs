@@ -1,17 +1,20 @@
-class ListSortDescriptionCollection:
+class ListSortDescriptionCollection(object):
  """
  Represents a collection of System.ComponentModel.ListSortDescription objects.
  
  ListSortDescriptionCollection()
  ListSortDescriptionCollection(sorts: Array[ListSortDescription])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ListSortDescriptionCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Contains(self,value):
   """
   Contains(self: ListSortDescriptionCollection,value: object) -> bool
   
-   Determines if the System.ComponentModel.ListSortDescriptionCollection contains a specific 
-    value.
-  
+   Determines if the System.ComponentModel.ListSortDescriptionCollection contains a specific value.
   
    value: The System.Object to locate in the collection.
    Returns: true if the System.Object is found in the collection; otherwise,false.
@@ -20,9 +23,7 @@ class ListSortDescriptionCollection:
  def CopyTo(self,array,index):
   """
   CopyTo(self: ListSortDescriptionCollection,array: Array,index: int)
-   Copies the contents of the collection to the specified array,starting at the specified 
-    destination array index.
-  
+   Copies the contents of the collection to the specified array,starting at the specified destination array index.
   
    array: The destination array for the items copied from the collection.
    index: The index of the destination array at which copying begins.

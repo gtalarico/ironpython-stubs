@@ -1,12 +1,14 @@
-class HtmlWindowCollection:
+class HtmlWindowCollection(object,ICollection,IEnumerable):
  """ Represents the windows contained within another System.Windows.Forms.HtmlWindow. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return HtmlWindowCollection()
+
  def GetEnumerator(self):
   """
   GetEnumerator(self: HtmlWindowCollection) -> IEnumerator
   
-   Returns an enumerator that can iterate through all elements in the 
-    System.Windows.Forms.HtmlWindowCollection.
-  
+   Returns an enumerator that can iterate through all elements in the System.Windows.Forms.HtmlWindowCollection.
    Returns: The System.Collections.IEnumerator that enables enumeration of this collection's elements.
   """
   pass

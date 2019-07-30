@@ -1,4 +1,4 @@
-class AggregateException:
+class AggregateException(Exception):
  """
  Represents one or more errors that occur during application execution.
  
@@ -10,6 +10,11 @@ class AggregateException:
  AggregateException(message: str,innerExceptions: IEnumerable[Exception])
  AggregateException(message: str,*innerExceptions: Array[Exception])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AggregateException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Flatten(self):
   """
   Flatten(self: AggregateException) -> AggregateException

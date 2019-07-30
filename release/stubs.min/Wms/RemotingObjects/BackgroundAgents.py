@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.BackgroundAgents calls itself BackgroundAgents
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class BackgroundAgent:
+class BackgroundAgent(DbObject):
  """ BackgroundAgent() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BackgroundAgent()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -28,7 +34,9 @@ Set: Id(self: BackgroundAgent)=value
 """
 
  IsActive=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsActive(self: BackgroundAgent) -> bool
+ """True if LastSeen was updated within specified minutes.
+
+Get: IsActive(self: BackgroundAgent) -> bool
 
 """
 
@@ -39,7 +47,9 @@ Set: IsAuthorized(self: BackgroundAgent)=value
 """
 
  LastSeen=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LastSeen(self: BackgroundAgent) -> DateTime
+ """Last UTC time a ping was received
+
+Get: LastSeen(self: BackgroundAgent) -> DateTime
 
 Set: LastSeen(self: BackgroundAgent)=value
 """
@@ -64,8 +74,13 @@ Set: Type(self: BackgroundAgent)=value
 
 
 
-class BackgroundAgents:
+class BackgroundAgents(List):
  """ BackgroundAgents() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BackgroundAgents()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -81,8 +96,13 @@ class BackgroundAgents:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
 
-class BackgroundAgentStatus:
+class BackgroundAgentStatus(object):
  """ BackgroundAgentStatus() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BackgroundAgentStatus()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ActiveAgents=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: ActiveAgents(self: BackgroundAgentStatus) -> int
 
@@ -99,6 +119,11 @@ Set: InactiveAgents(self: BackgroundAgentStatus)=value
 
 class BackgroundAgentType:
  """ enum BackgroundAgentType,values: PrintAgent (1),Unknown (0) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BackgroundAgentType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -127,34 +152,53 @@ class BackgroundAgentType:
  value__=None
 
 
-class PingMessage:
- """ PingMessage() """
+class PingMessage(object):
+ """
+ Send a ping message to let boxwise know listener is still active.
+ 
+ PingMessage()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PingMessage()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  AgentType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AgentType(self: PingMessage) -> BackgroundAgentType
+ """Type of the agent that sends this message
+
+Get: AgentType(self: PingMessage) -> BackgroundAgentType
 
 Set: AgentType(self: PingMessage)=value
 """
 
  CreatedAt=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CreatedAt(self: PingMessage) -> DateTime
+ """Datetime when this ping was created.
+
+Get: CreatedAt(self: PingMessage) -> DateTime
 
 Set: CreatedAt(self: PingMessage)=value
 """
 
  ListenerId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ListenerId(self: PingMessage) -> str
+ """Id of the listing agent (instance id).
+
+Get: ListenerId(self: PingMessage) -> str
 
 Set: ListenerId(self: PingMessage)=value
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name(self: PingMessage) -> str
+ """Name of the listener to identify (e.g. Machinename on which it is running
+
+Get: Name(self: PingMessage) -> str
 
 Set: Name(self: PingMessage)=value
 """
 
  OS=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OS(self: PingMessage) -> str
+ """Meta data about the OS the background agent is running on.
+
+Get: OS(self: PingMessage) -> str
 
 Set: OS(self: PingMessage)=value
 """

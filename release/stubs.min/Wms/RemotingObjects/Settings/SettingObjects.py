@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.Settings.SettingObjects calls itself SettingObjects
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class MyList:
+class MyList(FindableList):
  """ MyList() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MyList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToString(self):
   """ ToString(self: MyList) -> str """
   pass
@@ -30,40 +36,58 @@ class MyList:
  def __str__(self,*args):
   pass
 
-class OrderFlowLink:
+class OrderFlowLink(object):
  """ OrderFlowLink(orderFlowOption: OrderFlowOption,orderSelectionCode: str,orderSelectionDescription: str,Color: str) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OrderFlowLink()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,orderFlowOption,orderSelectionCode,orderSelectionDescription,Color):
   """ __new__(cls: type,orderFlowOption: OrderFlowOption,orderSelectionCode: str,orderSelectionDescription: str,Color: str) """
   pass
  Color=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Color(self: OrderFlowLink) -> str
+ """
+
+Get: Color(self: OrderFlowLink) -> str
 
 Set: Color(self: OrderFlowLink)=value
 """
 
  OrderFlowOption=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderFlowOption(self: OrderFlowLink) -> OrderFlowOption
+ """
+
+Get: OrderFlowOption(self: OrderFlowLink) -> OrderFlowOption
 
 Set: OrderFlowOption(self: OrderFlowLink)=value
 """
 
  OrderSelectionCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderSelectionCode(self: OrderFlowLink) -> str
+ """
+
+Get: OrderSelectionCode(self: OrderFlowLink) -> str
 
 Set: OrderSelectionCode(self: OrderFlowLink)=value
 """
 
  OrderSelectionDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderSelectionDescription(self: OrderFlowLink) -> str
+ """
+
+Get: OrderSelectionDescription(self: OrderFlowLink) -> str
 
 Set: OrderSelectionDescription(self: OrderFlowLink)=value
 """
 
 
 
-class OrderFlowLinks:
+class OrderFlowLinks(List):
  """ OrderFlowLinks() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OrderFlowLinks()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def DeleteLinksThatAreNotEqual(self,SelectionCodes):
   """ DeleteLinksThatAreNotEqual(self: OrderFlowLinks,SelectionCodes: Array[str]) """
   pass
@@ -92,6 +116,11 @@ class OrderFlowLinks:
 
 class OrderFlowOption:
  """ enum OrderFlowOption,values: FulFill (2),FulFillPrintInvoice (1),PrintInvoiceFulFill (0) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OrderFlowOption()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -121,52 +150,74 @@ class OrderFlowOption:
  value__=None
 
 
-class ShippperServiceLink:
+class ShippperServiceLink(object):
  """ ShippperServiceLink(ShipperId: str,ServiceId: str,DeliveryMethodCode: str,DeliveryMethodName: str,Color: str) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ShippperServiceLink()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,ShipperId,ServiceId,DeliveryMethodCode,DeliveryMethodName,Color):
   """ __new__(cls: type,ShipperId: str,ServiceId: str,DeliveryMethodCode: str,DeliveryMethodName: str,Color: str) """
   pass
  Color=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Color(self: ShippperServiceLink) -> str
+ """
+
+Get: Color(self: ShippperServiceLink) -> str
 
 Set: Color(self: ShippperServiceLink)=value
 """
 
  DeliveryMethodCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DeliveryMethodCode(self: ShippperServiceLink) -> str
+ """
+
+Get: DeliveryMethodCode(self: ShippperServiceLink) -> str
 
 Set: DeliveryMethodCode(self: ShippperServiceLink)=value
 """
 
  DeliveryMethodName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DeliveryMethodName(self: ShippperServiceLink) -> str
+ """
+
+Get: DeliveryMethodName(self: ShippperServiceLink) -> str
 
 Set: DeliveryMethodName(self: ShippperServiceLink)=value
 """
 
  Enabled=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Enabled(self: ShippperServiceLink) -> bool
+ """
+
+Get: Enabled(self: ShippperServiceLink) -> bool
 
 Set: Enabled(self: ShippperServiceLink)=value
 """
 
  ServiceId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ServiceId(self: ShippperServiceLink) -> str
+ """
+
+Get: ServiceId(self: ShippperServiceLink) -> str
 
 Set: ServiceId(self: ShippperServiceLink)=value
 """
 
  ShipperId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ShipperId(self: ShippperServiceLink) -> str
+ """
+
+Get: ShipperId(self: ShippperServiceLink) -> str
 
 Set: ShipperId(self: ShippperServiceLink)=value
 """
 
 
 
-class ShippperServiceLinks:
+class ShippperServiceLinks(List):
  """ ShippperServiceLinks() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ShippperServiceLinks()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def DeliveryMethodCodes(self):
   """ DeliveryMethodCodes(self: ShippperServiceLinks) -> List[str] """
   pass

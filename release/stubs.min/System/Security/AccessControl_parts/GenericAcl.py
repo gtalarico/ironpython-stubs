@@ -1,28 +1,25 @@
-class GenericAcl:
+class GenericAcl(object):
  """ Represents an access control list (ACL) and is the base class for the System.Security.AccessControl.CommonAcl,System.Security.AccessControl.DiscretionaryAcl,System.Security.AccessControl.RawAcl,and System.Security.AccessControl.SystemAcl classes. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GenericAcl()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CopyTo(self,array,index):
   """
   CopyTo(self: GenericAcl,array: Array[GenericAce],index: int)
-   Copies each System.Security.AccessControl.GenericAce of the current 
-    System.Security.AccessControl.GenericAcl into the specified array.
+   Copies each System.Security.AccessControl.GenericAce of the current System.Security.AccessControl.GenericAcl into the specified array.
   
-  
-   array: The array into which copies of the System.Security.AccessControl.GenericAce objects 
-    contained by the current System.Security.AccessControl.GenericAcl are placed.
-  
+   array: The array into which copies of the System.Security.AccessControl.GenericAce objects contained by the current System.Security.AccessControl.GenericAcl are placed.
    index: The zero-based index of array where the copying begins.
   """
   pass
  def GetBinaryForm(self,binaryForm,offset):
   """
   GetBinaryForm(self: GenericAcl,binaryForm: Array[Byte],offset: int)
-   Marshals the contents of the System.Security.AccessControl.GenericAcl object into the 
-    specified byte array beginning at the specified offset.
+   Marshals the contents of the System.Security.AccessControl.GenericAcl object into the specified byte array beginning at the specified offset.
   
-  
-   binaryForm: The byte array into which the contents of the System.Security.AccessControl.GenericAcl is 
-    marshaled.
-  
+   binaryForm: The byte array into which the contents of the System.Security.AccessControl.GenericAcl is marshaled.
    offset: The offset at which to start marshaling.
   """
   pass

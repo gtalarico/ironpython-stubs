@@ -1,4 +1,4 @@
-class MissingMemberException:
+class MissingMemberException(MemberAccessException):
  """
  The exception that is thrown when there is an attempt to dynamically access a class member that does not exist.
  
@@ -7,11 +7,16 @@ class MissingMemberException:
  MissingMemberException(message: str,inner: Exception)
  MissingMemberException(className: str,memberName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MissingMemberException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: MissingMemberException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the class name,the 
-    member name,the signature of the missing member,and additional exception information.
+   Sets the System.Runtime.Serialization.SerializationInfo object with the class name,the member name,the signature of the missing member,and additional exception 
+    information.
   
   
    info: The object that holds the serialized object data.

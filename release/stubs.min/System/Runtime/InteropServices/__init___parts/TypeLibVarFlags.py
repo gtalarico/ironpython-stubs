@@ -4,6 +4,11 @@ class TypeLibVarFlags:
  
  enum (flags) TypeLibVarFlags,values: FBindable (4),FDefaultBind (32),FDefaultCollelem (256),FDisplayBind (16),FHidden (64),FImmediateBind (4096),FNonBrowsable (1024),FReadOnly (1),FReplaceable (2048),FRequestEdit (8),FRestricted (128),FSource (2),FUiDefault (512)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TypeLibVarFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

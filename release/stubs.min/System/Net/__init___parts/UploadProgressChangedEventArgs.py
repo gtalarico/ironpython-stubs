@@ -1,5 +1,10 @@
-class UploadProgressChangedEventArgs:
+class UploadProgressChangedEventArgs(ProgressChangedEventArgs):
  """ Provides data for the System.Net.WebClient.UploadProgressChanged event of a System.Net.WebClient. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UploadProgressChangedEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  BytesReceived=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets the number of bytes received.
 

@@ -4,6 +4,11 @@ class AccessControlActions:
  
  enum (flags) AccessControlActions,values: Change (2),None (0),View (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AccessControlActions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -1,9 +1,14 @@
-class MarshalByValueComponent:
+class MarshalByValueComponent(object):
  """
  Implements System.ComponentModel.IComponent and provides the base implementation for remotable components that are marshaled by value (a copy of the serialized object is passed).
  
  MarshalByValueComponent()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MarshalByValueComponent()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: MarshalByValueComponent)
@@ -24,11 +29,8 @@ class MarshalByValueComponent:
   """
   ToString(self: MarshalByValueComponent) -> str
   
-   Returns a System.String containing the name of the System.ComponentModel.Component,if 
-    any. This method should not be overridden.
-  
-   Returns: A System.String containing the name of the System.ComponentModel.Component,if any.null 
-    if the System.ComponentModel.Component is unnamed.
+   Returns a System.String containing the name of the System.ComponentModel.Component,if any. This method should not be overridden.
+   Returns: A System.String containing the name of the System.ComponentModel.Component,if any.null if the System.ComponentModel.Component is unnamed.
   """
   pass
  def __enter__(self,*args):

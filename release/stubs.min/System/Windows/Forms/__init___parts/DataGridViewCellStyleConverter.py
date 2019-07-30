@@ -1,9 +1,13 @@
-class DataGridViewCellStyleConverter:
+class DataGridViewCellStyleConverter(TypeConverter):
  """
  Converts System.Windows.Forms.DataGridViewCellStyle objects to and from other data types.
  
  DataGridViewCellStyleConverter()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewCellStyleConverter()
+
  def CanConvertTo(self,*__args):
   """
   CanConvertTo(self: DataGridViewCellStyleConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool

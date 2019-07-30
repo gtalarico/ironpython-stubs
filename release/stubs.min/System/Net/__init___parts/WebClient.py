@@ -1,9 +1,14 @@
-class WebClient:
+class WebClient(Component):
  """
  Provides common methods for sending data to and receiving data from a resource identified by a URI.
  
  WebClient()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebClient()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CancelAsync(self):
   """
   CancelAsync(self: WebClient)
@@ -13,12 +18,9 @@ class WebClient:
  def Dispose(self):
   """
   Dispose(self: Component,disposing: bool)
-   Releases the unmanaged resources used by the System.ComponentModel.Component and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.ComponentModel.Component and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def DownloadData(self,address):
@@ -40,19 +42,14 @@ class WebClient:
  def DownloadDataAsync(self,address,userToken=None):
   """
   DownloadDataAsync(self: WebClient,address: Uri)
-   Downloads the specified resource as a System.Byte array. This method does not block the 
-    calling thread.
-  
+   Downloads the specified resource as a System.Byte array. This method does not block the calling thread.
   
    address: A System.Uri containing the URI to download.
   DownloadDataAsync(self: WebClient,address: Uri,userToken: object)
-   Downloads the specified resource as a System.Byte array. This method does not block the 
-    calling thread.
-  
+   Downloads the specified resource as a System.Byte array. This method does not block the calling thread.
   
    address: A System.Uri containing the URI to download.
-   userToken: A user-defined object that is passed to the method invoked when the asynchronous 
-    operation completes.
+   userToken: A user-defined object that is passed to the method invoked when the asynchronous operation completes.
   """
   pass
  def DownloadDataTaskAsync(self,address):
@@ -78,21 +75,16 @@ class WebClient:
  def DownloadFileAsync(self,address,fileName,userToken=None):
   """
   DownloadFileAsync(self: WebClient,address: Uri,fileName: str)
-   Downloads,to a local file,the resource with the specified URI. This method does not 
-    block the calling thread.
-  
+   Downloads,to a local file,the resource with the specified URI. This method does not block the calling thread.
   
    address: The URI of the resource to download.
    fileName: The name of the file to be placed on the local computer.
   DownloadFileAsync(self: WebClient,address: Uri,fileName: str,userToken: object)
-   Downloads,to a local file,the resource with the specified URI. This method does not 
-    block the calling thread.
-  
+   Downloads,to a local file,the resource with the specified URI. This method does not block the calling thread.
   
    address: The URI of the resource to download.
    fileName: The name of the file to be placed on the local computer.
-   userToken: A user-defined object that is passed to the method invoked when the asynchronous 
-    operation completes.
+   userToken: A user-defined object that is passed to the method invoked when the asynchronous operation completes.
   """
   pass
  def DownloadFileTaskAsync(self,address,fileName):
@@ -105,17 +97,13 @@ class WebClient:
   """
   DownloadString(self: WebClient,address: str) -> str
   
-   Downloads the requested resource as a System.String. The resource to download is 
-    specified as a System.String containing the URI.
-  
+   Downloads the requested resource as a System.String. The resource to download is specified as a System.String containing the URI.
   
    address: A System.String containing the URI to download.
    Returns: A System.String containing the requested resource.
   DownloadString(self: WebClient,address: Uri) -> str
   
-   Downloads the requested resource as a System.String. The resource to download is 
-    specified as a System.Uri.
-  
+   Downloads the requested resource as a System.String. The resource to download is specified as a System.Uri.
   
    address: A System.Uri object containing the URI to download.
    Returns: A System.String containing the requested resource.
@@ -124,19 +112,14 @@ class WebClient:
  def DownloadStringAsync(self,address,userToken=None):
   """
   DownloadStringAsync(self: WebClient,address: Uri)
-   Downloads the resource specified as a System.Uri. This method does not block the calling 
-    thread.
-  
+   Downloads the resource specified as a System.Uri. This method does not block the calling thread.
   
    address: A System.Uri containing the URI to download.
   DownloadStringAsync(self: WebClient,address: Uri,userToken: object)
-   Downloads the specified string to the specified resource. This method does not block the 
-    calling thread.
-  
+   Downloads the specified string to the specified resource. This method does not block the calling thread.
   
    address: A System.Uri containing the URI to download.
-   userToken: A user-defined object that is passed to the method invoked when the asynchronous 
-    operation completes.
+   userToken: A user-defined object that is passed to the method invoked when the asynchronous operation completes.
   """
   pass
  def DownloadStringTaskAsync(self,address):
@@ -149,14 +132,11 @@ class WebClient:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified 
+    service.
   """
   pass
  def GetWebRequest(self,*args):
@@ -179,14 +159,10 @@ class WebClient:
    Returns: A System.Net.WebResponse containing the response for the specified System.Net.WebRequest.
   GetWebResponse(self: WebClient,request: WebRequest,result: IAsyncResult) -> WebResponse
   
-   Returns the System.Net.WebResponse for the specified System.Net.WebRequest using the 
-    specified System.IAsyncResult.
-  
+   Returns the System.Net.WebResponse for the specified System.Net.WebRequest using the specified System.IAsyncResult.
   
    request: A System.Net.WebRequest that is used to obtain the response.
-   result: An System.IAsyncResult object obtained from a previous call to 
-    System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object) .
-  
+   result: An System.IAsyncResult object obtained from a previous call to System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object) .
    Returns: A System.Net.WebResponse containing the response for the specified System.Net.WebRequest.
   """
   pass
@@ -196,11 +172,9 @@ class WebClient:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -304,17 +278,13 @@ class WebClient:
   """
   OpenRead(self: WebClient,address: str) -> Stream
   
-   Opens a readable stream for the data downloaded from a resource with the URI specified as 
-    a System.String.
-  
+   Opens a readable stream for the data downloaded from a resource with the URI specified as a System.String.
   
    address: The URI specified as a System.String from which to download data.
    Returns: A System.IO.Stream used to read data from a resource.
   OpenRead(self: WebClient,address: Uri) -> Stream
   
-   Opens a readable stream for the data downloaded from a resource with the URI specified as 
-    a System.Uri
-  
+   Opens a readable stream for the data downloaded from a resource with the URI specified as a System.Uri
   
    address: The URI specified as a System.Uri from which to download data.
    Returns: A System.IO.Stream used to read data from a resource.
@@ -323,19 +293,14 @@ class WebClient:
  def OpenReadAsync(self,address,userToken=None):
   """
   OpenReadAsync(self: WebClient,address: Uri)
-   Opens a readable stream containing the specified resource. This method does not block the 
-    calling thread.
-  
+   Opens a readable stream containing the specified resource. This method does not block the calling thread.
   
    address: The URI of the resource to retrieve.
   OpenReadAsync(self: WebClient,address: Uri,userToken: object)
-   Opens a readable stream containing the specified resource. This method does not block the 
-    calling thread.
-  
+   Opens a readable stream containing the specified resource. This method does not block the calling thread.
   
    address: The URI of the resource to retrieve.
-   userToken: A user-defined object that is passed to the method invoked when the asynchronous 
-    operation completes.
+   userToken: A user-defined object that is passed to the method invoked when the asynchronous operation completes.
   """
   pass
  def OpenReadTaskAsync(self,address):
@@ -363,49 +328,34 @@ class WebClient:
    Opens a stream for writing data to the specified resource,using the specified method.
   
    address: The URI of the resource to receive the data.
-   method: The method used to send the data to the resource. If null,the default is POST for http 
-    and STOR for ftp.
-  
+   method: The method used to send the data to the resource. If null,the default is POST for http and STOR for ftp.
    Returns: A System.IO.Stream used to write data to the resource.
   OpenWrite(self: WebClient,address: Uri,method: str) -> Stream
   
    Opens a stream for writing data to the specified resource,by using the specified method.
   
    address: The URI of the resource to receive the data.
-   method: The method used to send the data to the resource. If null,the default is POST for http 
-    and STOR for ftp.
-  
+   method: The method used to send the data to the resource. If null,the default is POST for http and STOR for ftp.
    Returns: A System.IO.Stream used to write data to the resource.
   """
   pass
  def OpenWriteAsync(self,address,method=None,userToken=None):
   """
   OpenWriteAsync(self: WebClient,address: Uri)
-   Opens a stream for writing data to the specified resource. This method does not block the 
-    calling thread.
-  
+   Opens a stream for writing data to the specified resource. This method does not block the calling thread.
   
    address: The URI of the resource to receive the data.
   OpenWriteAsync(self: WebClient,address: Uri,method: str)
-   Opens a stream for writing data to the specified resource. This method does not block the 
-    calling thread.
-  
+   Opens a stream for writing data to the specified resource. This method does not block the calling thread.
   
    address: The URI of the resource to receive the data.
-   method: The method used to send the data to the resource. If null,the default is POST for http 
-    and STOR for ftp.
-  
+   method: The method used to send the data to the resource. If null,the default is POST for http and STOR for ftp.
   OpenWriteAsync(self: WebClient,address: Uri,method: str,userToken: object)
-   Opens a stream for writing data to the specified resource,using the specified method. 
-    This method does not block the calling thread.
-  
+   Opens a stream for writing data to the specified resource,using the specified method. This method does not block the calling thread.
   
    address: The URI of the resource to receive the data.
-   method: The method used to send the data to the resource. If null,the default is POST for http 
-    and STOR for ftp.
-  
-   userToken: A user-defined object that is passed to the method invoked when the asynchronous 
-    operation completes
+   method: The method used to send the data to the resource. If null,the default is POST for http and STOR for ftp.
+   userToken: A user-defined object that is passed to the method invoked when the asynchronous operation completes
   """
   pass
  def OpenWriteTaskAsync(self,address,method=None):
@@ -437,9 +387,7 @@ class WebClient:
    Uploads a data buffer to the specified resource,using the specified method.
   
    address: The URI of the resource to receive the data.
-   method: The HTTP method used to send the data to the resource. If null,the default is POST for 
-    http and STOR for ftp.
-  
+   method: The HTTP method used to send the data to the resource. If null,the default is POST for http and STOR for ftp.
    data: The data buffer to send to the resource.
    Returns: A System.Byte array containing the body of the response from the resource.
   UploadData(self: WebClient,address: Uri,method: str,data: Array[Byte]) -> Array[Byte]
@@ -447,9 +395,7 @@ class WebClient:
    Uploads a data buffer to the specified resource,using the specified method.
   
    address: The URI of the resource to receive the data.
-   method: The HTTP method used to send the data to the resource. If null,the default is POST for 
-    http and STOR for ftp.
-  
+   method: The HTTP method used to send the data to the resource. If null,the default is POST for http and STOR for ftp.
    data: The data buffer to send to the resource.
    Returns: A System.Byte array containing the body of the response from the resource.
   """
@@ -457,34 +403,23 @@ class WebClient:
  def UploadDataAsync(self,address,*__args):
   """
   UploadDataAsync(self: WebClient,address: Uri,data: Array[Byte])
-   Uploads a data buffer to a resource identified by a URI,using the POST method. This 
-    method does not block the calling thread.
-  
+   Uploads a data buffer to a resource identified by a URI,using the POST method. This method does not block the calling thread.
   
    address: The URI of the resource to receive the data.
    data: The data buffer to send to the resource.
   UploadDataAsync(self: WebClient,address: Uri,method: str,data: Array[Byte])
-   Uploads a data buffer to a resource identified by a URI,using the specified method. This 
-    method does not block the calling thread.
-  
+   Uploads a data buffer to a resource identified by a URI,using the specified method. This method does not block the calling thread.
   
    address: The URI of the resource to receive the data.
-   method: The HTTP method used to send the file to the resource. If null,the default is POST for 
-    http and STOR for ftp.
-  
+   method: The HTTP method used to send the file to the resource. If null,the default is POST for http and STOR for ftp.
    data: The data buffer to send to the resource.
   UploadDataAsync(self: WebClient,address: Uri,method: str,data: Array[Byte],userToken: object)
-   Uploads a data buffer to a resource identified by a URI,using the specified method and 
-    identifying token.
-  
+   Uploads a data buffer to a resource identified by a URI,using the specified method and identifying token.
   
    address: The URI of the resource to receive the data.
-   method: The HTTP method used to send the file to the resource. If null,the default is POST for 
-    http and STOR for ftp.
-  
+   method: The HTTP method used to send the file to the resource. If null,the default is POST for http and STOR for ftp.
    data: The data buffer to send to the resource.
-   userToken: A user-defined object that is passed to the method invoked when the asynchronous 
-    operation completes.
+   userToken: A user-defined object that is passed to the method invoked when the asynchronous operation completes.
   """
   pass
  def UploadDataTaskAsync(self,address,*__args):
@@ -516,9 +451,7 @@ class WebClient:
    Uploads the specified local file to the specified resource,using the specified method.
   
    address: The URI of the resource to receive the file.
-   method: The HTTP method used to send the file to the resource. If null,the default is POST for 
-    http and STOR for ftp.
-  
+   method: The HTTP method used to send the file to the resource. If null,the default is POST for http and STOR for ftp.
    fileName: The file to send to the resource.
    Returns: A System.Byte array containing the body of the response from the resource.
   UploadFile(self: WebClient,address: Uri,method: str,fileName: str) -> Array[Byte]
@@ -526,9 +459,7 @@ class WebClient:
    Uploads the specified local file to the specified resource,using the specified method.
   
    address: The URI of the resource to receive the file.
-   method: The HTTP method used to send the file to the resource. If null,the default is POST for 
-    http and STOR for ftp.
-  
+   method: The HTTP method used to send the file to the resource. If null,the default is POST for http and STOR for ftp.
    fileName: The file to send to the resource.
    Returns: A System.Byte array containing the body of the response from the resource.
   """
@@ -536,43 +467,29 @@ class WebClient:
  def UploadFileAsync(self,address,*__args):
   """
   UploadFileAsync(self: WebClient,address: Uri,fileName: str)
-   Uploads the specified local file to the specified resource,using the POST method. This 
-    method does not block the calling thread.
+   Uploads the specified local file to the specified resource,using the POST method. This method does not block the calling thread.
   
-  
-   address: The URI of the resource to receive the file. For HTTP resources,this URI must identify a 
-    resource that can accept a request sent with the POST method,such as a script or ASP 
-    page.
+   address: The URI of the resource to receive the file. For HTTP resources,this URI must identify a resource that can accept a request sent with the POST method,such as a script or 
+    ASP page.
   
    fileName: The file to send to the resource.
   UploadFileAsync(self: WebClient,address: Uri,method: str,fileName: str)
-   Uploads the specified local file to the specified resource,using the POST method. This 
-    method does not block the calling thread.
+   Uploads the specified local file to the specified resource,using the POST method. This method does not block the calling thread.
   
+   address: The URI of the resource to receive the file. For HTTP resources,this URI must identify a resource that can accept a request sent with the POST method,such as a script or 
+    ASP page.
   
-   address: The URI of the resource to receive the file. For HTTP resources,this URI must identify a 
-    resource that can accept a request sent with the POST method,such as a script or ASP 
-    page.
-  
-   method: The HTTP method used to send the data to the resource. If null,the default is POST for 
-    http and STOR for ftp.
-  
+   method: The HTTP method used to send the data to the resource. If null,the default is POST for http and STOR for ftp.
    fileName: The file to send to the resource.
   UploadFileAsync(self: WebClient,address: Uri,method: str,fileName: str,userToken: object)
-   Uploads the specified local file to the specified resource,using the POST method. This 
-    method does not block the calling thread.
+   Uploads the specified local file to the specified resource,using the POST method. This method does not block the calling thread.
   
+   address: The URI of the resource to receive the file. For HTTP resources,this URI must identify a resource that can accept a request sent with the POST method,such as a script or 
+    ASP page.
   
-   address: The URI of the resource to receive the file. For HTTP resources,this URI must identify a 
-    resource that can accept a request sent with the POST method,such as a script or ASP 
-    page.
-  
-   method: The HTTP method used to send the data to the resource. If null,the default is POST for 
-    http and STOR for ftp.
-  
+   method: The HTTP method used to send the data to the resource. If null,the default is POST for http and STOR for ftp.
    fileName: The file to send to the resource.
-   userToken: A user-defined object that is passed to the method invoked when the asynchronous 
-    operation completes.
+   userToken: A user-defined object that is passed to the method invoked when the asynchronous operation completes.
   """
   pass
  def UploadFileTaskAsync(self,address,*__args):
@@ -589,9 +506,8 @@ class WebClient:
   
    Uploads the specified string to the specified resource,using the POST method.
   
-   address: The URI of the resource to receive the string. For Http resources,this URI must identify 
-    a resource that can accept a request sent with the POST method,such as a script or ASP 
-    page.
+   address: The URI of the resource to receive the string. For Http resources,this URI must identify a resource that can accept a request sent with the POST method,such as a script 
+    or ASP page.
   
    data: The string to be uploaded.
    Returns: A System.String containing the response sent by the server.
@@ -599,9 +515,8 @@ class WebClient:
   
    Uploads the specified string to the specified resource,using the POST method.
   
-   address: The URI of the resource to receive the string. For Http resources,this URI must identify 
-    a resource that can accept a request sent with the POST method,such as a script or ASP 
-    page.
+   address: The URI of the resource to receive the string. For Http resources,this URI must identify a resource that can accept a request sent with the POST method,such as a script 
+    or ASP page.
   
    data: The string to be uploaded.
    Returns: A System.String containing the response sent by the server.
@@ -609,24 +524,16 @@ class WebClient:
   
    Uploads the specified string to the specified resource,using the specified method.
   
-   address: The URI of the resource to receive the file. This URI must identify a resource that can 
-    accept a request sent with the method method.
-  
-   method: The HTTP method used to send the string to the resource. If null,the default is POST for 
-    http and STOR for ftp.
-  
+   address: The URI of the resource to receive the file. This URI must identify a resource that can accept a request sent with the method method.
+   method: The HTTP method used to send the string to the resource. If null,the default is POST for http and STOR for ftp.
    data: The string to be uploaded.
    Returns: A System.String containing the response sent by the server.
   UploadString(self: WebClient,address: Uri,method: str,data: str) -> str
   
    Uploads the specified string to the specified resource,using the specified method.
   
-   address: The URI of the resource to receive the file. This URI must identify a resource that can 
-    accept a request sent with the method method.
-  
-   method: The HTTP method used to send the string to the resource. If null,the default is POST for 
-    http and STOR for ftp.
-  
+   address: The URI of the resource to receive the file. This URI must identify a resource that can accept a request sent with the method method.
+   method: The HTTP method used to send the string to the resource. If null,the default is POST for http and STOR for ftp.
    data: The string to be uploaded.
    Returns: A System.String containing the response sent by the server.
   """
@@ -634,43 +541,29 @@ class WebClient:
  def UploadStringAsync(self,address,*__args):
   """
   UploadStringAsync(self: WebClient,address: Uri,data: str)
-   Uploads the specified string to the specified resource. This method does not block the 
-    calling thread.
+   Uploads the specified string to the specified resource. This method does not block the calling thread.
   
-  
-   address: The URI of the resource to receive the file. For HTTP resources,this URI must identify a 
-    resource that can accept a request sent with the POST method,such as a script or ASP 
-    page.
+   address: The URI of the resource to receive the file. For HTTP resources,this URI must identify a resource that can accept a request sent with the POST method,such as a script or 
+    ASP page.
   
    data: The string to be uploaded.
   UploadStringAsync(self: WebClient,address: Uri,method: str,data: str)
-   Uploads the specified string to the specified resource. This method does not block the 
-    calling thread.
+   Uploads the specified string to the specified resource. This method does not block the calling thread.
   
+   address: The URI of the resource to receive the file. For HTTP resources,this URI must identify a resource that can accept a request sent with the POST method,such as a script or 
+    ASP page.
   
-   address: The URI of the resource to receive the file. For HTTP resources,this URI must identify a 
-    resource that can accept a request sent with the POST method,such as a script or ASP 
-    page.
-  
-   method: The HTTP method used to send the file to the resource. If null,the default is POST for 
-    http and STOR for ftp.
-  
+   method: The HTTP method used to send the file to the resource. If null,the default is POST for http and STOR for ftp.
    data: The string to be uploaded.
   UploadStringAsync(self: WebClient,address: Uri,method: str,data: str,userToken: object)
-   Uploads the specified string to the specified resource. This method does not block the 
-    calling thread.
+   Uploads the specified string to the specified resource. This method does not block the calling thread.
   
+   address: The URI of the resource to receive the file. For HTTP resources,this URI must identify a resource that can accept a request sent with the POST method,such as a script or 
+    ASP page.
   
-   address: The URI of the resource to receive the file. For HTTP resources,this URI must identify a 
-    resource that can accept a request sent with the POST method,such as a script or ASP 
-    page.
-  
-   method: The HTTP method used to send the file to the resource. If null,the default is POST for 
-    http and STOR for ftp.
-  
+   method: The HTTP method used to send the file to the resource. If null,the default is POST for http and STOR for ftp.
    data: The string to be uploaded.
-   userToken: A user-defined object that is passed to the method invoked when the asynchronous 
-    operation completes.
+   userToken: A user-defined object that is passed to the method invoked when the asynchronous operation completes.
   """
   pass
  def UploadStringTaskAsync(self,address,*__args):
@@ -685,44 +578,32 @@ class WebClient:
   """
   UploadValues(self: WebClient,address: str,data: NameValueCollection) -> Array[Byte]
   
-   Uploads the specified name/value collection to the resource identified by the specified 
-    URI.
-  
+   Uploads the specified name/value collection to the resource identified by the specified URI.
   
    address: The URI of the resource to receive the collection.
    data: The System.Collections.Specialized.NameValueCollection to send to the resource.
    Returns: A System.Byte array containing the body of the response from the resource.
   UploadValues(self: WebClient,address: Uri,data: NameValueCollection) -> Array[Byte]
   
-   Uploads the specified name/value collection to the resource identified by the specified 
-    URI.
-  
+   Uploads the specified name/value collection to the resource identified by the specified URI.
   
    address: The URI of the resource to receive the collection.
    data: The System.Collections.Specialized.NameValueCollection to send to the resource.
    Returns: A System.Byte array containing the body of the response from the resource.
   UploadValues(self: WebClient,address: str,method: str,data: NameValueCollection) -> Array[Byte]
   
-   Uploads the specified name/value collection to the resource identified by the specified 
-    URI,using the specified method.
-  
+   Uploads the specified name/value collection to the resource identified by the specified URI,using the specified method.
   
    address: The URI of the resource to receive the collection.
-   method: The HTTP method used to send the file to the resource. If null,the default is POST for 
-    http and STOR for ftp.
-  
+   method: The HTTP method used to send the file to the resource. If null,the default is POST for http and STOR for ftp.
    data: The System.Collections.Specialized.NameValueCollection to send to the resource.
    Returns: A System.Byte array containing the body of the response from the resource.
   UploadValues(self: WebClient,address: Uri,method: str,data: NameValueCollection) -> Array[Byte]
   
-   Uploads the specified name/value collection to the resource identified by the specified 
-    URI,using the specified method.
-  
+   Uploads the specified name/value collection to the resource identified by the specified URI,using the specified method.
   
    address: The URI of the resource to receive the collection.
-   method: The HTTP method used to send the file to the resource. If null,the default is POST for 
-    http and STOR for ftp.
-  
+   method: The HTTP method used to send the file to the resource. If null,the default is POST for http and STOR for ftp.
    data: The System.Collections.Specialized.NameValueCollection to send to the resource.
    Returns: A System.Byte array containing the body of the response from the resource.
   """
@@ -730,42 +611,27 @@ class WebClient:
  def UploadValuesAsync(self,address,*__args):
   """
   UploadValuesAsync(self: WebClient,address: Uri,data: NameValueCollection)
-   Uploads the data in the specified name/value collection to the resource identified by the 
-    specified URI. This method does not block the calling thread.
+   Uploads the data in the specified name/value collection to the resource identified by the specified URI. This method does not block the calling thread.
   
-  
-   address: The URI of the resource to receive the collection. This URI must identify a resource that 
-    can accept a request sent with the default method. See remarks.
-  
+   address: The URI of the resource to receive the collection. This URI must identify a resource that can accept a request sent with the default method. See remarks.
    data: The System.Collections.Specialized.NameValueCollection to send to the resource.
   UploadValuesAsync(self: WebClient,address: Uri,method: str,data: NameValueCollection)
-   Uploads the data in the specified name/value collection to the resource identified by the 
-    specified URI,using the specified method. This method does not block the calling thread.
+   Uploads the data in the specified name/value collection to the resource identified by the specified URI,using the specified method. This method does not block the calling 
+    thread.
   
   
-   address: The URI of the resource to receive the collection. This URI must identify a resource that 
-    can accept a request sent with the method method.
-  
-   method: The method used to send the string to the resource. If null,the default is POST for http 
-    and STOR for ftp.
-  
+   address: The URI of the resource to receive the collection. This URI must identify a resource that can accept a request sent with the method method.
+   method: The method used to send the string to the resource. If null,the default is POST for http and STOR for ftp.
    data: The System.Collections.Specialized.NameValueCollection to send to the resource.
   UploadValuesAsync(self: WebClient,address: Uri,method: str,data: NameValueCollection,userToken: object)
-   Uploads the data in the specified name/value collection to the resource identified by the 
-    specified URI,using the specified method. This method does not block the calling thread,
-    and allows the caller to pass an object to the method that is invoked when the operation 
-    completes.
+   Uploads the data in the specified name/value collection to the resource identified by the specified URI,using the specified method. This method does not block the calling 
+    thread,and allows the caller to pass an object to the method that is invoked when the operation completes.
   
   
-   address: The URI of the resource to receive the collection. This URI must identify a resource that 
-    can accept a request sent with the method method.
-  
-   method: The HTTP method used to send the string to the resource. If null,the default is POST for 
-    http and STOR for ftp.
-  
+   address: The URI of the resource to receive the collection. This URI must identify a resource that can accept a request sent with the method method.
+   method: The HTTP method used to send the string to the resource. If null,the default is POST for http and STOR for ftp.
    data: The System.Collections.Specialized.NameValueCollection to send to the resource.
-   userToken: A user-defined object that is passed to the method invoked when the asynchronous 
-    operation completes.
+   userToken: A user-defined object that is passed to the method invoked when the asynchronous operation completes.
   """
   pass
  def UploadValuesTaskAsync(self,address,*__args):

@@ -1,9 +1,14 @@
-class AuthorizationRuleCollection:
+class AuthorizationRuleCollection(ReadOnlyCollectionBase):
  """
  Represents a collection of System.Security.AccessControl.AuthorizationRule objects.
  
  AuthorizationRuleCollection()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AuthorizationRuleCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddRule(self,rule):
   """ AddRule(self: AuthorizationRuleCollection,rule: AuthorizationRule) """
   pass

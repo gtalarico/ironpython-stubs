@@ -1,9 +1,13 @@
-class NumericUpDownAcceleration:
+class NumericUpDownAcceleration(object):
  """
  Provides information specifying how acceleration should be performed on a spin box (also known as an up-down control) when the up or down button is pressed for specified time period.
  
  NumericUpDownAcceleration(seconds: int,increment: Decimal)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return NumericUpDownAcceleration()
+
  @staticmethod
  def __new__(self,seconds,increment):
   """ __new__(cls: type,seconds: int,increment: Decimal) """

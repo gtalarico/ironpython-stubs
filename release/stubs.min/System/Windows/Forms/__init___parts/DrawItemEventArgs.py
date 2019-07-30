@@ -1,23 +1,24 @@
-class DrawItemEventArgs:
+class DrawItemEventArgs(EventArgs):
  """
  Provides data for the DrawItem event.
  
  DrawItemEventArgs(graphics: Graphics,font: Font,rect: Rectangle,index: int,state: DrawItemState)
  DrawItemEventArgs(graphics: Graphics,font: Font,rect: Rectangle,index: int,state: DrawItemState,foreColor: Color,backColor: Color)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DrawItemEventArgs()
+
  def DrawBackground(self):
   """
   DrawBackground(self: DrawItemEventArgs)
-   Draws the background within the bounds specified in the 
-    erload:System.Windows.Forms.DrawItemEventArgs.#ctor constructor and with the appropriate 
-    color.
+   Draws the background within the bounds specified in the erload:System.Windows.Forms.DrawItemEventArgs.#ctor constructor and with the appropriate color.
   """
   pass
  def DrawFocusRectangle(self):
   """
   DrawFocusRectangle(self: DrawItemEventArgs)
-   Draws a focus rectangle within the bounds specified in the 
-    erload:System.Windows.Forms.DrawItemEventArgs.#ctor constructor.
+   Draws a focus rectangle within the bounds specified in the erload:System.Windows.Forms.DrawItemEventArgs.#ctor constructor.
   """
   pass
  @staticmethod

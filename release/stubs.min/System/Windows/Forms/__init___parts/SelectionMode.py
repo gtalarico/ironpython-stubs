@@ -1,9 +1,13 @@
-class SelectionMode:
+class SelectionMode(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies the selection behavior of a list box.
  
  enum SelectionMode,values: MultiExtended (3),MultiSimple (2),None (0),One (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SelectionMode()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

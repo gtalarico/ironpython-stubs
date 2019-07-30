@@ -1,4 +1,4 @@
-class RankException:
+class RankException(SystemException):
  """
  The exception that is thrown when an array with the wrong number of dimensions is passed to a method.
  
@@ -6,6 +6,11 @@ class RankException:
  RankException(message: str)
  RankException(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RankException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

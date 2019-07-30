@@ -1,16 +1,17 @@
-class Color:
+class Color(object):
  """ Represents an ARGB (alpha,red,green,blue) color. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Color()
+
  def Equals(self,obj):
   """
   Equals(self: Color,obj: object) -> bool
   
-   Tests whether the specified object is a System.Drawing.Color structure and is equivalent 
-    to this System.Drawing.Color structure.
-  
+   Tests whether the specified object is a System.Drawing.Color structure and is equivalent to this System.Drawing.Color structure.
   
    obj: The object to test.
-   Returns: true if obj is a System.Drawing.Color structure equivalent to this System.Drawing.Color 
-    structure; otherwise,false.
+   Returns: true if obj is a System.Drawing.Color structure equivalent to this System.Drawing.Color structure; otherwise,false.
   """
   pass
  @staticmethod
@@ -24,10 +25,7 @@ class Color:
    Returns: The System.Drawing.Color structure that this method creates.
   FromArgb(alpha: int,red: int,green: int,blue: int) -> Color
   
-   Creates a System.Drawing.Color structure from the four ARGB component (alpha,red,green,
-    and blue) values. Although this method allows a 32-bit value to be passed for each 
-    component,the value of each component is limited to 8 bits.
-  
+   Creates a System.Drawing.Color structure from the four ARGB component (alpha,red,green,and blue) values. Although this method allows a 32-bit value to be passed for each component,the value of each component is limited to 8 bits.
   
    alpha: The alpha component. Valid values are 0 through 255.
    red: The red component. Valid values are 0 through 255.
@@ -36,26 +34,17 @@ class Color:
    Returns: The System.Drawing.Color that this method creates.
   FromArgb(alpha: int,baseColor: Color) -> Color
   
-   Creates a System.Drawing.Color structure from the specified System.Drawing.Color 
-    structure,but with the new specified alpha value. Although this method allows a 32-bit 
-    value to be passed for the alpha value,the value is limited to 8 bits.
-  
+   Creates a System.Drawing.Color structure from the specified System.Drawing.Color structure,but with the new specified alpha value. Although this method allows a 32-bit value to be passed for the alpha value,the value is limited to 8 bits.
   
    alpha: The alpha value for the new System.Drawing.Color. Valid values are 0 through 255.
    baseColor: The System.Drawing.Color from which to create the new System.Drawing.Color.
    Returns: The System.Drawing.Color that this method creates.
   FromArgb(red: int,green: int,blue: int) -> Color
   
-   Creates a System.Drawing.Color structure from the specified 8-bit color values (red,
-    green,and blue). The alpha value is implicitly 255 (fully opaque). Although this method 
-    allows a 32-bit value to be passed for each color component,the value of each component 
-    is limited to 8 bits.
-  
+   Creates a System.Drawing.Color structure from the specified 8-bit color values (red,green,and blue). The alpha value is implicitly 255 (fully opaque). Although this method allows a 32-bit value to be passed for each color component,the value of each component is limited to 8 bits.
   
    red: The red component value for the new System.Drawing.Color. Valid values are 0 through 255.
-   green: The green component value for the new System.Drawing.Color. Valid values are 0 through 
-    255.
-  
+   green: The green component value for the new System.Drawing.Color. Valid values are 0 through 255.
    blue: The blue component value for the new System.Drawing.Color. Valid values are 0 through 255.
    Returns: The System.Drawing.Color that this method creates.
   """
@@ -78,9 +67,7 @@ class Color:
   
    Creates a System.Drawing.Color structure from the specified name of a predefined color.
   
-   name: A string that is the name of a predefined color. Valid names are the same as the names of 
-    the elements of the System.Drawing.KnownColor enumeration.
-  
+   name: A string that is the name of a predefined color. Valid names are the same as the names of the elements of the System.Drawing.KnownColor enumeration.
    Returns: The System.Drawing.Color that this method creates.
   """
   pass
@@ -88,11 +75,8 @@ class Color:
   """
   GetBrightness(self: Color) -> Single
   
-   Gets the hue-saturation-brightness (HSB) brightness value for this System.Drawing.Color 
-    structure.
-  
-   Returns: The brightness of this System.Drawing.Color. The brightness ranges from 0.0 through 1.0,
-    where 0.0 represents black and 1.0 represents white.
+   Gets the hue-saturation-brightness (HSB) brightness value for this System.Drawing.Color structure.
+   Returns: The brightness of this System.Drawing.Color. The brightness ranges from 0.0 through 1.0,where 0.0 represents black and 1.0 represents white.
   """
   pass
  def GetHashCode(self):
@@ -107,22 +91,16 @@ class Color:
   """
   GetHue(self: Color) -> Single
   
-   Gets the hue-saturation-brightness (HSB) hue value,in degrees,for this 
-    System.Drawing.Color structure.
-  
-   Returns: The hue,in degrees,of this System.Drawing.Color. The hue is measured in degrees,
-    ranging from 0.0 through 360.0,in HSB color space.
+   Gets the hue-saturation-brightness (HSB) hue value,in degrees,for this System.Drawing.Color structure.
+   Returns: The hue,in degrees,of this System.Drawing.Color. The hue is measured in degrees,ranging from 0.0 through 360.0,in HSB color space.
   """
   pass
  def GetSaturation(self):
   """
   GetSaturation(self: Color) -> Single
   
-   Gets the hue-saturation-brightness (HSB) saturation value for this System.Drawing.Color 
-    structure.
-  
-   Returns: The saturation of this System.Drawing.Color. The saturation ranges from 0.0 through 1.0,
-    where 0.0 is grayscale and 1.0 is the most saturated.
+   Gets the hue-saturation-brightness (HSB) saturation value for this System.Drawing.Color structure.
+   Returns: The saturation of this System.Drawing.Color. The saturation ranges from 0.0 through 1.0,where 0.0 is grayscale and 1.0 is the most saturated.
   """
   pass
  def ToArgb(self):
@@ -138,10 +116,7 @@ class Color:
   ToKnownColor(self: Color) -> KnownColor
   
    Gets the System.Drawing.KnownColor value of this System.Drawing.Color structure.
-   Returns: An element of the System.Drawing.KnownColor enumeration,if the System.Drawing.Color is 
-    created from a predefined color by using either the 
-    System.Drawing.Color.FromName(System.String) method or the 
-    System.Drawing.Color.FromKnownColor(System.Drawing.KnownColor) method; otherwise,0.
+   Returns: An element of the System.Drawing.KnownColor enumeration,if the System.Drawing.Color is created from a predefined color by using either the System.Drawing.Color.FromName(System.String) method or the System.Drawing.Color.FromKnownColor(System.Drawing.KnownColor) method; otherwise,0.
   """
   pass
  def ToString(self):
@@ -149,11 +124,7 @@ class Color:
   ToString(self: Color) -> str
   
    Converts this System.Drawing.Color structure to a human-readable string.
-   Returns: A string that is the name of this System.Drawing.Color,if the System.Drawing.Color is 
-    created from a predefined color by using either the 
-    System.Drawing.Color.FromName(System.String) method or the 
-    System.Drawing.Color.FromKnownColor(System.Drawing.KnownColor) method; otherwise,a 
-    string that consists of the ARGB component names and their values.
+   Returns: A string that is the name of this System.Drawing.Color,if the System.Drawing.Color is created from a predefined color by using either the System.Drawing.Color.FromName(System.String) method or the System.Drawing.Color.FromKnownColor(System.Drawing.KnownColor) method; otherwise,a string that consists of the ARGB component names and their values.
   """
   pass
  def __eq__(self,*args):

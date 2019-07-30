@@ -1,4 +1,4 @@
-class LicenseException:
+class LicenseException(SystemException):
  """
  Represents the exception thrown when a component cannot be granted a license.
  
@@ -7,12 +7,15 @@ class LicenseException:
  LicenseException(type: Type,instance: object,message: str)
  LicenseException(type: Type,instance: object,message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LicenseException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: LicenseException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo with information about the 
-    exception.
-  
+   Sets the System.Runtime.Serialization.SerializationInfo with information about the exception.
   
    info: The System.Runtime.Serialization.SerializationInfo to be used for deserialization.
    context: The destination to be used for deserialization.

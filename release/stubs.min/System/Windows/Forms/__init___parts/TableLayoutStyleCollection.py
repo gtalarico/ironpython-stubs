@@ -1,22 +1,23 @@
-class TableLayoutStyleCollection:
+class TableLayoutStyleCollection(object,IList,ICollection,IEnumerable):
  """ Implements the basic functionality for a collection of table layout styles. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TableLayoutStyleCollection()
+
  def Add(self,style):
   """
   Add(self: TableLayoutStyleCollection,style: TableLayoutStyle) -> int
   
    Adds a new System.Windows.Forms.TableLayoutStyle to the end of the current collection.
   
-   style: The System.Windows.Forms.TableLayoutStyle to add to the 
-    System.Windows.Forms.TableLayoutStyleCollection.
-  
+   style: The System.Windows.Forms.TableLayoutStyle to add to the System.Windows.Forms.TableLayoutStyleCollection.
    Returns: The position into which the new element was inserted.
   """
   pass
  def Clear(self):
   """
   Clear(self: TableLayoutStyleCollection)
-   Disassociates the collection from its associated System.Windows.Forms.TableLayoutPanel 
-    and empties the collection.
+   Disassociates the collection from its associated System.Windows.Forms.TableLayoutPanel and empties the collection.
   """
   pass
  def RemoveAt(self,index):

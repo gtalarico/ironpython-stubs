@@ -1,10 +1,15 @@
-class ComponentResourceManager:
+class ComponentResourceManager(ResourceManager):
  """
  Provides simple functionality for enumerating resources for a component or object. The System.ComponentModel.ComponentResourceManager class is a System.Resources.ResourceManager.
  
  ComponentResourceManager()
  ComponentResourceManager(t: Type)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ComponentResourceManager()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ApplyResources(self,value,objectName,culture=None):
   """
   ApplyResources(self: ComponentResourceManager,value: object,objectName: str)

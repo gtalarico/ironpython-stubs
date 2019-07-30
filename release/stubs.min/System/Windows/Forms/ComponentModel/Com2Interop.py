@@ -8,15 +8,23 @@
 # no functions
 # classes
 
-class Com2Variant:
+class Com2Variant(object):
  """
  Facilitates proper recognition of a variant type.
  
  Com2Variant()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Com2Variant()
+
 
 class ICom2PropertyPageDisplayService:
  """ Defines a method that shows the property page for an ActiveX control. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ICom2PropertyPageDisplayService()
+
  def ShowPropertyPage(self,title,component,dispid,pageGuid,parentHandle):
   """
   ShowPropertyPage(self: ICom2PropertyPageDisplayService,title: str,component: object,dispid: int,pageGuid: Guid,parentHandle: IntPtr)
@@ -35,6 +43,10 @@ class ICom2PropertyPageDisplayService:
 
 class IComPropertyBrowser:
  """ Allows Visual Studio to communicate internally with the System.Windows.Forms.PropertyGrid control. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return IComPropertyBrowser()
+
  def DropDownDone(self):
   """
   DropDownDone(self: IComPropertyBrowser)
@@ -46,15 +58,13 @@ class IComPropertyBrowser:
   EnsurePendingChangesCommitted(self: IComPropertyBrowser) -> bool
   
    Commits all pending changes to the System.Windows.Forms.PropertyGrid control.
-   Returns: true if the System.Windows.Forms.PropertyGrid successfully commits changes; otherwise,
-    false.
+   Returns: true if the System.Windows.Forms.PropertyGrid successfully commits changes; otherwise,false.
   """
   pass
  def HandleF4(self):
   """
   HandleF4(self: IComPropertyBrowser)
-   Activates the System.Windows.Forms.PropertyGrid control when the user chooses Properties 
-    for a control in Design view.
+   Activates the System.Windows.Forms.PropertyGrid control when the user chooses Properties for a control in Design view.
   """
   pass
  def LoadState(self,key):

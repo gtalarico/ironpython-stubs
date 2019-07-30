@@ -1,5 +1,9 @@
-class DateBoldEventArgs:
+class DateBoldEventArgs(EventArgs):
  """ Provides data for events that are internal to the System.Windows.Forms.MonthCalendar control. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DateBoldEventArgs()
+
  DaysToBold=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets or sets dates that are bold.
 

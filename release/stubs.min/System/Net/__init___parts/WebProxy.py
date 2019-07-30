@@ -1,4 +1,4 @@
-class WebProxy:
+class WebProxy(object):
  """
  Contains HTTP proxy settings for the System.Net.WebRequest class.
  
@@ -13,26 +13,27 @@ class WebProxy:
  WebProxy(Address: str,BypassOnLocal: bool,BypassList: Array[str])
  WebProxy(Address: str,BypassOnLocal: bool,BypassList: Array[str],Credentials: ICredentials)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebProxy()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetDefaultProxy():
   """
   GetDefaultProxy() -> WebProxy
   
    Reads the Internet Explorer nondynamic proxy settings.
-   Returns: A System.Net.WebProxy instance that contains the nondynamic proxy settings from Internet 
-    Explorer 5.5 and later.
+   Returns: A System.Net.WebProxy instance that contains the nondynamic proxy settings from Internet Explorer 5.5 and later.
   """
   pass
  def GetObjectData(self,*args):
   """
   GetObjectData(self: WebProxy,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data that is needed 
-    to serialize the target object.
-  
+   Populates a System.Runtime.Serialization.SerializationInfo with the data that is needed to serialize the target object.
   
    serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
-    serialization.
+   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this serialization.
   """
   pass
  def GetProxy(self,destination):
@@ -42,8 +43,7 @@ class WebProxy:
    Returns the proxied URI for a request.
   
    destination: The System.Uri instance of the requested Internet resource.
-   Returns: The System.Uri instance of the Internet resource,if the resource is on the bypass list; 
-    otherwise,the System.Uri instance of the proxy.
+   Returns: The System.Uri instance of the Internet resource,if the resource is on the bypass list; otherwise,the System.Uri instance of the proxy.
   """
   pass
  def IsBypassed(self,host):

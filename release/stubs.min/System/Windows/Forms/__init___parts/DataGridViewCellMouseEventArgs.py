@@ -1,9 +1,13 @@
-class DataGridViewCellMouseEventArgs:
+class DataGridViewCellMouseEventArgs(MouseEventArgs):
  """
  Provides data for mouse events raised by a System.Windows.Forms.DataGridView whenever the mouse is moved within a System.Windows.Forms.DataGridViewCell.
  
  DataGridViewCellMouseEventArgs(columnIndex: int,rowIndex: int,localX: int,localY: int,e: MouseEventArgs)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewCellMouseEventArgs()
+
  @staticmethod
  def __new__(self,columnIndex,rowIndex,localX,localY,e):
   """ __new__(cls: type,columnIndex: int,rowIndex: int,localX: int,localY: int,e: MouseEventArgs) """

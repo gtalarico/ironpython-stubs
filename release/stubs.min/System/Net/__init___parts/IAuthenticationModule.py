@@ -1,27 +1,27 @@
 class IAuthenticationModule:
  """ Provides the base authentication interface for Web client authentication modules. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IAuthenticationModule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Authenticate(self,challenge,request,credentials):
   """
   Authenticate(self: IAuthenticationModule,challenge: str,request: WebRequest,credentials: ICredentials) -> Authorization
   
-   Returns an instance of the System.Net.Authorization class in respose to an authentication 
-    challenge from a server.
-  
+   Returns an instance of the System.Net.Authorization class in respose to an authentication challenge from a server.
   
    challenge: The authentication challenge sent by the server.
    request: The System.Net.WebRequest instance associated with the challenge.
    credentials: The credentials associated with the challenge.
-   Returns: An System.Net.Authorization instance containing the authorization message for the 
-    request,or null if the challenge cannot be handled.
+   Returns: An System.Net.Authorization instance containing the authorization message for the request,or null if the challenge cannot be handled.
   """
   pass
  def PreAuthenticate(self,request,credentials):
   """
   PreAuthenticate(self: IAuthenticationModule,request: WebRequest,credentials: ICredentials) -> Authorization
   
-   Returns an instance of the System.Net.Authorization class for an authentication request 
-    to a server.
-  
+   Returns an instance of the System.Net.Authorization class for an authentication request to a server.
   
    request: The System.Net.WebRequest instance associated with the authentication request.
    credentials: The credentials associated with the authentication request.

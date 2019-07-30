@@ -4,6 +4,11 @@ class AccessControlType:
  
  enum AccessControlType,values: Allow (0),Deny (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AccessControlType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

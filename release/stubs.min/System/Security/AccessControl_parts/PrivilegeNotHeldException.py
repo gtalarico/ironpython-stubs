@@ -1,4 +1,4 @@
-class PrivilegeNotHeldException:
+class PrivilegeNotHeldException(UnauthorizedAccessException):
  """
  The exception that is thrown when a method in the System.Security.AccessControl namespace attempts to enable a privilege that it does not have.
  
@@ -6,16 +6,18 @@ class PrivilegeNotHeldException:
  PrivilegeNotHeldException(privilege: str)
  PrivilegeNotHeldException(privilege: str,inner: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrivilegeNotHeldException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: PrivilegeNotHeldException,info: SerializationInfo,context: StreamingContext)
    Sets the info parameter with information about the exception.
   
-   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data 
-    about the exception being thrown.
-  
-   context: The System.Runtime.Serialization.StreamingContext that contains contextual information 
-    about the source or destination.
+   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about the exception being thrown.
+   context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the source or destination.
   """
   pass
  def __init__(self,*args):

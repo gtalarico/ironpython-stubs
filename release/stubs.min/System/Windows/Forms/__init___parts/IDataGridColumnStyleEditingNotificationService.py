@@ -1,5 +1,9 @@
 class IDataGridColumnStyleEditingNotificationService:
  """ Provides an editing notification interface. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return IDataGridColumnStyleEditingNotificationService()
+
  def ColumnStartedEditing(self,editingControl):
   """
   ColumnStartedEditing(self: IDataGridColumnStyleEditingNotificationService,editingControl: Control)

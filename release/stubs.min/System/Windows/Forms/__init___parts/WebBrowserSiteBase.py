@@ -1,5 +1,9 @@
-class WebBrowserSiteBase:
+class WebBrowserSiteBase(object,IOleControlSite,IOleClientSite,IOleInPlaceSite,ISimpleFrameSite,IPropertyNotifySink,IDisposable):
  """ Implements the interfaces of an ActiveX site for use as a base class by the System.Windows.Forms.WebBrowser.WebBrowserSite class. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return WebBrowserSiteBase()
+
  def Dispose(self):
   """
   Dispose(self: WebBrowserSiteBase)

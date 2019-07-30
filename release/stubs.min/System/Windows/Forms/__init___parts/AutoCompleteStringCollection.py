@@ -1,9 +1,13 @@
-class AutoCompleteStringCollection:
+class AutoCompleteStringCollection(object,IList,ICollection,IEnumerable):
  """
  Contains a collection of strings to use for the auto-complete feature on certain Windows Forms controls.
  
  AutoCompleteStringCollection()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return AutoCompleteStringCollection()
+
  def Add(self,value):
   """
   Add(self: AutoCompleteStringCollection,value: str) -> int
@@ -41,9 +45,7 @@ class AutoCompleteStringCollection:
  def CopyTo(self,array,index):
   """
   CopyTo(self: AutoCompleteStringCollection,array: Array[str],index: int)
-   Copies an array of System.String objects into the collection,starting at the specified 
-    position.
-  
+   Copies an array of System.String objects into the collection,starting at the specified position.
   
    array: The System.String objects to add to the collection.
    index: The position within the collection at which to start the insertion.
@@ -53,9 +55,7 @@ class AutoCompleteStringCollection:
   """
   GetEnumerator(self: AutoCompleteStringCollection) -> IEnumerator
   
-   Returns an enumerator that iterates through the 
-    System.Windows.Forms.AutoCompleteStringCollection.
-  
+   Returns an enumerator that iterates through the System.Windows.Forms.AutoCompleteStringCollection.
    Returns: An enumerator that iterates through the collection.
   """
   pass

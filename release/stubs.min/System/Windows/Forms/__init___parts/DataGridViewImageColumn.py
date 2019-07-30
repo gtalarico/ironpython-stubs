@@ -1,10 +1,14 @@
-class DataGridViewImageColumn:
+class DataGridViewImageColumn(DataGridViewColumn,ICloneable,IDisposable,IComponent):
  """
  Hosts a collection of System.Windows.Forms.DataGridViewImageCell objects.
  
  DataGridViewImageColumn()
  DataGridViewImageColumn(valuesAreIcons: bool)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewImageColumn()
+
  def Clone(self):
   """
   Clone(self: DataGridViewImageColumn) -> object
@@ -16,8 +20,7 @@ class DataGridViewImageColumn:
  def Dispose(self):
   """
   Dispose(self: DataGridViewColumn,disposing: bool)
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def OnDataGridViewChanged(self,*args):

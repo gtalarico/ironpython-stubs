@@ -1,18 +1,24 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.Outbound.DirectOrderObjects calls itself DirectOrderObjects
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class DirectOrder:
+class DirectOrder(CacheObject):
  """
  DirectOrder()
  DirectOrder(customer: Customer,warehouseCode: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DirectOrder()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddOrderLine(self,orderLine):
   """ AddOrderLine(self: DirectOrder,orderLine: DirectOrderLine) """
   pass
@@ -134,8 +140,13 @@ Set: WarehouseCode(self: DirectOrder)=value
  ValueMember='CustomerNumber'
 
 
-class DirectOrderCrudArgs:
+class DirectOrderCrudArgs(object):
  """ DirectOrderCrudArgs(directOrder: DirectOrder) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DirectOrderCrudArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,directOrder):
   """ __new__(cls: type,directOrder: DirectOrder) """
@@ -148,8 +159,13 @@ Set: DirectOrder(self: DirectOrderCrudArgs)=value
 
 
 
-class DirectOrderLine:
+class DirectOrderLine(object):
  """ DirectOrderLine(item: Item,location: Location) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DirectOrderLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ConvertToOutboundOrderLine(self,parent):
   """ ConvertToOutboundOrderLine(self: DirectOrderLine,parent: DirectOrder) -> OutboundOrderLine """
   pass
@@ -167,7 +183,9 @@ class DirectOrderLine:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  ContainsBatchNumberItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ContainsBatchNumberItem(self: DirectOrderLine) -> bool
+ """Don't set directly. Setter is for serialization purpose only
+
+Get: ContainsBatchNumberItem(self: DirectOrderLine) -> bool
 
 Set: ContainsBatchNumberItem(self: DirectOrderLine)=value
 """
@@ -178,7 +196,9 @@ Set: ContainsBatchNumberItem(self: DirectOrderLine)=value
 """
 
  ContainsSerialNumberItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ContainsSerialNumberItem(self: DirectOrderLine) -> bool
+ """Don't set directly. Setter is for serialization purpose only
+
+Get: ContainsSerialNumberItem(self: DirectOrderLine) -> bool
 
 Set: ContainsSerialNumberItem(self: DirectOrderLine)=value
 """
@@ -251,8 +271,13 @@ Set: Quantity(self: DirectOrderLine)=value
  ValueMember='ItemCode'
 
 
-class DirectOrderLineCrudArgs:
+class DirectOrderLineCrudArgs(DirectOrderCrudArgs):
  """ DirectOrderLineCrudArgs(directOrder: DirectOrder,directOrderLine: DirectOrderLine) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DirectOrderLineCrudArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,directOrder,directOrderLine):
   """ __new__(cls: type,directOrder: DirectOrder,directOrderLine: DirectOrderLine) """
@@ -265,8 +290,13 @@ Set: DirectOrderLine(self: DirectOrderLineCrudArgs)=value
 
 
 
-class DirectOrderLineItemIdentificationCrudArgs:
+class DirectOrderLineItemIdentificationCrudArgs(DirectOrderLineCrudArgs):
  """ DirectOrderLineItemIdentificationCrudArgs(order: DirectOrder,directOrderLine: DirectOrderLine,itemIdentification: ItemIdentification) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DirectOrderLineItemIdentificationCrudArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,order,directOrderLine,itemIdentification):
   """ __new__(cls: type,order: DirectOrder,directOrderLine: DirectOrderLine,itemIdentification: ItemIdentification) """
@@ -279,8 +309,13 @@ Set: ItemIdentification(self: DirectOrderLineItemIdentificationCrudArgs)=value
 
 
 
-class DirectOrderLineItemIdentificationsCrudArgs:
+class DirectOrderLineItemIdentificationsCrudArgs(DirectOrderLineCrudArgs):
  """ DirectOrderLineItemIdentificationsCrudArgs(directOrder: DirectOrder,directOrderLine: DirectOrderLine,itemIdentifications: ItemIdentifications) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DirectOrderLineItemIdentificationsCrudArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,directOrder,directOrderLine,itemIdentifications):
   """ __new__(cls: type,directOrder: DirectOrder,directOrderLine: DirectOrderLine,itemIdentifications: ItemIdentifications) """
@@ -293,8 +328,13 @@ Set: ItemIdentifications(self: DirectOrderLineItemIdentificationsCrudArgs)=value
 
 
 
-class ErpProcessDirecOrderResult:
+class ErpProcessDirecOrderResult(object):
  """ ErpProcessDirecOrderResult() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ErpProcessDirecOrderResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  OrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: OrderNumber(self: ErpProcessDirecOrderResult) -> str
 
@@ -309,8 +349,13 @@ Set: Success(self: ErpProcessDirecOrderResult)=value
 
 
 
-class HistoryDirectOrder:
+class HistoryDirectOrder(object):
  """ HistoryDirectOrder() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryDirectOrder()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CreatedBy=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: CreatedBy(self: HistoryDirectOrder) -> str
 
@@ -385,8 +430,13 @@ Set: WarehouseCode(self: HistoryDirectOrder)=value
 
 
 
-class HistoryDirectOrderLine:
+class HistoryDirectOrderLine(object):
  """ HistoryDirectOrderLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryDirectOrderLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CreatedBy=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: CreatedBy(self: HistoryDirectOrderLine) -> str
 
@@ -473,8 +523,13 @@ Set: WarehouseLocationCode(self: HistoryDirectOrderLine)=value
 
 
 
-class HistoryDirectOrderLinesFilter:
+class HistoryDirectOrderLinesFilter(object):
  """ HistoryDirectOrderLinesFilter() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryDirectOrderLinesFilter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  DirectOrderKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: DirectOrderKey(self: HistoryDirectOrderLinesFilter) -> int
 
@@ -489,8 +544,13 @@ Set: SearchText(self: HistoryDirectOrderLinesFilter)=value
 
 
 
-class HistoryDirectOrdersFilter:
+class HistoryDirectOrdersFilter(HistoryFilterBase):
  """ HistoryDirectOrdersFilter() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryDirectOrdersFilter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: WarehouseCode(self: HistoryDirectOrdersFilter) -> str
 

@@ -6,6 +6,11 @@ class ToolboxItemAttribute:
  ToolboxItemAttribute(toolboxItemTypeName: str)
  ToolboxItemAttribute(toolboxItemType: Type)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ToolboxItemAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: ToolboxItemAttribute,obj: object) -> bool
@@ -20,9 +25,7 @@ class ToolboxItemAttribute:
   """
   IsDefaultAttribute(self: ToolboxItemAttribute) -> bool
   
-   Gets a value indicating whether the current value of the attribute is the default value 
-    for the attribute.
-  
+   Gets a value indicating whether the current value of the attribute is the default value for the attribute.
    Returns: true if the current value of the attribute is the default; otherwise,false.
   """
   pass

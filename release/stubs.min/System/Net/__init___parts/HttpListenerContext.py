@@ -1,5 +1,10 @@
-class HttpListenerContext:
+class HttpListenerContext(object):
  """ Provides access to the request and response objects used by the System.Net.HttpListener class. This class cannot be inherited. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HttpListenerContext()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AcceptWebSocketAsync(self,subProtocol,*__args):
   """
   AcceptWebSocketAsync(self: HttpListenerContext,subProtocol: str) -> Task[HttpListenerWebSocketContext]

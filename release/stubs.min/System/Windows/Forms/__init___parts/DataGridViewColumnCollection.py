@@ -1,16 +1,18 @@
-class DataGridViewColumnCollection:
+class DataGridViewColumnCollection(BaseCollection,ICollection,IEnumerable,IList):
  """
  Represents a collection of System.Windows.Forms.DataGridViewColumn objects in a System.Windows.Forms.DataGridView control.
  
  DataGridViewColumnCollection(dataGridView: DataGridView)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewColumnCollection()
+
  def Add(self,*__args):
   """
   Add(self: DataGridViewColumnCollection,columnName: str,headerText: str) -> int
   
-   Adds a System.Windows.Forms.DataGridViewTextBoxColumn with the given column name and 
-    column header text to the collection.
-  
+   Adds a System.Windows.Forms.DataGridViewTextBoxColumn with the given column name and column header text to the collection.
   
    columnName: The name by which the column will be referred.
    headerText: The text for the column's header.
@@ -68,9 +70,7 @@ class DataGridViewColumnCollection:
   
    Returns the number of columns that meet the given filter requirements.
   
-   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that 
-    represent the filter for inclusion.
-  
+   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that represent the filter for inclusion.
    Returns: The number of columns that meet the filter requirements.
   """
   pass
@@ -78,45 +78,27 @@ class DataGridViewColumnCollection:
   """
   GetColumnsWidth(self: DataGridViewColumnCollection,includeFilter: DataGridViewElementStates) -> int
   
-   Returns the width,in pixels,required to display all of the columns that meet the given 
-    filter requirements.
+   Returns the width,in pixels,required to display all of the columns that meet the given filter requirements.
   
-  
-   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that 
-    represent the filter for inclusion.
-  
-   Returns: The width,in pixels,that is necessary to display all of the columns that meet the 
-    filter requirements.
+   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that represent the filter for inclusion.
+   Returns: The width,in pixels,that is necessary to display all of the columns that meet the filter requirements.
   """
   pass
  def GetFirstColumn(self,includeFilter,excludeFilter=None):
   """
   GetFirstColumn(self: DataGridViewColumnCollection,includeFilter: DataGridViewElementStates) -> DataGridViewColumn
   
-   Returns the first column in display order that meets the given inclusion-filter 
-    requirements.
+   Returns the first column in display order that meets the given inclusion-filter requirements.
   
-  
-   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that 
-    represents the filter for inclusion.
-  
-   Returns: The first column in display order that meets the given filter requirements,or null if no 
-    column is found.
-  
+   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that represents the filter for inclusion.
+   Returns: The first column in display order that meets the given filter requirements,or null if no column is found.
   GetFirstColumn(self: DataGridViewColumnCollection,includeFilter: DataGridViewElementStates,excludeFilter: DataGridViewElementStates) -> DataGridViewColumn
   
-   Returns the first column in display order that meets the given inclusion-filter and 
-    exclusion-filter requirements.
+   Returns the first column in display order that meets the given inclusion-filter and exclusion-filter requirements.
   
-  
-   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that 
-    represent the filter to apply for inclusion.
-  
-   excludeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that 
-    represent the filter to apply for exclusion.
-  
-   Returns: The first column in display order that meets the given filter requirements,or null if no 
-    column is found.
+   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that represent the filter to apply for inclusion.
+   excludeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that represent the filter to apply for exclusion.
+   Returns: The first column in display order that meets the given filter requirements,or null if no column is found.
   """
   pass
  def GetLastColumn(self,includeFilter,excludeFilter):
@@ -125,31 +107,20 @@ class DataGridViewColumnCollection:
   
    Returns the last column in display order that meets the given filter requirements.
   
-   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that 
-    represent the filter to apply for inclusion.
-  
-   excludeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that 
-    represent the filter to apply for exclusion.
-  
-   Returns: The last displayed column in display order that meets the given filter requirements,or 
-    null if no column is found.
+   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that represent the filter to apply for inclusion.
+   excludeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that represent the filter to apply for exclusion.
+   Returns: The last displayed column in display order that meets the given filter requirements,or null if no column is found.
   """
   pass
  def GetNextColumn(self,dataGridViewColumnStart,includeFilter,excludeFilter):
   """
   GetNextColumn(self: DataGridViewColumnCollection,dataGridViewColumnStart: DataGridViewColumn,includeFilter: DataGridViewElementStates,excludeFilter: DataGridViewElementStates) -> DataGridViewColumn
   
-   Gets the first column after the given column in display order that meets the given filter 
-    requirements.
-  
+   Gets the first column after the given column in display order that meets the given filter requirements.
   
    dataGridViewColumnStart: The column from which to start searching for the next column.
-   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that 
-    represent the filter to apply for inclusion.
-  
-   excludeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that 
-    represent the filter to apply for exclusion.
-  
+   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that represent the filter to apply for inclusion.
+   excludeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that represent the filter to apply for exclusion.
    Returns: The next column that meets the given filter requirements,or null if no column is found.
   """
   pass
@@ -157,19 +128,12 @@ class DataGridViewColumnCollection:
   """
   GetPreviousColumn(self: DataGridViewColumnCollection,dataGridViewColumnStart: DataGridViewColumn,includeFilter: DataGridViewElementStates,excludeFilter: DataGridViewElementStates) -> DataGridViewColumn
   
-   Gets the last column prior to the given column in display order that meets the given 
-    filter requirements.
-  
+   Gets the last column prior to the given column in display order that meets the given filter requirements.
   
    dataGridViewColumnStart: The column from which to start searching for the previous column.
-   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that 
-    represent the filter to apply for inclusion.
-  
-   excludeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that 
-    represent the filter to apply for exclusion.
-  
-   Returns: The previous column that meets the given filter requirements,or null if no column is 
-    found.
+   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that represent the filter to apply for inclusion.
+   excludeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values that represent the filter to apply for exclusion.
+   Returns: The previous column that meets the given filter requirements,or null if no column is found.
   """
   pass
  def IndexOf(self,dataGridViewColumn):
@@ -197,12 +161,7 @@ class DataGridViewColumnCollection:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   

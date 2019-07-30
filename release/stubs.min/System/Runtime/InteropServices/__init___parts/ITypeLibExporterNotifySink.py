@@ -1,5 +1,10 @@
 class ITypeLibExporterNotifySink:
  """ Provides a callback mechanism for the assembly converter to inform the caller of the status of the conversion,and involve the caller in the conversion process itself. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ITypeLibExporterNotifySink()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ReportEvent(self,eventKind,eventCode,eventMsg):
   """
   ReportEvent(self: ITypeLibExporterNotifySink,eventKind: ExporterEventKind,eventCode: int,eventMsg: str)

@@ -1,10 +1,14 @@
-class LinkLabelLinkClickedEventArgs:
+class LinkLabelLinkClickedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.LinkLabel.LinkClicked event.
  
  LinkLabelLinkClickedEventArgs(link: Link)
  LinkLabelLinkClickedEventArgs(link: Link,button: MouseButtons)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return LinkLabelLinkClickedEventArgs()
+
  @staticmethod
  def __new__(self,link,button=None):
   """

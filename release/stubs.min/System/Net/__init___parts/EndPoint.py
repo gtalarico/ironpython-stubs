@@ -1,5 +1,10 @@
-class EndPoint:
+class EndPoint(object):
  """ Identifies a network address. This is an abstract class. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EndPoint()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Create(self,socketAddress):
   """
   Create(self: EndPoint,socketAddress: SocketAddress) -> EndPoint
@@ -7,8 +12,7 @@ class EndPoint:
    Creates an System.Net.EndPoint instance from a System.Net.SocketAddress instance.
   
    socketAddress: The socket address that serves as the endpoint for a connection.
-   Returns: A new System.Net.EndPoint instance that is initialized from the specified 
-    System.Net.SocketAddress instance.
+   Returns: A new System.Net.EndPoint instance that is initialized from the specified System.Net.SocketAddress instance.
   """
   pass
  def Serialize(self):

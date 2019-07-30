@@ -1,9 +1,13 @@
-class SplitterEventArgs:
+class SplitterEventArgs(EventArgs):
  """
  Provides data for System.Windows.Forms.Splitter.SplitterMoving and the System.Windows.Forms.Splitter.SplitterMoved events.
  
  SplitterEventArgs(x: int,y: int,splitX: int,splitY: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SplitterEventArgs()
+
  @staticmethod
  def __new__(self,x,y,splitX,splitY):
   """ __new__(cls: type,x: int,y: int,splitX: int,splitY: int) """

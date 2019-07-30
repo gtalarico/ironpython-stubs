@@ -4,6 +4,11 @@ class UriPartial:
  
  enum UriPartial,values: Authority (1),Path (2),Query (3),Scheme (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UriPartial()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

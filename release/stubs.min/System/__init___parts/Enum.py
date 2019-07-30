@@ -1,18 +1,19 @@
-class Enum:
+class Enum(object):
  """ Provides the base class for enumerations. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Enum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CompareTo(self,target):
   """
   CompareTo(self: Enum,target: object) -> int
   
-   Compares this instance to a specified object and returns an indication of their relative 
-    values.
-  
+   Compares this instance to a specified object and returns an indication of their relative values.
   
    target: An object to compare,or null.
-   Returns: A signed number that indicates the relative values of this instance and target.Value 
-    Meaning Less than zero The value of this instance is less than the value of target. Zero 
-    The value of this instance is equal to the value of target. Greater than zero The value 
-    of this instance is greater than the value of target.-or- target is null.
+   Returns: A signed number that indicates the relative values of this instance and target.Value Meaning Less than zero The value of this instance is less than the value of target. 
+    Zero The value of this instance is equal to the value of target. Greater than zero The value of this instance is greater than the value of target.-or- target is null.
   """
   pass
  def Equals(self,obj):
@@ -22,8 +23,7 @@ class Enum:
    Returns a value indicating whether this instance is equal to a specified object.
   
    obj: An object to compare with this instance,or null.
-   Returns: true if obj is an System.Enum with the same underlying type and value as this instance; 
-    otherwise,false.
+   Returns: true if obj is an System.Enum with the same underlying type and value as this instance; otherwise,false.
   """
   pass
  @staticmethod
@@ -31,9 +31,7 @@ class Enum:
   """
   Format(enumType: Type,value: object,format: str) -> str
   
-   Converts the specified value of a specified enumerated type to its equivalent string 
-    representation according to the specified format.
-  
+   Converts the specified value of a specified enumerated type to its equivalent string representation according to the specified format.
   
    enumType: The enumeration type of the value to convert.
    value: The value to convert.
@@ -54,14 +52,11 @@ class Enum:
   """
   GetName(enumType: Type,value: object) -> str
   
-   Retrieves the name of the constant in the specified enumeration that has the specified 
-    value.
-  
+   Retrieves the name of the constant in the specified enumeration that has the specified value.
   
    enumType: An enumeration type.
    value: The value of a particular enumerated constant in terms of its underlying type.
-   Returns: A string containing the name of the enumerated constant in enumType whose value is value; 
-    or null if no such constant is found.
+   Returns: A string containing the name of the enumerated constant in enumType whose value is value; or null if no such constant is found.
   """
   pass
  @staticmethod
@@ -112,8 +107,7 @@ class Enum:
    Determines whether one or more bit fields are set in the current instance.
   
    flag: An enumeration value.
-   Returns: true if the bit field or bit fields that are set in flag are also set in the current 
-    instance; otherwise,false.
+   Returns: true if the bit field or bit fields that are set in flag are also set in the current instance; otherwise,false.
   """
   pass
  @staticmethod
@@ -133,18 +127,15 @@ class Enum:
   """
   Parse(enumType: Type,value: str) -> object
   
-   Converts the string representation of the name or numeric value of one or more enumerated 
-    constants to an equivalent enumerated object.
-  
+   Converts the string representation of the name or numeric value of one or more enumerated constants to an equivalent enumerated object.
   
    enumType: An enumeration type.
    value: A string containing the name or value to convert.
    Returns: An object of type enumType whose value is represented by value.
   Parse(enumType: Type,value: str,ignoreCase: bool) -> object
   
-   Converts the string representation of the name or numeric value of one or more enumerated 
-    constants to an equivalent enumerated object. A parameter specifies whether the operation 
-    is case-insensitive.
+   Converts the string representation of the name or numeric value of one or more enumerated constants to an equivalent enumerated object. A parameter specifies whether the 
+    operation is case-insensitive.
   
   
    enumType: An enumeration type.
@@ -236,9 +227,7 @@ class Enum:
    Returns: The string representation of the value of this instance as specified by format.
   ToString(self: Enum,format: str) -> str
   
-   Converts the value of this instance to its equivalent string representation using the 
-    specified format.
-  
+   Converts the value of this instance to its equivalent string representation using the specified format.
   
    format: A format string.
    Returns: The string representation of the value of this instance as specified by format.

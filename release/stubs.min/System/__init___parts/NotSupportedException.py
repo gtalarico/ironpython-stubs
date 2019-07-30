@@ -1,4 +1,4 @@
-class NotSupportedException:
+class NotSupportedException(SystemException):
  """
  The exception that is thrown when an invoked method is not supported,or when there is an attempt to read,seek,or write to a stream that does not support the invoked functionality.
  
@@ -6,6 +6,11 @@ class NotSupportedException:
  NotSupportedException(message: str)
  NotSupportedException(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NotSupportedException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

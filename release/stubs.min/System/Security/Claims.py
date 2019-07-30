@@ -3,12 +3,12 @@
 # from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
 
-class Claim:
+class Claim(object):
  """
  Claim(reader: BinaryReader)
  Claim(reader: BinaryReader,subject: ClaimsIdentity)
@@ -18,6 +18,11 @@ class Claim:
  Claim(type: str,value: str,valueType: str,issuer: str,originalIssuer: str)
  Claim(type: str,value: str,valueType: str,issuer: str,originalIssuer: str,subject: ClaimsIdentity)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Claim()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self,identity=None):
   """
   Clone(self: Claim) -> Claim
@@ -83,7 +88,7 @@ class Claim:
 
 
 
-class ClaimsIdentity:
+class ClaimsIdentity(object):
  """
  ClaimsIdentity()
  ClaimsIdentity(identity: IIdentity)
@@ -96,6 +101,11 @@ class ClaimsIdentity:
  ClaimsIdentity(identity: IIdentity,claims: IEnumerable[Claim],authenticationType: str,nameType: str,roleType: str)
  ClaimsIdentity(reader: BinaryReader)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ClaimsIdentity()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddClaim(self,claim):
   """ AddClaim(self: ClaimsIdentity,claim: Claim) """
   pass
@@ -220,7 +230,7 @@ Set: Label(self: ClaimsIdentity)=value
  DefaultRoleClaimType='http://schemas.microsoft.com/ws/2008/06/identity/claims/role'
 
 
-class ClaimsPrincipal:
+class ClaimsPrincipal(object):
  """
  ClaimsPrincipal()
  ClaimsPrincipal(identity: IIdentity)
@@ -228,6 +238,11 @@ class ClaimsPrincipal:
  ClaimsPrincipal(principal: IPrincipal)
  ClaimsPrincipal(reader: BinaryReader)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ClaimsPrincipal()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddIdentities(self,identities):
   """ AddIdentities(self: ClaimsPrincipal,identities: IEnumerable[ClaimsIdentity]) """
   pass
@@ -311,8 +326,13 @@ class ClaimsPrincipal:
  Current=None
 
 
-class ClaimTypes:
+class ClaimTypes(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ClaimTypes()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Actor='http://schemas.xmlsoap.org/ws/2009/09/identity/claims/actor'
  Anonymous='http://schemas.xmlsoap.org/ws/2005/05/identity/claims/anonymous'
  Authentication='http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authentication'
@@ -425,8 +445,13 @@ class ClaimTypes:
  ]
 
 
-class ClaimValueTypes:
+class ClaimValueTypes(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ClaimValueTypes()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Base64Binary='http://www.w3.org/2001/XMLSchema#base64Binary'
  Base64Octet='http://www.w3.org/2001/XMLSchema#base64Octet'
  Boolean='http://www.w3.org/2001/XMLSchema#boolean'
@@ -485,8 +510,13 @@ class ClaimValueTypes:
  ]
 
 
-class DynamicRoleClaimProvider:
+class DynamicRoleClaimProvider(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DynamicRoleClaimProvider()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def AddDynamicRoleClaims(claimsIdentity,claims):
   """ AddDynamicRoleClaims(claimsIdentity: ClaimsIdentity,claims: IEnumerable[Claim]) """

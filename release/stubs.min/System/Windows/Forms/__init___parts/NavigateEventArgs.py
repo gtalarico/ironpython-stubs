@@ -1,9 +1,13 @@
-class NavigateEventArgs:
+class NavigateEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.DataGrid.Navigate event.
  
  NavigateEventArgs(isForward: bool)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return NavigateEventArgs()
+
  @staticmethod
  def __new__(self,isForward):
   """ __new__(cls: type,isForward: bool) """

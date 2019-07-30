@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.Scripting.Remoting calls itself Remoting
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class BaseRemotingSink:
+class BaseRemotingSink(BaseChannelObjectWithProperties):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BaseRemotingSink()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ProcessRequest(self,*args):
   """ ProcessRequest(self: BaseRemotingSink,message: IMessage,headers: ITransportHeaders,stream: Stream,state: object) -> (Stream,object) """
   pass
@@ -35,8 +41,13 @@ class BaseRemotingSink:
 
 
 
-class MakePythonTypesSerializeableSink:
+class MakePythonTypesSerializeableSink(BaseRemotingSink):
  """ MakePythonTypesSerializeableSink() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MakePythonTypesSerializeableSink()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ProcessRequest(self,*args):
   """ ProcessRequest(self: BaseRemotingSink,message: IMessage,headers: ITransportHeaders,stream: Stream,state: object) -> (Stream,object) """
   pass
@@ -59,8 +70,13 @@ class MakePythonTypesSerializeableSink:
 
 
 
-class SinkProviderOf:
+class SinkProviderOf(object):
  """ SinkProviderOf[T]() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SinkProviderOf()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreateSink(self,channel):
   """ CreateSink(self: SinkProviderOf[T],channel: IChannelReceiver) -> IServerChannelSink """
   pass

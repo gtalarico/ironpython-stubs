@@ -1,5 +1,10 @@
-class Marshal:
+class Marshal(object):
  """ Provides a collection of methods for allocating unmanaged memory,copying unmanaged memory blocks,and converting managed to unmanaged types,as well as other miscellaneous methods used when interacting with unmanaged code. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Marshal()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def AddRef(pUnk):
   """
@@ -19,8 +24,7 @@ class Marshal:
    Allocates a block of memory of specified size from the COM task memory allocator.
   
    cb: The size of the block of memory to be allocated.
-   Returns: An integer representing the address of the block of memory allocated. This memory must be 
-    released with System.Runtime.InteropServices.Marshal.FreeCoTaskMem(System.IntPtr).
+   Returns: An integer representing the address of the block of memory allocated. This memory must be released with System.Runtime.InteropServices.Marshal.FreeCoTaskMem(System.IntPtr).
   """
   pass
  @staticmethod
@@ -28,23 +32,16 @@ class Marshal:
   """
   AllocHGlobal(cb: IntPtr) -> IntPtr
   
-   Allocates memory from the unmanaged memory of the process by using the pointer to the 
-    specified number of bytes.
-  
+   Allocates memory from the unmanaged memory of the process by using the pointer to the specified number of bytes.
   
    cb: The required number of bytes in memory.
-   Returns: A pointer to the newly allocated memory. This memory must be released using the 
-    System.Runtime.InteropServices.Marshal.FreeHGlobal(System.IntPtr) method.
-  
+   Returns: A pointer to the newly allocated memory. This memory must be released using the System.Runtime.InteropServices.Marshal.FreeHGlobal(System.IntPtr) method.
   AllocHGlobal(cb: int) -> IntPtr
   
-   Allocates memory from the unmanaged memory of the process by using the specified number 
-    of bytes.
-  
+   Allocates memory from the unmanaged memory of the process by using the specified number of bytes.
   
    cb: The required number of bytes in memory.
-   Returns: A pointer to the newly allocated memory. This memory must be released using the 
-    System.Runtime.InteropServices.Marshal.FreeHGlobal(System.IntPtr) method.
+   Returns: A pointer to the newly allocated memory. This memory must be released using the System.Runtime.InteropServices.Marshal.FreeHGlobal(System.IntPtr) method.
   """
   pass
  @staticmethod
@@ -52,9 +49,7 @@ class Marshal:
   """
   AreComObjectsAvailableForCleanup() -> bool
   
-   Indicates whether runtime callable wrappers (RCWs) from any context are available for 
-    cleanup.
-  
+   Indicates whether runtime callable wrappers (RCWs) from any context are available for cleanup.
    Returns: true if there are any RCWs available for cleanup; otherwise,false.
   """
   pass
@@ -66,8 +61,8 @@ class Marshal:
    Gets an interface pointer identified by the specified moniker.
   
    monikerName: The moniker corresponding to the desired interface pointer.
-   Returns: An object containing a reference to the interface pointer identified by the monikerName 
-    parameter. A moniker is a name,and in this case,the moniker is defined by an interface.
+   Returns: An object containing a reference to the interface pointer identified by the monikerName parameter. A moniker is a name,and in this case,the moniker is defined by an 
+    interface.
   """
   pass
  @staticmethod
@@ -76,91 +71,71 @@ class Marshal:
   ChangeWrapperHandleStrength(otp: object,fIsWeak: bool)
    Changes the strength of an object's COM Callable Wrapper (CCW) handle.
   
-   otp: The object whose CCW holds a reference counted handle. The handle is strong if the 
-    reference count on the CCW is greater than zero; otherwise,it is weak.
-  
-   fIsWeak: true to change the strength of the handle on the otp parameter to weak,regardless of its 
-    reference count; false to reset the handle strength on otp to be reference counted.
+   otp: The object whose CCW holds a reference counted handle. The handle is strong if the reference count on the CCW is greater than zero; otherwise,it is weak.
+   fIsWeak: true to change the strength of the handle on the otp parameter to weak,regardless of its reference count; false to reset the handle strength on otp to be reference counted.
   """
   pass
  @staticmethod
  def CleanupUnusedObjectsInCurrentContext():
   """
   CleanupUnusedObjectsInCurrentContext()
-   Notifies the runtime to clean up all Runtime Callable Wrappers (RCWs) allocated in the 
-    current context.
+   Notifies the runtime to clean up all Runtime Callable Wrappers (RCWs) allocated in the current context.
   """
   pass
  @staticmethod
  def Copy(source,*__args):
   """
   Copy(source: Array[int],startIndex: int,destination: IntPtr,length: int)
-   Copies data from a one-dimensional,managed 32-bit signed integer array to an unmanaged 
-    memory pointer.
-  
+   Copies data from a one-dimensional,managed 32-bit signed integer array to an unmanaged memory pointer.
   
    source: The one-dimensional array to copy from.
    startIndex: The zero-based index in the source array where copying should start.
    destination: The memory pointer to copy to.
    length: The number of array elements to copy.
   Copy(source: Array[Char],startIndex: int,destination: IntPtr,length: int)
-   Copies data from a one-dimensional,managed character array to an unmanaged memory 
-    pointer.
-  
+   Copies data from a one-dimensional,managed character array to an unmanaged memory pointer.
   
    source: The one-dimensional array to copy from.
    startIndex: The zero-based index in the source array where copying should start.
    destination: The memory pointer to copy to.
    length: The number of array elements to copy.
   Copy(source: Array[Int16],startIndex: int,destination: IntPtr,length: int)
-   Copies data from a one-dimensional,managed 16-bit signed integer array to an unmanaged 
-    memory pointer.
-  
+   Copies data from a one-dimensional,managed 16-bit signed integer array to an unmanaged memory pointer.
   
    source: The one-dimensional array to copy from.
    startIndex: The zero-based index in the source array where copying should start.
    destination: The memory pointer to copy to.
    length: The number of array elements to copy.
   Copy(source: Array[Int64],startIndex: int,destination: IntPtr,length: int)
-   Copies data from a one-dimensional,managed 64-bit signed integer array to an unmanaged 
-    memory pointer.
-  
+   Copies data from a one-dimensional,managed 64-bit signed integer array to an unmanaged memory pointer.
   
    source: The one-dimensional array to copy from.
    startIndex: The zero-based index in the source array where copying should start.
    destination: The memory pointer to copy to.
    length: The number of array elements to copy.
   Copy(source: Array[Single],startIndex: int,destination: IntPtr,length: int)
-   Copies data from a one-dimensional,managed single-precision floating-point number array 
-    to an unmanaged memory pointer.
-  
+   Copies data from a one-dimensional,managed single-precision floating-point number array to an unmanaged memory pointer.
   
    source: The one-dimensional array to copy from.
    startIndex: The zero-based index in the source array where copying should start.
    destination: The memory pointer to copy to.
    length: The number of array elements to copy.
   Copy(source: Array[float],startIndex: int,destination: IntPtr,length: int)
-   Copies data from a one-dimensional,managed double-precision floating-point number array 
-    to an unmanaged memory pointer.
-  
+   Copies data from a one-dimensional,managed double-precision floating-point number array to an unmanaged memory pointer.
   
    source: The one-dimensional array to copy from.
    startIndex: The zero-based index in the source array where copying should start.
    destination: The memory pointer to copy to.
    length: The number of array elements to copy.
   Copy(source: Array[Byte],startIndex: int,destination: IntPtr,length: int)
-   Copies data from a one-dimensional,managed 8-bit unsigned integer array to an unmanaged 
-    memory pointer.
-  
+   Copies data from a one-dimensional,managed 8-bit unsigned integer array to an unmanaged memory pointer.
   
    source: The one-dimensional array to copy from.
    startIndex: The zero-based index in the source array where copying should start.
    destination: The memory pointer to copy to.
    length: The number of array elements to copy.
   Copy(source: Array[IntPtr],startIndex: int,destination: IntPtr,length: int)
-   Copies data from a one-dimensional,managed System.IntPtr array to an unmanaged memory 
-    pointer.
-  
+   Copies data from a one-dimensional,managed System.IntPtr array to an unmanaged memory pointer.
   
    source: The one-dimensional array to copy from.
    startIndex: The zero-based index into the source array where copying should start.
@@ -195,18 +170,14 @@ class Marshal:
    startIndex: The zero-based index in the destination  array where copying should start.
    length: The number of array elements to copy.
   Copy(source: IntPtr,destination: Array[Single],startIndex: int,length: int)
-   Copies data from an unmanaged memory pointer to a managed single-precision floating-point 
-    number array.
-  
+   Copies data from an unmanaged memory pointer to a managed single-precision floating-point number array.
   
    source: The memory pointer to copy from.
    destination: The array to copy to.
    startIndex: The zero-based index in the destination  array where copying should start.
    length: The number of array elements to copy.
   Copy(source: IntPtr,destination: Array[float],startIndex: int,length: int)
-   Copies data from an unmanaged memory pointer to a managed double-precision floating-point 
-    number array.
-  
+   Copies data from an unmanaged memory pointer to a managed double-precision floating-point number array.
   
    source: The memory pointer to copy from.
    destination: The array to copy to.
@@ -261,9 +232,7 @@ class Marshal:
    Frees all substructures that the specified unmanaged memory block points to.
   
    ptr: A pointer to an unmanaged block of memory.
-   structuretype: Type of a formatted class. This provides the layout information necessary to delete the 
-    buffer in the ptr parameter.
-  
+   structuretype: Type of a formatted class. This provides the layout information necessary to delete the buffer in the ptr parameter.
   DestroyStructure[T](ptr: IntPtr)
   """
   pass
@@ -272,13 +241,10 @@ class Marshal:
   """
   FinalReleaseComObject(o: object) -> int
   
-   Releases all references to a Runtime Callable Wrapper (RCW) by setting its reference 
-    count to 0.
-  
+   Releases all references to a Runtime Callable Wrapper (RCW) by setting its reference count to 0.
   
    o: The RCW to be released.
-   Returns: The new value of the reference count of the RCW associated with the oparameter,which is 
-    0 (zero) if the release is successful.
+   Returns: The new value of the reference count of the RCW associated with the oparameter,which is 0 (zero) if the release is successful.
   """
   pass
  @staticmethod
@@ -305,8 +271,7 @@ class Marshal:
   FreeHGlobal(hglobal: IntPtr)
    Frees memory previously allocated from the unmanaged memory of the process.
   
-   hglobal: The handle returned by the original matching call to 
-    System.Runtime.InteropServices.Marshal.AllocHGlobal(System.IntPtr).
+   hglobal: The handle returned by the original matching call to System.Runtime.InteropServices.Marshal.AllocHGlobal(System.IntPtr).
   """
   pass
  @staticmethod
@@ -314,9 +279,7 @@ class Marshal:
   """
   GenerateGuidForType(type: Type) -> Guid
   
-   Returns the globally unique identifier (GUID) for the specified type,or generates a GUID 
-    using the algorithm used by the Type Library Exporter (Tlbexp.exe).
-  
+   Returns the globally unique identifier (GUID) for the specified type,or generates a GUID using the algorithm used by the Type Library Exporter (Tlbexp.exe).
   
    type: The type to generate a GUID for.
    Returns: An identifier for the specified type.
@@ -341,8 +304,7 @@ class Marshal:
    Obtains a running instance of the specified object from the running object table (ROT).
   
    progID: The programmatic identifier (ProgID) of the object that was requested.
-   Returns: The object that was requested; otherwise null. You can cast this object to any COM 
-    interface that it supports.
+   Returns: The object that was requested; otherwise null. You can cast this object to any COM interface that it supports.
   """
   pass
  @staticmethod
@@ -350,9 +312,7 @@ class Marshal:
   """
   GetComInterfaceForObject(o: object,T: Type) -> IntPtr
   
-   Returns a pointer to an IUnknown interface that represents the specified interface on the 
-    specified object. Custom query interface access is enabled by default.
-  
+   Returns a pointer to an IUnknown interface that represents the specified interface on the specified object. Custom query interface access is enabled by default.
   
    o: The object that provides the interface.
    T: The type of interface that is requested.
@@ -360,15 +320,13 @@ class Marshal:
   GetComInterfaceForObject[(T,TInterface)](o: T) -> IntPtr
   GetComInterfaceForObject(o: object,T: Type,mode: CustomQueryInterfaceMode) -> IntPtr
   
-   Returns a pointer to an IUnknown interface that represents the specified interface on the 
-    specified object. Custom query interface access is controlled by the specified 
+   Returns a pointer to an IUnknown interface that represents the specified interface on the specified object. Custom query interface access is controlled by the specified 
     customization mode.
   
   
    o: The object that provides the interface.
    T: The type of interface that is requested.
-   mode: One of the enumeration values that indicates whether to apply an IUnknown::QueryInterface 
-    customization that is supplied by an 
+   mode: One of the enumeration values that indicates whether to apply an IUnknown::QueryInterface customization that is supplied by an 
     System.Runtime.InteropServices.ICustomQueryInterface.
   
    Returns: The interface pointer that represents the interface for the object.
@@ -379,14 +337,11 @@ class Marshal:
   """
   GetComInterfaceForObjectInContext(o: object,t: Type) -> IntPtr
   
-   Returns an interface pointer that represents the specified interface for an object,if 
-    the caller is in the same context as that object.
-  
+   Returns an interface pointer that represents the specified interface for an object,if the caller is in the same context as that object.
   
    o: The object that provides the interface.
    t: The type of interface that is requested.
-   Returns: The interface pointer specified by t that represents the interface for the specified 
-    object,or null if the caller is not in the same context as the object.
+   Returns: The interface pointer specified by t that represents the interface for the specified object,or null if the caller is not in the same context as the object.
   """
   pass
  @staticmethod
@@ -406,9 +361,7 @@ class Marshal:
   """
   GetComSlotForMethodInfo(m: MemberInfo) -> int
   
-   Retrieves the virtual function table (v-table or VTBL) slot for a specified 
-    System.Reflection.MemberInfo type when that type is exposed to COM.
-  
+   Retrieves the virtual function table (v-table or VTBL) slot for a specified System.Reflection.MemberInfo type when that type is exposed to COM.
   
    m: An object that represents an interface method.
    Returns: The VTBL slot m identifier when it is exposed to COM.
@@ -432,13 +385,10 @@ class Marshal:
   """
   GetEndComSlot(t: Type) -> int
   
-   Retrieves the last slot in the virtual function table (v-table or VTBL) of a type when 
-    exposed to COM.
-  
+   Retrieves the last slot in the virtual function table (v-table or VTBL) of a type when exposed to COM.
   
    t: A type that represents an interface or class.
-   Returns: The last VTBL slot of the interface when exposed to COM. If the t parameter is a class,
-    the returned VTBL slot is the last slot in the interface that is generated from the 
+   Returns: The last VTBL slot of the interface when exposed to COM. If the t parameter is a class,the returned VTBL slot is the last slot in the interface that is generated from the 
     class.
   """
   pass
@@ -462,15 +412,13 @@ class Marshal:
    Returns: An object that represents the converted HRESULT.
   GetExceptionForHR(errorCode: int,errorInfo: IntPtr) -> Exception
   
-   Converts the specified HRESULT error code to a corresponding System.Exception object,
-    with additional error information passed in an IErrorInfo interface for the exception 
+   Converts the specified HRESULT error code to a corresponding System.Exception object,with additional error information passed in an IErrorInfo interface for the exception 
     object.
   
   
    errorCode: The HRESULT to be converted.
-   errorInfo: A pointer to the IErrorInfo interface that provides more information about the error. You 
-    can specify IntPtr(0) to use the current IErrorInfo interface,or IntPtr(-1) to ignore 
-    the current IErrorInfo interface and construct the exception just from the error code.
+   errorInfo: A pointer to the IErrorInfo interface that provides more information about the error. You can specify IntPtr(0) to use the current IErrorInfo interface,or IntPtr(-1) to 
+    ignore the current IErrorInfo interface and construct the exception just from the error code.
   
    Returns: An object that represents the converted HRESULT and information obtained from errorInfo.
   """
@@ -480,9 +428,7 @@ class Marshal:
   """
   GetExceptionPointers() -> IntPtr
   
-   Retrieves a computer-independent description of an exception,and information about the 
-    state that existed for the thread when the exception occurred.
-  
+   Retrieves a computer-independent description of an exception,and information about the state that existed for the thread when the exception occurred.
    Returns: A pointer to an EXCEPTION_POINTERS structure.
   """
   pass
@@ -494,9 +440,7 @@ class Marshal:
    Converts a delegate into a function pointer that is callable from unmanaged code.
   
    d: The delegate to be passed to unmanaged code.
-   Returns: A value that can be passed to unmanaged code,which,in turn,can use it to call the 
-    underlying managed delegate.
-  
+   Returns: A value that can be passed to unmanaged code,which,in turn,can use it to call the underlying managed delegate.
   GetFunctionPointerForDelegate[TDelegate](d: TDelegate) -> IntPtr
   """
   pass
@@ -527,9 +471,7 @@ class Marshal:
   """
   GetHRForLastWin32Error() -> int
   
-   Returns the HRESULT corresponding to the last error incurred by Win32 code executed using 
-    System.Runtime.InteropServices.Marshal.
-  
+   Returns the HRESULT corresponding to the last error incurred by Win32 code executed using System.Runtime.InteropServices.Marshal.
    Returns: The HRESULT corresponding to the last Win32 error code.
   """
   pass
@@ -549,13 +491,10 @@ class Marshal:
   """
   GetIDispatchForObjectInContext(o: object) -> IntPtr
   
-   Returns an IDispatch interface pointer from a managed object,if the caller is in the 
-    same context as that object.
-  
+   Returns an IDispatch interface pointer from a managed object,if the caller is in the same context as that object.
   
    o: The object whose IDispatch interface is requested.
-   Returns: The IDispatch interface pointer for the specified object,or null if the caller is not in 
-    the same context as the specified object.
+   Returns: The IDispatch interface pointer for the specified object,or null if the caller is not in the same context as the specified object.
   """
   pass
  @staticmethod
@@ -585,13 +524,10 @@ class Marshal:
   """
   GetIUnknownForObjectInContext(o: object) -> IntPtr
   
-   Returns an IUnknown interface from a managed object,if the caller is in the same context 
-    as that object.
-  
+   Returns an IUnknown interface from a managed object,if the caller is in the same context as that object.
   
    o: The object whose IUnknown interface is requested.
-   Returns: The IUnknown pointer for the specified object,or null if the caller is not in the same 
-    context as the specified object.
+   Returns: The IUnknown pointer for the specified object,or null if the caller is not in the same context as the specified object.
   """
   pass
  @staticmethod
@@ -599,8 +535,7 @@ class Marshal:
   """
   GetLastWin32Error() -> int
   
-   Returns the error code returned by the last unmanaged function that was called using 
-    platform invoke that has the 
+   Returns the error code returned by the last unmanaged function that was called using platform invoke that has the 
     System.Runtime.InteropServices.DllImportAttribute.SetLastError flag set.
   
    Returns: The last error code set by a call to the Win32 SetLastError function.
@@ -611,15 +546,12 @@ class Marshal:
   """
   GetManagedThunkForUnmanagedMethodPtr(pfnMethodToWrap: IntPtr,pbSignature: IntPtr,cbSignature: int) -> IntPtr
   
-   Gets a pointer to a runtime-generated function that marshals a call from managed to 
-    unmanaged code.
-  
+   Gets a pointer to a runtime-generated function that marshals a call from managed to unmanaged code.
   
    pfnMethodToWrap: A pointer to the method to marshal.
    pbSignature: A pointer to the method signature.
    cbSignature: The number of bytes in pbSignature.
-   Returns: A pointer to the function that will marshal a call from the pfnMethodToWrap parameter to 
-    unmanaged code.
+   Returns: A pointer to the function that will marshal a call from the pfnMethodToWrap parameter to unmanaged code.
   """
   pass
  @staticmethod
@@ -627,9 +559,7 @@ class Marshal:
   """
   GetMethodInfoForComSlot(t: Type,slot: int,memberType: ComMemberType) -> (MemberInfo,ComMemberType)
   
-   Retrieves a System.Reflection.MemberInfo object for the specified virtual function table 
-    (v-table or VTBL) slot.
-  
+   Retrieves a System.Reflection.MemberInfo object for the specified virtual function table (v-table or VTBL) slot.
   
    t: The type for which the System.Reflection.MemberInfo is to be retrieved.
    slot: The VTBL slot.
@@ -653,9 +583,7 @@ class Marshal:
   """
   GetObjectForIUnknown(pUnk: IntPtr) -> object
   
-   Returns an instance of a type that represents a COM object by a pointer to its IUnknown 
-    interface.
-  
+   Returns an instance of a type that represents a COM object by a pointer to its IUnknown interface.
   
    pUnk: A pointer to the IUnknown interface.
    Returns: An object that represents the specified unmanaged COM object.
@@ -702,13 +630,10 @@ class Marshal:
   """
   GetStartComSlot(t: Type) -> int
   
-   Gets the first slot in the virtual function table (v-table or VTBL) that contains 
-    user-defined methods.
-  
+   Gets the first slot in the virtual function table (v-table or VTBL) that contains user-defined methods.
   
    t: A type that represents an interface.
-   Returns: The first VTBL slot that contains user-defined methods. The first slot is 3 if the 
-    interface is based on IUnknown,and 7 if the interface is based on IDispatch.
+   Returns: The first VTBL slot that contains user-defined methods. The first slot is 3 if the interface is based on IUnknown,and 7 if the interface is based on IDispatch.
   """
   pass
  @staticmethod
@@ -731,8 +656,7 @@ class Marshal:
   
    pUnk: A pointer to the IUnknown interface of the unmanaged object.
    t: The type of the requested managed class.
-   Returns: An instance of the class corresponding to the System.Type object that represents the 
-    requested unmanaged COM object.
+   Returns: An instance of the class corresponding to the System.Type object that represents the requested unmanaged COM object.
   """
   pass
  @staticmethod
@@ -789,13 +713,10 @@ class Marshal:
   """
   GetTypeLibGuidForAssembly(asm: Assembly) -> Guid
   
-   Retrieves the library identifier (LIBID) that is assigned to a type library when it was 
-    exported from the specified assembly.
-  
+   Retrieves the library identifier (LIBID) that is assigned to a type library when it was exported from the specified assembly.
   
    asm: The assembly from which the type library was exported.
-   Returns: The LIBID that is assigned to a type library when it is exported from the specified 
-    assembly.
+   Returns: The LIBID that is assigned to a type library when it is exported from the specified assembly.
   """
   pass
  @staticmethod
@@ -837,9 +758,7 @@ class Marshal:
   """
   GetTypeLibVersionForAssembly(inputAssembly: Assembly) -> (int,int)
   
-   Retrieves the version number of a type library that will be exported from the specified 
-    assembly.
-  
+   Retrieves the version number of a type library that will be exported from the specified assembly.
   
    inputAssembly: A managed assembly.
   """
@@ -860,9 +779,7 @@ class Marshal:
   """
   GetUnmanagedThunkForManagedMethodPtr(pfnMethodToWrap: IntPtr,pbSignature: IntPtr,cbSignature: int) -> IntPtr
   
-   Gets a pointer to a runtime-generated function that marshals a call from unmanaged to 
-    managed code.
-  
+   Gets a pointer to a runtime-generated function that marshals a call from unmanaged to managed code.
   
    pfnMethodToWrap: A pointer to the method to marshal.
    pbSignature: A pointer to the method signature.
@@ -897,9 +814,7 @@ class Marshal:
   """
   NumParamBytes(m: MethodInfo) -> int
   
-   Calculates the number of bytes in unmanaged memory that are required to hold the 
-    parameters for the specified method.
-  
+   Calculates the number of bytes in unmanaged memory that are required to hold the parameters for the specified method.
   
    m: The method to be checked.
    Returns: The number of bytes required to represent the method parameters in unmanaged memory.
@@ -912,13 +827,9 @@ class Marshal:
   
    Returns the field offset of the unmanaged form of the managed class.
   
-   t: A value type or formatted reference type that specifies the managed class. You must apply 
-    the System.Runtime.InteropServices.StructLayoutAttribute to the class.
-  
+   t: A value type or formatted reference type that specifies the managed class. You must apply the System.Runtime.InteropServices.StructLayoutAttribute to the class.
    fieldName: The field within the t parameter.
-   Returns: The offset,in bytes,for the fieldName parameter within the specified class that is 
-    declared by platform invoke.
-  
+   Returns: The offset,in bytes,for the fieldName parameter within the specified class that is declared by platform invoke.
   OffsetOf[T](fieldName: str) -> IntPtr
   """
   pass
@@ -945,24 +856,17 @@ class Marshal:
   """
   PtrToStringAnsi(ptr: IntPtr) -> str
   
-   Copies all characters up to the first null character from an unmanaged ANSI string to a 
-    managed System.String,and widens each ANSI character to Unicode.
-  
+   Copies all characters up to the first null character from an unmanaged ANSI string to a managed System.String,and widens each ANSI character to Unicode.
   
    ptr: The address of the first character of the unmanaged string.
-   Returns: A managed string that holds a copy of the unmanaged ANSI string. If ptr is null,the 
-    method returns a null string.
-  
+   Returns: A managed string that holds a copy of the unmanaged ANSI string. If ptr is null,the method returns a null string.
   PtrToStringAnsi(ptr: IntPtr,len: int) -> str
   
-   Allocates a managed System.String,copies a specified number of characters from an 
-    unmanaged ANSI string into it,and widens each ANSI character to Unicode.
-  
+   Allocates a managed System.String,copies a specified number of characters from an unmanaged ANSI string into it,and widens each ANSI character to Unicode.
   
    ptr: The address of the first character of the unmanaged string.
    len: The byte count of the input string to copy.
-   Returns: A managed string that holds a copy of the native ANSI string if the value of the ptr 
-    parameter is not null; otherwise,this method returns null.
+   Returns: A managed string that holds a copy of the native ANSI string if the value of the ptr parameter is not null; otherwise,this method returns null.
   """
   pass
  @staticmethod
@@ -970,28 +874,17 @@ class Marshal:
   """
   PtrToStringAuto(ptr: IntPtr,len: int) -> str
   
-   Allocates a managed System.String and copies the specified number of characters from a 
-    string stored in unmanaged memory into it.
+   Allocates a managed System.String and copies the specified number of characters from a string stored in unmanaged memory into it.
   
-  
-   ptr: For Unicode platforms,the address of the first Unicode character.-or- For ANSI plaforms,
-    the address of the first ANSI character.
-  
+   ptr: For Unicode platforms,the address of the first Unicode character.-or- For ANSI plaforms,the address of the first ANSI character.
    len: The number of characters to copy.
-   Returns: A managed string that holds a copy of the native string if the value of the ptr parameter 
-    is not null; otherwise,this method returns null.
-  
+   Returns: A managed string that holds a copy of the native string if the value of the ptr parameter is not null; otherwise,this method returns null.
   PtrToStringAuto(ptr: IntPtr) -> str
   
-   Allocates a managed System.String and copies all characters up to the first null 
-    character from a string stored in unmanaged memory into it.
+   Allocates a managed System.String and copies all characters up to the first null character from a string stored in unmanaged memory into it.
   
-  
-   ptr: For Unicode platforms,the address of the first Unicode character.-or- For ANSI plaforms,
-    the address of the first ANSI character.
-  
-   Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr 
-    parameter is not null; otherwise,this method returns null.
+   ptr: For Unicode platforms,the address of the first Unicode character.-or- For ANSI plaforms,the address of the first ANSI character.
+   Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr parameter is not null; otherwise,this method returns null.
   """
   pass
  @staticmethod
@@ -999,13 +892,10 @@ class Marshal:
   """
   PtrToStringBSTR(ptr: IntPtr) -> str
   
-   Allocates a managed System.String and copies a BSTR Data Type string stored in unmanaged 
-    memory into it.
-  
+   Allocates a managed System.String and copies a BSTR Data Type string stored in unmanaged memory into it.
   
    ptr: The address of the first character of the unmanaged string.
-   Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr 
-    parameter is not null; otherwise,this method returns null.
+   Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr parameter is not null; otherwise,this method returns null.
   """
   pass
  @staticmethod
@@ -1013,24 +903,17 @@ class Marshal:
   """
   PtrToStringUni(ptr: IntPtr,len: int) -> str
   
-   Allocates a managed System.String and copies a specified number of characters from an 
-    unmanaged Unicode string into it.
-  
+   Allocates a managed System.String and copies a specified number of characters from an unmanaged Unicode string into it.
   
    ptr: The address of the first character of the unmanaged string.
    len: The number of Unicode characters to copy.
-   Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr 
-    parameter is not null; otherwise,this method returns null.
-  
+   Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr parameter is not null; otherwise,this method returns null.
   PtrToStringUni(ptr: IntPtr) -> str
   
-   Allocates a managed System.String and copies all characters up to the first null 
-    character from an unmanaged Unicode string into it.
-  
+   Allocates a managed System.String and copies all characters up to the first null character from an unmanaged Unicode string into it.
   
    ptr: The address of the first character of the unmanaged string.
-   Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr 
-    parameter is not null; otherwise,this method returns null.
+   Returns: A managed string that holds a copy of the unmanaged string if the value of the ptr parameter is not null; otherwise,this method returns null.
   """
   pass
  @staticmethod
@@ -1040,19 +923,13 @@ class Marshal:
    Marshals data from an unmanaged block of memory to a managed object.
   
    ptr: A pointer to an unmanaged block of memory.
-   structure: The object to which the data is to be copied. This must be an instance of a formatted 
-    class.
-  
+   structure: The object to which the data is to be copied. This must be an instance of a formatted class.
   PtrToStructure[T](ptr: IntPtr,structure: T)PtrToStructure(ptr: IntPtr,structureType: Type) -> object
   
-   Marshals data from an unmanaged block of memory to a newly allocated managed object of 
-    the specified type.
-  
+   Marshals data from an unmanaged block of memory to a newly allocated managed object of the specified type.
   
    ptr: A pointer to an unmanaged block of memory.
-   structureType: The type of object to be created. This object must represent a formatted class or a 
-    structure.
-  
+   structureType: The type of object to be created. This object must represent a formatted class or a structure.
    Returns: A managed object containing the data pointed to by the ptr parameter.
   PtrToStructure[T](ptr: IntPtr) -> T
   """
@@ -1191,8 +1068,7 @@ class Marshal:
    Reads a processor native-sized integer from unmanaged memory.
   
    ptr: The address in unmanaged memory from which to read.
-   Returns: The integer read from unmanaged memory. A 32 bit integer is returned on 32 bit machines 
-    and a 64 bit integer is returned on 64 bit machines.
+   Returns: The integer read from unmanaged memory. A 32 bit integer is returned on 32 bit machines and a 64 bit integer is returned on 64 bit machines.
   """
   pass
  @staticmethod
@@ -1200,16 +1076,12 @@ class Marshal:
   """
   ReAllocCoTaskMem(pv: IntPtr,cb: int) -> IntPtr
   
-   Resizes a block of memory previously allocated with 
-    System.Runtime.InteropServices.Marshal.AllocCoTaskMem(System.Int32).
+   Resizes a block of memory previously allocated with System.Runtime.InteropServices.Marshal.AllocCoTaskMem(System.Int32).
   
-  
-   pv: A pointer to memory allocated with 
-    System.Runtime.InteropServices.Marshal.AllocCoTaskMem(System.Int32).
-  
+   pv: A pointer to memory allocated with System.Runtime.InteropServices.Marshal.AllocCoTaskMem(System.Int32).
    cb: The new size of the allocated block.
-   Returns: An integer representing the address of the reallocated block of memory. This memory must 
-    be released with System.Runtime.InteropServices.Marshal.FreeCoTaskMem(System.IntPtr).
+   Returns: An integer representing the address of the reallocated block of memory. This memory must be released with 
+    System.Runtime.InteropServices.Marshal.FreeCoTaskMem(System.IntPtr).
   """
   pass
  @staticmethod
@@ -1217,18 +1089,13 @@ class Marshal:
   """
   ReAllocHGlobal(pv: IntPtr,cb: IntPtr) -> IntPtr
   
-   Resizes a block of memory previously allocated with 
-    System.Runtime.InteropServices.Marshal.AllocHGlobal(System.IntPtr).
+   Resizes a block of memory previously allocated with System.Runtime.InteropServices.Marshal.AllocHGlobal(System.IntPtr).
   
+   pv: A pointer to memory allocated with System.Runtime.InteropServices.Marshal.AllocHGlobal(System.IntPtr).
+   cb: The new size of the allocated block. This is not a pointer; it is the byte count you are requesting,cast to type System.IntPtr. If you pass a pointer,it is treated as a 
+    size.
   
-   pv: A pointer to memory allocated with 
-    System.Runtime.InteropServices.Marshal.AllocHGlobal(System.IntPtr).
-  
-   cb: The new size of the allocated block. This is not a pointer; it is the byte count you are 
-    requesting,cast to type System.IntPtr. If you pass a pointer,it is treated as a size.
-  
-   Returns: A pointer to the reallocated memory. This memory must be released using 
-    System.Runtime.InteropServices.Marshal.FreeHGlobal(System.IntPtr).
+   Returns: A pointer to the reallocated memory. This memory must be released using System.Runtime.InteropServices.Marshal.FreeHGlobal(System.IntPtr).
   """
   pass
  @staticmethod
@@ -1247,14 +1114,11 @@ class Marshal:
   """
   ReleaseComObject(o: object) -> int
   
-   Decrements the reference count of the specified Runtime Callable Wrapper (RCW) associated 
-    with the specified COM object.
-  
+   Decrements the reference count of the specified Runtime Callable Wrapper (RCW) associated with the specified COM object.
   
    o: The COM object to release.
-   Returns: The new value of the reference count of the RCW associated with o. This value is 
-    typically zero since the RCW keeps just one reference to the wrapped COM object 
-    regardless of the number of managed clients calling it.
+   Returns: The new value of the reference count of the RCW associated with o. This value is typically zero since the RCW keeps just one reference to the wrapped COM object regardless 
+    of the number of managed clients calling it.
   """
   pass
  @staticmethod
@@ -1269,13 +1133,10 @@ class Marshal:
   """
   SecureStringToBSTR(s: SecureString) -> IntPtr
   
-   Allocates a BSTR Data Type and copies the contents of a managed 
-    System.Security.SecureString object into it.
-  
+   Allocates a BSTR Data Type and copies the contents of a managed System.Security.SecureString object into it.
   
    s: The managed object to copy.
-   Returns: The address,in unmanaged memory,where the s parameter was copied to,or 0 if a null 
-    object was supplied.
+   Returns: The address,in unmanaged memory,where the s parameter was copied to,or 0 if a null object was supplied.
   """
   pass
  @staticmethod
@@ -1283,13 +1144,10 @@ class Marshal:
   """
   SecureStringToCoTaskMemAnsi(s: SecureString) -> IntPtr
   
-   Copies the contents of a managed System.Security.SecureString object to a block of memory 
-    allocated from the unmanaged COM task allocator.
-  
+   Copies the contents of a managed System.Security.SecureString object to a block of memory allocated from the unmanaged COM task allocator.
   
    s: The managed object to copy.
-   Returns: The address,in unmanaged memory,where the s parameter was copied to,or 0 if a null 
-    object was supplied.
+   Returns: The address,in unmanaged memory,where the s parameter was copied to,or 0 if a null object was supplied.
   """
   pass
  @staticmethod
@@ -1297,13 +1155,10 @@ class Marshal:
   """
   SecureStringToCoTaskMemUnicode(s: SecureString) -> IntPtr
   
-   Copies the contents of a managed System.Security.SecureString object to a block of memory 
-    allocated from the unmanaged COM task allocator.
-  
+   Copies the contents of a managed System.Security.SecureString object to a block of memory allocated from the unmanaged COM task allocator.
   
    s: The managed object to copy.
-   Returns: The address,in unmanaged memory,where the s parameter was copied to,or 0 if a null 
-    object was supplied.
+   Returns: The address,in unmanaged memory,where the s parameter was copied to,or 0 if a null object was supplied.
   """
   pass
  @staticmethod
@@ -1311,13 +1166,10 @@ class Marshal:
   """
   SecureStringToGlobalAllocAnsi(s: SecureString) -> IntPtr
   
-   Copies the contents of a managed System.Security.SecureString into unmanaged memory,
-    converting into ANSI format as it copies.
-  
+   Copies the contents of a managed System.Security.SecureString into unmanaged memory,converting into ANSI format as it copies.
   
    s: The managed object to copy.
-   Returns: The address,in unmanaged memory,to where the s parameter was copied,or 0 if a null 
-    object was supplied.
+   Returns: The address,in unmanaged memory,to where the s parameter was copied,or 0 if a null object was supplied.
   """
   pass
  @staticmethod
@@ -1325,13 +1177,10 @@ class Marshal:
   """
   SecureStringToGlobalAllocUnicode(s: SecureString) -> IntPtr
   
-   Copies the contents of a managed System.Security.SecureString object into unmanaged 
-    memory.
-  
+   Copies the contents of a managed System.Security.SecureString object into unmanaged memory.
   
    s: The managed object to copy.
-   Returns: The address,in unmanaged memory,where s was copied,or 0 if s is a 
-    System.Security.SecureString object whose length is 0.
+   Returns: The address,in unmanaged memory,where s was copied,or 0 if s is a System.Security.SecureString object whose length is 0.
   """
   pass
  @staticmethod
@@ -1382,13 +1231,10 @@ class Marshal:
   """
   StringToCoTaskMemAnsi(s: str) -> IntPtr
   
-   Copies the contents of a managed System.String to a block of memory allocated from the 
-    unmanaged COM task allocator.
-  
+   Copies the contents of a managed System.String to a block of memory allocated from the unmanaged COM task allocator.
   
    s: A managed string to be copied.
-   Returns: An integer representing a pointer to the block of memory allocated for the string,or 0 
-    if s is null.
+   Returns: An integer representing a pointer to the block of memory allocated for the string,or 0 if s is null.
   """
   pass
  @staticmethod
@@ -1396,9 +1242,7 @@ class Marshal:
   """
   StringToCoTaskMemAuto(s: str) -> IntPtr
   
-   Copies the contents of a managed System.String to a block of memory allocated from the 
-    unmanaged COM task allocator.
-  
+   Copies the contents of a managed System.String to a block of memory allocated from the unmanaged COM task allocator.
   
    s: A managed string to be copied.
    Returns: The allocated memory block,or 0 if s is null.
@@ -1409,13 +1253,10 @@ class Marshal:
   """
   StringToCoTaskMemUni(s: str) -> IntPtr
   
-   Copies the contents of a managed System.String to a block of memory allocated from the 
-    unmanaged COM task allocator.
-  
+   Copies the contents of a managed System.String to a block of memory allocated from the unmanaged COM task allocator.
   
    s: A managed string to be copied.
-   Returns: An integer representing a pointer to the block of memory allocated for the string,or 0 
-    if s is null.
+   Returns: An integer representing a pointer to the block of memory allocated for the string,or 0 if s is null.
   """
   pass
  @staticmethod
@@ -1423,9 +1264,7 @@ class Marshal:
   """
   StringToHGlobalAnsi(s: str) -> IntPtr
   
-   Copies the contents of a managed System.String into unmanaged memory,converting into 
-    ANSI format as it copies.
-  
+   Copies the contents of a managed System.String into unmanaged memory,converting into ANSI format as it copies.
   
    s: A managed string to be copied.
    Returns: The address,in unmanaged memory,to where s was copied,or 0 if s is null.
@@ -1436,9 +1275,7 @@ class Marshal:
   """
   StringToHGlobalAuto(s: str) -> IntPtr
   
-   Copies the contents of a managed System.String into unmanaged memory,converting into 
-    ANSI format if required.
-  
+   Copies the contents of a managed System.String into unmanaged memory,converting into ANSI format if required.
   
    s: A managed string to be copied.
    Returns: The address,in unmanaged memory,to where the string was copied,or 0 if s is null.
@@ -1461,16 +1298,10 @@ class Marshal:
   StructureToPtr(structure: object,ptr: IntPtr,fDeleteOld: bool)
    Marshals data from a managed object to an unmanaged block of memory.
   
-   structure: A managed object holding the data to be marshaled. This object must be an instance of a 
-    formatted class.
-  
-   ptr: A pointer to an unmanaged block of memory,which must be allocated before this method is 
-    called.
-  
-   fDeleteOld: true to have the 
-    System.Runtime.InteropServices.Marshal.DestroyStructure(System.IntPtr,System.Type) method 
-    called on the ptr parameter before this method executes. Note that passing false can lead 
-    to a memory leak.
+   structure: A managed object holding the data to be marshaled. This object must be an instance of a formatted class.
+   ptr: A pointer to an unmanaged block of memory,which must be allocated before this method is called.
+   fDeleteOld: true to have the System.Runtime.InteropServices.Marshal.DestroyStructure(System.IntPtr,System.Type) method called on the ptr parameter before this method executes. Note 
+    that passing false can lead to a memory leak.
   
   StructureToPtr[T](structure: T,ptr: IntPtr,fDeleteOld: bool)
   """
@@ -1483,14 +1314,11 @@ class Marshal:
   
    errorCode: The HRESULT corresponding to the desired exception.
   ThrowExceptionForHR(errorCode: int,errorInfo: IntPtr)
-   Throws an exception with a specific failure HRESULT,based on the specified IErrorInfo 
-    Interface interface.
-  
+   Throws an exception with a specific failure HRESULT,based on the specified IErrorInfo Interface interface.
   
    errorCode: The HRESULT corresponding to the desired exception.
-   errorInfo: A pointer to the IErrorInfo interface that provides more information about the error. You 
-    can specify IntPtr(0) to use the current IErrorInfo interface,or IntPtr(-1) to ignore 
-    the current IErrorInfo interface and construct the exception just from the error code.
+   errorInfo: A pointer to the IErrorInfo interface that provides more information about the error. You can specify IntPtr(0) to use the current IErrorInfo interface,or IntPtr(-1) to 
+    ignore the current IErrorInfo interface and construct the exception just from the error code.
   """
   pass
  @staticmethod
@@ -1637,10 +1465,7 @@ class Marshal:
  def ZeroFreeBSTR(s):
   """
   ZeroFreeBSTR(s: IntPtr)
-   Frees a BSTR Data Type pointer that was allocated using the 
-    System.Runtime.InteropServices.Marshal.SecureStringToBSTR(System.Security.SecureString) 
-    method.
-  
+   Frees a BSTR Data Type pointer that was allocated using the System.Runtime.InteropServices.Marshal.SecureStringToBSTR(System.Security.SecureString) method.
   
    s: The address of the BSTR to free.
   """
@@ -1649,10 +1474,7 @@ class Marshal:
  def ZeroFreeCoTaskMemAnsi(s):
   """
   ZeroFreeCoTaskMemAnsi(s: IntPtr)
-   Frees an unmanaged string pointer that was allocated using the 
-    System.Runtime.InteropServices.Marshal.SecureStringToCoTaskMemAnsi(System.Security.SecureS
-    tring) method.
-  
+   Frees an unmanaged string pointer that was allocated using the System.Runtime.InteropServices.Marshal.SecureStringToCoTaskMemAnsi(System.Security.SecureString) method.
   
    s: The address of the unmanaged string to free.
   """
@@ -1661,10 +1483,7 @@ class Marshal:
  def ZeroFreeCoTaskMemUnicode(s):
   """
   ZeroFreeCoTaskMemUnicode(s: IntPtr)
-   Frees an unmanaged string pointer that was allocated using the 
-    System.Runtime.InteropServices.Marshal.SecureStringToCoTaskMemUnicode(System.Security.Secu
-    reString) method.
-  
+   Frees an unmanaged string pointer that was allocated using the System.Runtime.InteropServices.Marshal.SecureStringToCoTaskMemUnicode(System.Security.SecureString) method.
   
    s: The address of the unmanaged string to free.
   """
@@ -1673,10 +1492,7 @@ class Marshal:
  def ZeroFreeGlobalAllocAnsi(s):
   """
   ZeroFreeGlobalAllocAnsi(s: IntPtr)
-   Frees an unmanaged string pointer that was allocated using the 
-    System.Runtime.InteropServices.Marshal.SecureStringToGlobalAllocAnsi(System.Security.Secur
-    eString) method.
-  
+   Frees an unmanaged string pointer that was allocated using the System.Runtime.InteropServices.Marshal.SecureStringToGlobalAllocAnsi(System.Security.SecureString) method.
   
    s: The address of the unmanaged string to free.
   """
@@ -1685,10 +1501,7 @@ class Marshal:
  def ZeroFreeGlobalAllocUnicode(s):
   """
   ZeroFreeGlobalAllocUnicode(s: IntPtr)
-   Frees an unmanaged string pointer that was allocated using the 
-    System.Runtime.InteropServices.Marshal.SecureStringToGlobalAllocUnicode(System.Security.Se
-    cureString) method.
-  
+   Frees an unmanaged string pointer that was allocated using the System.Runtime.InteropServices.Marshal.SecureStringToGlobalAllocUnicode(System.Security.SecureString) method.
   
    s: The address of the unmanaged string to free.
   """

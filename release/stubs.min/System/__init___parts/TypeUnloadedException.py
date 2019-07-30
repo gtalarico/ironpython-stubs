@@ -1,4 +1,4 @@
-class TypeUnloadedException:
+class TypeUnloadedException(SystemException):
  """
  The exception that is thrown when there is an attempt to access an unloaded class.
  
@@ -6,6 +6,11 @@ class TypeUnloadedException:
  TypeUnloadedException(message: str)
  TypeUnloadedException(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TypeUnloadedException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.ShippingLayers.Abstract calls itself Abstract
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class OnGetSettingMemberHandler:
+class OnGetSettingMemberHandler(MulticastDelegate):
  """ OnGetSettingMemberHandler(object: object,method: IntPtr) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OnGetSettingMemberHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInvoke(self,member,settings,callback,object):
   """ BeginInvoke(self: OnGetSettingMemberHandler,member: MemberInfo,settings: SystemSettings,callback: AsyncCallback,object: object) -> IAsyncResult """
   pass
@@ -29,8 +35,7 @@ class OnGetSettingMemberHandler:
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the 
-    current delegate.-or- null,if the method represented by the current delegate does not 
+   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not 
     require arguments.
   
    Returns: The object returned by the method represented by the delegate.
@@ -54,13 +59,10 @@ class OnGetSettingMemberHandler:
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is 
-    equal to the specified delegate.
-  
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate 
-    without value in its invocation list; otherwise,this instance with its original 
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original 
     invocation list.
   """
   pass
@@ -74,8 +76,13 @@ class OnGetSettingMemberHandler:
  def __reduce_ex__(self,*args):
   pass
 
-class OnGetSettingsHandler:
+class OnGetSettingsHandler(MulticastDelegate):
  """ OnGetSettingsHandler(object: object,method: IntPtr) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OnGetSettingsHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInvoke(self,settings,callback,object):
   """ BeginInvoke(self: OnGetSettingsHandler,settings: SystemSettings,callback: AsyncCallback,object: object) -> IAsyncResult """
   pass
@@ -95,8 +102,7 @@ class OnGetSettingsHandler:
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the 
-    current delegate.-or- null,if the method represented by the current delegate does not 
+   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not 
     require arguments.
   
    Returns: The object returned by the method represented by the delegate.
@@ -120,13 +126,10 @@ class OnGetSettingsHandler:
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is 
-    equal to the specified delegate.
-  
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate 
-    without value in its invocation list; otherwise,this instance with its original 
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original 
     invocation list.
   """
   pass
@@ -140,8 +143,13 @@ class OnGetSettingsHandler:
  def __reduce_ex__(self,*args):
   pass
 
-class OnSaveSettingMemberHandler:
+class OnSaveSettingMemberHandler(MulticastDelegate):
  """ OnSaveSettingMemberHandler(object: object,method: IntPtr) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OnSaveSettingMemberHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInvoke(self,member,settings,callback,object):
   """ BeginInvoke(self: OnSaveSettingMemberHandler,member: MemberInfo,settings: SystemSettings,callback: AsyncCallback,object: object) -> IAsyncResult """
   pass
@@ -161,8 +169,7 @@ class OnSaveSettingMemberHandler:
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the 
-    current delegate.-or- null,if the method represented by the current delegate does not 
+   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not 
     require arguments.
   
    Returns: The object returned by the method represented by the delegate.
@@ -186,13 +193,10 @@ class OnSaveSettingMemberHandler:
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is 
-    equal to the specified delegate.
-  
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate 
-    without value in its invocation list; otherwise,this instance with its original 
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original 
     invocation list.
   """
   pass
@@ -206,8 +210,13 @@ class OnSaveSettingMemberHandler:
  def __reduce_ex__(self,*args):
   pass
 
-class OnSaveSettingsHandler:
+class OnSaveSettingsHandler(MulticastDelegate):
  """ OnSaveSettingsHandler(object: object,method: IntPtr) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OnSaveSettingsHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInvoke(self,settings,callback,object):
   """ BeginInvoke(self: OnSaveSettingsHandler,settings: SystemSettings,callback: AsyncCallback,object: object) -> IAsyncResult """
   pass
@@ -227,8 +236,7 @@ class OnSaveSettingsHandler:
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the 
-    current delegate.-or- null,if the method represented by the current delegate does not 
+   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not 
     require arguments.
   
    Returns: The object returned by the method represented by the delegate.
@@ -252,13 +260,10 @@ class OnSaveSettingsHandler:
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is 
-    equal to the specified delegate.
-  
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate 
-    without value in its invocation list; otherwise,this instance with its original 
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original 
     invocation list.
   """
   pass
@@ -272,161 +277,222 @@ class OnSaveSettingsHandler:
  def __reduce_ex__(self,*args):
   pass
 
-class PackageBase:
- # no doc
+class PackageBase(object):
+ """  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PackageBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  BoxGuid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BoxGuid(self: PackageBase) -> Guid
+ """
+
+Get: BoxGuid(self: PackageBase) -> Guid
 
 Set: BoxGuid(self: PackageBase)=value
 """
 
  BoxId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BoxId(self: PackageBase) -> str
+ """Property to give the Wms.RemotingObjects.ShippingLayers.Abstract.PackageBase an unique number. It will be empty by default. This
+   property will be used in conjuction with the property ItemCode.
+
+Get: BoxId(self: PackageBase) -> str
 
 Set: BoxId(self: PackageBase)=value
 """
 
  CashAmount=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CashAmount(self: PackageBase) -> Decimal
+ """
+
+Get: CashAmount(self: PackageBase) -> Decimal
 
 Set: CashAmount(self: PackageBase)=value
 """
 
  CashCurrency=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CashCurrency(self: PackageBase) -> str
+ """
+
+Get: CashCurrency(self: PackageBase) -> str
 
 Set: CashCurrency(self: PackageBase)=value
 """
 
  ColliCount=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ColliCount(self: PackageBase) -> int
+ """
+
+Get: ColliCount(self: PackageBase) -> int
 
 Set: ColliCount(self: PackageBase)=value
 """
 
  ColliNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ColliNumber(self: PackageBase) -> int
+ """
+
+Get: ColliNumber(self: PackageBase) -> int
 
 Set: ColliNumber(self: PackageBase)=value
 """
 
  ColliPresetName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ColliPresetName(self: PackageBase) -> str
+ """
+
+Get: ColliPresetName(self: PackageBase) -> str
 
 Set: ColliPresetName(self: PackageBase)=value
 """
 
  ColliSpecificationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ColliSpecificationCode(self: PackageBase) -> str
+ """
+
+Get: ColliSpecificationCode(self: PackageBase) -> str
 
 Set: ColliSpecificationCode(self: PackageBase)=value
 """
 
  DangerousItems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DangerousItems(self: PackageBase) -> DangerousItems
+ """
+
+Get: DangerousItems(self: PackageBase) -> DangerousItems
 
 Set: DangerousItems(self: PackageBase)=value
 """
 
  Date=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Date(self: PackageBase) -> DateTime
+ """
+
+Get: Date(self: PackageBase) -> DateTime
 
 Set: Date(self: PackageBase)=value
 """
 
  DbKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DbKey(self: PackageBase) -> int
+ """
+
+Get: DbKey(self: PackageBase) -> int
 
 Set: DbKey(self: PackageBase)=value
 """
 
  Dimensions=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Dimensions(self: PackageBase) -> Dimensions
+ """
+
+Get: Dimensions(self: PackageBase) -> Dimensions
 
 Set: Dimensions(self: PackageBase)=value
 """
 
  IsSavedToDb=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsSavedToDb(self: PackageBase) -> bool
+ """
+
+Get: IsSavedToDb(self: PackageBase) -> bool
 
 Set: IsSavedToDb(self: PackageBase)=value
 """
 
  IsSent=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsSent(self: PackageBase) -> bool
+ """
+
+Get: IsSent(self: PackageBase) -> bool
 
 Set: IsSent(self: PackageBase)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: PackageBase) -> str
+ """
+
+Get: ItemCode(self: PackageBase) -> str
 
 Set: ItemCode(self: PackageBase)=value
 """
 
  Label=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Label(self: PackageBase) -> Array[Byte]
+ """
+
+Get: Label(self: PackageBase) -> Array[Byte]
 
 Set: Label(self: PackageBase)=value
 """
 
  LabelDuplicate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LabelDuplicate(self: PackageBase) -> Array[Byte]
+ """
+
+Get: LabelDuplicate(self: PackageBase) -> Array[Byte]
 
 Set: LabelDuplicate(self: PackageBase)=value
 """
 
  OrderReferences=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderReferences(self: PackageBase) -> References
+ """
+
+Get: OrderReferences(self: PackageBase) -> References
 
 Set: OrderReferences(self: PackageBase)=value
 """
 
  OuterReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OuterReference(self: PackageBase) -> str
+ """
+
+Get: OuterReference(self: PackageBase) -> str
 
 Set: OuterReference(self: PackageBase)=value
 """
 
  PackageType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackageType(self: PackageBase) -> PackageType
+ """
+
+Get: PackageType(self: PackageBase) -> PackageType
 
 Set: PackageType(self: PackageBase)=value
 """
 
  PackingSlipLines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackingSlipLines(self: PackageBase) -> List[PackingSlipLine]
+ """A System.Collections.Generic.List with the items in this package
+
+Get: PackingSlipLines(self: PackageBase) -> List[PackingSlipLine]
 
 Set: PackingSlipLines(self: PackageBase)=value
 """
 
  Shipment=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Shipment(self: PackageBase) -> ShipmentBase
+ """
+
+Get: Shipment(self: PackageBase) -> ShipmentBase
 
 """
 
  TrackingUrl=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TrackingUrl(self: PackageBase) -> str
+ """
+
+Get: TrackingUrl(self: PackageBase) -> str
 
 Set: TrackingUrl(self: PackageBase)=value
 """
 
  Weight=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Weight(self: PackageBase) -> Decimal
+ """
+
+Get: Weight(self: PackageBase) -> Decimal
 
 Set: Weight(self: PackageBase)=value
 """
 
  YourReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: YourReference(self: PackageBase) -> str
+ """A reference of the shipper for this package
+
+Get: YourReference(self: PackageBase) -> str
 
 Set: YourReference(self: PackageBase)=value
 """
 
 
 
-class ServiceBase:
- # no doc
+class ServiceBase(object):
+ """  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ServiceBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -436,47 +502,66 @@ class ServiceBase:
   """ __repr__(self: object) -> str """
   pass
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: ServiceBase) -> str
+ """
+
+Get: Description(self: ServiceBase) -> str
 
 """
 
  ExtraCharges=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ExtraCharges(self: ServiceBase) -> Charges
+ """
+
+Get: ExtraCharges(self: ServiceBase) -> Charges
 
 Set: ExtraCharges(self: ServiceBase)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: ServiceBase) -> str
+ """
+
+Get: Id(self: ServiceBase) -> str
 
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name(self: ServiceBase) -> str
+ """
+
+Get: Name(self: ServiceBase) -> str
 
 """
 
  Shipper=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Shipper(self: ServiceBase) -> ShipperBase
+ """
+
+Get: Shipper(self: ServiceBase) -> ShipperBase
 
 """
 
  TotalCharge=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalCharge(self: ServiceBase) -> Charge
+ """
+
+Get: TotalCharge(self: ServiceBase) -> Charge
 
 Set: TotalCharge(self: ServiceBase)=value
 """
 
  TransportationCharge=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TransportationCharge(self: ServiceBase) -> Charge
+ """
+
+Get: TransportationCharge(self: ServiceBase) -> Charge
 
 Set: TransportationCharge(self: ServiceBase)=value
 """
 
 
 
-class ShipmentBase:
+class ShipmentBase(Address):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ShipmentBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetPossibleServices(self):
   """ GetPossibleServices(self: ShipmentBase) -> Services """
   pass
@@ -531,7 +616,9 @@ Set: Documents(self: ShipmentBase)=value
 """
 
  HasAttachments=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HasAttachments(self: ShipmentBase) -> bool
+ """Indicates if the shipments has any attachments (documents). This doesn't include labels!
+
+Get: HasAttachments(self: ShipmentBase) -> bool
 
 """
 
@@ -541,7 +628,9 @@ Set: Documents(self: ShipmentBase)=value
 """
 
  IsCod=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsCod(self: ShipmentBase) -> bool
+ """rembours
+
+Get: IsCod(self: ShipmentBase) -> bool
 
 Set: IsCod(self: ShipmentBase)=value
 """
@@ -575,13 +664,17 @@ Set: Reference(self: ShipmentBase)=value
 """
 
  Service=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Service(self: ShipmentBase) -> ServiceBase
+ """the id of the service that should be used when shipping this packet
+
+Get: Service(self: ShipmentBase) -> ServiceBase
 
 Set: Service(self: ShipmentBase)=value
 """
 
  Shipper=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Shipper(self: ShipmentBase) -> ShipperBase
+ """holds reference to shipper object
+
+Get: Shipper(self: ShipmentBase) -> ShipperBase
 
 """
 
@@ -592,8 +685,13 @@ Set: Service(self: ShipmentBase)=value
 
 
 
-class ShipperBase:
- # no doc
+class ShipperBase(object):
+ """  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ShipperBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetServiceLevels(self,services):
   """ GetServiceLevels(self: ShipperBase) -> (int,Services) """
   pass
@@ -630,42 +728,58 @@ class ShipperBase:
   """ __repr__(self: object) -> str """
   pass
  ColliSpecificationCodes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ColliSpecificationCodes(self: ShipperBase) -> Array[str]
+ """
+
+Get: ColliSpecificationCodes(self: ShipperBase) -> Array[str]
 
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: ShipperBase) -> str
+ """
+
+Get: Description(self: ShipperBase) -> str
 
 """
 
  DimensionMandatory=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DimensionMandatory(self: ShipperBase) -> bool
+ """
+
+Get: DimensionMandatory(self: ShipperBase) -> bool
 
 """
 
  Logo48=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Logo48(self: ShipperBase) -> Bitmap
+ """
+
+Get: Logo48(self: ShipperBase) -> Bitmap
 
 """
 
  Logo64=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Logo64(self: ShipperBase) -> Bitmap
+ """
+
+Get: Logo64(self: ShipperBase) -> Bitmap
 
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name(self: ShipperBase) -> str
+ """
+
+Get: Name(self: ShipperBase) -> str
 
 """
 
  SupportsRates=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SupportsRates(self: ShipperBase) -> bool
+ """
+
+Get: SupportsRates(self: ShipperBase) -> bool
 
 """
 
  UniqueId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UniqueId(self: ShipperBase) -> str
+ """
+
+Get: UniqueId(self: ShipperBase) -> str
 
 """
 

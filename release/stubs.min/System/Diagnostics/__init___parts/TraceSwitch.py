@@ -1,10 +1,15 @@
-class TraceSwitch:
+class TraceSwitch(Switch):
  """
  Provides a multilevel switch to control tracing and debug output without recompiling your code.
  
  TraceSwitch(displayName: str,description: str)
  TraceSwitch(displayName: str,description: str,defaultSwitchValue: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TraceSwitch()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,displayName,description,defaultSwitchValue=None):
   """

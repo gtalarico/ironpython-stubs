@@ -1,20 +1,22 @@
-class AppDomainManager:
+class AppDomainManager(MarshalByRefObject):
  """
  Provides a managed equivalent of an unmanaged host.
  
  AppDomainManager()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AppDomainManager()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CheckSecuritySettings(self,state):
   """
   CheckSecuritySettings(self: AppDomainManager,state: SecurityState) -> bool
   
    Indicates whether the specified operation is allowed in the application domain.
   
-   state: A subclass of System.Security.SecurityState that identifies the operation whose security 
-    status is requested.
-  
-   Returns: true if the host allows the operation specified by state to be performed in the 
-    application domain; otherwise,false.
+   state: A subclass of System.Security.SecurityState that identifies the operation whose security status is requested.
+   Returns: true if the host allows the operation specified by state to be performed in the application domain; otherwise,false.
   """
   pass
  def CreateDomain(self,friendlyName,securityInfo,appDomainInfo):
@@ -24,9 +26,7 @@ class AppDomainManager:
    Returns a new or existing application domain.
   
    friendlyName: The friendly name of the domain.
-   securityInfo: An object that contains evidence mapped through the security policy to establish a 
-    top-of-stack permission set.
-  
+   securityInfo: An object that contains evidence mapped through the security policy to establish a top-of-stack permission set.
    appDomainInfo: An object that contains application domain initialization information.
    Returns: A new or existing application domain.
   """
@@ -38,9 +38,7 @@ class AppDomainManager:
    Provides a helper method to create an application domain.
   
    friendlyName: The friendly name of the domain.
-   securityInfo: An object that contains evidence mapped through the security policy to establish a 
-    top-of-stack permission set.
-  
+   securityInfo: An object that contains evidence mapped through the security policy to establish a top-of-stack permission set.
    appDomainInfo: An object that contains application domain initialization information.
    Returns: A newly created application domain.
   """

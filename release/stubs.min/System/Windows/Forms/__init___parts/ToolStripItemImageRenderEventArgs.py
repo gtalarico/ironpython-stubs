@@ -1,10 +1,14 @@
-class ToolStripItemImageRenderEventArgs:
+class ToolStripItemImageRenderEventArgs(ToolStripItemRenderEventArgs):
  """
  Provides data for the System.Windows.Forms.ToolStripRenderer.RenderItemImage event.
  
  ToolStripItemImageRenderEventArgs(g: Graphics,item: ToolStripItem,imageRectangle: Rectangle)
  ToolStripItemImageRenderEventArgs(g: Graphics,item: ToolStripItem,image: Image,imageRectangle: Rectangle)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripItemImageRenderEventArgs()
+
  @staticmethod
  def __new__(self,g,item,*__args):
   """

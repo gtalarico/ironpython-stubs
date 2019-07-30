@@ -1,61 +1,90 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.Security calls itself Security
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class AuthenticationArgs:
- """ AuthenticationArgs() """
+class AuthenticationArgs(object):
+ """
+ Contains all required fields for login
+ 
+ AuthenticationArgs()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AuthenticationArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ClientName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ClientName(self: AuthenticationArgs) -> str
+ """
+
+Get: ClientName(self: AuthenticationArgs) -> str
 
 Set: ClientName(self: AuthenticationArgs)=value
 """
 
  ClientTime=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ClientTime(self: AuthenticationArgs) -> DateTime
+ """
+
+Get: ClientTime(self: AuthenticationArgs) -> DateTime
 
 Set: ClientTime(self: AuthenticationArgs)=value
 """
 
  ClientVersion=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ClientVersion(self: AuthenticationArgs) -> Version
+ """
+
+Get: ClientVersion(self: AuthenticationArgs) -> Version
 
 Set: ClientVersion(self: AuthenticationArgs)=value
 """
 
  DeviceType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DeviceType(self: AuthenticationArgs) -> DeviceTypesEnum
+ """
+
+Get: DeviceType(self: AuthenticationArgs) -> DeviceTypesEnum
 
 Set: DeviceType(self: AuthenticationArgs)=value
 """
 
  MacAddress=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: MacAddress(self: AuthenticationArgs) -> str
+ """
+
+Get: MacAddress(self: AuthenticationArgs) -> str
 
 Set: MacAddress(self: AuthenticationArgs)=value
 """
 
  Password=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Password(self: AuthenticationArgs) -> str
+ """
+
+Get: Password(self: AuthenticationArgs) -> str
 
 Set: Password(self: AuthenticationArgs)=value
 """
 
  UserName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UserName(self: AuthenticationArgs) -> str
+ """
+
+Get: UserName(self: AuthenticationArgs) -> str
 
 Set: UserName(self: AuthenticationArgs)=value
 """
 
 
 
-class RemotingIdentity:
+class RemotingIdentity(object):
  """ RemotingIdentity(accessId: str,clientName: str,userName: str) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RemotingIdentity()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,*__args):
   """
   Equals(self: RemotingIdentity,obj: object) -> bool
@@ -66,7 +95,11 @@ class RemotingIdentity:
   """ GetHashCode(self: RemotingIdentity) -> int """
   pass
  def ToSession(self):
-  """ ToSession(self: RemotingIdentity) -> Session """
+  """
+  ToSession(self: RemotingIdentity) -> Session
+  
+   Converts a RemotingIdentity object to a smaller,leaner Session object for storage.
+  """
   pass
  def ToString(self):
   """ ToString(self: RemotingIdentity) -> str """
@@ -81,57 +114,77 @@ class RemotingIdentity:
  def __ne__(self,*args):
   pass
  AccessId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AccessId(self: RemotingIdentity) -> str
+ """
+
+Get: AccessId(self: RemotingIdentity) -> str
 
 """
 
  ClientName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ClientName(self: RemotingIdentity) -> str
+ """
+
+Get: ClientName(self: RemotingIdentity) -> str
 
 """
 
  Device=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Device(self: RemotingIdentity) -> Device
+ """
+
+Get: Device(self: RemotingIdentity) -> Device
 
 Set: Device(self: RemotingIdentity)=value
 """
 
  EndPoint=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: EndPoint(self: RemotingIdentity) -> str
+ """
+
+Get: EndPoint(self: RemotingIdentity) -> str
 
 Set: EndPoint(self: RemotingIdentity)=value
 """
 
  IsAnonymous=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsAnonymous(self: RemotingIdentity) -> bool
+ """
+
+Get: IsAnonymous(self: RemotingIdentity) -> bool
 
 """
 
  PreferredLanguage=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreferredLanguage(self: RemotingIdentity) -> str
+ """
+
+Get: PreferredLanguage(self: RemotingIdentity) -> str
 
 Set: PreferredLanguage(self: RemotingIdentity)=value
 """
 
  UserDisplayName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UserDisplayName(self: RemotingIdentity) -> str
+ """
+
+Get: UserDisplayName(self: RemotingIdentity) -> str
 
 Set: UserDisplayName(self: RemotingIdentity)=value
 """
 
  UserId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UserId(self: RemotingIdentity) -> int
+ """
+
+Get: UserId(self: RemotingIdentity) -> int
 
 Set: UserId(self: RemotingIdentity)=value
 """
 
  UserName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UserName(self: RemotingIdentity) -> str
+ """
+
+Get: UserName(self: RemotingIdentity) -> str
 
 """
 
  Zone=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Zone(self: RemotingIdentity) -> Zone
+ """
+
+Get: Zone(self: RemotingIdentity) -> Zone
 
 Set: Zone(self: RemotingIdentity)=value
 """

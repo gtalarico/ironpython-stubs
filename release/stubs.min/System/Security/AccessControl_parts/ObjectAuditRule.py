@@ -1,5 +1,10 @@
-class ObjectAuditRule:
+class ObjectAuditRule(AuditRule):
  """ Represents a combination of a user's identity,an access mask,and audit conditions. An System.Security.AccessControl.ObjectAuditRule object also contains information about the type of object to which the rule applies,the type of child object that can inherit the rule,how the rule is inherited by child objects,and how that inheritance is propagated. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ObjectAuditRule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*args): #cannot find CLR constructor
   """ __new__(cls: type,identity: IdentityReference,accessMask: int,isInherited: bool,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,objectType: Guid,inheritedObjectType: Guid,auditFlags: AuditFlags) """

@@ -1,10 +1,15 @@
-class ArgIterator:
+class ArgIterator(object):
  """
  Represents a variable-length argument list; that is,the parameters of a function that takes a variable number of arguments.
  
  ArgIterator(arglist: RuntimeArgumentHandle)
  ArgIterator(arglist: RuntimeArgumentHandle,ptr: Void*)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ArgIterator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def End(self):
   """
   End(self: ArgIterator)

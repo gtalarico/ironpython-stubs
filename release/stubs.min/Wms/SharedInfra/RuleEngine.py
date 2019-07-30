@@ -1,19 +1,25 @@
 # encoding: utf-8
 # module Wms.SharedInfra.RuleEngine calls itself RuleEngine
-# from Wms.SharedInfra,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.SharedInfra,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class Condition:
+class Condition(object):
  """
  Condition()
  Condition(field: str,operator: str,value: str)
  Condition(field: str,operator: str,values: IEnumerable[str])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Condition()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -50,6 +56,11 @@ Set: Values(self: Condition)=value
 
 class ICondition:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ICondition()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -75,6 +86,11 @@ Set: Values(self: ICondition)=value
 
 class IRule:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IRule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -106,6 +122,11 @@ Set: Priority(self: IRule)=value
 
 class OperatorEnum:
  """ enum OperatorEnum,values: OperatorIn (2),OperatorIs (0),OperatorIsNot (1),OperatorNotIn (3) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OperatorEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -136,8 +157,13 @@ class OperatorEnum:
  value__=None
 
 
-class Rule:
+class Rule(object):
  """ Rule() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Rule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -170,8 +196,13 @@ Set: Priority(self: Rule)=value
 
 
 
-class RuleEngine:
+class RuleEngine(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RuleEngine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def CalculatePriority(*__args):
   """ CalculatePriority(printRules: IEnumerable[IRule])CalculatePriority(rule: IRule) -> int """

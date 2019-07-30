@@ -3,7 +3,7 @@
 # from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
@@ -14,6 +14,11 @@ class AssemblyTargetedPatchBandAttribute:
  
  AssemblyTargetedPatchBandAttribute(targetedPatchBand: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AssemblyTargetedPatchBandAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -32,6 +37,11 @@ Get: TargetedPatchBand(self: AssemblyTargetedPatchBandAttribute) -> str
 
 class GCLargeObjectHeapCompactionMode:
  """ enum GCLargeObjectHeapCompactionMode,values: CompactOnce (2),Default (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GCLargeObjectHeapCompactionMode()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -66,6 +76,11 @@ class GCLatencyMode:
  
  enum GCLatencyMode,values: Batch (0),Interactive (1),LowLatency (2),NoGCRegion (4),SustainedLowLatency (3)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GCLatencyMode()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -97,20 +112,30 @@ class GCLatencyMode:
  value__=None
 
 
-class GCSettings:
+class GCSettings(object):
  """ Specifies the garbage collection settings for the current process. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GCSettings()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  IsServerGC=False
  LargeObjectHeapCompactionMode=None
  LatencyMode=None
  __all__=[]
 
 
-class MemoryFailPoint:
+class MemoryFailPoint(CriticalFinalizerObject):
  """
  Checks for sufficient memory resources prior to execution. This class cannot be inherited.
  
  MemoryFailPoint(sizeInMegabytes: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MemoryFailPoint()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: MemoryFailPoint)
@@ -131,8 +156,13 @@ class MemoryFailPoint:
   """ __new__(cls: type,sizeInMegabytes: int) """
   pass
 
-class ProfileOptimization:
+class ProfileOptimization(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProfileOptimization()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def SetProfileRoot(directoryPath):
   """ SetProfileRoot(directoryPath: str) """
@@ -153,6 +183,11 @@ class TargetedPatchingOptOutAttribute:
  
  TargetedPatchingOptOutAttribute(reason: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TargetedPatchingOptOutAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

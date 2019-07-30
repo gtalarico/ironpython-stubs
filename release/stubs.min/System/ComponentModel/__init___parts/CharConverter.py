@@ -1,16 +1,19 @@
-class CharConverter:
+class CharConverter(TypeConverter):
  """
  Provides a type converter to convert Unicode character objects to and from various other representations.
  
  CharConverter()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CharConverter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CanConvertFrom(self,*__args):
   """
   CanConvertFrom(self: CharConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object in the given source 
-    type to a Unicode character object using the specified context.
-  
+   Gets a value indicating whether this converter can convert an object in the given source type to a Unicode character object using the specified context.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    sourceType: A System.Type that represents the type you want to convert from.

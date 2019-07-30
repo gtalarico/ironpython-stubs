@@ -1,19 +1,25 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.EdiMessaging.Messages.Rp calls itself Rp
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class RpInboundFileMessage:
+class RpInboundFileMessage(MessageBase):
  """
  RpInboundFileMessage()
  RpInboundFileMessage(message: IMessage)
  RpInboundFileMessage(data: RpInboundFileMessageData)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RpInboundFileMessage()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -35,8 +41,13 @@ Set: Data(self: RpInboundFileMessage)=value
  TypeName='RP Inbound File: {0}'
 
 
-class RpInboundFileMessageData:
+class RpInboundFileMessageData(object):
  """ RpInboundFileMessageData() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RpInboundFileMessageData()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Base64Content=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Base64Content(self: RpInboundFileMessageData) -> str
 

@@ -1,10 +1,15 @@
-class CryptoKeyAccessRule:
+class CryptoKeyAccessRule(AccessRule):
  """
  Represents an access rule for a cryptographic key. An access rule represents a combination of a user's identity,an access mask,and an access control type (allow or deny). An access rule object also contains information about the how the rule is inherited by child objects and how that inheritance is propagated.
  
  CryptoKeyAccessRule(identity: IdentityReference,cryptoKeyRights: CryptoKeyRights,type: AccessControlType)
  CryptoKeyAccessRule(identity: str,cryptoKeyRights: CryptoKeyRights,type: AccessControlType)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CryptoKeyAccessRule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,identity,cryptoKeyRights,type):
   """

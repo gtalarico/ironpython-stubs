@@ -1,9 +1,14 @@
-class RegistrationServices:
+class RegistrationServices(object):
  """
  Provides a set of services for registering and unregistering managed assemblies for use from COM.
  
  RegistrationServices()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RegistrationServices()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetManagedCategoryGuid(self):
   """
   GetManagedCategoryGuid(self: RegistrationServices) -> Guid
@@ -27,8 +32,7 @@ class RegistrationServices:
   GetRegistrableTypesInAssembly(self: RegistrationServices,assembly: Assembly) -> Array[Type]
   
    Retrieves a list of classes in an assembly that would be registered by a call to 
-    System.Runtime.InteropServices.RegistrationServices.RegisterAssembly(System.Reflection.Ass
-    embly,System.Runtime.InteropServices.AssemblyRegistrationFlags).
+    System.Runtime.InteropServices.RegistrationServices.RegisterAssembly(System.Reflection.Assembly,System.Runtime.InteropServices.AssemblyRegistrationFlags).
   
   
    assembly: The assembly to search for classes.
@@ -42,11 +46,8 @@ class RegistrationServices:
    Registers the classes in a managed assembly to enable creation from COM.
   
    assembly: The assembly to be registered.
-   flags: An System.Runtime.InteropServices.AssemblyRegistrationFlags value indicating any special 
-    settings used when registering assembly.
-  
-   Returns: true if assembly contains types that were successfully registered; otherwise false if the 
-    assembly contains no eligible types.
+   flags: An System.Runtime.InteropServices.AssemblyRegistrationFlags value indicating any special settings used when registering assembly.
+   Returns: true if assembly contains types that were successfully registered; otherwise false if the assembly contains no eligible types.
   """
   pass
  def RegisterTypeForComClients(self,type,*__args):
@@ -59,17 +60,11 @@ class RegistrationServices:
    g: The System.Guid used to register the specified type.
   RegisterTypeForComClients(self: RegistrationServices,type: Type,classContext: RegistrationClassContext,flags: RegistrationConnectionType) -> int
   
-   Registers the specified type with COM using the specified execution context and 
-    connection type.
-  
+   Registers the specified type with COM using the specified execution context and connection type.
   
    type: The System.Type object to register for use from COM.
-   classContext: One of the System.Runtime.InteropServices.RegistrationClassContext values that indicates 
-    the context in which the executable code will be run.
-  
-   flags: One of the System.Runtime.InteropServices.RegistrationConnectionType values that 
-    specifies how connections are made to the class object.
-  
+   classContext: One of the System.Runtime.InteropServices.RegistrationClassContext values that indicates the context in which the executable code will be run.
+   flags: One of the System.Runtime.InteropServices.RegistrationConnectionType values that specifies how connections are made to the class object.
    Returns: An integer that represents a cookie value.
   """
   pass
@@ -77,15 +72,13 @@ class RegistrationServices:
   """
   TypeRepresentsComType(self: RegistrationServices,type: Type) -> bool
   
-   Indicates whether a type is marked with the 
-    System.Runtime.InteropServices.ComImportAttribute,or derives from a type marked with the 
+   Indicates whether a type is marked with the System.Runtime.InteropServices.ComImportAttribute,or derives from a type marked with the 
     System.Runtime.InteropServices.ComImportAttribute and shares the same GUID as the parent.
   
   
    type: The type to check for being a COM type.
-   Returns: true if a type is marked with the System.Runtime.InteropServices.ComImportAttribute,or 
-    derives from a type marked with the System.Runtime.InteropServices.ComImportAttribute and 
-    shares the same GUID as the parent; otherwise false.
+   Returns: true if a type is marked with the System.Runtime.InteropServices.ComImportAttribute,or derives from a type marked with the 
+    System.Runtime.InteropServices.ComImportAttribute and shares the same GUID as the parent; otherwise false.
   """
   pass
  def TypeRequiresRegistration(self,type):
@@ -105,23 +98,20 @@ class RegistrationServices:
    Unregisters the classes in a managed assembly.
   
    assembly: The assembly to be unregistered.
-   Returns: true if assembly contains types that were successfully unregistered; otherwise false if 
-    the assembly contains no eligible types.
+   Returns: true if assembly contains types that were successfully unregistered; otherwise false if the assembly contains no eligible types.
   """
   pass
  def UnregisterTypeForComClients(self,cookie):
   """
   UnregisterTypeForComClients(self: RegistrationServices,cookie: int)
    Removes references to a type registered with the 
-    System.Runtime.InteropServices.RegistrationServices.RegisterTypeForComClients(System.Type,
-    System.Runtime.InteropServices.RegistrationClassContext,System.Runtime.InteropServices.Reg
-    istrationConnectionType) method.
+    System.Runtime.InteropServices.RegistrationServices.RegisterTypeForComClients(System.Type,System.Runtime.InteropServices.RegistrationClassContext,System.Runtime.InteropServi
+    ces.RegistrationConnectionType) method.
   
   
    cookie: The cookie value returned by a previous call to the 
-    System.Runtime.InteropServices.RegistrationServices.RegisterTypeForComClients(System.Type,
-    System.Runtime.InteropServices.RegistrationClassContext,System.Runtime.InteropServices.Reg
-    istrationConnectionType) method overload.
+    System.Runtime.InteropServices.RegistrationServices.RegisterTypeForComClients(System.Type,System.Runtime.InteropServices.RegistrationClassContext,System.Runtime.InteropServi
+    ces.RegistrationConnectionType) method overload.
   """
   pass
  def __init__(self,*args):

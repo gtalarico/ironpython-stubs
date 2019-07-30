@@ -1,25 +1,22 @@
-class DataGridViewAdvancedBorderStyle:
+class DataGridViewAdvancedBorderStyle(object,ICloneable):
  """
  Contains border styles for the cells in a System.Windows.Forms.DataGridView control.
  
  DataGridViewAdvancedBorderStyle()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewAdvancedBorderStyle()
+
  def Equals(self,other):
   """
   Equals(self: DataGridViewAdvancedBorderStyle,other: object) -> bool
   
-   Determines whether the specified object is equal to the current 
-    System.Windows.Forms.DataGridViewAdvancedBorderStyle.
-  
+   Determines whether the specified object is equal to the current System.Windows.Forms.DataGridViewAdvancedBorderStyle.
   
    other: An System.Object to be compared.
-   Returns: true if other is a System.Windows.Forms.DataGridViewAdvancedBorderStyle and the values 
-    for the System.Windows.Forms.DataGridViewAdvancedBorderStyle.Top,
-    System.Windows.Forms.DataGridViewAdvancedBorderStyle.Bottom,
-    System.Windows.Forms.DataGridViewAdvancedBorderStyle.Left,and 
-    System.Windows.Forms.DataGridViewAdvancedBorderStyle.Right properties are equal to their 
-    counterpart in the current System.Windows.Forms.DataGridViewAdvancedBorderStyle; 
-    otherwise,false.
+   Returns: true if other is a System.Windows.Forms.DataGridViewAdvancedBorderStyle and the values for the System.Windows.Forms.DataGridViewAdvancedBorderStyle.Top,System.Windows.Forms.DataGridViewAdvancedBorderStyle.Bottom,System.Windows.Forms.DataGridViewAdvancedBorderStyle.Left,and System.Windows.Forms.DataGridViewAdvancedBorderStyle.Right properties are equal to their counterpart in the current 
+    System.Windows.Forms.DataGridViewAdvancedBorderStyle; otherwise,false.
   """
   pass
  def GetHashCode(self):

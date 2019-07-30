@@ -10,11 +10,14 @@
 
 class IRootGridEntry:
  """ Defines methods and a property that allow filtering on specific attributes. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return IRootGridEntry()
+
  def ResetBrowsableAttributes(self):
   """
   ResetBrowsableAttributes(self: IRootGridEntry)
-   Resets the System.Windows.Forms.PropertyGridInternal.IRootGridEntry.BrowsableAttributes 
-    property to the default value.
+   Resets the System.Windows.Forms.PropertyGridInternal.IRootGridEntry.BrowsableAttributes property to the default value.
   """
   pass
  def ShowCategories(self,showCategories):
@@ -38,21 +41,22 @@ Set: BrowsableAttributes(self: IRootGridEntry)=value
 
 
 
-class PropertiesTab:
+class PropertiesTab(PropertyTab,IExtenderProvider):
  """
  Represents the Properties tab on a System.Windows.Forms.PropertyGrid control.
  
  PropertiesTab()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return PropertiesTab()
+
  def Dispose(self):
   """
   Dispose(self: PropertyTab,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.Design.PropertyTab and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.Design.PropertyTab and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetDefaultProperty(self,obj):
@@ -66,21 +70,14 @@ class PropertiesTab:
   GetProperties(self: PropertiesTab,component: object,attributes: Array[Attribute]) -> PropertyDescriptorCollection
   
    component: The component to retrieve properties from.
-   attributes: An array of type System.Attribute that indicates the attributes of the properties to 
-    retrieve.
-  
+   attributes: An array of type System.Attribute that indicates the attributes of the properties to retrieve.
    Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the properties.
   GetProperties(self: PropertiesTab,context: ITypeDescriptorContext,component: object,attributes: Array[Attribute]) -> PropertyDescriptorCollection
   
-   context: An System.ComponentModel.ITypeDescriptorContext that indicates the context to retrieve 
-    properties from.
-  
+   context: An System.ComponentModel.ITypeDescriptorContext that indicates the context to retrieve properties from.
    component: The component to retrieve properties from.
-   attributes: An array of type System.Attribute that indicates the attributes of the properties to 
-    retrieve.
-  
-   Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the properties 
-    matching the specified context and attributes.
+   attributes: An array of type System.Attribute that indicates the attributes of the properties to retrieve.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection that contains the properties matching the specified context and attributes.
   """
   pass
  def __init__(self,*args):
@@ -102,12 +99,16 @@ Get: TabName(self: PropertiesTab) -> str
 
 
 
-class PropertyGridCommands:
+class PropertyGridCommands(object):
  """
  Contains a set of menu commands used by the designer in Visual Studio.
  
  PropertyGridCommands()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return PropertyGridCommands()
+
  Commands=None
  Description=None
  Hide=None

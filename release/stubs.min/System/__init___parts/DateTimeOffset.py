@@ -1,4 +1,4 @@
-class DateTimeOffset:
+class DateTimeOffset(object):
  """
  Represents a point in time,typically expressed as a date and time of day,relative to Coordinated Universal Time (UTC).
  
@@ -9,6 +9,11 @@ class DateTimeOffset:
  DateTimeOffset(year: int,month: int,day: int,hour: int,minute: int,second: int,millisecond: int,offset: TimeSpan)
  DateTimeOffset(year: int,month: int,day: int,hour: int,minute: int,second: int,millisecond: int,calendar: Calendar,offset: TimeSpan)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DateTimeOffset()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,timeSpan):
   """
   Add(self: DateTimeOffset,timeSpan: TimeSpan) -> DateTimeOffset
@@ -16,34 +21,27 @@ class DateTimeOffset:
    Adds a specified time interval to a System.DateTimeOffset object.
   
    timeSpan: A System.TimeSpan object that represents a positive or a negative time interval.
-   Returns: An object whose value is the sum of the date and time represented by the current 
-    System.DateTimeOffset object and the time interval represented by timeSpan.
+   Returns: An object whose value is the sum of the date and time represented by the current System.DateTimeOffset object and the time interval represented by timeSpan.
   """
   pass
  def AddDays(self,days):
   """
   AddDays(self: DateTimeOffset,days: float) -> DateTimeOffset
   
-   Adds a specified number of whole and fractional days to the current System.DateTimeOffset 
-    object.
-  
+   Adds a specified number of whole and fractional days to the current System.DateTimeOffset object.
   
    days: A number of whole and fractional days. The number can be negative or positive.
-   Returns: An object whose value is the sum of the date and time represented by the current 
-    System.DateTimeOffset object and the number of days represented by days.
+   Returns: An object whose value is the sum of the date and time represented by the current System.DateTimeOffset object and the number of days represented by days.
   """
   pass
  def AddHours(self,hours):
   """
   AddHours(self: DateTimeOffset,hours: float) -> DateTimeOffset
   
-   Adds a specified number of whole and fractional hours to the current 
-    System.DateTimeOffset object.
-  
+   Adds a specified number of whole and fractional hours to the current System.DateTimeOffset object.
   
    hours: A number of whole and fractional hours. The number can be negative or positive.
-   Returns: An object whose value is the sum of the date and time represented by the current 
-    System.DateTimeOffset object and the number of hours represented by hours.
+   Returns: An object whose value is the sum of the date and time represented by the current System.DateTimeOffset object and the number of hours represented by hours.
   """
   pass
  def AddMilliseconds(self,milliseconds):
@@ -53,8 +51,7 @@ class DateTimeOffset:
    Adds a specified number of milliseconds to the current System.DateTimeOffset object.
   
    milliseconds: A number of whole and fractional milliseconds. The number can be negative or positive.
-   Returns: An object whose value is the sum of the date and time represented by the current 
-    System.DateTimeOffset object and the number of whole milliseconds represented by 
+   Returns: An object whose value is the sum of the date and time represented by the current System.DateTimeOffset object and the number of whole milliseconds represented by 
     milliseconds.
   """
   pass
@@ -62,13 +59,10 @@ class DateTimeOffset:
   """
   AddMinutes(self: DateTimeOffset,minutes: float) -> DateTimeOffset
   
-   Adds a specified number of whole and fractional minutes to the current 
-    System.DateTimeOffset object.
-  
+   Adds a specified number of whole and fractional minutes to the current System.DateTimeOffset object.
   
    minutes: A number of whole and fractional minutes. The number can be negative or positive.
-   Returns: An object whose value is the sum of the date and time represented by the current 
-    System.DateTimeOffset object and the number of minutes represented by minutes.
+   Returns: An object whose value is the sum of the date and time represented by the current System.DateTimeOffset object and the number of minutes represented by minutes.
   """
   pass
  def AddMonths(self,months):
@@ -78,21 +72,17 @@ class DateTimeOffset:
    Adds a specified number of months to the current System.DateTimeOffset object.
   
    months: A number of whole months. The number can be negative or positive.
-   Returns: An object whose value is the sum of the date and time represented by the current 
-    System.DateTimeOffset object and the number of months represented by months.
+   Returns: An object whose value is the sum of the date and time represented by the current System.DateTimeOffset object and the number of months represented by months.
   """
   pass
  def AddSeconds(self,seconds):
   """
   AddSeconds(self: DateTimeOffset,seconds: float) -> DateTimeOffset
   
-   Adds a specified number of whole and fractional seconds to the current 
-    System.DateTimeOffset object.
-  
+   Adds a specified number of whole and fractional seconds to the current System.DateTimeOffset object.
   
    seconds: A number of whole and fractional seconds. The number can be negative or positive.
-   Returns: An object whose value is the sum of the date and time represented by the current 
-    System.DateTimeOffset object and the number of seconds represented by seconds.
+   Returns: An object whose value is the sum of the date and time represented by the current System.DateTimeOffset object and the number of seconds represented by seconds.
   """
   pass
  def AddTicks(self,ticks):
@@ -102,8 +92,7 @@ class DateTimeOffset:
    Adds a specified number of ticks to the current System.DateTimeOffset object.
   
    ticks: A number of 100-nanosecond ticks. The number can be negative or positive.
-   Returns: An object whose value is the sum of the date and time represented by the current 
-    System.DateTimeOffset object and the number of ticks represented by ticks.
+   Returns: An object whose value is the sum of the date and time represented by the current System.DateTimeOffset object and the number of ticks represented by ticks.
   """
   pass
  def AddYears(self,years):
@@ -113,8 +102,7 @@ class DateTimeOffset:
    Adds a specified number of years to the System.DateTimeOffset object.
   
    years: A number of years. The number can be negative or positive.
-   Returns: An object whose value is the sum of the date and time represented by the current 
-    System.DateTimeOffset object and the number of years represented by years.
+   Returns: An object whose value is the sum of the date and time represented by the current System.DateTimeOffset object and the number of years represented by years.
   """
   pass
  @staticmethod
@@ -122,80 +110,59 @@ class DateTimeOffset:
   """
   Compare(first: DateTimeOffset,second: DateTimeOffset) -> int
   
-   Compares two System.DateTimeOffset objects and indicates whether the first is earlier 
-    than the second,equal to the second,or later than the second.
-  
+   Compares two System.DateTimeOffset objects and indicates whether the first is earlier than the second,equal to the second,or later than the second.
   
    first: The first object to compare.
    second: The second object to compare.
-   Returns: A signed integer that indicates whether the value of the first parameter is earlier than,
-    later than,or the same time as the value of the second parameter,as the following table 
-    shows.Return valueMeaningLess than zerofirst is earlier than second.Zerofirst is equal to 
-    second.Greater than zerofirst is later than second.
+   Returns: A signed integer that indicates whether the value of the first parameter is earlier than,later than,or the same time as the value of the second parameter,as the 
+    following table shows.Return valueMeaningLess than zerofirst is earlier than second.Zerofirst is equal to second.Greater than zerofirst is later than second.
   """
   pass
  def CompareTo(self,other):
   """
   CompareTo(self: DateTimeOffset,other: DateTimeOffset) -> int
   
-   Compares the current System.DateTimeOffset object to a specified System.DateTimeOffset 
-    object and indicates whether the current object is earlier than,the same as,or later 
-    than the second System.DateTimeOffset object.
+   Compares the current System.DateTimeOffset object to a specified System.DateTimeOffset object and indicates whether the current object is earlier than,the same as,or 
+    later than the second System.DateTimeOffset object.
   
   
    other: An object to compare with the current System.DateTimeOffset object.
-   Returns: A signed integer that indicates the relationship between the current 
-    System.DateTimeOffset object and other,as the following table shows.Return 
-    ValueDescriptionLess than zeroThe current System.DateTimeOffset object is earlier than 
-    other.ZeroThe current System.DateTimeOffset object is the same as other.Greater than 
-    zero.The current System.DateTimeOffset object is later than other.
+   Returns: A signed integer that indicates the relationship between the current System.DateTimeOffset object and other,as the following table shows.Return ValueDescriptionLess than 
+    zeroThe current System.DateTimeOffset object is earlier than other.ZeroThe current System.DateTimeOffset object is the same as other.Greater than zero.The current 
+    System.DateTimeOffset object is later than other.
   """
   pass
  def Equals(self,*__args):
   """
   Equals(self: DateTimeOffset,obj: object) -> bool
   
-   Determines whether a System.DateTimeOffset object represents the same point in time as a 
-    specified object.
-  
+   Determines whether a System.DateTimeOffset object represents the same point in time as a specified object.
   
    obj: The object to compare to the current System.DateTimeOffset object.
-   Returns: true if the obj parameter is a System.DateTimeOffset object and represents the same point 
-    in time as the current System.DateTimeOffset object; otherwise,false.
-  
+   Returns: true if the obj parameter is a System.DateTimeOffset object and represents the same point in time as the current System.DateTimeOffset object; otherwise,false.
   Equals(self: DateTimeOffset,other: DateTimeOffset) -> bool
   
-   Determines whether the current System.DateTimeOffset object represents the same point in 
-    time as a specified System.DateTimeOffset object.
-  
+   Determines whether the current System.DateTimeOffset object represents the same point in time as a specified System.DateTimeOffset object.
   
    other: An object to compare to the current System.DateTimeOffset object.
-   Returns: true if both System.DateTimeOffset objects have the same 
-    System.DateTimeOffset.UtcDateTime value; otherwise,false.
-  
+   Returns: true if both System.DateTimeOffset objects have the same System.DateTimeOffset.UtcDateTime value; otherwise,false.
   Equals(first: DateTimeOffset,second: DateTimeOffset) -> bool
   
-   Determines whether two specified System.DateTimeOffset objects represent the same point 
-    in time.
-  
+   Determines whether two specified System.DateTimeOffset objects represent the same point in time.
   
    first: The first object to compare.
    second: The second object to compare.
-   Returns: true if the two System.DateTimeOffset objects have the same 
-    System.DateTimeOffset.UtcDateTime value; otherwise,false.
+   Returns: true if the two System.DateTimeOffset objects have the same System.DateTimeOffset.UtcDateTime value; otherwise,false.
   """
   pass
  def EqualsExact(self,other):
   """
   EqualsExact(self: DateTimeOffset,other: DateTimeOffset) -> bool
   
-   Determines whether the current System.DateTimeOffset object represents the same time and 
-    has the same offset as a specified System.DateTimeOffset object.
-  
+   Determines whether the current System.DateTimeOffset object represents the same time and has the same offset as a specified System.DateTimeOffset object.
   
    other: The object to compare to the current System.DateTimeOffset object.
-   Returns: true if the current System.DateTimeOffset object and other have the same date and time 
-    value and the same System.DateTimeOffset.Offset value; otherwise,false.
+   Returns: true if the current System.DateTimeOffset object and other have the same date and time value and the same System.DateTimeOffset.Offset value; otherwise,false.
   """
   pass
  @staticmethod
@@ -206,8 +173,7 @@ class DateTimeOffset:
    Converts the specified Windows file time to an equivalent local time.
   
    fileTime: A Windows file time,expressed in ticks.
-   Returns: An object that represents the date and time of fileTime with the offset set to the local 
-    time offset.
+   Returns: An object that represents the date and time of fileTime with the offset set to the local time offset.
   """
   pass
  @staticmethod
@@ -231,37 +197,27 @@ class DateTimeOffset:
   """
   Parse(input: str) -> DateTimeOffset
   
-   Converts the specified string representation of a date,time,and offset to its 
-    System.DateTimeOffset equivalent.
-  
+   Converts the specified string representation of a date,time,and offset to its System.DateTimeOffset equivalent.
   
    input: A string that contains a date and time to convert.
    Returns: An object that is equivalent to the date and time that is contained in input.
   Parse(input: str,formatProvider: IFormatProvider) -> DateTimeOffset
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTimeOffset equivalent using the specified culture-specific format information.
-  
+   Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified culture-specific format information.
   
    input: A string that contains a date and time to convert.
    formatProvider: An object that provides culture-specific format information about input.
-   Returns: An object that is equivalent to the date and time that is contained in input,as 
-    specified by formatProvider.
-  
+   Returns: An object that is equivalent to the date and time that is contained in input,as specified by formatProvider.
   Parse(input: str,formatProvider: IFormatProvider,styles: DateTimeStyles) -> DateTimeOffset
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTimeOffset equivalent using the specified culture-specific format information 
-    and formatting style.
+   Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified culture-specific format information and 
+    formatting style.
   
   
    input: A string that contains a date and time to convert.
    formatProvider: An object that provides culture-specific format information about input.
-   styles: A bitwise combination of enumeration values that indicates the permitted format of input. 
-    A typical value to specify is System.Globalization.DateTimeStyles.None.
-  
-   Returns: An object that is equivalent to the date and time that is contained in input as specified 
-    by formatProvider and styles.
+   styles: A bitwise combination of enumeration values that indicates the permitted format of input. A typical value to specify is System.Globalization.DateTimeStyles.None.
+   Returns: An object that is equivalent to the date and time that is contained in input as specified by formatProvider and styles.
   """
   pass
  @staticmethod
@@ -269,56 +225,43 @@ class DateTimeOffset:
   """
   ParseExact(input: str,format: str,formatProvider: IFormatProvider) -> DateTimeOffset
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTimeOffset equivalent using the specified format and culture-specific format 
-    information. The format of the string representation must match the specified format 
-    exactly.
+   Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified format and culture-specific format information. 
+    The format of the string representation must match the specified format exactly.
   
   
    input: A string that contains a date and time to convert.
    format: A format specifier that defines the expected format of input.
    formatProvider: An object that supplies culture-specific formatting information about input.
-   Returns: An object that is equivalent to the date and time that is contained in input as specified 
-    by format and formatProvider.
-  
+   Returns: An object that is equivalent to the date and time that is contained in input as specified by format and formatProvider.
   ParseExact(input: str,format: str,formatProvider: IFormatProvider,styles: DateTimeStyles) -> DateTimeOffset
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTimeOffset equivalent using the specified format,culture-specific format 
-    information,and style. The format of the string representation must match the specified 
-    format exactly.
+   Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified format,culture-specific format information,and 
+    style. The format of the string representation must match the specified format exactly.
   
   
    input: A string that contains a date and time to convert.
    format: A format specifier that defines the expected format of input.
    formatProvider: An object that supplies culture-specific formatting information about input.
    styles: A bitwise combination of enumeration values that indicates the permitted format of input.
-   Returns: An object that is equivalent to the date and time that is contained in the input 
-    parameter,as specified by the format,formatProvider,and styles parameters.
-  
+   Returns: An object that is equivalent to the date and time that is contained in the input parameter,as specified by the format,formatProvider,and styles parameters.
   ParseExact(input: str,formats: Array[str],formatProvider: IFormatProvider,styles: DateTimeStyles) -> DateTimeOffset
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTimeOffset equivalent using the specified formats,culture-specific format 
-    information,and style. The format of the string representation must match one of the 
-    specified formats exactly.
+   Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified formats,culture-specific format information,
+    and style. The format of the string representation must match one of the specified formats exactly.
   
   
    input: A string that contains a date and time to convert.
    formats: An array of format specifiers that define the expected formats of input.
    formatProvider: An object that supplies culture-specific formatting information about input.
    styles: A bitwise combination of enumeration values that indicates the permitted format of input.
-   Returns: An object that is equivalent to the date and time that is contained in the input 
-    parameter,as specified by the formats,formatProvider,and styles parameters.
+   Returns: An object that is equivalent to the date and time that is contained in the input parameter,as specified by the formats,formatProvider,and styles parameters.
   """
   pass
  def Subtract(self,value):
   """
   Subtract(self: DateTimeOffset,value: DateTimeOffset) -> TimeSpan
   
-   Subtracts a System.DateTimeOffset value that represents a specific date and time from the 
-    current System.DateTimeOffset object.
-  
+   Subtracts a System.DateTimeOffset value that represents a specific date and time from the current System.DateTimeOffset object.
   
    value: An object that represents the value to subtract.
    Returns: An object that specifies the interval between the two System.DateTimeOffset objects.
@@ -327,8 +270,7 @@ class DateTimeOffset:
    Subtracts a specified time interval from the current System.DateTimeOffset object.
   
    value: The time interval to subtract.
-   Returns: An object that is equal to the date and time represented by the current 
-    System.DateTimeOffset object,minus the time interval represented by value.
+   Returns: An object that is equal to the date and time represented by the current System.DateTimeOffset object,minus the time interval represented by value.
   """
   pass
  def ToFileTime(self):
@@ -343,78 +285,54 @@ class DateTimeOffset:
   """
   ToLocalTime(self: DateTimeOffset) -> DateTimeOffset
   
-   Converts the current System.DateTimeOffset object to a System.DateTimeOffset object that 
-    represents the local time.
-  
-   Returns: An object that represents the date and time of the current System.DateTimeOffset object 
-    converted to local time.
+   Converts the current System.DateTimeOffset object to a System.DateTimeOffset object that represents the local time.
+   Returns: An object that represents the date and time of the current System.DateTimeOffset object converted to local time.
   """
   pass
  def ToOffset(self,offset):
   """
   ToOffset(self: DateTimeOffset,offset: TimeSpan) -> DateTimeOffset
   
-   Converts the value of the current System.DateTimeOffset object to the date and time 
-    specified by an offset value.
-  
+   Converts the value of the current System.DateTimeOffset object to the date and time specified by an offset value.
   
    offset: The offset to convert the System.DateTimeOffset value to.
-   Returns: An object that is equal to the original System.DateTimeOffset object (that is,their 
-    System.DateTimeOffset.ToUniversalTime methods return identical points in time) but whose 
-    System.DateTimeOffset.Offset property is set to offset.
+   Returns: An object that is equal to the original System.DateTimeOffset object (that is,their System.DateTimeOffset.ToUniversalTime methods return identical points in time) but 
+    whose System.DateTimeOffset.Offset property is set to offset.
   """
   pass
  def ToString(self,*__args):
   """
   ToString(self: DateTimeOffset) -> str
   
-   Converts the value of the current System.DateTimeOffset object to its equivalent string 
-    representation.
-  
-   Returns: A string representation of a System.DateTimeOffset object that includes the offset 
-    appended at the end of the string.
-  
+   Converts the value of the current System.DateTimeOffset object to its equivalent string representation.
+   Returns: A string representation of a System.DateTimeOffset object that includes the offset appended at the end of the string.
   ToString(self: DateTimeOffset,format: str) -> str
   
-   Converts the value of the current System.DateTimeOffset object to its equivalent string 
-    representation using the specified format.
-  
+   Converts the value of the current System.DateTimeOffset object to its equivalent string representation using the specified format.
   
    format: A format string.
-   Returns: A string representation of the value of the current System.DateTimeOffset object,as 
-    specified by format.
-  
+   Returns: A string representation of the value of the current System.DateTimeOffset object,as specified by format.
   ToString(self: DateTimeOffset,formatProvider: IFormatProvider) -> str
   
-   Converts the value of the current System.DateTimeOffset object to its equivalent string 
-    representation using the specified culture-specific formatting information.
-  
+   Converts the value of the current System.DateTimeOffset object to its equivalent string representation using the specified culture-specific formatting information.
   
    formatProvider: An object that supplies culture-specific formatting information.
-   Returns: A string representation of the value of the current System.DateTimeOffset object,as 
-    specified by formatProvider.
-  
+   Returns: A string representation of the value of the current System.DateTimeOffset object,as specified by formatProvider.
   ToString(self: DateTimeOffset,format: str,formatProvider: IFormatProvider) -> str
   
-   Converts the value of the current System.DateTimeOffset object to its equivalent string 
-    representation using the specified format and culture-specific format information.
-  
+   Converts the value of the current System.DateTimeOffset object to its equivalent string representation using the specified format and culture-specific format information.
   
    format: A format string.
    formatProvider: An object that supplies culture-specific formatting information.
-   Returns: A string representation of the value of the current System.DateTimeOffset object,as 
-    specified by format and provider.
+   Returns: A string representation of the value of the current System.DateTimeOffset object,as specified by format and provider.
   """
   pass
  def ToUniversalTime(self):
   """
   ToUniversalTime(self: DateTimeOffset) -> DateTimeOffset
   
-   Converts the current System.DateTimeOffset object to a System.DateTimeOffset value that 
-    represents the Coordinated Universal Time (UTC).
-  
-   Returns: An object that represents the date and time of the current System.DateTimeOffset object 
-    converted to Coordinated Universal Time (UTC).
+   Converts the current System.DateTimeOffset object to a System.DateTimeOffset value that represents the Coordinated Universal Time (UTC).
+   Returns: An object that represents the date and time of the current System.DateTimeOffset object converted to Coordinated Universal Time (UTC).
   """
   pass
  def ToUnixTimeMilliseconds(self):
@@ -428,18 +346,16 @@ class DateTimeOffset:
   """
   TryParse(input: str) -> (bool,DateTimeOffset)
   
-   Tries to converts a specified string representation of a date and time to its 
-    System.DateTimeOffset equivalent,and returns a value that indicates whether the 
-    conversion succeeded.
+   Tries to converts a specified string representation of a date and time to its System.DateTimeOffset equivalent,and returns a value that indicates whether the conversion 
+    succeeded.
   
   
    input: A string that contains a date and time to convert.
    Returns: true if the input parameter is successfully converted; otherwise,false.
   TryParse(input: str,formatProvider: IFormatProvider,styles: DateTimeStyles) -> (bool,DateTimeOffset)
   
-   Tries to convert a specified string representation of a date and time to its 
-    System.DateTimeOffset equivalent,and returns a value that indicates whether the 
-    conversion succeeded.
+   Tries to convert a specified string representation of a date and time to its System.DateTimeOffset equivalent,and returns a value that indicates whether the conversion 
+    succeeded.
   
   
    input: A string that contains a date and time to convert.
@@ -453,33 +369,25 @@ class DateTimeOffset:
   """
   TryParseExact(input: str,format: str,formatProvider: IFormatProvider,styles: DateTimeStyles) -> (bool,DateTimeOffset)
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTimeOffset equivalent using the specified format,culture-specific format 
-    information,and style. The format of the string representation must match the specified 
-    format exactly.
+   Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified format,culture-specific format information,and 
+    style. The format of the string representation must match the specified format exactly.
   
   
    input: A string that contains a date and time to convert.
    format: A format specifier that defines the required format of input.
    formatProvider: An object that supplies culture-specific formatting information about input.
-   styles: A bitwise combination of enumeration values that indicates the permitted format of input. 
-    A typical value to specify is None.
-  
+   styles: A bitwise combination of enumeration values that indicates the permitted format of input. A typical value to specify is None.
    Returns: true if the input parameter is successfully converted; otherwise,false.
   TryParseExact(input: str,formats: Array[str],formatProvider: IFormatProvider,styles: DateTimeStyles) -> (bool,DateTimeOffset)
   
-   Converts the specified string representation of a date and time to its 
-    System.DateTimeOffset equivalent using the specified array of formats,culture-specific 
-    format information,and style. The format of the string representation must match one of 
-    the specified formats exactly.
+   Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified array of formats,culture-specific format 
+    information,and style. The format of the string representation must match one of the specified formats exactly.
   
   
    input: A string that contains a date and time to convert.
    formats: An array that defines the expected formats of input.
    formatProvider: An object that supplies culture-specific formatting information about input.
-   styles: A bitwise combination of enumeration values that indicates the permitted format of input. 
-    A typical value to specify is None.
-  
+   styles: A bitwise combination of enumeration values that indicates the permitted format of input. A typical value to specify is None.
    Returns: true if the input parameter is successfully converted; otherwise,false.
   """
   pass

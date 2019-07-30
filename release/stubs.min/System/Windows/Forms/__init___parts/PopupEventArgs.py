@@ -1,9 +1,13 @@
-class PopupEventArgs:
+class PopupEventArgs(CancelEventArgs):
  """
  Provides data for the System.Windows.Forms.ToolTip.Popup event.
  
  PopupEventArgs(associatedWindow: IWin32Window,associatedControl: Control,isBalloon: bool,size: Size)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return PopupEventArgs()
+
  @staticmethod
  def __new__(self,associatedWindow,associatedControl,isBalloon,size):
   """ __new__(cls: type,associatedWindow: IWin32Window,associatedControl: Control,isBalloon: bool,size: Size) """

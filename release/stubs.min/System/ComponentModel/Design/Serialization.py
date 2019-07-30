@@ -3,13 +3,18 @@
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
 
-class ComponentSerializationService:
+class ComponentSerializationService(object):
  """ Provides the base class for serializing a set of components or serializable objects into a serialization store. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ComponentSerializationService()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreateStore(self):
   """
   CreateStore(self: ComponentSerializationService) -> SerializationStore
@@ -28,46 +33,33 @@ class ComponentSerializationService:
    Returns: A collection of objects created according to the stored state.
   Deserialize(self: ComponentSerializationService,store: SerializationStore,container: IContainer) -> ICollection
   
-   Deserializes the given store and populates the given System.ComponentModel.IContainer 
-    with deserialized System.ComponentModel.IComponent objects.
-  
+   Deserializes the given store and populates the given System.ComponentModel.IContainer with deserialized System.ComponentModel.IComponent objects.
   
    store: The System.ComponentModel.Design.Serialization.SerializationStore to deserialize.
-   container: The System.ComponentModel.IContainer to which System.ComponentModel.IComponent objects 
-    will be added.
-  
+   container: The System.ComponentModel.IContainer to which System.ComponentModel.IComponent objects will be added.
    Returns: A collection of objects created according to the stored state.
   """
   pass
  def DeserializeTo(self,store,container,validateRecycledTypes=None,applyDefaults=None):
   """
   DeserializeTo(self: ComponentSerializationService,store: SerializationStore,container: IContainer,validateRecycledTypes: bool,applyDefaults: bool)
-   Deserializes the given System.ComponentModel.Design.Serialization.SerializationStore to 
-    the given container,optionally applying default property values.
-  
+   Deserializes the given System.ComponentModel.Design.Serialization.SerializationStore to the given container,optionally applying default property values.
   
    store: The System.ComponentModel.Design.Serialization.SerializationStore to deserialize.
    container: The container to which System.ComponentModel.IComponent objects will be added.
-   validateRecycledTypes: true to guarantee that the deserialization will only work if applied to an object of the 
-    same type.
-  
+   validateRecycledTypes: true to guarantee that the deserialization will only work if applied to an object of the same type.
    applyDefaults: true to indicate that the default property values should be applied.
   DeserializeTo(self: ComponentSerializationService,store: SerializationStore,container: IContainer)
-   Deserializes the given System.ComponentModel.Design.Serialization.SerializationStore to 
-    the given container.
-  
+   Deserializes the given System.ComponentModel.Design.Serialization.SerializationStore to the given container.
   
    store: The System.ComponentModel.Design.Serialization.SerializationStore to deserialize.
    container: The container to which System.ComponentModel.IComponent objects will be added.
   DeserializeTo(self: ComponentSerializationService,store: SerializationStore,container: IContainer,validateRecycledTypes: bool)
-   Deserializes the given System.ComponentModel.Design.Serialization.SerializationStore to 
-    the given container,optionally validating recycled types.
-  
+   Deserializes the given System.ComponentModel.Design.Serialization.SerializationStore to the given container,optionally validating recycled types.
   
    store: The System.ComponentModel.Design.Serialization.SerializationStore to deserialize.
    container: The container to which System.ComponentModel.IComponent objects will be added.
-   validateRecycledTypes: true to guarantee that the deserialization will only work if applied to an object of the 
-    same type.
+   validateRecycledTypes: true to guarantee that the deserialization will only work if applied to an object of the same type.
   """
   pass
  def LoadStore(self,stream):
@@ -83,13 +75,9 @@ class ComponentSerializationService:
  def Serialize(self,store,value):
   """
   Serialize(self: ComponentSerializationService,store: SerializationStore,value: object)
-   Serializes the given object to the given 
-    System.ComponentModel.Design.Serialization.SerializationStore.
+   Serializes the given object to the given System.ComponentModel.Design.Serialization.SerializationStore.
   
-  
-   store: The System.ComponentModel.Design.Serialization.SerializationStore to which the state of 
-    value will be written.
-  
+   store: The System.ComponentModel.Design.Serialization.SerializationStore to which the state of value will be written.
    value: The object to serialize.
   """
   pass
@@ -98,9 +86,7 @@ class ComponentSerializationService:
   SerializeAbsolute(self: ComponentSerializationService,store: SerializationStore,value: object)
    Serializes the given object,accounting for default property values.
   
-   store: The System.ComponentModel.Design.Serialization.SerializationStore to which the state of 
-    value will be serialized.
-  
+   store: The System.ComponentModel.Design.Serialization.SerializationStore to which the state of value will be serialized.
    value: The object to serialize.
   """
   pass
@@ -109,9 +95,7 @@ class ComponentSerializationService:
   SerializeMember(self: ComponentSerializationService,store: SerializationStore,owningObject: object,member: MemberDescriptor)
    Serializes the given member on the given object.
   
-   store: The System.ComponentModel.Design.Serialization.SerializationStore to which the state of 
-    member will be serialized.
-  
+   store: The System.ComponentModel.Design.Serialization.SerializationStore to which the state of member will be serialized.
    owningObject: The object to which member is attached.
    member: A System.ComponentModel.MemberDescriptor specifying the member to serialize.
   """
@@ -119,30 +103,29 @@ class ComponentSerializationService:
  def SerializeMemberAbsolute(self,store,owningObject,member):
   """
   SerializeMemberAbsolute(self: ComponentSerializationService,store: SerializationStore,owningObject: object,member: MemberDescriptor)
-   Serializes the given member on the given object,accounting for the default property 
-    value.
+   Serializes the given member on the given object,accounting for the default property value.
   
-  
-   store: The System.ComponentModel.Design.Serialization.SerializationStore to which the state of 
-    member will be serialized.
-  
+   store: The System.ComponentModel.Design.Serialization.SerializationStore to which the state of member will be serialized.
    owningObject: The object to which member is attached.
    member: The member to serialize.
   """
   pass
 
-class ContextStack:
+class ContextStack(object):
  """
  Provides a stack object that can be used by a serializer to make information available to nested serializers.
  
  ContextStack()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ContextStack()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Append(self,context):
   """
   Append(self: ContextStack,context: object)
-   Appends an object to the end of the stack,rather than pushing it onto the top of the 
-    stack.
-  
+   Appends an object to the end of the stack,rather than pushing it onto the top of the stack.
   
    context: A context object to append to the stack.
   """
@@ -182,6 +165,11 @@ class DefaultSerializationProviderAttribute:
  DefaultSerializationProviderAttribute(providerType: Type)
  DefaultSerializationProviderAttribute(providerTypeName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DefaultSerializationProviderAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -201,8 +189,13 @@ Get: ProviderTypeName(self: DefaultSerializationProviderAttribute) -> str
 
 
 
-class DesignerLoader:
+class DesignerLoader(object):
  """ Provides a basic designer loader interface that can be used to implement a custom designer loader. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DesignerLoader()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginLoad(self,host):
   """
   BeginLoad(self: DesignerLoader,host: IDesignerLoaderHost)
@@ -214,8 +207,7 @@ class DesignerLoader:
  def Dispose(self):
   """
   Dispose(self: DesignerLoader)
-   Releases all resources used by the 
-    System.ComponentModel.Design.Serialization.DesignerLoader.
+   Releases all resources used by the System.ComponentModel.Design.Serialization.DesignerLoader.
   """
   pass
  def Flush(self):
@@ -241,6 +233,11 @@ class DesignerSerializerAttribute:
  DesignerSerializerAttribute(serializerTypeName: str,baseSerializerType: Type)
  DesignerSerializerAttribute(serializerTypeName: str,baseSerializerTypeName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DesignerSerializerAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -277,17 +274,19 @@ Get: TypeId(self: DesignerSerializerAttribute) -> object
 
 class IDesignerLoaderHost:
  """ Provides an interface that can extend a designer host to support loading from a serialized state. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IDesignerLoaderHost()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def EndLoad(self,baseClassName,successful,errorCollection):
   """
   EndLoad(self: IDesignerLoaderHost,baseClassName: str,successful: bool,errorCollection: ICollection)
    Ends the designer loading operation.
   
-   baseClassName: The fully qualified name of the base class of the document that this designer is 
-    designing.
-  
+   baseClassName: The fully qualified name of the base class of the document that this designer is designing.
    successful: true if the designer is successfully loaded; otherwise,false.
-   errorCollection: A collection containing the errors encountered during load,if any. If no errors were 
-    encountered,pass either an empty collection or null.
+   errorCollection: A collection containing the errors encountered during load,if any. If no errors were encountered,pass either an empty collection or null.
   """
   pass
  def Reload(self):
@@ -302,6 +301,11 @@ class IDesignerLoaderHost:
 
 class IDesignerLoaderHost2:
  """ Provides an interface that extends System.ComponentModel.Design.Serialization.IDesignerLoaderHost to specify whether errors are tolerated while loading a design document. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IDesignerLoaderHost2()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -325,6 +329,11 @@ Set: IgnoreErrorsDuringReload(self: IDesignerLoaderHost2)=value
 
 class IDesignerLoaderService:
  """ Provides an interface that can extend a designer loader to support asynchronous loading of external components. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IDesignerLoaderService()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddLoadDependency(self):
   """
   AddLoadDependency(self: IDesignerLoaderService)
@@ -336,11 +345,8 @@ class IDesignerLoaderService:
   DependentLoadComplete(self: IDesignerLoaderService,successful: bool,errorCollection: ICollection)
    Signals that a dependent load has finished.
   
-   successful: true if the load of the designer is successful; false if errors prevented the load from 
-    finishing.
-  
-   errorCollection: A collection of errors that occurred during the load,if any. If no errors occurred,pass 
-    either an empty collection or null.
+   successful: true if the load of the designer is successful; false if errors prevented the load from finishing.
+   errorCollection: A collection of errors that occurred during the load,if any. If no errors occurred,pass either an empty collection or null.
   """
   pass
  def Reload(self):
@@ -357,6 +363,11 @@ class IDesignerLoaderService:
 
 class IDesignerSerializationManager:
  """ Provides an interface that can manage design-time serialization. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IDesignerSerializationManager()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddSerializationProvider(self,provider):
   """
   AddSerializationProvider(self: IDesignerSerializationManager,provider: IDesignerSerializationProvider)
@@ -374,12 +385,10 @@ class IDesignerSerializationManager:
    type: The data type to create.
    arguments: The arguments to pass to the constructor for this type.
    name: The name of the object. This name can be used to access the object later through 
-    System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance(Syste
-    m.String). If null is passed,the object is still created but cannot be accessed by name.
+    System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance(System.String). If null is passed,the object is still created but cannot be accessed 
+    by name.
   
-   addToContainer: If true,this object is added to the design container. The object must implement 
-    System.ComponentModel.IComponent for this to have any effect.
-  
+   addToContainer: If true,this object is added to the design container. The object must implement System.ComponentModel.IComponent for this to have any effect.
    Returns: The newly created object instance.
   """
   pass
@@ -387,13 +396,10 @@ class IDesignerSerializationManager:
   """
   GetInstance(self: IDesignerSerializationManager,name: str) -> object
   
-   Gets an instance of a created object of the specified name,or null if that object does 
-    not exist.
-  
+   Gets an instance of a created object of the specified name,or null if that object does not exist.
   
    name: The name of the object to retrieve.
-   Returns: An instance of the object with the given name,or null if no object by that name can be 
-    found.
+   Returns: An instance of the object with the given name,or null if no object by that name can be found.
   """
   pass
  def GetName(self,value):
@@ -414,8 +420,7 @@ class IDesignerSerializationManager:
   
    objectType: The type of the object to get the serializer for.
    serializerType: The type of the serializer to retrieve.
-   Returns: An instance of the requested serializer,or null if no appropriate serializer can be 
-    located.
+   Returns: An instance of the requested serializer,or null if no appropriate serializer can be located.
   """
   pass
  def GetType(self,typeName):
@@ -434,8 +439,7 @@ class IDesignerSerializationManager:
    Removes a custom serialization provider from the serialization manager.
   
    provider: The provider to remove. This object must have been added using 
-    System.ComponentModel.Design.Serialization.IDesignerSerializationManager.AddSerializationP
-    rovider(System.ComponentModel.Design.Serialization.IDesignerSerializationProvider).
+    System.ComponentModel.Design.Serialization.IDesignerSerializationManager.AddSerializationProvider(System.ComponentModel.Design.Serialization.IDesignerSerializationProvider).
   """
   pass
  def ReportError(self,errorInformation):
@@ -443,8 +447,7 @@ class IDesignerSerializationManager:
   ReportError(self: IDesignerSerializationManager,errorInformation: object)
    Reports an error in serialization.
   
-   errorInformation: The error to report. This information object can be of any object type. If it is an 
-    exception,the message of the exception is extracted and reported to the user. If it is 
+   errorInformation: The error to report. This information object can be of any object type. If it is an exception,the message of the exception is extracted and reported to the user. If it is 
     any other type,System.Object.ToString is called to display the information to the user.
   """
   pass
@@ -481,6 +484,11 @@ Get: Properties(self: IDesignerSerializationManager) -> PropertyDescriptorCollec
 
 class IDesignerSerializationProvider:
  """ Provides an interface that enables access to a serializer. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IDesignerSerializationProvider()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetSerializer(self,manager,currentSerializer,objectType,serializerType):
   """
   GetSerializer(self: IDesignerSerializationProvider,manager: IDesignerSerializationManager,currentSerializer: object,objectType: Type,serializerType: Type) -> object
@@ -488,13 +496,10 @@ class IDesignerSerializationProvider:
    Gets a serializer using the specified attributes.
   
    manager: The serialization manager requesting the serializer.
-   currentSerializer: An instance of the current serializer of the specified type. This can be null if no 
-    serializer of the specified type exists.
-  
+   currentSerializer: An instance of the current serializer of the specified type. This can be null if no serializer of the specified type exists.
    objectType: The data type of the object to serialize.
    serializerType: The data type of the serializer to create.
-   Returns: An instance of a serializer of the type requested,or null if the request cannot be 
-    satisfied.
+   Returns: An instance of a serializer of the type requested,or null if the request cannot be satisfied.
   """
   pass
  def __init__(self,*args):
@@ -503,26 +508,26 @@ class IDesignerSerializationProvider:
 
 class IDesignerSerializationService:
  """ Provides an interface that can invoke serialization and deserialization. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IDesignerSerializationService()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Deserialize(self,serializationData):
   """
   Deserialize(self: IDesignerSerializationService,serializationData: object) -> ICollection
   
-   Deserializes the specified serialization data object and returns a collection of objects 
-    represented by that data.
-  
+   Deserializes the specified serialization data object and returns a collection of objects represented by that data.
   
    serializationData: An object consisting of serialized data.
-   Returns: An System.Collections.ICollection of objects rebuilt from the specified serialization 
-    data object.
+   Returns: An System.Collections.ICollection of objects rebuilt from the specified serialization data object.
   """
   pass
  def Serialize(self,objects):
   """
   Serialize(self: IDesignerSerializationService,objects: ICollection) -> object
   
-   Serializes the specified collection of objects and stores them in a serialization data 
-    object.
-  
+   Serializes the specified collection of objects and stores them in a serialization data object.
   
    objects: A collection of objects to serialize.
    Returns: An object that contains the serialized state of the specified collection of objects.
@@ -534,6 +539,11 @@ class IDesignerSerializationService:
 
 class INameCreationService:
  """ Provides a service that can generate unique names for objects. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return INameCreationService()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreateName(self,container,dataType):
   """
   CreateName(self: INameCreationService,container: IContainer,dataType: Type) -> str
@@ -567,13 +577,18 @@ class INameCreationService:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class InstanceDescriptor:
+class InstanceDescriptor(object):
  """
  Provides the information necessary to create an instance of an object. This class cannot be inherited.
  
  InstanceDescriptor(member: MemberInfo,arguments: ICollection,isComplete: bool)
  InstanceDescriptor(member: MemberInfo,arguments: ICollection)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InstanceDescriptor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Invoke(self):
   """
   Invoke(self: InstanceDescriptor) -> object
@@ -612,25 +627,25 @@ Get: MemberInfo(self: InstanceDescriptor) -> MemberInfo
 
 
 
-class MemberRelationship:
+class MemberRelationship(object):
  """
  Represents a single relationship between an object and a member.
  
  MemberRelationship(owner: object,member: MemberDescriptor)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MemberRelationship()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: MemberRelationship,obj: object) -> bool
   
-   Determines whether two System.ComponentModel.Design.Serialization.MemberRelationship 
-    instances are equal.
+   Determines whether two System.ComponentModel.Design.Serialization.MemberRelationship instances are equal.
   
-  
-   obj: The System.ComponentModel.Design.Serialization.MemberRelationship to compare with the 
-    current System.ComponentModel.Design.Serialization.MemberRelationship.
-  
-   Returns: true if the specified System.ComponentModel.Design.Serialization.MemberRelationship is 
-    equal to the current System.ComponentModel.Design.Serialization.MemberRelationship; 
+   obj: The System.ComponentModel.Design.Serialization.MemberRelationship to compare with the current System.ComponentModel.Design.Serialization.MemberRelationship.
+   Returns: true if the specified System.ComponentModel.Design.Serialization.MemberRelationship is equal to the current System.ComponentModel.Design.Serialization.MemberRelationship; 
     otherwise,false.
   """
   pass
@@ -679,8 +694,13 @@ Get: Owner(self: MemberRelationship) -> object
  Empty=None
 
 
-class MemberRelationshipService:
+class MemberRelationshipService(object):
  """ Provides the base class for relating one member to another. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MemberRelationshipService()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetRelationship(self,*args):
   """
   GetRelationship(self: MemberRelationshipService,source: MemberRelationship) -> MemberRelationship
@@ -688,9 +708,7 @@ class MemberRelationshipService:
    Gets a relationship to the given source relationship.
   
    source: The source relationship.
-   Returns: A relationship to source,or 
-    System.ComponentModel.Design.Serialization.MemberRelationship.Empty if no relationship 
-    exists.
+   Returns: A relationship to source,or System.ComponentModel.Design.Serialization.MemberRelationship.Empty if no relationship exists.
   """
   pass
  def SetRelationship(self,*args):
@@ -720,12 +738,17 @@ class MemberRelationshipService:
   """ x.__setitem__(i,y) <==> x[i]=x.__setitem__(i,y) <==> x[i]= """
   pass
 
-class ResolveNameEventArgs:
+class ResolveNameEventArgs(EventArgs):
  """
  Provides data for the System.ComponentModel.Design.Serialization.IDesignerSerializationManager.ResolveName event.
  
  ResolveNameEventArgs(name: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ResolveNameEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,name):
   """ __new__(cls: type,name: str) """
@@ -747,12 +770,17 @@ Set: Value(self: ResolveNameEventArgs)=value
 
 
 
-class ResolveNameEventHandler:
+class ResolveNameEventHandler(MulticastDelegate):
  """
  Represents the method that handles the System.ComponentModel.Design.Serialization.IDesignerSerializationManager.ResolveName event of a serialization manager.
  
  ResolveNameEventHandler(object: object,method: IntPtr)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ResolveNameEventHandler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInvoke(self,sender,e,callback,object):
   """ BeginInvoke(self: ResolveNameEventHandler,sender: object,e: ResolveNameEventArgs,callback: AsyncCallback,object: object) -> IAsyncResult """
   pass
@@ -772,8 +800,7 @@ class ResolveNameEventHandler:
   
    Dynamically invokes (late-bound) the method represented by the current delegate.
   
-   args: An array of objects that are the arguments to pass to the method represented by the 
-    current delegate.-or- null,if the method represented by the current delegate does not 
+   args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null,if the method represented by the current delegate does not 
     require arguments.
   
    Returns: The object returned by the method represented by the delegate.
@@ -797,13 +824,10 @@ class ResolveNameEventHandler:
   """
   RemoveImpl(self: MulticastDelegate,value: Delegate) -> Delegate
   
-   Removes an element from the invocation list of this System.MulticastDelegate that is 
-    equal to the specified delegate.
-  
+   Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
   
    value: The delegate to search for in the invocation list.
-   Returns: If value is found in the invocation list for this instance,then a new System.Delegate 
-    without value in its invocation list; otherwise,this instance with its original 
+   Returns: If value is found in the invocation list for this instance,then a new System.Delegate without value in its invocation list; otherwise,this instance with its original 
     invocation list.
   """
   pass
@@ -825,6 +849,11 @@ class RootDesignerSerializerAttribute:
  RootDesignerSerializerAttribute(serializerType: Type,baseSerializerType: Type,reloadable: bool)
  RootDesignerSerializerAttribute(serializerTypeName: str,baseSerializerType: Type,reloadable: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RootDesignerSerializerAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -866,8 +895,13 @@ Get: TypeId(self: RootDesignerSerializerAttribute) -> object
 
 
 
-class SerializationStore:
+class SerializationStore(object):
  """ Provides the base class for storing serialization data for the System.ComponentModel.Design.Serialization.ComponentSerializationService. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SerializationStore()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: SerializationStore)
@@ -877,13 +911,9 @@ class SerializationStore:
  def Dispose(self,*args):
   """
   Dispose(self: SerializationStore,disposing: bool)
-   Releases the unmanaged resources used by the 
-    System.ComponentModel.Design.Serialization.SerializationStore and optionally releases the 
-    managed resources.
+   Releases the unmanaged resources used by the System.ComponentModel.Design.Serialization.SerializationStore and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def Save(self,stream):

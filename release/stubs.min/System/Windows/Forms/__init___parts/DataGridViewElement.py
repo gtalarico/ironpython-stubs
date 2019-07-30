@@ -1,9 +1,13 @@
-class DataGridViewElement:
+class DataGridViewElement(object):
  """
  Provides the base class for elements of a System.Windows.Forms.DataGridView control.
  
  DataGridViewElement()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewElement()
+
  def OnDataGridViewChanged(self,*args):
   """
   OnDataGridViewChanged(self: DataGridViewElement)

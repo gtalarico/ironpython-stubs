@@ -1,10 +1,14 @@
-class ToolStripRenderEventArgs:
+class ToolStripRenderEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ToolStripRenderer.OnRenderImageMargin(System.Windows.Forms.ToolStripRenderEventArgs),System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBorder(System.Windows.Forms.ToolStripRenderEventArgs),and System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBackground(System.Windows.Forms.ToolStripRenderEventArgs) methods.
  
  ToolStripRenderEventArgs(g: Graphics,toolStrip: ToolStrip)
  ToolStripRenderEventArgs(g: Graphics,toolStrip: ToolStrip,affectedBounds: Rectangle,backColor: Color)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripRenderEventArgs()
+
  @staticmethod
  def __new__(self,g,toolStrip,affectedBounds=None,backColor=None):
   """

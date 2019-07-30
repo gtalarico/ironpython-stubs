@@ -1,9 +1,13 @@
-class WebBrowserProgressChangedEventArgs:
+class WebBrowserProgressChangedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.WebBrowser.ProgressChanged event.
  
  WebBrowserProgressChangedEventArgs(currentProgress: Int64,maximumProgress: Int64)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return WebBrowserProgressChangedEventArgs()
+
  @staticmethod
  def __new__(self,currentProgress,maximumProgress):
   """ __new__(cls: type,currentProgress: Int64,maximumProgress: Int64) """

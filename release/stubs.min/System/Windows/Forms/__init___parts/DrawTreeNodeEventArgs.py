@@ -1,9 +1,13 @@
-class DrawTreeNodeEventArgs:
+class DrawTreeNodeEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.TreeView.DrawNode event.
  
  DrawTreeNodeEventArgs(graphics: Graphics,node: TreeNode,bounds: Rectangle,state: TreeNodeStates)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DrawTreeNodeEventArgs()
+
  @staticmethod
  def __new__(self,graphics,node,bounds,state):
   """ __new__(cls: type,graphics: Graphics,node: TreeNode,bounds: Rectangle,state: TreeNodeStates) """

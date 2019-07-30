@@ -1,9 +1,14 @@
-class WebHeaderCollection:
+class WebHeaderCollection(NameValueCollection):
  """
  Contains protocol headers associated with a request or response.
  
  WebHeaderCollection()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebHeaderCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,*__args):
   """
   Add(self: WebHeaderCollection,name: str,value: str)
@@ -30,9 +35,7 @@ class WebHeaderCollection:
  def AddWithoutValidate(self,*args):
   """
   AddWithoutValidate(self: WebHeaderCollection,headerName: str,headerValue: str)
-   Inserts a header into the collection without checking whether the header is on the 
-    restricted header list.
-  
+   Inserts a header into the collection without checking whether the header is on the restricted header list.
   
    headerName: The header to add to the collection.
    headerValue: The content of the header.
@@ -41,9 +44,7 @@ class WebHeaderCollection:
  def BaseAdd(self,*args):
   """
   BaseAdd(self: NameObjectCollectionBase,name: str,value: object)
-   Adds an entry with the specified key and value into the 
-    System.Collections.Specialized.NameObjectCollectionBase instance.
-  
+   Adds an entry with the specified key and value into the System.Collections.Specialized.NameObjectCollectionBase instance.
   
    name: The System.String key of the entry to add. The key can be null.
    value: The System.Object value of the entry to add. The value can be null.
@@ -52,27 +53,20 @@ class WebHeaderCollection:
  def BaseClear(self,*args):
   """
   BaseClear(self: NameObjectCollectionBase)
-   Removes all entries from the System.Collections.Specialized.NameObjectCollectionBase 
-    instance.
+   Removes all entries from the System.Collections.Specialized.NameObjectCollectionBase instance.
   """
   pass
  def BaseGet(self,*args):
   """
   BaseGet(self: NameObjectCollectionBase,name: str) -> object
   
-   Gets the value of the first entry with the specified key from the 
-    System.Collections.Specialized.NameObjectCollectionBase instance.
-  
+   Gets the value of the first entry with the specified key from the System.Collections.Specialized.NameObjectCollectionBase instance.
   
    name: The System.String key of the entry to get. The key can be null.
-   Returns: An System.Object that represents the value of the first entry with the specified key,if 
-    found; otherwise,null.
-  
+   Returns: An System.Object that represents the value of the first entry with the specified key,if found; otherwise,null.
   BaseGet(self: NameObjectCollectionBase,index: int) -> object
   
-   Gets the value of the entry at the specified index of the 
-    System.Collections.Specialized.NameObjectCollectionBase instance.
-  
+   Gets the value of the entry at the specified index of the System.Collections.Specialized.NameObjectCollectionBase instance.
   
    index: The zero-based index of the value to get.
    Returns: An System.Object that represents the value of the entry at the specified index.
@@ -82,41 +76,29 @@ class WebHeaderCollection:
   """
   BaseGetAllKeys(self: NameObjectCollectionBase) -> Array[str]
   
-   Returns a System.String array that contains all the keys in the 
-    System.Collections.Specialized.NameObjectCollectionBase instance.
-  
-   Returns: A System.String array that contains all the keys in the 
-    System.Collections.Specialized.NameObjectCollectionBase instance.
+   Returns a System.String array that contains all the keys in the System.Collections.Specialized.NameObjectCollectionBase instance.
+   Returns: A System.String array that contains all the keys in the System.Collections.Specialized.NameObjectCollectionBase instance.
   """
   pass
  def BaseGetAllValues(self,*args):
   """
   BaseGetAllValues(self: NameObjectCollectionBase) -> Array[object]
   
-   Returns an System.Object array that contains all the values in the 
-    System.Collections.Specialized.NameObjectCollectionBase instance.
-  
-   Returns: An System.Object array that contains all the values in the 
-    System.Collections.Specialized.NameObjectCollectionBase instance.
-  
+   Returns an System.Object array that contains all the values in the System.Collections.Specialized.NameObjectCollectionBase instance.
+   Returns: An System.Object array that contains all the values in the System.Collections.Specialized.NameObjectCollectionBase instance.
   BaseGetAllValues(self: NameObjectCollectionBase,type: Type) -> Array[object]
   
-   Returns an array of the specified type that contains all the values in the 
-    System.Collections.Specialized.NameObjectCollectionBase instance.
-  
+   Returns an array of the specified type that contains all the values in the System.Collections.Specialized.NameObjectCollectionBase instance.
   
    type: A System.Type that represents the type of array to return.
-   Returns: An array of the specified type that contains all the values in the 
-    System.Collections.Specialized.NameObjectCollectionBase instance.
+   Returns: An array of the specified type that contains all the values in the System.Collections.Specialized.NameObjectCollectionBase instance.
   """
   pass
  def BaseGetKey(self,*args):
   """
   BaseGetKey(self: NameObjectCollectionBase,index: int) -> str
   
-   Gets the key of the entry at the specified index of the 
-    System.Collections.Specialized.NameObjectCollectionBase instance.
-  
+   Gets the key of the entry at the specified index of the System.Collections.Specialized.NameObjectCollectionBase instance.
   
    index: The zero-based index of the key to get.
    Returns: A System.String that represents the key of the entry at the specified index.
@@ -126,20 +108,14 @@ class WebHeaderCollection:
   """
   BaseHasKeys(self: NameObjectCollectionBase) -> bool
   
-   Gets a value indicating whether the 
-    System.Collections.Specialized.NameObjectCollectionBase instance contains entries whose 
-    keys are not null.
-  
-   Returns: true if the System.Collections.Specialized.NameObjectCollectionBase instance contains 
-    entries whose keys are not null; otherwise,false.
+   Gets a value indicating whether the System.Collections.Specialized.NameObjectCollectionBase instance contains entries whose keys are not null.
+   Returns: true if the System.Collections.Specialized.NameObjectCollectionBase instance contains entries whose keys are not null; otherwise,false.
   """
   pass
  def BaseRemove(self,*args):
   """
   BaseRemove(self: NameObjectCollectionBase,name: str)
-   Removes the entries with the specified key from the 
-    System.Collections.Specialized.NameObjectCollectionBase instance.
-  
+   Removes the entries with the specified key from the System.Collections.Specialized.NameObjectCollectionBase instance.
   
    name: The System.String key of the entries to remove. The key can be null.
   """
@@ -147,9 +123,7 @@ class WebHeaderCollection:
  def BaseRemoveAt(self,*args):
   """
   BaseRemoveAt(self: NameObjectCollectionBase,index: int)
-   Removes the entry at the specified index of the 
-    System.Collections.Specialized.NameObjectCollectionBase instance.
-  
+   Removes the entry at the specified index of the System.Collections.Specialized.NameObjectCollectionBase instance.
   
    index: The zero-based index of the entry to remove.
   """
@@ -157,24 +131,17 @@ class WebHeaderCollection:
  def BaseSet(self,*args):
   """
   BaseSet(self: NameObjectCollectionBase,name: str,value: object)
-   Sets the value of the first entry with the specified key in the 
-    System.Collections.Specialized.NameObjectCollectionBase instance,if found; otherwise,
-    adds an entry with the specified key and value into the 
-    System.Collections.Specialized.NameObjectCollectionBase instance.
+   Sets the value of the first entry with the specified key in the System.Collections.Specialized.NameObjectCollectionBase instance,if found; otherwise,adds an entry with 
+    the specified key and value into the System.Collections.Specialized.NameObjectCollectionBase instance.
   
   
    name: The System.String key of the entry to set. The key can be null.
-   value: The System.Object that represents the new value of the entry to set. The value can be 
-    null.
-  
+   value: The System.Object that represents the new value of the entry to set. The value can be null.
   BaseSet(self: NameObjectCollectionBase,index: int,value: object)
-   Sets the value of the entry at the specified index of the 
-    System.Collections.Specialized.NameObjectCollectionBase instance.
-  
+   Sets the value of the entry at the specified index of the System.Collections.Specialized.NameObjectCollectionBase instance.
   
    index: The zero-based index of the entry to set.
-   value: The System.Object that represents the new value of the entry to set. The value can be 
-    null.
+   value: The System.Object that represents the new value of the entry to set. The value can be null.
   """
   pass
  def Clear(self):
@@ -187,17 +154,13 @@ class WebHeaderCollection:
   """
   Get(self: WebHeaderCollection,name: str) -> str
   
-   Get the value of a particular header in the collection,specified by the name of the 
-    header.
-  
+   Get the value of a particular header in the collection,specified by the name of the header.
   
    name: The name of the Web header.
    Returns: A System.String holding the value of the specified header.
   Get(self: WebHeaderCollection,index: int) -> str
   
-   Get the value of a particular header in the collection,specified by an index into the 
-    collection.
-  
+   Get the value of a particular header in the collection,specified by an index into the collection.
   
    index: The zero-based index of the key to get from the collection.
    Returns: A System.String containing the value of the specified header.
@@ -207,9 +170,7 @@ class WebHeaderCollection:
   """
   GetEnumerator(self: WebHeaderCollection) -> IEnumerator
   
-   Returns an enumerator that can iterate through the System.Net.WebHeaderCollection 
-    instance.
-  
+   Returns an enumerator that can iterate through the System.Net.WebHeaderCollection instance.
    Returns: An System.Collections.IEnumerator for the System.Net.WebHeaderCollection.
   """
   pass
@@ -226,13 +187,10 @@ class WebHeaderCollection:
  def GetObjectData(self,serializationInfo,streamingContext):
   """
   GetObjectData(self: WebHeaderCollection,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data needed to 
-    serialize the target object.
-  
+   Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the target object.
   
    serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
-    serialization.
+   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this serialization.
   """
   pass
  def GetValues(self,*__args):
@@ -278,9 +236,7 @@ class WebHeaderCollection:
  def OnDeserialization(self,sender):
   """
   OnDeserialization(self: WebHeaderCollection,sender: object)
-   Implements the System.Runtime.Serialization.ISerializable interface and raises the 
-    deserialization event when the deserialization is complete.
-  
+   Implements the System.Runtime.Serialization.ISerializable interface and raises the deserialization event when the deserialization is complete.
   
    sender: The source of the deserialization event.
   """

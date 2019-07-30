@@ -1,10 +1,15 @@
-class SourceSwitch:
+class SourceSwitch(Switch):
  """
  Provides a multilevel switch to control tracing and debug output without recompiling your code.
  
  SourceSwitch(name: str)
  SourceSwitch(displayName: str,defaultSwitchValue: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SourceSwitch()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ShouldTrace(self,eventType):
   """
   ShouldTrace(self: SourceSwitch,eventType: TraceEventType) -> bool

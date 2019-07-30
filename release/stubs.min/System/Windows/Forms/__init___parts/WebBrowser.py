@@ -1,28 +1,24 @@
-class WebBrowser:
+class WebBrowser(WebBrowserBase,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceObject,IOleInPlaceActiveObject,IOleWindow,IViewObject,IViewObject2,IPersist,IPersistStreamInit,IPersistPropertyBag,IPersistStorage,IQuickActivate,ISupportOleDropSource,IDropTarget,ISynchronizeInvoke,IWin32Window,IArrangedElement,IBindableComponent):
  """
  Enables the user to navigate Web pages inside your form.
  
  WebBrowser()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return WebBrowser()
+
  def AccessibilityNotifyClients(self,*args):
   """
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
-   Notifies the accessibility client applications of the specified 
-    System.Windows.Forms.AccessibleEvents for the specified child control.
+   Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control.
   
-  
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications 
-    of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,objectID: int,childID: int)
-   Notifies the accessibility client applications of the specified 
-    System.Windows.Forms.AccessibleEvents for the specified child control .
+   Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control .
   
-  
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications 
-    of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
@@ -67,11 +63,8 @@ class WebBrowser:
   """
   CreateWebBrowserSiteBase(self: WebBrowser) -> WebBrowserSiteBase
   
-   Returns a reference to the unmanaged WebBrowser ActiveX control site,which you can 
-    extend to customize the managed System.Windows.Forms.WebBrowser control.
-  
-   Returns: A System.Windows.Forms.WebBrowser.WebBrowserSite that represents the WebBrowser ActiveX 
-    control site.
+   Returns a reference to the unmanaged WebBrowser ActiveX control site,which you can extend to customize the managed System.Windows.Forms.WebBrowser control.
+   Returns: A System.Windows.Forms.WebBrowser.WebBrowserSite that represents the WebBrowser ActiveX control site.
   """
   pass
  def DefWndProc(self,*args):
@@ -98,19 +91,15 @@ class WebBrowser:
  def DetachSink(self,*args):
   """
   DetachSink(self: WebBrowser)
-   Releases the event-handling client attached in the 
-    System.Windows.Forms.WebBrowser.CreateSink method from the underlying ActiveX control.
+   Releases the event-handling client attached in the System.Windows.Forms.WebBrowser.CreateSink method from the underlying ActiveX control.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: WebBrowser,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.WebBrowser and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.WebBrowser and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetAccessibilityObjectById(self,*args):
@@ -127,9 +116,7 @@ class WebBrowser:
   """
   GetAutoSizeMode(self: Control) -> AutoSizeMode
   
-   Retrieves a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
-  
+   Retrieves a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
    Returns: One of the System.Windows.Forms.AutoSizeMode values.
   """
   pass
@@ -139,13 +126,9 @@ class WebBrowser:
   
    Retrieves the bounds within which the control is scaled.
   
-   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display 
-    bounds.
-  
+   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display bounds.
    factor: The height and width of the control's bounds.
-   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of 
-    the control to use when defining its size and position.
-  
+   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of the control to use when defining its size and position.
    Returns: A System.Drawing.Rectangle representing the bounds within which the control is scaled.
   """
   pass
@@ -153,14 +136,10 @@ class WebBrowser:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -185,36 +164,28 @@ class WebBrowser:
   """
   GoBack(self: WebBrowser) -> bool
   
-   Navigates the System.Windows.Forms.WebBrowser control to the previous page in the 
-    navigation history,if one is available.
-  
-   Returns: true if the navigation succeeds; false if a previous page in the navigation history is 
-    not available.
+   Navigates the System.Windows.Forms.WebBrowser control to the previous page in the navigation history,if one is available.
+   Returns: true if the navigation succeeds; false if a previous page in the navigation history is not available.
   """
   pass
  def GoForward(self):
   """
   GoForward(self: WebBrowser) -> bool
   
-   Navigates the System.Windows.Forms.WebBrowser control to the next page in the navigation 
-    history,if one is available.
-  
-   Returns: true if the navigation succeeds; false if a subsequent page in the navigation history is 
-    not available.
+   Navigates the System.Windows.Forms.WebBrowser control to the next page in the navigation history,if one is available.
+   Returns: true if the navigation succeeds; false if a subsequent page in the navigation history is not available.
   """
   pass
  def GoHome(self):
   """
   GoHome(self: WebBrowser)
-   Navigates the System.Windows.Forms.WebBrowser control to the home page of the current 
-    user.
+   Navigates the System.Windows.Forms.WebBrowser control to the home page of the current user.
   """
   pass
  def GoSearch(self):
   """
   GoSearch(self: WebBrowser)
-   Navigates the System.Windows.Forms.WebBrowser control to the default search page of the 
-    current user.
+   Navigates the System.Windows.Forms.WebBrowser control to the default search page of the current user.
   """
   pass
  def InitLayout(self,*args):
@@ -246,9 +217,7 @@ class WebBrowser:
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event 
-    to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -257,9 +226,7 @@ class WebBrowser:
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event 
-    to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -268,9 +235,7 @@ class WebBrowser:
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event 
-    to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -279,17 +244,14 @@ class WebBrowser:
   IsInputChar(self: WebBrowserBase,charCode: Char) -> bool
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the control and not preprocessed; 
-    otherwise,false.
+   Returns: true if the character should be sent directly to the control and not preprocessed; otherwise,false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: Control,keyData: Keys) -> bool
   
-   Determines whether the specified key is a regular input key or a special key that 
-    requires preprocessing.
-  
+   Determines whether the specified key is a regular input key or a special key that requires preprocessing.
   
    keyData: One of the System.Windows.Forms.Keys values.
    Returns: true if the specified key is a regular input key; otherwise,false.
@@ -301,12 +263,7 @@ class WebBrowser:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -317,66 +274,42 @@ class WebBrowser:
  def Navigate(self,*__args):
   """
   Navigate(self: WebBrowser,url: Uri)
-   Loads the document at the location indicated by the specified System.Uri into the 
-    System.Windows.Forms.WebBrowser control,replacing the previous document.
-  
+   Loads the document at the location indicated by the specified System.Uri into the System.Windows.Forms.WebBrowser control,replacing the previous document.
   
    url: A System.Uri representing the URL of the document to load.
   Navigate(self: WebBrowser,urlString: str)
-   Loads the document at the specified Uniform Resource Locator (URL) into the 
-    System.Windows.Forms.WebBrowser control,replacing the previous document.
-  
+   Loads the document at the specified Uniform Resource Locator (URL) into the System.Windows.Forms.WebBrowser control,replacing the previous document.
   
    urlString: The URL of the document to load.
   Navigate(self: WebBrowser,url: Uri,targetFrameName: str)
-   Loads the document at the location indicated by the specified System.Uri into the 
-    System.Windows.Forms.WebBrowser control,replacing the contents of the Web page frame 
-    with the specified name.
-  
+   Loads the document at the location indicated by the specified System.Uri into the System.Windows.Forms.WebBrowser control,replacing the contents of the Web page frame with the specified name.
   
    url: A System.Uri representing the URL of the document to load.
    targetFrameName: The name of the frame in which to load the document.
   Navigate(self: WebBrowser,urlString: str,targetFrameName: str)
-   Loads the document at the specified Uniform Resource Locator (URL) into the 
-    System.Windows.Forms.WebBrowser control,replacing the contents of the Web page frame 
-    with the specified name.
-  
+   Loads the document at the specified Uniform Resource Locator (URL) into the System.Windows.Forms.WebBrowser control,replacing the contents of the Web page frame with the specified name.
   
    urlString: The URL of the document to load.
    targetFrameName: The name of the frame in which to load the document.
   Navigate(self: WebBrowser,url: Uri,newWindow: bool)
-   Loads the document at the location indicated by the specified System.Uri into a new 
-    browser window or into the System.Windows.Forms.WebBrowser control.
-  
+   Loads the document at the location indicated by the specified System.Uri into a new browser window or into the System.Windows.Forms.WebBrowser control.
   
    url: A System.Uri representing the URL of the document to load.
-   newWindow: true to load the document into a new browser window; false to load the document into the 
-    System.Windows.Forms.WebBrowser control.
-  
+   newWindow: true to load the document into a new browser window; false to load the document into the System.Windows.Forms.WebBrowser control.
   Navigate(self: WebBrowser,urlString: str,newWindow: bool)
-   Loads the document at the specified Uniform Resource Locator (URL) into a new browser 
-    window or into the System.Windows.Forms.WebBrowser control.
-  
+   Loads the document at the specified Uniform Resource Locator (URL) into a new browser window or into the System.Windows.Forms.WebBrowser control.
   
    urlString: The URL of the document to load.
-   newWindow: true to load the document into a new browser window; false to load the document into the 
-    System.Windows.Forms.WebBrowser control.
-  
+   newWindow: true to load the document into a new browser window; false to load the document into the System.Windows.Forms.WebBrowser control.
   Navigate(self: WebBrowser,url: Uri,targetFrameName: str,postData: Array[Byte],additionalHeaders: str)
-   Loads the document at the location indicated by the specified System.Uri into the 
-    System.Windows.Forms.WebBrowser control,requesting it using the specified HTTP data and 
-    replacing the contents of the Web page frame with the specified name.
-  
+   Loads the document at the location indicated by the specified System.Uri into the System.Windows.Forms.WebBrowser control,requesting it using the specified HTTP data and replacing the contents of the Web page frame with the specified name.
   
    url: A System.Uri representing the URL of the document to load.
    targetFrameName: The name of the frame in which to load the document.
    postData: HTTP POST data such as form data.
    additionalHeaders: HTTP headers to add to the default headers.
   Navigate(self: WebBrowser,urlString: str,targetFrameName: str,postData: Array[Byte],additionalHeaders: str)
-   Loads the document at the specified Uniform Resource Locator (URL) into the 
-    System.Windows.Forms.WebBrowser control,requesting it using the specified HTTP data and 
-    replacing the contents of the Web page frame with the specified name.
-  
+   Loads the document at the specified Uniform Resource Locator (URL) into the System.Windows.Forms.WebBrowser control,requesting it using the specified HTTP data and replacing the contents of the Web page frame with the specified name.
   
    urlString: The URL of the document to load.
    targetFrameName: The name of the frame in which to load the document.
@@ -387,9 +320,7 @@ class WebBrowser:
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the 
-    control to invalidate.
-  
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control to invalidate.
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
   """
@@ -897,16 +828,13 @@ class WebBrowser:
   OnPaintBackground(self: Control,pevent: PaintEventArgs)
    Paints the background of the control.
   
-   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to 
-    paint.
+   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to paint.
   """
   pass
  def OnParentBackColorChanged(self,*args):
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.BackColorChanged event when the System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -914,10 +842,7 @@ class WebBrowser:
  def OnParentBackgroundImageChanged(self,*args):
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -925,10 +850,7 @@ class WebBrowser:
  def OnParentBindingContextChanged(self,*args):
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.BindingContextChanged event when the System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -952,9 +874,7 @@ class WebBrowser:
  def OnParentEnabledChanged(self,*args):
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.EnabledChanged event when the System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -962,9 +882,7 @@ class WebBrowser:
  def OnParentFontChanged(self,*args):
   """
   OnParentFontChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.FontChanged event when the System.Windows.Forms.Control.Font property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -972,9 +890,7 @@ class WebBrowser:
  def OnParentForeColorChanged(self,*args):
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.ForeColorChanged event when the System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -982,10 +898,7 @@ class WebBrowser:
  def OnParentRightToLeftChanged(self,*args):
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.RightToLeftChanged event when the System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -993,9 +906,7 @@ class WebBrowser:
  def OnParentVisibleChanged(self,*args):
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.VisibleChanged event when the System.Windows.Forms.Control.Visible property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1139,8 +1050,7 @@ class WebBrowser:
  def Print(self):
   """
   Print(self: WebBrowser)
-   Prints the document currently displayed in the System.Windows.Forms.WebBrowser control 
-    using the current print and page settings.
+   Prints the document currently displayed in the System.Windows.Forms.WebBrowser control using the current print and page settings.
   """
   pass
  def ProcessCmdKey(self,*args):
@@ -1149,9 +1059,7 @@ class WebBrowser:
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
   """
@@ -1173,8 +1081,7 @@ class WebBrowser:
    Processes a dialog key if the WebBrowser ActiveX control does not process it.
   
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
-   Returns: true if the key was processed by the System.Windows.Forms.WebBrowserBase; otherwise,
-    false.
+   Returns: true if the key was processed by the System.Windows.Forms.WebBrowserBase; otherwise,false.
   """
   pass
  def ProcessKeyEventArgs(self,*args):
@@ -1183,9 +1090,7 @@ class WebBrowser:
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1195,9 +1100,7 @@ class WebBrowser:
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1207,9 +1110,7 @@ class WebBrowser:
   
    Previews a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1266,13 +1167,9 @@ class WebBrowser:
  def Refresh(self,opt=None):
   """
   Refresh(self: WebBrowser)
-   Reloads the document currently displayed in the System.Windows.Forms.WebBrowser control 
-    by checking the server for an updated version.
-  
+   Reloads the document currently displayed in the System.Windows.Forms.WebBrowser control by checking the server for an updated version.
   Refresh(self: WebBrowser,opt: WebBrowserRefreshOption)
-   Reloads the document currently displayed in the System.Windows.Forms.WebBrowser control 
-    using the specified refresh options.
-  
+   Reloads the document currently displayed in the System.Windows.Forms.WebBrowser control using the specified refresh options.
   
    opt: One of the System.Windows.Forms.WebBrowserRefreshOption values.
   """
@@ -1290,25 +1187,19 @@ class WebBrowser:
   """
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
-    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
    Returns: One of the System.Windows.Forms.HorizontalAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
-    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: ContentAlignment) -> ContentAlignment
   
-   Converts the specified System.Drawing.ContentAlignment to the appropriate 
-    System.Drawing.ContentAlignment to support right-to-left text.
-  
+   Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
   
    align: One of the System.Drawing.ContentAlignment values.
    Returns: One of the System.Drawing.ContentAlignment values.
@@ -1318,9 +1209,7 @@ class WebBrowser:
   """
   RtlTranslateContent(self: Control,align: ContentAlignment) -> ContentAlignment
   
-   Converts the specified System.Drawing.ContentAlignment to the appropriate 
-    System.Drawing.ContentAlignment to support right-to-left text.
-  
+   Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
   
    align: One of the System.Drawing.ContentAlignment values.
    Returns: One of the System.Drawing.ContentAlignment values.
@@ -1330,9 +1219,7 @@ class WebBrowser:
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
-    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
    Returns: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1342,9 +1229,7 @@ class WebBrowser:
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
-    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1356,8 +1241,7 @@ class WebBrowser:
    Scales a control's location,size,padding and margin.
   
    factor: The factor by which the height and width of the control will be scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to 
-    use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -1372,9 +1256,7 @@ class WebBrowser:
  def Select(self):
   """
   Select(self: Control,directed: bool,forward: bool)
-   Activates a child control. Optionally specifies the direction in the tab order to select 
-    the control from.
-  
+   Activates a child control. Optionally specifies the direction in the tab order to select the control from.
   
    directed: true to specify the direction of the control to select; otherwise,false.
    forward: true to move forward in the tab order; false to move backward in the tab order.
@@ -1383,9 +1265,7 @@ class WebBrowser:
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
-  
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
   """
@@ -1463,8 +1343,7 @@ class WebBrowser:
  def ShowSaveAsDialog(self):
   """
   ShowSaveAsDialog(self: WebBrowser)
-   Opens the Internet Explorer Save Web Page dialog box or the Save dialog box of the hosted 
-    document if it is not an HTML page.
+   Opens the Internet Explorer Save Web Page dialog box or the Save dialog box of the hosted document if it is not an HTML page.
   """
   pass
  def SizeFromClientSize(self,*args):
@@ -1473,17 +1352,14 @@ class WebBrowser:
   
    Determines the size of the entire control from the height and width of its client area.
   
-   clientSize: A System.Drawing.Size value representing the height and width of the control's client 
-    area.
-  
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
    Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass
  def Stop(self):
   """
   Stop(self: WebBrowser)
-   Cancels any pending navigation and stops any dynamic page elements,such as background 
-    sounds and animations.
+   Cancels any pending navigation and stops any dynamic page elements,such as background sounds and animations.
   """
   pass
  def UpdateBounds(self,*args):

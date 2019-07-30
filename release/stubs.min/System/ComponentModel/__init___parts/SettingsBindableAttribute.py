@@ -4,6 +4,11 @@ class SettingsBindableAttribute:
  
  SettingsBindableAttribute(bindable: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SettingsBindableAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: SettingsBindableAttribute,obj: object) -> bool

@@ -1,10 +1,15 @@
-class BStrWrapper:
+class BStrWrapper(object):
  """
  Marshals data of type VT_BSTR from managed to unmanaged code. This class cannot be inherited.
  
  BStrWrapper(value: str)
  BStrWrapper(value: object)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BStrWrapper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,value):
   """

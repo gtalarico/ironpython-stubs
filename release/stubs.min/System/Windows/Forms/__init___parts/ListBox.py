@@ -1,28 +1,24 @@
-class ListBox:
+class ListBox(ListControl,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceObject,IOleInPlaceActiveObject,IOleWindow,IViewObject,IViewObject2,IPersist,IPersistStreamInit,IPersistPropertyBag,IPersistStorage,IQuickActivate,ISupportOleDropSource,IDropTarget,ISynchronizeInvoke,IWin32Window,IArrangedElement,IBindableComponent):
  """
  Represents a Windows control to display a list of items.
  
  ListBox()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ListBox()
+
  def AccessibilityNotifyClients(self,*args):
   """
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
-   Notifies the accessibility client applications of the specified 
-    System.Windows.Forms.AccessibleEvents for the specified child control.
+   Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control.
   
-  
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications 
-    of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,objectID: int,childID: int)
-   Notifies the accessibility client applications of the specified 
-    System.Windows.Forms.AccessibleEvents for the specified child control .
+   Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control .
   
-  
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications 
-    of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
@@ -38,9 +34,7 @@ class ListBox:
  def BeginUpdate(self):
   """
   BeginUpdate(self: ListBox)
-   Maintains performance while items are added to the System.Windows.Forms.ListBox one at a 
-    time by preventing the control from drawing until the 
-    System.Windows.Forms.ListBox.EndUpdate method is called.
+   Maintains performance while items are added to the System.Windows.Forms.ListBox one at a time by preventing the control from drawing until the System.Windows.Forms.ListBox.EndUpdate method is called.
   """
   pass
  def ClearSelected(self):
@@ -97,36 +91,28 @@ class ListBox:
  def Dispose(self):
   """
   Dispose(self: Control,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.Control and its child 
-    controls and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.Control and its child controls and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def EndUpdate(self):
   """
   EndUpdate(self: ListBox)
-   Resumes painting the System.Windows.Forms.ListBox control after painting is suspended by 
-    the System.Windows.Forms.ListBox.BeginUpdate method.
+   Resumes painting the System.Windows.Forms.ListBox control after painting is suspended by the System.Windows.Forms.ListBox.BeginUpdate method.
   """
   pass
  def FilterItemOnProperty(self,*args):
   """
   FilterItemOnProperty(self: ListControl,item: object) -> object
   
-   Retrieves the current value of the System.Windows.Forms.ListControl item,if it is a 
-    property of an object,given the item.
-  
+   Retrieves the current value of the System.Windows.Forms.ListControl item,if it is a property of an object,given the item.
   
    item: The object the System.Windows.Forms.ListControl item is bound to.
    Returns: The filtered object.
   FilterItemOnProperty(self: ListControl,item: object,field: str) -> object
   
-   Returns the current value of the System.Windows.Forms.ListControl item,if it is a 
-    property of an object given the item and the property name.
-  
+   Returns the current value of the System.Windows.Forms.ListControl item,if it is a property of an object given the item and the property name.
   
    item: The object the System.Windows.Forms.ListControl item is bound to.
    field: The property name of the item the System.Windows.Forms.ListControl is bound to.
@@ -137,52 +123,34 @@ class ListBox:
   """
   FindString(self: ListBox,s: str) -> int
   
-   Finds the first item in the System.Windows.Forms.ListBox that starts with the specified 
-    string.
-  
+   Finds the first item in the System.Windows.Forms.ListBox that starts with the specified string.
   
    s: The text to search for.
-   Returns: The zero-based index of the first item found; returns ListBox.NoMatches if no match is 
-    found.
-  
+   Returns: The zero-based index of the first item found; returns ListBox.NoMatches if no match is found.
   FindString(self: ListBox,s: str,startIndex: int) -> int
   
-   Finds the first item in the System.Windows.Forms.ListBox that starts with the specified 
-    string. The search starts at a specific starting index.
-  
+   Finds the first item in the System.Windows.Forms.ListBox that starts with the specified string. The search starts at a specific starting index.
   
    s: The text to search for.
-   startIndex: The zero-based index of the item before the first item to be searched. Set to negative 
-    one (-1) to search from the beginning of the control.
-  
-   Returns: The zero-based index of the first item found; returns ListBox.NoMatches if no match is 
-    found.
+   startIndex: The zero-based index of the item before the first item to be searched. Set to negative one (-1) to search from the beginning of the control.
+   Returns: The zero-based index of the first item found; returns ListBox.NoMatches if no match is found.
   """
   pass
  def FindStringExact(self,s,startIndex=None):
   """
   FindStringExact(self: ListBox,s: str) -> int
   
-   Finds the first item in the System.Windows.Forms.ListBox that exactly matches the 
-    specified string.
-  
+   Finds the first item in the System.Windows.Forms.ListBox that exactly matches the specified string.
   
    s: The text to search for.
-   Returns: The zero-based index of the first item found; returns ListBox.NoMatches if no match is 
-    found.
-  
+   Returns: The zero-based index of the first item found; returns ListBox.NoMatches if no match is found.
   FindStringExact(self: ListBox,s: str,startIndex: int) -> int
   
-   Finds the first item in the System.Windows.Forms.ListBox that exactly matches the 
-    specified string. The search starts at a specific starting index.
-  
+   Finds the first item in the System.Windows.Forms.ListBox that exactly matches the specified string. The search starts at a specific starting index.
   
    s: The text to search for.
-   startIndex: The zero-based index of the item before the first item to be searched. Set to negative 
-    one (-1) to search from the beginning of the control.
-  
-   Returns: The zero-based index of the first item found; returns ListBox.NoMatches if no match is 
-    found.
+   startIndex: The zero-based index of the item before the first item to be searched. Set to negative one (-1) to search from the beginning of the control.
+   Returns: The zero-based index of the first item found; returns ListBox.NoMatches if no match is found.
   """
   pass
  def GetAccessibilityObjectById(self,*args):
@@ -199,9 +167,7 @@ class ListBox:
   """
   GetAutoSizeMode(self: Control) -> AutoSizeMode
   
-   Retrieves a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
-  
+   Retrieves a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
    Returns: One of the System.Windows.Forms.AutoSizeMode values.
   """
   pass
@@ -231,13 +197,9 @@ class ListBox:
   
    Retrieves the bounds within which the System.Windows.Forms.ListBox is scaled.
   
-   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display 
-    bounds.
-  
+   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display bounds.
    factor: The height and width of the control's bounds.
-   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of 
-    the control to use when defining its size and position.
-  
+   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of the control to use when defining its size and position.
    Returns: A System.Drawing.Rectangle representing the bounds within which the control is scaled.
   """
   pass
@@ -248,22 +210,17 @@ class ListBox:
    Returns a value indicating whether the specified item is selected.
   
    index: The zero-based index of the item that determines whether it is selected.
-   Returns: true if the specified item is currently selected in the System.Windows.Forms.ListBox; 
-    otherwise,false.
+   Returns: true if the specified item is currently selected in the System.Windows.Forms.ListBox; otherwise,false.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -291,17 +248,14 @@ class ListBox:
    Returns the zero-based index of the item at the specified coordinates.
   
    p: A System.Drawing.Point object containing the coordinates used to obtain the item index.
-   Returns: The zero-based index of the item found at the specified coordinates; returns 
-    ListBox.NoMatches if no match is found.
-  
+   Returns: The zero-based index of the item found at the specified coordinates; returns ListBox.NoMatches if no match is found.
   IndexFromPoint(self: ListBox,x: int,y: int) -> int
   
    Returns the zero-based index of the item at the specified coordinates.
   
    x: The x-coordinate of the location to search.
    y: The y-coordinate of the location to search.
-   Returns: The zero-based index of the item found at the specified coordinates; returns 
-    ListBox.NoMatches if no match is found.
+   Returns: The zero-based index of the item found at the specified coordinates; returns ListBox.NoMatches if no match is found.
   """
   pass
  def InitLayout(self,*args):
@@ -333,9 +287,7 @@ class ListBox:
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event 
-    to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -344,9 +296,7 @@ class ListBox:
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event 
-    to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -355,9 +305,7 @@ class ListBox:
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event 
-    to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -368,8 +316,7 @@ class ListBox:
    Determines if a character is an input character that the control recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the control and not preprocessed; 
-    otherwise,false.
+   Returns: true if the character should be sent directly to the control and not preprocessed; otherwise,false.
   """
   pass
  def IsInputKey(self,*args):
@@ -379,10 +326,7 @@ class ListBox:
    Handles special input keys,such as PAGE UP,PAGE DOWN,HOME,END,and so on.
   
    keyData: One of the values of System.Windows.Forms.Keys.
-   Returns: true if the keyData parameter specifies the System.Windows.Forms.Keys.End,
-    System.Windows.Forms.Keys.Home,System.Windows.Forms.Keys.PageUp,or 
-    System.Windows.Forms.Keys.PageDown key; false if the keyData parameter specifies 
-    System.Windows.Forms.Keys.Alt.
+   Returns: true if the keyData parameter specifies the System.Windows.Forms.Keys.End,System.Windows.Forms.Keys.Home,System.Windows.Forms.Keys.PageUp,or System.Windows.Forms.Keys.PageDown key; false if the keyData parameter specifies System.Windows.Forms.Keys.Alt.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -391,12 +335,7 @@ class ListBox:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -407,9 +346,7 @@ class ListBox:
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the 
-    control to invalidate.
-  
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control to invalidate.
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
   """
@@ -683,9 +620,7 @@ class ListBox:
  def OnHandleCreated(self,*args):
   """
   OnHandleCreated(self: ListBox,e: EventArgs)
-   Specifies when the window handle has been created so that column width and other 
-    characteristics can be set. Inheriting classes should call base.OnHandleCreated.
-  
+   Specifies when the window handle has been created so that column width and other characteristics can be set. Inheriting classes should call base.OnHandleCreated.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -693,9 +628,7 @@ class ListBox:
  def OnHandleDestroyed(self,*args):
   """
   OnHandleDestroyed(self: ListBox,e: EventArgs)
-   Overridden to be sure that items are set up and cleared out correctly. Inheriting 
-    controls should call base.OnHandleDestroyed.
-  
+   Overridden to be sure that items are set up and cleared out correctly. Inheriting controls should call base.OnHandleDestroyed.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -913,16 +846,13 @@ class ListBox:
   OnPaintBackground(self: Control,pevent: PaintEventArgs)
    Paints the background of the control.
   
-   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to 
-    paint.
+   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to paint.
   """
   pass
  def OnParentBackColorChanged(self,*args):
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.BackColorChanged event when the System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -930,10 +860,7 @@ class ListBox:
  def OnParentBackgroundImageChanged(self,*args):
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -941,10 +868,7 @@ class ListBox:
  def OnParentBindingContextChanged(self,*args):
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.BindingContextChanged event when the System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -966,9 +890,7 @@ class ListBox:
  def OnParentEnabledChanged(self,*args):
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.EnabledChanged event when the System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -976,9 +898,7 @@ class ListBox:
  def OnParentFontChanged(self,*args):
   """
   OnParentFontChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.FontChanged event when the System.Windows.Forms.Control.Font property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -986,9 +906,7 @@ class ListBox:
  def OnParentForeColorChanged(self,*args):
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.ForeColorChanged event when the System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -996,10 +914,7 @@ class ListBox:
  def OnParentRightToLeftChanged(self,*args):
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.RightToLeftChanged event when the System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1007,9 +922,7 @@ class ListBox:
  def OnParentVisibleChanged(self,*args):
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.VisibleChanged event when the System.Windows.Forms.Control.Visible property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1158,9 +1071,7 @@ class ListBox:
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
   """
@@ -1191,9 +1102,7 @@ class ListBox:
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1203,9 +1112,7 @@ class ListBox:
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1215,9 +1122,7 @@ class ListBox:
   
    Previews a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1276,8 +1181,7 @@ class ListBox:
  def Refresh(self):
   """
   Refresh(self: ListBox)
-   Forces the control to invalidate its client area and immediately redraw itself and any 
-    child controls.
+   Forces the control to invalidate its client area and immediately redraw itself and any child controls.
   """
   pass
  def RefreshItem(self,*args):
@@ -1313,25 +1217,19 @@ class ListBox:
   """
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
-    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
    Returns: One of the System.Windows.Forms.HorizontalAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
-    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: ContentAlignment) -> ContentAlignment
   
-   Converts the specified System.Drawing.ContentAlignment to the appropriate 
-    System.Drawing.ContentAlignment to support right-to-left text.
-  
+   Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
   
    align: One of the System.Drawing.ContentAlignment values.
    Returns: One of the System.Drawing.ContentAlignment values.
@@ -1341,9 +1239,7 @@ class ListBox:
   """
   RtlTranslateContent(self: Control,align: ContentAlignment) -> ContentAlignment
   
-   Converts the specified System.Drawing.ContentAlignment to the appropriate 
-    System.Drawing.ContentAlignment to support right-to-left text.
-  
+   Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
   
    align: One of the System.Drawing.ContentAlignment values.
    Returns: One of the System.Drawing.ContentAlignment values.
@@ -1353,9 +1249,7 @@ class ListBox:
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
-    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
    Returns: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1365,9 +1259,7 @@ class ListBox:
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
-    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1377,8 +1269,7 @@ class ListBox:
   """
   ScaleControl(self: ListBox,factor: SizeF,specified: BoundsSpecified)
    factor: The factor by which the height and width of the control will be scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to 
-    use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -1393,9 +1284,7 @@ class ListBox:
  def Select(self):
   """
   Select(self: Control,directed: bool,forward: bool)
-   Activates a child control. Optionally specifies the direction in the tab order to select 
-    the control from.
-  
+   Activates a child control. Optionally specifies the direction in the tab order to select the control from.
   
    directed: true to specify the direction of the control to select; otherwise,false.
    forward: true to move forward in the tab order; false to move backward in the tab order.
@@ -1404,9 +1293,7 @@ class ListBox:
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
-  
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
   """
@@ -1444,9 +1331,7 @@ class ListBox:
  def SetItemsCore(self,*args):
   """
   SetItemsCore(self: ListBox,value: IList)
-   Clears the contents of the System.Windows.Forms.ListBox and adds the specified items to 
-    the control.
-  
+   Clears the contents of the System.Windows.Forms.ListBox and adds the specified items to the control.
   
    value: An array of objects to insert into the control.
   """
@@ -1456,9 +1341,7 @@ class ListBox:
   SetSelected(self: ListBox,index: int,value: bool)
    Selects or clears the selection for the specified item in a System.Windows.Forms.ListBox.
   
-   index: The zero-based index of the item in a System.Windows.Forms.ListBox to select or clear the 
-    selection for.
-  
+   index: The zero-based index of the item in a System.Windows.Forms.ListBox to select or clear the selection for.
    value: true to select the specified item; otherwise,false.
   """
   pass
@@ -1493,9 +1376,7 @@ class ListBox:
   
    Determines the size of the entire control from the height and width of its client area.
   
-   clientSize: A System.Drawing.Size value representing the height and width of the control's client 
-    area.
-  
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
    Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass
@@ -1510,9 +1391,7 @@ class ListBox:
   ToString(self: ListBox) -> str
   
    Returns a string representation of the System.Windows.Forms.ListBox.
-   Returns: A string that states the control type,the count of items in the 
-    System.Windows.Forms.ListBox control,and the Text property of the first item in the 
-    System.Windows.Forms.ListBox,if the count is not 0.
+   Returns: A string that states the control type,the count of items in the System.Windows.Forms.ListBox control,and the Text property of the first item in the System.Windows.Forms.ListBox,if the count is not 0.
   """
   pass
  def UpdateBounds(self,*args):
@@ -1553,12 +1432,9 @@ class ListBox:
   """
   WmReflectCommand(self: ListBox,m: Message) -> Message
   
-   Processes the command message the System.Windows.Forms.ListView control receives from the 
-    top-level window.
+   Processes the command message the System.Windows.Forms.ListView control receives from the top-level window.
   
-  
-   m: The System.Windows.Forms.Message the top-level window sent to the 
-    System.Windows.Forms.ListBox control.
+   m: The System.Windows.Forms.Message the top-level window sent to the System.Windows.Forms.ListBox control.
   """
   pass
  def WndProc(self,*args):

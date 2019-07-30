@@ -1,15 +1,22 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.PrintJobs calls itself PrintJobs
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # no functions
 # classes
 
-class BwServerPrintJobMessageProcessor:
+class BwServerPrintJobMessageProcessor(MessageProcessor):
  """ BwServerPrintJobMessageProcessor(queueProvider: IQueueProvider) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BwServerPrintJobMessageProcessor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,queueProvider):
   """ __new__(cls: type,queueProvider: IQueueProvider) """
@@ -17,8 +24,13 @@ class BwServerPrintJobMessageProcessor:
  _queueProvider=None
 
 
-class CleanupDocumentQueueTask:
+class CleanupDocumentQueueTask(TaskBase):
  """ CleanupDocumentQueueTask(settings: SystemSettings) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CleanupDocumentQueueTask()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Run(self):
   """ Run(self: CleanupDocumentQueueTask) """
   pass
@@ -33,8 +45,13 @@ class CleanupDocumentQueueTask:
 
 
 
-class DocumentQueueExtensionMethods:
+class DocumentQueueExtensionMethods(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DocumentQueueExtensionMethods()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def AddPrintJobSync(queue,job):
   """ AddPrintJobSync(queue: IAddPrintJob,job: AddPrintJob) -> Guid """
@@ -59,8 +76,13 @@ class DocumentQueueExtensionMethods:
  ]
 
 
-class JsonMessageDispatcher:
+class JsonMessageDispatcher(object):
  """ JsonMessageDispatcher(queueProvider: IQueueProvider) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return JsonMessageDispatcher()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def PublishMessage(self,message):
   """ PublishMessage(self: JsonMessageDispatcher,message: object) """
   pass
@@ -69,8 +91,13 @@ class JsonMessageDispatcher:
   """ __new__(cls: type,queueProvider: IQueueProvider) """
   pass
 
-class PrintJobExtensions:
+class PrintJobExtensions(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintJobExtensions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def RegisterMsQueue(container,resolverName,host,queueName):
   """ RegisterMsQueue(container: IUnityContainer,resolverName: str,host: str,queueName: str) """
@@ -80,15 +107,25 @@ class PrintJobExtensions:
  ]
 
 
-class PrintJobQueueDispatcher:
+class PrintJobQueueDispatcher(JsonMessageDispatcher):
  """ PrintJobQueueDispatcher(queueProvider: IQueueProvider) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintJobQueueDispatcher()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,queueProvider):
   """ __new__(cls: type,queueProvider: IQueueProvider) """
   pass
 
-class PrintJobsOnStartupValidator:
+class PrintJobsOnStartupValidator(object):
  """ PrintJobsOnStartupValidator(messageDispatcher: PrintJobQueueDispatcher) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintJobsOnStartupValidator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Start(self,cancellationToken):
   """ Start(self: PrintJobsOnStartupValidator,cancellationToken: CancellationToken) -> Task """
   pass
@@ -97,8 +134,13 @@ class PrintJobsOnStartupValidator:
   """ __new__(cls: type,messageDispatcher: PrintJobQueueDispatcher) """
   pass
 
-class PrintJobsQueuer:
+class PrintJobsQueuer(object):
  """ PrintJobsQueuer(messageDispatcher: PrintJobQueueDispatcher,storageProvider: StorageProvider) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrintJobsQueuer()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def QueueNextPrintJob(self,*args):
   """ QueueNextPrintJob(self: PrintJobsQueuer) -> int """
   pass

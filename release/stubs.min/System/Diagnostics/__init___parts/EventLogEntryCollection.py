@@ -1,14 +1,16 @@
-class EventLogEntryCollection:
+class EventLogEntryCollection(object):
  """ Defines size and enumerators for a collection of System.Diagnostics.EventLogEntry instances. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EventLogEntryCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CopyTo(self,entries,index):
   """
   CopyTo(self: EventLogEntryCollection,entries: Array[EventLogEntry],index: int)
-   Copies the elements of the System.Diagnostics.EventLogEntryCollection to an array of 
-    System.Diagnostics.EventLogEntry instances,starting at a particular array index.
+   Copies the elements of the System.Diagnostics.EventLogEntryCollection to an array of System.Diagnostics.EventLogEntry instances,starting at a particular array index.
   
-  
-   entries: The one-dimensional array of System.Diagnostics.EventLogEntry instances that is the 
-    destination of the elements copied from the collection. The array must have zero-based 
+   entries: The one-dimensional array of System.Diagnostics.EventLogEntry instances that is the destination of the elements copied from the collection. The array must have zero-based 
     indexing.
   
    index: The zero-based index in the array at which copying begins.

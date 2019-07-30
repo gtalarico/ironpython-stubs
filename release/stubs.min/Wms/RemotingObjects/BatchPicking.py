@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.BatchPicking calls itself BatchPicking
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
 class ActivityEnum:
  """ enum ActivityEnum,values: BatchCreated (0),BatchFinished (1),ProcessedPack (7),ProcessedPick (6),ProcessShipment (8),StartedPacking (4),StartedPicking (2),StoppedPacking (5),StoppedPicking (3) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ActivityEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -45,8 +51,13 @@ class ActivityEnum:
  value__=None
 
 
-class BatchBase:
+class BatchBase(CacheObject):
  """ BatchBase() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: BatchBase) -> object """
   pass
@@ -86,7 +97,9 @@ Set: Age(self: BatchBase)=value
 """
 
  AssignedUserId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AssignedUserId(self: BatchBase) -> int
+ """Foreign key to the user that is assigned to the batch. Value <= 0 means not assigned
+
+Get: AssignedUserId(self: BatchBase) -> int
 
 Set: AssignedUserId(self: BatchBase)=value
 """
@@ -174,7 +187,9 @@ Set: Id(self: BatchBase)=value
 """
 
  IdAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IdAsString(self: BatchBase) -> str
+ """Necessary for Mobile
+
+Get: IdAsString(self: BatchBase) -> str
 
 """
 
@@ -288,7 +303,9 @@ Set: Tag(self: BatchBase)=value
 """
 
  UserId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UserId(self: BatchBase) -> int
+ """Foreign key to the user that created the batch.
+
+Get: UserId(self: BatchBase) -> int
 
 Set: UserId(self: BatchBase)=value
 """
@@ -301,11 +318,16 @@ Set: ZoneId(self: BatchBase)=value
 
 
 
-class Batch:
+class Batch(BatchBase):
  """
  Batch()
  Batch(tag: object)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Batch()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddOrMergeSoLine(self,line):
   """ AddOrMergeSoLine(self: Batch,line: OutboundOrderLine) """
   pass
@@ -319,7 +341,11 @@ class Batch:
   """ DisapproveBatch(self: Batch) """
   pass
  def GetOrderNumbers(self,onlyVisibleOrders):
-  """ GetOrderNumbers(self: Batch,onlyVisibleOrders: bool) -> List[str] """
+  """
+  GetOrderNumbers(self: Batch,onlyVisibleOrders: bool) -> List[str]
+  
+   onlyVisibleOrders: True if only the ordernumbers of visible lines should be retrieved,otherwise false.
+  """
   pass
  def HasOrderLinesOfOrder(self,orderNumber):
   """ HasOrderLinesOfOrder(self: Batch,orderNumber: str) -> bool """
@@ -328,7 +354,11 @@ class Batch:
   """ HasTransportPackages(self: Batch) -> bool """
   pass
  def IsProcessedInTotal(self):
-  """ IsProcessedInTotal(self: Batch) -> bool """
+  """
+  IsProcessedInTotal(self: Batch) -> bool
+  
+   Is called from CleanupBatches only...
+  """
   pass
  def RegisterBatchCreated(self,identity):
   """ RegisterBatchCreated(self: Batch,identity: RemotingIdentity) """
@@ -388,7 +418,9 @@ Set: CreatedByClientTypeClientType(self: Batch)=value
 """
 
  Customers=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Customers(self: Batch) -> PackCustomers
+ """Contains the customers in this batch.
+
+Get: Customers(self: Batch) -> PackCustomers
 
 Set: Customers(self: Batch)=value
 """
@@ -455,13 +487,19 @@ Set: PreferredColumns(self: Batch)=value
 """
 
  References=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: References(self: Batch) -> List[ColloReference]
+ """Colli SSCC references.
+   Never null.
+
+Get: References(self: Batch) -> List[ColloReference]
 
 Set: References(self: Batch)=value
 """
 
  ShipOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ShipOrders(self: Batch) -> bool
+ """If set to false,the shipment feature on the mobile/touch devices will be skipped for this batch.
+   Setter is used in zone scripts only!
+
+Get: ShipOrders(self: Batch) -> bool
 
 Set: ShipOrders(self: Batch)=value
 """
@@ -483,8 +521,13 @@ Set: ShipOrders(self: Batch)=value
 
 
 
-class BatchActivityEntry:
+class BatchActivityEntry(object):
  """ BatchActivityEntry() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchActivityEntry()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: BatchActivityEntry) -> object """
   pass
@@ -497,44 +540,61 @@ class BatchActivityEntry:
   """ __repr__(self: object) -> str """
   pass
  Activity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Activity(self: BatchActivityEntry) -> ActivityEnum
+ """
+
+Get: Activity(self: BatchActivityEntry) -> ActivityEnum
 
 Set: Activity(self: BatchActivityEntry)=value
 """
 
  ActivityAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ActivityAsString(self: BatchActivityEntry) -> str
+ """
+
+Get: ActivityAsString(self: BatchActivityEntry) -> str
 
 """
 
  DatabaseId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DatabaseId(self: BatchActivityEntry) -> int
+ """
+
+Get: DatabaseId(self: BatchActivityEntry) -> int
 
 Set: DatabaseId(self: BatchActivityEntry)=value
 """
 
  Notes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Notes(self: BatchActivityEntry) -> str
+ """
+
+Get: Notes(self: BatchActivityEntry) -> str
 
 Set: Notes(self: BatchActivityEntry)=value
 """
 
  Session=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Session(self: BatchActivityEntry) -> Session
+ """
+
+Get: Session(self: BatchActivityEntry) -> Session
 
 Set: Session(self: BatchActivityEntry)=value
 """
 
  Time=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Time(self: BatchActivityEntry) -> DateTime
+ """
+
+Get: Time(self: BatchActivityEntry) -> DateTime
 
 Set: Time(self: BatchActivityEntry)=value
 """
 
 
 
-class BatchAgeSortComparer:
+class BatchAgeSortComparer(object):
  """ BatchAgeSortComparer() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchAgeSortComparer()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Compare(self,x,y):
   """ Compare(self: BatchAgeSortComparer,x: Batch,y: Batch) -> int """
   pass
@@ -548,8 +608,13 @@ class BatchAgeSortComparer:
   """ __repr__(self: object) -> str """
   pass
 
-class BatchBaseAgeSortComparer:
+class BatchBaseAgeSortComparer(object):
  """ BatchBaseAgeSortComparer() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchBaseAgeSortComparer()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Compare(self,x,y):
   """ Compare(self: BatchBaseAgeSortComparer,x: BatchBase,y: BatchBase) -> int """
   pass
@@ -563,8 +628,13 @@ class BatchBaseAgeSortComparer:
   """ __repr__(self: object) -> str """
   pass
 
-class BatchBaseList:
+class BatchBaseList(FindableList):
  """ BatchBaseList() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchBaseList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -585,6 +655,11 @@ class BatchBaseList:
 
 class BatchCreatedByClientTypeEnum:
  """ enum BatchCreatedByClientTypeEnum,values: AdHocPicking (1),Portal (0),Script (2),Touch (3) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchCreatedByClientTypeEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -615,11 +690,16 @@ class BatchCreatedByClientTypeEnum:
  value__=None
 
 
-class Batches:
+class Batches(FindableList):
  """
  Batches()
  Batches(filterBatches: IEnumerable[Batch])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Batches()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(list):
   """ FromIEnumerable(list: IEnumerable[Batch]) -> Batches """
@@ -658,8 +738,13 @@ class Batches:
  ValueMember='IdAsString'
 
 
-class BatchFilterArgs:
+class BatchFilterArgs(object):
  """ BatchFilterArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchFilterArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Barcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Barcode(self: BatchFilterArgs) -> str
 
@@ -692,22 +777,34 @@ Set: TagsToFilter(self: BatchFilterArgs)=value
 
 
 
-class BatchFilterResult:
+class BatchFilterResult(object):
  """ BatchFilterResult() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchFilterResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  BarcodeResult=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BarcodeResult(self: BatchFilterResult) -> str
+ """
+
+Get: BarcodeResult(self: BatchFilterResult) -> str
 
 Set: BarcodeResult(self: BatchFilterResult)=value
 """
 
  Batches=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Batches(self: BatchFilterResult) -> BatchBaseList
+ """
+
+Get: Batches(self: BatchFilterResult) -> BatchBaseList
 
 Set: Batches(self: BatchFilterResult)=value
 """
 
  Customer=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Customer(self: BatchFilterResult) -> PackCustomer
+ """The Wms.RemotingObjects.Sales.PackCustomer of the found batch if the scan 
+   matches the data that belongs to a single customer
+
+Get: Customer(self: BatchFilterResult) -> PackCustomer
 
 Set: Customer(self: BatchFilterResult)=value
 """
@@ -716,6 +813,11 @@ Set: Customer(self: BatchFilterResult)=value
 
 class BatchPickLocation:
  """ BatchPickLocation() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchPickLocation()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def ConstructUniqueId(itemCode,warehouseCode,locationCode,itemIdNumber,innerReference,outerReference):
   """ ConstructUniqueId(itemCode: str,warehouseCode: str,locationCode: str,itemIdNumber: str,innerReference: str,outerReference: str) -> str """
@@ -753,7 +855,9 @@ Set: CustomerDistribution(self: BatchPickLocation)=value
 """
 
  InnerReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: InnerReference(self: BatchPickLocation) -> str
+ """The inner reference number
+
+Get: InnerReference(self: BatchPickLocation) -> str
 
 Set: InnerReference(self: BatchPickLocation)=value
 """
@@ -817,13 +921,17 @@ Set: ItemWeight(self: BatchPickLocation)=value
 """
 
  OuterReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OuterReference(self: BatchPickLocation) -> str
+ """The outer reference number (SSCC)
+
+Get: OuterReference(self: BatchPickLocation) -> str
 
 Set: OuterReference(self: BatchPickLocation)=value
 """
 
  OuterReferenceDisplayValue=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OuterReferenceDisplayValue(self: BatchPickLocation) -> str
+ """The outer reference to display
+
+Get: OuterReferenceDisplayValue(self: BatchPickLocation) -> str
 
 Set: OuterReferenceDisplayValue(self: BatchPickLocation)=value
 """
@@ -872,6 +980,11 @@ Set: VendorItemCode(self: BatchPickLocation)=value
 
 class BatchPickLocationIndicatorEnum:
  """ enum BatchPickLocationIndicatorEnum,values: Complete (2),MarkedAsPicked (3),None (0),Partial (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchPickLocationIndicatorEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -902,8 +1015,13 @@ class BatchPickLocationIndicatorEnum:
  value__=None
 
 
-class BatchPickLocations:
+class BatchPickLocations(FindableList):
  """ BatchPickLocations() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchPickLocations()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(list):
   """ FromIEnumerable(list: IEnumerable[BatchPickLocation]) -> BatchPickLocations """
@@ -928,6 +1046,11 @@ class BatchPickLocations:
 
 class BatchProcessAction:
  """ enum BatchProcessAction,values: Default (0),Mobile (2),MobileToTerminal (1),Terminal (3) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchProcessAction()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -958,42 +1081,62 @@ class BatchProcessAction:
  value__=None
 
 
-class BatchScanArgs:
+class BatchScanArgs(object):
  """ BatchScanArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchScanArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Barcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Barcode(self: BatchScanArgs) -> str
+ """
+
+Get: Barcode(self: BatchScanArgs) -> str
 
 Set: Barcode(self: BatchScanArgs)=value
 """
 
  CacheKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CacheKey(self: BatchScanArgs) -> CacheKey
+ """CacheKey of the batch
+
+Get: CacheKey(self: BatchScanArgs) -> CacheKey
 
 Set: CacheKey(self: BatchScanArgs)=value
 """
 
  ItemCodeExpected=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCodeExpected(self: BatchScanArgs) -> str
+ """The expected item
+
+Get: ItemCodeExpected(self: BatchScanArgs) -> str
 
 Set: ItemCodeExpected(self: BatchScanArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: BatchScanArgs) -> str
+ """
+
+Get: WarehouseCode(self: BatchScanArgs) -> str
 
 Set: WarehouseCode(self: BatchScanArgs)=value
 """
 
  WarehouseLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseLocationCode(self: BatchScanArgs) -> str
+ """
+
+Get: WarehouseLocationCode(self: BatchScanArgs) -> str
 
 Set: WarehouseLocationCode(self: BatchScanArgs)=value
 """
 
 
 
-class BatchScanResult:
+class BatchScanResult(object):
  """ BatchScanResult() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchScanResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  BarcodeResult=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: BarcodeResult(self: BatchScanResult) -> BarcodeStructureResultEnum
 
@@ -1034,6 +1177,11 @@ Set: Message(self: BatchScanResult)=value
 
 class BatchStatus:
  """ enum BatchStatus,values: Approved (0),FullyPacked (5),New (-1),Packing (4),Picking (1),PickingAndPacking (2),ReadyToPack (3),Shipping (6) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchStatus()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -1068,46 +1216,65 @@ class BatchStatus:
  value__=None
 
 
-class BatchUpdateArgs:
+class BatchUpdateArgs(object):
  """ BatchUpdateArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchUpdateArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  AllocationProfileId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AllocationProfileId(self: BatchUpdateArgs) -> int
+ """
+
+Get: AllocationProfileId(self: BatchUpdateArgs) -> int
 
 Set: AllocationProfileId(self: BatchUpdateArgs)=value
 """
 
  Approve=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Approve(self: BatchUpdateArgs) -> bool
+ """
+
+Get: Approve(self: BatchUpdateArgs) -> bool
 
 Set: Approve(self: BatchUpdateArgs)=value
 """
 
  AssignedUserId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AssignedUserId(self: BatchUpdateArgs) -> int
+ """
+
+Get: AssignedUserId(self: BatchUpdateArgs) -> int
 
 Set: AssignedUserId(self: BatchUpdateArgs)=value
 """
 
  BatchName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BatchName(self: BatchUpdateArgs) -> str
+ """
+
+Get: BatchName(self: BatchUpdateArgs) -> str
 
 Set: BatchName(self: BatchUpdateArgs)=value
 """
 
  Notes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Notes(self: BatchUpdateArgs) -> str
+ """
+
+Get: Notes(self: BatchUpdateArgs) -> str
 
 Set: Notes(self: BatchUpdateArgs)=value
 """
 
  PickItems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PickItems(self: BatchUpdateArgs) -> bool
+ """
+
+Get: PickItems(self: BatchUpdateArgs) -> bool
 
 Set: PickItems(self: BatchUpdateArgs)=value
 """
 
  Tags=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Tags(self: BatchUpdateArgs) -> Array[Tag]
+ """
+
+Get: Tags(self: BatchUpdateArgs) -> Array[Tag]
 
 Set: Tags(self: BatchUpdateArgs)=value
 """
@@ -1116,6 +1283,11 @@ Set: Tags(self: BatchUpdateArgs)=value
 
 class DifferFromRouteOptions:
  """ enum DifferFromRouteOptions,values: Allow (0),AllowWithMessage (1),DontAllow (2) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DifferFromRouteOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -1145,62 +1317,90 @@ class DifferFromRouteOptions:
  value__=None
 
 
-class GetBatchArgs:
+class GetBatchArgs(object):
  """ GetBatchArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetBatchArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CreatedByClientType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CreatedByClientType(self: GetBatchArgs) -> BatchCreatedByClientTypeEnum
+ """
+
+Get: CreatedByClientType(self: GetBatchArgs) -> BatchCreatedByClientTypeEnum
 
 Set: CreatedByClientType(self: GetBatchArgs)=value
 """
 
  Filter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Filter(self: GetBatchArgs) -> str
+ """
+
+Get: Filter(self: GetBatchArgs) -> str
 
 Set: Filter(self: GetBatchArgs)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: GetBatchArgs) -> str
+ """
+
+Get: Id(self: GetBatchArgs) -> str
 
 Set: Id(self: GetBatchArgs)=value
 """
 
  Status=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Status(self: GetBatchArgs) -> BatchStatus
+ """
+
+Get: Status(self: GetBatchArgs) -> BatchStatus
 
 Set: Status(self: GetBatchArgs)=value
 """
 
  TagsToFilter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TagsToFilter(self: GetBatchArgs) -> Tags
+ """
+
+Get: TagsToFilter(self: GetBatchArgs) -> Tags
 
 Set: TagsToFilter(self: GetBatchArgs)=value
 """
 
  UseCreatedBy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UseCreatedBy(self: GetBatchArgs) -> bool
+ """
+
+Get: UseCreatedBy(self: GetBatchArgs) -> bool
 
 Set: UseCreatedBy(self: GetBatchArgs)=value
 """
 
  UseStatus=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UseStatus(self: GetBatchArgs) -> bool
+ """
+
+Get: UseStatus(self: GetBatchArgs) -> bool
 
 Set: UseStatus(self: GetBatchArgs)=value
 """
 
 
 
-class GetBatchToConsolidateToArgs:
+class GetBatchToConsolidateToArgs(object):
  """ GetBatchToConsolidateToArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetBatchToConsolidateToArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  UseComparerToFindBatch=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UseComparerToFindBatch(self: GetBatchToConsolidateToArgs) -> bool
+ """
+
+Get: UseComparerToFindBatch(self: GetBatchToConsolidateToArgs) -> bool
 
 Set: UseComparerToFindBatch(self: GetBatchToConsolidateToArgs)=value
 """
 
  ZoneIdToCheckForPackBatch=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ZoneIdToCheckForPackBatch(self: GetBatchToConsolidateToArgs) -> int
+ """
+
+Get: ZoneIdToCheckForPackBatch(self: GetBatchToConsolidateToArgs) -> int
 
 Set: ZoneIdToCheckForPackBatch(self: GetBatchToConsolidateToArgs)=value
 """
@@ -1209,35 +1409,51 @@ Set: ZoneIdToCheckForPackBatch(self: GetBatchToConsolidateToArgs)=value
  Comparer=None
 
 
-class GetItemsToPackArgs:
+class GetItemsToPackArgs(object):
  """ GetItemsToPackArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetItemsToPackArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  BatchIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BatchIds(self: GetItemsToPackArgs) -> List[str]
+ """
+
+Get: BatchIds(self: GetItemsToPackArgs) -> List[str]
 
 Set: BatchIds(self: GetItemsToPackArgs)=value
 """
 
  CacheKeyOfTransportPackages=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CacheKeyOfTransportPackages(self: GetItemsToPackArgs) -> CacheKey
+ """
+
+Get: CacheKeyOfTransportPackages(self: GetItemsToPackArgs) -> CacheKey
 
 Set: CacheKeyOfTransportPackages(self: GetItemsToPackArgs)=value
 """
 
  Customer=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Customer(self: GetItemsToPackArgs) -> PackCustomer
+ """
+
+Get: Customer(self: GetItemsToPackArgs) -> PackCustomer
 
 Set: Customer(self: GetItemsToPackArgs)=value
 """
 
 
 
-class PickArgs:
+class PickArgs(object):
  """
  PickArgs()
  PickArgs(itemCode: str,warehouseCode: str,locationCode: str,quantity: Decimal)
  PickArgs(itemCode: str,warehouseCode: str,locationCode: str,quantity: Decimal,itemId: str)
  PickArgs(itemCode: str,warehouseCode: str,locationCode: str,quantity: Decimal,itemId: ItemIdentification)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PickArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,itemCode=None,warehouseCode=None,locationCode=None,quantity=None,itemId=None):
   """
@@ -1266,7 +1482,9 @@ Set: ItemId(self: PickArgs)=value
 """
 
  ItemWasScanned=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemWasScanned(self: PickArgs) -> bool
+ """True if the pick was performed with a scanned item,false if the item was manually confirmed.
+
+Get: ItemWasScanned(self: PickArgs) -> bool
 
 Set: ItemWasScanned(self: PickArgs)=value
 """
@@ -1278,31 +1496,43 @@ Set: LocationCode(self: PickArgs)=value
 """
 
  LocationWasScanned=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LocationWasScanned(self: PickArgs) -> bool
+ """True if the pick was performed with a scanned location,false if the location was manually confirmed.
+
+Get: LocationWasScanned(self: PickArgs) -> bool
 
 Set: LocationWasScanned(self: PickArgs)=value
 """
 
  NewInnerReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NewInnerReference(self: PickArgs) -> str
+ """The new inner (item) reference. It's used in conjuction with
+   Wms.RemotingObjects.BatchPicking.PickArgs.PreviousInnerReference when a reference is updated.
+
+Get: NewInnerReference(self: PickArgs) -> str
 
 Set: NewInnerReference(self: PickArgs)=value
 """
 
  NewOuterReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NewOuterReference(self: PickArgs) -> str
+ """The new outer (SSCC) reference. It's used in conjuction with 
+   Wms.RemotingObjects.BatchPicking.PickArgs.PreviousOuterReference when a reference is updated
+
+Get: NewOuterReference(self: PickArgs) -> str
 
 Set: NewOuterReference(self: PickArgs)=value
 """
 
  PreviousInnerReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreviousInnerReference(self: PickArgs) -> str
+ """The inner reference that will be overwritten during a pick.
+
+Get: PreviousInnerReference(self: PickArgs) -> str
 
 Set: PreviousInnerReference(self: PickArgs)=value
 """
 
  PreviousOuterReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreviousOuterReference(self: PickArgs) -> str
+ """The outer (SSCC) reference that will be overwritten during a pick.
+
+Get: PreviousOuterReference(self: PickArgs) -> str
 
 Set: PreviousOuterReference(self: PickArgs)=value
 """
@@ -1314,7 +1544,11 @@ Set: Quantity(self: PickArgs)=value
 """
 
  Result=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Result(self: PickArgs) -> PickResult
+ """The result after a pick. It contains the updated Wms.RemotingObjects.BatchPicking.BatchPickLocations and
+   a dictionary with the positions of the updated Wms.RemotingObjects.BatchPicking.BatchPickLocations that the 
+   applications can use to determine the correction position.
+
+Get: Result(self: PickArgs) -> PickResult
 
 Set: Result(self: PickArgs)=value
 """
@@ -1327,52 +1561,87 @@ Set: WarehouseCode(self: PickArgs)=value
 
 
 
-class PickItemIdRangeArgs:
+class PickItemIdRangeArgs(PickArgs):
  """ PickItemIdRangeArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PickItemIdRangeArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  GenerateArgs=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GenerateArgs(self: PickItemIdRangeArgs) -> ItemIdGenerateArgs
+ """
+
+Get: GenerateArgs(self: PickItemIdRangeArgs) -> ItemIdGenerateArgs
 
 Set: GenerateArgs(self: PickItemIdRangeArgs)=value
 """
 
 
 
-class PickItemIdsArgs:
+class PickItemIdsArgs(PickArgs):
  """ PickItemIdsArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PickItemIdsArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ItemIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIds(self: PickItemIdsArgs) -> List[ItemIdentification]
+ """
+
+Get: ItemIds(self: PickItemIdsArgs) -> List[ItemIdentification]
 
 Set: ItemIds(self: PickItemIdsArgs)=value
 """
 
 
 
-class PickResult:
+class PickResult(object):
  """ PickResult() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PickResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  PickLocations=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PickLocations(self: PickResult) -> BatchPickLocations
+ """
+
+Get: PickLocations(self: PickResult) -> BatchPickLocations
 
 Set: PickLocations(self: PickResult)=value
 """
 
  Positions=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Positions(self: PickResult) -> SerializableDictionary[str,str]
+ """The positions of the Wms.RemotingObjects.BatchPicking.BatchPickLocations to insert back into the picking list.
+   It contains the id of the Wms.RemotingObjects.BatchPicking.BatchPickLocation to insert/update and the id of the 
+   parent Wms.RemotingObjects.BatchPicking.BatchPickLocation for the position.
+   Key=Wms.RemotingObjects.BatchPicking.BatchPickLocation.UniqueId,Value=parent Wms.RemotingObjects.BatchPicking.BatchPickLocation.UniqueId
+
+Get: Positions(self: PickResult) -> SerializableDictionary[str,str]
 
 Set: Positions(self: PickResult)=value
 """
 
 
 
-class ProcessBatchPickingArgs:
+class ProcessBatchPickingArgs(object):
  """ ProcessBatchPickingArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessBatchPickingArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CacheKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CacheKey(self: ProcessBatchPickingArgs) -> CacheKey
+ """
+
+Get: CacheKey(self: ProcessBatchPickingArgs) -> CacheKey
 
 Set: CacheKey(self: ProcessBatchPickingArgs)=value
 """
 
  NewPackBatchId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NewPackBatchId(self: ProcessBatchPickingArgs) -> str
+ """
+
+Get: NewPackBatchId(self: ProcessBatchPickingArgs) -> str
 
 Set: NewPackBatchId(self: ProcessBatchPickingArgs)=value
 """
@@ -1381,6 +1650,11 @@ Set: NewPackBatchId(self: ProcessBatchPickingArgs)=value
 
 class ProcessPickState:
  """ enum ProcessPickState,values: Allocated (3),Deallocated (2),Done (4),NotSet (0),Transferred (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessPickState()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -1412,28 +1686,41 @@ class ProcessPickState:
  value__=None
 
 
-class ProcessSalesOrderLinesArgs:
+class ProcessSalesOrderLinesArgs(object):
  """ ProcessSalesOrderLinesArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessSalesOrderLinesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  AllowToDeliverMoreThanOrdered=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AllowToDeliverMoreThanOrdered(self: ProcessSalesOrderLinesArgs) -> bool
+ """
+
+Get: AllowToDeliverMoreThanOrdered(self: ProcessSalesOrderLinesArgs) -> bool
 
 Set: AllowToDeliverMoreThanOrdered(self: ProcessSalesOrderLinesArgs)=value
 """
 
  DocumentPrinter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DocumentPrinter(self: ProcessSalesOrderLinesArgs) -> str
+ """
+
+Get: DocumentPrinter(self: ProcessSalesOrderLinesArgs) -> str
 
 Set: DocumentPrinter(self: ProcessSalesOrderLinesArgs)=value
 """
 
  PackageSlipLayout=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackageSlipLayout(self: ProcessSalesOrderLinesArgs) -> str
+ """
+
+Get: PackageSlipLayout(self: ProcessSalesOrderLinesArgs) -> str
 
 Set: PackageSlipLayout(self: ProcessSalesOrderLinesArgs)=value
 """
 
  PrintInvoices=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrintInvoices(self: ProcessSalesOrderLinesArgs) -> bool
+ """
+
+Get: PrintInvoices(self: ProcessSalesOrderLinesArgs) -> bool
 
 Set: PrintInvoices(self: ProcessSalesOrderLinesArgs)=value
 """

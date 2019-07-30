@@ -8,8 +8,12 @@
 # no functions
 # classes
 
-class SystemDrawingSection:
+class SystemDrawingSection(ConfigurationSection):
  """ SystemDrawingSection() """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SystemDrawingSection()
+
  BitmapSuffix=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: BitmapSuffix(self: SystemDrawingSection) -> str
 

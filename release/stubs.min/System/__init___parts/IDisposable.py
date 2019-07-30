@@ -1,10 +1,14 @@
 class IDisposable:
  """ Defines a method to release allocated resources. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IDisposable()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: IDisposable)
-   Performs application-defined tasks associated with freeing,releasing,or resetting 
-    unmanaged resources.
+   Performs application-defined tasks associated with freeing,releasing,or resetting unmanaged resources.
   """
   pass
  def __enter__(self,*args):

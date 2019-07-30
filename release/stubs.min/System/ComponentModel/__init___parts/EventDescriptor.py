@@ -1,5 +1,10 @@
-class EventDescriptor:
+class EventDescriptor(MemberDescriptor):
  """ Provides information about an event. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EventDescriptor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddEventHandler(self,component,value):
   """
   AddEventHandler(self: EventDescriptor,component: object,value: Delegate)
@@ -12,9 +17,7 @@ class EventDescriptor:
  def RemoveEventHandler(self,component,value):
   """
   RemoveEventHandler(self: EventDescriptor,component: object,value: Delegate)
-   When overridden in a derived class,unbinds the delegate from the component so that the 
-    delegate will no longer receive events from the component.
-  
+   When overridden in a derived class,unbinds the delegate from the component so that the delegate will no longer receive events from the component.
   
    component: The component that the delegate is bound to.
    value: The delegate to unbind from the component.

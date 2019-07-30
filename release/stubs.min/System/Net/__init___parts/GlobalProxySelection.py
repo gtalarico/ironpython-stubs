@@ -1,9 +1,14 @@
-class GlobalProxySelection:
+class GlobalProxySelection(object):
  """
  Contains a global default proxy instance for all HTTP requests.
  
  GlobalProxySelection()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GlobalProxySelection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetEmptyWebProxy():
   """

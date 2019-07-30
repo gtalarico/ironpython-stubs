@@ -1,51 +1,42 @@
 class _MethodBase:
  """ Exposes the public members of the System.Reflection.MethodBase class to unmanaged code. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return _MethodBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,other):
   """
   Equals(self: _MethodBase,other: object) -> bool
   
-   Provides COM objects with version-independent access to the 
-    System.Object.Equals(System.Object) method.
-  
+   Provides COM objects with version-independent access to the System.Object.Equals(System.Object) method.
   
    other: The System.Object to compare with the current System.Object.
-   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,
-    false.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
   """
   pass
  def GetCustomAttributes(self,*__args):
   """
   GetCustomAttributes(self: _MethodBase,attributeType: Type,inherit: bool) -> Array[object]
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.MemberInfo.GetCustomAttributes(System.Type,System.Boolean) method.
+   Provides COM objects with version-independent access to the System.Reflection.MemberInfo.GetCustomAttributes(System.Type,System.Boolean) method.
   
-  
-   attributeType: The type of attribute to search for. Only attributes that are assignable to this type are 
-    returned.
-  
+   attributeType: The type of attribute to search for. Only attributes that are assignable to this type are returned.
    inherit: true to search this member's inheritance chain to find the attributes; otherwise,false.
-   Returns: An array of custom attributes applied to this member,or an array with zero (0) elements 
-    if no attributes have been applied.
-  
+   Returns: An array of custom attributes applied to this member,or an array with zero (0) elements if no attributes have been applied.
   GetCustomAttributes(self: _MethodBase,inherit: bool) -> Array[object]
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean) method.
   
    inherit: true to search this member's inheritance chain to find the attributes; otherwise,false.
-   Returns: An array that contains all the custom attributes,or an array with zero (0) elements if 
-    no attributes are defined.
+   Returns: An array that contains all the custom attributes,or an array with zero (0) elements if no attributes are defined.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: _MethodBase) -> int
   
-   Provides COM objects with version-independent access to the System.Object.GetHashCode 
-    method.
-  
+   Provides COM objects with version-independent access to the System.Object.GetHashCode method.
    Returns: The hash code for the current instance.
   """
   pass
@@ -66,9 +57,7 @@ class _MethodBase:
   """
   GetMethodImplementationFlags(self: _MethodBase) -> MethodImplAttributes
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.MethodBase.GetMethodImplementationFlags method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.MethodBase.GetMethodImplementationFlags method.
    Returns: One of the System.Reflection.MethodImplAttributes values.
   """
   pass
@@ -76,11 +65,8 @@ class _MethodBase:
   """
   GetParameters(self: _MethodBase) -> Array[ParameterInfo]
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.MethodBase.GetParameters method.
-  
-   Returns: An array of type System.Reflection.ParameterInfo containing information that matches the 
-    signature of the method (or constructor) reflected by this instance.
+   Provides COM objects with version-independent access to the System.Reflection.MethodBase.GetParameters method.
+   Returns: An array of type System.Reflection.ParameterInfo containing information that matches the signature of the method (or constructor) reflected by this instance.
   """
   pass
  def GetType(self):
@@ -94,9 +80,7 @@ class _MethodBase:
  def GetTypeInfo(self,iTInfo,lcid,ppTInfo):
   """
   GetTypeInfo(self: _MethodBase,iTInfo: UInt32,lcid: UInt32,ppTInfo: IntPtr)
-   Retrieves the type information for an object,which can be used to get the type 
-    information for an interface.
-  
+   Retrieves the type information for an object,which can be used to get the type information for an interface.
   
    iTInfo: The type information to return.
    lcid: The locale identifier for the type information.
@@ -107,8 +91,7 @@ class _MethodBase:
   """
   GetTypeInfoCount(self: _MethodBase) -> UInt32
   
-   Retrieves the number of type information interfaces that an object provides (either 0 or 
-    1).
+   Retrieves the number of type information interfaces that an object provides (either 0 or 1).
   """
   pass
  def Invoke(self,*__args):
@@ -121,53 +104,38 @@ class _MethodBase:
    riid: Reserved for future use. Must be IID_NULL.
    lcid: The locale context in which to interpret arguments.
    wFlags: Flags describing the context of the call.
-   pDispParams: A pointer to a structure containing an array of arguments,an array of argument DISPIDs 
-    for named arguments,and counts for the number of elements in the arrays.
-  
+   pDispParams: A pointer to a structure containing an array of arguments,an array of argument DISPIDs for named arguments,and counts for the number of elements in the arrays.
    pVarResult: A pointer to the location where the result will be stored.
    pExcepInfo: A pointer to a structure that contains exception information.
    puArgErr: The index of the first argument that has an error.
   Invoke(self: _MethodBase,obj: object,invokeAttr: BindingFlags,binder: Binder,parameters: Array[object],culture: CultureInfo) -> object
   
    Provides COM objects with version-independent access to the 
-    System.Reflection.MethodBase.Invoke(System.Object,System.Reflection.BindingFlags,System.Re
-    flection.Binder,System.Object[],System.Globalization.CultureInfo) method.
+    System.Reflection.MethodBase.Invoke(System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo) method.
   
   
    obj: The instance that created this method.
    invokeAttr: One of the BindingFlags values that specifies the type of binding.
-   binder: A Binder that defines a set of properties and enables the binding,coercion of argument 
-    types,and invocation of members using reflection. If binder is null,then 
+   binder: A Binder that defines a set of properties and enables the binding,coercion of argument types,and invocation of members using reflection. If binder is null,then 
     Binder.DefaultBinding is used.
   
-   parameters: An array of type Object used to match the number,order,and type of the parameters for 
-    this constructor,under the constraints of binder. If this constructor does not require 
-    parameters,pass an array with zero elements,as in Object[] parameters=new Object[0]. 
-    Any object in this array that is not explicitly initialized with a value will contain the 
-    default value for that object type. For reference type elements,this value is null. For 
-    value type elements,this value is 0,0.0,or false,depending on the specific element 
-    type.
+   parameters: An array of type Object used to match the number,order,and type of the parameters for this constructor,under the constraints of binder. If this constructor does not 
+    require parameters,pass an array with zero elements,as in Object[] parameters=new Object[0]. Any object in this array that is not explicitly initialized with a value 
+    will contain the default value for that object type. For reference type elements,this value is null. For value type elements,this value is 0,0.0,or false,depending on 
+    the specific element type.
   
-   culture: A System.Globalization.CultureInfo object used to govern the coercion of types. If this 
-    is null,the System.Globalization.CultureInfo for the current thread is used.
-  
+   culture: A System.Globalization.CultureInfo object used to govern the coercion of types. If this is null,the System.Globalization.CultureInfo for the current thread is used.
    Returns: An instance of the class associated with the constructor.
   Invoke(self: _MethodBase,obj: object,parameters: Array[object]) -> object
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.MethodBase.Invoke(System.Object,System.Object[]) method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.MethodBase.Invoke(System.Object,System.Object[]) method.
   
    obj: The instance that created this method.
-   parameters: An argument list for the invoked method or constructor. This is an array of objects with 
-    the same number,order,and type as the parameters of the method or constructor to be 
-    invoked. If there are no parameters,parameters should be null.If the method or 
-    constructor represented by this instance takes a ref parameter (ByRef in Visual Basic),
-    no special attribute is required for that parameter to invoke the method or constructor 
-    using this function. Any object in this array that is not explicitly initialized with a 
-    value will contain the default value for that object type. For reference type elements,
-    this value is null. For value type elements,this value is 0,0.0,or false,depending on 
-    the specific element type.
+   parameters: An argument list for the invoked method or constructor. This is an array of objects with the same number,order,and type as the parameters of the method or constructor to 
+    be invoked. If there are no parameters,parameters should be null.If the method or constructor represented by this instance takes a ref parameter (ByRef in Visual Basic),
+    no special attribute is required for that parameter to invoke the method or constructor using this function. Any object in this array that is not explicitly initialized 
+    with a value will contain the default value for that object type. For reference type elements,this value is null. For value type elements,this value is 0,0.0,or false,
+    depending on the specific element type.
   
    Returns: An instance of the class associated with the constructor.
   """
@@ -176,14 +144,11 @@ class _MethodBase:
   """
   IsDefined(self: _MethodBase,attributeType: Type,inherit: bool) -> bool
   
-   Provides COM objects with version-independent access to the 
-    System.Reflection.MemberInfo.IsDefined(System.Type,System.Boolean) method.
-  
+   Provides COM objects with version-independent access to the System.Reflection.MemberInfo.IsDefined(System.Type,System.Boolean) method.
   
    attributeType: The Type object to which the custom attributes are applied.
    inherit: true to search this member's inheritance chain to find the attributes; otherwise,false.
-   Returns: true if one or more instance of the attributeType parameter is applied to this member; 
-    otherwise,false.
+   Returns: true if one or more instance of the attributeType parameter is applied to this member; otherwise,false.
   """
   pass
  def ToString(self):

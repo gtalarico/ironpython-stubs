@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.Rma calls itself Rma
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class DeleteFreeRmaLineArgs:
+class DeleteFreeRmaLineArgs(object):
  """ DeleteFreeRmaLineArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DeleteFreeRmaLineArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CacheKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: CacheKey(self: DeleteFreeRmaLineArgs) -> CacheKey
 
@@ -36,39 +42,60 @@ Set: Reason(self: DeleteFreeRmaLineArgs)=value
 
 
 
-class GetHistoryRmaOrderLinesArgs:
+class GetHistoryRmaOrderLinesArgs(object):
  """ GetHistoryRmaOrderLinesArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetHistoryRmaOrderLinesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CustomerNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerNumber(self: GetHistoryRmaOrderLinesArgs) -> str
+ """
+
+Get: CustomerNumber(self: GetHistoryRmaOrderLinesArgs) -> str
 
 Set: CustomerNumber(self: GetHistoryRmaOrderLinesArgs)=value
 """
 
  HistorySalesOrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HistorySalesOrderNumber(self: GetHistoryRmaOrderLinesArgs) -> str
+ """
+
+Get: HistorySalesOrderNumber(self: GetHistoryRmaOrderLinesArgs) -> str
 
 Set: HistorySalesOrderNumber(self: GetHistoryRmaOrderLinesArgs)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: GetHistoryRmaOrderLinesArgs) -> str
+ """
+
+Get: ItemCode(self: GetHistoryRmaOrderLinesArgs) -> str
 
 Set: ItemCode(self: GetHistoryRmaOrderLinesArgs)=value
 """
 
  OrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumber(self: GetHistoryRmaOrderLinesArgs) -> str
+ """
+
+Get: OrderNumber(self: GetHistoryRmaOrderLinesArgs) -> str
 
 Set: OrderNumber(self: GetHistoryRmaOrderLinesArgs)=value
 """
 
 
 
-class GetRmaOrderArgs:
+class GetRmaOrderArgs(object):
  """
+ {Delete}
+     Arguments wich are used for retrieving RMA orders.
+ 
  GetRmaOrderArgs()
  GetRmaOrderArgs(rmaOrderId: int,warehouseCode: str,customerNumber: str,filterText: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetRmaOrderArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,rmaOrderId=None,warehouseCode=None,customerNumber=None,filterText=None):
   """
@@ -77,25 +104,33 @@ class GetRmaOrderArgs:
   """
   pass
  CustomerNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerNumber(self: GetRmaOrderArgs) -> str
+ """
+
+Get: CustomerNumber(self: GetRmaOrderArgs) -> str
 
 Set: CustomerNumber(self: GetRmaOrderArgs)=value
 """
 
  FilterText=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: FilterText(self: GetRmaOrderArgs) -> str
+ """
+
+Get: FilterText(self: GetRmaOrderArgs) -> str
 
 Set: FilterText(self: GetRmaOrderArgs)=value
 """
 
  RmaOrderId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: RmaOrderId(self: GetRmaOrderArgs) -> int
+ """
+
+Get: RmaOrderId(self: GetRmaOrderArgs) -> int
 
 Set: RmaOrderId(self: GetRmaOrderArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: GetRmaOrderArgs) -> str
+ """
+
+Get: WarehouseCode(self: GetRmaOrderArgs) -> str
 
 Set: WarehouseCode(self: GetRmaOrderArgs)=value
 """
@@ -104,11 +139,18 @@ Set: WarehouseCode(self: GetRmaOrderArgs)=value
  Default=None
 
 
-class GetRmaOrderCustomersArgs:
+class GetRmaOrderCustomersArgs(object):
  """
+ Arguments wich are used for retrieving customers from RMA orders.
+ 
  GetRmaOrderCustomersArgs()
  GetRmaOrderCustomersArgs(warehouseCode: str,filterText: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetRmaOrderCustomersArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,warehouseCode=None,filterText=None):
   """
@@ -117,13 +159,17 @@ class GetRmaOrderCustomersArgs:
   """
   pass
  FilterText=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: FilterText(self: GetRmaOrderCustomersArgs) -> str
+ """
+
+Get: FilterText(self: GetRmaOrderCustomersArgs) -> str
 
 Set: FilterText(self: GetRmaOrderCustomersArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: GetRmaOrderCustomersArgs) -> str
+ """
+
+Get: WarehouseCode(self: GetRmaOrderCustomersArgs) -> str
 
 Set: WarehouseCode(self: GetRmaOrderCustomersArgs)=value
 """
@@ -132,7 +178,7 @@ Set: WarehouseCode(self: GetRmaOrderCustomersArgs)=value
  Default=None
 
 
-class GetRmaOrderLinesArgs:
+class GetRmaOrderLinesArgs(object):
  """
  GetRmaOrderLinesArgs()
  GetRmaOrderLinesArgs(orderId: int)
@@ -140,6 +186,11 @@ class GetRmaOrderLinesArgs:
  GetRmaOrderLinesArgs(orderId: int,orderNumber: str)
  GetRmaOrderLinesArgs(orderId: int,orderNumber: str,warehouseCode: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetRmaOrderLinesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -151,19 +202,25 @@ class GetRmaOrderLinesArgs:
   """
   pass
  OrderId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderId(self: GetRmaOrderLinesArgs) -> int
+ """
+
+Get: OrderId(self: GetRmaOrderLinesArgs) -> int
 
 Set: OrderId(self: GetRmaOrderLinesArgs)=value
 """
 
  OrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumber(self: GetRmaOrderLinesArgs) -> str
+ """
+
+Get: OrderNumber(self: GetRmaOrderLinesArgs) -> str
 
 Set: OrderNumber(self: GetRmaOrderLinesArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: GetRmaOrderLinesArgs) -> str
+ """
+
+Get: WarehouseCode(self: GetRmaOrderLinesArgs) -> str
 
 Set: WarehouseCode(self: GetRmaOrderLinesArgs)=value
 """
@@ -173,7 +230,19 @@ Set: WarehouseCode(self: GetRmaOrderLinesArgs)=value
 
 
 class RmaOrder:
- """ RmaOrder() """
+ """
+ Represents a single RMA order. Contains all general information of a purchase order.
+    
+    It doesn't contain the order lines! Those are gathered by using the Wms.RemotingObjects.Rma.RmaOrderLines and Wms.RemotingObjects.Rma.RmaOrderLine
+    objects.
+ 
+ RmaOrder()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RmaOrder()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def CreateDummyFromCustomer(orderNumber,warehouseCode,customer):
   """ CreateDummyFromCustomer(orderNumber: str,warehouseCode: str,customer: Customer) -> RmaOrder """
@@ -187,100 +256,136 @@ class RmaOrder:
  def __reduce_ex__(self,*args):
   pass
  CustomerAddressLine1=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerAddressLine1(self: RmaOrder) -> str
+ """Address of the customer,containing the street name and number.
+
+Get: CustomerAddressLine1(self: RmaOrder) -> str
 
 Set: CustomerAddressLine1(self: RmaOrder)=value
 """
 
  CustomerAddressLine2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerAddressLine2(self: RmaOrder) -> str
+ """Second address of the customer,containing the street name and number.
+
+Get: CustomerAddressLine2(self: RmaOrder) -> str
 
 Set: CustomerAddressLine2(self: RmaOrder)=value
 """
 
  CustomerAddressLine3=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerAddressLine3(self: RmaOrder) -> str
+ """Third address of the customer,containing the street name and number.
+
+Get: CustomerAddressLine3(self: RmaOrder) -> str
 
 Set: CustomerAddressLine3(self: RmaOrder)=value
 """
 
  CustomerCity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerCity(self: RmaOrder) -> str
+ """Necessary for Userinterface BOXwise Mobile.
+
+Get: CustomerCity(self: RmaOrder) -> str
 
 Set: CustomerCity(self: RmaOrder)=value
 """
 
  CustomerContact=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerContact(self: RmaOrder) -> str
+ """
+
+Get: CustomerContact(self: RmaOrder) -> str
 
 Set: CustomerContact(self: RmaOrder)=value
 """
 
  CustomerContactEmail=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerContactEmail(self: RmaOrder) -> str
+ """
+
+Get: CustomerContactEmail(self: RmaOrder) -> str
 
 Set: CustomerContactEmail(self: RmaOrder)=value
 """
 
  CustomerCountryCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerCountryCode(self: RmaOrder) -> str
+ """Necessary for Userinterface BOXwise Mobile.
+
+Get: CustomerCountryCode(self: RmaOrder) -> str
 
 Set: CustomerCountryCode(self: RmaOrder)=value
 """
 
  CustomerCountryName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerCountryName(self: RmaOrder) -> str
+ """
+
+Get: CustomerCountryName(self: RmaOrder) -> str
 
 Set: CustomerCountryName(self: RmaOrder)=value
 """
 
  CustomerName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerName(self: RmaOrder) -> str
+ """Necessary for Userinterface BOXwise  Mobile.
+   Full name of the customer of the RMA order.
+
+Get: CustomerName(self: RmaOrder) -> str
 
 Set: CustomerName(self: RmaOrder)=value
 """
 
  CustomerNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerNumber(self: RmaOrder) -> str
+ """Necessary for Userinterface BOXwise  Mobile.
+
+Get: CustomerNumber(self: RmaOrder) -> str
 
 Set: CustomerNumber(self: RmaOrder)=value
 """
 
  CustomerPhoneNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerPhoneNumber(self: RmaOrder) -> str
+ """
+
+Get: CustomerPhoneNumber(self: RmaOrder) -> str
 
 Set: CustomerPhoneNumber(self: RmaOrder)=value
 """
 
  CustomerState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerState(self: RmaOrder) -> str
+ """
+
+Get: CustomerState(self: RmaOrder) -> str
 
 Set: CustomerState(self: RmaOrder)=value
 """
 
  CustomerZipCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerZipCode(self: RmaOrder) -> str
+ """
+
+Get: CustomerZipCode(self: RmaOrder) -> str
 
 Set: CustomerZipCode(self: RmaOrder)=value
 """
 
 
 
-class HistoryRmaOrder:
+class HistoryRmaOrder(RmaOrder):
  """ HistoryRmaOrder() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryRmaOrder()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  def __reduce_ex__(self,*args):
   pass
  GroupGuid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupGuid(self: HistoryRmaOrder) -> Guid
+ """
+
+Get: GroupGuid(self: HistoryRmaOrder) -> Guid
 
 Set: GroupGuid(self: HistoryRmaOrder)=value
 """
 
  YourReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: YourReference(self: HistoryRmaOrder) -> str
+ """
+
+Get: YourReference(self: HistoryRmaOrder) -> str
 
 Set: YourReference(self: HistoryRmaOrder)=value
 """
@@ -288,7 +393,16 @@ Set: YourReference(self: HistoryRmaOrder)=value
 
 
 class RmaOrderLine:
- """ RmaOrderLine() """
+ """
+ Represents a single order line of a RMA order.
+ 
+ RmaOrderLine()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RmaOrderLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: RmaOrderLine) -> object """
   pass
@@ -306,54 +420,76 @@ class RmaOrderLine:
  def __reduce_ex__(self,*args):
   pass
  HistorySalesOrderId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HistorySalesOrderId(self: RmaOrderLine) -> int
+ """Id of the salesorder that was used to send the item to the customer.
+
+Get: HistorySalesOrderId(self: RmaOrderLine) -> int
 
 Set: HistorySalesOrderId(self: RmaOrderLine)=value
 """
 
  HistorySalesOrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HistorySalesOrderNumber(self: RmaOrderLine) -> str
+ """Number of the salesorder that was used to send the item to the customer.
+
+Get: HistorySalesOrderNumber(self: RmaOrderLine) -> str
 
 Set: HistorySalesOrderNumber(self: RmaOrderLine)=value
 """
 
  ItemRmaPrice=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemRmaPrice(self: RmaOrderLine) -> Decimal
+ """
+
+Get: ItemRmaPrice(self: RmaOrderLine) -> Decimal
 
 Set: ItemRmaPrice(self: RmaOrderLine)=value
 """
 
  ReasonCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReasonCode(self: RmaOrderLine) -> str
+ """
+
+Get: ReasonCode(self: RmaOrderLine) -> str
 
 Set: ReasonCode(self: RmaOrderLine)=value
 """
 
  ReasonDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReasonDescription(self: RmaOrderLine) -> str
+ """
+
+Get: ReasonDescription(self: RmaOrderLine) -> str
 
 Set: ReasonDescription(self: RmaOrderLine)=value
 """
 
 
 
-class HistoryRmaOrderLine:
+class HistoryRmaOrderLine(RmaOrderLine):
  """ HistoryRmaOrderLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryRmaOrderLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  def __reduce_ex__(self,*args):
   pass
  DateReceived=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DateReceived(self: HistoryRmaOrderLine) -> DateTime
+ """
+
+Get: DateReceived(self: HistoryRmaOrderLine) -> DateTime
 
 Set: DateReceived(self: HistoryRmaOrderLine)=value
 """
 
 
 
-class HistoryRmaOrderLines:
+class HistoryRmaOrderLines(FindableList):
  """ HistoryRmaOrderLines() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryRmaOrderLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -369,15 +505,22 @@ class HistoryRmaOrderLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: HistoryRmaOrderLines) -> Int64
+ """
+
+Get: TotalRowsMatched(self: HistoryRmaOrderLines) -> Int64
 
 Set: TotalRowsMatched(self: HistoryRmaOrderLines)=value
 """
 
 
 
-class HistoryRmaOrders:
+class HistoryRmaOrders(FindableList):
  """ HistoryRmaOrders() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryRmaOrders()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -393,144 +536,206 @@ class HistoryRmaOrders:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: HistoryRmaOrders) -> Int64
+ """when paging is used this property holds the total number of rows 
+   which are returned by the query
+
+Get: TotalRowsMatched(self: HistoryRmaOrders) -> Int64
 
 Set: TotalRowsMatched(self: HistoryRmaOrders)=value
 """
 
 
 
-class ProcessAdhocRmaArgs:
+class ProcessAdhocRmaArgs(object):
  """ ProcessAdhocRmaArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessAdhocRmaArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CustomerNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerNumber(self: ProcessAdhocRmaArgs) -> str
+ """
+
+Get: CustomerNumber(self: ProcessAdhocRmaArgs) -> str
 
 Set: CustomerNumber(self: ProcessAdhocRmaArgs)=value
 """
 
  InvoiceLayoutRma=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: InvoiceLayoutRma(self: ProcessAdhocRmaArgs) -> str
+ """
+
+Get: InvoiceLayoutRma(self: ProcessAdhocRmaArgs) -> str
 
 Set: InvoiceLayoutRma(self: ProcessAdhocRmaArgs)=value
 """
 
  PrintRmaInvoices=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrintRmaInvoices(self: ProcessAdhocRmaArgs) -> bool
+ """
+
+Get: PrintRmaInvoices(self: ProcessAdhocRmaArgs) -> bool
 
 Set: PrintRmaInvoices(self: ProcessAdhocRmaArgs)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: ProcessAdhocRmaArgs) -> str
+ """
+
+Get: WarehouseCode(self: ProcessAdhocRmaArgs) -> str
 
 Set: WarehouseCode(self: ProcessAdhocRmaArgs)=value
 """
 
  YourReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: YourReference(self: ProcessAdhocRmaArgs) -> str
+ """
+
+Get: YourReference(self: ProcessAdhocRmaArgs) -> str
 
 Set: YourReference(self: ProcessAdhocRmaArgs)=value
 """
 
 
 
-class ReceiveRmaArgs:
+class ReceiveRmaArgs(ReceiveArgs):
  """ ReceiveRmaArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReceiveRmaArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetIdString(self):
   """ GetIdString(self: ReceiveRmaArgs) -> str """
   pass
  HistoryOrderId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HistoryOrderId(self: ReceiveRmaArgs) -> int
+ """
+
+Get: HistoryOrderId(self: ReceiveRmaArgs) -> int
 
 Set: HistoryOrderId(self: ReceiveRmaArgs)=value
 """
 
  HistoryOrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HistoryOrderNumber(self: ReceiveRmaArgs) -> str
+ """
+
+Get: HistoryOrderNumber(self: ReceiveRmaArgs) -> str
 
 Set: HistoryOrderNumber(self: ReceiveRmaArgs)=value
 """
 
  QuantityDeliveredOnOrder=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityDeliveredOnOrder(self: ReceiveRmaArgs) -> Decimal
+ """
+
+Get: QuantityDeliveredOnOrder(self: ReceiveRmaArgs) -> Decimal
 
 Set: QuantityDeliveredOnOrder(self: ReceiveRmaArgs)=value
 """
 
  RmaReason=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: RmaReason(self: ReceiveRmaArgs) -> RmaReason
+ """
+
+Get: RmaReason(self: ReceiveRmaArgs) -> RmaReason
 
 Set: RmaReason(self: ReceiveRmaArgs)=value
 """
 
 
 
-class ReceiveAdhocRmaArgs:
+class ReceiveAdhocRmaArgs(ReceiveRmaArgs):
  """ ReceiveAdhocRmaArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReceiveAdhocRmaArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ModifiedReceiveLines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ModifiedReceiveLines(self: ReceiveAdhocRmaArgs) -> RmaReceiveLines
+ """Contains the modified Wms.RemotingObjects.Rma.RmaReceiveLines of the orginal Wms.RemotingObjects.Rma.RmaReceiveLines
+   which were created for an adhoc Touch RMA.
+
+Get: ModifiedReceiveLines(self: ReceiveAdhocRmaArgs) -> RmaReceiveLines
 
 Set: ModifiedReceiveLines(self: ReceiveAdhocRmaArgs)=value
 """
 
  OrderKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderKey(self: ReceiveAdhocRmaArgs) -> int
+ """
+
+Get: OrderKey(self: ReceiveAdhocRmaArgs) -> int
 
 Set: OrderKey(self: ReceiveAdhocRmaArgs)=value
 """
 
  ReceivedReceiveLines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReceivedReceiveLines(self: ReceiveAdhocRmaArgs) -> RmaReceiveLines
+ """
+
+Get: ReceivedReceiveLines(self: ReceiveAdhocRmaArgs) -> RmaReceiveLines
 
 Set: ReceivedReceiveLines(self: ReceiveAdhocRmaArgs)=value
 """
 
 
 
-class ReceiveRmaMultiArgs:
+class ReceiveRmaMultiArgs(ReceiveItemIdMultiArgs):
  """ ReceiveRmaMultiArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReceiveRmaMultiArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetIdString(self):
   """ GetIdString(self: ReceiveRmaMultiArgs) -> str """
   pass
  HistoryOrderId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HistoryOrderId(self: ReceiveRmaMultiArgs) -> int
+ """
+
+Get: HistoryOrderId(self: ReceiveRmaMultiArgs) -> int
 
 Set: HistoryOrderId(self: ReceiveRmaMultiArgs)=value
 """
 
  HistoryOrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HistoryOrderNumber(self: ReceiveRmaMultiArgs) -> str
+ """
+
+Get: HistoryOrderNumber(self: ReceiveRmaMultiArgs) -> str
 
 Set: HistoryOrderNumber(self: ReceiveRmaMultiArgs)=value
 """
 
  QuantityDeliveredOnOrder=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityDeliveredOnOrder(self: ReceiveRmaMultiArgs) -> Decimal
+ """
+
+Get: QuantityDeliveredOnOrder(self: ReceiveRmaMultiArgs) -> Decimal
 
 Set: QuantityDeliveredOnOrder(self: ReceiveRmaMultiArgs)=value
 """
 
  ReceiveArgs=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReceiveArgs(self: ReceiveRmaMultiArgs) -> ReceiveRmaArgs
+ """
+
+Get: ReceiveArgs(self: ReceiveRmaMultiArgs) -> ReceiveRmaArgs
 
 """
 
  RmaReason=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: RmaReason(self: ReceiveRmaMultiArgs) -> RmaReason
+ """
+
+Get: RmaReason(self: ReceiveRmaMultiArgs) -> RmaReason
 
 Set: RmaReason(self: ReceiveRmaMultiArgs)=value
 """
 
  UnitCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UnitCode(self: ReceiveRmaMultiArgs) -> str
+ """
+
+Get: UnitCode(self: ReceiveRmaMultiArgs) -> str
 
 Set: UnitCode(self: ReceiveRmaMultiArgs)=value
 """
 
 
 
-class RmaOrderArgs:
+class RmaOrderArgs(object):
  """
+ Provides a filter for the RMA orders.
+ 
  RmaOrderArgs()
  RmaOrderArgs(id: int)
  RmaOrderArgs(id: int,orderNumber: str)
@@ -539,6 +744,11 @@ class RmaOrderArgs:
  RmaOrderArgs(warehouseCode: str,customerNumber: str,searchText: str)
  RmaOrderArgs(warehouseCode: str,customerNumber: str,searchText: str,groupkey: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RmaOrderArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -561,7 +771,16 @@ class RmaOrderArgs:
 
 
 class RmaOrderLines:
- """ RmaOrderLines() """
+ """
+ Container for the Wms.RemotingObjects.Rma.RmaOrderLine objects.
+ 
+ RmaOrderLines()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RmaOrderLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(inboundOrderLines):
   """ FromIEnumerable(inboundOrderLines: IEnumerable[InboundOrderLine]) -> RmaOrderLines """
@@ -586,6 +805,11 @@ class RmaOrderLines:
 
 class RmaOrders:
  """ RmaOrders() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RmaOrders()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetCacheKey(self):
   """ GetCacheKey(self: RmaOrders) -> int """
   pass
@@ -610,8 +834,13 @@ class RmaOrders:
  ValueMember='Id'
 
 
-class RmaReason:
+class RmaReason(object):
  """ RmaReason() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RmaReason()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """ Equals(self: RmaReason,obj: object) -> bool """
   pass
@@ -627,21 +856,30 @@ class RmaReason:
  def __ne__(self,*args):
   pass
  Code=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Code(self: RmaReason) -> str
+ """
+
+Get: Code(self: RmaReason) -> str
 
 Set: Code(self: RmaReason)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: RmaReason) -> str
+ """
+
+Get: Description(self: RmaReason) -> str
 
 Set: Description(self: RmaReason)=value
 """
 
 
 
-class RmaReasons:
+class RmaReasons(FindableList):
  """ RmaReasons() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RmaReasons()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -662,6 +900,11 @@ class RmaReasons:
 
 class RmaReceiveLine:
  """ RmaReceiveLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RmaReceiveLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: RmaReceiveLine) -> object """
   pass
@@ -684,41 +927,55 @@ class RmaReceiveLine:
  def __reduce_ex__(self,*args):
   pass
  CompareHistoryOutboundOrderNumbers=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CompareHistoryOutboundOrderNumbers(self: RmaReceiveLine) -> bool
+ """
+
+Get: CompareHistoryOutboundOrderNumbers(self: RmaReceiveLine) -> bool
 
 Set: CompareHistoryOutboundOrderNumbers(self: RmaReceiveLine)=value
 """
 
  HistorySalesOrderId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HistorySalesOrderId(self: RmaReceiveLine) -> int
+ """
+
+Get: HistorySalesOrderId(self: RmaReceiveLine) -> int
 
 Set: HistorySalesOrderId(self: RmaReceiveLine)=value
 """
 
  HistorySalesOrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HistorySalesOrderNumber(self: RmaReceiveLine) -> str
+ """
+
+Get: HistorySalesOrderNumber(self: RmaReceiveLine) -> str
 
 Set: HistorySalesOrderNumber(self: RmaReceiveLine)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: RmaReceiveLine) -> str
+ """
+
+Get: Id(self: RmaReceiveLine) -> str
 
 """
 
  Reason=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Reason(self: RmaReceiveLine) -> RmaReason
+ """
+
+Get: Reason(self: RmaReceiveLine) -> RmaReason
 
 Set: Reason(self: RmaReceiveLine)=value
 """
 
  ReasonAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReasonAsString(self: RmaReceiveLine) -> str
+ """
+
+Get: ReasonAsString(self: RmaReceiveLine) -> str
 
 """
 
  SalesOrderAsDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SalesOrderAsDescription(self: RmaReceiveLine) -> str
+ """
+
+Get: SalesOrderAsDescription(self: RmaReceiveLine) -> str
 
 """
 
@@ -734,6 +991,11 @@ class RmaReceiveLines:
  RmaReceiveLines(collection: IEnumerable[InboundReceiveLine])
  RmaReceiveLines(collection: IEnumerable[InboundReceiveLine],compareHistoryOrderNumbers: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RmaReceiveLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,*__args):
   """ Add(self: RmaReceiveLines,receiveLine: InboundReceiveLine) """
   pass
@@ -789,18 +1051,24 @@ class RmaReceiveLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  CompareHistoryOutboundOrderNumbers=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CompareHistoryOutboundOrderNumbers(self: RmaReceiveLines) -> bool
+ """
+
+Get: CompareHistoryOutboundOrderNumbers(self: RmaReceiveLines) -> bool
 
 Set: CompareHistoryOutboundOrderNumbers(self: RmaReceiveLines)=value
 """
 
  OrderIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderIds(self: RmaReceiveLines) -> Dictionary[int,str]
+ """
+
+Get: OrderIds(self: RmaReceiveLines) -> Dictionary[int,str]
 
 """
 
  OrderNumberList=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumberList(self: RmaReceiveLines) -> str
+ """
+
+Get: OrderNumberList(self: RmaReceiveLines) -> str
 
 """
 

@@ -1,5 +1,9 @@
-class Message:
+class Message(object):
  """ Implements a Windows message. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Message()
+
  @staticmethod
  def Create(hWnd,msg,wparam,lparam):
   """
@@ -37,8 +41,7 @@ class Message:
    Gets the System.Windows.Forms.Message.LParam value and converts the value to an object.
   
    cls: The type to use to create an instance. This type must be declared as a structure type.
-   Returns: An System.Object that represents an instance of the class specified by the cls parameter,
-    with the data from the System.Windows.Forms.Message.LParam field of the message.
+   Returns: An System.Object that represents an instance of the class specified by the cls parameter,with the data from the System.Windows.Forms.Message.LParam field of the message.
   """
   pass
  def ToString(self):

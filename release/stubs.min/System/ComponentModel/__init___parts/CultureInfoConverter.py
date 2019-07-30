@@ -1,16 +1,19 @@
-class CultureInfoConverter:
+class CultureInfoConverter(TypeConverter):
  """
  Provides a type converter to convert System.Globalization.CultureInfo objects to and from various other representations.
  
  CultureInfoConverter()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CultureInfoConverter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CanConvertFrom(self,*__args):
   """
   CanConvertFrom(self: CultureInfoConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object in the given source 
-    type to a System.Globalization.CultureInfo using the specified context.
-  
+   Gets a value indicating whether this converter can convert an object in the given source type to a System.Globalization.CultureInfo using the specified context.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    sourceType: A System.Type that represents the type you wish to convert from.
@@ -21,9 +24,7 @@ class CultureInfoConverter:
   """
   CanConvertTo(self: CultureInfoConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object to the given 
-    destination type using the context.
-  
+   Gets a value indicating whether this converter can convert an object to the given destination type using the context.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    destinationType: A System.Type that represents the type you wish to convert to.
@@ -69,13 +70,10 @@ class CultureInfoConverter:
   """
   GetStandardValues(self: CultureInfoConverter,context: ITypeDescriptorContext) -> StandardValuesCollection
   
-   Gets a collection of standard values for a System.Globalization.CultureInfo object using 
-    the specified context.
-  
+   Gets a collection of standard values for a System.Globalization.CultureInfo object using the specified context.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection containing a standard set 
-    of valid values,or null if the data type does not support a standard set of values.
+   Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection containing a standard set of valid values,or null if the data type does not support a standard set of values.
   """
   pass
  def GetStandardValuesExclusive(self,context=None):
@@ -83,30 +81,23 @@ class CultureInfoConverter:
   GetStandardValuesExclusive(self: CultureInfoConverter,context: ITypeDescriptorContext) -> bool
   
    Gets a value indicating whether the list of standard values returned from 
-    System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDe
-    scriptorContext) is an exhaustive list.
+    System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   Returns: false because the System.ComponentModel.TypeConverter.StandardValuesCollection returned 
-    from 
-    System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDe
-    scriptorContext) is not an exhaustive list of possible values (that is,other values are 
-    possible). This method never returns true.
+   Returns: false because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
+    System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is not an exhaustive list of possible values (that is,other 
+    values are possible). This method never returns true.
   """
   pass
  def GetStandardValuesSupported(self,context=None):
   """
   GetStandardValuesSupported(self: CultureInfoConverter,context: ITypeDescriptorContext) -> bool
   
-   Gets a value indicating whether this object supports a standard set of values that can be 
-    picked from a list using the specified context.
-  
+   Gets a value indicating whether this object supports a standard set of values that can be picked from a list using the specified context.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   Returns: true because 
-    System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDe
-    scriptorContext) should be called to find a common set of values the object supports. 
-    This method never returns false.
+   Returns: true because System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) should be called to find a common set of values the 
+    object supports. This method never returns false.
   """
   pass

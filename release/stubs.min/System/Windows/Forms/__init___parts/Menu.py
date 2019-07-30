@@ -1,11 +1,13 @@
-class Menu:
+class Menu(Component,IComponent,IDisposable):
  """ Represents the base functionality for all menus. Although System.Windows.Forms.ToolStripDropDown and System.Windows.Forms.ToolStripDropDownMenu replace and add functionality to the System.Windows.Forms.Menu control of previous versions,System.Windows.Forms.Menu is retained for both backward compatibility and future use if you choose. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Menu()
+
  def CloneMenu(self,*args):
   """
   CloneMenu(self: Menu,menuSrc: Menu)
-   Copies the System.Windows.Forms.Menu that is passed as a parameter to the current 
-    System.Windows.Forms.Menu.
-  
+   Copies the System.Windows.Forms.Menu that is passed as a parameter to the current System.Windows.Forms.Menu.
   
    menuSrc: The System.Windows.Forms.Menu to copy.
   """
@@ -23,8 +25,7 @@ class Menu:
   Dispose(self: Menu,disposing: bool)
    Disposes of the resources,other than memory,used by the System.Windows.Forms.Menu.
   
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def FindMenuItem(self,type,value):
@@ -68,14 +69,10 @@ class Menu:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -84,12 +81,7 @@ class Menu:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -102,8 +94,7 @@ class Menu:
   MergeMenu(self: Menu,menuSrc: Menu)
    Merges the System.Windows.Forms.MenuItem objects of one menu with the current menu.
   
-   menuSrc: The System.Windows.Forms.Menu whose menu items are merged with the menu items of the 
-    current menu.
+   menuSrc: The System.Windows.Forms.Menu whose menu items are merged with the menu items of the current menu.
   """
   pass
  def ProcessCmdKey(self,*args):
@@ -112,9 +103,7 @@ class Menu:
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference that represents the window message to 
-    process.
-  
+   msg: A System.Windows.Forms.Message,passed by reference that represents the window message to process.
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
   """

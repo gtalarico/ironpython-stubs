@@ -4,6 +4,11 @@ class DesignerSerializationVisibilityAttribute:
  
  DesignerSerializationVisibilityAttribute(visibility: DesignerSerializationVisibility)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DesignerSerializationVisibilityAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: DesignerSerializationVisibilityAttribute,obj: object) -> bool
@@ -26,9 +31,7 @@ class DesignerSerializationVisibilityAttribute:
   """
   IsDefaultAttribute(self: DesignerSerializationVisibilityAttribute) -> bool
   
-   Gets a value indicating whether the current value of the attribute is the default value 
-    for the attribute.
-  
+   Gets a value indicating whether the current value of the attribute is the default value for the attribute.
    Returns: true if the attribute is set to the default value; otherwise,false.
   """
   pass

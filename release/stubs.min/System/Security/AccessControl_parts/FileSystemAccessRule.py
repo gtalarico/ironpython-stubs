@@ -1,4 +1,4 @@
-class FileSystemAccessRule:
+class FileSystemAccessRule(AccessRule):
  """
  Represents an abstraction of an access control entry (ACE) that defines an access rule for a file or directory. This class cannot be inherited.
  
@@ -7,6 +7,11 @@ class FileSystemAccessRule:
  FileSystemAccessRule(identity: IdentityReference,fileSystemRights: FileSystemRights,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,type: AccessControlType)
  FileSystemAccessRule(identity: str,fileSystemRights: FileSystemRights,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,type: AccessControlType)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileSystemAccessRule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,identity,fileSystemRights,*__args):
   """

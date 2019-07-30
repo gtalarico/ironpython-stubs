@@ -1,5 +1,9 @@
 class IComponentEditorPageSite:
  """ The site for a System.Windows.Forms.Design.ComponentEditorPage. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return IComponentEditorPageSite()
+
  def GetControl(self):
   """
   GetControl(self: IComponentEditorPageSite) -> Control

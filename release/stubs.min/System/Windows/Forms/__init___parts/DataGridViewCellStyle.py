@@ -1,19 +1,20 @@
-class DataGridViewCellStyle:
+class DataGridViewCellStyle(object,ICloneable):
  """
  Represents the formatting and style information applied to individual cells within a System.Windows.Forms.DataGridView control.
  
  DataGridViewCellStyle()
  DataGridViewCellStyle(dataGridViewCellStyle: DataGridViewCellStyle)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewCellStyle()
+
  def ApplyStyle(self,dataGridViewCellStyle):
   """
   ApplyStyle(self: DataGridViewCellStyle,dataGridViewCellStyle: DataGridViewCellStyle)
-   Applies the specified System.Windows.Forms.DataGridViewCellStyle to the current 
-    System.Windows.Forms.DataGridViewCellStyle.
+   Applies the specified System.Windows.Forms.DataGridViewCellStyle to the current System.Windows.Forms.DataGridViewCellStyle.
   
-  
-   dataGridViewCellStyle: The System.Windows.Forms.DataGridViewCellStyle to apply to the current 
-    System.Windows.Forms.DataGridViewCellStyle.
+   dataGridViewCellStyle: The System.Windows.Forms.DataGridViewCellStyle to apply to the current System.Windows.Forms.DataGridViewCellStyle.
   """
   pass
  def Clone(self):
@@ -21,8 +22,7 @@ class DataGridViewCellStyle:
   Clone(self: DataGridViewCellStyle) -> DataGridViewCellStyle
   
    Creates an exact copy of this System.Windows.Forms.DataGridViewCellStyle.
-   Returns: A System.Windows.Forms.DataGridViewCellStyle that represents an exact copy of this cell 
-    style.
+   Returns: A System.Windows.Forms.DataGridViewCellStyle that represents an exact copy of this cell style.
   """
   pass
  def Equals(self,o):
@@ -32,8 +32,7 @@ class DataGridViewCellStyle:
    Returns a value indicating whether this instance is equivalent to the specified object.
   
    o: An object to compare with this instance,or null.
-   Returns: true if o is a System.Windows.Forms.DataGridViewCellStyle and has the same property 
-    values as this instance; otherwise,false.
+   Returns: true if o is a System.Windows.Forms.DataGridViewCellStyle and has the same property values as this instance; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -46,11 +45,8 @@ class DataGridViewCellStyle:
   """
   ToString(self: DataGridViewCellStyle) -> str
   
-   Returns a string indicating the current property settings of the 
-    System.Windows.Forms.DataGridViewCellStyle.
-  
-   Returns: A string indicating the current property settings of the 
-    System.Windows.Forms.DataGridViewCellStyle.
+   Returns a string indicating the current property settings of the System.Windows.Forms.DataGridViewCellStyle.
+   Returns: A string indicating the current property settings of the System.Windows.Forms.DataGridViewCellStyle.
   """
   pass
  def __eq__(self,*args):

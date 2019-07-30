@@ -1,9 +1,13 @@
-class ColumnWidthChangedEventArgs:
+class ColumnWidthChangedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ListView.ColumnWidthChanged event.
  
  ColumnWidthChangedEventArgs(columnIndex: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ColumnWidthChangedEventArgs()
+
  @staticmethod
  def __new__(self,columnIndex):
   """ __new__(cls: type,columnIndex: int) """

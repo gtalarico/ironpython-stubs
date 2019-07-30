@@ -1,4 +1,4 @@
-class Win32Exception:
+class Win32Exception(ExternalException):
  """
  Throws an exception for a Win32 error code.
  
@@ -8,12 +8,15 @@ class Win32Exception:
  Win32Exception(message: str)
  Win32Exception(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Win32Exception()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: Win32Exception,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the file name and 
-    line number at which this System.ComponentModel.Win32Exception occurred.
-  
+   Sets the System.Runtime.Serialization.SerializationInfo object with the file name and line number at which this System.ComponentModel.Win32Exception occurred.
   
    info: A System.Runtime.Serialization.SerializationInfo.
    context: The contextual information about the source or destination.

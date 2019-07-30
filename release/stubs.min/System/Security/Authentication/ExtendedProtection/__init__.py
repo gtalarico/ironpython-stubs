@@ -3,19 +3,22 @@
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
 
-class ChannelBinding:
+class ChannelBinding(SafeHandleZeroOrMinusOneIsInvalid):
  """ The System.Security.Authentication.ExtendedProtection.ChannelBinding class encapsulates a pointer to the opaque data used to bind an authenticated transaction to a secure channel. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ChannelBinding()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: SafeHandle,disposing: bool)
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
-    class specifying whether to perform a normal dispose operation.
-  
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
   
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
@@ -25,9 +28,8 @@ class ChannelBinding:
   ReleaseHandle(self: SafeHandle) -> bool
   
    When overridden in a derived class,executes the code required to free the handle.
-   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic 
-    failure,false. In this case,it generates a releaseHandleFailed MDA Managed Debugging 
-    Assistant.
+   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,false. In this case,it generates a releaseHandleFailed MDA Managed 
+    Debugging Assistant.
   """
   pass
  def SetHandle(self,*args):
@@ -71,6 +73,11 @@ class ChannelBindingKind:
  
  enum ChannelBindingKind,values: Endpoint (26),Unique (25),Unknown (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ChannelBindingKind()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -100,7 +107,7 @@ class ChannelBindingKind:
  value__=None
 
 
-class ExtendedProtectionPolicy:
+class ExtendedProtectionPolicy(object):
  """
  The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy class represents the extended protection policy used by the server to validate incoming client connections.
  
@@ -109,13 +116,17 @@ class ExtendedProtectionPolicy:
  ExtendedProtectionPolicy(policyEnforcement: PolicyEnforcement,customChannelBinding: ChannelBinding)
  ExtendedProtectionPolicy(policyEnforcement: PolicyEnforcement)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ExtendedProtectionPolicy()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToString(self):
   """
   ToString(self: ExtendedProtectionPolicy) -> str
   
    Gets a string representation for the extended protection policy instance.
-   Returns: A System.String instance that contains the representation of the 
-    System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy instance.
+   Returns: A System.String instance that contains the representation of the System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy instance.
   """
   pass
  def __init__(self,*args):
@@ -170,12 +181,17 @@ Get: ProtectionScenario(self: ExtendedProtectionPolicy) -> ProtectionScenario
  OSSupportsExtendedProtection=True
 
 
-class ExtendedProtectionPolicyTypeConverter:
+class ExtendedProtectionPolicyTypeConverter(TypeConverter):
  """
  The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicyTypeConverter class represents the type converter for extended protection policy used by the server to validate incoming client connections.
  
  ExtendedProtectionPolicyTypeConverter()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ExtendedProtectionPolicyTypeConverter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CanConvertTo(self,*__args):
   """
   CanConvertTo(self: ExtendedProtectionPolicyTypeConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
@@ -194,12 +210,8 @@ class ExtendedProtectionPolicyTypeConverter:
    Convert the object to the specified type
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   culture: A System.Globalization.CultureInfo object. If null is passed,the current culture is 
-    assumed.
-  
-   value: The System.Object to convert. This should be a 
-    System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy object.
-  
+   culture: A System.Globalization.CultureInfo object. If null is passed,the current culture is assumed.
+   value: The System.Object to convert. This should be a System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy object.
    destinationType: The System.Type to convert the value parameter to.
    Returns: An System.Object that represents the converted value parameter.
   """
@@ -211,6 +223,11 @@ class PolicyEnforcement:
  
  enum PolicyEnforcement,values: Always (2),Never (0),WhenSupported (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PolicyEnforcement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -246,6 +263,11 @@ class ProtectionScenario:
  
  enum ProtectionScenario,values: TransportSelected (0),TrustedProxy (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProtectionScenario()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -274,12 +296,17 @@ class ProtectionScenario:
  value__=None
 
 
-class ServiceNameCollection:
+class ServiceNameCollection(ReadOnlyCollectionBase):
  """
  The System.Security.Authentication.ExtendedProtection.ServiceNameCollection class is a read-only collection of service principal names.
  
  ServiceNameCollection(items: ICollection)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ServiceNameCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Contains(self,searchServiceName):
   """ Contains(self: ServiceNameCollection,searchServiceName: str) -> bool """
   pass
@@ -287,37 +314,23 @@ class ServiceNameCollection:
   """
   Merge(self: ServiceNameCollection,serviceName: str) -> ServiceNameCollection
   
-   Merges the current 
-    System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the 
-    specified values to create a new 
-    System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the 
-    union.
+   Merges the current System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the specified values to create a new 
+    System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the union.
   
   
-   serviceName: A string that contains the specified values of service names to be used to initialize the 
-    class.
-  
-   Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance 
-    that contains the union of the existing 
-    System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged 
-    with the specified values.
+   serviceName: A string that contains the specified values of service names to be used to initialize the class.
+   Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance that contains the union of the existing 
+    System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged with the specified values.
   
   Merge(self: ServiceNameCollection,serviceNames: IEnumerable) -> ServiceNameCollection
   
-   Merges the current 
-    System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the 
-    specified values to create a new 
-    System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the 
-    union.
+   Merges the current System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the specified values to create a new 
+    System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the union.
   
   
-   serviceNames: An instance of the System.Collections.IEnumerable class that contains the specified 
-    values of service names to be merged.
-  
-   Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance 
-    that contains the union of the existing 
-    System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged 
-    with the specified values.
+   serviceNames: An instance of the System.Collections.IEnumerable class that contains the specified values of service names to be merged.
+   Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance that contains the union of the existing 
+    System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged with the specified values.
   """
   pass
  def __init__(self,*args):
@@ -339,8 +352,13 @@ class ServiceNameCollection:
 
 
 
-class TokenBinding:
+class TokenBinding(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TokenBinding()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetRawTokenBindingId(self):
   """ GetRawTokenBindingId(self: TokenBinding) -> Array[Byte] """
   pass
@@ -353,6 +371,11 @@ class TokenBinding:
 
 class TokenBindingType:
  """ enum TokenBindingType,values: Provided (0),Referred (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TokenBindingType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

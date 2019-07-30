@@ -1,5 +1,10 @@
-class OSPlatform:
+class OSPlatform(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OSPlatform()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Create(osPlatform):
   """ Create(osPlatform: str) -> OSPlatform """

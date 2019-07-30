@@ -1,10 +1,15 @@
-class PropertyDescriptorCollection:
+class PropertyDescriptorCollection(object):
  """
  Represents a collection of System.ComponentModel.PropertyDescriptor objects.
  
  PropertyDescriptorCollection(properties: Array[PropertyDescriptor])
  PropertyDescriptorCollection(properties: Array[PropertyDescriptor],readOnly: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PropertyDescriptorCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: PropertyDescriptorCollection,value: PropertyDescriptor) -> int
@@ -12,8 +17,7 @@ class PropertyDescriptorCollection:
    Adds the specified System.ComponentModel.PropertyDescriptor to the collection.
   
    value: The System.ComponentModel.PropertyDescriptor to add to the collection.
-   Returns: The index of the System.ComponentModel.PropertyDescriptor that was added to the 
-    collection.
+   Returns: The index of the System.ComponentModel.PropertyDescriptor that was added to the collection.
   """
   pass
  def Clear(self):
@@ -26,13 +30,10 @@ class PropertyDescriptorCollection:
   """
   Contains(self: PropertyDescriptorCollection,value: PropertyDescriptor) -> bool
   
-   Returns whether the collection contains the given 
-    System.ComponentModel.PropertyDescriptor.
-  
+   Returns whether the collection contains the given System.ComponentModel.PropertyDescriptor.
   
    value: The System.ComponentModel.PropertyDescriptor to find in the collection.
-   Returns: true if the collection contains the given System.ComponentModel.PropertyDescriptor; 
-    otherwise,false.
+   Returns: true if the collection contains the given System.ComponentModel.PropertyDescriptor; otherwise,false.
   """
   pass
  def CopyTo(self,array,index):
@@ -40,9 +41,7 @@ class PropertyDescriptorCollection:
   CopyTo(self: PropertyDescriptorCollection,array: Array,index: int)
    Copies the entire collection to an array,starting at the specified index number.
   
-   array: An array of System.ComponentModel.PropertyDescriptor objects to copy elements of the 
-    collection to.
-  
+   array: An array of System.ComponentModel.PropertyDescriptor objects to copy elements of the collection to.
    index: The index of the array parameter at which copying begins.
   """
   pass
@@ -50,14 +49,11 @@ class PropertyDescriptorCollection:
   """
   Find(self: PropertyDescriptorCollection,name: str,ignoreCase: bool) -> PropertyDescriptor
   
-   Returns the System.ComponentModel.PropertyDescriptor with the specified name,using a 
-    Boolean to indicate whether to ignore case.
-  
+   Returns the System.ComponentModel.PropertyDescriptor with the specified name,using a Boolean to indicate whether to ignore case.
   
    name: The name of the System.ComponentModel.PropertyDescriptor to return from the collection.
    ignoreCase: true if you want to ignore the case of the property name; otherwise,false.
-   Returns: A System.ComponentModel.PropertyDescriptor with the specified name,or null if the 
-    property does not exist.
+   Returns: A System.ComponentModel.PropertyDescriptor with the specified name,or null if the property does not exist.
   """
   pass
  def GetEnumerator(self):
@@ -81,9 +77,7 @@ class PropertyDescriptorCollection:
  def Insert(self,index,value):
   """
   Insert(self: PropertyDescriptorCollection,index: int,value: PropertyDescriptor)
-   Adds the System.ComponentModel.PropertyDescriptor to the collection at the specified 
-    index number.
-  
+   Adds the System.ComponentModel.PropertyDescriptor to the collection at the specified index number.
   
    index: The index at which to add the value parameter to the collection.
    value: The System.ComponentModel.PropertyDescriptor to add to the collection.
@@ -92,18 +86,13 @@ class PropertyDescriptorCollection:
  def InternalSort(self,*args):
   """
   InternalSort(self: PropertyDescriptorCollection,names: Array[str])
-   Sorts the members of this collection. The specified order is applied first,followed by 
-    the default sort for this collection,which is usually alphabetical.
+   Sorts the members of this collection. The specified order is applied first,followed by the default sort for this collection,which is usually alphabetical.
   
-  
-   names: An array of strings describing the order in which to sort the 
-    System.ComponentModel.PropertyDescriptor objects in this collection.
-  
+   names: An array of strings describing the order in which to sort the System.ComponentModel.PropertyDescriptor objects in this collection.
   InternalSort(self: PropertyDescriptorCollection,sorter: IComparer)
    Sorts the members of this collection,using the specified System.Collections.IComparer.
   
-   sorter: A comparer to use to sort the System.ComponentModel.PropertyDescriptor objects in this 
-    collection.
+   sorter: A comparer to use to sort the System.ComponentModel.PropertyDescriptor objects in this collection.
   """
   pass
  def Remove(self,value):
@@ -117,9 +106,7 @@ class PropertyDescriptorCollection:
  def RemoveAt(self,index):
   """
   RemoveAt(self: PropertyDescriptorCollection,index: int)
-   Removes the System.ComponentModel.PropertyDescriptor at the specified index from the 
-    collection.
-  
+   Removes the System.ComponentModel.PropertyDescriptor at the specified index from the collection.
   
    index: The index of the System.ComponentModel.PropertyDescriptor to remove from the collection.
   """
@@ -128,48 +115,27 @@ class PropertyDescriptorCollection:
   """
   Sort(self: PropertyDescriptorCollection) -> PropertyDescriptorCollection
   
-   Sorts the members of this collection,using the default sort for this collection,which 
-    is usually alphabetical.
-  
-   Returns: A new System.ComponentModel.PropertyDescriptorCollection that contains the sorted 
-    System.ComponentModel.PropertyDescriptor objects.
-  
+   Sorts the members of this collection,using the default sort for this collection,which is usually alphabetical.
+   Returns: A new System.ComponentModel.PropertyDescriptorCollection that contains the sorted System.ComponentModel.PropertyDescriptor objects.
   Sort(self: PropertyDescriptorCollection,names: Array[str]) -> PropertyDescriptorCollection
   
-   Sorts the members of this collection. The specified order is applied first,followed by 
-    the default sort for this collection,which is usually alphabetical.
+   Sorts the members of this collection. The specified order is applied first,followed by the default sort for this collection,which is usually alphabetical.
   
-  
-   names: An array of strings describing the order in which to sort the 
-    System.ComponentModel.PropertyDescriptor objects in this collection.
-  
-   Returns: A new System.ComponentModel.PropertyDescriptorCollection that contains the sorted 
-    System.ComponentModel.PropertyDescriptor objects.
-  
+   names: An array of strings describing the order in which to sort the System.ComponentModel.PropertyDescriptor objects in this collection.
+   Returns: A new System.ComponentModel.PropertyDescriptorCollection that contains the sorted System.ComponentModel.PropertyDescriptor objects.
   Sort(self: PropertyDescriptorCollection,names: Array[str],comparer: IComparer) -> PropertyDescriptorCollection
   
-   Sorts the members of this collection. The specified order is applied first,followed by 
-    the sort using the specified System.Collections.IComparer.
+   Sorts the members of this collection. The specified order is applied first,followed by the sort using the specified System.Collections.IComparer.
   
-  
-   names: An array of strings describing the order in which to sort the 
-    System.ComponentModel.PropertyDescriptor objects in this collection.
-  
-   comparer: A comparer to use to sort the System.ComponentModel.PropertyDescriptor objects in this 
-    collection.
-  
-   Returns: A new System.ComponentModel.PropertyDescriptorCollection that contains the sorted 
-    System.ComponentModel.PropertyDescriptor objects.
-  
+   names: An array of strings describing the order in which to sort the System.ComponentModel.PropertyDescriptor objects in this collection.
+   comparer: A comparer to use to sort the System.ComponentModel.PropertyDescriptor objects in this collection.
+   Returns: A new System.ComponentModel.PropertyDescriptorCollection that contains the sorted System.ComponentModel.PropertyDescriptor objects.
   Sort(self: PropertyDescriptorCollection,comparer: IComparer) -> PropertyDescriptorCollection
   
    Sorts the members of this collection,using the specified System.Collections.IComparer.
   
-   comparer: A comparer to use to sort the System.ComponentModel.PropertyDescriptor objects in this 
-    collection.
-  
-   Returns: A new System.ComponentModel.PropertyDescriptorCollection that contains the sorted 
-    System.ComponentModel.PropertyDescriptor objects.
+   comparer: A comparer to use to sort the System.ComponentModel.PropertyDescriptor objects in this collection.
+   Returns: A new System.ComponentModel.PropertyDescriptorCollection that contains the sorted System.ComponentModel.PropertyDescriptor objects.
   """
   pass
  def __add__(self,*args):

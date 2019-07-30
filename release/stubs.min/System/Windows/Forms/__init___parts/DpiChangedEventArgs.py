@@ -1,5 +1,9 @@
-class DpiChangedEventArgs:
+class DpiChangedEventArgs(CancelEventArgs):
  # no doc
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DpiChangedEventArgs()
+
  def ToString(self):
   """ ToString(self: DpiChangedEventArgs) -> str """
   pass

@@ -1,9 +1,13 @@
-class AutoValidate:
+class AutoValidate(Enum,IComparable,IFormattable,IConvertible):
  """
  Determines how a control validates its data when it loses user input focus.
  
  enum AutoValidate,values: Disable (0),EnableAllowFocusChange (2),EnablePreventFocusChange (1),Inherit (-1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return AutoValidate()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

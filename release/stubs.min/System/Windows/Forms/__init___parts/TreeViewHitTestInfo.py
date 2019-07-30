@@ -1,9 +1,13 @@
-class TreeViewHitTestInfo:
+class TreeViewHitTestInfo(object):
  """
  Contains information about an area of a System.Windows.Forms.TreeView control or a System.Windows.Forms.TreeNode.
  
  TreeViewHitTestInfo(hitNode: TreeNode,hitLocation: TreeViewHitTestLocations)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TreeViewHitTestInfo()
+
  @staticmethod
  def __new__(self,hitNode,hitLocation):
   """ __new__(cls: type,hitNode: TreeNode,hitLocation: TreeViewHitTestLocations) """

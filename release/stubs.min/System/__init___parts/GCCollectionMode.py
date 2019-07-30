@@ -4,6 +4,11 @@ class GCCollectionMode:
  
  enum GCCollectionMode,values: Default (0),Forced (1),Optimized (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GCCollectionMode()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -5,17 +5,19 @@ class DataObjectAttribute:
  DataObjectAttribute()
  DataObjectAttribute(isDataObject: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DataObjectAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: DataObjectAttribute,obj: object) -> bool
   
-   Determines whether this instance of System.ComponentModel.DataObjectAttribute fits the 
-    pattern of another object.
-  
+   Determines whether this instance of System.ComponentModel.DataObjectAttribute fits the pattern of another object.
   
    obj: An object to compare with this instance of System.ComponentModel.DataObjectAttribute.
-   Returns: true if this instance is the same as the instance specified by the obj parameter; 
-    otherwise,false.
+   Returns: true if this instance is the same as the instance specified by the obj parameter; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -30,9 +32,7 @@ class DataObjectAttribute:
   """
   IsDefaultAttribute(self: DataObjectAttribute) -> bool
   
-   Gets a value indicating whether the current value of the attribute is the default value 
-    for the attribute.
-  
+   Gets a value indicating whether the current value of the attribute is the default value for the attribute.
    Returns: true if the current value of the attribute is the default; otherwise,false.
   """
   pass

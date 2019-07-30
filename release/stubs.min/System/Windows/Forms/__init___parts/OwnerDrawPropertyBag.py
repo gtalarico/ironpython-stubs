@@ -1,5 +1,9 @@
-class OwnerDrawPropertyBag:
+class OwnerDrawPropertyBag(MarshalByRefObject,ISerializable):
  """ Contains values of properties that a component might need only occasionally. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return OwnerDrawPropertyBag()
+
  @staticmethod
  def Copy(value):
   """
@@ -16,8 +20,7 @@ class OwnerDrawPropertyBag:
   IsEmpty(self: OwnerDrawPropertyBag) -> bool
   
    Returns whether the System.Windows.Forms.OwnerDrawPropertyBag contains all default values.
-   Returns: true if the System.Windows.Forms.OwnerDrawPropertyBag contains all default values; 
-    otherwise,false.
+   Returns: true if the System.Windows.Forms.OwnerDrawPropertyBag contains all default values; otherwise,false.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -26,12 +29,7 @@ class OwnerDrawPropertyBag:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   

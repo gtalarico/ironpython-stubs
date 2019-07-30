@@ -1,10 +1,14 @@
-class DataGridColumnStyle:
+class DataGridColumnStyle(Component,IComponent,IDisposable,IDataGridColumnStyleEditingNotificationService):
  """
  Specifies the appearance,text formatting,and behavior of a System.Windows.Forms.DataGrid control column. This class is abstract.
  
  DataGridColumnStyle()
  DataGridColumnStyle(prop: PropertyDescriptor)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridColumnStyle()
+
  def Abort(self,*args):
   """
   Abort(self: DataGridColumnStyle,rowNum: int)
@@ -16,16 +20,13 @@ class DataGridColumnStyle:
  def BeginUpdate(self,*args):
   """
   BeginUpdate(self: DataGridColumnStyle)
-   Suspends the painting of the column until the 
-    System.Windows.Forms.DataGridColumnStyle.EndUpdate method is called.
+   Suspends the painting of the column until the System.Windows.Forms.DataGridColumnStyle.EndUpdate method is called.
   """
   pass
  def CheckValidDataSource(self,*args):
   """
   CheckValidDataSource(self: DataGridColumnStyle,value: CurrencyManager)
-   Throws an exception if the System.Windows.Forms.DataGrid does not have a valid data 
-    source,or if this column is not mapped to a valid property in the data source.
-  
+   Throws an exception if the System.Windows.Forms.DataGrid does not have a valid data source,or if this column is not mapped to a valid property in the data source.
   
    value: A System.Windows.Forms.CurrencyManager to check.
   """
@@ -66,12 +67,9 @@ class DataGridColumnStyle:
  def Dispose(self):
   """
   Dispose(self: Component,disposing: bool)
-   Releases the unmanaged resources used by the System.ComponentModel.Component and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.ComponentModel.Component and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def Edit(self,*args):
@@ -82,20 +80,14 @@ class DataGridColumnStyle:
    source: The System.Windows.Forms.CurrencyManager for the System.Windows.Forms.DataGridColumnStyle.
    rowNum: The row number to edit.
    bounds: The bounding System.Drawing.Rectangle in which the control is to be sited.
-   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; 
-    otherwise,false.
-  
+   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; otherwise,false.
   Edit(self: DataGridColumnStyle,source: CurrencyManager,rowNum: int,bounds: Rectangle,readOnly: bool,displayText: str)
-   Prepares the cell for editing using the specified System.Windows.Forms.CurrencyManager,
-    row number,and System.Drawing.Rectangle parameters.
-  
+   Prepares the cell for editing using the specified System.Windows.Forms.CurrencyManager,row number,and System.Drawing.Rectangle parameters.
   
    source: The System.Windows.Forms.CurrencyManager for the System.Windows.Forms.DataGridColumnStyle.
    rowNum: The row number in this column which is being edited.
    bounds: The System.Drawing.Rectangle in which the control is to be sited.
-   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; 
-    otherwise,false.
-  
+   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; otherwise,false.
    displayText: The text to display in the control.
   Edit(self: DataGridColumnStyle,source: CurrencyManager,rowNum: int,bounds: Rectangle,readOnly: bool,displayText: str,cellIsVisible: bool)
    When overridden in a deriving class,prepares a cell for editing.
@@ -103,19 +95,15 @@ class DataGridColumnStyle:
    source: The System.Windows.Forms.CurrencyManager for the System.Windows.Forms.DataGridColumnStyle.
    rowNum: The row number in this column which is being edited.
    bounds: The System.Drawing.Rectangle in which the control is to be sited.
-   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; 
-    otherwise,false.
-  
+   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; otherwise,false.
    displayText: The text to display in the control.
-   cellIsVisible: A value indicating whether the cell is visible. true if the cell is visible; otherwise,
-    false.
+   cellIsVisible: A value indicating whether the cell is visible. true if the cell is visible; otherwise,false.
   """
   pass
  def EndUpdate(self,*args):
   """
   EndUpdate(self: DataGridColumnStyle)
-   Resumes the painting of columns suspended by calling the 
-    System.Windows.Forms.DataGridColumnStyle.BeginUpdate method.
+   Resumes the painting of columns suspended by calling the System.Windows.Forms.DataGridColumnStyle.BeginUpdate method.
   """
   pass
  def EnterNullValue(self,*args):
@@ -128,9 +116,7 @@ class DataGridColumnStyle:
   """
   GetColumnValueAtRow(self: DataGridColumnStyle,source: CurrencyManager,rowNum: int) -> object
   
-   Gets the value in the specified row from the specified 
-    System.Windows.Forms.CurrencyManager.
-  
+   Gets the value in the specified row from the specified System.Windows.Forms.CurrencyManager.
   
    source: The System.Windows.Forms.CurrencyManager containing the data.
    rowNum: The row number containing the data.
@@ -149,9 +135,7 @@ class DataGridColumnStyle:
   """
   GetPreferredHeight(self: DataGridColumnStyle,g: Graphics,value: object) -> int
   
-   When overridden in a derived class,gets the height used for automatically resizing 
-    columns.
-  
+   When overridden in a derived class,gets the height used for automatically resizing columns.
   
    g: A System.Drawing.Graphics object.
    value: An object value for which you want to know the screen height and width.
@@ -162,11 +146,7 @@ class DataGridColumnStyle:
   """
   GetPreferredSize(self: DataGridColumnStyle,g: Graphics,value: object) -> Size
   
-   When overridden in a derived class,gets the width and height of the specified value. The 
-    width and height are used when the user navigates to 
-    System.Windows.Forms.DataGridTableStyle using the 
-    System.Windows.Forms.DataGridColumnStyle.
-  
+   When overridden in a derived class,gets the width and height of the specified value. The width and height are used when the user navigates to System.Windows.Forms.DataGridTableStyle using the System.Windows.Forms.DataGridColumnStyle.
   
    g: A System.Drawing.Graphics object.
    value: An object value for which you want to know the screen height and width.
@@ -177,14 +157,10 @@ class DataGridColumnStyle:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def Invalidate(self,*args):
@@ -199,12 +175,7 @@ class DataGridColumnStyle:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -215,48 +186,30 @@ class DataGridColumnStyle:
  def Paint(self,*args):
   """
   Paint(self: DataGridColumnStyle,g: Graphics,bounds: Rectangle,source: CurrencyManager,rowNum: int)
-   Paints the System.Windows.Forms.DataGridColumnStyle with the specified 
-    System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,
-    and row number.
-  
+   Paints the System.Windows.Forms.DataGridColumnStyle with the specified System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,and row number.
   
    g: The System.Drawing.Graphics to draw to.
    bounds: The bounding System.Drawing.Rectangle to paint into.
-   source: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid control the 
-    column belongs to.
-  
+   source: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid control the column belongs to.
    rowNum: The number of the row in the underlying data being referred to.
   Paint(self: DataGridColumnStyle,g: Graphics,bounds: Rectangle,source: CurrencyManager,rowNum: int,alignToRight: bool)
-   When overridden in a derived class,paints a System.Windows.Forms.DataGridColumnStyle 
-    with the specified System.Drawing.Graphics,System.Drawing.Rectangle,
-    System.Windows.Forms.CurrencyManager,row number,and alignment.
-  
+   When overridden in a derived class,paints a System.Windows.Forms.DataGridColumnStyle with the specified System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,row number,and alignment.
   
    g: The System.Drawing.Graphics to draw to.
    bounds: The bounding System.Drawing.Rectangle to paint into.
-   source: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid control the 
-    column belongs to.
-  
+   source: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid control the column belongs to.
    rowNum: The number of the row in the underlying data being referred to.
-   alignToRight: A value indicating whether to align the column's content to the right. true if the 
-    content should be aligned to the right; otherwise false.
-  
+   alignToRight: A value indicating whether to align the column's content to the right. true if the content should be aligned to the right; otherwise false.
   Paint(self: DataGridColumnStyle,g: Graphics,bounds: Rectangle,source: CurrencyManager,rowNum: int,backBrush: Brush,foreBrush: Brush,alignToRight: bool)
-   Paints a System.Windows.Forms.DataGridColumnStyle with the specified 
-    System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,
-    row number,background color,foreground color,and alignment.
-  
+   Paints a System.Windows.Forms.DataGridColumnStyle with the specified System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,row number,background color,foreground color,and alignment.
   
    g: The System.Drawing.Graphics to draw to.
    bounds: The bounding System.Drawing.Rectangle to paint into.
-   source: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid control the 
-    column belongs to.
-  
+   source: The System.Windows.Forms.CurrencyManager of the System.Windows.Forms.DataGrid control the column belongs to.
    rowNum: The number of the row in the underlying data table being referred to.
    backBrush: A System.Drawing.Brush used to paint the background color.
    foreBrush: A System.Drawing.Color used to paint the foreground color.
-   alignToRight: A value indicating whether to align the content to the right. true if the content is 
-    aligned to the right,otherwise,false.
+   alignToRight: A value indicating whether to align the content to the right. true if the content is aligned to the right,otherwise,false.
   """
   pass
  def ReleaseHostedControl(self,*args):
@@ -274,13 +227,9 @@ class DataGridColumnStyle:
  def SetColumnValueAtRow(self,*args):
   """
   SetColumnValueAtRow(self: DataGridColumnStyle,source: CurrencyManager,rowNum: int,value: object)
-   Sets the value in a specified row with the value from a specified 
-    System.Windows.Forms.CurrencyManager.
+   Sets the value in a specified row with the value from a specified System.Windows.Forms.CurrencyManager.
   
-  
-   source: A System.Windows.Forms.CurrencyManager associated with the 
-    System.Windows.Forms.DataGridColumnStyle.
-  
+   source: A System.Windows.Forms.CurrencyManager associated with the System.Windows.Forms.DataGridColumnStyle.
    rowNum: The number of the row.
    value: The value to set.
   """
@@ -306,9 +255,7 @@ class DataGridColumnStyle:
   UpdateUI(self: DataGridColumnStyle,source: CurrencyManager,rowNum: int,displayText: str)
    Updates the value of a specified row with the given text.
   
-   source: The System.Windows.Forms.CurrencyManager associated with the 
-    System.Windows.Forms.DataGridColumnStyle.
-  
+   source: The System.Windows.Forms.CurrencyManager associated with the System.Windows.Forms.DataGridColumnStyle.
    rowNum: The row to update.
    displayText: The new value.
   """

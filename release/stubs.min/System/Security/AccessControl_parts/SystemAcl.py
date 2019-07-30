@@ -1,4 +1,4 @@
-class SystemAcl:
+class SystemAcl(CommonAcl):
  """
  Represents a System Access Control List (SACL).
  
@@ -6,6 +6,11 @@ class SystemAcl:
  SystemAcl(isContainer: bool,isDS: bool,revision: Byte,capacity: int)
  SystemAcl(isContainer: bool,isDS: bool,rawAcl: RawAcl)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SystemAcl()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddAudit(self,*__args):
   """
   AddAudit(self: SystemAcl,auditFlags: AuditFlags,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags)
@@ -17,10 +22,8 @@ class SystemAcl:
    inheritanceFlags: Flags that specify the inheritance properties of the new audit rule.
    propagationFlags: Flags that specify the inheritance propagation properties for the new audit rule.
   AddAudit(self: SystemAcl,sid: SecurityIdentifier,rule: ObjectAuditRule)AddAudit(self: SystemAcl,auditFlags: AuditFlags,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,objectFlags: ObjectAceFlags,objectType: Guid,inheritedObjectType: Guid)
-   Adds an audit rule with the specified settings to the current 
-    System.Security.AccessControl.SystemAcl object. Use this method for directory object 
-    Access Control Lists (ACLs) when specifying the object type or the inherited object type 
-    for the new audit rule.
+   Adds an audit rule with the specified settings to the current System.Security.AccessControl.SystemAcl object. Use this method for directory object Access Control Lists 
+    (ACLs) when specifying the object type or the inherited object type for the new audit rule.
   
   
    auditFlags: The type of audit rule to add.
@@ -28,9 +31,7 @@ class SystemAcl:
    accessMask: The access mask for the new audit rule.
    inheritanceFlags: Flags that specify the inheritance properties of the new audit rule.
    propagationFlags: Flags that specify the inheritance propagation properties for the new audit rule.
-   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain non-null 
-    values.
-  
+   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain non-null values.
    objectType: The identity of the class of objects to which the new audit rule applies.
    inheritedObjectType: The identity of the class of child objects which can inherit the new audit rule.
   """
@@ -39,9 +40,7 @@ class SystemAcl:
   """
   RemoveAudit(self: SystemAcl,auditFlags: AuditFlags,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags) -> bool
   
-   Removes the specified audit rule from the current System.Security.AccessControl.SystemAcl 
-    object.
-  
+   Removes the specified audit rule from the current System.Security.AccessControl.SystemAcl object.
   
    auditFlags: The type of audit rule to remove.
    sid: The System.Security.Principal.SecurityIdentifier for which to remove an audit rule.
@@ -52,9 +51,8 @@ class SystemAcl:
   RemoveAudit(self: SystemAcl,sid: SecurityIdentifier,rule: ObjectAuditRule) -> bool
   RemoveAudit(self: SystemAcl,auditFlags: AuditFlags,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,objectFlags: ObjectAceFlags,objectType: Guid,inheritedObjectType: Guid) -> bool
   
-   Removes the specified audit rule from the current System.Security.AccessControl.SystemAcl 
-    object. Use this method for directory object Access Control Lists (ACLs) when specifying 
-    the object type or the inherited object type.
+   Removes the specified audit rule from the current System.Security.AccessControl.SystemAcl object. Use this method for directory object Access Control Lists (ACLs) when 
+    specifying the object type or the inherited object type.
   
   
    auditFlags: The type of audit rule to remove.
@@ -62,9 +60,7 @@ class SystemAcl:
    accessMask: The access mask for the rule to be removed.
    inheritanceFlags: Flags that specify the inheritance properties of the rule to be removed.
    propagationFlags: Flags that specify the inheritance propagation properties for the rule to be removed.
-   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain non-null 
-    values.
-  
+   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain non-null values.
    objectType: The identity of the class of objects to which the removed audit control rule applies.
    inheritedObjectType: The identity of the class of child objects which can inherit the removed audit rule.
    Returns: true if this method successfully removes the specified audit rule; otherwise,false.
@@ -73,9 +69,7 @@ class SystemAcl:
  def RemoveAuditSpecific(self,*__args):
   """
   RemoveAuditSpecific(self: SystemAcl,auditFlags: AuditFlags,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags)
-   Removes the specified audit rule from the current 
-    System.Security.AccessControl.DiscretionaryAcl object.
-  
+   Removes the specified audit rule from the current System.Security.AccessControl.DiscretionaryAcl object.
   
    auditFlags: The type of audit rule to remove.
    sid: The System.Security.Principal.SecurityIdentifier for which to remove an audit rule.
@@ -83,10 +77,8 @@ class SystemAcl:
    inheritanceFlags: Flags that specify the inheritance properties of the rule to be removed.
    propagationFlags: Flags that specify the inheritance propagation properties for the rule to be removed.
   RemoveAuditSpecific(self: SystemAcl,sid: SecurityIdentifier,rule: ObjectAuditRule)RemoveAuditSpecific(self: SystemAcl,auditFlags: AuditFlags,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,objectFlags: ObjectAceFlags,objectType: Guid,inheritedObjectType: Guid)
-   Removes the specified audit rule from the current 
-    System.Security.AccessControl.DiscretionaryAcl object. Use this method for directory 
-    object Access Control Lists (ACLs) when specifying the object type or the inherited 
-    object type.
+   Removes the specified audit rule from the current System.Security.AccessControl.DiscretionaryAcl object. Use this method for directory object Access Control Lists (ACLs) 
+    when specifying the object type or the inherited object type.
   
   
    auditFlags: The type of audit rule to remove.
@@ -94,9 +86,7 @@ class SystemAcl:
    accessMask: The access mask for the rule to be removed.
    inheritanceFlags: Flags that specify the inheritance properties of the rule to be removed.
    propagationFlags: Flags that specify the inheritance propagation properties for the rule to be removed.
-   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain non-null 
-    values.
-  
+   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain non-null values.
    objectType: The identity of the class of objects to which the removed audit control rule applies.
    inheritedObjectType: The identity of the class of child objects which can inherit the removed audit rule.
   """
@@ -104,9 +94,7 @@ class SystemAcl:
  def SetAudit(self,*__args):
   """
   SetAudit(self: SystemAcl,auditFlags: AuditFlags,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags)
-   Sets the specified audit rule for the specified 
-    System.Security.Principal.SecurityIdentifier object.
-  
+   Sets the specified audit rule for the specified System.Security.Principal.SecurityIdentifier object.
   
    auditFlags: The audit condition to set.
    sid: The System.Security.Principal.SecurityIdentifier for which to set an audit rule.
@@ -114,9 +102,8 @@ class SystemAcl:
    inheritanceFlags: Flags that specify the inheritance properties of the new audit rule.
    propagationFlags: Flags that specify the inheritance propagation properties for the new audit rule.
   SetAudit(self: SystemAcl,sid: SecurityIdentifier,rule: ObjectAuditRule)SetAudit(self: SystemAcl,auditFlags: AuditFlags,sid: SecurityIdentifier,accessMask: int,inheritanceFlags: InheritanceFlags,propagationFlags: PropagationFlags,objectFlags: ObjectAceFlags,objectType: Guid,inheritedObjectType: Guid)
-   Sets the specified audit rule for the specified 
-    System.Security.Principal.SecurityIdentifier object. Use this method for directory object 
-    Access Control Lists (ACLs) when specifying the object type or the inherited object type.
+   Sets the specified audit rule for the specified System.Security.Principal.SecurityIdentifier object. Use this method for directory object Access Control Lists (ACLs) when 
+    specifying the object type or the inherited object type.
   
   
    auditFlags: The audit condition to set.
@@ -124,9 +111,7 @@ class SystemAcl:
    accessMask: The access mask for the new audit rule.
    inheritanceFlags: Flags that specify the inheritance properties of the new audit rule.
    propagationFlags: Flags that specify the inheritance propagation properties for the new audit rule.
-   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain non-null 
-    values.
-  
+   objectFlags: Flags that specify if the objectType and inheritedObjectType parameters contain non-null values.
    objectType: The identity of the class of objects to which the new audit rule applies.
    inheritedObjectType: The identity of the class of child objects which can inherit the new audit rule.
   """

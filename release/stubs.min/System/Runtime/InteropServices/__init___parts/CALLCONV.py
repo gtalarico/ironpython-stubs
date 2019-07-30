@@ -4,6 +4,11 @@ class CALLCONV:
  
  enum CALLCONV,values: CC_CDECL (1),CC_MACPASCAL (3),CC_MAX (9),CC_MPWCDECL (7),CC_MPWPASCAL (8),CC_MSCPASCAL (2),CC_PASCAL (2),CC_RESERVED (5),CC_STDCALL (4),CC_SYSCALL (6)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CALLCONV()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

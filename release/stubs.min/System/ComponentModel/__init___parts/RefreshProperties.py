@@ -4,6 +4,11 @@ class RefreshProperties:
  
  enum RefreshProperties,values: All (1),None (0),Repaint (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RefreshProperties()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

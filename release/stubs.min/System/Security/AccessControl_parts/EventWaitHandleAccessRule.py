@@ -1,10 +1,15 @@
-class EventWaitHandleAccessRule:
+class EventWaitHandleAccessRule(AccessRule):
  """
  Represents a set of access rights allowed or denied for a user or group. This class cannot be inherited.
  
  EventWaitHandleAccessRule(identity: IdentityReference,eventRights: EventWaitHandleRights,type: AccessControlType)
  EventWaitHandleAccessRule(identity: str,eventRights: EventWaitHandleRights,type: AccessControlType)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EventWaitHandleAccessRule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,identity,eventRights,type):
   """

@@ -1,14 +1,17 @@
-class ServicePoint:
+class ServicePoint(object):
  """ Provides connection management for HTTP connections. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ServicePoint()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CloseConnectionGroup(self,connectionGroupName):
   """
   CloseConnectionGroup(self: ServicePoint,connectionGroupName: str) -> bool
   
    Removes the specified connection group from this System.Net.ServicePoint object.
   
-   connectionGroupName: The name of the connection group that contains the connections to close and remove from 
-    this service point.
-  
+   connectionGroupName: The name of the connection group that contains the connections to close and remove from this service point.
    Returns: A System.Boolean value that indicates whether the connection group was closed.
   """
   pass
@@ -17,18 +20,14 @@ class ServicePoint:
   SetTcpKeepAlive(self: ServicePoint,enabled: bool,keepAliveTime: int,keepAliveInterval: int)
    Enables or disables the keep-alive option on a TCP connection.
   
-   enabled: If set to true,then the TCP keep-alive option on a TCP connection will be enabled using 
-    the specified keepAliveTime and keepAliveInterval values. If set to false,then the TCP 
-    keep-alive option is disabled and the remaining parameters are ignored.The default value 
-    is false.
+   enabled: If set to true,then the TCP keep-alive option on a TCP connection will be enabled using the specified keepAliveTime and keepAliveInterval values. If set to false,then the 
+    TCP keep-alive option is disabled and the remaining parameters are ignored.The default value is false.
   
-   keepAliveTime: Specifies the timeout,in milliseconds,with no activity until the first keep-alive 
-    packet is sent. The value must be greater than 0.  If a value of less than or equal to 
+   keepAliveTime: Specifies the timeout,in milliseconds,with no activity until the first keep-alive packet is sent. The value must be greater than 0.  If a value of less than or equal to 
     zero is passed an System.ArgumentOutOfRangeException is thrown.
   
-   keepAliveInterval: Specifies the interval,in milliseconds,between when successive keep-alive packets are 
-    sent if no acknowledgement is received.The value must be greater than 0.  If a value of 
-    less than or equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
+   keepAliveInterval: Specifies the interval,in milliseconds,between when successive keep-alive packets are sent if no acknowledgement is received.The value must be greater than 0.  If a value 
+    of less than or equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
   """
   pass
  Address=property(lambda self: object(),lambda self,v: None,lambda self: None)

@@ -1,5 +1,10 @@
-class License:
+class License(object):
  """ Provides the abstract base class for all licenses. A license is granted to a specific instance of a component. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return License()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
   Dispose(self: License)

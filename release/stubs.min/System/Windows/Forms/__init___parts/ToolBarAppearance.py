@@ -1,9 +1,13 @@
-class ToolBarAppearance:
+class ToolBarAppearance(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies the type of toolbar to display.
  
  enum ToolBarAppearance,values: Flat (1),Normal (0)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolBarAppearance()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

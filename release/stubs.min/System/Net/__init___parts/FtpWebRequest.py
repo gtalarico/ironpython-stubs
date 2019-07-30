@@ -1,5 +1,10 @@
-class FtpWebRequest:
+class FtpWebRequest(WebRequest):
  """ Implements a File Transfer Protocol (FTP) client. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FtpWebRequest()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Abort(self):
   """
   Abort(self: FtpWebRequest)
@@ -12,12 +17,8 @@ class FtpWebRequest:
   
    Begins asynchronously opening a request's content stream for writing.
   
-   callback: An System.AsyncCallback delegate that references the method to invoke when the operation 
-    is complete.
-  
-   state: A user-defined object that contains information about the operation. This object is 
-    passed to the callback delegate when the operation completes.
-  
+   callback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
+   state: A user-defined object that contains information about the operation. This object is passed to the callback delegate when the operation completes.
    Returns: An System.IAsyncResult instance that indicates the status of the operation.
   """
   pass
@@ -27,12 +28,8 @@ class FtpWebRequest:
   
    Begins sending a request and receiving a response from an FTP server asynchronously.
   
-   callback: An System.AsyncCallback delegate that references the method to invoke when the operation 
-    is complete.
-  
-   state: A user-defined object that contains information about the operation. This object is 
-    passed to the callback delegate when the operation completes.
-  
+   callback: An System.AsyncCallback delegate that references the method to invoke when the operation is complete.
+   state: A user-defined object that contains information about the operation. This object is passed to the callback delegate when the operation completes.
    Returns: An System.IAsyncResult instance that indicates the status of the operation.
   """
   pass
@@ -40,9 +37,7 @@ class FtpWebRequest:
   """
   EndGetRequestStream(self: FtpWebRequest,asyncResult: IAsyncResult) -> Stream
   
-   Ends a pending asynchronous operation started with 
-    System.Net.FtpWebRequest.BeginGetRequestStream(System.AsyncCallback,System.Object).
-  
+   Ends a pending asynchronous operation started with System.Net.FtpWebRequest.BeginGetRequestStream(System.AsyncCallback,System.Object).
   
    asyncResult: The System.IAsyncResult object that was returned when the operation started.
    Returns: A writable System.IO.Stream instance associated with this instance.
@@ -52,25 +47,19 @@ class FtpWebRequest:
   """
   EndGetResponse(self: FtpWebRequest,asyncResult: IAsyncResult) -> WebResponse
   
-   Ends a pending asynchronous operation started with 
-    System.Net.FtpWebRequest.BeginGetResponse(System.AsyncCallback,System.Object).
-  
+   Ends a pending asynchronous operation started with System.Net.FtpWebRequest.BeginGetResponse(System.AsyncCallback,System.Object).
   
    asyncResult: The System.IAsyncResult that was returned when the operation started.
-   Returns: A System.Net.WebResponse reference that contains an System.Net.FtpWebResponse instance. 
-    This object contains the FTP server's response to the request.
+   Returns: A System.Net.WebResponse reference that contains an System.Net.FtpWebResponse instance. This object contains the FTP server's response to the request.
   """
   pass
  def GetObjectData(self,*args):
   """
   GetObjectData(self: WebRequest,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data needed to 
-    serialize the target object.
-  
+   Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the target object.
   
    serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
-    serialization.
+   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this serialization.
   """
   pass
  def GetRequestStream(self):
@@ -78,8 +67,7 @@ class FtpWebRequest:
   GetRequestStream(self: FtpWebRequest) -> Stream
   
    Retrieves the stream used to upload data to an FTP server.
-   Returns: A writable System.IO.Stream instance used to store data to be sent to the server by the 
-    current request.
+   Returns: A writable System.IO.Stream instance used to store data to be sent to the server by the current request.
   """
   pass
  def GetResponse(self):
@@ -87,8 +75,7 @@ class FtpWebRequest:
   GetResponse(self: FtpWebRequest) -> WebResponse
   
    Returns the FTP server response.
-   Returns: A System.Net.WebResponse reference that contains an System.Net.FtpWebResponse instance. 
-    This object contains the FTP server's response to the request.
+   Returns: A System.Net.WebResponse reference that contains an System.Net.FtpWebResponse instance. This object contains the FTP server's response to the request.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -97,11 +84,9 @@ class FtpWebRequest:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object

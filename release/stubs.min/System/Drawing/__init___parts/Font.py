@@ -1,4 +1,4 @@
-class Font:
+class Font(MarshalByRefObject,ICloneable,ISerializable,IDisposable):
  """
  Defines a particular format for text,including font face,size,and style attributes. This class cannot be inherited.
  
@@ -16,6 +16,10 @@ class Font:
  Font(familyName: str,emSize: Single,style: FontStyle)
  Font(familyName: str,emSize: Single,unit: GraphicsUnit)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Font()
+
  def Clone(self):
   """
   Clone(self: Font) -> object
@@ -34,17 +38,10 @@ class Font:
   """
   Equals(self: Font,obj: object) -> bool
   
-   Indicates whether the specified object is a System.Drawing.Font and has the same 
-    System.Drawing.Font.FontFamily,System.Drawing.Font.GdiVerticalFont,
-    System.Drawing.Font.GdiCharSet,System.Drawing.Font.Style,System.Drawing.Font.Size,and 
-    System.Drawing.Font.Unit property values as this System.Drawing.Font.
-  
+   Indicates whether the specified object is a System.Drawing.Font and has the same System.Drawing.Font.FontFamily,System.Drawing.Font.GdiVerticalFont,System.Drawing.Font.GdiCharSet,System.Drawing.Font.Style,System.Drawing.Font.Size,and System.Drawing.Font.Unit property values as this System.Drawing.Font.
   
    obj: The object to test.
-   Returns: true if the obj parameter is a System.Drawing.Font and has the same 
-    System.Drawing.Font.FontFamily,System.Drawing.Font.GdiVerticalFont,
-    System.Drawing.Font.GdiCharSet,System.Drawing.Font.Style,System.Drawing.Font.Size,and 
-    System.Drawing.Font.Unit property values as this System.Drawing.Font; otherwise,false.
+   Returns: true if the obj parameter is a System.Drawing.Font and has the same System.Drawing.Font.FontFamily,System.Drawing.Font.GdiVerticalFont,System.Drawing.Font.GdiCharSet,System.Drawing.Font.Style,System.Drawing.Font.Size,and System.Drawing.Font.Unit property values as this System.Drawing.Font; otherwise,false.
   """
   pass
  @staticmethod
@@ -76,18 +73,14 @@ class Font:
   
    Creates a System.Drawing.Font from the specified GDI logical font (LOGFONT) structure.
   
-   lf: An System.Object that represents the GDI�LOGFONT structure from which to create the 
-    System.Drawing.Font.
-  
+   lf: An System.Object that represents the GDI�LOGFONT structure from which to create the System.Drawing.Font.
    hdc: A handle to a device context that contains additional information about the lf structure.
    Returns: The System.Drawing.Font that this method creates.
   FromLogFont(lf: object) -> Font
   
    Creates a System.Drawing.Font from the specified GDI logical font (LOGFONT) structure.
   
-   lf: An System.Object that represents the GDI�LOGFONT structure from which to create the 
-    System.Drawing.Font.
-  
+   lf: An System.Object that represents the GDI�LOGFONT structure from which to create the System.Drawing.Font.
    Returns: The System.Drawing.Font that this method creates.
   """
   pass
@@ -103,13 +96,9 @@ class Font:
   """
   GetHeight(self: Font,graphics: Graphics) -> Single
   
-   Returns the line spacing,in the current unit of a specified System.Drawing.Graphics,of 
-    this font.
+   Returns the line spacing,in the current unit of a specified System.Drawing.Graphics,of this font.
   
-  
-   graphics: A System.Drawing.Graphics that holds the vertical resolution,in dots per inch,of the 
-    display device as well as settings for page unit and page scale.
-  
+   graphics: A System.Drawing.Graphics that holds the vertical resolution,in dots per inch,of the display device as well as settings for page unit and page scale.
    Returns: The line spacing,in pixels,of this font.
   GetHeight(self: Font) -> Single
   
@@ -117,9 +106,7 @@ class Font:
    Returns: The line spacing,in pixels,of this font.
   GetHeight(self: Font,dpi: Single) -> Single
   
-   Returns the height,in pixels,of this System.Drawing.Font when drawn to a device with 
-    the specified vertical resolution.
-  
+   Returns the height,in pixels,of this System.Drawing.Font when drawn to a device with the specified vertical resolution.
   
    dpi: The vertical resolution,in dots per inch,used to calculate the height of the font.
    Returns: The height,in pixels,of this System.Drawing.Font.
@@ -131,12 +118,7 @@ class Font:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   

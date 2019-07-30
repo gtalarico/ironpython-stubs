@@ -1,4 +1,4 @@
-class ColumnHeader:
+class ColumnHeader(Component,IComponent,IDisposable,ICloneable):
  """
  Displays a single column header in a System.Windows.Forms.ListView control.
  
@@ -6,6 +6,10 @@ class ColumnHeader:
  ColumnHeader(imageIndex: int)
  ColumnHeader(imageKey: str)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ColumnHeader()
+
  def AutoResize(self,headerAutoResize):
   """
   AutoResize(self: ColumnHeader,headerAutoResize: ColumnHeaderAutoResizeStyle)
@@ -18,35 +22,26 @@ class ColumnHeader:
   """
   Clone(self: ColumnHeader) -> object
   
-   Creates an identical copy of the current System.Windows.Forms.ColumnHeader that is not 
-    attached to any list view control.
-  
+   Creates an identical copy of the current System.Windows.Forms.ColumnHeader that is not attached to any list view control.
    Returns: An object representing a copy of this System.Windows.Forms.ColumnHeader object.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: ColumnHeader,disposing: bool)
-   Disposes of the resources (other than memory) used by the 
-    System.Windows.Forms.ColumnHeader.
+   Disposes of the resources (other than memory) used by the System.Windows.Forms.ColumnHeader.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def GetService(self,*args):
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -55,12 +50,7 @@ class ColumnHeader:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -73,8 +63,7 @@ class ColumnHeader:
   ToString(self: ColumnHeader) -> str
   
    Returns a string representation of this column header.
-   Returns: A System.String containing the name of the System.ComponentModel.Component,if any,or 
-    null if the System.ComponentModel.Component is unnamed.
+   Returns: A System.String containing the name of the System.ComponentModel.Component,if any,or null if the System.ComponentModel.Component is unnamed.
   """
   pass
  def __enter__(self,*args):

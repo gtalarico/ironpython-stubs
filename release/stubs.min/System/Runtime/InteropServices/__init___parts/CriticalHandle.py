@@ -1,5 +1,10 @@
-class CriticalHandle:
+class CriticalHandle(CriticalFinalizerObject):
  """ Represents a wrapper class for handle resources. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CriticalHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: CriticalHandle)
@@ -17,9 +22,8 @@ class CriticalHandle:
   ReleaseHandle(self: CriticalHandle) -> bool
   
    When overridden in a derived class,executes the code required to free the handle.
-   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic 
-    failure,false. In this case,it generates a releaseHandleFailed MDA Managed Debugging 
-    Assistant.
+   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,false. In this case,it generates a releaseHandleFailed MDA Managed 
+    Debugging Assistant.
   """
   pass
  def SetHandle(self,*args):

@@ -1,41 +1,37 @@
-class ToolStripItemCollection:
+class ToolStripItemCollection(ArrangedElementCollection,IList,ICollection,IEnumerable):
  """
  Represents a collection of System.Windows.Forms.ToolStripItem objects.
  
  ToolStripItemCollection(owner: ToolStrip,value: Array[ToolStripItem])
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripItemCollection()
+
  def Add(self,*__args):
   """
   Add(self: ToolStripItemCollection,text: str) -> ToolStripItem
   
-   Adds a System.Windows.Forms.ToolStripItem that displays the specified text to the 
-    collection.
-  
+   Adds a System.Windows.Forms.ToolStripItem that displays the specified text to the collection.
   
    text: The text to be displayed on the System.Windows.Forms.ToolStripItem.
    Returns: The new System.Windows.Forms.ToolStripItem.
   Add(self: ToolStripItemCollection,image: Image) -> ToolStripItem
   
-   Adds a System.Windows.Forms.ToolStripItem that displays the specified image to the 
-    collection.
-  
+   Adds a System.Windows.Forms.ToolStripItem that displays the specified image to the collection.
   
    image: The System.Drawing.Image to be displayed on the System.Windows.Forms.ToolStripItem.
    Returns: The new System.Windows.Forms.ToolStripItem.
   Add(self: ToolStripItemCollection,text: str,image: Image) -> ToolStripItem
   
-   Adds a System.Windows.Forms.ToolStripItem that displays the specified image and text to 
-    the collection.
-  
+   Adds a System.Windows.Forms.ToolStripItem that displays the specified image and text to the collection.
   
    text: The text to be displayed on the System.Windows.Forms.ToolStripItem.
    image: The System.Drawing.Image to be displayed on the System.Windows.Forms.ToolStripItem.
    Returns: The new System.Windows.Forms.ToolStripItem.
   Add(self: ToolStripItemCollection,text: str,image: Image,onClick: EventHandler) -> ToolStripItem
   
-   Adds a System.Windows.Forms.ToolStripItem that displays the specified image and text to 
-    the collection and that raises the System.Windows.Forms.ToolStripItem.Click event.
-  
+   Adds a System.Windows.Forms.ToolStripItem that displays the specified image and text to the collection and that raises the System.Windows.Forms.ToolStripItem.Click event.
   
    text: The text to be displayed on the System.Windows.Forms.ToolStripItem.
    image: The System.Drawing.Image to be displayed on the System.Windows.Forms.ToolStripItem.
@@ -73,11 +69,8 @@ class ToolStripItemCollection:
   
    Determines whether the specified item is a member of the collection.
   
-   value: The System.Windows.Forms.ToolStripItem to search for in the 
-    System.Windows.Forms.ToolStripItemCollection.
-  
-   Returns: true if the System.Windows.Forms.ToolStripItem is a member of the current 
-    System.Windows.Forms.ToolStripItemCollection; otherwise,false.
+   value: The System.Windows.Forms.ToolStripItem to search for in the System.Windows.Forms.ToolStripItemCollection.
+   Returns: true if the System.Windows.Forms.ToolStripItem is a member of the current System.Windows.Forms.ToolStripItemCollection; otherwise,false.
   """
   pass
  def ContainsKey(self,key):
@@ -87,20 +80,16 @@ class ToolStripItemCollection:
    Determines whether the collection contains an item with the specified key.
   
    key: The key to locate in the System.Windows.Forms.ToolStripItemCollection.
-   Returns: true if the System.Windows.Forms.ToolStripItemCollection contains a 
-    System.Windows.Forms.ToolStripItem with the specified key; otherwise,false.
+   Returns: true if the System.Windows.Forms.ToolStripItemCollection contains a System.Windows.Forms.ToolStripItem with the specified key; otherwise,false.
   """
   pass
  def CopyTo(self,array,index):
   """
   CopyTo(self: ToolStripItemCollection,array: Array[ToolStripItem],index: int)
-   Copies the collection into the specified position of the specified 
-    System.Windows.Forms.ToolStripItem array.
-  
+   Copies the collection into the specified position of the specified System.Windows.Forms.ToolStripItem array.
   
    array: The array of type System.Windows.Forms.ToolStripItem to which to copy the collection.
-   index: The position in the System.Windows.Forms.ToolStripItem array at which to paste the 
-    collection.
+   index: The position in the System.Windows.Forms.ToolStripItem array at which to paste the collection.
   """
   pass
  def Find(self,key,searchAllChildren):
@@ -110,9 +99,7 @@ class ToolStripItemCollection:
    Searches for items by their name and returns an array of all matching controls.
   
    key: The item name to search the System.Windows.Forms.ToolStripItemCollection for.
-   searchAllChildren: true to search child items of the System.Windows.Forms.ToolStripItem specified by the key 
-    parameter; otherwise,false.
-  
+   searchAllChildren: true to search child items of the System.Windows.Forms.ToolStripItem specified by the key parameter; otherwise,false.
    Returns: A System.Windows.Forms.ToolStripItem array of the search results.
   """
   pass
@@ -122,12 +109,8 @@ class ToolStripItemCollection:
   
    Retrieves the index of the specified item in the collection.
   
-   value: The System.Windows.Forms.ToolStripItem to locate in the 
-    System.Windows.Forms.ToolStripItemCollection.
-  
-   Returns: A zero-based index value that represents the position of the specified 
-    System.Windows.Forms.ToolStripItem in the System.Windows.Forms.ToolStripItemCollection,
-    if found; otherwise,-1.
+   value: The System.Windows.Forms.ToolStripItem to locate in the System.Windows.Forms.ToolStripItemCollection.
+   Returns: A zero-based index value that represents the position of the specified System.Windows.Forms.ToolStripItem in the System.Windows.Forms.ToolStripItemCollection,if found; otherwise,-1.
   """
   pass
  def IndexOfKey(self,key):
@@ -137,9 +120,7 @@ class ToolStripItemCollection:
    Retrieves the index of the first occurrence of the specified item within the collection.
   
    key: The name of the System.Windows.Forms.ToolStripItem to search for.
-   Returns: A zero-based index value that represents the position of the first occurrence of the 
-    System.Windows.Forms.ToolStripItem specified by the key parameter,if found; otherwise,
-    -1.
+   Returns: A zero-based index value that represents the position of the first occurrence of the System.Windows.Forms.ToolStripItem specified by the key parameter,if found; otherwise,-1.
   """
   pass
  def Insert(self,index,value):
@@ -147,9 +128,7 @@ class ToolStripItemCollection:
   Insert(self: ToolStripItemCollection,index: int,value: ToolStripItem)
    Inserts the specified item into the collection at the specified index.
   
-   index: The location in the System.Windows.Forms.ToolStripItemCollection at which to insert the 
-    System.Windows.Forms.ToolStripItem.
-  
+   index: The location in the System.Windows.Forms.ToolStripItemCollection at which to insert the System.Windows.Forms.ToolStripItem.
    value: The System.Windows.Forms.ToolStripItem to insert.
   """
   pass
@@ -158,8 +137,7 @@ class ToolStripItemCollection:
   Remove(self: ToolStripItemCollection,value: ToolStripItem)
    Removes the specified item from the collection.
   
-   value: The System.Windows.Forms.ToolStripItem to remove from the 
-    System.Windows.Forms.ToolStripItemCollection.
+   value: The System.Windows.Forms.ToolStripItem to remove from the System.Windows.Forms.ToolStripItemCollection.
   """
   pass
  def RemoveAt(self,index):

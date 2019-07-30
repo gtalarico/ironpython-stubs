@@ -1,5 +1,9 @@
-class ImeContext:
+class ImeContext(object):
  """ Contains static methods that interact directly with the IME API. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ImeContext()
+
  @staticmethod
  def Disable(handle):
   """

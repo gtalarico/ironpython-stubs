@@ -1,5 +1,10 @@
-class SByte:
+class SByte(object):
  """ Represents an 8-bit signed integer. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SByte()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def bit_length(self,*args):
   """ bit_length(value: SByte) -> int """
   pass
@@ -7,25 +12,19 @@ class SByte:
   """
   CompareTo(self: SByte,obj: object) -> int
   
-   Compares this instance to a specified object and returns an indication of their relative 
-    values.
-  
+   Compares this instance to a specified object and returns an indication of their relative values.
   
    obj: An object to compare,or null.
-   Returns: A signed number indicating the relative values of this instance and obj.Return Value 
-    Description Less than zero This instance is less than obj. Zero This instance is equal to 
-    obj. Greater than zero This instance is greater than obj.-or- obj is null.
+   Returns: A signed number indicating the relative values of this instance and obj.Return Value Description Less than zero This instance is less than obj. Zero This instance is equal 
+    to obj. Greater than zero This instance is greater than obj.-or- obj is null.
   
   CompareTo(self: SByte,value: SByte) -> int
   
-   Compares this instance to a specified 8-bit signed integer and returns an indication of 
-    their relative values.
-  
+   Compares this instance to a specified 8-bit signed integer and returns an indication of their relative values.
   
    value: An 8-bit signed integer to compare.
-   Returns: A signed integer that indicates the relative order of this instance and value.Return 
-    Value Description Less than zero This instance is less than value. Zero This instance is 
-    equal to value. Greater than zero This instance is greater than value.
+   Returns: A signed integer that indicates the relative order of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance 
+    is equal to value. Greater than zero This instance is greater than value.
   """
   pass
  def conjugate(self,*args):
@@ -38,14 +37,10 @@ class SByte:
    Returns a value indicating whether this instance is equal to a specified object.
   
    obj: An object to compare with this instance.
-   Returns: true if obj is an instance of System.SByte and equals the value of this instance; 
-    otherwise,false.
-  
+   Returns: true if obj is an instance of System.SByte and equals the value of this instance; otherwise,false.
   Equals(self: SByte,obj: SByte) -> bool
   
-   Returns a value indicating whether this instance is equal to a specified System.SByte 
-    value.
-  
+   Returns a value indicating whether this instance is equal to a specified System.SByte value.
   
    obj: An System.SByte value to compare to this instance.
    Returns: true if obj has the same value as this instance; otherwise,false.
@@ -74,53 +69,33 @@ class SByte:
   
    Converts the string representation of a number to its 8-bit signed integer equivalent.
   
-   s: A string that represents a number to convert. The string is interpreted using the 
-    System.Globalization.NumberStyles.Integer style.
-  
+   s: A string that represents a number to convert. The string is interpreted using the System.Globalization.NumberStyles.Integer style.
    Returns: An 8-bit signed integer that is equivalent to the number contained in the s parameter.
   Parse(s: str,style: NumberStyles) -> SByte
   
-   Converts the string representation of a number in a specified style to its 8-bit signed 
-    integer equivalent.
+   Converts the string representation of a number in a specified style to its 8-bit signed integer equivalent.
   
-  
-   s: A string that contains a number to convert. The string is interpreted using the style 
-    specified by style.
-  
-   style: A bitwise combination of the enumeration values that indicates the style elements that 
-    can be present in s. A typical value to specify is 
+   s: A string that contains a number to convert. The string is interpreted using the style specified by style.
+   style: A bitwise combination of the enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
     System.Globalization.NumberStyles.Integer.
   
    Returns: An 8-bit signed integer that is equivalent to the number specified in s.
   Parse(s: str,provider: IFormatProvider) -> SByte
   
-   Converts the string representation of a number in a specified culture-specific format to 
-    its 8-bit signed integer equivalent.
+   Converts the string representation of a number in a specified culture-specific format to its 8-bit signed integer equivalent.
   
-  
-   s: A string that represents a number to convert. The string is interpreted using the 
-    System.Globalization.NumberStyles.Integer style.
-  
-   provider: An object that supplies culture-specific formatting information about s. If provider is 
-    null,the thread current culture is used.
-  
+   s: A string that represents a number to convert. The string is interpreted using the System.Globalization.NumberStyles.Integer style.
+   provider: An object that supplies culture-specific formatting information about s. If provider is null,the thread current culture is used.
    Returns: An 8-bit signed integer that is equivalent to the number specified in s.
   Parse(s: str,style: NumberStyles,provider: IFormatProvider) -> SByte
   
-   Converts the string representation of a number that is in a specified style and 
-    culture-specific format to its 8-bit signed equivalent.
+   Converts the string representation of a number that is in a specified style and culture-specific format to its 8-bit signed equivalent.
   
-  
-   s: A string that contains the number to convert. The string is interpreted by using the 
-    style specified by style.
-  
-   style: A bitwise combination of the enumeration values that indicates the style elements that 
-    can be present in s. A typical value to specify is 
+   s: A string that contains the number to convert. The string is interpreted by using the style specified by style.
+   style: A bitwise combination of the enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
     System.Globalization.NumberStyles.Integer.
   
-   provider: An object that supplies culture-specific formatting information about s. If provider is 
-    null,the thread current culture is used.
-  
+   provider: An object that supplies culture-specific formatting information about s. If provider is null,the thread current culture is used.
    Returns: An 8-bit signed byte value that is equivalent to the number specified in the s parameter.
   """
   pass
@@ -129,36 +104,28 @@ class SByte:
   ToString(self: SByte) -> str
   
    Converts the numeric value of this instance to its equivalent string representation.
-   Returns: The string representation of the value of this instance,consisting of a negative sign if 
-    the value is negative,and a sequence of digits ranging from 0 to 9 with no leading 
-    zeroes.
+   Returns: The string representation of the value of this instance,consisting of a negative sign if the value is negative,and a sequence of digits ranging from 0 to 9 with no 
+    leading zeroes.
   
   ToString(self: SByte,provider: IFormatProvider) -> str
   
-   Converts the numeric value of this instance to its equivalent string representation using 
-    the specified culture-specific format information.
-  
+   Converts the numeric value of this instance to its equivalent string representation using the specified culture-specific format information.
   
    provider: An object that supplies culture-specific formatting information.
    Returns: The string representation of the value of this instance,as specified by provider.
   ToString(self: SByte,format: str) -> str
   
-   Converts the numeric value of this instance to its equivalent string representation,
-    using the specified format.
-  
+   Converts the numeric value of this instance to its equivalent string representation,using the specified format.
   
    format: A standard or custom numeric format string.
    Returns: The string representation of the value of this instance as specified by format.
   ToString(self: SByte,format: str,provider: IFormatProvider) -> str
   
-   Converts the numeric value of this instance to its equivalent string representation using 
-    the specified format and culture-specific format information.
-  
+   Converts the numeric value of this instance to its equivalent string representation using the specified format and culture-specific format information.
   
    format: A standard or custom numeric format string.
    provider: An object that supplies culture-specific formatting information.
-   Returns: The string representation of the value of this instance as specified by format and 
-    provider.
+   Returns: The string representation of the value of this instance as specified by format and provider.
   """
   pass
  @staticmethod
@@ -166,23 +133,18 @@ class SByte:
   """
   TryParse(s: str) -> (bool,SByte)
   
-   Tries to convert the string representation of a number to its System.SByte equivalent,
-    and returns a value that indicates whether the conversion succeeded.
-  
+   Tries to convert the string representation of a number to its System.SByte equivalent,and returns a value that indicates whether the conversion succeeded.
   
    s: A string that contains a number to convert.
    Returns: true if s was converted successfully; otherwise,false.
   TryParse(s: str,style: NumberStyles,provider: IFormatProvider) -> (bool,SByte)
   
-   Tries to convert the string representation of a number in a specified style and 
-    culture-specific format to its System.SByte equivalent,and returns a value that 
-    indicates whether the conversion succeeded.
+   Tries to convert the string representation of a number in a specified style and culture-specific format to its System.SByte equivalent,and returns a value that indicates 
+    whether the conversion succeeded.
   
   
    s: A string representing a number to convert.
-   style: A bitwise combination of enumeration values that indicates the permitted format of s. A 
-    typical value to specify is System.Globalization.NumberStyles.Integer.
-  
+   style: A bitwise combination of enumeration values that indicates the permitted format of s. A typical value to specify is System.Globalization.NumberStyles.Integer.
    provider: An object that supplies culture-specific formatting information about s.
    Returns: true if s was converted successfully; otherwise,false.
   """

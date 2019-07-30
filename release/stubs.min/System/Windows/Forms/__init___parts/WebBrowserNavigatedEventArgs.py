@@ -1,9 +1,13 @@
-class WebBrowserNavigatedEventArgs:
+class WebBrowserNavigatedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.WebBrowser.Navigated event.
  
  WebBrowserNavigatedEventArgs(url: Uri)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return WebBrowserNavigatedEventArgs()
+
  @staticmethod
  def __new__(self,url):
   """ __new__(cls: type,url: Uri) """

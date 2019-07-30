@@ -1,27 +1,24 @@
-class DataFormats:
+class DataFormats(object):
  """ Provides static,predefined System.Windows.Forms.Clipboard format names. Use them to identify the format of data that you store in an System.Windows.Forms.IDataObject. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataFormats()
+
  @staticmethod
  def GetFormat(*__args):
   """
   GetFormat(format: str) -> Format
   
-   Returns a System.Windows.Forms.DataFormats.Format with the Windows Clipboard numeric ID 
-    and name for the specified format.
-  
+   Returns a System.Windows.Forms.DataFormats.Format with the Windows Clipboard numeric ID and name for the specified format.
   
    format: The format name.
-   Returns: A System.Windows.Forms.DataFormats.Format that has the Windows Clipboard numeric ID and 
-    the name of the format.
-  
+   Returns: A System.Windows.Forms.DataFormats.Format that has the Windows Clipboard numeric ID and the name of the format.
   GetFormat(id: int) -> Format
   
-   Returns a System.Windows.Forms.DataFormats.Format with the Windows Clipboard numeric ID 
-    and name for the specified ID.
-  
+   Returns a System.Windows.Forms.DataFormats.Format with the Windows Clipboard numeric ID and name for the specified ID.
   
    id: The format ID.
-   Returns: A System.Windows.Forms.DataFormats.Format that has the Windows Clipboard numeric ID and 
-    the name of the format.
+   Returns: A System.Windows.Forms.DataFormats.Format that has the Windows Clipboard numeric ID and the name of the format.
   """
   pass
  Bitmap='Bitmap'

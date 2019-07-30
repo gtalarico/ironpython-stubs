@@ -1,9 +1,13 @@
-class DataGridViewRowStateChangedEventArgs:
+class DataGridViewRowStateChangedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.DataGridView.RowStateChanged event of a System.Windows.Forms.DataGridView.
  
  DataGridViewRowStateChangedEventArgs(dataGridViewRow: DataGridViewRow,stateChanged: DataGridViewElementStates)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewRowStateChangedEventArgs()
+
  @staticmethod
  def __new__(self,dataGridViewRow,stateChanged):
   """ __new__(cls: type,dataGridViewRow: DataGridViewRow,stateChanged: DataGridViewElementStates) """

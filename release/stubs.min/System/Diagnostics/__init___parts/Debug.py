@@ -1,47 +1,35 @@
-class Debug:
+class Debug(object):
  """ Provides a set of methods and properties that help debug your code. This class cannot be inherited. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Debug()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Assert(condition,message=None,*__args):
   """
   Assert(condition: bool)
-   Checks for a condition; if the condition is false,displays a message box that shows the 
-    call stack.
+   Checks for a condition; if the condition is false,displays a message box that shows the call stack.
   
-  
-   condition: The conditional expression to evaluate. If the condition is true,a failure message is 
-    not sent and the message box is not displayed.
-  
+   condition: The conditional expression to evaluate. If the condition is true,a failure message is not sent and the message box is not displayed.
   Assert(condition: bool,message: str)
-   Checks for a condition; if the condition is false,outputs a specified message and 
-    displays a message box that shows the call stack.
+   Checks for a condition; if the condition is false,outputs a specified message and displays a message box that shows the call stack.
   
-  
-   condition: The conditional expression to evaluate. If the condition is true,the specified message 
-    is not sent and the message box is not displayed.
-  
+   condition: The conditional expression to evaluate. If the condition is true,the specified message is not sent and the message box is not displayed.
    message: The message to send to the System.Diagnostics.Trace.Listeners collection.
   Assert(condition: bool,message: str,detailMessage: str)
-   Checks for a condition; if the condition is false,outputs two specified messages and 
-    displays a message box that shows the call stack.
+   Checks for a condition; if the condition is false,outputs two specified messages and displays a message box that shows the call stack.
   
-  
-   condition: The conditional expression to evaluate. If the condition is true,the specified messages 
-    are not sent and the message box is not displayed.
-  
+   condition: The conditional expression to evaluate. If the condition is true,the specified messages are not sent and the message box is not displayed.
    message: The message to send to the System.Diagnostics.Trace.Listeners collection.
    detailMessage: The detailed message to send to the System.Diagnostics.Trace.Listeners collection.
   Assert(condition: bool,message: str,detailMessageFormat: str,*args: Array[object])
-   Checks for a condition; if the condition is false,outputs two messages (simple and 
-    formatted) and displays a message box that shows the call stack.
+   Checks for a condition; if the condition is false,outputs two messages (simple and formatted) and displays a message box that shows the call stack.
   
-  
-   condition: The conditional expression to evaluate. If the condition is true,the specified messages 
-    are not sent and the message box is not displayed.
-  
+   condition: The conditional expression to evaluate. If the condition is true,the specified messages are not sent and the message box is not displayed.
    message: The message to send to the System.Diagnostics.Trace.Listeners collection.
-   detailMessageFormat: The composite format string (see Remarks) to send to the 
-    System.Diagnostics.Trace.Listeners collection. This message contains text intermixed with 
-    zero or more format items,which correspond to objects in the args array.
+   detailMessageFormat: The composite format string (see Remarks) to send to the System.Diagnostics.Trace.Listeners collection. This message contains text intermixed with zero or more format 
+    items,which correspond to objects in the args array.
   
    args: An object array that contains zero or more objects to format.
   """
@@ -50,8 +38,7 @@ class Debug:
  def Close():
   """
   Close()
-   Flushes the output buffer and then calls the Close method on each of the 
-    System.Diagnostics.Debug.Listeners.
+   Flushes the output buffer and then calls the Close method on each of the System.Diagnostics.Debug.Listeners.
   """
   pass
  @staticmethod
@@ -72,8 +59,7 @@ class Debug:
  def Flush():
   """
   Flush()
-   Flushes the output buffer and causes buffered data to write to the 
-    System.Diagnostics.Debug.Listeners collection.
+   Flushes the output buffer and causes buffered data to write to the System.Diagnostics.Debug.Listeners collection.
   """
   pass
  @staticmethod
@@ -87,19 +73,13 @@ class Debug:
  def Print(*__args):
   """
   Print(message: str)
-   Writes a message followed by a line terminator to the trace listeners in the 
-    System.Diagnostics.Debug.Listeners collection.
-  
+   Writes a message followed by a line terminator to the trace listeners in the System.Diagnostics.Debug.Listeners collection.
   
    message: The message to write.
   Print(format: str,*args: Array[object])
-   Writes a formatted string followed by a line terminator to the trace listeners in the 
-    System.Diagnostics.Debug.Listeners collection.
+   Writes a formatted string followed by a line terminator to the trace listeners in the System.Diagnostics.Debug.Listeners collection.
   
-  
-   format: A composite format string (see Remarks) that contains text intermixed with zero or more 
-    format items,which correspond to objects in the args array.
-  
+   format: A composite format string (see Remarks) that contains text intermixed with zero or more format items,which correspond to objects in the args array.
    args: An object array containing zero or more objects to format.
   """
   pass
@@ -114,28 +94,20 @@ class Debug:
  def Write(*__args):
   """
   Write(message: str)
-   Writes a message to the trace listeners in the System.Diagnostics.Debug.Listeners 
-    collection.
-  
+   Writes a message to the trace listeners in the System.Diagnostics.Debug.Listeners collection.
   
    message: A message to write.
   Write(value: object)
-   Writes the value of the object's System.Object.ToString method to the trace listeners in 
-    the System.Diagnostics.Debug.Listeners collection.
-  
+   Writes the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection.
   
    value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
   Write(message: str,category: str)
-   Writes a category name and message to the trace listeners in the 
-    System.Diagnostics.Debug.Listeners collection.
-  
+   Writes a category name and message to the trace listeners in the System.Diagnostics.Debug.Listeners collection.
   
    message: A message to write.
    category: A category name used to organize the output.
   Write(value: object,category: str)
-   Writes a category name and the value of the object's System.Object.ToString method to the 
-    trace listeners in the System.Diagnostics.Debug.Listeners collection.
-  
+   Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection.
   
    value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
    category: A category name used to organize the output.
@@ -145,42 +117,27 @@ class Debug:
  def WriteIf(condition,*__args):
   """
   WriteIf(condition: bool,message: str)
-   Writes a message to the trace listeners in the System.Diagnostics.Debug.Listeners 
-    collection if a condition is true.
+   Writes a message to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a condition is true.
   
-  
-   condition: The conditional expression to evaluate. If the condition is true,the message is written 
-    to the trace listeners in the collection.
-  
+   condition: The conditional expression to evaluate. If the condition is true,the message is written to the trace listeners in the collection.
    message: A message to write.
   WriteIf(condition: bool,value: object)
-   Writes the value of the object's System.Object.ToString method to the trace listeners in 
-    the System.Diagnostics.Debug.Listeners collection if a condition is true.
+   Writes the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a condition is true.
   
-  
-   condition: The conditional expression to evaluate. If the condition is true,the value is written to 
-    the trace listeners in the collection.
-  
+   condition: The conditional expression to evaluate. If the condition is true,the value is written to the trace listeners in the collection.
    value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
   WriteIf(condition: bool,message: str,category: str)
-   Writes a category name and message to the trace listeners in the 
-    System.Diagnostics.Debug.Listeners collection if a condition is true.
+   Writes a category name and message to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a condition is true.
   
-  
-   condition: The conditional expression to evaluate. If the condition is true,the category name and 
-    message are written to the trace listeners in the collection.
-  
+   condition: The conditional expression to evaluate. If the condition is true,the category name and message are written to the trace listeners in the collection.
    message: A message to write.
    category: A category name used to organize the output.
   WriteIf(condition: bool,value: object,category: str)
-   Writes a category name and the value of the object's System.Object.ToString method to the 
-    trace listeners in the System.Diagnostics.Debug.Listeners collection if a condition is 
-    true.
+   Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a 
+    condition is true.
   
   
-   condition: The conditional expression to evaluate. If the condition is true,the category name and 
-    value are written to the trace listeners in the collection.
-  
+   condition: The conditional expression to evaluate. If the condition is true,the category name and value are written to the trace listeners in the collection.
    value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
    category: A category name used to organize the output.
   """
@@ -189,39 +146,27 @@ class Debug:
  def WriteLine(*__args):
   """
   WriteLine(message: str)
-   Writes a message followed by a line terminator to the trace listeners in the 
-    System.Diagnostics.Debug.Listeners collection.
-  
+   Writes a message followed by a line terminator to the trace listeners in the System.Diagnostics.Debug.Listeners collection.
   
    message: A message to write.
   WriteLine(value: object)
-   Writes the value of the object's System.Object.ToString method to the trace listeners in 
-    the System.Diagnostics.Debug.Listeners collection.
-  
+   Writes the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection.
   
    value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
   WriteLine(message: str,category: str)
-   Writes a category name and message to the trace listeners in the 
-    System.Diagnostics.Debug.Listeners collection.
-  
+   Writes a category name and message to the trace listeners in the System.Diagnostics.Debug.Listeners collection.
   
    message: A message to write.
    category: A category name used to organize the output.
   WriteLine(value: object,category: str)
-   Writes a category name and the value of the object's System.Object.ToString method to the 
-    trace listeners in the System.Diagnostics.Debug.Listeners collection.
-  
+   Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection.
   
    value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
    category: A category name used to organize the output.
   WriteLine(format: str,*args: Array[object])
-   Writes a formatted message followed by a line terminator to the trace listeners in the 
-    System.Diagnostics.Debug.Listeners collection.
+   Writes a formatted message followed by a line terminator to the trace listeners in the System.Diagnostics.Debug.Listeners collection.
   
-  
-   format: A composite format string (see Remarks) that contains text intermixed with zero or more 
-    format items,which correspond to objects in the args array.
-  
+   format: A composite format string (see Remarks) that contains text intermixed with zero or more format items,which correspond to objects in the args array.
    args: An object array containing zero or more objects to format.
   """
   pass
@@ -229,40 +174,27 @@ class Debug:
  def WriteLineIf(condition,*__args):
   """
   WriteLineIf(condition: bool,message: str)
-   Writes a message to the trace listeners in the System.Diagnostics.Debug.Listeners 
-    collection if a condition is true.
+   Writes a message to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a condition is true.
   
-  
-   condition: The conditional expression to evaluate. If the condition is true,the message is written 
-    to the trace listeners in the collection.
-  
+   condition: The conditional expression to evaluate. If the condition is true,the message is written to the trace listeners in the collection.
    message: A message to write.
   WriteLineIf(condition: bool,value: object)
-   Writes the value of the object's System.Object.ToString method to the trace listeners in 
-    the System.Diagnostics.Debug.Listeners collection if a condition is true.
+   Writes the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a condition is true.
   
-  
-   condition: The conditional expression to evaluate. If the condition is true,the value is written to 
-    the trace listeners in the collection.
-  
+   condition: The conditional expression to evaluate. If the condition is true,the value is written to the trace listeners in the collection.
    value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
   WriteLineIf(condition: bool,message: str,category: str)
-   Writes a category name and message to the trace listeners in the 
-    System.Diagnostics.Debug.Listeners collection if a condition is true.
-  
+   Writes a category name and message to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a condition is true.
   
    condition: true to cause a message to be written; otherwise,false.
    message: A message to write.
    category: A category name used to organize the output.
   WriteLineIf(condition: bool,value: object,category: str)
-   Writes a category name and the value of the object's System.Object.ToString method to the 
-    trace listeners in the System.Diagnostics.Debug.Listeners collection if a condition is 
-    true.
+   Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a 
+    condition is true.
   
   
-   condition: The conditional expression to evaluate. If the condition is true,the category name and 
-    value are written to the trace listeners in the collection.
-  
+   condition: The conditional expression to evaluate. If the condition is true,the category name and value are written to the trace listeners in the collection.
    value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
    category: A category name used to organize the output.
   """

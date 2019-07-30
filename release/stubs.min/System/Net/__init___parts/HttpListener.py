@@ -1,14 +1,18 @@
-class HttpListener:
+class HttpListener(object):
  """
  Provides a simple,programmatically controlled HTTP protocol listener. This class cannot be inherited.
  
  HttpListener()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HttpListener()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Abort(self):
   """
   Abort(self: HttpListener)
-   Shuts down the System.Net.HttpListener object immediately,discarding all currently 
-    queued requests.
+   Shuts down the System.Net.HttpListener object immediately,discarding all currently queued requests.
   """
   pass
  def BeginGetContext(self,callback,state):
@@ -17,12 +21,8 @@ class HttpListener:
   
    Begins asynchronously retrieving an incoming request.
   
-   callback: An System.AsyncCallback delegate that references the method to invoke when a client 
-    request is available.
-  
-   state: A user-defined object that contains information about the operation. This object is 
-    passed to the callback delegate when the operation completes.
-  
+   callback: An System.AsyncCallback delegate that references the method to invoke when a client request is available.
+   state: A user-defined object that contains information about the operation. This object is passed to the callback delegate when the operation completes.
    Returns: An System.IAsyncResult object that indicates the status of the asynchronous operation.
   """
   pass
@@ -38,9 +38,7 @@ class HttpListener:
   
    Completes an asynchronous operation to retrieve an incoming client request.
   
-   asyncResult: An System.IAsyncResult object that was obtained when the asynchronous operation was 
-    started.
-  
+   asyncResult: An System.IAsyncResult object that was obtained when the asynchronous operation was started.
    Returns: An System.Net.HttpListenerContext object that represents the client request.
   """
   pass

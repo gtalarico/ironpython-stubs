@@ -1,5 +1,9 @@
-class CurrencyManager:
+class CurrencyManager(BindingManagerBase):
  """ Manages a list of System.Windows.Forms.Binding objects. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return CurrencyManager()
+
  def AddNew(self):
   """
   AddNew(self: CurrencyManager)

@@ -1,9 +1,14 @@
-class WebPermissionAttribute:
+class WebPermissionAttribute(CodeAccessSecurityAttribute):
  """
  Specifies permission to access Internet resources. This class cannot be inherited.
  
  WebPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
   CreatePermission(self: WebPermissionAttribute) -> IPermission

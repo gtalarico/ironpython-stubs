@@ -1,4 +1,4 @@
-class UnmanagedMemoryStream:
+class UnmanagedMemoryStream(Stream):
  """
  Provides access to unmanaged blocks of memory from managed code.
  
@@ -7,6 +7,11 @@ class UnmanagedMemoryStream:
  UnmanagedMemoryStream(pointer: Byte*,length: Int64)
  UnmanagedMemoryStream(pointer: Byte*,length: Int64,capacity: Int64,access: FileAccess)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UnmanagedMemoryStream()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreateWaitHandle(self,*args):
   """
   CreateWaitHandle(self: Stream) -> WaitHandle
@@ -18,12 +23,9 @@ class UnmanagedMemoryStream:
  def Dispose(self):
   """
   Dispose(self: UnmanagedMemoryStream,disposing: bool)
-   Releases the unmanaged resources used by the System.IO.UnmanagedMemoryStream and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.IO.UnmanagedMemoryStream and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def Flush(self):
@@ -38,18 +40,14 @@ class UnmanagedMemoryStream:
  def Initialize(self,*args):
   """
   Initialize(self: UnmanagedMemoryStream,pointer: Byte*,length: Int64,capacity: Int64,access: FileAccess)
-   Initializes a new instance of the System.IO.UnmanagedMemoryStream class by using a 
-    pointer to an unmanaged memory location.
-  
+   Initializes a new instance of the System.IO.UnmanagedMemoryStream class by using a pointer to an unmanaged memory location.
   
    pointer: A pointer to an unmanaged memory location.
    length: The length of the memory to use.
    capacity: The total amount of memory assigned to the stream.
    access: One of the System.IO.FileAccess values.
   Initialize(self: UnmanagedMemoryStream,buffer: SafeBuffer,offset: Int64,length: Int64,access: FileAccess)
-   Initializes a new instance of the System.IO.UnmanagedMemoryStream class in a safe buffer 
-    with a specified offset,length,and file access.
-  
+   Initializes a new instance of the System.IO.UnmanagedMemoryStream class in a safe buffer with a specified offset,length,and file access.
   
    buffer: The buffer to contain the unmanaged memory stream.
    offset: The byte position in the buffer at which to start the unmanaged memory stream.
@@ -63,11 +61,9 @@ class UnmanagedMemoryStream:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -88,13 +84,10 @@ class UnmanagedMemoryStream:
   
    Reads the specified number of bytes into the specified array.
   
-   offset: The zero-based byte offset in buffer at which to begin storing the data read from the 
-    current stream.
-  
+   offset: The zero-based byte offset in buffer at which to begin storing the data read from the current stream.
    count: The maximum number of bytes to read from the current stream.
-   Returns: The total number of bytes read into the buffer. This can be less than the number of bytes 
-    requested if that many bytes are not currently available,or zero (0) if the end of the 
-    stream has been reached.
+   Returns: The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available,or zero (0) if the end 
+    of the stream has been reached.
   """
   pass
  def ReadAsync(self,buffer,offset,count,cancellationToken=None):
@@ -104,9 +97,7 @@ class UnmanagedMemoryStream:
   """
   ReadByte(self: UnmanagedMemoryStream) -> int
   
-   Reads a byte from a stream and advances the position within the stream by one byte,or 
-    returns -1 if at the end of the stream.
-  
+   Reads a byte from a stream and advances the position within the stream by one byte,or returns -1 if at the end of the stream.
    Returns: The unsigned byte cast to an System.Int32 object,or -1 if at the end of the stream.
   """
   pass
@@ -117,9 +108,7 @@ class UnmanagedMemoryStream:
    Sets the current position of the current stream to the given value.
   
    offset: The point relative to origin to begin seeking from.
-   loc: Specifies the beginning,the end,or the current position as a reference point for 
-    origin,using a value of type System.IO.SeekOrigin.
-  
+   loc: Specifies the beginning,the end,or the current position as a reference point for origin,using a value of type System.IO.SeekOrigin.
    Returns: The new position in the stream.
   """
   pass

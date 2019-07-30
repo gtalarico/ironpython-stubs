@@ -1,19 +1,21 @@
-class DataGridViewCheckBoxCell:
+class DataGridViewCheckBoxCell(DataGridViewCell,ICloneable,IDisposable,IDataGridViewEditingCell):
  """
  Displays a check box user interface (UI) to use in a System.Windows.Forms.DataGridView control.
  
  DataGridViewCheckBoxCell()
  DataGridViewCheckBoxCell(threeState: bool)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewCheckBoxCell()
+
  def BorderWidths(self,*args):
   """
   BorderWidths(self: DataGridViewCell,advancedBorderStyle: DataGridViewAdvancedBorderStyle) -> Rectangle
   
    Returns a System.Drawing.Rectangle that represents the widths of all the cell margins.
   
-   advancedBorderStyle: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that the margins are to be 
-    calculated for.
-  
+   advancedBorderStyle: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that the margins are to be calculated for.
    Returns: A System.Drawing.Rectangle that represents the widths of all the cell margins.
   """
   pass
@@ -23,12 +25,8 @@ class DataGridViewCheckBoxCell:
   
    Indicates whether the cell's row will be unshared when the cell is clicked.
   
-   e: The System.Windows.Forms.DataGridViewCellEventArgs containing the data passed to the 
-    System.Windows.Forms.DataGridViewCell.OnClick(System.Windows.Forms.DataGridViewCellEventAr
-    gs) method.
-  
-   Returns: true if the row will be unshared,otherwise,false. The base 
-    System.Windows.Forms.DataGridViewCell class always returns false.
+   e: The System.Windows.Forms.DataGridViewCellEventArgs containing the data passed to the System.Windows.Forms.DataGridViewCell.OnClick(System.Windows.Forms.DataGridViewCellEventArgs) method.
+   Returns: true if the row will be unshared,otherwise,false. The base System.Windows.Forms.DataGridViewCell class always returns false.
   """
   pass
  def Clone(self):
@@ -43,9 +41,7 @@ class DataGridViewCheckBoxCell:
   """
   ContentClickUnsharesRow(self: DataGridViewCheckBoxCell,e: DataGridViewCellEventArgs) -> bool
   
-   Indicates whether the row containing the cell will be unshared when the cell content is 
-    clicked.
-  
+   Indicates whether the row containing the cell will be unshared when the cell content is clicked.
   
    e: A System.Windows.Forms.DataGridViewCellEventArgs that contains data about the mouse click.
    Returns: true if the cell is in edit mode; otherwise,false.
@@ -55,13 +51,9 @@ class DataGridViewCheckBoxCell:
   """
   ContentDoubleClickUnsharesRow(self: DataGridViewCheckBoxCell,e: DataGridViewCellEventArgs) -> bool
   
-   Indicates whether the row containing the cell will be unshared when the cell content is 
-    double-clicked.
+   Indicates whether the row containing the cell will be unshared when the cell content is double-clicked.
   
-  
-   e: A System.Windows.Forms.DataGridViewCellEventArgs that contains data about the 
-    double-click.
-  
+   e: A System.Windows.Forms.DataGridViewCellEventArgs that contains data about the double-click.
    Returns: true if the cell is in edit mode; otherwise,false.
   """
   pass
@@ -70,20 +62,15 @@ class DataGridViewCheckBoxCell:
   CreateAccessibilityInstance(self: DataGridViewCheckBoxCell) -> AccessibleObject
   
    Creates a new accessible object for the System.Windows.Forms.DataGridViewCheckBoxCell.
-   Returns: A new 
-    System.Windows.Forms.DataGridViewCheckBoxCell.DataGridViewCheckBoxCellAccessibleObject 
-    for the System.Windows.Forms.DataGridViewCheckBoxCell.
+   Returns: A new System.Windows.Forms.DataGridViewCheckBoxCell.DataGridViewCheckBoxCellAccessibleObject for the System.Windows.Forms.DataGridViewCheckBoxCell.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: DataGridViewCell,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.DataGridViewCell and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.DataGridViewCell and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def DoubleClickUnsharesRow(self,*args):
@@ -92,12 +79,8 @@ class DataGridViewCheckBoxCell:
   
    Indicates whether the cell's row will be unshared when the cell is double-clicked.
   
-   e: The System.Windows.Forms.DataGridViewCellEventArgs containing the data passed to the 
-    System.Windows.Forms.DataGridViewCell.OnDoubleClick(System.Windows.Forms.DataGridViewCellE
-    ventArgs) method.
-  
-   Returns: true if the row will be unshared,otherwise,false. The base 
-    System.Windows.Forms.DataGridViewCell class always returns false.
+   e: The System.Windows.Forms.DataGridViewCellEventArgs containing the data passed to the System.Windows.Forms.DataGridViewCell.OnDoubleClick(System.Windows.Forms.DataGridViewCellEventArgs) method.
+   Returns: true if the row will be unshared,otherwise,false. The base System.Windows.Forms.DataGridViewCell class always returns false.
   """
   pass
  def EnterUnsharesRow(self,*args):
@@ -107,11 +90,8 @@ class DataGridViewCheckBoxCell:
    Indicates whether the parent row will be unshared when the focus moves to the cell.
   
    rowIndex: The index of the cell's parent row.
-   throughMouseClick: true if a user action moved focus to the cell; false if a programmatic operation moved 
-    focus to the cell.
-  
-   Returns: true if the row will be unshared; otherwise,false. The base 
-    System.Windows.Forms.DataGridViewCell class always returns false.
+   throughMouseClick: true if a user action moved focus to the cell; false if a programmatic operation moved focus to the cell.
+   Returns: true if the row will be unshared; otherwise,false. The base System.Windows.Forms.DataGridViewCell class always returns false.
   """
   pass
  def GetClipboardContent(self,*args):
@@ -121,21 +101,12 @@ class DataGridViewCheckBoxCell:
    Retrieves the formatted value of the cell to copy to the System.Windows.Forms.Clipboard.
   
    rowIndex: The zero-based index of the row containing the cell.
-   firstCell: true to indicate that the cell is in the first column of the region defined by the 
-    selected cells; otherwise,false.
-  
-   lastCell: true to indicate that the cell is the last column of the region defined by the selected 
-    cells; otherwise,false.
-  
-   inFirstRow: true to indicate that the cell is in the first row of the region defined by the selected 
-    cells; otherwise,false.
-  
-   inLastRow: true to indicate that the cell is in the last row of the region defined by the selected 
-    cells; otherwise,false.
-  
+   firstCell: true to indicate that the cell is in the first column of the region defined by the selected cells; otherwise,false.
+   lastCell: true to indicate that the cell is the last column of the region defined by the selected cells; otherwise,false.
+   inFirstRow: true to indicate that the cell is in the first row of the region defined by the selected cells; otherwise,false.
+   inLastRow: true to indicate that the cell is in the last row of the region defined by the selected cells; otherwise,false.
    format: The current format string of the cell.
-   Returns: An System.Object that represents the value of the cell to copy to the 
-    System.Windows.Forms.Clipboard.
+   Returns: An System.Object that represents the value of the cell to copy to the System.Windows.Forms.Clipboard.
   """
   pass
  def GetContentBounds(self,rowIndex):
@@ -154,9 +125,7 @@ class DataGridViewCheckBoxCell:
   
    Gets the formatted value of the cell while it is in edit mode.
   
-   context: A bitwise combination of System.Windows.Forms.DataGridViewDataErrorContexts values that 
-    describes the context in which any formatting error occurs.
-  
+   context: A bitwise combination of System.Windows.Forms.DataGridViewDataErrorContexts values that describes the context in which any formatting error occurs.
    Returns: An System.Object representing the formatted value of the editing cell.
   """
   pass
@@ -167,8 +136,7 @@ class DataGridViewCheckBoxCell:
    graphics: The graphics context for the cell.
    cellStyle: The System.Windows.Forms.DataGridViewCellStyle to be applied to the cell.
    rowIndex: The index of the cell's parent row.
-   Returns: The System.Drawing.Rectangle that bounds the cell's error icon,if one is displayed; 
-    otherwise,System.Drawing.Rectangle.Empty.
+   Returns: The System.Drawing.Rectangle that bounds the cell's error icon,if one is displayed; otherwise,System.Drawing.Rectangle.Empty.
   """
   pass
  def GetErrorText(self,*args):
@@ -190,18 +158,10 @@ class DataGridViewCheckBoxCell:
    value: The value to be formatted.
    rowIndex: The index of the cell's parent row.
    cellStyle: The System.Windows.Forms.DataGridViewCellStyle in effect for the cell.
-   valueTypeConverter: A System.ComponentModel.TypeConverter associated with the value type that provides custom 
-    conversion to the formatted value type,or null if no such custom conversion is needed.
-  
-   formattedValueTypeConverter: A System.ComponentModel.TypeConverter associated with the formatted value type that 
-    provides custom conversion from the value type,or null if no such custom conversion is 
-    needed.
-  
-   context: A bitwise combination of System.Windows.Forms.DataGridViewDataErrorContexts values 
-    describing the context in which the formatted value is needed.
-  
-   Returns: The value of the cell's data after formatting has been applied or null if the cell is not 
-    part of a System.Windows.Forms.DataGridView control.
+   valueTypeConverter: A System.ComponentModel.TypeConverter associated with the value type that provides custom conversion to the formatted value type,or null if no such custom conversion is needed.
+   formattedValueTypeConverter: A System.ComponentModel.TypeConverter associated with the formatted value type that provides custom conversion from the value type,or null if no such custom conversion is needed.
+   context: A bitwise combination of System.Windows.Forms.DataGridViewDataErrorContexts values describing the context in which the formatted value is needed.
+   Returns: The value of the cell's data after formatting has been applied or null if the cell is not part of a System.Windows.Forms.DataGridView control.
   """
   pass
  def GetPreferredSize(self,*args):
@@ -239,37 +199,29 @@ class DataGridViewCheckBoxCell:
   """
   KeyDownUnsharesRow(self: DataGridViewCheckBoxCell,e: KeyEventArgs,rowIndex: int) -> bool
   
-   Indicates whether the row containing the cell is unshared when a key is pressed while the 
-    cell has focus.
-  
+   Indicates whether the row containing the cell is unshared when a key is pressed while the cell has focus.
   
    e: A System.Windows.Forms.KeyEventArgs that contains data about the key press.
    rowIndex: The index of the row containing the cell.
-   Returns: true if the SPACE key is pressed and the CTRL,ALT,and SHIFT keys are all not pressed; 
-    otherwise,false.
+   Returns: true if the SPACE key is pressed and the CTRL,ALT,and SHIFT keys are all not pressed; otherwise,false.
   """
   pass
  def KeyPressUnsharesRow(self,*args):
   """
   KeyPressUnsharesRow(self: DataGridViewCell,e: KeyPressEventArgs,rowIndex: int) -> bool
   
-   Indicates whether a row will be unshared if a key is pressed while a cell in the row has 
-    focus.
-  
+   Indicates whether a row will be unshared if a key is pressed while a cell in the row has focus.
   
    e: A System.Windows.Forms.KeyPressEventArgs that contains the event data.
    rowIndex: The index of the cell's parent row.
-   Returns: true if the row will be unshared,otherwise,false. The base 
-    System.Windows.Forms.DataGridViewCell class always returns false.
+   Returns: true if the row will be unshared,otherwise,false. The base System.Windows.Forms.DataGridViewCell class always returns false.
   """
   pass
  def KeyUpUnsharesRow(self,*args):
   """
   KeyUpUnsharesRow(self: DataGridViewCheckBoxCell,e: KeyEventArgs,rowIndex: int) -> bool
   
-   Indicates whether the row containing the cell is unshared when a key is released while 
-    the cell has focus.
-  
+   Indicates whether the row containing the cell is unshared when a key is released while the cell has focus.
   
    e: A System.Windows.Forms.KeyEventArgs that contains data about the key press.
    rowIndex: The index of the row containing the cell.
@@ -283,24 +235,18 @@ class DataGridViewCheckBoxCell:
    Indicates whether a row will be unshared when the focus leaves a cell in the row.
   
    rowIndex: The index of the cell's parent row.
-   throughMouseClick: true if a user action moved focus to the cell; false if a programmatic operation moved 
-    focus to the cell.
-  
-   Returns: true if the row will be unshared,otherwise,false. The base 
-    System.Windows.Forms.DataGridViewCell class always returns false.
+   throughMouseClick: true if a user action moved focus to the cell; false if a programmatic operation moved focus to the cell.
+   Returns: true if the row will be unshared,otherwise,false. The base System.Windows.Forms.DataGridViewCell class always returns false.
   """
   pass
  def MouseClickUnsharesRow(self,*args):
   """
   MouseClickUnsharesRow(self: DataGridViewCell,e: DataGridViewCellMouseEventArgs) -> bool
   
-   Indicates whether a row will be unshared if the user clicks a mouse button while the 
-    pointer is on a cell in the row.
-  
+   Indicates whether a row will be unshared if the user clicks a mouse button while the pointer is on a cell in the row.
   
    e: A System.Windows.Forms.DataGridViewCellMouseEventArgs that contains the event data.
-   Returns: true if the row will be unshared,otherwise,false. The base 
-    System.Windows.Forms.DataGridViewCell class always returns false.
+   Returns: true if the row will be unshared,otherwise,false. The base System.Windows.Forms.DataGridViewCell class always returns false.
   """
   pass
  def MouseDoubleClickUnsharesRow(self,*args):
@@ -310,21 +256,16 @@ class DataGridViewCheckBoxCell:
    Indicates whether a row will be unshared if the user double-clicks a cell in the row.
   
    e: A System.Windows.Forms.DataGridViewCellMouseEventArgs that contains the event data.
-   Returns: true if the row will be unshared,otherwise,false. The base 
-    System.Windows.Forms.DataGridViewCell class always returns false.
+   Returns: true if the row will be unshared,otherwise,false. The base System.Windows.Forms.DataGridViewCell class always returns false.
   """
   pass
  def MouseDownUnsharesRow(self,*args):
   """
   MouseDownUnsharesRow(self: DataGridViewCheckBoxCell,e: DataGridViewCellMouseEventArgs) -> bool
   
-   Indicates whether the row containing the cell will be unshared when the mouse button is 
-    pressed while the pointer is over the cell.
+   Indicates whether the row containing the cell will be unshared when the mouse button is pressed while the pointer is over the cell.
   
-  
-   e: A System.Windows.Forms.DataGridViewCellMouseEventArgs that contains data about the mouse 
-    click.
-  
+   e: A System.Windows.Forms.DataGridViewCellMouseEventArgs that contains data about the mouse click.
    Returns: Always true.
   """
   pass
@@ -332,9 +273,7 @@ class DataGridViewCheckBoxCell:
   """
   MouseEnterUnsharesRow(self: DataGridViewCheckBoxCell,rowIndex: int) -> bool
   
-   Indicates whether the row containing the cell will be unshared when the mouse pointer 
-    moves over the cell.
-  
+   Indicates whether the row containing the cell will be unshared when the mouse pointer moves over the cell.
   
    rowIndex: The index of the row containing the cell.
    Returns: true if the cell was the last cell receiving a mouse click; otherwise,false.
@@ -344,39 +283,29 @@ class DataGridViewCheckBoxCell:
   """
   MouseLeaveUnsharesRow(self: DataGridViewCheckBoxCell,rowIndex: int) -> bool
   
-   Indicates whether the row containing the cell will be unshared when the mouse pointer 
-    leaves the cell.
-  
+   Indicates whether the row containing the cell will be unshared when the mouse pointer leaves the cell.
   
    rowIndex: The index of the row containing the cell.
-   Returns: true if the button is not in the normal state; false if the button is in the pressed 
-    state.
+   Returns: true if the button is not in the normal state; false if the button is in the pressed state.
   """
   pass
  def MouseMoveUnsharesRow(self,*args):
   """
   MouseMoveUnsharesRow(self: DataGridViewCell,e: DataGridViewCellMouseEventArgs) -> bool
   
-   Indicates whether a row will be unshared when the mouse pointer moves over a cell in the 
-    row.
-  
+   Indicates whether a row will be unshared when the mouse pointer moves over a cell in the row.
   
    e: A System.Windows.Forms.DataGridViewCellMouseEventArgs that contains the event data.
-   Returns: true if the row will be unshared,otherwise,false. The base 
-    System.Windows.Forms.DataGridViewCell class always returns false.
+   Returns: true if the row will be unshared,otherwise,false. The base System.Windows.Forms.DataGridViewCell class always returns false.
   """
   pass
  def MouseUpUnsharesRow(self,*args):
   """
   MouseUpUnsharesRow(self: DataGridViewCheckBoxCell,e: DataGridViewCellMouseEventArgs) -> bool
   
-   Indicates whether the row containing the cell will be unshared when the mouse button is 
-    released while the pointer is over the cell.
+   Indicates whether the row containing the cell will be unshared when the mouse button is released while the pointer is over the cell.
   
-  
-   e: A System.Windows.Forms.DataGridViewCellMouseEventArgs that contains data about the mouse 
-    click.
-  
+   e: A System.Windows.Forms.DataGridViewCellMouseEventArgs that contains data about the mouse click.
    Returns: Always true.
   """
   pass
@@ -403,8 +332,7 @@ class DataGridViewCheckBoxCell:
  def OnDataGridViewChanged(self,*args):
   """
   OnDataGridViewChanged(self: DataGridViewCell)
-   Called when the System.Windows.Forms.DataGridViewElement.DataGridView property of the 
-    cell changes.
+   Called when the System.Windows.Forms.DataGridViewElement.DataGridView property of the cell changes.
   """
   pass
  def OnDoubleClick(self,*args):
@@ -421,8 +349,7 @@ class DataGridViewCheckBoxCell:
    Called when the focus moves to a cell.
   
    rowIndex: The index of the cell's parent row.
-   throughMouseClick: true if a user action moved focus to the cell; false if a programmatic operation moved 
-    focus to the cell.
+   throughMouseClick: true if a user action moved focus to the cell; false if a programmatic operation moved focus to the cell.
   """
   pass
  def OnKeyDown(self,*args):
@@ -458,8 +385,7 @@ class DataGridViewCheckBoxCell:
    Called when the focus moves from a cell.
   
    rowIndex: The row index of the current cell,or -1 if the cell is not owned by a row.
-   throughMouseClick: true if the cell was left as a result of user mouse click rather than a programmatic cell 
-    change; otherwise,false.
+   throughMouseClick: true if the cell was left as a result of user mouse click rather than a programmatic cell change; otherwise,false.
   """
   pass
  def OnMouseClick(self,*args):
@@ -524,25 +450,16 @@ class DataGridViewCheckBoxCell:
    Paints the current System.Windows.Forms.DataGridViewCheckBoxCell.
   
    graphics: The System.Drawing.Graphics used to paint the cell.
-   clipBounds: A System.Drawing.Rectangle that represents the area of the 
-    System.Windows.Forms.DataGridView that needs to be repainted.
-  
+   clipBounds: A System.Drawing.Rectangle that represents the area of the System.Windows.Forms.DataGridView that needs to be repainted.
    cellBounds: A System.Drawing.Rectangle that contains the bounds of the cell that is being painted.
    rowIndex: The row index of the cell that is being painted.
-   elementState: A bitwise combination of System.Windows.Forms.DataGridViewElementStates values that 
-    specifies the state of the cell.
-  
+   elementState: A bitwise combination of System.Windows.Forms.DataGridViewElementStates values that specifies the state of the cell.
    value: The data of the cell that is being painted.
    formattedValue: The formatted data of the cell that is being painted.
    errorText: An error message that is associated with the cell.
-   cellStyle: A System.Windows.Forms.DataGridViewCellStyle that contains formatting and style 
-    information about the cell.
-  
-   advancedBorderStyle: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that contains border styles for 
-    the cell that is being painted.
-  
-   paintParts: A bitwise combination of the System.Windows.Forms.DataGridViewPaintParts values that 
-    specifies which parts of the cell need to be painted.
+   cellStyle: A System.Windows.Forms.DataGridViewCellStyle that contains formatting and style information about the cell.
+   advancedBorderStyle: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that contains border styles for the cell that is being painted.
+   paintParts: A bitwise combination of the System.Windows.Forms.DataGridViewPaintParts values that specifies which parts of the cell need to be painted.
   """
   pass
  def PaintBorder(self,*args):
@@ -551,15 +468,10 @@ class DataGridViewCheckBoxCell:
    Paints the border of the current System.Windows.Forms.DataGridViewCell.
   
    graphics: The System.Drawing.Graphics used to paint the border.
-   clipBounds: A System.Drawing.Rectangle that represents the area of the 
-    System.Windows.Forms.DataGridView that needs to be repainted.
-  
+   clipBounds: A System.Drawing.Rectangle that represents the area of the System.Windows.Forms.DataGridView that needs to be repainted.
    bounds: A System.Drawing.Rectangle that contains the area of the border that is being painted.
-   cellStyle: A System.Windows.Forms.DataGridViewCellStyle that contains formatting and style 
-    information about the current cell.
-  
-   advancedBorderStyle: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that contains border styles of the 
-    border that is being painted.
+   cellStyle: A System.Windows.Forms.DataGridViewCellStyle that contains formatting and style information about the current cell.
+   advancedBorderStyle: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that contains border styles of the border that is being painted.
   """
   pass
  def PaintErrorIcon(self,*args):
@@ -568,9 +480,7 @@ class DataGridViewCheckBoxCell:
    Paints the error icon of the current System.Windows.Forms.DataGridViewCell.
   
    graphics: The System.Drawing.Graphics used to paint the border.
-   clipBounds: A System.Drawing.Rectangle that represents the area of the 
-    System.Windows.Forms.DataGridView that needs to be repainted.
-  
+   clipBounds: A System.Drawing.Rectangle that represents the area of the System.Windows.Forms.DataGridView that needs to be repainted.
    cellValueBounds: The bounding System.Drawing.Rectangle that encloses the cell's content area.
    errorText: An error message that is associated with the cell.
   """
@@ -583,12 +493,8 @@ class DataGridViewCheckBoxCell:
   
    formattedValue: The display value of the cell.
    cellStyle: The System.Windows.Forms.DataGridViewCellStyle in effect for the cell.
-   formattedValueTypeConverter: A System.ComponentModel.TypeConverter for the display value type,or null to use the 
-    default converter.
-  
-   valueTypeConverter: A System.ComponentModel.TypeConverter for the cell value type,or null to use the default 
-    converter.
-  
+   formattedValueTypeConverter: A System.ComponentModel.TypeConverter for the display value type,or null to use the default converter.
+   valueTypeConverter: A System.ComponentModel.TypeConverter for the cell value type,or null to use the default converter.
    Returns: The cell value.
   """
   pass

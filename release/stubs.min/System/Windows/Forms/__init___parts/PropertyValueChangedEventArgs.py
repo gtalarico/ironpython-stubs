@@ -1,9 +1,13 @@
-class PropertyValueChangedEventArgs:
+class PropertyValueChangedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.PropertyGrid.PropertyValueChanged event of a System.Windows.Forms.PropertyGrid.
  
  PropertyValueChangedEventArgs(changedItem: GridItem,oldValue: object)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return PropertyValueChangedEventArgs()
+
  @staticmethod
  def __new__(self,changedItem,oldValue):
   """ __new__(cls: type,changedItem: GridItem,oldValue: object) """

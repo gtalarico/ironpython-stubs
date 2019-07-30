@@ -7,6 +7,11 @@ class BindableAttribute:
  BindableAttribute(flags: BindableSupport)
  BindableAttribute(flags: BindableSupport,direction: BindingDirection)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BindableAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: BindableAttribute,obj: object) -> bool
@@ -14,8 +19,7 @@ class BindableAttribute:
    Determines whether two System.ComponentModel.BindableAttribute objects are equal.
   
    obj: The object to compare.
-   Returns: true if the specified System.ComponentModel.BindableAttribute is equal to the current 
-    System.ComponentModel.BindableAttribute; false if it is not equal.
+   Returns: true if the specified System.ComponentModel.BindableAttribute is equal to the current System.ComponentModel.BindableAttribute; false if it is not equal.
   """
   pass
  def GetHashCode(self):

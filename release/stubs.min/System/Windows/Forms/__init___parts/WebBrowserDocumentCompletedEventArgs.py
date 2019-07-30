@@ -1,9 +1,13 @@
-class WebBrowserDocumentCompletedEventArgs:
+class WebBrowserDocumentCompletedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.WebBrowser.DocumentCompleted event.
  
  WebBrowserDocumentCompletedEventArgs(url: Uri)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return WebBrowserDocumentCompletedEventArgs()
+
  @staticmethod
  def __new__(self,url):
   """ __new__(cls: type,url: Uri) """

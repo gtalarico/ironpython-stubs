@@ -1,4 +1,4 @@
-class FileStream:
+class FileStream(Stream):
  """
  Exposes a System.IO.Stream around a file,supporting both synchronous and asynchronous read and write operations.
  
@@ -18,6 +18,11 @@ class FileStream:
  FileStream(handle: SafeFileHandle,access: FileAccess,bufferSize: int)
  FileStream(handle: SafeFileHandle,access: FileAccess,bufferSize: int,isAsync: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileStream()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginRead(self,array,offset,numBytes,userCallback,stateObject):
   """
   BeginRead(self: FileStream,array: Array[Byte],offset: int,numBytes: int,userCallback: AsyncCallback,stateObject: object) -> IAsyncResult
@@ -28,9 +33,7 @@ class FileStream:
    offset: The byte offset in array at which to begin reading.
    numBytes: The maximum number of bytes to read.
    userCallback: The method to be called when the asynchronous read operation is completed.
-   stateObject: A user-provided object that distinguishes this particular asynchronous read request from 
-    other requests.
-  
+   stateObject: A user-provided object that distinguishes this particular asynchronous read request from other requests.
    Returns: An object that references the asynchronous read.
   """
   pass
@@ -44,9 +47,7 @@ class FileStream:
    offset: The zero-based byte offset in array at which to begin copying bytes to the current stream.
    numBytes: The maximum number of bytes to write.
    userCallback: The method to be called when the asynchronous write operation is completed.
-   stateObject: A user-provided object that distinguishes this particular asynchronous write request from 
-    other requests.
-  
+   stateObject: A user-provided object that distinguishes this particular asynchronous write request from other requests.
    Returns: An object that references the asynchronous write.
   """
   pass
@@ -61,12 +62,9 @@ class FileStream:
  def Dispose(self):
   """
   Dispose(self: FileStream,disposing: bool)
-   Releases the unmanaged resources used by the System.IO.FileStream and optionally releases 
-    the managed resources.
+   Releases the unmanaged resources used by the System.IO.FileStream and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def EndRead(self,asyncResult):
@@ -76,8 +74,7 @@ class FileStream:
    Waits for the pending asynchronous read to complete.
   
    asyncResult: The reference to the pending asynchronous request to wait for.
-   Returns: The number of bytes read from the stream,between 0 and the number of bytes you 
-    requested. Streams only return 0 at the end of the stream,otherwise,they should block 
+   Returns: The number of bytes read from the stream,between 0 and the number of bytes you requested. Streams only return 0 at the end of the stream,otherwise,they should block 
     until at least 1 byte is available.
   """
   pass
@@ -94,9 +91,7 @@ class FileStream:
   Flush(self: FileStream)
    Clears buffers for this stream and causes any buffered data to be written to the file.
   Flush(self: FileStream,flushToDisk: bool)
-   Clears buffers for this stream and causes any buffered data to be written to the file,
-    and also clears all intermediate file buffers.
-  
+   Clears buffers for this stream and causes any buffered data to be written to the file,and also clears all intermediate file buffers.
   
    flushToDisk: true to flush all intermediate file buffers; otherwise,false.
   """
@@ -108,12 +103,10 @@ class FileStream:
   """
   GetAccessControl(self: FileStream) -> FileSecurity
   
-   Gets a System.Security.AccessControl.FileSecurity object that encapsulates the access 
-    control list (ACL) entries for the file described by the current System.IO.FileStream 
+   Gets a System.Security.AccessControl.FileSecurity object that encapsulates the access control list (ACL) entries for the file described by the current System.IO.FileStream 
     object.
   
-   Returns: An object that encapsulates the access control settings for the file described by the 
-    current System.IO.FileStream object.
+   Returns: An object that encapsulates the access control settings for the file described by the current System.IO.FileStream object.
   """
   pass
  def Lock(self,position,length):
@@ -121,9 +114,7 @@ class FileStream:
   Lock(self: FileStream,position: Int64,length: Int64)
    Prevents other processes from reading from or writing to the System.IO.FileStream.
   
-   position: The beginning of the range to lock. The value of this parameter must be equal to or 
-    greater than zero (0).
-  
+   position: The beginning of the range to lock. The value of this parameter must be equal to or greater than zero (0).
    length: The range to be locked.
   """
   pass
@@ -133,11 +124,9 @@ class FileStream:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -160,9 +149,8 @@ class FileStream:
   
    offset: The byte offset in array at which the read bytes will be placed.
    count: The maximum number of bytes to read.
-   Returns: The total number of bytes read into the buffer. This might be less than the number of 
-    bytes requested if that number of bytes are not currently available,or zero if the end 
-    of the stream is reached.
+   Returns: The total number of bytes read into the buffer. This might be less than the number of bytes requested if that number of bytes are not currently available,or zero if the 
+    end of the stream is reached.
   """
   pass
  def ReadAsync(self,buffer,offset,count,cancellationToken=None):
@@ -183,19 +171,14 @@ class FileStream:
    Sets the current position of this stream to the given value.
   
    offset: The point relative to origin from which to begin seeking.
-   origin: Specifies the beginning,the end,or the current position as a reference point for 
-    origin,using a value of type System.IO.SeekOrigin.
-  
+   origin: Specifies the beginning,the end,or the current position as a reference point for origin,using a value of type System.IO.SeekOrigin.
    Returns: The new position in the stream.
   """
   pass
  def SetAccessControl(self,fileSecurity):
   """
   SetAccessControl(self: FileStream,fileSecurity: FileSecurity)
-   Applies access control list (ACL) entries described by a 
-    System.Security.AccessControl.FileSecurity object to the file described by the current 
-    System.IO.FileStream object.
-  
+   Applies access control list (ACL) entries described by a System.Security.AccessControl.FileSecurity object to the file described by the current System.IO.FileStream object.
   
    fileSecurity: An object that describes an ACL entry to apply to the current file.
   """

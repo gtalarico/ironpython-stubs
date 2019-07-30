@@ -1,9 +1,13 @@
-class DataGridViewAutoSizeRowMode:
+class DataGridViewAutoSizeRowMode(Enum,IComparable,IFormattable,IConvertible):
  """
  Defines values for specifying how the height of a row is adjusted.
  
  enum DataGridViewAutoSizeRowMode,values: AllCells (3),AllCellsExceptHeader (2),RowHeader (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewAutoSizeRowMode()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

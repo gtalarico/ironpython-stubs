@@ -1,9 +1,13 @@
-class DateRangeEventArgs:
+class DateRangeEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.MonthCalendar.DateChanged or System.Windows.Forms.MonthCalendar.DateSelected events of the System.Windows.Forms.MonthCalendar control.
  
  DateRangeEventArgs(start: DateTime,end: DateTime)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DateRangeEventArgs()
+
  @staticmethod
  def __new__(self,start,end):
   """ __new__(cls: type,start: DateTime,end: DateTime) """

@@ -4,6 +4,11 @@ class DESCKIND:
  
  enum DESCKIND,values: DESCKIND_FUNCDESC (1),DESCKIND_IMPLICITAPPOBJ (4),DESCKIND_MAX (5),DESCKIND_NONE (0),DESCKIND_TYPECOMP (3),DESCKIND_VARDESC (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DESCKIND()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

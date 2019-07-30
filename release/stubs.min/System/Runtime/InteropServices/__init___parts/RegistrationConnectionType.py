@@ -4,6 +4,11 @@ class RegistrationConnectionType:
  
  enum (flags) RegistrationConnectionType,values: MultipleUse (1),MultiSeparate (2),SingleUse (0),Surrogate (8),Suspended (4)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RegistrationConnectionType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

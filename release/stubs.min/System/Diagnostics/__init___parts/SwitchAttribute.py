@@ -4,6 +4,11 @@ class SwitchAttribute:
  
  SwitchAttribute(switchName: str,switchType: Type)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SwitchAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetAll(assembly):
   """

@@ -1,4 +1,4 @@
-class ArgumentException:
+class ArgumentException(SystemException):
  """
  The exception that is thrown when one of the arguments provided to a method is not valid.
  
@@ -8,12 +8,15 @@ class ArgumentException:
  ArgumentException(message: str,paramName: str,innerException: Exception)
  ArgumentException(message: str,paramName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ArgumentException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: ArgumentException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo object with the parameter name 
-    and additional exception information.
-  
+   Sets the System.Runtime.Serialization.SerializationInfo object with the parameter name and additional exception information.
   
    info: The object that holds the serialized object data.
    context: The contextual information about the source or destination.

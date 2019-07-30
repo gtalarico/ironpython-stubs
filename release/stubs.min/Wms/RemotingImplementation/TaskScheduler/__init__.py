@@ -1,19 +1,26 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.TaskScheduler calls itself TaskScheduler
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # no functions
 # classes
 
-class TaskAlreadyRunningException:
+class TaskAlreadyRunningException(Exception):
  """
  TaskAlreadyRunningException()
  TaskAlreadyRunningException(message: str)
  TaskAlreadyRunningException(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TaskAlreadyRunningException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -31,8 +38,13 @@ class TaskAlreadyRunningException:
  SerializeObjectState=None
 
 
-class TaskBase:
+class TaskBase(object):
  """ TaskBase() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TaskBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CalculateNextMoment(self):
   """ CalculateNextMoment(self: TaskBase) -> DateTime """
   pass
@@ -226,8 +238,16 @@ Set: Type(self: TaskBase)=value
  LogCategory='Tasks'
 
 
-class TaskScheduler:
+class TaskScheduler(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TaskScheduler()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
+ def AddDefaultTasks(self):
+  """ AddDefaultTasks(self: TaskScheduler) """
+  pass
  def AddTask(self,task,findDelegate):
   """ AddTask(self: TaskScheduler,task: TaskBase,findDelegate: Func[TaskBase,bool]) -> int """
   pass
@@ -239,6 +259,9 @@ class TaskScheduler:
   pass
  def RemoveTaskByName(self,name):
   """ RemoveTaskByName(self: TaskScheduler,name: str) """
+  pass
+ def RestartTasksAsync(self):
+  """ RestartTasksAsync(self: TaskScheduler) -> Task """
   pass
  def Run(self,*args):
   """ Run(self: TaskScheduler,ct: CancellationToken) -> Task """
@@ -263,6 +286,11 @@ class TaskScheduler:
 
 class TaskType:
  """ enum TaskType,values: Erp (0),General (1),NotificationSummary (3),ScriptTask (2) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TaskType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -1,16 +1,18 @@
-class DataGridPreferredColumnWidthTypeConverter:
+class DataGridPreferredColumnWidthTypeConverter(TypeConverter):
  """
  Converts the value of an object to a different data type.
  
  DataGridPreferredColumnWidthTypeConverter()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridPreferredColumnWidthTypeConverter()
+
  def CanConvertFrom(self,*__args):
   """
   CanConvertFrom(self: DataGridPreferredColumnWidthTypeConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Gets a value that specifies whether the converter can convert an object in the given 
-    source type to the native type of the converter.
-  
+   Gets a value that specifies whether the converter can convert an object in the given source type to the native type of the converter.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    sourceType: A System.Type that represents the type you want to convert from.

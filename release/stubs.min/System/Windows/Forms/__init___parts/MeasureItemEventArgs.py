@@ -1,10 +1,14 @@
-class MeasureItemEventArgs:
+class MeasureItemEventArgs(EventArgs):
  """
  Provides data for the MeasureItem event of the System.Windows.Forms.ListBox,System.Windows.Forms.ComboBox,System.Windows.Forms.CheckedListBox,and System.Windows.Forms.MenuItem controls.
  
  MeasureItemEventArgs(graphics: Graphics,index: int,itemHeight: int)
  MeasureItemEventArgs(graphics: Graphics,index: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return MeasureItemEventArgs()
+
  @staticmethod
  def __new__(self,graphics,index,itemHeight=None):
   """

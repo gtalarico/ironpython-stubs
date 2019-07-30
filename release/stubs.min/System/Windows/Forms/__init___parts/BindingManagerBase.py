@@ -1,9 +1,13 @@
-class BindingManagerBase:
+class BindingManagerBase(object):
  """
  Manages all System.Windows.Forms.Binding objects that are bound to the same data source and data member. This class is abstract.
  
  BindingManagerBase()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return BindingManagerBase()
+
  def AddNew(self):
   """
   AddNew(self: BindingManagerBase)
@@ -26,20 +30,15 @@ class BindingManagerBase:
   """
   GetItemProperties(self: BindingManagerBase) -> PropertyDescriptorCollection
   
-   When overridden in a derived class,gets the collection of property descriptors for the 
-    binding.
-  
-   Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the property 
-    descriptors for the binding.
+   When overridden in a derived class,gets the collection of property descriptors for the binding.
+   Returns: A System.ComponentModel.PropertyDescriptorCollection that represents the property descriptors for the binding.
   """
   pass
  def GetListName(self,*args):
   """
   GetListName(self: BindingManagerBase,listAccessors: ArrayList) -> str
   
-   When overridden in a derived class,gets the name of the list supplying the data for the 
-    binding.
-  
+   When overridden in a derived class,gets the name of the list supplying the data for the binding.
   
    listAccessors: An System.Collections.ArrayList containing the table's bound properties.
    Returns: The name of the list supplying the data for the binding.
@@ -74,8 +73,7 @@ class BindingManagerBase:
   OnDataError(self: BindingManagerBase,e: Exception)
    Raises the System.Windows.Forms.BindingManagerBase.DataError event.
   
-   e: An System.Exception that caused the System.Windows.Forms.BindingManagerBase.DataError 
-    event to occur.
+   e: An System.Exception that caused the System.Windows.Forms.BindingManagerBase.DataError event to occur.
   """
   pass
  def PullData(self,*args):
@@ -93,9 +91,7 @@ class BindingManagerBase:
  def RemoveAt(self,index):
   """
   RemoveAt(self: BindingManagerBase,index: int)
-   When overridden in a derived class,deletes the row at the specified index from the 
-    underlying list.
-  
+   When overridden in a derived class,deletes the row at the specified index from the underlying list.
   
    index: The index of the row to delete.
   """

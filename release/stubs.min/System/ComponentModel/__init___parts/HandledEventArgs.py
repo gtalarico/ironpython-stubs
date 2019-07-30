@@ -1,10 +1,15 @@
-class HandledEventArgs:
+class HandledEventArgs(EventArgs):
  """
  Provides data for events that can be handled completely in an event handler.
  
  HandledEventArgs()
  HandledEventArgs(defaultHandledValue: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HandledEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,defaultHandledValue=None):
   """

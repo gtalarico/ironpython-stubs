@@ -1,5 +1,9 @@
-class HtmlElementCollection:
+class HtmlElementCollection(object,ICollection,IEnumerable):
  """ Defines a collection of System.Windows.Forms.HtmlElement objects. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return HtmlElementCollection()
+
  def GetElementsByName(self,name):
   """
   GetElementsByName(self: HtmlElementCollection,name: str) -> HtmlElementCollection
@@ -7,8 +11,7 @@ class HtmlElementCollection:
    Gets a collection of elements by their name.
   
    name: The name or ID of the element.
-   Returns: An System.Windows.Forms.HtmlElementCollection containing the elements whose 
-    System.Windows.Forms.HtmlElement.Name property match name.
+   Returns: An System.Windows.Forms.HtmlElementCollection containing the elements whose System.Windows.Forms.HtmlElement.Name property match name.
   """
   pass
  def GetEnumerator(self):

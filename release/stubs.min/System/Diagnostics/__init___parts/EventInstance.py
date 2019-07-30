@@ -1,10 +1,15 @@
-class EventInstance:
+class EventInstance(object):
  """
  Represents language-neutral information for an event log entry.
  
  EventInstance(instanceId: Int64,categoryId: int)
  EventInstance(instanceId: Int64,categoryId: int,entryType: EventLogEntryType)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EventInstance()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,instanceId,categoryId,entryType=None):
   """

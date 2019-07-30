@@ -1,10 +1,15 @@
-class ResolveEventArgs:
+class ResolveEventArgs(EventArgs):
  """
  Provides data for loader resolution events,such as the System.AppDomain.TypeResolve,System.AppDomain.ResourceResolve,System.AppDomain.ReflectionOnlyAssemblyResolve,and System.AppDomain.AssemblyResolve events.
  
  ResolveEventArgs(name: str)
  ResolveEventArgs(name: str,requestingAssembly: Assembly)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ResolveEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,name,requestingAssembly=None):
   """

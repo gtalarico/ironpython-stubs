@@ -1,29 +1,26 @@
-class LicenseManager:
+class LicenseManager(object):
  """ Provides properties and methods to add a license to a component and to manage a System.ComponentModel.LicenseProvider. This class cannot be inherited. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LicenseManager()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def CreateWithContext(type,creationContext,args=None):
   """
   CreateWithContext(type: Type,creationContext: LicenseContext) -> object
   
-   Creates an instance of the specified type,given a context in which you can use the 
-    licensed instance.
-  
+   Creates an instance of the specified type,given a context in which you can use the licensed instance.
   
    type: A System.Type that represents the type to create.
-   creationContext: A System.ComponentModel.LicenseContext that specifies when you can use the licensed 
-    instance.
-  
+   creationContext: A System.ComponentModel.LicenseContext that specifies when you can use the licensed instance.
    Returns: An instance of the specified type.
   CreateWithContext(type: Type,creationContext: LicenseContext,args: Array[object]) -> object
   
-   Creates an instance of the specified type with the specified arguments,given a context 
-    in which you can use the licensed instance.
-  
+   Creates an instance of the specified type with the specified arguments,given a context in which you can use the licensed instance.
   
    type: A System.Type that represents the type to create.
-   creationContext: A System.ComponentModel.LicenseContext that specifies when you can use the licensed 
-    instance.
-  
+   creationContext: A System.ComponentModel.LicenseContext that specifies when you can use the licensed instance.
    args: An array of type System.Object that represents the arguments for the type.
    Returns: An instance of the specified type with the given array of arguments.
   """
@@ -46,15 +43,11 @@ class LicenseManager:
   
    Determines whether a valid license can be granted for the specified type.
   
-   type: A System.Type that represents the type of object that requests the 
-    System.ComponentModel.License.
-  
+   type: A System.Type that represents the type of object that requests the System.ComponentModel.License.
    Returns: true if a valid license can be granted; otherwise,false.
   IsValid(type: Type,instance: object) -> (bool,License)
   
-   Determines whether a valid license can be granted for the specified instance of the type. 
-    This method creates a valid System.ComponentModel.License.
-  
+   Determines whether a valid license can be granted for the specified instance of the type. This method creates a valid System.ComponentModel.License.
   
    type: A System.Type that represents the type of object that requests the license.
    instance: An object of the specified type or a type derived from the specified type.
@@ -65,9 +58,7 @@ class LicenseManager:
  def LockContext(contextUser):
   """
   LockContext(contextUser: object)
-   Prevents changes being made to the current System.ComponentModel.LicenseContext of the 
-    given object.
-  
+   Prevents changes being made to the current System.ComponentModel.LicenseContext of the given object.
   
    contextUser: The object whose current context you want to lock.
   """
@@ -76,9 +67,7 @@ class LicenseManager:
  def UnlockContext(contextUser):
   """
   UnlockContext(contextUser: object)
-   Allows changes to be made to the current System.ComponentModel.LicenseContext of the 
-    given object.
-  
+   Allows changes to be made to the current System.ComponentModel.LicenseContext of the given object.
   
    contextUser: The object whose current context you want to unlock.
   """

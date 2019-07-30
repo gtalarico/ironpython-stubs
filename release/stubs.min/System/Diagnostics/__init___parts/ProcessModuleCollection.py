@@ -1,27 +1,28 @@
-class ProcessModuleCollection:
+class ProcessModuleCollection(ReadOnlyCollectionBase):
  """
  Provides a strongly typed collection of System.Diagnostics.ProcessModule objects.
  
  ProcessModuleCollection(processModules: Array[ProcessModule])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessModuleCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Contains(self,module):
   """
   Contains(self: ProcessModuleCollection,module: ProcessModule) -> bool
   
    Determines whether the specified process module exists in the collection.
   
-   module: A System.Diagnostics.ProcessModule instance that indicates the module to find in this 
-    collection.
-  
+   module: A System.Diagnostics.ProcessModule instance that indicates the module to find in this collection.
    Returns: true if the module exists in the collection; otherwise,false.
   """
   pass
  def CopyTo(self,array,index):
   """
   CopyTo(self: ProcessModuleCollection,array: Array[ProcessModule],index: int)
-   Copies an array of System.Diagnostics.ProcessModule instances to the collection,at the 
-    specified index.
-  
+   Copies an array of System.Diagnostics.ProcessModule instances to the collection,at the specified index.
   
    array: An array of System.Diagnostics.ProcessModule instances to add to the collection.
    index: The location at which to add the new instances.
@@ -34,8 +35,7 @@ class ProcessModuleCollection:
    Provides the location of a specified module within the collection.
   
    module: The System.Diagnostics.ProcessModule whose index is retrieved.
-   Returns: The zero-based index that defines the location of the module within the 
-    System.Diagnostics.ProcessModuleCollection.
+   Returns: The zero-based index that defines the location of the module within the System.Diagnostics.ProcessModuleCollection.
   """
   pass
  def __getitem__(self,*args):

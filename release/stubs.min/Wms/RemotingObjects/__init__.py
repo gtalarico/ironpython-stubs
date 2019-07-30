@@ -1,9 +1,11 @@
 # encoding: utf-8
 # module Wms.RemotingObjects calls itself RemotingObjects
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # functions
 
@@ -18,6 +20,11 @@ def ResultObject(): # real signature unknown; restored from __doc__
 
 class AnswerOptionsEnum:
  """ enum (flags) AnswerOptionsEnum,values: Abort (4),Cancel (2),Ignore (16),No (64),NoResponse (0),OK (1),Retry (8),Yes (32) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AnswerOptionsEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -52,8 +59,13 @@ class AnswerOptionsEnum:
  Yes=None
 
 
-class AnswerOptionsEnumHelper:
+class AnswerOptionsEnumHelper(object):
  """ AnswerOptionsEnumHelper() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AnswerOptionsEnumHelper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def ConvertFromDialogResult(result):
   """ ConvertFromDialogResult(result: DialogResult) -> AnswerOptionsEnum """
@@ -69,6 +81,11 @@ class AnswerOptionsEnumHelper:
 
 class IFindableList:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IFindableList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ExistsByProperty(self,id):
   """ ExistsByProperty(self: IFindableList,id: str) -> bool """
   pass
@@ -81,21 +98,35 @@ class IFindableList:
  def GetObject(self,*__args):
   """
   GetObject(self: IFindableList,id: str) -> object
-  GetObject(self: IFindableList,propertyName: str,searchString: str) -> object
+  GetObject(self: IFindableList,propertyName: str,searchString: str) -> object
+  
+   Gets the object by a specific property name and search string
+  
+   propertyName: The name of the property to check
+   searchString: The value to look for
   """
   pass
  def Remove(self,id):
   """ Remove(self: IFindableList,id: str) """
   pass
  def Update(self,id,property,value):
-  """ Update(self: IFindableList,id: object,property: str,value: object) -> bool """
+  """
+  Update(self: IFindableList,id: object,property: str,value: object) -> bool
+  
+   Make sure the value parameter has the same type as the actual field to update!
+  """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class Answers:
+class Answers(FindableList):
  """ Answers() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Answers()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetAnswerCount(self,countAnswer):
   """ GetAnswerCount(self: Answers,countAnswer: AnswerOptionsEnum) -> int """
   pass
@@ -150,11 +181,16 @@ class Answers:
 
 
 
-class BatchInfo:
+class BatchInfo(object):
  """
  BatchInfo(text: str)
  BatchInfo(text: str,tag: object)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BatchInfo()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,text,tag=None):
   """
@@ -163,30 +199,43 @@ class BatchInfo:
   """
   pass
  Children=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Children(self: BatchInfo) -> List[BatchInfo]
+ """
+
+Get: Children(self: BatchInfo) -> List[BatchInfo]
 
 Set: Children(self: BatchInfo)=value
 """
 
  Tag=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Tag(self: BatchInfo) -> object
+ """
+
+Get: Tag(self: BatchInfo) -> object
 
 Set: Tag(self: BatchInfo)=value
 """
 
  Text=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Text(self: BatchInfo) -> str
+ """
+
+Get: Text(self: BatchInfo) -> str
 
 Set: Text(self: BatchInfo)=value
 """
 
 
 
-class ChangeBarcodeArgs:
+class ChangeBarcodeArgs(object):
  """
+ Arguments used for changing the barcode of an item.
+ 
  ChangeBarcodeArgs()
  ChangeBarcodeArgs(itemCode: str,barcode: str,creditor: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ChangeBarcodeArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,itemCode=None,barcode=None,creditor=None):
   """
@@ -195,19 +244,25 @@ class ChangeBarcodeArgs:
   """
   pass
  Barcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Barcode(self: ChangeBarcodeArgs) -> str
+ """The new barcode value.
+
+Get: Barcode(self: ChangeBarcodeArgs) -> str
 
 Set: Barcode(self: ChangeBarcodeArgs)=value
 """
 
  Creditor=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Creditor(self: ChangeBarcodeArgs) -> str
+ """The id of the creditor to which the item belongs.
+
+Get: Creditor(self: ChangeBarcodeArgs) -> str
 
 Set: Creditor(self: ChangeBarcodeArgs)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: ChangeBarcodeArgs) -> str
+ """The itemcode of the item from wich the barcode has to be changed.
+
+Get: ItemCode(self: ChangeBarcodeArgs) -> str
 
 Set: ItemCode(self: ChangeBarcodeArgs)=value
 """
@@ -218,6 +273,11 @@ Set: ItemCode(self: ChangeBarcodeArgs)=value
 
 class DataBindingTypes:
  """ enum DataBindingTypes,values: DisplayMember (1),UniqueId (2),ValueMember (0) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DataBindingTypes()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -247,8 +307,13 @@ class DataBindingTypes:
  value__=None
 
 
-class DbObject:
- # no doc
+class DbObject(object):
+ """  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DbObject()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -258,69 +323,95 @@ class DbObject:
   """ __repr__(self: object) -> str """
   pass
  CreatedBy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CreatedBy(self: DbObject) -> str
+ """
+
+Get: CreatedBy(self: DbObject) -> str
 
 Set: CreatedBy(self: DbObject)=value
 """
 
  CreatedOn=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CreatedOn(self: DbObject) -> DateTime
+ """
+
+Get: CreatedOn(self: DbObject) -> DateTime
 
 Set: CreatedOn(self: DbObject)=value
 """
 
  ModifiedBy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ModifiedBy(self: DbObject) -> str
+ """
+
+Get: ModifiedBy(self: DbObject) -> str
 
 Set: ModifiedBy(self: DbObject)=value
 """
 
  ModifiedOn=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ModifiedOn(self: DbObject) -> DateTime
+ """
+
+Get: ModifiedOn(self: DbObject) -> DateTime
 
 Set: ModifiedOn(self: DbObject)=value
 """
 
 
 
-class Device:
+class Device(DbObject):
  """ Device() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Device()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  def __reduce_ex__(self,*args):
   pass
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: Device) -> int
+ """
+
+Get: Id(self: Device) -> int
 
 Set: Id(self: Device)=value
 """
 
  MacAddress=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: MacAddress(self: Device) -> str
+ """
+
+Get: MacAddress(self: Device) -> str
 
 Set: MacAddress(self: Device)=value
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name(self: Device) -> str
+ """
+
+Get: Name(self: Device) -> str
 
 Set: Name(self: Device)=value
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Type(self: Device) -> DeviceTypesEnum
+ """
+
+Get: Type(self: Device) -> DeviceTypesEnum
 
 Set: Type(self: Device)=value
 """
 
 
 
-class DeviceInformation:
+class DeviceInformation(object):
  """
  DeviceInformation()
  DeviceInformation(type: DeviceTypesEnum,name: str,serialNumber: str,operatingSystem: str,hardwareInformation: List[str])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DeviceInformation()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,type=None,name=None,serialNumber=None,operatingSystem=None,hardwareInformation=None):
   """
@@ -329,39 +420,54 @@ class DeviceInformation:
   """
   pass
  HardwareInformation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HardwareInformation(self: DeviceInformation) -> List[str]
+ """
+
+Get: HardwareInformation(self: DeviceInformation) -> List[str]
 
 Set: HardwareInformation(self: DeviceInformation)=value
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name(self: DeviceInformation) -> str
+ """
+
+Get: Name(self: DeviceInformation) -> str
 
 Set: Name(self: DeviceInformation)=value
 """
 
  OperatingSystem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OperatingSystem(self: DeviceInformation) -> str
+ """
+
+Get: OperatingSystem(self: DeviceInformation) -> str
 
 Set: OperatingSystem(self: DeviceInformation)=value
 """
 
  SerialNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SerialNumber(self: DeviceInformation) -> str
+ """
+
+Get: SerialNumber(self: DeviceInformation) -> str
 
 Set: SerialNumber(self: DeviceInformation)=value
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Type(self: DeviceInformation) -> DeviceTypesEnum
+ """
+
+Get: Type(self: DeviceInformation) -> DeviceTypesEnum
 
 Set: Type(self: DeviceInformation)=value
 """
 
 
 
-class Devices:
+class Devices(FindableList):
  """ Devices() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Devices()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -379,6 +485,11 @@ class Devices:
 
 class DeviceTypesEnum:
  """ enum DeviceTypesEnum,values: Handheld (2),Other (0),Portal (3),Terminal (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DeviceTypesEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -409,12 +520,17 @@ class DeviceTypesEnum:
  value__=None
 
 
-class Error:
+class Error(object):
  """
  Error(text: str)
  Error(text: str,details: str)
  Error(key: str,text: str,details: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Error()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -424,7 +540,9 @@ class Error:
   """
   pass
  Details=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Details(self: Error) -> str
+ """
+
+Get: Details(self: Error) -> str
 
 """
 
@@ -435,16 +553,28 @@ Set: Key(self: Error)=value
 """
 
  Text=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Text(self: Error) -> str
+ """
+
+Get: Text(self: Error) -> str
 
 """
 
 
 
-class Errors:
+class Errors(List):
  """ Errors() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Errors()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToString(self):
-  """ ToString(self: Errors) -> str """
+  """
+  ToString(self: Errors) -> str
+  
+   Returns a System.String that represents the current System.Object.
+   Returns: A System.String that represents the current System.Object.
+  """
   pass
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
@@ -463,11 +593,16 @@ class Errors:
  def __str__(self,*args):
   pass
 
-class FindableList:
+class FindableList(List):
  """
  FindableList[T]()
  FindableList[T](collection: IEnumerable[T])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FindableList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ExistsByProperty(self,id):
   """ ExistsByProperty(self: FindableList[T],id: str) -> bool """
   pass
@@ -484,7 +619,12 @@ class FindableList:
  def GetObject(self,*__args):
   """
   GetObject(self: FindableList[T],id: str) -> object
-  GetObject(self: FindableList[T],propertyName: str,searchString: str) -> object
+  GetObject(self: FindableList[T],propertyName: str,searchString: str) -> object
+  
+   Gets the object by a specific property name and search string
+  
+   propertyName: The name of the property to check
+   searchString: The value to look for
   """
   pass
  def IsLifeExpired(self,lifeTimeConfig):
@@ -494,7 +634,11 @@ class FindableList:
   """ Remove(self: FindableList[T],id: str) """
   pass
  def Update(self,id,property,value):
-  """ Update(self: FindableList[T],id: object,property: str,value: object) -> bool """
+  """
+  Update(self: FindableList[T],id: object,property: str,value: object) -> bool
+  
+   Make sure the value parameter has the same type as the actual field to update!
+  """
   pass
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
@@ -518,104 +662,146 @@ class FindableList:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  CreatedAt=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CreatedAt(self: FindableList[T]) -> DateTime
+ """
+
+Get: CreatedAt(self: FindableList[T]) -> DateTime
 
 """
 
  Hidden=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Hidden(self: FindableList[T]) -> bool
+ """
+
+Get: Hidden(self: FindableList[T]) -> bool
 
 """
 
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: FindableList[T]) -> bool
+ """
+
+Get: IsDisposable(self: FindableList[T]) -> bool
 
 """
 
  IsUserRemovable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsUserRemovable(self: FindableList[T]) -> bool
+ """By default,all objects are user removable.
+
+Get: IsUserRemovable(self: FindableList[T]) -> bool
 
 """
 
  Key=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Key(self: FindableList[T]) -> CacheKey
+ """
+
+Get: Key(self: FindableList[T]) -> CacheKey
 
 Set: Key(self: FindableList[T])=value
 """
 
  Lifetime=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Lifetime(self: FindableList[T]) -> CacheLifeTimes
+ """
+
+Get: Lifetime(self: FindableList[T]) -> CacheLifeTimes
 
 Set: Lifetime(self: FindableList[T])=value
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: FindableList[T]) -> bool
+ """
+
+Get: PreserveState(self: FindableList[T]) -> bool
 
 """
 
 
 
-class GetLogLinesArgs:
+class GetLogLinesArgs(object):
  """ GetLogLinesArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GetLogLinesArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Device=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Device(self: GetLogLinesArgs) -> str
+ """
+
+Get: Device(self: GetLogLinesArgs) -> str
 
 Set: Device(self: GetLogLinesArgs)=value
 """
 
  EndDate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: EndDate(self: GetLogLinesArgs) -> str
+ """
+
+Get: EndDate(self: GetLogLinesArgs) -> str
 
 Set: EndDate(self: GetLogLinesArgs)=value
 """
 
  OnlyLastTwoDays=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OnlyLastTwoDays(self: GetLogLinesArgs) -> bool
+ """
+
+Get: OnlyLastTwoDays(self: GetLogLinesArgs) -> bool
 
 Set: OnlyLastTwoDays(self: GetLogLinesArgs)=value
 """
 
  Paging=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Paging(self: GetLogLinesArgs) -> PagingParams
+ """
+
+Get: Paging(self: GetLogLinesArgs) -> PagingParams
 
 Set: Paging(self: GetLogLinesArgs)=value
 """
 
  SearchText=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SearchText(self: GetLogLinesArgs) -> str
+ """
+
+Get: SearchText(self: GetLogLinesArgs) -> str
 
 Set: SearchText(self: GetLogLinesArgs)=value
 """
 
  StartDate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StartDate(self: GetLogLinesArgs) -> str
+ """
+
+Get: StartDate(self: GetLogLinesArgs) -> str
 
 Set: StartDate(self: GetLogLinesArgs)=value
 """
 
  Types=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Types(self: GetLogLinesArgs) -> str
+ """
+
+Get: Types(self: GetLogLinesArgs) -> str
 
 Set: Types(self: GetLogLinesArgs)=value
 """
 
  UserName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UserName(self: GetLogLinesArgs) -> str
+ """
+
+Get: UserName(self: GetLogLinesArgs) -> str
 
 Set: UserName(self: GetLogLinesArgs)=value
 """
 
  Zone=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Zone(self: GetLogLinesArgs) -> str
+ """
+
+Get: Zone(self: GetLogLinesArgs) -> str
 
 Set: Zone(self: GetLogLinesArgs)=value
 """
 
 
 
-class HistoryFilterBase:
- # no doc
+class HistoryFilterBase(object):
+ """  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryFilterBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  FromDate=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: FromDate(self: HistoryFilterBase) -> Nullable[DateTime]
 
@@ -642,132 +828,192 @@ Set: TimeSpan(self: HistoryFilterBase)=value
 
 class IDbObject:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IDbObject()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  CreatedBy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CreatedBy(self: IDbObject) -> str
+ """
+
+Get: CreatedBy(self: IDbObject) -> str
 
 Set: CreatedBy(self: IDbObject)=value
 """
 
  CreatedOn=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CreatedOn(self: IDbObject) -> DateTime
+ """
+
+Get: CreatedOn(self: IDbObject) -> DateTime
 
 Set: CreatedOn(self: IDbObject)=value
 """
 
  ModifiedBy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ModifiedBy(self: IDbObject) -> str
+ """
+
+Get: ModifiedBy(self: IDbObject) -> str
 
 Set: ModifiedBy(self: IDbObject)=value
 """
 
  ModifiedOn=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ModifiedOn(self: IDbObject) -> DateTime
+ """
+
+Get: ModifiedOn(self: IDbObject) -> DateTime
 
 Set: ModifiedOn(self: IDbObject)=value
 """
 
 
 
-class ImplementedFunctionalities:
+class ImplementedFunctionalities(object):
  """ ImplementedFunctionalities() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ImplementedFunctionalities()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToMobileVariant(self):
-  """ ToMobileVariant(self: ImplementedFunctionalities) -> ImplementedFunctionalities """
+  """
+  ToMobileVariant(self: ImplementedFunctionalities) -> ImplementedFunctionalities
+  
+   Used by the Mobile because it doesn't have a reference to the ERP links.
+  """
   pass
  CreateReceiptsWithoutPurchaseOrder=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CreateReceiptsWithoutPurchaseOrder(self: ImplementedFunctionalities) -> bool
+ """Is the link able to create a receipt without a purchase order?
+
+Get: CreateReceiptsWithoutPurchaseOrder(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetItemCodeFromBarcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetItemCodeFromBarcode(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve an item with a given barcode?
+
+Get: GetItemCodeFromBarcode(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetItemIdentifictionAvailable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetItemIdentifictionAvailable(self: ImplementedFunctionalities) -> bool
+ """Is the link able to check if the item identifications are available?
+
+Get: GetItemIdentifictionAvailable(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetItems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetItems(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve items?
+
+Get: GetItems(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetItemsOnLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetItemsOnLocation(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve the items on a specific warehouselocation?
+
+Get: GetItemsOnLocation(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetItemStockInfo=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetItemStockInfo(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve the stock info from an item?
+
+Get: GetItemStockInfo(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetPurchaseOrderLines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetPurchaseOrderLines(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve all order lines from a purchase order?
+
+Get: GetPurchaseOrderLines(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetPurchaseOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetPurchaseOrders(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve the purchase orders of each vendor?
+
+Get: GetPurchaseOrders(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetPurchaseOrderVendors=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetPurchaseOrderVendors(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve the purchase vendors?
+
+Get: GetPurchaseOrderVendors(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetRmaOrderCustomers=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetRmaOrderCustomers(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve the customers of RMA orders?
+
+Get: GetRmaOrderCustomers(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetRmaOrderLines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetRmaOrderLines(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve all order lines from a RMA order?
+
+Get: GetRmaOrderLines(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetRmaOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetRmaOrders(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve the RMA orders of each customer?
+
+Get: GetRmaOrders(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetSalesOrderCustomers=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetSalesOrderCustomers(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve customer information from all sales orders?
+
+Get: GetSalesOrderCustomers(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetSalesOrderLines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetSalesOrderLines(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve all sales orderlines?
+
+Get: GetSalesOrderLines(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetSalesOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetSalesOrders(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve sales orders?
+
+Get: GetSalesOrders(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetSerialNumberExists=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetSerialNumberExists(self: ImplementedFunctionalities) -> bool
+ """Is the link able to check if a serial number of an item exists in the ERP system.
+
+Get: GetSerialNumberExists(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetWarehouseLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetWarehouseLocation(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve a warehouselocation from a product?
+
+Get: GetWarehouseLocation(self: ImplementedFunctionalities) -> bool
 
 """
 
  GetWarehouses=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GetWarehouses(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve information about the warehouses?
+
+Get: GetWarehouses(self: ImplementedFunctionalities) -> bool
 
 """
 
  HasSupportForDefaultInboundLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HasSupportForDefaultInboundLocation(self: ImplementedFunctionalities) -> bool
+ """Does the link support a default inbound location on a warehouse?
+
+Get: HasSupportForDefaultInboundLocation(self: ImplementedFunctionalities) -> bool
 
 """
 
@@ -777,77 +1023,115 @@ class ImplementedFunctionalities:
 """
 
  ImportSalesOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ImportSalesOrders(self: ImplementedFunctionalities) -> bool
+ """Is the link able to retrieve all sales orders with their order lines and customers?
+
+Get: ImportSalesOrders(self: ImplementedFunctionalities) -> bool
 
 """
 
  PrintAdhocRmaInvoice=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrintAdhocRmaInvoice(self: ImplementedFunctionalities) -> bool
+ """Is the link able to print invoices for an adhoc RMA receipt?
+
+Get: PrintAdhocRmaInvoice(self: ImplementedFunctionalities) -> bool
 
 """
 
  PrintPackingSlipUsingCustomPrinter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrintPackingSlipUsingCustomPrinter(self: ImplementedFunctionalities) -> bool
+ """Is the link able to print packing slips when a custom printer is passed while processing salesorders?
+
+Get: PrintPackingSlipUsingCustomPrinter(self: ImplementedFunctionalities) -> bool
 
 """
 
  PrintSalesInvoice=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PrintSalesInvoice(self: ImplementedFunctionalities) -> bool
+ """Is the link able to print invoices of a sales order after fulfillment?
+
+Get: PrintSalesInvoice(self: ImplementedFunctionalities) -> bool
 
 """
 
  ProcessAdhocRmaOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ProcessAdhocRmaOrders(self: ImplementedFunctionalities) -> bool
+ """Is the link able to create and process an adhoc RMA order?
+
+Get: ProcessAdhocRmaOrders(self: ImplementedFunctionalities) -> bool
 
 """
 
  ProcessCounts=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ProcessCounts(self: ImplementedFunctionalities) -> bool
+ """Is the link able to process counts with the data wich will be provided by BOXwise?
+
+Get: ProcessCounts(self: ImplementedFunctionalities) -> bool
 
 """
 
  ProcessPurchaseOrderLines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ProcessPurchaseOrderLines(self: ImplementedFunctionalities) -> bool
+ """Is the link able to process a specific purchase order with the data wich will be provided by BOXwise?
+
+Get: ProcessPurchaseOrderLines(self: ImplementedFunctionalities) -> bool
 
 """
 
  ProcessRmaOrderLines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ProcessRmaOrderLines(self: ImplementedFunctionalities) -> bool
+ """Is the link able to process a specific RMA order with the data wich will be provided by BOXwise?
+
+Get: ProcessRmaOrderLines(self: ImplementedFunctionalities) -> bool
 
 """
 
  ProcessSalesOrderLines=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ProcessSalesOrderLines(self: ImplementedFunctionalities) -> bool
+ """Is the link able to process a specific sales order with the data wich will be provided by BOXwise?
+
+Get: ProcessSalesOrderLines(self: ImplementedFunctionalities) -> bool
 
 """
 
  UpdateExpiryDateWithCounts=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UpdateExpiryDateWithCounts(self: ImplementedFunctionalities) -> bool
+ """Is the link able to register the expiry date of a batchnumber with a count.
+
+Get: UpdateExpiryDateWithCounts(self: ImplementedFunctionalities) -> bool
 
 """
 
  ValidateOrders=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ValidateOrders(self: ImplementedFunctionalities) -> bool
+ """Is the link able to validate orders?
+
+Get: ValidateOrders(self: ImplementedFunctionalities) -> bool
 
 """
 
 
 
 class IPagedList:
- # no doc
+ """  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IPagedList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: IPagedList) -> Int64
+ """Returns the total rows that have matched the query. This is not the total rows in the collection.
+
+Get: TotalRowsMatched(self: IPagedList) -> Int64
 
 Set: TotalRowsMatched(self: IPagedList)=value
 """
 
 
 
-class Items:
- """ Items() """
+class Items(FindableList):
+ """
+ Container for the Wms.RemotingObjects.Inventory.Item objects.
+ 
+ Items()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Items()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(items):
   """ FromIEnumerable(items: IEnumerable[Item]) -> Items """
@@ -871,7 +1155,12 @@ class Items:
 
 
 class IUniqueHashable:
- # no doc
+ """  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IUniqueHashable()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetUniqueHashCode(self):
   """ GetUniqueHashCode(self: IUniqueHashable) -> str """
   pass
@@ -879,76 +1168,110 @@ class IUniqueHashable:
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class License:
- """ License() """
+class License(object):
+ """
+ License information for a BOXwise license
+ 
+ License()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return License()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  AddressLine1=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AddressLine1(self: License) -> str
+ """First address line container street and number
+
+Get: AddressLine1(self: License) -> str
 
 Set: AddressLine1(self: License)=value
 """
 
  AddressLine2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AddressLine2(self: License) -> str
+ """Optional second address line contain extra information,eg: first floor,room 12
+
+Get: AddressLine2(self: License) -> str
 
 Set: AddressLine2(self: License)=value
 """
 
  AddressLine3=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AddressLine3(self: License) -> str
+ """Optional third line if more info is required than after second line.
+
+Get: AddressLine3(self: License) -> str
 
 Set: AddressLine3(self: License)=value
 """
 
  BeginDate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BeginDate(self: License) -> Nullable[DateTime]
+ """Datetime from when the license is valid
+
+Get: BeginDate(self: License) -> Nullable[DateTime]
 
 Set: BeginDate(self: License)=value
 """
 
  Country=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Country(self: License) -> str
+ """Name of country of the address
+
+Get: Country(self: License) -> str
 
 Set: Country(self: License)=value
 """
 
  CustomerName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerName(self: License) -> str
+ """Name of the customer/company
+
+Get: CustomerName(self: License) -> str
 
 Set: CustomerName(self: License)=value
 """
 
  CustomerNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerNumber(self: License) -> str
+ """Customer number in our accounting software (profit)
+
+Get: CustomerNumber(self: License) -> str
 
 Set: CustomerNumber(self: License)=value
 """
 
  Email=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Email(self: License) -> str
+ """Email address the customer is reachable on.
+
+Get: Email(self: License) -> str
 
 Set: Email(self: License)=value
 """
 
  EndDate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: EndDate(self: License) -> Nullable[DateTime]
+ """Datetime upto when the license is valid
+
+Get: EndDate(self: License) -> Nullable[DateTime]
 
 Set: EndDate(self: License)=value
 """
 
  IsDemoLicense=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDemoLicense(self: License) -> bool
+ """Wether the license is a demo/test license.
+   Warning will be shown that its a demo license
+
+Get: IsDemoLicense(self: License) -> bool
 
 Set: IsDemoLicense(self: License)=value
 """
 
  Number=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Number(self: License) -> str
+ """Unique number for the license eg: 89
+
+Get: Number(self: License) -> str
 
 Set: Number(self: License)=value
 """
 
  NumberOfBosClients=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NumberOfBosClients(self: License) -> int
+ """Number of BOS(OPH) clients allowed for this license registered at the same time
+
+Get: NumberOfBosClients(self: License) -> int
 
 Set: NumberOfBosClients(self: License)=value
 """
@@ -960,147 +1283,199 @@ Set: NumberOfClients(self: License)=value
 """
 
  Phone=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Phone(self: License) -> str
+ """Phone number the customer is reachable on.
+
+Get: Phone(self: License) -> str
 
 Set: Phone(self: License)=value
 """
 
  State=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: State(self: License) -> str
+ """State or province in country
+
+Get: State(self: License) -> str
 
 Set: State(self: License)=value
 """
 
  Warnings=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Warnings(self: License) -> List[str]
+ """Warnings about this license that will be shown in portal.
+
+Get: Warnings(self: License) -> List[str]
 
 Set: Warnings(self: License)=value
 """
 
 
 
-class LogLine:
+class LogLine(DbObject):
  """ LogLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LogLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  def __reduce_ex__(self,*args):
   pass
  AccessId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AccessId(self: LogLine) -> str
+ """
+
+Get: AccessId(self: LogLine) -> str
 
 Set: AccessId(self: LogLine)=value
 """
 
  AppDomain=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AppDomain(self: LogLine) -> str
+ """
+
+Get: AppDomain(self: LogLine) -> str
 
 Set: AppDomain(self: LogLine)=value
 """
 
  Category=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Category(self: LogLine) -> str
+ """
+
+Get: Category(self: LogLine) -> str
 
 Set: Category(self: LogLine)=value
 """
 
  ClientName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ClientName(self: LogLine) -> str
+ """
+
+Get: ClientName(self: LogLine) -> str
 
 Set: ClientName(self: LogLine)=value
 """
 
  EventId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: EventId(self: LogLine) -> int
+ """
+
+Get: EventId(self: LogLine) -> int
 
 Set: EventId(self: LogLine)=value
 """
 
  EventType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: EventType(self: LogLine) -> str
+ """
+
+Get: EventType(self: LogLine) -> str
 
 Set: EventType(self: LogLine)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: LogLine) -> int
+ """
+
+Get: Id(self: LogLine) -> int
 
 Set: Id(self: LogLine)=value
 """
 
  MachineName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: MachineName(self: LogLine) -> str
+ """
+
+Get: MachineName(self: LogLine) -> str
 
 Set: MachineName(self: LogLine)=value
 """
 
  Message=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Message(self: LogLine) -> str
+ """
+
+Get: Message(self: LogLine) -> str
 
 Set: Message(self: LogLine)=value
 """
 
  Priority=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Priority(self: LogLine) -> int
+ """
+
+Get: Priority(self: LogLine) -> int
 
 Set: Priority(self: LogLine)=value
 """
 
  ProcessId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ProcessId(self: LogLine) -> str
+ """
+
+Get: ProcessId(self: LogLine) -> str
 
 Set: ProcessId(self: LogLine)=value
 """
 
  ProcessName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ProcessName(self: LogLine) -> str
+ """
+
+Get: ProcessName(self: LogLine) -> str
 
 Set: ProcessName(self: LogLine)=value
 """
 
  Thread=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Thread(self: LogLine) -> int
+ """
+
+Get: Thread(self: LogLine) -> int
 
 Set: Thread(self: LogLine)=value
 """
 
  TimeStamp=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TimeStamp(self: LogLine) -> DateTime
+ """
+
+Get: TimeStamp(self: LogLine) -> DateTime
 
 Set: TimeStamp(self: LogLine)=value
 """
 
  Title=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Title(self: LogLine) -> str
+ """
+
+Get: Title(self: LogLine) -> str
 
 Set: Title(self: LogLine)=value
 """
 
  UserName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UserName(self: LogLine) -> str
+ """
+
+Get: UserName(self: LogLine) -> str
 
 Set: UserName(self: LogLine)=value
 """
 
  WindowsIdentity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WindowsIdentity(self: LogLine) -> str
+ """
+
+Get: WindowsIdentity(self: LogLine) -> str
 
 Set: WindowsIdentity(self: LogLine)=value
 """
 
  Zone=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Zone(self: LogLine) -> str
+ """
+
+Get: Zone(self: LogLine) -> str
 
 Set: Zone(self: LogLine)=value
 """
 
 
 
-class Mapping:
+class Mapping(object):
  """
  Mapping[TKey,TValue,TInfo](key: TKey,value: TValue)
  Mapping[TKey,TValue,TInfo](key: TKey,value: TValue,info: TInfo)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Mapping()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,key,value,info=None):
   """
@@ -1109,29 +1484,40 @@ class Mapping:
   """
   pass
  Info=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Info(self: Mapping[TKey,TValue,TInfo]) -> TInfo
+ """
+
+Get: Info(self: Mapping[TKey,TValue,TInfo]) -> TInfo
 
 Set: Info(self: Mapping[TKey,TValue,TInfo])=value
 """
 
  Key=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Key(self: Mapping[TKey,TValue,TInfo]) -> TKey
+ """
+
+Get: Key(self: Mapping[TKey,TValue,TInfo]) -> TKey
 
 """
 
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Value(self: Mapping[TKey,TValue,TInfo]) -> TValue
+ """
+
+Get: Value(self: Mapping[TKey,TValue,TInfo]) -> TValue
 
 Set: Value(self: Mapping[TKey,TValue,TInfo])=value
 """
 
 
 
-class Mappings:
+class Mappings(object):
  """
  Mappings[TKey,TValue,TInfo](capacity: int)
  Mappings[TKey,TValue,TInfo]()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Mappings()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,key,value,info=None):
   """ Add(self: Mappings[TKey,TValue,TInfo],key: TKey,value: TValue)Add(self: Mappings[TKey,TValue,TInfo],key: TKey,value: TValue,info: TInfo) """
   pass
@@ -1172,6 +1558,11 @@ class Mappings:
 
 class OrderTypeEnum:
  """ enum OrderTypeEnum,values: Purchase (0),Replenishment (3),Rma (1),Rtv (4),Sales (2) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OrderTypeEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -1203,12 +1594,17 @@ class OrderTypeEnum:
  value__=None
 
 
-class PagedList:
+class PagedList(List):
  """
  PagedList[T]()
  PagedList[T](capacity: int)
  PagedList[T](collection: IEnumerable[T])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PagedList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -1232,23 +1628,41 @@ class PagedList:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: PagedList[T]) -> Int64
+ """Returns the total rows that have matched the query. This is not the total rows in the collection.
+
+Get: TotalRowsMatched(self: PagedList[T]) -> Int64
 
 Set: TotalRowsMatched(self: PagedList[T])=value
 """
 
 
 
-class PagingParams:
+class PagingParams(object):
  """
+ Default model for paging and sorting results.
+ 
  PagingParams()
  PagingParams(start: int,limit: int,sortColumn: str,sortDirection: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PagingParams()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHashCode(self):
-  """ GetHashCode(self: PagingParams) -> int """
+  """
+  GetHashCode(self: PagingParams) -> int
+  
+   Unique hash depending on contents.
+     Identical contents leads to identical hash.
+  """
   pass
  def GetSortAsString(self):
-  """ GetSortAsString(self: PagingParams) -> str """
+  """
+  GetSortAsString(self: PagingParams) -> str
+  
+   Sql sort string. usable for easy objects.
+  """
   pass
  @staticmethod
  def __new__(self,start=None,limit=None,sortColumn=None,sortDirection=None):
@@ -1258,23 +1672,32 @@ class PagingParams:
   """
   pass
  IsSortingApplied=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsSortingApplied(self: PagingParams) -> bool
+ """If sort order is defined
+
+Get: IsSortingApplied(self: PagingParams) -> bool
 
 """
 
  Limit=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Limit(self: PagingParams) -> int
+ """How many records to return (after Wms.RemotingObjects.PagingParams.Start).
+
+Get: Limit(self: PagingParams) -> int
 
 Set: Limit(self: PagingParams)=value
 """
 
  SortAscending=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SortAscending(self: PagingParams) -> bool
+ """If sort order is ascending,default false.
+   Descending is more handy,think of id and created_at means latest first.
+
+Get: SortAscending(self: PagingParams) -> bool
 
 """
 
  Start=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Start(self: PagingParams) -> int
+ """index of first record to be returned (1=first record).
+
+Get: Start(self: PagingParams) -> int
 
 Set: Start(self: PagingParams)=value
 """
@@ -1284,8 +1707,13 @@ Set: Start(self: PagingParams)=value
  SortDirection=None
 
 
-class ProfilingLogEntries:
+class ProfilingLogEntries(FindableList):
  """ ProfilingLogEntries() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProfilingLogEntries()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -1301,11 +1729,16 @@ class ProfilingLogEntries:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
 
-class ProfilingUserNode:
+class ProfilingUserNode(object):
  """
  ProfilingUserNode()
  ProfilingUserNode(userKey: int,userName: str,machineName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProfilingUserNode()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToString(self):
   """ ToString(self: ProfilingUserNode) -> str """
   pass
@@ -1342,8 +1775,13 @@ Set: UserName(self: ProfilingUserNode)=value
 
 
 
-class ProfilingLogEntry:
+class ProfilingLogEntry(ProfilingUserNode):
  """ ProfilingLogEntry() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProfilingLogEntry()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  AccessId=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: AccessId(self: ProfilingLogEntry) -> str
 
@@ -1448,8 +1886,13 @@ Set: WindowsIdentity(self: ProfilingLogEntry)=value
 
 
 
-class ProfilingUserNodes:
+class ProfilingUserNodes(FindableList):
  """ ProfilingUserNodes() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProfilingUserNodes()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -1465,12 +1908,17 @@ class ProfilingUserNodes:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
 
-class Question:
+class Question(object):
  """
  Question()
  Question(key: str,text: str,possibleAnswers: int)
  Question(key: str,text: str,details: str,possibleAnswers: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Question()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,key=None,text=None,*__args):
   """
@@ -1480,7 +1928,9 @@ class Question:
   """
   pass
  Answer=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Answer(self: Question) -> AnswerOptionsEnum
+ """
+
+Get: Answer(self: Question) -> AnswerOptionsEnum
 
 Set: Answer(self: Question)=value
 """
@@ -1516,16 +1966,26 @@ Set: Text(self: Question)=value
 
 
 
-class QuestionConstants:
+class QuestionConstants(object):
  """ QuestionConstants() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return QuestionConstants()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  PreReceiptsArchive='PreReceiptsArchive'
  PreReceiptsDelete='PreReceiptsDelete'
  PreReceiptsSave='PreReceiptsSave'
  PrintRmaInvoice='PrintRmaInvoice'
 
 
-class Questions:
+class Questions(List):
  """ Questions() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Questions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ContainsKey(self,key):
   """ ContainsKey(self: Questions,key: str) -> bool """
   pass
@@ -1536,7 +1996,12 @@ class Questions:
   """ IsQuestionAnswered(self: Questions,key: str) -> bool """
   pass
  def ToString(self):
-  """ ToString(self: Questions) -> str """
+  """
+  ToString(self: Questions) -> str
+  
+   Returns a System.String that represents the current System.Object.
+   Returns: A System.String that represents the current System.Object.
+  """
   pass
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
@@ -1555,18 +2020,25 @@ class Questions:
  def __str__(self,*args):
   pass
  CountNotAnswered=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CountNotAnswered(self: Questions) -> int
+ """
+
+Get: CountNotAnswered(self: Questions) -> int
 
 """
 
 
 
-class RemotingException:
+class RemotingException(Exception):
  """
  RemotingException()
  RemotingException(message: str)
  RemotingException(message: str,innerEx: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RemotingException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -1585,12 +2057,17 @@ class RemotingException:
  SerializeObjectState=None
 
 
-class RemotingArgumentException:
+class RemotingArgumentException(RemotingException):
  """
  RemotingArgumentException()
  RemotingArgumentException(message: str)
  RemotingArgumentException(message: str,inner: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RemotingArgumentException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -1609,11 +2086,16 @@ class RemotingArgumentException:
  SerializeObjectState=None
 
 
-class RemotingDbException:
+class RemotingDbException(RemotingException):
  """
  RemotingDbException()
  RemotingDbException(Message: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RemotingDbException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -1631,12 +2113,17 @@ class RemotingDbException:
  SerializeObjectState=None
 
 
-class RemotingInsufficientRightsException:
+class RemotingInsufficientRightsException(RemotingException):
  """
  RemotingInsufficientRightsException()
  RemotingInsufficientRightsException(message: str)
  RemotingInsufficientRightsException(message: str,innerEx: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RemotingInsufficientRightsException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -1655,12 +2142,17 @@ class RemotingInsufficientRightsException:
  SerializeObjectState=None
 
 
-class RemotingLostErpHostException:
+class RemotingLostErpHostException(RemotingException):
  """
  RemotingLostErpHostException()
  RemotingLostErpHostException(message: str)
  RemotingLostErpHostException(message: str,innerEx: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RemotingLostErpHostException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -1679,12 +2171,17 @@ class RemotingLostErpHostException:
  SerializeObjectState=None
 
 
-class RemotingMessageException:
+class RemotingMessageException(RemotingException):
  """
  RemotingMessageException()
  RemotingMessageException(message: str)
  RemotingMessageException(message: str,innerEx: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RemotingMessageException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -1703,11 +2200,16 @@ class RemotingMessageException:
  SerializeObjectState=None
 
 
-class RemotingSecurityViolationException:
+class RemotingSecurityViolationException(RemotingException):
  """
  RemotingSecurityViolationException()
  RemotingSecurityViolationException(Message: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RemotingSecurityViolationException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -1725,22 +2227,40 @@ class RemotingSecurityViolationException:
  SerializeObjectState=None
 
 
-class Schedule:
+class Schedule(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Schedule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def IsWithinSchedule(self,value):
-  """ IsWithinSchedule(self: Schedule,value: DateTime) -> bool """
+  """
+  IsWithinSchedule(self: Schedule,value: DateTime) -> bool
+  
+   Determines if the value falls within the schedule
+  """
   pass
  @staticmethod
  def Parse(schedule):
-  """ Parse(schedule: str) -> Schedule """
+  """
+  Parse(schedule: str) -> Schedule
+  
+   schedule: Example: Mon,Tue(0800:1700),Thu,Fri
+  """
   pass
 
-class SerializableDictionary:
+class SerializableDictionary(Dictionary):
  """
  SerializableDictionary[TKey,TValue]()
  SerializableDictionary[TKey,TValue](dictionary: IDictionary[TKey,TValue])
  SerializableDictionary[TKey,TValue](info: SerializationInfo,context: StreamingContext)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SerializableDictionary()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetSchema(self):
   """ GetSchema(self: SerializableDictionary[TKey,TValue]) -> XmlSchema """
   pass
@@ -1775,6 +2295,11 @@ class SerializableDictionary:
 
 class ServerHealthEnum:
  """ enum ServerHealthEnum,values: DatabaseUpdateNeeded (4),DifferentHookVersions (5),InvalidConnection (2),InvalidLicense (1),NoDatabase (3),NotReady (6),NotRunning (7),Ok (0) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ServerHealthEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -1809,47 +2334,69 @@ class ServerHealthEnum:
  value__=None
 
 
-class Session:
+class Session(object):
  """ Session() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Session()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  AccessId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AccessId(self: Session) -> str
+ """
+
+Get: AccessId(self: Session) -> str
 
 Set: AccessId(self: Session)=value
 """
 
  DeviceType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DeviceType(self: Session) -> DeviceTypesEnum
+ """
+
+Get: DeviceType(self: Session) -> DeviceTypesEnum
 
 Set: DeviceType(self: Session)=value
 """
 
  EndPoint=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: EndPoint(self: Session) -> str
+ """
+
+Get: EndPoint(self: Session) -> str
 
 Set: EndPoint(self: Session)=value
 """
 
  MachineName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: MachineName(self: Session) -> str
+ """
+
+Get: MachineName(self: Session) -> str
 
 Set: MachineName(self: Session)=value
 """
 
  RandomNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: RandomNumber(self: Session) -> str
+ """
+
+Get: RandomNumber(self: Session) -> str
 
 """
 
  UserName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UserName(self: Session) -> str
+ """
+
+Get: UserName(self: Session) -> str
 
 Set: UserName(self: Session)=value
 """
 
 
 
-class Sessions:
+class Sessions(FindableList):
  """ Sessions() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Sessions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -1868,8 +2415,13 @@ class Sessions:
  ValueMember='Number'
 
 
-class StateTransition:
+class StateTransition(object):
  """ StateTransition[T](currentStatus: T,newStatus: T) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StateTransition()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """ Equals(self: StateTransition[T],obj: object) -> bool """
   pass
@@ -1889,11 +2441,16 @@ class StateTransition:
  NewStatus=None
 
 
-class Tag:
+class Tag(DbObject):
  """
  Tag()
  Tag(description: str,color: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Tag()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """ Equals(self: Tag,obj: object) -> bool """
   pass
@@ -1931,41 +2488,56 @@ class Tag:
  def __str__(self,*args):
   pass
  Color=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Color(self: Tag) -> str
+ """
+
+Get: Color(self: Tag) -> str
 
 Set: Color(self: Tag)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: Tag) -> str
+ """
+
+Get: Description(self: Tag) -> str
 
 Set: Description(self: Tag)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: Tag) -> int
+ """
+
+Get: Id(self: Tag) -> int
 
 Set: Id(self: Tag)=value
 """
 
  Target=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Target(self: Tag) -> TagTarget
+ """
+
+Get: Target(self: Tag) -> TagTarget
 
 Set: Target(self: Tag)=value
 """
 
  TargetAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TargetAsString(self: Tag) -> str
+ """
+
+Get: TargetAsString(self: Tag) -> str
 
 """
 
 
 
-class Tags:
+class Tags(List):
  """
  Tags(collection: IEnumerable[Tag])
  Tags()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Tags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToString(self):
   """ ToString(self: Tags) -> str """
   pass
@@ -1997,6 +2569,11 @@ class Tags:
 
 class TagTarget:
  """ enum TagTarget,values: Batch (2),NotSet (0),Order (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TagTarget()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -2026,8 +2603,13 @@ class TagTarget:
  value__=None
 
 
-class ThreadSafeList:
+class ThreadSafeList(object):
  """ ThreadSafeList[T]() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ThreadSafeList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clear(self):
   """ Clear(self: ThreadSafeList[T]) """
   pass
@@ -2072,7 +2654,9 @@ class ThreadSafeList:
   """ __repr__(self: object) -> str """
   pass
  Count=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Count(self: ThreadSafeList[T]) -> int
+ """
+
+Get: Count(self: ThreadSafeList[T]) -> int
 
 """
 
@@ -2080,6 +2664,11 @@ class ThreadSafeList:
 
 class TimeFilterEnum:
  """ enum TimeFilterEnum,values: All (3),Today (0),Tomorrow (1),UpcomingWeek (2) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TimeFilterEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -2112,6 +2701,11 @@ class TimeFilterEnum:
 
 class TimeFilterHistoryEnum:
  """ enum TimeFilterHistoryEnum,values: All (3),LastWeek (2),Today (0),Yesterday (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TimeFilterHistoryEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -2144,9 +2738,17 @@ class TimeFilterHistoryEnum:
 
 class UiDataBindingTypeAttribute:
  """ UiDataBindingTypeAttribute(type: DataBindingTypes) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UiDataBindingTypeAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetDisplayMember(type):
-  """ GetDisplayMember(type: Type) -> str """
+  """
+  GetDisplayMember(type: Type) -> str
+   Returns: The name of the field that is marked as DisplayMember for Type type
+  """
   pass
  @staticmethod
  def GetUniqueIdMember(type):
@@ -2154,7 +2756,10 @@ class UiDataBindingTypeAttribute:
   pass
  @staticmethod
  def GetValueMember(type):
-  """ GetValueMember(type: Type) -> str """
+  """
+  GetValueMember(type: Type) -> str
+   Returns: The name of the field that is marked as ValueMember for Type type
+  """
   pass
  @staticmethod
  def IsDefined(member,type):
@@ -2168,7 +2773,9 @@ class UiDataBindingTypeAttribute:
   """ __new__(cls: type,type: DataBindingTypes) """
   pass
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Type(self: UiDataBindingTypeAttribute) -> DataBindingTypes
+ """
+
+Get: Type(self: UiDataBindingTypeAttribute) -> DataBindingTypes
 
 """
 
@@ -2176,6 +2783,11 @@ class UiDataBindingTypeAttribute:
 
 class UnitTypeEnum:
  """ enum UnitTypeEnum,values: Length (2),Other (1),Time (3),Unspecified (0),Weight (4) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UnitTypeEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -2207,8 +2819,13 @@ class UnitTypeEnum:
  Weight=None
 
 
-class User:
+class User(DbObject):
  """ User() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return User()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """ Equals(self: User,obj: object) -> bool """
   pass
@@ -2226,7 +2843,9 @@ class User:
  def __reduce_ex__(self,*args):
   pass
  Active=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Active(self: User) -> bool
+ """
+
+Get: Active(self: User) -> bool
 
 Set: Active(self: User)=value
 """
@@ -2244,39 +2863,54 @@ Set: EmailAddress(self: User)=value
 """
 
  FullName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: FullName(self: User) -> str
+ """
+
+Get: FullName(self: User) -> str
 
 Set: FullName(self: User)=value
 """
 
  Password=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Password(self: User) -> str
+ """
+
+Get: Password(self: User) -> str
 
 Set: Password(self: User)=value
 """
 
  PreferredLanguage=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreferredLanguage(self: User) -> str
+ """Save the preferred language
+
+Get: PreferredLanguage(self: User) -> str
 
 Set: PreferredLanguage(self: User)=value
 """
 
  UserId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UserId(self: User) -> int
+ """
+
+Get: UserId(self: User) -> int
 
 Set: UserId(self: User)=value
 """
 
  Username=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Username(self: User) -> str
+ """
+
+Get: Username(self: User) -> str
 
 Set: Username(self: User)=value
 """
 
 
 
-class Users:
+class Users(List):
  """ Users() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Users()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -2295,8 +2929,13 @@ class Users:
  ValueMember='UserId'
 
 
-class UserWithSecrets:
+class UserWithSecrets(User):
  """ UserWithSecrets() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UserWithSecrets()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -2314,46 +2953,72 @@ Set: Salt(self: UserWithSecrets)=value
 
 
 
-class Warning:
+class Warning(object):
  """
  Warning()
  Warning(key: str,text: str)
- Warning(key: str,text: str,allowsRetry: bool)
+ Warning(key: str,text: str,allowsRetry: bool)
+ Warning(key: str,text: str,details: str,allowsRetry: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Warning()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
- def __new__(self,key=None,text=None,allowsRetry=None):
+ def __new__(self,key=None,text=None,*__args):
   """
   __new__(cls: type)
   __new__(cls: type,key: str,text: str)
-  __new__(cls: type,key: str,text: str,allowsRetry: bool)
+  __new__(cls: type,key: str,text: str,allowsRetry: bool)
+  __new__(cls: type,key: str,text: str,details: str,allowsRetry: bool)
   """
   pass
  AllowsRetry=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AllowsRetry(self: Warning) -> bool
+ """
+
+Get: AllowsRetry(self: Warning) -> bool
 
 Set: AllowsRetry(self: Warning)=value
 """
 
+ Details=property(lambda self: object(),lambda self,v: None,lambda self: None)
+ """Get: Details(self: Warning) -> str
+
+Set: Details(self: Warning)=value
+"""
+
  Ignore=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Ignore(self: Warning) -> bool
+ """
+
+Get: Ignore(self: Warning) -> bool
 
 Set: Ignore(self: Warning)=value
 """
 
  Key=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Key(self: Warning) -> str
+ """
+
+Get: Key(self: Warning) -> str
 
 """
 
  Text=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Text(self: Warning) -> str
+ """
+
+Get: Text(self: Warning) -> str
 
 """
 
 
 
-class Warnings:
+class Warnings(List):
  """ Warnings() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Warnings()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ContainsKey(self,key):
   """ ContainsKey(self: Warnings,key: str) -> bool """
   pass
@@ -2361,7 +3026,12 @@ class Warnings:
   """ IndexOf(self: Warnings,Key: str) -> int """
   pass
  def ToString(self):
-  """ ToString(self: Warnings) -> str """
+  """
+  ToString(self: Warnings) -> str
+  
+   Returns a System.String that represents the current System.Object.
+   Returns: A System.String that represents the current System.Object.
+  """
   pass
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
@@ -2380,7 +3050,9 @@ class Warnings:
  def __str__(self,*args):
   pass
  CountNotIgnored=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CountNotIgnored(self: Warnings) -> int
+ """
+
+Get: CountNotIgnored(self: Warnings) -> int
 
 """
 

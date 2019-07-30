@@ -1,4 +1,4 @@
-class UIntPtr:
+class UIntPtr(object):
  """
  A platform-specific type that is used to represent a pointer or a handle.
  
@@ -6,6 +6,11 @@ class UIntPtr:
  UIntPtr(value: UInt64)
  UIntPtr(value: Void*)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UIntPtr()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Add(pointer,offset):
   """
@@ -25,8 +30,7 @@ class UIntPtr:
    Returns a value indicating whether this instance is equal to a specified object.
   
    obj: An object to compare with this instance or null.
-   Returns: true if obj is an instance of System.UIntPtr and equals the value of this instance; 
-    otherwise,false.
+   Returns: true if obj is an instance of System.UIntPtr and equals the value of this instance; otherwise,false.
   """
   pass
  def GetHashCode(self):
@@ -54,8 +58,7 @@ class UIntPtr:
   ToPointer(self: UIntPtr) -> Void*
   
    Converts the value of this instance to a pointer to an unspecified type.
-   Returns: A pointer to System.Void; that is,a pointer to memory containing data of an unspecified 
-    type.
+   Returns: A pointer to System.Void; that is,a pointer to memory containing data of an unspecified type.
   """
   pass
  def ToString(self):

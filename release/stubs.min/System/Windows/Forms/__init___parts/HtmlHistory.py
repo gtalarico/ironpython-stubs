@@ -1,12 +1,15 @@
-class HtmlHistory:
+class HtmlHistory(object,IDisposable):
  """ Manages the list of documents and Web sites the user has visited within the current session. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return HtmlHistory()
+
  def Back(self,numberBack):
   """
   Back(self: HtmlHistory,numberBack: int)
    Navigates backward in the navigation stack by the specified number of entries.
   
-   numberBack: The number of entries to navigate backward in the navigation stack. This number must be a 
-    positive integer.
+   numberBack: The number of entries to navigate backward in the navigation stack. This number must be a positive integer.
   """
   pass
  def Dispose(self):
@@ -20,8 +23,7 @@ class HtmlHistory:
   Forward(self: HtmlHistory,numberForward: int)
    Navigates forward in the navigation stack by the specified number of entries.
   
-   numberForward: The number of entries to navigate forward in the navigation stack. This number must be a 
-    positive integer.
+   numberForward: The number of entries to navigate forward in the navigation stack. This number must be a positive integer.
   """
   pass
  def Go(self,*__args):
@@ -33,10 +35,7 @@ class HtmlHistory:
   Go(self: HtmlHistory,urlString: str)
    Navigates to the specified Uniform Resource Locator (URL).
   
-   urlString: The URL you want to display. This may be a relative or virtual URL (for example,
-    page.html,path/page.html,or /path/to/page.html),in which case the current Web page's 
-    URL is used as a base.
-  
+   urlString: The URL you want to display. This may be a relative or virtual URL (for example,page.html,path/page.html,or /path/to/page.html),in which case the current Web page's URL is used as a base.
   Go(self: HtmlHistory,relativePosition: int)
    Navigates to the specified relative position in the browser's history.
   

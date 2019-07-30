@@ -5,13 +5,16 @@ class InstallerTypeAttribute:
  InstallerTypeAttribute(installerType: Type)
  InstallerTypeAttribute(typeName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InstallerTypeAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: InstallerTypeAttribute,obj: object) -> bool
   
-   Returns whether the value of the given object is equal to the current 
-    System.ComponentModel.InstallerTypeAttribute.
-  
+   Returns whether the value of the given object is equal to the current System.ComponentModel.InstallerTypeAttribute.
   
    obj: The object to test the value equality of.
    Returns: true if the value of the given object is equal to that of the current; otherwise,false.

@@ -1,9 +1,13 @@
-class LinkArea:
+class LinkArea(object):
  """
  Represents an area within a System.Windows.Forms.LinkLabel control that represents a hyperlink within the control.
  
  LinkArea(start: int,length: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return LinkArea()
+
  def Equals(self,o):
   """
   Equals(self: LinkArea,o: object) -> bool
@@ -11,8 +15,7 @@ class LinkArea:
    Determines whether this System.Windows.Forms.LinkArea is equal to the specified object.
   
    o: The object to compare to this System.Windows.Forms.LinkArea.
-   Returns: true if the specified object is equal to the current System.Windows.Forms.LinkArea; 
-    otherwise,false.
+   Returns: true if the specified object is equal to the current System.Windows.Forms.LinkArea; otherwise,false.
   """
   pass
  def GetHashCode(self):

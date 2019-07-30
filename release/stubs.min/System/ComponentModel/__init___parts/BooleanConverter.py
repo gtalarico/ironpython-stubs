@@ -1,16 +1,19 @@
-class BooleanConverter:
+class BooleanConverter(TypeConverter):
  """
  Provides a type converter to convert System.Boolean objects to and from various other representations.
  
  BooleanConverter()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BooleanConverter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CanConvertFrom(self,*__args):
   """
   CanConvertFrom(self: BooleanConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object in the given source 
-    type to a Boolean object using the specified context.
-  
+   Gets a value indicating whether this converter can convert an object in the given source type to a Boolean object using the specified context.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    sourceType: A System.Type that represents the type you wish to convert from.
@@ -36,8 +39,7 @@ class BooleanConverter:
    Gets a collection of standard values for the Boolean data type.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set 
-    of valid values.
+   Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values.
   """
   pass
  def GetStandardValuesExclusive(self,context=None):
@@ -45,29 +47,23 @@ class BooleanConverter:
   GetStandardValuesExclusive(self: BooleanConverter,context: ITypeDescriptorContext) -> bool
   
    Gets a value indicating whether the list of standard values returned from the 
-    System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescri
-    ptorContext) method is an exclusive list.
+    System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) method is an exclusive list.
   
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned 
-    from 
-    System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescri
-    ptorContext) is an exhaustive list of possible values. This method never returns false.
+   Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
+    System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list of possible values. This method never returns 
+    false.
   """
   pass
  def GetStandardValuesSupported(self,context=None):
   """
   GetStandardValuesSupported(self: BooleanConverter,context: ITypeDescriptorContext) -> bool
   
-   Gets a value indicating whether this object supports a standard set of values that can be 
-    picked from a list.
-  
+   Gets a value indicating whether this object supports a standard set of values that can be picked from a list.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-   Returns: true because 
-    System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescri
-    ptorContext) can be called to find a common set of values the object supports. This 
-    method never returns false.
+   Returns: true because System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) can be called to find a common set of values the object 
+    supports. This method never returns false.
   """
   pass

@@ -1,21 +1,22 @@
-class ActivationContext:
+class ActivationContext(object):
  """ Identifies the activation context for the current application. This class cannot be inherited. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ActivationContext()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def CreatePartialActivationContext(identity,manifestPaths=None):
   """
   CreatePartialActivationContext(identity: ApplicationIdentity) -> ActivationContext
   
-   Initializes a new instance of the System.ActivationContext class using the specified 
-    application identity.
-  
+   Initializes a new instance of the System.ActivationContext class using the specified application identity.
   
    identity: An object that identifies an application.
    Returns: An object with the specified application identity.
   CreatePartialActivationContext(identity: ApplicationIdentity,manifestPaths: Array[str]) -> ActivationContext
   
-   Initializes a new instance of the System.ActivationContext class using the specified 
-    application identity and array of manifest paths.
-  
+   Initializes a new instance of the System.ActivationContext class using the specified application identity and array of manifest paths.
   
    identity: An object that identifies an application.
    manifestPaths: A string array of manifest paths for the application.

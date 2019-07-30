@@ -1,18 +1,25 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.EdiMessaging.Messages calls itself Messages
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # no functions
 # classes
 
-class ProcessDirectOrderMessage:
+class ProcessDirectOrderMessage(MessageBase):
  """
  ProcessDirectOrderMessage()
  ProcessDirectOrderMessage(message: IMessage)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessDirectOrderMessage()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -33,11 +40,16 @@ Set: Data(self: ProcessDirectOrderMessage)=value
  TypeName='Direct Order Fulfillment'
 
 
-class ProcessDirectOrderMessageData:
+class ProcessDirectOrderMessageData(object):
  """
  ProcessDirectOrderMessageData()
  ProcessDirectOrderMessageData(directOrder: DirectOrder)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessDirectOrderMessageData()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,directOrder=None):
   """
@@ -76,11 +88,16 @@ Set: IsProcessedInErp(self: ProcessDirectOrderMessageData)=value
 
 
 
-class ProcessPreReceiptMessage:
+class ProcessPreReceiptMessage(MessageBase):
  """
  ProcessPreReceiptMessage()
  ProcessPreReceiptMessage(message: IMessage)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessPreReceiptMessage()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -101,8 +118,13 @@ Set: Data(self: ProcessPreReceiptMessage)=value
  TypeName='Prereceipt Fulfillment'
 
 
-class ProcessPreReceiptMessageData:
+class ProcessPreReceiptMessageData(object):
  """ ProcessPreReceiptMessageData() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessPreReceiptMessageData()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  DefaultInboundLocation=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: DefaultInboundLocation(self: ProcessPreReceiptMessageData) -> str
 
@@ -135,11 +157,16 @@ Set: YourReference(self: ProcessPreReceiptMessageData)=value
 
 
 
-class ProcessSalesOrderMessage:
+class ProcessSalesOrderMessage(MessageBase):
  """
  ProcessSalesOrderMessage()
  ProcessSalesOrderMessage(message: IMessage)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessSalesOrderMessage()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -160,8 +187,13 @@ Set: Data(self: ProcessSalesOrderMessage)=value
  TypeName='Sales Order Fulfillment'
 
 
-class ProcessSalesOrderMessageData:
+class ProcessSalesOrderMessageData(object):
  """ ProcessSalesOrderMessageData() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessSalesOrderMessageData()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Arguments=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: Arguments(self: ProcessSalesOrderMessageData) -> ProcessSalesOrderLinesArgs
 
@@ -182,8 +214,13 @@ Set: Order(self: ProcessSalesOrderMessageData)=value
 
 
 
-class StockOnLocationChangedMessage:
+class StockOnLocationChangedMessage(MessageBase):
  """ StockOnLocationChangedMessage() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StockOnLocationChangedMessage()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

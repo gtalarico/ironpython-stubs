@@ -1,4 +1,4 @@
-class TextWriterTraceListener:
+class TextWriterTraceListener(TraceListener):
  """
  Directs tracing or debugging output to a System.IO.TextWriter or to a System.IO.Stream,such as System.IO.FileStream.
  
@@ -10,11 +10,15 @@ class TextWriterTraceListener:
  TextWriterTraceListener(fileName: str)
  TextWriterTraceListener(fileName: str,name: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TextWriterTraceListener()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Close(self):
   """
   Close(self: TextWriterTraceListener)
-   Closes the System.Diagnostics.TextWriterTraceListener.Writer so that it no longer 
-    receives tracing or debugging output.
+   Closes the System.Diagnostics.TextWriterTraceListener.Writer so that it no longer receives tracing or debugging output.
   """
   pass
  def Dispose(self):
@@ -22,8 +26,7 @@ class TextWriterTraceListener:
   Dispose(self: TextWriterTraceListener,disposing: bool)
    Disposes this System.Diagnostics.TextWriterTraceListener object.
   
-   disposing: true to release managed resources; if false,
-    System.Diagnostics.TextWriterTraceListener.Dispose(System.Boolean) has no effect.
+   disposing: true to release managed resources; if false,System.Diagnostics.TextWriterTraceListener.Dispose(System.Boolean) has no effect.
   """
   pass
  def Flush(self):
@@ -37,8 +40,7 @@ class TextWriterTraceListener:
   GetSupportedAttributes(self: TraceListener) -> Array[str]
   
    Gets the custom attributes supported by the trace listener.
-   Returns: A string array naming the custom attributes supported by the trace listener,or null if 
-    there are no custom attributes.
+   Returns: A string array naming the custom attributes supported by the trace listener,or null if there are no custom attributes.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -47,11 +49,9 @@ class TextWriterTraceListener:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -71,16 +71,14 @@ class TextWriterTraceListener:
  def WriteIndent(self,*args):
   """
   WriteIndent(self: TraceListener)
-   Writes the indent to the listener you create when you implement this class,and resets 
-    the System.Diagnostics.TraceListener.NeedIndent property to false.
+   Writes the indent to the listener you create when you implement this class,and resets the System.Diagnostics.TraceListener.NeedIndent property to false.
   """
   pass
  def WriteLine(self,*__args):
   """
   WriteLine(self: TextWriterTraceListener,message: str)
-   Writes a message to this instance's System.Diagnostics.TextWriterTraceListener.Writer 
-    followed by a line terminator. The default line terminator is a carriage return followed 
-    by a line feed (\r\n).
+   Writes a message to this instance's System.Diagnostics.TextWriterTraceListener.Writer followed by a line terminator. The default line terminator is a carriage return 
+    followed by a line feed (\r\n).
   
   
    message: A message to write.

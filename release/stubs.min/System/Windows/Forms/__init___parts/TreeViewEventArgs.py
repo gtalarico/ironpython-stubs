@@ -1,10 +1,14 @@
-class TreeViewEventArgs:
+class TreeViewEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.TreeView.AfterCheck,System.Windows.Forms.TreeView.AfterCollapse,System.Windows.Forms.TreeView.AfterExpand,or System.Windows.Forms.TreeView.AfterSelect events of a System.Windows.Forms.TreeView control.
  
  TreeViewEventArgs(node: TreeNode)
  TreeViewEventArgs(node: TreeNode,action: TreeViewAction)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TreeViewEventArgs()
+
  @staticmethod
  def __new__(self,node,action=None):
   """

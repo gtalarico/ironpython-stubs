@@ -1,5 +1,10 @@
 class IServiceProvider:
  """ Defines a mechanism for retrieving a service object; that is,an object that provides custom support to other objects. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IServiceProvider()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetService(self,serviceType):
   """
   GetService(self: IServiceProvider,serviceType: Type) -> object
@@ -7,8 +12,7 @@ class IServiceProvider:
    Gets the service object of the specified type.
   
    serviceType: An object that specifies the type of service object to get.
-   Returns: A service object of type serviceType.-or- null if there is no service object of type 
-    serviceType.
+   Returns: A service object of type serviceType.-or- null if there is no service object of type serviceType.
   """
   pass
  def __init__(self,*args):

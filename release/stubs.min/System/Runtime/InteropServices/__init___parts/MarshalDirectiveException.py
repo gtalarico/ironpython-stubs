@@ -1,4 +1,4 @@
-class MarshalDirectiveException:
+class MarshalDirectiveException(SystemException):
  """
  The exception that is thrown by the marshaler when it encounters a System.Runtime.InteropServices.MarshalAsAttribute it does not support.
  
@@ -6,6 +6,11 @@ class MarshalDirectiveException:
  MarshalDirectiveException(message: str)
  MarshalDirectiveException(message: str,inner: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MarshalDirectiveException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

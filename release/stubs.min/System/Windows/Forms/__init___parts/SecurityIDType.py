@@ -1,9 +1,13 @@
-class SecurityIDType:
+class SecurityIDType(Enum,IComparable,IFormattable,IConvertible):
  """
  This enumeration is not used.
  
  enum SecurityIDType,values: Alias (4),Computer (9),DeletedAccount (6),Domain (3),Group (2),Invalid (7),Unknown (8),User (1),WellKnownGroup (5)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SecurityIDType()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -1,9 +1,13 @@
-class ToolStripPanelRenderEventArgs:
+class ToolStripPanelRenderEventArgs(EventArgs):
  """
  Provides data for System.Windows.Forms.ToolStripPanel drawing.
  
  ToolStripPanelRenderEventArgs(g: Graphics,toolStripPanel: ToolStripPanel)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripPanelRenderEventArgs()
+
  @staticmethod
  def __new__(self,g,toolStripPanel):
   """ __new__(cls: type,g: Graphics,toolStripPanel: ToolStripPanel) """

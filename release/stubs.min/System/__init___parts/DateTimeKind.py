@@ -4,6 +4,11 @@ class DateTimeKind:
  
  enum DateTimeKind,values: Local (2),Unspecified (0),Utc (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DateTimeKind()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

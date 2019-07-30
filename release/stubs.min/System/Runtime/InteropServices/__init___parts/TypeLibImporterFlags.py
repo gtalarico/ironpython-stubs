@@ -4,6 +4,11 @@ class TypeLibImporterFlags:
  
  enum (flags) TypeLibImporterFlags,values: ImportAsAgnostic (2048),ImportAsArm (16384),ImportAsItanium (1024),ImportAsX64 (512),ImportAsX86 (256),NoDefineVersionResource (8192),None (0),PreventClassMembers (16),PrimaryInteropAssembly (1),ReflectionOnlyLoading (4096),SafeArrayAsSystemArray (4),SerializableValueClasses (32),TransformDispRetVals (8),UnsafeInterfaces (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TypeLibImporterFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

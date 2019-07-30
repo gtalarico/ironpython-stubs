@@ -1,9 +1,13 @@
-class ControlBindingsCollection:
+class ControlBindingsCollection(BindingsCollection,ICollection,IEnumerable):
  """
  Represents the collection of data bindings for a control.
  
  ControlBindingsCollection(control: IBindableComponent)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ControlBindingsCollection()
+
  def Add(self,*__args):
   """
   Add(self: ControlBindingsCollection,binding: Binding)
@@ -12,9 +16,7 @@ class ControlBindingsCollection:
    binding: The System.Windows.Forms.Binding to add.
   Add(self: ControlBindingsCollection,propertyName: str,dataSource: object,dataMember: str) -> Binding
   
-   Creates a System.Windows.Forms.Binding using the specified control property name,data 
-    source,and data member,and adds it to the collection.
-  
+   Creates a System.Windows.Forms.Binding using the specified control property name,data source,and data member,and adds it to the collection.
   
    propertyName: The name of the control property to bind.
    dataSource: An System.Object that represents the data source.
@@ -22,9 +24,7 @@ class ControlBindingsCollection:
    Returns: The newly created System.Windows.Forms.Binding.
   Add(self: ControlBindingsCollection,propertyName: str,dataSource: object,dataMember: str,formattingEnabled: bool) -> Binding
   
-   Creates a binding with the specified control property name,data source,data member,and 
-    information about whether formatting is enabled,and adds the binding to the collection.
-  
+   Creates a binding with the specified control property name,data source,data member,and information about whether formatting is enabled,and adds the binding to the collection.
   
    propertyName: The name of the control property to bind.
    dataSource: An System.Object representing the data source.
@@ -33,11 +33,7 @@ class ControlBindingsCollection:
    Returns: The newly created System.Windows.Forms.Binding.
   Add(self: ControlBindingsCollection,propertyName: str,dataSource: object,dataMember: str,formattingEnabled: bool,updateMode: DataSourceUpdateMode) -> Binding
   
-   Creates a binding that binds the specified control property to the specified data member 
-    of the specified data source,optionally enabling formatting,propagating values to the 
-    data source based on the specified update setting,and adding the binding to the 
-    collection.
-  
+   Creates a binding that binds the specified control property to the specified data member of the specified data source,optionally enabling formatting,propagating values to the data source based on the specified update setting,and adding the binding to the collection.
   
    propertyName: The name of the control property to bind.
    dataSource: An System.Object representing the data source.
@@ -47,48 +43,31 @@ class ControlBindingsCollection:
    Returns: The newly created System.Windows.Forms.Binding.
   Add(self: ControlBindingsCollection,propertyName: str,dataSource: object,dataMember: str,formattingEnabled: bool,updateMode: DataSourceUpdateMode,nullValue: object) -> Binding
   
-   Creates a binding that binds the specified control property to the specified data member 
-    of the specified data source,optionally enabling formatting,propagating values to the 
-    data source based on the specified update setting,setting the property to the specified 
-    value when System.DBNull is returned from the data source,and adding the binding to the 
-    collection.
-  
+   Creates a binding that binds the specified control property to the specified data member of the specified data source,optionally enabling formatting,propagating values to the data source based on the specified update setting,setting the property to the specified value when System.DBNull is returned from the data source,and adding the binding to the collection.
   
    propertyName: The name of the control property to bind.
    dataSource: An System.Object representing the data source.
    dataMember: The property or list to bind to.
    formattingEnabled: true to format the displayed data; otherwise,false.
    updateMode: One of the System.Windows.Forms.DataSourceUpdateMode values.
-   nullValue: The System.Object to be applied to the bound control property if the data source value is 
-    System.DBNull.
-  
+   nullValue: The System.Object to be applied to the bound control property if the data source value is System.DBNull.
    Returns: The newly created System.Windows.Forms.Binding
   Add(self: ControlBindingsCollection,propertyName: str,dataSource: object,dataMember: str,formattingEnabled: bool,updateMode: DataSourceUpdateMode,nullValue: object,formatString: str) -> Binding
   
-   Creates a binding that binds the specified control property to the specified data member 
-    of the specified data source,optionally enabling formatting with the specified format 
-    string,propagating values to the data source based on the specified update setting,
-    setting the property to the specified value when System.DBNull is returned from the data 
-    source,and adding the binding to the collection.
-  
+   Creates a binding that binds the specified control property to the specified data member of the specified data source,optionally enabling formatting with the specified format string,propagating values to the data source based on the specified update setting,setting the property to the specified value when System.DBNull is returned from the data source,and adding the binding to the collection.
   
    propertyName: The name of the control property to bind.
    dataSource: An System.Object representing the data source.
    dataMember: The property or list to bind to.
    formattingEnabled: true to format the displayed data; otherwise,false.
    updateMode: One of the System.Windows.Forms.DataSourceUpdateMode values.
-   nullValue: The System.Object to be applied to the bound control property if the data source value is 
-    System.DBNull.
-  
+   nullValue: The System.Object to be applied to the bound control property if the data source value is System.DBNull.
    formatString: One or more format specifier characters that indicate how a value is to be displayed.
    Returns: The newly created System.Windows.Forms.Binding
   Add(self: ControlBindingsCollection,propertyName: str,dataSource: object,dataMember: str,formattingEnabled: bool,updateMode: DataSourceUpdateMode,nullValue: object,formatString: str,formatInfo: IFormatProvider) -> Binding
   
-   Creates a binding that binds the specified control property to the specified data member 
-    of the specified data source,optionally enabling formatting with the specified format 
-    string,propagating values to the data source based on the specified update setting,
-    setting the property to the specified value when System.DBNull is returned from the data 
-    source,setting the specified format provider,and adding the binding to the collection.
+   Creates a binding that binds the specified control property to the specified data member of the specified data source,optionally enabling formatting with the specified format string,propagating values to the data source based on the specified update setting,setting the property to the specified value when System.DBNull is returned from the data source,setting the specified format provider,and adding the 
+    binding to the collection.
   
   
    propertyName: The name of the control property to bind.
@@ -96,9 +75,7 @@ class ControlBindingsCollection:
    dataMember: The property or list to bind to.
    formattingEnabled: true to format the displayed data; otherwise,false.
    updateMode: One of the System.Windows.Forms.DataSourceUpdateMode values.
-   nullValue: The System.Object to be applied to the bound control property if the data source value is 
-    System.DBNull.
-  
+   nullValue: The System.Object to be applied to the bound control property if the data source value is System.DBNull.
    formatString: One or more format specifier characters that indicate how a value is to be displayed
    formatInfo: An implementation of System.IFormatProvider to override default formatting behavior.
    Returns: The newly created System.Windows.Forms.Binding.
@@ -130,12 +107,7 @@ class ControlBindingsCollection:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   

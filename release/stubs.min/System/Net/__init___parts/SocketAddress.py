@@ -1,30 +1,30 @@
-class SocketAddress:
+class SocketAddress(object):
  """
  Stores serialized information from System.Net.EndPoint derived classes.
  
  SocketAddress(family: AddressFamily,size: int)
  SocketAddress(family: AddressFamily)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SocketAddress()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,comparand):
   """
   Equals(self: SocketAddress,comparand: object) -> bool
   
-   Determines whether the specified System.Object is equal to the current 
-    System.Net.SocketAddress instance.
-  
+   Determines whether the specified System.Object is equal to the current System.Net.SocketAddress instance.
   
    comparand: The specified System.Object to compare with the current System.Net.SocketAddress instance.
-   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,
-    false.
+   Returns: true if the specified System.Object is equal to the current System.Object; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
   GetHashCode(self: SocketAddress) -> int
   
-   Serves as a hash function for a particular type,suitable for use in hashing algorithms 
-    and data structures like a hash table.
-  
+   Serves as a hash function for a particular type,suitable for use in hashing algorithms and data structures like a hash table.
    Returns: A hash code for the current System.Object.
   """
   pass

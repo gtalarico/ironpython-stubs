@@ -1,9 +1,13 @@
-class ToolTipIcon:
+class ToolTipIcon(Enum,IComparable,IFormattable,IConvertible):
  """
  Defines a set of standardized icons that can be associated with a ToolTip.
  
  enum ToolTipIcon,values: Error (3),Info (1),None (0),Warning (2)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolTipIcon()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

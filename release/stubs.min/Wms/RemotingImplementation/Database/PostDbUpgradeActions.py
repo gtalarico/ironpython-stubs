@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.Database.PostDbUpgradeActions calls itself PostDbUpgradeActions
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class ClearResourceCachePostDbUpgradeAction:
+class ClearResourceCachePostDbUpgradeAction(object):
  """ ClearResourceCachePostDbUpgradeAction(general: General) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ClearResourceCachePostDbUpgradeAction()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Execute(self):
   """ Execute(self: ClearResourceCachePostDbUpgradeAction) """
   pass

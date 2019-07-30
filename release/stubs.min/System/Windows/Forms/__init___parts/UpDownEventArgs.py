@@ -1,9 +1,13 @@
-class UpDownEventArgs:
+class UpDownEventArgs(EventArgs):
  """
  Provides data for controls that derive from the System.Windows.Forms.UpDownBase control.
  
  UpDownEventArgs(buttonPushed: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return UpDownEventArgs()
+
  @staticmethod
  def __new__(self,buttonPushed):
   """ __new__(cls: type,buttonPushed: int) """

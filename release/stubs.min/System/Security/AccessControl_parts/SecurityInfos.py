@@ -4,6 +4,11 @@ class SecurityInfos:
  
  enum (flags) SecurityInfos,values: DiscretionaryAcl (4),Group (2),Owner (1),SystemAcl (8)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SecurityInfos()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

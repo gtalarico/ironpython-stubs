@@ -1,5 +1,9 @@
-class SendKeys:
+class SendKeys(object):
  """ Provides methods for sending keystrokes to an application. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SendKeys()
+
  @staticmethod
  def Flush():
   """
@@ -20,9 +24,7 @@ class SendKeys:
  def SendWait(keys):
   """
   SendWait(keys: str)
-   Sends the given keys to the active application,and then waits for the messages to be 
-    processed.
-  
+   Sends the given keys to the active application,and then waits for the messages to be processed.
   
    keys: The string of keystrokes to send.
   """

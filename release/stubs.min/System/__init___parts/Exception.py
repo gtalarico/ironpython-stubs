@@ -1,4 +1,4 @@
-class Exception:
+class Exception(object):
  """
  Represents errors that occur during application execution.
  
@@ -6,30 +6,27 @@ class Exception:
  Exception(message: str)
  Exception(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Exception()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetBaseException(self):
   """
   GetBaseException(self: Exception) -> Exception
   
-   When overridden in a derived class,returns the System.Exception that is the root cause 
-    of one or more subsequent exceptions.
-  
-   Returns: The first exception thrown in a chain of exceptions. If the 
-    System.Exception.InnerException property of the current exception is a null reference 
-    (Nothing in Visual Basic),this property returns the current exception.
+   When overridden in a derived class,returns the System.Exception that is the root cause of one or more subsequent exceptions.
+   Returns: The first exception thrown in a chain of exceptions. If the System.Exception.InnerException property of the current exception is a null reference (Nothing in Visual Basic),
+    this property returns the current exception.
   """
   pass
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: Exception,info: SerializationInfo,context: StreamingContext)
-   When overridden in a derived class,sets the 
-    System.Runtime.Serialization.SerializationInfo with information about the exception.
+   When overridden in a derived class,sets the System.Runtime.Serialization.SerializationInfo with information about the exception.
   
-  
-   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data 
-    about the exception being thrown.
-  
-   context: The System.Runtime.Serialization.StreamingContext that contains contextual information 
-    about the source or destination.
+   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about the exception being thrown.
+   context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the source or destination.
   """
   pass
  def GetType(self):

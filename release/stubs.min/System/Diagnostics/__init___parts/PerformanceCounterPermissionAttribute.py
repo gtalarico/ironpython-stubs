@@ -1,16 +1,20 @@
-class PerformanceCounterPermissionAttribute:
+class PerformanceCounterPermissionAttribute(CodeAccessSecurityAttribute):
  """
  Allows declaritive performance counter permission checks.
  
  PerformanceCounterPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PerformanceCounterPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
   CreatePermission(self: PerformanceCounterPermissionAttribute) -> IPermission
   
-   Creates the permission based on the requested access levels that are set through the 
-    System.Diagnostics.PerformanceCounterPermissionAttribute.PermissionAccess property on the 
-    attribute.
+   Creates the permission based on the requested access levels that are set through the System.Diagnostics.PerformanceCounterPermissionAttribute.PermissionAccess property on 
+    the attribute.
   
    Returns: An System.Security.IPermission that represents the created permission.
   """

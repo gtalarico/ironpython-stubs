@@ -4,6 +4,11 @@ class TypeLibTypeFlags:
  
  enum (flags) TypeLibTypeFlags,values: FAggregatable (1024),FAppObject (1),FCanCreate (2),FControl (32),FDispatchable (4096),FDual (64),FHidden (16),FLicensed (4),FNonExtensible (128),FOleAutomation (256),FPreDeclId (8),FReplaceable (2048),FRestricted (512),FReverseBind (8192)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TypeLibTypeFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -1,4 +1,4 @@
-class StackOverflowException:
+class StackOverflowException(SystemException):
  """
  The exception that is thrown when the execution stack overflows because it contains too many nested method calls. This class cannot be inherited.
  
@@ -6,6 +6,11 @@ class StackOverflowException:
  StackOverflowException(message: str)
  StackOverflowException(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StackOverflowException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

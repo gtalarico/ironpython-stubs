@@ -1,9 +1,14 @@
-class Stopwatch:
+class Stopwatch(object):
  """
  Provides a set of methods and properties that you can use to accurately measure elapsed time.
  
  Stopwatch()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Stopwatch()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetTimestamp():
   """
@@ -22,8 +27,7 @@ class Stopwatch:
  def Restart(self):
   """
   Restart(self: Stopwatch)
-   Stops time interval measurement,resets the elapsed time to zero,and starts measuring 
-    elapsed time.
+   Stops time interval measurement,resets the elapsed time to zero,and starts measuring elapsed time.
   """
   pass
  def Start(self):
@@ -37,9 +41,7 @@ class Stopwatch:
   """
   StartNew() -> Stopwatch
   
-   Initializes a new System.Diagnostics.Stopwatch instance,sets the elapsed time property 
-    to zero,and starts measuring elapsed time.
-  
+   Initializes a new System.Diagnostics.Stopwatch instance,sets the elapsed time property to zero,and starts measuring elapsed time.
    Returns: A System.Diagnostics.Stopwatch that has just begun measuring elapsed time.
   """
   pass

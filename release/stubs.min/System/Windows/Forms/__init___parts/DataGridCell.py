@@ -1,16 +1,18 @@
-class DataGridCell:
+class DataGridCell(object):
  """
  Identifies a cell in the grid.
  
  DataGridCell(r: int,c: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridCell()
+
  def Equals(self,o):
   """
   Equals(self: DataGridCell,o: object) -> bool
   
-   Gets a value indicating whether the System.Windows.Forms.DataGridCell is identical to a 
-    second System.Windows.Forms.DataGridCell.
-  
+   Gets a value indicating whether the System.Windows.Forms.DataGridCell is identical to a second System.Windows.Forms.DataGridCell.
   
    o: An object you are to comparing.
    Returns: true if the second object is identical to the first; otherwise,false.
@@ -21,8 +23,7 @@ class DataGridCell:
   GetHashCode(self: DataGridCell) -> int
   
    Gets a hash value that can be added to a System.Collections.Hashtable.
-   Returns: A number that uniquely identifies the System.Windows.Forms.DataGridCell in a 
-    System.Collections.Hashtable.
+   Returns: A number that uniquely identifies the System.Windows.Forms.DataGridCell in a System.Collections.Hashtable.
   """
   pass
  def ToString(self):

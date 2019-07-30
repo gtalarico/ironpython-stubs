@@ -1,9 +1,13 @@
-class SortOrder:
+class SortOrder(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies how items in a list are sorted.
  
  enum SortOrder,values: Ascending (1),Descending (2),None (0)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SortOrder()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

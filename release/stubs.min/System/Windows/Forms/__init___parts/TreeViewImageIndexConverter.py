@@ -1,9 +1,13 @@
-class TreeViewImageIndexConverter:
+class TreeViewImageIndexConverter(ImageIndexConverter):
  """
  Provides a type converter to convert data for an image index to and from one data type to another for use by the System.Windows.Forms.TreeView control.
  
  TreeViewImageIndexConverter()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TreeViewImageIndexConverter()
+
  def ConvertFrom(self,*__args):
   """
   ConvertFrom(self: TreeViewImageIndexConverter,context: ITypeDescriptorContext,culture: CultureInfo,value: object) -> object

@@ -1,28 +1,24 @@
-class DataGridView:
+class DataGridView(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceObject,IOleInPlaceActiveObject,IOleWindow,IViewObject,IViewObject2,IPersist,IPersistStreamInit,IPersistPropertyBag,IPersistStorage,IQuickActivate,ISupportOleDropSource,IDropTarget,ISynchronizeInvoke,IWin32Window,IArrangedElement,IBindableComponent,ISupportInitialize):
  """
  Displays data in a customizable grid.
  
  DataGridView()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridView()
+
  def AccessibilityNotifyClients(self,*args):
   """
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
-   Notifies the accessibility client applications of the specified 
-    System.Windows.Forms.AccessibleEvents for the specified child control.
+   Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control.
   
-  
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications 
-    of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,objectID: int,childID: int)
-   Notifies the accessibility client applications of the specified 
-    System.Windows.Forms.AccessibleEvents for the specified child control .
+   Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control .
   
-  
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications 
-    of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
@@ -39,49 +35,29 @@ class DataGridView:
   """
   AdjustColumnHeaderBorderStyle(self: DataGridView,dataGridViewAdvancedBorderStyleInput: DataGridViewAdvancedBorderStyle,dataGridViewAdvancedBorderStylePlaceholder: DataGridViewAdvancedBorderStyle,isFirstDisplayedColumn: bool,isLastVisibleColumn: bool) -> DataGridViewAdvancedBorderStyle
   
-   Adjusts the System.Windows.Forms.DataGridViewAdvancedBorderStyle for a column header cell 
-    of a System.Windows.Forms.DataGridView that is currently being painted.
+   Adjusts the System.Windows.Forms.DataGridViewAdvancedBorderStyle for a column header cell of a System.Windows.Forms.DataGridView that is currently being painted.
   
-  
-   dataGridViewAdvancedBorderStyleInput: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that that represents the column 
-    header border style to modify.
-  
-   dataGridViewAdvancedBorderStylePlaceholder: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that is used to store intermediate 
-    changes to the column header border style.
-  
-   isFirstDisplayedColumn: true to indicate that the System.Windows.Forms.DataGridViewCell that is currently being 
-    painted is in the first column displayed on the System.Windows.Forms.DataGridView; 
-    otherwise,false.
-  
-   isLastVisibleColumn: true to indicate that the System.Windows.Forms.DataGridViewCell that is currently being 
-    painted is in the last column in the System.Windows.Forms.DataGridView that has the 
-    System.Windows.Forms.DataGridViewColumn.Visible property set to true; otherwise,false.
-  
-   Returns: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that represents the border style 
-    for the current column header.
+   dataGridViewAdvancedBorderStyleInput: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that that represents the column header border style to modify.
+   dataGridViewAdvancedBorderStylePlaceholder: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that is used to store intermediate changes to the column header border style.
+   isFirstDisplayedColumn: true to indicate that the System.Windows.Forms.DataGridViewCell that is currently being painted is in the first column displayed on the System.Windows.Forms.DataGridView; otherwise,false.
+   isLastVisibleColumn: true to indicate that the System.Windows.Forms.DataGridViewCell that is currently being painted is in the last column in the System.Windows.Forms.DataGridView that has the System.Windows.Forms.DataGridViewColumn.Visible property set to true; otherwise,false.
+   Returns: A System.Windows.Forms.DataGridViewAdvancedBorderStyle that represents the border style for the current column header.
   """
   pass
  def AreAllCellsSelected(self,includeInvisibleCells):
   """
   AreAllCellsSelected(self: DataGridView,includeInvisibleCells: bool) -> bool
   
-   Returns a value indicating whether all the System.Windows.Forms.DataGridView cells are 
-    currently selected.
+   Returns a value indicating whether all the System.Windows.Forms.DataGridView cells are currently selected.
   
-  
-   includeInvisibleCells: true to include the rows and columns with System.Windows.Forms.DataGridViewBand.Visible 
-    property values of false; otherwise,false.
-  
-   Returns: true if all cells (or all visible cells) are selected or if there are no cells (or no 
-    visible cells); otherwise,false.
+   includeInvisibleCells: true to include the rows and columns with System.Windows.Forms.DataGridViewBand.Visible property values of false; otherwise,false.
+   Returns: true if all cells (or all visible cells) are selected or if there are no cells (or no visible cells); otherwise,false.
   """
   pass
  def AutoResizeColumn(self,columnIndex,autoSizeColumnMode=None):
   """
   AutoResizeColumn(self: DataGridView,columnIndex: int)
-   Adjusts the width of the specified column to fit the contents of all its cells,including 
-    the header cell.
-  
+   Adjusts the width of the specified column to fit the contents of all its cells,including the header cell.
   
    columnIndex: The index of the column to resize.
   AutoResizeColumn(self: DataGridView,columnIndex: int,autoSizeColumnMode: DataGridViewAutoSizeColumnMode)
@@ -96,9 +72,7 @@ class DataGridView:
   AutoResizeColumnHeadersHeight(self: DataGridView)
    Adjusts the height of the column headers to fit the contents of the largest column header.
   AutoResizeColumnHeadersHeight(self: DataGridView,columnIndex: int)
-   Adjusts the height of the column headers based on changes to the contents of the header 
-    in the specified column.
-  
+   Adjusts the height of the column headers based on changes to the contents of the header in the specified column.
   
    columnIndex: The index of the column containing the header with the changed content.
   """
@@ -106,9 +80,7 @@ class DataGridView:
  def AutoResizeColumns(self,autoSizeColumnsMode=None):
   """
   AutoResizeColumns(self: DataGridView)
-   Adjusts the width of all columns to fit the contents of all their cells,including the 
-    header cells.
-  
+   Adjusts the width of all columns to fit the contents of all their cells,including the header cells.
   AutoResizeColumns(self: DataGridView,autoSizeColumnsMode: DataGridViewAutoSizeColumnsMode)
    Adjusts the width of all columns using the specified size mode.
   
@@ -118,9 +90,7 @@ class DataGridView:
  def AutoResizeRow(self,rowIndex,autoSizeRowMode=None):
   """
   AutoResizeRow(self: DataGridView,rowIndex: int)
-   Adjusts the height of the specified row to fit the contents of all its cells including 
-    the header cell.
-  
+   Adjusts the height of the specified row to fit the contents of all its cells including the header cell.
   
    rowIndex: The index of the row to resize.
   AutoResizeRow(self: DataGridView,rowIndex: int,autoSizeRowMode: DataGridViewAutoSizeRowMode)
@@ -137,9 +107,7 @@ class DataGridView:
   
    rowHeadersWidthSizeMode: One of the System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode values.
   AutoResizeRowHeadersWidth(self: DataGridView,rowIndex: int,rowHeadersWidthSizeMode: DataGridViewRowHeadersWidthSizeMode)
-   Adjusts the width of the row headers based on changes to the contents of the header in 
-    the specified row and using the specified size mode.
-  
+   Adjusts the width of the row headers based on changes to the contents of the header in the specified row and using the specified size mode.
   
    rowIndex: The index of the row header with the changed content.
    rowHeadersWidthSizeMode: One of the System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode values.
@@ -148,9 +116,7 @@ class DataGridView:
  def AutoResizeRows(self,autoSizeRowsMode=None):
   """
   AutoResizeRows(self: DataGridView)
-   Adjusts the heights of all rows to fit the contents of all their cells,including the 
-    header cells.
-  
+   Adjusts the heights of all rows to fit the contents of all their cells,including the header cells.
   AutoResizeRows(self: DataGridView,autoSizeRowsMode: DataGridViewAutoSizeRowsMode)
    Adjusts the heights of the rows using the specified size mode value.
   
@@ -164,8 +130,7 @@ class DataGridView:
    Puts the current cell in edit mode.
   
    selectAll: true to select all the cell's contents; false to not select any contents.
-   Returns: true if the current cell is already in edit mode or successfully enters edit mode; 
-    otherwise,false.
+   Returns: true if the current cell is already in edit mode or successfully enters edit mode; otherwise,false.
   """
   pass
  def CancelEdit(self):
@@ -188,9 +153,7 @@ class DataGridView:
   
    Commits changes in the current cell to the data cache without ending edit mode.
   
-   context: A bitwise combination of System.Windows.Forms.DataGridViewDataErrorContexts values that 
-    specifies the context in which an error can occur.
-  
+   context: A bitwise combination of System.Windows.Forms.DataGridViewDataErrorContexts values that specifies the context in which an error can occur.
    Returns: true if the changes were committed; otherwise false.
   """
   pass
@@ -199,8 +162,7 @@ class DataGridView:
   CreateAccessibilityInstance(self: DataGridView) -> AccessibleObject
   
    Creates a new accessible object for the System.Windows.Forms.DataGridView.
-   Returns: A new System.Windows.Forms.DataGridView.DataGridViewAccessibleObject for the 
-    System.Windows.Forms.DataGridView.
+   Returns: A new System.Windows.Forms.DataGridView.DataGridViewAccessibleObject for the System.Windows.Forms.DataGridView.
   """
   pass
  def CreateColumnsInstance(self,*args):
@@ -215,9 +177,7 @@ class DataGridView:
   """
   CreateControlsInstance(self: DataGridView) -> ControlCollection
   
-   Creates and returns a new System.Windows.Forms.Control.ControlCollection that can be cast 
-    to type System.Windows.Forms.DataGridView.DataGridViewControlCollection.
-  
+   Creates and returns a new System.Windows.Forms.Control.ControlCollection that can be cast to type System.Windows.Forms.DataGridView.DataGridViewControlCollection.
    Returns: An empty System.Windows.Forms.Control.ControlCollection.
   """
   pass
@@ -273,8 +233,7 @@ class DataGridView:
  def Dispose(self):
   """
   Dispose(self: DataGridView,disposing: bool)
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def EndEdit(self,context=None):
@@ -287,9 +246,7 @@ class DataGridView:
   
    Commits and ends the edit operation on the current cell using the specified error context.
   
-   context: A bitwise combination of System.Windows.Forms.DataGridViewDataErrorContexts values that 
-    specifies the context in which an error can occur.
-  
+   context: A bitwise combination of System.Windows.Forms.DataGridViewDataErrorContexts values that specifies the context in which an error can occur.
    Returns: true if the edit operation is committed and ended; otherwise,false.
   """
   pass
@@ -305,9 +262,7 @@ class DataGridView:
   """
   GetAutoSizeMode(self: Control) -> AutoSizeMode
   
-   Retrieves a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
-  
+   Retrieves a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
    Returns: One of the System.Windows.Forms.AutoSizeMode values.
   """
   pass
@@ -317,9 +272,7 @@ class DataGridView:
   
    Gets the number of cells that satisfy the provided filter.
   
-   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values 
-    specifying the cells to count.
-  
+   includeFilter: A bitwise combination of the System.Windows.Forms.DataGridViewElementStates values specifying the cells to count.
    Returns: The number of cells that match the includeFilter parameter.
   """
   pass
@@ -331,9 +284,7 @@ class DataGridView:
   
    columnIndex: The column index for the desired cell.
    rowIndex: The row index for the desired cell.
-   cutOverflow: true to return the displayed portion of the cell only; false to return the entire cell 
-    bounds.
-  
+   cutOverflow: true to return the displayed portion of the cell only; false to return the entire cell bounds.
    Returns: The System.Drawing.Rectangle that represents the display rectangle of the cell.
   """
   pass
@@ -341,9 +292,7 @@ class DataGridView:
   """
   GetClipboardContent(self: DataGridView) -> DataObject
   
-   Retrieves the formatted values that represent the contents of the selected cells for 
-    copying to the System.Windows.Forms.Clipboard.
-  
+   Retrieves the formatted values that represent the contents of the selected cells for copying to the System.Windows.Forms.Clipboard.
    Returns: A System.Windows.Forms.DataObject that represents the contents of the selected cells.
   """
   pass
@@ -351,14 +300,10 @@ class DataGridView:
   """
   GetColumnDisplayRectangle(self: DataGridView,columnIndex: int,cutOverflow: bool) -> Rectangle
   
-   Returns the rectangle that represents the display area for a column,as determined by the 
-    column index.
-  
+   Returns the rectangle that represents the display area for a column,as determined by the column index.
   
    columnIndex: The column index for the desired cell.
-   cutOverflow: true to return the column rectangle visible in the System.Windows.Forms.DataGridView 
-    bounds; false to return the entire column rectangle.
-  
+   cutOverflow: true to return the column rectangle visible in the System.Windows.Forms.DataGridView bounds; false to return the entire column rectangle.
    Returns: The System.Drawing.Rectangle that represents the display rectangle of the column.
   """
   pass
@@ -366,14 +311,10 @@ class DataGridView:
   """
   GetRowDisplayRectangle(self: DataGridView,rowIndex: int,cutOverflow: bool) -> Rectangle
   
-   Returns the rectangle that represents the display area for a row,as determined by the 
-    row index.
-  
+   Returns the rectangle that represents the display area for a row,as determined by the row index.
   
    rowIndex: The row index for the desired cell.
-   cutOverflow: true to return the row rectangle visible in the System.Windows.Forms.DataGridView bounds; 
-    false to return the entire row rectangle.
-  
+   cutOverflow: true to return the row rectangle visible in the System.Windows.Forms.DataGridView bounds; false to return the entire row rectangle.
    Returns: The System.Drawing.Rectangle that represents the display rectangle of the row.
   """
   pass
@@ -383,13 +324,9 @@ class DataGridView:
   
    Retrieves the bounds within which the control is scaled.
   
-   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display 
-    bounds.
-  
+   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display bounds.
    factor: The height and width of the control's bounds.
-   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of 
-    the control to use when defining its size and position.
-  
+   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of the control to use when defining its size and position.
    Returns: A System.Drawing.Rectangle representing the bounds within which the control is scaled.
   """
   pass
@@ -397,14 +334,10 @@ class DataGridView:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -445,15 +378,11 @@ class DataGridView:
  def InvalidateCell(self,*__args):
   """
   InvalidateCell(self: DataGridView,dataGridViewCell: DataGridViewCell)
-   Invalidates the specified cell of the System.Windows.Forms.DataGridView,forcing it to be 
-    repainted.
-  
+   Invalidates the specified cell of the System.Windows.Forms.DataGridView,forcing it to be repainted.
   
    dataGridViewCell: The System.Windows.Forms.DataGridViewCell to invalidate.
   InvalidateCell(self: DataGridView,columnIndex: int,rowIndex: int)
-   Invalidates the cell with the specified row and column indexes,forcing it to be 
-    repainted.
-  
+   Invalidates the cell with the specified row and column indexes,forcing it to be repainted.
   
    columnIndex: The column index of the cell to invalidate.
    rowIndex: The row index of the cell to invalidate.
@@ -462,9 +391,7 @@ class DataGridView:
  def InvalidateColumn(self,columnIndex):
   """
   InvalidateColumn(self: DataGridView,columnIndex: int)
-   Invalidates the specified column of the System.Windows.Forms.DataGridView,forcing it to 
-    be repainted.
-  
+   Invalidates the specified column of the System.Windows.Forms.DataGridView,forcing it to be repainted.
   
    columnIndex: The index of the column to invalidate.
   """
@@ -472,9 +399,7 @@ class DataGridView:
  def InvalidateRow(self,rowIndex):
   """
   InvalidateRow(self: DataGridView,rowIndex: int)
-   Invalidates the specified row of the System.Windows.Forms.DataGridView,forcing it to be 
-    repainted.
-  
+   Invalidates the specified row of the System.Windows.Forms.DataGridView,forcing it to be repainted.
   
    rowIndex: The index of the row to invalidate.
   """
@@ -502,9 +427,7 @@ class DataGridView:
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event 
-    to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -513,9 +436,7 @@ class DataGridView:
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event 
-    to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -524,9 +445,7 @@ class DataGridView:
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event 
-    to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -534,9 +453,7 @@ class DataGridView:
   """
   IsInputChar(self: DataGridView,charCode: Char) -> bool
   
-   Determines whether a character is an input character that the 
-    System.Windows.Forms.DataGridView recognizes.
-  
+   Determines whether a character is an input character that the System.Windows.Forms.DataGridView recognizes.
   
    charCode: The character to test.
    Returns: true if the character is recognized as an input character; otherwise,false.
@@ -556,12 +473,7 @@ class DataGridView:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -572,9 +484,7 @@ class DataGridView:
  def NotifyCurrentCellDirty(self,dirty):
   """
   NotifyCurrentCellDirty(self: DataGridView,dirty: bool)
-   Notifies the System.Windows.Forms.DataGridView that the current cell has uncommitted 
-    changes.
-  
+   Notifies the System.Windows.Forms.DataGridView that the current cell has uncommitted changes.
   
    dirty: true to indicate the cell has uncommitted changes; otherwise,false.
   """
@@ -582,9 +492,7 @@ class DataGridView:
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the 
-    control to invalidate.
-  
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control to invalidate.
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
   """
@@ -658,8 +566,7 @@ class DataGridView:
   OnAutoSizeColumnModeChanged(self: DataGridView,e: DataGridViewAutoSizeColumnModeEventArgs)
    Raises the System.Windows.Forms.DataGridView.AutoSizeColumnModeChanged event.
   
-   e: A System.Windows.Forms.DataGridViewAutoSizeColumnModeEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.DataGridViewAutoSizeColumnModeEventArgs that contains the event data.
   """
   pass
  def OnAutoSizeColumnsModeChanged(self,*args):
@@ -667,8 +574,7 @@ class DataGridView:
   OnAutoSizeColumnsModeChanged(self: DataGridView,e: DataGridViewAutoSizeColumnsModeEventArgs)
    Raises the System.Windows.Forms.DataGridView.AutoSizeColumnsModeChanged event.
   
-   e: A System.Windows.Forms.DataGridViewAutoSizeColumnsModeEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.DataGridViewAutoSizeColumnsModeEventArgs that contains the event data.
   """
   pass
  def OnAutoSizeRowsModeChanged(self,*args):
@@ -772,8 +678,7 @@ class DataGridView:
   OnCellContentClick(self: DataGridView,e: DataGridViewCellEventArgs)
    Raises the System.Windows.Forms.DataGridView.CellContentClick event.
   
-   e: A System.Windows.Forms.DataGridViewCellEventArgs that contains information regarding the 
-    cell whose content was clicked.
+   e: A System.Windows.Forms.DataGridViewCellEventArgs that contains information regarding the cell whose content was clicked.
   """
   pass
  def OnCellContentDoubleClick(self,*args):
@@ -797,8 +702,7 @@ class DataGridView:
   OnCellContextMenuStripNeeded(self: DataGridView,e: DataGridViewCellContextMenuStripNeededEventArgs)
    Raises the System.Windows.Forms.DataGridView.CellContextMenuStripNeeded event.
   
-   e: A System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventArgs that contains the 
-    event data.
+   e: A System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventArgs that contains the event data.
   """
   pass
  def OnCellDoubleClick(self,*args):
@@ -838,8 +742,7 @@ class DataGridView:
   OnCellErrorTextNeeded(self: DataGridView,e: DataGridViewCellErrorTextNeededEventArgs)
    Raises the System.Windows.Forms.DataGridView.CellErrorTextNeeded event.
   
-   e: A System.Windows.Forms.DataGridViewCellErrorTextNeededEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.DataGridViewCellErrorTextNeededEventArgs that contains the event data.
   """
   pass
  def OnCellFormatting(self,*args):
@@ -951,8 +854,7 @@ class DataGridView:
   OnCellStyleContentChanged(self: DataGridView,e: DataGridViewCellStyleContentChangedEventArgs)
    Raises the System.Windows.Forms.DataGridView.CellStyleContentChanged event.
   
-   e: A System.Windows.Forms.DataGridViewCellStyleContentChangedEventArgs that contains the 
-    event data.
+   e: A System.Windows.Forms.DataGridViewCellStyleContentChangedEventArgs that contains the event data.
   """
   pass
  def OnCellToolTipTextChanged(self,*args):
@@ -960,8 +862,7 @@ class DataGridView:
   OnCellToolTipTextChanged(self: DataGridView,e: DataGridViewCellEventArgs)
    Raises the System.Windows.Forms.DataGridView.CellToolTipTextChanged event.
   
-   e: An System.Windows.Forms.DataGridViewCellEventArgs that contains information about the 
-    cell.
+   e: An System.Windows.Forms.DataGridViewCellEventArgs that contains information about the cell.
   """
   pass
  def OnCellToolTipTextNeeded(self,*args):
@@ -969,8 +870,7 @@ class DataGridView:
   OnCellToolTipTextNeeded(self: DataGridView,e: DataGridViewCellToolTipTextNeededEventArgs)
    Raises the System.Windows.Forms.DataGridView.CellToolTipTextNeeded event.
   
-   e: A System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs that contains the event data.
   """
   pass
  def OnCellValidated(self,*args):
@@ -1082,8 +982,7 @@ class DataGridView:
   OnColumnDividerDoubleClick(self: DataGridView,e: DataGridViewColumnDividerDoubleClickEventArgs)
    Raises the System.Windows.Forms.DataGridView.ColumnDividerDoubleClick event.
   
-   e: A System.Windows.Forms.DataGridViewColumnDividerDoubleClickEventArgs that contains the 
-    event data.
+   e: A System.Windows.Forms.DataGridViewColumnDividerDoubleClickEventArgs that contains the event data.
   """
   pass
  def OnColumnDividerWidthChanged(self,*args):
@@ -1115,8 +1014,7 @@ class DataGridView:
   OnColumnHeaderMouseDoubleClick(self: DataGridView,e: DataGridViewCellMouseEventArgs)
    Raises the System.Windows.Forms.DataGridView.ColumnHeaderMouseDoubleClick event.
   
-   e: A System.Windows.Forms.DataGridViewCellMouseEventArgs that contains information about the 
-    cell and the position of the mouse pointer.
+   e: A System.Windows.Forms.DataGridViewCellMouseEventArgs that contains information about the cell and the position of the mouse pointer.
   """
   pass
  def OnColumnHeadersBorderStyleChanged(self,*args):
@@ -1188,8 +1086,7 @@ class DataGridView:
   OnColumnStateChanged(self: DataGridView,e: DataGridViewColumnStateChangedEventArgs)
    Raises the System.Windows.Forms.DataGridView.ColumnStateChanged event.
   
-   e: A System.Windows.Forms.DataGridViewColumnStateChangedEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.DataGridViewColumnStateChangedEventArgs that contains the event data.
   """
   pass
  def OnColumnToolTipTextChanged(self,*args):
@@ -1197,8 +1094,7 @@ class DataGridView:
   OnColumnToolTipTextChanged(self: DataGridView,e: DataGridViewColumnEventArgs)
    Raises the System.Windows.Forms.DataGridView.ColumnToolTipTextChanged event.
   
-   e: A System.Windows.Forms.DataGridViewColumnEventArgs that contains information about the 
-    column.
+   e: A System.Windows.Forms.DataGridViewColumnEventArgs that contains information about the column.
   """
   pass
  def OnColumnWidthChanged(self,*args):
@@ -1266,10 +1162,7 @@ class DataGridView:
  def OnCursorChanged(self,*args):
   """
   OnCursorChanged(self: DataGridView,e: EventArgs)
-   Raises the System.Windows.Forms.Control.CursorChanged event and updates the 
-    System.Windows.Forms.DataGridView.UserSetCursor property if the cursor was changed in 
-    user code.
-  
+   Raises the System.Windows.Forms.Control.CursorChanged event and updates the System.Windows.Forms.DataGridView.UserSetCursor property if the cursor was changed in user code.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1287,9 +1180,7 @@ class DataGridView:
   OnDataError(self: DataGridView,displayErrorDialogIfNoHandler: bool,e: DataGridViewDataErrorEventArgs)
    Raises the System.Windows.Forms.DataGridView.DataError event.
   
-   displayErrorDialogIfNoHandler: true to display an error dialog box if there is no handler for the 
-    System.Windows.Forms.DataGridView.DataError event.
-  
+   displayErrorDialogIfNoHandler: true to display an error dialog box if there is no handler for the System.Windows.Forms.DataGridView.DataError event.
    e: A System.Windows.Forms.DataGridViewDataErrorEventArgs that contains the event data.
   """
   pass
@@ -1384,8 +1275,7 @@ class DataGridView:
   OnEditingControlShowing(self: DataGridView,e: DataGridViewEditingControlShowingEventArgs)
    Raises the System.Windows.Forms.DataGridView.EditingControlShowing event.
   
-   e: A System.Windows.Forms.DataGridViewEditingControlShowingEventArgs that contains 
-    information about the editing control.
+   e: A System.Windows.Forms.DataGridViewEditingControlShowingEventArgs that contains information about the editing control.
   """
   pass
  def OnEditModeChanged(self,*args):
@@ -1675,16 +1565,13 @@ class DataGridView:
   OnPaintBackground(self: Control,pevent: PaintEventArgs)
    Paints the background of the control.
   
-   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to 
-    paint.
+   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to paint.
   """
   pass
  def OnParentBackColorChanged(self,*args):
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.BackColorChanged event when the System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1692,10 +1579,7 @@ class DataGridView:
  def OnParentBackgroundImageChanged(self,*args):
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1703,10 +1587,7 @@ class DataGridView:
  def OnParentBindingContextChanged(self,*args):
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.BindingContextChanged event when the System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1730,9 +1611,7 @@ class DataGridView:
  def OnParentEnabledChanged(self,*args):
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.EnabledChanged event when the System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1740,9 +1619,7 @@ class DataGridView:
  def OnParentFontChanged(self,*args):
   """
   OnParentFontChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.FontChanged event when the System.Windows.Forms.Control.Font property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1750,9 +1627,7 @@ class DataGridView:
  def OnParentForeColorChanged(self,*args):
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.ForeColorChanged event when the System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1760,10 +1635,7 @@ class DataGridView:
  def OnParentRightToLeftChanged(self,*args):
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.RightToLeftChanged event when the System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1771,9 +1643,7 @@ class DataGridView:
  def OnParentVisibleChanged(self,*args):
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.VisibleChanged event when the System.Windows.Forms.Control.Visible property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1845,8 +1715,7 @@ class DataGridView:
   OnRowContextMenuStripNeeded(self: DataGridView,e: DataGridViewRowContextMenuStripNeededEventArgs)
    Raises the System.Windows.Forms.DataGridView.RowContextMenuStripNeeded event.
   
-   e: A System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs that contains the 
-    event data.
+   e: A System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs that contains the event data.
   """
   pass
  def OnRowDefaultCellStyleChanged(self,*args):
@@ -1870,8 +1739,7 @@ class DataGridView:
   OnRowDividerDoubleClick(self: DataGridView,e: DataGridViewRowDividerDoubleClickEventArgs)
    Raises the System.Windows.Forms.DataGridView.RowDividerDoubleClick event.
   
-   e: A System.Windows.Forms.DataGridViewRowDividerDoubleClickEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.DataGridViewRowDividerDoubleClickEventArgs that contains the event data.
   """
   pass
  def OnRowDividerHeightChanged(self,*args):
@@ -1903,8 +1771,7 @@ class DataGridView:
   OnRowErrorTextNeeded(self: DataGridView,e: DataGridViewRowErrorTextNeededEventArgs)
    Raises the System.Windows.Forms.DataGridView.RowErrorTextNeeded event.
   
-   e: A System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs that contains the event data.
   """
   pass
  def OnRowHeaderCellChanged(self,*args):
@@ -1920,8 +1787,7 @@ class DataGridView:
   OnRowHeaderMouseClick(self: DataGridView,e: DataGridViewCellMouseEventArgs)
    Raises the System.Windows.Forms.DataGridView.RowHeaderMouseClick event.
   
-   e: A System.Windows.Forms.DataGridViewCellMouseEventArgs that contains information about the 
-    mouse and the header cell that was clicked.
+   e: A System.Windows.Forms.DataGridViewCellMouseEventArgs that contains information about the mouse and the header cell that was clicked.
   """
   pass
  def OnRowHeaderMouseDoubleClick(self,*args):
@@ -1929,8 +1795,7 @@ class DataGridView:
   OnRowHeaderMouseDoubleClick(self: DataGridView,e: DataGridViewCellMouseEventArgs)
    Raises the System.Windows.Forms.DataGridView.RowHeaderMouseDoubleClick event.
   
-   e: A System.Windows.Forms.DataGridViewCellMouseEventArgs that contains information about the 
-    mouse and the header cell that was double-clicked.
+   e: A System.Windows.Forms.DataGridViewCellMouseEventArgs that contains information about the mouse and the header cell that was double-clicked.
   """
   pass
  def OnRowHeadersBorderStyleChanged(self,*args):
@@ -1978,8 +1843,7 @@ class DataGridView:
   OnRowHeightInfoNeeded(self: DataGridView,e: DataGridViewRowHeightInfoNeededEventArgs)
    Raises the System.Windows.Forms.DataGridView.RowHeightInfoNeeded event.
   
-   e: A System.Windows.Forms.DataGridViewRowHeightInfoNeededEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.DataGridViewRowHeightInfoNeededEventArgs that contains the event data.
   """
   pass
  def OnRowHeightInfoPushed(self,*args):
@@ -1987,8 +1851,7 @@ class DataGridView:
   OnRowHeightInfoPushed(self: DataGridView,e: DataGridViewRowHeightInfoPushedEventArgs)
    Raises the System.Windows.Forms.DataGridView.RowHeightInfoPushed event.
   
-   e: A System.Windows.Forms.DataGridViewRowHeightInfoPushedEventArgs that contains the event 
-    data.
+   e: A System.Windows.Forms.DataGridViewRowHeightInfoPushedEventArgs that contains the event data.
   """
   pass
  def OnRowLeave(self,*args):
@@ -2028,8 +1891,7 @@ class DataGridView:
   OnRowsAdded(self: DataGridView,e: DataGridViewRowsAddedEventArgs)
    Raises the System.Windows.Forms.DataGridView.RowsAdded event.
   
-   e: A System.Windows.Forms.DataGridViewRowsAddedEventArgs that contains information about the 
-    added rows.
+   e: A System.Windows.Forms.DataGridViewRowsAddedEventArgs that contains information about the added rows.
   """
   pass
  def OnRowsDefaultCellStyleChanged(self,*args):
@@ -2045,8 +1907,7 @@ class DataGridView:
   OnRowsRemoved(self: DataGridView,e: DataGridViewRowsRemovedEventArgs)
    Raises the System.Windows.Forms.DataGridView.RowsRemoved event.
   
-   e: A System.Windows.Forms.DataGridViewRowsRemovedEventArgs that contains information about 
-    the deleted rows.
+   e: A System.Windows.Forms.DataGridViewRowsRemovedEventArgs that contains information about the deleted rows.
   """
   pass
  def OnRowStateChanged(self,*args):
@@ -2214,9 +2075,7 @@ class DataGridView:
    Paints the background of the System.Windows.Forms.DataGridView.
   
    graphics: The System.Drawing.Graphics used to paint the background.
-   clipBounds: A System.Drawing.Rectangle that represents the area of the 
-    System.Windows.Forms.DataGridView that needs to be painted.
-  
+   clipBounds: A System.Drawing.Rectangle that represents the area of the System.Windows.Forms.DataGridView that needs to be painted.
    gridBounds: A System.Drawing.Rectangle that represents the area in which cells are drawn.
   """
   pass
@@ -2226,9 +2085,7 @@ class DataGridView:
   
    Processes the A key.
   
-   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys 
-    to process.
-  
+   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys to process.
    Returns: true if the key was processed; otherwise,false.
   """
   pass
@@ -2238,9 +2095,7 @@ class DataGridView:
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
   """
@@ -2261,9 +2116,7 @@ class DataGridView:
   
    Processes the DELETE key.
   
-   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys 
-    to process.
-  
+   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys to process.
    Returns: true if the key was processed; otherwise,false.
   """
   pass
@@ -2281,13 +2134,9 @@ class DataGridView:
   """
   ProcessDialogKey(self: DataGridView,keyData: Keys) -> bool
   
-   Processes keys,such as the TAB,ESCAPE,ENTER,and ARROW keys,used to control dialog 
-    boxes.
+   Processes keys,such as the TAB,ESCAPE,ENTER,and ARROW keys,used to control dialog boxes.
   
-  
-   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys 
-    to process.
-  
+   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys to process.
    Returns: true if the key was processed; otherwise,false.
   """
   pass
@@ -2297,9 +2146,7 @@ class DataGridView:
   
    Processes the DOWN ARROW key.
   
-   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys 
-    to process.
-  
+   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys to process.
    Returns: true if the key was processed; otherwise,false.
   """
   pass
@@ -2309,9 +2156,7 @@ class DataGridView:
   
    Processes the END key.
   
-   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys 
-    to process.
-  
+   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys to process.
    Returns: true if the key was processed; otherwise,false.
   """
   pass
@@ -2321,9 +2166,7 @@ class DataGridView:
   
    Processes the ENTER key.
   
-   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys 
-    to process.
-  
+   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys to process.
    Returns: true if the key was processed; otherwise,false.
   """
   pass
@@ -2333,9 +2176,7 @@ class DataGridView:
   
    Processes the ESC key.
   
-   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys 
-    to process.
-  
+   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys to process.
    Returns: true if the key was processed; otherwise,false.
   """
   pass
@@ -2345,9 +2186,7 @@ class DataGridView:
   
    Processes the F2 key.
   
-   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys 
-    to process.
-  
+   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys to process.
    Returns: true if the key was processed; otherwise,false.
   """
   pass
@@ -2380,9 +2219,7 @@ class DataGridView:
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed; otherwise,false.
   """
   pass
@@ -2392,9 +2229,7 @@ class DataGridView:
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -2404,9 +2239,7 @@ class DataGridView:
   
    Previews a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed; otherwise,false.
   """
   pass
@@ -2416,9 +2249,7 @@ class DataGridView:
   
    Processes the LEFT ARROW key.
   
-   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys 
-    to process.
-  
+   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys to process.
    Returns: true if the key was processed; otherwise,false.
   """
   pass
@@ -2438,9 +2269,7 @@ class DataGridView:
   
    Processes the PAGE DOWN key.
   
-   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys 
-    to process.
-  
+   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys to process.
    Returns: true if the key was processed; otherwise,false.
   """
   pass
@@ -2450,9 +2279,7 @@ class DataGridView:
   
    Processes the PAGE UP key.
   
-   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys 
-    to process.
-  
+   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys to process.
    Returns: true if the key was processed; otherwise,false.
   """
   pass
@@ -2462,9 +2289,7 @@ class DataGridView:
   
    Processes the RIGHT ARROW key.
   
-   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys 
-    to process.
-  
+   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys to process.
    Returns: true if the key was processed; otherwise,false.
   """
   pass
@@ -2484,9 +2309,7 @@ class DataGridView:
   
    Processes the TAB key.
   
-   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys 
-    to process.
-  
+   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys to process.
    Returns: true if the key was processed; otherwise,false.
   """
   pass
@@ -2496,9 +2319,7 @@ class DataGridView:
   
    Processes the UP ARROW key.
   
-   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys 
-    to process.
-  
+   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys to process.
    Returns: true if the key was processed; otherwise,false.
   """
   pass
@@ -2508,9 +2329,7 @@ class DataGridView:
   
    Processes the 0 key.
   
-   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys 
-    to process.
-  
+   keyData: A bitwise combination of System.Windows.Forms.Keys values that represents the key or keys to process.
    Returns: true if the key was processed; otherwise,false.
   """
   pass
@@ -2560,9 +2379,7 @@ class DataGridView:
   """
   RefreshEdit(self: DataGridView) -> bool
   
-   Refreshes the value of the current cell with the underlying cell value when the cell is 
-    in edit mode,discarding any previous value.
-  
+   Refreshes the value of the current cell with the underlying cell value when the cell is in edit mode,discarding any previous value.
    Returns: true if successful; false if a System.Windows.Forms.DataGridView.DataError event occurred.
   """
   pass
@@ -2585,25 +2402,19 @@ class DataGridView:
   """
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
-    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
    Returns: One of the System.Windows.Forms.HorizontalAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
-    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: ContentAlignment) -> ContentAlignment
   
-   Converts the specified System.Drawing.ContentAlignment to the appropriate 
-    System.Drawing.ContentAlignment to support right-to-left text.
-  
+   Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
   
    align: One of the System.Drawing.ContentAlignment values.
    Returns: One of the System.Drawing.ContentAlignment values.
@@ -2613,9 +2424,7 @@ class DataGridView:
   """
   RtlTranslateContent(self: Control,align: ContentAlignment) -> ContentAlignment
   
-   Converts the specified System.Drawing.ContentAlignment to the appropriate 
-    System.Drawing.ContentAlignment to support right-to-left text.
-  
+   Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
   
    align: One of the System.Drawing.ContentAlignment values.
    Returns: One of the System.Drawing.ContentAlignment values.
@@ -2625,9 +2434,7 @@ class DataGridView:
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
-    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
    Returns: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -2637,9 +2444,7 @@ class DataGridView:
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
-    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -2651,8 +2456,7 @@ class DataGridView:
    Scales a control's location,size,padding and margin.
   
    factor: The factor by which the height and width of the control will be scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to 
-    use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -2667,9 +2471,7 @@ class DataGridView:
  def Select(self):
   """
   Select(self: Control,directed: bool,forward: bool)
-   Activates a child control. Optionally specifies the direction in the tab order to select 
-    the control from.
-  
+   Activates a child control. Optionally specifies the direction in the tab order to select the control from.
   
    directed: true to specify the direction of the control to select; otherwise,false.
    forward: true to move forward in the tab order; false to move backward in the tab order.
@@ -2684,9 +2486,7 @@ class DataGridView:
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
-  
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
   """
@@ -2694,10 +2494,7 @@ class DataGridView:
  def SetBoundsCore(self,*args):
   """
   SetBoundsCore(self: DataGridView,x: int,y: int,width: int,height: int,specified: BoundsSpecified)
-   This member overrides 
-    System.Windows.Forms.Control.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.I
-    nt32,System.Windows.Forms.BoundsSpecified).
-  
+   This member overrides System.Windows.Forms.Control.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified).
   
    x: The new System.Windows.Forms.Control.Left property value of the control.
    y: The new System.Windows.Forms.Control.Top property value of the control.
@@ -2723,12 +2520,8 @@ class DataGridView:
   
    columnIndex: The index of the column containing the cell.
    rowIndex: The index of the row containing the cell.
-   setAnchorCellAddress: true to make the new current cell the anchor cell for a subsequent multicell selection 
-    using the SHIFT key; otherwise,false.
-  
-   validateCurrentCell: true to validate the value in the old current cell and cancel the change if validation 
-    fails; otherwise,false.
-  
+   setAnchorCellAddress: true to make the new current cell the anchor cell for a subsequent multicell selection using the SHIFT key; otherwise,false.
+   validateCurrentCell: true to validate the value in the old current cell and cancel the change if validation fails; otherwise,false.
    throughMouseClick: true if the current cell is being set as a result of a mouse click; otherwise,false.
    Returns: true if the current cell was successfully set; otherwise,false.
   """
@@ -2792,28 +2585,21 @@ class DataGridView:
   
    Determines the size of the entire control from the height and width of its client area.
   
-   clientSize: A System.Drawing.Size value representing the height and width of the control's client 
-    area.
-  
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
    Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass
  def Sort(self,*__args):
   """
   Sort(self: DataGridView,dataGridViewColumn: DataGridViewColumn,direction: ListSortDirection)
-   Sorts the contents of the System.Windows.Forms.DataGridView control in ascending or 
-    descending order based on the contents of the specified column.
-  
+   Sorts the contents of the System.Windows.Forms.DataGridView control in ascending or descending order based on the contents of the specified column.
   
    dataGridViewColumn: The column by which to sort the contents of the System.Windows.Forms.DataGridView.
    direction: One of the System.ComponentModel.ListSortDirection values.
   Sort(self: DataGridView,comparer: IComparer)
-   Sorts the contents of the System.Windows.Forms.DataGridView control using an 
-    implementation of the System.Collections.IComparer interface.
+   Sorts the contents of the System.Windows.Forms.DataGridView control using an implementation of the System.Collections.IComparer interface.
   
-  
-   comparer: An implementation of System.Collections.IComparer that performs the custom sorting 
-    operation.
+   comparer: An implementation of System.Collections.IComparer that performs the custom sorting operation.
   """
   pass
  def UpdateBounds(self,*args):
@@ -2850,9 +2636,7 @@ class DataGridView:
  def UpdateCellValue(self,columnIndex,rowIndex):
   """
   UpdateCellValue(self: DataGridView,columnIndex: int,rowIndex: int)
-   Forces the control to update its display of the cell at the specified location based on 
-    its new value,applying any automatic sizing modes currently in effect.
-  
+   Forces the control to update its display of the cell at the specified location based on its new value,applying any automatic sizing modes currently in effect.
   
    columnIndex: The zero-based column index of the cell with the new value.
    rowIndex: The zero-based row index of the cell with the new value.
@@ -2898,8 +2682,7 @@ class DataGridView:
   
    Processes window messages.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
   """
   pass
  def __enter__(self,*args):

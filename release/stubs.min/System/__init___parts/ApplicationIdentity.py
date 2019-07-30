@@ -1,9 +1,14 @@
-class ApplicationIdentity:
+class ApplicationIdentity(object):
  """
  Provides the ability to uniquely identify a manifest-activated application. This class cannot be inherited.
  
  ApplicationIdentity(applicationIdentityFullName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ApplicationIdentity()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToString(self):
   """
   ToString(self: ApplicationIdentity) -> str

@@ -1,9 +1,14 @@
-class RuntimeEnvironment:
+class RuntimeEnvironment(object):
  """
  Provides a collection of static methods that return information about the common language runtime environment.
  
  RuntimeEnvironment()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RuntimeEnvironment()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromGlobalAccessCache(a):
   """
@@ -21,8 +26,7 @@ class RuntimeEnvironment:
   GetRuntimeDirectory() -> str
   
    Returns the directory where the common language runtime is installed.
-   Returns: A string that contains the path to the directory where the common language runtime is 
-    installed.
+   Returns: A string that contains the path to the directory where the common language runtime is installed.
   """
   pass
  @staticmethod
@@ -42,9 +46,7 @@ class RuntimeEnvironment:
   """
   GetRuntimeInterfaceAsObject(clsid: Guid,riid: Guid) -> object
   
-   Returns an instance of a type that represents a COM object by a pointer to its IUnknown 
-    interface.
-  
+   Returns an instance of a type that represents a COM object by a pointer to its IUnknown interface.
   
    clsid: The identifier for the desired class.
    riid: The identifier for the desired interface.
@@ -56,9 +58,7 @@ class RuntimeEnvironment:
   """
   GetSystemVersion() -> str
   
-   Gets the version number of the common language runtime that is running the current 
-    process.
-  
+   Gets the version number of the common language runtime that is running the current process.
    Returns: A string containing the version number of the common language runtime.
   """
   pass

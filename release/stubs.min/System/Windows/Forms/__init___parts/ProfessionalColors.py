@@ -1,5 +1,9 @@
-class ProfessionalColors:
+class ProfessionalColors(object):
  """ Provides System.Drawing.Color structures that are colors of a Windows display element. This class cannot be inherited. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ProfessionalColors()
+
  ButtonCheckedGradientBegin=None
  ButtonCheckedGradientEnd=None
  ButtonCheckedGradientMiddle=None

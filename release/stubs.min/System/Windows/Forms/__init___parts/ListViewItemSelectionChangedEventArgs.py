@@ -1,9 +1,13 @@
-class ListViewItemSelectionChangedEventArgs:
+class ListViewItemSelectionChangedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ListView.ItemSelectionChanged event.
  
  ListViewItemSelectionChangedEventArgs(item: ListViewItem,itemIndex: int,isSelected: bool)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ListViewItemSelectionChangedEventArgs()
+
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass

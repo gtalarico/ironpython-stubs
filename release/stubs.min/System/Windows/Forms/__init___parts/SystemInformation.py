@@ -1,5 +1,9 @@
-class SystemInformation:
+class SystemInformation(object):
  """ Provides information about the current system environment. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SystemInformation()
+
  @staticmethod
  def GetBorderSizeForDpi(dpi):
   """ GetBorderSizeForDpi(dpi: int) -> Size """

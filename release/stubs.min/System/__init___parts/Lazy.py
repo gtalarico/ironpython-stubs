@@ -1,4 +1,4 @@
-class Lazy:
+class Lazy(object):
  """
  Lazy[T](valueFactory: Func[T],mode: LazyThreadSafetyMode)
  Lazy[T]()
@@ -7,13 +7,17 @@ class Lazy:
  Lazy[T](mode: LazyThreadSafetyMode)
  Lazy[T](valueFactory: Func[T],isThreadSafe: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Lazy()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ToString(self):
   """
   ToString(self: Lazy[T]) -> str
   
    Creates and returns a string representation of the System.Lazy property for this instance.
-   Returns: The result of calling the System.Object.ToString method on the System.Lazy property for 
-    this instance,if the value has been created (that is,if the System.Lazy property 
+   Returns: The result of calling the System.Object.ToString method on the System.Lazy property for this instance,if the value has been created (that is,if the System.Lazy property 
     returns true). Otherwise,a string indicating that the value has not been created.
   """
   pass

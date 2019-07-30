@@ -1,5 +1,10 @@
 class ICustomFactory:
  """ Enables users to write activation code for managed objects that extend System.MarshalByRefObject. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ICustomFactory()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreateInstance(self,serverType):
   """
   CreateInstance(self: ICustomFactory,serverType: Type) -> MarshalByRefObject

@@ -1,9 +1,14 @@
-class IPHostEntry:
+class IPHostEntry(object):
  """
  Provides a container class for Internet host address information.
  
  IPHostEntry()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IPHostEntry()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  AddressList=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets or sets a list of IP addresses that are associated with a host.
 

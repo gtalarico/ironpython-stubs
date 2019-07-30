@@ -1,9 +1,13 @@
-class DataGridViewLinkColumn:
+class DataGridViewLinkColumn(DataGridViewColumn,ICloneable,IDisposable,IComponent):
  """
  Represents a column of cells that contain links in a System.Windows.Forms.DataGridView control.
  
  DataGridViewLinkColumn()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewLinkColumn()
+
  def Clone(self):
   """
   Clone(self: DataGridViewLinkColumn) -> object
@@ -15,8 +19,7 @@ class DataGridViewLinkColumn:
  def Dispose(self):
   """
   Dispose(self: DataGridViewColumn,disposing: bool)
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def OnDataGridViewChanged(self,*args):

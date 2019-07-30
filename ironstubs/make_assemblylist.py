@@ -1,7 +1,7 @@
 import os
 import json
 
-path_dll = ["C:/Program Files (x86)/TranCon/BOXwisePro/Server"]
+path_dll = ["C:\Program Files (x86)\TranCon\BOXwisePro\Server"]
 data = {}
 data['assemblylist'] = []
 

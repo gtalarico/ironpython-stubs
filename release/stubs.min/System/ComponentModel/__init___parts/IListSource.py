@@ -1,12 +1,15 @@
 class IListSource:
  """ Provides functionality to an object to return a list that can be bound to a data source. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IListSource()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetList(self):
   """
   GetList(self: IListSource) -> IList
   
-   Returns an System.Collections.IList that can be bound to a data source from an object 
-    that does not implement an System.Collections.IList itself.
-  
+   Returns an System.Collections.IList that can be bound to a data source from an object that does not implement an System.Collections.IList itself.
    Returns: An System.Collections.IList that can be bound to a data source from the object.
   """
   pass

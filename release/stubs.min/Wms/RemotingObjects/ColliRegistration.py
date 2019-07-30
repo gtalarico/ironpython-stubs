@@ -1,20 +1,26 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.ColliRegistration calls itself ColliRegistration
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class ColloReference:
+class ColloReference(object):
  """
  ColloReference()
  ColloReference(reference: str,type: ReferenceType)
  ColloReference(reference: str,type: ReferenceType,warehouseCode: str,warehouseLocationCode: str,itemCode: str,quantity: Decimal)
  ColloReference(reference: str,type: ReferenceType,warehouseCode: str,warehouseLocationCode: str,itemCode: str,quantity: Decimal,itemId: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ColloReference()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: ColloReference) -> object """
   pass
@@ -44,72 +50,97 @@ class ColloReference:
  def __str__(self,*args):
   pass
  ColliPresetId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ColliPresetId(self: ColloReference) -> str
+ """The chosen preset of this reference
+
+Get: ColliPresetId(self: ColloReference) -> str
 
 Set: ColliPresetId(self: ColloReference)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: ColloReference) -> str
+ """
+
+Get: ItemCode(self: ColloReference) -> str
 
 Set: ItemCode(self: ColloReference)=value
 """
 
  ItemIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIds(self: ColloReference) -> ItemIdentifications
+ """Optional. The serial or batch numbers on this reference.
+
+Get: ItemIds(self: ColloReference) -> ItemIdentifications
 
 Set: ItemIds(self: ColloReference)=value
 """
 
  OrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumber(self: ColloReference) -> str
+ """
+
+Get: OrderNumber(self: ColloReference) -> str
 
 Set: OrderNumber(self: ColloReference)=value
 """
 
  Parent=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Parent(self: ColloReference) -> str
+ """
+
+Get: Parent(self: ColloReference) -> str
 
 Set: Parent(self: ColloReference)=value
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: ColloReference) -> Decimal
+ """
+
+Get: Quantity(self: ColloReference) -> Decimal
 
 Set: Quantity(self: ColloReference)=value
 """
 
  Reference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Reference(self: ColloReference) -> str
+ """
+
+Get: Reference(self: ColloReference) -> str
 
 Set: Reference(self: ColloReference)=value
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Type(self: ColloReference) -> ReferenceType
+ """
+
+Get: Type(self: ColloReference) -> ReferenceType
 
 Set: Type(self: ColloReference)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: ColloReference) -> str
+ """
+
+Get: WarehouseCode(self: ColloReference) -> str
 
 Set: WarehouseCode(self: ColloReference)=value
 """
 
  WarehouseLocationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseLocationCode(self: ColloReference) -> str
+ """
+
+Get: WarehouseLocationCode(self: ColloReference) -> str
 
 Set: WarehouseLocationCode(self: ColloReference)=value
 """
 
 
 
-class ColloReferencePair:
+class ColloReferencePair(object):
  """
  ColloReferencePair(itemCode: str,warehouseCode: str,warehouseLocationCode: str)
  ColloReferencePair(outer: ColloReference,inner: ColloReference)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ColloReferencePair()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -169,6 +200,11 @@ Set: WarehouseLocationCode(self: ColloReferencePair)=value
 
 class ReferenceType:
  """ enum ReferenceType,values: Inner (0),Outer (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReferenceType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

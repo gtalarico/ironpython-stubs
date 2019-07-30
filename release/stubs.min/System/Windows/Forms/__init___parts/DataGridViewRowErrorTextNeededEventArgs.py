@@ -1,5 +1,9 @@
-class DataGridViewRowErrorTextNeededEventArgs:
+class DataGridViewRowErrorTextNeededEventArgs(EventArgs):
  """ Provides data for the System.Windows.Forms.DataGridView.RowErrorTextNeeded event of a System.Windows.Forms.DataGridView control. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewRowErrorTextNeededEventArgs()
+
  ErrorText=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets or sets the error text for the row.
 

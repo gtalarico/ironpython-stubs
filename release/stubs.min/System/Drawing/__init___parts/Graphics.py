@@ -1,5 +1,9 @@
-class Graphics:
+class Graphics(MarshalByRefObject,IDisposable,IDeviceContext):
  """ Encapsulates a GDI+ drawing surface. This class cannot be inherited. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Graphics()
+
  def AddMetafileComment(self,data):
   """
   AddMetafileComment(self: Graphics,data: Array[Byte])
@@ -12,47 +16,24 @@ class Graphics:
   """
   BeginContainer(self: Graphics) -> GraphicsContainer
   
-   Saves a graphics container with the current state of this System.Drawing.Graphics and 
-    opens and uses a new graphics container.
-  
-   Returns: This method returns a System.Drawing.Drawing2D.GraphicsContainer that represents the 
-    state of this System.Drawing.Graphics at the time of the method call.
-  
+   Saves a graphics container with the current state of this System.Drawing.Graphics and opens and uses a new graphics container.
+   Returns: This method returns a System.Drawing.Drawing2D.GraphicsContainer that represents the state of this System.Drawing.Graphics at the time of the method call.
   BeginContainer(self: Graphics,dstrect: RectangleF,srcrect: RectangleF,unit: GraphicsUnit) -> GraphicsContainer
   
-   Saves a graphics container with the current state of this System.Drawing.Graphics and 
-    opens and uses a new graphics container with the specified scale transformation.
+   Saves a graphics container with the current state of this System.Drawing.Graphics and opens and uses a new graphics container with the specified scale transformation.
   
-  
-   dstrect: System.Drawing.RectangleF structure that,together with the srcrect parameter,specifies 
-    a scale transformation for the new graphics container.
-  
-   srcrect: System.Drawing.RectangleF structure that,together with the dstrect parameter,specifies 
-    a scale transformation for the new graphics container.
-  
-   unit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the unit of measure 
-    for the container.
-  
-   Returns: This method returns a System.Drawing.Drawing2D.GraphicsContainer that represents the 
-    state of this System.Drawing.Graphics at the time of the method call.
-  
+   dstrect: System.Drawing.RectangleF structure that,together with the srcrect parameter,specifies a scale transformation for the new graphics container.
+   srcrect: System.Drawing.RectangleF structure that,together with the dstrect parameter,specifies a scale transformation for the new graphics container.
+   unit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the unit of measure for the container.
+   Returns: This method returns a System.Drawing.Drawing2D.GraphicsContainer that represents the state of this System.Drawing.Graphics at the time of the method call.
   BeginContainer(self: Graphics,dstrect: Rectangle,srcrect: Rectangle,unit: GraphicsUnit) -> GraphicsContainer
   
-   Saves a graphics container with the current state of this System.Drawing.Graphics and 
-    opens and uses a new graphics container with the specified scale transformation.
+   Saves a graphics container with the current state of this System.Drawing.Graphics and opens and uses a new graphics container with the specified scale transformation.
   
-  
-   dstrect: System.Drawing.Rectangle structure that,together with the srcrect parameter,specifies a 
-    scale transformation for the container.
-  
-   srcrect: System.Drawing.Rectangle structure that,together with the dstrect parameter,specifies a 
-    scale transformation for the container.
-  
-   unit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the unit of measure 
-    for the container.
-  
-   Returns: This method returns a System.Drawing.Drawing2D.GraphicsContainer that represents the 
-    state of this System.Drawing.Graphics at the time of the method call.
+   dstrect: System.Drawing.Rectangle structure that,together with the srcrect parameter,specifies a scale transformation for the container.
+   srcrect: System.Drawing.Rectangle structure that,together with the dstrect parameter,specifies a scale transformation for the container.
+   unit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the unit of measure for the container.
+   Returns: This method returns a System.Drawing.Drawing2D.GraphicsContainer that represents the state of this System.Drawing.Graphics at the time of the method call.
   """
   pass
  def Clear(self,color):
@@ -60,24 +41,19 @@ class Graphics:
   Clear(self: Graphics,color: Color)
    Clears the entire drawing surface and fills it with the specified background color.
   
-   color: System.Drawing.Color structure that represents the background color of the drawing 
-    surface.
+   color: System.Drawing.Color structure that represents the background color of the drawing surface.
   """
   pass
  def CopyFromScreen(self,*__args):
   """
   CopyFromScreen(self: Graphics,upperLeftSource: Point,upperLeftDestination: Point,blockRegionSize: Size)
-   Performs a bit-block transfer of color data,corresponding to a rectangle of pixels,from 
-    the screen to the drawing surface of the System.Drawing.Graphics.
-  
+   Performs a bit-block transfer of color data,corresponding to a rectangle of pixels,from the screen to the drawing surface of the System.Drawing.Graphics.
   
    upperLeftSource: The point at the upper-left corner of the source rectangle.
    upperLeftDestination: The point at the upper-left corner of the destination rectangle.
    blockRegionSize: The size of the area to be transferred.
   CopyFromScreen(self: Graphics,sourceX: int,sourceY: int,destinationX: int,destinationY: int,blockRegionSize: Size)
-   Performs a bit-block transfer of the color data,corresponding to a rectangle of pixels,
-    from the screen to the drawing surface of the System.Drawing.Graphics.
-  
+   Performs a bit-block transfer of the color data,corresponding to a rectangle of pixels,from the screen to the drawing surface of the System.Drawing.Graphics.
   
    sourceX: The x-coordinate of the point at the upper-left corner of the source rectangle.
    sourceY: The y-coordinate of the point at the upper-left corner of the source rectangle.
@@ -85,18 +61,14 @@ class Graphics:
    destinationY: The y-coordinate of the point at the upper-left corner of the destination rectangle.
    blockRegionSize: The size of the area to be transferred.
   CopyFromScreen(self: Graphics,upperLeftSource: Point,upperLeftDestination: Point,blockRegionSize: Size,copyPixelOperation: CopyPixelOperation)
-   Performs a bit-block transfer of color data,corresponding to a rectangle of pixels,from 
-    the screen to the drawing surface of the System.Drawing.Graphics.
-  
+   Performs a bit-block transfer of color data,corresponding to a rectangle of pixels,from the screen to the drawing surface of the System.Drawing.Graphics.
   
    upperLeftSource: The point at the upper-left corner of the source rectangle.
    upperLeftDestination: The point at the upper-left corner of the destination rectangle.
    blockRegionSize: The size of the area to be transferred.
    copyPixelOperation: One of the System.Drawing.CopyPixelOperation values.
   CopyFromScreen(self: Graphics,sourceX: int,sourceY: int,destinationX: int,destinationY: int,blockRegionSize: Size,copyPixelOperation: CopyPixelOperation)
-   Performs a bit-block transfer of the color data,corresponding to a rectangle of pixels,
-    from the screen to the drawing surface of the System.Drawing.Graphics.
-  
+   Performs a bit-block transfer of the color data,corresponding to a rectangle of pixels,from the screen to the drawing surface of the System.Drawing.Graphics.
   
    sourceX: The x-coordinate of the point at the upper-left corner of the source rectangle.
    sourceY: The y-coordinate of the point at the upper-left corner of the source rectangle
@@ -115,9 +87,7 @@ class Graphics:
  def DrawArc(self,pen,*__args):
   """
   DrawArc(self: Graphics,pen: Pen,x: Single,y: Single,width: Single,height: Single,startAngle: Single,sweepAngle: Single)
-   Draws an arc representing a portion of an ellipse specified by a pair of coordinates,a 
-    width,and a height.
-  
+   Draws an arc representing a portion of an ellipse specified by a pair of coordinates,a width,and a height.
   
    pen: System.Drawing.Pen that determines the color,width,and style of the arc.
    x: The x-coordinate of the upper-left corner of the rectangle that defines the ellipse.
@@ -125,24 +95,16 @@ class Graphics:
    width: Width of the rectangle that defines the ellipse.
    height: Height of the rectangle that defines the ellipse.
    startAngle: Angle in degrees measured clockwise from the x-axis to the starting point of the arc.
-   sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending point of the 
-    arc.
-  
+   sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending point of the arc.
   DrawArc(self: Graphics,pen: Pen,rect: RectangleF,startAngle: Single,sweepAngle: Single)
-   Draws an arc representing a portion of an ellipse specified by a 
-    System.Drawing.RectangleF structure.
-  
+   Draws an arc representing a portion of an ellipse specified by a System.Drawing.RectangleF structure.
   
    pen: System.Drawing.Pen that determines the color,width,and style of the arc.
    rect: System.Drawing.RectangleF structure that defines the boundaries of the ellipse.
    startAngle: Angle in degrees measured clockwise from the x-axis to the starting point of the arc.
-   sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending point of the 
-    arc.
-  
+   sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending point of the arc.
   DrawArc(self: Graphics,pen: Pen,x: int,y: int,width: int,height: int,startAngle: int,sweepAngle: int)
-   Draws an arc representing a portion of an ellipse specified by a pair of coordinates,a 
-    width,and a height.
-  
+   Draws an arc representing a portion of an ellipse specified by a pair of coordinates,a width,and a height.
   
    pen: System.Drawing.Pen that determines the color,width,and style of the arc.
    x: The x-coordinate of the upper-left corner of the rectangle that defines the ellipse.
@@ -150,19 +112,14 @@ class Graphics:
    width: Width of the rectangle that defines the ellipse.
    height: Height of the rectangle that defines the ellipse.
    startAngle: Angle in degrees measured clockwise from the x-axis to the starting point of the arc.
-   sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending point of the 
-    arc.
-  
+   sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending point of the arc.
   DrawArc(self: Graphics,pen: Pen,rect: Rectangle,startAngle: Single,sweepAngle: Single)
-   Draws an arc representing a portion of an ellipse specified by a System.Drawing.Rectangle 
-    structure.
-  
+   Draws an arc representing a portion of an ellipse specified by a System.Drawing.Rectangle structure.
   
    pen: System.Drawing.Pen that determines the color,width,and style of the arc.
    rect: System.Drawing.RectangleF structure that defines the boundaries of the ellipse.
    startAngle: Angle in degrees measured clockwise from the x-axis to the starting point of the arc.
-   sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending point of the 
-    arc.
+   sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to ending point of the arc.
   """
   pass
  def DrawBezier(self,pen,*__args):
@@ -203,17 +160,12 @@ class Graphics:
    Draws a series of B�zier splines from an array of System.Drawing.PointF structures.
   
    pen: System.Drawing.Pen that determines the color,width,and style of the curve.
-   points: Array of System.Drawing.PointF structures that represent the points that determine the 
-    curve. The number of points in the array should be a multiple of 3 plus 1,such as 4,7,
-    or 10.
-  
+   points: Array of System.Drawing.PointF structures that represent the points that determine the curve. The number of points in the array should be a multiple of 3 plus 1,such as 4,7,or 10.
   DrawBeziers(self: Graphics,pen: Pen,points: Array[Point])
    Draws a series of B�zier splines from an array of System.Drawing.Point structures.
   
    pen: System.Drawing.Pen that determines the color,width,and style of the curve.
-   points: Array of System.Drawing.Point structures that represent the points that determine the 
-    curve. The number of points in the array should be a multiple of 3 plus 1,such as 4,7,
-    or 10.
+   points: Array of System.Drawing.Point structures that represent the points that determine the curve. The number of points in the array should be a multiple of 3 plus 1,such as 4,7,or 10.
   """
   pass
  def DrawClosedCurve(self,pen,points,tension=None,fillmode=None):
@@ -224,31 +176,24 @@ class Graphics:
    pen: System.Drawing.Pen that determines the color,width,and height of the curve.
    points: Array of System.Drawing.PointF structures that define the spline.
   DrawClosedCurve(self: Graphics,pen: Pen,points: Array[PointF],tension: Single,fillmode: FillMode)
-   Draws a closed cardinal spline defined by an array of System.Drawing.PointF structures 
-    using a specified tension.
-  
+   Draws a closed cardinal spline defined by an array of System.Drawing.PointF structures using a specified tension.
   
    pen: System.Drawing.Pen that determines the color,width,and height of the curve.
    points: Array of System.Drawing.PointF structures that define the spline.
    tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
-   fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve 
-    is filled. This parameter is required but is ignored.
-  
+   fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve is filled. This parameter is required but is ignored.
   DrawClosedCurve(self: Graphics,pen: Pen,points: Array[Point])
    Draws a closed cardinal spline defined by an array of System.Drawing.Point structures.
   
    pen: System.Drawing.Pen that determines the color,width,and height of the curve.
    points: Array of System.Drawing.Point structures that define the spline.
   DrawClosedCurve(self: Graphics,pen: Pen,points: Array[Point],tension: Single,fillmode: FillMode)
-   Draws a closed cardinal spline defined by an array of System.Drawing.Point structures 
-    using a specified tension.
-  
+   Draws a closed cardinal spline defined by an array of System.Drawing.Point structures using a specified tension.
   
    pen: System.Drawing.Pen that determines the color,width,and height of the curve.
    points: Array of System.Drawing.Point structures that define the spline.
    tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
-   fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve 
-    is filled. This parameter is required but ignored.
+   fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve is filled. This parameter is required but ignored.
   """
   pass
  def DrawCurve(self,pen,points,*__args):
@@ -259,34 +204,24 @@ class Graphics:
    pen: System.Drawing.Pen that determines the color,width,and height of the curve.
    points: Array of System.Drawing.PointF structures that define the spline.
   DrawCurve(self: Graphics,pen: Pen,points: Array[PointF],tension: Single)
-   Draws a cardinal spline through a specified array of System.Drawing.PointF structures 
-    using a specified tension.
-  
+   Draws a cardinal spline through a specified array of System.Drawing.PointF structures using a specified tension.
   
    pen: System.Drawing.Pen that determines the color,width,and height of the curve.
    points: Array of System.Drawing.PointF structures that represent the points that define the curve.
    tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
   DrawCurve(self: Graphics,pen: Pen,points: Array[PointF],offset: int,numberOfSegments: int)
-   Draws a cardinal spline through a specified array of System.Drawing.PointF structures. 
-    The drawing begins offset from the beginning of the array.
-  
+   Draws a cardinal spline through a specified array of System.Drawing.PointF structures. The drawing begins offset from the beginning of the array.
   
    pen: System.Drawing.Pen that determines the color,width,and height of the curve.
    points: Array of System.Drawing.PointF structures that define the spline.
-   offset: Offset from the first element in the array of the points parameter to the starting point 
-    in the curve.
-  
+   offset: Offset from the first element in the array of the points parameter to the starting point in the curve.
    numberOfSegments: Number of segments after the starting point to include in the curve.
   DrawCurve(self: Graphics,pen: Pen,points: Array[PointF],offset: int,numberOfSegments: int,tension: Single)
-   Draws a cardinal spline through a specified array of System.Drawing.PointF structures 
-    using a specified tension. The drawing begins offset from the beginning of the array.
-  
+   Draws a cardinal spline through a specified array of System.Drawing.PointF structures using a specified tension. The drawing begins offset from the beginning of the array.
   
    pen: System.Drawing.Pen that determines the color,width,and height of the curve.
    points: Array of System.Drawing.PointF structures that define the spline.
-   offset: Offset from the first element in the array of the points parameter to the starting point 
-    in the curve.
-  
+   offset: Offset from the first element in the array of the points parameter to the starting point in the curve.
    numberOfSegments: Number of segments after the starting point to include in the curve.
    tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
   DrawCurve(self: Graphics,pen: Pen,points: Array[Point])
@@ -295,23 +230,17 @@ class Graphics:
    pen: System.Drawing.Pen that determines the color,width,and height of the curve.
    points: Array of System.Drawing.Point structures that define the spline.
   DrawCurve(self: Graphics,pen: Pen,points: Array[Point],tension: Single)
-   Draws a cardinal spline through a specified array of System.Drawing.Point structures 
-    using a specified tension.
-  
+   Draws a cardinal spline through a specified array of System.Drawing.Point structures using a specified tension.
   
    pen: System.Drawing.Pen that determines the color,width,and height of the curve.
    points: Array of System.Drawing.Point structures that define the spline.
    tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
   DrawCurve(self: Graphics,pen: Pen,points: Array[Point],offset: int,numberOfSegments: int,tension: Single)
-   Draws a cardinal spline through a specified array of System.Drawing.Point structures 
-    using a specified tension.
-  
+   Draws a cardinal spline through a specified array of System.Drawing.Point structures using a specified tension.
   
    pen: System.Drawing.Pen that determines the color,width,and height of the curve.
    points: Array of System.Drawing.Point structures that define the spline.
-   offset: Offset from the first element in the array of the points parameter to the starting point 
-    in the curve.
-  
+   offset: Offset from the first element in the array of the points parameter to the starting point in the curve.
    numberOfSegments: Number of segments after the starting point to include in the curve.
    tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
   """
@@ -324,17 +253,11 @@ class Graphics:
    pen: System.Drawing.Pen that determines the color,width,and style of the ellipse.
    rect: System.Drawing.RectangleF structure that defines the boundaries of the ellipse.
   DrawEllipse(self: Graphics,pen: Pen,x: Single,y: Single,width: Single,height: Single)
-   Draws an ellipse defined by a bounding rectangle specified by a pair of coordinates,a 
-    height,and a width.
-  
+   Draws an ellipse defined by a bounding rectangle specified by a pair of coordinates,a height,and a width.
   
    pen: System.Drawing.Pen that determines the color,width,and style of the ellipse.
-   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse.
-  
-   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse.
-  
+   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
+   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
    width: Width of the bounding rectangle that defines the ellipse.
    height: Height of the bounding rectangle that defines the ellipse.
   DrawEllipse(self: Graphics,pen: Pen,rect: Rectangle)
@@ -343,17 +266,11 @@ class Graphics:
    pen: System.Drawing.Pen that determines the color,width,and style of the ellipse.
    rect: System.Drawing.Rectangle structure that defines the boundaries of the ellipse.
   DrawEllipse(self: Graphics,pen: Pen,x: int,y: int,width: int,height: int)
-   Draws an ellipse defined by a bounding rectangle specified by coordinates for the 
-    upper-left corner of the rectangle,a height,and a width.
-  
+   Draws an ellipse defined by a bounding rectangle specified by coordinates for the upper-left corner of the rectangle,a height,and a width.
   
    pen: System.Drawing.Pen that determines the color,width,and style of the ellipse.
-   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse.
-  
-   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse.
-  
+   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
+   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
    width: Width of the bounding rectangle that defines the ellipse.
    height: Height of the bounding rectangle that defines the ellipse.
   """
@@ -361,151 +278,93 @@ class Graphics:
  def DrawIcon(self,icon,*__args):
   """
   DrawIcon(self: Graphics,icon: Icon,x: int,y: int)
-   Draws the image represented by the specified System.Drawing.Icon at the specified 
-    coordinates.
-  
+   Draws the image represented by the specified System.Drawing.Icon at the specified coordinates.
   
    icon: System.Drawing.Icon to draw.
    x: The x-coordinate of the upper-left corner of the drawn image.
    y: The y-coordinate of the upper-left corner of the drawn image.
   DrawIcon(self: Graphics,icon: Icon,targetRect: Rectangle)
-   Draws the image represented by the specified System.Drawing.Icon within the area 
-    specified by a System.Drawing.Rectangle structure.
-  
+   Draws the image represented by the specified System.Drawing.Icon within the area specified by a System.Drawing.Rectangle structure.
   
    icon: System.Drawing.Icon to draw.
-   targetRect: System.Drawing.Rectangle structure that specifies the location and size of the resulting 
-    image on the display surface. The image contained in the icon parameter is scaled to the 
-    dimensions of this rectangular area.
+   targetRect: System.Drawing.Rectangle structure that specifies the location and size of the resulting image on the display surface. The image contained in the icon parameter is scaled to the dimensions of this rectangular area.
   """
   pass
  def DrawIconUnstretched(self,icon,targetRect):
   """
   DrawIconUnstretched(self: Graphics,icon: Icon,targetRect: Rectangle)
-   Draws the image represented by the specified System.Drawing.Icon without scaling the 
-    image.
-  
+   Draws the image represented by the specified System.Drawing.Icon without scaling the image.
   
    icon: System.Drawing.Icon to draw.
-   targetRect: System.Drawing.Rectangle structure that specifies the location and size of the resulting 
-    image. The image is not scaled to fit this rectangle,but retains its original size. If 
-    the image is larger than the rectangle,it is clipped to fit inside it.
+   targetRect: System.Drawing.Rectangle structure that specifies the location and size of the resulting image. The image is not scaled to fit this rectangle,but retains its original size. If the image is larger than the rectangle,it is clipped to fit inside it.
   """
   pass
  def DrawImage(self,image,*__args):
   """
   DrawImage(self: Graphics,image: Image,x: int,y: int)
-   Draws the specified image,using its original physical size,at the location specified by 
-    a coordinate pair.
-  
+   Draws the specified image,using its original physical size,at the location specified by a coordinate pair.
   
    image: System.Drawing.Image to draw.
    x: The x-coordinate of the upper-left corner of the drawn image.
    y: The y-coordinate of the upper-left corner of the drawn image.
   DrawImage(self: Graphics,image: Image,destRect: Rectangle,srcX: Single,srcY: Single,srcWidth: Single,srcHeight: Single,srcUnit: GraphicsUnit,imageAttrs: ImageAttributes,callback: DrawImageAbort,callbackData: IntPtr)DrawImage(self: Graphics,image: Image,destRect: Rectangle,srcX: Single,srcY: Single,srcWidth: Single,srcHeight: Single,srcUnit: GraphicsUnit,imageAttrs: ImageAttributes,callback: DrawImageAbort)DrawImage(self: Graphics,image: Image,destRect: Rectangle,srcX: Single,srcY: Single,srcWidth: Single,srcHeight: Single,srcUnit: GraphicsUnit,imageAttrs: ImageAttributes)
-   Draws the specified portion of the specified System.Drawing.Image at the specified 
-    location and with the specified size.
-  
+   Draws the specified portion of the specified System.Drawing.Image at the specified location and with the specified size.
   
    image: System.Drawing.Image to draw.
-   destRect: System.Drawing.Rectangle structure that specifies the location and size of the drawn 
-    image. The image is scaled to fit the rectangle.
-  
+   destRect: System.Drawing.Rectangle structure that specifies the location and size of the drawn image. The image is scaled to fit the rectangle.
    srcX: The x-coordinate of the upper-left corner of the portion of the source image to draw.
    srcY: The y-coordinate of the upper-left corner of the portion of the source image to draw.
    srcWidth: Width of the portion of the source image to draw.
    srcHeight: Height of the portion of the source image to draw.
-   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure 
-    used to determine the source rectangle.
-  
-   imageAttrs: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma information 
-    for the image object.
-  
+   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used to determine the source rectangle.
+   imageAttrs: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma information for the image object.
   DrawImage(self: Graphics,image: Image,destRect: Rectangle,srcX: Single,srcY: Single,srcWidth: Single,srcHeight: Single,srcUnit: GraphicsUnit)
-   Draws the specified portion of the specified System.Drawing.Image at the specified 
-    location and with the specified size.
-  
+   Draws the specified portion of the specified System.Drawing.Image at the specified location and with the specified size.
   
    image: System.Drawing.Image to draw.
-   destRect: System.Drawing.Rectangle structure that specifies the location and size of the drawn 
-    image. The image is scaled to fit the rectangle.
-  
+   destRect: System.Drawing.Rectangle structure that specifies the location and size of the drawn image. The image is scaled to fit the rectangle.
    srcX: The x-coordinate of the upper-left corner of the portion of the source image to draw.
    srcY: The y-coordinate of the upper-left corner of the portion of the source image to draw.
    srcWidth: Width of the portion of the source image to draw.
    srcHeight: Height of the portion of the source image to draw.
-   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure 
-    used to determine the source rectangle.
-  
+   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used to determine the source rectangle.
   DrawImage(self: Graphics,image: Image,destPoints: Array[Point],srcRect: Rectangle,srcUnit: GraphicsUnit,imageAttr: ImageAttributes,callback: DrawImageAbort,callbackData: int)DrawImage(self: Graphics,image: Image,destPoints: Array[Point],srcRect: Rectangle,srcUnit: GraphicsUnit,imageAttr: ImageAttributes,callback: DrawImageAbort)DrawImage(self: Graphics,image: Image,destPoints: Array[Point],srcRect: Rectangle,srcUnit: GraphicsUnit,imageAttr: ImageAttributes)
-   Draws the specified portion of the specified System.Drawing.Image at the specified 
-    location.
-  
+   Draws the specified portion of the specified System.Drawing.Image at the specified location.
   
    image: System.Drawing.Image to draw.
    destPoints: Array of three System.Drawing.Point structures that define a parallelogram.
    srcRect: System.Drawing.Rectangle structure that specifies the portion of the image object to draw.
-   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure 
-    used by the srcRect parameter.
-  
-   imageAttr: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma information 
-    for the image object.
-  
+   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used by the srcRect parameter.
+   imageAttr: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma information for the image object.
   DrawImage(self: Graphics,image: Image,destPoints: Array[Point],srcRect: Rectangle,srcUnit: GraphicsUnit)
-   Draws the specified portion of the specified System.Drawing.Image at the specified 
-    location and with the specified size.
-  
+   Draws the specified portion of the specified System.Drawing.Image at the specified location and with the specified size.
   
    image: System.Drawing.Image to draw.
    destPoints: Array of three System.Drawing.Point structures that define a parallelogram.
    srcRect: System.Drawing.Rectangle structure that specifies the portion of the image object to draw.
-   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure 
-    used by the srcRect parameter.
-  
+   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used by the srcRect parameter.
   DrawImage(self: Graphics,image: Image,destPoints: Array[PointF],srcRect: RectangleF,srcUnit: GraphicsUnit,imageAttr: ImageAttributes,callback: DrawImageAbort,callbackData: int)DrawImage(self: Graphics,image: Image,destPoints: Array[PointF],srcRect: RectangleF,srcUnit: GraphicsUnit,imageAttr: ImageAttributes,callback: DrawImageAbort)DrawImage(self: Graphics,image: Image,destPoints: Array[PointF],srcRect: RectangleF,srcUnit: GraphicsUnit,imageAttr: ImageAttributes)
-   Draws the specified portion of the specified System.Drawing.Image at the specified 
-    location and with the specified size.
-  
+   Draws the specified portion of the specified System.Drawing.Image at the specified location and with the specified size.
   
    image: System.Drawing.Image to draw.
    destPoints: Array of three System.Drawing.PointF structures that define a parallelogram.
-   srcRect: System.Drawing.RectangleF structure that specifies the portion of the image object to 
-    draw.
-  
-   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure 
-    used by the srcRect parameter.
-  
-   imageAttr: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma information 
-    for the image object.
-  
+   srcRect: System.Drawing.RectangleF structure that specifies the portion of the image object to draw.
+   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used by the srcRect parameter.
+   imageAttr: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma information for the image object.
   DrawImage(self: Graphics,image: Image,destPoints: Array[PointF],srcRect: RectangleF,srcUnit: GraphicsUnit)
-   Draws the specified portion of the specified System.Drawing.Image at the specified 
-    location and with the specified size.
-  
+   Draws the specified portion of the specified System.Drawing.Image at the specified location and with the specified size.
   
    image: System.Drawing.Image to draw.
    destPoints: Array of three System.Drawing.PointF structures that define a parallelogram.
-   srcRect: System.Drawing.RectangleF structure that specifies the portion of the image object to 
-    draw.
-  
-   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure 
-    used by the srcRect parameter.
-  
+   srcRect: System.Drawing.RectangleF structure that specifies the portion of the image object to draw.
+   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used by the srcRect parameter.
   DrawImage(self: Graphics,image: Image,destRect: RectangleF,srcRect: RectangleF,srcUnit: GraphicsUnit)
-   Draws the specified portion of the specified System.Drawing.Image at the specified 
-    location and with the specified size.
-  
+   Draws the specified portion of the specified System.Drawing.Image at the specified location and with the specified size.
   
    image: System.Drawing.Image to draw.
-   destRect: System.Drawing.RectangleF structure that specifies the location and size of the drawn 
-    image. The image is scaled to fit the rectangle.
-  
-   srcRect: System.Drawing.RectangleF structure that specifies the portion of the image object to 
-    draw.
-  
-   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure 
-    used by the srcRect parameter.
-  
+   destRect: System.Drawing.RectangleF structure that specifies the location and size of the drawn image. The image is scaled to fit the rectangle.
+   srcRect: System.Drawing.RectangleF structure that specifies the portion of the image object to draw.
+   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used by the srcRect parameter.
   DrawImage(self: Graphics,image: Image,x: int,y: int,srcRect: Rectangle,srcUnit: GraphicsUnit)
    Draws a portion of an image at a specified location.
   
@@ -513,48 +372,32 @@ class Graphics:
    x: The x-coordinate of the upper-left corner of the drawn image.
    y: The y-coordinate of the upper-left corner of the drawn image.
    srcRect: System.Drawing.Rectangle structure that specifies the portion of the image object to draw.
-   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure 
-    used by the srcRect parameter.
-  
+   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used by the srcRect parameter.
   DrawImage(self: Graphics,image: Image,x: Single,y: Single,srcRect: RectangleF,srcUnit: GraphicsUnit)
    Draws a portion of an image at a specified location.
   
    image: System.Drawing.Image to draw.
    x: The x-coordinate of the upper-left corner of the drawn image.
    y: The y-coordinate of the upper-left corner of the drawn image.
-   srcRect: System.Drawing.RectangleF structure that specifies the portion of the 
-    System.Drawing.Image to draw.
-  
-   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure 
-    used by the srcRect parameter.
-  
+   srcRect: System.Drawing.RectangleF structure that specifies the portion of the System.Drawing.Image to draw.
+   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used by the srcRect parameter.
   DrawImage(self: Graphics,image: Image,destPoints: Array[Point])
-   Draws the specified System.Drawing.Image at the specified location and with the specified 
-    shape and size.
-  
+   Draws the specified System.Drawing.Image at the specified location and with the specified shape and size.
   
    image: System.Drawing.Image to draw.
    destPoints: Array of three System.Drawing.Point structures that define a parallelogram.
   DrawImage(self: Graphics,image: Image,destPoints: Array[PointF])
-   Draws the specified System.Drawing.Image at the specified location and with the specified 
-    shape and size.
-  
+   Draws the specified System.Drawing.Image at the specified location and with the specified shape and size.
   
    image: System.Drawing.Image to draw.
    destPoints: Array of three System.Drawing.PointF structures that define a parallelogram.
   DrawImage(self: Graphics,image: Image,point: Point)
-   Draws the specified System.Drawing.Image,using its original physical size,at the 
-    specified location.
-  
+   Draws the specified System.Drawing.Image,using its original physical size,at the specified location.
   
    image: System.Drawing.Image to draw.
-   point: System.Drawing.Point structure that represents the location of the upper-left corner of 
-    the drawn image.
-  
+   point: System.Drawing.Point structure that represents the location of the upper-left corner of the drawn image.
   DrawImage(self: Graphics,image: Image,x: Single,y: Single,width: Single,height: Single)
-   Draws the specified System.Drawing.Image at the specified location and with the specified 
-    size.
-  
+   Draws the specified System.Drawing.Image at the specified location and with the specified size.
   
    image: System.Drawing.Image to draw.
    x: The x-coordinate of the upper-left corner of the drawn image.
@@ -562,65 +405,41 @@ class Graphics:
    width: Width of the drawn image.
    height: Height of the drawn image.
   DrawImage(self: Graphics,image: Image,rect: RectangleF)
-   Draws the specified System.Drawing.Image at the specified location and with the specified 
-    size.
-  
+   Draws the specified System.Drawing.Image at the specified location and with the specified size.
   
    image: System.Drawing.Image to draw.
-   rect: System.Drawing.RectangleF structure that specifies the location and size of the drawn 
-    image.
-  
+   rect: System.Drawing.RectangleF structure that specifies the location and size of the drawn image.
   DrawImage(self: Graphics,image: Image,x: Single,y: Single)
-   Draws the specified System.Drawing.Image,using its original physical size,at the 
-    specified location.
-  
+   Draws the specified System.Drawing.Image,using its original physical size,at the specified location.
   
    image: System.Drawing.Image to draw.
    x: The x-coordinate of the upper-left corner of the drawn image.
    y: The y-coordinate of the upper-left corner of the drawn image.
   DrawImage(self: Graphics,image: Image,point: PointF)
-   Draws the specified System.Drawing.Image,using its original physical size,at the 
-    specified location.
-  
+   Draws the specified System.Drawing.Image,using its original physical size,at the specified location.
   
    image: System.Drawing.Image to draw.
    point: System.Drawing.PointF structure that represents the upper-left corner of the drawn image.
   DrawImage(self: Graphics,image: Image,destRect: Rectangle,srcX: int,srcY: int,srcWidth: int,srcHeight: int,srcUnit: GraphicsUnit,imageAttrs: ImageAttributes,callback: DrawImageAbort,callbackData: IntPtr)DrawImage(self: Graphics,image: Image,destRect: Rectangle,srcX: int,srcY: int,srcWidth: int,srcHeight: int,srcUnit: GraphicsUnit,imageAttr: ImageAttributes)
-   Draws the specified portion of the specified System.Drawing.Image at the specified 
-    location and with the specified size.
-  
+   Draws the specified portion of the specified System.Drawing.Image at the specified location and with the specified size.
   
    image: System.Drawing.Image to draw.
-   destRect: System.Drawing.Rectangle structure that specifies the location and size of the drawn 
-    image. The image is scaled to fit the rectangle.
-  
+   destRect: System.Drawing.Rectangle structure that specifies the location and size of the drawn image. The image is scaled to fit the rectangle.
    srcX: The x-coordinate of the upper-left corner of the portion of the source image to draw.
    srcY: The y-coordinate of the upper-left corner of the portion of the source image to draw.
    srcWidth: Width of the portion of the source image to draw.
    srcHeight: Height of the portion of the source image to draw.
-   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure 
-    used to determine the source rectangle.
-  
-   imageAttr: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma information 
-    for the image object.
-  
+   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used to determine the source rectangle.
+   imageAttr: System.Drawing.Imaging.ImageAttributes that specifies recoloring and gamma information for the image object.
   DrawImage(self: Graphics,image: Image,destRect: Rectangle,srcRect: Rectangle,srcUnit: GraphicsUnit)
-   Draws the specified portion of the specified System.Drawing.Image at the specified 
-    location and with the specified size.
-  
+   Draws the specified portion of the specified System.Drawing.Image at the specified location and with the specified size.
   
    image: System.Drawing.Image to draw.
-   destRect: System.Drawing.Rectangle structure that specifies the location and size of the drawn 
-    image. The image is scaled to fit the rectangle.
-  
+   destRect: System.Drawing.Rectangle structure that specifies the location and size of the drawn image. The image is scaled to fit the rectangle.
    srcRect: System.Drawing.Rectangle structure that specifies the portion of the image object to draw.
-   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure 
-    used by the srcRect parameter.
-  
+   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used by the srcRect parameter.
   DrawImage(self: Graphics,image: Image,x: int,y: int,width: int,height: int)
-   Draws the specified System.Drawing.Image at the specified location and with the specified 
-    size.
-  
+   Draws the specified System.Drawing.Image at the specified location and with the specified size.
   
    image: System.Drawing.Image to draw.
    x: The x-coordinate of the upper-left corner of the drawn image.
@@ -628,30 +447,20 @@ class Graphics:
    width: Width of the drawn image.
    height: Height of the drawn image.
   DrawImage(self: Graphics,image: Image,rect: Rectangle)
-   Draws the specified System.Drawing.Image at the specified location and with the specified 
-    size.
-  
+   Draws the specified System.Drawing.Image at the specified location and with the specified size.
   
    image: System.Drawing.Image to draw.
-   rect: System.Drawing.Rectangle structure that specifies the location and size of the drawn 
-    image.
-  
+   rect: System.Drawing.Rectangle structure that specifies the location and size of the drawn image.
   DrawImage(self: Graphics,image: Image,destRect: Rectangle,srcX: int,srcY: int,srcWidth: int,srcHeight: int,srcUnit: GraphicsUnit)
-   Draws the specified portion of the specified System.Drawing.Image at the specified 
-    location and with the specified size.
-  
+   Draws the specified portion of the specified System.Drawing.Image at the specified location and with the specified size.
   
    image: System.Drawing.Image to draw.
-   destRect: System.Drawing.Rectangle structure that specifies the location and size of the drawn 
-    image. The image is scaled to fit the rectangle.
-  
+   destRect: System.Drawing.Rectangle structure that specifies the location and size of the drawn image. The image is scaled to fit the rectangle.
    srcX: The x-coordinate of the upper-left corner of the portion of the source image to draw.
    srcY: The y-coordinate of the upper-left corner of the portion of the source image to draw.
    srcWidth: Width of the portion of the source image to draw.
    srcHeight: Height of the portion of the source image to draw.
-   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure 
-    used to determine the source rectangle.
-  
+   srcUnit: Member of the System.Drawing.GraphicsUnit enumeration that specifies the units of measure used to determine the source rectangle.
   DrawImage(self: Graphics,image: Image,destRect: Rectangle,srcX: int,srcY: int,srcWidth: int,srcHeight: int,srcUnit: GraphicsUnit,imageAttr: ImageAttributes,callback: DrawImageAbort)
   """
   pass
@@ -663,9 +472,7 @@ class Graphics:
    image: System.Drawing.Image to draw.
    point: System.Drawing.Point structure that specifies the upper-left corner of the drawn image.
   DrawImageUnscaled(self: Graphics,image: Image,x: int,y: int)
-   Draws the specified image using its original physical size at the location specified by a 
-    coordinate pair.
-  
+   Draws the specified image using its original physical size at the location specified by a coordinate pair.
   
    image: System.Drawing.Image to draw.
    x: The x-coordinate of the upper-left corner of the drawn image.
@@ -674,10 +481,7 @@ class Graphics:
    Draws a specified image using its original physical size at a specified location.
   
    image: System.Drawing.Image to draw.
-   rect: System.Drawing.Rectangle that specifies the upper-left corner of the drawn image. The X 
-    and Y properties of the rectangle specify the upper-left corner. The Width and Height 
-    properties are ignored.
-  
+   rect: System.Drawing.Rectangle that specifies the upper-left corner of the drawn image. The X and Y properties of the rectangle specify the upper-left corner. The Width and Height properties are ignored.
   DrawImageUnscaled(self: Graphics,image: Image,x: int,y: int,width: int,height: int)
    Draws a specified image using its original physical size at a specified location.
   
@@ -691,9 +495,7 @@ class Graphics:
  def DrawImageUnscaledAndClipped(self,image,rect):
   """
   DrawImageUnscaledAndClipped(self: Graphics,image: Image,rect: Rectangle)
-   Draws the specified image without scaling and clips it,if necessary,to fit in the 
-    specified rectangle.
-  
+   Draws the specified image without scaling and clips it,if necessary,to fit in the specified rectangle.
   
    image: The System.Drawing.Image to draw.
    rect: The System.Drawing.Rectangle in which to draw the image.
@@ -757,66 +559,39 @@ class Graphics:
  def DrawPie(self,pen,*__args):
   """
   DrawPie(self: Graphics,pen: Pen,rect: RectangleF,startAngle: Single,sweepAngle: Single)
-   Draws a pie shape defined by an ellipse specified by a System.Drawing.RectangleF 
-    structure and two radial lines.
-  
+   Draws a pie shape defined by an ellipse specified by a System.Drawing.RectangleF structure and two radial lines.
   
    pen: System.Drawing.Pen that determines the color,width,and style of the pie shape.
-   rect: System.Drawing.RectangleF structure that represents the bounding rectangle that defines 
-    the ellipse from which the pie shape comes.
-  
+   rect: System.Drawing.RectangleF structure that represents the bounding rectangle that defines the ellipse from which the pie shape comes.
    startAngle: Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.
-   sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second side of 
-    the pie shape.
-  
+   sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie shape.
   DrawPie(self: Graphics,pen: Pen,x: Single,y: Single,width: Single,height: Single,startAngle: Single,sweepAngle: Single)
-   Draws a pie shape defined by an ellipse specified by a coordinate pair,a width,a 
-    height,and two radial lines.
-  
+   Draws a pie shape defined by an ellipse specified by a coordinate pair,a width,a height,and two radial lines.
   
    pen: System.Drawing.Pen that determines the color,width,and style of the pie shape.
-   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse from which the pie shape comes.
-  
-   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse from which the pie shape comes.
-  
+   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes.
+   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes.
    width: Width of the bounding rectangle that defines the ellipse from which the pie shape comes.
    height: Height of the bounding rectangle that defines the ellipse from which the pie shape comes.
    startAngle: Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.
-   sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second side of 
-    the pie shape.
-  
+   sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie shape.
   DrawPie(self: Graphics,pen: Pen,rect: Rectangle,startAngle: Single,sweepAngle: Single)
-   Draws a pie shape defined by an ellipse specified by a System.Drawing.Rectangle structure 
-    and two radial lines.
-  
+   Draws a pie shape defined by an ellipse specified by a System.Drawing.Rectangle structure and two radial lines.
   
    pen: System.Drawing.Pen that determines the color,width,and style of the pie shape.
-   rect: System.Drawing.Rectangle structure that represents the bounding rectangle that defines 
-    the ellipse from which the pie shape comes.
-  
+   rect: System.Drawing.Rectangle structure that represents the bounding rectangle that defines the ellipse from which the pie shape comes.
    startAngle: Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.
-   sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second side of 
-    the pie shape.
-  
+   sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie shape.
   DrawPie(self: Graphics,pen: Pen,x: int,y: int,width: int,height: int,startAngle: int,sweepAngle: int)
-   Draws a pie shape defined by an ellipse specified by a coordinate pair,a width,a 
-    height,and two radial lines.
-  
+   Draws a pie shape defined by an ellipse specified by a coordinate pair,a width,a height,and two radial lines.
   
    pen: System.Drawing.Pen that determines the color,width,and style of the pie shape.
-   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse from which the pie shape comes.
-  
-   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse from which the pie shape comes.
-  
+   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes.
+   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes.
    width: Width of the bounding rectangle that defines the ellipse from which the pie shape comes.
    height: Height of the bounding rectangle that defines the ellipse from which the pie shape comes.
    startAngle: Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.
-   sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second side of 
-    the pie shape.
+   sweepAngle: Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie shape.
   """
   pass
  def DrawPolygon(self,pen,points):
@@ -863,25 +638,19 @@ class Graphics:
   DrawRectangles(self: Graphics,pen: Pen,rects: Array[RectangleF])
    Draws a series of rectangles specified by System.Drawing.RectangleF structures.
   
-   pen: System.Drawing.Pen that determines the color,width,and style of the outlines of the 
-    rectangles.
-  
+   pen: System.Drawing.Pen that determines the color,width,and style of the outlines of the rectangles.
    rects: Array of System.Drawing.RectangleF structures that represent the rectangles to draw.
   DrawRectangles(self: Graphics,pen: Pen,rects: Array[Rectangle])
    Draws a series of rectangles specified by System.Drawing.Rectangle structures.
   
-   pen: System.Drawing.Pen that determines the color,width,and style of the outlines of the 
-    rectangles.
-  
+   pen: System.Drawing.Pen that determines the color,width,and style of the outlines of the rectangles.
    rects: Array of System.Drawing.Rectangle structures that represent the rectangles to draw.
   """
   pass
  def DrawString(self,s,font,brush,*__args):
   """
   DrawString(self: Graphics,s: str,font: Font,brush: Brush,x: Single,y: Single)
-   Draws the specified text string at the specified location with the specified 
-    System.Drawing.Brush and System.Drawing.Font objects.
-  
+   Draws the specified text string at the specified location with the specified System.Drawing.Brush and System.Drawing.Font objects.
   
    s: String to draw.
    font: System.Drawing.Font that defines the text format of the string.
@@ -889,74 +658,52 @@ class Graphics:
    x: The x-coordinate of the upper-left corner of the drawn text.
    y: The y-coordinate of the upper-left corner of the drawn text.
   DrawString(self: Graphics,s: str,font: Font,brush: Brush,layoutRectangle: RectangleF)
-   Draws the specified text string in the specified rectangle with the specified 
-    System.Drawing.Brush and System.Drawing.Font objects.
-  
+   Draws the specified text string in the specified rectangle with the specified System.Drawing.Brush and System.Drawing.Font objects.
   
    s: String to draw.
    font: System.Drawing.Font that defines the text format of the string.
    brush: System.Drawing.Brush that determines the color and texture of the drawn text.
    layoutRectangle: System.Drawing.RectangleF structure that specifies the location of the drawn text.
   DrawString(self: Graphics,s: str,font: Font,brush: Brush,layoutRectangle: RectangleF,format: StringFormat)
-   Draws the specified text string in the specified rectangle with the specified 
-    System.Drawing.Brush and System.Drawing.Font objects using the formatting attributes of 
-    the specified System.Drawing.StringFormat.
-  
+   Draws the specified text string in the specified rectangle with the specified System.Drawing.Brush and System.Drawing.Font objects using the formatting attributes of the specified System.Drawing.StringFormat.
   
    s: String to draw.
    font: System.Drawing.Font that defines the text format of the string.
    brush: System.Drawing.Brush that determines the color and texture of the drawn text.
    layoutRectangle: System.Drawing.RectangleF structure that specifies the location of the drawn text.
-   format: System.Drawing.StringFormat that specifies formatting attributes,such as line spacing 
-    and alignment,that are applied to the drawn text.
-  
+   format: System.Drawing.StringFormat that specifies formatting attributes,such as line spacing and alignment,that are applied to the drawn text.
   DrawString(self: Graphics,s: str,font: Font,brush: Brush,point: PointF)
-   Draws the specified text string at the specified location with the specified 
-    System.Drawing.Brush and System.Drawing.Font objects.
-  
+   Draws the specified text string at the specified location with the specified System.Drawing.Brush and System.Drawing.Font objects.
   
    s: String to draw.
    font: System.Drawing.Font that defines the text format of the string.
    brush: System.Drawing.Brush that determines the color and texture of the drawn text.
    point: System.Drawing.PointF structure that specifies the upper-left corner of the drawn text.
   DrawString(self: Graphics,s: str,font: Font,brush: Brush,x: Single,y: Single,format: StringFormat)
-   Draws the specified text string at the specified location with the specified 
-    System.Drawing.Brush and System.Drawing.Font objects using the formatting attributes of 
-    the specified System.Drawing.StringFormat.
-  
+   Draws the specified text string at the specified location with the specified System.Drawing.Brush and System.Drawing.Font objects using the formatting attributes of the specified System.Drawing.StringFormat.
   
    s: String to draw.
    font: System.Drawing.Font that defines the text format of the string.
    brush: System.Drawing.Brush that determines the color and texture of the drawn text.
    x: The x-coordinate of the upper-left corner of the drawn text.
    y: The y-coordinate of the upper-left corner of the drawn text.
-   format: System.Drawing.StringFormat that specifies formatting attributes,such as line spacing 
-    and alignment,that are applied to the drawn text.
-  
+   format: System.Drawing.StringFormat that specifies formatting attributes,such as line spacing and alignment,that are applied to the drawn text.
   DrawString(self: Graphics,s: str,font: Font,brush: Brush,point: PointF,format: StringFormat)
-   Draws the specified text string at the specified location with the specified 
-    System.Drawing.Brush and System.Drawing.Font objects using the formatting attributes of 
-    the specified System.Drawing.StringFormat.
-  
+   Draws the specified text string at the specified location with the specified System.Drawing.Brush and System.Drawing.Font objects using the formatting attributes of the specified System.Drawing.StringFormat.
   
    s: String to draw.
    font: System.Drawing.Font that defines the text format of the string.
    brush: System.Drawing.Brush that determines the color and texture of the drawn text.
    point: System.Drawing.PointF structure that specifies the upper-left corner of the drawn text.
-   format: System.Drawing.StringFormat that specifies formatting attributes,such as line spacing 
-    and alignment,that are applied to the drawn text.
+   format: System.Drawing.StringFormat that specifies formatting attributes,such as line spacing and alignment,that are applied to the drawn text.
   """
   pass
  def EndContainer(self,container):
   """
   EndContainer(self: Graphics,container: GraphicsContainer)
-   Closes the current graphics container and restores the state of this 
-    System.Drawing.Graphics to the state saved by a call to the 
-    System.Drawing.Graphics.BeginContainer method.
+   Closes the current graphics container and restores the state of this System.Drawing.Graphics to the state saved by a call to the System.Drawing.Graphics.BeginContainer method.
   
-  
-   container: System.Drawing.Drawing2D.GraphicsContainer that represents the container this method 
-    restores.
+   container: System.Drawing.Drawing2D.GraphicsContainer that represents the container this method restores.
   """
   pass
  def EnumerateMetafile(self,metafile,*__args):
@@ -965,126 +712,81 @@ class Graphics:
  def ExcludeClip(self,*__args):
   """
   ExcludeClip(self: Graphics,region: Region)
-   Updates the clip region of this System.Drawing.Graphics to exclude the area specified by 
-    a System.Drawing.Region.
-  
+   Updates the clip region of this System.Drawing.Graphics to exclude the area specified by a System.Drawing.Region.
   
    region: System.Drawing.Region that specifies the region to exclude from the clip region.
   ExcludeClip(self: Graphics,rect: Rectangle)
-   Updates the clip region of this System.Drawing.Graphics to exclude the area specified by 
-    a System.Drawing.Rectangle structure.
+   Updates the clip region of this System.Drawing.Graphics to exclude the area specified by a System.Drawing.Rectangle structure.
   
-  
-   rect: System.Drawing.Rectangle structure that specifies the rectangle to exclude from the clip 
-    region.
+   rect: System.Drawing.Rectangle structure that specifies the rectangle to exclude from the clip region.
   """
   pass
  def FillClosedCurve(self,brush,points,fillmode=None,tension=None):
   """
   FillClosedCurve(self: Graphics,brush: Brush,points: Array[PointF])
-   Fills the interior of a closed cardinal spline curve defined by an array of 
-    System.Drawing.PointF structures.
-  
+   Fills the interior of a closed cardinal spline curve defined by an array of System.Drawing.PointF structures.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
    points: Array of System.Drawing.PointF structures that define the spline.
   FillClosedCurve(self: Graphics,brush: Brush,points: Array[PointF],fillmode: FillMode)
-   Fills the interior of a closed cardinal spline curve defined by an array of 
-    System.Drawing.PointF structures using the specified fill mode.
-  
+   Fills the interior of a closed cardinal spline curve defined by an array of System.Drawing.PointF structures using the specified fill mode.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
    points: Array of System.Drawing.PointF structures that define the spline.
-   fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve 
-    is filled.
-  
+   fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve is filled.
   FillClosedCurve(self: Graphics,brush: Brush,points: Array[PointF],fillmode: FillMode,tension: Single)
-   Fills the interior of a closed cardinal spline curve defined by an array of 
-    System.Drawing.PointF structures using the specified fill mode and tension.
-  
+   Fills the interior of a closed cardinal spline curve defined by an array of System.Drawing.PointF structures using the specified fill mode and tension.
   
    brush: A System.Drawing.Brush that determines the characteristics of the fill.
    points: Array of System.Drawing.PointF structures that define the spline.
-   fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve 
-    is filled.
-  
+   fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve is filled.
    tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
   FillClosedCurve(self: Graphics,brush: Brush,points: Array[Point])
-   Fills the interior of a closed cardinal spline curve defined by an array of 
-    System.Drawing.Point structures.
-  
+   Fills the interior of a closed cardinal spline curve defined by an array of System.Drawing.Point structures.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
    points: Array of System.Drawing.Point structures that define the spline.
   FillClosedCurve(self: Graphics,brush: Brush,points: Array[Point],fillmode: FillMode)
-   Fills the interior of a closed cardinal spline curve defined by an array of 
-    System.Drawing.Point structures using the specified fill mode.
-  
+   Fills the interior of a closed cardinal spline curve defined by an array of System.Drawing.Point structures using the specified fill mode.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
    points: Array of System.Drawing.Point structures that define the spline.
-   fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve 
-    is filled.
-  
+   fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve is filled.
   FillClosedCurve(self: Graphics,brush: Brush,points: Array[Point],fillmode: FillMode,tension: Single)
-   Fills the interior of a closed cardinal spline curve defined by an array of 
-    System.Drawing.Point structures using the specified fill mode and tension.
-  
+   Fills the interior of a closed cardinal spline curve defined by an array of System.Drawing.Point structures using the specified fill mode and tension.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
    points: Array of System.Drawing.Point structures that define the spline.
-   fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve 
-    is filled.
-  
+   fillmode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines how the curve is filled.
    tension: Value greater than or equal to 0.0F that specifies the tension of the curve.
   """
   pass
  def FillEllipse(self,brush,*__args):
   """
   FillEllipse(self: Graphics,brush: Brush,x: Single,y: Single,width: Single,height: Single)
-   Fills the interior of an ellipse defined by a bounding rectangle specified by a pair of 
-    coordinates,a width,and a height.
-  
+   Fills the interior of an ellipse defined by a bounding rectangle specified by a pair of coordinates,a width,and a height.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
-   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse.
-  
-   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse.
-  
+   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
+   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
    width: Width of the bounding rectangle that defines the ellipse.
    height: Height of the bounding rectangle that defines the ellipse.
   FillEllipse(self: Graphics,brush: Brush,rect: RectangleF)
-   Fills the interior of an ellipse defined by a bounding rectangle specified by a 
-    System.Drawing.RectangleF structure.
-  
+   Fills the interior of an ellipse defined by a bounding rectangle specified by a System.Drawing.RectangleF structure.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
-   rect: System.Drawing.RectangleF structure that represents the bounding rectangle that defines 
-    the ellipse.
-  
+   rect: System.Drawing.RectangleF structure that represents the bounding rectangle that defines the ellipse.
   FillEllipse(self: Graphics,brush: Brush,rect: Rectangle)
-   Fills the interior of an ellipse defined by a bounding rectangle specified by a 
-    System.Drawing.Rectangle structure.
-  
+   Fills the interior of an ellipse defined by a bounding rectangle specified by a System.Drawing.Rectangle structure.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
-   rect: System.Drawing.Rectangle structure that represents the bounding rectangle that defines 
-    the ellipse.
-  
+   rect: System.Drawing.Rectangle structure that represents the bounding rectangle that defines the ellipse.
   FillEllipse(self: Graphics,brush: Brush,x: int,y: int,width: int,height: int)
-   Fills the interior of an ellipse defined by a bounding rectangle specified by a pair of 
-    coordinates,a width,and a height.
-  
+   Fills the interior of an ellipse defined by a bounding rectangle specified by a pair of coordinates,a width,and a height.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
-   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse.
-  
-   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse.
-  
+   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
+   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
    width: Width of the bounding rectangle that defines the ellipse.
    height: Height of the bounding rectangle that defines the ellipse.
   """
@@ -1101,110 +803,64 @@ class Graphics:
  def FillPie(self,brush,*__args):
   """
   FillPie(self: Graphics,brush: Brush,rect: Rectangle,startAngle: Single,sweepAngle: Single)
-   Fills the interior of a pie section defined by an ellipse specified by a 
-    System.Drawing.RectangleF structure and two radial lines.
-  
+   Fills the interior of a pie section defined by an ellipse specified by a System.Drawing.RectangleF structure and two radial lines.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
-   rect: System.Drawing.Rectangle structure that represents the bounding rectangle that defines 
-    the ellipse from which the pie section comes.
-  
+   rect: System.Drawing.Rectangle structure that represents the bounding rectangle that defines the ellipse from which the pie section comes.
    startAngle: Angle in degrees measured clockwise from the x-axis to the first side of the pie section.
-   sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to the second side of 
-    the pie section.
-  
+   sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to the second side of the pie section.
   FillPie(self: Graphics,brush: Brush,x: Single,y: Single,width: Single,height: Single,startAngle: Single,sweepAngle: Single)
-   Fills the interior of a pie section defined by an ellipse specified by a pair of 
-    coordinates,a width,a height,and two radial lines.
-  
+   Fills the interior of a pie section defined by an ellipse specified by a pair of coordinates,a width,a height,and two radial lines.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
-   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse from which the pie section comes.
-  
-   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse from which the pie section comes.
-  
+   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie section comes.
+   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie section comes.
    width: Width of the bounding rectangle that defines the ellipse from which the pie section comes.
-   height: Height of the bounding rectangle that defines the ellipse from which the pie section 
-    comes.
-  
+   height: Height of the bounding rectangle that defines the ellipse from which the pie section comes.
    startAngle: Angle in degrees measured clockwise from the x-axis to the first side of the pie section.
-   sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to the second side of 
-    the pie section.
-  
+   sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to the second side of the pie section.
   FillPie(self: Graphics,brush: Brush,x: int,y: int,width: int,height: int,startAngle: int,sweepAngle: int)
-   Fills the interior of a pie section defined by an ellipse specified by a pair of 
-    coordinates,a width,a height,and two radial lines.
-  
+   Fills the interior of a pie section defined by an ellipse specified by a pair of coordinates,a width,a height,and two radial lines.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
-   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse from which the pie section comes.
-  
-   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the 
-    ellipse from which the pie section comes.
-  
+   x: The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie section comes.
+   y: The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie section comes.
    width: Width of the bounding rectangle that defines the ellipse from which the pie section comes.
-   height: Height of the bounding rectangle that defines the ellipse from which the pie section 
-    comes.
-  
+   height: Height of the bounding rectangle that defines the ellipse from which the pie section comes.
    startAngle: Angle in degrees measured clockwise from the x-axis to the first side of the pie section.
-   sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to the second side of 
-    the pie section.
+   sweepAngle: Angle in degrees measured clockwise from the startAngle parameter to the second side of the pie section.
   """
   pass
  def FillPolygon(self,brush,points,fillMode=None):
   """
   FillPolygon(self: Graphics,brush: Brush,points: Array[Point])
-   Fills the interior of a polygon defined by an array of points specified by 
-    System.Drawing.Point structures.
-  
+   Fills the interior of a polygon defined by an array of points specified by System.Drawing.Point structures.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
-   points: Array of System.Drawing.Point structures that represent the vertices of the polygon to 
-    fill.
-  
+   points: Array of System.Drawing.Point structures that represent the vertices of the polygon to fill.
   FillPolygon(self: Graphics,brush: Brush,points: Array[PointF])
-   Fills the interior of a polygon defined by an array of points specified by 
-    System.Drawing.PointF structures.
-  
+   Fills the interior of a polygon defined by an array of points specified by System.Drawing.PointF structures.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
-   points: Array of System.Drawing.PointF structures that represent the vertices of the polygon to 
-    fill.
-  
+   points: Array of System.Drawing.PointF structures that represent the vertices of the polygon to fill.
   FillPolygon(self: Graphics,brush: Brush,points: Array[PointF],fillMode: FillMode)
-   Fills the interior of a polygon defined by an array of points specified by 
-    System.Drawing.PointF structures using the specified fill mode.
-  
+   Fills the interior of a polygon defined by an array of points specified by System.Drawing.PointF structures using the specified fill mode.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
-   points: Array of System.Drawing.PointF structures that represent the vertices of the polygon to 
-    fill.
-  
-   fillMode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines the style of 
-    the fill.
-  
+   points: Array of System.Drawing.PointF structures that represent the vertices of the polygon to fill.
+   fillMode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines the style of the fill.
   FillPolygon(self: Graphics,brush: Brush,points: Array[Point],fillMode: FillMode)
-   Fills the interior of a polygon defined by an array of points specified by 
-    System.Drawing.Point structures using the specified fill mode.
-  
+   Fills the interior of a polygon defined by an array of points specified by System.Drawing.Point structures using the specified fill mode.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
-   points: Array of System.Drawing.Point structures that represent the vertices of the polygon to 
-    fill.
-  
-   fillMode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines the style of 
-    the fill.
+   points: Array of System.Drawing.Point structures that represent the vertices of the polygon to fill.
+   fillMode: Member of the System.Drawing.Drawing2D.FillMode enumeration that determines the style of the fill.
   """
   pass
  def FillRectangle(self,brush,*__args):
   """
   FillRectangle(self: Graphics,brush: Brush,x: Single,y: Single,width: Single,height: Single)
-   Fills the interior of a rectangle specified by a pair of coordinates,a width,and a 
-    height.
-  
+   Fills the interior of a rectangle specified by a pair of coordinates,a width,and a height.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
    x: The x-coordinate of the upper-left corner of the rectangle to fill.
@@ -1217,9 +873,7 @@ class Graphics:
    brush: System.Drawing.Brush that determines the characteristics of the fill.
    rect: System.Drawing.Rectangle structure that represents the rectangle to fill.
   FillRectangle(self: Graphics,brush: Brush,x: int,y: int,width: int,height: int)
-   Fills the interior of a rectangle specified by a pair of coordinates,a width,and a 
-    height.
-  
+   Fills the interior of a rectangle specified by a pair of coordinates,a width,and a height.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
    x: The x-coordinate of the upper-left corner of the rectangle to fill.
@@ -1236,16 +890,12 @@ class Graphics:
  def FillRectangles(self,brush,rects):
   """
   FillRectangles(self: Graphics,brush: Brush,rects: Array[Rectangle])
-   Fills the interiors of a series of rectangles specified by System.Drawing.Rectangle 
-    structures.
-  
+   Fills the interiors of a series of rectangles specified by System.Drawing.Rectangle structures.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
    rects: Array of System.Drawing.Rectangle structures that represent the rectangles to fill.
   FillRectangles(self: Graphics,brush: Brush,rects: Array[RectangleF])
-   Fills the interiors of a series of rectangles specified by System.Drawing.RectangleF 
-    structures.
-  
+   Fills the interiors of a series of rectangles specified by System.Drawing.RectangleF structures.
   
    brush: System.Drawing.Brush that determines the characteristics of the fill.
    rects: Array of System.Drawing.RectangleF structures that represent the rectangles to fill.
@@ -1263,16 +913,11 @@ class Graphics:
  def Flush(self,intention=None):
   """
   Flush(self: Graphics)
-   Forces execution of all pending graphics operations and returns immediately without 
-    waiting for the operations to finish.
-  
+   Forces execution of all pending graphics operations and returns immediately without waiting for the operations to finish.
   Flush(self: Graphics,intention: FlushIntention)
-   Forces execution of all pending graphics operations with the method waiting or not 
-    waiting,as specified,to return before the operations finish.
+   Forces execution of all pending graphics operations with the method waiting or not waiting,as specified,to return before the operations finish.
   
-  
-   intention: Member of the System.Drawing.Drawing2D.FlushIntention enumeration that specifies whether 
-    the method returns immediately or waits for any existing operations to finish.
+   intention: Member of the System.Drawing.Drawing2D.FlushIntention enumeration that specifies whether the method returns immediately or waits for any existing operations to finish.
   """
   pass
  @staticmethod
@@ -1286,14 +931,11 @@ class Graphics:
    Returns: This method returns a new System.Drawing.Graphics for the specified device context.
   FromHdc(hdc: IntPtr,hdevice: IntPtr) -> Graphics
   
-   Creates a new System.Drawing.Graphics from the specified handle to a device context and 
-    handle to a device.
-  
+   Creates a new System.Drawing.Graphics from the specified handle to a device context and handle to a device.
   
    hdc: Handle to a device context.
    hdevice: Handle to a device.
-   Returns: This method returns a new System.Drawing.Graphics for the specified device context and 
-    device.
+   Returns: This method returns a new System.Drawing.Graphics for the specified device context and device.
   """
   pass
  @staticmethod
@@ -1372,28 +1014,21 @@ class Graphics:
    Gets the nearest color to the specified System.Drawing.Color structure.
   
    color: System.Drawing.Color structure for which to find a match.
-   Returns: A System.Drawing.Color structure that represents the nearest color to the one specified 
-    with the color parameter.
+   Returns: A System.Drawing.Color structure that represents the nearest color to the one specified with the color parameter.
   """
   pass
  def IntersectClip(self,*__args):
   """
   IntersectClip(self: Graphics,rect: Rectangle)
-   Updates the clip region of this System.Drawing.Graphics to the intersection of the 
-    current clip region and the specified System.Drawing.Rectangle structure.
-  
+   Updates the clip region of this System.Drawing.Graphics to the intersection of the current clip region and the specified System.Drawing.Rectangle structure.
   
    rect: System.Drawing.Rectangle structure to intersect with the current clip region.
   IntersectClip(self: Graphics,rect: RectangleF)
-   Updates the clip region of this System.Drawing.Graphics to the intersection of the 
-    current clip region and the specified System.Drawing.RectangleF structure.
-  
+   Updates the clip region of this System.Drawing.Graphics to the intersection of the current clip region and the specified System.Drawing.RectangleF structure.
   
    rect: System.Drawing.RectangleF structure to intersect with the current clip region.
   IntersectClip(self: Graphics,region: Region)
-   Updates the clip region of this System.Drawing.Graphics to the intersection of the 
-    current clip region and the specified System.Drawing.Region.
-  
+   Updates the clip region of this System.Drawing.Graphics to the intersection of the current clip region and the specified System.Drawing.Region.
   
    region: System.Drawing.Region to intersect with the current region.
   """
@@ -1402,200 +1037,128 @@ class Graphics:
   """
   IsVisible(self: Graphics,rect: Rectangle) -> bool
   
-   Indicates whether the rectangle specified by a System.Drawing.Rectangle structure is 
-    contained within the visible clip region of this System.Drawing.Graphics.
-  
+   Indicates whether the rectangle specified by a System.Drawing.Rectangle structure is contained within the visible clip region of this System.Drawing.Graphics.
   
    rect: System.Drawing.Rectangle structure to test for visibility.
-   Returns: true if the rectangle specified by the rect parameter is contained within the visible 
-    clip region of this System.Drawing.Graphics; otherwise,false.
-  
+   Returns: true if the rectangle specified by the rect parameter is contained within the visible clip region of this System.Drawing.Graphics; otherwise,false.
   IsVisible(self: Graphics,x: int,y: int) -> bool
   
-   Indicates whether the point specified by a pair of coordinates is contained within the 
-    visible clip region of this System.Drawing.Graphics.
-  
+   Indicates whether the point specified by a pair of coordinates is contained within the visible clip region of this System.Drawing.Graphics.
   
    x: The x-coordinate of the point to test for visibility.
    y: The y-coordinate of the point to test for visibility.
-   Returns: true if the point defined by the x and y parameters is contained within the visible clip 
-    region of this System.Drawing.Graphics; otherwise,false.
-  
+   Returns: true if the point defined by the x and y parameters is contained within the visible clip region of this System.Drawing.Graphics; otherwise,false.
   IsVisible(self: Graphics,point: Point) -> bool
   
-   Indicates whether the specified System.Drawing.Point structure is contained within the 
-    visible clip region of this System.Drawing.Graphics.
-  
+   Indicates whether the specified System.Drawing.Point structure is contained within the visible clip region of this System.Drawing.Graphics.
   
    point: System.Drawing.Point structure to test for visibility.
-   Returns: true if the point specified by the point parameter is contained within the visible clip 
-    region of this System.Drawing.Graphics; otherwise,false.
-  
+   Returns: true if the point specified by the point parameter is contained within the visible clip region of this System.Drawing.Graphics; otherwise,false.
   IsVisible(self: Graphics,x: Single,y: Single) -> bool
   
-   Indicates whether the point specified by a pair of coordinates is contained within the 
-    visible clip region of this System.Drawing.Graphics.
-  
+   Indicates whether the point specified by a pair of coordinates is contained within the visible clip region of this System.Drawing.Graphics.
   
    x: The x-coordinate of the point to test for visibility.
    y: The y-coordinate of the point to test for visibility.
-   Returns: true if the point defined by the x and y parameters is contained within the visible clip 
-    region of this System.Drawing.Graphics; otherwise,false.
-  
+   Returns: true if the point defined by the x and y parameters is contained within the visible clip region of this System.Drawing.Graphics; otherwise,false.
   IsVisible(self: Graphics,point: PointF) -> bool
   
-   Indicates whether the specified System.Drawing.PointF structure is contained within the 
-    visible clip region of this System.Drawing.Graphics.
-  
+   Indicates whether the specified System.Drawing.PointF structure is contained within the visible clip region of this System.Drawing.Graphics.
   
    point: System.Drawing.PointF structure to test for visibility.
-   Returns: true if the point specified by the point parameter is contained within the visible clip 
-    region of this System.Drawing.Graphics; otherwise,false.
-  
+   Returns: true if the point specified by the point parameter is contained within the visible clip region of this System.Drawing.Graphics; otherwise,false.
   IsVisible(self: Graphics,x: int,y: int,width: int,height: int) -> bool
   
-   Indicates whether the rectangle specified by a pair of coordinates,a width,and a height 
-    is contained within the visible clip region of this System.Drawing.Graphics.
-  
+   Indicates whether the rectangle specified by a pair of coordinates,a width,and a height is contained within the visible clip region of this System.Drawing.Graphics.
   
    x: The x-coordinate of the upper-left corner of the rectangle to test for visibility.
    y: The y-coordinate of the upper-left corner of the rectangle to test for visibility.
    width: Width of the rectangle to test for visibility.
    height: Height of the rectangle to test for visibility.
-   Returns: true if the rectangle defined by the x,y,width,and height parameters is contained 
-    within the visible clip region of this System.Drawing.Graphics; otherwise,false.
-  
+   Returns: true if the rectangle defined by the x,y,width,and height parameters is contained within the visible clip region of this System.Drawing.Graphics; otherwise,false.
   IsVisible(self: Graphics,x: Single,y: Single,width: Single,height: Single) -> bool
   
-   Indicates whether the rectangle specified by a pair of coordinates,a width,and a height 
-    is contained within the visible clip region of this System.Drawing.Graphics.
-  
+   Indicates whether the rectangle specified by a pair of coordinates,a width,and a height is contained within the visible clip region of this System.Drawing.Graphics.
   
    x: The x-coordinate of the upper-left corner of the rectangle to test for visibility.
    y: The y-coordinate of the upper-left corner of the rectangle to test for visibility.
    width: Width of the rectangle to test for visibility.
    height: Height of the rectangle to test for visibility.
-   Returns: true if the rectangle defined by the x,y,width,and height parameters is contained 
-    within the visible clip region of this System.Drawing.Graphics; otherwise,false.
-  
+   Returns: true if the rectangle defined by the x,y,width,and height parameters is contained within the visible clip region of this System.Drawing.Graphics; otherwise,false.
   IsVisible(self: Graphics,rect: RectangleF) -> bool
   
-   Indicates whether the rectangle specified by a System.Drawing.RectangleF structure is 
-    contained within the visible clip region of this System.Drawing.Graphics.
-  
+   Indicates whether the rectangle specified by a System.Drawing.RectangleF structure is contained within the visible clip region of this System.Drawing.Graphics.
   
    rect: System.Drawing.RectangleF structure to test for visibility.
-   Returns: true if the rectangle specified by the rect parameter is contained within the visible 
-    clip region of this System.Drawing.Graphics; otherwise,false.
+   Returns: true if the rectangle specified by the rect parameter is contained within the visible clip region of this System.Drawing.Graphics; otherwise,false.
   """
   pass
  def MeasureCharacterRanges(self,text,font,layoutRect,stringFormat):
   """
   MeasureCharacterRanges(self: Graphics,text: str,font: Font,layoutRect: RectangleF,stringFormat: StringFormat) -> Array[Region]
   
-   Gets an array of System.Drawing.Region objects,each of which bounds a range of character 
-    positions within the specified string.
-  
+   Gets an array of System.Drawing.Region objects,each of which bounds a range of character positions within the specified string.
   
    text: String to measure.
    font: System.Drawing.Font that defines the text format of the string.
    layoutRect: System.Drawing.RectangleF structure that specifies the layout rectangle for the string.
-   stringFormat: System.Drawing.StringFormat that represents formatting information,such as line spacing,
-    for the string.
-  
-   Returns: This method returns an array of System.Drawing.Region objects,each of which bounds a 
-    range of character positions within the specified string.
+   stringFormat: System.Drawing.StringFormat that represents formatting information,such as line spacing,for the string.
+   Returns: This method returns an array of System.Drawing.Region objects,each of which bounds a range of character positions within the specified string.
   """
   pass
  def MeasureString(self,text,font,*__args):
   """
   MeasureString(self: Graphics,text: str,font: Font,layoutArea: SizeF,stringFormat: StringFormat) -> SizeF
   
-   Measures the specified string when drawn with the specified System.Drawing.Font and 
-    formatted with the specified System.Drawing.StringFormat.
-  
+   Measures the specified string when drawn with the specified System.Drawing.Font and formatted with the specified System.Drawing.StringFormat.
   
    text: String to measure.
    font: System.Drawing.Font defines the text format of the string.
    layoutArea: System.Drawing.SizeF structure that specifies the maximum layout area for the text.
-   stringFormat: System.Drawing.StringFormat that represents formatting information,such as line spacing,
-    for the string.
-  
-   Returns: This method returns a System.Drawing.SizeF structure that represents the size,in the 
-    units specified by the System.Drawing.Graphics.PageUnit property,of the string specified 
-    in the text parameter as drawn with the font parameter and the stringFormat parameter.
-  
+   stringFormat: System.Drawing.StringFormat that represents formatting information,such as line spacing,for the string.
+   Returns: This method returns a System.Drawing.SizeF structure that represents the size,in the units specified by the System.Drawing.Graphics.PageUnit property,of the string specified in the text parameter as drawn with the font parameter and the stringFormat parameter.
   MeasureString(self: Graphics,text: str,font: Font) -> SizeF
   
    Measures the specified string when drawn with the specified System.Drawing.Font.
   
    text: String to measure.
    font: System.Drawing.Font that defines the text format of the string.
-   Returns: This method returns a System.Drawing.SizeF structure that represents the size,in the 
-    units specified by the System.Drawing.Graphics.PageUnit property,of the string specified 
-    by the text parameter as drawn with the font parameter.
-  
+   Returns: This method returns a System.Drawing.SizeF structure that represents the size,in the units specified by the System.Drawing.Graphics.PageUnit property,of the string specified by the text parameter as drawn with the font parameter.
   MeasureString(self: Graphics,text: str,font: Font,width: int,format: StringFormat) -> SizeF
   
-   Measures the specified string when drawn with the specified System.Drawing.Font and 
-    formatted with the specified System.Drawing.StringFormat.
-  
+   Measures the specified string when drawn with the specified System.Drawing.Font and formatted with the specified System.Drawing.StringFormat.
   
    text: String to measure.
    font: System.Drawing.Font that defines the text format of the string.
    width: Maximum width of the string.
-   format: System.Drawing.StringFormat that represents formatting information,such as line spacing,
-    for the string.
-  
-   Returns: This method returns a System.Drawing.SizeF structure that represents the size,in the 
-    units specified by the System.Drawing.Graphics.PageUnit property,of the string specified 
-    in the text parameter as drawn with the font parameter and the stringFormat parameter.
-  
+   format: System.Drawing.StringFormat that represents formatting information,such as line spacing,for the string.
+   Returns: This method returns a System.Drawing.SizeF structure that represents the size,in the units specified by the System.Drawing.Graphics.PageUnit property,of the string specified in the text parameter as drawn with the font parameter and the stringFormat parameter.
   MeasureString(self: Graphics,text: str,font: Font,layoutArea: SizeF,stringFormat: StringFormat) -> (SizeF,int,int)
   
-   Measures the specified string when drawn with the specified System.Drawing.Font and 
-    formatted with the specified System.Drawing.StringFormat.
-  
+   Measures the specified string when drawn with the specified System.Drawing.Font and formatted with the specified System.Drawing.StringFormat.
   
    text: String to measure.
    font: System.Drawing.Font that defines the text format of the string.
    layoutArea: System.Drawing.SizeF structure that specifies the maximum layout area for the text.
-   stringFormat: System.Drawing.StringFormat that represents formatting information,such as line spacing,
-    for the string.
-  
-   Returns: This method returns a System.Drawing.SizeF structure that represents the size of the 
-    string,in the units specified by the System.Drawing.Graphics.PageUnit property,of the 
-    text parameter as drawn with the font parameter and the stringFormat parameter.
-  
+   stringFormat: System.Drawing.StringFormat that represents formatting information,such as line spacing,for the string.
+   Returns: This method returns a System.Drawing.SizeF structure that represents the size of the string,in the units specified by the System.Drawing.Graphics.PageUnit property,of the text parameter as drawn with the font parameter and the stringFormat parameter.
   MeasureString(self: Graphics,text: str,font: Font,origin: PointF,stringFormat: StringFormat) -> SizeF
   
-   Measures the specified string when drawn with the specified System.Drawing.Font and 
-    formatted with the specified System.Drawing.StringFormat.
-  
+   Measures the specified string when drawn with the specified System.Drawing.Font and formatted with the specified System.Drawing.StringFormat.
   
    text: String to measure.
    font: System.Drawing.Font defines the text format of the string.
    origin: System.Drawing.PointF structure that represents the upper-left corner of the string.
-   stringFormat: System.Drawing.StringFormat that represents formatting information,such as line spacing,
-    for the string.
-  
-   Returns: This method returns a System.Drawing.SizeF structure that represents the size,in the 
-    units specified by the System.Drawing.Graphics.PageUnit property,of the string specified 
-    by the text parameter as drawn with the font parameter and the stringFormat parameter.
-  
+   stringFormat: System.Drawing.StringFormat that represents formatting information,such as line spacing,for the string.
+   Returns: This method returns a System.Drawing.SizeF structure that represents the size,in the units specified by the System.Drawing.Graphics.PageUnit property,of the string specified by the text parameter as drawn with the font parameter and the stringFormat parameter.
   MeasureString(self: Graphics,text: str,font: Font,layoutArea: SizeF) -> SizeF
   
-   Measures the specified string when drawn with the specified System.Drawing.Font within 
-    the specified layout area.
-  
+   Measures the specified string when drawn with the specified System.Drawing.Font within the specified layout area.
   
    text: String to measure.
    font: System.Drawing.Font defines the text format of the string.
    layoutArea: System.Drawing.SizeF structure that specifies the maximum layout area for the text.
-   Returns: This method returns a System.Drawing.SizeF structure that represents the size,in the 
-    units specified by the System.Drawing.Graphics.PageUnit property,of the string specified 
-    by the text parameter as drawn with the font parameter.
-  
+   Returns: This method returns a System.Drawing.SizeF structure that represents the size,in the units specified by the System.Drawing.Graphics.PageUnit property,of the string specified by the text parameter as drawn with the font parameter.
   MeasureString(self: Graphics,text: str,font: Font,width: int) -> SizeF
   
    Measures the specified string when drawn with the specified System.Drawing.Font.
@@ -1603,9 +1166,7 @@ class Graphics:
    text: String to measure.
    font: System.Drawing.Font that defines the format of the string.
    width: Maximum width of the string in pixels.
-   Returns: This method returns a System.Drawing.SizeF structure that represents the size,in the 
-    units specified by the System.Drawing.Graphics.PageUnit property,of the string specified 
-    in the text parameter as drawn with the font parameter.
+   Returns: This method returns a System.Drawing.SizeF structure that represents the size,in the units specified by the System.Drawing.Graphics.PageUnit property,of the string specified in the text parameter as drawn with the font parameter.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -1614,12 +1175,7 @@ class Graphics:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -1630,34 +1186,24 @@ class Graphics:
  def MultiplyTransform(self,matrix,order=None):
   """
   MultiplyTransform(self: Graphics,matrix: Matrix)
-   Multiplies the world transformation of this System.Drawing.Graphics and specified the 
-    System.Drawing.Drawing2D.Matrix.
-  
+   Multiplies the world transformation of this System.Drawing.Graphics and specified the System.Drawing.Drawing2D.Matrix.
   
    matrix: 4x4 System.Drawing.Drawing2D.Matrix that multiplies the world transformation.
   MultiplyTransform(self: Graphics,matrix: Matrix,order: MatrixOrder)
-   Multiplies the world transformation of this System.Drawing.Graphics and specified the 
-    System.Drawing.Drawing2D.Matrix in the specified order.
-  
+   Multiplies the world transformation of this System.Drawing.Graphics and specified the System.Drawing.Drawing2D.Matrix in the specified order.
   
    matrix: 4x4 System.Drawing.Drawing2D.Matrix that multiplies the world transformation.
-   order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that determines the order 
-    of the multiplication.
+   order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that determines the order of the multiplication.
   """
   pass
  def ReleaseHdc(self,hdc=None):
   """
   ReleaseHdc(self: Graphics,hdc: IntPtr)
-   Releases a device context handle obtained by a previous call to the 
-    System.Drawing.Graphics.GetHdc method of this System.Drawing.Graphics.
+   Releases a device context handle obtained by a previous call to the System.Drawing.Graphics.GetHdc method of this System.Drawing.Graphics.
   
-  
-   hdc: Handle to a device context obtained by a previous call to the 
-    System.Drawing.Graphics.GetHdc method of this System.Drawing.Graphics.
-  
+   hdc: Handle to a device context obtained by a previous call to the System.Drawing.Graphics.GetHdc method of this System.Drawing.Graphics.
   ReleaseHdc(self: Graphics)
-   Releases a device context handle obtained by a previous call to the 
-    System.Drawing.Graphics.GetHdc method of this System.Drawing.Graphics.
+   Releases a device context handle obtained by a previous call to the System.Drawing.Graphics.GetHdc method of this System.Drawing.Graphics.
   """
   pass
  def ReleaseHdcInternal(self,hdc):
@@ -1677,187 +1223,123 @@ class Graphics:
  def ResetTransform(self):
   """
   ResetTransform(self: Graphics)
-   Resets the world transformation matrix of this System.Drawing.Graphics to the identity 
-    matrix.
+   Resets the world transformation matrix of this System.Drawing.Graphics to the identity matrix.
   """
   pass
  def Restore(self,gstate):
   """
   Restore(self: Graphics,gstate: GraphicsState)
-   Restores the state of this System.Drawing.Graphics to the state represented by a 
-    System.Drawing.Drawing2D.GraphicsState.
+   Restores the state of this System.Drawing.Graphics to the state represented by a System.Drawing.Drawing2D.GraphicsState.
   
-  
-   gstate: System.Drawing.Drawing2D.GraphicsState that represents the state to which to restore this 
-    System.Drawing.Graphics.
+   gstate: System.Drawing.Drawing2D.GraphicsState that represents the state to which to restore this System.Drawing.Graphics.
   """
   pass
  def RotateTransform(self,angle,order=None):
   """
   RotateTransform(self: Graphics,angle: Single)
-   Applies the specified rotation to the transformation matrix of this 
-    System.Drawing.Graphics.
-  
+   Applies the specified rotation to the transformation matrix of this System.Drawing.Graphics.
   
    angle: Angle of rotation in degrees.
   RotateTransform(self: Graphics,angle: Single,order: MatrixOrder)
-   Applies the specified rotation to the transformation matrix of this 
-    System.Drawing.Graphics in the specified order.
-  
+   Applies the specified rotation to the transformation matrix of this System.Drawing.Graphics in the specified order.
   
    angle: Angle of rotation in degrees.
-   order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether the 
-    rotation is appended or prepended to the matrix transformation.
+   order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether the rotation is appended or prepended to the matrix transformation.
   """
   pass
  def Save(self):
   """
   Save(self: Graphics) -> GraphicsState
   
-   Saves the current state of this System.Drawing.Graphics and identifies the saved state 
-    with a System.Drawing.Drawing2D.GraphicsState.
-  
-   Returns: This method returns a System.Drawing.Drawing2D.GraphicsState that represents the saved 
-    state of this System.Drawing.Graphics.
+   Saves the current state of this System.Drawing.Graphics and identifies the saved state with a System.Drawing.Drawing2D.GraphicsState.
+   Returns: This method returns a System.Drawing.Drawing2D.GraphicsState that represents the saved state of this System.Drawing.Graphics.
   """
   pass
  def ScaleTransform(self,sx,sy,order=None):
   """
   ScaleTransform(self: Graphics,sx: Single,sy: Single)
-   Applies the specified scaling operation to the transformation matrix of this 
-    System.Drawing.Graphics by prepending it to the object's transformation matrix.
-  
+   Applies the specified scaling operation to the transformation matrix of this System.Drawing.Graphics by prepending it to the object's transformation matrix.
   
    sx: Scale factor in the x direction.
    sy: Scale factor in the y direction.
   ScaleTransform(self: Graphics,sx: Single,sy: Single,order: MatrixOrder)
-   Applies the specified scaling operation to the transformation matrix of this 
-    System.Drawing.Graphics in the specified order.
-  
+   Applies the specified scaling operation to the transformation matrix of this System.Drawing.Graphics in the specified order.
   
    sx: Scale factor in the x direction.
    sy: Scale factor in the y direction.
-   order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether the 
-    scaling operation is prepended or appended to the transformation matrix.
+   order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether the scaling operation is prepended or appended to the transformation matrix.
   """
   pass
  def SetClip(self,*__args):
   """
   SetClip(self: Graphics,rect: Rectangle)
-   Sets the clipping region of this System.Drawing.Graphics to the rectangle specified by a 
-    System.Drawing.Rectangle structure.
-  
+   Sets the clipping region of this System.Drawing.Graphics to the rectangle specified by a System.Drawing.Rectangle structure.
   
    rect: System.Drawing.Rectangle structure that represents the new clip region.
   SetClip(self: Graphics,region: Region,combineMode: CombineMode)
-   Sets the clipping region of this System.Drawing.Graphics to the result of the specified 
-    operation combining the current clip region and the specified System.Drawing.Region.
-  
+   Sets the clipping region of this System.Drawing.Graphics to the result of the specified operation combining the current clip region and the specified System.Drawing.Region.
   
    region: System.Drawing.Region to combine.
-   combineMode: Member from the System.Drawing.Drawing2D.CombineMode enumeration that specifies the 
-    combining operation to use.
-  
+   combineMode: Member from the System.Drawing.Drawing2D.CombineMode enumeration that specifies the combining operation to use.
   SetClip(self: Graphics,g: Graphics)
-   Sets the clipping region of this System.Drawing.Graphics to the Clip property of the 
-    specified System.Drawing.Graphics.
-  
+   Sets the clipping region of this System.Drawing.Graphics to the Clip property of the specified System.Drawing.Graphics.
   
    g: System.Drawing.Graphics from which to take the new clip region.
   SetClip(self: Graphics,g: Graphics,combineMode: CombineMode)
-   Sets the clipping region of this System.Drawing.Graphics to the result of the specified 
-    combining operation of the current clip region and the System.Drawing.Graphics.Clip 
-    property of the specified System.Drawing.Graphics.
-  
+   Sets the clipping region of this System.Drawing.Graphics to the result of the specified combining operation of the current clip region and the System.Drawing.Graphics.Clip property of the specified System.Drawing.Graphics.
   
    g: System.Drawing.Graphics that specifies the clip region to combine.
-   combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies the 
-    combining operation to use.
-  
+   combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies the combining operation to use.
   SetClip(self: Graphics,rect: Rectangle,combineMode: CombineMode)
-   Sets the clipping region of this System.Drawing.Graphics to the result of the specified 
-    operation combining the current clip region and the rectangle specified by a 
-    System.Drawing.Rectangle structure.
-  
+   Sets the clipping region of this System.Drawing.Graphics to the result of the specified operation combining the current clip region and the rectangle specified by a System.Drawing.Rectangle structure.
   
    rect: System.Drawing.Rectangle structure to combine.
-   combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies the 
-    combining operation to use.
-  
+   combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies the combining operation to use.
   SetClip(self: Graphics,rect: RectangleF)
-   Sets the clipping region of this System.Drawing.Graphics to the rectangle specified by a 
-    System.Drawing.RectangleF structure.
-  
+   Sets the clipping region of this System.Drawing.Graphics to the rectangle specified by a System.Drawing.RectangleF structure.
   
    rect: System.Drawing.RectangleF structure that represents the new clip region.
   SetClip(self: Graphics,rect: RectangleF,combineMode: CombineMode)
-   Sets the clipping region of this System.Drawing.Graphics to the result of the specified 
-    operation combining the current clip region and the rectangle specified by a 
-    System.Drawing.RectangleF structure.
-  
+   Sets the clipping region of this System.Drawing.Graphics to the result of the specified operation combining the current clip region and the rectangle specified by a System.Drawing.RectangleF structure.
   
    rect: System.Drawing.RectangleF structure to combine.
-   combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies the 
-    combining operation to use.
-  
+   combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies the combining operation to use.
   SetClip(self: Graphics,path: GraphicsPath)
-   Sets the clipping region of this System.Drawing.Graphics to the specified 
-    System.Drawing.Drawing2D.GraphicsPath.
-  
+   Sets the clipping region of this System.Drawing.Graphics to the specified System.Drawing.Drawing2D.GraphicsPath.
   
    path: System.Drawing.Drawing2D.GraphicsPath that represents the new clip region.
   SetClip(self: Graphics,path: GraphicsPath,combineMode: CombineMode)
-   Sets the clipping region of this System.Drawing.Graphics to the result of the specified 
-    operation combining the current clip region and the specified 
-    System.Drawing.Drawing2D.GraphicsPath.
-  
+   Sets the clipping region of this System.Drawing.Graphics to the result of the specified operation combining the current clip region and the specified System.Drawing.Drawing2D.GraphicsPath.
   
    path: System.Drawing.Drawing2D.GraphicsPath to combine.
-   combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies the 
-    combining operation to use.
+   combineMode: Member of the System.Drawing.Drawing2D.CombineMode enumeration that specifies the combining operation to use.
   """
   pass
  def TransformPoints(self,destSpace,srcSpace,pts):
   """
   TransformPoints(self: Graphics,destSpace: CoordinateSpace,srcSpace: CoordinateSpace,pts: Array[PointF])
-   Transforms an array of points from one coordinate space to another using the current 
-    world and page transformations of this System.Drawing.Graphics.
+   Transforms an array of points from one coordinate space to another using the current world and page transformations of this System.Drawing.Graphics.
   
-  
-   destSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that specifies the 
-    destination coordinate space.
-  
-   srcSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that specifies the 
-    source coordinate space.
-  
+   destSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that specifies the destination coordinate space.
+   srcSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that specifies the source coordinate space.
    pts: Array of System.Drawing.PointF structures that represent the points to transform.
   TransformPoints(self: Graphics,destSpace: CoordinateSpace,srcSpace: CoordinateSpace,pts: Array[Point])
-   Transforms an array of points from one coordinate space to another using the current 
-    world and page transformations of this System.Drawing.Graphics.
+   Transforms an array of points from one coordinate space to another using the current world and page transformations of this System.Drawing.Graphics.
   
-  
-   destSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that specifies the 
-    destination coordinate space.
-  
-   srcSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that specifies the 
-    source coordinate space.
-  
+   destSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that specifies the destination coordinate space.
+   srcSpace: Member of the System.Drawing.Drawing2D.CoordinateSpace enumeration that specifies the source coordinate space.
    pts: Array of System.Drawing.Point structures that represents the points to transformation.
   """
   pass
  def TranslateClip(self,dx,dy):
   """
   TranslateClip(self: Graphics,dx: int,dy: int)
-   Translates the clipping region of this System.Drawing.Graphics by specified amounts in 
-    the horizontal and vertical directions.
-  
+   Translates the clipping region of this System.Drawing.Graphics by specified amounts in the horizontal and vertical directions.
   
    dx: The x-coordinate of the translation.
    dy: The y-coordinate of the translation.
   TranslateClip(self: Graphics,dx: Single,dy: Single)
-   Translates the clipping region of this System.Drawing.Graphics by specified amounts in 
-    the horizontal and vertical directions.
-  
+   Translates the clipping region of this System.Drawing.Graphics by specified amounts in the horizontal and vertical directions.
   
    dx: The x-coordinate of the translation.
    dy: The y-coordinate of the translation.
@@ -1866,21 +1348,16 @@ class Graphics:
  def TranslateTransform(self,dx,dy,order=None):
   """
   TranslateTransform(self: Graphics,dx: Single,dy: Single)
-   Changes the origin of the coordinate system by prepending the specified translation to 
-    the transformation matrix of this System.Drawing.Graphics.
-  
+   Changes the origin of the coordinate system by prepending the specified translation to the transformation matrix of this System.Drawing.Graphics.
   
    dx: The x-coordinate of the translation.
    dy: The y-coordinate of the translation.
   TranslateTransform(self: Graphics,dx: Single,dy: Single,order: MatrixOrder)
-   Changes the origin of the coordinate system by applying the specified translation to the 
-    transformation matrix of this System.Drawing.Graphics in the specified order.
-  
+   Changes the origin of the coordinate system by applying the specified translation to the transformation matrix of this System.Drawing.Graphics in the specified order.
   
    dx: The x-coordinate of the translation.
    dy: The y-coordinate of the translation.
-   order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether the 
-    translation is prepended or appended to the transformation matrix.
+   order: Member of the System.Drawing.Drawing2D.MatrixOrder enumeration that specifies whether the translation is prepended or appended to the transformation matrix.
   """
   pass
  def __enter__(self,*args):

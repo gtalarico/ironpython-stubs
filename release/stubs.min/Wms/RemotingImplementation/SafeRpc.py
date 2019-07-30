@@ -1,18 +1,24 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.SafeRpc calls itself SafeRpc
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class SafeRpcMethod:
+class SafeRpcMethod(object):
  """
  SafeRpcMethod(id: int)
  SafeRpcMethod(cacheKey: CacheKey)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeRpcMethod()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """ Dispose(self: SafeRpcMethod) """
   pass

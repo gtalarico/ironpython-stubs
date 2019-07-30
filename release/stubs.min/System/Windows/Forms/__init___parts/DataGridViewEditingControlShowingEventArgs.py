@@ -1,9 +1,13 @@
-class DataGridViewEditingControlShowingEventArgs:
+class DataGridViewEditingControlShowingEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.DataGridView.EditingControlShowing event.
  
  DataGridViewEditingControlShowingEventArgs(control: Control,cellStyle: DataGridViewCellStyle)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewEditingControlShowingEventArgs()
+
  @staticmethod
  def __new__(self,control,cellStyle):
   """ __new__(cls: type,control: Control,cellStyle: DataGridViewCellStyle) """

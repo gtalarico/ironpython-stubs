@@ -1,5 +1,10 @@
-class Directory:
+class Directory(object):
  """ Exposes static methods for creating,moving,and enumerating through directories and subdirectories. This class cannot be inherited. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Directory()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def CreateDirectory(path,directorySecurity=None):
   """
@@ -11,9 +16,7 @@ class Directory:
    Returns: A System.IO.DirectoryInfo as specified by path.
   CreateDirectory(path: str,directorySecurity: DirectorySecurity) -> DirectoryInfo
   
-   Creates all the directories in the specified path,applying the specified Windows 
-    security.
-  
+   Creates all the directories in the specified path,applying the specified Windows security.
   
    path: The directory to create.
    directorySecurity: The access control to apply to the directory.
@@ -28,9 +31,7 @@ class Directory:
   
    path: The name of the empty directory to remove. This directory must be writable or empty.
   Delete(path: str,recursive: bool)
-   Deletes the specified directory and,if indicated,any subdirectories and files in the 
-    directory.
-  
+   Deletes the specified directory and,if indicated,any subdirectories and files in the directory.
   
    path: The name of the directory to remove.
    recursive: true to remove directories,subdirectories,and files in path; otherwise,false.
@@ -47,29 +48,21 @@ class Directory:
    Returns: An enumerable collection of directory names in the directory specified by path.
   EnumerateDirectories(path: str,searchPattern: str) -> IEnumerable[str]
   
-   Returns an enumerable collection of directory names that match a search pattern in a 
-    specified path.
-  
+   Returns an enumerable collection of directory names that match a search pattern in a specified path.
   
    path: The directory to search.
    searchPattern: The search string to match against the names of directories in path.
-   Returns: An enumerable collection of directory names in the directory specified by path and that 
-    match searchPattern.
-  
+   Returns: An enumerable collection of directory names in the directory specified by path and that match searchPattern.
   EnumerateDirectories(path: str,searchPattern: str,searchOption: SearchOption) -> IEnumerable[str]
   
-   Returns an enumerable collection of directory names that match a search pattern in a 
-    specified path,and optionally searches subdirectories.
-  
+   Returns an enumerable collection of directory names that match a search pattern in a specified path,and optionally searches subdirectories.
   
    path: The directory to search.
    searchPattern: The search string to match against the names of directories in path.
-   searchOption: One of the values of the System.IO.SearchOption enumeration that specifies whether the 
-    search operation should include only the current directory or should include all 
+   searchOption: One of the values of the System.IO.SearchOption enumeration that specifies whether the search operation should include only the current directory or should include all 
     subdirectories.The default value is System.IO.SearchOption.TopDirectoryOnly.
   
-   Returns: An enumerable collection of directory names in the directory specified by path and that 
-    match searchPattern and searchOption.
+   Returns: An enumerable collection of directory names in the directory specified by path and that match searchPattern and searchOption.
   """
   pass
  @staticmethod
@@ -83,29 +76,21 @@ class Directory:
    Returns: An enumerable collection of file names in the directory specified by path.
   EnumerateFiles(path: str,searchPattern: str) -> IEnumerable[str]
   
-   Returns an enumerable collection of file names that match a search pattern in a specified 
-    path.
-  
+   Returns an enumerable collection of file names that match a search pattern in a specified path.
   
    path: The directory to search.
    searchPattern: The search string to match against the names of directories in path.
-   Returns: An enumerable collection of file names in the directory specified by path and that match 
-    searchPattern.
-  
+   Returns: An enumerable collection of file names in the directory specified by path and that match searchPattern.
   EnumerateFiles(path: str,searchPattern: str,searchOption: SearchOption) -> IEnumerable[str]
   
-   Returns an enumerable collection of file names that match a search pattern in a specified 
-    path,and optionally searches subdirectories.
-  
+   Returns an enumerable collection of file names that match a search pattern in a specified path,and optionally searches subdirectories.
   
    path: The directory to search.
    searchPattern: The search string to match against the names of directories in path.
-   searchOption: One of the values of the System.IO.SearchOption enumeration that specifies whether the 
-    search operation should include only the current directory or should include all 
+   searchOption: One of the values of the System.IO.SearchOption enumeration that specifies whether the search operation should include only the current directory or should include all 
     subdirectories.The default value is System.IO.SearchOption.TopDirectoryOnly.
   
-   Returns: An enumerable collection of file names in the directory specified by path and that match 
-    searchPattern and searchOption.
+   Returns: An enumerable collection of file names in the directory specified by path and that match searchPattern and searchOption.
   """
   pass
  @staticmethod
@@ -119,29 +104,21 @@ class Directory:
    Returns: An enumerable collection of file-system entries in the directory specified by path.
   EnumerateFileSystemEntries(path: str,searchPattern: str) -> IEnumerable[str]
   
-   Returns an enumerable collection of file-system entries that match a search pattern in a 
-    specified path.
-  
+   Returns an enumerable collection of file-system entries that match a search pattern in a specified path.
   
    path: The directory to search.
    searchPattern: The search string to match against the names of directories in path.
-   Returns: An enumerable collection of file-system entries in the directory specified by path and 
-    that match searchPattern.
-  
+   Returns: An enumerable collection of file-system entries in the directory specified by path and that match searchPattern.
   EnumerateFileSystemEntries(path: str,searchPattern: str,searchOption: SearchOption) -> IEnumerable[str]
   
-   Returns an enumerable collection of file names and directory names that match a search 
-    pattern in a specified path,and optionally searches subdirectories.
-  
+   Returns an enumerable collection of file names and directory names that match a search pattern in a specified path,and optionally searches subdirectories.
   
    path: The directory to search.
    searchPattern: The search string to match against the names of directories in path.
-   searchOption: One of the values of the System.IO.SearchOption enumeration that specifies whether the 
-    search operation should include only the current directory or should include all 
+   searchOption: One of the values of the System.IO.SearchOption enumeration that specifies whether the search operation should include only the current directory or should include all 
     subdirectories.The default value is System.IO.SearchOption.TopDirectoryOnly.
   
-   Returns: An enumerable collection of file-system entries in the directory specified by path and 
-    that match searchPattern and searchOption.
+   Returns: An enumerable collection of file-system entries in the directory specified by path and that match searchPattern and searchOption.
   """
   pass
  @staticmethod
@@ -160,30 +137,17 @@ class Directory:
   """
   GetAccessControl(path: str) -> DirectorySecurity
   
-   Gets a System.Security.AccessControl.DirectorySecurity object that encapsulates the 
-    access control list (ACL) entries for a specified directory.
+   Gets a System.Security.AccessControl.DirectorySecurity object that encapsulates the access control list (ACL) entries for a specified directory.
   
-  
-   path: The path to a directory containing a System.Security.AccessControl.DirectorySecurity 
-    object that describes the file's access control list (ACL) information.
-  
-   Returns: A System.Security.AccessControl.DirectorySecurity object that encapsulates the access 
-    control rules for the file described by the path parameter.
-  
+   path: The path to a directory containing a System.Security.AccessControl.DirectorySecurity object that describes the file's access control list (ACL) information.
+   Returns: A System.Security.AccessControl.DirectorySecurity object that encapsulates the access control rules for the file described by the path parameter.
   GetAccessControl(path: str,includeSections: AccessControlSections) -> DirectorySecurity
   
-   Gets a System.Security.AccessControl.DirectorySecurity object that encapsulates the 
-    specified type of access control list (ACL) entries for a specified directory.
+   Gets a System.Security.AccessControl.DirectorySecurity object that encapsulates the specified type of access control list (ACL) entries for a specified directory.
   
-  
-   path: The path to a directory containing a System.Security.AccessControl.DirectorySecurity 
-    object that describes the file's access control list (ACL) information.
-  
-   includeSections: One of the System.Security.AccessControl.AccessControlSections values that specifies the 
-    type of access control list (ACL) information to receive.
-  
-   Returns: A System.Security.AccessControl.DirectorySecurity object that encapsulates the access 
-    control rules for the file described by the path parameter.
+   path: The path to a directory containing a System.Security.AccessControl.DirectorySecurity object that describes the file's access control list (ACL) information.
+   includeSections: One of the System.Security.AccessControl.AccessControlSections values that specifies the type of access control list (ACL) information to receive.
+   Returns: A System.Security.AccessControl.DirectorySecurity object that encapsulates the access control rules for the file described by the path parameter.
   """
   pass
  @staticmethod
@@ -194,8 +158,7 @@ class Directory:
    Gets the creation date and time of a directory.
   
    path: The path of the directory.
-   Returns: A System.DateTime structure set to the creation date and time for the specified 
-    directory. This value is expressed in local time.
+   Returns: A System.DateTime structure set to the creation date and time for the specified directory. This value is expressed in local time.
   """
   pass
  @staticmethod
@@ -203,13 +166,10 @@ class Directory:
   """
   GetCreationTimeUtc(path: str) -> DateTime
   
-   Gets the creation date and time,in Coordinated Universal Time (UTC) format,of a 
-    directory.
-  
+   Gets the creation date and time,in Coordinated Universal Time (UTC) format,of a directory.
   
    path: The path of the directory.
-   Returns: A System.DateTime structure set to the creation date and time for the specified 
-    directory. This value is expressed in UTC time.
+   Returns: A System.DateTime structure set to the creation date and time for the specified directory. This value is expressed in UTC time.
   """
   pass
  @staticmethod
@@ -218,8 +178,7 @@ class Directory:
   GetCurrentDirectory() -> str
   
    Gets the current working directory of the application.
-   Returns: A string that contains the path of the current working directory,and does not end with a 
-    backslash (\).
+   Returns: A string that contains the path of the current working directory,and does not end with a backslash (\).
   """
   pass
  @staticmethod
@@ -233,32 +192,22 @@ class Directory:
    Returns: An array of the names of subdirectories in path.
   GetDirectories(path: str,searchPattern: str) -> Array[str]
   
-   Gets an array of directories (including their paths) that match the specified search 
-    pattern in the current directory.
-  
+   Gets an array of directories (including their paths) that match the specified search pattern in the current directory.
   
    path: The path to search.
-   searchPattern: The search string to match against the names of files in path. The parameter cannot end 
-    in two periods ("..") or contain two periods ("..") followed by 
-    System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar,nor 
-    can it contain any of the characters in System.IO.Path.InvalidPathChars.
+   searchPattern: The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by 
+    System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar,nor can it contain any of the characters in System.IO.Path.InvalidPathChars.
   
    Returns: A String array of directories that match the search pattern.
   GetDirectories(path: str,searchPattern: str,searchOption: SearchOption) -> Array[str]
   
-   Gets the names of the directories (including their paths) that match the specified search 
-    pattern in the current directory,and optionally searches subdirectories.
-  
+   Gets the names of the directories (including their paths) that match the specified search pattern in the current directory,and optionally searches subdirectories.
   
    path: The path to search.
-   searchPattern: The search string to match against the names of files in path. The parameter cannot end 
-    in two periods ("..") or contain two periods ("..") followed by 
-    System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar,nor 
-    can it contain any of the characters in System.IO.Path.InvalidPathChars.
+   searchPattern: The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by 
+    System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar,nor can it contain any of the characters in System.IO.Path.InvalidPathChars.
   
-   searchOption: One of the System.IO.SearchOption values that specifies whether the search operation 
-    should include all subdirectories or only the current directory.
-  
+   searchOption: One of the System.IO.SearchOption values that specifies whether the search operation should include all subdirectories or only the current directory.
    Returns: A String array of directories that match the search pattern.
   """
   pass
@@ -270,8 +219,7 @@ class Directory:
    Returns the volume information,root information,or both for the specified path.
   
    path: The path of a file or directory.
-   Returns: A string containing the volume information,root information,or both for the specified 
-    path.
+   Returns: A string containing the volume information,root information,or both for the specified path.
   """
   pass
  @staticmethod
@@ -285,37 +233,25 @@ class Directory:
    Returns: A String array of file names in the specified directory.
   GetFiles(path: str,searchPattern: str) -> Array[str]
   
-   Returns the names of files (including their paths) that match the specified search 
-    pattern in the specified directory.
-  
+   Returns the names of files (including their paths) that match the specified search pattern in the specified directory.
   
    path: The directory to search.
-   searchPattern: The search string to match against the names of files in path. The parameter cannot end 
-    in two periods ("..") or contain two periods ("..") followed by 
-    System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar,nor 
-    can it contain any of the characters in System.IO.Path.InvalidPathChars.
+   searchPattern: The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by 
+    System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar,nor can it contain any of the characters in System.IO.Path.InvalidPathChars.
   
-   Returns: A String array containing the names of files in the specified directory that match the 
-    specified search pattern. File names include the full path.
-  
+   Returns: A String array containing the names of files in the specified directory that match the specified search pattern. File names include the full path.
   GetFiles(path: str,searchPattern: str,searchOption: SearchOption) -> Array[str]
   
-   Returns the names of files (including their paths) that match the specified search 
-    pattern in the specified directory,using a value to determine whether to search 
+   Returns the names of files (including their paths) that match the specified search pattern in the specified directory,using a value to determine whether to search 
     subdirectories.
   
   
    path: The directory to search.
-   searchPattern: The search string to match against the names of files in path. The parameter cannot end 
-    in two periods ("..") or contain two periods ("..") followed by 
-    System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar,nor 
-    can it contain any of the characters in System.IO.Path.InvalidPathChars.
+   searchPattern: The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by 
+    System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar,nor can it contain any of the characters in System.IO.Path.InvalidPathChars.
   
-   searchOption: One of the System.IO.SearchOption values that specifies whether the search operation 
-    should include all subdirectories or only the current directory.
-  
-   Returns: A String array containing the names of files in the specified directory that match the 
-    specified search pattern. File names include the full path.
+   searchOption: One of the System.IO.SearchOption values that specifies whether the search operation should include all subdirectories or only the current directory.
+   Returns: A String array containing the names of files in the specified directory that match the specified search pattern. File names include the full path.
   """
   pass
  @staticmethod
@@ -332,24 +268,17 @@ class Directory:
    Returns an array of file system entries that match the specified search criteria.
   
    path: The path to be searched.
-   searchPattern: The search string to match against the names of files in path. The searchPattern 
-    parameter cannot end in two periods ("..") or contain two periods ("..") followed by 
-    System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar,nor 
-    can it contain any of the characters in System.IO.Path.InvalidPathChars.
+   searchPattern: The search string to match against the names of files in path. The searchPattern parameter cannot end in two periods ("..") or contain two periods ("..") followed by 
+    System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar,nor can it contain any of the characters in System.IO.Path.InvalidPathChars.
   
    Returns: An array of file system entries that match the search criteria.
   GetFileSystemEntries(path: str,searchPattern: str,searchOption: SearchOption) -> Array[str]
   
-   Gets an array of all the file names and directory names that match a search pattern in a 
-    specified path,and optionally searches subdirectories.
-  
+   Gets an array of all the file names and directory names that match a search pattern in a specified path,and optionally searches subdirectories.
   
    path: The directory to search.
-   searchPattern: The string used to search for all files or directories that match its search pattern. The 
-    default pattern is for all files and directories: "*"
-  
-   searchOption: The option that specifies whether the search operation should include only the current 
-    directory or should include all subdirectories.The default value is 
+   searchPattern: The string used to search for all files or directories that match its search pattern. The default pattern is for all files and directories: "*"
+   searchOption: The option that specifies whether the search operation should include only the current directory or should include all subdirectories.The default value is 
     System.IO.SearchOption.TopDirectoryOnly.
   
    Returns: An array of file system entries that match the search criteria.
@@ -363,8 +292,7 @@ class Directory:
    Returns the date and time the specified file or directory was last accessed.
   
    path: The file or directory for which to obtain access date and time information.
-   Returns: A System.DateTime structure set to the date and time the specified file or directory was 
-    last accessed. This value is expressed in local time.
+   Returns: A System.DateTime structure set to the date and time the specified file or directory was last accessed. This value is expressed in local time.
   """
   pass
  @staticmethod
@@ -372,13 +300,10 @@ class Directory:
   """
   GetLastAccessTimeUtc(path: str) -> DateTime
   
-   Returns the date and time,in Coordinated Universal Time (UTC) format,that the specified 
-    file or directory was last accessed.
-  
+   Returns the date and time,in Coordinated Universal Time (UTC) format,that the specified file or directory was last accessed.
   
    path: The file or directory for which to obtain access date and time information.
-   Returns: A System.DateTime structure set to the date and time the specified file or directory was 
-    last accessed. This value is expressed in UTC time.
+   Returns: A System.DateTime structure set to the date and time the specified file or directory was last accessed. This value is expressed in UTC time.
   """
   pass
  @staticmethod
@@ -389,8 +314,7 @@ class Directory:
    Returns the date and time the specified file or directory was last written to.
   
    path: The file or directory for which to obtain modification date and time information.
-   Returns: A System.DateTime structure set to the date and time the specified file or directory was 
-    last written to. This value is expressed in local time.
+   Returns: A System.DateTime structure set to the date and time the specified file or directory was last written to. This value is expressed in local time.
   """
   pass
  @staticmethod
@@ -398,13 +322,10 @@ class Directory:
   """
   GetLastWriteTimeUtc(path: str) -> DateTime
   
-   Returns the date and time,in Coordinated Universal Time (UTC) format,that the specified 
-    file or directory was last written to.
-  
+   Returns the date and time,in Coordinated Universal Time (UTC) format,that the specified file or directory was last written to.
   
    path: The file or directory for which to obtain modification date and time information.
-   Returns: A System.DateTime structure set to the date and time the specified file or directory was 
-    last written to. This value is expressed in UTC time.
+   Returns: A System.DateTime structure set to the date and time the specified file or directory was last written to. This value is expressed in UTC time.
   """
   pass
  @staticmethod
@@ -421,13 +342,10 @@ class Directory:
   """
   GetParent(path: str) -> DirectoryInfo
   
-   Retrieves the parent directory of the specified path,including both absolute and 
-    relative paths.
-  
+   Retrieves the parent directory of the specified path,including both absolute and relative paths.
   
    path: The path for which to retrieve the parent directory.
-   Returns: The parent directory,or null if path is the root directory,including the root of a UNC 
-    server or share name.
+   Returns: The parent directory,or null if path is the root directory,including the root of a UNC server or share name.
   """
   pass
  @staticmethod
@@ -437,21 +355,17 @@ class Directory:
    Moves a file or a directory and its contents to a new location.
   
    sourceDirName: The path of the file or directory to move.
-   destDirName: The path to the new location for sourceDirName. If sourceDirName is a file,then 
-    destDirName must also be a file name.
+   destDirName: The path to the new location for sourceDirName. If sourceDirName is a file,then destDirName must also be a file name.
   """
   pass
  @staticmethod
  def SetAccessControl(path,directorySecurity):
   """
   SetAccessControl(path: str,directorySecurity: DirectorySecurity)
-   Applies access control list (ACL) entries described by a 
-    System.Security.AccessControl.DirectorySecurity object to the specified directory.
-  
+   Applies access control list (ACL) entries described by a System.Security.AccessControl.DirectorySecurity object to the specified directory.
   
    path: A directory to add or remove access control list (ACL) entries from.
-   directorySecurity: A System.Security.AccessControl.DirectorySecurity object that describes an ACL entry to 
-    apply to the directory described by the path parameter.
+   directorySecurity: A System.Security.AccessControl.DirectorySecurity object that describes an ACL entry to apply to the directory described by the path parameter.
   """
   pass
  @staticmethod
@@ -461,21 +375,17 @@ class Directory:
    Sets the creation date and time for the specified file or directory.
   
    path: The file or directory for which to set the creation date and time information.
-   creationTime: A System.DateTime containing the value to set for the creation date and time of path. 
-    This value is expressed in local time.
+   creationTime: A System.DateTime containing the value to set for the creation date and time of path. This value is expressed in local time.
   """
   pass
  @staticmethod
  def SetCreationTimeUtc(path,creationTimeUtc):
   """
   SetCreationTimeUtc(path: str,creationTimeUtc: DateTime)
-   Sets the creation date and time,in Coordinated Universal Time (UTC) format,for the 
-    specified file or directory.
-  
+   Sets the creation date and time,in Coordinated Universal Time (UTC) format,for the specified file or directory.
   
    path: The file or directory for which to set the creation date and time information.
-   creationTimeUtc: A System.DateTime containing the value to set for the creation date and time of path. 
-    This value is expressed in UTC time.
+   creationTimeUtc: A System.DateTime containing the value to set for the creation date and time of path. This value is expressed in UTC time.
   """
   pass
  @staticmethod
@@ -494,21 +404,17 @@ class Directory:
    Sets the date and time the specified file or directory was last accessed.
   
    path: The file or directory for which to set the access date and time information.
-   lastAccessTime: A System.DateTime containing the value to set for the access date and time of path. This 
-    value is expressed in local time.
+   lastAccessTime: A System.DateTime containing the value to set for the access date and time of path. This value is expressed in local time.
   """
   pass
  @staticmethod
  def SetLastAccessTimeUtc(path,lastAccessTimeUtc):
   """
   SetLastAccessTimeUtc(path: str,lastAccessTimeUtc: DateTime)
-   Sets the date and time,in Coordinated Universal Time (UTC) format,that the specified 
-    file or directory was last accessed.
-  
+   Sets the date and time,in Coordinated Universal Time (UTC) format,that the specified file or directory was last accessed.
   
    path: The file or directory for which to set the access date and time information.
-   lastAccessTimeUtc: A System.DateTime containing the value to set for the access date and time of path. This 
-    value is expressed in UTC time.
+   lastAccessTimeUtc: A System.DateTime containing the value to set for the access date and time of path. This value is expressed in UTC time.
   """
   pass
  @staticmethod
@@ -518,17 +424,14 @@ class Directory:
    Sets the date and time a directory was last written to.
   
    path: The path of the directory.
-   lastWriteTime: The date and time the directory was last written to. This value is expressed in local 
-    time.
+   lastWriteTime: The date and time the directory was last written to. This value is expressed in local time.
   """
   pass
  @staticmethod
  def SetLastWriteTimeUtc(path,lastWriteTimeUtc):
   """
   SetLastWriteTimeUtc(path: str,lastWriteTimeUtc: DateTime)
-   Sets the date and time,in Coordinated Universal Time (UTC) format,that a directory was 
-    last written to.
-  
+   Sets the date and time,in Coordinated Universal Time (UTC) format,that a directory was last written to.
   
    path: The path of the directory.
    lastWriteTimeUtc: The date and time the directory was last written to. This value is expressed in UTC time.

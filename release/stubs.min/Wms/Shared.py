@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.Shared calls itself Shared
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
 class ILoggingService:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ILoggingService()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Debug(self,*__args):
   """ Debug(self: ILoggingService,message: str)Debug(self: ILoggingService,format: str,*args: Array[object]) """
   pass
@@ -58,6 +64,11 @@ class ILoggingService:
 
 class ITraceLoggingService:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ITraceLoggingService()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def IsTracingEnabled(self):
   """ IsTracingEnabled(self: ITraceLoggingService) -> bool """
   pass
@@ -73,6 +84,11 @@ class ITraceLoggingService:
 
 class TraceExtProperties:
  """ enum TraceExtProperties,values: ElapsedSeconds (4),MethodId (0),MethodName (1),MethodPreviousId (6),MethodPreviousName (5),ParameterList (3),ReturnParam (2),TimeStart (7),TimeStop (8) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TraceExtProperties()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -110,6 +126,11 @@ class TraceExtProperties:
 
 class TraceType:
  """ enum TraceType,values: Start (1),Stop (0) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TraceType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -1,38 +1,35 @@
-class Single:
+class Single(object):
  """ Represents a single-precision floating-point number. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Single()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CompareTo(self,value):
   """
   CompareTo(self: Single,value: object) -> int
   
-   Compares this instance to a specified object and returns an integer that indicates 
-    whether the value of this instance is less than,equal to,or greater than the value of 
+   Compares this instance to a specified object and returns an integer that indicates whether the value of this instance is less than,equal to,or greater than the value of 
     the specified object.
   
   
    value: An object to compare,or null.
-   Returns: A signed number indicating the relative values of this instance and value.Return Value 
-    Description Less than zero This instance is less than value.-or- This instance is not a 
-    number (System.Single.NaN) and value is a number. Zero This instance is equal to 
-    value.-or- This instance and value are both not a number (System.Single.NaN),
-    System.Single.PositiveInfinity,or System.Single.NegativeInfinity. Greater than zero This 
-    instance is greater than value.-or- This instance is a number and value is not a number 
-    (System.Single.NaN).-or- value is null.
+   Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value.-or- This instance is not 
+    a number (System.Single.NaN) and value is a number. Zero This instance is equal to value.-or- This instance and value are both not a number (System.Single.NaN),
+    System.Single.PositiveInfinity,or System.Single.NegativeInfinity. Greater than zero This instance is greater than value.-or- This instance is a number and value is not a 
+    number (System.Single.NaN).-or- value is null.
   
   CompareTo(self: Single,value: Single) -> int
   
-   Compares this instance to a specified single-precision floating-point number and returns 
-    an integer that indicates whether the value of this instance is less than,equal to,or 
-    greater than the value of the specified single-precision floating-point number.
+   Compares this instance to a specified single-precision floating-point number and returns an integer that indicates whether the value of this instance is less than,equal 
+    to,or greater than the value of the specified single-precision floating-point number.
   
   
    value: A single-precision floating-point number to compare.
-   Returns: A signed number indicating the relative values of this instance and value.Return Value 
-    Description Less than zero This instance is less than value.-or- This instance is not a 
-    number (System.Single.NaN) and value is a number. Zero This instance is equal to 
-    value.-or- Both this instance and value are not a number (System.Single.NaN),
-    System.Single.PositiveInfinity,or System.Single.NegativeInfinity. Greater than zero This 
-    instance is greater than value.-or- This instance is a number and value is not a number 
-    (System.Single.NaN).
+   Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value.-or- This instance is not 
+    a number (System.Single.NaN) and value is a number. Zero This instance is equal to value.-or- Both this instance and value are not a number (System.Single.NaN),
+    System.Single.PositiveInfinity,or System.Single.NegativeInfinity. Greater than zero This instance is greater than value.-or- This instance is a number and value is not a 
+    number (System.Single.NaN).
   """
   pass
  def conjugate(self,*args):
@@ -45,14 +42,10 @@ class Single:
    Returns a value indicating whether this instance is equal to a specified object.
   
    obj: An object to compare with this instance.
-   Returns: true if obj is an instance of System.Single and equals the value of this instance; 
-    otherwise,false.
-  
+   Returns: true if obj is an instance of System.Single and equals the value of this instance; otherwise,false.
   Equals(self: Single,obj: Single) -> bool
   
-   Returns a value indicating whether this instance and a specified System.Single object 
-    represent the same value.
-  
+   Returns a value indicating whether this instance and a specified System.Single object represent the same value.
   
    obj: An object to compare with this instance.
    Returns: true if obj is equal to this instance; otherwise,false.
@@ -79,13 +72,10 @@ class Single:
   """
   IsInfinity(f: Single) -> bool
   
-   Returns a value indicating whether the specified number evaluates to negative or positive 
-    infinity.
-  
+   Returns a value indicating whether the specified number evaluates to negative or positive infinity.
   
    f: A single-precision floating-point number.
-   Returns: true if f evaluates to System.Single.PositiveInfinity or System.Single.NegativeInfinity; 
-    otherwise,false.
+   Returns: true if f evaluates to System.Single.PositiveInfinity or System.Single.NegativeInfinity; otherwise,false.
   """
   pass
  @staticmethod
@@ -93,9 +83,7 @@ class Single:
   """
   IsNaN(f: Single) -> bool
   
-   Returns a value indicating whether the specified number evaluates to not a number 
-    (System.Single.NaN).
-  
+   Returns a value indicating whether the specified number evaluates to not a number (System.Single.NaN).
   
    f: A single-precision floating-point number.
    Returns: true if f evaluates to not a number (System.Single.NaN); otherwise,false.
@@ -128,53 +116,36 @@ class Single:
   """
   Parse(s: str) -> Single
   
-   Converts the string representation of a number to its single-precision floating-point 
-    number equivalent.
-  
+   Converts the string representation of a number to its single-precision floating-point number equivalent.
   
    s: A string that contains a number to convert.
-   Returns: A single-precision floating-point number equivalent to the numeric value or symbol 
-    specified in s.
-  
+   Returns: A single-precision floating-point number equivalent to the numeric value or symbol specified in s.
   Parse(s: str,style: NumberStyles) -> Single
   
-   Converts the string representation of a number in a specified style to its 
-    single-precision floating-point number equivalent.
-  
+   Converts the string representation of a number in a specified style to its single-precision floating-point number equivalent.
   
    s: A string that contains a number to convert.
-   style: A bitwise combination of enumeration values that indicates the style elements that can be 
-    present in s. A typical value to specify is System.Globalization.NumberStyles.Float 
-    combined with System.Globalization.NumberStyles.AllowThousands.
+   style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
+    System.Globalization.NumberStyles.Float combined with System.Globalization.NumberStyles.AllowThousands.
   
-   Returns: A single-precision floating-point number that is equivalent to the numeric value or 
-    symbol specified in s.
-  
+   Returns: A single-precision floating-point number that is equivalent to the numeric value or symbol specified in s.
   Parse(s: str,provider: IFormatProvider) -> Single
   
-   Converts the string representation of a number in a specified culture-specific format to 
-    its single-precision floating-point number equivalent.
-  
+   Converts the string representation of a number in a specified culture-specific format to its single-precision floating-point number equivalent.
   
    s: A string that contains a number to convert.
    provider: An object that supplies culture-specific formatting information about s.
-   Returns: A single-precision floating-point number equivalent to the numeric value or symbol 
-    specified in s.
-  
+   Returns: A single-precision floating-point number equivalent to the numeric value or symbol specified in s.
   Parse(s: str,style: NumberStyles,provider: IFormatProvider) -> Single
   
-   Converts the string representation of a number in a specified style and culture-specific 
-    format to its single-precision floating-point number equivalent.
-  
+   Converts the string representation of a number in a specified style and culture-specific format to its single-precision floating-point number equivalent.
   
    s: A string that contains a number to convert.
-   style: A bitwise combination of enumeration values that indicates the style elements that can be 
-    present in s. A typical value to specify is System.Globalization.NumberStyles.Float 
-    combined with System.Globalization.NumberStyles.AllowThousands.
+   style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
+    System.Globalization.NumberStyles.Float combined with System.Globalization.NumberStyles.AllowThousands.
   
    provider: An object that supplies culture-specific formatting information about s.
-   Returns: A single-precision floating-point number equivalent to the numeric value or symbol 
-    specified in s.
+   Returns: A single-precision floating-point number equivalent to the numeric value or symbol specified in s.
   """
   pass
  def ToString(self,*__args):
@@ -185,30 +156,23 @@ class Single:
    Returns: The string representation of the value of this instance.
   ToString(self: Single,provider: IFormatProvider) -> str
   
-   Converts the numeric value of this instance to its equivalent string representation using 
-    the specified culture-specific format information.
-  
+   Converts the numeric value of this instance to its equivalent string representation using the specified culture-specific format information.
   
    provider: An object that supplies culture-specific formatting information.
    Returns: The string representation of the value of this instance as specified by provider.
   ToString(self: Single,format: str) -> str
   
-   Converts the numeric value of this instance to its equivalent string representation,
-    using the specified format.
-  
+   Converts the numeric value of this instance to its equivalent string representation,using the specified format.
   
    format: A numeric format string.
    Returns: The string representation of the value of this instance as specified by format.
   ToString(self: Single,format: str,provider: IFormatProvider) -> str
   
-   Converts the numeric value of this instance to its equivalent string representation using 
-    the specified format and culture-specific format information.
-  
+   Converts the numeric value of this instance to its equivalent string representation using the specified format and culture-specific format information.
   
    format: A numeric format string.
    provider: An object that supplies culture-specific formatting information.
-   Returns: The string representation of the value of this instance as specified by format and 
-    provider.
+   Returns: The string representation of the value of this instance as specified by format and provider.
   """
   pass
  @staticmethod
@@ -216,22 +180,18 @@ class Single:
   """
   TryParse(s: str) -> (bool,Single)
   
-   Converts the string representation of a number to its single-precision floating-point 
-    number equivalent. A return value indicates whether the conversion succeeded or failed.
-  
+   Converts the string representation of a number to its single-precision floating-point number equivalent. A return value indicates whether the conversion succeeded or failed.
   
    s: A string representing a number to convert.
    Returns: true if s was converted successfully; otherwise,false.
   TryParse(s: str,style: NumberStyles,provider: IFormatProvider) -> (bool,Single)
   
-   Converts the string representation of a number in a specified style and culture-specific 
-    format to its single-precision floating-point number equivalent. A return value indicates 
-    whether the conversion succeeded or failed.
+   Converts the string representation of a number in a specified style and culture-specific format to its single-precision floating-point number equivalent. A return value 
+    indicates whether the conversion succeeded or failed.
   
   
    s: A string representing a number to convert.
-   style: A bitwise combination of enumeration values that indicates the permitted format of s. A 
-    typical value to specify is System.Globalization.NumberStyles.Float combined with 
+   style: A bitwise combination of enumeration values that indicates the permitted format of s. A typical value to specify is System.Globalization.NumberStyles.Float combined with 
     System.Globalization.NumberStyles.AllowThousands.
   
    provider: An object that supplies culture-specific formatting information about s.

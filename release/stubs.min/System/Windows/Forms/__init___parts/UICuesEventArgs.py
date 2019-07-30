@@ -1,9 +1,13 @@
-class UICuesEventArgs:
+class UICuesEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.Control.ChangeUICues event.
  
  UICuesEventArgs(uicues: UICues)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return UICuesEventArgs()
+
  @staticmethod
  def __new__(self,uicues):
   """ __new__(cls: type,uicues: UICues) """

@@ -1,22 +1,22 @@
-class ImageListStreamer:
+class ImageListStreamer(object,ISerializable,IDisposable):
  """ Provides the data portion of an System.Windows.Forms.ImageList. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ImageListStreamer()
+
  def Dispose(self):
   """
   Dispose(self: ImageListStreamer)
-   Releases all resources used by the current instance of the 
-    System.Windows.Forms.ImageListStreamer class.
+   Releases all resources used by the current instance of the System.Windows.Forms.ImageListStreamer class.
   """
   pass
  def GetObjectData(self,si,context):
   """
   GetObjectData(self: ImageListStreamer,si: SerializationInfo,context: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data needed to 
-    serialize the target object.
-  
+   Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the target object.
   
    si: The System.Runtime.Serialization.SerializationInfo to populate with data.
-   context: The System.Runtime.Serialization.StreamingContext that is the destination for this 
-    serialization.
+   context: The System.Runtime.Serialization.StreamingContext that is the destination for this serialization.
   """
   pass
  def __enter__(self,*args):

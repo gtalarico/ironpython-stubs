@@ -1,9 +1,13 @@
-class ToolStripContentPanelRenderEventArgs:
+class ToolStripContentPanelRenderEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ToolStripContentPanel.RendererChanged event.
  
  ToolStripContentPanelRenderEventArgs(g: Graphics,contentPanel: ToolStripContentPanel)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripContentPanelRenderEventArgs()
+
  @staticmethod
  def __new__(self,g,contentPanel):
   """ __new__(cls: type,g: Graphics,contentPanel: ToolStripContentPanel) """

@@ -1,16 +1,18 @@
-class PaddingConverter:
+class PaddingConverter(TypeConverter):
  """
  Provides a type converter to convert System.Windows.Forms.Padding values to and from various other representations.
  
  PaddingConverter()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return PaddingConverter()
+
  def CanConvertFrom(self,*__args):
   """
   CanConvertFrom(self: PaddingConverter,context: ITypeDescriptorContext,sourceType: Type) -> bool
   
-   Returns whether this converter can convert an object of one type to the type of this 
-    converter.
-  
+   Returns whether this converter can convert an object of one type to the type of this converter.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    sourceType: A System.Type that represents the type you wish to convert from.
@@ -21,9 +23,7 @@ class PaddingConverter:
   """
   CanConvertTo(self: PaddingConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Returns whether this converter can convert the object to the specified type,using the 
-    specified context.
-  
+   Returns whether this converter can convert the object to the specified type,using the specified context.
   
    destinationType: A T:System.Type that represents the type you want to convert to.
    Returns: true if this converter can perform the conversion; otherwise,false.
@@ -52,15 +52,11 @@ class PaddingConverter:
   """
   CreateInstance(self: PaddingConverter,context: ITypeDescriptorContext,propertyValues: IDictionary) -> object
   
-   Creates an instance of the type that this System.ComponentModel.TypeConverter is 
-    associated with,using the specified context,given a set of property values for the 
-    object.
-  
+   Creates an instance of the type that this System.ComponentModel.TypeConverter is associated with,using the specified context,given a set of property values for the object.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    propertyValues: An System.Collections.IDictionary of new property values.
-   Returns: An System.Object representing the given System.Collections.IDictionary,or null if the 
-    object cannot be created. This method always returns null.
+   Returns: An System.Object representing the given System.Collections.IDictionary,or null if the object cannot be created. This method always returns null.
   """
   pass
  def GetCreateInstanceSupported(self,context=None):

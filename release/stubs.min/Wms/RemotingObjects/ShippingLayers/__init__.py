@@ -1,15 +1,22 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.ShippingLayers calls itself ShippingLayers
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # no functions
 # classes
 
-class Address:
+class Address(object):
  """ Address() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Address()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: Address) -> object """
   pass
@@ -25,159 +32,217 @@ class Address:
   """ __repr__(self: object) -> str """
   pass
  Address1=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Address1(self: Address) -> str
+ """
+
+Get: Address1(self: Address) -> str
 
 Set: Address1(self: Address)=value
 """
 
  Address2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Address2(self: Address) -> str
+ """
+
+Get: Address2(self: Address) -> str
 
 Set: Address2(self: Address)=value
 """
 
  Address3=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Address3(self: Address) -> str
+ """
+
+Get: Address3(self: Address) -> str
 
 Set: Address3(self: Address)=value
 """
 
  City=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: City(self: Address) -> str
+ """
+
+Get: City(self: Address) -> str
 
 Set: City(self: Address)=value
 """
 
  CountryCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CountryCode(self: Address) -> str
+ """
+
+Get: CountryCode(self: Address) -> str
 
 Set: CountryCode(self: Address)=value
 """
 
  CountryName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CountryName(self: Address) -> str
+ """
+
+Get: CountryName(self: Address) -> str
 
 Set: CountryName(self: Address)=value
 """
 
  CustomFields=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomFields(self: Address) -> SerializableDictionary[str,object]
+ """
+
+Get: CustomFields(self: Address) -> SerializableDictionary[str,object]
 
 Set: CustomFields(self: Address)=value
 """
 
  DeliveryBeginDateTime=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DeliveryBeginDateTime(self: Address) -> DateTime
+ """
+
+Get: DeliveryBeginDateTime(self: Address) -> DateTime
 
 Set: DeliveryBeginDateTime(self: Address)=value
 """
 
  DeliveryEndDateTime=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DeliveryEndDateTime(self: Address) -> DateTime
+ """
+
+Get: DeliveryEndDateTime(self: Address) -> DateTime
 
 Set: DeliveryEndDateTime(self: Address)=value
 """
 
  Email=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Email(self: Address) -> str
+ """
+
+Get: Email(self: Address) -> str
 
 Set: Email(self: Address)=value
 """
 
  EoriNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: EoriNumber(self: Address) -> str
+ """
+
+Get: EoriNumber(self: Address) -> str
 
 Set: EoriNumber(self: Address)=value
 """
 
  FullAddress=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: FullAddress(self: Address) -> str
+ """
+
+Get: FullAddress(self: Address) -> str
 
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name(self: Address) -> str
+ """
+
+Get: Name(self: Address) -> str
 
 Set: Name(self: Address)=value
 """
 
  Name2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name2(self: Address) -> str
+ """
+
+Get: Name2(self: Address) -> str
 
 Set: Name2(self: Address)=value
 """
 
  PhoneNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PhoneNumber(self: Address) -> str
+ """
+
+Get: PhoneNumber(self: Address) -> str
 
 Set: PhoneNumber(self: Address)=value
 """
 
  PickupDateTime=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PickupDateTime(self: Address) -> DateTime
+ """
+
+Get: PickupDateTime(self: Address) -> DateTime
 
 Set: PickupDateTime(self: Address)=value
 """
 
  StateCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StateCode(self: Address) -> str
+ """
+
+Get: StateCode(self: Address) -> str
 
 Set: StateCode(self: Address)=value
 """
 
  ZipCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ZipCode(self: Address) -> str
+ """
+
+Get: ZipCode(self: Address) -> str
 
 Set: ZipCode(self: Address)=value
 """
 
 
 
-class AddTransportPackageArgs:
+class AddTransportPackageArgs(object):
  """ AddTransportPackageArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AddTransportPackageArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  BoxIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BoxIds(self: AddTransportPackageArgs) -> List[str]
+ """Optional. The id's for the new Wms.RemotingObjects.ShippingLayers.TransportPackage.
+
+Get: BoxIds(self: AddTransportPackageArgs) -> List[str]
 
 """
 
  CacheKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CacheKey(self: AddTransportPackageArgs) -> CacheKey
+ """
+
+Get: CacheKey(self: AddTransportPackageArgs) -> CacheKey
 
 Set: CacheKey(self: AddTransportPackageArgs)=value
 """
 
  NumberOfPackages=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NumberOfPackages(self: AddTransportPackageArgs) -> int
+ """
+
+Get: NumberOfPackages(self: AddTransportPackageArgs) -> int
 
 Set: NumberOfPackages(self: AddTransportPackageArgs)=value
 """
 
  OuterReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OuterReference(self: AddTransportPackageArgs) -> str
+ """The outer reference (SSCC) to be used when adding a new package
+
+Get: OuterReference(self: AddTransportPackageArgs) -> str
 
 Set: OuterReference(self: AddTransportPackageArgs)=value
 """
 
  Preset=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Preset(self: AddTransportPackageArgs) -> ColliPreset
+ """
+
+Get: Preset(self: AddTransportPackageArgs) -> ColliPreset
 
 Set: Preset(self: AddTransportPackageArgs)=value
 """
 
  RegisterBoxIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: RegisterBoxIds(self: AddTransportPackageArgs) -> bool
+ """
+
+Get: RegisterBoxIds(self: AddTransportPackageArgs) -> bool
 
 Set: RegisterBoxIds(self: AddTransportPackageArgs)=value
 """
 
 
 
-class Charge:
+class Charge(object):
  """
  Charge()
  Charge(amount: Decimal,currencyCode: str,description: str)
  Charge(amount: Decimal,salesAmount: Decimal,currencyCode: str,description: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Charge()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,amount=None,*__args):
   """
@@ -193,8 +258,13 @@ class Charge:
  SalesAmount=None
 
 
-class Charges:
+class Charges(List):
  """ Charges() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Charges()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -212,8 +282,13 @@ class Charges:
  Empty=None
 
 
-class ColliPreset:
+class ColliPreset(object):
  """ ColliPreset() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ColliPreset()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -221,130 +296,175 @@ class ColliPreset:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  Active=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Active(self: ColliPreset) -> bool
+ """
+
+Get: Active(self: ColliPreset) -> bool
 
 Set: Active(self: ColliPreset)=value
 """
 
  Barcode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Barcode(self: ColliPreset) -> str
+ """
+
+Get: Barcode(self: ColliPreset) -> str
 
 Set: Barcode(self: ColliPreset)=value
 """
 
  ColliSpecificationCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ColliSpecificationCode(self: ColliPreset) -> str
+ """
+
+Get: ColliSpecificationCode(self: ColliPreset) -> str
 
 Set: ColliSpecificationCode(self: ColliPreset)=value
 """
 
  CreatedBy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CreatedBy(self: ColliPreset) -> str
+ """
+
+Get: CreatedBy(self: ColliPreset) -> str
 
 Set: CreatedBy(self: ColliPreset)=value
 """
 
  CreatedOn=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CreatedOn(self: ColliPreset) -> DateTime
+ """
+
+Get: CreatedOn(self: ColliPreset) -> DateTime
 
 Set: CreatedOn(self: ColliPreset)=value
 """
 
  Height=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Height(self: ColliPreset) -> Decimal
+ """
+
+Get: Height(self: ColliPreset) -> Decimal
 
 Set: Height(self: ColliPreset)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: ColliPreset) -> int
+ """
+
+Get: Id(self: ColliPreset) -> int
 
 Set: Id(self: ColliPreset)=value
 """
 
  IsDefault=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDefault(self: ColliPreset) -> bool
+ """
+
+Get: IsDefault(self: ColliPreset) -> bool
 
 Set: IsDefault(self: ColliPreset)=value
 """
 
  Item=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Item(self: ColliPreset) -> Item
+ """
+
+Get: Item(self: ColliPreset) -> Item
 
 Set: Item(self: ColliPreset)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: ColliPreset) -> str
+ """
+
+Get: ItemCode(self: ColliPreset) -> str
 
 Set: ItemCode(self: ColliPreset)=value
 """
 
  Length=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Length(self: ColliPreset) -> Decimal
+ """
+
+Get: Length(self: ColliPreset) -> Decimal
 
 Set: Length(self: ColliPreset)=value
 """
 
  ModifiedBy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ModifiedBy(self: ColliPreset) -> str
+ """
+
+Get: ModifiedBy(self: ColliPreset) -> str
 
 Set: ModifiedBy(self: ColliPreset)=value
 """
 
  ModifiedOn=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ModifiedOn(self: ColliPreset) -> DateTime
+ """
+
+Get: ModifiedOn(self: ColliPreset) -> DateTime
 
 Set: ModifiedOn(self: ColliPreset)=value
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name(self: ColliPreset) -> str
+ """
+
+Get: Name(self: ColliPreset) -> str
 
 Set: Name(self: ColliPreset)=value
 """
 
  StockRegistration=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StockRegistration(self: ColliPreset) -> StockRegistrationForColliEnum
+ """
+
+Get: StockRegistration(self: ColliPreset) -> StockRegistrationForColliEnum
 
 Set: StockRegistration(self: ColliPreset)=value
 """
 
  StockRegistrationAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StockRegistrationAsString(self: ColliPreset) -> str
+ """
+
+Get: StockRegistrationAsString(self: ColliPreset) -> str
 
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Type(self: ColliPreset) -> PackageType
+ """
+
+Get: Type(self: ColliPreset) -> PackageType
 
 Set: Type(self: ColliPreset)=value
 """
 
  TypeAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TypeAsString(self: ColliPreset) -> str
+ """
+
+Get: TypeAsString(self: ColliPreset) -> str
 
 """
 
  Weight=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Weight(self: ColliPreset) -> Decimal
+ """
+
+Get: Weight(self: ColliPreset) -> Decimal
 
 Set: Weight(self: ColliPreset)=value
 """
 
  Width=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Width(self: ColliPreset) -> Decimal
+ """
+
+Get: Width(self: ColliPreset) -> Decimal
 
 Set: Width(self: ColliPreset)=value
 """
 
 
 
-class ColliPresets:
+class ColliPresets(FindableList):
  """
  ColliPresets()
  ColliPresets(items: Array[ColliPreset])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ColliPresets()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(list):
   """ FromIEnumerable(list: IEnumerable[ColliPreset]) -> ColliPresets """
@@ -374,8 +494,13 @@ class ColliPresets:
  ValueMember='Id'
 
 
-class Countries:
+class Countries(FindableList):
  """ Countries() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Countries()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -394,11 +519,16 @@ class Countries:
  ValueMember='Code'
 
 
-class Country:
+class Country(object):
  """
  Country()
  Country(code: str,name: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Country()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,code=None,name=None):
   """
@@ -420,8 +550,13 @@ Set: Name(self: Country)=value
 
 
 
-class DangerousItem:
+class DangerousItem(object):
  """ DangerousItem() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DangerousItem()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: DangerousItem) -> object """
   pass
@@ -434,126 +569,169 @@ class DangerousItem:
   """ __repr__(self: object) -> str """
   pass
  Code=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Code(self: DangerousItem) -> str
+ """
+
+Get: Code(self: DangerousItem) -> str
 
 Set: Code(self: DangerousItem)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: DangerousItem) -> str
+ """
+
+Get: Description(self: DangerousItem) -> str
 
 Set: Description(self: DangerousItem)=value
 """
 
  FlashPointDegree=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: FlashPointDegree(self: DangerousItem) -> Decimal
+ """
+
+Get: FlashPointDegree(self: DangerousItem) -> Decimal
 
 Set: FlashPointDegree(self: DangerousItem)=value
 """
 
  GrossWeight=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GrossWeight(self: DangerousItem) -> Decimal
+ """
+
+Get: GrossWeight(self: DangerousItem) -> Decimal
 
 Set: GrossWeight(self: DangerousItem)=value
 """
 
  Instruction=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Instruction(self: DangerousItem) -> str
+ """
+
+Get: Instruction(self: DangerousItem) -> str
 
 Set: Instruction(self: DangerousItem)=value
 """
 
  LimitedQuantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LimitedQuantity(self: DangerousItem) -> str
+ """
+
+Get: LimitedQuantity(self: DangerousItem) -> str
 
 Set: LimitedQuantity(self: DangerousItem)=value
 """
 
  LimitedQuantityPoints=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: LimitedQuantityPoints(self: DangerousItem) -> int
+ """
+
+Get: LimitedQuantityPoints(self: DangerousItem) -> int
 
 Set: LimitedQuantityPoints(self: DangerousItem)=value
 """
 
  MarkingIdentifier=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: MarkingIdentifier(self: DangerousItem) -> str
+ """
+
+Get: MarkingIdentifier(self: DangerousItem) -> str
 
 Set: MarkingIdentifier(self: DangerousItem)=value
 """
 
  Measurements=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Measurements(self: DangerousItem) -> Dimensions
+ """
+
+Get: Measurements(self: DangerousItem) -> Dimensions
 
 Set: Measurements(self: DangerousItem)=value
 """
 
  NetWeight=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NetWeight(self: DangerousItem) -> Decimal
+ """
+
+Get: NetWeight(self: DangerousItem) -> Decimal
 
 Set: NetWeight(self: DangerousItem)=value
 """
 
  PackingClassificiation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackingClassificiation(self: DangerousItem) -> str
+ """
+
+Get: PackingClassificiation(self: DangerousItem) -> str
 
 Set: PackingClassificiation(self: DangerousItem)=value
 """
 
  PackingGroup=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackingGroup(self: DangerousItem) -> str
+ """
+
+Get: PackingGroup(self: DangerousItem) -> str
 
 Set: PackingGroup(self: DangerousItem)=value
 """
 
  PackingType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackingType(self: DangerousItem) -> str
+ """
+
+Get: PackingType(self: DangerousItem) -> str
 
 Set: PackingType(self: DangerousItem)=value
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: DangerousItem) -> Decimal
+ """
+
+Get: Quantity(self: DangerousItem) -> Decimal
 
 Set: Quantity(self: DangerousItem)=value
 """
 
  TunnelCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TunnelCode(self: DangerousItem) -> str
+ """
+
+Get: TunnelCode(self: DangerousItem) -> str
 
 Set: TunnelCode(self: DangerousItem)=value
 """
 
  UndgCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UndgCode(self: DangerousItem) -> str
+ """
+
+Get: UndgCode(self: DangerousItem) -> str
 
 Set: UndgCode(self: DangerousItem)=value
 """
 
  UndgSubCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UndgSubCode(self: DangerousItem) -> str
+ """
+
+Get: UndgSubCode(self: DangerousItem) -> str
 
 Set: UndgSubCode(self: DangerousItem)=value
 """
 
  UnitCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UnitCode(self: DangerousItem) -> str
+ """
+
+Get: UnitCode(self: DangerousItem) -> str
 
 Set: UnitCode(self: DangerousItem)=value
 """
 
  Volume=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Volume(self: DangerousItem) -> Decimal
+ """
+
+Get: Volume(self: DangerousItem) -> Decimal
 
 Set: Volume(self: DangerousItem)=value
 """
 
 
 
-class DangerousItems:
+class DangerousItems(List):
  """
  DangerousItems()
  DangerousItems(items: IEnumerable[DangerousItem])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DangerousItems()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: DangerousItems) -> object """
   pass
@@ -579,12 +757,17 @@ class DangerousItems:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
 
-class Dimensions:
+class Dimensions(object):
  """
  Dimensions(length: Decimal,width: Decimal,height: Decimal)
  Dimensions()
  Dimensions(dimensions: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Dimensions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CompareTo(self,other):
   """ CompareTo(self: Dimensions,other: Dimensions) -> int """
   pass
@@ -598,10 +781,18 @@ class Dimensions:
   """ GetHashCode(self: Dimensions) -> int """
   pass
  def IsValid(self):
-  """ IsValid(self: Dimensions) -> bool """
+  """
+  IsValid(self: Dimensions) -> bool
+  
+   Returns true if all dimensions are greater than zero
+  """
   pass
  def ToDimensionObjectWhereLengthIsLongest(self):
-  """ ToDimensionObjectWhereLengthIsLongest(self: Dimensions) -> Dimensions """
+  """
+  ToDimensionObjectWhereLengthIsLongest(self: Dimensions) -> Dimensions
+  
+   Swaps dimensions so that length is always the longest
+  """
   pass
  def ToString(self):
   """ ToString(self: Dimensions) -> str """
@@ -649,25 +840,33 @@ class Dimensions:
   """ x.__sub__(y) <==> x-y """
   pass
  Height=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Height(self: Dimensions) -> Decimal
+ """
+
+Get: Height(self: Dimensions) -> Decimal
 
 Set: Height(self: Dimensions)=value
 """
 
  Length=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Length(self: Dimensions) -> Decimal
+ """
+
+Get: Length(self: Dimensions) -> Decimal
 
 Set: Length(self: Dimensions)=value
 """
 
  UnitOfMeasurement=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UnitOfMeasurement(self: Dimensions) -> str
+ """
+
+Get: UnitOfMeasurement(self: Dimensions) -> str
 
 Set: UnitOfMeasurement(self: Dimensions)=value
 """
 
  Width=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Width(self: Dimensions) -> Decimal
+ """
+
+Get: Width(self: Dimensions) -> Decimal
 
 Set: Width(self: Dimensions)=value
 """
@@ -676,8 +875,13 @@ Set: Width(self: Dimensions)=value
  Empty=None
 
 
-class ExportDetails:
+class ExportDetails(object):
  """ ExportDetails() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ExportDetails()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: ExportDetails) -> object """
   pass
@@ -690,71 +894,99 @@ class ExportDetails:
   """ __repr__(self: object) -> str """
   pass
  CountryOfOrigin=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CountryOfOrigin(self: ExportDetails) -> str
+ """Country of origin of a product
+
+Get: CountryOfOrigin(self: ExportDetails) -> str
 
 Set: CountryOfOrigin(self: ExportDetails)=value
 """
 
  HsCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HsCode(self: ExportDetails) -> str
+ """Harmonized System Code. A unique code of an internationally 
+   standard system of names and numbers to classify traded products.
+
+Get: HsCode(self: ExportDetails) -> str
 
 Set: HsCode(self: ExportDetails)=value
 """
 
  HsCodeDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HsCodeDescription(self: ExportDetails) -> str
+ """The descroption of the Wms.RemotingObjects.ShippingLayers.ExportDetails.HsCode
+
+Get: HsCodeDescription(self: ExportDetails) -> str
 
 Set: HsCodeDescription(self: ExportDetails)=value
 """
 
  ReasonOfExport=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReasonOfExport(self: ExportDetails) -> str
+ """A description with the reason of the export
+
+Get: ReasonOfExport(self: ExportDetails) -> str
 
 Set: ReasonOfExport(self: ExportDetails)=value
 """
 
 
 
-class HistoryShipment:
+class HistoryShipment(object):
  """ HistoryShipment() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryShipment()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Address=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Address(self: HistoryShipment) -> str
+ """
+
+Get: Address(self: HistoryShipment) -> str
 
 Set: Address(self: HistoryShipment)=value
 """
 
  Address2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Address2(self: HistoryShipment) -> str
+ """
+
+Get: Address2(self: HistoryShipment) -> str
 
 Set: Address2(self: HistoryShipment)=value
 """
 
  Address3=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Address3(self: HistoryShipment) -> str
+ """
+
+Get: Address3(self: HistoryShipment) -> str
 
 Set: Address3(self: HistoryShipment)=value
 """
 
  Canceled=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Canceled(self: HistoryShipment) -> bool
+ """
+
+Get: Canceled(self: HistoryShipment) -> bool
 
 Set: Canceled(self: HistoryShipment)=value
 """
 
  City=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: City(self: HistoryShipment) -> str
+ """
+
+Get: City(self: HistoryShipment) -> str
 
 Set: City(self: HistoryShipment)=value
 """
 
  Colli=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Colli(self: HistoryShipment) -> int
+ """
+
+Get: Colli(self: HistoryShipment) -> int
 
 Set: Colli(self: HistoryShipment)=value
 """
 
  CountryAndCity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CountryAndCity(self: HistoryShipment) -> str
+ """
+
+Get: CountryAndCity(self: HistoryShipment) -> str
 
 """
 
@@ -765,37 +997,49 @@ Set: CountryCode(self: HistoryShipment)=value
 """
 
  CountryName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CountryName(self: HistoryShipment) -> str
+ """
+
+Get: CountryName(self: HistoryShipment) -> str
 
 Set: CountryName(self: HistoryShipment)=value
 """
 
  DeliveryBeginDateTime=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DeliveryBeginDateTime(self: HistoryShipment) -> DateTime
+ """
+
+Get: DeliveryBeginDateTime(self: HistoryShipment) -> DateTime
 
 Set: DeliveryBeginDateTime(self: HistoryShipment)=value
 """
 
  DeliveryEndDateTime=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DeliveryEndDateTime(self: HistoryShipment) -> DateTime
+ """
+
+Get: DeliveryEndDateTime(self: HistoryShipment) -> DateTime
 
 Set: DeliveryEndDateTime(self: HistoryShipment)=value
 """
 
  Email=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Email(self: HistoryShipment) -> str
+ """
+
+Get: Email(self: HistoryShipment) -> str
 
 Set: Email(self: HistoryShipment)=value
 """
 
  HasAttachments=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HasAttachments(self: HistoryShipment) -> bool
+ """Indicates if the shipments has any attachments (documents). This doesn't include labels!
+
+Get: HasAttachments(self: HistoryShipment) -> bool
 
 Set: HasAttachments(self: HistoryShipment)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: HistoryShipment) -> int
+ """
+
+Get: Id(self: HistoryShipment) -> int
 
 Set: Id(self: HistoryShipment)=value
 """
@@ -807,93 +1051,126 @@ Set: IsCod(self: HistoryShipment)=value
 """
 
  ModifiedBy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ModifiedBy(self: HistoryShipment) -> str
+ """
+
+Get: ModifiedBy(self: HistoryShipment) -> str
 
 Set: ModifiedBy(self: HistoryShipment)=value
 """
 
  ModifiedOn=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ModifiedOn(self: HistoryShipment) -> DateTime
+ """
+
+Get: ModifiedOn(self: HistoryShipment) -> DateTime
 
 Set: ModifiedOn(self: HistoryShipment)=value
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name(self: HistoryShipment) -> str
+ """
+
+Get: Name(self: HistoryShipment) -> str
 
 Set: Name(self: HistoryShipment)=value
 """
 
  Name2=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name2(self: HistoryShipment) -> str
+ """
+
+Get: Name2(self: HistoryShipment) -> str
 
 Set: Name2(self: HistoryShipment)=value
 """
 
  Notes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Notes(self: HistoryShipment) -> str
+ """
+
+Get: Notes(self: HistoryShipment) -> str
 
 Set: Notes(self: HistoryShipment)=value
 """
 
  PhoneNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PhoneNumber(self: HistoryShipment) -> str
+ """
+
+Get: PhoneNumber(self: HistoryShipment) -> str
 
 Set: PhoneNumber(self: HistoryShipment)=value
 """
 
  PickupDateTime=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PickupDateTime(self: HistoryShipment) -> DateTime
+ """
+
+Get: PickupDateTime(self: HistoryShipment) -> DateTime
 
 Set: PickupDateTime(self: HistoryShipment)=value
 """
 
  Reference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Reference(self: HistoryShipment) -> str
+ """
+
+Get: Reference(self: HistoryShipment) -> str
 
 Set: Reference(self: HistoryShipment)=value
 """
 
  ShipperId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ShipperId(self: HistoryShipment) -> str
+ """
+
+Get: ShipperId(self: HistoryShipment) -> str
 
 Set: ShipperId(self: HistoryShipment)=value
 """
 
  ShipperServiceLevelId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ShipperServiceLevelId(self: HistoryShipment) -> str
+ """
+
+Get: ShipperServiceLevelId(self: HistoryShipment) -> str
 
 Set: ShipperServiceLevelId(self: HistoryShipment)=value
 """
 
  ShipperServiceName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ShipperServiceName(self: HistoryShipment) -> str
+ """
+
+Get: ShipperServiceName(self: HistoryShipment) -> str
 
 Set: ShipperServiceName(self: HistoryShipment)=value
 """
 
  StateCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StateCode(self: HistoryShipment) -> str
+ """
+
+Get: StateCode(self: HistoryShipment) -> str
 
 Set: StateCode(self: HistoryShipment)=value
 """
 
  TotalWeight=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalWeight(self: HistoryShipment) -> Decimal
+ """
+
+Get: TotalWeight(self: HistoryShipment) -> Decimal
 
 Set: TotalWeight(self: HistoryShipment)=value
 """
 
  ZipCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ZipCode(self: HistoryShipment) -> str
+ """
+
+Get: ZipCode(self: HistoryShipment) -> str
 
 Set: ZipCode(self: HistoryShipment)=value
 """
 
 
 
-class HistoryShipmentFilter:
+class HistoryShipmentFilter(HistoryFilterBase):
  """ HistoryShipmentFilter() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryShipmentFilter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  SearchString=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: SearchString(self: HistoryShipmentFilter) -> str
 
@@ -908,8 +1185,13 @@ Set: YourReference(self: HistoryShipmentFilter)=value
 
 
 
-class HistoryShipmentLine:
+class HistoryShipmentLine(object):
  """ HistoryShipmentLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryShipmentLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ColliPresetName=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: ColliPresetName(self: HistoryShipmentLine) -> str
 
@@ -917,19 +1199,25 @@ Set: ColliPresetName(self: HistoryShipmentLine)=value
 """
 
  CustomerReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerReference(self: HistoryShipmentLine) -> str
+ """
+
+Get: CustomerReference(self: HistoryShipmentLine) -> str
 
 Set: CustomerReference(self: HistoryShipmentLine)=value
 """
 
  DateOfDelivery=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DateOfDelivery(self: HistoryShipmentLine) -> DateTime
+ """
+
+Get: DateOfDelivery(self: HistoryShipmentLine) -> DateTime
 
 Set: DateOfDelivery(self: HistoryShipmentLine)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: HistoryShipmentLine) -> str
+ """
+
+Get: Description(self: HistoryShipmentLine) -> str
 
 Set: Description(self: HistoryShipmentLine)=value
 """
@@ -1019,7 +1307,9 @@ Set: PackageWeight(self: HistoryShipmentLine)=value
 """
 
  QuantityDelivered=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityDelivered(self: HistoryShipmentLine) -> Decimal
+ """
+
+Get: QuantityDelivered(self: HistoryShipmentLine) -> Decimal
 
 Set: QuantityDelivered(self: HistoryShipmentLine)=value
 """
@@ -1050,11 +1340,16 @@ Set: SSCC(self: HistoryShipmentLine)=value
 
 
 
-class HistoryShipmentLines:
+class HistoryShipmentLines(PagedList):
  """
  HistoryShipmentLines()
  HistoryShipmentLines(collection: IEnumerable[HistoryShipmentLine])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryShipmentLines()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def FromIEnumerable(collection):
   """ FromIEnumerable(collection: IEnumerable[HistoryShipmentLine]) -> HistoryShipmentLines """
@@ -1081,12 +1376,16 @@ class HistoryShipmentLines:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  IsDisposable=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsDisposable(self: HistoryShipmentLines) -> bool
+ """
+
+Get: IsDisposable(self: HistoryShipmentLines) -> bool
 
 """
 
  PreserveState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PreserveState(self: HistoryShipmentLines) -> bool
+ """
+
+Get: PreserveState(self: HistoryShipmentLines) -> bool
 
 """
 
@@ -1095,8 +1394,13 @@ class HistoryShipmentLines:
  ValueMember='ItemCode'
 
 
-class HistoryShipments:
+class HistoryShipments(FindableList):
  """ HistoryShipments() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HistoryShipments()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -1118,7 +1422,9 @@ Set: Total(self: HistoryShipments)=value
 """
 
  TotalRowsMatched=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalRowsMatched(self: HistoryShipments) -> Int64
+ """Same as Total property needed to implement Wms.RemotingObjects.IPagedList.
+
+Get: TotalRowsMatched(self: HistoryShipments) -> Int64
 
 Set: TotalRowsMatched(self: HistoryShipments)=value
 """
@@ -1130,6 +1436,11 @@ Set: TotalRowsMatched(self: HistoryShipments)=value
 
 class IService:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IService()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -1170,6 +1481,11 @@ Set: TransportationCharge(self: IService)=value
 
 class IShipper:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IShipper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -1210,8 +1526,13 @@ class IShipper:
 
 
 
-class LogSink:
+class LogSink(object):
  """ LogSink() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LogSink()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Write(message,type=None):
   """ Write(message: str,type: LogSinkMessageTypes)Write(message: str) """
@@ -1222,6 +1543,11 @@ class LogSink:
 
 class LogSinkMessageTypes:
  """ enum LogSinkMessageTypes,values: Debug (2),Error (0),UserInfo (1) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LogSinkMessageTypes()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -1251,11 +1577,16 @@ class LogSinkMessageTypes:
  value__=None
 
 
-class MobileService:
+class MobileService(object):
  """
  MobileService()
  MobileService(original: IService)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MobileService()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -1311,11 +1642,16 @@ Set: TransportationCharge(self: MobileService)=value
 
 
 
-class MobileShipper:
+class MobileShipper(object):
  """
  MobileShipper(source: IShipper)
  MobileShipper()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MobileShipper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -1332,48 +1668,67 @@ class MobileShipper:
   """ __repr__(self: object) -> str """
   pass
  ColliSpecificationCodes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ColliSpecificationCodes(self: MobileShipper) -> Array[str]
+ """
+
+Get: ColliSpecificationCodes(self: MobileShipper) -> Array[str]
 
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: MobileShipper) -> str
+ """
+
+Get: Description(self: MobileShipper) -> str
 
 """
 
  DimensionMandatory=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DimensionMandatory(self: MobileShipper) -> bool
+ """
+
+Get: DimensionMandatory(self: MobileShipper) -> bool
 
 """
 
  Logo48=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Logo48(self: MobileShipper) -> Bitmap
+ """
+
+Get: Logo48(self: MobileShipper) -> Bitmap
 
 """
 
  Logo64=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Logo64(self: MobileShipper) -> Bitmap
+ """
+
+Get: Logo64(self: MobileShipper) -> Bitmap
 
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name(self: MobileShipper) -> str
+ """
+
+Get: Name(self: MobileShipper) -> str
 
 """
 
  UniqueId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UniqueId(self: MobileShipper) -> str
+ """
+
+Get: UniqueId(self: MobileShipper) -> str
 
 """
 
 
 
-class OutboundOrderItem:
+class OutboundOrderItem(object):
  """
  OutboundOrderItem()
  OutboundOrderItem(orderNumber: str,boxGuid: Guid,itemCode: str,quantity: Decimal)
  OutboundOrderItem(orderNumber: str,boxGuid: Guid,itemCode: str,itemIdentificationNumber: str,quantity: Decimal)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OutboundOrderItem()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHashCode(self):
   """ GetHashCode(self: OutboundOrderItem) -> int """
   pass
@@ -1386,60 +1741,81 @@ class OutboundOrderItem:
   """
   pass
  BoxGuid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BoxGuid(self: OutboundOrderItem) -> Guid
+ """
+
+Get: BoxGuid(self: OutboundOrderItem) -> Guid
 
 Set: BoxGuid(self: OutboundOrderItem)=value
 """
 
  HistoryIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: HistoryIds(self: OutboundOrderItem) -> Dictionary[int,Decimal]
+ """The ID's of the database record in the BOXwise Pro database table OutboundOrders
+
+Get: HistoryIds(self: OutboundOrderItem) -> Dictionary[int,Decimal]
 
 Set: HistoryIds(self: OutboundOrderItem)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: OutboundOrderItem) -> str
+ """
+
+Get: ItemCode(self: OutboundOrderItem) -> str
 
 Set: ItemCode(self: OutboundOrderItem)=value
 """
 
  ItemIdentificationNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIdentificationNumber(self: OutboundOrderItem) -> str
+ """
+
+Get: ItemIdentificationNumber(self: OutboundOrderItem) -> str
 
 Set: ItemIdentificationNumber(self: OutboundOrderItem)=value
 """
 
  OrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumber(self: OutboundOrderItem) -> str
+ """
+
+Get: OrderNumber(self: OutboundOrderItem) -> str
 
 Set: OrderNumber(self: OutboundOrderItem)=value
 """
 
  PackingSlipNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackingSlipNumber(self: OutboundOrderItem) -> str
+ """The packing slip number of this item. It will be assigned when it has been processed to the ERP.
+
+Get: PackingSlipNumber(self: OutboundOrderItem) -> str
 
 Set: PackingSlipNumber(self: OutboundOrderItem)=value
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: OutboundOrderItem) -> Decimal
+ """
+
+Get: Quantity(self: OutboundOrderItem) -> Decimal
 
 Set: Quantity(self: OutboundOrderItem)=value
 """
 
  QuantityOriginal=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityOriginal(self: OutboundOrderItem) -> Decimal
+ """
+
+Get: QuantityOriginal(self: OutboundOrderItem) -> Decimal
 
 Set: QuantityOriginal(self: OutboundOrderItem)=value
 """
 
 
 
-class OutboundOrderItems:
+class OutboundOrderItems(List):
  """
  OutboundOrderItems()
  OutboundOrderItems(outboundOrderItems: OutboundOrderItems)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OutboundOrderItems()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddOrUpdate(self,*__args):
   """ AddOrUpdate(self: OutboundOrderItems,outboundOrderItem: OutboundOrderItem)AddOrUpdate(self: OutboundOrderItems,orderNumber: str,boxGuid: Guid,itemCode: str,quantity: Decimal)AddOrUpdate(self: OutboundOrderItems,orderNumber: str,boxGuid: Guid,itemCode: str,itemIdentificationNumber: str,quantity: Decimal) """
   pass
@@ -1474,8 +1850,13 @@ class OutboundOrderItems:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
 
-class OutboundOrdersFilter:
+class OutboundOrdersFilter(object):
  """ OutboundOrdersFilter() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OutboundOrdersFilter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  BoxNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: BoxNumber(self: OutboundOrdersFilter) -> str
 
@@ -1490,8 +1871,13 @@ Set: SearchString(self: OutboundOrdersFilter)=value
 
 
 
-class Packages:
+class Packages(List):
  """ Packages() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Packages()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetTotalWeight(self):
   """ GetTotalWeight(self: Packages) -> Decimal """
   pass
@@ -1514,6 +1900,11 @@ class Packages:
 
 class PackageType:
  """ enum PackageType,values: Box (1),Document (0),Pallet (2) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PackageType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -1543,8 +1934,13 @@ class PackageType:
  value__=None
 
 
-class PackingSlipLine:
+class PackingSlipLine(object):
  """ PackingSlipLine() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PackingSlipLine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: PackingSlipLine) -> object """
   pass
@@ -1557,161 +1953,218 @@ class PackingSlipLine:
   """ __repr__(self: object) -> str """
   pass
  AssemblyInstructions=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AssemblyInstructions(self: PackingSlipLine) -> str
+ """
+
+Get: AssemblyInstructions(self: PackingSlipLine) -> str
 
 Set: AssemblyInstructions(self: PackingSlipLine)=value
 """
 
  Composition=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Composition(self: PackingSlipLine) -> str
+ """
+
+Get: Composition(self: PackingSlipLine) -> str
 
 Set: Composition(self: PackingSlipLine)=value
 """
 
  Currency=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Currency(self: PackingSlipLine) -> str
+ """The currencty that's used for the sales price
+
+Get: Currency(self: PackingSlipLine) -> str
 
 Set: Currency(self: PackingSlipLine)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: PackingSlipLine) -> str
+ """The description of an item
+
+Get: Description(self: PackingSlipLine) -> str
 
 Set: Description(self: PackingSlipLine)=value
 """
 
  ExportDetails=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ExportDetails(self: PackingSlipLine) -> ExportDetails
+ """Wms.RemotingObjects.ShippingLayers.ExportDetails with additional data for export
+
+Get: ExportDetails(self: PackingSlipLine) -> ExportDetails
 
 Set: ExportDetails(self: PackingSlipLine)=value
 """
 
  GrossWeight=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GrossWeight(self: PackingSlipLine) -> Decimal
+ """Gross weight
+
+Get: GrossWeight(self: PackingSlipLine) -> Decimal
 
 Set: GrossWeight(self: PackingSlipLine)=value
 """
 
  GTINCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GTINCode(self: PackingSlipLine) -> str
+ """The EAN code
+
+Get: GTINCode(self: PackingSlipLine) -> str
 
 Set: GTINCode(self: PackingSlipLine)=value
 """
 
  IsBatchNumberItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsBatchNumberItem(self: PackingSlipLine) -> bool
+ """Indicates if this item is a batch number item. Used in combination with Wms.RemotingObjects.ShippingLayers.PackingSlipLine.ItemIdentifications.
+
+Get: IsBatchNumberItem(self: PackingSlipLine) -> bool
 
 Set: IsBatchNumberItem(self: PackingSlipLine)=value
 """
 
  IsSerialNumberItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsSerialNumberItem(self: PackingSlipLine) -> bool
+ """Indicates if this item is a serial number item. Used in combination with Wms.RemotingObjects.ShippingLayers.PackingSlipLine.ItemIdentifications.
+
+Get: IsSerialNumberItem(self: PackingSlipLine) -> bool
 
 Set: IsSerialNumberItem(self: PackingSlipLine)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: PackingSlipLine) -> str
+ """The unique code of an item
+
+Get: ItemCode(self: PackingSlipLine) -> str
 
 Set: ItemCode(self: PackingSlipLine)=value
 """
 
  ItemIdentifications=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIdentifications(self: PackingSlipLine) -> List[ItemIdentificationBase]
+ """A System.Collections.Generic.List with the serial or batch numbers
+
+Get: ItemIdentifications(self: PackingSlipLine) -> List[ItemIdentificationBase]
 
 Set: ItemIdentifications(self: PackingSlipLine)=value
 """
 
  NettoWeight=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: NettoWeight(self: PackingSlipLine) -> Decimal
+ """Netto weight
+
+Get: NettoWeight(self: PackingSlipLine) -> Decimal
 
 Set: NettoWeight(self: PackingSlipLine)=value
 """
 
  Number=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Number(self: PackingSlipLine) -> str
+ """Number of the package slip
+
+Get: Number(self: PackingSlipLine) -> str
 
 Set: Number(self: PackingSlipLine)=value
 """
 
  OrderNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumber(self: PackingSlipLine) -> str
+ """The order number
+
+Get: OrderNumber(self: PackingSlipLine) -> str
 
 Set: OrderNumber(self: PackingSlipLine)=value
 """
 
  Proforma=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Proforma(self: PackingSlipLine) -> Proforma
+ """Wms.RemotingObjects.ShippingLayers.Proforma with information of the proforma
+
+Get: Proforma(self: PackingSlipLine) -> Proforma
 
 Set: Proforma(self: PackingSlipLine)=value
 """
 
  Quality=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quality(self: PackingSlipLine) -> str
+ """
+
+Get: Quality(self: PackingSlipLine) -> str
 
 Set: Quality(self: PackingSlipLine)=value
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: PackingSlipLine) -> Decimal
+ """Quantity of this item
+
+Get: Quantity(self: PackingSlipLine) -> Decimal
 
 Set: Quantity(self: PackingSlipLine)=value
 """
 
  QuantityCubicMeters=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityCubicMeters(self: PackingSlipLine) -> Decimal
+ """
+
+Get: QuantityCubicMeters(self: PackingSlipLine) -> Decimal
 
 Set: QuantityCubicMeters(self: PackingSlipLine)=value
 """
 
  QuantityInBackOrder=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityInBackOrder(self: PackingSlipLine) -> Decimal
+ """The quantity in back order
+
+Get: QuantityInBackOrder(self: PackingSlipLine) -> Decimal
 
 Set: QuantityInBackOrder(self: PackingSlipLine)=value
 """
 
  QuantityOrdered=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityOrdered(self: PackingSlipLine) -> Decimal
+ """The total quantity that has been ordered
+
+Get: QuantityOrdered(self: PackingSlipLine) -> Decimal
 
 Set: QuantityOrdered(self: PackingSlipLine)=value
 """
 
  SalesPrice=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SalesPrice(self: PackingSlipLine) -> Decimal
+ """The sales price exluding VAT
+
+Get: SalesPrice(self: PackingSlipLine) -> Decimal
 
 Set: SalesPrice(self: PackingSlipLine)=value
 """
 
  SalesPriceWithVat=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SalesPriceWithVat(self: PackingSlipLine) -> Decimal
+ """The sales price including VAT
+
+Get: SalesPriceWithVat(self: PackingSlipLine) -> Decimal
 
 Set: SalesPriceWithVat(self: PackingSlipLine)=value
 """
 
  UnitCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UnitCode(self: PackingSlipLine) -> str
+ """
+
+Get: UnitCode(self: PackingSlipLine) -> str
 
 Set: UnitCode(self: PackingSlipLine)=value
 """
 
  WeightUom=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WeightUom(self: PackingSlipLine) -> str
+ """The unit of measurement of the weights
+
+Get: WeightUom(self: PackingSlipLine) -> str
 
 Set: WeightUom(self: PackingSlipLine)=value
 """
 
 
 
-class ProcessShipmentArgs:
+class ProcessShipmentArgs(object):
  """ ProcessShipmentArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessShipmentArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CacheKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CacheKey(self: ProcessShipmentArgs) -> CacheKey
+ """
+
+Get: CacheKey(self: ProcessShipmentArgs) -> CacheKey
 
 Set: CacheKey(self: ProcessShipmentArgs)=value
 """
 
  ShipmentId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ShipmentId(self: ProcessShipmentArgs) -> int
+ """
+
+Get: ShipmentId(self: ProcessShipmentArgs) -> int
 
 Set: ShipmentId(self: ProcessShipmentArgs)=value
 """
@@ -1720,6 +2173,11 @@ Set: ShipmentId(self: ProcessShipmentArgs)=value
 
 class ProcessShipmentStepsEnum:
  """ enum ProcessShipmentStepsEnum,values: Done (4),LogShipment (1),PrintPackingSlip (3),ProcessInfoToErp (2),ProcessShipment (0) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessShipmentStepsEnum()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -1751,8 +2209,13 @@ class ProcessShipmentStepsEnum:
  value__=None
 
 
-class Proforma:
+class Proforma(object):
  """ Proforma() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Proforma()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: Proforma) -> object """
   pass
@@ -1814,8 +2277,13 @@ Set: OtherCharges(self: Proforma)=value
 
 
 
-class References:
+class References(object):
  """ References() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return References()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: References) -> object """
   pass
@@ -1839,48 +2307,67 @@ class References:
   """ __repr__(self: object) -> str """
   pass
  CustomerReferences=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerReferences(self: References) -> List[str]
+ """
+
+Get: CustomerReferences(self: References) -> List[str]
 
 """
 
  CustomerReferencesAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomerReferencesAsString(self: References) -> str
+ """
+
+Get: CustomerReferencesAsString(self: References) -> str
 
 Set: CustomerReferencesAsString(self: References)=value
 """
 
  DebtorNumber=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DebtorNumber(self: References) -> str
+ """
+
+Get: DebtorNumber(self: References) -> str
 
 Set: DebtorNumber(self: References)=value
 """
 
  OrderNumbers=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumbers(self: References) -> List[str]
+ """
+
+Get: OrderNumbers(self: References) -> List[str]
 
 """
 
  OrderNumbersAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OrderNumbersAsString(self: References) -> str
+ """
+
+Get: OrderNumbersAsString(self: References) -> str
 
 Set: OrderNumbersAsString(self: References)=value
 """
 
  PackageSlipNumbers=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackageSlipNumbers(self: References) -> List[str]
+ """
+
+Get: PackageSlipNumbers(self: References) -> List[str]
 
 """
 
  PackageSlipNumbersAsString=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: PackageSlipNumbersAsString(self: References) -> str
+ """
+
+Get: PackageSlipNumbersAsString(self: References) -> str
 
 Set: PackageSlipNumbersAsString(self: References)=value
 """
 
 
 
-class Services:
+class Services(FindableList):
  """ Services() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Services()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Exists(self,*__args):
   """ Exists(self: Services,serviceId: str) -> bool """
   pass
@@ -1905,43 +2392,69 @@ class Services:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
 
-class ShipmentDayClass:
+class ShipmentDayClass(object):
  """ ShipmentDayClass() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ShipmentDayClass()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ShipmentDay=None
 
 
-class ShipmentInfo:
+class ShipmentInfo(object):
  """ ShipmentInfo() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ShipmentInfo()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ColliCount=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ColliCount(self: ShipmentInfo) -> int
+ """
+
+Get: ColliCount(self: ShipmentInfo) -> int
 
 Set: ColliCount(self: ShipmentInfo)=value
 """
 
  TotalWeight=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalWeight(self: ShipmentInfo) -> Decimal
+ """
+
+Get: TotalWeight(self: ShipmentInfo) -> Decimal
 
 Set: TotalWeight(self: ShipmentInfo)=value
 """
 
  TrackingUrl=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TrackingUrl(self: ShipmentInfo) -> str
+ """
+
+Get: TrackingUrl(self: ShipmentInfo) -> str
 
 Set: TrackingUrl(self: ShipmentInfo)=value
 """
 
 
 
-class ShipperInitInfo:
+class ShipperInitInfo(object):
  """ ShipperInitInfo() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ShipperInitInfo()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  RootShipperFolder=None
 
 
-class ShipperServiceLink:
+class ShipperServiceLink(DbObject):
  """
  ShipperServiceLink()
  ShipperServiceLink(erpDeliveryMethodCode: str,erpDeliveryMethodDescription: str,shipperId: str,serviceLevel: str,allowDifferentChoice: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ShipperServiceLink()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -1955,48 +2468,65 @@ class ShipperServiceLink:
  def __reduce_ex__(self,*args):
   pass
  AllowDifferentChoice=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AllowDifferentChoice(self: ShipperServiceLink) -> bool
+ """
+
+Get: AllowDifferentChoice(self: ShipperServiceLink) -> bool
 
 Set: AllowDifferentChoice(self: ShipperServiceLink)=value
 """
 
  ErpDeliveryMethodCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ErpDeliveryMethodCode(self: ShipperServiceLink) -> str
+ """
+
+Get: ErpDeliveryMethodCode(self: ShipperServiceLink) -> str
 
 Set: ErpDeliveryMethodCode(self: ShipperServiceLink)=value
 """
 
  ErpDeliveryMethodDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ErpDeliveryMethodDescription(self: ShipperServiceLink) -> str
+ """
+
+Get: ErpDeliveryMethodDescription(self: ShipperServiceLink) -> str
 
 Set: ErpDeliveryMethodDescription(self: ShipperServiceLink)=value
 """
 
  Id=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Id(self: ShipperServiceLink) -> int
+ """
+
+Get: Id(self: ShipperServiceLink) -> int
 
 Set: Id(self: ShipperServiceLink)=value
 """
 
  ServiceLevel=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ServiceLevel(self: ShipperServiceLink) -> str
+ """
+
+Get: ServiceLevel(self: ShipperServiceLink) -> str
 
 Set: ServiceLevel(self: ShipperServiceLink)=value
 """
 
  ShipperId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ShipperId(self: ShipperServiceLink) -> str
+ """
+
+Get: ShipperId(self: ShipperServiceLink) -> str
 
 Set: ShipperId(self: ShipperServiceLink)=value
 """
 
 
 
-class ShipperServiceLinks:
+class ShipperServiceLinks(FindableList):
  """
  ShipperServiceLinks()
  ShipperServiceLinks(items: Array[ShipperServiceLink])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ShipperServiceLinks()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -2023,7 +2553,17 @@ class ShipperServiceLinks:
 
 
 class State:
- """ enum State,values: Packed (2),Picked (0),Processed (1),Shipped (3) """
+ """
+ Current state of the Wms.RemotingObjects.ShippingLayers.TransportItem.
+    In a normal process a TransportItems goes through all the states.
+ 
+ enum State,values: Packed (2),Picked (0),Processed (1),Shipped (3)
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return State()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -2054,20 +2594,36 @@ class State:
  value__=None
 
 
-class TransportItem:
+class TransportItem(object):
  """
  TransportItem()
  TransportItem(line: OutboundOrderLine,boxGuid: Guid,itemIds: ItemIdentifications,innerReference: str)
  TransportItem(line: OutboundOrderLine,boxGuid: Guid,quantity: Decimal,quantityProcessed: Decimal,registerItemIdsDuringPacking: bool,innerReference: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TransportItem()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
-  """ Clone(self: TransportItem) -> object """
+  """
+  Clone(self: TransportItem) -> object
+  
+   Creates shallow clone.
+  """
   pass
  def CloneWithSpecificOutboundOrder(self,orderNumber):
   """ CloneWithSpecificOutboundOrder(self: TransportItem,orderNumber: str) -> object """
   pass
  def CopyTo(self,item,itemIds=None):
-  """ CopyTo(self: TransportItem,item: TransportItem)CopyTo(self: TransportItem,item: TransportItem,itemIds: ItemIdentifications) """
+  """
+  CopyTo(self: TransportItem,item: TransportItem)CopyTo(self: TransportItem,item: TransportItem,itemIds: ItemIdentifications)
+   Copies the contents of this item to the given item with only the itemidentifications given in the
+     second parameter
+  
+   item: The item to wich the contents of this item have to be copied.
+   itemIds: The itemidentifications to copy to the new item.
+  """
   pass
  def ResetQuantity(self):
   """ ResetQuantity(self: TransportItem) """
@@ -2092,25 +2648,33 @@ class TransportItem:
   """ __repr__(self: object) -> str """
   pass
  BatchId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BatchId(self: TransportItem) -> str
+ """
+
+Get: BatchId(self: TransportItem) -> str
 
 Set: BatchId(self: TransportItem)=value
 """
 
  BatchIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: BatchIds(self: TransportItem) -> List[str]
+ """
+
+Get: BatchIds(self: TransportItem) -> List[str]
 
 Set: BatchIds(self: TransportItem)=value
 """
 
  Colors=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Colors(self: TransportItem) -> List[str]
+ """
+
+Get: Colors(self: TransportItem) -> List[str]
 
 Set: Colors(self: TransportItem)=value
 """
 
  Currency=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Currency(self: TransportItem) -> str
+ """The currency of the item sales price
+
+Get: Currency(self: TransportItem) -> str
 
 Set: Currency(self: TransportItem)=value
 """
@@ -2122,79 +2686,105 @@ Set: DbKey(self: TransportItem)=value
 """
 
  DefaultVendorItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DefaultVendorItemCode(self: TransportItem) -> str
+ """
+
+Get: DefaultVendorItemCode(self: TransportItem) -> str
 
 Set: DefaultVendorItemCode(self: TransportItem)=value
 """
 
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Description(self: TransportItem) -> str
+ """Comes from: Wms.RemotingObjects.Outbound.OutboundOrderLine.LineDescription
+
+Get: Description(self: TransportItem) -> str
 
 Set: Description(self: TransportItem)=value
 """
 
  GTINCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GTINCode(self: TransportItem) -> str
+ """The GTIN of this item
+
+Get: GTINCode(self: TransportItem) -> str
 
 Set: GTINCode(self: TransportItem)=value
 """
 
  InnerReference=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: InnerReference(self: TransportItem) -> str
+ """
+
+Get: InnerReference(self: TransportItem) -> str
 
 Set: InnerReference(self: TransportItem)=value
 """
 
  Instruction=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Instruction(self: TransportItem) -> str
+ """
+
+Get: Instruction(self: TransportItem) -> str
 
 Set: Instruction(self: TransportItem)=value
 """
 
  IsBatchNumberItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsBatchNumberItem(self: TransportItem) -> bool
+ """
+
+Get: IsBatchNumberItem(self: TransportItem) -> bool
 
 Set: IsBatchNumberItem(self: TransportItem)=value
 """
 
  IsExtraItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsExtraItem(self: TransportItem) -> bool
+ """
+
+Get: IsExtraItem(self: TransportItem) -> bool
 
 Set: IsExtraItem(self: TransportItem)=value
 """
 
  IsFractionAllowed=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsFractionAllowed(self: TransportItem) -> bool
+ """
+
+Get: IsFractionAllowed(self: TransportItem) -> bool
 
 Set: IsFractionAllowed(self: TransportItem)=value
 """
 
  IsSerialNumberItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsSerialNumberItem(self: TransportItem) -> bool
+ """
+
+Get: IsSerialNumberItem(self: TransportItem) -> bool
 
 Set: IsSerialNumberItem(self: TransportItem)=value
 """
 
  ItemCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemCode(self: TransportItem) -> str
+ """
+
+Get: ItemCode(self: TransportItem) -> str
 
 Set: ItemCode(self: TransportItem)=value
 """
 
  ItemIds=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemIds(self: TransportItem) -> ItemIdentifications
+ """
+
+Get: ItemIds(self: TransportItem) -> ItemIdentifications
 
 Set: ItemIds(self: TransportItem)=value
 """
 
  ItemSalesPrice=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemSalesPrice(self: TransportItem) -> Decimal
+ """The item sales price excluding VAT
+
+Get: ItemSalesPrice(self: TransportItem) -> Decimal
 
 Set: ItemSalesPrice(self: TransportItem)=value
 """
 
  ItemSalesPriceSingleWithVat=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ItemSalesPriceSingleWithVat(self: TransportItem) -> Decimal
+ """
+
+Get: ItemSalesPriceSingleWithVat(self: TransportItem) -> Decimal
 
 Set: ItemSalesPriceSingleWithVat(self: TransportItem)=value
 """
@@ -2206,65 +2796,89 @@ Set: ItemWeight(self: TransportItem)=value
 """
 
  OutboundOrderItems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OutboundOrderItems(self: TransportItem) -> OutboundOrderItems
+ """
+
+Get: OutboundOrderItems(self: TransportItem) -> OutboundOrderItems
 
 Set: OutboundOrderItems(self: TransportItem)=value
 """
 
  Quantity=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Quantity(self: TransportItem) -> Decimal
+ """Amount of products in  this item.
+   Either sum of quantities of item-ids or Quantity itself.
+
+Get: Quantity(self: TransportItem) -> Decimal
 
 Set: Quantity(self: TransportItem)=value
 """
 
  QuantityOriginal=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityOriginal(self: TransportItem) -> Decimal
+ """
+
+Get: QuantityOriginal(self: TransportItem) -> Decimal
 
 Set: QuantityOriginal(self: TransportItem)=value
 """
 
  QuantityProcessed=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: QuantityProcessed(self: TransportItem) -> Decimal
+ """
+
+Get: QuantityProcessed(self: TransportItem) -> Decimal
 
 Set: QuantityProcessed(self: TransportItem)=value
 """
 
  RegisterItemIdsDuringPacking=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: RegisterItemIdsDuringPacking(self: TransportItem) -> bool
+ """
+
+Get: RegisterItemIdsDuringPacking(self: TransportItem) -> bool
 
 Set: RegisterItemIdsDuringPacking(self: TransportItem)=value
 """
 
  State=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: State(self: TransportItem) -> State
+ """
+
+Get: State(self: TransportItem) -> State
 
 Set: State(self: TransportItem)=value
 """
 
  UniqueId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UniqueId(self: TransportItem) -> str
+ """The unique id of this Wms.RemotingObjects.ShippingLayers.TransportItem
+
+Get: UniqueId(self: TransportItem) -> str
 
 """
 
  UnitCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UnitCode(self: TransportItem) -> str
+ """
+
+Get: UnitCode(self: TransportItem) -> str
 
 Set: UnitCode(self: TransportItem)=value
 """
 
  WarehouseCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WarehouseCode(self: TransportItem) -> str
+ """
+
+Get: WarehouseCode(self: TransportItem) -> str
 
 Set: WarehouseCode(self: TransportItem)=value
 """
 
 
 
-class TransportItems:
+class TransportItems(FindableList):
  """
  TransportItems()
  TransportItems(items: IEnumerable[TransportItem])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TransportItems()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,item,includingItemIds=None):
   """ Add(self: TransportItems,item: TransportItem)Add(self: TransportItems,item: TransportItem,includingItemIds: bool) """
   pass
@@ -2309,62 +2923,88 @@ class TransportItems:
  ValueMember='UniqueId'
 
 
-class TransportOptions:
+class TransportOptions(object):
  """ TransportOptions() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TransportOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CustomFields=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CustomFields(self: TransportOptions) -> SerializableDictionary[str,object]
+ """
+
+Get: CustomFields(self: TransportOptions) -> SerializableDictionary[str,object]
 
 Set: CustomFields(self: TransportOptions)=value
 """
 
  DeliveryBegin=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DeliveryBegin(self: TransportOptions) -> Nullable[DateTime]
+ """
+
+Get: DeliveryBegin(self: TransportOptions) -> Nullable[DateTime]
 
 Set: DeliveryBegin(self: TransportOptions)=value
 """
 
  DeliveryEnd=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: DeliveryEnd(self: TransportOptions) -> Nullable[DateTime]
+ """
+
+Get: DeliveryEnd(self: TransportOptions) -> Nullable[DateTime]
 
 Set: DeliveryEnd(self: TransportOptions)=value
 """
 
  IsShipperServiceLinkSet=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsShipperServiceLinkSet(self: TransportOptions) -> bool
+ """
+
+Get: IsShipperServiceLinkSet(self: TransportOptions) -> bool
 
 """
 
  Pickup=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Pickup(self: TransportOptions) -> Nullable[DateTime]
+ """
+
+Get: Pickup(self: TransportOptions) -> Nullable[DateTime]
 
 Set: Pickup(self: TransportOptions)=value
 """
 
  Shipper=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Shipper(self: TransportOptions) -> str
+ """
+
+Get: Shipper(self: TransportOptions) -> str
 
 Set: Shipper(self: TransportOptions)=value
 """
 
  ShipperDisallowDifferentChoice=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ShipperDisallowDifferentChoice(self: TransportOptions) -> bool
+ """
+
+Get: ShipperDisallowDifferentChoice(self: TransportOptions) -> bool
 
 Set: ShipperDisallowDifferentChoice(self: TransportOptions)=value
 """
 
  ShipperServiceLevel=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ShipperServiceLevel(self: TransportOptions) -> str
+ """
+
+Get: ShipperServiceLevel(self: TransportOptions) -> str
 
 Set: ShipperServiceLevel(self: TransportOptions)=value
 """
 
 
 
-class TransportPackage:
+class TransportPackage(PackageBase):
  """
  TransportPackage(boxGuid: Guid)
  TransportPackage()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TransportPackage()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self):
   """ Clone(self: TransportPackage) -> object """
   pass
@@ -2384,43 +3024,56 @@ class TransportPackage:
  def __reduce_ex__(self,*args):
   pass
  CashAmount=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CashAmount(self: TransportPackage) -> Decimal
+ """
+
+Get: CashAmount(self: TransportPackage) -> Decimal
 
 Set: CashAmount(self: TransportPackage)=value
 """
 
  IsMixedCollo=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsMixedCollo(self: TransportPackage) -> bool
+ """Indicates if this Wms.RemotingObjects.ShippingLayers.TransportPackage is a mixed collo (it has multiple items). If not,then
+   it's a homogeneous pallet.
+
+Get: IsMixedCollo(self: TransportPackage) -> bool
 
 """
 
  Shipment=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Shipment(self: TransportPackage) -> ShipmentBase
+ """
+
+Get: Shipment(self: TransportPackage) -> ShipmentBase
 
 """
 
  StockRegistration=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: StockRegistration(self: TransportPackage) -> StockRegistrationForColliEnum
+ """
+
+Get: StockRegistration(self: TransportPackage) -> StockRegistrationForColliEnum
 
 Set: StockRegistration(self: TransportPackage)=value
 """
 
  TransportItems=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TransportItems(self: TransportPackage) -> TransportItems
+ """
+
+Get: TransportItems(self: TransportPackage) -> TransportItems
 
 Set: TransportItems(self: TransportPackage)=value
 """
 
 
 
-class TransportPackages:
+class TransportPackages(FindableList):
  """
  TransportPackages()
  TransportPackages(batches: Batches)
  """
- def Add(self,*__args):
-  """ Add(self: TransportPackages,package: TransportPackage) """
-  pass
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TransportPackages()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddNew(self,basedOn=None,boxId=None,outerReference=None):
   """
   AddNew(self: TransportPackages) -> Guid
@@ -2448,16 +3101,23 @@ class TransportPackages:
   """ MoveTransportItems(self: TransportPackages,fromBoxGuid: Guid,toBoxGuid: Guid,items: TransportItems,includingItemIds: bool) -> bool """
   pass
  def Remove(self,*__args):
-  """ Remove(self: TransportPackages,boxGuid: Guid) -> bool """
+  """
+  Remove(self: TransportPackages,boxGuid: Guid) -> bool
+  
+   Returns the package needs to be empty before removal.
+     Boxnumbers are renumbered if a package is removed in the middle
+  
+   boxGuid: BoxNr
+  """
   pass
  def SetReferences(self,boxGuid):
-  """ SetReferences(self: TransportPackages,boxGuid: Guid) """
+  """
+  SetReferences(self: TransportPackages,boxGuid: Guid)
+   Sets the order and customer references using the order data in this object.
+  """
   pass
  def Update(self,*__args):
   """ Update(self: TransportPackages,newPackageData: TransportPackage) -> bool """
-  pass
- def __add__(self,*args):
-  """ x.__add__(y) <==> x+y """
   pass
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
@@ -2481,7 +3141,9 @@ class TransportPackages:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  AreOutboundOrdersProcessed=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: AreOutboundOrdersProcessed(self: TransportPackages) -> bool
+ """True if all orders are processed,otherwise false.
+
+Get: AreOutboundOrdersProcessed(self: TransportPackages) -> bool
 
 Set: AreOutboundOrdersProcessed(self: TransportPackages)=value
 """
@@ -2498,7 +3160,10 @@ Set: ArePackagesRegistered(self: TransportPackages)=value
 """
 
  Customer=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Customer(self: TransportPackages) -> PackCustomer
+ """Contains the Wms.RemotingObjects.ShippingLayers.TransportPackages.Customer object with the pending salesorders. This will be used during 
+   processing so the orderlines in the batches are matched to the correct customer and order.
+
+Get: Customer(self: TransportPackages) -> PackCustomer
 
 Set: Customer(self: TransportPackages)=value
 """
@@ -2515,7 +3180,9 @@ Set: InvoiceAddress(self: TransportPackages)=value
 """
 
  IsHistoricShipment=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsHistoricShipment(self: TransportPackages) -> bool
+ """Indicates if these Wms.RemotingObjects.ShippingLayers.TransportPackages belong to a historic shipment.
+
+Get: IsHistoricShipment(self: TransportPackages) -> bool
 
 """
 
@@ -2538,7 +3205,9 @@ Set: OrderNotes(self: TransportPackages)=value
 """
 
  OurReferences=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: OurReferences(self: TransportPackages) -> List[str]
+ """The order numbers
+
+Get: OurReferences(self: TransportPackages) -> List[str]
 
 """
 
@@ -2602,7 +3271,9 @@ Set: ShipmentNotes(self: TransportPackages)=value
 """
 
  TotalVolume=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TotalVolume(self: TransportPackages) -> Decimal
+ """The cubic meters of all packages
+
+Get: TotalVolume(self: TransportPackages) -> Decimal
 
 """
 
@@ -2610,6 +3281,11 @@ Set: ShipmentNotes(self: TransportPackages)=value
 
 class TypeOfDay:
  """ enum TypeOfDay,values: WeekDays (1),WorkingDays (0) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TypeOfDay()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -2638,56 +3314,82 @@ class TypeOfDay:
  WorkingDays=None
 
 
-class UpdateTransportPackageArgs:
+class UpdateTransportPackageArgs(object):
  """ UpdateTransportPackageArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UpdateTransportPackageArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CacheKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CacheKey(self: UpdateTransportPackageArgs) -> CacheKey
+ """
+
+Get: CacheKey(self: UpdateTransportPackageArgs) -> CacheKey
 
 Set: CacheKey(self: UpdateTransportPackageArgs)=value
 """
 
  ValidateItem=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ValidateItem(self: UpdateTransportPackageArgs) -> bool
+ """
+
+Get: ValidateItem(self: UpdateTransportPackageArgs) -> bool
 
 Set: ValidateItem(self: UpdateTransportPackageArgs)=value
 """
 
 
 
-class UpdateTransportPackagesHeaderArgs:
+class UpdateTransportPackagesHeaderArgs(object):
  """ UpdateTransportPackagesHeaderArgs() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UpdateTransportPackagesHeaderArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Customer=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Customer(self: UpdateTransportPackagesHeaderArgs) -> PackCustomer
+ """
+
+Get: Customer(self: UpdateTransportPackagesHeaderArgs) -> PackCustomer
 
 Set: Customer(self: UpdateTransportPackagesHeaderArgs)=value
 """
 
  InvoiceAddress=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: InvoiceAddress(self: UpdateTransportPackagesHeaderArgs) -> Address
+ """
+
+Get: InvoiceAddress(self: UpdateTransportPackagesHeaderArgs) -> Address
 
 Set: InvoiceAddress(self: UpdateTransportPackagesHeaderArgs)=value
 """
 
  ReceiveAddress=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ReceiveAddress(self: UpdateTransportPackagesHeaderArgs) -> Address
+ """
+
+Get: ReceiveAddress(self: UpdateTransportPackagesHeaderArgs) -> Address
 
 Set: ReceiveAddress(self: UpdateTransportPackagesHeaderArgs)=value
 """
 
  SendAddress=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SendAddress(self: UpdateTransportPackagesHeaderArgs) -> Address
+ """
+
+Get: SendAddress(self: UpdateTransportPackagesHeaderArgs) -> Address
 
 Set: SendAddress(self: UpdateTransportPackagesHeaderArgs)=value
 """
 
  ShipmentNotes=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ShipmentNotes(self: UpdateTransportPackagesHeaderArgs) -> str
+ """
+
+Get: ShipmentNotes(self: UpdateTransportPackagesHeaderArgs) -> str
 
 Set: ShipmentNotes(self: UpdateTransportPackagesHeaderArgs)=value
 """
 
  TransportOptions=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: TransportOptions(self: UpdateTransportPackagesHeaderArgs) -> TransportOptions
+ """
+
+Get: TransportOptions(self: UpdateTransportPackagesHeaderArgs) -> TransportOptions
 
 Set: TransportOptions(self: UpdateTransportPackagesHeaderArgs)=value
 """

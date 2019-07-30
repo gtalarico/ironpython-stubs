@@ -1,24 +1,24 @@
-class SafeBuffer:
+class SafeBuffer(SafeHandleZeroOrMinusOneIsInvalid):
  """ Provides a controlled memory buffer that can be used for reading and writing. Attempts to access memory outside the controlled buffer (underruns and overruns) raise exceptions. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeBuffer()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AcquirePointer(self,pointer):
   """
   AcquirePointer(self: SafeBuffer,pointer: Byte*) -> Byte*
   
-   Obtains a pointer from a System.Runtime.InteropServices.SafeBuffer object for a block of 
-    memory.
+   Obtains a pointer from a System.Runtime.InteropServices.SafeBuffer object for a block of memory.
   
-  
-   pointer: A byte pointer,passed by reference,to receive the pointer from within the 
-    System.Runtime.InteropServices.SafeBuffer object. You must set this pointer to null 
-    before you call this method.
+   pointer: A byte pointer,passed by reference,to receive the pointer from within the System.Runtime.InteropServices.SafeBuffer object. You must set this pointer to null before you 
+    call this method.
   """
   pass
  def Dispose(self):
   """
   Dispose(self: SafeHandle,disposing: bool)
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
-    class specifying whether to perform a normal dispose operation.
-  
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
   
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
@@ -26,14 +26,11 @@ class SafeBuffer:
  def Initialize(self,*__args):
   """
   Initialize(self: SafeBuffer,numBytes: UInt64)
-   Defines the allocation size of the memory region in bytes. You must call this method 
-    before you use the System.Runtime.InteropServices.SafeBuffer instance.
-  
+   Defines the allocation size of the memory region in bytes. You must call this method before you use the System.Runtime.InteropServices.SafeBuffer instance.
   
    numBytes: The number of bytes in the buffer.
   Initialize(self: SafeBuffer,numElements: UInt32,sizeOfEachElement: UInt32)
-   Specifies the allocation size of the memory buffer by using the specified number of 
-    elements and element size. You must call this method before you use the 
+   Specifies the allocation size of the memory buffer by using the specified number of elements and element size. You must call this method before you use the 
     System.Runtime.InteropServices.SafeBuffer instance.
   
   
@@ -53,16 +50,14 @@ class SafeBuffer:
   ReleaseHandle(self: SafeHandle) -> bool
   
    When overridden in a derived class,executes the code required to free the handle.
-   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic 
-    failure,false. In this case,it generates a releaseHandleFailed MDA Managed Debugging 
-    Assistant.
+   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,false. In this case,it generates a releaseHandleFailed MDA Managed 
+    Debugging Assistant.
   """
   pass
  def ReleasePointer(self):
   """
   ReleasePointer(self: SafeBuffer)
-   Releases a pointer that was obtained by the 
-    System.Runtime.InteropServices.SafeBuffer.AcquirePointer(System.Byte*@) method.
+   Releases a pointer that was obtained by the System.Runtime.InteropServices.SafeBuffer.AcquirePointer(System.Byte*@) method.
   """
   pass
  def SetHandle(self,*args):

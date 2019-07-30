@@ -1,34 +1,32 @@
-class Container:
+class Container(object):
  """
  Encapsulates zero or more components.
  
  Container()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Container()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,component,name=None):
   """
   Add(self: Container,component: IComponent)
-   Adds the specified System.ComponentModel.Component to the 
-    System.ComponentModel.Container. The component is unnamed.
-  
+   Adds the specified System.ComponentModel.Component to the System.ComponentModel.Container. The component is unnamed.
   
    component: The component to add.
   Add(self: Container,component: IComponent,name: str)
-   Adds the specified System.ComponentModel.Component to the System.ComponentModel.Container 
-    and assigns it a name.
-  
+   Adds the specified System.ComponentModel.Component to the System.ComponentModel.Container and assigns it a name.
   
    component: The component to add.
-   name: The unique,case-insensitive name to assign to the component.-or- null,which leaves the 
-    component unnamed.
+   name: The unique,case-insensitive name to assign to the component.-or- null,which leaves the component unnamed.
   """
   pass
  def CreateSite(self,*args):
   """
   CreateSite(self: Container,component: IComponent,name: str) -> ISite
   
-   Creates a site System.ComponentModel.ISite for the given System.ComponentModel.IComponent 
-    and assigns the given name to the site.
-  
+   Creates a site System.ComponentModel.ISite for the given System.ComponentModel.IComponent and assigns the given name to the site.
   
    component: The System.ComponentModel.IComponent to create a site for.
    name: The name to assign to component,or null to skip the name assignment.
@@ -48,8 +46,7 @@ class Container:
    Gets the service object of the specified type,if it is available.
   
    service: The System.Type of the service to retrieve.
-   Returns: An System.Object implementing the requested service,or null if the service cannot be 
-    resolved.
+   Returns: An System.Object implementing the requested service,or null if the service cannot be resolved.
   """
   pass
  def Remove(self,component):
@@ -63,9 +60,7 @@ class Container:
  def RemoveWithoutUnsiting(self,*args):
   """
   RemoveWithoutUnsiting(self: Container,component: IComponent)
-   Removes a component from the System.ComponentModel.Container without setting 
-    System.ComponentModel.IComponent.Site to null.
-  
+   Removes a component from the System.ComponentModel.Container without setting System.ComponentModel.IComponent.Site to null.
   
    component: The component to remove.
   """

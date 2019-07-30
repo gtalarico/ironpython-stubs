@@ -1,15 +1,22 @@
 # encoding: utf-8
 # module Wms.RemotingImplementation.EdiMessaging calls itself EdiMessaging
-# from Wms.RemotingImplementation,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # no functions
 # classes
 
-class IronPythonMessagingProvider:
+class IronPythonMessagingProvider(object):
  """ IronPythonMessagingProvider() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IronPythonMessagingProvider()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def ClearHandlers(self):
   """ ClearHandlers(self: IronPythonMessagingProvider) """
   pass
@@ -40,8 +47,13 @@ class IronPythonMessagingProvider:
  Instance=None
 
 
-class StandardMessagingProvider:
+class StandardMessagingProvider(object):
  """ StandardMessagingProvider() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StandardMessagingProvider()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetHandlers(self):
   """ GetHandlers(self: StandardMessagingProvider) -> IEnumerable[MessageHandlerDescriptor] """
   pass

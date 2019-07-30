@@ -3,17 +3,22 @@
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
 
-class CodeObject:
+class CodeObject(object):
  """
  Provides a common base class for most Code Document Object Model (CodeDOM) objects.
  
  CodeObject()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeObject()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  UserData=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets the user-definable data for the current object.
 
@@ -23,20 +28,30 @@ Get: UserData(self: CodeObject) -> IDictionary
 
 
 
-class CodeExpression:
+class CodeExpression(CodeObject):
  """
  Represents a code expression. This is a base class for other code expression objects that is never instantiated.
  
  CodeExpression()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
 
-class CodeArgumentReferenceExpression:
+class CodeArgumentReferenceExpression(CodeExpression):
  """
  Represents a reference to the value of an argument passed to a method.
  
  CodeArgumentReferenceExpression()
  CodeArgumentReferenceExpression(parameterName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeArgumentReferenceExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,parameterName=None):
   """
@@ -54,7 +69,7 @@ Set: ParameterName(self: CodeArgumentReferenceExpression)=value
 
 
 
-class CodeArrayCreateExpression:
+class CodeArrayCreateExpression(CodeExpression):
  """
  Represents an expression that creates an array.
  
@@ -69,6 +84,11 @@ class CodeArrayCreateExpression:
  CodeArrayCreateExpression(createType: str,size: CodeExpression)
  CodeArrayCreateExpression(createType: Type,size: CodeExpression)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeArrayCreateExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,createType=None,*__args):
   """
@@ -117,13 +137,18 @@ Set: SizeExpression(self: CodeArrayCreateExpression)=value
 
 
 
-class CodeArrayIndexerExpression:
+class CodeArrayIndexerExpression(CodeExpression):
  """
  Represents a reference to an index of an array.
  
  CodeArrayIndexerExpression()
  CodeArrayIndexerExpression(targetObject: CodeExpression,*indices: Array[CodeExpression])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeArrayIndexerExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,targetObject=None,indices=None):
   """
@@ -148,12 +173,17 @@ Set: TargetObject(self: CodeArrayIndexerExpression)=value
 
 
 
-class CodeStatement:
+class CodeStatement(CodeObject):
  """
  Represents the abstract base class from which all code statements derive.
  
  CodeStatement()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeStatement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  EndDirectives=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets a System.CodeDom.CodeDirectiveCollection object that contains end directives.
 
@@ -178,13 +208,18 @@ Get: StartDirectives(self: CodeStatement) -> CodeDirectiveCollection
 
 
 
-class CodeAssignStatement:
+class CodeAssignStatement(CodeStatement):
  """
  Represents a simple assignment statement.
  
  CodeAssignStatement()
  CodeAssignStatement(left: CodeExpression,right: CodeExpression)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeAssignStatement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,left=None,right=None):
   """
@@ -210,7 +245,7 @@ Set: Right(self: CodeAssignStatement)=value
 
 
 
-class CodeAttachEventStatement:
+class CodeAttachEventStatement(CodeStatement):
  """
  Represents a statement that attaches an event-handler delegate to an event.
  
@@ -218,6 +253,11 @@ class CodeAttachEventStatement:
  CodeAttachEventStatement(eventRef: CodeEventReferenceExpression,listener: CodeExpression)
  CodeAttachEventStatement(targetObject: CodeExpression,eventName: str,listener: CodeExpression)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeAttachEventStatement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -244,7 +284,7 @@ Set: Listener(self: CodeAttachEventStatement)=value
 
 
 
-class CodeAttributeArgument:
+class CodeAttributeArgument(object):
  """
  Represents an argument used in a metadata attribute declaration.
  
@@ -252,6 +292,11 @@ class CodeAttributeArgument:
  CodeAttributeArgument(value: CodeExpression)
  CodeAttributeArgument(name: str,value: CodeExpression)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeAttributeArgument()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -278,7 +323,7 @@ Set: Value(self: CodeAttributeArgument)=value
 
 
 
-class CodeAttributeArgumentCollection:
+class CodeAttributeArgumentCollection(CollectionBase):
  """
  Represents a collection of System.CodeDom.CodeAttributeArgument objects.
  
@@ -286,6 +331,11 @@ class CodeAttributeArgumentCollection:
  CodeAttributeArgumentCollection(value: CodeAttributeArgumentCollection)
  CodeAttributeArgumentCollection(value: Array[CodeAttributeArgument])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeAttributeArgumentCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CodeAttributeArgumentCollection,value: CodeAttributeArgument) -> int
@@ -299,29 +349,20 @@ class CodeAttributeArgumentCollection:
  def AddRange(self,value):
   """
   AddRange(self: CodeAttributeArgumentCollection,value: Array[CodeAttributeArgument])
-   Copies the elements of the specified System.CodeDom.CodeAttributeArgument array to the 
-    end of the collection.
+   Copies the elements of the specified System.CodeDom.CodeAttributeArgument array to the end of the collection.
   
-  
-   value: An array of type System.CodeDom.CodeAttributeArgument that contains the objects to add to 
-    the collection.
-  
+   value: An array of type System.CodeDom.CodeAttributeArgument that contains the objects to add to the collection.
   AddRange(self: CodeAttributeArgumentCollection,value: CodeAttributeArgumentCollection)
-   Copies the contents of another System.CodeDom.CodeAttributeArgumentCollection object to 
-    the end of the collection.
+   Copies the contents of another System.CodeDom.CodeAttributeArgumentCollection object to the end of the collection.
   
-  
-   value: A System.CodeDom.CodeAttributeArgumentCollection that contains the objects to add to the 
-    collection.
+   value: A System.CodeDom.CodeAttributeArgumentCollection that contains the objects to add to the collection.
   """
   pass
  def Contains(self,value):
   """
   Contains(self: CodeAttributeArgumentCollection,value: CodeAttributeArgument) -> bool
   
-   Gets a value that indicates whether the collection contains the specified 
-    System.CodeDom.CodeAttributeArgument object.
-  
+   Gets a value that indicates whether the collection contains the specified System.CodeDom.CodeAttributeArgument object.
   
    value: The System.CodeDom.CodeAttributeArgument object to locate in the collection.
    Returns: true if the collection contains the specified object; otherwise,false.
@@ -330,13 +371,9 @@ class CodeAttributeArgumentCollection:
  def CopyTo(self,array,index):
   """
   CopyTo(self: CodeAttributeArgumentCollection,array: Array[CodeAttributeArgument],index: int)
-   Copies the collection objects to a one-dimensional System.Array instance beginning at the 
-    specified index.
+   Copies the collection objects to a one-dimensional System.Array instance beginning at the specified index.
   
-  
-   array: The one-dimensional System.Array that is the destination of the values copied from the 
-    collection.
-  
+   array: The one-dimensional System.Array that is the destination of the values copied from the collection.
    index: The index of the array at which to begin inserting.
   """
   pass
@@ -344,9 +381,7 @@ class CodeAttributeArgumentCollection:
   """
   IndexOf(self: CodeAttributeArgumentCollection,value: CodeAttributeArgument) -> int
   
-   Gets the index of the specified System.CodeDom.CodeAttributeArgument object in the 
-    collection,if it exists in the collection.
-  
+   Gets the index of the specified System.CodeDom.CodeAttributeArgument object in the collection,if it exists in the collection.
   
    value: The System.CodeDom.CodeAttributeArgument object to locate in the collection.
    Returns: The index of the specified object,if found,in the collection; otherwise,-1.
@@ -355,9 +390,7 @@ class CodeAttributeArgumentCollection:
  def Insert(self,index,value):
   """
   Insert(self: CodeAttributeArgumentCollection,index: int,value: CodeAttributeArgument)
-   Inserts the specified System.CodeDom.CodeAttributeArgument object into the collection at 
-    the specified index.
-  
+   Inserts the specified System.CodeDom.CodeAttributeArgument object into the collection at the specified index.
   
    index: The zero-based index where the specified object should be inserted.
    value: The System.CodeDom.CodeAttributeArgument object to insert.
@@ -366,23 +399,19 @@ class CodeAttributeArgumentCollection:
  def OnClear(self,*args):
   """
   OnClear(self: CollectionBase)
-   Performs additional custom processes when clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes when clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnClearComplete(self,*args):
   """
   OnClearComplete(self: CollectionBase)
-   Performs additional custom processes after clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes after clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnInsert(self,*args):
   """
   OnInsert(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes before inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -391,9 +420,7 @@ class CodeAttributeArgumentCollection:
  def OnInsertComplete(self,*args):
   """
   OnInsertComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -402,9 +429,7 @@ class CodeAttributeArgumentCollection:
  def OnRemove(self,*args):
   """
   OnRemove(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes when removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes when removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -413,9 +438,7 @@ class CodeAttributeArgumentCollection:
  def OnRemoveComplete(self,*args):
   """
   OnRemoveComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -424,9 +447,7 @@ class CodeAttributeArgumentCollection:
  def OnSet(self,*args):
   """
   OnSet(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes before setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -436,9 +457,7 @@ class CodeAttributeArgumentCollection:
  def OnSetComplete(self,*args):
   """
   OnSetComplete(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes after setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -498,7 +517,7 @@ class CodeAttributeArgumentCollection:
 
 
 
-class CodeAttributeDeclaration:
+class CodeAttributeDeclaration(object):
  """
  Represents an attribute declaration.
  
@@ -508,6 +527,11 @@ class CodeAttributeDeclaration:
  CodeAttributeDeclaration(name: str,*arguments: Array[CodeAttributeArgument])
  CodeAttributeDeclaration(attributeType: CodeTypeReference)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeAttributeDeclaration()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -542,7 +566,7 @@ Set: Name(self: CodeAttributeDeclaration)=value
 
 
 
-class CodeAttributeDeclarationCollection:
+class CodeAttributeDeclarationCollection(CollectionBase):
  """
  Represents a collection of System.CodeDom.CodeAttributeDeclaration objects.
  
@@ -550,13 +574,16 @@ class CodeAttributeDeclarationCollection:
  CodeAttributeDeclarationCollection(value: CodeAttributeDeclarationCollection)
  CodeAttributeDeclarationCollection(value: Array[CodeAttributeDeclaration])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeAttributeDeclarationCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CodeAttributeDeclarationCollection,value: CodeAttributeDeclaration) -> int
   
-   Adds a System.CodeDom.CodeAttributeDeclaration object with the specified value to the 
-    collection.
-  
+   Adds a System.CodeDom.CodeAttributeDeclaration object with the specified value to the collection.
   
    value: The System.CodeDom.CodeAttributeDeclaration object to add.
    Returns: The index at which the new element was inserted.
@@ -565,29 +592,20 @@ class CodeAttributeDeclarationCollection:
  def AddRange(self,value):
   """
   AddRange(self: CodeAttributeDeclarationCollection,value: Array[CodeAttributeDeclaration])
-   Copies the elements of the specified System.CodeDom.CodeAttributeDeclaration array to the 
-    end of the collection.
+   Copies the elements of the specified System.CodeDom.CodeAttributeDeclaration array to the end of the collection.
   
-  
-   value: An array of type System.CodeDom.CodeAttributeDeclaration that contains the objects to add 
-    to the collection.
-  
+   value: An array of type System.CodeDom.CodeAttributeDeclaration that contains the objects to add to the collection.
   AddRange(self: CodeAttributeDeclarationCollection,value: CodeAttributeDeclarationCollection)
-   Copies the contents of another System.CodeDom.CodeAttributeDeclarationCollection object 
-    to the end of the collection.
+   Copies the contents of another System.CodeDom.CodeAttributeDeclarationCollection object to the end of the collection.
   
-  
-   value: A System.CodeDom.CodeAttributeDeclarationCollection that contains the objects to add to 
-    the collection.
+   value: A System.CodeDom.CodeAttributeDeclarationCollection that contains the objects to add to the collection.
   """
   pass
  def Contains(self,value):
   """
   Contains(self: CodeAttributeDeclarationCollection,value: CodeAttributeDeclaration) -> bool
   
-   Gets or sets a value that indicates whether the collection contains the specified 
-    System.CodeDom.CodeAttributeDeclaration object.
-  
+   Gets or sets a value that indicates whether the collection contains the specified System.CodeDom.CodeAttributeDeclaration object.
   
    value: The System.CodeDom.CodeAttributeDeclaration object to locate.
    Returns: true if the collection contains the specified object; otherwise,false.
@@ -596,13 +614,9 @@ class CodeAttributeDeclarationCollection:
  def CopyTo(self,array,index):
   """
   CopyTo(self: CodeAttributeDeclarationCollection,array: Array[CodeAttributeDeclaration],index: int)
-   Copies the collection objects to a one-dimensional System.Array instance beginning at the 
-    specified index.
+   Copies the collection objects to a one-dimensional System.Array instance beginning at the specified index.
   
-  
-   array: The one-dimensional System.Array that is the destination of the values copied from the 
-    collection.
-  
+   array: The one-dimensional System.Array that is the destination of the values copied from the collection.
    index: The index of the array at which to begin inserting.
   """
   pass
@@ -610,9 +624,7 @@ class CodeAttributeDeclarationCollection:
   """
   IndexOf(self: CodeAttributeDeclarationCollection,value: CodeAttributeDeclaration) -> int
   
-   Gets the index of the specified System.CodeDom.CodeAttributeDeclaration object in the 
-    collection,if it exists in the collection.
-  
+   Gets the index of the specified System.CodeDom.CodeAttributeDeclaration object in the collection,if it exists in the collection.
   
    value: The System.CodeDom.CodeAttributeDeclaration object to locate in the collection.
    Returns: The index in the collection of the specified object,if found; otherwise,-1.
@@ -621,9 +633,7 @@ class CodeAttributeDeclarationCollection:
  def Insert(self,index,value):
   """
   Insert(self: CodeAttributeDeclarationCollection,index: int,value: CodeAttributeDeclaration)
-   Inserts the specified System.CodeDom.CodeAttributeDeclaration object into the collection 
-    at the specified index.
-  
+   Inserts the specified System.CodeDom.CodeAttributeDeclaration object into the collection at the specified index.
   
    index: The zero-based index where the specified object should be inserted.
    value: The System.CodeDom.CodeAttributeDeclaration object to insert.
@@ -632,23 +642,19 @@ class CodeAttributeDeclarationCollection:
  def OnClear(self,*args):
   """
   OnClear(self: CollectionBase)
-   Performs additional custom processes when clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes when clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnClearComplete(self,*args):
   """
   OnClearComplete(self: CollectionBase)
-   Performs additional custom processes after clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes after clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnInsert(self,*args):
   """
   OnInsert(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes before inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -657,9 +663,7 @@ class CodeAttributeDeclarationCollection:
  def OnInsertComplete(self,*args):
   """
   OnInsertComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -668,9 +672,7 @@ class CodeAttributeDeclarationCollection:
  def OnRemove(self,*args):
   """
   OnRemove(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes when removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes when removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -679,9 +681,7 @@ class CodeAttributeDeclarationCollection:
  def OnRemoveComplete(self,*args):
   """
   OnRemoveComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -690,9 +690,7 @@ class CodeAttributeDeclarationCollection:
  def OnSet(self,*args):
   """
   OnSet(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes before setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -702,9 +700,7 @@ class CodeAttributeDeclarationCollection:
  def OnSetComplete(self,*args):
   """
   OnSetComplete(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes after setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -764,20 +760,30 @@ class CodeAttributeDeclarationCollection:
 
 
 
-class CodeBaseReferenceExpression:
+class CodeBaseReferenceExpression(CodeExpression):
  """
  Represents a reference to the base class.
  
  CodeBaseReferenceExpression()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeBaseReferenceExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
 
-class CodeBinaryOperatorExpression:
+class CodeBinaryOperatorExpression(CodeExpression):
  """
  Represents an expression that consists of a binary operation between two expressions.
  
  CodeBinaryOperatorExpression()
  CodeBinaryOperatorExpression(left: CodeExpression,op: CodeBinaryOperatorType,right: CodeExpression)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeBinaryOperatorExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,left=None,op=None,right=None):
   """
@@ -817,6 +823,11 @@ class CodeBinaryOperatorType:
  
  enum CodeBinaryOperatorType,values: Add (0),Assign (5),BitwiseAnd (10),BitwiseOr (9),BooleanAnd (12),BooleanOr (11),Divide (3),GreaterThan (15),GreaterThanOrEqual (16),IdentityEquality (7),IdentityInequality (6),LessThan (13),LessThanOrEqual (14),Modulus (4),Multiply (2),Subtract (1),ValueEquality (8)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeBinaryOperatorType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -860,7 +871,7 @@ class CodeBinaryOperatorType:
  value__=None
 
 
-class CodeCastExpression:
+class CodeCastExpression(CodeExpression):
  """
  Represents an expression cast to a data type or interface.
  
@@ -869,6 +880,11 @@ class CodeCastExpression:
  CodeCastExpression(targetType: str,expression: CodeExpression)
  CodeCastExpression(targetType: Type,expression: CodeExpression)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeCastExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,targetType=None,expression=None):
   """
@@ -896,7 +912,7 @@ Set: TargetType(self: CodeCastExpression)=value
 
 
 
-class CodeCatchClause:
+class CodeCatchClause(object):
  """
  Represents a catch exception block of a try/catch statement.
  
@@ -905,6 +921,11 @@ class CodeCatchClause:
  CodeCatchClause(localName: str,catchExceptionType: CodeTypeReference)
  CodeCatchClause(localName: str,catchExceptionType: CodeTypeReference,*statements: Array[CodeStatement])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeCatchClause()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,localName=None,catchExceptionType=None,statements=None):
   """
@@ -939,7 +960,7 @@ Get: Statements(self: CodeCatchClause) -> CodeStatementCollection
 
 
 
-class CodeCatchClauseCollection:
+class CodeCatchClauseCollection(CollectionBase):
  """
  Represents a collection of System.CodeDom.CodeCatchClause objects.
  
@@ -947,6 +968,11 @@ class CodeCatchClauseCollection:
  CodeCatchClauseCollection(value: CodeCatchClauseCollection)
  CodeCatchClauseCollection(value: Array[CodeCatchClause])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeCatchClauseCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CodeCatchClauseCollection,value: CodeCatchClause) -> int
@@ -960,29 +986,20 @@ class CodeCatchClauseCollection:
  def AddRange(self,value):
   """
   AddRange(self: CodeCatchClauseCollection,value: Array[CodeCatchClause])
-   Copies the elements of the specified System.CodeDom.CodeCatchClause array to the end of 
-    the collection.
+   Copies the elements of the specified System.CodeDom.CodeCatchClause array to the end of the collection.
   
-  
-   value: An array of type System.CodeDom.CodeCatchClause that contains the objects to add to the 
-    collection.
-  
+   value: An array of type System.CodeDom.CodeCatchClause that contains the objects to add to the collection.
   AddRange(self: CodeCatchClauseCollection,value: CodeCatchClauseCollection)
-   Copies the contents of another System.CodeDom.CodeCatchClauseCollection object to the end 
-    of the collection.
+   Copies the contents of another System.CodeDom.CodeCatchClauseCollection object to the end of the collection.
   
-  
-   value: A System.CodeDom.CodeCatchClauseCollection that contains the objects to add to the 
-    collection.
+   value: A System.CodeDom.CodeCatchClauseCollection that contains the objects to add to the collection.
   """
   pass
  def Contains(self,value):
   """
   Contains(self: CodeCatchClauseCollection,value: CodeCatchClause) -> bool
   
-   Gets a value that indicates whether the collection contains the specified 
-    System.CodeDom.CodeCatchClause object.
-  
+   Gets a value that indicates whether the collection contains the specified System.CodeDom.CodeCatchClause object.
   
    value: The System.CodeDom.CodeCatchClause object to locate in the collection.
    Returns: true if the collection contains the specified object; otherwise,false.
@@ -991,13 +1008,9 @@ class CodeCatchClauseCollection:
  def CopyTo(self,array,index):
   """
   CopyTo(self: CodeCatchClauseCollection,array: Array[CodeCatchClause],index: int)
-   Copies the collection objects to a one-dimensional System.Array instance beginning at the 
-    specified index.
+   Copies the collection objects to a one-dimensional System.Array instance beginning at the specified index.
   
-  
-   array: The one-dimensional System.Array that is the destination of the values copied from the 
-    collection.
-  
+   array: The one-dimensional System.Array that is the destination of the values copied from the collection.
    index: The index of the array at which to begin inserting.
   """
   pass
@@ -1005,9 +1018,7 @@ class CodeCatchClauseCollection:
   """
   IndexOf(self: CodeCatchClauseCollection,value: CodeCatchClause) -> int
   
-   Gets the index of the specified System.CodeDom.CodeCatchClause object in the collection,
-    if it exists in the collection.
-  
+   Gets the index of the specified System.CodeDom.CodeCatchClause object in the collection,if it exists in the collection.
   
    value: The System.CodeDom.CodeCatchClause object to locate in the collection.
    Returns: The index of the specified object,if found,in the collection; otherwise,-1.
@@ -1016,9 +1027,7 @@ class CodeCatchClauseCollection:
  def Insert(self,index,value):
   """
   Insert(self: CodeCatchClauseCollection,index: int,value: CodeCatchClause)
-   Inserts the specified System.CodeDom.CodeCatchClause object into the collection at the 
-    specified index.
-  
+   Inserts the specified System.CodeDom.CodeCatchClause object into the collection at the specified index.
   
    index: The zero-based index where the specified object should be inserted.
    value: The System.CodeDom.CodeCatchClause object to insert.
@@ -1027,23 +1036,19 @@ class CodeCatchClauseCollection:
  def OnClear(self,*args):
   """
   OnClear(self: CollectionBase)
-   Performs additional custom processes when clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes when clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnClearComplete(self,*args):
   """
   OnClearComplete(self: CollectionBase)
-   Performs additional custom processes after clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes after clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnInsert(self,*args):
   """
   OnInsert(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes before inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -1052,9 +1057,7 @@ class CodeCatchClauseCollection:
  def OnInsertComplete(self,*args):
   """
   OnInsertComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -1063,9 +1066,7 @@ class CodeCatchClauseCollection:
  def OnRemove(self,*args):
   """
   OnRemove(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes when removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes when removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -1074,9 +1075,7 @@ class CodeCatchClauseCollection:
  def OnRemoveComplete(self,*args):
   """
   OnRemoveComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -1085,9 +1084,7 @@ class CodeCatchClauseCollection:
  def OnSet(self,*args):
   """
   OnSet(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes before setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -1097,9 +1094,7 @@ class CodeCatchClauseCollection:
  def OnSetComplete(self,*args):
   """
   OnSetComplete(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes after setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -1159,20 +1154,30 @@ class CodeCatchClauseCollection:
 
 
 
-class CodeDirective:
+class CodeDirective(CodeObject):
  """
  Serves as the base class for code directive classes.
  
  CodeDirective()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeDirective()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
 
-class CodeChecksumPragma:
+class CodeChecksumPragma(CodeDirective):
  """
  Represents a code checksum pragma code entity.
  
  CodeChecksumPragma()
  CodeChecksumPragma(fileName: str,checksumAlgorithmId: Guid,checksumData: Array[Byte])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeChecksumPragma()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,fileName=None,checksumAlgorithmId=None,checksumData=None):
   """
@@ -1206,7 +1211,7 @@ Set: FileName(self: CodeChecksumPragma)=value
 
 
 
-class CodeComment:
+class CodeComment(CodeObject):
  """
  Represents a comment.
  
@@ -1214,6 +1219,11 @@ class CodeComment:
  CodeComment(text: str)
  CodeComment(text: str,docComment: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeComment()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,text=None,docComment=None):
   """
@@ -1240,7 +1250,7 @@ Set: Text(self: CodeComment)=value
 
 
 
-class CodeCommentStatement:
+class CodeCommentStatement(CodeStatement):
  """
  Represents a statement consisting of a single comment.
  
@@ -1249,6 +1259,11 @@ class CodeCommentStatement:
  CodeCommentStatement(text: str)
  CodeCommentStatement(text: str,docComment: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeCommentStatement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -1268,7 +1283,7 @@ Set: Comment(self: CodeCommentStatement)=value
 
 
 
-class CodeCommentStatementCollection:
+class CodeCommentStatementCollection(CollectionBase):
  """
  Represents a collection of System.CodeDom.CodeCommentStatement objects.
  
@@ -1276,6 +1291,11 @@ class CodeCommentStatementCollection:
  CodeCommentStatementCollection(value: CodeCommentStatementCollection)
  CodeCommentStatementCollection(value: Array[CodeCommentStatement])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeCommentStatementCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CodeCommentStatementCollection,value: CodeCommentStatement) -> int
@@ -1289,29 +1309,20 @@ class CodeCommentStatementCollection:
  def AddRange(self,value):
   """
   AddRange(self: CodeCommentStatementCollection,value: Array[CodeCommentStatement])
-   Copies the elements of the specified System.CodeDom.CodeCommentStatement array to the end 
-    of the collection.
+   Copies the elements of the specified System.CodeDom.CodeCommentStatement array to the end of the collection.
   
-  
-   value: An array of type System.CodeDom.CodeCommentStatement that contains the objects to add to 
-    the collection.
-  
+   value: An array of type System.CodeDom.CodeCommentStatement that contains the objects to add to the collection.
   AddRange(self: CodeCommentStatementCollection,value: CodeCommentStatementCollection)
-   Copies the contents of another System.CodeDom.CodeCommentStatementCollection object to 
-    the end of the collection.
+   Copies the contents of another System.CodeDom.CodeCommentStatementCollection object to the end of the collection.
   
-  
-   value: A System.CodeDom.CodeCommentStatementCollection that contains the objects to add to the 
-    collection.
+   value: A System.CodeDom.CodeCommentStatementCollection that contains the objects to add to the collection.
   """
   pass
  def Contains(self,value):
   """
   Contains(self: CodeCommentStatementCollection,value: CodeCommentStatement) -> bool
   
-   Gets a value that indicates whether the collection contains the specified 
-    System.CodeDom.CodeCommentStatement object.
-  
+   Gets a value that indicates whether the collection contains the specified System.CodeDom.CodeCommentStatement object.
   
    value: The System.CodeDom.CodeCommentStatement to search for in the collection.
    Returns: true if the collection contains the specified object; otherwise,false.
@@ -1320,13 +1331,9 @@ class CodeCommentStatementCollection:
  def CopyTo(self,array,index):
   """
   CopyTo(self: CodeCommentStatementCollection,array: Array[CodeCommentStatement],index: int)
-   Copies the collection objects to the specified one-dimensional System.Array beginning at 
-    the specified index.
+   Copies the collection objects to the specified one-dimensional System.Array beginning at the specified index.
   
-  
-   array: The one-dimensional System.Array that is the destination of the values copied from the 
-    collection.
-  
+   array: The one-dimensional System.Array that is the destination of the values copied from the collection.
    index: The index of the array at which to begin inserting.
   """
   pass
@@ -1334,9 +1341,7 @@ class CodeCommentStatementCollection:
   """
   IndexOf(self: CodeCommentStatementCollection,value: CodeCommentStatement) -> int
   
-   Gets the index of the specified System.CodeDom.CodeCommentStatement object in the 
-    collection,if it exists in the collection.
-  
+   Gets the index of the specified System.CodeDom.CodeCommentStatement object in the collection,if it exists in the collection.
   
    value: The System.CodeDom.CodeCommentStatement object to locate.
    Returns: The index of the specified object,if found,in the collection; otherwise,-1.
@@ -1345,9 +1350,7 @@ class CodeCommentStatementCollection:
  def Insert(self,index,value):
   """
   Insert(self: CodeCommentStatementCollection,index: int,value: CodeCommentStatement)
-   Inserts a System.CodeDom.CodeCommentStatement object into the collection at the specified 
-    index.
-  
+   Inserts a System.CodeDom.CodeCommentStatement object into the collection at the specified index.
   
    index: The zero-based index where the item should be inserted.
    value: The System.CodeDom.CodeCommentStatement object to insert.
@@ -1356,23 +1359,19 @@ class CodeCommentStatementCollection:
  def OnClear(self,*args):
   """
   OnClear(self: CollectionBase)
-   Performs additional custom processes when clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes when clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnClearComplete(self,*args):
   """
   OnClearComplete(self: CollectionBase)
-   Performs additional custom processes after clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes after clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnInsert(self,*args):
   """
   OnInsert(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes before inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -1381,9 +1380,7 @@ class CodeCommentStatementCollection:
  def OnInsertComplete(self,*args):
   """
   OnInsertComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -1392,9 +1389,7 @@ class CodeCommentStatementCollection:
  def OnRemove(self,*args):
   """
   OnRemove(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes when removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes when removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -1403,9 +1398,7 @@ class CodeCommentStatementCollection:
  def OnRemoveComplete(self,*args):
   """
   OnRemoveComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -1414,9 +1407,7 @@ class CodeCommentStatementCollection:
  def OnSet(self,*args):
   """
   OnSet(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes before setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -1426,9 +1417,7 @@ class CodeCommentStatementCollection:
  def OnSetComplete(self,*args):
   """
   OnSetComplete(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes after setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -1488,12 +1477,17 @@ class CodeCommentStatementCollection:
 
 
 
-class CodeCompileUnit:
+class CodeCompileUnit(CodeObject):
  """
  Provides a container for a CodeDOM program graph.
  
  CodeCompileUnit()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeCompileUnit()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  AssemblyCustomAttributes=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets a collection of custom attributes for the generated assembly.
 
@@ -1531,7 +1525,7 @@ Get: StartDirectives(self: CodeCompileUnit) -> CodeDirectiveCollection
 
 
 
-class CodeConditionStatement:
+class CodeConditionStatement(CodeStatement):
  """
  Represents a conditional branch statement,typically represented as an if statement.
  
@@ -1539,6 +1533,11 @@ class CodeConditionStatement:
  CodeConditionStatement(condition: CodeExpression,*trueStatements: Array[CodeStatement])
  CodeConditionStatement(condition: CodeExpression,trueStatements: Array[CodeStatement],falseStatements: Array[CodeStatement])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeConditionStatement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,condition=None,trueStatements=None,falseStatements=None):
   """
@@ -1571,12 +1570,17 @@ Get: TrueStatements(self: CodeConditionStatement) -> CodeStatementCollection
 
 
 
-class CodeTypeMember:
+class CodeTypeMember(CodeObject):
  """
  Provides a base class for a member of a type. Type members include fields,methods,properties,constructors and nested types.
  
  CodeTypeMember()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeTypeMember()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  Attributes=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets or sets the attributes of the member.
 
@@ -1632,12 +1636,17 @@ Get: StartDirectives(self: CodeTypeMember) -> CodeDirectiveCollection
 
 
 
-class CodeMemberMethod:
+class CodeMemberMethod(CodeTypeMember):
  """
  Represents a declaration for a method of a type.
  
  CodeMemberMethod()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeMemberMethod()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ImplementationTypes=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets the data types of the interfaces implemented by this method,unless it is a private method implementation,which is indicated by the System.CodeDom.CodeMemberMethod.PrivateImplementationType property.
 
@@ -1695,12 +1704,17 @@ Get: TypeParameters(self: CodeMemberMethod) -> CodeTypeParameterCollection
  PopulateStatements=None
 
 
-class CodeConstructor:
+class CodeConstructor(CodeMemberMethod):
  """
  Represents a declaration for an instance constructor of a type.
  
  CodeConstructor()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeConstructor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  BaseConstructorArgs=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets the collection of base constructor arguments.
 
@@ -1717,13 +1731,18 @@ Get: ChainedConstructorArgs(self: CodeConstructor) -> CodeExpressionCollection
 
 
 
-class CodeDefaultValueExpression:
+class CodeDefaultValueExpression(CodeExpression):
  """
  Represents a reference to a default value.
  
  CodeDefaultValueExpression()
  CodeDefaultValueExpression(type: CodeTypeReference)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeDefaultValueExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,type=None):
   """
@@ -1741,13 +1760,18 @@ Set: Type(self: CodeDefaultValueExpression)=value
 
 
 
-class CodeDelegateCreateExpression:
+class CodeDelegateCreateExpression(CodeExpression):
  """
  Represents an expression that creates a delegate.
  
  CodeDelegateCreateExpression()
  CodeDelegateCreateExpression(delegateType: CodeTypeReference,targetObject: CodeExpression,methodName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeDelegateCreateExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,delegateType=None,targetObject=None,methodName=None):
   """
@@ -1781,7 +1805,7 @@ Set: TargetObject(self: CodeDelegateCreateExpression)=value
 
 
 
-class CodeDelegateInvokeExpression:
+class CodeDelegateInvokeExpression(CodeExpression):
  """
  Represents an expression that raises an event.
  
@@ -1789,6 +1813,11 @@ class CodeDelegateInvokeExpression:
  CodeDelegateInvokeExpression(targetObject: CodeExpression)
  CodeDelegateInvokeExpression(targetObject: CodeExpression,*parameters: Array[CodeExpression])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeDelegateInvokeExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,targetObject=None,parameters=None):
   """
@@ -1814,13 +1843,18 @@ Set: TargetObject(self: CodeDelegateInvokeExpression)=value
 
 
 
-class CodeDirectionExpression:
+class CodeDirectionExpression(CodeExpression):
  """
  Represents an expression used as a method invoke parameter along with a reference direction indicator.
  
  CodeDirectionExpression()
  CodeDirectionExpression(direction: FieldDirection,expression: CodeExpression)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeDirectionExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,direction=None,expression=None):
   """
@@ -1846,7 +1880,7 @@ Set: Expression(self: CodeDirectionExpression)=value
 
 
 
-class CodeDirectiveCollection:
+class CodeDirectiveCollection(CollectionBase):
  """
  Represents a collection of System.CodeDom.CodeDirective objects.
  
@@ -1854,6 +1888,11 @@ class CodeDirectiveCollection:
  CodeDirectiveCollection(value: CodeDirectiveCollection)
  CodeDirectiveCollection(value: Array[CodeDirective])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeDirectiveCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CodeDirectiveCollection,value: CodeDirective) -> int
@@ -1871,21 +1910,16 @@ class CodeDirectiveCollection:
   
    value: An array of System.CodeDom.CodeDirective objects to add to the collection.
   AddRange(self: CodeDirectiveCollection,value: CodeDirectiveCollection)
-   Adds the contents of the specified System.CodeDom.CodeDirectiveCollection object to the 
-    end of the collection.
+   Adds the contents of the specified System.CodeDom.CodeDirectiveCollection object to the end of the collection.
   
-  
-   value: A System.CodeDom.CodeDirectiveCollection object containing the 
-    System.CodeDom.CodeDirective objects to add to the collection.
+   value: A System.CodeDom.CodeDirectiveCollection object containing the System.CodeDom.CodeDirective objects to add to the collection.
   """
   pass
  def Contains(self,value):
   """
   Contains(self: CodeDirectiveCollection,value: CodeDirective) -> bool
   
-   Gets a value indicating whether the collection contains the specified 
-    System.CodeDom.CodeDirective object.
-  
+   Gets a value indicating whether the collection contains the specified System.CodeDom.CodeDirective object.
   
    value: The System.CodeDom.CodeDirective object to search for in the collection.
    Returns: true if the collection contains the specified object; otherwise,false.
@@ -1894,13 +1928,9 @@ class CodeDirectiveCollection:
  def CopyTo(self,array,index):
   """
   CopyTo(self: CodeDirectiveCollection,array: Array[CodeDirective],index: int)
-   Copies the contents of the collection to a one-dimensional array beginning at the 
-    specified index.
+   Copies the contents of the collection to a one-dimensional array beginning at the specified index.
   
-  
-   array: An array of type System.CodeDom.CodeDirective that is the destination of the values 
-    copied from the collection.
-  
+   array: An array of type System.CodeDom.CodeDirective that is the destination of the values copied from the collection.
    index: The index in the array at which to begin inserting collection objects.
   """
   pass
@@ -1908,9 +1938,7 @@ class CodeDirectiveCollection:
   """
   IndexOf(self: CodeDirectiveCollection,value: CodeDirective) -> int
   
-   Gets the index in the collection of the specified System.CodeDom.CodeDirective object,if 
-    it exists in the collection.
-  
+   Gets the index in the collection of the specified System.CodeDom.CodeDirective object,if it exists in the collection.
   
    value: The System.CodeDom.CodeDirective object to locate in the collection.
    Returns: The index position in the collection of the specified object,if found; otherwise,-1.
@@ -1919,9 +1947,7 @@ class CodeDirectiveCollection:
  def Insert(self,index,value):
   """
   Insert(self: CodeDirectiveCollection,index: int,value: CodeDirective)
-   Inserts the specified System.CodeDom.CodeDirective object into the collection at the 
-    specified index.
-  
+   Inserts the specified System.CodeDom.CodeDirective object into the collection at the specified index.
   
    index: The zero-based index position where the specified object should be inserted.
    value: The System.CodeDom.CodeDirective object to insert.
@@ -1930,23 +1956,19 @@ class CodeDirectiveCollection:
  def OnClear(self,*args):
   """
   OnClear(self: CollectionBase)
-   Performs additional custom processes when clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes when clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnClearComplete(self,*args):
   """
   OnClearComplete(self: CollectionBase)
-   Performs additional custom processes after clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes after clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnInsert(self,*args):
   """
   OnInsert(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes before inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -1955,9 +1977,7 @@ class CodeDirectiveCollection:
  def OnInsertComplete(self,*args):
   """
   OnInsertComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -1966,9 +1986,7 @@ class CodeDirectiveCollection:
  def OnRemove(self,*args):
   """
   OnRemove(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes when removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes when removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -1977,9 +1995,7 @@ class CodeDirectiveCollection:
  def OnRemoveComplete(self,*args):
   """
   OnRemoveComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -1988,9 +2004,7 @@ class CodeDirectiveCollection:
  def OnSet(self,*args):
   """
   OnSet(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes before setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -2000,9 +2014,7 @@ class CodeDirectiveCollection:
  def OnSetComplete(self,*args):
   """
   OnSetComplete(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes after setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -2062,20 +2074,30 @@ class CodeDirectiveCollection:
 
 
 
-class CodeEntryPointMethod:
+class CodeEntryPointMethod(CodeMemberMethod):
  """
  Represents the entry point method of an executable.
  
  CodeEntryPointMethod()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeEntryPointMethod()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
 
-class CodeEventReferenceExpression:
+class CodeEventReferenceExpression(CodeExpression):
  """
  Represents a reference to an event.
  
  CodeEventReferenceExpression()
  CodeEventReferenceExpression(targetObject: CodeExpression,eventName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeEventReferenceExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,targetObject=None,eventName=None):
   """
@@ -2101,7 +2123,7 @@ Set: TargetObject(self: CodeEventReferenceExpression)=value
 
 
 
-class CodeExpressionCollection:
+class CodeExpressionCollection(CollectionBase):
  """
  Represents a collection of System.CodeDom.CodeExpression objects.
  
@@ -2109,6 +2131,11 @@ class CodeExpressionCollection:
  CodeExpressionCollection(value: CodeExpressionCollection)
  CodeExpressionCollection(value: Array[CodeExpression])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeExpressionCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CodeExpressionCollection,value: CodeExpression) -> int
@@ -2124,25 +2151,18 @@ class CodeExpressionCollection:
   AddRange(self: CodeExpressionCollection,value: Array[CodeExpression])
    Copies the elements of the specified array to the end of the collection.
   
-   value: An array of type System.CodeDom.CodeExpression that contains the objects to add to the 
-    collection.
-  
+   value: An array of type System.CodeDom.CodeExpression that contains the objects to add to the collection.
   AddRange(self: CodeExpressionCollection,value: CodeExpressionCollection)
-   Copies the contents of another System.CodeDom.CodeExpressionCollection object to the end 
-    of the collection.
+   Copies the contents of another System.CodeDom.CodeExpressionCollection object to the end of the collection.
   
-  
-   value: A System.CodeDom.CodeExpressionCollection that contains the objects to add to the 
-    collection.
+   value: A System.CodeDom.CodeExpressionCollection that contains the objects to add to the collection.
   """
   pass
  def Contains(self,value):
   """
   Contains(self: CodeExpressionCollection,value: CodeExpression) -> bool
   
-   Gets a value that indicates whether the collection contains the specified 
-    System.CodeDom.CodeExpression object.
-  
+   Gets a value that indicates whether the collection contains the specified System.CodeDom.CodeExpression object.
   
    value: The System.CodeDom.CodeExpression object to locate in the collection.
    Returns: true if the collection contains the specified object; otherwise,false.
@@ -2151,13 +2171,9 @@ class CodeExpressionCollection:
  def CopyTo(self,array,index):
   """
   CopyTo(self: CodeExpressionCollection,array: Array[CodeExpression],index: int)
-   Copies the collection objects to a one-dimensional System.Array instance beginning at the 
-    specified index.
+   Copies the collection objects to a one-dimensional System.Array instance beginning at the specified index.
   
-  
-   array: The one-dimensional System.Array that is the destination of the values copied from the 
-    collection.
-  
+   array: The one-dimensional System.Array that is the destination of the values copied from the collection.
    index: The index of the array at which to begin inserting.
   """
   pass
@@ -2165,9 +2181,7 @@ class CodeExpressionCollection:
   """
   IndexOf(self: CodeExpressionCollection,value: CodeExpression) -> int
   
-   Gets the index of the specified System.CodeDom.CodeExpression object in the collection,
-    if it exists in the collection.
-  
+   Gets the index of the specified System.CodeDom.CodeExpression object in the collection,if it exists in the collection.
   
    value: The System.CodeDom.CodeExpression object to locate in the collection.
    Returns: The index of the specified object,if found,in the collection; otherwise,-1.
@@ -2176,9 +2190,7 @@ class CodeExpressionCollection:
  def Insert(self,index,value):
   """
   Insert(self: CodeExpressionCollection,index: int,value: CodeExpression)
-   Inserts the specified System.CodeDom.CodeExpression object into the collection at the 
-    specified index.
-  
+   Inserts the specified System.CodeDom.CodeExpression object into the collection at the specified index.
   
    index: The zero-based index where the specified object should be inserted.
    value: The System.CodeDom.CodeExpression object to insert.
@@ -2187,23 +2199,19 @@ class CodeExpressionCollection:
  def OnClear(self,*args):
   """
   OnClear(self: CollectionBase)
-   Performs additional custom processes when clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes when clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnClearComplete(self,*args):
   """
   OnClearComplete(self: CollectionBase)
-   Performs additional custom processes after clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes after clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnInsert(self,*args):
   """
   OnInsert(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes before inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -2212,9 +2220,7 @@ class CodeExpressionCollection:
  def OnInsertComplete(self,*args):
   """
   OnInsertComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -2223,9 +2229,7 @@ class CodeExpressionCollection:
  def OnRemove(self,*args):
   """
   OnRemove(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes when removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes when removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -2234,9 +2238,7 @@ class CodeExpressionCollection:
  def OnRemoveComplete(self,*args):
   """
   OnRemoveComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -2245,9 +2247,7 @@ class CodeExpressionCollection:
  def OnSet(self,*args):
   """
   OnSet(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes before setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -2257,9 +2257,7 @@ class CodeExpressionCollection:
  def OnSetComplete(self,*args):
   """
   OnSetComplete(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes after setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -2319,13 +2317,18 @@ class CodeExpressionCollection:
 
 
 
-class CodeExpressionStatement:
+class CodeExpressionStatement(CodeStatement):
  """
  Represents a statement that consists of a single expression.
  
  CodeExpressionStatement()
  CodeExpressionStatement(expression: CodeExpression)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeExpressionStatement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,expression=None):
   """
@@ -2343,13 +2346,18 @@ Set: Expression(self: CodeExpressionStatement)=value
 
 
 
-class CodeFieldReferenceExpression:
+class CodeFieldReferenceExpression(CodeExpression):
  """
  Represents a reference to a field.
  
  CodeFieldReferenceExpression()
  CodeFieldReferenceExpression(targetObject: CodeExpression,fieldName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeFieldReferenceExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,targetObject=None,fieldName=None):
   """
@@ -2375,13 +2383,18 @@ Set: TargetObject(self: CodeFieldReferenceExpression)=value
 
 
 
-class CodeGotoStatement:
+class CodeGotoStatement(CodeStatement):
  """
  Represents a goto statement.
  
  CodeGotoStatement()
  CodeGotoStatement(label: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeGotoStatement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,label=None):
   """
@@ -2399,13 +2412,18 @@ Set: Label(self: CodeGotoStatement)=value
 
 
 
-class CodeIndexerExpression:
+class CodeIndexerExpression(CodeExpression):
  """
  Represents a reference to an indexer property of an object.
  
  CodeIndexerExpression()
  CodeIndexerExpression(targetObject: CodeExpression,*indices: Array[CodeExpression])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeIndexerExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,targetObject=None,indices=None):
   """
@@ -2430,13 +2448,18 @@ Set: TargetObject(self: CodeIndexerExpression)=value
 
 
 
-class CodeIterationStatement:
+class CodeIterationStatement(CodeStatement):
  """
  Represents a for statement,or a loop through a block of statements,using a test expression as a condition for continuing to loop.
  
  CodeIterationStatement()
  CodeIterationStatement(initStatement: CodeStatement,testExpression: CodeExpression,incrementStatement: CodeStatement,*statements: Array[CodeStatement])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeIterationStatement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,initStatement=None,testExpression=None,incrementStatement=None,statements=None):
   """
@@ -2477,7 +2500,7 @@ Set: TestExpression(self: CodeIterationStatement)=value
 
 
 
-class CodeLabeledStatement:
+class CodeLabeledStatement(CodeStatement):
  """
  Represents a labeled statement or a stand-alone label.
  
@@ -2485,6 +2508,11 @@ class CodeLabeledStatement:
  CodeLabeledStatement(label: str)
  CodeLabeledStatement(label: str,statement: CodeStatement)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeLabeledStatement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,label=None,statement=None):
   """
@@ -2511,13 +2539,18 @@ Set: Statement(self: CodeLabeledStatement)=value
 
 
 
-class CodeLinePragma:
+class CodeLinePragma(object):
  """
  Represents a specific location within a specific file.
  
  CodeLinePragma()
  CodeLinePragma(fileName: str,lineNumber: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeLinePragma()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,fileName=None,lineNumber=None):
   """
@@ -2543,12 +2576,17 @@ Set: LineNumber(self: CodeLinePragma)=value
 
 
 
-class CodeMemberEvent:
+class CodeMemberEvent(CodeTypeMember):
  """
  Represents a declaration for an event of a type.
  
  CodeMemberEvent()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeMemberEvent()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  ImplementationTypes=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets or sets the data type that the member event implements.
 
@@ -2574,7 +2612,7 @@ Set: Type(self: CodeMemberEvent)=value
 
 
 
-class CodeMemberField:
+class CodeMemberField(CodeTypeMember):
  """
  Represents a declaration for a field of a type.
  
@@ -2583,6 +2621,11 @@ class CodeMemberField:
  CodeMemberField(type: str,name: str)
  CodeMemberField(type: Type,name: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeMemberField()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,type=None,name=None):
   """
@@ -2610,12 +2653,17 @@ Set: Type(self: CodeMemberField)=value
 
 
 
-class CodeMemberProperty:
+class CodeMemberProperty(CodeTypeMember):
  """
  Represents a declaration for a property of a type.
  
  CodeMemberProperty()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeMemberProperty()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  GetStatements=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Gets the collection of get statements for the property.
 
@@ -2678,7 +2726,7 @@ Set: Type(self: CodeMemberProperty)=value
 
 
 
-class CodeMethodInvokeExpression:
+class CodeMethodInvokeExpression(CodeExpression):
  """
  Represents an expression that invokes a method.
  
@@ -2686,6 +2734,11 @@ class CodeMethodInvokeExpression:
  CodeMethodInvokeExpression(targetObject: CodeExpression,methodName: str,*parameters: Array[CodeExpression])
  CodeMethodInvokeExpression(method: CodeMethodReferenceExpression,*parameters: Array[CodeExpression])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeMethodInvokeExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -2711,7 +2764,7 @@ Get: Parameters(self: CodeMethodInvokeExpression) -> CodeExpressionCollection
 
 
 
-class CodeMethodReferenceExpression:
+class CodeMethodReferenceExpression(CodeExpression):
  """
  Represents a reference to a method.
  
@@ -2719,6 +2772,11 @@ class CodeMethodReferenceExpression:
  CodeMethodReferenceExpression(targetObject: CodeExpression,methodName: str)
  CodeMethodReferenceExpression(targetObject: CodeExpression,methodName: str,*typeParameters: Array[CodeTypeReference])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeMethodReferenceExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,targetObject=None,methodName=None,typeParameters=None):
   """
@@ -2752,13 +2810,18 @@ Get: TypeArguments(self: CodeMethodReferenceExpression) -> CodeTypeReferenceColl
 
 
 
-class CodeMethodReturnStatement:
+class CodeMethodReturnStatement(CodeStatement):
  """
  Represents a return value statement.
  
  CodeMethodReturnStatement()
  CodeMethodReturnStatement(expression: CodeExpression)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeMethodReturnStatement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,expression=None):
   """
@@ -2776,13 +2839,18 @@ Set: Expression(self: CodeMethodReturnStatement)=value
 
 
 
-class CodeNamespace:
+class CodeNamespace(CodeObject):
  """
  Represents a namespace declaration.
  
  CodeNamespace(name: str)
  CodeNamespace()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeNamespace()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,name=None):
   """
@@ -2825,7 +2893,7 @@ Get: Types(self: CodeNamespace) -> CodeTypeDeclarationCollection
  PopulateTypes=None
 
 
-class CodeNamespaceCollection:
+class CodeNamespaceCollection(CollectionBase):
  """
  Represents a collection of System.CodeDom.CodeNamespace objects.
  
@@ -2833,6 +2901,11 @@ class CodeNamespaceCollection:
  CodeNamespaceCollection(value: CodeNamespaceCollection)
  CodeNamespaceCollection(value: Array[CodeNamespace])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeNamespaceCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CodeNamespaceCollection,value: CodeNamespace) -> int
@@ -2846,29 +2919,20 @@ class CodeNamespaceCollection:
  def AddRange(self,value):
   """
   AddRange(self: CodeNamespaceCollection,value: Array[CodeNamespace])
-   Copies the elements of the specified System.CodeDom.CodeNamespace array to the end of the 
-    collection.
+   Copies the elements of the specified System.CodeDom.CodeNamespace array to the end of the collection.
   
-  
-   value: An array of type System.CodeDom.CodeNamespace that contains the objects to add to the 
-    collection.
-  
+   value: An array of type System.CodeDom.CodeNamespace that contains the objects to add to the collection.
   AddRange(self: CodeNamespaceCollection,value: CodeNamespaceCollection)
-   Adds the contents of the specified System.CodeDom.CodeNamespaceCollection object to the 
-    end of the collection.
+   Adds the contents of the specified System.CodeDom.CodeNamespaceCollection object to the end of the collection.
   
-  
-   value: A System.CodeDom.CodeNamespaceCollection that contains the objects to add to the 
-    collection.
+   value: A System.CodeDom.CodeNamespaceCollection that contains the objects to add to the collection.
   """
   pass
  def Contains(self,value):
   """
   Contains(self: CodeNamespaceCollection,value: CodeNamespace) -> bool
   
-   Gets a value that indicates whether the collection contains the specified 
-    System.CodeDom.CodeNamespace object.
-  
+   Gets a value that indicates whether the collection contains the specified System.CodeDom.CodeNamespace object.
   
    value: The System.CodeDom.CodeNamespace to search for in the collection.
    Returns: true if the System.CodeDom.CodeNamespace is contained in the collection; otherwise,false.
@@ -2877,13 +2941,9 @@ class CodeNamespaceCollection:
  def CopyTo(self,array,index):
   """
   CopyTo(self: CodeNamespaceCollection,array: Array[CodeNamespace],index: int)
-   Copies the collection objects to a one-dimensional System.Array instance,starting at the 
-    specified index.
+   Copies the collection objects to a one-dimensional System.Array instance,starting at the specified index.
   
-  
-   array: The one-dimensional System.Array that is the destination of the values copied from the 
-    collection.
-  
+   array: The one-dimensional System.Array that is the destination of the values copied from the collection.
    index: The index of the array at which to begin inserting.
   """
   pass
@@ -2891,21 +2951,16 @@ class CodeNamespaceCollection:
   """
   IndexOf(self: CodeNamespaceCollection,value: CodeNamespace) -> int
   
-   Gets the index of the specified System.CodeDom.CodeNamespace object in the 
-    System.CodeDom.CodeNamespaceCollection,if it exists in the collection.
-  
+   Gets the index of the specified System.CodeDom.CodeNamespace object in the System.CodeDom.CodeNamespaceCollection,if it exists in the collection.
   
    value: The System.CodeDom.CodeNamespace to locate.
-   Returns: The index of the specified System.CodeDom.CodeNamespace,if it is found,in the 
-    collection; otherwise,-1.
+   Returns: The index of the specified System.CodeDom.CodeNamespace,if it is found,in the collection; otherwise,-1.
   """
   pass
  def Insert(self,index,value):
   """
   Insert(self: CodeNamespaceCollection,index: int,value: CodeNamespace)
-   Inserts the specified System.CodeDom.CodeNamespace object into the collection at the 
-    specified index.
-  
+   Inserts the specified System.CodeDom.CodeNamespace object into the collection at the specified index.
   
    index: The zero-based index where the new item should be inserted.
    value: The System.CodeDom.CodeNamespace to insert.
@@ -2914,23 +2969,19 @@ class CodeNamespaceCollection:
  def OnClear(self,*args):
   """
   OnClear(self: CollectionBase)
-   Performs additional custom processes when clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes when clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnClearComplete(self,*args):
   """
   OnClearComplete(self: CollectionBase)
-   Performs additional custom processes after clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes after clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnInsert(self,*args):
   """
   OnInsert(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes before inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -2939,9 +2990,7 @@ class CodeNamespaceCollection:
  def OnInsertComplete(self,*args):
   """
   OnInsertComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -2950,9 +2999,7 @@ class CodeNamespaceCollection:
  def OnRemove(self,*args):
   """
   OnRemove(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes when removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes when removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -2961,9 +3008,7 @@ class CodeNamespaceCollection:
  def OnRemoveComplete(self,*args):
   """
   OnRemoveComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -2972,9 +3017,7 @@ class CodeNamespaceCollection:
  def OnSet(self,*args):
   """
   OnSet(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes before setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -2984,9 +3027,7 @@ class CodeNamespaceCollection:
  def OnSetComplete(self,*args):
   """
   OnSetComplete(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes after setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -3046,13 +3087,18 @@ class CodeNamespaceCollection:
 
 
 
-class CodeNamespaceImport:
+class CodeNamespaceImport(CodeObject):
  """
  Represents a namespace import directive that indicates a namespace to use.
  
  CodeNamespaceImport(nameSpace: str)
  CodeNamespaceImport()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeNamespaceImport()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,nameSpace=None):
   """
@@ -3078,12 +3124,17 @@ Set: Namespace(self: CodeNamespaceImport)=value
 
 
 
-class CodeNamespaceImportCollection:
+class CodeNamespaceImportCollection(object):
  """
  Represents a collection of System.CodeDom.CodeNamespaceImport objects.
  
  CodeNamespaceImportCollection()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeNamespaceImportCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CodeNamespaceImportCollection,value: CodeNamespaceImport)
@@ -3097,8 +3148,7 @@ class CodeNamespaceImportCollection:
   AddRange(self: CodeNamespaceImportCollection,value: Array[CodeNamespaceImport])
    Adds a set of System.CodeDom.CodeNamespaceImport objects to the collection.
   
-   value: An array of type System.CodeDom.CodeNamespaceImport that contains the objects to add to 
-    the collection.
+   value: An array of type System.CodeDom.CodeNamespaceImport that contains the objects to add to the collection.
   """
   pass
  def Clear(self):
@@ -3157,7 +3207,7 @@ Get: Count(self: CodeNamespaceImportCollection) -> int
 
 
 
-class CodeObjectCreateExpression:
+class CodeObjectCreateExpression(CodeExpression):
  """
  Represents an expression that creates a new instance of a type.
  
@@ -3166,6 +3216,11 @@ class CodeObjectCreateExpression:
  CodeObjectCreateExpression(createType: CodeTypeReference,*parameters: Array[CodeExpression])
  CodeObjectCreateExpression(createType: Type,*parameters: Array[CodeExpression])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeObjectCreateExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,createType=None,parameters=None):
   """
@@ -3192,7 +3247,7 @@ Get: Parameters(self: CodeObjectCreateExpression) -> CodeExpressionCollection
 
 
 
-class CodeParameterDeclarationExpression:
+class CodeParameterDeclarationExpression(CodeExpression):
  """
  Represents a parameter declaration for a method,property,or constructor.
  
@@ -3201,6 +3256,11 @@ class CodeParameterDeclarationExpression:
  CodeParameterDeclarationExpression(type: str,name: str)
  CodeParameterDeclarationExpression(type: Type,name: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeParameterDeclarationExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,type=None,name=None):
   """
@@ -3244,7 +3304,7 @@ Set: Type(self: CodeParameterDeclarationExpression)=value
 
 
 
-class CodeParameterDeclarationExpressionCollection:
+class CodeParameterDeclarationExpressionCollection(CollectionBase):
  """
  Represents a collection of System.CodeDom.CodeParameterDeclarationExpression objects.
  
@@ -3252,6 +3312,11 @@ class CodeParameterDeclarationExpressionCollection:
  CodeParameterDeclarationExpressionCollection(value: CodeParameterDeclarationExpressionCollection)
  CodeParameterDeclarationExpressionCollection(value: Array[CodeParameterDeclarationExpression])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeParameterDeclarationExpressionCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CodeParameterDeclarationExpressionCollection,value: CodeParameterDeclarationExpression) -> int
@@ -3267,25 +3332,18 @@ class CodeParameterDeclarationExpressionCollection:
   AddRange(self: CodeParameterDeclarationExpressionCollection,value: Array[CodeParameterDeclarationExpression])
    Copies the elements of the specified array to the end of the collection.
   
-   value: An array of type System.CodeDom.CodeParameterDeclarationExpression containing the objects 
-    to add to the collection.
-  
+   value: An array of type System.CodeDom.CodeParameterDeclarationExpression containing the objects to add to the collection.
   AddRange(self: CodeParameterDeclarationExpressionCollection,value: CodeParameterDeclarationExpressionCollection)
-   Adds the contents of another System.CodeDom.CodeParameterDeclarationExpressionCollection 
-    to the end of the collection.
+   Adds the contents of another System.CodeDom.CodeParameterDeclarationExpressionCollection to the end of the collection.
   
-  
-   value: A System.CodeDom.CodeParameterDeclarationExpressionCollection containing the objects to 
-    add to the collection.
+   value: A System.CodeDom.CodeParameterDeclarationExpressionCollection containing the objects to add to the collection.
   """
   pass
  def Contains(self,value):
   """
   Contains(self: CodeParameterDeclarationExpressionCollection,value: CodeParameterDeclarationExpression) -> bool
   
-   Gets a value indicating whether the collection contains the specified 
-    System.CodeDom.CodeParameterDeclarationExpression.
-  
+   Gets a value indicating whether the collection contains the specified System.CodeDom.CodeParameterDeclarationExpression.
   
    value: A System.CodeDom.CodeParameterDeclarationExpression to search for in the collection.
    Returns: true if the collection contains the specified object; otherwise,false.
@@ -3294,13 +3352,9 @@ class CodeParameterDeclarationExpressionCollection:
  def CopyTo(self,array,index):
   """
   CopyTo(self: CodeParameterDeclarationExpressionCollection,array: Array[CodeParameterDeclarationExpression],index: int)
-   Copies the collection objects to a one-dimensional System.Array instance beginning at the 
-    specified index.
+   Copies the collection objects to a one-dimensional System.Array instance beginning at the specified index.
   
-  
-   array: The one-dimensional System.Array that is the destination of the values copied from the 
-    collection.
-  
+   array: The one-dimensional System.Array that is the destination of the values copied from the collection.
    index: The index of the array at which to begin inserting.
   """
   pass
@@ -3308,9 +3362,7 @@ class CodeParameterDeclarationExpressionCollection:
   """
   IndexOf(self: CodeParameterDeclarationExpressionCollection,value: CodeParameterDeclarationExpression) -> int
   
-   Gets the index in the collection of the specified 
-    System.CodeDom.CodeParameterDeclarationExpression,if it exists in the collection.
-  
+   Gets the index in the collection of the specified System.CodeDom.CodeParameterDeclarationExpression,if it exists in the collection.
   
    value: The System.CodeDom.CodeParameterDeclarationExpression to locate in the collection.
    Returns: The index in the collection of the specified object,if found; otherwise,-1.
@@ -3319,9 +3371,7 @@ class CodeParameterDeclarationExpressionCollection:
  def Insert(self,index,value):
   """
   Insert(self: CodeParameterDeclarationExpressionCollection,index: int,value: CodeParameterDeclarationExpression)
-   Inserts the specified System.CodeDom.CodeParameterDeclarationExpression into the 
-    collection at the specified index.
-  
+   Inserts the specified System.CodeDom.CodeParameterDeclarationExpression into the collection at the specified index.
   
    index: The zero-based index where the specified object should be inserted.
    value: The System.CodeDom.CodeParameterDeclarationExpression to insert.
@@ -3330,23 +3380,19 @@ class CodeParameterDeclarationExpressionCollection:
  def OnClear(self,*args):
   """
   OnClear(self: CollectionBase)
-   Performs additional custom processes when clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes when clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnClearComplete(self,*args):
   """
   OnClearComplete(self: CollectionBase)
-   Performs additional custom processes after clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes after clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnInsert(self,*args):
   """
   OnInsert(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes before inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -3355,9 +3401,7 @@ class CodeParameterDeclarationExpressionCollection:
  def OnInsertComplete(self,*args):
   """
   OnInsertComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -3366,9 +3410,7 @@ class CodeParameterDeclarationExpressionCollection:
  def OnRemove(self,*args):
   """
   OnRemove(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes when removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes when removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -3377,9 +3419,7 @@ class CodeParameterDeclarationExpressionCollection:
  def OnRemoveComplete(self,*args):
   """
   OnRemoveComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -3388,9 +3428,7 @@ class CodeParameterDeclarationExpressionCollection:
  def OnSet(self,*args):
   """
   OnSet(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes before setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -3400,9 +3438,7 @@ class CodeParameterDeclarationExpressionCollection:
  def OnSetComplete(self,*args):
   """
   OnSetComplete(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes after setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -3420,9 +3456,7 @@ class CodeParameterDeclarationExpressionCollection:
  def Remove(self,value):
   """
   Remove(self: CodeParameterDeclarationExpressionCollection,value: CodeParameterDeclarationExpression)
-   Removes the specified System.CodeDom.CodeParameterDeclarationExpression from the 
-    collection.
-  
+   Removes the specified System.CodeDom.CodeParameterDeclarationExpression from the collection.
   
    value: The System.CodeDom.CodeParameterDeclarationExpression to remove from the collection.
   """
@@ -3464,13 +3498,18 @@ class CodeParameterDeclarationExpressionCollection:
 
 
 
-class CodePrimitiveExpression:
+class CodePrimitiveExpression(CodeExpression):
  """
  Represents a primitive data type value.
  
  CodePrimitiveExpression()
  CodePrimitiveExpression(value: object)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodePrimitiveExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,value=None):
   """
@@ -3488,13 +3527,18 @@ Set: Value(self: CodePrimitiveExpression)=value
 
 
 
-class CodePropertyReferenceExpression:
+class CodePropertyReferenceExpression(CodeExpression):
  """
  Represents a reference to the value of a property.
  
  CodePropertyReferenceExpression(targetObject: CodeExpression,propertyName: str)
  CodePropertyReferenceExpression()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodePropertyReferenceExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,targetObject=None,propertyName=None):
   """
@@ -3520,20 +3564,30 @@ Set: TargetObject(self: CodePropertyReferenceExpression)=value
 
 
 
-class CodePropertySetValueReferenceExpression:
+class CodePropertySetValueReferenceExpression(CodeExpression):
  """
  Represents the value argument of a property set method call within a property set method.
  
  CodePropertySetValueReferenceExpression()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodePropertySetValueReferenceExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
 
-class CodeRegionDirective:
+class CodeRegionDirective(CodeDirective):
  """
  Specifies the name and mode for a code region.
  
  CodeRegionDirective()
  CodeRegionDirective(regionMode: CodeRegionMode,regionText: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeRegionDirective()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,regionMode=None,regionText=None):
   """
@@ -3565,6 +3619,11 @@ class CodeRegionMode:
  
  enum CodeRegionMode,values: End (2),None (0),Start (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeRegionMode()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -3594,7 +3653,7 @@ class CodeRegionMode:
  value__=None
 
 
-class CodeRemoveEventStatement:
+class CodeRemoveEventStatement(CodeStatement):
  """
  Represents a statement that removes an event handler.
  
@@ -3602,6 +3661,11 @@ class CodeRemoveEventStatement:
  CodeRemoveEventStatement(eventRef: CodeEventReferenceExpression,listener: CodeExpression)
  CodeRemoveEventStatement(targetObject: CodeExpression,eventName: str,listener: CodeExpression)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeRemoveEventStatement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -3628,13 +3692,18 @@ Set: Listener(self: CodeRemoveEventStatement)=value
 
 
 
-class CodeSnippetCompileUnit:
+class CodeSnippetCompileUnit(CodeCompileUnit):
  """
  Represents a literal code fragment that can be compiled.
  
  CodeSnippetCompileUnit()
  CodeSnippetCompileUnit(value: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeSnippetCompileUnit()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,value=None):
   """
@@ -3660,13 +3729,18 @@ Set: Value(self: CodeSnippetCompileUnit)=value
 
 
 
-class CodeSnippetExpression:
+class CodeSnippetExpression(CodeExpression):
  """
  Represents a literal expression.
  
  CodeSnippetExpression()
  CodeSnippetExpression(value: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeSnippetExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,value=None):
   """
@@ -3684,13 +3758,18 @@ Set: Value(self: CodeSnippetExpression)=value
 
 
 
-class CodeSnippetStatement:
+class CodeSnippetStatement(CodeStatement):
  """
  Represents a statement using a literal code fragment.
  
  CodeSnippetStatement()
  CodeSnippetStatement(value: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeSnippetStatement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,value=None):
   """
@@ -3708,13 +3787,18 @@ Set: Value(self: CodeSnippetStatement)=value
 
 
 
-class CodeSnippetTypeMember:
+class CodeSnippetTypeMember(CodeTypeMember):
  """
  Represents a member of a type using a literal code fragment.
  
  CodeSnippetTypeMember()
  CodeSnippetTypeMember(text: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeSnippetTypeMember()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,text=None):
   """
@@ -3732,7 +3816,7 @@ Set: Text(self: CodeSnippetTypeMember)=value
 
 
 
-class CodeStatementCollection:
+class CodeStatementCollection(CollectionBase):
  """
  Represents a collection of System.CodeDom.CodeStatement objects.
  
@@ -3740,6 +3824,11 @@ class CodeStatementCollection:
  CodeStatementCollection(value: CodeStatementCollection)
  CodeStatementCollection(value: Array[CodeStatement])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeStatementCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CodeStatementCollection,value: CodeStatement) -> int
@@ -3763,21 +3852,16 @@ class CodeStatementCollection:
   
    value: An array of System.CodeDom.CodeStatement objects to add to the collection.
   AddRange(self: CodeStatementCollection,value: CodeStatementCollection)
-   Adds the contents of another System.CodeDom.CodeStatementCollection object to the end of 
-    the collection.
+   Adds the contents of another System.CodeDom.CodeStatementCollection object to the end of the collection.
   
-  
-   value: A System.CodeDom.CodeStatementCollection object that contains the objects to add to the 
-    collection.
+   value: A System.CodeDom.CodeStatementCollection object that contains the objects to add to the collection.
   """
   pass
  def Contains(self,value):
   """
   Contains(self: CodeStatementCollection,value: CodeStatement) -> bool
   
-   Gets a value that indicates whether the collection contains the specified 
-    System.CodeDom.CodeStatement object.
-  
+   Gets a value that indicates whether the collection contains the specified System.CodeDom.CodeStatement object.
   
    value: The System.CodeDom.CodeStatement object to search for in the collection.
    Returns: true if the collection contains the specified object; otherwise,false.
@@ -3786,13 +3870,9 @@ class CodeStatementCollection:
  def CopyTo(self,array,index):
   """
   CopyTo(self: CodeStatementCollection,array: Array[CodeStatement],index: int)
-   Copies the elements of the System.CodeDom.CodeStatementCollection object to a 
-    one-dimensional System.Array instance,starting at the specified index.
+   Copies the elements of the System.CodeDom.CodeStatementCollection object to a one-dimensional System.Array instance,starting at the specified index.
   
-  
-   array: The one-dimensional System.Array that is the destination of the values copied from the 
-    collection.
-  
+   array: The one-dimensional System.Array that is the destination of the values copied from the collection.
    index: The index of the array at which to begin inserting.
   """
   pass
@@ -3800,9 +3880,7 @@ class CodeStatementCollection:
   """
   IndexOf(self: CodeStatementCollection,value: CodeStatement) -> int
   
-   Gets the index of the specified System.CodeDom.CodeStatement object in the 
-    System.CodeDom.CodeStatementCollection,if it exists in the collection.
-  
+   Gets the index of the specified System.CodeDom.CodeStatement object in the System.CodeDom.CodeStatementCollection,if it exists in the collection.
   
    value: The System.CodeDom.CodeStatement to locate in the collection.
    Returns: The index of the specified object,if it is found,in the collection; otherwise,-1.
@@ -3811,9 +3889,7 @@ class CodeStatementCollection:
  def Insert(self,index,value):
   """
   Insert(self: CodeStatementCollection,index: int,value: CodeStatement)
-   Inserts the specified System.CodeDom.CodeStatement object into the collection at the 
-    specified index.
-  
+   Inserts the specified System.CodeDom.CodeStatement object into the collection at the specified index.
   
    index: The zero-based index where the specified object should be inserted.
    value: The System.CodeDom.CodeStatement object to insert.
@@ -3822,23 +3898,19 @@ class CodeStatementCollection:
  def OnClear(self,*args):
   """
   OnClear(self: CollectionBase)
-   Performs additional custom processes when clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes when clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnClearComplete(self,*args):
   """
   OnClearComplete(self: CollectionBase)
-   Performs additional custom processes after clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes after clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnInsert(self,*args):
   """
   OnInsert(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes before inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -3847,9 +3919,7 @@ class CodeStatementCollection:
  def OnInsertComplete(self,*args):
   """
   OnInsertComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -3858,9 +3928,7 @@ class CodeStatementCollection:
  def OnRemove(self,*args):
   """
   OnRemove(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes when removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes when removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -3869,9 +3937,7 @@ class CodeStatementCollection:
  def OnRemoveComplete(self,*args):
   """
   OnRemoveComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -3880,9 +3946,7 @@ class CodeStatementCollection:
  def OnSet(self,*args):
   """
   OnSet(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes before setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -3892,9 +3956,7 @@ class CodeStatementCollection:
  def OnSetComplete(self,*args):
   """
   OnSetComplete(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes after setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -3954,20 +4016,30 @@ class CodeStatementCollection:
 
 
 
-class CodeThisReferenceExpression:
+class CodeThisReferenceExpression(CodeExpression):
  """
  Represents a reference to the current local class instance.
  
  CodeThisReferenceExpression()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeThisReferenceExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
 
-class CodeThrowExceptionStatement:
+class CodeThrowExceptionStatement(CodeStatement):
  """
  Represents a statement that throws an exception.
  
  CodeThrowExceptionStatement()
  CodeThrowExceptionStatement(toThrow: CodeExpression)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeThrowExceptionStatement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,toThrow=None):
   """
@@ -3985,7 +4057,7 @@ Set: ToThrow(self: CodeThrowExceptionStatement)=value
 
 
 
-class CodeTryCatchFinallyStatement:
+class CodeTryCatchFinallyStatement(CodeStatement):
  """
  Represents a try block with any number of catch clauses and,optionally,a finally block.
  
@@ -3993,6 +4065,11 @@ class CodeTryCatchFinallyStatement:
  CodeTryCatchFinallyStatement(tryStatements: Array[CodeStatement],catchClauses: Array[CodeCatchClause])
  CodeTryCatchFinallyStatement(tryStatements: Array[CodeStatement],catchClauses: Array[CodeCatchClause],finallyStatements: Array[CodeStatement])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeTryCatchFinallyStatement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,tryStatements=None,catchClauses=None,finallyStatements=None):
   """
@@ -4024,20 +4101,30 @@ Get: TryStatements(self: CodeTryCatchFinallyStatement) -> CodeStatementCollectio
 
 
 
-class CodeTypeConstructor:
+class CodeTypeConstructor(CodeMemberMethod):
  """
  Represents a static constructor for a class.
  
  CodeTypeConstructor()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeTypeConstructor()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
 
-class CodeTypeDeclaration:
+class CodeTypeDeclaration(CodeTypeMember):
  """
  Represents a type declaration for a class,structure,interface,or enumeration.
  
  CodeTypeDeclaration(name: str)
  CodeTypeDeclaration()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeTypeDeclaration()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,name=None):
   """
@@ -4119,7 +4206,7 @@ Get: TypeParameters(self: CodeTypeDeclaration) -> CodeTypeParameterCollection
  PopulateMembers=None
 
 
-class CodeTypeDeclarationCollection:
+class CodeTypeDeclarationCollection(CollectionBase):
  """
  Represents a collection of System.CodeDom.CodeTypeDeclaration objects.
  
@@ -4127,6 +4214,11 @@ class CodeTypeDeclarationCollection:
  CodeTypeDeclarationCollection(value: CodeTypeDeclarationCollection)
  CodeTypeDeclarationCollection(value: Array[CodeTypeDeclaration])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeTypeDeclarationCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CodeTypeDeclarationCollection,value: CodeTypeDeclaration) -> int
@@ -4142,25 +4234,18 @@ class CodeTypeDeclarationCollection:
   AddRange(self: CodeTypeDeclarationCollection,value: Array[CodeTypeDeclaration])
    Copies the elements of the specified array to the end of the collection.
   
-   value: An array of type System.CodeDom.CodeTypeDeclaration that contains the objects to add to 
-    the collection.
-  
+   value: An array of type System.CodeDom.CodeTypeDeclaration that contains the objects to add to the collection.
   AddRange(self: CodeTypeDeclarationCollection,value: CodeTypeDeclarationCollection)
-   Adds the contents of another System.CodeDom.CodeTypeDeclarationCollection object to the 
-    end of the collection.
+   Adds the contents of another System.CodeDom.CodeTypeDeclarationCollection object to the end of the collection.
   
-  
-   value: A System.CodeDom.CodeTypeDeclarationCollection object that contains the objects to add to 
-    the collection.
+   value: A System.CodeDom.CodeTypeDeclarationCollection object that contains the objects to add to the collection.
   """
   pass
  def Contains(self,value):
   """
   Contains(self: CodeTypeDeclarationCollection,value: CodeTypeDeclaration) -> bool
   
-   Gets a value that indicates whether the collection contains the specified 
-    System.CodeDom.CodeTypeDeclaration object.
-  
+   Gets a value that indicates whether the collection contains the specified System.CodeDom.CodeTypeDeclaration object.
   
    value: The System.CodeDom.CodeTypeDeclaration object to search for in the collection.
    Returns: true if the collection contains the specified object; otherwise,false.
@@ -4169,13 +4254,9 @@ class CodeTypeDeclarationCollection:
  def CopyTo(self,array,index):
   """
   CopyTo(self: CodeTypeDeclarationCollection,array: Array[CodeTypeDeclaration],index: int)
-   Copies the elements in the System.CodeDom.CodeTypeDeclarationCollection object to a 
-    one-dimensional System.Array instance,starting at the specified index.
+   Copies the elements in the System.CodeDom.CodeTypeDeclarationCollection object to a one-dimensional System.Array instance,starting at the specified index.
   
-  
-   array: The one-dimensional System.Array that is the destination of the values copied from the 
-    collection.
-  
+   array: The one-dimensional System.Array that is the destination of the values copied from the collection.
    index: The index of the array at which to begin inserting.
   """
   pass
@@ -4183,9 +4264,7 @@ class CodeTypeDeclarationCollection:
   """
   IndexOf(self: CodeTypeDeclarationCollection,value: CodeTypeDeclaration) -> int
   
-   Gets the index of the specified System.CodeDom.CodeTypeDeclaration object in the 
-    System.CodeDom.CodeTypeDeclarationCollection,if it exists in the collection.
-  
+   Gets the index of the specified System.CodeDom.CodeTypeDeclaration object in the System.CodeDom.CodeTypeDeclarationCollection,if it exists in the collection.
   
    value: The System.CodeDom.CodeTypeDeclaration to locate in the collection.
    Returns: The index of the specified object,if it is found,in the collection; otherwise,-1.
@@ -4194,9 +4273,7 @@ class CodeTypeDeclarationCollection:
  def Insert(self,index,value):
   """
   Insert(self: CodeTypeDeclarationCollection,index: int,value: CodeTypeDeclaration)
-   Inserts the specified System.CodeDom.CodeTypeDeclaration object into the collection at 
-    the specified index.
-  
+   Inserts the specified System.CodeDom.CodeTypeDeclaration object into the collection at the specified index.
   
    index: The zero-based index where the specified object should be inserted.
    value: The System.CodeDom.CodeTypeDeclaration object to insert.
@@ -4205,23 +4282,19 @@ class CodeTypeDeclarationCollection:
  def OnClear(self,*args):
   """
   OnClear(self: CollectionBase)
-   Performs additional custom processes when clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes when clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnClearComplete(self,*args):
   """
   OnClearComplete(self: CollectionBase)
-   Performs additional custom processes after clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes after clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnInsert(self,*args):
   """
   OnInsert(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes before inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -4230,9 +4303,7 @@ class CodeTypeDeclarationCollection:
  def OnInsertComplete(self,*args):
   """
   OnInsertComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -4241,9 +4312,7 @@ class CodeTypeDeclarationCollection:
  def OnRemove(self,*args):
   """
   OnRemove(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes when removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes when removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -4252,9 +4321,7 @@ class CodeTypeDeclarationCollection:
  def OnRemoveComplete(self,*args):
   """
   OnRemoveComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -4263,9 +4330,7 @@ class CodeTypeDeclarationCollection:
  def OnSet(self,*args):
   """
   OnSet(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes before setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -4275,9 +4340,7 @@ class CodeTypeDeclarationCollection:
  def OnSetComplete(self,*args):
   """
   OnSetComplete(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes after setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -4337,13 +4400,18 @@ class CodeTypeDeclarationCollection:
 
 
 
-class CodeTypeDelegate:
+class CodeTypeDelegate(CodeTypeDeclaration):
  """
  Represents a delegate declaration.
  
  CodeTypeDelegate()
  CodeTypeDelegate(name: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeTypeDelegate()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,name=None):
   """
@@ -4368,7 +4436,7 @@ Set: ReturnType(self: CodeTypeDelegate)=value
 
 
 
-class CodeTypeMemberCollection:
+class CodeTypeMemberCollection(CollectionBase):
  """
  Represents a collection of System.CodeDom.CodeTypeMember objects.
  
@@ -4376,6 +4444,11 @@ class CodeTypeMemberCollection:
  CodeTypeMemberCollection(value: CodeTypeMemberCollection)
  CodeTypeMemberCollection(value: Array[CodeTypeMember])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeTypeMemberCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CodeTypeMemberCollection,value: CodeTypeMember) -> int
@@ -4389,17 +4462,11 @@ class CodeTypeMemberCollection:
  def AddRange(self,value):
   """
   AddRange(self: CodeTypeMemberCollection,value: Array[CodeTypeMember])
-   Copies the elements of the specified System.CodeDom.CodeTypeMember array to the end of 
-    the collection.
+   Copies the elements of the specified System.CodeDom.CodeTypeMember array to the end of the collection.
   
-  
-   value: An array of type System.CodeDom.CodeTypeMember containing the objects to add to the 
-    collection.
-  
+   value: An array of type System.CodeDom.CodeTypeMember containing the objects to add to the collection.
   AddRange(self: CodeTypeMemberCollection,value: CodeTypeMemberCollection)
-   Adds the contents of another System.CodeDom.CodeTypeMemberCollection to the end of the 
-    collection.
-  
+   Adds the contents of another System.CodeDom.CodeTypeMemberCollection to the end of the collection.
   
    value: A System.CodeDom.CodeTypeMemberCollection containing the objects to add to the collection.
   """
@@ -4408,9 +4475,7 @@ class CodeTypeMemberCollection:
   """
   Contains(self: CodeTypeMemberCollection,value: CodeTypeMember) -> bool
   
-   Gets a value indicating whether the collection contains the specified 
-    System.CodeDom.CodeTypeMember.
-  
+   Gets a value indicating whether the collection contains the specified System.CodeDom.CodeTypeMember.
   
    value: The System.CodeDom.CodeTypeMember to search for in the collection.
    Returns: true if the collection contains the specified object; otherwise,false.
@@ -4419,13 +4484,9 @@ class CodeTypeMemberCollection:
  def CopyTo(self,array,index):
   """
   CopyTo(self: CodeTypeMemberCollection,array: Array[CodeTypeMember],index: int)
-   Copies the collection objects to a one-dimensional System.Array instance,beginning at 
-    the specified index.
+   Copies the collection objects to a one-dimensional System.Array instance,beginning at the specified index.
   
-  
-   array: The one-dimensional System.Array that is the destination of the values copied from the 
-    collection.
-  
+   array: The one-dimensional System.Array that is the destination of the values copied from the collection.
    index: The index of the array at which to begin inserting.
   """
   pass
@@ -4433,9 +4494,7 @@ class CodeTypeMemberCollection:
   """
   IndexOf(self: CodeTypeMemberCollection,value: CodeTypeMember) -> int
   
-   Gets the index in the collection of the specified System.CodeDom.CodeTypeMember,if it 
-    exists in the collection.
-  
+   Gets the index in the collection of the specified System.CodeDom.CodeTypeMember,if it exists in the collection.
   
    value: The System.CodeDom.CodeTypeMember to locate in the collection.
    Returns: The index in the collection of the specified object,if found; otherwise,-1.
@@ -4444,9 +4503,7 @@ class CodeTypeMemberCollection:
  def Insert(self,index,value):
   """
   Insert(self: CodeTypeMemberCollection,index: int,value: CodeTypeMember)
-   Inserts the specified System.CodeDom.CodeTypeMember into the collection at the specified 
-    index.
-  
+   Inserts the specified System.CodeDom.CodeTypeMember into the collection at the specified index.
   
    index: The zero-based index where the specified object should be inserted.
    value: The System.CodeDom.CodeTypeMember to insert.
@@ -4455,23 +4512,19 @@ class CodeTypeMemberCollection:
  def OnClear(self,*args):
   """
   OnClear(self: CollectionBase)
-   Performs additional custom processes when clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes when clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnClearComplete(self,*args):
   """
   OnClearComplete(self: CollectionBase)
-   Performs additional custom processes after clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes after clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnInsert(self,*args):
   """
   OnInsert(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes before inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -4480,9 +4533,7 @@ class CodeTypeMemberCollection:
  def OnInsertComplete(self,*args):
   """
   OnInsertComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -4491,9 +4542,7 @@ class CodeTypeMemberCollection:
  def OnRemove(self,*args):
   """
   OnRemove(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes when removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes when removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -4502,9 +4551,7 @@ class CodeTypeMemberCollection:
  def OnRemoveComplete(self,*args):
   """
   OnRemoveComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -4513,9 +4560,7 @@ class CodeTypeMemberCollection:
  def OnSet(self,*args):
   """
   OnSet(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes before setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -4525,9 +4570,7 @@ class CodeTypeMemberCollection:
  def OnSetComplete(self,*args):
   """
   OnSetComplete(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes after setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -4587,7 +4630,7 @@ class CodeTypeMemberCollection:
 
 
 
-class CodeTypeOfExpression:
+class CodeTypeOfExpression(CodeExpression):
  """
  Represents a typeof expression,an expression that returns a System.Type for a specified type name.
  
@@ -4596,6 +4639,11 @@ class CodeTypeOfExpression:
  CodeTypeOfExpression(type: str)
  CodeTypeOfExpression(type: Type)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeTypeOfExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,type=None):
   """
@@ -4615,13 +4663,18 @@ Set: Type(self: CodeTypeOfExpression)=value
 
 
 
-class CodeTypeParameter:
+class CodeTypeParameter(CodeObject):
  """
  Represents a type parameter of a generic type or method.
  
  CodeTypeParameter()
  CodeTypeParameter(name: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeTypeParameter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,name=None):
   """
@@ -4661,7 +4714,7 @@ Set: Name(self: CodeTypeParameter)=value
 
 
 
-class CodeTypeParameterCollection:
+class CodeTypeParameterCollection(CollectionBase):
  """
  Represents a collection of System.CodeDom.CodeTypeParameter objects.
  
@@ -4669,6 +4722,11 @@ class CodeTypeParameterCollection:
  CodeTypeParameterCollection(value: CodeTypeParameterCollection)
  CodeTypeParameterCollection(value: Array[CodeTypeParameter])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeTypeParameterCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CodeTypeParameterCollection,value: CodeTypeParameter) -> int
@@ -4678,56 +4736,39 @@ class CodeTypeParameterCollection:
    value: The System.CodeDom.CodeTypeParameter to add.
    Returns: The zero-based index at which the new element was inserted.
   Add(self: CodeTypeParameterCollection,value: str)
-   Adds the specified System.CodeDom.CodeTypeParameter object to the collection using the 
-    specified data type name.
+   Adds the specified System.CodeDom.CodeTypeParameter object to the collection using the specified data type name.
   
-  
-   value: The name of a data type for which to add the System.CodeDom.CodeTypeParameter object to 
-    the collection.
+   value: The name of a data type for which to add the System.CodeDom.CodeTypeParameter object to the collection.
   """
   pass
  def AddRange(self,value):
   """
   AddRange(self: CodeTypeParameterCollection,value: Array[CodeTypeParameter])
-   Copies the elements of the specified System.CodeDom.CodeTypeParameter array to the end of 
-    the collection.
+   Copies the elements of the specified System.CodeDom.CodeTypeParameter array to the end of the collection.
   
-  
-   value: An array of type System.CodeDom.CodeTypeParameter containing the objects to add to the 
-    collection.
-  
+   value: An array of type System.CodeDom.CodeTypeParameter containing the objects to add to the collection.
   AddRange(self: CodeTypeParameterCollection,value: CodeTypeParameterCollection)
-   Copies the elements of the specified System.CodeDom.CodeTypeParameterCollection to the 
-    end of the collection.
+   Copies the elements of the specified System.CodeDom.CodeTypeParameterCollection to the end of the collection.
   
-  
-   value: A System.CodeDom.CodeTypeParameterCollection containing the 
-    System.CodeDom.CodeTypeParameter objects to add to the collection.
+   value: A System.CodeDom.CodeTypeParameterCollection containing the System.CodeDom.CodeTypeParameter objects to add to the collection.
   """
   pass
  def Contains(self,value):
   """
   Contains(self: CodeTypeParameterCollection,value: CodeTypeParameter) -> bool
   
-   Determines whether the collection contains the specified System.CodeDom.CodeTypeParameter 
-    object.
-  
+   Determines whether the collection contains the specified System.CodeDom.CodeTypeParameter object.
   
    value: The System.CodeDom.CodeTypeParameter object to search for in the collection.
-   Returns: true if the System.CodeDom.CodeTypeParameter object is contained in the collection; 
-    otherwise,false.
+   Returns: true if the System.CodeDom.CodeTypeParameter object is contained in the collection; otherwise,false.
   """
   pass
  def CopyTo(self,array,index):
   """
   CopyTo(self: CodeTypeParameterCollection,array: Array[CodeTypeParameter],index: int)
-   Copies the items in the collection to the specified one-dimensional System.Array at the 
-    specified index.
+   Copies the items in the collection to the specified one-dimensional System.Array at the specified index.
   
-  
-   array: The one-dimensional System.Array that is the destination of the values copied from the 
-    collection.
-  
+   array: The one-dimensional System.Array that is the destination of the values copied from the collection.
    index: The index of the array at which to begin inserting.
   """
   pass
@@ -4735,21 +4776,16 @@ class CodeTypeParameterCollection:
   """
   IndexOf(self: CodeTypeParameterCollection,value: CodeTypeParameter) -> int
   
-   Gets the index in the collection of the specified System.CodeDom.CodeTypeParameter 
-    object,if it exists in the collection.
-  
+   Gets the index in the collection of the specified System.CodeDom.CodeTypeParameter object,if it exists in the collection.
   
    value: The System.CodeDom.CodeTypeParameter object to locate in the collection.
-   Returns: The zero-based index of the specified System.CodeDom.CodeTypeParameter object in the 
-    collection if found; otherwise,-1.
+   Returns: The zero-based index of the specified System.CodeDom.CodeTypeParameter object in the collection if found; otherwise,-1.
   """
   pass
  def Insert(self,index,value):
   """
   Insert(self: CodeTypeParameterCollection,index: int,value: CodeTypeParameter)
-   Inserts the specified System.CodeDom.CodeTypeParameter object into the collection at the 
-    specified index.
-  
+   Inserts the specified System.CodeDom.CodeTypeParameter object into the collection at the specified index.
   
    index: The zero-based index at which to insert the item.
    value: The System.CodeDom.CodeTypeParameter object to insert.
@@ -4758,23 +4794,19 @@ class CodeTypeParameterCollection:
  def OnClear(self,*args):
   """
   OnClear(self: CollectionBase)
-   Performs additional custom processes when clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes when clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnClearComplete(self,*args):
   """
   OnClearComplete(self: CollectionBase)
-   Performs additional custom processes after clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes after clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnInsert(self,*args):
   """
   OnInsert(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes before inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -4783,9 +4815,7 @@ class CodeTypeParameterCollection:
  def OnInsertComplete(self,*args):
   """
   OnInsertComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -4794,9 +4824,7 @@ class CodeTypeParameterCollection:
  def OnRemove(self,*args):
   """
   OnRemove(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes when removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes when removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -4805,9 +4833,7 @@ class CodeTypeParameterCollection:
  def OnRemoveComplete(self,*args):
   """
   OnRemoveComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -4816,9 +4842,7 @@ class CodeTypeParameterCollection:
  def OnSet(self,*args):
   """
   OnSet(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes before setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -4828,9 +4852,7 @@ class CodeTypeParameterCollection:
  def OnSetComplete(self,*args):
   """
   OnSetComplete(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes after setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -4890,7 +4912,7 @@ class CodeTypeParameterCollection:
 
 
 
-class CodeTypeReference:
+class CodeTypeReference(CodeObject):
  """
  Represents a reference to a type.
  
@@ -4904,6 +4926,11 @@ class CodeTypeReference:
  CodeTypeReference(baseType: str,rank: int)
  CodeTypeReference(arrayType: CodeTypeReference,rank: int)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeTypeReference()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,*__args):
   """
@@ -4959,7 +4986,7 @@ Get: TypeArguments(self: CodeTypeReference) -> CodeTypeReferenceCollection
 
 
 
-class CodeTypeReferenceCollection:
+class CodeTypeReferenceCollection(CollectionBase):
  """
  Represents a collection of System.CodeDom.CodeTypeReference objects.
  
@@ -4967,6 +4994,11 @@ class CodeTypeReferenceCollection:
  CodeTypeReferenceCollection(value: CodeTypeReferenceCollection)
  CodeTypeReferenceCollection(value: Array[CodeTypeReference])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeTypeReferenceCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,value):
   """
   Add(self: CodeTypeReferenceCollection,value: CodeTypeReference) -> int
@@ -4976,13 +5008,9 @@ class CodeTypeReferenceCollection:
    value: The System.CodeDom.CodeTypeReference to add.
    Returns: The index at which the new element was inserted.
   Add(self: CodeTypeReferenceCollection,value: str)
-   Adds a System.CodeDom.CodeTypeReference to the collection using the specified data type 
-    name.
+   Adds a System.CodeDom.CodeTypeReference to the collection using the specified data type name.
   
-  
-   value: The name of a data type for which to add a System.CodeDom.CodeTypeReference to the 
-    collection.
-  
+   value: The name of a data type for which to add a System.CodeDom.CodeTypeReference to the collection.
   Add(self: CodeTypeReferenceCollection,value: Type)
    Adds a System.CodeDom.CodeTypeReference to the collection using the specified data type.
   
@@ -4992,45 +5020,31 @@ class CodeTypeReferenceCollection:
  def AddRange(self,value):
   """
   AddRange(self: CodeTypeReferenceCollection,value: Array[CodeTypeReference])
-   Copies the elements of the specified System.CodeDom.CodeTypeReference array to the end of 
-    the collection.
+   Copies the elements of the specified System.CodeDom.CodeTypeReference array to the end of the collection.
   
-  
-   value: An array of type System.CodeDom.CodeTypeReference containing the objects to add to the 
-    collection.
-  
+   value: An array of type System.CodeDom.CodeTypeReference containing the objects to add to the collection.
   AddRange(self: CodeTypeReferenceCollection,value: CodeTypeReferenceCollection)
-   Adds the contents of the specified System.CodeDom.CodeTypeReferenceCollection to the end 
-    of the collection.
+   Adds the contents of the specified System.CodeDom.CodeTypeReferenceCollection to the end of the collection.
   
-  
-   value: A System.CodeDom.CodeTypeReferenceCollection containing the objects to add to the 
-    collection.
+   value: A System.CodeDom.CodeTypeReferenceCollection containing the objects to add to the collection.
   """
   pass
  def Contains(self,value):
   """
   Contains(self: CodeTypeReferenceCollection,value: CodeTypeReference) -> bool
   
-   Gets a value indicating whether the collection contains the specified 
-    System.CodeDom.CodeTypeReference.
-  
+   Gets a value indicating whether the collection contains the specified System.CodeDom.CodeTypeReference.
   
    value: The System.CodeDom.CodeTypeReference to search for in the collection.
-   Returns: true if the System.CodeDom.CodeTypeReference is contained in the collection; otherwise,
-    false.
+   Returns: true if the System.CodeDom.CodeTypeReference is contained in the collection; otherwise,false.
   """
   pass
  def CopyTo(self,array,index):
   """
   CopyTo(self: CodeTypeReferenceCollection,array: Array[CodeTypeReference],index: int)
-   Copies the items in the collection to the specified one-dimensional System.Array at the 
-    specified index.
+   Copies the items in the collection to the specified one-dimensional System.Array at the specified index.
   
-  
-   array: The one-dimensional System.Array that is the destination of the values copied from the 
-    collection.
-  
+   array: The one-dimensional System.Array that is the destination of the values copied from the collection.
    index: The index of the array at which to begin inserting.
   """
   pass
@@ -5038,13 +5052,10 @@ class CodeTypeReferenceCollection:
   """
   IndexOf(self: CodeTypeReferenceCollection,value: CodeTypeReference) -> int
   
-   Gets the index in the collection of the specified System.CodeDom.CodeTypeReference,if it 
-    exists in the collection.
-  
+   Gets the index in the collection of the specified System.CodeDom.CodeTypeReference,if it exists in the collection.
   
    value: The System.CodeDom.CodeTypeReference to locate in the collection.
-   Returns: The index of the specified System.CodeDom.CodeTypeReference in the collection if found; 
-    otherwise,-1.
+   Returns: The index of the specified System.CodeDom.CodeTypeReference in the collection if found; otherwise,-1.
   """
   pass
  def Insert(self,index,value):
@@ -5059,23 +5070,19 @@ class CodeTypeReferenceCollection:
  def OnClear(self,*args):
   """
   OnClear(self: CollectionBase)
-   Performs additional custom processes when clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes when clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnClearComplete(self,*args):
   """
   OnClearComplete(self: CollectionBase)
-   Performs additional custom processes after clearing the contents of the 
-    System.Collections.CollectionBase instance.
+   Performs additional custom processes after clearing the contents of the System.Collections.CollectionBase instance.
   """
   pass
  def OnInsert(self,*args):
   """
   OnInsert(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes before inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -5084,9 +5091,7 @@ class CodeTypeReferenceCollection:
  def OnInsertComplete(self,*args):
   """
   OnInsertComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after inserting a new element into the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after inserting a new element into the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which to insert value.
    value: The new value of the element at index.
@@ -5095,9 +5100,7 @@ class CodeTypeReferenceCollection:
  def OnRemove(self,*args):
   """
   OnRemove(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes when removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes when removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -5106,9 +5109,7 @@ class CodeTypeReferenceCollection:
  def OnRemoveComplete(self,*args):
   """
   OnRemoveComplete(self: CollectionBase,index: int,value: object)
-   Performs additional custom processes after removing an element from the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after removing an element from the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which value can be found.
    value: The value of the element to remove from index.
@@ -5117,9 +5118,7 @@ class CodeTypeReferenceCollection:
  def OnSet(self,*args):
   """
   OnSet(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes before setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes before setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -5129,9 +5128,7 @@ class CodeTypeReferenceCollection:
  def OnSetComplete(self,*args):
   """
   OnSetComplete(self: CollectionBase,index: int,oldValue: object,newValue: object)
-   Performs additional custom processes after setting a value in the 
-    System.Collections.CollectionBase instance.
-  
+   Performs additional custom processes after setting a value in the System.Collections.CollectionBase instance.
   
    index: The zero-based index at which oldValue can be found.
    oldValue: The value to replace with newValue.
@@ -5191,7 +5188,7 @@ class CodeTypeReferenceCollection:
 
 
 
-class CodeTypeReferenceExpression:
+class CodeTypeReferenceExpression(CodeExpression):
  """
  Represents a reference to a data type.
  
@@ -5200,6 +5197,11 @@ class CodeTypeReferenceExpression:
  CodeTypeReferenceExpression(type: str)
  CodeTypeReferenceExpression(type: Type)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeTypeReferenceExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,type=None):
   """
@@ -5225,6 +5227,11 @@ class CodeTypeReferenceOptions:
  
  enum (flags) CodeTypeReferenceOptions,values: GenericTypeParameter (2),GlobalReference (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeTypeReferenceOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -5253,7 +5260,7 @@ class CodeTypeReferenceOptions:
  value__=None
 
 
-class CodeVariableDeclarationStatement:
+class CodeVariableDeclarationStatement(CodeStatement):
  """
  Represents a variable declaration.
  
@@ -5265,6 +5272,11 @@ class CodeVariableDeclarationStatement:
  CodeVariableDeclarationStatement(type: str,name: str,initExpression: CodeExpression)
  CodeVariableDeclarationStatement(type: Type,name: str,initExpression: CodeExpression)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeVariableDeclarationStatement()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,type=None,name=None,initExpression=None):
   """
@@ -5303,13 +5315,18 @@ Set: Type(self: CodeVariableDeclarationStatement)=value
 
 
 
-class CodeVariableReferenceExpression:
+class CodeVariableReferenceExpression(CodeExpression):
  """
  Represents a reference to a local variable.
  
  CodeVariableReferenceExpression()
  CodeVariableReferenceExpression(variableName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeVariableReferenceExpression()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,variableName=None):
   """
@@ -5333,6 +5350,11 @@ class FieldDirection:
  
  enum FieldDirection,values: In (0),Out (1),Ref (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FieldDirection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -5368,6 +5390,11 @@ class MemberAttributes:
  
  enum MemberAttributes,values: Abstract (1),AccessMask (61440),Assembly (4096),Const (5),Family (12288),FamilyAndAssembly (8192),FamilyOrAssembly (16384),Final (2),New (16),Overloaded (256),Override (4),Private (20480),Public (24576),ScopeMask (15),Static (3),VTableMask (240)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MemberAttributes()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

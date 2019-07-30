@@ -1,9 +1,14 @@
-class DoWorkEventArgs:
+class DoWorkEventArgs(CancelEventArgs):
  """
  Provides data for the System.ComponentModel.BackgroundWorker.DoWork event handler.
  
  DoWorkEventArgs(argument: object)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DoWorkEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,argument):
   """ __new__(cls: type,argument: object) """

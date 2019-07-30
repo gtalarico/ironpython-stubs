@@ -1,5 +1,10 @@
-class TransportContext:
+class TransportContext(object):
  """ The System.Net.TransportContext class provides additional context about the underlying transport layer. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TransportContext()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetChannelBinding(self,kind):
   """
   GetChannelBinding(self: TransportContext,kind: ChannelBindingKind) -> ChannelBinding
@@ -7,8 +12,7 @@ class TransportContext:
    Retrieves the requested channel binding.
   
    kind: The type of channel binding to retrieve.
-   Returns: The requested System.Security.Authentication.ExtendedProtection.ChannelBinding,or null 
-    if the channel binding is not supported by the current transport or by the operating 
+   Returns: The requested System.Security.Authentication.ExtendedProtection.ChannelBinding,or null if the channel binding is not supported by the current transport or by the operating 
     system.
   """
   pass

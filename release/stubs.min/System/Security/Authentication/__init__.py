@@ -3,12 +3,12 @@
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
 # no doc
-# no imports
+# no important
 
 # no functions
 # classes
 
-class AuthenticationException:
+class AuthenticationException(SystemException):
  """
  The exception that is thrown when authentication fails for an authentication stream.
  
@@ -16,6 +16,11 @@ class AuthenticationException:
  AuthenticationException(message: str)
  AuthenticationException(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AuthenticationException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -41,6 +46,11 @@ class CipherAlgorithmType:
  
  enum CipherAlgorithmType,values: Aes (26129),Aes128 (26126),Aes192 (26127),Aes256 (26128),Des (26113),None (0),Null (24576),Rc2 (26114),Rc4 (26625),TripleDes (26115)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CipherAlgorithmType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -83,6 +93,11 @@ class ExchangeAlgorithmType:
  
  enum ExchangeAlgorithmType,values: DiffieHellman (43522),None (0),RsaKeyX (41984),RsaSign (9216)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ExchangeAlgorithmType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -119,6 +134,11 @@ class HashAlgorithmType:
  
  enum HashAlgorithmType,values: Md5 (32771),None (0),Sha1 (32772),Sha256 (32780),Sha384 (32781),Sha512 (32782)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HashAlgorithmType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -151,7 +171,7 @@ class HashAlgorithmType:
  value__=None
 
 
-class InvalidCredentialException:
+class InvalidCredentialException(AuthenticationException):
  """
  The exception that is thrown when authentication fails for an authentication stream and cannot be retried.
  
@@ -159,6 +179,11 @@ class InvalidCredentialException:
  InvalidCredentialException(message: str)
  InvalidCredentialException(message: str,innerException: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InvalidCredentialException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -184,6 +209,11 @@ class SslProtocols:
  
  enum (flags) SslProtocols,values: Default (240),None (0),Ssl2 (12),Ssl3 (48),Tls (192),Tls11 (768),Tls12 (3072)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SslProtocols()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

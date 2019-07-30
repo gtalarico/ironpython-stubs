@@ -1,19 +1,20 @@
-class CustomAce:
+class CustomAce(GenericAce):
  """
  Represents an Access Control Entry (ACE) that is not defined by one of the members of the System.Security.AccessControl.AceType enumeration.
  
  CustomAce(type: AceType,flags: AceFlags,opaque: Array[Byte])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CustomAce()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetBinaryForm(self,binaryForm,offset):
   """
   GetBinaryForm(self: CustomAce,binaryForm: Array[Byte],offset: int)
-   Marshals the contents of the System.Security.AccessControl.CustomAce object into the 
-    specified byte array beginning at the specified offset.
+   Marshals the contents of the System.Security.AccessControl.CustomAce object into the specified byte array beginning at the specified offset.
   
-  
-   binaryForm: The byte array into which the contents of the System.Security.AccessControl.CustomAce is 
-    marshaled.
-  
+   binaryForm: The byte array into which the contents of the System.Security.AccessControl.CustomAce is marshaled.
    offset: The offset at which to start marshaling.
   """
   pass
@@ -21,22 +22,16 @@ class CustomAce:
   """
   GetOpaque(self: CustomAce) -> Array[Byte]
   
-   Returns the opaque data associated with this System.Security.AccessControl.CustomAce 
-    object.
-  
-   Returns: An array of byte values that represents the opaque data associated with this 
-    System.Security.AccessControl.CustomAce object.
+   Returns the opaque data associated with this System.Security.AccessControl.CustomAce object.
+   Returns: An array of byte values that represents the opaque data associated with this System.Security.AccessControl.CustomAce object.
   """
   pass
  def SetOpaque(self,opaque):
   """
   SetOpaque(self: CustomAce,opaque: Array[Byte])
-   Sets the opaque callback data associated with this 
-    System.Security.AccessControl.CustomAce object.
+   Sets the opaque callback data associated with this System.Security.AccessControl.CustomAce object.
   
-  
-   opaque: An array of byte values that represents the opaque callback data for this 
-    System.Security.AccessControl.CustomAce object.
+   opaque: An array of byte values that represents the opaque callback data for this System.Security.AccessControl.CustomAce object.
   """
   pass
  @staticmethod

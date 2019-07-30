@@ -1,5 +1,10 @@
-class HttpListenerTimeoutManager:
+class HttpListenerTimeoutManager(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HttpListenerTimeoutManager()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  DrainEntityBody=property(lambda self: object(),lambda self,v: None,lambda self: None)
  """Get: DrainEntityBody(self: HttpListenerTimeoutManager) -> TimeSpan
 

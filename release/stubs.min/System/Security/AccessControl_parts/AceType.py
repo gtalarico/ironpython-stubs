@@ -4,6 +4,11 @@ class AceType:
  
  enum AceType,values: AccessAllowed (0),AccessAllowedCallback (9),AccessAllowedCallbackObject (11),AccessAllowedCompound (4),AccessAllowedObject (5),AccessDenied (1),AccessDeniedCallback (10),AccessDeniedCallbackObject (12),AccessDeniedObject (6),MaxDefinedAceType (16),SystemAlarm (3),SystemAlarmCallback (14),SystemAlarmCallbackObject (16),SystemAlarmObject (8),SystemAudit (2),SystemAuditCallback (13),SystemAuditCallbackObject (15),SystemAuditObject (7)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AceType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

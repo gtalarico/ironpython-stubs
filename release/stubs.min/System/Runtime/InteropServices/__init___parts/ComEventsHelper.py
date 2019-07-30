@@ -1,5 +1,10 @@
-class ComEventsHelper:
+class ComEventsHelper(object):
  """ Provides methods that enable .NET Framework delegates that handle events to be added and removed from COM objects. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ComEventsHelper()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Combine(rcw,iid,dispid,d):
   """

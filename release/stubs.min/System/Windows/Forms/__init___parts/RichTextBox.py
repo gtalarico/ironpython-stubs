@@ -1,28 +1,24 @@
-class RichTextBox:
+class RichTextBox(TextBoxBase,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceObject,IOleInPlaceActiveObject,IOleWindow,IViewObject,IViewObject2,IPersist,IPersistStreamInit,IPersistPropertyBag,IPersistStorage,IQuickActivate,ISupportOleDropSource,IDropTarget,ISynchronizeInvoke,IWin32Window,IArrangedElement,IBindableComponent):
  """
  Represents a Windows rich text box control.
  
  RichTextBox()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return RichTextBox()
+
  def AccessibilityNotifyClients(self,*args):
   """
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
-   Notifies the accessibility client applications of the specified 
-    System.Windows.Forms.AccessibleEvents for the specified child control.
+   Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control.
   
-  
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications 
-    of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,objectID: int,childID: int)
-   Notifies the accessibility client applications of the specified 
-    System.Windows.Forms.AccessibleEvents for the specified child control .
+   Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control .
   
-  
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications 
-    of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
@@ -53,9 +49,7 @@ class RichTextBox:
   """
   CreateRichEditOleCallback(self: RichTextBox) -> object
   
-   Creates an IRichEditOleCallback-compatible object for handling rich-edit callback 
-    operations.
-  
+   Creates an IRichEditOleCallback-compatible object for handling rich-edit callback operations.
    Returns: An object that implements the IRichEditOleCallback interface.
   """
   pass
@@ -77,12 +71,9 @@ class RichTextBox:
  def Dispose(self):
   """
   Dispose(self: Control,disposing: bool)
-   Releases the unmanaged resources used by the System.Windows.Forms.Control and its child 
-    controls and optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.Windows.Forms.Control and its child controls and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def DrawToBitmap(self,bitmap,targetBounds):
@@ -101,23 +92,17 @@ class RichTextBox:
    Searches the text in a System.Windows.Forms.RichTextBox control for a string.
   
    str: The text to locate in the control.
-   Returns: The location within the control where the search text was found or -1 if the search 
-    string is not found or an empty search string is specified in the str parameter.
-  
+   Returns: The location within the control where the search text was found or -1 if the search string is not found or an empty search string is specified in the str parameter.
   Find(self: RichTextBox,str: str,options: RichTextBoxFinds) -> int
   
-   Searches the text in a System.Windows.Forms.RichTextBox control for a string with 
-    specific options applied to the search.
-  
+   Searches the text in a System.Windows.Forms.RichTextBox control for a string with specific options applied to the search.
   
    str: The text to locate in the control.
    options: A bitwise combination of the System.Windows.Forms.RichTextBoxFinds values.
    Returns: The location within the control where the search text was found.
   Find(self: RichTextBox,str: str,start: int,options: RichTextBoxFinds) -> int
   
-   Searches the text in a System.Windows.Forms.RichTextBox control for a string at a 
-    specific location within the control and with specific options applied to the search.
-  
+   Searches the text in a System.Windows.Forms.RichTextBox control for a string at a specific location within the control and with specific options applied to the search.
   
    str: The text to locate in the control.
    start: The location within the control's text at which to begin searching.
@@ -125,42 +110,29 @@ class RichTextBox:
    Returns: The location within the control where the search text was found.
   Find(self: RichTextBox,str: str,start: int,end: int,options: RichTextBoxFinds) -> int
   
-   Searches the text in a System.Windows.Forms.RichTextBox control for a string within a 
-    range of text within the control and with specific options applied to the search.
-  
+   Searches the text in a System.Windows.Forms.RichTextBox control for a string within a range of text within the control and with specific options applied to the search.
   
    str: The text to locate in the control.
    start: The location within the control's text at which to begin searching.
-   end: The location within the control's text at which to end searching. This value must be 
-    equal to negative one (-1) or greater than or equal to the start parameter.
-  
+   end: The location within the control's text at which to end searching. This value must be equal to negative one (-1) or greater than or equal to the start parameter.
    options: A bitwise combination of the System.Windows.Forms.RichTextBoxFinds values.
    Returns: The location within the control where the search text was found.
   Find(self: RichTextBox,characterSet: Array[Char]) -> int
   
-   Searches the text of a System.Windows.Forms.RichTextBox control for the first instance of 
-    a character from a list of characters.
-  
+   Searches the text of a System.Windows.Forms.RichTextBox control for the first instance of a character from a list of characters.
   
    characterSet: The array of characters to search for.
-   Returns: The location within the control where the search characters were found or -1 if the 
-    search characters are not found or an empty search character set is specified in the char 
-    parameter.
-  
+   Returns: The location within the control where the search characters were found or -1 if the search characters are not found or an empty search character set is specified in the char parameter.
   Find(self: RichTextBox,characterSet: Array[Char],start: int) -> int
   
-   Searches the text of a System.Windows.Forms.RichTextBox control,at a specific starting 
-    point,for the first instance of a character from a list of characters.
-  
+   Searches the text of a System.Windows.Forms.RichTextBox control,at a specific starting point,for the first instance of a character from a list of characters.
   
    characterSet: The array of characters to search for.
    start: The location within the control's text at which to begin searching.
    Returns: The location within the control where the search characters are found.
   Find(self: RichTextBox,characterSet: Array[Char],start: int,end: int) -> int
   
-   Searches a range of text in a System.Windows.Forms.RichTextBox control for the first 
-    instance of a character from a list of characters.
-  
+   Searches a range of text in a System.Windows.Forms.RichTextBox control for the first instance of a character from a list of characters.
   
    characterSet: The array of characters to search for.
    start: The location within the control's text at which to begin searching.
@@ -182,9 +154,7 @@ class RichTextBox:
   """
   GetAutoSizeMode(self: Control) -> AutoSizeMode
   
-   Retrieves a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
-  
+   Retrieves a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
    Returns: One of the System.Windows.Forms.AutoSizeMode values.
   """
   pass
@@ -202,9 +172,7 @@ class RichTextBox:
   """
   GetLineFromCharIndex(self: RichTextBox,index: int) -> int
   
-   Retrieves the line number from the specified character position within the text of the 
-    System.Windows.Forms.RichTextBox control.
-  
+   Retrieves the line number from the specified character position within the text of the System.Windows.Forms.RichTextBox control.
   
    index: The character index position to search.
    Returns: The zero-based line number in which the character index is located.
@@ -226,13 +194,9 @@ class RichTextBox:
   
    Retrieves the bounds within which the control is scaled.
   
-   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display 
-    bounds.
-  
+   bounds: A System.Drawing.Rectangle that specifies the area for which to retrieve the display bounds.
    factor: The height and width of the control's bounds.
-   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of 
-    the control to use when defining its size and position.
-  
+   specified: One of the values of System.Windows.Forms.BoundsSpecified that specifies the bounds of the control to use when defining its size and position.
    Returns: A System.Drawing.Rectangle representing the bounds within which the control is scaled.
   """
   pass
@@ -240,14 +204,10 @@ class RichTextBox:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -297,9 +257,7 @@ class RichTextBox:
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event 
-    to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -308,9 +266,7 @@ class RichTextBox:
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event 
-    to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -319,9 +275,7 @@ class RichTextBox:
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event 
-    to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -332,17 +286,14 @@ class RichTextBox:
    Determines if a character is an input character that the control recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the control and not preprocessed; 
-    otherwise,false.
+   Returns: true if the character should be sent directly to the control and not preprocessed; otherwise,false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: TextBoxBase,keyData: Keys) -> bool
   
-   Determines whether the specified key is an input key or a special key that requires 
-    preprocessing.
-  
+   Determines whether the specified key is an input key or a special key that requires preprocessing.
   
    keyData: One of the Keys value.
    Returns: true if the specified key is an input key; otherwise,false.
@@ -351,9 +302,7 @@ class RichTextBox:
  def LoadFile(self,*__args):
   """
   LoadFile(self: RichTextBox,path: str)
-   Loads a rich text format (RTF) or standard ASCII text file into the 
-    System.Windows.Forms.RichTextBox control.
-  
+   Loads a rich text format (RTF) or standard ASCII text file into the System.Windows.Forms.RichTextBox control.
   
    path: The name and location of the file to load into the control.
   LoadFile(self: RichTextBox,path: str,fileType: RichTextBoxStreamType)
@@ -362,9 +311,7 @@ class RichTextBox:
    path: The name and location of the file to load into the control.
    fileType: One of the System.Windows.Forms.RichTextBoxStreamType values.
   LoadFile(self: RichTextBox,data: Stream,fileType: RichTextBoxStreamType)
-   Loads the contents of an existing data stream into the System.Windows.Forms.RichTextBox 
-    control.
-  
+   Loads the contents of an existing data stream into the System.Windows.Forms.RichTextBox control.
   
    data: A stream of data to load into the System.Windows.Forms.RichTextBox control.
    fileType: One of the System.Windows.Forms.RichTextBoxStreamType values.
@@ -376,12 +323,7 @@ class RichTextBox:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -392,9 +334,7 @@ class RichTextBox:
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the 
-    control to invalidate.
-  
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control to invalidate.
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
   """
@@ -910,16 +850,13 @@ class RichTextBox:
   OnPaintBackground(self: Control,pevent: PaintEventArgs)
    Paints the background of the control.
   
-   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to 
-    paint.
+   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to paint.
   """
   pass
  def OnParentBackColorChanged(self,*args):
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.BackColorChanged event when the System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -927,10 +864,7 @@ class RichTextBox:
  def OnParentBackgroundImageChanged(self,*args):
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -938,10 +872,7 @@ class RichTextBox:
  def OnParentBindingContextChanged(self,*args):
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.BindingContextChanged event when the System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -965,9 +896,7 @@ class RichTextBox:
  def OnParentEnabledChanged(self,*args):
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.EnabledChanged event when the System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -975,9 +904,7 @@ class RichTextBox:
  def OnParentFontChanged(self,*args):
   """
   OnParentFontChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.FontChanged event when the System.Windows.Forms.Control.Font property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -985,9 +912,7 @@ class RichTextBox:
  def OnParentForeColorChanged(self,*args):
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.ForeColorChanged event when the System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -995,10 +920,7 @@ class RichTextBox:
  def OnParentRightToLeftChanged(self,*args):
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.RightToLeftChanged event when the System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1006,9 +928,7 @@ class RichTextBox:
  def OnParentVisibleChanged(self,*args):
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.VisibleChanged event when the System.Windows.Forms.Control.Visible property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1199,9 +1119,7 @@ class RichTextBox:
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1211,9 +1129,7 @@ class RichTextBox:
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1223,9 +1139,7 @@ class RichTextBox:
   
    Previews a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1300,25 +1214,19 @@ class RichTextBox:
   """
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
-    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
    Returns: One of the System.Windows.Forms.HorizontalAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
-    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: ContentAlignment) -> ContentAlignment
   
-   Converts the specified System.Drawing.ContentAlignment to the appropriate 
-    System.Drawing.ContentAlignment to support right-to-left text.
-  
+   Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
   
    align: One of the System.Drawing.ContentAlignment values.
    Returns: One of the System.Drawing.ContentAlignment values.
@@ -1328,9 +1236,7 @@ class RichTextBox:
   """
   RtlTranslateContent(self: Control,align: ContentAlignment) -> ContentAlignment
   
-   Converts the specified System.Drawing.ContentAlignment to the appropriate 
-    System.Drawing.ContentAlignment to support right-to-left text.
-  
+   Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
   
    align: One of the System.Drawing.ContentAlignment values.
    Returns: One of the System.Drawing.ContentAlignment values.
@@ -1340,9 +1246,7 @@ class RichTextBox:
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
-    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
    Returns: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1352,9 +1256,7 @@ class RichTextBox:
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
-    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1363,9 +1265,7 @@ class RichTextBox:
  def SaveFile(self,*__args):
   """
   SaveFile(self: RichTextBox,path: str)
-   Saves the contents of the System.Windows.Forms.RichTextBox to a rich text format (RTF) 
-    file.
-  
+   Saves the contents of the System.Windows.Forms.RichTextBox to a rich text format (RTF) file.
   
    path: The name and location of the file to save.
   SaveFile(self: RichTextBox,path: str,fileType: RichTextBoxStreamType)
@@ -1386,8 +1286,7 @@ class RichTextBox:
    Scales a control's location,size,padding and margin.
   
    factor: The factor by which the height and width of the control will be scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to 
-    use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -1402,9 +1301,7 @@ class RichTextBox:
  def Select(self,start=None,length=None):
   """
   Select(self: Control,directed: bool,forward: bool)
-   Activates a child control. Optionally specifies the direction in the tab order to select 
-    the control from.
-  
+   Activates a child control. Optionally specifies the direction in the tab order to select the control from.
   
    directed: true to specify the direction of the control to select; otherwise,false.
    forward: true to move forward in the tab order; false to move backward in the tab order.
@@ -1413,9 +1310,7 @@ class RichTextBox:
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
-  
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
   """
@@ -1472,9 +1367,7 @@ class RichTextBox:
   
    Determines the size of the entire control from the height and width of its client area.
   
-   clientSize: A System.Drawing.Size value representing the height and width of the control's client 
-    area.
-  
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
    Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass

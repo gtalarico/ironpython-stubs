@@ -6,19 +6,19 @@ class ComplexBindingPropertiesAttribute:
  ComplexBindingPropertiesAttribute(dataSource: str)
  ComplexBindingPropertiesAttribute(dataSource: str,dataMember: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ComplexBindingPropertiesAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
   Equals(self: ComplexBindingPropertiesAttribute,obj: object) -> bool
   
-   Determines whether the specified System.Object is equal to the current 
-    System.ComponentModel.ComplexBindingPropertiesAttribute instance.
+   Determines whether the specified System.Object is equal to the current System.ComponentModel.ComplexBindingPropertiesAttribute instance.
   
-  
-   obj: The System.Object to compare with the current 
-    System.ComponentModel.ComplexBindingPropertiesAttribute instance
-  
-   Returns: true if the object is equal to the current instance; otherwise,false,indicating they 
-    are not equal.
+   obj: The System.Object to compare with the current System.ComponentModel.ComplexBindingPropertiesAttribute instance
+   Returns: true if the object is equal to the current instance; otherwise,false,indicating they are not equal.
   """
   pass
  def GetHashCode(self):

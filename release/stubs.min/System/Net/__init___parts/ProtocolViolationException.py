@@ -5,16 +5,18 @@ class ProtocolViolationException:
  ProtocolViolationException()
  ProtocolViolationException(message: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProtocolViolationException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,serializationInfo,streamingContext):
   """
   GetObjectData(self: ProtocolViolationException,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data required to 
-    serialize the target object.
-  
+   Populates a System.Runtime.Serialization.SerializationInfo with the data required to serialize the target object.
   
    serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
-    serialization.
+   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this serialization.
   """
   pass
  def __init__(self,*args):

@@ -4,6 +4,11 @@ class IDLFLAG:
  
  enum (flags) IDLFLAG,values: IDLFLAG_FIN (1),IDLFLAG_FLCID (4),IDLFLAG_FOUT (2),IDLFLAG_FRETVAL (8),IDLFLAG_NONE (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IDLFLAG()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

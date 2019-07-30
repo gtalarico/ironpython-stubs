@@ -1,9 +1,13 @@
-class ToolBarButtonClickEventArgs:
+class ToolBarButtonClickEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ToolBar.ButtonClick event.
  
  ToolBarButtonClickEventArgs(button: ToolBarButton)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolBarButtonClickEventArgs()
+
  @staticmethod
  def __new__(self,button):
   """ __new__(cls: type,button: ToolBarButton) """

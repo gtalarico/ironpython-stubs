@@ -1,10 +1,15 @@
-class SemaphoreAccessRule:
+class SemaphoreAccessRule(AccessRule):
  """
  Represents a set of access rights allowed or denied for a user or group. This class cannot be inherited.
  
  SemaphoreAccessRule(identity: IdentityReference,eventRights: SemaphoreRights,type: AccessControlType)
  SemaphoreAccessRule(identity: str,eventRights: SemaphoreRights,type: AccessControlType)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SemaphoreAccessRule()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,identity,eventRights,type):
   """

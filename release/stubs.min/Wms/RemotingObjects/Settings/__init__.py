@@ -1,18 +1,34 @@
 # encoding: utf-8
 # module Wms.RemotingObjects.Settings calls itself Settings
-# from Wms.RemotingObjects,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.RemotingObjects,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
 
 # no functions
 # classes
 
-class SystemSettings:
- """ SystemSettings() """
+class SystemSettings(object):
+ """
+ Contains the system settings used by BOXwise.
+    
+    Add the [Serializable] attribute when you inherit this class. BOXwise needs it in order to function properly.
+ 
+ SystemSettings()
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SystemSettings()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def AddValidValueDelegate(id,delegate):
-  """ AddValidValueDelegate(id: str,delegate: GetValidValues) """
+  """
+  AddValidValueDelegate(id: str,delegate: GetValidValues)
+   Adds a delegate to the internal collection of delegates for retrieving validvalues.
+  """
   pass
  def GetCreateCountForPickDifferencesOption(self):
   """ GetCreateCountForPickDifferencesOption(self: SystemSettings) -> PickDifferenceOptionsEnum """
@@ -42,7 +58,9 @@ class SystemSettings:
   """ GetTimeSpanFilters(self: SystemSettings) -> Hashtable """
   pass
  ShipppingDeliveryTimeInterval=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ShipppingDeliveryTimeInterval(self: SystemSettings) -> int
+ """
+
+Get: ShipppingDeliveryTimeInterval(self: SystemSettings) -> int
 
 Set: ShipppingDeliveryTimeInterval(self: SystemSettings)=value
 """
@@ -159,8 +177,13 @@ Set: ShipppingDeliveryTimeInterval(self: SystemSettings)=value
  ValidValueGetTypeDays='ValidValueGetTypeDays'
 
 
-class SystemSettingsTable:
+class SystemSettingsTable(List):
  """ SystemSettingsTable() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SystemSettingsTable()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass
@@ -176,82 +199,115 @@ class SystemSettingsTable:
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
 
-class SystemSettingsTableRow:
+class SystemSettingsTableRow(object):
  """ SystemSettingsTableRow() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SystemSettingsTableRow()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  GroupName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupName(self: SystemSettingsTableRow) -> str
+ """Name of the group the settings are part of.
+   Used for categorization.
+
+Get: GroupName(self: SystemSettingsTableRow) -> str
 
 Set: GroupName(self: SystemSettingsTableRow)=value
 """
 
  GroupSortKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: GroupSortKey(self: SystemSettingsTableRow) -> str
+ """Sort order of the group settings are grouped in.
+
+Get: GroupSortKey(self: SystemSettingsTableRow) -> str
 
 Set: GroupSortKey(self: SystemSettingsTableRow)=value
 """
 
  InValidRegexMessage=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: InValidRegexMessage(self: SystemSettingsTableRow) -> str
+ """Error message to be shown when regex is invalid
+
+Get: InValidRegexMessage(self: SystemSettingsTableRow) -> str
 
 Set: InValidRegexMessage(self: SystemSettingsTableRow)=value
 """
 
  IsMachineSetting=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsMachineSetting(self: SystemSettingsTableRow) -> bool
+ """Wether setting should be saved for a specific machine.
+
+Get: IsMachineSetting(self: SystemSettingsTableRow) -> bool
 
 Set: IsMachineSetting(self: SystemSettingsTableRow)=value
 """
 
  IsUserSetting=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsUserSetting(self: SystemSettingsTableRow) -> bool
+ """Wether setting should only be saved for a specific user.
+
+Get: IsUserSetting(self: SystemSettingsTableRow) -> bool
 
 Set: IsUserSetting(self: SystemSettingsTableRow)=value
 """
 
  Label=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Label(self: SystemSettingsTableRow) -> str
+ """Name of the setting to show in the UI.
+
+Get: Label(self: SystemSettingsTableRow) -> str
 
 Set: Label(self: SystemSettingsTableRow)=value
 """
 
  MaxLength=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: MaxLength(self: SystemSettingsTableRow) -> int
+ """Maximum amount of characters allowed in the value.
+
+Get: MaxLength(self: SystemSettingsTableRow) -> int
 
 Set: MaxLength(self: SystemSettingsTableRow)=value
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Name(self: SystemSettingsTableRow) -> str
+ """Name of Key the setting is saved under.
+
+Get: Name(self: SystemSettingsTableRow) -> str
 
 Set: Name(self: SystemSettingsTableRow)=value
 """
 
  Renderer=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Renderer(self: SystemSettingsTableRow) -> str
+ """Type of editor to render in UI for edditing setting.
+   from: Wms.RemotingObjects.Settings.MetaData.RenderingTypes.
+
+Get: Renderer(self: SystemSettingsTableRow) -> str
 
 Set: Renderer(self: SystemSettingsTableRow)=value
 """
 
  Type=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Type(self: SystemSettingsTableRow) -> str
+ """value type of the setting (string,int,etc).
+
+Get: Type(self: SystemSettingsTableRow) -> str
 
 Set: Type(self: SystemSettingsTableRow)=value
 """
 
  ValidRegex=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ValidRegex(self: SystemSettingsTableRow) -> str
+ """Regex that can be used to test if value provided is valid.
+
+Get: ValidRegex(self: SystemSettingsTableRow) -> str
 
 Set: ValidRegex(self: SystemSettingsTableRow)=value
 """
 
  ValidValues=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ValidValues(self: SystemSettingsTableRow) -> Hashtable
+ """List of valid values to choose from.
+
+Get: ValidValues(self: SystemSettingsTableRow) -> Hashtable
 
 Set: ValidValues(self: SystemSettingsTableRow)=value
 """
 
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Value(self: SystemSettingsTableRow) -> object
+ """Current value of the setting
+
+Get: Value(self: SystemSettingsTableRow) -> object
 
 Set: Value(self: SystemSettingsTableRow)=value
 """

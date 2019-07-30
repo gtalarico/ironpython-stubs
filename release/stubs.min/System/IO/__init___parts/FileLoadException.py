@@ -8,29 +8,26 @@ class FileLoadException:
  FileLoadException(message: str,fileName: str)
  FileLoadException(message: str,fileName: str,inner: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileLoadException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,info,context):
   """
   GetObjectData(self: FileLoadException,info: SerializationInfo,context: StreamingContext)
-   Sets the System.Runtime.Serialization.SerializationInfo with the file name and additional 
-    exception information.
+   Sets the System.Runtime.Serialization.SerializationInfo with the file name and additional exception information.
   
-  
-   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data 
-    about the exception being thrown.
-  
-   context: The System.Runtime.Serialization.StreamingContext that contains contextual information 
-    about the source or destination.
+   info: The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about the exception being thrown.
+   context: The System.Runtime.Serialization.StreamingContext that contains contextual information about the source or destination.
   """
   pass
  def ToString(self):
   """
   ToString(self: FileLoadException) -> str
   
-   Returns the fully qualified name of the current exception,and possibly the error 
-    message,the name of the inner exception,and the stack trace.
-  
-   Returns: A string containing the fully qualified name of this exception,and possibly the error 
-    message,the name of the inner exception,and the stack trace,depending on which 
+   Returns the fully qualified name of the current exception,and possibly the error message,the name of the inner exception,and the stack trace.
+   Returns: A string containing the fully qualified name of this exception,and possibly the error message,the name of the inner exception,and the stack trace,depending on which 
     System.IO.FileLoadException constructor is used.
   """
   pass

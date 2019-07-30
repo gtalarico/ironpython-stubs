@@ -1,9 +1,13 @@
-class PointF:
+class PointF(object):
  """
  Represents an ordered pair of floating-point x- and y-coordinates that defines a point in a two-dimensional plane.
  
  PointF(x: Single,y: Single)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return PointF()
+
  @staticmethod
  def Add(pt,sz):
   """
@@ -27,13 +31,10 @@ class PointF:
   """
   Equals(self: PointF,obj: object) -> bool
   
-   Specifies whether this System.Drawing.PointF contains the same coordinates as the 
-    specified System.Object.
-  
+   Specifies whether this System.Drawing.PointF contains the same coordinates as the specified System.Object.
   
    obj: The System.Object to test.
-   Returns: This method returns true if obj is a System.Drawing.PointF and has the same coordinates 
-    as this System.Drawing.Point.
+   Returns: This method returns true if obj is a System.Drawing.PointF and has the same coordinates as this System.Drawing.Point.
   """
   pass
  def GetHashCode(self):
@@ -59,9 +60,7 @@ class PointF:
    Translates a System.Drawing.PointF by the negative of a specified size.
   
    pt: The System.Drawing.PointF to translate.
-   sz: The System.Drawing.SizeF that specifies the numbers to subtract from the coordinates of 
-    pt.
-  
+   sz: The System.Drawing.SizeF that specifies the numbers to subtract from the coordinates of pt.
    Returns: The translated System.Drawing.PointF.
   """
   pass

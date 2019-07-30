@@ -1,9 +1,13 @@
-class TabControlCancelEventArgs:
+class TabControlCancelEventArgs(CancelEventArgs):
  """
  Provides data for the System.Windows.Forms.TabControl.Selecting and System.Windows.Forms.TabControl.Deselecting events of a System.Windows.Forms.TabControl control.
  
  TabControlCancelEventArgs(tabPage: TabPage,tabPageIndex: int,cancel: bool,action: TabControlAction)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TabControlCancelEventArgs()
+
  @staticmethod
  def __new__(self,tabPage,tabPageIndex,cancel,action):
   """ __new__(cls: type,tabPage: TabPage,tabPageIndex: int,cancel: bool,action: TabControlAction) """

@@ -1,9 +1,13 @@
-class PropertyTabChangedEventArgs:
+class PropertyTabChangedEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.PropertyGrid.PropertyTabChanged event of a System.Windows.Forms.PropertyGrid.
  
  PropertyTabChangedEventArgs(oldTab: PropertyTab,newTab: PropertyTab)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return PropertyTabChangedEventArgs()
+
  @staticmethod
  def __new__(self,oldTab,newTab):
   """ __new__(cls: type,oldTab: PropertyTab,newTab: PropertyTab) """

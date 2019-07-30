@@ -1,22 +1,23 @@
-class DrawListViewSubItemEventArgs:
+class DrawListViewSubItemEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ListView.DrawSubItem event.
  
  DrawListViewSubItemEventArgs(graphics: Graphics,bounds: Rectangle,item: ListViewItem,subItem: ListViewSubItem,itemIndex: int,columnIndex: int,header: ColumnHeader,itemState: ListViewItemStates)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DrawListViewSubItemEventArgs()
+
  def DrawBackground(self):
   """
   DrawBackground(self: DrawListViewSubItemEventArgs)
-   Draws the background of the System.Windows.Forms.ListViewItem.ListViewSubItem using its 
-    current background color.
+   Draws the background of the System.Windows.Forms.ListViewItem.ListViewSubItem using its current background color.
   """
   pass
  def DrawFocusRectangle(self,bounds):
   """
   DrawFocusRectangle(self: DrawListViewSubItemEventArgs,bounds: Rectangle)
-   Draws a focus rectangle for the System.Windows.Forms.ListViewItem.ListViewSubItem if the 
-    parent System.Windows.Forms.ListViewItem has focus.
-  
+   Draws a focus rectangle for the System.Windows.Forms.ListViewItem.ListViewSubItem if the parent System.Windows.Forms.ListViewItem has focus.
   
    bounds: The area within which to draw the focus rectangle.
   """
@@ -24,14 +25,9 @@ class DrawListViewSubItemEventArgs:
  def DrawText(self,flags=None):
   """
   DrawText(self: DrawListViewSubItemEventArgs)
-   Draws the text of the System.Windows.Forms.ListViewItem.ListViewSubItem using its current 
-    foreground color.
-  
+   Draws the text of the System.Windows.Forms.ListViewItem.ListViewSubItem using its current foreground color.
   DrawText(self: DrawListViewSubItemEventArgs,flags: TextFormatFlags)
-   Draws the text of the System.Windows.Forms.ListViewItem.ListViewSubItem using its current 
-    foreground color and formatting it with the specified 
-    System.Windows.Forms.TextFormatFlags values.
-  
+   Draws the text of the System.Windows.Forms.ListViewItem.ListViewSubItem using its current foreground color and formatting it with the specified System.Windows.Forms.TextFormatFlags values.
   
    flags: A bitwise combination of System.Windows.Forms.TextFormatFlags values.
   """

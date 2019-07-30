@@ -4,6 +4,11 @@ class OverflowAction:
  
  enum OverflowAction,values: DoNotOverwrite (-1),OverwriteAsNeeded (0),OverwriteOlder (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return OverflowAction()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

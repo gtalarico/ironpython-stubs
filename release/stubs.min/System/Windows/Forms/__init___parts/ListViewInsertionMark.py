@@ -1,5 +1,9 @@
-class ListViewInsertionMark:
+class ListViewInsertionMark(object):
  """ Used to indicate the expected drop location when an item is dragged to a new position in a System.Windows.Forms.ListView control. This functionality is available only on Windows XP and later. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ListViewInsertionMark()
+
  def NearestIndex(self,pt):
   """
   NearestIndex(self: ListViewInsertionMark,pt: Point) -> int
@@ -7,8 +11,7 @@ class ListViewInsertionMark:
    Retrieves the index of the item closest to the specified point.
   
    pt: A System.Drawing.Point representing the location from which to find the nearest item.
-   Returns: The index of the item closest to the specified point or -1 if the closest item is the 
-    item currently being dragged.
+   Returns: The index of the item closest to the specified point or -1 if the closest item is the item currently being dragged.
   """
   pass
  AppearsAfterItem=property(lambda self: object(),lambda self,v: None,lambda self: None)

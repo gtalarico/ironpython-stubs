@@ -1,9 +1,14 @@
-class EventHandlerList:
+class EventHandlerList(object):
  """
  Provides a simple list of delegates. This class cannot be inherited.
  
  EventHandlerList()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EventHandlerList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddHandler(self,key,value):
   """
   AddHandler(self: EventHandlerList,key: object,value: Delegate)

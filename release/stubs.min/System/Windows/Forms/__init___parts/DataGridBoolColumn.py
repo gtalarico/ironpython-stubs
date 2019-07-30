@@ -1,4 +1,4 @@
-class DataGridBoolColumn:
+class DataGridBoolColumn(DataGridColumnStyle,IComponent,IDisposable,IDataGridColumnStyleEditingNotificationService):
  """
  Specifies a column in which each cell contains a check box for representing a Boolean value.
  
@@ -6,6 +6,10 @@ class DataGridBoolColumn:
  DataGridBoolColumn(prop: PropertyDescriptor)
  DataGridBoolColumn(prop: PropertyDescriptor,isDefault: bool)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridBoolColumn()
+
  def Abort(self,*args):
   """
   Abort(self: DataGridBoolColumn,rowNum: int)
@@ -17,16 +21,13 @@ class DataGridBoolColumn:
  def BeginUpdate(self,*args):
   """
   BeginUpdate(self: DataGridColumnStyle)
-   Suspends the painting of the column until the 
-    System.Windows.Forms.DataGridColumnStyle.EndUpdate method is called.
+   Suspends the painting of the column until the System.Windows.Forms.DataGridColumnStyle.EndUpdate method is called.
   """
   pass
  def CheckValidDataSource(self,*args):
   """
   CheckValidDataSource(self: DataGridColumnStyle,value: CurrencyManager)
-   Throws an exception if the System.Windows.Forms.DataGrid does not have a valid data 
-    source,or if this column is not mapped to a valid property in the data source.
-  
+   Throws an exception if the System.Windows.Forms.DataGrid does not have a valid data source,or if this column is not mapped to a valid property in the data source.
   
    value: A System.Windows.Forms.CurrencyManager to check.
   """
@@ -64,12 +65,9 @@ class DataGridBoolColumn:
  def Dispose(self):
   """
   Dispose(self: Component,disposing: bool)
-   Releases the unmanaged resources used by the System.ComponentModel.Component and 
-    optionally releases the managed resources.
+   Releases the unmanaged resources used by the System.ComponentModel.Component and optionally releases the managed resources.
   
-  
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def Edit(self,*args):
@@ -89,28 +87,21 @@ class DataGridBoolColumn:
    source: The System.Windows.Forms.CurrencyManager for the System.Windows.Forms.DataGridColumnStyle.
    rowNum: The row number to edit.
    bounds: The bounding System.Drawing.Rectangle in which the control is to be sited.
-   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; 
-    otherwise,false.
-  
+   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; otherwise,false.
   Edit(self: DataGridColumnStyle,source: CurrencyManager,rowNum: int,bounds: Rectangle,readOnly: bool,displayText: str)
-   Prepares the cell for editing using the specified System.Windows.Forms.CurrencyManager,
-    row number,and System.Drawing.Rectangle parameters.
-  
+   Prepares the cell for editing using the specified System.Windows.Forms.CurrencyManager,row number,and System.Drawing.Rectangle parameters.
   
    source: The System.Windows.Forms.CurrencyManager for the System.Windows.Forms.DataGridColumnStyle.
    rowNum: The row number in this column which is being edited.
    bounds: The System.Drawing.Rectangle in which the control is to be sited.
-   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; 
-    otherwise,false.
-  
+   readOnly: A value indicating whether the column is a read-only. true if the value is read-only; otherwise,false.
    displayText: The text to display in the control.
   """
   pass
  def EndUpdate(self,*args):
   """
   EndUpdate(self: DataGridColumnStyle)
-   Resumes the painting of columns suspended by calling the 
-    System.Windows.Forms.DataGridColumnStyle.BeginUpdate method.
+   Resumes the painting of columns suspended by calling the System.Windows.Forms.DataGridColumnStyle.BeginUpdate method.
   """
   pass
  def EnterNullValue(self,*args):
@@ -164,14 +155,10 @@ class DataGridBoolColumn:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def Invalidate(self,*args):
@@ -186,12 +173,7 @@ class DataGridBoolColumn:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -202,30 +184,22 @@ class DataGridBoolColumn:
  def Paint(self,*args):
   """
   Paint(self: DataGridBoolColumn,g: Graphics,bounds: Rectangle,source: CurrencyManager,rowNum: int)
-   Draws the System.Windows.Forms.DataGridBoolColumn with the given System.Drawing.Graphics,
-    System.Drawing.Rectangle and row number.
-  
+   Draws the System.Windows.Forms.DataGridBoolColumn with the given System.Drawing.Graphics,System.Drawing.Rectangle and row number.
   
    g: The System.Drawing.Graphics to draw to.
    bounds: The bounding System.Drawing.Rectangle to paint into.
    source: The System.Windows.Forms.CurrencyManager of the column.
    rowNum: The number of the row referred to in the underlying data.
   Paint(self: DataGridBoolColumn,g: Graphics,bounds: Rectangle,source: CurrencyManager,rowNum: int,alignToRight: bool)
-   Draws the System.Windows.Forms.DataGridBoolColumn with the given System.Drawing.Graphics,
-    System.Drawing.Rectangle,row number,and alignment settings.
-  
+   Draws the System.Windows.Forms.DataGridBoolColumn with the given System.Drawing.Graphics,System.Drawing.Rectangle,row number,and alignment settings.
   
    g: The System.Drawing.Graphics to draw to.
    bounds: The bounding System.Drawing.Rectangle to paint into.
    source: The System.Windows.Forms.CurrencyManager of the column.
    rowNum: The number of the row in the underlying data table being referred to.
-   alignToRight: A value indicating whether to align the content to the right. true if the content is 
-    aligned to the right,otherwise,false.
-  
+   alignToRight: A value indicating whether to align the content to the right. true if the content is aligned to the right,otherwise,false.
   Paint(self: DataGridBoolColumn,g: Graphics,bounds: Rectangle,source: CurrencyManager,rowNum: int,backBrush: Brush,foreBrush: Brush,alignToRight: bool)
-   Draws the System.Windows.Forms.DataGridBoolColumn with the given System.Drawing.Graphics,
-    System.Drawing.Rectangle,row number,System.Drawing.Brush,and System.Drawing.Color.
-  
+   Draws the System.Windows.Forms.DataGridBoolColumn with the given System.Drawing.Graphics,System.Drawing.Rectangle,row number,System.Drawing.Brush,and System.Drawing.Color.
   
    g: The System.Drawing.Graphics to draw to.
    bounds: The bounding System.Drawing.Rectangle to paint into.
@@ -233,8 +207,7 @@ class DataGridBoolColumn:
    rowNum: The number of the row in the underlying data table being referred to.
    backBrush: A System.Drawing.Brush used to paint the background color.
    foreBrush: A System.Drawing.Color used to paint the foreground color.
-   alignToRight: A value indicating whether to align the content to the right. true if the content is 
-    aligned to the right,otherwise,false.
+   alignToRight: A value indicating whether to align the content to the right. true if the content is aligned to the right,otherwise,false.
   """
   pass
  def ReleaseHostedControl(self,*args):
@@ -274,9 +247,7 @@ class DataGridBoolColumn:
   UpdateUI(self: DataGridColumnStyle,source: CurrencyManager,rowNum: int,displayText: str)
    Updates the value of a specified row with the given text.
   
-   source: The System.Windows.Forms.CurrencyManager associated with the 
-    System.Windows.Forms.DataGridColumnStyle.
-  
+   source: The System.Windows.Forms.CurrencyManager associated with the System.Windows.Forms.DataGridColumnStyle.
    rowNum: The row to update.
    displayText: The new value.
   """

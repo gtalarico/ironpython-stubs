@@ -1,16 +1,18 @@
-class TreeNodeConverter:
+class TreeNodeConverter(TypeConverter):
  """
  Provides a type converter to convert System.Windows.Forms.TreeNode objects to and from various other representations.
  
  TreeNodeConverter()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TreeNodeConverter()
+
  def CanConvertTo(self,*__args):
   """
   CanConvertTo(self: TreeNodeConverter,context: ITypeDescriptorContext,destinationType: Type) -> bool
   
-   Gets a value indicating whether this converter can convert an object to the given 
-    destination type using the context.
-  
+   Gets a value indicating whether this converter can convert an object to the given destination type using the context.
   
    context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
    destinationType: A System.Type that represents the type you wish to convert to.

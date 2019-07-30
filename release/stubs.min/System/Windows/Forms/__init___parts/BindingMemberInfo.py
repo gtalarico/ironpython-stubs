@@ -1,20 +1,21 @@
-class BindingMemberInfo:
+class BindingMemberInfo(object):
  """
  Contains information that enables a System.Windows.Forms.Binding to resolve a data binding to either the property of an object or the property of the current object in a list of objects.
  
  BindingMemberInfo(dataMember: str)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return BindingMemberInfo()
+
  def Equals(self,otherObject):
   """
   Equals(self: BindingMemberInfo,otherObject: object) -> bool
   
-   Determines whether the specified object is equal to this 
-    System.Windows.Forms.BindingMemberInfo.
-  
+   Determines whether the specified object is equal to this System.Windows.Forms.BindingMemberInfo.
   
    otherObject: The object to compare for equality.
-   Returns: true if otherObject is a System.Windows.Forms.BindingMemberInfo and both 
-    System.Windows.Forms.BindingMemberInfo.BindingMember strings are equal; otherwise false.
+   Returns: true if otherObject is a System.Windows.Forms.BindingMemberInfo and both System.Windows.Forms.BindingMemberInfo.BindingMember strings are equal; otherwise false.
   """
   pass
  def GetHashCode(self):

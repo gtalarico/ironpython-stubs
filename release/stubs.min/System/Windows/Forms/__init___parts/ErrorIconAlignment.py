@@ -1,9 +1,13 @@
-class ErrorIconAlignment:
+class ErrorIconAlignment(Enum,IComparable,IFormattable,IConvertible):
  """
  Specifies constants indicating the locations that an error icon can appear in relation to the control with an error.
  
  enum ErrorIconAlignment,values: BottomLeft (4),BottomRight (5),MiddleLeft (2),MiddleRight (3),TopLeft (0),TopRight (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ErrorIconAlignment()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

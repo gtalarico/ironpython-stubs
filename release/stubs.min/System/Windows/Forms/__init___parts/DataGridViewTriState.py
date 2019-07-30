@@ -1,9 +1,13 @@
-class DataGridViewTriState:
+class DataGridViewTriState(Enum,IComparable,IFormattable,IConvertible):
  """
  Defines values for specifying one of three possible states.
  
  enum DataGridViewTriState,values: False (2),NotSet (0),True (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewTriState()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

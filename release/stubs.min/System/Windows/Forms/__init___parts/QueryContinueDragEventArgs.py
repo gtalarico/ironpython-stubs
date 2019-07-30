@@ -1,9 +1,13 @@
-class QueryContinueDragEventArgs:
+class QueryContinueDragEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.Control.QueryContinueDrag event.
  
  QueryContinueDragEventArgs(keyState: int,escapePressed: bool,action: DragAction)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return QueryContinueDragEventArgs()
+
  @staticmethod
  def __new__(self,keyState,escapePressed,action):
   """ __new__(cls: type,keyState: int,escapePressed: bool,action: DragAction) """

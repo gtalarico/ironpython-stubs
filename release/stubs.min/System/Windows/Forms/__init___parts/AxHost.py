@@ -1,24 +1,20 @@
-class AxHost:
+class AxHost(Control,IComponent,IDisposable,IOleControl,IOleObject,IOleInPlaceObject,IOleInPlaceActiveObject,IOleWindow,IViewObject,IViewObject2,IPersist,IPersistStreamInit,IPersistPropertyBag,IPersistStorage,IQuickActivate,ISupportOleDropSource,IDropTarget,ISynchronizeInvoke,IWin32Window,IArrangedElement,IBindableComponent,ISupportInitialize,ICustomTypeDescriptor):
  """ Wraps ActiveX controls and exposes them as fully featured Windows Forms controls. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return AxHost()
+
  def AccessibilityNotifyClients(self,*args):
   """
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,childID: int)
-   Notifies the accessibility client applications of the specified 
-    System.Windows.Forms.AccessibleEvents for the specified child control.
+   Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control.
   
-  
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications 
-    of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   AccessibilityNotifyClients(self: Control,accEvent: AccessibleEvents,objectID: int,childID: int)
-   Notifies the accessibility client applications of the specified 
-    System.Windows.Forms.AccessibleEvents for the specified child control .
+   Notifies the accessibility client applications of the specified System.Windows.Forms.AccessibleEvents for the specified child control .
   
-  
-   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications 
-    of.
-  
+   accEvent: The System.Windows.Forms.AccessibleEvents to notify the accessibility client applications of.
    objectID: The identifier of the System.Windows.Forms.AccessibleObject.
    childID: The child System.Windows.Forms.Control to notify of the accessible event.
   """
@@ -91,8 +87,7 @@ class AxHost:
  def Dispose(self):
   """
   Dispose(self: AxHost,disposing: bool)
-   disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
-    resources.
+   disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
   """
   pass
  def DoVerb(self,verb):
@@ -132,9 +127,7 @@ class AxHost:
   """
   GetAutoSizeMode(self: Control) -> AutoSizeMode
   
-   Retrieves a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
-  
+   Retrieves a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
    Returns: One of the System.Windows.Forms.AutoSizeMode values.
   """
   pass
@@ -142,9 +135,7 @@ class AxHost:
   """
   GetColorFromOleColor(color: UInt32) -> Color
   
-   Returns a System.Drawing.Color structure that corresponds to the specified OLE color 
-    value.
-  
+   Returns a System.Drawing.Color structure that corresponds to the specified OLE color value.
   
    color: The OLE color value to translate.
    Returns: The System.Drawing.Color structure that represents the translated OLE color value.
@@ -157,9 +148,7 @@ class AxHost:
    Returns a System.Drawing.Font created from the specified OLE IFont object.
   
    font: The IFont to create a System.Drawing.Font from.
-   Returns: The System.Drawing.Font created from the specified IFont,
-    System.Windows.Forms.Control.DefaultFont if the font could not be created,or null if 
-    font is null.
+   Returns: The System.Drawing.Font created from the specified IFont,System.Windows.Forms.Control.DefaultFont if the font could not be created,or null if font is null.
   """
   pass
  def GetFontFromIFontDisp(self,*args):
@@ -169,9 +158,7 @@ class AxHost:
    Returns a System.Drawing.Font created from the specified OLE IFontDisp object.
   
    font: The IFontDisp to create a System.Drawing.Font from.
-   Returns: The System.Drawing.Font created from the specified IFontDisp,
-    System.Windows.Forms.Control.DefaultFont if the font could not be created,or null if 
-    font is null.
+   Returns: The System.Drawing.Font created from the specified IFontDisp,System.Windows.Forms.Control.DefaultFont if the font could not be created,or null if font is null.
   """
   pass
  def GetIFontDispFromFont(self,*args):
@@ -191,8 +178,7 @@ class AxHost:
    Returns an OLE IFont object created from the specified System.Drawing.Font object.
   
    font: The font to create an IFont object from.
-   Returns: The IFont object created from the specified font,or null if font is null or the IFont 
-    could not be created.
+   Returns: The IFont object created from the specified font,or null if font is null or the IFont could not be created.
   """
   pass
  def GetIPictureDispFromPicture(self,*args):
@@ -229,13 +215,10 @@ class AxHost:
   """
   GetOADateFromTime(time: DateTime) -> float
   
-   Returns an OLE Automation date that corresponds to the specified System.DateTime 
-    structure.
-  
+   Returns an OLE Automation date that corresponds to the specified System.DateTime structure.
   
    time: The System.DateTime structure to translate.
-   Returns: A double-precision floating-point number that contains an OLE Automation date equivalent 
-    to specified time value.
+   Returns: A double-precision floating-point number that contains an OLE Automation date equivalent to specified time value.
   """
   pass
  def GetOcx(self):
@@ -250,9 +233,7 @@ class AxHost:
   """
   GetOleColorFromColor(color: Color) -> UInt32
   
-   Returns an OLE color value that corresponds to the specified System.Drawing.Color 
-    structure.
-  
+   Returns an OLE color value that corresponds to the specified System.Drawing.Color structure.
   
    color: The System.Drawing.Color structure to translate.
    Returns: The OLE color value that represents the translated System.Drawing.Color structure.
@@ -294,14 +275,10 @@ class AxHost:
   """
   GetService(self: Component,service: Type) -> object
   
-   Returns an object that represents a service provided by the 
-    System.ComponentModel.Component or by its System.ComponentModel.Container.
-  
+   Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
   
    service: A service provided by the System.ComponentModel.Component.
-   Returns: An System.Object that represents a service provided by the 
-    System.ComponentModel.Component,or null if the System.ComponentModel.Component does not 
-    provide the specified service.
+   Returns: An System.Object that represents a service provided by the System.ComponentModel.Component,or null if the System.ComponentModel.Component does not provide the specified service.
   """
   pass
  def GetStyle(self,*args):
@@ -375,9 +352,7 @@ class AxHost:
   InvokeOnClick(self: Control,toInvoke: Control,e: EventArgs)
    Raises the System.Windows.Forms.Control.Click event for the specified control.
   
-   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event 
-    to.
-  
+   toInvoke: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Click event to.
    e: An System.EventArgs that contains the event data.
   """
   pass
@@ -386,9 +361,7 @@ class AxHost:
   InvokePaint(self: Control,c: Control,e: PaintEventArgs)
    Raises the System.Windows.Forms.Control.Paint event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event 
-    to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -397,9 +370,7 @@ class AxHost:
   InvokePaintBackground(self: Control,c: Control,e: PaintEventArgs)
    Raises the PaintBackground event for the specified control.
   
-   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event 
-    to.
-  
+   c: The System.Windows.Forms.Control to assign the System.Windows.Forms.Control.Paint event to.
    e: An System.Windows.Forms.PaintEventArgs that contains the event data.
   """
   pass
@@ -410,17 +381,14 @@ class AxHost:
    Determines if a character is an input character that the ActiveX control recognizes.
   
    charCode: The character to test.
-   Returns: true if the character should be sent directly to the ActiveX control and not 
-    preprocessed; otherwise,false.
+   Returns: true if the character should be sent directly to the ActiveX control and not preprocessed; otherwise,false.
   """
   pass
  def IsInputKey(self,*args):
   """
   IsInputKey(self: Control,keyData: Keys) -> bool
   
-   Determines whether the specified key is a regular input key or a special key that 
-    requires preprocessing.
-  
+   Determines whether the specified key is a regular input key or a special key that requires preprocessing.
   
    keyData: One of the System.Windows.Forms.Keys values.
    Returns: true if the specified key is a regular input key; otherwise,false.
@@ -429,8 +397,7 @@ class AxHost:
  def MakeDirty(self):
   """
   MakeDirty(self: AxHost)
-   Announces to the component change service that the System.Windows.Forms.AxHost has 
-    changed.
+   Announces to the component change service that the System.Windows.Forms.AxHost has changed.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -439,12 +406,7 @@ class AxHost:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -455,9 +417,7 @@ class AxHost:
  def NotifyInvalidate(self,*args):
   """
   NotifyInvalidate(self: Control,invalidatedArea: Rectangle)
-   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the 
-    control to invalidate.
-  
+   Raises the System.Windows.Forms.Control.Invalidated event with a specified region of the control to invalidate.
   
    invalidatedArea: A System.Drawing.Rectangle representing the area to invalidate.
   """
@@ -899,16 +859,13 @@ class AxHost:
   OnPaintBackground(self: Control,pevent: PaintEventArgs)
    Paints the background of the control.
   
-   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to 
-    paint.
+   pevent: A System.Windows.Forms.PaintEventArgs that contains information about the control to paint.
   """
   pass
  def OnParentBackColorChanged(self,*args):
   """
   OnParentBackColorChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BackColorChanged event when the 
-    System.Windows.Forms.Control.BackColor property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.BackColorChanged event when the System.Windows.Forms.Control.BackColor property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -916,10 +873,7 @@ class AxHost:
  def OnParentBackgroundImageChanged(self,*args):
   """
   OnParentBackgroundImageChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the 
-    System.Windows.Forms.Control.BackgroundImage property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.BackgroundImageChanged event when the System.Windows.Forms.Control.BackgroundImage property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -927,10 +881,7 @@ class AxHost:
  def OnParentBindingContextChanged(self,*args):
   """
   OnParentBindingContextChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.BindingContextChanged event when the 
-    System.Windows.Forms.Control.BindingContext property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.BindingContextChanged event when the System.Windows.Forms.Control.BindingContext property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -954,9 +905,7 @@ class AxHost:
  def OnParentEnabledChanged(self,*args):
   """
   OnParentEnabledChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.EnabledChanged event when the 
-    System.Windows.Forms.Control.Enabled property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.EnabledChanged event when the System.Windows.Forms.Control.Enabled property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -964,9 +913,7 @@ class AxHost:
  def OnParentFontChanged(self,*args):
   """
   OnParentFontChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.FontChanged event when the 
-    System.Windows.Forms.Control.Font property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.FontChanged event when the System.Windows.Forms.Control.Font property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -974,9 +921,7 @@ class AxHost:
  def OnParentForeColorChanged(self,*args):
   """
   OnParentForeColorChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.ForeColorChanged event when the 
-    System.Windows.Forms.Control.ForeColor property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.ForeColorChanged event when the System.Windows.Forms.Control.ForeColor property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -984,10 +929,7 @@ class AxHost:
  def OnParentRightToLeftChanged(self,*args):
   """
   OnParentRightToLeftChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.RightToLeftChanged event when the 
-    System.Windows.Forms.Control.RightToLeft property value of the control's container 
-    changes.
-  
+   Raises the System.Windows.Forms.Control.RightToLeftChanged event when the System.Windows.Forms.Control.RightToLeft property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -995,9 +937,7 @@ class AxHost:
  def OnParentVisibleChanged(self,*args):
   """
   OnParentVisibleChanged(self: Control,e: EventArgs)
-   Raises the System.Windows.Forms.Control.VisibleChanged event when the 
-    System.Windows.Forms.Control.Visible property value of the control's container changes.
-  
+   Raises the System.Windows.Forms.Control.VisibleChanged event when the System.Windows.Forms.Control.Visible property value of the control's container changes.
   
    e: An System.EventArgs that contains the event data.
   """
@@ -1126,9 +1066,7 @@ class AxHost:
   """
   PreProcessMessage(self: AxHost,msg: Message) -> (bool,Message)
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the message to 
-    process. The possible values are WM_KEYDOWN,WM_SYSKEYDOWN,WM_CHAR,and WM_SYSCHAR.
-  
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the message to process. The possible values are WM_KEYDOWN,WM_SYSKEYDOWN,WM_CHAR,and WM_SYSCHAR.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1138,9 +1076,7 @@ class AxHost:
   
    Processes a command key.
   
-   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   msg: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    keyData: One of the System.Windows.Forms.Keys values that represents the key to process.
    Returns: true if the character was processed by the control; otherwise,false.
   """
@@ -1169,9 +1105,7 @@ class AxHost:
   
    Processes a key message and generates the appropriate control events.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1181,9 +1115,7 @@ class AxHost:
   
    Processes a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1193,9 +1125,7 @@ class AxHost:
   
    Previews a keyboard message.
   
-   m: A System.Windows.Forms.Message,passed by reference,that represents the window message 
-    to process.
-  
+   m: A System.Windows.Forms.Message,passed by reference,that represents the window message to process.
    Returns: true if the message was processed by the control; otherwise,false.
   """
   pass
@@ -1211,9 +1141,7 @@ class AxHost:
   """
   PropsValid(self: AxHost) -> bool
   
-   Returns a value that indicates whether the hosted control is in a state in which its 
-    properties can be accessed.
-  
+   Returns a value that indicates whether the hosted control is in a state in which its properties can be accessed.
    Returns: true if the properties of the hosted control can be accessed; otherwise,false.
   """
   pass
@@ -1249,31 +1177,21 @@ class AxHost:
   RaiseOnMouseDown(self: AxHost,o1: object,o2: object,o3: object,o4: object)
    Raises the System.Windows.Forms.AxHost.MouseDown event using the specified objects.
   
-   o1: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was 
-    pressed.
-  
+   o1: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    o2: Not used.
    o3: The x-coordinate of a mouse click,in pixels.
    o4: The y-coordinate of a mouse click,in pixels.
   RaiseOnMouseDown(self: AxHost,button: Int16,shift: Int16,x: Single,y: Single)
-   Raises the System.Windows.Forms.AxHost.MouseDown event using the specified 
-    single-precision floating-point numbers.
+   Raises the System.Windows.Forms.AxHost.MouseDown event using the specified single-precision floating-point numbers.
   
-  
-   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was 
-    pressed.
-  
+   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    shift: Not used.
    x: The x-coordinate of a mouse click,in pixels.
    y: The y-coordinate of a mouse click,in pixels.
   RaiseOnMouseDown(self: AxHost,button: Int16,shift: Int16,x: int,y: int)
-   Raises the System.Windows.Forms.AxHost.MouseDown event using the specified 32-bit signed 
-    integers.
+   Raises the System.Windows.Forms.AxHost.MouseDown event using the specified 32-bit signed integers.
   
-  
-   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was 
-    pressed.
-  
+   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    shift: Not used.
    x: The x-coordinate of a mouse click,in pixels.
    y: The y-coordinate of a mouse click,in pixels.
@@ -1284,31 +1202,21 @@ class AxHost:
   RaiseOnMouseMove(self: AxHost,o1: object,o2: object,o3: object,o4: object)
    Raises the System.Windows.Forms.AxHost.MouseMove event using the specified objects.
   
-   o1: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was 
-    pressed.
-  
+   o1: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    o2: Not used.
    o3: The x-coordinate of a mouse click,in pixels.
    o4: The y-coordinate of a mouse click,in pixels.
   RaiseOnMouseMove(self: AxHost,button: Int16,shift: Int16,x: Single,y: Single)
-   Raises the System.Windows.Forms.AxHost.MouseMove event using the specified 
-    single-precision floating-point numbers.
+   Raises the System.Windows.Forms.AxHost.MouseMove event using the specified single-precision floating-point numbers.
   
-  
-   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was 
-    pressed.
-  
+   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    shift: Not used.
    x: The x-coordinate of a mouse click,in pixels.
    y: The y-coordinate of a mouse click,in pixels.
   RaiseOnMouseMove(self: AxHost,button: Int16,shift: Int16,x: int,y: int)
-   Raises the System.Windows.Forms.AxHost.MouseMove event using the specified 32-bit signed 
-    integers.
+   Raises the System.Windows.Forms.AxHost.MouseMove event using the specified 32-bit signed integers.
   
-  
-   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was 
-    pressed.
-  
+   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    shift: Not used.
    x: The x-coordinate of a mouse click,in pixels.
    y: The y-coordinate of a mouse click,in pixels.
@@ -1319,31 +1227,21 @@ class AxHost:
   RaiseOnMouseUp(self: AxHost,o1: object,o2: object,o3: object,o4: object)
    Raises the System.Windows.Forms.AxHost.MouseUp event using the specified objects.
   
-   o1: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was 
-    pressed.
-  
+   o1: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    o2: Not used.
    o3: The x-coordinate of a mouse click,in pixels.
    o4: The y-coordinate of a mouse click,in pixels.
   RaiseOnMouseUp(self: AxHost,button: Int16,shift: Int16,x: Single,y: Single)
-   Raises the System.Windows.Forms.AxHost.MouseUp event using the specified single-precision 
-    floating-point numbers.
+   Raises the System.Windows.Forms.AxHost.MouseUp event using the specified single-precision floating-point numbers.
   
-  
-   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was 
-    pressed.
-  
+   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    shift: Not used.
    x: The x-coordinate of a mouse click,in pixels.
    y: The y-coordinate of a mouse click,in pixels.
   RaiseOnMouseUp(self: AxHost,button: Int16,shift: Int16,x: int,y: int)
-   Raises the System.Windows.Forms.AxHost.MouseUp event using the specified 32-bit signed 
-    integers.
+   Raises the System.Windows.Forms.AxHost.MouseUp event using the specified 32-bit signed integers.
   
-  
-   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was 
-    pressed.
-  
+   button: One of the System.Windows.Forms.MouseButtons values that indicate which mouse button was pressed.
    shift: Not used.
    x: The x-coordinate of a mouse click,in pixels.
    y: The y-coordinate of a mouse click,in pixels.
@@ -1377,25 +1275,19 @@ class AxHost:
   """
   RtlTranslateAlignment(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
-    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
    Returns: One of the System.Windows.Forms.HorizontalAlignment values.
   RtlTranslateAlignment(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
-    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
   RtlTranslateAlignment(self: Control,align: ContentAlignment) -> ContentAlignment
   
-   Converts the specified System.Drawing.ContentAlignment to the appropriate 
-    System.Drawing.ContentAlignment to support right-to-left text.
-  
+   Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
   
    align: One of the System.Drawing.ContentAlignment values.
    Returns: One of the System.Drawing.ContentAlignment values.
@@ -1405,9 +1297,7 @@ class AxHost:
   """
   RtlTranslateContent(self: Control,align: ContentAlignment) -> ContentAlignment
   
-   Converts the specified System.Drawing.ContentAlignment to the appropriate 
-    System.Drawing.ContentAlignment to support right-to-left text.
-  
+   Converts the specified System.Drawing.ContentAlignment to the appropriate System.Drawing.ContentAlignment to support right-to-left text.
   
    align: One of the System.Drawing.ContentAlignment values.
    Returns: One of the System.Drawing.ContentAlignment values.
@@ -1417,9 +1307,7 @@ class AxHost:
   """
   RtlTranslateHorizontal(self: Control,align: HorizontalAlignment) -> HorizontalAlignment
   
-   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate 
-    System.Windows.Forms.HorizontalAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.HorizontalAlignment to the appropriate System.Windows.Forms.HorizontalAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.HorizontalAlignment values.
    Returns: One of the System.Windows.Forms.HorizontalAlignment values.
@@ -1429,9 +1317,7 @@ class AxHost:
   """
   RtlTranslateLeftRight(self: Control,align: LeftRightAlignment) -> LeftRightAlignment
   
-   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate 
-    System.Windows.Forms.LeftRightAlignment to support right-to-left text.
-  
+   Converts the specified System.Windows.Forms.LeftRightAlignment to the appropriate System.Windows.Forms.LeftRightAlignment to support right-to-left text.
   
    align: One of the System.Windows.Forms.LeftRightAlignment values.
    Returns: One of the System.Windows.Forms.LeftRightAlignment values.
@@ -1443,8 +1329,7 @@ class AxHost:
    Scales a control's location,size,padding and margin.
   
    factor: The factor by which the height and width of the control will be scaled.
-   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to 
-    use when defining its size and position.
+   specified: A System.Windows.Forms.BoundsSpecified value that specifies the bounds of the control to use when defining its size and position.
   """
   pass
  def ScaleCore(self,*args):
@@ -1459,9 +1344,7 @@ class AxHost:
  def Select(self):
   """
   Select(self: Control,directed: bool,forward: bool)
-   Activates a child control. Optionally specifies the direction in the tab order to select 
-    the control from.
-  
+   Activates a child control. Optionally specifies the direction in the tab order to select the control from.
   
    directed: true to specify the direction of the control to select; otherwise,false.
    forward: true to move forward in the tab order; false to move backward in the tab order.
@@ -1473,9 +1356,7 @@ class AxHost:
  def SetAutoSizeMode(self,*args):
   """
   SetAutoSizeMode(self: Control,mode: AutoSizeMode)
-   Sets a value indicating how a control will behave when its 
-    System.Windows.Forms.Control.AutoSize property is enabled.
-  
+   Sets a value indicating how a control will behave when its System.Windows.Forms.Control.AutoSize property is enabled.
   
    mode: One of the System.Windows.Forms.AutoSizeMode values.
   """
@@ -1533,9 +1414,7 @@ class AxHost:
   ShowPropertyPages(self: AxHost)
    Displays the property pages associated with the ActiveX control.
   ShowPropertyPages(self: AxHost,control: Control)
-   Displays the property pages associated with the ActiveX control assigned to the specified 
-    parent control.
-  
+   Displays the property pages associated with the ActiveX control assigned to the specified parent control.
   
    control: The parent System.Windows.Forms.Control of the ActiveX control.
   """
@@ -1546,9 +1425,7 @@ class AxHost:
   
    Determines the size of the entire control from the height and width of its client area.
   
-   clientSize: A System.Drawing.Size value representing the height and width of the control's client 
-    area.
-  
+   clientSize: A System.Drawing.Size value representing the height and width of the control's client area.
    Returns: A System.Drawing.Size value representing the height and width of the entire control.
   """
   pass

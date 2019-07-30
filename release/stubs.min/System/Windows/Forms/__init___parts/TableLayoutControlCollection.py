@@ -1,9 +1,13 @@
-class TableLayoutControlCollection:
+class TableLayoutControlCollection(ControlCollection,IList,ICollection,IEnumerable,ICloneable):
  """
  Represents a collection of child controls in a table layout container.
  
  TableLayoutControlCollection(container: TableLayoutPanel)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TableLayoutControlCollection()
+
  def Add(self,*__args):
   """
   Add(self: TableLayoutControlCollection,control: Control,column: int,row: int)

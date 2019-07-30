@@ -1,10 +1,15 @@
-class AsyncCompletedEventArgs:
+class AsyncCompletedEventArgs(EventArgs):
  """
  Provides data for the MethodNameCompleted event.
  
  AsyncCompletedEventArgs()
  AsyncCompletedEventArgs(error: Exception,cancelled: bool,userState: object)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AsyncCompletedEventArgs()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def RaiseExceptionIfNecessary(self,*args):
   """
   RaiseExceptionIfNecessary(self: AsyncCompletedEventArgs)

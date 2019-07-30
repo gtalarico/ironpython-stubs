@@ -1,9 +1,13 @@
-class CacheVirtualItemsEventArgs:
+class CacheVirtualItemsEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ListView.CacheVirtualItems event.
  
  CacheVirtualItemsEventArgs(startIndex: int,endIndex: int)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return CacheVirtualItemsEventArgs()
+
  @staticmethod
  def __new__(self,startIndex,endIndex):
   """ __new__(cls: type,startIndex: int,endIndex: int) """

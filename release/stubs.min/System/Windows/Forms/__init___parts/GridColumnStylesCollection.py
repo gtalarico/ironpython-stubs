@@ -1,5 +1,9 @@
-class GridColumnStylesCollection:
+class GridColumnStylesCollection(BaseCollection,ICollection,IEnumerable,IList):
  """ Represents a collection of System.Windows.Forms.DataGridColumnStyle objects in the System.Windows.Forms.DataGrid control. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return GridColumnStylesCollection()
+
  def Add(self,column):
   """
   Add(self: GridColumnStylesCollection,column: DataGridColumnStyle) -> int
@@ -28,38 +32,22 @@ class GridColumnStylesCollection:
   """
   Contains(self: GridColumnStylesCollection,propertyDescriptor: PropertyDescriptor) -> bool
   
-   Gets a value indicating whether the System.Windows.Forms.GridColumnStylesCollection 
-    contains a System.Windows.Forms.DataGridColumnStyle associated with the specified 
-    System.ComponentModel.PropertyDescriptor.
+   Gets a value indicating whether the System.Windows.Forms.GridColumnStylesCollection contains a System.Windows.Forms.DataGridColumnStyle associated with the specified System.ComponentModel.PropertyDescriptor.
   
-  
-   propertyDescriptor: The System.ComponentModel.PropertyDescriptor associated with the desired 
-    System.Windows.Forms.DataGridColumnStyle.
-  
-   Returns: true if the collection contains the System.Windows.Forms.DataGridColumnStyle; otherwise,
-    false.
-  
+   propertyDescriptor: The System.ComponentModel.PropertyDescriptor associated with the desired System.Windows.Forms.DataGridColumnStyle.
+   Returns: true if the collection contains the System.Windows.Forms.DataGridColumnStyle; otherwise,false.
   Contains(self: GridColumnStylesCollection,column: DataGridColumnStyle) -> bool
   
-   Gets a value indicating whether the System.Windows.Forms.GridColumnStylesCollection 
-    contains the specified System.Windows.Forms.DataGridColumnStyle.
-  
+   Gets a value indicating whether the System.Windows.Forms.GridColumnStylesCollection contains the specified System.Windows.Forms.DataGridColumnStyle.
   
    column: The desired System.Windows.Forms.DataGridColumnStyle.
-   Returns: true if the collection contains the System.Windows.Forms.DataGridColumnStyle; otherwise,
-    false.
-  
+   Returns: true if the collection contains the System.Windows.Forms.DataGridColumnStyle; otherwise,false.
   Contains(self: GridColumnStylesCollection,name: str) -> bool
   
-   Gets a value indicating whether the System.Windows.Forms.GridColumnStylesCollection 
-    contains the System.Windows.Forms.DataGridColumnStyle with the specified name.
+   Gets a value indicating whether the System.Windows.Forms.GridColumnStylesCollection contains the System.Windows.Forms.DataGridColumnStyle with the specified name.
   
-  
-   name: The System.Windows.Forms.DataGridColumnStyle.MappingName of the desired 
-    System.Windows.Forms.DataGridColumnStyle.
-  
-   Returns: true if the collection contains the System.Windows.Forms.DataGridColumnStyle; otherwise,
-    false.
+   name: The System.Windows.Forms.DataGridColumnStyle.MappingName of the desired System.Windows.Forms.DataGridColumnStyle.
+   Returns: true if the collection contains the System.Windows.Forms.DataGridColumnStyle; otherwise,false.
   """
   pass
  def IndexOf(self,element):
@@ -69,9 +57,7 @@ class GridColumnStylesCollection:
    Gets the index of a specified System.Windows.Forms.DataGridColumnStyle.
   
    element: The System.Windows.Forms.DataGridColumnStyle to find.
-   Returns: The zero-based index of the System.Windows.Forms.DataGridColumnStyle within the 
-    System.Windows.Forms.GridColumnStylesCollection or -1 if no corresponding 
-    System.Windows.Forms.DataGridColumnStyle exists.
+   Returns: The zero-based index of the System.Windows.Forms.DataGridColumnStyle within the System.Windows.Forms.GridColumnStylesCollection or -1 if no corresponding System.Windows.Forms.DataGridColumnStyle exists.
   """
   pass
  def MemberwiseClone(self,*args):
@@ -80,12 +66,7 @@ class GridColumnStylesCollection:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   
@@ -104,9 +85,7 @@ class GridColumnStylesCollection:
  def Remove(self,column):
   """
   Remove(self: GridColumnStylesCollection,column: DataGridColumnStyle)
-   Removes the specified System.Windows.Forms.DataGridColumnStyle from the 
-    System.Windows.Forms.GridColumnStylesCollection.
-  
+   Removes the specified System.Windows.Forms.DataGridColumnStyle from the System.Windows.Forms.GridColumnStylesCollection.
   
    column: The System.Windows.Forms.DataGridColumnStyle to remove from the collection.
   """
@@ -114,9 +93,7 @@ class GridColumnStylesCollection:
  def RemoveAt(self,index):
   """
   RemoveAt(self: GridColumnStylesCollection,index: int)
-   Removes the System.Windows.Forms.DataGridColumnStyle with the specified index from the 
-    System.Windows.Forms.GridColumnStylesCollection.
-  
+   Removes the System.Windows.Forms.DataGridColumnStyle with the specified index from the System.Windows.Forms.GridColumnStylesCollection.
   
    index: The zero-based index of the System.Windows.Forms.DataGridColumnStyle to remove.
   """
@@ -124,8 +101,7 @@ class GridColumnStylesCollection:
  def ResetPropertyDescriptors(self):
   """
   ResetPropertyDescriptors(self: GridColumnStylesCollection)
-   Sets the System.ComponentModel.PropertyDescriptor for each column style in the collection 
-    to null.
+   Sets the System.ComponentModel.PropertyDescriptor for each column style in the collection to null.
   """
   pass
  def __add__(self,*args):

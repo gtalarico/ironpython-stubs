@@ -1,26 +1,25 @@
-class ConsoleKeyInfo:
+class ConsoleKeyInfo(object):
  """
  Describes the console key that was pressed,including the character represented by the console key and the state of the SHIFT,ALT,and CTRL modifier keys.
  
  ConsoleKeyInfo(keyChar: Char,key: ConsoleKey,shift: bool,alt: bool,control: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ConsoleKeyInfo()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,*__args):
   """
   Equals(self: ConsoleKeyInfo,value: object) -> bool
   
-   Gets a value indicating whether the specified object is equal to the current 
-    System.ConsoleKeyInfo object.
-  
+   Gets a value indicating whether the specified object is equal to the current System.ConsoleKeyInfo object.
   
    value: An object to compare to the current System.ConsoleKeyInfo object.
-   Returns: true if value is a System.ConsoleKeyInfo object and is equal to the current 
-    System.ConsoleKeyInfo object; otherwise,false.
-  
+   Returns: true if value is a System.ConsoleKeyInfo object and is equal to the current System.ConsoleKeyInfo object; otherwise,false.
   Equals(self: ConsoleKeyInfo,obj: ConsoleKeyInfo) -> bool
   
-   Gets a value indicating whether the specified System.ConsoleKeyInfo object is equal to 
-    the current System.ConsoleKeyInfo object.
-  
+   Gets a value indicating whether the specified System.ConsoleKeyInfo object is equal to the current System.ConsoleKeyInfo object.
   
    obj: An object to compare to the current System.ConsoleKeyInfo object.
    Returns: true if obj is equal to the current System.ConsoleKeyInfo object; otherwise,false.

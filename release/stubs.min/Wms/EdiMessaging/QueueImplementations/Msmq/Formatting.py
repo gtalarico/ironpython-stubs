@@ -1,15 +1,21 @@
 # encoding: utf-8
 # module Wms.EdiMessaging.QueueImplementations.Msmq.Formatting calls itself Formatting
-# from Wms.EdiMessaging,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null
+# from Wms.EdiMessaging,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
 # by generator 1.145
 # no doc
-# no imports
+# no important
+from __init__ import *
 
 # no functions
 # classes
 
-class MessageSerialization:
+class MessageSerialization(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MessageSerialization()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def Deserialize(stream):
   """ Deserialize(stream: Stream) -> IMessage """

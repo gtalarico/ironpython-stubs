@@ -1,9 +1,14 @@
-class CookieCollection:
+class CookieCollection(object):
  """
  Provides a collection container for instances of the System.Net.Cookie class.
  
  CookieCollection()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CookieCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,*__args):
   """
   Add(self: CookieCollection,cookie: Cookie)
@@ -19,20 +24,14 @@ class CookieCollection:
  def CopyTo(self,array,index):
   """
   CopyTo(self: CookieCollection,array: Array,index: int)
-   Copies the elements of a System.Net.CookieCollection to an instance of the System.Array 
-    class,starting at a particular index.
-  
+   Copies the elements of a System.Net.CookieCollection to an instance of the System.Array class,starting at a particular index.
   
    array: The target System.Array to which the System.Net.CookieCollection will be copied.
    index: The zero-based index in the target System.Array where copying begins.
   CopyTo(self: CookieCollection,array: Array[Cookie],index: int)
-   Copies the elements of this System.Net.CookieCollection to a System.Net.Cookie array 
-    starting at the specified index of the target array.
+   Copies the elements of this System.Net.CookieCollection to a System.Net.Cookie array starting at the specified index of the target array.
   
-  
-   array: The target System.Net.Cookie array to which the System.Net.CookieCollection will be 
-    copied.
-  
+   array: The target System.Net.Cookie array to which the System.Net.CookieCollection will be copied.
    index: The zero-based index in the target System.Array where copying begins.
   """
   pass
@@ -41,8 +40,7 @@ class CookieCollection:
   GetEnumerator(self: CookieCollection) -> IEnumerator
   
    Gets an enumerator that can iterate through a System.Net.CookieCollection.
-   Returns: An instance of an implementation of an System.Collections.IEnumerator interface that can 
-    iterate through a System.Net.CookieCollection.
+   Returns: An instance of an implementation of an System.Collections.IEnumerator interface that can iterate through a System.Net.CookieCollection.
   """
   pass
  def __add__(self,*args):

@@ -1,5 +1,10 @@
-class WebRequest:
+class WebRequest(MarshalByRefObject):
  """ Makes a request to a Uniform Resource Identifier (URI). This is an abstract class. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebRequest()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Abort(self):
   """
   Abort(self: WebRequest)
@@ -10,9 +15,7 @@ class WebRequest:
   """
   BeginGetRequestStream(self: WebRequest,callback: AsyncCallback,state: object) -> IAsyncResult
   
-   When overridden in a descendant class,provides an asynchronous version of the 
-    System.Net.WebRequest.GetRequestStream method.
-  
+   When overridden in a descendant class,provides an asynchronous version of the System.Net.WebRequest.GetRequestStream method.
   
    callback: The System.AsyncCallback delegate.
    state: An object containing state information for this asynchronous request.
@@ -23,9 +26,7 @@ class WebRequest:
   """
   BeginGetResponse(self: WebRequest,callback: AsyncCallback,state: object) -> IAsyncResult
   
-   When overridden in a descendant class,begins an asynchronous request for an Internet 
-    resource.
-  
+   When overridden in a descendant class,begins an asynchronous request for an Internet resource.
   
    callback: The System.AsyncCallback delegate.
    state: An object containing state information for this asynchronous request.
@@ -71,9 +72,7 @@ class WebRequest:
   """
   EndGetRequestStream(self: WebRequest,asyncResult: IAsyncResult) -> Stream
   
-   When overridden in a descendant class,returns a System.IO.Stream for writing data to the 
-    Internet resource.
-  
+   When overridden in a descendant class,returns a System.IO.Stream for writing data to the Internet resource.
   
    asyncResult: An System.IAsyncResult that references a pending request for a stream.
    Returns: A System.IO.Stream to write data to.
@@ -92,22 +91,17 @@ class WebRequest:
  def GetObjectData(self,*args):
   """
   GetObjectData(self: WebRequest,serializationInfo: SerializationInfo,streamingContext: StreamingContext)
-   Populates a System.Runtime.Serialization.SerializationInfo with the data needed to 
-    serialize the target object.
-  
+   Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the target object.
   
    serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
-    serialization.
+   streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this serialization.
   """
   pass
  def GetRequestStream(self):
   """
   GetRequestStream(self: WebRequest) -> Stream
   
-   When overridden in a descendant class,returns a System.IO.Stream for writing data to the 
-    Internet resource.
-  
+   When overridden in a descendant class,returns a System.IO.Stream for writing data to the Internet resource.
    Returns: A System.IO.Stream for writing data to the Internet resource.
   """
   pass
@@ -130,9 +124,7 @@ class WebRequest:
   """
   GetSystemWebProxy() -> IWebProxy
   
-   Returns a proxy configured with the Internet Explorer settings of the currently 
-    impersonated user.
-  
+   Returns a proxy configured with the Internet Explorer settings of the currently impersonated user.
    Returns: An System.Net.IWebProxy used by every call to instances of System.Net.WebRequest.
   """
   pass
@@ -142,11 +134,9 @@ class WebRequest:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+    boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls 
+    to be routed to the remote server object.
   
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
@@ -167,9 +157,7 @@ class WebRequest:
    Registers a System.Net.WebRequest descendant for the specified URI.
   
    prefix: The complete URI or URI prefix that the System.Net.WebRequest descendant services.
-   creator: The create method that the System.Net.WebRequest calls to create the 
-    System.Net.WebRequest descendant.
-  
+   creator: The create method that the System.Net.WebRequest calls to create the System.Net.WebRequest descendant.
    Returns: true if registration is successful; otherwise,false.
   """
   pass

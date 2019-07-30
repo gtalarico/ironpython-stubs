@@ -1,9 +1,14 @@
-class ComponentCollection:
+class ComponentCollection(ReadOnlyCollectionBase):
  """
  Provides a read-only container for a collection of System.ComponentModel.IComponent objects.
  
  ComponentCollection(components: Array[IComponent])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ComponentCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CopyTo(self,array,index):
   """
   CopyTo(self: ComponentCollection,array: Array[IComponent],index: int)

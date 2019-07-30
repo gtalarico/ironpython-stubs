@@ -4,6 +4,11 @@ class WebExceptionStatus:
  
  enum WebExceptionStatus,values: CacheEntryNotFound (18),ConnectFailure (2),ConnectionClosed (8),KeepAliveFailure (12),MessageLengthLimitExceeded (17),NameResolutionFailure (1),Pending (13),PipelineFailure (5),ProtocolError (7),ProxyNameResolutionFailure (15),ReceiveFailure (3),RequestCanceled (6),RequestProhibitedByCachePolicy (19),RequestProhibitedByProxy (20),SecureChannelFailure (10),SendFailure (4),ServerProtocolViolation (11),Success (0),Timeout (14),TrustFailure (9),UnknownError (16)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebExceptionStatus()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -1,4 +1,4 @@
-class DllNotFoundException:
+class DllNotFoundException(TypeLoadException):
  """
  The exception that is thrown when a DLL specified in a DLL import cannot be found.
  
@@ -6,6 +6,11 @@ class DllNotFoundException:
  DllNotFoundException(message: str)
  DllNotFoundException(message: str,inner: Exception)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DllNotFoundException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass

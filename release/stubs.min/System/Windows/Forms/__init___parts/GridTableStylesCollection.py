@@ -1,5 +1,9 @@
-class GridTableStylesCollection:
+class GridTableStylesCollection(BaseCollection,ICollection,IEnumerable,IList):
  """ Represents a collection of System.Windows.Forms.DataGridTableStyle objects in the System.Windows.Forms.DataGrid control. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return GridTableStylesCollection()
+
  def Add(self,table):
   """
   Add(self: GridTableStylesCollection,table: DataGridTableStyle) -> int
@@ -28,21 +32,15 @@ class GridTableStylesCollection:
   """
   Contains(self: GridTableStylesCollection,table: DataGridTableStyle) -> bool
   
-   Gets a value indicating whether the System.Windows.Forms.GridTableStylesCollection 
-    contains the specified System.Windows.Forms.DataGridTableStyle.
-  
+   Gets a value indicating whether the System.Windows.Forms.GridTableStylesCollection contains the specified System.Windows.Forms.DataGridTableStyle.
   
    table: The System.Windows.Forms.DataGridTableStyle to look for.
    Returns: true if the specified table style exists in the collection; otherwise,false.
   Contains(self: GridTableStylesCollection,name: str) -> bool
   
-   Gets a value indicating whether the System.Windows.Forms.GridTableStylesCollection 
-    contains the System.Windows.Forms.DataGridTableStyle specified by name.
+   Gets a value indicating whether the System.Windows.Forms.GridTableStylesCollection contains the System.Windows.Forms.DataGridTableStyle specified by name.
   
-  
-   name: The System.Windows.Forms.DataGridTableStyle.MappingName of the 
-    System.Windows.Forms.DataGridTableStyle to look for.
-  
+   name: The System.Windows.Forms.DataGridTableStyle.MappingName of the System.Windows.Forms.DataGridTableStyle to look for.
    Returns: true if the specified table style exists in the collection; otherwise,false.
   """
   pass
@@ -52,12 +50,7 @@ class GridTableStylesCollection:
   
    Creates a shallow copy of the current System.MarshalByRefObject object.
   
-   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause 
-    the object to be assigned a new identity when it is marshaled across a remoting boundary. 
-    A value of false is usually appropriate. true to copy the current 
-    System.MarshalByRefObject object's identity to its clone,which will cause remoting 
-    client calls to be routed to the remote server object.
-  
+   cloneIdentity: false to delete the current System.MarshalByRefObject object's identity,which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone,which will cause remoting client calls to be routed to the remote server object.
    Returns: A shallow copy of the current System.MarshalByRefObject object.
   MemberwiseClone(self: object) -> object
   

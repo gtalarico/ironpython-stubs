@@ -4,6 +4,11 @@ class UriFormat:
  
  enum UriFormat,values: SafeUnescaped (3),Unescaped (2),UriEscaped (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UriFormat()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

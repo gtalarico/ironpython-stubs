@@ -1,9 +1,13 @@
-class ToolStripArrowRenderEventArgs:
+class ToolStripArrowRenderEventArgs(EventArgs):
  """
  Provides data for the System.Windows.Forms.ToolStripRenderer.RenderArrow event.
  
  ToolStripArrowRenderEventArgs(g: Graphics,toolStripItem: ToolStripItem,arrowRectangle: Rectangle,arrowColor: Color,arrowDirection: ArrowDirection)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripArrowRenderEventArgs()
+
  def __getitem__(self,*args):
   """ x.__getitem__(y) <==> x[y] """
   pass

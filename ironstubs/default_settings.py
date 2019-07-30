@@ -2,13 +2,13 @@ import os
 
 PATHS = [
     # | Local Binaries
-  'C:\\dev\\Trancon.WmsPro\\Source\\Wms.WarehouseServerConsole\\Source\\bin\\Debug'
+  'C:\Program Files (x86)\TranCon\BOXwisePro\Server'
     ]
 
 ASSEMBLIES = [
     # | BOXwise
-	 'Wms.RemotingImplementation',
-	'Wms.RemotingObjects',
+	'Wms.RemotingImplementation',
+    'Wms.RemotingObjects',
 	'Wms.RemotingInterface',
 	'Wms.SharedInfra',
 	'Wms.EdiMessaging',
@@ -17,6 +17,7 @@ ASSEMBLIES = [
     'System',
     #'System.Drawing',
     #'System.Windows.Forms',
+
     ]
 
 BUILTINS = [

@@ -1,9 +1,14 @@
-class PerformanceCounterPermissionEntry:
+class PerformanceCounterPermissionEntry(object):
  """
  Defines the smallest unit of a code access security permission that is set for a System.Diagnostics.PerformanceCounter.
  
  PerformanceCounterPermissionEntry(permissionAccess: PerformanceCounterPermissionAccess,machineName: str,categoryName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PerformanceCounterPermissionEntry()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,permissionAccess,machineName,categoryName):
   """ __new__(cls: type,permissionAccess: PerformanceCounterPermissionAccess,machineName: str,categoryName: str) """
