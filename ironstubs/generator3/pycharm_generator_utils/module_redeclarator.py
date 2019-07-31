@@ -667,7 +667,7 @@ class ModuleRedeclarator(object):
                         out(indent, local_import)
 
         regex1 = "([\[]).*?([\]]+)"
-        regex2 = "(\\bI|_).*?((?:\,)|(?:\)))|\\bEnum,?|\\bAttribute,?|\\bCachable,?"
+        regex2 = "(\\bI|_).*?((?:\,)|(?:\)))|\\bEnum,?|\\bAttribute,?|\\bTemplateBase,?|\\bMarshalled\\w*,?|\\bobject,?"   #deleting templatebase:razor
         filtered = re.sub(regex1, "", base_def)
         filtered = re.sub(regex2, "", filtered)
         filtered = filtered.replace(" ","")
@@ -1100,6 +1100,8 @@ class ModuleRedeclarator(object):
                 if ('init' in self.outfile):
                     #self.imports_buf.out(0, "from Stubs.Wms.Generic import *") #TODO (only for wms)import standard things like system collection and init #fix/TODO kevin
                     self.imports_buf.out(0, "from System.Collections.Generic import *")
+                    self.imports_buf.out(0, "from System.ComponentModel import *")
+                    self.imports_buf.out(0, "from System import *")
                     self.imports_buf.out(0, "from ..__init__ import *")
                 else:
                     self.imports_buf.out(0, "from __init__ import *")
