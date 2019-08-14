@@ -1,0 +1,19 @@
+{
+    "assemblylist": [
+        "BosRestClient", 
+        "BosRestClient.Model", 
+        "EmitMapper"
+    ]
+}
+
+
+
+Outbound.PickInBatch(batchnumbers,quantity,deliverer) -> Outbound.PickInBatch(pickargs)
+
+
+
+public abstract class pickargs{
+    batchnumbers 
+    quantity
+    deliverer
+}

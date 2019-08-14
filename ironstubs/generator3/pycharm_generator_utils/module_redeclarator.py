@@ -4,6 +4,10 @@ from util_methods import *
 from constants import *
 import re
 import os
+import json
+
+
+data = {}
 
 class emptylistdict(dict):
     """defaultdict not available before 2.5; simplest reimplementation using [] as default"""
@@ -665,7 +669,7 @@ class ModuleRedeclarator(object):
                     local_import = self.create_local_import(base)
                     if local_import:
                         out(indent, local_import)
-
+        
         regex1 = "([\[]).*?([\]]+)"
         regex2 = "(\\bI|_).*?((?:\,)|(?:\)))|\\bEnum,?|\\bAttribute,?|\\bTemplateBase,?|\\bMarshalled\\w*,?|\\bobject,?"   #deleting templatebase:razor
         filtered = re.sub(regex1, "", base_def)
@@ -676,18 +680,19 @@ class ModuleRedeclarator(object):
         if filtered.endswith('('):
             filtered = filtered[:-1]
         
-
+        data[p_name] = p_modname
+        print "name = "+p_name
+        print "module = "+p_modname
         out(indent, "class ", p_name, filtered , ":",          #re.sub(regex, "", base_def)    #fix kevin ana 3/inherited classes showed up in constructor/base def replaced with ""
             skipped_bases and " # skipped bases: " + ", ".join(skipped_bases) or "")  # we dont do anything with python objects so why bother 
         out_doc_attr(out, p_class, indent + 1)
-        # inner parts
-        # out(indent+1, "Instance = ",p_name)
-        # out(indent+1, '"""hardcoded/returns an instance of the class"""')      #fix kevin ana added instance to every class #quickfix since instance doesn't get recognized
-        out(indent+1, "def ZZZ(self):")
-        out(indent+2, '"""hardcoded/mock instance of the class"""')
-        out(indent+2, "return ",p_name,"()")
-        out(indent+1, "instance = ZZZ()")
-        out(indent+1, '"""hardcoded/returns an instance of the class"""')    #fix for linter
+        out(indent+1, "Instance = ",p_name)
+        out(indent+1, '"""hardcoded/returns an instance of the class"""')      #fix kevin ana added instance to every class #quickfix since instance doesn't get recognized
+        # out(indent+1, "def ZZZ(self):")
+        # out(indent+2, '"""hardcoded/mock instance of the class"""')
+        # out(indent+2, "return ",p_name,"()")
+        # out(indent+1, "instance = ZZZ()")
+        # out(indent+1, '"""hardcoded/returns an instance of the class"""')    #fix for linter
         methods = {}
         properties = {}
         others = {}
@@ -1091,21 +1096,10 @@ class ModuleRedeclarator(object):
                 # imports: last, because previous parts could alter used_imports or hidden_imports
         self.output_import_froms()
         if self.imports_buf.isEmpty():
-
             self.imports_buf.out(0, "# no imports")
-            # self.imports_buf.out(0, "2",self.mod_filename)
-            # self.imports_buf.out(0, "3",self.outfile)
-            # self.imports_buf.out(0, 'yes' if 'Wms\\'in self.outfile else 'no')
-            if('Wms\\'in self.outfile):
-                if ('init' in self.outfile):
-                    #self.imports_buf.out(0, "from Stubs.Wms.Generic import *") #TODO (only for wms)import standard things like system collection and init #fix/TODO kevin
-                    self.imports_buf.out(0, "from System.Collections.Generic import *")
-                    self.imports_buf.out(0, "from System.ComponentModel import *")
-                    self.imports_buf.out(0, "from System import *")
-                    self.imports_buf.out(0, "from ..__init__ import *")
-                else:
-                    self.imports_buf.out(0, "from __init__ import *")
         self.imports_buf.out(0, "") # empty line after imports
+        with open('classlist.json', 'w') as outfile:
+            json.dump(data, outfile,indent=4)
 
     def output_import_froms(self):
         """Mention all imported names known within the module, wrapping as per PEP."""
