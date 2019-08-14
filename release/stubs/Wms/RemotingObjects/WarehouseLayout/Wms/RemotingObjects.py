@@ -11,10 +11,7 @@ from Wms.RemotingObjects import *
 
 class WarehouseLayoutSetting(DbObject):
     """ WarehouseLayoutSetting() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WarehouseLayoutSetting()
-    instance = ZZZ()
+    Instance = WarehouseLayoutSetting
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

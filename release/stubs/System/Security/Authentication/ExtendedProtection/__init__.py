@@ -10,10 +10,7 @@
 
 class ChannelBinding(SafeHandleZeroOrMinusOneIsInvalid):
     """ The System.Security.Authentication.ExtendedProtection.ChannelBinding class encapsulates a pointer to the opaque data used to bind an authenticated transaction to a secure channel. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ChannelBinding()
-    instance = ZZZ()
+    Instance = ChannelBinding
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -80,10 +77,7 @@ class ChannelBindingKind:
     
     enum ChannelBindingKind, values: Endpoint (26), Unique (25), Unknown (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ChannelBindingKind()
-    instance = ZZZ()
+    Instance = ChannelBindingKind
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -133,10 +127,7 @@ class ExtendedProtectionPolicy:
     ExtendedProtectionPolicy(policyEnforcement: PolicyEnforcement, customChannelBinding: ChannelBinding)
     ExtendedProtectionPolicy(policyEnforcement: PolicyEnforcement)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExtendedProtectionPolicy()
-    instance = ZZZ()
+    Instance = ExtendedProtectionPolicy
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
@@ -210,10 +201,7 @@ class ExtendedProtectionPolicyTypeConverter(TypeConverter):
     
     ExtendedProtectionPolicyTypeConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExtendedProtectionPolicyTypeConverter()
-    instance = ZZZ()
+    Instance = ExtendedProtectionPolicyTypeConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertTo(self, *__args):
         """
@@ -248,10 +236,7 @@ class PolicyEnforcement:
     
     enum PolicyEnforcement, values: Always (2), Never (0), WhenSupported (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PolicyEnforcement()
-    instance = ZZZ()
+    Instance = PolicyEnforcement
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -298,10 +283,7 @@ class ProtectionScenario:
     
     enum ProtectionScenario, values: TransportSelected (0), TrustedProxy (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProtectionScenario()
-    instance = ZZZ()
+    Instance = ProtectionScenario
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -347,10 +329,7 @@ class ServiceNameCollection(ReadOnlyCollectionBase):
     
     ServiceNameCollection(items: ICollection)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ServiceNameCollection()
-    instance = ZZZ()
+    Instance = ServiceNameCollection
     """hardcoded/returns an instance of the class"""
     def Contains(self, searchServiceName):
         """ Contains(self: ServiceNameCollection, searchServiceName: str) -> bool """
@@ -405,10 +384,7 @@ class ServiceNameCollection(ReadOnlyCollectionBase):
 
 class TokenBinding():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TokenBinding()
-    instance = ZZZ()
+    Instance = TokenBinding
     """hardcoded/returns an instance of the class"""
     def GetRawTokenBindingId(self):
         """ GetRawTokenBindingId(self: TokenBinding) -> Array[Byte] """
@@ -423,10 +399,7 @@ class TokenBinding():
 
 class TokenBindingType:
     """ enum TokenBindingType, values: Provided (0), Referred (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TokenBindingType()
-    instance = ZZZ()
+    Instance = TokenBindingType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

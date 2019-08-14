@@ -10,10 +10,7 @@
 
 class MessageQueueProxyExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessageQueueProxyExtensions()
-    instance = ZZZ()
+    Instance = MessageQueueProxyExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def ToMessagingMessage(proxy):

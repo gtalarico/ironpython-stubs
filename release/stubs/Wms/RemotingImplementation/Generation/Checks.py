@@ -10,10 +10,7 @@
 
 class BatchNumbercheck:
     """ BatchNumbercheck() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchNumbercheck()
-    instance = ZZZ()
+    Instance = BatchNumbercheck
     """hardcoded/returns an instance of the class"""
     def IsNumberUsed(self, args):
         """ IsNumberUsed(self: BatchNumbercheck, args: UsedNumberArgs) -> bool """
@@ -30,10 +27,7 @@ class BatchNumbercheck:
 
 class DatabaseNumberCheck:
     """ DatabaseNumberCheck() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DatabaseNumberCheck()
-    instance = ZZZ()
+    Instance = DatabaseNumberCheck
     """hardcoded/returns an instance of the class"""
     def IsNumberUsed(self, args):
         """ IsNumberUsed(self: DatabaseNumberCheck, args: UsedNumberArgs) -> bool """
@@ -50,10 +44,7 @@ class DatabaseNumberCheck:
 
 class INumberCheck:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INumberCheck()
-    instance = ZZZ()
+    Instance = INumberCheck
     """hardcoded/returns an instance of the class"""
     def IsNumberUsed(self, args):
         """ IsNumberUsed(self: INumberCheck, args: UsedNumberArgs) -> bool """
@@ -66,10 +57,7 @@ class INumberCheck:
 
 class NumberCheckFactory():
     """ NumberCheckFactory() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NumberCheckFactory()
-    instance = ZZZ()
+    Instance = NumberCheckFactory
     """hardcoded/returns an instance of the class"""
     def IsNumberUsed(self, args):
         """ IsNumberUsed(self: NumberCheckFactory, args: UsedNumberArgs) -> bool """
@@ -78,10 +66,7 @@ class NumberCheckFactory():
 
 class TransportPackageNumberCheck:
     """ TransportPackageNumberCheck() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TransportPackageNumberCheck()
-    instance = ZZZ()
+    Instance = TransportPackageNumberCheck
     """hardcoded/returns an instance of the class"""
     def IsNumberUsed(self, args):
         """ IsNumberUsed(self: TransportPackageNumberCheck, args: UsedNumberArgs) -> bool """

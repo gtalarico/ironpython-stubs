@@ -11,10 +11,7 @@ from Wms.RemotingObjects import *
 
 class AddPrintJob():
     """ AddPrintJob() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AddPrintJob()
-    instance = ZZZ()
+    Instance = AddPrintJob
     """hardcoded/returns an instance of the class"""
     Attributes = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Extra attributes to store on the print message,
@@ -89,10 +86,7 @@ class Attachment():
     
     Attachment()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Attachment()
-    instance = ZZZ()
+    Instance = Attachment
     """hardcoded/returns an instance of the class"""
     Document = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Raw bytes to be printed.
@@ -141,10 +135,7 @@ Set: Metadata(self: Attachment) = value
 
 class AttributeValue():
     """ AttributeValue() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AttributeValue()
-    instance = ZZZ()
+    Instance = AttributeValue
     """hardcoded/returns an instance of the class"""
     Code = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Code(self: AttributeValue) -> str
@@ -165,10 +156,7 @@ class DocumentDescriptor():
     DocumentDescriptor()
     DocumentDescriptor(code: str, description: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DocumentDescriptor()
-    instance = ZZZ()
+    Instance = DocumentDescriptor
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, code=None, description=None):
@@ -198,10 +186,7 @@ Set: Description(self: DocumentDescriptor) = value
 
 class GetPrinterRulesArgs():
     """ GetPrinterRulesArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetPrinterRulesArgs()
-    instance = ZZZ()
+    Instance = GetPrinterRulesArgs
     """hardcoded/returns an instance of the class"""
     FileTypes = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: FileTypes(self: GetPrinterRulesArgs) -> Array[str]
@@ -231,10 +216,7 @@ Set: JobTypes(self: GetPrinterRulesArgs) = value
 
 class GetPrintJobAttributesArgs():
     """ GetPrintJobAttributesArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetPrintJobAttributesArgs()
-    instance = ZZZ()
+    Instance = GetPrintJobAttributesArgs
     """hardcoded/returns an instance of the class"""
     DefaultAttributesOnly = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Indicates if only the default set of attributes should be retrieved
@@ -254,10 +236,7 @@ Set: JobType(self: GetPrintJobAttributesArgs) = value
 
 class GetPrintJobAuditLogArgs():
     """ GetPrintJobAuditLogArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetPrintJobAuditLogArgs()
-    instance = ZZZ()
+    Instance = GetPrintJobAuditLogArgs
     """hardcoded/returns an instance of the class"""
     JobId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: JobId(self: GetPrintJobAuditLogArgs) -> int
@@ -275,10 +254,7 @@ Set: PagingParams(self: GetPrintJobAuditLogArgs) = value
 
 class GetPrintJobsArgs():
     """ GetPrintJobsArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetPrintJobsArgs()
-    instance = ZZZ()
+    Instance = GetPrintJobsArgs
     """hardcoded/returns an instance of the class"""
     Filter = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Filter(self: GetPrintJobsArgs) -> str
@@ -305,10 +281,7 @@ class IAddPrintJob:
     Interface abstraction for adding print jobs.
                 Needed for projects who can't directly use RemotingImplementation
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IAddPrintJob()
-    instance = ZZZ()
+    Instance = IAddPrintJob
     """hardcoded/returns an instance of the class"""
     def AddPrintJob(self, printjob):
         """
@@ -329,10 +302,7 @@ class Operator():
     Operator()
     Operator(code: str, description: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Operator()
-    instance = ZZZ()
+    Instance = Operator
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, code=None, description=None):
@@ -362,10 +332,7 @@ class PrintJobAttribute():
     PrintJobAttribute(code: str)
     PrintJobAttribute(code: str, description: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobAttribute()
-    instance = ZZZ()
+    Instance = PrintJobAttribute
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, code=None, description=None):
@@ -392,10 +359,7 @@ Set: Description(self: PrintJobAttribute) = value
 
 class PrintJobAuditLogEntry(DbObject):
     """ PrintJobAuditLogEntry() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobAuditLogEntry()
-    instance = ZZZ()
+    Instance = PrintJobAuditLogEntry
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -438,10 +402,7 @@ Set: StatusChangedOn(self: PrintJobAuditLogEntry) = value
 
 class PrintJobConstants():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobConstants()
-    instance = ZZZ()
+    Instance = PrintJobConstants
     """hardcoded/returns an instance of the class"""
     QueueFromAgentResolverKey = 'BwPrintJobsReturn'
     QueueToAgentResolverKey = 'BwPrintJobs'
@@ -453,10 +414,7 @@ class PrintJobConstants():
 
 class PrintJobStatus:
     """ enum PrintJobStatus, values: Dispatched (18), Enqueued (10), Handled (20), HandledWithErrors (30), Handling (15), New (0), ReSubmitted (40), Unknown (50) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobStatus()
-    instance = ZZZ()
+    Instance = PrintJobStatus
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -507,10 +465,7 @@ class PrintJobType():
     PrintJobType()
     PrintJobType(id: str, description: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobType()
-    instance = ZZZ()
+    Instance = PrintJobType
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, id=None, description=None):
@@ -536,10 +491,7 @@ Set: Id(self: PrintJobType) = value
 
 class PrintRule(DbObject):
     """ PrintRule() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintRule()
-    instance = ZZZ()
+    Instance = PrintRule
     """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """
@@ -673,10 +625,7 @@ class PrintRuleLine(DbObject):
     PrintRuleLine(field: str, operator: str, value: str)
     PrintRuleLine(field: str, operator: str, values: IEnumerable[str])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintRuleLine()
-    instance = ZZZ()
+    Instance = PrintRuleLine
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -727,10 +676,7 @@ Set: Values(self: PrintRuleLine) = value
 
 class QueuedPrintJob(DbObject):
     """ QueuedPrintJob() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return QueuedPrintJob()
-    instance = ZZZ()
+    Instance = QueuedPrintJob
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -870,10 +816,7 @@ Set: ZoneId(self: QueuedPrintJob) = value
 
 class RedispatchPrintJobArgs():
     """ RedispatchPrintJobArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RedispatchPrintJobArgs()
-    instance = ZZZ()
+    Instance = RedispatchPrintJobArgs
     """hardcoded/returns an instance of the class"""
     JobIds = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: JobIds(self: RedispatchPrintJobArgs) -> Array[Guid]

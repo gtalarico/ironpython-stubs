@@ -11,10 +11,7 @@ from Wms.EdiMessaging import *
 
 class CheckLpIntegrity_StockOnLocationChangedMessageHandler(MessageHandlerBase):
     """ CheckLpIntegrity_StockOnLocationChangedMessageHandler() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CheckLpIntegrity_StockOnLocationChangedMessageHandler()
-    instance = ZZZ()
+    Instance = CheckLpIntegrity_StockOnLocationChangedMessageHandler
     """hardcoded/returns an instance of the class"""
     def CanHandle(self, message):
         """ CanHandle(self: CheckLpIntegrity_StockOnLocationChangedMessageHandler, message: IMessage) -> bool """
@@ -31,10 +28,7 @@ class CheckLpIntegrity_StockOnLocationChangedMessageHandler(MessageHandlerBase):
 
 class ProcessDirectOrderMessageHandler(MessageHandlerBase):
     """ ProcessDirectOrderMessageHandler(messaging: IMessaging, directOrderLogger: DirectOrderLogger) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessDirectOrderMessageHandler()
-    instance = ZZZ()
+    Instance = ProcessDirectOrderMessageHandler
     """hardcoded/returns an instance of the class"""
     def CanHandle(self, message):
         """ CanHandle(self: ProcessDirectOrderMessageHandler, message: IMessage) -> bool """
@@ -56,10 +50,7 @@ class ProcessDirectOrderMessageHandler(MessageHandlerBase):
 
 class ProcessPreReceiptMessageHandler(MessageHandlerBase):
     """ ProcessPreReceiptMessageHandler() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessPreReceiptMessageHandler()
-    instance = ZZZ()
+    Instance = ProcessPreReceiptMessageHandler
     """hardcoded/returns an instance of the class"""
     def CanHandle(self, message):
         """ CanHandle(self: ProcessPreReceiptMessageHandler, message: IMessage) -> bool """
@@ -76,10 +67,7 @@ class ProcessPreReceiptMessageHandler(MessageHandlerBase):
 
 class ProcessSalesOrderMessageHandler(MessageHandlerBase):
     """ ProcessSalesOrderMessageHandler(outbound: Outbound, stockManager: IStockManager) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessSalesOrderMessageHandler()
-    instance = ZZZ()
+    Instance = ProcessSalesOrderMessageHandler
     """hardcoded/returns an instance of the class"""
     def CanHandle(self, message):
         """ CanHandle(self: ProcessSalesOrderMessageHandler, message: IMessage) -> bool """

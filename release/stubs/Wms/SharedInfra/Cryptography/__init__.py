@@ -10,10 +10,7 @@
 
 class IUniqueHashCodeProvider:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IUniqueHashCodeProvider()
-    instance = ZZZ()
+    Instance = IUniqueHashCodeProvider
     """hardcoded/returns an instance of the class"""
     def CalculateHash(self, param):
         """ CalculateHash(self: IUniqueHashCodeProvider, *param: Array[object]) -> str """
@@ -26,10 +23,7 @@ class IUniqueHashCodeProvider:
 
 class SHA256Base64ShortUniqueHashCodeProvider:
     """ SHA256Base64ShortUniqueHashCodeProvider() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SHA256Base64ShortUniqueHashCodeProvider()
-    instance = ZZZ()
+    Instance = SHA256Base64ShortUniqueHashCodeProvider
     """hardcoded/returns an instance of the class"""
     def CalculateHash(self, param):
         """ CalculateHash(self: SHA256Base64ShortUniqueHashCodeProvider, *param: Array[object]) -> str """
@@ -46,10 +40,7 @@ class SHA256Base64ShortUniqueHashCodeProvider:
 
 class SHA256CngUniqueHashCodeProvider:
     """ SHA256CngUniqueHashCodeProvider() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SHA256CngUniqueHashCodeProvider()
-    instance = ZZZ()
+    Instance = SHA256CngUniqueHashCodeProvider
     """hardcoded/returns an instance of the class"""
     def CalculateHash(self, param):
         """ CalculateHash(self: SHA256CngUniqueHashCodeProvider, *param: Array[object]) -> str """

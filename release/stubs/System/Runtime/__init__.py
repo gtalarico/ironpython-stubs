@@ -14,10 +14,7 @@ class AssemblyTargetedPatchBandAttribute:
     
     AssemblyTargetedPatchBandAttribute(targetedPatchBand: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AssemblyTargetedPatchBandAttribute()
-    instance = ZZZ()
+    Instance = AssemblyTargetedPatchBandAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -39,10 +36,7 @@ Get: TargetedPatchBand(self: AssemblyTargetedPatchBandAttribute) -> str
 
 class GCLargeObjectHeapCompactionMode:
     """ enum GCLargeObjectHeapCompactionMode, values: CompactOnce (2), Default (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GCLargeObjectHeapCompactionMode()
-    instance = ZZZ()
+    Instance = GCLargeObjectHeapCompactionMode
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -88,10 +82,7 @@ class GCLatencyMode:
     
     enum GCLatencyMode, values: Batch (0), Interactive (1), LowLatency (2), NoGCRegion (4), SustainedLowLatency (3)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GCLatencyMode()
-    instance = ZZZ()
+    Instance = GCLatencyMode
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -136,10 +127,7 @@ class GCLatencyMode:
 
 class GCSettings():
     """ Specifies the garbage collection settings for the current process. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GCSettings()
-    instance = ZZZ()
+    Instance = GCSettings
     """hardcoded/returns an instance of the class"""
     IsServerGC = False
     LargeObjectHeapCompactionMode = None
@@ -153,10 +141,7 @@ class MemoryFailPoint(CriticalFinalizerObject):
     
     MemoryFailPoint(sizeInMegabytes: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MemoryFailPoint()
-    instance = ZZZ()
+    Instance = MemoryFailPoint
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -185,10 +170,7 @@ class MemoryFailPoint(CriticalFinalizerObject):
 
 class ProfileOptimization():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProfileOptimization()
-    instance = ZZZ()
+    Instance = ProfileOptimization
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def SetProfileRoot(directoryPath):
@@ -212,10 +194,7 @@ class TargetedPatchingOptOutAttribute:
     
     TargetedPatchingOptOutAttribute(reason: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TargetedPatchingOptOutAttribute()
-    instance = ZZZ()
+    Instance = TargetedPatchingOptOutAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

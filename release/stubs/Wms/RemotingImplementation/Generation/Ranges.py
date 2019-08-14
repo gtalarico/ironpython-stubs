@@ -10,10 +10,7 @@
 
 class BaseRange():
     """ BaseRange(numberGeneration: INumberGeneration) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BaseRange()
-    instance = ZZZ()
+    Instance = BaseRange
     """hardcoded/returns an instance of the class"""
     def AddGenerationArgs(self, *args): #cannot find CLR method
         """ AddGenerationArgs[T](self: BaseRange, dfObject: DataFlowObject[T], numberRange: NumberRange, numbersToGenerate: int) """
@@ -66,10 +63,7 @@ class BaseRange():
 
 class NumberRangeFactory():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NumberRangeFactory()
-    instance = ZZZ()
+    Instance = NumberRangeFactory
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetRange(rangeType):
@@ -83,10 +77,7 @@ class NumberRangeFactory():
 
 class SSCCRange(BaseRange):
     """ SSCCRange(numberGeneration: INumberGeneration) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCRange()
-    instance = ZZZ()
+    Instance = SSCCRange
     """hardcoded/returns an instance of the class"""
     def ResetRange(self, dfObject, manualReset):
         """ ResetRange(self: SSCCRange, dfObject: DataFlowObject[NumberRange], manualReset: bool) -> DataFlowObject[NumberRange] """

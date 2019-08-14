@@ -16,10 +16,7 @@ class BinaryReader:
     BinaryReader(input: Stream, encoding: Encoding)
     BinaryReader(input: Stream, encoding: Encoding, leaveOpen: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BinaryReader()
-    instance = ZZZ()
+    Instance = BinaryReader
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -286,10 +283,7 @@ class BinaryWriter:
     BinaryWriter(output: Stream, encoding: Encoding)
     BinaryWriter(output: Stream, encoding: Encoding, leaveOpen: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BinaryWriter()
-    instance = ZZZ()
+    Instance = BinaryWriter
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -465,10 +459,7 @@ Get: BaseStream(self: BinaryWriter) -> Stream
 
 class Stream(MarshalByRefObject):
     """ Provides a generic view of a sequence of bytes. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Stream()
-    instance = ZZZ()
+    Instance = Stream
     """hardcoded/returns an instance of the class"""
     def BeginRead(self, buffer, offset, count, callback, state):
         """
@@ -779,10 +770,7 @@ class BufferedStream(Stream):
     BufferedStream(stream: Stream)
     BufferedStream(stream: Stream, bufferSize: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BufferedStream()
-    instance = ZZZ()
+    Instance = BufferedStream
     """hardcoded/returns an instance of the class"""
     def BeginRead(self, buffer, offset, count, callback, state):
         """ BeginRead(self: BufferedStream, buffer: Array[Byte], offset: int, count: int, callback: AsyncCallback, state: object) -> IAsyncResult """
@@ -980,10 +968,7 @@ Set: Position(self: BufferedStream) = value
 
 class Directory():
     """ Exposes static methods for creating, moving, and enumerating through directories and subdirectories. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Directory()
-    instance = ZZZ()
+    Instance = Directory
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateDirectory(path, directorySecurity=None):
@@ -1481,10 +1466,7 @@ class Directory():
 
 class FileSystemInfo(MarshalByRefObject):
     """ Provides the base class for both System.IO.FileInfo and System.IO.DirectoryInfo objects. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileSystemInfo()
-    instance = ZZZ()
+    Instance = FileSystemInfo
     """hardcoded/returns an instance of the class"""
     def Delete(self):
         """
@@ -1638,10 +1620,7 @@ class DirectoryInfo(FileSystemInfo):
     
     DirectoryInfo(path: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DirectoryInfo()
-    instance = ZZZ()
+    Instance = DirectoryInfo
     """hardcoded/returns an instance of the class"""
     def Create(self, directorySecurity=None):
         """
@@ -1958,10 +1937,7 @@ class IOException(SystemException):
     IOException(message: str, hresult: int)
     IOException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IOException()
-    instance = ZZZ()
+    Instance = IOException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1995,10 +1971,7 @@ class DirectoryNotFoundException:
     DirectoryNotFoundException(message: str)
     DirectoryNotFoundException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DirectoryNotFoundException()
-    instance = ZZZ()
+    Instance = DirectoryNotFoundException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2029,10 +2002,7 @@ class DriveInfo:
     
     DriveInfo(driveName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DriveInfo()
-    instance = ZZZ()
+    Instance = DriveInfo
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetDrives():
@@ -2146,10 +2116,7 @@ class DriveNotFoundException:
     DriveNotFoundException(message: str)
     DriveNotFoundException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DriveNotFoundException()
-    instance = ZZZ()
+    Instance = DriveNotFoundException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2180,10 +2147,7 @@ class DriveType:
     
     enum DriveType, values: CDRom (5), Fixed (3), Network (4), NoRootDirectory (1), Ram (6), Removable (2), Unknown (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DriveType()
-    instance = ZZZ()
+    Instance = DriveType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2236,10 +2200,7 @@ class EndOfStreamException:
     EndOfStreamException(message: str)
     EndOfStreamException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EndOfStreamException()
-    instance = ZZZ()
+    Instance = EndOfStreamException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2270,10 +2231,7 @@ class ErrorEventArgs(EventArgs):
     
     ErrorEventArgs(exception: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ErrorEventArgs()
-    instance = ZZZ()
+    Instance = ErrorEventArgs
     """hardcoded/returns an instance of the class"""
     def GetException(self):
         """
@@ -2296,10 +2254,7 @@ class ErrorEventHandler(MulticastDelegate):
     
     ErrorEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ErrorEventHandler()
-    instance = ZZZ()
+    Instance = ErrorEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: ErrorEventHandler, sender: object, e: ErrorEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -2373,10 +2328,7 @@ class ErrorEventHandler(MulticastDelegate):
 
 class File():
     """ Provides static methods for the creation, copying, deletion, moving, and opening of files, and aids in the creation of System.IO.FileStream objects. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return File()
-    instance = ZZZ()
+    Instance = File
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def AppendAllLines(path, contents, encoding=None):
@@ -2976,10 +2928,7 @@ class FileAccess:
     
     enum (flags) FileAccess, values: Read (1), ReadWrite (3), Write (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileAccess()
-    instance = ZZZ()
+    Instance = FileAccess
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3026,10 +2975,7 @@ class FileAttributes:
     
     enum (flags) FileAttributes, values: Archive (32), Compressed (2048), Device (64), Directory (16), Encrypted (16384), Hidden (2), IntegrityStream (32768), Normal (128), NoScrubData (131072), NotContentIndexed (8192), Offline (4096), ReadOnly (1), ReparsePoint (1024), SparseFile (512), System (4), Temporary (256)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileAttributes()
-    instance = ZZZ()
+    Instance = FileAttributes
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3089,10 +3035,7 @@ class FileInfo(FileSystemInfo):
     
     FileInfo(fileName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileInfo()
-    instance = ZZZ()
+    Instance = FileInfo
     """hardcoded/returns an instance of the class"""
     def AppendText(self):
         """
@@ -3374,10 +3317,7 @@ class FileLoadException:
     FileLoadException(message: str, fileName: str)
     FileLoadException(message: str, fileName: str, inner: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileLoadException()
-    instance = ZZZ()
+    Instance = FileLoadException
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
@@ -3452,10 +3392,7 @@ class FileMode:
     
     enum FileMode, values: Append (6), Create (2), CreateNew (1), Open (3), OpenOrCreate (4), Truncate (5)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileMode()
-    instance = ZZZ()
+    Instance = FileMode
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3509,10 +3446,7 @@ class FileNotFoundException:
     FileNotFoundException(message: str, fileName: str)
     FileNotFoundException(message: str, fileName: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileNotFoundException()
-    instance = ZZZ()
+    Instance = FileNotFoundException
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
@@ -3586,10 +3520,7 @@ class FileOptions:
     
     enum (flags) FileOptions, values: Asynchronous (1073741824), DeleteOnClose (67108864), Encrypted (16384), None (0), RandomAccess (268435456), SequentialScan (134217728), WriteThrough (-2147483648)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileOptions()
-    instance = ZZZ()
+    Instance = FileOptions
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3640,10 +3571,7 @@ class FileShare:
     
     enum (flags) FileShare, values: Delete (4), Inheritable (16), None (0), Read (1), ReadWrite (3), Write (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileShare()
-    instance = ZZZ()
+    Instance = FileShare
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3707,10 +3635,7 @@ class FileStream(Stream):
     FileStream(handle: SafeFileHandle, access: FileAccess, bufferSize: int)
     FileStream(handle: SafeFileHandle, access: FileAccess, bufferSize: int, isAsync: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileStream()
-    instance = ZZZ()
+    Instance = FileStream
     """hardcoded/returns an instance of the class"""
     def BeginRead(self, array, offset, numBytes, userCallback, stateObject):
         """
@@ -4037,10 +3962,7 @@ class FileSystemEventArgs(EventArgs):
     
     FileSystemEventArgs(changeType: WatcherChangeTypes, directory: str, name: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileSystemEventArgs()
-    instance = ZZZ()
+    Instance = FileSystemEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, changeType, directory, name):
@@ -4076,10 +3998,7 @@ class FileSystemEventHandler(MulticastDelegate):
     
     FileSystemEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileSystemEventHandler()
-    instance = ZZZ()
+    Instance = FileSystemEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: FileSystemEventHandler, sender: object, e: FileSystemEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -4159,10 +4078,7 @@ class FileSystemWatcher(Component):
     FileSystemWatcher(path: str)
     FileSystemWatcher(path: str, filter: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileSystemWatcher()
-    instance = ZZZ()
+    Instance = FileSystemWatcher
     """hardcoded/returns an instance of the class"""
     def BeginInit(self):
         """
@@ -4401,10 +4317,7 @@ class InternalBufferOverflowException(SystemException):
     InternalBufferOverflowException(message: str)
     InternalBufferOverflowException(message: str, inner: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InternalBufferOverflowException()
-    instance = ZZZ()
+    Instance = InternalBufferOverflowException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -4437,10 +4350,7 @@ class InvalidDataException(SystemException):
     InvalidDataException(message: str)
     InvalidDataException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InvalidDataException()
-    instance = ZZZ()
+    Instance = InvalidDataException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -4470,10 +4380,7 @@ class IODescriptionAttribute(DescriptionAttribute):
     
     IODescriptionAttribute(description: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IODescriptionAttribute()
-    instance = ZZZ()
+    Instance = IODescriptionAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -4510,10 +4417,7 @@ class MemoryStream(Stream):
     MemoryStream(buffer: Array[Byte], index: int, count: int, writable: bool)
     MemoryStream(buffer: Array[Byte], index: int, count: int, writable: bool, publiclyVisible: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MemoryStream()
-    instance = ZZZ()
+    Instance = MemoryStream
     """hardcoded/returns an instance of the class"""
     def CopyToAsync(self, destination, bufferSize=None, cancellationToken=None):
         """ CopyToAsync(self: MemoryStream, destination: Stream, bufferSize: int, cancellationToken: CancellationToken) -> Task """
@@ -4756,10 +4660,7 @@ class NotifyFilters:
     
     enum (flags) NotifyFilters, values: Attributes (4), CreationTime (64), DirectoryName (2), FileName (1), LastAccess (32), LastWrite (16), Security (256), Size (8)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NotifyFilters()
-    instance = ZZZ()
+    Instance = NotifyFilters
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4807,10 +4708,7 @@ class NotifyFilters:
 
 class Path():
     """ Performs operations on System.String instances that contain file or directory path information. These operations are performed in a cross-platform manner. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Path()
-    instance = ZZZ()
+    Instance = Path
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def ChangeExtension(path, extension):
@@ -5049,10 +4947,7 @@ class PathTooLongException:
     PathTooLongException(message: str)
     PathTooLongException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PathTooLongException()
-    instance = ZZZ()
+    Instance = PathTooLongException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -5083,10 +4978,7 @@ class RenamedEventArgs(FileSystemEventArgs):
     
     RenamedEventArgs(changeType: WatcherChangeTypes, directory: str, name: str, oldName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RenamedEventArgs()
-    instance = ZZZ()
+    Instance = RenamedEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, changeType, directory, name, oldName):
@@ -5115,10 +5007,7 @@ class RenamedEventHandler(MulticastDelegate):
     
     RenamedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RenamedEventHandler()
-    instance = ZZZ()
+    Instance = RenamedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: RenamedEventHandler, sender: object, e: RenamedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -5196,10 +5085,7 @@ class SearchOption:
     
     enum SearchOption, values: AllDirectories (1), TopDirectoryOnly (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SearchOption()
-    instance = ZZZ()
+    Instance = SearchOption
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -5245,10 +5131,7 @@ class SeekOrigin:
     
     enum SeekOrigin, values: Begin (0), Current (1), End (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SeekOrigin()
-    instance = ZZZ()
+    Instance = SeekOrigin
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -5291,10 +5174,7 @@ class SeekOrigin:
 
 class TextReader(MarshalByRefObject):
     """ Represents a reader that can read a sequential series of characters. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TextReader()
-    instance = ZZZ()
+    Instance = TextReader
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -5449,10 +5329,7 @@ class StreamReader(TextReader):
     StreamReader(path: str, encoding: Encoding, detectEncodingFromByteOrderMarks: bool)
     StreamReader(path: str, encoding: Encoding, detectEncodingFromByteOrderMarks: bool, bufferSize: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StreamReader()
-    instance = ZZZ()
+    Instance = StreamReader
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -5618,10 +5495,7 @@ Get: EndOfStream(self: StreamReader) -> bool
 
 class TextWriter(MarshalByRefObject):
     """ Represents a writer that can write a sequential series of characters. This class is abstract. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TextWriter()
-    instance = ZZZ()
+    Instance = TextWriter
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -5926,10 +5800,7 @@ class StreamWriter(TextWriter):
     StreamWriter(path: str, append: bool)
     StreamWriter(path: str, append: bool, encoding: Encoding, bufferSize: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StreamWriter()
-    instance = ZZZ()
+    Instance = StreamWriter
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -6078,10 +5949,7 @@ class StringReader(TextReader):
     
     StringReader(s: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StringReader()
-    instance = ZZZ()
+    Instance = StringReader
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -6207,10 +6075,7 @@ class StringWriter(TextWriter):
     StringWriter(sb: StringBuilder)
     StringWriter(sb: StringBuilder, formatProvider: IFormatProvider)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StringWriter()
-    instance = ZZZ()
+    Instance = StringWriter
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -6349,10 +6214,7 @@ class UnmanagedMemoryAccessor:
     UnmanagedMemoryAccessor(buffer: SafeBuffer, offset: Int64, capacity: Int64)
     UnmanagedMemoryAccessor(buffer: SafeBuffer, offset: Int64, capacity: Int64, access: FileAccess)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UnmanagedMemoryAccessor()
-    instance = ZZZ()
+    Instance = UnmanagedMemoryAccessor
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -6661,10 +6523,7 @@ class UnmanagedMemoryStream(Stream):
     UnmanagedMemoryStream(pointer: Byte*, length: Int64)
     UnmanagedMemoryStream(pointer: Byte*, length: Int64, capacity: Int64, access: FileAccess)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UnmanagedMemoryStream()
-    instance = ZZZ()
+    Instance = UnmanagedMemoryStream
     """hardcoded/returns an instance of the class"""
     def CreateWaitHandle(self, *args): #cannot find CLR method
         """
@@ -6888,10 +6747,7 @@ Set: PositionPointer(self: UnmanagedMemoryStream) = value
 
 class WaitForChangedResult():
     """ Contains information on the change that occurred. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WaitForChangedResult()
-    instance = ZZZ()
+    Instance = WaitForChangedResult
     """hardcoded/returns an instance of the class"""
     ChangeType = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the type of change that occurred.
@@ -6933,10 +6789,7 @@ class WatcherChangeTypes:
     
     enum (flags) WatcherChangeTypes, values: All (15), Changed (4), Created (1), Deleted (2), Renamed (8)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WatcherChangeTypes()
-    instance = ZZZ()
+    Instance = WatcherChangeTypes
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

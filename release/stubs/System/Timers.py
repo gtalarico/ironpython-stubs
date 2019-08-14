@@ -10,10 +10,7 @@
 
 class ElapsedEventArgs(EventArgs):
     """ Provides data for the System.Timers.Timer.Elapsed event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ElapsedEventArgs()
-    instance = ZZZ()
+    Instance = ElapsedEventArgs
     """hardcoded/returns an instance of the class"""
     SignalTime = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the time the System.Timers.Timer.Elapsed event was raised.
@@ -30,10 +27,7 @@ class ElapsedEventHandler(MulticastDelegate):
     
     ElapsedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ElapsedEventHandler()
-    instance = ZZZ()
+    Instance = ElapsedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: ElapsedEventHandler, sender: object, e: ElapsedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -112,10 +106,7 @@ class Timer(Component):
     Timer()
     Timer(interval: float)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Timer()
-    instance = ZZZ()
+    Instance = Timer
     """hardcoded/returns an instance of the class"""
     def BeginInit(self):
         """
@@ -279,10 +270,7 @@ class TimersDescriptionAttribute(DescriptionAttribute):
     
     TimersDescriptionAttribute(description: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TimersDescriptionAttribute()
-    instance = ZZZ()
+    Instance = TimersDescriptionAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

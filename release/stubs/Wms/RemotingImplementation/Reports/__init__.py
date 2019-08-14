@@ -10,10 +10,7 @@
 
 class IReportDataArgsProvider:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IReportDataArgsProvider()
-    instance = ZZZ()
+    Instance = IReportDataArgsProvider
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -28,10 +25,7 @@ class IReportDataArgsProvider:
 
 class IReportExportArgsProvider:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IReportExportArgsProvider()
-    instance = ZZZ()
+    Instance = IReportExportArgsProvider
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -46,10 +40,7 @@ class IReportExportArgsProvider:
 
 class IReportPrintArgsProvider:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IReportPrintArgsProvider()
-    instance = ZZZ()
+    Instance = IReportPrintArgsProvider
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -64,10 +55,7 @@ class IReportPrintArgsProvider:
 
 class IReportRenderer:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IReportRenderer()
-    instance = ZZZ()
+    Instance = IReportRenderer
     """hardcoded/returns an instance of the class"""
     def Export(self, *__args):
         """
@@ -87,10 +75,7 @@ class IReportRenderer:
 
 class ReportArgs():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReportArgs()
-    instance = ZZZ()
+    Instance = ReportArgs
     """hardcoded/returns an instance of the class"""
     ReportFile = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: ReportFile(self: ReportArgs) -> str
@@ -108,10 +93,7 @@ Set: ReportParameters(self: ReportArgs) = value
 
 class ReportDataArgs():
     """ ReportDataArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReportDataArgs()
-    instance = ZZZ()
+    Instance = ReportDataArgs
     """hardcoded/returns an instance of the class"""
     DataSources = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: DataSources(self: ReportDataArgs) -> Dictionary[str, object]
@@ -129,10 +111,7 @@ Set: MetaData(self: ReportDataArgs) = value
 
 class ReportExport():
     """ ReportExport() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReportExport()
-    instance = ZZZ()
+    Instance = ReportExport
     """hardcoded/returns an instance of the class"""
     Buffer = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Buffer(self: ReportExport) -> Array[Byte]
@@ -174,10 +153,7 @@ Set: NumberOfPages(self: ReportExport) = value
 
 class ReportExportArgs(ReportArgs):
     """ ReportExportArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReportExportArgs()
-    instance = ZZZ()
+    Instance = ReportExportArgs
     """hardcoded/returns an instance of the class"""
     Format = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Format(self: ReportExportArgs) -> ReportExportFormat
@@ -189,10 +165,7 @@ Set: Format(self: ReportExportArgs) = value
 
 class ReportExportFormat:
     """ enum ReportExportFormat, values: Excel (1), Image (3), PDF (0), Word (2) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReportExportFormat()
-    instance = ZZZ()
+    Instance = ReportExportFormat
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -236,10 +209,7 @@ class ReportExportFormat:
 
 class ReportPrintArgs(ReportArgs):
     """ ReportPrintArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReportPrintArgs()
-    instance = ZZZ()
+    Instance = ReportPrintArgs
     """hardcoded/returns an instance of the class"""
     DocumentName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: DocumentName(self: ReportPrintArgs) -> str

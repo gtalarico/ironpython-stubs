@@ -10,10 +10,7 @@
 
 class RegularPicker:
     """ RegularPicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegularPicker()
-    instance = ZZZ()
+    Instance = RegularPicker
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """ Dispose(self: RegularPicker) """
@@ -88,10 +85,7 @@ class RegularPicker:
 
 class DifferentLocationAndMorePicker(RegularPicker):
     """ DifferentLocationAndMorePicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DifferentLocationAndMorePicker()
-    instance = ZZZ()
+    Instance = DifferentLocationAndMorePicker
     """hardcoded/returns an instance of the class"""
     def BasicValidation(self, *args): #cannot find CLR method
         """ BasicValidation(self: DifferentLocationAndMorePicker, dfObject: DataFlowObject[PickArgs]) -> DataFlowObject[PickArgs] """
@@ -139,10 +133,7 @@ class DifferentLocationAndMorePicker(RegularPicker):
 
 class DifferentLocationPicker(DifferentLocationAndMorePicker):
     """ DifferentLocationPicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DifferentLocationPicker()
-    instance = ZZZ()
+    Instance = DifferentLocationPicker
     """hardcoded/returns an instance of the class"""
     def BasicValidation(self, *args): #cannot find CLR method
         """ BasicValidation(self: DifferentLocationAndMorePicker, dfObject: DataFlowObject[PickArgs]) -> DataFlowObject[PickArgs] """
@@ -186,10 +177,7 @@ class DifferentLocationPicker(DifferentLocationAndMorePicker):
 
 class ItemIdRegularPicker:
     """ ItemIdRegularPicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemIdRegularPicker()
-    instance = ZZZ()
+    Instance = ItemIdRegularPicker
     """hardcoded/returns an instance of the class"""
     def AddAllocationForRollback(self, line, number, quantity):
         """ AddAllocationForRollback(self: ItemIdRegularPicker, line: OutboundOrderLine, number: str, quantity: Decimal) """
@@ -308,10 +296,7 @@ class ItemIdRegularPicker:
 
 class ItemIdDifferentLocationAndMorePicker:
     """ ItemIdDifferentLocationAndMorePicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemIdDifferentLocationAndMorePicker()
-    instance = ZZZ()
+    Instance = ItemIdDifferentLocationAndMorePicker
     """hardcoded/returns an instance of the class"""
     def DeAllocateItemIdOnNonAssignedLines(self, *args): #cannot find CLR method
         """ DeAllocateItemIdOnNonAssignedLines(self: ItemIdRegularPicker, itemIdToRemove: str, qtyToRemove: Decimal, pickLocToEdit: ItemPickLocation) -> bool """
@@ -371,10 +356,7 @@ class ItemIdDifferentLocationAndMorePicker:
 
 class ItemIdDifferentLocationPicker:
     """ ItemIdDifferentLocationPicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemIdDifferentLocationPicker()
-    instance = ZZZ()
+    Instance = ItemIdDifferentLocationPicker
     """hardcoded/returns an instance of the class"""
     def DeAllocateItemIdOnNonAssignedLines(self, *args): #cannot find CLR method
         """ DeAllocateItemIdOnNonAssignedLines(self: ItemIdRegularPicker, itemIdToRemove: str, qtyToRemove: Decimal, pickLocToEdit: ItemPickLocation) -> bool """
@@ -426,10 +408,7 @@ class ItemIdDifferentLocationPicker:
 
 class ItemIdMorePicker:
     """ ItemIdMorePicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemIdMorePicker()
-    instance = ZZZ()
+    Instance = ItemIdMorePicker
     """hardcoded/returns an instance of the class"""
     def DeAllocateItemIdOnNonAssignedLines(self, *args): #cannot find CLR method
         """ DeAllocateItemIdOnNonAssignedLines(self: ItemIdRegularPicker, itemIdToRemove: str, qtyToRemove: Decimal, pickLocToEdit: ItemPickLocation) -> bool """
@@ -485,10 +464,7 @@ class ItemIdMorePicker:
 
 class MorePicker(RegularPicker):
     """ MorePicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MorePicker()
-    instance = ZZZ()
+    Instance = MorePicker
     """hardcoded/returns an instance of the class"""
     def Pick(self, dfObject):
         """ Pick(self: MorePicker, dfObject: DataFlowObject[PickArgs]) -> DataFlowObject[PickArgs] """
@@ -536,10 +512,7 @@ class MorePicker(RegularPicker):
 
 class PickerFactory:
     """ PickerFactory(args: PickingArgs) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PickerFactory()
-    instance = ZZZ()
+    Instance = PickerFactory
     """hardcoded/returns an instance of the class"""
     def CreateItemIdPicker(self):
         """ CreateItemIdPicker(self: PickerFactory) -> ItemIdRegularPicker """
@@ -577,10 +550,7 @@ class PickerFactory:
 
 class PickFlavour:
     """ enum PickFlavour, values: ChangeRoute (2), DeliverMore (1), DeliverMoreAndChangeRoute (3), Regular (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PickFlavour()
-    instance = ZZZ()
+    Instance = PickFlavour
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -624,10 +594,7 @@ class PickFlavour:
 
 class PickingArgs():
     """ PickingArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PickingArgs()
-    instance = ZZZ()
+    Instance = PickingArgs
     """hardcoded/returns an instance of the class"""
     Batch = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Batch(self: PickingArgs) -> Batch

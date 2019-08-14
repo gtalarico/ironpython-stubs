@@ -11,10 +11,7 @@ from Wms.RemotingImplementation.TaskScheduler import *
 
 class ErpLockingTask(TaskBase):
     """ ErpLockingTask(settings: SystemSettings) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ErpLockingTask()
-    instance = ZZZ()
+    Instance = ErpLockingTask
     """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: ErpLockingTask) """

@@ -11,10 +11,7 @@ from System import *
 
 class DefaultLocationCacheDTO():
     """ DefaultLocationCacheDTO() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultLocationCacheDTO()
-    instance = ZZZ()
+    Instance = DefaultLocationCacheDTO
     """hardcoded/returns an instance of the class"""
     ItemCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: ItemCode(self: DefaultLocationCacheDTO) -> str
@@ -44,10 +41,7 @@ Set: WarehouseCode(self: DefaultLocationCacheDTO) = value
 
 class DefaultLocationCacheUpdater():
     """ DefaultLocationCacheUpdater() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultLocationCacheUpdater()
-    instance = ZZZ()
+    Instance = DefaultLocationCacheUpdater
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Update(updateCacheDto):
@@ -57,10 +51,7 @@ class DefaultLocationCacheUpdater():
 
 class DefaultLocationHelper(MarshalByRefObject):
     """ DefaultLocationHelper() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultLocationHelper()
-    instance = ZZZ()
+    Instance = DefaultLocationHelper
     """hardcoded/returns an instance of the class"""
     def GetDefaultItemLocationsByItemCode(self, itemCode):
         """ GetDefaultItemLocationsByItemCode(self: DefaultLocationHelper, itemCode: str) -> ResultObject[FindableList[WarehouseItemLocation]] """

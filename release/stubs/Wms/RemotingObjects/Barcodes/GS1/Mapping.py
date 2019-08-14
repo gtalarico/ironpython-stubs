@@ -10,10 +10,7 @@
 
 class PrintLineToGS1MapperBase:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintLineToGS1MapperBase()
-    instance = ZZZ()
+    Instance = PrintLineToGS1MapperBase
     """hardcoded/returns an instance of the class"""
     def ConvertToBarcode(self, propertyName, value, provider):
         """
@@ -42,10 +39,7 @@ class PrintLineToGS1MapperBase:
 
 class HomogeneousPalletMapper(PrintLineToGS1MapperBase):
     """ HomogeneousPalletMapper() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HomogeneousPalletMapper()
-    instance = ZZZ()
+    Instance = HomogeneousPalletMapper
     """hardcoded/returns an instance of the class"""
     def ConvertToBarcode(self, propertyName, value, provider):
         """
@@ -70,10 +64,7 @@ class HomogeneousPalletMapper(PrintLineToGS1MapperBase):
 
 class IPrintlineToGS1Mapper:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPrintlineToGS1Mapper()
-    instance = ZZZ()
+    Instance = IPrintlineToGS1Mapper
     """hardcoded/returns an instance of the class"""
     def ConvertToBarcode(self, propertyName, value, provider):
         """ ConvertToBarcode(self: IPrintlineToGS1Mapper, propertyName: str, value: object, provider: IFormatProvider) -> IGeneratedBarcode """
@@ -94,10 +85,7 @@ class IPrintlineToGS1Mapper:
 
 class MixedPalletMapper(PrintLineToGS1MapperBase):
     """ MixedPalletMapper() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MixedPalletMapper()
-    instance = ZZZ()
+    Instance = MixedPalletMapper
     """hardcoded/returns an instance of the class"""
     def GetMapping(self, propertyName):
         """ GetMapping(self: MixedPalletMapper, propertyName: str) -> str """
@@ -110,10 +98,7 @@ class MixedPalletMapper(PrintLineToGS1MapperBase):
 
 class PrintLineToGS1MapperFactory():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintLineToGS1MapperFactory()
-    instance = ZZZ()
+    Instance = PrintLineToGS1MapperFactory
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetMapper(datasetName):

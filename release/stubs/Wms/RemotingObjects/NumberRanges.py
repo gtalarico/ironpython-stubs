@@ -14,10 +14,7 @@ class GenerateArgs():
     GenerateArgs()
     GenerateArgs(numberRange: NumberRange)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GenerateArgs()
-    instance = ZZZ()
+    Instance = GenerateArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, numberRange=None):
@@ -65,10 +62,7 @@ class GenerateNumbersBaseArgs():
     GenerateNumbersBaseArgs(id: int, type: NumberRangeType)
     GenerateNumbersBaseArgs(id: int, type: NumberRangeType, numbersToGenerate: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GenerateNumbersBaseArgs()
-    instance = ZZZ()
+    Instance = GenerateNumbersBaseArgs
     """hardcoded/returns an instance of the class"""
     def AddGenerationArgs(self, args, numbersToGenerate):
         """ AddGenerationArgs(self: GenerateNumbersBaseArgs, args: GenerateArgs, numbersToGenerate: int) """
@@ -165,10 +159,7 @@ class GenerateBarcodeLabelArgs(GenerateNumbersBaseArgs):
     GenerateBarcodeLabelArgs(id: int, type: NumberRangeType)
     GenerateBarcodeLabelArgs(id: int, type: NumberRangeType, numbersToGenerate: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GenerateBarcodeLabelArgs()
-    instance = ZZZ()
+    Instance = GenerateBarcodeLabelArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, id=None, type=None, numbersToGenerate=None):
@@ -207,10 +198,7 @@ Set: PrintingOptions(self: GenerateBarcodeLabelArgs) = value
 
 class GetNumberRangeArgs():
     """ GetNumberRangeArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetNumberRangeArgs()
-    instance = ZZZ()
+    Instance = GetNumberRangeArgs
     """hardcoded/returns an instance of the class"""
     Filter = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Filter(self: GetNumberRangeArgs) -> str
@@ -242,10 +230,7 @@ Set: Type(self: GetNumberRangeArgs) = value
 
 class NumberRange(DbObject):
     """ NumberRange() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NumberRange()
-    instance = ZZZ()
+    Instance = NumberRange
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -346,10 +331,7 @@ Set: To(self: NumberRange) = value
 
 class NumberRangeType:
     """ enum NumberRangeType, values: PickBatch (2), Regular (0), SSCC (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NumberRangeType()
-    instance = ZZZ()
+    Instance = NumberRangeType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

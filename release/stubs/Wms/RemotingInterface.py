@@ -11,10 +11,7 @@ from System import *
 
 class DataChangedEventHandler(MulticastDelegate):
     """ DataChangedEventHandler(object: object, method: IntPtr) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DataChangedEventHandler()
-    instance = ZZZ()
+    Instance = DataChangedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, callback, object):
         """ BeginInvoke(self: DataChangedEventHandler, sender: object, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -88,10 +85,7 @@ class DataChangedEventHandler(MulticastDelegate):
 
 class IClientService:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IClientService()
-    instance = ZZZ()
+    Instance = IClientService
     """hardcoded/returns an instance of the class"""
     def BeepContinuous(self):
         """ BeepContinuous(self: IClientService) """
@@ -132,10 +126,7 @@ class IClientService:
 
 class IDefaultItemLocationHelper:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDefaultItemLocationHelper()
-    instance = ZZZ()
+    Instance = IDefaultItemLocationHelper
     """hardcoded/returns an instance of the class"""
     def GetDefaultItemLocationsByItemCode(self, itemCode):
         """ GetDefaultItemLocationsByItemCode(self: IDefaultItemLocationHelper, itemCode: str) -> ResultObject[FindableList[WarehouseItemLocation]] """
@@ -156,10 +147,7 @@ class IDefaultItemLocationHelper:
 
 class IDocumentQueue:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDocumentQueue()
-    instance = ZZZ()
+    Instance = IDocumentQueue
     """hardcoded/returns an instance of the class"""
     def CopyPrintRule(self, printRuleId):
         """ CopyPrintRule(self: IDocumentQueue, printRuleId: int) -> PrintRule """
@@ -260,10 +248,7 @@ class IDocumentQueue:
 
 class IGeneral:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IGeneral()
-    instance = ZZZ()
+    Instance = IGeneral
     """hardcoded/returns an instance of the class"""
     def AddOrUpdateErpLock(self, lock):
         """ AddOrUpdateErpLock(self: IGeneral, lock: ErpLock) -> int """
@@ -1243,10 +1228,7 @@ Set: CurrentLicense(self: IGeneral) = value
 
 class IInbound:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IInbound()
-    instance = ZZZ()
+    Instance = IInbound
     """hardcoded/returns an instance of the class"""
     def AddOrUpdateLicensePlateToReceipt(self, cacheKey, licensePlate):
         """ AddOrUpdateLicensePlateToReceipt(self: IInbound, cacheKey: CacheKey, licensePlate: LicensePlate) -> LicensePlate """
@@ -1467,10 +1449,7 @@ class IInbound:
 
 class IInventory:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IInventory()
-    instance = ZZZ()
+    Instance = IInventory
     """hardcoded/returns an instance of the class"""
     def AddCountItemIdentitification(self, key, itemId, overwriteIfExists):
         """ AddCountItemIdentitification(self: IInventory, key: CacheKey, itemId: ItemIdentification, overwriteIfExists: bool) -> bool """
@@ -1838,10 +1817,7 @@ class IInventory:
 
 class IMessaging:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IMessaging()
-    instance = ZZZ()
+    Instance = IMessaging
     """hardcoded/returns an instance of the class"""
     def ChangeMessagesStatus(self, messageIds, newStatus):
         """ ChangeMessagesStatus(self: IMessaging, messageIds: List[Guid], newStatus: MessageStatus) """
@@ -1918,10 +1894,7 @@ class IMessaging:
 
 class INotificationCenter:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INotificationCenter()
-    instance = ZZZ()
+    Instance = INotificationCenter
     """hardcoded/returns an instance of the class"""
     def AddNotification(self, notificationToInsert):
         """ AddNotification(self: INotificationCenter, notificationToInsert: InsertNotificationArgs) """
@@ -1970,10 +1943,7 @@ class INotificationCenter:
 
 class INotificationSummary:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INotificationSummary()
-    instance = ZZZ()
+    Instance = INotificationSummary
     """hardcoded/returns an instance of the class"""
     def DeleteConfiguration(self, notificationSummaryId):
         """ DeleteConfiguration(self: INotificationSummary, notificationSummaryId: int) """
@@ -2014,10 +1984,7 @@ class INotificationSummary:
 
 class INumberGeneration:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INumberGeneration()
-    instance = ZZZ()
+    Instance = INumberGeneration
     """hardcoded/returns an instance of the class"""
     def AddUsedNumber(self, args):
         """ AddUsedNumber(self: INumberGeneration, args: AddUsedNumberArgs) """
@@ -2062,10 +2029,7 @@ class INumberGeneration:
 
 class IOfflineScanning:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IOfflineScanning()
-    instance = ZZZ()
+    Instance = IOfflineScanning
     """hardcoded/returns an instance of the class"""
     def AddScanner(self, args):
         """ AddScanner(self: IOfflineScanning, args: AddScannerArgs) """
@@ -2118,10 +2082,7 @@ class IOfflineScanning:
 
 class IOutbound:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IOutbound()
-    instance = ZZZ()
+    Instance = IOutbound
     """hardcoded/returns an instance of the class"""
     def AddDirectOrder(self, args):
         """ AddDirectOrder(self: IOutbound, args: DirectOrderCrudArgs) -> DataFlowObject[DirectOrder] """
@@ -2554,10 +2515,7 @@ class IOutbound:
 
 class IPrinting:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPrinting()
-    instance = ZZZ()
+    Instance = IPrinting
     """hardcoded/returns an instance of the class"""
     def GetPickListsAll(self, pickLists):
         """ GetPickListsAll(self: IPrinting) -> (int, ReportItems) """
@@ -2582,10 +2540,7 @@ class IPrinting:
 
 class IRemotePublishing:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IRemotePublishing()
-    instance = ZZZ()
+    Instance = IRemotePublishing
     """hardcoded/returns an instance of the class"""
     def AddRemotePublisher(self, args):
         """ AddRemotePublisher(self: IRemotePublishing, args: AddRemotePublisherArgs) -> Publisher """

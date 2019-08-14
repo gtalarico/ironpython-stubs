@@ -10,10 +10,7 @@
 
 class AddScannerArgs():
     """ AddScannerArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AddScannerArgs()
-    instance = ZZZ()
+    Instance = AddScannerArgs
     """hardcoded/returns an instance of the class"""
     Name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Name(self: AddScannerArgs) -> str
@@ -31,10 +28,7 @@ Set: Serialno(self: AddScannerArgs) = value
 
 class DeleteScannerArgs():
     """ DeleteScannerArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DeleteScannerArgs()
-    instance = ZZZ()
+    Instance = DeleteScannerArgs
     """hardcoded/returns an instance of the class"""
     Serialno = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Serialno(self: DeleteScannerArgs) -> str
@@ -46,10 +40,7 @@ Set: Serialno(self: DeleteScannerArgs) = value
 
 class GetAppVersionFileSpecArgs():
     """ GetAppVersionFileSpecArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetAppVersionFileSpecArgs()
-    instance = ZZZ()
+    Instance = GetAppVersionFileSpecArgs
     """hardcoded/returns an instance of the class"""
     Version = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Version(self: GetAppVersionFileSpecArgs) -> str
@@ -61,10 +52,7 @@ Set: Version(self: GetAppVersionFileSpecArgs) = value
 
 class SetCurrentAppVersionArgs():
     """ SetCurrentAppVersionArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SetCurrentAppVersionArgs()
-    instance = ZZZ()
+    Instance = SetCurrentAppVersionArgs
     """hardcoded/returns an instance of the class"""
     Version = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Version(self: SetCurrentAppVersionArgs) -> str

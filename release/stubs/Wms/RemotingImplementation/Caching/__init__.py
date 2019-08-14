@@ -12,10 +12,7 @@ from Wms.RemotingImplementation.TaskScheduler import *
 
 class CacheCleanupTask(TaskBase):
     """ CacheCleanupTask(settings: SystemSettings) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CacheCleanupTask()
-    instance = ZZZ()
+    Instance = CacheCleanupTask
     """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: CacheCleanupTask) """
@@ -36,10 +33,7 @@ Set: Settings(self: CacheCleanupTask) = value
 
 class CacheContainer(Cache):
     """ CacheContainer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CacheContainer()
-    instance = ZZZ()
+    Instance = CacheContainer
     """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """ Add(self: CacheContainer, key: CacheKey, value: ICachable) """
@@ -146,10 +140,7 @@ Set: Settings(self: CacheContainer) = value
 
 class CacheSaveTask(TaskBase):
     """ CacheSaveTask(settings: SystemSettings) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CacheSaveTask()
-    instance = ZZZ()
+    Instance = CacheSaveTask
     """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: CacheSaveTask) """

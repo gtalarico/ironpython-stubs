@@ -10,10 +10,7 @@
 
 class AssemblyHelper():
     """ AssemblyHelper() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AssemblyHelper()
-    instance = ZZZ()
+    Instance = AssemblyHelper
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def LoadAssembly(fileName, fullPath):

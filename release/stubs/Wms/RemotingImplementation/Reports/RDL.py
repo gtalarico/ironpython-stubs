@@ -10,10 +10,7 @@
 
 class RDLIsolatedReportRendererExecutor():
     """ RDLIsolatedReportRendererExecutor(lifetime: TimeSpan) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RDLIsolatedReportRendererExecutor()
-    instance = ZZZ()
+    Instance = RDLIsolatedReportRendererExecutor
     """hardcoded/returns an instance of the class"""
     def Export(self, args, dataArgs):
         """ Export(self: RDLIsolatedReportRendererExecutor, args: ReportExportArgs, dataArgs: ReportDataArgs) -> ReportExport """
@@ -39,10 +36,7 @@ class RDLIsolatedReportRendererExecutor():
 
 class RDLReportRenderer:
     """ RDLReportRenderer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RDLReportRenderer()
-    instance = ZZZ()
+    Instance = RDLReportRenderer
     """hardcoded/returns an instance of the class"""
     def Export(self, *__args):
         """
@@ -66,10 +60,7 @@ class RDLReportRenderer:
 
 class Utilities():
     """ Utilities() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Utilities()
-    instance = ZZZ()
+    Instance = Utilities
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def LoadNativeAssemblies(rootApplicationPath):

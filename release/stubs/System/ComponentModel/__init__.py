@@ -15,10 +15,7 @@ class AddingNewEventArgs(EventArgs):
     AddingNewEventArgs()
     AddingNewEventArgs(newObject: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AddingNewEventArgs()
-    instance = ZZZ()
+    Instance = AddingNewEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, newObject=None):
@@ -44,10 +41,7 @@ class AddingNewEventHandler(MulticastDelegate):
     
     AddingNewEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AddingNewEventHandler()
-    instance = ZZZ()
+    Instance = AddingNewEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: AddingNewEventHandler, sender: object, e: AddingNewEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -135,10 +129,7 @@ class AmbientValueAttribute:
     AmbientValueAttribute(value: str)
     AmbientValueAttribute(value: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AmbientValueAttribute()
-    instance = ZZZ()
+    Instance = AmbientValueAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -203,10 +194,7 @@ class TypeConverter():
     
     TypeConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeConverter()
-    instance = ZZZ()
+    Instance = TypeConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertFrom(self, *__args):
         """
@@ -568,10 +556,7 @@ class CollectionConverter(TypeConverter):
     
     CollectionConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CollectionConverter()
-    instance = ZZZ()
+    Instance = CollectionConverter
     """hardcoded/returns an instance of the class"""
     def ConvertTo(self, *__args):
         """
@@ -620,10 +605,7 @@ class ArrayConverter(CollectionConverter):
     
     ArrayConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ArrayConverter()
-    instance = ZZZ()
+    Instance = ArrayConverter
     """hardcoded/returns an instance of the class"""
     def ConvertTo(self, *__args):
         """
@@ -672,10 +654,7 @@ class AsyncCompletedEventArgs(EventArgs):
     AsyncCompletedEventArgs()
     AsyncCompletedEventArgs(error: Exception, cancelled: bool, userState: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AsyncCompletedEventArgs()
-    instance = ZZZ()
+    Instance = AsyncCompletedEventArgs
     """hardcoded/returns an instance of the class"""
     def RaiseExceptionIfNecessary(self, *args): #cannot find CLR method
         """
@@ -721,10 +700,7 @@ class AsyncCompletedEventHandler(MulticastDelegate):
     
     AsyncCompletedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AsyncCompletedEventHandler()
-    instance = ZZZ()
+    Instance = AsyncCompletedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: AsyncCompletedEventHandler, sender: object, e: AsyncCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -798,10 +774,7 @@ class AsyncCompletedEventHandler(MulticastDelegate):
 
 class AsyncOperation():
     """ Tracks the lifetime of an asynchronous operation. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AsyncOperation()
-    instance = ZZZ()
+    Instance = AsyncOperation
     """hardcoded/returns an instance of the class"""
     def OperationCompleted(self):
         """
@@ -848,10 +821,7 @@ Get: UserSuppliedState(self: AsyncOperation) -> object
 
 class AsyncOperationManager():
     """ Provides concurrency management for classes that support asynchronous method calls. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AsyncOperationManager()
-    instance = ZZZ()
+    Instance = AsyncOperationManager
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateOperation(userSuppliedState):
@@ -877,10 +847,7 @@ class AttributeCollection:
     
     AttributeCollection(*attributes: Array[Attribute])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AttributeCollection()
-    instance = ZZZ()
+    Instance = AttributeCollection
     """hardcoded/returns an instance of the class"""
     def Contains(self, *__args):
         """
@@ -1011,10 +978,7 @@ class AttributeProviderAttribute:
     AttributeProviderAttribute(typeName: str, propertyName: str)
     AttributeProviderAttribute(type: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AttributeProviderAttribute()
-    instance = ZZZ()
+    Instance = AttributeProviderAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1051,10 +1015,7 @@ class Component(MarshalByRefObject):
     
     Component()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Component()
-    instance = ZZZ()
+    Instance = Component
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -1157,10 +1118,7 @@ class BackgroundWorker(Component):
     
     BackgroundWorker()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BackgroundWorker()
-    instance = ZZZ()
+    Instance = BackgroundWorker
     """hardcoded/returns an instance of the class"""
     def CancelAsync(self):
         """
@@ -1328,10 +1286,7 @@ Set: WorkerSupportsCancellation(self: BackgroundWorker) = value
 
 class BaseNumberConverter(TypeConverter):
     """ Provides a base type converter for nonfloating-point numerical types. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BaseNumberConverter()
-    instance = ZZZ()
+    Instance = BaseNumberConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertFrom(self, *__args):
         """
@@ -1394,10 +1349,7 @@ class BindableAttribute:
     BindableAttribute(flags: BindableSupport)
     BindableAttribute(flags: BindableSupport, direction: BindingDirection)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BindableAttribute()
-    instance = ZZZ()
+    Instance = BindableAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -1475,10 +1427,7 @@ class BindableSupport:
     
     enum BindableSupport, values: Default (2), No (0), Yes (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BindableSupport()
-    instance = ZZZ()
+    Instance = BindableSupport
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1525,10 +1474,7 @@ class BindingDirection:
     
     enum BindingDirection, values: OneWay (0), TwoWay (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BindingDirection()
-    instance = ZZZ()
+    Instance = BindingDirection
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1570,10 +1516,7 @@ class BindingDirection:
 
 class IBindingList:
     """ Provides the features required to support both complex and simple scenarios when binding to a data source. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IBindingList()
-    instance = ZZZ()
+    Instance = IBindingList
     """hardcoded/returns an instance of the class"""
     def AddIndex(self, property):
         """
@@ -1723,10 +1666,7 @@ Get: SupportsSorting(self: IBindingList) -> bool
 
 class ICancelAddNew:
     """ Adds transactional capability when adding a new item to a collection. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICancelAddNew()
-    instance = ZZZ()
+    Instance = ICancelAddNew
     """hardcoded/returns an instance of the class"""
     def CancelNew(self, itemIndex):
         """
@@ -1753,10 +1693,7 @@ class ICancelAddNew:
 
 class IRaiseItemChangedEvents:
     """ Indicates whether a class converts property change events to System.ComponentModel.IBindingList.ListChanged events. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IRaiseItemChangedEvents()
-    instance = ZZZ()
+    Instance = IRaiseItemChangedEvents
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1776,10 +1713,7 @@ class BindingList(Collection):
     BindingList[T]()
     BindingList[T](list: IList[T])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BindingList()
-    instance = ZZZ()
+    Instance = BindingList
     """hardcoded/returns an instance of the class"""
     def AddNew(self):
         """
@@ -2023,10 +1957,7 @@ class BooleanConverter(TypeConverter):
     
     BooleanConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BooleanConverter()
-    instance = ZZZ()
+    Instance = BooleanConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertFrom(self, *__args):
         """
@@ -2098,10 +2029,7 @@ class BrowsableAttribute:
     
     BrowsableAttribute(browsable: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BrowsableAttribute()
-    instance = ZZZ()
+    Instance = BrowsableAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -2167,10 +2095,7 @@ class ByteConverter(BaseNumberConverter):
     
     ByteConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ByteConverter()
-    instance = ZZZ()
+    Instance = ByteConverter
     """hardcoded/returns an instance of the class"""
 
 class CancelEventArgs(EventArgs):
@@ -2180,10 +2105,7 @@ class CancelEventArgs(EventArgs):
     CancelEventArgs()
     CancelEventArgs(cancel: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CancelEventArgs()
-    instance = ZZZ()
+    Instance = CancelEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, cancel=None):
@@ -2209,10 +2131,7 @@ class CancelEventHandler(MulticastDelegate):
     
     CancelEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CancelEventHandler()
-    instance = ZZZ()
+    Instance = CancelEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: CancelEventHandler, sender: object, e: CancelEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -2291,10 +2210,7 @@ class CategoryAttribute:
     CategoryAttribute()
     CategoryAttribute(category: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CategoryAttribute()
-    instance = ZZZ()
+    Instance = CategoryAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -2385,10 +2301,7 @@ class CharConverter(TypeConverter):
     
     CharConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CharConverter()
-    instance = ZZZ()
+    Instance = CharConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertFrom(self, *__args):
         """
@@ -2436,10 +2349,7 @@ class CollectionChangeAction:
     
     enum CollectionChangeAction, values: Add (1), Refresh (3), Remove (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CollectionChangeAction()
-    instance = ZZZ()
+    Instance = CollectionChangeAction
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2486,10 +2396,7 @@ class CollectionChangeEventArgs(EventArgs):
     
     CollectionChangeEventArgs(action: CollectionChangeAction, element: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CollectionChangeEventArgs()
-    instance = ZZZ()
+    Instance = CollectionChangeEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, action, element):
@@ -2518,10 +2425,7 @@ class CollectionChangeEventHandler(MulticastDelegate):
     
     CollectionChangeEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CollectionChangeEventHandler()
-    instance = ZZZ()
+    Instance = CollectionChangeEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: CollectionChangeEventHandler, sender: object, e: CollectionChangeEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -2601,10 +2505,7 @@ class ComplexBindingPropertiesAttribute:
     ComplexBindingPropertiesAttribute(dataSource: str)
     ComplexBindingPropertiesAttribute(dataSource: str, dataMember: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComplexBindingPropertiesAttribute()
-    instance = ZZZ()
+    Instance = ComplexBindingPropertiesAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -2668,10 +2569,7 @@ class ComponentCollection(ReadOnlyCollectionBase):
     
     ComponentCollection(components: Array[IComponent])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentCollection()
-    instance = ZZZ()
+    Instance = ComponentCollection
     """hardcoded/returns an instance of the class"""
     def CopyTo(self, array, index):
         """
@@ -2713,10 +2611,7 @@ class ReferenceConverter(TypeConverter):
     
     ReferenceConverter(type: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReferenceConverter()
-    instance = ZZZ()
+    Instance = ReferenceConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertFrom(self, *__args):
         """
@@ -2819,10 +2714,7 @@ class ComponentConverter(ReferenceConverter):
     
     ComponentConverter(type: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentConverter()
-    instance = ZZZ()
+    Instance = ComponentConverter
     """hardcoded/returns an instance of the class"""
     def GetProperties(self, *__args):
         """
@@ -2856,10 +2748,7 @@ class ComponentConverter(ReferenceConverter):
 
 class ComponentEditor():
     """ Provides the base class for a custom component editor. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentEditor()
-    instance = ZZZ()
+    Instance = ComponentEditor
     """hardcoded/returns an instance of the class"""
     def EditComponent(self, *__args):
         """
@@ -2887,10 +2776,7 @@ class ComponentResourceManager(ResourceManager):
     ComponentResourceManager()
     ComponentResourceManager(t: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentResourceManager()
-    instance = ZZZ()
+    Instance = ComponentResourceManager
     """hardcoded/returns an instance of the class"""
     def ApplyResources(self, value, objectName, culture=None):
         """
@@ -2933,10 +2819,7 @@ class Container:
     
     Container()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Container()
-    instance = ZZZ()
+    Instance = Container
     """hardcoded/returns an instance of the class"""
     def Add(self, component, name=None):
         """
@@ -3041,10 +2924,7 @@ Get: Components(self: Container) -> ComponentCollection
 
 class ContainerFilterService():
     """ Provides a base class for the container filter service. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ContainerFilterService()
-    instance = ZZZ()
+    Instance = ContainerFilterService
     """hardcoded/returns an instance of the class"""
     def FilterComponents(self, components):
         """
@@ -3064,10 +2944,7 @@ class CultureInfoConverter(TypeConverter):
     
     CultureInfoConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CultureInfoConverter()
-    instance = ZZZ()
+    Instance = CultureInfoConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertFrom(self, *__args):
         """
@@ -3172,10 +3049,7 @@ class CultureInfoConverter(TypeConverter):
 
 class CustomTypeDescriptor:
     """ Provides a simple default implementation of the System.ComponentModel.ICustomTypeDescriptor interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CustomTypeDescriptor()
-    instance = ZZZ()
+    Instance = CustomTypeDescriptor
     """hardcoded/returns an instance of the class"""
     def GetAttributes(self):
         """
@@ -3308,10 +3182,7 @@ class CustomTypeDescriptor:
 
 class DataErrorsChangedEventArgs(EventArgs):
     """ DataErrorsChangedEventArgs(propertyName: str) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DataErrorsChangedEventArgs()
-    instance = ZZZ()
+    Instance = DataErrorsChangedEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, propertyName):
@@ -3332,10 +3203,7 @@ class DataObjectAttribute:
     DataObjectAttribute()
     DataObjectAttribute(isDataObject: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DataObjectAttribute()
-    instance = ZZZ()
+    Instance = DataObjectAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -3407,10 +3275,7 @@ class DataObjectFieldAttribute:
     DataObjectFieldAttribute(primaryKey: bool, isIdentity: bool, isNullable: bool)
     DataObjectFieldAttribute(primaryKey: bool, isIdentity: bool, isNullable: bool, length: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DataObjectFieldAttribute()
-    instance = ZZZ()
+    Instance = DataObjectFieldAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -3490,10 +3355,7 @@ class DataObjectMethodAttribute:
     DataObjectMethodAttribute(methodType: DataObjectMethodType)
     DataObjectMethodAttribute(methodType: DataObjectMethodType, isDefault: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DataObjectMethodAttribute()
-    instance = ZZZ()
+    Instance = DataObjectMethodAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -3567,10 +3429,7 @@ class DataObjectMethodType:
     
     enum DataObjectMethodType, values: Delete (4), Fill (0), Insert (3), Select (1), Update (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DataObjectMethodType()
-    instance = ZZZ()
+    Instance = DataObjectMethodType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3619,10 +3478,7 @@ class DateTimeConverter(TypeConverter):
     
     DateTimeConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DateTimeConverter()
-    instance = ZZZ()
+    Instance = DateTimeConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertFrom(self, *__args):
         """
@@ -3682,10 +3538,7 @@ class DateTimeOffsetConverter(TypeConverter):
     
     DateTimeOffsetConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DateTimeOffsetConverter()
-    instance = ZZZ()
+    Instance = DateTimeOffsetConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertFrom(self, *__args):
         """
@@ -3745,10 +3598,7 @@ class DecimalConverter(BaseNumberConverter):
     
     DecimalConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DecimalConverter()
-    instance = ZZZ()
+    Instance = DecimalConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertTo(self, *__args):
         """
@@ -3784,10 +3634,7 @@ class DefaultBindingPropertyAttribute:
     DefaultBindingPropertyAttribute()
     DefaultBindingPropertyAttribute(name: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultBindingPropertyAttribute()
-    instance = ZZZ()
+    Instance = DefaultBindingPropertyAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -3843,10 +3690,7 @@ class DefaultEventAttribute:
     
     DefaultEventAttribute(name: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultEventAttribute()
-    instance = ZZZ()
+    Instance = DefaultEventAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -3901,10 +3745,7 @@ class DefaultPropertyAttribute:
     
     DefaultPropertyAttribute(name: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultPropertyAttribute()
-    instance = ZZZ()
+    Instance = DefaultPropertyAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -3969,10 +3810,7 @@ class DefaultValueAttribute:
     DefaultValueAttribute(value: str)
     DefaultValueAttribute(value: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultValueAttribute()
-    instance = ZZZ()
+    Instance = DefaultValueAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -4042,10 +3880,7 @@ class DescriptionAttribute:
     DescriptionAttribute()
     DescriptionAttribute(description: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DescriptionAttribute()
-    instance = ZZZ()
+    Instance = DescriptionAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -4116,10 +3951,7 @@ class DesignerAttribute:
     DesignerAttribute(designerTypeName: str, designerBaseType: Type)
     DesignerAttribute(designerType: Type, designerBaseType: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerAttribute()
-    instance = ZZZ()
+    Instance = DesignerAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -4188,10 +4020,7 @@ class DesignerCategoryAttribute:
     DesignerCategoryAttribute()
     DesignerCategoryAttribute(category: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerCategoryAttribute()
-    instance = ZZZ()
+    Instance = DesignerCategoryAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -4268,10 +4097,7 @@ class DesignerSerializationVisibility:
     
     enum DesignerSerializationVisibility, values: Content (2), Hidden (0), Visible (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerSerializationVisibility()
-    instance = ZZZ()
+    Instance = DesignerSerializationVisibility
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4318,10 +4144,7 @@ class DesignerSerializationVisibilityAttribute:
     
     DesignerSerializationVisibilityAttribute(visibility: DesignerSerializationVisibility)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerSerializationVisibilityAttribute()
-    instance = ZZZ()
+    Instance = DesignerSerializationVisibilityAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -4388,10 +4211,7 @@ class DesignOnlyAttribute:
     
     DesignOnlyAttribute(isDesignOnly: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignOnlyAttribute()
-    instance = ZZZ()
+    Instance = DesignOnlyAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -4453,10 +4273,7 @@ class DesignTimeVisibleAttribute:
     DesignTimeVisibleAttribute(visible: bool)
     DesignTimeVisibleAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignTimeVisibleAttribute()
-    instance = ZZZ()
+    Instance = DesignTimeVisibleAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -4518,10 +4335,7 @@ class DisplayNameAttribute:
     DisplayNameAttribute()
     DisplayNameAttribute(displayName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DisplayNameAttribute()
-    instance = ZZZ()
+    Instance = DisplayNameAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -4593,10 +4407,7 @@ class DoubleConverter(BaseNumberConverter):
     
     DoubleConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DoubleConverter()
-    instance = ZZZ()
+    Instance = DoubleConverter
     """hardcoded/returns an instance of the class"""
 
 class DoWorkEventArgs(CancelEventArgs):
@@ -4605,10 +4416,7 @@ class DoWorkEventArgs(CancelEventArgs):
     
     DoWorkEventArgs(argument: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DoWorkEventArgs()
-    instance = ZZZ()
+    Instance = DoWorkEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, argument):
@@ -4638,10 +4446,7 @@ class DoWorkEventHandler(MulticastDelegate):
     
     DoWorkEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DoWorkEventHandler()
-    instance = ZZZ()
+    Instance = DoWorkEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: DoWorkEventHandler, sender: object, e: DoWorkEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -4722,10 +4527,7 @@ class EditorAttribute:
     EditorAttribute(typeName: str, baseType: Type)
     EditorAttribute(type: Type, baseType: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EditorAttribute()
-    instance = ZZZ()
+    Instance = EditorAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -4793,10 +4595,7 @@ class EditorBrowsableAttribute:
     EditorBrowsableAttribute(state: EditorBrowsableState)
     EditorBrowsableAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EditorBrowsableAttribute()
-    instance = ZZZ()
+    Instance = EditorBrowsableAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -4847,10 +4646,7 @@ class EditorBrowsableState:
     
     enum EditorBrowsableState, values: Advanced (2), Always (0), Never (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EditorBrowsableState()
-    instance = ZZZ()
+    Instance = EditorBrowsableState
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4897,10 +4693,7 @@ class EnumConverter(TypeConverter):
     
     EnumConverter(type: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EnumConverter()
-    instance = ZZZ()
+    Instance = EnumConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertFrom(self, *__args):
         """
@@ -5025,10 +4818,7 @@ class EnumConverter(TypeConverter):
 
 class MemberDescriptor():
     """ Represents a class member, such as a property or event. This is an abstract base class. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MemberDescriptor()
-    instance = ZZZ()
+    Instance = MemberDescriptor
     """hardcoded/returns an instance of the class"""
     def CreateAttributeCollection(self, *args): #cannot find CLR method
         """
@@ -5209,10 +4999,7 @@ Get: Name(self: MemberDescriptor) -> str
 
 class EventDescriptor(MemberDescriptor):
     """ Provides information about an event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventDescriptor()
-    instance = ZZZ()
+    Instance = EventDescriptor
     """hardcoded/returns an instance of the class"""
     def AddEventHandler(self, component, value):
         """
@@ -5283,10 +5070,7 @@ class EventDescriptorCollection:
     EventDescriptorCollection(events: Array[EventDescriptor])
     EventDescriptorCollection(events: Array[EventDescriptor], readOnly: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventDescriptorCollection()
-    instance = ZZZ()
+    Instance = EventDescriptorCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
@@ -5480,10 +5264,7 @@ class EventHandlerList:
     
     EventHandlerList()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventHandlerList()
-    instance = ZZZ()
+    Instance = EventHandlerList
     """hardcoded/returns an instance of the class"""
     def AddHandler(self, key, value):
         """
@@ -5552,10 +5333,7 @@ class ExpandableObjectConverter(TypeConverter):
     
     ExpandableObjectConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExpandableObjectConverter()
-    instance = ZZZ()
+    Instance = ExpandableObjectConverter
     """hardcoded/returns an instance of the class"""
     def GetProperties(self, *__args):
         """
@@ -5588,10 +5366,7 @@ class ExtenderProvidedPropertyAttribute:
     
     ExtenderProvidedPropertyAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExtenderProvidedPropertyAttribute()
-    instance = ZZZ()
+    Instance = ExtenderProvidedPropertyAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -5662,10 +5437,7 @@ class GuidConverter(TypeConverter):
     
     GuidConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GuidConverter()
-    instance = ZZZ()
+    Instance = GuidConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertFrom(self, *__args):
         """
@@ -5726,10 +5498,7 @@ class HandledEventArgs(EventArgs):
     HandledEventArgs()
     HandledEventArgs(defaultHandledValue: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HandledEventArgs()
-    instance = ZZZ()
+    Instance = HandledEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, defaultHandledValue=None):
@@ -5755,10 +5524,7 @@ class HandledEventHandler(MulticastDelegate):
     
     HandledEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HandledEventHandler()
-    instance = ZZZ()
+    Instance = HandledEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: HandledEventHandler, sender: object, e: HandledEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -5832,10 +5598,7 @@ class HandledEventHandler(MulticastDelegate):
 
 class IBindingListView:
     """ Extends the System.ComponentModel.IBindingList interface by providing advanced sorting and filtering capabilities. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IBindingListView()
-    instance = ZZZ()
+    Instance = IBindingListView
     """hardcoded/returns an instance of the class"""
     def ApplySort(self, sorts):
         """
@@ -5909,10 +5672,7 @@ Get: SupportsFiltering(self: IBindingListView) -> bool
 
 class IChangeTracking:
     """ Defines the mechanism for querying the object for changes and resetting of the changed status. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IChangeTracking()
-    instance = ZZZ()
+    Instance = IChangeTracking
     """hardcoded/returns an instance of the class"""
     def AcceptChanges(self):
         """
@@ -5935,10 +5695,7 @@ Get: IsChanged(self: IChangeTracking) -> bool
 
 class IComNativeDescriptorHandler:
     """ Provides a top-level mapping layer between a COM object and a System.ComponentModel.TypeDescriptor. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IComNativeDescriptorHandler()
-    instance = ZZZ()
+    Instance = IComNativeDescriptorHandler
     """hardcoded/returns an instance of the class"""
     def GetAttributes(self, component):
         """
@@ -6076,10 +5833,7 @@ class IComNativeDescriptorHandler:
 
 class IComponent:
     """ Provides functionality required by all components. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IComponent()
-    instance = ZZZ()
+    Instance = IComponent
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6099,10 +5853,7 @@ Set: Site(self: IComponent) = value
 
 class IContainer:
     """ Provides functionality for containers. Containers are objects that logically contain zero or more components. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IContainer()
-    instance = ZZZ()
+    Instance = IContainer
     """hardcoded/returns an instance of the class"""
     def Add(self, component, name=None):
         """
@@ -6146,10 +5897,7 @@ Get: Components(self: IContainer) -> ComponentCollection
 
 class ICustomTypeDescriptor:
     """ Provides an interface that supplies dynamic custom type information for an object. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICustomTypeDescriptor()
-    instance = ZZZ()
+    Instance = ICustomTypeDescriptor
     """hardcoded/returns an instance of the class"""
     def GetAttributes(self):
         """
@@ -6264,10 +6012,7 @@ class ICustomTypeDescriptor:
 
 class IDataErrorInfo:
     """ Provides the functionality to offer custom error information that a user interface can bind to. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDataErrorInfo()
-    instance = ZZZ()
+    Instance = IDataErrorInfo
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -6288,10 +6033,7 @@ Get: Error(self: IDataErrorInfo) -> str
 
 class IEditableObject:
     """ Provides functionality to commit or rollback changes to an object that is used as a data source. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEditableObject()
-    instance = ZZZ()
+    Instance = IEditableObject
     """hardcoded/returns an instance of the class"""
     def BeginEdit(self):
         """
@@ -6321,10 +6063,7 @@ class IEditableObject:
 
 class IExtenderProvider:
     """ Defines the interface for extending properties to other components in a container. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IExtenderProvider()
-    instance = ZZZ()
+    Instance = IExtenderProvider
     """hardcoded/returns an instance of the class"""
     def CanExtend(self, extendee):
         """
@@ -6344,10 +6083,7 @@ class IExtenderProvider:
 
 class IIntellisenseBuilder:
     """ Provides an interface to facilitate the retrieval of the builder's name and to display the builder. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IIntellisenseBuilder()
-    instance = ZZZ()
+    Instance = IIntellisenseBuilder
     """hardcoded/returns an instance of the class"""
     def Show(self, language, value, newValue):
         """
@@ -6377,10 +6113,7 @@ Get: Name(self: IIntellisenseBuilder) -> str
 
 class IListSource:
     """ Provides functionality to an object to return a list that can be bound to a data source. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IListSource()
-    instance = ZZZ()
+    Instance = IListSource
     """hardcoded/returns an instance of the class"""
     def GetList(self):
         """
@@ -6410,10 +6143,7 @@ class ImmutableObjectAttribute:
     
     ImmutableObjectAttribute(immutable: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ImmutableObjectAttribute()
-    instance = ZZZ()
+    Instance = ImmutableObjectAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -6473,10 +6203,7 @@ Get: Immutable(self: ImmutableObjectAttribute) -> bool
 
 class INestedContainer:
     """ Provides functionality for nested containers, which logically contain zero or more other components and are owned by a parent component. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INestedContainer()
-    instance = ZZZ()
+    Instance = INestedContainer
     """hardcoded/returns an instance of the class"""
     def __enter__(self, *args): #cannot find CLR method
         """ __enter__(self: IDisposable) -> object """
@@ -6501,10 +6228,7 @@ Get: Owner(self: INestedContainer) -> IComponent
 
 class ISite:
     """ Provides functionality required by sites. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ISite()
-    instance = ZZZ()
+    Instance = ISite
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6543,10 +6267,7 @@ Set: Name(self: ISite) = value
 
 class INestedSite:
     """ Provides the ability to retrieve the full nested name of a component. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INestedSite()
-    instance = ZZZ()
+    Instance = INestedSite
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6568,10 +6289,7 @@ class InheritanceAttribute:
     InheritanceAttribute()
     InheritanceAttribute(inheritanceLevel: InheritanceLevel)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InheritanceAttribute()
-    instance = ZZZ()
+    Instance = InheritanceAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, value):
         """
@@ -6653,10 +6371,7 @@ class InheritanceLevel:
     
     enum InheritanceLevel, values: Inherited (1), InheritedReadOnly (2), NotInherited (3)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InheritanceLevel()
-    instance = ZZZ()
+    Instance = InheritanceLevel
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -6703,10 +6418,7 @@ class InitializationEventAttribute:
     
     InitializationEventAttribute(eventName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InitializationEventAttribute()
-    instance = ZZZ()
+    Instance = InitializationEventAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6728,10 +6440,7 @@ Get: EventName(self: InitializationEventAttribute) -> str
 
 class INotifyDataErrorInfo:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INotifyDataErrorInfo()
-    instance = ZZZ()
+    Instance = INotifyDataErrorInfo
     """hardcoded/returns an instance of the class"""
     def GetErrors(self, propertyName):
         """ GetErrors(self: INotifyDataErrorInfo, propertyName: str) -> IEnumerable """
@@ -6752,10 +6461,7 @@ class INotifyDataErrorInfo:
 
 class INotifyPropertyChanged:
     """ Notifies clients that a property value has changed. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INotifyPropertyChanged()
-    instance = ZZZ()
+    Instance = INotifyPropertyChanged
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6766,10 +6472,7 @@ class INotifyPropertyChanged:
 
 class INotifyPropertyChanging:
     """ Notifies clients that a property value is changing. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INotifyPropertyChanging()
-    instance = ZZZ()
+    Instance = INotifyPropertyChanging
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6785,10 +6488,7 @@ class InstallerTypeAttribute:
     InstallerTypeAttribute(installerType: Type)
     InstallerTypeAttribute(typeName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InstallerTypeAttribute()
-    instance = ZZZ()
+    Instance = InstallerTypeAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -6840,10 +6540,7 @@ Get: InstallerType(self: InstallerTypeAttribute) -> Type
 
 class InstanceCreationEditor():
     """ Creates an instance of a particular type of property from a drop-down box within the System.Windows.Forms.PropertyGrid. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InstanceCreationEditor()
-    instance = ZZZ()
+    Instance = InstanceCreationEditor
     """hardcoded/returns an instance of the class"""
     def CreateInstance(self, context, instanceType):
         """
@@ -6872,10 +6569,7 @@ class Int16Converter(BaseNumberConverter):
     
     Int16Converter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Int16Converter()
-    instance = ZZZ()
+    Instance = Int16Converter
     """hardcoded/returns an instance of the class"""
 
 class Int32Converter(BaseNumberConverter):
@@ -6884,10 +6578,7 @@ class Int32Converter(BaseNumberConverter):
     
     Int32Converter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Int32Converter()
-    instance = ZZZ()
+    Instance = Int32Converter
     """hardcoded/returns an instance of the class"""
 
 class Int64Converter(BaseNumberConverter):
@@ -6896,10 +6587,7 @@ class Int64Converter(BaseNumberConverter):
     
     Int64Converter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Int64Converter()
-    instance = ZZZ()
+    Instance = Int64Converter
     """hardcoded/returns an instance of the class"""
 
 class InvalidAsynchronousStateException(ArgumentException):
@@ -6910,10 +6598,7 @@ class InvalidAsynchronousStateException(ArgumentException):
     InvalidAsynchronousStateException(message: str)
     InvalidAsynchronousStateException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InvalidAsynchronousStateException()
-    instance = ZZZ()
+    Instance = InvalidAsynchronousStateException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6947,10 +6632,7 @@ class InvalidEnumArgumentException(ArgumentException):
     InvalidEnumArgumentException(message: str, innerException: Exception)
     InvalidEnumArgumentException(argumentName: str, invalidValue: int, enumClass: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InvalidEnumArgumentException()
-    instance = ZZZ()
+    Instance = InvalidEnumArgumentException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6978,10 +6660,7 @@ class InvalidEnumArgumentException(ArgumentException):
 
 class IRevertibleChangeTracking:
     """ Provides support for rolling back the changes """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IRevertibleChangeTracking()
-    instance = ZZZ()
+    Instance = IRevertibleChangeTracking
     """hardcoded/returns an instance of the class"""
     def RejectChanges(self):
         """
@@ -6996,10 +6675,7 @@ class IRevertibleChangeTracking:
 
 class ISupportInitialize:
     """ Specifies that this object supports a simple, transacted notification for batch initialization. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ISupportInitialize()
-    instance = ZZZ()
+    Instance = ISupportInitialize
     """hardcoded/returns an instance of the class"""
     def BeginInit(self):
         """
@@ -7022,10 +6698,7 @@ class ISupportInitialize:
 
 class ISupportInitializeNotification:
     """ Allows coordination of initialization for a component and its dependent properties. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ISupportInitializeNotification()
-    instance = ZZZ()
+    Instance = ISupportInitializeNotification
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -7044,10 +6717,7 @@ Get: IsInitialized(self: ISupportInitializeNotification) -> bool
 
 class ISynchronizeInvoke:
     """ Provides a way to synchronously or asynchronously execute a delegate. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ISynchronizeInvoke()
-    instance = ZZZ()
+    Instance = ISynchronizeInvoke
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, method, args):
         """
@@ -7103,10 +6773,7 @@ Get: InvokeRequired(self: ISynchronizeInvoke) -> bool
 
 class ITypeDescriptorContext:
     """ Provides contextual information about a component, such as its container and property descriptor. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeDescriptorContext()
-    instance = ZZZ()
+    Instance = ITypeDescriptorContext
     """hardcoded/returns an instance of the class"""
     def OnComponentChanged(self):
         """
@@ -7153,10 +6820,7 @@ Get: PropertyDescriptor(self: ITypeDescriptorContext) -> PropertyDescriptor
 
 class ITypedList:
     """ Provides functionality to discover the schema for a bindable list, where the properties available for binding differ from the public properties of the object to bind to. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITypedList()
-    instance = ZZZ()
+    Instance = ITypedList
     """hardcoded/returns an instance of the class"""
     def GetItemProperties(self, listAccessors):
         """
@@ -7187,10 +6851,7 @@ class ITypedList:
 
 class License:
     """ Provides the abstract base class for all licenses. A license is granted to a specific instance of a component. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return License()
-    instance = ZZZ()
+    Instance = License
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -7230,10 +6891,7 @@ class LicenseContext:
     
     LicenseContext()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseContext()
-    instance = ZZZ()
+    Instance = LicenseContext
     """hardcoded/returns an instance of the class"""
     def GetSavedLicenseKey(self, type, resourceAssembly):
         """
@@ -7294,10 +6952,7 @@ class LicenseException(SystemException):
     LicenseException(type: Type, instance: object, message: str)
     LicenseException(type: Type, instance: object, message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseException()
-    instance = ZZZ()
+    Instance = LicenseException
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
@@ -7343,10 +6998,7 @@ Get: LicensedType(self: LicenseException) -> Type
 
 class LicenseManager():
     """ Provides properties and methods to add a license to a component and to manage a System.ComponentModel.LicenseProvider. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseManager()
-    instance = ZZZ()
+    Instance = LicenseManager
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateWithContext(type, creationContext, args=None):
@@ -7443,10 +7095,7 @@ class LicenseManager():
 
 class LicenseProvider():
     """ Provides the abstract base class for implementing a license provider. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseProvider()
-    instance = ZZZ()
+    Instance = LicenseProvider
     """hardcoded/returns an instance of the class"""
     def GetLicense(self, context, type, instance, allowExceptions):
         """
@@ -7471,10 +7120,7 @@ class LicenseProviderAttribute:
     LicenseProviderAttribute(typeName: str)
     LicenseProviderAttribute(type: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseProviderAttribute()
-    instance = ZZZ()
+    Instance = LicenseProviderAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, value):
         """
@@ -7540,10 +7186,7 @@ class LicenseUsageMode:
     
     enum LicenseUsageMode, values: Designtime (1), Runtime (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseUsageMode()
-    instance = ZZZ()
+    Instance = LicenseUsageMode
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -7589,10 +7232,7 @@ class LicFileLicenseProvider(LicenseProvider):
     
     LicFileLicenseProvider()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicFileLicenseProvider()
-    instance = ZZZ()
+    Instance = LicFileLicenseProvider
     """hardcoded/returns an instance of the class"""
     def GetKey(self, *args): #cannot find CLR method
         """
@@ -7641,10 +7281,7 @@ class ListBindableAttribute:
     ListBindableAttribute(listBindable: bool)
     ListBindableAttribute(flags: BindableSupport)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ListBindableAttribute()
-    instance = ZZZ()
+    Instance = ListBindableAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -7716,10 +7353,7 @@ class ListChangedEventArgs(EventArgs):
     ListChangedEventArgs(listChangedType: ListChangedType, propDesc: PropertyDescriptor)
     ListChangedEventArgs(listChangedType: ListChangedType, newIndex: int, oldIndex: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ListChangedEventArgs()
-    instance = ZZZ()
+    Instance = ListChangedEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, listChangedType, *__args):
@@ -7767,10 +7401,7 @@ class ListChangedEventHandler(MulticastDelegate):
     
     ListChangedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ListChangedEventHandler()
-    instance = ZZZ()
+    Instance = ListChangedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: ListChangedEventHandler, sender: object, e: ListChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -7848,10 +7479,7 @@ class ListChangedType:
     
     enum ListChangedType, values: ItemAdded (1), ItemChanged (4), ItemDeleted (2), ItemMoved (3), PropertyDescriptorAdded (5), PropertyDescriptorChanged (7), PropertyDescriptorDeleted (6), Reset (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ListChangedType()
-    instance = ZZZ()
+    Instance = ListChangedType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -7903,10 +7531,7 @@ class ListSortDescription():
     
     ListSortDescription(property: PropertyDescriptor, direction: ListSortDirection)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ListSortDescription()
-    instance = ZZZ()
+    Instance = ListSortDescription
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, property, direction):
@@ -7938,10 +7563,7 @@ class ListSortDescriptionCollection:
     ListSortDescriptionCollection()
     ListSortDescriptionCollection(sorts: Array[ListSortDescription])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ListSortDescriptionCollection()
-    instance = ZZZ()
+    Instance = ListSortDescriptionCollection
     """hardcoded/returns an instance of the class"""
     def Contains(self, value):
         """
@@ -8033,10 +7655,7 @@ class ListSortDirection:
     
     enum ListSortDirection, values: Ascending (0), Descending (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ListSortDirection()
-    instance = ZZZ()
+    Instance = ListSortDirection
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -8082,10 +7701,7 @@ class LocalizableAttribute:
     
     LocalizableAttribute(isLocalizable: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LocalizableAttribute()
-    instance = ZZZ()
+    Instance = LocalizableAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -8152,10 +7768,7 @@ class LookupBindingPropertiesAttribute:
     LookupBindingPropertiesAttribute()
     LookupBindingPropertiesAttribute(dataSource: str, displayMember: str, valueMember: str, lookupMember: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LookupBindingPropertiesAttribute()
-    instance = ZZZ()
+    Instance = LookupBindingPropertiesAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -8234,10 +7847,7 @@ class MarshalByValueComponent:
     
     MarshalByValueComponent()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MarshalByValueComponent()
-    instance = ZZZ()
+    Instance = MarshalByValueComponent
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -8328,10 +7938,7 @@ class MaskedTextProvider:
     MaskedTextProvider(mask: str, culture: CultureInfo, passwordChar: Char, allowPromptAsInput: bool)
     MaskedTextProvider(mask: str, culture: CultureInfo, allowPromptAsInput: bool, promptChar: Char, passwordChar: Char, restrictToAscii: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MaskedTextProvider()
-    instance = ZZZ()
+    Instance = MaskedTextProvider
     """hardcoded/returns an instance of the class"""
     def Add(self, input, testPosition=None, resultHint=None):
         """
@@ -9000,10 +8607,7 @@ class MaskedTextResultHint:
     
     enum MaskedTextResultHint, values: AlphanumericCharacterExpected (-2), AsciiCharacterExpected (-1), CharacterEscaped (1), DigitExpected (-3), InvalidInput (-51), LetterExpected (-4), NoEffect (2), NonEditPosition (-54), PositionOutOfRange (-55), PromptCharNotAllowed (-52), SideEffect (3), SignedDigitExpected (-5), Success (4), UnavailableEditPosition (-53), Unknown (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MaskedTextResultHint()
-    instance = ZZZ()
+    Instance = MaskedTextResultHint
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -9062,10 +8666,7 @@ class MergablePropertyAttribute:
     
     MergablePropertyAttribute(allowMerge: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MergablePropertyAttribute()
-    instance = ZZZ()
+    Instance = MergablePropertyAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -9131,10 +8732,7 @@ class MultilineStringConverter(TypeConverter):
     
     MultilineStringConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MultilineStringConverter()
-    instance = ZZZ()
+    Instance = MultilineStringConverter
     """hardcoded/returns an instance of the class"""
     def ConvertTo(self, *__args):
         """
@@ -9181,10 +8779,7 @@ class NestedContainer(Container):
     
     NestedContainer(owner: IComponent)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NestedContainer()
-    instance = ZZZ()
+    Instance = NestedContainer
     """hardcoded/returns an instance of the class"""
     def CreateSite(self, *args): #cannot find CLR method
         """
@@ -9274,10 +8869,7 @@ class NotifyParentPropertyAttribute:
     
     NotifyParentPropertyAttribute(notifyParent: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NotifyParentPropertyAttribute()
-    instance = ZZZ()
+    Instance = NotifyParentPropertyAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -9343,10 +8935,7 @@ class NullableConverter(TypeConverter):
     
     NullableConverter(type: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NullableConverter()
-    instance = ZZZ()
+    Instance = NullableConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertFrom(self, *__args):
         """
@@ -9513,10 +9102,7 @@ class ParenthesizePropertyNameAttribute:
     ParenthesizePropertyNameAttribute()
     ParenthesizePropertyNameAttribute(needParenthesis: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ParenthesizePropertyNameAttribute()
-    instance = ZZZ()
+    Instance = ParenthesizePropertyNameAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, o):
         """
@@ -9584,10 +9170,7 @@ class PasswordPropertyTextAttribute:
     PasswordPropertyTextAttribute()
     PasswordPropertyTextAttribute(password: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PasswordPropertyTextAttribute()
-    instance = ZZZ()
+    Instance = PasswordPropertyTextAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, o):
         """
@@ -9656,10 +9239,7 @@ class ProgressChangedEventArgs(EventArgs):
     
     ProgressChangedEventArgs(progressPercentage: int, userState: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProgressChangedEventArgs()
-    instance = ZZZ()
+    Instance = ProgressChangedEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, progressPercentage, userState):
@@ -9688,10 +9268,7 @@ class ProgressChangedEventHandler(MulticastDelegate):
     
     ProgressChangedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProgressChangedEventHandler()
-    instance = ZZZ()
+    Instance = ProgressChangedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: ProgressChangedEventHandler, sender: object, e: ProgressChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -9769,10 +9346,7 @@ class PropertyChangedEventArgs(EventArgs):
     
     PropertyChangedEventArgs(propertyName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyChangedEventArgs()
-    instance = ZZZ()
+    Instance = PropertyChangedEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, propertyName):
@@ -9794,10 +9368,7 @@ class PropertyChangedEventHandler(MulticastDelegate):
     
     PropertyChangedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyChangedEventHandler()
-    instance = ZZZ()
+    Instance = PropertyChangedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: PropertyChangedEventHandler, sender: object, e: PropertyChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -9875,10 +9446,7 @@ class PropertyChangingEventArgs(EventArgs):
     
     PropertyChangingEventArgs(propertyName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyChangingEventArgs()
-    instance = ZZZ()
+    Instance = PropertyChangingEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, propertyName):
@@ -9900,10 +9468,7 @@ class PropertyChangingEventHandler(MulticastDelegate):
     
     PropertyChangingEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyChangingEventHandler()
-    instance = ZZZ()
+    Instance = PropertyChangingEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: PropertyChangingEventHandler, sender: object, e: PropertyChangingEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -9977,10 +9542,7 @@ class PropertyChangingEventHandler(MulticastDelegate):
 
 class PropertyDescriptor(MemberDescriptor):
     """ Provides an abstraction of a property on a class. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyDescriptor()
-    instance = ZZZ()
+    Instance = PropertyDescriptor
     """hardcoded/returns an instance of the class"""
     def AddValueChanged(self, component, handler):
         """
@@ -10233,10 +9795,7 @@ class PropertyDescriptorCollection:
     PropertyDescriptorCollection(properties: Array[PropertyDescriptor])
     PropertyDescriptorCollection(properties: Array[PropertyDescriptor], readOnly: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyDescriptorCollection()
-    instance = ZZZ()
+    Instance = PropertyDescriptorCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
@@ -10442,10 +10001,7 @@ class PropertyTabAttribute:
     PropertyTabAttribute(tabClass: Type, tabScope: PropertyTabScope)
     PropertyTabAttribute(tabClassName: str, tabScope: PropertyTabScope)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyTabAttribute()
-    instance = ZZZ()
+    Instance = PropertyTabAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, other):
         """
@@ -10540,10 +10096,7 @@ class PropertyTabScope:
     
     enum PropertyTabScope, values: Component (3), Document (2), Global (1), Static (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyTabScope()
-    instance = ZZZ()
+    Instance = PropertyTabScope
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -10592,10 +10145,7 @@ class ProvidePropertyAttribute:
     ProvidePropertyAttribute(propertyName: str, receiverType: Type)
     ProvidePropertyAttribute(propertyName: str, receiverTypeName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProvidePropertyAttribute()
-    instance = ZZZ()
+    Instance = ProvidePropertyAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -10665,10 +10215,7 @@ class ReadOnlyAttribute:
     
     ReadOnlyAttribute(isReadOnly: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReadOnlyAttribute()
-    instance = ZZZ()
+    Instance = ReadOnlyAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, value):
         """
@@ -10734,10 +10281,7 @@ class RecommendedAsConfigurableAttribute:
     
     RecommendedAsConfigurableAttribute(recommendedAsConfigurable: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RecommendedAsConfigurableAttribute()
-    instance = ZZZ()
+    Instance = RecommendedAsConfigurableAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -10804,10 +10348,7 @@ class RefreshEventArgs(EventArgs):
     RefreshEventArgs(componentChanged: object)
     RefreshEventArgs(typeChanged: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RefreshEventArgs()
-    instance = ZZZ()
+    Instance = RefreshEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -10839,10 +10380,7 @@ class RefreshEventHandler(MulticastDelegate):
     
     RefreshEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RefreshEventHandler()
-    instance = ZZZ()
+    Instance = RefreshEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, e, callback, object):
         """ BeginInvoke(self: RefreshEventHandler, e: RefreshEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -10920,10 +10458,7 @@ class RefreshProperties:
     
     enum RefreshProperties, values: All (1), None (0), Repaint (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RefreshProperties()
-    instance = ZZZ()
+    Instance = RefreshProperties
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -10970,10 +10505,7 @@ class RefreshPropertiesAttribute:
     
     RefreshPropertiesAttribute(refresh: RefreshProperties)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RefreshPropertiesAttribute()
-    instance = ZZZ()
+    Instance = RefreshPropertiesAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, value):
         """
@@ -11039,10 +10571,7 @@ class RunInstallerAttribute:
     
     RunInstallerAttribute(runInstaller: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RunInstallerAttribute()
-    instance = ZZZ()
+    Instance = RunInstallerAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -11108,10 +10637,7 @@ class RunWorkerCompletedEventArgs(AsyncCompletedEventArgs):
     
     RunWorkerCompletedEventArgs(result: object, error: Exception, cancelled: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RunWorkerCompletedEventArgs()
-    instance = ZZZ()
+    Instance = RunWorkerCompletedEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, result, error, cancelled):
@@ -11140,10 +10666,7 @@ class RunWorkerCompletedEventHandler(MulticastDelegate):
     
     RunWorkerCompletedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RunWorkerCompletedEventHandler()
-    instance = ZZZ()
+    Instance = RunWorkerCompletedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: RunWorkerCompletedEventHandler, sender: object, e: RunWorkerCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -11221,10 +10744,7 @@ class SByteConverter(BaseNumberConverter):
     
     SByteConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SByteConverter()
-    instance = ZZZ()
+    Instance = SByteConverter
     """hardcoded/returns an instance of the class"""
 
 class SettingsBindableAttribute:
@@ -11233,10 +10753,7 @@ class SettingsBindableAttribute:
     
     SettingsBindableAttribute(bindable: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsBindableAttribute()
-    instance = ZZZ()
+    Instance = SettingsBindableAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -11290,10 +10807,7 @@ class SingleConverter(BaseNumberConverter):
     
     SingleConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SingleConverter()
-    instance = ZZZ()
+    Instance = SingleConverter
     """hardcoded/returns an instance of the class"""
 
 class StringConverter(TypeConverter):
@@ -11302,10 +10816,7 @@ class StringConverter(TypeConverter):
     
     StringConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StringConverter()
-    instance = ZZZ()
+    Instance = StringConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertFrom(self, *__args):
         """
@@ -11335,10 +10846,7 @@ class StringConverter(TypeConverter):
 
 class SyntaxCheck():
     """ Provides methods to verify the machine name and path conform to a specific syntax. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SyntaxCheck()
-    instance = ZZZ()
+    Instance = SyntaxCheck
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CheckMachineName(value):
@@ -11389,10 +10897,7 @@ class TimeSpanConverter(TypeConverter):
     
     TimeSpanConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TimeSpanConverter()
-    instance = ZZZ()
+    Instance = TimeSpanConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertFrom(self, *__args):
         """
@@ -11454,10 +10959,7 @@ class ToolboxItemAttribute:
     ToolboxItemAttribute(toolboxItemTypeName: str)
     ToolboxItemAttribute(toolboxItemType: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ToolboxItemAttribute()
-    instance = ZZZ()
+    Instance = ToolboxItemAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -11526,10 +11028,7 @@ class ToolboxItemFilterAttribute:
     ToolboxItemFilterAttribute(filterString: str)
     ToolboxItemFilterAttribute(filterString: str, filterType: ToolboxItemFilterType)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ToolboxItemFilterAttribute()
-    instance = ZZZ()
+    Instance = ToolboxItemFilterAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -11612,10 +11111,7 @@ class ToolboxItemFilterType:
     
     enum ToolboxItemFilterType, values: Allow (0), Custom (1), Prevent (2), Require (3)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ToolboxItemFilterType()
-    instance = ZZZ()
+    Instance = ToolboxItemFilterType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -11665,10 +11161,7 @@ class TypeConverterAttribute:
     TypeConverterAttribute(type: Type)
     TypeConverterAttribute(typeName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeConverterAttribute()
-    instance = ZZZ()
+    Instance = TypeConverterAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -11723,10 +11216,7 @@ Get: ConverterTypeName(self: TypeConverterAttribute) -> str
 
 class TypeDescriptionProvider():
     """ Provides supplemental metadata to the System.ComponentModel.TypeDescriptor. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeDescriptionProvider()
-    instance = ZZZ()
+    Instance = TypeDescriptionProvider
     """hardcoded/returns an instance of the class"""
     def CreateInstance(self, provider, objectType, argTypes, args):
         """
@@ -11872,10 +11362,7 @@ class TypeDescriptionProviderAttribute:
     TypeDescriptionProviderAttribute(typeName: str)
     TypeDescriptionProviderAttribute(type: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeDescriptionProviderAttribute()
-    instance = ZZZ()
+    Instance = TypeDescriptionProviderAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -11900,10 +11387,7 @@ Get: TypeName(self: TypeDescriptionProviderAttribute) -> str
 
 class TypeDescriptor():
     """ Provides information about the characteristics for a component, such as its attributes, properties, and events. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeDescriptor()
-    instance = ZZZ()
+    Instance = TypeDescriptor
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def AddAttributes(*__args):
@@ -12473,10 +11957,7 @@ class TypeDescriptor():
 
 class TypeListConverter(TypeConverter):
     """ Provides a type converter that can be used to populate a list box with available types. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeListConverter()
-    instance = ZZZ()
+    Instance = TypeListConverter
     """hardcoded/returns an instance of the class"""
     def CanConvertFrom(self, *__args):
         """
@@ -12579,10 +12060,7 @@ class UInt16Converter(BaseNumberConverter):
     
     UInt16Converter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UInt16Converter()
-    instance = ZZZ()
+    Instance = UInt16Converter
     """hardcoded/returns an instance of the class"""
 
 class UInt32Converter(BaseNumberConverter):
@@ -12591,10 +12069,7 @@ class UInt32Converter(BaseNumberConverter):
     
     UInt32Converter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UInt32Converter()
-    instance = ZZZ()
+    Instance = UInt32Converter
     """hardcoded/returns an instance of the class"""
 
 class UInt64Converter(BaseNumberConverter):
@@ -12603,10 +12078,7 @@ class UInt64Converter(BaseNumberConverter):
     
     UInt64Converter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UInt64Converter()
-    instance = ZZZ()
+    Instance = UInt64Converter
     """hardcoded/returns an instance of the class"""
 
 class WarningException(SystemException):
@@ -12619,10 +12091,7 @@ class WarningException(SystemException):
     WarningException(message: str, innerException: Exception)
     WarningException(message: str, helpUrl: str, helpTopic: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WarningException()
-    instance = ZZZ()
+    Instance = WarningException
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
@@ -12687,10 +12156,7 @@ class Win32Exception(ExternalException):
     Win32Exception(message: str)
     Win32Exception(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Win32Exception()
-    instance = ZZZ()
+    Instance = Win32Exception
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """

@@ -10,10 +10,7 @@
 
 class DepartmentFixedLengthLayoutFactory:
     """ DepartmentFixedLengthLayoutFactory() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DepartmentFixedLengthLayoutFactory()
-    instance = ZZZ()
+    Instance = DepartmentFixedLengthLayoutFactory
     """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: DepartmentFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosDepartment] """
@@ -30,10 +27,7 @@ class DepartmentFixedLengthLayoutFactory:
 
 class IFixedLengthLayoutFactory:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IFixedLengthLayoutFactory()
-    instance = ZZZ()
+    Instance = IFixedLengthLayoutFactory
     """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: IFixedLengthLayoutFactory[T], appVersion: str) -> IFixedLayout[T] """
@@ -46,10 +40,7 @@ class IFixedLengthLayoutFactory:
 
 class KanbanBarcodeFixedLengthLayoutFactory:
     """ KanbanBarcodeFixedLengthLayoutFactory() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return KanbanBarcodeFixedLengthLayoutFactory()
-    instance = ZZZ()
+    Instance = KanbanBarcodeFixedLengthLayoutFactory
     """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: KanbanBarcodeFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosKanbanBarcode] """
@@ -66,10 +57,7 @@ class KanbanBarcodeFixedLengthLayoutFactory:
 
 class KanbanProductFixedLengthLayoutFactory:
     """ KanbanProductFixedLengthLayoutFactory() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return KanbanProductFixedLengthLayoutFactory()
-    instance = ZZZ()
+    Instance = KanbanProductFixedLengthLayoutFactory
     """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: KanbanProductFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosKanbanProduct] """
@@ -86,10 +74,7 @@ class KanbanProductFixedLengthLayoutFactory:
 
 class KanbanReplenishmentLineFixedLengthLayoutFactory:
     """ KanbanReplenishmentLineFixedLengthLayoutFactory() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return KanbanReplenishmentLineFixedLengthLayoutFactory()
-    instance = ZZZ()
+    Instance = KanbanReplenishmentLineFixedLengthLayoutFactory
     """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: KanbanReplenishmentLineFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosKanbanReplenishmentLine] """
@@ -106,10 +91,7 @@ class KanbanReplenishmentLineFixedLengthLayoutFactory:
 
 class MetaFixedLengthLayoutFactory:
     """ MetaFixedLengthLayoutFactory() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MetaFixedLengthLayoutFactory()
-    instance = ZZZ()
+    Instance = MetaFixedLengthLayoutFactory
     """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: MetaFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosMeta] """
@@ -126,10 +108,7 @@ class MetaFixedLengthLayoutFactory:
 
 class ProductReplenishmentLineFixedLengthLayoutFactory:
     """ ProductReplenishmentLineFixedLengthLayoutFactory() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProductReplenishmentLineFixedLengthLayoutFactory()
-    instance = ZZZ()
+    Instance = ProductReplenishmentLineFixedLengthLayoutFactory
     """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: ProductReplenishmentLineFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosProductReplenishmentLine] """
@@ -146,10 +125,7 @@ class ProductReplenishmentLineFixedLengthLayoutFactory:
 
 class ProductsFixedLengthLayoutFactory:
     """ ProductsFixedLengthLayoutFactory() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProductsFixedLengthLayoutFactory()
-    instance = ZZZ()
+    Instance = ProductsFixedLengthLayoutFactory
     """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: ProductsFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosProduct] """
@@ -166,10 +142,7 @@ class ProductsFixedLengthLayoutFactory:
 
 class ProductsIndexFixedLengthLayoutFactory:
     """ ProductsIndexFixedLengthLayoutFactory() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProductsIndexFixedLengthLayoutFactory()
-    instance = ZZZ()
+    Instance = ProductsIndexFixedLengthLayoutFactory
     """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: ProductsIndexFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosProductIndex] """
@@ -186,10 +159,7 @@ class ProductsIndexFixedLengthLayoutFactory:
 
 class UsersFixedLengthLayoutFactory:
     """ UsersFixedLengthLayoutFactory() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UsersFixedLengthLayoutFactory()
-    instance = ZZZ()
+    Instance = UsersFixedLengthLayoutFactory
     """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: UsersFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[UserWithSecrets] """

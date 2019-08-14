@@ -11,10 +11,7 @@ from System.ComponentModel import *
 
 class PurchaseOrders_GetHistoryLinesTableAdapter(Component):
     """ PurchaseOrders_GetHistoryLinesTableAdapter() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrders_GetHistoryLinesTableAdapter()
-    instance = ZZZ()
+    Instance = PurchaseOrders_GetHistoryLinesTableAdapter
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -107,10 +104,7 @@ Set: ClearBeforeFill(self: PurchaseOrders_GetHistoryLinesTableAdapter) = value
 
 class RmaOrders_GetHistoryLinesTableAdapter(Component):
     """ RmaOrders_GetHistoryLinesTableAdapter() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RmaOrders_GetHistoryLinesTableAdapter()
-    instance = ZZZ()
+    Instance = RmaOrders_GetHistoryLinesTableAdapter
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -203,10 +197,7 @@ Set: ClearBeforeFill(self: RmaOrders_GetHistoryLinesTableAdapter) = value
 
 class Shipment_GetHistoryShipmentLinesTableAdapter(Component):
     """ Shipment_GetHistoryShipmentLinesTableAdapter() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Shipment_GetHistoryShipmentLinesTableAdapter()
-    instance = ZZZ()
+    Instance = Shipment_GetHistoryShipmentLinesTableAdapter
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -299,10 +290,7 @@ Set: ClearBeforeFill(self: Shipment_GetHistoryShipmentLinesTableAdapter) = value
 
 class TableAdapterManager(Component):
     """ TableAdapterManager() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TableAdapterManager()
-    instance = ZZZ()
+    Instance = TableAdapterManager
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """

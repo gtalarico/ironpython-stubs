@@ -10,10 +10,7 @@
 
 class BatchesExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchesExtensions()
-    instance = ZZZ()
+    Instance = BatchesExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def ExtractFastLookupDictionaries(this, batchNames, orderNumbers, lineNumbers, barcodes):
@@ -33,10 +30,7 @@ class BatchesExtensions():
 
 class BatchManager():
     """ BatchManager() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchManager()
-    instance = ZZZ()
+    Instance = BatchManager
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CalculateAge(createdAt):
@@ -118,10 +112,7 @@ class BatchManager():
 
 class BatchPackManager:
     """ BatchPackManager(stockManager: IStockManager, transportPackages: TransportPackages) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchPackManager()
-    instance = ZZZ()
+    Instance = BatchPackManager
     """hardcoded/returns an instance of the class"""
     def AddCodAmountToFirstPackage(self, result):
         """ AddCodAmountToFirstPackage(self: BatchPackManager, result: ErpProcessSalesOrderLinesResult) """
@@ -253,10 +244,7 @@ class BatchPackManager:
 
 class BatchPickManager:
     """ BatchPickManager(batch: Batch, stock: IStockManager, settings: AllocationSettings) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchPickManager()
-    instance = ZZZ()
+    Instance = BatchPickManager
     """hardcoded/returns an instance of the class"""
     def CheckBatchScanForItem(self, args):
         """ CheckBatchScanForItem(self: BatchPickManager, args: BatchScanArgs) -> BatchScanResult """
@@ -389,10 +377,7 @@ class BatchPickManager:
 
 class ColliRegistrationResult():
     """ ColliRegistrationResult() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ColliRegistrationResult()
-    instance = ZZZ()
+    Instance = ColliRegistrationResult
     """hardcoded/returns an instance of the class"""
     def AddCount(self, count):
         """ AddCount(self: ColliRegistrationResult, count: Count) """
@@ -422,10 +407,7 @@ Set: AreColliHandled(self: ColliRegistrationResult) = value
 
 class ColliRegistrator:
     """ ColliRegistrator(transportPackages: TransportPackages) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ColliRegistrator()
-    instance = ZZZ()
+    Instance = ColliRegistrator
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """ Dispose(self: ColliRegistrator) """
@@ -468,10 +450,7 @@ class ColliRegistrator:
 
 class CountForColliRegistration():
     """ CountForColliRegistration() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CountForColliRegistration()
-    instance = ZZZ()
+    Instance = CountForColliRegistration
     """hardcoded/returns an instance of the class"""
     ItemCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: ItemCode(self: CountForColliRegistration) -> str
@@ -507,10 +486,7 @@ Set: WarehouseLocationCode(self: CountForColliRegistration) = value
 
 class PickingList:
     """ PickingList() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PickingList()
-    instance = ZZZ()
+    Instance = PickingList
     """hardcoded/returns an instance of the class"""
     def Create(self, batch):
         """ Create(self: PickingList, batch: Batch) -> BatchPickLocations """

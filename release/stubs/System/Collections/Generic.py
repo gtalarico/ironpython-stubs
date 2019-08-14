@@ -10,10 +10,7 @@
 
 class Comparer:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Comparer()
-    instance = ZZZ()
+    Instance = Comparer
     """hardcoded/returns an instance of the class"""
     def Compare(self, x, y):
         """
@@ -60,10 +57,7 @@ class Dictionary:
     Dictionary[TKey, TValue](dictionary: IDictionary[TKey, TValue], comparer: IEqualityComparer[TKey])
     Dictionary[TKey, TValue](dictionary: IDictionary[TKey, TValue])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Dictionary()
-    instance = ZZZ()
+    Instance = Dictionary
     """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
@@ -248,10 +242,7 @@ Get: Values(self: Dictionary[TKey, TValue]) -> ValueCollection
 
 class EqualityComparer:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EqualityComparer()
-    instance = ZZZ()
+    Instance = EqualityComparer
     """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """
@@ -294,10 +285,7 @@ class EqualityComparer:
 
 class ICollection:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICollection()
-    instance = ZZZ()
+    Instance = ICollection
     """hardcoded/returns an instance of the class"""
     def Add(self, item):
         """
@@ -376,10 +364,7 @@ Get: IsReadOnly(self: ICollection[T]) -> bool
 
 class IComparer:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IComparer()
-    instance = ZZZ()
+    Instance = IComparer
     """hardcoded/returns an instance of the class"""
     def Compare(self, x, y):
         """
@@ -405,10 +390,7 @@ class IComparer:
 
 class IDictionary:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDictionary()
-    instance = ZZZ()
+    Instance = IDictionary
     """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
@@ -492,10 +474,7 @@ Get: Values(self: IDictionary[TKey, TValue]) -> ICollection[TValue]
 
 class IEnumerable:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumerable()
-    instance = ZZZ()
+    Instance = IEnumerable
     """hardcoded/returns an instance of the class"""
     def GetEnumerator(self):
         """
@@ -513,10 +492,7 @@ class IEnumerable:
 
 class IEnumerator:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumerator()
-    instance = ZZZ()
+    Instance = IEnumerator
     """hardcoded/returns an instance of the class"""
     def next(self, *args): #cannot find CLR method
         """ next(self: object) -> object """
@@ -549,10 +525,7 @@ Get: Current(self: IEnumerator[T]) -> T
 
 class IEqualityComparer:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEqualityComparer()
-    instance = ZZZ()
+    Instance = IEqualityComparer
     """hardcoded/returns an instance of the class"""
     def Equals(self, x, y):
         """
@@ -588,10 +561,7 @@ class IEqualityComparer:
 
 class IList:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IList()
-    instance = ZZZ()
+    Instance = IList
     """hardcoded/returns an instance of the class"""
     def IndexOf(self, item):
         """
@@ -657,10 +627,7 @@ class IList:
 
 class IReadOnlyCollection:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IReadOnlyCollection()
-    instance = ZZZ()
+    Instance = IReadOnlyCollection
     """hardcoded/returns an instance of the class"""
     def __contains__(self, *args): #cannot find CLR method
         """ __contains__[T](enumerable: IEnumerable[T], value: T) -> bool """
@@ -683,10 +650,7 @@ class IReadOnlyCollection:
 
 class IReadOnlyDictionary:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IReadOnlyDictionary()
-    instance = ZZZ()
+    Instance = IReadOnlyDictionary
     """hardcoded/returns an instance of the class"""
     def ContainsKey(self, key):
         """ ContainsKey(self: IReadOnlyDictionary[TKey, TValue], key: TKey) -> bool """
@@ -726,10 +690,7 @@ class IReadOnlyDictionary:
 
 class IReadOnlyList:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IReadOnlyList()
-    instance = ZZZ()
+    Instance = IReadOnlyList
     """hardcoded/returns an instance of the class"""
     def __contains__(self, *args): #cannot find CLR method
         """ __contains__[T](enumerable: IEnumerable[T], value: T) -> bool """
@@ -750,10 +711,7 @@ class IReadOnlyList:
 
 class ISet:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ISet()
-    instance = ZZZ()
+    Instance = ISet
     """hardcoded/returns an instance of the class"""
     def Add(self, item):
         """
@@ -904,10 +862,7 @@ class KeyNotFoundException(SystemException):
     KeyNotFoundException(message: str)
     KeyNotFoundException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return KeyNotFoundException()
-    instance = ZZZ()
+    Instance = KeyNotFoundException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -934,10 +889,7 @@ class KeyNotFoundException(SystemException):
 
 class KeyValuePair():
     """ KeyValuePair[TKey, TValue](key: TKey, value: TValue) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return KeyValuePair()
-    instance = ZZZ()
+    Instance = KeyValuePair
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
@@ -978,10 +930,7 @@ class LinkedList:
     LinkedList[T]()
     LinkedList[T](collection: IEnumerable[T])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LinkedList()
-    instance = ZZZ()
+    Instance = LinkedList
     """hardcoded/returns an instance of the class"""
     def AddAfter(self, node, *__args):
         """
@@ -1217,10 +1166,7 @@ Get: Last(self: LinkedList[T]) -> LinkedListNode[T]
 
 class LinkedListNode():
     """ LinkedListNode[T](value: T) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LinkedListNode()
-    instance = ZZZ()
+    Instance = LinkedListNode
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, value):
@@ -1264,10 +1210,7 @@ class List:
     List[T](capacity: int)
     List[T](collection: IEnumerable[T])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return List()
-    instance = ZZZ()
+    Instance = List
     """hardcoded/returns an instance of the class"""
     def Add(self, item):
         """
@@ -1767,10 +1710,7 @@ class Queue:
     Queue[T](capacity: int)
     Queue[T](collection: IEnumerable[T])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Queue()
-    instance = ZZZ()
+    Instance = Queue
     """hardcoded/returns an instance of the class"""
     def Clear(self):
         """
@@ -1896,10 +1836,7 @@ class SortedDictionary:
     SortedDictionary[TKey, TValue](dictionary: IDictionary[TKey, TValue])
     SortedDictionary[TKey, TValue](dictionary: IDictionary[TKey, TValue], comparer: IComparer[TKey])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SortedDictionary()
-    instance = ZZZ()
+    Instance = SortedDictionary
     """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
@@ -2069,10 +2006,7 @@ class SortedList:
     SortedList[TKey, TValue](dictionary: IDictionary[TKey, TValue])
     SortedList[TKey, TValue](dictionary: IDictionary[TKey, TValue], comparer: IComparer[TKey])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SortedList()
-    instance = ZZZ()
+    Instance = SortedList
     """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
@@ -2280,10 +2214,7 @@ class SortedSet:
     SortedSet[T](collection: IEnumerable[T], comparer: IComparer[T])
     SortedSet[T](comparer: IComparer[T])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SortedSet()
-    instance = ZZZ()
+    Instance = SortedSet
     """hardcoded/returns an instance of the class"""
     def Add(self, item):
         """
@@ -2599,10 +2530,7 @@ class Stack:
     Stack[T](capacity: int)
     Stack[T](collection: IEnumerable[T])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Stack()
-    instance = ZZZ()
+    Instance = Stack
     """hardcoded/returns an instance of the class"""
     def Clear(self):
         """

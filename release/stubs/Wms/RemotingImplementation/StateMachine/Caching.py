@@ -10,10 +10,7 @@
 
 class IStateMachineCache:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IStateMachineCache()
-    instance = ZZZ()
+    Instance = IStateMachineCache
     """hardcoded/returns an instance of the class"""
     def ClearState(self, id):
         """ ClearState(self: IStateMachineCache, id: str) """
@@ -34,10 +31,7 @@ class IStateMachineCache:
 
 class StateMachineCacheContainer:
     """ StateMachineCacheContainer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StateMachineCacheContainer()
-    instance = ZZZ()
+    Instance = StateMachineCacheContainer
     """hardcoded/returns an instance of the class"""
     def ClearState(self, id):
         """ ClearState(self: StateMachineCacheContainer, id: str) """

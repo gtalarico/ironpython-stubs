@@ -10,10 +10,7 @@
 
 class AuthenticationManager():
     """ Manages the authentication modules called during the client authentication process. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AuthenticationManager()
-    instance = ZZZ()
+    Instance = AuthenticationManager
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Authenticate(challenge, request, credentials):
@@ -78,10 +75,7 @@ class AuthenticationSchemes:
     
     enum (flags) AuthenticationSchemes, values: Anonymous (32768), Basic (8), Digest (1), IntegratedWindowsAuthentication (6), Negotiate (2), None (0), Ntlm (4)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AuthenticationSchemes()
-    instance = ZZZ()
+    Instance = AuthenticationSchemes
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -132,10 +126,7 @@ class AuthenticationSchemeSelector(MulticastDelegate):
     
     AuthenticationSchemeSelector(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AuthenticationSchemeSelector()
-    instance = ZZZ()
+    Instance = AuthenticationSchemeSelector
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, httpRequest, callback, object):
         """ BeginInvoke(self: AuthenticationSchemeSelector, httpRequest: HttpListenerRequest, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -215,10 +206,7 @@ class Authorization():
     Authorization(token: str, finished: bool)
     Authorization(token: str, finished: bool, connectionGroupId: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Authorization()
-    instance = ZZZ()
+    Instance = Authorization
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, token, finished=None, connectionGroupId=None):
@@ -274,10 +262,7 @@ class BindIPEndPoint(MulticastDelegate):
     
     BindIPEndPoint(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BindIPEndPoint()
-    instance = ZZZ()
+    Instance = BindIPEndPoint
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, servicePoint, remoteEndPoint, retryCount, callback, object):
         """ BeginInvoke(self: BindIPEndPoint, servicePoint: ServicePoint, remoteEndPoint: IPEndPoint, retryCount: int, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -358,10 +343,7 @@ class Cookie():
     Cookie(name: str, value: str, path: str)
     Cookie(name: str, value: str, path: str, domain: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Cookie()
-    instance = ZZZ()
+    Instance = Cookie
     """hardcoded/returns an instance of the class"""
     def Equals(self, comparand):
         """
@@ -530,10 +512,7 @@ class CookieCollection:
     
     CookieCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CookieCollection()
-    instance = ZZZ()
+    Instance = CookieCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
@@ -637,10 +616,7 @@ class CookieContainer():
     CookieContainer(capacity: int)
     CookieContainer(capacity: int, perDomainCapacity: int, maxCookieSize: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CookieContainer()
-    instance = ZZZ()
+    Instance = CookieContainer
     """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
@@ -755,10 +731,7 @@ class CookieException(FormatException):
     
     CookieException()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CookieException()
-    instance = ZZZ()
+    Instance = CookieException
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, serializationInfo, streamingContext):
         """
@@ -797,10 +770,7 @@ class CredentialCache:
     
     CredentialCache()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CredentialCache()
-    instance = ZZZ()
+    Instance = CredentialCache
     """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
@@ -895,10 +865,7 @@ class DecompressionMethods:
     
     enum (flags) DecompressionMethods, values: Deflate (2), GZip (1), None (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DecompressionMethods()
-    instance = ZZZ()
+    Instance = DecompressionMethods
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -941,10 +908,7 @@ class DecompressionMethods:
 
 class Dns():
     """ Provides simple domain name resolution functionality. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Dns()
-    instance = ZZZ()
+    Instance = Dns
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def BeginGetHostAddresses(hostNameOrAddress, requestCallback, state):
@@ -1176,10 +1140,7 @@ class Dns():
 
 class EndPoint():
     """ Identifies a network address. This is an abstract class. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EndPoint()
-    instance = ZZZ()
+    Instance = EndPoint
     """hardcoded/returns an instance of the class"""
     def Create(self, socketAddress):
         """
@@ -1217,10 +1178,7 @@ class DnsEndPoint(EndPoint):
     DnsEndPoint(host: str, port: int)
     DnsEndPoint(host: str, port: int, addressFamily: AddressFamily)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DnsEndPoint()
-    instance = ZZZ()
+    Instance = DnsEndPoint
     """hardcoded/returns an instance of the class"""
     def Equals(self, comparand):
         """
@@ -1295,10 +1253,7 @@ class DnsPermission(CodeAccessPermission):
     
     DnsPermission(state: PermissionState)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DnsPermission()
-    instance = ZZZ()
+    Instance = DnsPermission
     """hardcoded/returns an instance of the class"""
     def Copy(self):
         """
@@ -1395,10 +1350,7 @@ class DnsPermissionAttribute(CodeAccessSecurityAttribute):
     
     DnsPermissionAttribute(action: SecurityAction)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DnsPermissionAttribute()
-    instance = ZZZ()
+    Instance = DnsPermissionAttribute
     """hardcoded/returns an instance of the class"""
     def CreatePermission(self):
         """
@@ -1424,10 +1376,7 @@ class DnsPermissionAttribute(CodeAccessSecurityAttribute):
 
 class DownloadDataCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.DownloadDataCompleted event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DownloadDataCompletedEventArgs()
-    instance = ZZZ()
+    Instance = DownloadDataCompletedEventArgs
     """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the data that is downloaded by a erload:System.Net.WebClient.DownloadDataAsync method.
@@ -1444,10 +1393,7 @@ class DownloadDataCompletedEventHandler(MulticastDelegate):
     
     DownloadDataCompletedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DownloadDataCompletedEventHandler()
-    instance = ZZZ()
+    Instance = DownloadDataCompletedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: DownloadDataCompletedEventHandler, sender: object, e: DownloadDataCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -1521,10 +1467,7 @@ class DownloadDataCompletedEventHandler(MulticastDelegate):
 
 class DownloadProgressChangedEventArgs(ProgressChangedEventArgs):
     """ Provides data for the System.Net.WebClient.DownloadProgressChanged event of a System.Net.WebClient. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DownloadProgressChangedEventArgs()
-    instance = ZZZ()
+    Instance = DownloadProgressChangedEventArgs
     """hardcoded/returns an instance of the class"""
     BytesReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of bytes received.
@@ -1548,10 +1491,7 @@ class DownloadProgressChangedEventHandler(MulticastDelegate):
     
     DownloadProgressChangedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DownloadProgressChangedEventHandler()
-    instance = ZZZ()
+    Instance = DownloadProgressChangedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: DownloadProgressChangedEventHandler, sender: object, e: DownloadProgressChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -1625,10 +1565,7 @@ class DownloadProgressChangedEventHandler(MulticastDelegate):
 
 class DownloadStringCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.DownloadStringCompleted event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DownloadStringCompletedEventArgs()
-    instance = ZZZ()
+    Instance = DownloadStringCompletedEventArgs
     """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the data that is downloaded by a erload:System.Net.WebClient.DownloadStringAsync method.
@@ -1645,10 +1582,7 @@ class DownloadStringCompletedEventHandler(MulticastDelegate):
     
     DownloadStringCompletedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DownloadStringCompletedEventHandler()
-    instance = ZZZ()
+    Instance = DownloadStringCompletedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: DownloadStringCompletedEventHandler, sender: object, e: DownloadStringCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -1722,10 +1656,7 @@ class DownloadStringCompletedEventHandler(MulticastDelegate):
 
 class EndpointPermission():
     """ Defines an endpoint that is authorized by a System.Net.SocketPermission instance. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EndpointPermission()
-    instance = ZZZ()
+    Instance = EndpointPermission
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -1788,10 +1719,7 @@ Get: Transport(self: EndpointPermission) -> TransportType
 
 class WebRequest(MarshalByRefObject):
     """ Makes a request to a Uniform Resource Identifier (URI). This is an abstract class. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebRequest()
-    instance = ZZZ()
+    Instance = WebRequest
     """hardcoded/returns an instance of the class"""
     def Abort(self):
         """
@@ -2104,10 +2032,7 @@ Set: UseDefaultCredentials(self: WebRequest) = value
 
 class FileWebRequest(WebRequest):
     """ Provides a file system implementation of the System.Net.WebRequest class. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileWebRequest()
-    instance = ZZZ()
+    Instance = FileWebRequest
     """hardcoded/returns an instance of the class"""
     def Abort(self):
         """
@@ -2310,10 +2235,7 @@ Set: UseDefaultCredentials(self: FileWebRequest) = value
 
 class WebResponse(MarshalByRefObject):
     """ Provides a response from a Uniform Resource Identifier (URI). This is an abstract class. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebResponse()
-    instance = ZZZ()
+    Instance = WebResponse
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -2439,10 +2361,7 @@ Get: ResponseUri(self: WebResponse) -> Uri
 
 class FileWebResponse(WebResponse):
     """ Provides a file system implementation of the System.Net.WebResponse class. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileWebResponse()
-    instance = ZZZ()
+    Instance = FileWebResponse
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -2553,10 +2472,7 @@ class FtpStatusCode:
     
     enum FtpStatusCode, values: AccountNeeded (532), ActionAbortedLocalProcessingError (451), ActionAbortedUnknownPageType (551), ActionNotTakenFilenameNotAllowed (553), ActionNotTakenFileUnavailable (550), ActionNotTakenFileUnavailableOrBusy (450), ActionNotTakenInsufficientSpace (452), ArgumentSyntaxError (501), BadCommandSequence (503), CantOpenData (425), ClosingControl (221), ClosingData (226), CommandExtraneous (202), CommandNotImplemented (502), CommandOK (200), CommandSyntaxError (500), ConnectionClosed (426), DataAlreadyOpen (125), DirectoryStatus (212), EnteringPassive (227), FileActionAborted (552), FileActionOK (250), FileCommandPending (350), FileStatus (213), LoggedInProceed (230), NeedLoginAccount (332), NotLoggedIn (530), OpeningData (150), PathnameCreated (257), RestartMarker (110), SendPasswordCommand (331), SendUserCommand (220), ServerWantsSecureSession (234), ServiceNotAvailable (421), ServiceTemporarilyNotAvailable (120), SystemType (215), Undefined (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FtpStatusCode()
-    instance = ZZZ()
+    Instance = FtpStatusCode
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2633,10 +2549,7 @@ class FtpStatusCode:
 
 class FtpWebRequest(WebRequest):
     """ Implements a File Transfer Protocol (FTP) client. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FtpWebRequest()
-    instance = ZZZ()
+    Instance = FtpWebRequest
     """hardcoded/returns an instance of the class"""
     def Abort(self):
         """
@@ -2905,10 +2818,7 @@ Set: UsePassive(self: FtpWebRequest) = value
 
 class FtpWebResponse(WebResponse):
     """ Encapsulates a File Transfer Protocol (FTP) server's response to a request. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FtpWebResponse()
-    instance = ZZZ()
+    Instance = FtpWebResponse
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -3046,10 +2956,7 @@ class GlobalProxySelection():
     
     GlobalProxySelection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GlobalProxySelection()
-    instance = ZZZ()
+    Instance = GlobalProxySelection
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetEmptyWebProxy():
@@ -3070,10 +2977,7 @@ class HttpContinueDelegate(MulticastDelegate):
     
     HttpContinueDelegate(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpContinueDelegate()
-    instance = ZZZ()
+    Instance = HttpContinueDelegate
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, StatusCode, httpHeaders, callback, object):
         """ BeginInvoke(self: HttpContinueDelegate, StatusCode: int, httpHeaders: WebHeaderCollection, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -3151,10 +3055,7 @@ class HttpListener:
     
     HttpListener()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpListener()
-    instance = ZZZ()
+    Instance = HttpListener
     """hardcoded/returns an instance of the class"""
     def Abort(self):
         """
@@ -3329,10 +3230,7 @@ class HttpListenerBasicIdentity(GenericIdentity):
     
     HttpListenerBasicIdentity(username: str, password: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpListenerBasicIdentity()
-    instance = ZZZ()
+    Instance = HttpListenerBasicIdentity
     """hardcoded/returns an instance of the class"""
     def CreateClaim(self, *args): #cannot find CLR method
         """ CreateClaim(self: ClaimsIdentity, reader: BinaryReader) -> Claim """
@@ -3368,10 +3266,7 @@ Get: Password(self: HttpListenerBasicIdentity) -> str
 
 class HttpListenerContext():
     """ Provides access to the request and response objects used by the System.Net.HttpListener class. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpListenerContext()
-    instance = ZZZ()
+    Instance = HttpListenerContext
     """hardcoded/returns an instance of the class"""
     def AcceptWebSocketAsync(self, subProtocol, *__args):
         """
@@ -3413,10 +3308,7 @@ class HttpListenerException(Win32Exception):
     HttpListenerException(errorCode: int)
     HttpListenerException(errorCode: int, message: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpListenerException()
-    instance = ZZZ()
+    Instance = HttpListenerException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -3451,10 +3343,7 @@ Get: ErrorCode(self: HttpListenerException) -> int
 
 class HttpListenerPrefixCollection:
     """ Represents the collection used to store Uniform Resource Identifier (URI) prefixes for System.Net.HttpListener objects. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpListenerPrefixCollection()
-    instance = ZZZ()
+    Instance = HttpListenerPrefixCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, uriPrefix):
         """
@@ -3567,10 +3456,7 @@ Get: IsSynchronized(self: HttpListenerPrefixCollection) -> bool
 
 class HttpListenerRequest():
     """ Describes an incoming HTTP request to an System.Net.HttpListener object. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpListenerRequest()
-    instance = ZZZ()
+    Instance = HttpListenerRequest
     """hardcoded/returns an instance of the class"""
     def BeginGetClientCertificate(self, requestCallback, state):
         """
@@ -3813,10 +3699,7 @@ Get: UserLanguages(self: HttpListenerRequest) -> Array[str]
 
 class HttpListenerResponse:
     """ Represents a response to a request being handled by an System.Net.HttpListener object. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpListenerResponse()
-    instance = ZZZ()
+    Instance = HttpListenerResponse
     """hardcoded/returns an instance of the class"""
     def Abort(self):
         """
@@ -4008,10 +3891,7 @@ Set: StatusDescription(self: HttpListenerResponse) = value
 
 class HttpListenerTimeoutManager():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpListenerTimeoutManager()
-    instance = ZZZ()
+    Instance = HttpListenerTimeoutManager
     """hardcoded/returns an instance of the class"""
     DrainEntityBody = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: DrainEntityBody(self: HttpListenerTimeoutManager) -> TimeSpan
@@ -4057,10 +3937,7 @@ class HttpRequestHeader:
     
     enum HttpRequestHeader, values: Accept (20), AcceptCharset (21), AcceptEncoding (22), AcceptLanguage (23), Allow (10), Authorization (24), CacheControl (0), Connection (1), ContentEncoding (13), ContentLanguage (14), ContentLength (11), ContentLocation (15), ContentMd5 (16), ContentRange (17), ContentType (12), Cookie (25), Date (2), Expect (26), Expires (18), From (27), Host (28), IfMatch (29), IfModifiedSince (30), IfNoneMatch (31), IfRange (32), IfUnmodifiedSince (33), KeepAlive (3), LastModified (19), MaxForwards (34), Pragma (4), ProxyAuthorization (35), Range (37), Referer (36), Te (38), Trailer (5), TransferEncoding (6), Translate (39), Upgrade (7), UserAgent (40), Via (8), Warning (9)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpRequestHeader()
-    instance = ZZZ()
+    Instance = HttpRequestHeader
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4145,10 +4022,7 @@ class HttpResponseHeader:
     
     enum HttpResponseHeader, values: AcceptRanges (20), Age (21), Allow (10), CacheControl (0), Connection (1), ContentEncoding (13), ContentLanguage (14), ContentLength (11), ContentLocation (15), ContentMd5 (16), ContentRange (17), ContentType (12), Date (2), ETag (22), Expires (18), KeepAlive (3), LastModified (19), Location (23), Pragma (4), ProxyAuthenticate (24), RetryAfter (25), Server (26), SetCookie (27), Trailer (5), TransferEncoding (6), Upgrade (7), Vary (28), Via (8), Warning (9), WwwAuthenticate (29)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpResponseHeader()
-    instance = ZZZ()
+    Instance = HttpResponseHeader
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4222,10 +4096,7 @@ class HttpStatusCode:
     
     enum HttpStatusCode, values: Accepted (202), Ambiguous (300), BadGateway (502), BadRequest (400), Conflict (409), Continue (100), Created (201), ExpectationFailed (417), Forbidden (403), Found (302), GatewayTimeout (504), Gone (410), HttpVersionNotSupported (505), InternalServerError (500), LengthRequired (411), MethodNotAllowed (405), Moved (301), MovedPermanently (301), MultipleChoices (300), NoContent (204), NonAuthoritativeInformation (203), NotAcceptable (406), NotFound (404), NotImplemented (501), NotModified (304), OK (200), PartialContent (206), PaymentRequired (402), PreconditionFailed (412), ProxyAuthenticationRequired (407), Redirect (302), RedirectKeepVerb (307), RedirectMethod (303), RequestedRangeNotSatisfiable (416), RequestEntityTooLarge (413), RequestTimeout (408), RequestUriTooLong (414), ResetContent (205), SeeOther (303), ServiceUnavailable (503), SwitchingProtocols (101), TemporaryRedirect (307), Unauthorized (401), UnsupportedMediaType (415), Unused (306), UpgradeRequired (426), UseProxy (305)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpStatusCode()
-    instance = ZZZ()
+    Instance = HttpStatusCode
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4316,10 +4187,7 @@ class HttpVersion():
     
     HttpVersion()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpVersion()
-    instance = ZZZ()
+    Instance = HttpVersion
     """hardcoded/returns an instance of the class"""
     Version10 = None
     Version11 = None
@@ -4331,10 +4199,7 @@ class HttpWebRequest(WebRequest):
     
     HttpWebRequest()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpWebRequest()
-    instance = ZZZ()
+    Instance = HttpWebRequest
     """hardcoded/returns an instance of the class"""
     def Abort(self):
         """
@@ -4840,10 +4705,7 @@ class HttpWebResponse(WebResponse):
     
     HttpWebResponse()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpWebResponse()
-    instance = ZZZ()
+    Instance = HttpWebResponse
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -5035,10 +4897,7 @@ Get: StatusDescription(self: HttpWebResponse) -> str
 
 class IAuthenticationModule:
     """ Provides the base authentication interface for Web client authentication modules. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IAuthenticationModule()
-    instance = ZZZ()
+    Instance = IAuthenticationModule
     """hardcoded/returns an instance of the class"""
     def Authenticate(self, challenge, request, credentials):
         """
@@ -5087,10 +4946,7 @@ Get: CanPreAuthenticate(self: IAuthenticationModule) -> bool
 
 class ICertificatePolicy:
     """ Validates a server certificate. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICertificatePolicy()
-    instance = ZZZ()
+    Instance = ICertificatePolicy
     """hardcoded/returns an instance of the class"""
     def CheckValidationResult(self, srvPoint, certificate, request, certificateProblem):
         """
@@ -5113,10 +4969,7 @@ class ICertificatePolicy:
 
 class ICredentialPolicy:
     """ Defines the credential policy to be used for resource requests that are made using System.Net.WebRequest and its derived classes. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICredentialPolicy()
-    instance = ZZZ()
+    Instance = ICredentialPolicy
     """hardcoded/returns an instance of the class"""
     def ShouldSendCredential(self, challengeUri, request, credential, authenticationModule):
         """
@@ -5139,10 +4992,7 @@ class ICredentialPolicy:
 
 class ICredentials:
     """ Provides the base authentication interface for retrieving credentials for Web client authentication. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICredentials()
-    instance = ZZZ()
+    Instance = ICredentials
     """hardcoded/returns an instance of the class"""
     def GetCredential(self, uri, authType):
         """
@@ -5163,10 +5013,7 @@ class ICredentials:
 
 class ICredentialsByHost:
     """ Provides the interface for retrieving credentials for a host, port, and authentication type. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICredentialsByHost()
-    instance = ZZZ()
+    Instance = ICredentialsByHost
     """hardcoded/returns an instance of the class"""
     def GetCredential(self, host, port, authenticationType):
         """
@@ -5195,10 +5042,7 @@ class IPAddress():
     IPAddress(address: Array[Byte], scopeid: Int64)
     IPAddress(address: Array[Byte])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPAddress()
-    instance = ZZZ()
+    Instance = IPAddress
     """hardcoded/returns an instance of the class"""
     def Equals(self, comparand):
         """
@@ -5419,10 +5263,7 @@ class IPEndPoint(EndPoint):
     IPEndPoint(address: Int64, port: int)
     IPEndPoint(address: IPAddress, port: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPEndPoint()
-    instance = ZZZ()
+    Instance = IPEndPoint
     """hardcoded/returns an instance of the class"""
     def Create(self, socketAddress):
         """
@@ -5522,10 +5363,7 @@ class IPHostEntry():
     
     IPHostEntry()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPHostEntry()
-    instance = ZZZ()
+    Instance = IPHostEntry
     """hardcoded/returns an instance of the class"""
     AddressList = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets a list of IP addresses that are associated with a host.
@@ -5555,10 +5393,7 @@ Set: HostName(self: IPHostEntry) = value
 
 class IWebProxy:
     """ Provides the base interface for implementation of proxy access for the System.Net.WebRequest class. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IWebProxy()
-    instance = ZZZ()
+    Instance = IWebProxy
     """hardcoded/returns an instance of the class"""
     def GetProxy(self, destination):
         """
@@ -5598,10 +5433,7 @@ Set: Credentials(self: IWebProxy) = value
 
 class IWebProxyScript:
     """ Provides the base interface to load and execute scripts for automatic proxy detection. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IWebProxyScript()
-    instance = ZZZ()
+    Instance = IWebProxyScript
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -5642,10 +5474,7 @@ class IWebProxyScript:
 
 class IWebRequestCreate:
     """ Provides the base interface for creating System.Net.WebRequest instances. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IWebRequestCreate()
-    instance = ZZZ()
+    Instance = IWebRequestCreate
     """hardcoded/returns an instance of the class"""
     def Create(self, uri):
         """
@@ -5669,10 +5498,7 @@ class NetworkAccess:
     
     enum (flags) NetworkAccess, values: Accept (128), Connect (64)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetworkAccess()
-    instance = ZZZ()
+    Instance = NetworkAccess
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -5722,10 +5548,7 @@ class NetworkCredential:
     NetworkCredential(userName: str, password: str, domain: str)
     NetworkCredential(userName: str, password: SecureString, domain: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetworkCredential()
-    instance = ZZZ()
+    Instance = NetworkCredential
     """hardcoded/returns an instance of the class"""
     def GetCredential(self, *__args):
         """
@@ -5803,10 +5626,7 @@ Set: UserName(self: NetworkCredential) = value
 
 class OpenReadCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.OpenReadCompleted event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OpenReadCompletedEventArgs()
-    instance = ZZZ()
+    Instance = OpenReadCompletedEventArgs
     """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets a readable stream that contains data downloaded by a erload:System.Net.WebClient.DownloadDataAsync method.
@@ -5823,10 +5643,7 @@ class OpenReadCompletedEventHandler(MulticastDelegate):
     
     OpenReadCompletedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OpenReadCompletedEventHandler()
-    instance = ZZZ()
+    Instance = OpenReadCompletedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: OpenReadCompletedEventHandler, sender: object, e: OpenReadCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -5900,10 +5717,7 @@ class OpenReadCompletedEventHandler(MulticastDelegate):
 
 class OpenWriteCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.OpenWriteCompleted event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OpenWriteCompletedEventArgs()
-    instance = ZZZ()
+    Instance = OpenWriteCompletedEventArgs
     """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets a writable stream that is used to send data to a server.
@@ -5920,10 +5734,7 @@ class OpenWriteCompletedEventHandler(MulticastDelegate):
     
     OpenWriteCompletedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OpenWriteCompletedEventHandler()
-    instance = ZZZ()
+    Instance = OpenWriteCompletedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: OpenWriteCompletedEventHandler, sender: object, e: OpenWriteCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -6002,10 +5813,7 @@ class ProtocolViolationException:
     ProtocolViolationException()
     ProtocolViolationException(message: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProtocolViolationException()
-    instance = ZZZ()
+    Instance = ProtocolViolationException
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, serializationInfo, streamingContext):
         """
@@ -6045,10 +5853,7 @@ class SecurityProtocolType:
     
     enum (flags) SecurityProtocolType, values: Ssl3 (48), SystemDefault (0), Tls (192), Tls11 (768), Tls12 (3072)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityProtocolType()
-    instance = ZZZ()
+    Instance = SecurityProtocolType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -6093,10 +5898,7 @@ class SecurityProtocolType:
 
 class ServicePoint():
     """ Provides connection management for HTTP connections. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ServicePoint()
-    instance = ZZZ()
+    Instance = ServicePoint
     """hardcoded/returns an instance of the class"""
     def CloseConnectionGroup(self, connectionGroupName):
         """
@@ -6241,10 +6043,7 @@ Set: UseNagleAlgorithm(self: ServicePoint) = value
 
 class ServicePointManager():
     """ Manages the collection of System.Net.ServicePoint objects. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ServicePointManager()
-    instance = ZZZ()
+    Instance = ServicePointManager
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FindServicePoint(*__args):
@@ -6315,10 +6114,7 @@ class SocketAddress():
     SocketAddress(family: AddressFamily, size: int)
     SocketAddress(family: AddressFamily)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketAddress()
-    instance = ZZZ()
+    Instance = SocketAddress
     """hardcoded/returns an instance of the class"""
     def Equals(self, comparand):
         """
@@ -6395,10 +6191,7 @@ class SocketPermission(CodeAccessPermission):
     SocketPermission(state: PermissionState)
     SocketPermission(access: NetworkAccess, transport: TransportType, hostName: str, portNumber: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketPermission()
-    instance = ZZZ()
+    Instance = SocketPermission
     """hardcoded/returns an instance of the class"""
     def AddPermission(self, access, transport, hostName, portNumber):
         """
@@ -6526,10 +6319,7 @@ class SocketPermissionAttribute(CodeAccessSecurityAttribute):
     
     SocketPermissionAttribute(action: SecurityAction)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketPermissionAttribute()
-    instance = ZZZ()
+    Instance = SocketPermissionAttribute
     """hardcoded/returns an instance of the class"""
     def CreatePermission(self):
         """
@@ -6588,10 +6378,7 @@ Set: Transport(self: SocketPermissionAttribute) = value
 
 class TransportContext():
     """ The System.Net.TransportContext class provides additional context about the underlying transport layer. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TransportContext()
-    instance = ZZZ()
+    Instance = TransportContext
     """hardcoded/returns an instance of the class"""
     def GetChannelBinding(self, kind):
         """
@@ -6616,10 +6403,7 @@ class TransportType:
     
     enum TransportType, values: All (3), Connectionless (1), ConnectionOriented (2), Tcp (2), Udp (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TransportType()
-    instance = ZZZ()
+    Instance = TransportType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -6664,10 +6448,7 @@ class TransportType:
 
 class UploadDataCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.UploadDataCompleted event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UploadDataCompletedEventArgs()
-    instance = ZZZ()
+    Instance = UploadDataCompletedEventArgs
     """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the server reply to a data upload operation started by calling an erload:System.Net.WebClient.UploadDataAsync method.
@@ -6684,10 +6465,7 @@ class UploadDataCompletedEventHandler(MulticastDelegate):
     
     UploadDataCompletedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UploadDataCompletedEventHandler()
-    instance = ZZZ()
+    Instance = UploadDataCompletedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: UploadDataCompletedEventHandler, sender: object, e: UploadDataCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -6761,10 +6539,7 @@ class UploadDataCompletedEventHandler(MulticastDelegate):
 
 class UploadFileCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.UploadFileCompleted event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UploadFileCompletedEventArgs()
-    instance = ZZZ()
+    Instance = UploadFileCompletedEventArgs
     """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the server reply to a data upload operation that is started by calling an erload:System.Net.WebClient.UploadFileAsync method.
@@ -6781,10 +6556,7 @@ class UploadFileCompletedEventHandler(MulticastDelegate):
     
     UploadFileCompletedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UploadFileCompletedEventHandler()
-    instance = ZZZ()
+    Instance = UploadFileCompletedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: UploadFileCompletedEventHandler, sender: object, e: UploadFileCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -6858,10 +6630,7 @@ class UploadFileCompletedEventHandler(MulticastDelegate):
 
 class UploadProgressChangedEventArgs(ProgressChangedEventArgs):
     """ Provides data for the System.Net.WebClient.UploadProgressChanged event of a System.Net.WebClient. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UploadProgressChangedEventArgs()
-    instance = ZZZ()
+    Instance = UploadProgressChangedEventArgs
     """hardcoded/returns an instance of the class"""
     BytesReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of bytes received.
@@ -6899,10 +6668,7 @@ class UploadProgressChangedEventHandler(MulticastDelegate):
     
     UploadProgressChangedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UploadProgressChangedEventHandler()
-    instance = ZZZ()
+    Instance = UploadProgressChangedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: UploadProgressChangedEventHandler, sender: object, e: UploadProgressChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -6976,10 +6742,7 @@ class UploadProgressChangedEventHandler(MulticastDelegate):
 
 class UploadStringCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.UploadStringCompleted event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UploadStringCompletedEventArgs()
-    instance = ZZZ()
+    Instance = UploadStringCompletedEventArgs
     """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the server reply to a string upload operation that is started by calling an erload:System.Net.WebClient.UploadStringAsync method.
@@ -6996,10 +6759,7 @@ class UploadStringCompletedEventHandler(MulticastDelegate):
     
     UploadStringCompletedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UploadStringCompletedEventHandler()
-    instance = ZZZ()
+    Instance = UploadStringCompletedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: UploadStringCompletedEventHandler, sender: object, e: UploadStringCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -7073,10 +6833,7 @@ class UploadStringCompletedEventHandler(MulticastDelegate):
 
 class UploadValuesCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.UploadValuesCompleted event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UploadValuesCompletedEventArgs()
-    instance = ZZZ()
+    Instance = UploadValuesCompletedEventArgs
     """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the server reply to a data upload operation started by calling an erload:System.Net.WebClient.UploadValuesAsync method.
@@ -7093,10 +6850,7 @@ class UploadValuesCompletedEventHandler(MulticastDelegate):
     
     UploadValuesCompletedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UploadValuesCompletedEventHandler()
-    instance = ZZZ()
+    Instance = UploadValuesCompletedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: UploadValuesCompletedEventHandler, sender: object, e: UploadValuesCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -7174,10 +6928,7 @@ class WebClient(Component):
     
     WebClient()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebClient()
-    instance = ZZZ()
+    Instance = WebClient
     """hardcoded/returns an instance of the class"""
     def CancelAsync(self):
         """
@@ -8002,10 +7753,7 @@ class WebException:
     WebException(message: str, status: WebExceptionStatus)
     WebException(message: str, innerException: Exception, status: WebExceptionStatus, response: WebResponse)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebException()
-    instance = ZZZ()
+    Instance = WebException
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, serializationInfo, streamingContext):
         """
@@ -8063,10 +7811,7 @@ class WebExceptionStatus:
     
     enum WebExceptionStatus, values: CacheEntryNotFound (18), ConnectFailure (2), ConnectionClosed (8), KeepAliveFailure (12), MessageLengthLimitExceeded (17), NameResolutionFailure (1), Pending (13), PipelineFailure (5), ProtocolError (7), ProxyNameResolutionFailure (15), ReceiveFailure (3), RequestCanceled (6), RequestProhibitedByCachePolicy (19), RequestProhibitedByProxy (20), SecureChannelFailure (10), SendFailure (4), ServerProtocolViolation (11), Success (0), Timeout (14), TrustFailure (9), UnknownError (16)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebExceptionStatus()
-    instance = ZZZ()
+    Instance = WebExceptionStatus
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -8131,10 +7876,7 @@ class WebHeaderCollection(NameValueCollection):
     
     WebHeaderCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebHeaderCollection()
-    instance = ZZZ()
+    Instance = WebHeaderCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
@@ -8519,10 +8261,7 @@ class WebPermission(CodeAccessPermission):
     WebPermission(access: NetworkAccess, uriRegex: Regex)
     WebPermission(access: NetworkAccess, uriString: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebPermission()
-    instance = ZZZ()
+    Instance = WebPermission
     """hardcoded/returns an instance of the class"""
     def AddPermission(self, access, *__args):
         """
@@ -8654,10 +8393,7 @@ class WebPermissionAttribute(CodeAccessSecurityAttribute):
     
     WebPermissionAttribute(action: SecurityAction)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebPermissionAttribute()
-    instance = ZZZ()
+    Instance = WebPermissionAttribute
     """hardcoded/returns an instance of the class"""
     def CreatePermission(self):
         """
@@ -8729,10 +8465,7 @@ class WebProxy:
     WebProxy(Address: str, BypassOnLocal: bool, BypassList: Array[str])
     WebProxy(Address: str, BypassOnLocal: bool, BypassList: Array[str], Credentials: ICredentials)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebProxy()
-    instance = ZZZ()
+    Instance = WebProxy
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetDefaultProxy():
@@ -8855,10 +8588,7 @@ Set: UseDefaultCredentials(self: WebProxy) = value
 
 class WebRequestMethods():
     """ Container class for System.Net.WebRequestMethods.Ftp, System.Net.WebRequestMethods.File, and System.Net.WebRequestMethods.Http classes. This class cannot be inherited """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebRequestMethods()
-    instance = ZZZ()
+    Instance = WebRequestMethods
     """hardcoded/returns an instance of the class"""
     File = None
     Ftp = None
@@ -8872,10 +8602,7 @@ class WebRequestMethods():
 
 class WebUtility():
     """ Provides methods for encoding and decoding URLs when processing Web requests. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebUtility()
-    instance = ZZZ()
+    Instance = WebUtility
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def HtmlDecode(value, output=None):
@@ -8943,10 +8670,7 @@ class WebUtility():
 
 class WriteStreamClosedEventArgs(EventArgs):
     """ WriteStreamClosedEventArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WriteStreamClosedEventArgs()
-    instance = ZZZ()
+    Instance = WriteStreamClosedEventArgs
     """hardcoded/returns an instance of the class"""
     Error = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Error(self: WriteStreamClosedEventArgs) -> Exception
@@ -8957,10 +8681,7 @@ class WriteStreamClosedEventArgs(EventArgs):
 
 class WriteStreamClosedEventHandler(MulticastDelegate):
     """ WriteStreamClosedEventHandler(object: object, method: IntPtr) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WriteStreamClosedEventHandler()
-    instance = ZZZ()
+    Instance = WriteStreamClosedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: WriteStreamClosedEventHandler, sender: object, e: WriteStreamClosedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """

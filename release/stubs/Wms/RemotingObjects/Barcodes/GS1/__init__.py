@@ -10,10 +10,7 @@
 
 class ApplicationIdentifiers():
     """ ApplicationIdentifiers() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ApplicationIdentifiers()
-    instance = ZZZ()
+    Instance = ApplicationIdentifiers
     """hardcoded/returns an instance of the class"""
     AdditionalProductIdentification = '240'
     AmountDue_DefinedValutaBand = '390n'
@@ -141,10 +138,7 @@ class GS1Barcode:
     GS1Barcode()
     GS1Barcode(applicationIdentifier: str, value: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GS1Barcode()
-    instance = ZZZ()
+    Instance = GS1Barcode
     """hardcoded/returns an instance of the class"""
     def ToBarcode(self, includeApplicationIdentifier=None):
         """
@@ -199,10 +193,7 @@ class GS1Barcode:
 
 class ItemNumberHelper():
     """ A class to validate GS1 article numbers """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemNumberHelper()
-    instance = ZZZ()
+    Instance = ItemNumberHelper
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetItemNumberType(articleNumber):
@@ -307,10 +298,7 @@ class ItemNumberHelper():
 
 class ItemNumberType:
     """ enum ItemNumberType, values: ASIN (1), EAN13 (3), EAN8 (2), GTIN (4), ISBN10 (5), ISBN13 (6), ISSN (9), SKU (7), Unknown (0), UPC (8) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemNumberType()
-    instance = ZZZ()
+    Instance = ItemNumberType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

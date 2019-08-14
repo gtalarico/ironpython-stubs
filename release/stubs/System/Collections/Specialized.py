@@ -15,10 +15,7 @@ class BitVector32():
     BitVector32(data: int)
     BitVector32(value: BitVector32)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BitVector32()
-    instance = ZZZ()
+    Instance = BitVector32
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateMask(previous=None):
@@ -128,10 +125,7 @@ class CollectionsUtil():
     
     CollectionsUtil()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CollectionsUtil()
-    instance = ZZZ()
+    Instance = CollectionsUtil
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateCaseInsensitiveHashtable(*__args):
@@ -177,10 +171,7 @@ class HybridDictionary:
     HybridDictionary(caseInsensitive: bool)
     HybridDictionary(initialSize: int, caseInsensitive: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HybridDictionary()
-    instance = ZZZ()
+    Instance = HybridDictionary
     """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
@@ -345,10 +336,7 @@ Get: Values(self: HybridDictionary) -> ICollection
 
 class INotifyCollectionChanged:
     """ Notifies listeners of dynamic changes, such as when items get added and removed or the whole list is refreshed. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INotifyCollectionChanged()
-    instance = ZZZ()
+    Instance = INotifyCollectionChanged
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -359,10 +347,7 @@ class INotifyCollectionChanged:
 
 class IOrderedDictionary:
     """ Represents an indexed collection of key/value pairs. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IOrderedDictionary()
-    instance = ZZZ()
+    Instance = IOrderedDictionary
     """hardcoded/returns an instance of the class"""
     def GetEnumerator(self):
         """
@@ -432,10 +417,7 @@ class ListDictionary:
     ListDictionary()
     ListDictionary(comparer: IComparer)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ListDictionary()
-    instance = ZZZ()
+    Instance = ListDictionary
     """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
@@ -598,10 +580,7 @@ Get: Values(self: ListDictionary) -> ICollection
 
 class NameObjectCollectionBase:
     """ Provides the abstract base class for a collection of associated System.String keys and System.Object values that can be accessed either with the key or with the index. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NameObjectCollectionBase()
-    instance = ZZZ()
+    Instance = NameObjectCollectionBase
     """hardcoded/returns an instance of the class"""
     def BaseAdd(self, *args): #cannot find CLR method
         """
@@ -817,10 +796,7 @@ class NameValueCollection(NameObjectCollectionBase):
     NameValueCollection(capacity: int, col: NameValueCollection)
     NameValueCollection(capacity: int, hashProvider: IHashCodeProvider, comparer: IComparer)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NameValueCollection()
-    instance = ZZZ()
+    Instance = NameValueCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
@@ -1109,10 +1085,7 @@ class NotifyCollectionChangedAction:
     
     enum NotifyCollectionChangedAction, values: Add (0), Move (3), Remove (1), Replace (2), Reset (4)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NotifyCollectionChangedAction()
-    instance = ZZZ()
+    Instance = NotifyCollectionChangedAction
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1171,10 +1144,7 @@ class NotifyCollectionChangedEventArgs(EventArgs):
     NotifyCollectionChangedEventArgs(action: NotifyCollectionChangedAction, changedItem: object, index: int, oldIndex: int)
     NotifyCollectionChangedEventArgs(action: NotifyCollectionChangedAction, changedItems: IList, index: int, oldIndex: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NotifyCollectionChangedEventArgs()
-    instance = ZZZ()
+    Instance = NotifyCollectionChangedEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, action, *__args):
@@ -1236,10 +1206,7 @@ class NotifyCollectionChangedEventHandler(MulticastDelegate):
     
     NotifyCollectionChangedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NotifyCollectionChangedEventHandler()
-    instance = ZZZ()
+    Instance = NotifyCollectionChangedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: NotifyCollectionChangedEventHandler, sender: object, e: NotifyCollectionChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -1320,10 +1287,7 @@ class OrderedDictionary:
     OrderedDictionary(comparer: IEqualityComparer)
     OrderedDictionary(capacity: int, comparer: IEqualityComparer)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OrderedDictionary()
-    instance = ZZZ()
+    Instance = OrderedDictionary
     """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
@@ -1521,10 +1485,7 @@ class StringCollection:
     
     StringCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StringCollection()
-    instance = ZZZ()
+    Instance = StringCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
@@ -1702,10 +1663,7 @@ class StringDictionary:
     
     StringDictionary()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StringDictionary()
-    instance = ZZZ()
+    Instance = StringDictionary
     """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
@@ -1840,10 +1798,7 @@ Get: Values(self: StringDictionary) -> ICollection
 
 class StringEnumerator():
     """ Supports a simple iteration over a System.Collections.Specialized.StringCollection. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StringEnumerator()
-    instance = ZZZ()
+    Instance = StringEnumerator
     """hardcoded/returns an instance of the class"""
     def MoveNext(self):
         """

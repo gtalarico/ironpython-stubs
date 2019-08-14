@@ -10,10 +10,7 @@
 
 class DailyOnWorkdaysSchedule:
     """ DailyOnWorkdaysSchedule() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DailyOnWorkdaysSchedule()
-    instance = ZZZ()
+    Instance = DailyOnWorkdaysSchedule
     """hardcoded/returns an instance of the class"""
     def GetNextTime(self, lastTime):
         """ GetNextTime(self: DailyOnWorkdaysSchedule, lastTime: DateTime) -> DateTime """
@@ -30,10 +27,7 @@ class DailyOnWorkdaysSchedule:
 
 class DailySchedule:
     """ DailySchedule() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DailySchedule()
-    instance = ZZZ()
+    Instance = DailySchedule
     """hardcoded/returns an instance of the class"""
     def GetNextTime(self, lastTime):
         """ GetNextTime(self: DailySchedule, lastTime: DateTime) -> DateTime """
@@ -50,10 +44,7 @@ class DailySchedule:
 
 class EmailDigestNotificationSummary:
     """ EmailDigestNotificationSummary(mailer: IMailer, general: General) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EmailDigestNotificationSummary()
-    instance = ZZZ()
+    Instance = EmailDigestNotificationSummary
     """hardcoded/returns an instance of the class"""
     def ExecuteSummary(self, summary):
         """ ExecuteSummary(self: EmailDigestNotificationSummary, summary: ExecuteNotificationSummaryArgs) -> Task """
@@ -83,10 +74,7 @@ class EmailDigestNotificationSummary:
 
 class INotificationSummaryExecution:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INotificationSummaryExecution()
-    instance = ZZZ()
+    Instance = INotificationSummaryExecution
     """hardcoded/returns an instance of the class"""
     def ExecuteSummary(self, summary):
         """ ExecuteSummary(self: INotificationSummaryExecution, summary: ExecuteNotificationSummaryArgs) -> Task """
@@ -103,10 +91,7 @@ class INotificationSummaryExecution:
 
 class INotificationSummarySchedule:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INotificationSummarySchedule()
-    instance = ZZZ()
+    Instance = INotificationSummarySchedule
     """hardcoded/returns an instance of the class"""
     def GetNextTime(self, lastTime):
         """ GetNextTime(self: INotificationSummarySchedule, lastTime: DateTime) -> DateTime """
@@ -119,10 +104,7 @@ class INotificationSummarySchedule:
 
 class NotificationTypeContainer():
     """ NotificationTypeContainer(iocContainer: IUnityContainer) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NotificationTypeContainer()
-    instance = ZZZ()
+    Instance = NotificationTypeContainer
     """hardcoded/returns an instance of the class"""
     def RegisterExecution(self, *__args):
         """ RegisterExecution(self: NotificationTypeContainer, implementation: Type, name: str)RegisterExecution[T](self: NotificationTypeContainer, name: str) """
@@ -159,10 +141,7 @@ class NotificationTypeContainer():
 
 class SlackWebDigestNotificationSummary:
     """ SlackWebDigestNotificationSummary(general: General) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SlackWebDigestNotificationSummary()
-    instance = ZZZ()
+    Instance = SlackWebDigestNotificationSummary
     """hardcoded/returns an instance of the class"""
     def ExecuteSummary(self, summary):
         """ ExecuteSummary(self: SlackWebDigestNotificationSummary, summary: ExecuteNotificationSummaryArgs) -> Task """
@@ -188,10 +167,7 @@ class SlackWebDigestNotificationSummary:
 
 class WeeklySchedule:
     """ WeeklySchedule() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WeeklySchedule()
-    instance = ZZZ()
+    Instance = WeeklySchedule
     """hardcoded/returns an instance of the class"""
     def GetNextTime(self, lastTime):
         """ GetNextTime(self: WeeklySchedule, lastTime: DateTime) -> DateTime """

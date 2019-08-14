@@ -10,10 +10,7 @@
 
 class ZoneRightsAttributes():
     """ ZoneRightsAttributes() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ZoneRightsAttributes()
-    instance = ZZZ()
+    Instance = ZoneRightsAttributes
     """hardcoded/returns an instance of the class"""
     Description = None
     Group = None

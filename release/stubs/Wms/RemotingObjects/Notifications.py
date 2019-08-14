@@ -14,10 +14,7 @@ class AddNotificationGroupArgs():
     
     AddNotificationGroupArgs()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AddNotificationGroupArgs()
-    instance = ZZZ()
+    Instance = AddNotificationGroupArgs
     """hardcoded/returns an instance of the class"""
     GotoLink = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """optional goto link, user can click on to see origin of notifications from this group
@@ -44,10 +41,7 @@ class DeleteNotificationByReferenceArgs():
     
     DeleteNotificationByReferenceArgs()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DeleteNotificationByReferenceArgs()
-    instance = ZZZ()
+    Instance = DeleteNotificationByReferenceArgs
     """hardcoded/returns an instance of the class"""
     GroupKey = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """optional filter, will only delete notifications in this group.
@@ -81,10 +75,7 @@ class DeleteNotificationGroupArgs():
     
     DeleteNotificationGroupArgs()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DeleteNotificationGroupArgs()
-    instance = ZZZ()
+    Instance = DeleteNotificationGroupArgs
     """hardcoded/returns an instance of the class"""
     ForceDelete = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Forces delete even when notifications still exist under group.
@@ -110,10 +101,7 @@ class ExecuteNotificationSummaryArgs():
     
     ExecuteNotificationSummaryArgs()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExecuteNotificationSummaryArgs()
-    instance = ZZZ()
+    Instance = ExecuteNotificationSummaryArgs
     """hardcoded/returns an instance of the class"""
     def TryGetConfiguration(self, key):
         """
@@ -180,10 +168,7 @@ class GetNotificationsArgs():
     
     GetNotificationsArgs()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetNotificationsArgs()
-    instance = ZZZ()
+    Instance = GetNotificationsArgs
     """hardcoded/returns an instance of the class"""
     LimitPerGroup = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Paging page size per group, amount of notifications to return.
@@ -270,10 +255,7 @@ Set: ZoneId(self: GetNotificationsArgs) = value
 
 class GetNotificationsSortOrder:
     """ enum GetNotificationsSortOrder, values: Default (0), Importance (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetNotificationsSortOrder()
-    instance = ZZZ()
+    Instance = GetNotificationsSortOrder
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -315,10 +297,7 @@ class GetNotificationsSortOrder:
 
 class HasNotificationsArgs():
     """ HasNotificationsArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HasNotificationsArgs()
-    instance = ZZZ()
+    Instance = HasNotificationsArgs
     """hardcoded/returns an instance of the class"""
     NewerThan = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """If set, only takes notifications that are newer than this value.
@@ -368,10 +347,7 @@ class InsertNotificationArgs():
     
     InsertNotificationArgs()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InsertNotificationArgs()
-    instance = ZZZ()
+    Instance = InsertNotificationArgs
     """hardcoded/returns an instance of the class"""
     GotoLink = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: GotoLink(self: InsertNotificationArgs) -> str
@@ -425,10 +401,7 @@ class Notification():
     
     Notification()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Notification()
-    instance = ZZZ()
+    Instance = Notification
     """hardcoded/returns an instance of the class"""
     CreatedOn = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Time the issue was created.
@@ -529,10 +502,7 @@ class NotificationGroup():
     
     NotificationGroup()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NotificationGroup()
-    instance = ZZZ()
+    Instance = NotificationGroup
     """hardcoded/returns an instance of the class"""
     GotoLink = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Optional goto link for notification group
@@ -558,10 +528,7 @@ class NotificationSeverity:
     
     enum NotificationSeverity, values: Critical (10), Informational (0), Warning (5)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NotificationSeverity()
-    instance = ZZZ()
+    Instance = NotificationSeverity
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -609,10 +576,7 @@ class NotificationSummaryConfiguration():
     
     NotificationSummaryConfiguration()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NotificationSummaryConfiguration()
-    instance = ZZZ()
+    Instance = NotificationSummaryConfiguration
     """hardcoded/returns an instance of the class"""
     ExecutionConfig = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Dynamic (json) dictionary of options used by INotificationSummaryExecution.ExecuteSummary.

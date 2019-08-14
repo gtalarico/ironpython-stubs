@@ -13,10 +13,7 @@ class OrderValidator:
     OrderValidator(orderNumber: str, orderType: OrderTypeEnum)
     OrderValidator(orderNumber: str, orderType: OrderTypeEnum, orderLines: IEnumerable[OutboundOrderLine])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OrderValidator()
-    instance = ZZZ()
+    Instance = OrderValidator
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """ Dispose(self: OrderValidator) """
@@ -61,10 +58,7 @@ class OrderValidator:
 
 class OrderValidatorFactory():
     """ OrderValidatorFactory(orderNumber: str, orderType: OrderTypeEnum) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OrderValidatorFactory()
-    instance = ZZZ()
+    Instance = OrderValidatorFactory
     """hardcoded/returns an instance of the class"""
     def Create(self):
         """ Create(self: OrderValidatorFactory) -> OrderValidator """
@@ -78,10 +72,7 @@ class OrderValidatorFactory():
 
 class PurchasOrderValidator(OrderValidator):
     """ PurchasOrderValidator(orderNumber: str, orderType: OrderTypeEnum) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PurchasOrderValidator()
-    instance = ZZZ()
+    Instance = PurchasOrderValidator
     """hardcoded/returns an instance of the class"""
     def IsOrderValid(self):
         """ IsOrderValid(self: PurchasOrderValidator) -> OrderValidationResult """
@@ -111,10 +102,7 @@ class PurchasOrderValidator(OrderValidator):
 
 class ReplenishmentOrderValidator(OrderValidator):
     """ ReplenishmentOrderValidator(orderNumber: str, orderType: OrderTypeEnum) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReplenishmentOrderValidator()
-    instance = ZZZ()
+    Instance = ReplenishmentOrderValidator
     """hardcoded/returns an instance of the class"""
     def IsOrderValid(self):
         """ IsOrderValid(self: ReplenishmentOrderValidator) -> OrderValidationResult """
@@ -144,10 +132,7 @@ class ReplenishmentOrderValidator(OrderValidator):
 
 class RmaOrderValidator(OrderValidator):
     """ RmaOrderValidator(orderNumber: str, orderType: OrderTypeEnum) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RmaOrderValidator()
-    instance = ZZZ()
+    Instance = RmaOrderValidator
     """hardcoded/returns an instance of the class"""
     def IsOrderValid(self):
         """ IsOrderValid(self: RmaOrderValidator) -> OrderValidationResult """
@@ -177,10 +162,7 @@ class RmaOrderValidator(OrderValidator):
 
 class SalesOrderValidator(OrderValidator):
     """ SalesOrderValidator(orderNumber: str, orderType: OrderTypeEnum) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SalesOrderValidator()
-    instance = ZZZ()
+    Instance = SalesOrderValidator
     """hardcoded/returns an instance of the class"""
     def IsOrderValid(self):
         """ IsOrderValid(self: SalesOrderValidator) -> OrderValidationResult """

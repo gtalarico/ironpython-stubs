@@ -15,10 +15,7 @@ class CSharpCodeProvider(CodeDomProvider):
     CSharpCodeProvider()
     CSharpCodeProvider(providerOptions: IDictionary[str, str])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CSharpCodeProvider()
-    instance = ZZZ()
+    Instance = CSharpCodeProvider
     """hardcoded/returns an instance of the class"""
     def CreateCompiler(self):
         """

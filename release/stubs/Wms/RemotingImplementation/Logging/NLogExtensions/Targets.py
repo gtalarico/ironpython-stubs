@@ -10,10 +10,7 @@
 
 class ExceptionExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExceptionExtensions()
-    instance = ZZZ()
+    Instance = ExceptionExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def IsLoggedToInternalLogger(exception):
@@ -39,10 +36,7 @@ class ExceptionExtensions():
 
 class LogLevelExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LogLevelExtensions()
-    instance = ZZZ()
+    Instance = LogLevelExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def ToSeverity(level):
@@ -59,10 +53,7 @@ class StackdriverLabel():
     StackdriverLabel()
     StackdriverLabel(parameterName: str, parameterLayout: Layout)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StackdriverLabel()
-    instance = ZZZ()
+    Instance = StackdriverLabel
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, parameterName=None, parameterLayout=None):
@@ -88,10 +79,7 @@ Set: Name(self: StackdriverLabel) = value
 
 class StackDriverLoggingTarget(TargetWithLayout):
     """ StackDriverLoggingTarget() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StackDriverLoggingTarget()
-    instance = ZZZ()
+    Instance = StackDriverLoggingTarget
     """hardcoded/returns an instance of the class"""
     def CloseTarget(self, *args): #cannot find CLR method
         """ CloseTarget(self: StackDriverLoggingTarget) """

@@ -15,10 +15,7 @@ class Count(DbObject):
     
     Count()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Count()
-    instance = ZZZ()
+    Instance = Count
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: Count) -> object """
@@ -288,10 +285,7 @@ class CountFilter():
     CountFilter(warehouseCode: str, type: CountTypeEnum, countGroup: int)
     CountFilter(warehouseCode: str, type: CountTypeEnum, countGroup: int, searchText: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CountFilter()
-    instance = ZZZ()
+    Instance = CountFilter
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -312,10 +306,7 @@ class CountFilter():
 
 class CountGroup(DbObject):
     """ CountGroup() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CountGroup()
-    instance = ZZZ()
+    Instance = CountGroup
     """hardcoded/returns an instance of the class"""
     def IsLifeExpired(self, lifeTimeConfig):
         """ IsLifeExpired(self: CountGroup, lifeTimeConfig: Dictionary[CacheLifeTimes, int]) -> bool """
@@ -451,10 +442,7 @@ Set: UseScript(self: CountGroup) = value
 
 class CountGroups(FindableList):
     """ CountGroups() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CountGroups()
-    instance = ZZZ()
+    Instance = CountGroups
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(list):
@@ -486,10 +474,7 @@ class CountGroups(FindableList):
 
 class CountGroupTypeEnum:
     """ enum CountGroupTypeEnum, values: ADHOC (1), COLLIREGISTRATION (0), PICKDIFF (2) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CountGroupTypeEnum()
-    instance = ZZZ()
+    Instance = CountGroupTypeEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -536,10 +521,7 @@ class Counts(FindableList):
     
     Counts()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Counts()
-    instance = ZZZ()
+    Instance = Counts
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -580,10 +562,7 @@ class CountTypeEnum:
     
     enum (flags) CountTypeEnum, values: All (7), Approved (4), Count (1), SuggestCount (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CountTypeEnum()
-    instance = ZZZ()
+    Instance = CountTypeEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -631,10 +610,7 @@ class ProcessCountResult():
     
     ProcessCountResult(success: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessCountResult()
-    instance = ZZZ()
+    Instance = ProcessCountResult
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, success):

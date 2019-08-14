@@ -14,10 +14,7 @@ class AllowPartiallyTrustedCallersAttribute:
     
     AllowPartiallyTrustedCallersAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AllowPartiallyTrustedCallersAttribute()
-    instance = ZZZ()
+    Instance = AllowPartiallyTrustedCallersAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -35,10 +32,7 @@ Set: PartialTrustVisibilityLevel(self: AllowPartiallyTrustedCallersAttribute) = 
 
 class CodeAccessPermission:
     """ Defines the underlying structure of all code access permissions. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CodeAccessPermission()
-    instance = ZZZ()
+    Instance = CodeAccessPermission
     """hardcoded/returns an instance of the class"""
     def Assert(self):
         """
@@ -221,10 +215,7 @@ class HostProtectionException(SystemException):
     HostProtectionException(message: str, e: Exception)
     HostProtectionException(message: str, protectedResources: HostProtectionResource, demandedResources: HostProtectionResource)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HostProtectionException()
-    instance = ZZZ()
+    Instance = HostProtectionException
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
@@ -290,10 +281,7 @@ class HostSecurityManager():
     
     HostSecurityManager()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HostSecurityManager()
-    instance = ZZZ()
+    Instance = HostSecurityManager
     """hardcoded/returns an instance of the class"""
     def DetermineApplicationTrust(self, applicationEvidence, activatorEvidence, context):
         """
@@ -407,10 +395,7 @@ class HostSecurityManagerOptions:
     
     enum (flags) HostSecurityManagerOptions, values: AllFlags (31), HostAppDomainEvidence (1), HostAssemblyEvidence (4), HostDetermineApplicationTrust (8), HostPolicyLevel (2), HostResolvePolicy (16), None (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HostSecurityManagerOptions()
-    instance = ZZZ()
+    Instance = HostSecurityManagerOptions
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -457,10 +442,7 @@ class HostSecurityManagerOptions:
 
 class IEvidenceFactory:
     """ Gets an object's System.Security.Policy.Evidence. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEvidenceFactory()
-    instance = ZZZ()
+    Instance = IEvidenceFactory
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -477,10 +459,7 @@ Get: Evidence(self: IEvidenceFactory) -> Evidence
 
 class ISecurityEncodable:
     """ Defines the methods that convert permission object state to and from XML element representation. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ISecurityEncodable()
-    instance = ZZZ()
+    Instance = ISecurityEncodable
     """hardcoded/returns an instance of the class"""
     def FromXml(self, e):
         """
@@ -507,10 +486,7 @@ class ISecurityEncodable:
 
 class IPermission:
     """ Defines methods implemented by permission types. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPermission()
-    instance = ZZZ()
+    Instance = IPermission
     """hardcoded/returns an instance of the class"""
     def Copy(self):
         """
@@ -568,10 +544,7 @@ class IPermission:
 
 class ISecurityPolicyEncodable:
     """ Supports the methods that convert permission object state to and from an XML element representation. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ISecurityPolicyEncodable()
-    instance = ZZZ()
+    Instance = ISecurityPolicyEncodable
     """hardcoded/returns an instance of the class"""
     def FromXml(self, e, level):
         """
@@ -601,10 +574,7 @@ class ISecurityPolicyEncodable:
 
 class IStackWalk:
     """ Manages the stack walk that determines whether all callers in the call stack have the required permissions to access a protected resource. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IStackWalk()
-    instance = ZZZ()
+    Instance = IStackWalk
     """hardcoded/returns an instance of the class"""
     def Assert(self):
         """
@@ -648,10 +618,7 @@ class PermissionSet:
     PermissionSet(state: PermissionState)
     PermissionSet(permSet: PermissionSet)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PermissionSet()
-    instance = ZZZ()
+    Instance = PermissionSet
     """hardcoded/returns an instance of the class"""
     def AddPermission(self, perm):
         """
@@ -1015,10 +982,7 @@ class NamedPermissionSet(PermissionSet):
     NamedPermissionSet(name: str, state: PermissionState)
     NamedPermissionSet(name: str, permSet: PermissionSet)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NamedPermissionSet()
-    instance = ZZZ()
+    Instance = NamedPermissionSet
     """hardcoded/returns an instance of the class"""
     def AddPermissionImpl(self, *args): #cannot find CLR method
         """
@@ -1181,10 +1145,7 @@ class PartialTrustVisibilityLevel:
     
     enum PartialTrustVisibilityLevel, values: NotVisibleByDefault (1), VisibleToAllHosts (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PartialTrustVisibilityLevel()
-    instance = ZZZ()
+    Instance = PartialTrustVisibilityLevel
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1230,10 +1191,7 @@ class PolicyLevelType:
     
     enum PolicyLevelType, values: AppDomain (3), Enterprise (2), Machine (1), User (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PolicyLevelType()
-    instance = ZZZ()
+    Instance = PolicyLevelType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1281,10 +1239,7 @@ class ReadOnlyPermissionSet(PermissionSet):
     
     ReadOnlyPermissionSet(permissionSetXml: SecurityElement)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReadOnlyPermissionSet()
-    instance = ZZZ()
+    Instance = ReadOnlyPermissionSet
     """hardcoded/returns an instance of the class"""
     def AddPermissionImpl(self, *args): #cannot find CLR method
         """ AddPermissionImpl(self: ReadOnlyPermissionSet, perm: IPermission) -> IPermission """
@@ -1368,10 +1323,7 @@ class SecureString:
     SecureString()
     SecureString(value: Char*, length: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecureString()
-    instance = ZZZ()
+    Instance = SecureString
     """hardcoded/returns an instance of the class"""
     def AppendChar(self, c):
         """
@@ -1485,10 +1437,7 @@ Get: Length(self: SecureString) -> int
 
 class SecureStringMarshal():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecureStringMarshal()
-    instance = ZZZ()
+    Instance = SecureStringMarshal
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def SecureStringToCoTaskMemAnsi(s):
@@ -1520,10 +1469,7 @@ class SecureStringMarshal():
 
 class SecurityContext:
     """ Encapsulates and propagates all security-related data for execution contexts transferred across threads. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityContext()
-    instance = ZZZ()
+    Instance = SecurityContext
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Capture():
@@ -1634,10 +1580,7 @@ class SecurityContextSource:
     
     enum SecurityContextSource, values: CurrentAppDomain (0), CurrentAssembly (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityContextSource()
-    instance = ZZZ()
+    Instance = SecurityContextSource
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1684,10 +1627,7 @@ class SecurityCriticalAttribute:
     SecurityCriticalAttribute()
     SecurityCriticalAttribute(scope: SecurityCriticalScope)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityCriticalAttribute()
-    instance = ZZZ()
+    Instance = SecurityCriticalAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1716,10 +1656,7 @@ class SecurityCriticalScope:
     
     enum SecurityCriticalScope, values: Everything (1), Explicit (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityCriticalScope()
-    instance = ZZZ()
+    Instance = SecurityCriticalScope
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1766,10 +1703,7 @@ class SecurityElement:
     SecurityElement(tag: str)
     SecurityElement(tag: str, text: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityElement()
-    instance = ZZZ()
+    Instance = SecurityElement
     """hardcoded/returns an instance of the class"""
     def AddAttribute(self, name, value):
         """
@@ -1993,10 +1927,7 @@ class SecurityException(SystemException):
     SecurityException(message: str, assemblyName: AssemblyName, grant: PermissionSet, refused: PermissionSet, method: MethodInfo, action: SecurityAction, demanded: object, permThatFailed: IPermission, evidence: Evidence)
     SecurityException(message: str, deny: object, permitOnly: object, method: MethodInfo, demanded: object, permThatFailed: IPermission)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityException()
-    instance = ZZZ()
+    Instance = SecurityException
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
@@ -2151,10 +2082,7 @@ Set: Zone(self: SecurityException) = value
 
 class SecurityManager():
     """ Provides the main access point for classes interacting with the security system. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityManager()
-    instance = ZZZ()
+    Instance = SecurityManager
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CurrentThreadRequiresSecurityContextCapture():
@@ -2330,10 +2258,7 @@ class SecurityRulesAttribute:
     
     SecurityRulesAttribute(ruleSet: SecurityRuleSet)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityRulesAttribute()
-    instance = ZZZ()
+    Instance = SecurityRulesAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2367,10 +2292,7 @@ class SecurityRuleSet:
     
     enum SecurityRuleSet, values: Level1 (1), Level2 (2), None (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityRuleSet()
-    instance = ZZZ()
+    Instance = SecurityRuleSet
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2417,10 +2339,7 @@ class SecuritySafeCriticalAttribute:
     
     SecuritySafeCriticalAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecuritySafeCriticalAttribute()
-    instance = ZZZ()
+    Instance = SecuritySafeCriticalAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2429,10 +2348,7 @@ class SecuritySafeCriticalAttribute:
 
 class SecurityState():
     """ Provides a base class for requesting the security status of an action from the System.AppDomainManager object. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityState()
-    instance = ZZZ()
+    Instance = SecurityState
     """hardcoded/returns an instance of the class"""
     def EnsureState(self):
         """
@@ -2457,10 +2373,7 @@ class SecurityTransparentAttribute:
     
     SecurityTransparentAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityTransparentAttribute()
-    instance = ZZZ()
+    Instance = SecurityTransparentAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2473,10 +2386,7 @@ class SecurityTreatAsSafeAttribute:
     
     SecurityTreatAsSafeAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityTreatAsSafeAttribute()
-    instance = ZZZ()
+    Instance = SecurityTreatAsSafeAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2489,10 +2399,7 @@ class SecurityZone:
     
     enum SecurityZone, values: Internet (3), Intranet (1), MyComputer (0), NoZone (-1), Trusted (2), Untrusted (4)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityZone()
-    instance = ZZZ()
+    Instance = SecurityZone
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2542,10 +2449,7 @@ class SuppressUnmanagedCodeSecurityAttribute:
     
     SuppressUnmanagedCodeSecurityAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SuppressUnmanagedCodeSecurityAttribute()
-    instance = ZZZ()
+    Instance = SuppressUnmanagedCodeSecurityAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2558,10 +2462,7 @@ class UnverifiableCodeAttribute:
     
     UnverifiableCodeAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UnverifiableCodeAttribute()
-    instance = ZZZ()
+    Instance = UnverifiableCodeAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2576,10 +2477,7 @@ class VerificationException(SystemException):
     VerificationException(message: str)
     VerificationException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return VerificationException()
-    instance = ZZZ()
+    Instance = VerificationException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2614,10 +2512,7 @@ class XmlSyntaxException(SystemException):
     XmlSyntaxException(lineNumber: int)
     XmlSyntaxException(lineNumber: int, message: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return XmlSyntaxException()
-    instance = ZZZ()
+    Instance = XmlSyntaxException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

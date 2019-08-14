@@ -10,10 +10,7 @@
 
 class CriticalHandleMinusOneIsInvalid(CriticalHandle):
     """ Provides a base class for Win32 critical handle implementations in which the value of -1 indicates an invalid handle. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CriticalHandleMinusOneIsInvalid()
-    instance = ZZZ()
+    Instance = CriticalHandleMinusOneIsInvalid
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -68,10 +65,7 @@ Get: IsInvalid(self: CriticalHandleMinusOneIsInvalid) -> bool
 
 class CriticalHandleZeroOrMinusOneIsInvalid(CriticalHandle):
     """ Provides a base class for Win32 critical handle implementations in which the value of either 0 or -1 indicates an invalid handle. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CriticalHandleZeroOrMinusOneIsInvalid()
-    instance = ZZZ()
+    Instance = CriticalHandleZeroOrMinusOneIsInvalid
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -126,10 +120,7 @@ Get: IsInvalid(self: CriticalHandleZeroOrMinusOneIsInvalid) -> bool
 
 class SafeAccessTokenHandle(SafeHandle):
     """ SafeAccessTokenHandle(handle: IntPtr) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SafeAccessTokenHandle()
-    instance = ZZZ()
+    Instance = SafeAccessTokenHandle
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -182,10 +173,7 @@ class SafeAccessTokenHandle(SafeHandle):
 
 class SafeHandleZeroOrMinusOneIsInvalid(SafeHandle):
     """ Provides a base class for Win32 safe handle implementations in which the value of either 0 or -1 indicates an invalid handle. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SafeHandleZeroOrMinusOneIsInvalid()
-    instance = ZZZ()
+    Instance = SafeHandleZeroOrMinusOneIsInvalid
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -249,10 +237,7 @@ class SafeFileHandle(SafeHandleZeroOrMinusOneIsInvalid):
     
     SafeFileHandle(preexistingHandle: IntPtr, ownsHandle: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SafeFileHandle()
-    instance = ZZZ()
+    Instance = SafeFileHandle
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -298,10 +283,7 @@ class SafeFileHandle(SafeHandleZeroOrMinusOneIsInvalid):
 
 class SafeHandleMinusOneIsInvalid(SafeHandle):
     """ Provides a base class for Win32 safe handle implementations in which the value of -1 indicates an invalid handle. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SafeHandleMinusOneIsInvalid()
-    instance = ZZZ()
+    Instance = SafeHandleMinusOneIsInvalid
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -361,10 +343,7 @@ Get: IsInvalid(self: SafeHandleMinusOneIsInvalid) -> bool
 
 class SafeProcessHandle(SafeHandleZeroOrMinusOneIsInvalid):
     """ SafeProcessHandle(existingHandle: IntPtr, ownsHandle: bool) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SafeProcessHandle()
-    instance = ZZZ()
+    Instance = SafeProcessHandle
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -414,10 +393,7 @@ class SafeRegistryHandle(SafeHandleZeroOrMinusOneIsInvalid):
     
     SafeRegistryHandle(preexistingHandle: IntPtr, ownsHandle: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SafeRegistryHandle()
-    instance = ZZZ()
+    Instance = SafeRegistryHandle
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -467,10 +443,7 @@ class SafeWaitHandle(SafeHandleZeroOrMinusOneIsInvalid):
     
     SafeWaitHandle(existingHandle: IntPtr, ownsHandle: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SafeWaitHandle()
-    instance = ZZZ()
+    Instance = SafeWaitHandle
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -516,10 +489,7 @@ class SafeWaitHandle(SafeHandleZeroOrMinusOneIsInvalid):
 
 class SafeX509ChainHandle(SafeHandleZeroOrMinusOneIsInvalid):
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SafeX509ChainHandle()
-    instance = ZZZ()
+    Instance = SafeX509ChainHandle
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """

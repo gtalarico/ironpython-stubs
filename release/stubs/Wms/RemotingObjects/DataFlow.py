@@ -13,10 +13,7 @@ class DataFlowObject:
     DataFlowObject[T]()
     DataFlowObject[T](subject: T)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DataFlowObject()
-    instance = ZZZ()
+    Instance = DataFlowObject
     """hardcoded/returns an instance of the class"""
     def AddError(self, error, details=None):
         """
@@ -130,10 +127,7 @@ class DataFlowResultEnum:
     
     enum DataFlowResultEnum, values: Failure (0), Success (1), SuccessWithWarning (3), Unspecified (256), UserInputRequired (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DataFlowResultEnum()
-    instance = ZZZ()
+    Instance = DataFlowResultEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -178,10 +172,7 @@ class DataFlowResultEnum:
 
 class IDataFlowObject:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDataFlowObject()
-    instance = ZZZ()
+    Instance = IDataFlowObject
     """hardcoded/returns an instance of the class"""
     def IsValid(self):
         """ IsValid(self: IDataFlowObject[T]) -> bool """

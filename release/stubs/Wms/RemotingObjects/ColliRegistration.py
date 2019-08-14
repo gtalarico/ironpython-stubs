@@ -15,10 +15,7 @@ class ColloReference:
     ColloReference(reference: str, type: ReferenceType, warehouseCode: str, warehouseLocationCode: str, itemCode: str, quantity: Decimal)
     ColloReference(reference: str, type: ReferenceType, warehouseCode: str, warehouseLocationCode: str, itemCode: str, quantity: Decimal, itemId: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ColloReference()
-    instance = ZZZ()
+    Instance = ColloReference
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: ColloReference) -> object """
@@ -143,10 +140,7 @@ class ColloReferencePair():
     ColloReferencePair(itemCode: str, warehouseCode: str, warehouseLocationCode: str)
     ColloReferencePair(outer: ColloReference, inner: ColloReference)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ColloReferencePair()
-    instance = ZZZ()
+    Instance = ColloReferencePair
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -208,10 +202,7 @@ Set: WarehouseLocationCode(self: ColloReferencePair) = value
 
 class ReferenceType:
     """ enum ReferenceType, values: Inner (0), Outer (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReferenceType()
-    instance = ZZZ()
+    Instance = ReferenceType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

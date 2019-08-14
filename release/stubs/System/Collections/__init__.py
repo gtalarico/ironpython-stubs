@@ -16,10 +16,7 @@ class ArrayList:
     ArrayList(capacity: int)
     ArrayList(c: ICollection)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ArrayList()
-    instance = ZZZ()
+    Instance = ArrayList
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Adapter(list):
@@ -520,10 +517,7 @@ class BitArray:
     BitArray(values: Array[int])
     BitArray(bits: BitArray)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BitArray()
-    instance = ZZZ()
+    Instance = BitArray
     """hardcoded/returns an instance of the class"""
     def And(self, value):
         """
@@ -716,10 +710,7 @@ class CaseInsensitiveComparer:
     CaseInsensitiveComparer()
     CaseInsensitiveComparer(culture: CultureInfo)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CaseInsensitiveComparer()
-    instance = ZZZ()
+    Instance = CaseInsensitiveComparer
     """hardcoded/returns an instance of the class"""
     def Compare(self, a, b):
         """
@@ -768,10 +759,7 @@ class CaseInsensitiveHashCodeProvider:
     CaseInsensitiveHashCodeProvider()
     CaseInsensitiveHashCodeProvider(culture: CultureInfo)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CaseInsensitiveHashCodeProvider()
-    instance = ZZZ()
+    Instance = CaseInsensitiveHashCodeProvider
     """hardcoded/returns an instance of the class"""
     def GetHashCode(self, obj=None):
         """
@@ -809,10 +797,7 @@ class CaseInsensitiveHashCodeProvider:
 
 class IEnumerable:
     """ Exposes the enumerator, which supports a simple iteration over a non-generic collection. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumerable()
-    instance = ZZZ()
+    Instance = IEnumerable
     """hardcoded/returns an instance of the class"""
     def GetEnumerator(self):
         """
@@ -834,10 +819,7 @@ class IEnumerable:
 
 class ICollection:
     """ Defines size, enumerators, and synchronization methods for all nongeneric collections. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICollection()
-    instance = ZZZ()
+    Instance = ICollection
     """hardcoded/returns an instance of the class"""
     def CopyTo(self, array, index):
         """
@@ -878,10 +860,7 @@ Get: SyncRoot(self: ICollection) -> object
 
 class IList:
     """ Represents a non-generic collection of objects that can be individually accessed by index. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IList()
-    instance = ZZZ()
+    Instance = IList
     """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
@@ -993,10 +972,7 @@ Get: IsReadOnly(self: IList) -> bool
 
 class CollectionBase:
     """ Provides the abstract base class for a strongly typed collection. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CollectionBase()
-    instance = ZZZ()
+    Instance = CollectionBase
     """hardcoded/returns an instance of the class"""
     def Clear(self):
         """
@@ -1179,10 +1155,7 @@ class Comparer:
     
     Comparer(culture: CultureInfo)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Comparer()
-    instance = ZZZ()
+    Instance = Comparer
     """hardcoded/returns an instance of the class"""
     def Compare(self, a, b):
         """
@@ -1233,10 +1206,7 @@ class Comparer:
 
 class IDictionary:
     """ Represents a nongeneric collection of key/value pairs. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDictionary()
-    instance = ZZZ()
+    Instance = IDictionary
     """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
@@ -1340,10 +1310,7 @@ Get: Values(self: IDictionary) -> ICollection
 
 class DictionaryBase:
     """ Provides the abstract base class for a strongly typed collection of key/value pairs. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DictionaryBase()
-    instance = ZZZ()
+    Instance = DictionaryBase
     """hardcoded/returns an instance of the class"""
     def Clear(self):
         """
@@ -1526,10 +1493,7 @@ class DictionaryEntry():
     
     DictionaryEntry(key: object, value: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DictionaryEntry()
-    instance = ZZZ()
+    Instance = DictionaryEntry
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, key, value):
@@ -1578,10 +1542,7 @@ class Hashtable:
     Hashtable(d: IDictionary, loadFactor: Single, hcp: IHashCodeProvider, comparer: IComparer)
     Hashtable(d: IDictionary, loadFactor: Single, equalityComparer: IEqualityComparer)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Hashtable()
-    instance = ZZZ()
+    Instance = Hashtable
     """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
@@ -1858,10 +1819,7 @@ Get: Values(self: Hashtable) -> ICollection
 
 class IComparer:
     """ Exposes a method that compares two objects. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IComparer()
-    instance = ZZZ()
+    Instance = IComparer
     """hardcoded/returns an instance of the class"""
     def Compare(self, x, y):
         """
@@ -1887,10 +1845,7 @@ class IComparer:
 
 class IEnumerator:
     """ Supports a simple iteration over a nongeneric collection. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumerator()
-    instance = ZZZ()
+    Instance = IEnumerator
     """hardcoded/returns an instance of the class"""
     def MoveNext(self):
         """
@@ -1931,10 +1886,7 @@ Get: Current(self: IEnumerator) -> object
 
 class IDictionaryEnumerator:
     """ Enumerates the elements of a nongeneric dictionary. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDictionaryEnumerator()
-    instance = ZZZ()
+    Instance = IDictionaryEnumerator
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1965,10 +1917,7 @@ Get: Value(self: IDictionaryEnumerator) -> object
 
 class IEqualityComparer:
     """ Defines methods to support the comparison of objects for equality. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEqualityComparer()
-    instance = ZZZ()
+    Instance = IEqualityComparer
     """hardcoded/returns an instance of the class"""
     def Equals(self, x, y):
         """
@@ -2004,10 +1953,7 @@ class IEqualityComparer:
 
 class IHashCodeProvider:
     """ Supplies a hash code for an object, using a custom hash function. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IHashCodeProvider()
-    instance = ZZZ()
+    Instance = IHashCodeProvider
     """hardcoded/returns an instance of the class"""
     def GetHashCode(self, obj):
         """
@@ -2027,10 +1973,7 @@ class IHashCodeProvider:
 
 class IStructuralComparable:
     """ Supports the structural comparison of collection objects. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IStructuralComparable()
-    instance = ZZZ()
+    Instance = IStructuralComparable
     """hardcoded/returns an instance of the class"""
     def CompareTo(self, other, comparer):
         """
@@ -2071,10 +2014,7 @@ class IStructuralComparable:
 
 class IStructuralEquatable:
     """ Defines methods to support the comparison of objects for structural equality. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IStructuralEquatable()
-    instance = ZZZ()
+    Instance = IStructuralEquatable
     """hardcoded/returns an instance of the class"""
     def Equals(self, other, comparer):
         """
@@ -2120,10 +2060,7 @@ class Queue:
     Queue(capacity: int, growFactor: Single)
     Queue(col: ICollection)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Queue()
-    instance = ZZZ()
+    Instance = Queue
     """hardcoded/returns an instance of the class"""
     def Clear(self):
         """
@@ -2280,10 +2217,7 @@ Get: SyncRoot(self: Queue) -> object
 
 class ReadOnlyCollectionBase:
     """ Provides the abstract base class for a strongly typed non-generic read-only collection. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReadOnlyCollectionBase()
-    instance = ZZZ()
+    Instance = ReadOnlyCollectionBase
     """hardcoded/returns an instance of the class"""
     def GetEnumerator(self):
         """
@@ -2338,10 +2272,7 @@ class SortedList:
     SortedList(d: IDictionary)
     SortedList(d: IDictionary, comparer: IComparer)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SortedList()
-    instance = ZZZ()
+    Instance = SortedList
     """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
@@ -2653,10 +2584,7 @@ class Stack:
     Stack(initialCapacity: int)
     Stack(col: ICollection)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Stack()
-    instance = ZZZ()
+    Instance = Stack
     """hardcoded/returns an instance of the class"""
     def Clear(self):
         """
@@ -2805,10 +2733,7 @@ Get: SyncRoot(self: Stack) -> object
 
 class StructuralComparisons():
     """ Provides objects for performing a structural comparison of two collection objects. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StructuralComparisons()
-    instance = ZZZ()
+    Instance = StructuralComparisons
     """hardcoded/returns an instance of the class"""
     StructuralComparer = None
     StructuralEqualityComparer = None

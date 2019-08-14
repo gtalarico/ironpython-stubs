@@ -11,10 +11,7 @@ from Wms.EdiMessaging import *
 
 class BosFile():
     """ BosFile() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BosFile()
-    instance = ZZZ()
+    Instance = BosFile
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Create(name, fileStream):
@@ -37,10 +34,7 @@ Set: Name(self: BosFile) = value
 
 class BosFileExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BosFileExtensions()
-    instance = ZZZ()
+    Instance = BosFileExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def AddFile(files, name, *__args):
@@ -57,10 +51,7 @@ class BosFileExtensions():
 
 class BosInboundFile(BosFile):
     """ BosInboundFile() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BosInboundFile()
-    instance = ZZZ()
+    Instance = BosInboundFile
     """hardcoded/returns an instance of the class"""
     ScannerSerialNo = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: ScannerSerialNo(self: BosInboundFile) -> str
@@ -72,10 +63,7 @@ Set: ScannerSerialNo(self: BosInboundFile) = value
 
 class BosInboundFileExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BosInboundFileExtensions()
-    instance = ZZZ()
+    Instance = BosInboundFileExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def SetFile(file, name, serialno, fileStream):
@@ -98,10 +86,7 @@ class BosInboundFileMessage(MessageBase):
     BosInboundFileMessage()
     BosInboundFileMessage(message: IMessage)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BosInboundFileMessage()
-    instance = ZZZ()
+    Instance = BosInboundFileMessage
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -127,10 +112,7 @@ Set: Data(self: BosInboundFileMessage) = value
 
 class BosInboundFileMessageData():
     """ BosInboundFileMessageData() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BosInboundFileMessageData()
-    instance = ZZZ()
+    Instance = BosInboundFileMessageData
     """hardcoded/returns an instance of the class"""
     File = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: File(self: BosInboundFileMessageData) -> BosInboundFile
@@ -145,10 +127,7 @@ class BosOutboundFilesMessage(MessageBase):
     BosOutboundFilesMessage()
     BosOutboundFilesMessage(message: IMessage)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BosOutboundFilesMessage()
-    instance = ZZZ()
+    Instance = BosOutboundFilesMessage
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -174,10 +153,7 @@ Set: Data(self: BosOutboundFilesMessage) = value
 
 class BosOutboundFilesMessageData():
     """ BosOutboundFilesMessageData() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BosOutboundFilesMessageData()
-    instance = ZZZ()
+    Instance = BosOutboundFilesMessageData
     """hardcoded/returns an instance of the class"""
     Files = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Files(self: BosOutboundFilesMessageData) -> List[BosFile]

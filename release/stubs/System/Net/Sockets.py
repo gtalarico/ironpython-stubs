@@ -14,10 +14,7 @@ class AddressFamily:
     
     enum AddressFamily, values: AppleTalk (16), Atm (22), Banyan (21), Ccitt (10), Chaos (5), Cluster (24), DataKit (9), DataLink (13), DecNet (12), Ecma (8), FireFox (19), HyperChannel (15), Ieee12844 (25), ImpLink (3), InterNetwork (2), InterNetworkV6 (23), Ipx (6), Irda (26), Iso (7), Lat (14), Max (29), NetBios (17), NetworkDesigners (28), NS (6), Osi (7), Pup (4), Sna (11), Unix (1), Unknown (-1), Unspecified (0), VoiceView (18)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AddressFamily()
-    instance = ZZZ()
+    Instance = AddressFamily
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -92,10 +89,7 @@ class IOControlCode:
     
     enum IOControlCode, values: AbsorbRouterAlert (2550136837), AddMulticastGroupOnInterface (2550136842), AddressListChange (671088663), AddressListQuery (1207959574), AddressListSort (3355443225), AssociateHandle (2281701377), AsyncIO (2147772029), BindToInterface (2550136840), DataToRead (1074030207), DeleteMulticastGroupFromInterface (2550136843), EnableCircularQueuing (671088642), Flush (671088644), GetBroadcastAddress (1207959557), GetExtensionFunctionPointer (3355443206), GetGroupQos (3355443208), GetQos (3355443207), KeepAliveValues (2550136836), LimitBroadcasts (2550136839), MulticastInterface (2550136841), MulticastScope (2281701386), MultipointLoopback (2281701385), NamespaceChange (2281701401), NonBlockingIO (2147772030), OobDataRead (1074033415), QueryTargetPnpHandle (1207959576), ReceiveAll (2550136833), ReceiveAllIgmpMulticast (2550136835), ReceiveAllMulticast (2550136834), RoutingInterfaceChange (2281701397), RoutingInterfaceQuery (3355443220), SetGroupQos (2281701388), SetQos (2281701387), TranslateHandle (3355443213), UnicastInterface (2550136838)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IOControlCode()
-    instance = ZZZ()
+    Instance = IOControlCode
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -169,10 +163,7 @@ class IOControlCode:
 
 class IPPacketInformation():
     """ Presents the packet information from a call to System.Net.Sockets.Socket.ReceiveMessageFrom(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags@,System.Net.EndPoint@,System.Net.Sockets.IPPacketInformation@) or System.Net.Sockets.Socket.EndReceiveMessageFrom(System.IAsyncResult,System.Net.Sockets.SocketFlags@,System.Net.EndPoint@,System.Net.Sockets.IPPacketInformation@). """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPPacketInformation()
-    instance = ZZZ()
+    Instance = IPPacketInformation
     """hardcoded/returns an instance of the class"""
     def Equals(self, comparand):
         """
@@ -223,10 +214,7 @@ class IPProtectionLevel:
     
     enum IPProtectionLevel, values: EdgeRestricted (20), Restricted (30), Unrestricted (10), Unspecified (-1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPProtectionLevel()
-    instance = ZZZ()
+    Instance = IPProtectionLevel
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -275,10 +263,7 @@ class IPv6MulticastOption():
     IPv6MulticastOption(group: IPAddress, ifindex: Int64)
     IPv6MulticastOption(group: IPAddress)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPv6MulticastOption()
-    instance = ZZZ()
+    Instance = IPv6MulticastOption
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, group, ifindex=None):
@@ -312,10 +297,7 @@ class LingerOption():
     
     LingerOption(enable: bool, seconds: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LingerOption()
-    instance = ZZZ()
+    Instance = LingerOption
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, enable, seconds):
@@ -348,10 +330,7 @@ class MulticastOption():
     MulticastOption(group: IPAddress, interfaceIndex: int)
     MulticastOption(group: IPAddress)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MulticastOption()
-    instance = ZZZ()
+    Instance = MulticastOption
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, group, *__args):
@@ -397,10 +376,7 @@ class NetworkStream(Stream):
     NetworkStream(socket: Socket, access: FileAccess)
     NetworkStream(socket: Socket, access: FileAccess, ownsSocket: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetworkStream()
-    instance = ZZZ()
+    Instance = NetworkStream
     """hardcoded/returns an instance of the class"""
     def BeginRead(self, buffer, offset, size, callback, state):
         """
@@ -674,10 +650,7 @@ class ProtocolFamily:
     
     enum ProtocolFamily, values: AppleTalk (16), Atm (22), Banyan (21), Ccitt (10), Chaos (5), Cluster (24), DataKit (9), DataLink (13), DecNet (12), Ecma (8), FireFox (19), HyperChannel (15), Ieee12844 (25), ImpLink (3), InterNetwork (2), InterNetworkV6 (23), Ipx (6), Irda (26), Iso (7), Lat (14), Max (29), NetBios (17), NetworkDesigners (28), NS (6), Osi (7), Pup (4), Sna (11), Unix (1), Unknown (-1), Unspecified (0), VoiceView (18)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProtocolFamily()
-    instance = ZZZ()
+    Instance = ProtocolFamily
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -752,10 +725,7 @@ class ProtocolType:
     
     enum ProtocolType, values: Ggp (3), Icmp (1), IcmpV6 (58), Idp (22), Igmp (2), IP (0), IPSecAuthenticationHeader (51), IPSecEncapsulatingSecurityPayload (50), IPv4 (4), IPv6 (41), IPv6DestinationOptions (60), IPv6FragmentHeader (44), IPv6HopByHopOptions (0), IPv6NoNextHeader (59), IPv6RoutingHeader (43), Ipx (1000), ND (77), Pup (12), Raw (255), Spx (1256), SpxII (1257), Tcp (6), Udp (17), Unknown (-1), Unspecified (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProtocolType()
-    instance = ZZZ()
+    Instance = ProtocolType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -824,10 +794,7 @@ class SelectMode:
     
     enum SelectMode, values: SelectError (2), SelectRead (0), SelectWrite (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SelectMode()
-    instance = ZZZ()
+    Instance = SelectMode
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -879,10 +846,7 @@ class SendPacketsElement():
     SendPacketsElement(buffer: Array[Byte], offset: int, count: int)
     SendPacketsElement(buffer: Array[Byte], offset: int, count: int, endOfPacket: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SendPacketsElement()
-    instance = ZZZ()
+    Instance = SendPacketsElement
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -941,10 +905,7 @@ class Socket:
     Socket(addressFamily: AddressFamily, socketType: SocketType, protocolType: ProtocolType)
     Socket(socketInformation: SocketInformation)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Socket()
-    instance = ZZZ()
+    Instance = Socket
     """hardcoded/returns an instance of the class"""
     def Accept(self):
         """
@@ -2074,10 +2035,7 @@ class SocketAsyncEventArgs(EventArgs):
     
     SocketAsyncEventArgs()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketAsyncEventArgs()
-    instance = ZZZ()
+    Instance = SocketAsyncEventArgs
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -2275,10 +2233,7 @@ class SocketAsyncOperation:
     
     enum SocketAsyncOperation, values: Accept (1), Connect (2), Disconnect (3), None (0), Receive (4), ReceiveFrom (5), ReceiveMessageFrom (6), Send (7), SendPackets (8), SendTo (9)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketAsyncOperation()
-    instance = ZZZ()
+    Instance = SocketAsyncOperation
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2328,10 +2283,7 @@ class SocketAsyncOperation:
 
 class SocketClientAccessPolicyProtocol:
     """ enum SocketClientAccessPolicyProtocol, values: Http (1), Tcp (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketClientAccessPolicyProtocol()
-    instance = ZZZ()
+    Instance = SocketClientAccessPolicyProtocol
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2377,10 +2329,7 @@ class SocketError:
     
     enum SocketError, values: AccessDenied (10013), AddressAlreadyInUse (10048), AddressFamilyNotSupported (10047), AddressNotAvailable (10049), AlreadyInProgress (10037), ConnectionAborted (10053), ConnectionRefused (10061), ConnectionReset (10054), DestinationAddressRequired (10039), Disconnecting (10101), Fault (10014), HostDown (10064), HostNotFound (11001), HostUnreachable (10065), InProgress (10036), Interrupted (10004), InvalidArgument (10022), IOPending (997), IsConnected (10056), MessageSize (10040), NetworkDown (10050), NetworkReset (10052), NetworkUnreachable (10051), NoBufferSpaceAvailable (10055), NoData (11004), NoRecovery (11003), NotConnected (10057), NotInitialized (10093), NotSocket (10038), OperationAborted (995), OperationNotSupported (10045), ProcessLimit (10067), ProtocolFamilyNotSupported (10046), ProtocolNotSupported (10043), ProtocolOption (10042), ProtocolType (10041), Shutdown (10058), SocketError (-1), SocketNotSupported (10044), Success (0), SystemNotReady (10091), TimedOut (10060), TooManyOpenSockets (10024), TryAgain (11002), TypeNotFound (10109), VersionNotSupported (10092), WouldBlock (10035)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketError()
-    instance = ZZZ()
+    Instance = SocketError
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2472,10 +2421,7 @@ class SocketException(Win32Exception):
     SocketException()
     SocketException(errorCode: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketException()
-    instance = ZZZ()
+    Instance = SocketException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2527,10 +2473,7 @@ class SocketFlags:
     
     enum (flags) SocketFlags, values: Broadcast (1024), ControlDataTruncated (512), DontRoute (4), MaxIOVectorLength (16), Multicast (2048), None (0), OutOfBand (1), Partial (32768), Peek (2), Truncated (256)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketFlags()
-    instance = ZZZ()
+    Instance = SocketFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2580,10 +2523,7 @@ class SocketFlags:
 
 class SocketInformation():
     """ Encapsulates the information that is necessary to duplicate a System.Net.Sockets.Socket. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketInformation()
-    instance = ZZZ()
+    Instance = SocketInformation
     """hardcoded/returns an instance of the class"""
     Options = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the options for a System.Net.Sockets.Socket.
@@ -2609,10 +2549,7 @@ class SocketInformationOptions:
     
     enum (flags) SocketInformationOptions, values: Connected (2), Listening (4), NonBlocking (1), UseOnlyOverlappedIO (8)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketInformationOptions()
-    instance = ZZZ()
+    Instance = SocketInformationOptions
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2660,10 +2597,7 @@ class SocketOptionLevel:
     
     enum SocketOptionLevel, values: IP (0), IPv6 (41), Socket (65535), Tcp (6), Udp (17)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketOptionLevel()
-    instance = ZZZ()
+    Instance = SocketOptionLevel
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2712,10 +2646,7 @@ class SocketOptionName:
     
     enum SocketOptionName, values: AcceptConnection (2), AddMembership (12), AddSourceMembership (15), BlockSource (17), Broadcast (32), BsdUrgent (2), ChecksumCoverage (20), Debug (1), DontFragment (14), DontLinger (-129), DontRoute (16), DropMembership (13), DropSourceMembership (16), Error (4103), ExclusiveAddressUse (-5), Expedited (2), HeaderIncluded (2), HopLimit (21), IPOptions (1), IPProtectionLevel (23), IpTimeToLive (4), IPv6Only (27), KeepAlive (8), Linger (128), MaxConnections (2147483647), MulticastInterface (9), MulticastLoopback (11), MulticastTimeToLive (10), NoChecksum (1), NoDelay (1), OutOfBandInline (256), PacketInformation (19), ReceiveBuffer (4098), ReceiveLowWater (4100), ReceiveTimeout (4102), ReuseAddress (4), ReuseUnicastPort (12295), SendBuffer (4097), SendLowWater (4099), SendTimeout (4101), Type (4104), TypeOfService (3), UnblockSource (18), UpdateAcceptContext (28683), UpdateConnectContext (28688), UseLoopback (64)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketOptionName()
-    instance = ZZZ()
+    Instance = SocketOptionName
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2801,10 +2732,7 @@ class SocketOptionName:
 
 class SocketReceiveFromResult():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketReceiveFromResult()
-    instance = ZZZ()
+    Instance = SocketReceiveFromResult
     """hardcoded/returns an instance of the class"""
     ReceivedBytes = None
     RemoteEndPoint = None
@@ -2812,10 +2740,7 @@ class SocketReceiveFromResult():
 
 class SocketReceiveMessageFromResult():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketReceiveMessageFromResult()
-    instance = ZZZ()
+    Instance = SocketReceiveMessageFromResult
     """hardcoded/returns an instance of the class"""
     PacketInformation = None
     ReceivedBytes = None
@@ -2829,10 +2754,7 @@ class SocketShutdown:
     
     enum SocketShutdown, values: Both (2), Receive (0), Send (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketShutdown()
-    instance = ZZZ()
+    Instance = SocketShutdown
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2875,10 +2797,7 @@ class SocketShutdown:
 
 class SocketTaskExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketTaskExtensions()
-    instance = ZZZ()
+    Instance = SocketTaskExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def AcceptAsync(socket, acceptSocket=None):
@@ -2946,10 +2865,7 @@ class SocketType:
     
     enum SocketType, values: Dgram (2), Raw (3), Rdm (4), Seqpacket (5), Stream (1), Unknown (-1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketType()
-    instance = ZZZ()
+    Instance = SocketType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3002,10 +2918,7 @@ class TcpClient:
     TcpClient(family: AddressFamily)
     TcpClient(hostname: str, port: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TcpClient()
-    instance = ZZZ()
+    Instance = TcpClient
     """hardcoded/returns an instance of the class"""
     def BeginConnect(self, *__args):
         """
@@ -3219,10 +3132,7 @@ class TcpListener():
     TcpListener(localaddr: IPAddress, port: int)
     TcpListener(port: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TcpListener()
-    instance = ZZZ()
+    Instance = TcpListener
     """hardcoded/returns an instance of the class"""
     def AcceptSocket(self):
         """
@@ -3381,10 +3291,7 @@ class TransmitFileOptions:
     
     enum (flags) TransmitFileOptions, values: Disconnect (1), ReuseSocket (2), UseDefaultWorkerThread (0), UseKernelApc (32), UseSystemThread (16), WriteBehind (4)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TransmitFileOptions()
-    instance = ZZZ()
+    Instance = TransmitFileOptions
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3439,10 +3346,7 @@ class UdpClient:
     UdpClient(localEP: IPEndPoint)
     UdpClient(hostname: str, port: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UdpClient()
-    instance = ZZZ()
+    Instance = UdpClient
     """hardcoded/returns an instance of the class"""
     def AllowNatTraversal(self, allowed):
         """
@@ -3735,10 +3639,7 @@ Set: Ttl(self: UdpClient) = value
 
 class UdpReceiveResult:
     """ UdpReceiveResult(buffer: Array[Byte], remoteEndPoint: IPEndPoint) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UdpReceiveResult()
-    instance = ZZZ()
+    Instance = UdpReceiveResult
     """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """

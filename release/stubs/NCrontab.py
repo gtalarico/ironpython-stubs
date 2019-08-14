@@ -14,10 +14,7 @@ class CrontabException(Exception):
     CrontabException(message: str)
     CrontabException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CrontabException()
-    instance = ZZZ()
+    Instance = CrontabException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -44,10 +41,7 @@ class CrontabException(Exception):
 
 class CrontabField:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CrontabField()
-    instance = ZZZ()
+    Instance = CrontabField
     """hardcoded/returns an instance of the class"""
     def Contains(self, value):
         """ Contains(self: CrontabField, value: int) -> bool """
@@ -127,10 +121,7 @@ class CrontabField:
 
 class CrontabFieldAccumulator(MulticastDelegate):
     """ CrontabFieldAccumulator(object: object, method: IntPtr) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CrontabFieldAccumulator()
-    instance = ZZZ()
+    Instance = CrontabFieldAccumulator
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, start, end, interval, onError, callback, object):
         """ BeginInvoke(self: CrontabFieldAccumulator, start: int, end: int, interval: int, onError: ExceptionHandler, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -204,10 +195,7 @@ class CrontabFieldAccumulator(MulticastDelegate):
 
 class CrontabFieldImpl:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CrontabFieldImpl()
-    instance = ZZZ()
+    Instance = CrontabFieldImpl
     """hardcoded/returns an instance of the class"""
     def Format(self, field, writer, noNames=None):
         """ Format(self: CrontabFieldImpl, field: ICrontabField, writer: TextWriter)Format(self: CrontabFieldImpl, field: ICrontabField, writer: TextWriter, noNames: bool) """
@@ -267,10 +255,7 @@ class CrontabFieldImpl:
 
 class CrontabFieldKind:
     """ enum CrontabFieldKind, values: Day (2), DayOfWeek (4), Hour (1), Minute (0), Month (3) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CrontabFieldKind()
-    instance = ZZZ()
+    Instance = CrontabFieldKind
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -315,10 +300,7 @@ class CrontabFieldKind:
 
 class CrontabSchedule():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CrontabSchedule()
-    instance = ZZZ()
+    Instance = CrontabSchedule
     """hardcoded/returns an instance of the class"""
     def GetNextOccurrence(self, baseTime, endTime=None):
         """
@@ -348,10 +330,7 @@ class CrontabSchedule():
 
 class ExceptionHandler(MulticastDelegate):
     """ ExceptionHandler(object: object, method: IntPtr) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExceptionHandler()
-    instance = ZZZ()
+    Instance = ExceptionHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, e, callback, object):
         """ BeginInvoke(self: ExceptionHandler, e: Exception, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -425,10 +404,7 @@ class ExceptionHandler(MulticastDelegate):
 
 class ExceptionProvider(MulticastDelegate):
     """ ExceptionProvider(object: object, method: IntPtr) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExceptionProvider()
-    instance = ZZZ()
+    Instance = ExceptionProvider
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, callback, object):
         """ BeginInvoke(self: ExceptionProvider, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -502,10 +478,7 @@ class ExceptionProvider(MulticastDelegate):
 
 class ICrontabField:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICrontabField()
-    instance = ZZZ()
+    Instance = ICrontabField
     """hardcoded/returns an instance of the class"""
     def Contains(self, value):
         """ Contains(self: ICrontabField, value: int) -> bool """
@@ -530,10 +503,7 @@ class ValueOrError():
     ValueOrError[T](error: Exception)
     ValueOrError[T](provider: ExceptionProvider)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ValueOrError()
-    instance = ZZZ()
+    Instance = ValueOrError
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """ ToString(self: ValueOrError[T]) -> str """

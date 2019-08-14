@@ -10,10 +10,7 @@
 
 class DatabaseBackgroundAgentHealthMonitor:
     """ DatabaseBackgroundAgentHealthMonitor() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DatabaseBackgroundAgentHealthMonitor()
-    instance = ZZZ()
+    Instance = DatabaseBackgroundAgentHealthMonitor
     """hardcoded/returns an instance of the class"""
     def CreateOrUpdateBackgroundAgent(self, arg):
         """ CreateOrUpdateBackgroundAgent(self: DatabaseBackgroundAgentHealthMonitor, arg: DataFlowObject[BackgroundAgent]) -> DataFlowObject[BackgroundAgent] """
@@ -50,10 +47,7 @@ class DatabaseBackgroundAgentHealthMonitor:
 
 class IBackgroundAgentHealthMonitor:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IBackgroundAgentHealthMonitor()
-    instance = ZZZ()
+    Instance = IBackgroundAgentHealthMonitor
     """hardcoded/returns an instance of the class"""
     def CreateOrUpdateBackgroundAgent(self, arg):
         """ CreateOrUpdateBackgroundAgent(self: IBackgroundAgentHealthMonitor, arg: DataFlowObject[BackgroundAgent]) -> DataFlowObject[BackgroundAgent] """
@@ -86,10 +80,7 @@ class IBackgroundAgentHealthMonitor:
 
 class InMemoryBackgroundAgentHealthMonitor:
     """ InMemoryBackgroundAgentHealthMonitor() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InMemoryBackgroundAgentHealthMonitor()
-    instance = ZZZ()
+    Instance = InMemoryBackgroundAgentHealthMonitor
     """hardcoded/returns an instance of the class"""
     def CreateOrUpdateBackgroundAgent(self, arg):
         """ CreateOrUpdateBackgroundAgent(self: InMemoryBackgroundAgentHealthMonitor, arg: DataFlowObject[BackgroundAgent]) -> DataFlowObject[BackgroundAgent] """

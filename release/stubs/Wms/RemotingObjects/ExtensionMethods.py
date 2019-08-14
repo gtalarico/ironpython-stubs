@@ -10,10 +10,7 @@
 
 class ExtensionMethods():
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExtensionMethods()
-    instance = ZZZ()
+    Instance = ExtensionMethods
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetMd5HashString(input):

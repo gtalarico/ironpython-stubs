@@ -11,10 +11,7 @@ from Wms.RemotingObjects import *
 
 class Detail():
     """ Detail() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Detail()
-    instance = ZZZ()
+    Instance = Detail
     """hardcoded/returns an instance of the class"""
     def AddColumn(self, header, description):
         """ AddColumn(self: Detail, header: str, description: str) """
@@ -32,10 +29,7 @@ Set: Columns(self: Detail) = value
 
 class DetailColumn():
     """ DetailColumn() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DetailColumn()
-    instance = ZZZ()
+    Instance = DetailColumn
     """hardcoded/returns an instance of the class"""
     Description = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -57,10 +51,7 @@ Set: Header(self: DetailColumn) = value
 
 class Details():
     """ Details() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Details()
-    instance = ZZZ()
+    Instance = Details
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """ ToString(self: Details) -> str """
@@ -86,10 +77,7 @@ Set: Description(self: Details) = value
 
 class OrderValidationArgs():
     """ OrderValidationArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OrderValidationArgs()
-    instance = ZZZ()
+    Instance = OrderValidationArgs
     """hardcoded/returns an instance of the class"""
     Order = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -135,10 +123,7 @@ Set: ReturnFirstErrorOnly(self: OrderValidationArgs) = value
 
 class OrderValidationCheck():
     """ OrderValidationCheck() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OrderValidationCheck()
-    instance = ZZZ()
+    Instance = OrderValidationCheck
     """hardcoded/returns an instance of the class"""
     def ToString(self, includeDetails=None):
         """
@@ -198,10 +183,7 @@ Set: Success(self: OrderValidationCheck) = value
 
 class OrderValidationResult(FindableList):
     """ OrderValidationResult() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OrderValidationResult()
-    instance = ZZZ()
+    Instance = OrderValidationResult
     """hardcoded/returns an instance of the class"""
     def AddResult(self, name, message, *__args):
         """ AddResult(self: OrderValidationResult, name: str, message: str, success: bool, group: str)AddResult(self: OrderValidationResult, name: str, message: str, messageDetails: str, success: bool, group: str) """

@@ -10,10 +10,7 @@
 
 class BlockingQueue:
     """ BlockingQueue[T]() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BlockingQueue()
-    instance = ZZZ()
+    Instance = BlockingQueue
     """hardcoded/returns an instance of the class"""
     def Dequeue(self):
         """ Dequeue(self: BlockingQueue[T]) -> T """

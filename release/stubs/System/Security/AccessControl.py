@@ -27,10 +27,7 @@ class AccessControlActions:
     
     enum (flags) AccessControlActions, values: Change (2), None (0), View (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AccessControlActions()
-    instance = ZZZ()
+    Instance = AccessControlActions
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -77,10 +74,7 @@ class AccessControlModification:
     
     enum AccessControlModification, values: Add (0), Remove (3), RemoveAll (4), RemoveSpecific (5), Reset (2), Set (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AccessControlModification()
-    instance = ZZZ()
+    Instance = AccessControlModification
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -130,10 +124,7 @@ class AccessControlSections:
     
     enum (flags) AccessControlSections, values: Access (2), All (15), Audit (1), Group (8), None (0), Owner (4)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AccessControlSections()
-    instance = ZZZ()
+    Instance = AccessControlSections
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -183,10 +174,7 @@ class AccessControlType:
     
     enum AccessControlType, values: Allow (0), Deny (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AccessControlType()
-    instance = ZZZ()
+    Instance = AccessControlType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -228,10 +216,7 @@ class AccessControlType:
 
 class AceEnumerator:
     """ Provides the ability to iterate through the access control entries (ACEs) in an access control list (ACL). """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AceEnumerator()
-    instance = ZZZ()
+    Instance = AceEnumerator
     """hardcoded/returns an instance of the class"""
     def MoveNext(self):
         """
@@ -280,10 +265,7 @@ class AceFlags:
     
     enum (flags) AceFlags, values: AuditFlags (192), ContainerInherit (2), FailedAccess (128), InheritanceFlags (15), Inherited (16), InheritOnly (8), None (0), NoPropagateInherit (4), ObjectInherit (1), SuccessfulAccess (64)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AceFlags()
-    instance = ZZZ()
+    Instance = AceFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -337,10 +319,7 @@ class AceQualifier:
     
     enum AceQualifier, values: AccessAllowed (0), AccessDenied (1), SystemAlarm (3), SystemAudit (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AceQualifier()
-    instance = ZZZ()
+    Instance = AceQualifier
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -388,10 +367,7 @@ class AceType:
     
     enum AceType, values: AccessAllowed (0), AccessAllowedCallback (9), AccessAllowedCallbackObject (11), AccessAllowedCompound (4), AccessAllowedObject (5), AccessDenied (1), AccessDeniedCallback (10), AccessDeniedCallbackObject (12), AccessDeniedObject (6), MaxDefinedAceType (16), SystemAlarm (3), SystemAlarmCallback (14), SystemAlarmCallbackObject (16), SystemAlarmObject (8), SystemAudit (2), SystemAuditCallback (13), SystemAuditCallbackObject (15), SystemAuditObject (7)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AceType()
-    instance = ZZZ()
+    Instance = AceType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -453,10 +429,7 @@ class AuditFlags:
     
     enum (flags) AuditFlags, values: Failure (2), None (0), Success (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AuditFlags()
-    instance = ZZZ()
+    Instance = AuditFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -499,10 +472,7 @@ class AuditFlags:
 
 class AuthorizationRule():
     """ Determines access to securable objects. The derived classes System.Security.AccessControl.AccessRule and System.Security.AccessControl.AuditRule offer specializations for access and audit functionality. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AuthorizationRule()
-    instance = ZZZ()
+    Instance = AuthorizationRule
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *args): #cannot find CLR constructor
@@ -550,10 +520,7 @@ class AuthorizationRuleCollection(ReadOnlyCollectionBase):
     
     AuthorizationRuleCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AuthorizationRuleCollection()
-    instance = ZZZ()
+    Instance = AuthorizationRuleCollection
     """hardcoded/returns an instance of the class"""
     def AddRule(self, rule):
         """ AddRule(self: AuthorizationRuleCollection, rule: AuthorizationRule) """
@@ -590,10 +557,7 @@ class AuthorizationRuleCollection(ReadOnlyCollectionBase):
 
 class GenericAce():
     """ Represents an Access Control Entry (ACE), and is the base class for all other ACE classes. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GenericAce()
-    instance = ZZZ()
+    Instance = GenericAce
     """hardcoded/returns an instance of the class"""
     def Copy(self):
         """
@@ -710,10 +674,7 @@ Get: PropagationFlags(self: GenericAce) -> PropagationFlags
 
 class KnownAce(GenericAce):
     """ Encapsulates all Access Control Entry (ACE) types currently defined by Microsoft Corporation. All System.Security.AccessControl.KnownAce objects contain a 32-bit access mask and a System.Security.Principal.SecurityIdentifier object. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return KnownAce()
-    instance = ZZZ()
+    Instance = KnownAce
     """hardcoded/returns an instance of the class"""
     AccessMask = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the access mask for this System.Security.AccessControl.KnownAce object.
@@ -735,10 +696,7 @@ Set: SecurityIdentifier(self: KnownAce) = value
 
 class QualifiedAce(KnownAce):
     """ Represents an Access Control Entry (ACE) that contains a qualifier. The qualifier, represented by an System.Security.AccessControl.AceQualifier object, specifies whether the ACE allows access, denies access, causes system audits, or causes system alarms. The System.Security.AccessControl.QualifiedAce class is the abstract base class for the System.Security.AccessControl.CommonAce and System.Security.AccessControl.ObjectAce classes. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return QualifiedAce()
-    instance = ZZZ()
+    Instance = QualifiedAce
     """hardcoded/returns an instance of the class"""
     def GetOpaque(self):
         """
@@ -787,10 +745,7 @@ class CommonAce(QualifiedAce):
     
     CommonAce(flags: AceFlags, qualifier: AceQualifier, accessMask: int, sid: SecurityIdentifier, isCallback: bool, opaque: Array[Byte])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CommonAce()
-    instance = ZZZ()
+    Instance = CommonAce
     """hardcoded/returns an instance of the class"""
     def GetBinaryForm(self, binaryForm, offset):
         """
@@ -830,10 +785,7 @@ Get: BinaryLength(self: CommonAce) -> int
 
 class GenericAcl:
     """ Represents an access control list (ACL) and is the base class for the System.Security.AccessControl.CommonAcl, System.Security.AccessControl.DiscretionaryAcl, System.Security.AccessControl.RawAcl, and System.Security.AccessControl.SystemAcl classes. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GenericAcl()
-    instance = ZZZ()
+    Instance = GenericAcl
     """hardcoded/returns an instance of the class"""
     def CopyTo(self, array, index):
         """
@@ -931,10 +883,7 @@ Get: SyncRoot(self: GenericAcl) -> object
 
 class CommonAcl(GenericAcl):
     """ Represents an access control list (ACL) and is the base class for the System.Security.AccessControl.DiscretionaryAcl and System.Security.AccessControl.SystemAcl classes. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CommonAcl()
-    instance = ZZZ()
+    Instance = CommonAcl
     """hardcoded/returns an instance of the class"""
     def GetBinaryForm(self, binaryForm, offset):
         """
@@ -1030,10 +979,7 @@ Get: Revision(self: CommonAcl) -> Byte
 
 class CommonObjectSecurity(ObjectSecurity):
     """ Controls access to objects without direct manipulation of access control lists (ACLs). This class is the abstract base class for the System.Security.AccessControl.NativeObjectSecurity class. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CommonObjectSecurity()
-    instance = ZZZ()
+    Instance = CommonObjectSecurity
     """hardcoded/returns an instance of the class"""
     def AddAccessRule(self, *args): #cannot find CLR method
         """
@@ -1223,10 +1169,7 @@ class CommonObjectSecurity(ObjectSecurity):
 
 class GenericSecurityDescriptor():
     """ Represents a security descriptor. A security descriptor includes an owner, a primary group, a Discretionary Access Control List (DACL), and a System Access Control List (SACL). """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GenericSecurityDescriptor()
-    instance = ZZZ()
+    Instance = GenericSecurityDescriptor
     """hardcoded/returns an instance of the class"""
     def GetBinaryForm(self, binaryForm, offset):
         """
@@ -1307,10 +1250,7 @@ class CommonSecurityDescriptor(GenericSecurityDescriptor):
     CommonSecurityDescriptor(isContainer: bool, isDS: bool, sddlForm: str)
     CommonSecurityDescriptor(isContainer: bool, isDS: bool, binaryForm: Array[Byte], offset: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CommonSecurityDescriptor()
-    instance = ZZZ()
+    Instance = CommonSecurityDescriptor
     """hardcoded/returns an instance of the class"""
     def AddDiscretionaryAcl(self, revision, trusted):
         """ AddDiscretionaryAcl(self: CommonSecurityDescriptor, revision: Byte, trusted: int) """
@@ -1451,10 +1391,7 @@ class CompoundAce(KnownAce):
     
     CompoundAce(flags: AceFlags, accessMask: int, compoundAceType: CompoundAceType, sid: SecurityIdentifier)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CompoundAce()
-    instance = ZZZ()
+    Instance = CompoundAce
     """hardcoded/returns an instance of the class"""
     def GetBinaryForm(self, binaryForm, offset):
         """
@@ -1494,10 +1431,7 @@ class CompoundAceType:
     
     enum CompoundAceType, values: Impersonation (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CompoundAceType()
-    instance = ZZZ()
+    Instance = CompoundAceType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1542,10 +1476,7 @@ class ControlFlags:
     
     enum (flags) ControlFlags, values: DiscretionaryAclAutoInherited (1024), DiscretionaryAclAutoInheritRequired (256), DiscretionaryAclDefaulted (8), DiscretionaryAclPresent (4), DiscretionaryAclProtected (4096), DiscretionaryAclUntrusted (64), GroupDefaulted (2), None (0), OwnerDefaulted (1), RMControlValid (16384), SelfRelative (32768), ServerSecurity (128), SystemAclAutoInherited (2048), SystemAclAutoInheritRequired (512), SystemAclDefaulted (32), SystemAclPresent (16), SystemAclProtected (8192)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ControlFlags()
-    instance = ZZZ()
+    Instance = ControlFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1607,10 +1538,7 @@ class CryptoKeyAccessRule(AccessRule):
     CryptoKeyAccessRule(identity: IdentityReference, cryptoKeyRights: CryptoKeyRights, type: AccessControlType)
     CryptoKeyAccessRule(identity: str, cryptoKeyRights: CryptoKeyRights, type: AccessControlType)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CryptoKeyAccessRule()
-    instance = ZZZ()
+    Instance = CryptoKeyAccessRule
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, identity, cryptoKeyRights, type):
@@ -1641,10 +1569,7 @@ class CryptoKeyAuditRule(AuditRule):
     CryptoKeyAuditRule(identity: IdentityReference, cryptoKeyRights: CryptoKeyRights, flags: AuditFlags)
     CryptoKeyAuditRule(identity: str, cryptoKeyRights: CryptoKeyRights, flags: AuditFlags)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CryptoKeyAuditRule()
-    instance = ZZZ()
+    Instance = CryptoKeyAuditRule
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, identity, cryptoKeyRights, flags):
@@ -1674,10 +1599,7 @@ class CryptoKeyRights:
     
     enum (flags) CryptoKeyRights, values: ChangePermissions (262144), Delete (65536), FullControl (2032027), GenericAll (268435456), GenericExecute (536870912), GenericRead (-2147483648), GenericWrite (1073741824), ReadAttributes (128), ReadData (1), ReadExtendedAttributes (8), ReadPermissions (131072), Synchronize (1048576), TakeOwnership (524288), WriteAttributes (256), WriteData (2), WriteExtendedAttributes (16)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CryptoKeyRights()
-    instance = ZZZ()
+    Instance = CryptoKeyRights
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1733,10 +1655,7 @@ class CryptoKeyRights:
 
 class NativeObjectSecurity(CommonObjectSecurity):
     """ Provides the ability to control access to native objects without direct manipulation of Access Control Lists (ACLs). Native object types are defined by the System.Security.AccessControl.ResourceType enumeration. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NativeObjectSecurity()
-    instance = ZZZ()
+    Instance = NativeObjectSecurity
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *args): #cannot find CLR constructor
@@ -1791,10 +1710,7 @@ class CryptoKeySecurity(NativeObjectSecurity):
     CryptoKeySecurity()
     CryptoKeySecurity(securityDescriptor: CommonSecurityDescriptor)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CryptoKeySecurity()
-    instance = ZZZ()
+    Instance = CryptoKeySecurity
     """hardcoded/returns an instance of the class"""
     def AccessRuleFactory(self, identityReference, accessMask, isInherited, inheritanceFlags, propagationFlags, type):
         """
@@ -2020,10 +1936,7 @@ class CustomAce(GenericAce):
     
     CustomAce(type: AceType, flags: AceFlags, opaque: Array[Byte])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CustomAce()
-    instance = ZZZ()
+    Instance = CustomAce
     """hardcoded/returns an instance of the class"""
     def GetBinaryForm(self, binaryForm, offset):
         """
@@ -2078,10 +1991,7 @@ Get: OpaqueLength(self: CustomAce) -> int
 
 class DirectoryObjectSecurity(ObjectSecurity):
     """ Provides the ability to control access to directory objects without direct manipulation of Access Control Lists (ACLs). """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DirectoryObjectSecurity()
-    instance = ZZZ()
+    Instance = DirectoryObjectSecurity
     """hardcoded/returns an instance of the class"""
     def AccessRuleFactory(self, identityReference, accessMask, isInherited, inheritanceFlags, propagationFlags, type, objectType=None, inheritedObjectType=None):
         """
@@ -2312,10 +2222,7 @@ class DirectoryObjectSecurity(ObjectSecurity):
 
 class FileSystemSecurity(NativeObjectSecurity):
     """ Represents the access control and audit security for a file or directory. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileSystemSecurity()
-    instance = ZZZ()
+    Instance = FileSystemSecurity
     """hardcoded/returns an instance of the class"""
     def AccessRuleFactory(self, identityReference, accessMask, isInherited, inheritanceFlags, propagationFlags, type):
         """
@@ -2515,10 +2422,7 @@ class DirectorySecurity(FileSystemSecurity):
     DirectorySecurity()
     DirectorySecurity(name: str, includeSections: AccessControlSections)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DirectorySecurity()
-    instance = ZZZ()
+    Instance = DirectorySecurity
     """hardcoded/returns an instance of the class"""
     def AddAccessRule(self, rule):
         """
@@ -2689,10 +2593,7 @@ class DiscretionaryAcl(CommonAcl):
     DiscretionaryAcl(isContainer: bool, isDS: bool, revision: Byte, capacity: int)
     DiscretionaryAcl(isContainer: bool, isDS: bool, rawAcl: RawAcl)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DiscretionaryAcl()
-    instance = ZZZ()
+    Instance = DiscretionaryAcl
     """hardcoded/returns an instance of the class"""
     def AddAccess(self, accessType, sid, *__args):
         """
@@ -2834,10 +2735,7 @@ class EventWaitHandleAccessRule(AccessRule):
     EventWaitHandleAccessRule(identity: IdentityReference, eventRights: EventWaitHandleRights, type: AccessControlType)
     EventWaitHandleAccessRule(identity: str, eventRights: EventWaitHandleRights, type: AccessControlType)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventWaitHandleAccessRule()
-    instance = ZZZ()
+    Instance = EventWaitHandleAccessRule
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, identity, eventRights, type):
@@ -2867,10 +2765,7 @@ class EventWaitHandleAuditRule(AuditRule):
     
     EventWaitHandleAuditRule(identity: IdentityReference, eventRights: EventWaitHandleRights, flags: AuditFlags)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventWaitHandleAuditRule()
-    instance = ZZZ()
+    Instance = EventWaitHandleAuditRule
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, identity, eventRights, flags):
@@ -2897,10 +2792,7 @@ class EventWaitHandleRights:
     
     enum (flags) EventWaitHandleRights, values: ChangePermissions (262144), Delete (65536), FullControl (2031619), Modify (2), ReadPermissions (131072), Synchronize (1048576), TakeOwnership (524288)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventWaitHandleRights()
-    instance = ZZZ()
+    Instance = EventWaitHandleRights
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2951,10 +2843,7 @@ class EventWaitHandleSecurity(NativeObjectSecurity):
     
     EventWaitHandleSecurity()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventWaitHandleSecurity()
-    instance = ZZZ()
+    Instance = EventWaitHandleSecurity
     """hardcoded/returns an instance of the class"""
     def AccessRuleFactory(self, identityReference, accessMask, isInherited, inheritanceFlags, propagationFlags, type):
         """
@@ -3166,10 +3055,7 @@ class FileSecurity(FileSystemSecurity):
     FileSecurity()
     FileSecurity(fileName: str, includeSections: AccessControlSections)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileSecurity()
-    instance = ZZZ()
+    Instance = FileSecurity
     """hardcoded/returns an instance of the class"""
     def AddAccessRule(self, rule):
         """
@@ -3341,10 +3227,7 @@ class FileSystemAccessRule(AccessRule):
     FileSystemAccessRule(identity: IdentityReference, fileSystemRights: FileSystemRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType)
     FileSystemAccessRule(identity: str, fileSystemRights: FileSystemRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileSystemAccessRule()
-    instance = ZZZ()
+    Instance = FileSystemAccessRule
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, identity, fileSystemRights, *__args):
@@ -3379,10 +3262,7 @@ class FileSystemAuditRule(AuditRule):
     FileSystemAuditRule(identity: str, fileSystemRights: FileSystemRights, flags: AuditFlags)
     FileSystemAuditRule(identity: str, fileSystemRights: FileSystemRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileSystemAuditRule()
-    instance = ZZZ()
+    Instance = FileSystemAuditRule
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, identity, fileSystemRights, *__args):
@@ -3414,10 +3294,7 @@ class FileSystemRights:
     
     enum (flags) FileSystemRights, values: AppendData (4), ChangePermissions (262144), CreateDirectories (4), CreateFiles (2), Delete (65536), DeleteSubdirectoriesAndFiles (64), ExecuteFile (32), FullControl (2032127), ListDirectory (1), Modify (197055), Read (131209), ReadAndExecute (131241), ReadAttributes (128), ReadData (1), ReadExtendedAttributes (8), ReadPermissions (131072), Synchronize (1048576), TakeOwnership (524288), Traverse (32), Write (278), WriteAttributes (256), WriteData (2), WriteExtendedAttributes (16)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileSystemRights()
-    instance = ZZZ()
+    Instance = FileSystemRights
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3484,10 +3361,7 @@ class InheritanceFlags:
     
     enum (flags) InheritanceFlags, values: ContainerInherit (1), None (0), ObjectInherit (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InheritanceFlags()
-    instance = ZZZ()
+    Instance = InheritanceFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3535,10 +3409,7 @@ class MutexAccessRule(AccessRule):
     MutexAccessRule(identity: IdentityReference, eventRights: MutexRights, type: AccessControlType)
     MutexAccessRule(identity: str, eventRights: MutexRights, type: AccessControlType)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MutexAccessRule()
-    instance = ZZZ()
+    Instance = MutexAccessRule
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, identity, eventRights, type):
@@ -3568,10 +3439,7 @@ class MutexAuditRule(AuditRule):
     
     MutexAuditRule(identity: IdentityReference, eventRights: MutexRights, flags: AuditFlags)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MutexAuditRule()
-    instance = ZZZ()
+    Instance = MutexAuditRule
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, identity, eventRights, flags):
@@ -3598,10 +3466,7 @@ class MutexRights:
     
     enum (flags) MutexRights, values: ChangePermissions (262144), Delete (65536), FullControl (2031617), Modify (1), ReadPermissions (131072), Synchronize (1048576), TakeOwnership (524288)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MutexRights()
-    instance = ZZZ()
+    Instance = MutexRights
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3653,10 +3518,7 @@ class MutexSecurity(NativeObjectSecurity):
     MutexSecurity()
     MutexSecurity(name: str, includeSections: AccessControlSections)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MutexSecurity()
-    instance = ZZZ()
+    Instance = MutexSecurity
     """hardcoded/returns an instance of the class"""
     def AccessRuleFactory(self, identityReference, accessMask, isInherited, inheritanceFlags, propagationFlags, type):
         """
@@ -3871,10 +3733,7 @@ Get: AuditRuleType(self: MutexSecurity) -> Type
 
 class ObjectAccessRule(AccessRule):
     """ Represents a combination of a user's identity, an access mask, and an access control type (allow or deny). An System.Security.AccessControl.ObjectAccessRule object also contains information about the type of object to which the rule applies, the type of child object that can inherit the rule, how the rule is inherited by child objects, and how that inheritance is propagated. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ObjectAccessRule()
-    instance = ZZZ()
+    Instance = ObjectAccessRule
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *args): #cannot find CLR constructor
@@ -3915,10 +3774,7 @@ class ObjectAce(QualifiedAce):
     
     ObjectAce(aceFlags: AceFlags, qualifier: AceQualifier, accessMask: int, sid: SecurityIdentifier, flags: ObjectAceFlags, type: Guid, inheritedType: Guid, isCallback: bool, opaque: Array[Byte])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ObjectAce()
-    instance = ZZZ()
+    Instance = ObjectAce
     """hardcoded/returns an instance of the class"""
     def GetBinaryForm(self, binaryForm, offset):
         """
@@ -3986,10 +3842,7 @@ class ObjectAceFlags:
     
     enum (flags) ObjectAceFlags, values: InheritedObjectAceTypePresent (2), None (0), ObjectAceTypePresent (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ObjectAceFlags()
-    instance = ZZZ()
+    Instance = ObjectAceFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4032,10 +3885,7 @@ class ObjectAceFlags:
 
 class ObjectAuditRule(AuditRule):
     """ Represents a combination of a user's identity, an access mask, and audit conditions. An System.Security.AccessControl.ObjectAuditRule object also contains information about the type of object to which the rule applies, the type of child object that can inherit the rule, how the rule is inherited by child objects, and how that inheritance is propagated. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ObjectAuditRule()
-    instance = ZZZ()
+    Instance = ObjectAuditRule
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *args): #cannot find CLR constructor
@@ -4078,10 +3928,7 @@ class PrivilegeNotHeldException(UnauthorizedAccessException):
     PrivilegeNotHeldException(privilege: str)
     PrivilegeNotHeldException(privilege: str, inner: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrivilegeNotHeldException()
-    instance = ZZZ()
+    Instance = PrivilegeNotHeldException
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
@@ -4129,10 +3976,7 @@ class PropagationFlags:
     
     enum (flags) PropagationFlags, values: InheritOnly (2), None (0), NoPropagateInherit (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PropagationFlags()
-    instance = ZZZ()
+    Instance = PropagationFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4180,10 +4024,7 @@ class RawAcl(GenericAcl):
     RawAcl(revision: Byte, capacity: int)
     RawAcl(binaryForm: Array[Byte], offset: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RawAcl()
-    instance = ZZZ()
+    Instance = RawAcl
     """hardcoded/returns an instance of the class"""
     def GetBinaryForm(self, binaryForm, offset):
         """
@@ -4275,10 +4116,7 @@ class RawSecurityDescriptor(GenericSecurityDescriptor):
     RawSecurityDescriptor(sddlForm: str)
     RawSecurityDescriptor(binaryForm: Array[Byte], offset: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RawSecurityDescriptor()
-    instance = ZZZ()
+    Instance = RawSecurityDescriptor
     """hardcoded/returns an instance of the class"""
     def SetFlags(self, flags):
         """
@@ -4356,10 +4194,7 @@ class RegistryAccessRule(AccessRule):
     RegistryAccessRule(identity: IdentityReference, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType)
     RegistryAccessRule(identity: str, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryAccessRule()
-    instance = ZZZ()
+    Instance = RegistryAccessRule
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, identity, registryRights, *__args):
@@ -4392,10 +4227,7 @@ class RegistryAuditRule(AuditRule):
     RegistryAuditRule(identity: IdentityReference, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags)
     RegistryAuditRule(identity: str, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryAuditRule()
-    instance = ZZZ()
+    Instance = RegistryAuditRule
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, identity, registryRights, inheritanceFlags, propagationFlags, flags):
@@ -4425,10 +4257,7 @@ class RegistryRights:
     
     enum (flags) RegistryRights, values: ChangePermissions (262144), CreateLink (32), CreateSubKey (4), Delete (65536), EnumerateSubKeys (8), ExecuteKey (131097), FullControl (983103), Notify (16), QueryValues (1), ReadKey (131097), ReadPermissions (131072), SetValue (2), TakeOwnership (524288), WriteKey (131078)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryRights()
-    instance = ZZZ()
+    Instance = RegistryRights
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4486,10 +4315,7 @@ class RegistrySecurity(NativeObjectSecurity):
     
     RegistrySecurity()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegistrySecurity()
-    instance = ZZZ()
+    Instance = RegistrySecurity
     """hardcoded/returns an instance of the class"""
     def AccessRuleFactory(self, identityReference, accessMask, isInherited, inheritanceFlags, propagationFlags, type):
         """
@@ -4707,10 +4533,7 @@ class ResourceType:
     
     enum ResourceType, values: DSObject (8), DSObjectAll (9), FileObject (1), KernelObject (6), LMShare (5), Printer (3), ProviderDefined (10), RegistryKey (4), RegistryWow6432Key (12), Service (2), Unknown (0), WindowObject (7), WmiGuidObject (11)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ResourceType()
-    instance = ZZZ()
+    Instance = ResourceType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4767,10 +4590,7 @@ class SecurityInfos:
     
     enum (flags) SecurityInfos, values: DiscretionaryAcl (4), Group (2), Owner (1), SystemAcl (8)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityInfos()
-    instance = ZZZ()
+    Instance = SecurityInfos
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4819,10 +4639,7 @@ class SemaphoreAccessRule(AccessRule):
     SemaphoreAccessRule(identity: IdentityReference, eventRights: SemaphoreRights, type: AccessControlType)
     SemaphoreAccessRule(identity: str, eventRights: SemaphoreRights, type: AccessControlType)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SemaphoreAccessRule()
-    instance = ZZZ()
+    Instance = SemaphoreAccessRule
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, identity, eventRights, type):
@@ -4852,10 +4669,7 @@ class SemaphoreAuditRule(AuditRule):
     
     SemaphoreAuditRule(identity: IdentityReference, eventRights: SemaphoreRights, flags: AuditFlags)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SemaphoreAuditRule()
-    instance = ZZZ()
+    Instance = SemaphoreAuditRule
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, identity, eventRights, flags):
@@ -4882,10 +4696,7 @@ class SemaphoreRights:
     
     enum (flags) SemaphoreRights, values: ChangePermissions (262144), Delete (65536), FullControl (2031619), Modify (2), ReadPermissions (131072), Synchronize (1048576), TakeOwnership (524288)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SemaphoreRights()
-    instance = ZZZ()
+    Instance = SemaphoreRights
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4937,10 +4748,7 @@ class SemaphoreSecurity(NativeObjectSecurity):
     SemaphoreSecurity()
     SemaphoreSecurity(name: str, includeSections: AccessControlSections)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SemaphoreSecurity()
-    instance = ZZZ()
+    Instance = SemaphoreSecurity
     """hardcoded/returns an instance of the class"""
     def AccessRuleFactory(self, identityReference, accessMask, isInherited, inheritanceFlags, propagationFlags, type):
         """
@@ -5161,10 +4969,7 @@ class SystemAcl(CommonAcl):
     SystemAcl(isContainer: bool, isDS: bool, revision: Byte, capacity: int)
     SystemAcl(isContainer: bool, isDS: bool, rawAcl: RawAcl)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SystemAcl()
-    instance = ZZZ()
+    Instance = SystemAcl
     """hardcoded/returns an instance of the class"""
     def AddAudit(self, *__args):
         """

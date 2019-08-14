@@ -10,10 +10,7 @@
 
 class BasePage:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BasePage()
-    instance = ZZZ()
+    Instance = BasePage
     """hardcoded/returns an instance of the class"""
     def ResolveLayout(self, *args): #cannot find CLR method
         """ ResolveLayout(self: TemplateBase[TModel], name: str) -> ITemplate """
@@ -43,10 +40,7 @@ class BasePage:
 
 class ILocalizeable:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ILocalizeable()
-    instance = ZZZ()
+    Instance = ILocalizeable
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

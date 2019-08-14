@@ -13,10 +13,7 @@ class AddUsedNumberArgs():
     AddUsedNumberArgs()
     AddUsedNumberArgs(number: str, type: NumberRangeType)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AddUsedNumberArgs()
-    instance = ZZZ()
+    Instance = AddUsedNumberArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, number=None, type=None):
@@ -42,10 +39,7 @@ Set: Type(self: AddUsedNumberArgs) = value
 
 class UsedNumberArgs():
     """ UsedNumberArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UsedNumberArgs()
-    instance = ZZZ()
+    Instance = UsedNumberArgs
     """hardcoded/returns an instance of the class"""
     CheckAfterDate = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: CheckAfterDate(self: UsedNumberArgs) -> Nullable[DateTime]

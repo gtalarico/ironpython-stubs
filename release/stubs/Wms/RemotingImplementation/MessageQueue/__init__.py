@@ -11,10 +11,7 @@ from Wms.RemotingImplementation.TaskScheduler import *
 
 class CleanupMessageQueueTask(TaskBase):
     """ CleanupMessageQueueTask(settings: SystemSettings) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CleanupMessageQueueTask()
-    instance = ZZZ()
+    Instance = CleanupMessageQueueTask
     """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: CleanupMessageQueueTask) """

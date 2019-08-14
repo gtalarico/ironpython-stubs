@@ -10,10 +10,7 @@
 
 class Parallel():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Parallel()
-    instance = ZZZ()
+    Instance = Parallel
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def ForEach(actions):
@@ -27,10 +24,7 @@ class Parallel():
 
 class Sequential():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Sequential()
-    instance = ZZZ()
+    Instance = Sequential
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def ForEach(items, action):

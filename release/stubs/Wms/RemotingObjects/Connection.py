@@ -11,10 +11,7 @@ from Wms.RemotingObjects import *
 
 class ConnectionEntries(FindableList):
     """ ConnectionEntries() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ConnectionEntries()
-    instance = ZZZ()
+    Instance = ConnectionEntries
     """hardcoded/returns an instance of the class"""
     def AddUnique(self, entry):
         """ AddUnique(self: ConnectionEntries, entry: ConnectionEntry) """
@@ -50,10 +47,7 @@ class ConnectionEntry():
     ConnectionEntry(host: str, port: int, name: str, description: str, pinned: bool)
     ConnectionEntry(host: str, port: int, name: str, description: str, pinned: bool, lastLoggedInUser: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ConnectionEntry()
-    instance = ZZZ()
+    Instance = ConnectionEntry
     """hardcoded/returns an instance of the class"""
     def UpdateRegistry(self):
         """

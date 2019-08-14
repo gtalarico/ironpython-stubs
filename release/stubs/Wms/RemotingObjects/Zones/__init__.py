@@ -12,10 +12,7 @@ from Wms.RemotingObjects import *
 
 class RightValueExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RightValueExtensions()
-    instance = ZZZ()
+    Instance = RightValueExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def IsPermitted(value):
@@ -29,10 +26,7 @@ class RightValueExtensions():
 
 class Zone(DbObject):
     """ Zone() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Zone()
-    instance = ZZZ()
+    Instance = Zone
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -93,10 +87,7 @@ Set: Sys(self: Zone) = value
 
 class ZoneRights(DbObject):
     """ ZoneRights() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ZoneRights()
-    instance = ZZZ()
+    Instance = ZoneRights
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromString(zoneRightsString):
@@ -1298,10 +1289,7 @@ class ZoneRightView():
     ZoneRightView()
     ZoneRightView(propertyName: str, name: str, value: RightValue, groupSortKey: str, groupName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ZoneRightView()
-    instance = ZZZ()
+    Instance = ZoneRightView
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, propertyName=None, name=None, value=None, groupSortKey=None, groupName=None):
@@ -1355,10 +1343,7 @@ Set: Value(self: ZoneRightView) = value
 
 class ZoneRightViews(FindableList):
     """ ZoneRightViews() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ZoneRightViews()
-    instance = ZZZ()
+    Instance = ZoneRightViews
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -1385,10 +1370,7 @@ class ZoneRightViews(FindableList):
 
 class Zones(FindableList):
     """ Zones() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Zones()
-    instance = ZZZ()
+    Instance = Zones
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -1418,10 +1400,7 @@ class ZoneUser(User):
     ZoneUser(basedOn: User, isInZone: bool)
     ZoneUser()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ZoneUser()
-    instance = ZZZ()
+    Instance = ZoneUser
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1453,10 +1432,7 @@ class ZoneUsers(List):
     ZoneUsers(collection: IEnumerable[ZoneUser])
     ZoneUsers()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ZoneUsers()
-    instance = ZZZ()
+    Instance = ZoneUsers
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """

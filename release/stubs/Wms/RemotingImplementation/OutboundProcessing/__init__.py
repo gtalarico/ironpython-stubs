@@ -10,10 +10,7 @@
 
 class ProcessHistoricShipment():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessHistoricShipment()
-    instance = ZZZ()
+    Instance = ProcessHistoricShipment
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Process(dfObject, packages):

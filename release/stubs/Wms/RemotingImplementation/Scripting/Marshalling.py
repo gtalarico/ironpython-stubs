@@ -11,10 +11,7 @@ from System.IO import *
 
 class MarshalledPythonScriptEvaluator():
     """ MarshalledPythonScriptEvaluator(lifetime: TimeSpan) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MarshalledPythonScriptEvaluator()
-    instance = ZZZ()
+    Instance = MarshalledPythonScriptEvaluator
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetLibRoot():
@@ -41,10 +38,7 @@ class MarshalledPythonScriptEvaluator():
 
 class PythonStdoutInterProcessLogger(StreamWriter):
     """ PythonStdoutInterProcessLogger(loggerProxy: IMarshalledLogger, stream: Stream) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PythonStdoutInterProcessLogger()
-    instance = ZZZ()
+    Instance = PythonStdoutInterProcessLogger
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """

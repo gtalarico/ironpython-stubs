@@ -10,10 +10,7 @@
 
 class IronPythonMessagingProvider:
     """ IronPythonMessagingProvider() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IronPythonMessagingProvider()
-    instance = ZZZ()
+    Instance = IronPythonMessagingProvider
     """hardcoded/returns an instance of the class"""
     def ClearHandlers(self):
         """ ClearHandlers(self: IronPythonMessagingProvider) """
@@ -56,10 +53,7 @@ class IronPythonMessagingProvider:
 
 class StandardMessagingProvider:
     """ StandardMessagingProvider() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StandardMessagingProvider()
-    instance = ZZZ()
+    Instance = StandardMessagingProvider
     """hardcoded/returns an instance of the class"""
     def GetHandlers(self):
         """ GetHandlers(self: StandardMessagingProvider) -> IEnumerable[MessageHandlerDescriptor] """

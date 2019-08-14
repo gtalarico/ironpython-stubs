@@ -14,10 +14,7 @@ class SettingAttribute:
     
     SettingAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingAttribute()
-    instance = ZZZ()
+    Instance = SettingAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -30,10 +27,7 @@ class ApplicationScopedSettingAttribute(SettingAttribute):
     
     ApplicationScopedSettingAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ApplicationScopedSettingAttribute()
-    instance = ZZZ()
+    Instance = ApplicationScopedSettingAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -42,10 +36,7 @@ class ApplicationScopedSettingAttribute(SettingAttribute):
 
 class SettingsBase():
     """ Provides the base class used to support user property settings. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsBase()
-    instance = ZZZ()
+    Instance = SettingsBase
     """hardcoded/returns an instance of the class"""
     def Initialize(self, context, properties, providers):
         """
@@ -124,10 +115,7 @@ Get: Providers(self: SettingsBase) -> SettingsProviderCollection
 
 class ApplicationSettingsBase(SettingsBase):
     """ Acts as a base class for deriving concrete wrapper classes to implement the application settings feature in Window Forms applications. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ApplicationSettingsBase()
-    instance = ZZZ()
+    Instance = ApplicationSettingsBase
     """hardcoded/returns an instance of the class"""
     def GetPreviousVersion(self, propertyName):
         """
@@ -279,10 +267,7 @@ class ApplicationSettingsGroup(ConfigurationSectionGroup):
     
     ApplicationSettingsGroup()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ApplicationSettingsGroup()
-    instance = ZZZ()
+    Instance = ApplicationSettingsGroup
     """hardcoded/returns an instance of the class"""
 
 class AppSettingsReader():
@@ -291,10 +276,7 @@ class AppSettingsReader():
     
     AppSettingsReader()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AppSettingsReader()
-    instance = ZZZ()
+    Instance = AppSettingsReader
     """hardcoded/returns an instance of the class"""
     def GetValue(self, key, type):
         """
@@ -317,10 +299,7 @@ class ClientSettingsSection(ConfigurationSection):
     
     ClientSettingsSection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ClientSettingsSection()
-    instance = ZZZ()
+    Instance = ClientSettingsSection
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -357,10 +336,7 @@ class ConfigurationException(SystemException):
     ConfigurationException(message: str, filename: str, line: int)
     ConfigurationException(message: str, inner: Exception, filename: str, line: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ConfigurationException()
-    instance = ZZZ()
+    Instance = ConfigurationException
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
@@ -454,10 +430,7 @@ Get: Message(self: ConfigurationException) -> str
 
 class ConfigurationSettings():
     """ Provides runtime versions 1.0 and 1.1 support for reading configuration sections and common configuration settings. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ConfigurationSettings()
-    instance = ZZZ()
+    Instance = ConfigurationSettings
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetConfig(sectionName):
@@ -481,10 +454,7 @@ class ConfigXmlDocument(XmlDocument):
     
     ConfigXmlDocument()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ConfigXmlDocument()
-    instance = ZZZ()
+    Instance = ConfigXmlDocument
     """hardcoded/returns an instance of the class"""
     def CreateAttribute(self, *__args):
         """
@@ -644,10 +614,7 @@ class DefaultSettingValueAttribute:
     
     DefaultSettingValueAttribute(value: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultSettingValueAttribute()
-    instance = ZZZ()
+    Instance = DefaultSettingValueAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -673,10 +640,7 @@ class DictionarySectionHandler:
     
     DictionarySectionHandler()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DictionarySectionHandler()
-    instance = ZZZ()
+    Instance = DictionarySectionHandler
     """hardcoded/returns an instance of the class"""
     def Create(self, parent, context, section):
         """
@@ -713,10 +677,7 @@ class DictionarySectionHandler:
 
 class IApplicationSettingsProvider:
     """ Defines extended capabilities for client-based application settings providers. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IApplicationSettingsProvider()
-    instance = ZZZ()
+    Instance = IApplicationSettingsProvider
     """hardcoded/returns an instance of the class"""
     def GetPreviousVersion(self, context, property):
         """
@@ -757,10 +718,7 @@ class IApplicationSettingsProvider:
 
 class IConfigurationSectionHandler:
     """ Handles the access to certain configuration sections. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IConfigurationSectionHandler()
-    instance = ZZZ()
+    Instance = IConfigurationSectionHandler
     """hardcoded/returns an instance of the class"""
     def Create(self, parent, configContext, section):
         """
@@ -782,10 +740,7 @@ class IConfigurationSectionHandler:
 
 class IConfigurationSystem:
     """ Provides standard configuration methods. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IConfigurationSystem()
-    instance = ZZZ()
+    Instance = IConfigurationSystem
     """hardcoded/returns an instance of the class"""
     def GetConfig(self, configKey):
         """
@@ -816,10 +771,7 @@ class IdnElement(ConfigurationElement):
     
     IdnElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IdnElement()
-    instance = ZZZ()
+    Instance = IdnElement
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -851,10 +803,7 @@ class IgnoreSectionHandler:
     
     IgnoreSectionHandler()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IgnoreSectionHandler()
-    instance = ZZZ()
+    Instance = IgnoreSectionHandler
     """hardcoded/returns an instance of the class"""
     def Create(self, parent, configContext, section):
         """
@@ -880,10 +829,7 @@ class IgnoreSectionHandler:
 
 class IPersistComponentSettings:
     """ Defines standard functionality for controls or libraries that store and retrieve application settings. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPersistComponentSettings()
-    instance = ZZZ()
+    Instance = IPersistComponentSettings
     """hardcoded/returns an instance of the class"""
     def LoadComponentSettings(self):
         """
@@ -934,10 +880,7 @@ class IriParsingElement(ConfigurationElement):
     
     IriParsingElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IriParsingElement()
-    instance = ZZZ()
+    Instance = IriParsingElement
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -965,10 +908,7 @@ Set: Enabled(self: IriParsingElement) = value
 
 class ISettingsProviderService:
     """ Provides an interface for defining an alternate application settings provider. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ISettingsProviderService()
-    instance = ZZZ()
+    Instance = ISettingsProviderService
     """hardcoded/returns an instance of the class"""
     def GetSettingsProvider(self, property):
         """
@@ -988,10 +928,7 @@ class ISettingsProviderService:
 
 class SettingsProvider(ProviderBase):
     """ Acts as a base class for deriving custom settings providers in the application settings architecture. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsProvider()
-    instance = ZZZ()
+    Instance = SettingsProvider
     """hardcoded/returns an instance of the class"""
     def GetPropertyValues(self, context, collection):
         """
@@ -1031,10 +968,7 @@ class LocalFileSettingsProvider(SettingsProvider):
     
     LocalFileSettingsProvider()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LocalFileSettingsProvider()
-    instance = ZZZ()
+    Instance = LocalFileSettingsProvider
     """hardcoded/returns an instance of the class"""
     def GetPreviousVersion(self, context, property):
         """
@@ -1117,10 +1051,7 @@ class NameValueFileSectionHandler:
     
     NameValueFileSectionHandler()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NameValueFileSectionHandler()
-    instance = ZZZ()
+    Instance = NameValueFileSectionHandler
     """hardcoded/returns an instance of the class"""
     def Create(self, parent, configContext, section):
         """
@@ -1150,10 +1081,7 @@ class NameValueSectionHandler:
     
     NameValueSectionHandler()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NameValueSectionHandler()
-    instance = ZZZ()
+    Instance = NameValueSectionHandler
     """hardcoded/returns an instance of the class"""
     def Create(self, parent, context, section):
         """
@@ -1194,10 +1122,7 @@ class NoSettingsVersionUpgradeAttribute:
     
     NoSettingsVersionUpgradeAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NoSettingsVersionUpgradeAttribute()
-    instance = ZZZ()
+    Instance = NoSettingsVersionUpgradeAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1210,10 +1135,7 @@ class SchemeSettingElement(ConfigurationElement):
     
     SchemeSettingElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SchemeSettingElement()
-    instance = ZZZ()
+    Instance = SchemeSettingElement
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -1251,10 +1173,7 @@ class SchemeSettingElementCollection(ConfigurationElementCollection):
     
     SchemeSettingElementCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SchemeSettingElementCollection()
-    instance = ZZZ()
+    Instance = SchemeSettingElementCollection
     """hardcoded/returns an instance of the class"""
     def BaseAdd(self, *args): #cannot find CLR method
         """
@@ -1668,10 +1587,7 @@ class SettingChangingEventArgs(CancelEventArgs):
     
     SettingChangingEventArgs(settingName: str, settingClass: str, settingKey: str, newValue: object, cancel: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingChangingEventArgs()
-    instance = ZZZ()
+    Instance = SettingChangingEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, settingName, settingClass, settingKey, newValue, cancel):
@@ -1714,10 +1630,7 @@ class SettingChangingEventHandler(MulticastDelegate):
     
     SettingChangingEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingChangingEventHandler()
-    instance = ZZZ()
+    Instance = SettingChangingEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SettingChangingEventHandler, sender: object, e: SettingChangingEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -1796,10 +1709,7 @@ class SettingElement(ConfigurationElement):
     SettingElement()
     SettingElement(name: str, serializeAs: SettingsSerializeAs)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingElement()
-    instance = ZZZ()
+    Instance = SettingElement
     """hardcoded/returns an instance of the class"""
     def Equals(self, settings):
         """
@@ -1875,10 +1785,7 @@ class SettingElementCollection(ConfigurationElementCollection):
     
     SettingElementCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingElementCollection()
-    instance = ZZZ()
+    Instance = SettingElementCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, element):
         """
@@ -2315,10 +2222,7 @@ class SettingsAttributeDictionary(Hashtable):
     SettingsAttributeDictionary()
     SettingsAttributeDictionary(attributes: SettingsAttributeDictionary)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsAttributeDictionary()
-    instance = ZZZ()
+    Instance = SettingsAttributeDictionary
     """hardcoded/returns an instance of the class"""
     def GetHash(self, *args): #cannot find CLR method
         """
@@ -2393,10 +2297,7 @@ class SettingsContext(Hashtable):
     
     SettingsContext()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsContext()
-    instance = ZZZ()
+    Instance = SettingsContext
     """hardcoded/returns an instance of the class"""
     def GetHash(self, *args): #cannot find CLR method
         """
@@ -2463,10 +2364,7 @@ class SettingsDescriptionAttribute:
     
     SettingsDescriptionAttribute(description: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsDescriptionAttribute()
-    instance = ZZZ()
+    Instance = SettingsDescriptionAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2492,10 +2390,7 @@ class SettingsGroupDescriptionAttribute:
     
     SettingsGroupDescriptionAttribute(description: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsGroupDescriptionAttribute()
-    instance = ZZZ()
+    Instance = SettingsGroupDescriptionAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2521,10 +2416,7 @@ class SettingsGroupNameAttribute:
     
     SettingsGroupNameAttribute(groupName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsGroupNameAttribute()
-    instance = ZZZ()
+    Instance = SettingsGroupNameAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2550,10 +2442,7 @@ class SettingsLoadedEventArgs(EventArgs):
     
     SettingsLoadedEventArgs(provider: SettingsProvider)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsLoadedEventArgs()
-    instance = ZZZ()
+    Instance = SettingsLoadedEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, provider):
@@ -2575,10 +2464,7 @@ class SettingsLoadedEventHandler(MulticastDelegate):
     
     SettingsLoadedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsLoadedEventHandler()
-    instance = ZZZ()
+    Instance = SettingsLoadedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SettingsLoadedEventHandler, sender: object, e: SettingsLoadedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -2656,10 +2542,7 @@ class SettingsManageability:
     
     enum SettingsManageability, values: Roaming (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsManageability()
-    instance = ZZZ()
+    Instance = SettingsManageability
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2704,10 +2587,7 @@ class SettingsManageabilityAttribute:
     
     SettingsManageabilityAttribute(manageability: SettingsManageability)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsManageabilityAttribute()
-    instance = ZZZ()
+    Instance = SettingsManageabilityAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2735,10 +2615,7 @@ class SettingsProperty():
     SettingsProperty(name: str, propertyType: Type, provider: SettingsProvider, isReadOnly: bool, defaultValue: object, serializeAs: SettingsSerializeAs, attributes: SettingsAttributeDictionary, throwOnErrorDeserializing: bool, throwOnErrorSerializing: bool)
     SettingsProperty(propertyToCopy: SettingsProperty)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsProperty()
-    instance = ZZZ()
+    Instance = SettingsProperty
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -2828,10 +2705,7 @@ class SettingsPropertyCollection:
     
     SettingsPropertyCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsPropertyCollection()
-    instance = ZZZ()
+    Instance = SettingsPropertyCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, property):
         """
@@ -2998,10 +2872,7 @@ class SettingsPropertyIsReadOnlyException(Exception):
     SettingsPropertyIsReadOnlyException(message: str, innerException: Exception)
     SettingsPropertyIsReadOnlyException()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsPropertyIsReadOnlyException()
-    instance = ZZZ()
+    Instance = SettingsPropertyIsReadOnlyException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -3034,10 +2905,7 @@ class SettingsPropertyNotFoundException(Exception):
     SettingsPropertyNotFoundException(message: str, innerException: Exception)
     SettingsPropertyNotFoundException()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsPropertyNotFoundException()
-    instance = ZZZ()
+    Instance = SettingsPropertyNotFoundException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -3068,10 +2936,7 @@ class SettingsPropertyValue():
     
     SettingsPropertyValue(property: SettingsProperty)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsPropertyValue()
-    instance = ZZZ()
+    Instance = SettingsPropertyValue
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, property):
@@ -3139,10 +3004,7 @@ class SettingsPropertyValueCollection:
     
     SettingsPropertyValueCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsPropertyValueCollection()
-    instance = ZZZ()
+    Instance = SettingsPropertyValueCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, property):
         """
@@ -3259,10 +3121,7 @@ class SettingsPropertyWrongTypeException(Exception):
     SettingsPropertyWrongTypeException(message: str, innerException: Exception)
     SettingsPropertyWrongTypeException()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsPropertyWrongTypeException()
-    instance = ZZZ()
+    Instance = SettingsPropertyWrongTypeException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -3294,10 +3153,7 @@ class SettingsProviderAttribute:
     SettingsProviderAttribute(providerTypeName: str)
     SettingsProviderAttribute(providerType: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsProviderAttribute()
-    instance = ZZZ()
+    Instance = SettingsProviderAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -3326,10 +3182,7 @@ class SettingsProviderCollection(ProviderCollection):
     
     SettingsProviderCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsProviderCollection()
-    instance = ZZZ()
+    Instance = SettingsProviderCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, provider):
         """
@@ -3363,10 +3216,7 @@ class SettingsSavingEventHandler(MulticastDelegate):
     
     SettingsSavingEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsSavingEventHandler()
-    instance = ZZZ()
+    Instance = SettingsSavingEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SettingsSavingEventHandler, sender: object, e: CancelEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -3444,10 +3294,7 @@ class SettingsSerializeAs:
     
     enum SettingsSerializeAs, values: Binary (2), ProviderSpecific (3), String (0), Xml (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsSerializeAs()
-    instance = ZZZ()
+    Instance = SettingsSerializeAs
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3495,10 +3342,7 @@ class SettingsSerializeAsAttribute:
     
     SettingsSerializeAsAttribute(serializeAs: SettingsSerializeAs)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsSerializeAsAttribute()
-    instance = ZZZ()
+    Instance = SettingsSerializeAsAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -3524,10 +3368,7 @@ class SettingValueElement(ConfigurationElement):
     
     SettingValueElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingValueElement()
-    instance = ZZZ()
+    Instance = SettingValueElement
     """hardcoded/returns an instance of the class"""
     def Equals(self, settingValue):
         """
@@ -3579,10 +3420,7 @@ class SingleTagSectionHandler:
     
     SingleTagSectionHandler()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SingleTagSectionHandler()
-    instance = ZZZ()
+    Instance = SingleTagSectionHandler
     """hardcoded/returns an instance of the class"""
     def Create(self, parent, context, section):
         """
@@ -3612,10 +3450,7 @@ class SpecialSetting:
     
     enum SpecialSetting, values: ConnectionString (0), WebServiceUrl (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SpecialSetting()
-    instance = ZZZ()
+    Instance = SpecialSetting
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3661,10 +3496,7 @@ class SpecialSettingAttribute:
     
     SpecialSettingAttribute(specialSetting: SpecialSetting)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SpecialSettingAttribute()
-    instance = ZZZ()
+    Instance = SpecialSettingAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -3690,10 +3522,7 @@ class UriSection(ConfigurationSection):
     
     UriSection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UriSection()
-    instance = ZZZ()
+    Instance = UriSection
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -3738,10 +3567,7 @@ class UserScopedSettingAttribute(SettingAttribute):
     
     UserScopedSettingAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UserScopedSettingAttribute()
-    instance = ZZZ()
+    Instance = UserScopedSettingAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -3754,10 +3580,7 @@ class UserSettingsGroup(ConfigurationSectionGroup):
     
     UserSettingsGroup()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UserSettingsGroup()
-    instance = ZZZ()
+    Instance = UserSettingsGroup
     """hardcoded/returns an instance of the class"""
 
 # variables with complex values

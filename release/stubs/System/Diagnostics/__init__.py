@@ -10,10 +10,7 @@
 
 class Switch():
     """ Provides an abstract base class to create new debugging and tracing switches. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Switch()
-    instance = ZZZ()
+    Instance = Switch
     """hardcoded/returns an instance of the class"""
     def GetSupportedAttributes(self, *args): #cannot find CLR method
         """
@@ -86,10 +83,7 @@ class BooleanSwitch(Switch):
     BooleanSwitch(displayName: str, description: str)
     BooleanSwitch(displayName: str, description: str, defaultSwitchValue: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BooleanSwitch()
-    instance = ZZZ()
+    Instance = BooleanSwitch
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, displayName, description, defaultSwitchValue=None):
@@ -125,10 +119,7 @@ class ConditionalAttribute:
     
     ConditionalAttribute(conditionString: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ConditionalAttribute()
-    instance = ZZZ()
+    Instance = ConditionalAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -153,10 +144,7 @@ Get: ConditionString(self: ConditionalAttribute) -> str
 
 class TraceListener(MarshalByRefObject):
     """ Provides the abstract base class for the listeners who monitor trace and debug output. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TraceListener()
-    instance = ZZZ()
+    Instance = TraceListener
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -433,10 +421,7 @@ class TextWriterTraceListener(TraceListener):
     TextWriterTraceListener(fileName: str)
     TextWriterTraceListener(fileName: str, name: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TextWriterTraceListener()
-    instance = ZZZ()
+    Instance = TextWriterTraceListener
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -562,10 +547,7 @@ class ConsoleTraceListener(TextWriterTraceListener):
     ConsoleTraceListener()
     ConsoleTraceListener(useErrorStream: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ConsoleTraceListener()
-    instance = ZZZ()
+    Instance = ConsoleTraceListener
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -646,10 +628,7 @@ class ConsoleTraceListener(TextWriterTraceListener):
 
 class CorrelationManager():
     """ Correlates traces that are part of a logical transaction. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CorrelationManager()
-    instance = ZZZ()
+    Instance = CorrelationManager
     """hardcoded/returns an instance of the class"""
     def StartLogicalOperation(self, operationId=None):
         """
@@ -693,10 +672,7 @@ class CounterCreationData():
     CounterCreationData(counterName: str, counterHelp: str, counterType: PerformanceCounterType)
     CounterCreationData()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CounterCreationData()
-    instance = ZZZ()
+    Instance = CounterCreationData
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, counterName=None, counterHelp=None, counterType=None):
@@ -740,10 +716,7 @@ class CounterCreationDataCollection(CollectionBase):
     CounterCreationDataCollection(value: CounterCreationDataCollection)
     CounterCreationDataCollection(value: Array[CounterCreationData])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CounterCreationDataCollection()
-    instance = ZZZ()
+    Instance = CounterCreationDataCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
@@ -956,10 +929,7 @@ class CounterSample():
     CounterSample(rawValue: Int64, baseValue: Int64, counterFrequency: Int64, systemFrequency: Int64, timeStamp: Int64, timeStamp100nSec: Int64, counterType: PerformanceCounterType)
     CounterSample(rawValue: Int64, baseValue: Int64, counterFrequency: Int64, systemFrequency: Int64, timeStamp: Int64, timeStamp100nSec: Int64, counterType: PerformanceCounterType, counterTimeStamp: Int64)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CounterSample()
-    instance = ZZZ()
+    Instance = CounterSample
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Calculate(counterSample, nextCounterSample=None):
@@ -1084,10 +1054,7 @@ Get: TimeStamp100nSec(self: CounterSample) -> Int64
 
 class CounterSampleCalculator():
     """ Provides a set of utility functions for interpreting performance counter data. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CounterSampleCalculator()
-    instance = ZZZ()
+    Instance = CounterSampleCalculator
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def ComputeCounterValue(*__args):
@@ -1115,10 +1082,7 @@ class CounterSampleCalculator():
 
 class DataReceivedEventArgs(EventArgs):
     """ Provides data for the System.Diagnostics.Process.OutputDataReceived and System.Diagnostics.Process.ErrorDataReceived events. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DataReceivedEventArgs()
-    instance = ZZZ()
+    Instance = DataReceivedEventArgs
     """hardcoded/returns an instance of the class"""
     Data = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the line of characters that was written to a redirected System.Diagnostics.Process output stream.
@@ -1135,10 +1099,7 @@ class DataReceivedEventHandler(MulticastDelegate):
     
     DataReceivedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DataReceivedEventHandler()
-    instance = ZZZ()
+    Instance = DataReceivedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: DataReceivedEventHandler, sender: object, e: DataReceivedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -1212,10 +1173,7 @@ class DataReceivedEventHandler(MulticastDelegate):
 
 class Debug():
     """ Provides a set of methods and properties that help debug your code. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Debug()
-    instance = ZZZ()
+    Instance = Debug
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Assert(condition, message=None, *__args):
@@ -1448,10 +1406,7 @@ class DebuggableAttribute:
     DebuggableAttribute(isJITTrackingEnabled: bool, isJITOptimizerDisabled: bool)
     DebuggableAttribute(modes: DebuggingModes)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DebuggableAttribute()
-    instance = ZZZ()
+    Instance = DebuggableAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1496,10 +1451,7 @@ class Debugger():
     
     Debugger()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Debugger()
-    instance = ZZZ()
+    Instance = Debugger
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Break():
@@ -1560,10 +1512,7 @@ class DebuggerBrowsableAttribute:
     
     DebuggerBrowsableAttribute(state: DebuggerBrowsableState)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DebuggerBrowsableAttribute()
-    instance = ZZZ()
+    Instance = DebuggerBrowsableAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1589,10 +1538,7 @@ class DebuggerBrowsableState:
     
     enum DebuggerBrowsableState, values: Collapsed (2), Never (0), RootHidden (3)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DebuggerBrowsableState()
-    instance = ZZZ()
+    Instance = DebuggerBrowsableState
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1639,10 +1585,7 @@ class DebuggerDisplayAttribute:
     
     DebuggerDisplayAttribute(value: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DebuggerDisplayAttribute()
-    instance = ZZZ()
+    Instance = DebuggerDisplayAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1700,10 +1643,7 @@ class DebuggerHiddenAttribute:
     
     DebuggerHiddenAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DebuggerHiddenAttribute()
-    instance = ZZZ()
+    Instance = DebuggerHiddenAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1719,10 +1659,7 @@ class DebuggerNonUserCodeAttribute:
     
     DebuggerNonUserCodeAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DebuggerNonUserCodeAttribute()
-    instance = ZZZ()
+    Instance = DebuggerNonUserCodeAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1738,10 +1675,7 @@ class DebuggerStepperBoundaryAttribute:
     
     DebuggerStepperBoundaryAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DebuggerStepperBoundaryAttribute()
-    instance = ZZZ()
+    Instance = DebuggerStepperBoundaryAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1757,10 +1691,7 @@ class DebuggerStepThroughAttribute:
     
     DebuggerStepThroughAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DebuggerStepThroughAttribute()
-    instance = ZZZ()
+    Instance = DebuggerStepThroughAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1777,10 +1708,7 @@ class DebuggerTypeProxyAttribute:
     DebuggerTypeProxyAttribute(type: Type)
     DebuggerTypeProxyAttribute(typeName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DebuggerTypeProxyAttribute()
-    instance = ZZZ()
+    Instance = DebuggerTypeProxyAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1830,10 +1758,7 @@ class DebuggerVisualizerAttribute:
     DebuggerVisualizerAttribute(visualizer: Type, visualizerObjectSource: Type)
     DebuggerVisualizerAttribute(visualizer: Type, visualizerObjectSourceTypeName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DebuggerVisualizerAttribute()
-    instance = ZZZ()
+    Instance = DebuggerVisualizerAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1897,10 +1822,7 @@ class DefaultTraceListener(TraceListener):
     
     DefaultTraceListener()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultTraceListener()
-    instance = ZZZ()
+    Instance = DefaultTraceListener
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -2025,10 +1947,7 @@ class DelimitedListTraceListener(TextWriterTraceListener):
     DelimitedListTraceListener(fileName: str)
     DelimitedListTraceListener(fileName: str, name: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DelimitedListTraceListener()
-    instance = ZZZ()
+    Instance = DelimitedListTraceListener
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -2161,10 +2080,7 @@ class DiagnosticsConfigurationHandler:
     
     DiagnosticsConfigurationHandler()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DiagnosticsConfigurationHandler()
-    instance = ZZZ()
+    Instance = DiagnosticsConfigurationHandler
     """hardcoded/returns an instance of the class"""
     def Create(self, parent, configContext, section):
         """
@@ -2195,10 +2111,7 @@ class EntryWrittenEventArgs(EventArgs):
     EntryWrittenEventArgs()
     EntryWrittenEventArgs(entry: EventLogEntry)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EntryWrittenEventArgs()
-    instance = ZZZ()
+    Instance = EntryWrittenEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, entry=None):
@@ -2223,10 +2136,7 @@ class EntryWrittenEventHandler(MulticastDelegate):
     
     EntryWrittenEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EntryWrittenEventHandler()
-    instance = ZZZ()
+    Instance = EntryWrittenEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: EntryWrittenEventHandler, sender: object, e: EntryWrittenEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -2305,10 +2215,7 @@ class EventInstance():
     EventInstance(instanceId: Int64, categoryId: int)
     EventInstance(instanceId: Int64, categoryId: int, entryType: EventLogEntryType)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventInstance()
-    instance = ZZZ()
+    Instance = EventInstance
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, instanceId, categoryId, entryType=None):
@@ -2353,10 +2260,7 @@ class EventLog(Component):
     EventLog(logName: str, machineName: str)
     EventLog(logName: str, machineName: str, source: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventLog()
-    instance = ZZZ()
+    Instance = EventLog
     """hardcoded/returns an instance of the class"""
     def BeginInit(self):
         """
@@ -2798,10 +2702,7 @@ Set: SynchronizingObject(self: EventLog) = value
 
 class EventLogEntry(Component):
     """ Encapsulates a single record in the event log. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventLogEntry()
-    instance = ZZZ()
+    Instance = EventLogEntry
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -2992,10 +2893,7 @@ Get: UserName(self: EventLogEntry) -> str
 
 class EventLogEntryCollection:
     """ Defines size and enumerators for a collection of System.Diagnostics.EventLogEntry instances. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventLogEntryCollection()
-    instance = ZZZ()
+    Instance = EventLogEntryCollection
     """hardcoded/returns an instance of the class"""
     def CopyTo(self, entries, index):
         """
@@ -3053,10 +2951,7 @@ class EventLogEntryType:
     
     enum EventLogEntryType, values: Error (1), FailureAudit (16), Information (4), SuccessAudit (8), Warning (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventLogEntryType()
-    instance = ZZZ()
+    Instance = EventLogEntryType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3108,10 +3003,7 @@ class EventLogPermission(ResourcePermissionBase):
     EventLogPermission(permissionAccess: EventLogPermissionAccess, machineName: str)
     EventLogPermission(permissionAccessEntries: Array[EventLogPermissionEntry])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventLogPermission()
-    instance = ZZZ()
+    Instance = EventLogPermission
     """hardcoded/returns an instance of the class"""
     def AddPermissionAccess(self, *args): #cannot find CLR method
         """
@@ -3192,10 +3084,7 @@ class EventLogPermissionAccess:
     
     enum (flags) EventLogPermissionAccess, values: Administer (48), Audit (10), Browse (2), Instrument (6), None (0), Write (16)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventLogPermissionAccess()
-    instance = ZZZ()
+    Instance = EventLogPermissionAccess
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3245,10 +3134,7 @@ class EventLogPermissionAttribute(CodeAccessSecurityAttribute):
     
     EventLogPermissionAttribute(action: SecurityAction)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventLogPermissionAttribute()
-    instance = ZZZ()
+    Instance = EventLogPermissionAttribute
     """hardcoded/returns an instance of the class"""
     def CreatePermission(self):
         """
@@ -3297,10 +3183,7 @@ class EventLogPermissionEntry():
     
     EventLogPermissionEntry(permissionAccess: EventLogPermissionAccess, machineName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventLogPermissionEntry()
-    instance = ZZZ()
+    Instance = EventLogPermissionEntry
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, permissionAccess, machineName):
@@ -3325,10 +3208,7 @@ Get: PermissionAccess(self: EventLogPermissionEntry) -> EventLogPermissionAccess
 
 class EventLogPermissionEntryCollection(CollectionBase):
     """ Contains a strongly typed collection of System.Diagnostics.EventLogPermissionEntry objects. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventLogPermissionEntryCollection()
-    instance = ZZZ()
+    Instance = EventLogPermissionEntryCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
@@ -3533,10 +3413,7 @@ class EventLogTraceListener(TraceListener):
     EventLogTraceListener(eventLog: EventLog)
     EventLogTraceListener(source: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventLogTraceListener()
-    instance = ZZZ()
+    Instance = EventLogTraceListener
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -3694,10 +3571,7 @@ class EventSourceCreationData():
     
     EventSourceCreationData(source: str, logName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventSourceCreationData()
-    instance = ZZZ()
+    Instance = EventSourceCreationData
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, source, logName):
@@ -3764,10 +3638,7 @@ Set: Source(self: EventSourceCreationData) = value
 
 class TraceFilter():
     """ Provides the base class for trace filter implementations. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TraceFilter()
-    instance = ZZZ()
+    Instance = TraceFilter
     """hardcoded/returns an instance of the class"""
     def ShouldTrace(self, cache, source, eventType, id, formatOrMessage, args, data1, data):
         """
@@ -3794,10 +3665,7 @@ class EventTypeFilter(TraceFilter):
     
     EventTypeFilter(level: SourceLevels)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EventTypeFilter()
-    instance = ZZZ()
+    Instance = EventTypeFilter
     """hardcoded/returns an instance of the class"""
     def ShouldTrace(self, cache, source, eventType, id, formatOrMessage, args, data1, data):
         """
@@ -3834,10 +3702,7 @@ Set: EventType(self: EventTypeFilter) = value
 
 class FileVersionInfo():
     """ Provides version information for a physical file on disk. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FileVersionInfo()
-    instance = ZZZ()
+    Instance = FileVersionInfo
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetVersionInfo(fileName):
@@ -4059,10 +3924,7 @@ Get: SpecialBuild(self: FileVersionInfo) -> str
 
 class ICollectData:
     """ Prepares performance data for the performance DLL the system loads when working with performance counters. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICollectData()
-    instance = ZZZ()
+    Instance = ICollectData
     """hardcoded/returns an instance of the class"""
     def CloseData(self):
         """
@@ -4095,10 +3957,7 @@ class InstanceData():
     
     InstanceData(instanceName: str, sample: CounterSample)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InstanceData()
-    instance = ZZZ()
+    Instance = InstanceData
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, instanceName, sample):
@@ -4134,10 +3993,7 @@ class InstanceDataCollection(DictionaryBase):
     
     InstanceDataCollection(counterName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InstanceDataCollection()
-    instance = ZZZ()
+    Instance = InstanceDataCollection
     """hardcoded/returns an instance of the class"""
     def Contains(self, instanceName):
         """
@@ -4314,10 +4170,7 @@ class InstanceDataCollectionCollection(DictionaryBase):
     
     InstanceDataCollectionCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InstanceDataCollectionCollection()
-    instance = ZZZ()
+    Instance = InstanceDataCollectionCollection
     """hardcoded/returns an instance of the class"""
     def Contains(self, counterName):
         """
@@ -4484,10 +4337,7 @@ class MonitoringDescriptionAttribute(DescriptionAttribute):
     
     MonitoringDescriptionAttribute(description: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MonitoringDescriptionAttribute()
-    instance = ZZZ()
+    Instance = MonitoringDescriptionAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -4518,10 +4368,7 @@ class OverflowAction:
     
     enum OverflowAction, values: DoNotOverwrite (-1), OverwriteAsNeeded (0), OverwriteOlder (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OverflowAction()
-    instance = ZZZ()
+    Instance = OverflowAction
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4573,10 +4420,7 @@ class PerformanceCounter(Component):
     PerformanceCounter(categoryName: str, counterName: str)
     PerformanceCounter(categoryName: str, counterName: str, readOnly: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PerformanceCounter()
-    instance = ZZZ()
+    Instance = PerformanceCounter
     """hardcoded/returns an instance of the class"""
     def BeginInit(self):
         """
@@ -4819,10 +4663,7 @@ class PerformanceCounterCategory():
     PerformanceCounterCategory(categoryName: str)
     PerformanceCounterCategory(categoryName: str, machineName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PerformanceCounterCategory()
-    instance = ZZZ()
+    Instance = PerformanceCounterCategory
     """hardcoded/returns an instance of the class"""
     def CounterExists(self, counterName, categoryName=None, machineName=None):
         """
@@ -5053,10 +4894,7 @@ class PerformanceCounterCategoryType:
     
     enum PerformanceCounterCategoryType, values: MultiInstance (1), SingleInstance (0), Unknown (-1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PerformanceCounterCategoryType()
-    instance = ZZZ()
+    Instance = PerformanceCounterCategoryType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -5103,10 +4941,7 @@ class PerformanceCounterInstanceLifetime:
     
     enum PerformanceCounterInstanceLifetime, values: Global (0), Process (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PerformanceCounterInstanceLifetime()
-    instance = ZZZ()
+    Instance = PerformanceCounterInstanceLifetime
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -5152,10 +4987,7 @@ class PerformanceCounterManager:
     
     PerformanceCounterManager()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PerformanceCounterManager()
-    instance = ZZZ()
+    Instance = PerformanceCounterManager
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -5175,10 +5007,7 @@ class PerformanceCounterPermission(ResourcePermissionBase):
     PerformanceCounterPermission(permissionAccess: PerformanceCounterPermissionAccess, machineName: str, categoryName: str)
     PerformanceCounterPermission(permissionAccessEntries: Array[PerformanceCounterPermissionEntry])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PerformanceCounterPermission()
-    instance = ZZZ()
+    Instance = PerformanceCounterPermission
     """hardcoded/returns an instance of the class"""
     def AddPermissionAccess(self, *args): #cannot find CLR method
         """
@@ -5259,10 +5088,7 @@ class PerformanceCounterPermissionAccess:
     
     enum (flags) PerformanceCounterPermissionAccess, values: Administer (7), Browse (1), Instrument (3), None (0), Read (1), Write (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PerformanceCounterPermissionAccess()
-    instance = ZZZ()
+    Instance = PerformanceCounterPermissionAccess
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -5312,10 +5138,7 @@ class PerformanceCounterPermissionAttribute(CodeAccessSecurityAttribute):
     
     PerformanceCounterPermissionAttribute(action: SecurityAction)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PerformanceCounterPermissionAttribute()
-    instance = ZZZ()
+    Instance = PerformanceCounterPermissionAttribute
     """hardcoded/returns an instance of the class"""
     def CreatePermission(self):
         """
@@ -5372,10 +5195,7 @@ class PerformanceCounterPermissionEntry():
     
     PerformanceCounterPermissionEntry(permissionAccess: PerformanceCounterPermissionAccess, machineName: str, categoryName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PerformanceCounterPermissionEntry()
-    instance = ZZZ()
+    Instance = PerformanceCounterPermissionEntry
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, permissionAccess, machineName, categoryName):
@@ -5407,10 +5227,7 @@ Get: PermissionAccess(self: PerformanceCounterPermissionEntry) -> PerformanceCou
 
 class PerformanceCounterPermissionEntryCollection(CollectionBase):
     """ Contains a strongly typed collection of System.Diagnostics.PerformanceCounterPermissionEntry objects. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PerformanceCounterPermissionEntryCollection()
-    instance = ZZZ()
+    Instance = PerformanceCounterPermissionEntryCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
@@ -5613,10 +5430,7 @@ class PerformanceCounterType:
     
     enum PerformanceCounterType, values: AverageBase (1073939458), AverageCount64 (1073874176), AverageTimer32 (805438464), CounterDelta32 (4195328), CounterDelta64 (4195584), CounterMultiBase (1107494144), CounterMultiTimer (574686464), CounterMultiTimer100Ns (575735040), CounterMultiTimer100NsInverse (592512256), CounterMultiTimerInverse (591463680), CounterTimer (541132032), CounterTimerInverse (557909248), CountPerTimeInterval32 (4523008), CountPerTimeInterval64 (4523264), ElapsedTime (807666944), NumberOfItems32 (65536), NumberOfItems64 (65792), NumberOfItemsHEX32 (0), NumberOfItemsHEX64 (256), RateOfCountsPerSecond32 (272696320), RateOfCountsPerSecond64 (272696576), RawBase (1073939459), RawFraction (537003008), SampleBase (1073939457), SampleCounter (4260864), SampleFraction (549585920), Timer100Ns (542180608), Timer100NsInverse (558957824)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PerformanceCounterType()
-    instance = ZZZ()
+    Instance = PerformanceCounterType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -5688,10 +5502,7 @@ class Process(Component):
     
     Process()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Process()
-    instance = ZZZ()
+    Instance = Process
     """hardcoded/returns an instance of the class"""
     def BeginErrorReadLine(self):
         """
@@ -6382,10 +6193,7 @@ Get: WorkingSet64(self: Process) -> Int64
 
 class ProcessModule(Component):
     """ Represents a.dll or .exe file that is loaded into a particular process. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessModule()
-    instance = ZZZ()
+    Instance = ProcessModule
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -6515,10 +6323,7 @@ class ProcessModuleCollection(ReadOnlyCollectionBase):
     
     ProcessModuleCollection(processModules: Array[ProcessModule])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessModuleCollection()
-    instance = ZZZ()
+    Instance = ProcessModuleCollection
     """hardcoded/returns an instance of the class"""
     def Contains(self, module):
         """
@@ -6585,10 +6390,7 @@ class ProcessPriorityClass:
     
     enum ProcessPriorityClass, values: AboveNormal (32768), BelowNormal (16384), High (128), Idle (64), Normal (32), RealTime (256)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessPriorityClass()
-    instance = ZZZ()
+    Instance = ProcessPriorityClass
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -6640,10 +6442,7 @@ class ProcessStartInfo():
     ProcessStartInfo(fileName: str)
     ProcessStartInfo(fileName: str, arguments: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessStartInfo()
-    instance = ZZZ()
+    Instance = ProcessStartInfo
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, fileName=None, arguments=None):
@@ -6827,10 +6626,7 @@ Set: WorkingDirectory(self: ProcessStartInfo) = value
 
 class ProcessThread(Component):
     """ Represents an operating system process thread. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessThread()
-    instance = ZZZ()
+    Instance = ProcessThread
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -7014,10 +6810,7 @@ class ProcessThreadCollection(ReadOnlyCollectionBase):
     
     ProcessThreadCollection(processThreads: Array[ProcessThread])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessThreadCollection()
-    instance = ZZZ()
+    Instance = ProcessThreadCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, thread):
         """
@@ -7118,10 +6911,7 @@ class ProcessWindowStyle:
     
     enum ProcessWindowStyle, values: Hidden (1), Maximized (3), Minimized (2), Normal (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessWindowStyle()
-    instance = ZZZ()
+    Instance = ProcessWindowStyle
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -7169,10 +6959,7 @@ class SourceFilter(TraceFilter):
     
     SourceFilter(source: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SourceFilter()
-    instance = ZZZ()
+    Instance = SourceFilter
     """hardcoded/returns an instance of the class"""
     def ShouldTrace(self, cache, source, eventType, id, formatOrMessage, args, data1, data):
         """
@@ -7213,10 +7000,7 @@ class SourceLevels:
     
     enum (flags) SourceLevels, values: ActivityTracing (65280), All (-1), Critical (1), Error (3), Information (15), Off (0), Verbose (31), Warning (7)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SourceLevels()
-    instance = ZZZ()
+    Instance = SourceLevels
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -7269,10 +7053,7 @@ class SourceSwitch(Switch):
     SourceSwitch(name: str)
     SourceSwitch(displayName: str, defaultSwitchValue: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SourceSwitch()
-    instance = ZZZ()
+    Instance = SourceSwitch
     """hardcoded/returns an instance of the class"""
     def ShouldTrace(self, eventType):
         """
@@ -7324,10 +7105,7 @@ class StackFrame():
     StackFrame(fileName: str, lineNumber: int)
     StackFrame(fileName: str, lineNumber: int, colNumber: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StackFrame()
-    instance = ZZZ()
+    Instance = StackFrame
     """hardcoded/returns an instance of the class"""
     def GetFileColumnNumber(self):
         """
@@ -7414,10 +7192,7 @@ class StackFrame():
 
 class StackFrameExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StackFrameExtensions()
-    instance = ZZZ()
+    Instance = StackFrameExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetNativeImageBase(stackFrame):
@@ -7474,10 +7249,7 @@ class StackTrace():
     StackTrace(frame: StackFrame)
     StackTrace(targetThread: Thread, needFileInfo: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StackTrace()
-    instance = ZZZ()
+    Instance = StackTrace
     """hardcoded/returns an instance of the class"""
     def GetFrame(self, index):
         """
@@ -7541,10 +7313,7 @@ class Stopwatch():
     
     Stopwatch()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Stopwatch()
-    instance = ZZZ()
+    Instance = Stopwatch
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetTimestamp():
@@ -7633,10 +7402,7 @@ class SwitchAttribute:
     
     SwitchAttribute(switchName: str, switchType: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SwitchAttribute()
-    instance = ZZZ()
+    Instance = SwitchAttribute
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetAll(assembly):
@@ -7691,10 +7457,7 @@ class SwitchLevelAttribute:
     
     SwitchLevelAttribute(switchLevelType: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SwitchLevelAttribute()
-    instance = ZZZ()
+    Instance = SwitchLevelAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -7721,10 +7484,7 @@ class ThreadPriorityLevel:
     
     enum ThreadPriorityLevel, values: AboveNormal (1), BelowNormal (-1), Highest (2), Idle (-15), Lowest (-2), Normal (0), TimeCritical (15)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ThreadPriorityLevel()
-    instance = ZZZ()
+    Instance = ThreadPriorityLevel
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -7775,10 +7535,7 @@ class ThreadState:
     
     enum ThreadState, values: Initialized (0), Ready (1), Running (2), Standby (3), Terminated (4), Transition (6), Unknown (7), Wait (5)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ThreadState()
-    instance = ZZZ()
+    Instance = ThreadState
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -7830,10 +7587,7 @@ class ThreadWaitReason:
     
     enum ThreadWaitReason, values: EventPairHigh (7), EventPairLow (8), ExecutionDelay (4), Executive (0), FreePage (1), LpcReceive (9), LpcReply (10), PageIn (2), PageOut (12), Suspended (5), SystemAllocation (3), Unknown (13), UserRequest (6), VirtualMemory (11)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ThreadWaitReason()
-    instance = ZZZ()
+    Instance = ThreadWaitReason
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -7887,10 +7641,7 @@ class ThreadWaitReason:
 
 class Trace():
     """ Provides a set of methods and properties that help you trace the execution of your code. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Trace()
-    instance = ZZZ()
+    Instance = Trace
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Assert(condition, message=None, detailMessage=None):
@@ -8135,10 +7886,7 @@ class TraceEventCache():
     
     TraceEventCache()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TraceEventCache()
-    instance = ZZZ()
+    Instance = TraceEventCache
     """hardcoded/returns an instance of the class"""
     Callstack = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the call stack for the current thread.
@@ -8190,10 +7938,7 @@ class TraceEventType:
     
     enum TraceEventType, values: Critical (1), Error (2), Information (8), Resume (2048), Start (256), Stop (512), Suspend (1024), Transfer (4096), Verbose (16), Warning (4)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TraceEventType()
-    instance = ZZZ()
+    Instance = TraceEventType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -8247,10 +7992,7 @@ class TraceLevel:
     
     enum TraceLevel, values: Error (1), Info (3), Off (0), Verbose (4), Warning (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TraceLevel()
-    instance = ZZZ()
+    Instance = TraceLevel
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -8295,10 +8037,7 @@ class TraceLevel:
 
 class TraceListenerCollection:
     """ Provides a thread-safe list of System.Diagnostics.TraceListener objects. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TraceListenerCollection()
-    instance = ZZZ()
+    Instance = TraceListenerCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, listener):
         """
@@ -8458,10 +8197,7 @@ class TraceOptions:
     
     enum (flags) TraceOptions, values: Callstack (32), DateTime (2), LogicalOperationStack (1), None (0), ProcessId (8), ThreadId (16), Timestamp (4)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TraceOptions()
-    instance = ZZZ()
+    Instance = TraceOptions
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -8513,10 +8249,7 @@ class TraceSource():
     TraceSource(name: str)
     TraceSource(name: str, defaultLevel: SourceLevels)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TraceSource()
-    instance = ZZZ()
+    Instance = TraceSource
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -8658,10 +8391,7 @@ class TraceSwitch(Switch):
     TraceSwitch(displayName: str, description: str)
     TraceSwitch(displayName: str, description: str, defaultSwitchValue: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TraceSwitch()
-    instance = ZZZ()
+    Instance = TraceSwitch
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, displayName, description, defaultSwitchValue=None):
@@ -8730,10 +8460,7 @@ class XmlWriterTraceListener(TextWriterTraceListener):
     XmlWriterTraceListener(filename: str)
     XmlWriterTraceListener(filename: str, name: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return XmlWriterTraceListener()
-    instance = ZZZ()
+    Instance = XmlWriterTraceListener
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """

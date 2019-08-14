@@ -18,10 +18,7 @@ class Claim():
     Claim(type: str, value: str, valueType: str, issuer: str, originalIssuer: str)
     Claim(type: str, value: str, valueType: str, issuer: str, originalIssuer: str, subject: ClaimsIdentity)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Claim()
-    instance = ZZZ()
+    Instance = Claim
     """hardcoded/returns an instance of the class"""
     def Clone(self, identity=None):
         """
@@ -105,10 +102,7 @@ class ClaimsIdentity:
     ClaimsIdentity(identity: IIdentity, claims: IEnumerable[Claim], authenticationType: str, nameType: str, roleType: str)
     ClaimsIdentity(reader: BinaryReader)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ClaimsIdentity()
-    instance = ZZZ()
+    Instance = ClaimsIdentity
     """hardcoded/returns an instance of the class"""
     def AddClaim(self, claim):
         """ AddClaim(self: ClaimsIdentity, claim: Claim) """
@@ -257,10 +251,7 @@ class ClaimsPrincipal:
     ClaimsPrincipal(principal: IPrincipal)
     ClaimsPrincipal(reader: BinaryReader)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ClaimsPrincipal()
-    instance = ZZZ()
+    Instance = ClaimsPrincipal
     """hardcoded/returns an instance of the class"""
     def AddIdentities(self, identities):
         """ AddIdentities(self: ClaimsPrincipal, identities: IEnumerable[ClaimsIdentity]) """
@@ -362,10 +353,7 @@ class ClaimsPrincipal:
 
 class ClaimTypes():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ClaimTypes()
-    instance = ZZZ()
+    Instance = ClaimTypes
     """hardcoded/returns an instance of the class"""
     Actor = 'http://schemas.xmlsoap.org/ws/2009/09/identity/claims/actor'
     Anonymous = 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/anonymous'
@@ -481,10 +469,7 @@ class ClaimTypes():
 
 class ClaimValueTypes():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ClaimValueTypes()
-    instance = ZZZ()
+    Instance = ClaimValueTypes
     """hardcoded/returns an instance of the class"""
     Base64Binary = 'http://www.w3.org/2001/XMLSchema#base64Binary'
     Base64Octet = 'http://www.w3.org/2001/XMLSchema#base64Octet'
@@ -546,10 +531,7 @@ class ClaimValueTypes():
 
 class DynamicRoleClaimProvider():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DynamicRoleClaimProvider()
-    instance = ZZZ()
+    Instance = DynamicRoleClaimProvider
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def AddDynamicRoleClaims(claimsIdentity, claims):

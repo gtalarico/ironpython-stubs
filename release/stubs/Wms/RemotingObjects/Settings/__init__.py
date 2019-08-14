@@ -17,10 +17,7 @@ class SystemSettings():
     
     SystemSettings()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SystemSettings()
-    instance = ZZZ()
+    Instance = SystemSettings
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def AddValidValueDelegate(id, delegate):
@@ -188,10 +185,7 @@ Set: ShipppingDeliveryTimeInterval(self: SystemSettings) = value
 
 class SystemSettingsTable(List):
     """ SystemSettingsTable() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SystemSettingsTable()
-    instance = ZZZ()
+    Instance = SystemSettingsTable
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -215,10 +209,7 @@ class SystemSettingsTable(List):
 
 class SystemSettingsTableRow():
     """ SystemSettingsTableRow() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SystemSettingsTableRow()
-    instance = ZZZ()
+    Instance = SystemSettingsTableRow
     """hardcoded/returns an instance of the class"""
     GroupName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Name of the group the settings are part of.

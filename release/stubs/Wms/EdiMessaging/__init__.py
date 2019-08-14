@@ -10,10 +10,7 @@
 
 class HandleResult():
     """ HandleResult() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HandleResult()
-    instance = ZZZ()
+    Instance = HandleResult
     """hardcoded/returns an instance of the class"""
     Messages = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Messages(self: HandleResult) -> StringBuilder
@@ -31,10 +28,7 @@ Set: Success(self: HandleResult) = value
 
 class IMessage:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IMessage()
-    instance = ZZZ()
+    Instance = IMessage
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -140,10 +134,7 @@ Set: Type(self: IMessage) = value
 
 class IMessageHandler:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IMessageHandler()
-    instance = ZZZ()
+    Instance = IMessageHandler
     """hardcoded/returns an instance of the class"""
     def CanHandle(self, message):
         """ CanHandle(self: IMessageHandler, message: IMessage) -> bool """
@@ -184,10 +175,7 @@ Set: OnLogWarning(self: IMessageHandler) = value
 
 class IMessagePublisher:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IMessagePublisher()
-    instance = ZZZ()
+    Instance = IMessagePublisher
     """hardcoded/returns an instance of the class"""
     def Start(self, onStoreMessage):
         """ Start(self: IMessagePublisher, onStoreMessage: OnStoreMessage) """
@@ -224,10 +212,7 @@ Set: OnLogWarning(self: IMessagePublisher) = value
 
 class IMessagingProvider:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IMessagingProvider()
-    instance = ZZZ()
+    Instance = IMessagingProvider
     """hardcoded/returns an instance of the class"""
     def GetHandlers(self):
         """ GetHandlers(self: IMessagingProvider) -> IEnumerable[MessageHandlerDescriptor] """
@@ -248,10 +233,7 @@ class IMessagingProvider:
 
 class IQueueProvider:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IQueueProvider()
-    instance = ZZZ()
+    Instance = IQueueProvider
     """hardcoded/returns an instance of the class"""
     def GetQueueListener(self):
         """ GetQueueListener(self: IQueueProvider) -> IQueueListener """
@@ -268,10 +250,7 @@ class IQueueProvider:
 
 class MessageBase:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessageBase()
-    instance = ZZZ()
+    Instance = MessageBase
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -383,10 +362,7 @@ Set: Type(self: MessageBase) = value
 
 class MessageHandlerBase:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessageHandlerBase()
-    instance = ZZZ()
+    Instance = MessageHandlerBase
     """hardcoded/returns an instance of the class"""
     def CanHandle(self, message):
         """ CanHandle(self: MessageHandlerBase, message: IMessage) -> bool """
@@ -439,10 +415,7 @@ Set: OnLogWarning(self: MessageHandlerBase) = value
 
 class MessagePriority:
     """ enum MessagePriority, values: AboveNormal (4), High (5), Highest (7), Low (2), Lowest (0), Normal (3), VeryHigh (6), VeryLow (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessagePriority()
-    instance = ZZZ()
+    Instance = MessagePriority
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -490,10 +463,7 @@ class MessagePriority:
 
 class MessagePublisherBase:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessagePublisherBase()
-    instance = ZZZ()
+    Instance = MessagePublisherBase
     """hardcoded/returns an instance of the class"""
     def Start(self, onStoreMessage):
         """ Start(self: MessagePublisherBase, onStoreMessage: OnStoreMessage) """
@@ -542,10 +512,7 @@ Set: OnLogWarning(self: MessagePublisherBase) = value
 
 class MessageStatus:
     """ enum MessageStatus, values: Enqueued (10), Handled (20), HandledWithErrors (30), Handling (15), New (0), ReSubmitted (40), Undefined (-1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessageStatus()
-    instance = ZZZ()
+    Instance = MessageStatus
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -592,18 +559,12 @@ class MessageStatus:
 
 class MessagingProviderInitializationArguments():
     """ MessagingProviderInitializationArguments() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessagingProviderInitializationArguments()
-    instance = ZZZ()
+    Instance = MessagingProviderInitializationArguments
     """hardcoded/returns an instance of the class"""
 
 class MessagingProvidersFactory():
     """ MessagingProvidersFactory() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessagingProvidersFactory()
-    instance = ZZZ()
+    Instance = MessagingProvidersFactory
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetAll():
@@ -628,10 +589,7 @@ class MessagingProvidersFactory():
 
 class MsmqProvider:
     """ MsmqProvider(options: MsmqOptions) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MsmqProvider()
-    instance = ZZZ()
+    Instance = MsmqProvider
     """hardcoded/returns an instance of the class"""
     def GetQueueListener(self):
         """ GetQueueListener(self: MsmqProvider) -> IQueueListener """

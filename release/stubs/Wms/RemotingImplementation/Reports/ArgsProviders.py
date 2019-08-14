@@ -10,10 +10,7 @@
 
 class ReportArgsProviderBase():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReportArgsProviderBase()
-    instance = ZZZ()
+    Instance = ReportArgsProviderBase
     """hardcoded/returns an instance of the class"""
     def GetCustomOrDefaultReportPath(self, *args): #cannot find CLR method
         """ GetCustomOrDefaultReportPath(defaultReportPath: str, customReportPath: str, reportFile: str) -> str """
@@ -22,10 +19,7 @@ class ReportArgsProviderBase():
 
 class ReportPackageSlipArgsProvider(ReportArgsProviderBase):
     """ ReportPackageSlipArgsProvider(general: General) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReportPackageSlipArgsProvider()
-    instance = ZZZ()
+    Instance = ReportPackageSlipArgsProvider
     """hardcoded/returns an instance of the class"""
     def Prepare(self, args):
         """ Prepare(self: ReportPackageSlipArgsProvider, args: PrintPackageSlipArgs) -> ReportPackageSlipArgsProvider """
@@ -54,10 +48,7 @@ class ReportPackageSlipArgsProvider(ReportArgsProviderBase):
 
 class ReportPickListArgsProvider(ReportArgsProviderBase):
     """ ReportPickListArgsProvider(general: General) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReportPickListArgsProvider()
-    instance = ZZZ()
+    Instance = ReportPickListArgsProvider
     """hardcoded/returns an instance of the class"""
     def Prepare(self, args, batch):
         """ Prepare(self: ReportPickListArgsProvider, args: PrintPickingListArgs, batch: Batch) -> ReportPickListArgsProvider """
@@ -91,10 +82,7 @@ class ReportPickListArgsProvider(ReportArgsProviderBase):
 
 class ReportPrereceivementReceiptArgsProvider(ReportArgsProviderBase):
     """ ReportPrereceivementReceiptArgsProvider(general: General) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReportPrereceivementReceiptArgsProvider()
-    instance = ZZZ()
+    Instance = ReportPrereceivementReceiptArgsProvider
     """hardcoded/returns an instance of the class"""
     def Prepare(self, dataset):
         """ Prepare(self: ReportPrereceivementReceiptArgsProvider, dataset: PurchaseOrders_GetHistoryLinesDataTable) -> ReportPrereceivementReceiptArgsProvider """
@@ -123,10 +111,7 @@ class ReportPrereceivementReceiptArgsProvider(ReportArgsProviderBase):
 
 class ReportPurchaseReceiptArgsProvider(ReportArgsProviderBase):
     """ ReportPurchaseReceiptArgsProvider(general: General) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReportPurchaseReceiptArgsProvider()
-    instance = ZZZ()
+    Instance = ReportPurchaseReceiptArgsProvider
     """hardcoded/returns an instance of the class"""
     def Prepare(self, groupGuid, printer, noOfCopies):
         """ Prepare(self: ReportPurchaseReceiptArgsProvider, groupGuid: Guid, printer: str, noOfCopies: int) -> ReportPurchaseReceiptArgsProvider """
@@ -155,10 +140,7 @@ class ReportPurchaseReceiptArgsProvider(ReportArgsProviderBase):
 
 class ReportRmaReceiptArgsProvider(ReportArgsProviderBase):
     """ ReportRmaReceiptArgsProvider(general: General) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReportRmaReceiptArgsProvider()
-    instance = ZZZ()
+    Instance = ReportRmaReceiptArgsProvider
     """hardcoded/returns an instance of the class"""
     def Prepare(self, groupGuid, printer, noOfCopies):
         """ Prepare(self: ReportRmaReceiptArgsProvider, groupGuid: Guid, printer: str, noOfCopies: int) -> ReportRmaReceiptArgsProvider """

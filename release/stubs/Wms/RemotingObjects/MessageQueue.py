@@ -12,10 +12,7 @@ from Wms.RemotingObjects import *
 
 class CleanupMessageHistoryArgs():
     """ CleanupMessageHistoryArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CleanupMessageHistoryArgs()
-    instance = ZZZ()
+    Instance = CleanupMessageHistoryArgs
     """hardcoded/returns an instance of the class"""
     OlderThenDays = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Messages before this date will be deleted.
@@ -29,10 +26,7 @@ Set: OlderThenDays(self: CleanupMessageHistoryArgs) = value
 
 class DequeueResult():
     """ DequeueResult() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DequeueResult()
-    instance = ZZZ()
+    Instance = DequeueResult
     """hardcoded/returns an instance of the class"""
     IsLastMessage = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Signals caller if there are any messages left after this message.
@@ -54,10 +48,7 @@ Set: Message(self: DequeueResult) = value
 
 class ExecuteMessageHandlerArgs():
     """ ExecuteMessageHandlerArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExecuteMessageHandlerArgs()
-    instance = ZZZ()
+    Instance = ExecuteMessageHandlerArgs
     """hardcoded/returns an instance of the class"""
     ExecutedIsolated = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -87,10 +78,7 @@ Set: Message(self: ExecuteMessageHandlerArgs) = value
 
 class ExecuteMessageHandlerResult():
     """ ExecuteMessageHandlerResult() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExecuteMessageHandlerResult()
-    instance = ZZZ()
+    Instance = ExecuteMessageHandlerResult
     """hardcoded/returns an instance of the class"""
     Message = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -112,10 +100,7 @@ Set: Success(self: ExecuteMessageHandlerResult) = value
 
 class ExecuteMessagePublisherArgs():
     """ ExecuteMessagePublisherArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExecuteMessagePublisherArgs()
-    instance = ZZZ()
+    Instance = ExecuteMessagePublisherArgs
     """hardcoded/returns an instance of the class"""
     ExecuteIsolated = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -137,10 +122,7 @@ Set: PublisherId(self: ExecuteMessagePublisherArgs) = value
 
 class ExecuteMessagePublisherResult():
     """ ExecuteMessagePublisherResult() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExecuteMessagePublisherResult()
-    instance = ZZZ()
+    Instance = ExecuteMessagePublisherResult
     """hardcoded/returns an instance of the class"""
     Success = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -154,10 +136,7 @@ Set: Success(self: ExecuteMessagePublisherResult) = value
 
 class GetDistinctTypeListArgs():
     """ GetDistinctTypeListArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetDistinctTypeListArgs()
-    instance = ZZZ()
+    Instance = GetDistinctTypeListArgs
     """hardcoded/returns an instance of the class"""
     DaysBackToIncludeInDistinct = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -171,26 +150,17 @@ Set: DaysBackToIncludeInDistinct(self: GetDistinctTypeListArgs) = value
 
 class GetMessageHandlersArgs():
     """ GetMessageHandlersArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetMessageHandlersArgs()
-    instance = ZZZ()
+    Instance = GetMessageHandlersArgs
     """hardcoded/returns an instance of the class"""
 
 class GetMessagePublishersArgs():
     """ GetMessagePublishersArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetMessagePublishersArgs()
-    instance = ZZZ()
+    Instance = GetMessagePublishersArgs
     """hardcoded/returns an instance of the class"""
 
 class GetMessagesArgs():
     """ GetMessagesArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetMessagesArgs()
-    instance = ZZZ()
+    Instance = GetMessagesArgs
     """hardcoded/returns an instance of the class"""
     MessageStatusses = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -220,10 +190,7 @@ Set: SearchText(self: GetMessagesArgs) = value
 
 class MessageBodyDecodeAs:
     """ enum MessageBodyDecodeAs, values: Ascii (0), Unicode (3), Utf16 (2), Utf8 (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessageBodyDecodeAs()
-    instance = ZZZ()
+    Instance = MessageBodyDecodeAs
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -270,10 +237,7 @@ class MessageHandlerDescriptorSerializable():
     MessageHandlerDescriptorSerializable()
     MessageHandlerDescriptorSerializable(seed: MessageHandlerDescriptor)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessageHandlerDescriptorSerializable()
-    instance = ZZZ()
+    Instance = MessageHandlerDescriptorSerializable
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, seed=None):
@@ -322,10 +286,7 @@ class MessagePublisherDescriptorSerializable():
     MessagePublisherDescriptorSerializable()
     MessagePublisherDescriptorSerializable(seed: MessagePublisherDescriptor)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessagePublisherDescriptorSerializable()
-    instance = ZZZ()
+    Instance = MessagePublisherDescriptorSerializable
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, seed=None):
@@ -375,10 +336,7 @@ class Messages(FindableList):
     
     Messages()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Messages()
-    instance = ZZZ()
+    Instance = Messages
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -415,10 +373,7 @@ class MessagingMessage(MessageBase):
     MessagingMessage()
     MessagingMessage(id: Guid)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessagingMessage()
-    instance = ZZZ()
+    Instance = MessagingMessage
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

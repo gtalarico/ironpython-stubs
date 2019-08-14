@@ -13,10 +13,7 @@ class DescriptorAttribute:
     DescriptorAttribute(id: str, friendlyName: str)
     DescriptorAttribute(id: str, friendlyName: str, executeIsolated: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DescriptorAttribute()
-    instance = ZZZ()
+    Instance = DescriptorAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -52,10 +49,7 @@ class HandlerDescriptorAttribute(DescriptorAttribute):
     HandlerDescriptorAttribute(id: str, friendlyName: str)
     HandlerDescriptorAttribute(id: str, friendlyName: str, executeIsolated: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HandlerDescriptorAttribute()
-    instance = ZZZ()
+    Instance = HandlerDescriptorAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -75,10 +69,7 @@ class PublisherDescriptorAttribute(DescriptorAttribute):
     PublisherDescriptorAttribute(id: str, friendlyName: str)
     PublisherDescriptorAttribute(id: str, friendlyName: str, executeIsolated: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PublisherDescriptorAttribute()
-    instance = ZZZ()
+    Instance = PublisherDescriptorAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

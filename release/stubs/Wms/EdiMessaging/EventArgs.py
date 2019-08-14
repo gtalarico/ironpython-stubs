@@ -11,10 +11,7 @@ from System import *
 
 class StatusChangedEventArgs(EventArgs):
     """ StatusChangedEventArgs(previousState: MessageStatus, newStatus: MessageStatus) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StatusChangedEventArgs()
-    instance = ZZZ()
+    Instance = StatusChangedEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, previousState, newStatus):

@@ -12,10 +12,7 @@ from Wms.RemotingObjects import *
 
 class DeleteFreeRmaLineArgs():
     """ DeleteFreeRmaLineArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DeleteFreeRmaLineArgs()
-    instance = ZZZ()
+    Instance = DeleteFreeRmaLineArgs
     """hardcoded/returns an instance of the class"""
     CacheKey = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: CacheKey(self: DeleteFreeRmaLineArgs) -> CacheKey
@@ -45,10 +42,7 @@ Set: Reason(self: DeleteFreeRmaLineArgs) = value
 
 class GetHistoryRmaOrderLinesArgs():
     """ GetHistoryRmaOrderLinesArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetHistoryRmaOrderLinesArgs()
-    instance = ZZZ()
+    Instance = GetHistoryRmaOrderLinesArgs
     """hardcoded/returns an instance of the class"""
     CustomerNumber = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -92,10 +86,7 @@ class GetRmaOrderArgs():
     GetRmaOrderArgs()
     GetRmaOrderArgs(rmaOrderId: int, warehouseCode: str, customerNumber: str, filterText: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetRmaOrderArgs()
-    instance = ZZZ()
+    Instance = GetRmaOrderArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, rmaOrderId=None, warehouseCode=None, customerNumber=None, filterText=None):
@@ -148,10 +139,7 @@ class GetRmaOrderCustomersArgs():
     GetRmaOrderCustomersArgs()
     GetRmaOrderCustomersArgs(warehouseCode: str, filterText: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetRmaOrderCustomersArgs()
-    instance = ZZZ()
+    Instance = GetRmaOrderCustomersArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, warehouseCode=None, filterText=None):
@@ -189,10 +177,7 @@ class GetRmaOrderLinesArgs():
     GetRmaOrderLinesArgs(orderId: int, orderNumber: str)
     GetRmaOrderLinesArgs(orderId: int, orderNumber: str, warehouseCode: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetRmaOrderLinesArgs()
-    instance = ZZZ()
+    Instance = GetRmaOrderLinesArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -242,10 +227,7 @@ class RmaOrder:
     
     RmaOrder()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RmaOrder()
-    instance = ZZZ()
+    Instance = RmaOrder
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateDummyFromCustomer(orderNumber, warehouseCode, customer):
@@ -372,10 +354,7 @@ Set: CustomerZipCode(self: RmaOrder) = value
 
 class HistoryRmaOrder(RmaOrder):
     """ HistoryRmaOrder() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryRmaOrder()
-    instance = ZZZ()
+    Instance = HistoryRmaOrder
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -408,10 +387,7 @@ class RmaOrderLine:
     
     RmaOrderLine()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RmaOrderLine()
-    instance = ZZZ()
+    Instance = RmaOrderLine
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: RmaOrderLine) -> object """
@@ -478,10 +454,7 @@ Set: ReasonDescription(self: RmaOrderLine) = value
 
 class HistoryRmaOrderLine(RmaOrderLine):
     """ HistoryRmaOrderLine() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryRmaOrderLine()
-    instance = ZZZ()
+    Instance = HistoryRmaOrderLine
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -502,10 +475,7 @@ Set: DateReceived(self: HistoryRmaOrderLine) = value
 
 class HistoryRmaOrderLines(FindableList):
     """ HistoryRmaOrderLines() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryRmaOrderLines()
-    instance = ZZZ()
+    Instance = HistoryRmaOrderLines
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -538,10 +508,7 @@ Set: TotalRowsMatched(self: HistoryRmaOrderLines) = value
 
 class HistoryRmaOrders(FindableList):
     """ HistoryRmaOrders() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryRmaOrders()
-    instance = ZZZ()
+    Instance = HistoryRmaOrders
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -575,10 +542,7 @@ Set: TotalRowsMatched(self: HistoryRmaOrders) = value
 
 class ProcessAdhocRmaArgs():
     """ ProcessAdhocRmaArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessAdhocRmaArgs()
-    instance = ZZZ()
+    Instance = ProcessAdhocRmaArgs
     """hardcoded/returns an instance of the class"""
     CustomerNumber = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -624,10 +588,7 @@ Set: YourReference(self: ProcessAdhocRmaArgs) = value
 
 class ReceiveRmaArgs(ReceiveArgs):
     """ ReceiveRmaArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiveRmaArgs()
-    instance = ZZZ()
+    Instance = ReceiveRmaArgs
     """hardcoded/returns an instance of the class"""
     def GetIdString(self):
         """ GetIdString(self: ReceiveRmaArgs) -> str """
@@ -669,10 +630,7 @@ Set: RmaReason(self: ReceiveRmaArgs) = value
 
 class ReceiveAdhocRmaArgs(ReceiveRmaArgs):
     """ ReceiveAdhocRmaArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiveAdhocRmaArgs()
-    instance = ZZZ()
+    Instance = ReceiveAdhocRmaArgs
     """hardcoded/returns an instance of the class"""
     ModifiedReceiveLines = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Contains the modified Wms.RemotingObjects.Rma.RmaReceiveLines of the orginal Wms.RemotingObjects.Rma.RmaReceiveLines
@@ -703,10 +661,7 @@ Set: ReceivedReceiveLines(self: ReceiveAdhocRmaArgs) = value
 
 class ReceiveRmaMultiArgs(ReceiveItemIdMultiArgs):
     """ ReceiveRmaMultiArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiveRmaMultiArgs()
-    instance = ZZZ()
+    Instance = ReceiveRmaMultiArgs
     """hardcoded/returns an instance of the class"""
     def GetIdString(self):
         """ GetIdString(self: ReceiveRmaMultiArgs) -> str """
@@ -773,10 +728,7 @@ class RmaOrderArgs():
     RmaOrderArgs(warehouseCode: str, customerNumber: str, searchText: str)
     RmaOrderArgs(warehouseCode: str, customerNumber: str, searchText: str, groupkey: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RmaOrderArgs()
-    instance = ZZZ()
+    Instance = RmaOrderArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -806,10 +758,7 @@ class RmaOrderLines:
     
     RmaOrderLines()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RmaOrderLines()
-    instance = ZZZ()
+    Instance = RmaOrderLines
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(inboundOrderLines):
@@ -841,10 +790,7 @@ class RmaOrderLines:
 
 class RmaOrders:
     """ RmaOrders() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RmaOrders()
-    instance = ZZZ()
+    Instance = RmaOrders
     """hardcoded/returns an instance of the class"""
     def GetCacheKey(self):
         """ GetCacheKey(self: RmaOrders) -> int """
@@ -879,10 +825,7 @@ class RmaOrders:
 
 class RmaReason():
     """ RmaReason() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RmaReason()
-    instance = ZZZ()
+    Instance = RmaReason
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """ Equals(self: RmaReason, obj: object) -> bool """
@@ -923,10 +866,7 @@ Set: Description(self: RmaReason) = value
 
 class RmaReasons(FindableList):
     """ RmaReasons() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RmaReasons()
-    instance = ZZZ()
+    Instance = RmaReasons
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -953,10 +893,7 @@ class RmaReasons(FindableList):
 
 class RmaReceiveLine:
     """ RmaReceiveLine() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RmaReceiveLine()
-    instance = ZZZ()
+    Instance = RmaReceiveLine
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: RmaReceiveLine) -> object """
@@ -1051,10 +988,7 @@ class RmaReceiveLines:
     RmaReceiveLines(collection: IEnumerable[InboundReceiveLine])
     RmaReceiveLines(collection: IEnumerable[InboundReceiveLine], compareHistoryOrderNumbers: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RmaReceiveLines()
-    instance = ZZZ()
+    Instance = RmaReceiveLines
     """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """ Add(self: RmaReceiveLines, receiveLine: InboundReceiveLine) """

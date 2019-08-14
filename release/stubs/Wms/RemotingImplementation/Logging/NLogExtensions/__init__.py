@@ -10,10 +10,7 @@
 
 class BuildEnvironmentLayoutRenderer(LayoutRenderer):
     """ BuildEnvironmentLayoutRenderer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BuildEnvironmentLayoutRenderer()
-    instance = ZZZ()
+    Instance = BuildEnvironmentLayoutRenderer
     """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BuildEnvironmentLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
@@ -60,10 +57,7 @@ class BuildEnvironmentLayoutRenderer(LayoutRenderer):
 
 class BwAccessIdLayoutRenderer(LayoutRenderer):
     """ BwAccessIdLayoutRenderer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BwAccessIdLayoutRenderer()
-    instance = ZZZ()
+    Instance = BwAccessIdLayoutRenderer
     """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BwAccessIdLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
@@ -110,10 +104,7 @@ class BwAccessIdLayoutRenderer(LayoutRenderer):
 
 class BwCategoryLayoutRenderer(LayoutRenderer):
     """ BwCategoryLayoutRenderer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BwCategoryLayoutRenderer()
-    instance = ZZZ()
+    Instance = BwCategoryLayoutRenderer
     """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BwCategoryLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
@@ -160,10 +151,7 @@ class BwCategoryLayoutRenderer(LayoutRenderer):
 
 class BwClientNameLayoutRenderer(LayoutRenderer):
     """ BwClientNameLayoutRenderer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BwClientNameLayoutRenderer()
-    instance = ZZZ()
+    Instance = BwClientNameLayoutRenderer
     """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BwClientNameLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
@@ -210,10 +198,7 @@ class BwClientNameLayoutRenderer(LayoutRenderer):
 
 class BwDeviceMacAddressLayoutRenderer(LayoutRenderer):
     """ BwDeviceMacAddressLayoutRenderer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BwDeviceMacAddressLayoutRenderer()
-    instance = ZZZ()
+    Instance = BwDeviceMacAddressLayoutRenderer
     """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BwDeviceMacAddressLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
@@ -260,10 +245,7 @@ class BwDeviceMacAddressLayoutRenderer(LayoutRenderer):
 
 class BwDeviceTypeLayoutRenderer(LayoutRenderer):
     """ BwDeviceTypeLayoutRenderer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BwDeviceTypeLayoutRenderer()
-    instance = ZZZ()
+    Instance = BwDeviceTypeLayoutRenderer
     """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BwDeviceTypeLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
@@ -310,10 +292,7 @@ class BwDeviceTypeLayoutRenderer(LayoutRenderer):
 
 class BwUserLayoutRenderer(LayoutRenderer):
     """ BwUserLayoutRenderer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BwUserLayoutRenderer()
-    instance = ZZZ()
+    Instance = BwUserLayoutRenderer
     """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BwUserLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
@@ -360,10 +339,7 @@ class BwUserLayoutRenderer(LayoutRenderer):
 
 class BwZoneNameLayoutRenderer(LayoutRenderer):
     """ BwZoneNameLayoutRenderer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BwZoneNameLayoutRenderer()
-    instance = ZZZ()
+    Instance = BwZoneNameLayoutRenderer
     """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BwZoneNameLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
@@ -410,10 +386,7 @@ class BwZoneNameLayoutRenderer(LayoutRenderer):
 
 class CustomTraceActivityIdLayoutRenderer(LayoutRenderer):
     """ CustomTraceActivityIdLayoutRenderer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CustomTraceActivityIdLayoutRenderer()
-    instance = ZZZ()
+    Instance = CustomTraceActivityIdLayoutRenderer
     """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: CustomTraceActivityIdLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
@@ -460,10 +433,7 @@ class CustomTraceActivityIdLayoutRenderer(LayoutRenderer):
 
 class IsProfilerTraceEventLayoutRenderer(LayoutRenderer):
     """ IsProfilerTraceEventLayoutRenderer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IsProfilerTraceEventLayoutRenderer()
-    instance = ZZZ()
+    Instance = IsProfilerTraceEventLayoutRenderer
     """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: IsProfilerTraceEventLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
@@ -512,10 +482,7 @@ class IsProfilerTraceEventLayoutRenderer(LayoutRenderer):
 
 class LicenseNameLayoutRenderer(LayoutRenderer):
     """ LicenseNameLayoutRenderer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseNameLayoutRenderer()
-    instance = ZZZ()
+    Instance = LicenseNameLayoutRenderer
     """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: LicenseNameLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
@@ -562,10 +529,7 @@ class LicenseNameLayoutRenderer(LayoutRenderer):
 
 class TraceTypeLayoutRenderer(LayoutRenderer):
     """ TraceTypeLayoutRenderer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TraceTypeLayoutRenderer()
-    instance = ZZZ()
+    Instance = TraceTypeLayoutRenderer
     """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: TraceTypeLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
@@ -612,10 +576,7 @@ class TraceTypeLayoutRenderer(LayoutRenderer):
 
 class VersionLayoutRenderer(LayoutRenderer):
     """ VersionLayoutRenderer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return VersionLayoutRenderer()
-    instance = ZZZ()
+    Instance = VersionLayoutRenderer
     """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: VersionLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """

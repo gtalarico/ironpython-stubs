@@ -10,10 +10,7 @@
 
 class ShipmentMetaDataHelper():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ShipmentMetaDataHelper()
-    instance = ZZZ()
+    Instance = ShipmentMetaDataHelper
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateMetaDataForPackingSlip(shipment, packages, shipper, serviceLevel):

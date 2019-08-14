@@ -10,10 +10,7 @@
 
 class BatchRegistrator:
     """ BatchRegistrator() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchRegistrator()
-    instance = ZZZ()
+    Instance = BatchRegistrator
     """hardcoded/returns an instance of the class"""
     def RegisterNumbers(self, data):
         """ RegisterNumbers(self: BatchRegistrator, data: object) """
@@ -30,10 +27,7 @@ class BatchRegistrator:
 
 class INumberRegistrator:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INumberRegistrator()
-    instance = ZZZ()
+    Instance = INumberRegistrator
     """hardcoded/returns an instance of the class"""
     def RegisterNumbers(self, data):
         """ RegisterNumbers(self: INumberRegistrator, data: object) """
@@ -46,10 +40,7 @@ class INumberRegistrator:
 
 class NumberRegistrationFactory():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NumberRegistrationFactory()
-    instance = ZZZ()
+    Instance = NumberRegistrationFactory
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def RegisterNumbers(data):
@@ -63,10 +54,7 @@ class NumberRegistrationFactory():
 
 class TransportPackageRegistrator:
     """ TransportPackageRegistrator() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TransportPackageRegistrator()
-    instance = ZZZ()
+    Instance = TransportPackageRegistrator
     """hardcoded/returns an instance of the class"""
     def RegisterNumbers(self, data):
         """ RegisterNumbers(self: TransportPackageRegistrator, data: object) """

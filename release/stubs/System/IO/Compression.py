@@ -10,10 +10,7 @@
 
 class CompressionLevel:
     """ enum CompressionLevel, values: Fastest (1), NoCompression (2), Optimal (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CompressionLevel()
-    instance = ZZZ()
+    Instance = CompressionLevel
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -60,10 +57,7 @@ class CompressionMode:
     
     enum CompressionMode, values: Compress (1), Decompress (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CompressionMode()
-    instance = ZZZ()
+    Instance = CompressionMode
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -112,10 +106,7 @@ class DeflateStream(Stream):
     DeflateStream(stream: Stream, compressionLevel: CompressionLevel)
     DeflateStream(stream: Stream, compressionLevel: CompressionLevel, leaveOpen: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DeflateStream()
-    instance = ZZZ()
+    Instance = DeflateStream
     """hardcoded/returns an instance of the class"""
     def BeginRead(self, array, offset, count, asyncCallback, asyncState):
         """
@@ -339,10 +330,7 @@ class GZipStream(Stream):
     GZipStream(stream: Stream, compressionLevel: CompressionLevel)
     GZipStream(stream: Stream, compressionLevel: CompressionLevel, leaveOpen: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GZipStream()
-    instance = ZZZ()
+    Instance = GZipStream
     """hardcoded/returns an instance of the class"""
     def BeginRead(self, array, offset, count, asyncCallback, asyncState):
         """

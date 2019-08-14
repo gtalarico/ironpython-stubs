@@ -11,10 +11,7 @@ from Wms.RemotingImplementation.OfflineScanners import *
 
 class RemotePublishingInboundFileListener(GcloudInboundFileListenerBase):
     """ RemotePublishingInboundFileListener(appSetttings: RemotePublishingInboundFileOptions, general: General, messaging: Messaging, api: RemotePublishing) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RemotePublishingInboundFileListener()
-    instance = ZZZ()
+    Instance = RemotePublishingInboundFileListener
     """hardcoded/returns an instance of the class"""
     def DownloadFile(self, *args): #cannot find CLR method
         """ DownloadFile(self: RemotePublishingInboundFileListener, filepath: str) -> Task[Stream] """
@@ -43,10 +40,7 @@ class RemotePublishingInboundFileListener(GcloudInboundFileListenerBase):
 
 class RemotePublishingInboundFileOptions(GcloudInboundFileListenerOptions):
     """ RemotePublishingInboundFileOptions(appSettings: IApplicationSettings) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RemotePublishingInboundFileOptions()
-    instance = ZZZ()
+    Instance = RemotePublishingInboundFileOptions
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, appSettings):
@@ -56,10 +50,7 @@ class RemotePublishingInboundFileOptions(GcloudInboundFileListenerOptions):
 
 class RemotePublishingInboundFileUploadedEvent():
     """ RemotePublishingInboundFileUploadedEvent() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RemotePublishingInboundFileUploadedEvent()
-    instance = ZZZ()
+    Instance = RemotePublishingInboundFileUploadedEvent
     """hardcoded/returns an instance of the class"""
     Event = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Event(self: RemotePublishingInboundFileUploadedEvent) -> str

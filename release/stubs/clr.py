@@ -204,10 +204,7 @@ def Use(name): # real signature unknown; restored from __doc__
 
 class ArgChecker():
     """ ArgChecker(prms: Array[object]) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ArgChecker()
-    instance = ZZZ()
+    Instance = ArgChecker
     """hardcoded/returns an instance of the class"""
     def __call__(self, *args): #cannot find CLR method
         """ x.__call__(...) <==> x(...) """
@@ -224,10 +221,7 @@ class StrongBox:
     StrongBox[T]()
     StrongBox[T](value: T)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StrongBox()
-    instance = ZZZ()
+    Instance = StrongBox
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -253,10 +247,7 @@ Reference = StrongBox
 
 class ReferencesList(List):
     """ ReferencesList() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReferencesList()
-    instance = ZZZ()
+    Instance = ReferencesList
     """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """ Add(self: ReferencesList, other: Assembly) """
@@ -285,10 +276,7 @@ class ReferencesList(List):
 
 class ReturnChecker():
     """ ReturnChecker(returnType: object) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReturnChecker()
-    instance = ZZZ()
+    Instance = ReturnChecker
     """hardcoded/returns an instance of the class"""
     def __call__(self, *args): #cannot find CLR method
         """ x.__call__(...) <==> x(...) """
@@ -307,10 +295,7 @@ class RuntimeArgChecker(PythonTypeSlot):
     RuntimeArgChecker(function: object, expectedArgs: Array[object])
     RuntimeArgChecker(instance: object, function: object, expectedArgs: Array[object])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RuntimeArgChecker()
-    instance = ZZZ()
+    Instance = RuntimeArgChecker
     """hardcoded/returns an instance of the class"""
     def __call__(self, *args): #cannot find CLR method
         """ x.__call__(...) <==> x(...)x.__call__(...) <==> x(...) """
@@ -330,10 +315,7 @@ class RuntimeReturnChecker(PythonTypeSlot):
     RuntimeReturnChecker(function: object, expectedReturn: object)
     RuntimeReturnChecker(instance: object, function: object, expectedReturn: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RuntimeReturnChecker()
-    instance = ZZZ()
+    Instance = RuntimeReturnChecker
     """hardcoded/returns an instance of the class"""
     def GetAttribute(self, instance, owner):
         """ GetAttribute(self: RuntimeReturnChecker, instance: object, owner: object) -> object """

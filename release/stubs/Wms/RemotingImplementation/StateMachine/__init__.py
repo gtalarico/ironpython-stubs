@@ -10,10 +10,7 @@
 
 class State():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return State()
-    instance = ZZZ()
+    Instance = State
     """hardcoded/returns an instance of the class"""
     def Next(self):
         """ Next(self: State) -> State """
@@ -29,10 +26,7 @@ class StateMachine():
     StateMachine(initialState: State, *args: Array[object])
     StateMachine(uniqueId: str, initialState: State, mapper: Func[str, State], *args: Array[object])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StateMachine()
-    instance = ZZZ()
+    Instance = StateMachine
     """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: StateMachine)Run[TResult](self: StateMachine) -> TResult """

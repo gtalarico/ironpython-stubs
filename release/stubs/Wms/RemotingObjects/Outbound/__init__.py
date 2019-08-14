@@ -12,10 +12,7 @@ from Wms.RemotingObjects import *
 
 class AllocationProfile():
     """ AllocationProfile() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AllocationProfile()
-    instance = ZZZ()
+    Instance = AllocationProfile
     """hardcoded/returns an instance of the class"""
     Description = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -45,10 +42,7 @@ Set: Name(self: AllocationProfile) = value
 
 class AllocationProfiles(List):
     """ AllocationProfiles() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AllocationProfiles()
-    instance = ZZZ()
+    Instance = AllocationProfiles
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -75,10 +69,7 @@ class AllocationProfiles(List):
 
 class GetHistoryOutboundOrderCustomersArgs():
     """ GetHistoryOutboundOrderCustomersArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetHistoryOutboundOrderCustomersArgs()
-    instance = ZZZ()
+    Instance = GetHistoryOutboundOrderCustomersArgs
     """hardcoded/returns an instance of the class"""
     CustomerNumber = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -116,10 +107,7 @@ Set: Warehouse(self: GetHistoryOutboundOrderCustomersArgs) = value
 
 class GetHistoryOutboundOrderItemArgs():
     """ GetHistoryOutboundOrderItemArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetHistoryOutboundOrderItemArgs()
-    instance = ZZZ()
+    Instance = GetHistoryOutboundOrderItemArgs
     """hardcoded/returns an instance of the class"""
     CustomerNumber = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -173,10 +161,7 @@ Set: SearchText(self: GetHistoryOutboundOrderItemArgs) = value
 
 class GetHistoryOutboundOrdersArgs():
     """ GetHistoryOutboundOrdersArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetHistoryOutboundOrdersArgs()
-    instance = ZZZ()
+    Instance = GetHistoryOutboundOrdersArgs
     """hardcoded/returns an instance of the class"""
     CacheKeyOfReceipt = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -246,10 +231,7 @@ Set: Paging(self: GetHistoryOutboundOrdersArgs) = value
 
 class GetOutboundOrdersArgs():
     """ GetOutboundOrdersArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetOutboundOrdersArgs()
-    instance = ZZZ()
+    Instance = GetOutboundOrdersArgs
     """hardcoded/returns an instance of the class"""
     OrderNumbers = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -271,10 +253,7 @@ Set: SearchText(self: GetOutboundOrdersArgs) = value
 
 class HistoryOutboundOrder(DbObject):
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryOutboundOrder()
-    instance = ZZZ()
+    Instance = HistoryOutboundOrder
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: HistoryOutboundOrder) -> object """
@@ -726,10 +705,7 @@ Set: Warehouse(self: HistoryOutboundOrder) = value
 
 class OutboundOrderLine(DbObject):
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OutboundOrderLine()
-    instance = ZZZ()
+    Instance = OutboundOrderLine
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: OutboundOrderLine) -> object """
@@ -1203,10 +1179,7 @@ Set: WarehouseLocation(self: OutboundOrderLine) = value
 
 class HistoryOutboundOrderLine(OutboundOrderLine):
     """ HistoryOutboundOrderLine() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryOutboundOrderLine()
-    instance = ZZZ()
+    Instance = HistoryOutboundOrderLine
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1250,10 +1223,7 @@ Get: Type(self: HistoryOutboundOrderLine) -> OutboundOrderTypeEnum
 
 class OutboundOrderLines(FindableList):
     """ OutboundOrderLines() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OutboundOrderLines()
-    instance = ZZZ()
+    Instance = OutboundOrderLines
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: OutboundOrderLines) -> object """
@@ -1308,10 +1278,7 @@ Get: PreserveState(self: OutboundOrderLines) -> bool
 
 class HistoryOutboundOrderLines(OutboundOrderLines):
     """ HistoryOutboundOrderLines() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryOutboundOrderLines()
-    instance = ZZZ()
+    Instance = HistoryOutboundOrderLines
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -1338,10 +1305,7 @@ class HistoryOutboundOrderLines(OutboundOrderLines):
 
 class HistoryOutboundOrders(FindableList):
     """ HistoryOutboundOrders() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryOutboundOrders()
-    instance = ZZZ()
+    Instance = HistoryOutboundOrders
     """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
@@ -1401,10 +1365,7 @@ Set: TotalRowsMatched(self: HistoryOutboundOrders) = value
 
 class OutboundOrder(DbObject):
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OutboundOrder()
-    instance = ZZZ()
+    Instance = OutboundOrder
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: OutboundOrder) -> object """
@@ -1924,10 +1885,7 @@ Set: Warehouse(self: OutboundOrder) = value
 
 class OutboundOrderLineEqualityComparer:
     """ OutboundOrderLineEqualityComparer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OutboundOrderLineEqualityComparer()
-    instance = ZZZ()
+    Instance = OutboundOrderLineEqualityComparer
     """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """ Equals(self: OutboundOrderLineEqualityComparer, x: OutboundOrderLine, y: OutboundOrderLine) -> bool """
@@ -1952,10 +1910,7 @@ class OutboundOrderLineEqualityComparer:
 
 class OutboundOrders(FindableList):
     """ OutboundOrders() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OutboundOrders()
-    instance = ZZZ()
+    Instance = OutboundOrders
     """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
@@ -2015,10 +1970,7 @@ Set: TotalRowsMatched(self: OutboundOrders) = value
 
 class OutboundOrderTypeEnum:
     """ enum OutboundOrderTypeEnum, values: ReplenishmentOrder (2), RtvOrder (3), SalesOrder (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OutboundOrderTypeEnum()
-    instance = ZZZ()
+    Instance = OutboundOrderTypeEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2061,10 +2013,7 @@ class OutboundOrderTypeEnum:
 
 class PickDifferenceOptionsEnum:
     """ enum PickDifferenceOptionsEnum, values: BasedOnMarkAsPicked (1), BasedOnNonePickedItems (2), None (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PickDifferenceOptionsEnum()
-    instance = ZZZ()
+    Instance = PickDifferenceOptionsEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2110,10 +2059,7 @@ class ValidateItemIdentificationArgs():
     ValidateItemIdentificationArgs()
     ValidateItemIdentificationArgs(itemCode: str, number: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ValidateItemIdentificationArgs()
-    instance = ZZZ()
+    Instance = ValidateItemIdentificationArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, itemCode=None, number=None):

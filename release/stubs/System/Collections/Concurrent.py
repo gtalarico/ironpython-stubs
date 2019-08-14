@@ -20,10 +20,7 @@ class BlockingCollection:
     BlockingCollection[T](collection: IProducerConsumerCollection[T], boundedCapacity: int)
     BlockingCollection[T](collection: IProducerConsumerCollection[T])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BlockingCollection()
-    instance = ZZZ()
+    Instance = BlockingCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, item, cancellationToken=None):
         """
@@ -256,10 +253,7 @@ class ConcurrentBag:
     ConcurrentBag[T]()
     ConcurrentBag[T](collection: IEnumerable[T])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ConcurrentBag()
-    instance = ZZZ()
+    Instance = ConcurrentBag
     """hardcoded/returns an instance of the class"""
     def Add(self, item):
         """
@@ -361,10 +355,7 @@ class ConcurrentDictionary:
     ConcurrentDictionary[TKey, TValue](concurrencyLevel: int, collection: IEnumerable[KeyValuePair[TKey, TValue]], comparer: IEqualityComparer[TKey])
     ConcurrentDictionary[TKey, TValue](concurrencyLevel: int, capacity: int, comparer: IEqualityComparer[TKey])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ConcurrentDictionary()
-    instance = ZZZ()
+    Instance = ConcurrentDictionary
     """hardcoded/returns an instance of the class"""
     def AddOrUpdate(self, key, *__args):
         """
@@ -557,10 +548,7 @@ class ConcurrentQueue:
     ConcurrentQueue[T]()
     ConcurrentQueue[T](collection: IEnumerable[T])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ConcurrentQueue()
-    instance = ZZZ()
+    Instance = ConcurrentQueue
     """hardcoded/returns an instance of the class"""
     def CopyTo(self, array, index):
         """ CopyTo(self: ConcurrentQueue[T], array: Array[T], index: int) """
@@ -653,10 +641,7 @@ class ConcurrentStack:
     ConcurrentStack[T]()
     ConcurrentStack[T](collection: IEnumerable[T])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ConcurrentStack()
-    instance = ZZZ()
+    Instance = ConcurrentStack
     """hardcoded/returns an instance of the class"""
     def Clear(self):
         """
@@ -764,10 +749,7 @@ Get: IsEmpty(self: ConcurrentStack[T]) -> bool
 
 class EnumerablePartitionerOptions:
     """ enum (flags) EnumerablePartitionerOptions, values: NoBuffering (1), None (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EnumerablePartitionerOptions()
-    instance = ZZZ()
+    Instance = EnumerablePartitionerOptions
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -809,10 +791,7 @@ class EnumerablePartitionerOptions:
 
 class IProducerConsumerCollection:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IProducerConsumerCollection()
-    instance = ZZZ()
+    Instance = IProducerConsumerCollection
     """hardcoded/returns an instance of the class"""
     def CopyTo(self, array, index):
         """ CopyTo(self: IProducerConsumerCollection[T], array: Array[T], index: int) """
@@ -861,10 +840,7 @@ class IProducerConsumerCollection:
 
 class OrderablePartitioner(Partitioner):
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OrderablePartitioner()
-    instance = ZZZ()
+    Instance = OrderablePartitioner
     """hardcoded/returns an instance of the class"""
     def GetDynamicPartitions(self):
         """

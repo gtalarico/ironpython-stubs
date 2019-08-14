@@ -15,10 +15,7 @@ class TaskAlreadyRunningException(Exception):
     TaskAlreadyRunningException(message: str)
     TaskAlreadyRunningException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TaskAlreadyRunningException()
-    instance = ZZZ()
+    Instance = TaskAlreadyRunningException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -42,10 +39,7 @@ class TaskAlreadyRunningException(Exception):
 
 class TaskBase():
     """ TaskBase() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TaskBase()
-    instance = ZZZ()
+    Instance = TaskBase
     """hardcoded/returns an instance of the class"""
     def CalculateNextMoment(self):
         """ CalculateNextMoment(self: TaskBase) -> DateTime """
@@ -248,10 +242,7 @@ Set: Type(self: TaskBase) = value
 
 class TaskScheduler():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TaskScheduler()
-    instance = ZZZ()
+    Instance = TaskScheduler
     """hardcoded/returns an instance of the class"""
     def AddDefaultTasks(self):
         """ AddDefaultTasks(self: TaskScheduler) """
@@ -304,10 +295,7 @@ class TaskScheduler():
 
 class TaskType:
     """ enum TaskType, values: Erp (0), General (1), NotificationSummary (3), ScriptTask (2) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TaskType()
-    instance = ZZZ()
+    Instance = TaskType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

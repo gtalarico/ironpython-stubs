@@ -11,10 +11,7 @@ from Wms.RemotingObjects import *
 
 class AddModuleArgs():
     """ AddModuleArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AddModuleArgs()
-    instance = ZZZ()
+    Instance = AddModuleArgs
     """hardcoded/returns an instance of the class"""
     Content = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -44,10 +41,7 @@ Set: Path(self: AddModuleArgs) = value
 
 class GetLibArgs():
     """ GetLibArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetLibArgs()
-    instance = ZZZ()
+    Instance = GetLibArgs
     """hardcoded/returns an instance of the class"""
     Path = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -61,10 +55,7 @@ Set: Path(self: GetLibArgs) = value
 
 class LibContent():
     """ LibContent() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LibContent()
-    instance = ZZZ()
+    Instance = LibContent
     """hardcoded/returns an instance of the class"""
     Directory = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -110,10 +101,7 @@ Set: Type(self: LibContent) = value
 
 class LibContents(FindableList):
     """ LibContents() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LibContents()
-    instance = ZZZ()
+    Instance = LibContents
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -146,10 +134,7 @@ Set: Path(self: LibContents) = value
 
 class LibContentType:
     """ enum LibContentType, values: File (1), Folder (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LibContentType()
-    instance = ZZZ()
+    Instance = LibContentType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -191,10 +176,7 @@ class LibContentType:
 
 class ModuleArgs():
     """ ModuleArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ModuleArgs()
-    instance = ZZZ()
+    Instance = ModuleArgs
     """hardcoded/returns an instance of the class"""
     Directory = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -232,10 +214,7 @@ Set: Script(self: ModuleArgs) = value
 
 class PythonModule():
     """ PythonModule() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PythonModule()
-    instance = ZZZ()
+    Instance = PythonModule
     """hardcoded/returns an instance of the class"""
     Content = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """

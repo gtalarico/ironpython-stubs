@@ -14,10 +14,7 @@ class ExtendedProtectionPolicyElement(ConfigurationElement):
     
     ExtendedProtectionPolicyElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExtendedProtectionPolicyElement()
-    instance = ZZZ()
+    Instance = ExtendedProtectionPolicyElement
     """hardcoded/returns an instance of the class"""
     def BuildPolicy(self):
         """
@@ -76,10 +73,7 @@ class ServiceNameElement(ConfigurationElement):
     
     ServiceNameElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ServiceNameElement()
-    instance = ZZZ()
+    Instance = ServiceNameElement
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -111,10 +105,7 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
     
     ServiceNameElementCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ServiceNameElementCollection()
-    instance = ZZZ()
+    Instance = ServiceNameElementCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, element):
         """

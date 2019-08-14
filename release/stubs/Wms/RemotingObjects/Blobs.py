@@ -10,10 +10,7 @@
 
 class BlobContent():
     """ BlobContent() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BlobContent()
-    instance = ZZZ()
+    Instance = BlobContent
     """hardcoded/returns an instance of the class"""
     Content = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Content(self: BlobContent) -> Array[Byte]

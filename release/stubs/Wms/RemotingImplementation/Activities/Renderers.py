@@ -10,10 +10,7 @@
 
 class MobileProgressBarRenderer:
     """ MobileProgressBarRenderer(current: Decimal, total: Decimal, title: str, enableDetails: bool, progressColor: str) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MobileProgressBarRenderer()
-    instance = ZZZ()
+    Instance = MobileProgressBarRenderer
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """ Dispose(self: MobileProgressBarRenderer) """

@@ -10,10 +10,7 @@
 
 class ProgressBase:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProgressBase()
-    instance = ZZZ()
+    Instance = ProgressBase
     """hardcoded/returns an instance of the class"""
     def GenerateProgressBarImage(self, args, progress):
         """ GenerateProgressBarImage(self: ProgressBase, args: GetActivityProgressArgs, progress: Progress) -> Array[Byte] """
@@ -38,10 +35,7 @@ class ProgressBase:
 
 class BatchPackProgress(ProgressBase):
     """ BatchPackProgress() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchPackProgress()
-    instance = ZZZ()
+    Instance = BatchPackProgress
     """hardcoded/returns an instance of the class"""
     def GetActivity(self, args, value):
         """ GetActivity(self: BatchPackProgress, args: GetActivityProgressArgs, value: object) -> Activity """
@@ -58,10 +52,7 @@ class BatchPackProgress(ProgressBase):
 
 class BatchPickProgress(ProgressBase):
     """ BatchPickProgress() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchPickProgress()
-    instance = ZZZ()
+    Instance = BatchPickProgress
     """hardcoded/returns an instance of the class"""
     def GetActivity(self, args, value):
         """ GetActivity(self: BatchPickProgress, args: GetActivityProgressArgs, value: object) -> Activity """
@@ -78,10 +69,7 @@ class BatchPickProgress(ProgressBase):
 
 class IProgress:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IProgress()
-    instance = ZZZ()
+    Instance = IProgress
     """hardcoded/returns an instance of the class"""
     def GetActivity(self, args, value):
         """ GetActivity(self: IProgress, args: GetActivityProgressArgs, value: object) -> Activity """
@@ -98,10 +86,7 @@ class IProgress:
 
 class ProgressFactory():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProgressFactory()
-    instance = ZZZ()
+    Instance = ProgressFactory
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetActivity(args, value):
@@ -121,10 +106,7 @@ class ProgressFactory():
 
 class ReceiveProgress(ProgressBase):
     """ ReceiveProgress() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiveProgress()
-    instance = ZZZ()
+    Instance = ReceiveProgress
     """hardcoded/returns an instance of the class"""
     def GetActivity(self, args, value):
         """ GetActivity(self: ReceiveProgress, args: GetActivityProgressArgs, value: object) -> Activity """

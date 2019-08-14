@@ -625,7 +625,7 @@ class ModuleRedeclarator(object):
         """
 
 
-
+        
         action("redoing class %r of module %r", p_name, p_modname)
         if seen is not None:
             if p_class in seen:
@@ -681,8 +681,6 @@ class ModuleRedeclarator(object):
             filtered = filtered[:-1]
         
         data[p_name] = p_modname
-        print "name = "+p_name
-        print "module = "+p_modname
         out(indent, "class ", p_name, filtered , ":",          #re.sub(regex, "", base_def)    #fix kevin ana 3/inherited classes showed up in constructor/base def replaced with ""
             skipped_bases and " # skipped bases: " + ", ".join(skipped_bases) or "")  # we dont do anything with python objects so why bother 
         out_doc_attr(out, p_class, indent + 1)

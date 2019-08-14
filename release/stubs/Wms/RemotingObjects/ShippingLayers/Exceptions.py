@@ -14,10 +14,7 @@ class ShipperFatalException(Exception):
     ShipperFatalException(message: str)
     ShipperFatalException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ShipperFatalException()
-    instance = ZZZ()
+    Instance = ShipperFatalException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -42,10 +39,7 @@ class ShipperCommunicationException(ShipperFatalException):
     ShipperCommunicationException(message: str, shouldRetry: bool)
     ShipperCommunicationException(message: str, innerException: Exception, shouldRetry: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ShipperCommunicationException()
-    instance = ZZZ()
+    Instance = ShipperCommunicationException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

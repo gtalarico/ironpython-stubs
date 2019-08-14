@@ -14,10 +14,7 @@ class OpenFlags:
     
     enum (flags) OpenFlags, values: IncludeArchived (8), MaxAllowed (2), OpenExistingOnly (4), ReadOnly (0), ReadWrite (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OpenFlags()
-    instance = ZZZ()
+    Instance = OpenFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -66,10 +63,7 @@ class PublicKey():
     
     PublicKey(oid: Oid, parameters: AsnEncodedData, keyValue: AsnEncodedData)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PublicKey()
-    instance = ZZZ()
+    Instance = PublicKey
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, oid, parameters, keyValue):
@@ -112,10 +106,7 @@ class StoreLocation:
     
     enum StoreLocation, values: CurrentUser (1), LocalMachine (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StoreLocation()
-    instance = ZZZ()
+    Instance = StoreLocation
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -161,10 +152,7 @@ class StoreName:
     
     enum StoreName, values: AddressBook (1), AuthRoot (2), CertificateAuthority (3), Disallowed (4), My (5), Root (6), TrustedPeople (7), TrustedPublisher (8)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StoreName()
-    instance = ZZZ()
+    Instance = StoreName
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -220,10 +208,7 @@ class X500DistinguishedName(AsnEncodedData):
     X500DistinguishedName(distinguishedName: str)
     X500DistinguishedName(distinguishedName: str, flag: X500DistinguishedNameFlags)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X500DistinguishedName()
-    instance = ZZZ()
+    Instance = X500DistinguishedName
     """hardcoded/returns an instance of the class"""
     def Decode(self, flag):
         """
@@ -273,10 +258,7 @@ class X500DistinguishedNameFlags:
     
     enum (flags) X500DistinguishedNameFlags, values: DoNotUsePlusSign (32), DoNotUseQuotes (64), ForceUTF8Encoding (16384), None (0), Reversed (1), UseCommas (128), UseNewLines (256), UseSemicolons (16), UseT61Encoding (8192), UseUTF8Encoding (4096)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X500DistinguishedNameFlags()
-    instance = ZZZ()
+    Instance = X500DistinguishedNameFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -332,10 +314,7 @@ class X509Extension(AsnEncodedData):
     X509Extension(encodedExtension: AsnEncodedData, critical: bool)
     X509Extension(oid: Oid, rawData: Array[Byte], critical: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509Extension()
-    instance = ZZZ()
+    Instance = X509Extension
     """hardcoded/returns an instance of the class"""
     def CopyFrom(self, asnEncodedData):
         """
@@ -374,10 +353,7 @@ class X509BasicConstraintsExtension(X509Extension):
     X509BasicConstraintsExtension(certificateAuthority: bool, hasPathLengthConstraint: bool, pathLengthConstraint: int, critical: bool)
     X509BasicConstraintsExtension(encodedBasicConstraints: AsnEncodedData, critical: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509BasicConstraintsExtension()
-    instance = ZZZ()
+    Instance = X509BasicConstraintsExtension
     """hardcoded/returns an instance of the class"""
     def CopyFrom(self, asnEncodedData):
         """
@@ -441,10 +417,7 @@ class X509Certificate:
     X509Certificate(cert: X509Certificate)
     X509Certificate(info: SerializationInfo, context: StreamingContext)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509Certificate()
-    instance = ZZZ()
+    Instance = X509Certificate
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateFromCertFile(filename):
@@ -837,10 +810,7 @@ class X509Certificate2(X509Certificate):
     X509Certificate2(handle: IntPtr)
     X509Certificate2(certificate: X509Certificate)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509Certificate2()
-    instance = ZZZ()
+    Instance = X509Certificate2
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """ Dispose(self: X509Certificate, disposing: bool) """
@@ -1106,10 +1076,7 @@ class X509CertificateCollection(CollectionBase):
     X509CertificateCollection(value: X509CertificateCollection)
     X509CertificateCollection(value: Array[X509Certificate])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509CertificateCollection()
-    instance = ZZZ()
+    Instance = X509CertificateCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
@@ -1362,10 +1329,7 @@ class X509Certificate2Collection(X509CertificateCollection):
     X509Certificate2Collection(certificates: X509Certificate2Collection)
     X509Certificate2Collection(certificates: Array[X509Certificate2])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509Certificate2Collection()
-    instance = ZZZ()
+    Instance = X509Certificate2Collection
     """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
@@ -1642,10 +1606,7 @@ class X509Certificate2Collection(X509CertificateCollection):
 
 class X509Certificate2Enumerator:
     """ Supports a simple iteration over a System.Security.Cryptography.X509Certificates.X509Certificate2Collection object. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509Certificate2Enumerator()
-    instance = ZZZ()
+    Instance = X509Certificate2Enumerator
     """hardcoded/returns an instance of the class"""
     def MoveNext(self):
         """
@@ -1696,10 +1657,7 @@ class X509Chain:
     X509Chain()
     X509Chain(chainContext: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509Chain()
-    instance = ZZZ()
+    Instance = X509Chain
     """hardcoded/returns an instance of the class"""
     def Build(self, certificate):
         """
@@ -1798,10 +1756,7 @@ Get: ChainStatus(self: X509Chain) -> Array[X509ChainStatus]
 
 class X509ChainElement():
     """ Represents an element of an X.509 chain. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509ChainElement()
-    instance = ZZZ()
+    Instance = X509ChainElement
     """hardcoded/returns an instance of the class"""
     Certificate = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the X.509 certificate at a particular chain element.
@@ -1828,10 +1783,7 @@ Get: Information(self: X509ChainElement) -> str
 
 class X509ChainElementCollection:
     """ Represents a collection of System.Security.Cryptography.X509Certificates.X509ChainElement objects. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509ChainElementCollection()
-    instance = ZZZ()
+    Instance = X509ChainElementCollection
     """hardcoded/returns an instance of the class"""
     def CopyTo(self, array, index):
         """
@@ -1897,10 +1849,7 @@ Get: SyncRoot(self: X509ChainElementCollection) -> object
 
 class X509ChainElementEnumerator:
     """ Supports a simple iteration over an System.Security.Cryptography.X509Certificates.X509ChainElementCollection. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509ChainElementEnumerator()
-    instance = ZZZ()
+    Instance = X509ChainElementEnumerator
     """hardcoded/returns an instance of the class"""
     def MoveNext(self):
         """
@@ -1949,10 +1898,7 @@ class X509ChainPolicy():
     
     X509ChainPolicy()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509ChainPolicy()
-    instance = ZZZ()
+    Instance = X509ChainPolicy
     """hardcoded/returns an instance of the class"""
     def Reset(self):
         """
@@ -2026,10 +1972,7 @@ Set: VerificationTime(self: X509ChainPolicy) = value
 
 class X509ChainStatus():
     """ Provides a simple structure for storing X509 chain status and error information. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509ChainStatus()
-    instance = ZZZ()
+    Instance = X509ChainStatus
     """hardcoded/returns an instance of the class"""
     Status = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Specifies the status of the X509 chain.
@@ -2055,10 +1998,7 @@ class X509ChainStatusFlags:
     
     enum (flags) X509ChainStatusFlags, values: CtlNotSignatureValid (262144), CtlNotTimeValid (131072), CtlNotValidForUsage (524288), Cyclic (128), ExplicitDistrust (67108864), HasExcludedNameConstraint (32768), HasNotDefinedNameConstraint (8192), HasNotPermittedNameConstraint (16384), HasNotSupportedCriticalExtension (134217728), HasNotSupportedNameConstraint (4096), HasWeakSignature (1048576), InvalidBasicConstraints (1024), InvalidExtension (256), InvalidNameConstraints (2048), InvalidPolicyConstraints (512), NoError (0), NoIssuanceChainPolicy (33554432), NotSignatureValid (8), NotTimeNested (2), NotTimeValid (1), NotValidForUsage (16), OfflineRevocation (16777216), PartialChain (65536), RevocationStatusUnknown (64), Revoked (4), UntrustedRoot (32)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509ChainStatusFlags()
-    instance = ZZZ()
+    Instance = X509ChainStatusFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2128,10 +2068,7 @@ class X509ContentType:
     
     enum X509ContentType, values: Authenticode (6), Cert (1), Pfx (3), Pkcs12 (3), Pkcs7 (5), SerializedCert (2), SerializedStore (4), Unknown (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509ContentType()
-    instance = ZZZ()
+    Instance = X509ContentType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2185,10 +2122,7 @@ class X509EnhancedKeyUsageExtension(X509Extension):
     X509EnhancedKeyUsageExtension(enhancedKeyUsages: OidCollection, critical: bool)
     X509EnhancedKeyUsageExtension(encodedEnhancedKeyUsages: AsnEncodedData, critical: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509EnhancedKeyUsageExtension()
-    instance = ZZZ()
+    Instance = X509EnhancedKeyUsageExtension
     """hardcoded/returns an instance of the class"""
     def CopyFrom(self, asnEncodedData):
         """
@@ -2225,10 +2159,7 @@ class X509ExtensionCollection:
     
     X509ExtensionCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509ExtensionCollection()
-    instance = ZZZ()
+    Instance = X509ExtensionCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, extension):
         """
@@ -2310,10 +2241,7 @@ Get: SyncRoot(self: X509ExtensionCollection) -> object
 
 class X509ExtensionEnumerator:
     """ Supports a simple iteration over a System.Security.Cryptography.X509Certificates.X509ExtensionCollection. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509ExtensionEnumerator()
-    instance = ZZZ()
+    Instance = X509ExtensionEnumerator
     """hardcoded/returns an instance of the class"""
     def MoveNext(self):
         """
@@ -2362,10 +2290,7 @@ class X509FindType:
     
     enum X509FindType, values: FindByApplicationPolicy (10), FindByCertificatePolicy (11), FindByExtension (12), FindByIssuerDistinguishedName (4), FindByIssuerName (3), FindByKeyUsage (13), FindBySerialNumber (5), FindBySubjectDistinguishedName (2), FindBySubjectKeyIdentifier (14), FindBySubjectName (1), FindByTemplateName (9), FindByThumbprint (0), FindByTimeExpired (8), FindByTimeNotYetValid (7), FindByTimeValid (6)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509FindType()
-    instance = ZZZ()
+    Instance = X509FindType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2424,10 +2349,7 @@ class X509IncludeOption:
     
     enum X509IncludeOption, values: EndCertOnly (2), ExcludeRoot (1), None (0), WholeChain (3)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509IncludeOption()
-    instance = ZZZ()
+    Instance = X509IncludeOption
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2475,10 +2397,7 @@ class X509KeyStorageFlags:
     
     enum (flags) X509KeyStorageFlags, values: DefaultKeySet (0), EphemeralKeySet (32), Exportable (4), MachineKeySet (2), PersistKeySet (16), UserKeySet (1), UserProtected (8)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509KeyStorageFlags()
-    instance = ZZZ()
+    Instance = X509KeyStorageFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2531,10 +2450,7 @@ class X509KeyUsageExtension(X509Extension):
     X509KeyUsageExtension(keyUsages: X509KeyUsageFlags, critical: bool)
     X509KeyUsageExtension(encodedKeyUsage: AsnEncodedData, critical: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509KeyUsageExtension()
-    instance = ZZZ()
+    Instance = X509KeyUsageExtension
     """hardcoded/returns an instance of the class"""
     def CopyFrom(self, asnEncodedData):
         """
@@ -2569,10 +2485,7 @@ class X509KeyUsageFlags:
     
     enum (flags) X509KeyUsageFlags, values: CrlSign (2), DataEncipherment (16), DecipherOnly (32768), DigitalSignature (128), EncipherOnly (1), KeyAgreement (8), KeyCertSign (4), KeyEncipherment (32), None (0), NonRepudiation (64)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509KeyUsageFlags()
-    instance = ZZZ()
+    Instance = X509KeyUsageFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2626,10 +2539,7 @@ class X509NameType:
     
     enum X509NameType, values: DnsFromAlternativeName (4), DnsName (3), EmailName (1), SimpleName (0), UpnName (2), UrlName (5)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509NameType()
-    instance = ZZZ()
+    Instance = X509NameType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2679,10 +2589,7 @@ class X509RevocationFlag:
     
     enum X509RevocationFlag, values: EndCertificateOnly (0), EntireChain (1), ExcludeRoot (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509RevocationFlag()
-    instance = ZZZ()
+    Instance = X509RevocationFlag
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2729,10 +2636,7 @@ class X509RevocationMode:
     
     enum X509RevocationMode, values: NoCheck (0), Offline (2), Online (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509RevocationMode()
-    instance = ZZZ()
+    Instance = X509RevocationMode
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2785,10 +2689,7 @@ class X509Store:
     X509Store(storeName: str, storeLocation: StoreLocation)
     X509Store(storeHandle: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509Store()
-    instance = ZZZ()
+    Instance = X509Store
     """hardcoded/returns an instance of the class"""
     def Add(self, certificate):
         """
@@ -2920,10 +2821,7 @@ class X509SubjectKeyIdentifierExtension(X509Extension):
     X509SubjectKeyIdentifierExtension(key: PublicKey, critical: bool)
     X509SubjectKeyIdentifierExtension(key: PublicKey, algorithm: X509SubjectKeyIdentifierHashAlgorithm, critical: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509SubjectKeyIdentifierExtension()
-    instance = ZZZ()
+    Instance = X509SubjectKeyIdentifierExtension
     """hardcoded/returns an instance of the class"""
     def CopyFrom(self, asnEncodedData):
         """
@@ -2961,10 +2859,7 @@ class X509SubjectKeyIdentifierHashAlgorithm:
     
     enum X509SubjectKeyIdentifierHashAlgorithm, values: CapiSha1 (2), Sha1 (0), ShortSha1 (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509SubjectKeyIdentifierHashAlgorithm()
-    instance = ZZZ()
+    Instance = X509SubjectKeyIdentifierHashAlgorithm
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3011,10 +2906,7 @@ class X509VerificationFlags:
     
     enum (flags) X509VerificationFlags, values: AllFlags (4095), AllowUnknownCertificateAuthority (16), IgnoreCertificateAuthorityRevocationUnknown (1024), IgnoreCtlNotTimeValid (2), IgnoreCtlSignerRevocationUnknown (512), IgnoreEndRevocationUnknown (256), IgnoreInvalidBasicConstraints (8), IgnoreInvalidName (64), IgnoreInvalidPolicy (128), IgnoreNotTimeNested (4), IgnoreNotTimeValid (1), IgnoreRootRevocationUnknown (2048), IgnoreWrongUsage (32), NoFlag (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return X509VerificationFlags()
-    instance = ZZZ()
+    Instance = X509VerificationFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

@@ -10,10 +10,7 @@
 
 class HashBytes():
     """ HashBytes() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HashBytes()
-    instance = ZZZ()
+    Instance = HashBytes
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateFromString(key, salt):
@@ -26,10 +23,7 @@ class HashBytes():
 
 class HashBytesExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HashBytesExtensions()
-    instance = ZZZ()
+    Instance = HashBytesExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromString(hashBytes, key, salt):
@@ -55,10 +49,7 @@ class HashBytesExtensions():
 
 class IPasswordHasher:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPasswordHasher()
-    instance = ZZZ()
+    Instance = IPasswordHasher
     """hardcoded/returns an instance of the class"""
     def Hash(self, password, saltLength=None, keyLength=None, iterations=None):
         """
@@ -81,10 +72,7 @@ class IPasswordHasher:
 
 class PBKDF2PasswordHasher:
     """ PBKDF2PasswordHasher() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PBKDF2PasswordHasher()
-    instance = ZZZ()
+    Instance = PBKDF2PasswordHasher
     """hardcoded/returns an instance of the class"""
     def Hash(self, password, saltLength=None, keyLength=None, iterations=None):
         """

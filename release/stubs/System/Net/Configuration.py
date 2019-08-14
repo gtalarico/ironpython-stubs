@@ -15,10 +15,7 @@ class AuthenticationModuleElement(ConfigurationElement):
     AuthenticationModuleElement()
     AuthenticationModuleElement(typeName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AuthenticationModuleElement()
-    instance = ZZZ()
+    Instance = AuthenticationModuleElement
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, typeName=None):
@@ -58,10 +55,7 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection):
     
     AuthenticationModuleElementCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AuthenticationModuleElementCollection()
-    instance = ZZZ()
+    Instance = AuthenticationModuleElementCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, element):
         """
@@ -514,10 +508,7 @@ class AuthenticationModulesSection(ConfigurationSection):
     
     AuthenticationModulesSection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AuthenticationModulesSection()
-    instance = ZZZ()
+    Instance = AuthenticationModulesSection
     """hardcoded/returns an instance of the class"""
     AuthenticationModules = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the collection of authentication modules in the section.
@@ -549,10 +540,7 @@ class BypassElement(ConfigurationElement):
     BypassElement()
     BypassElement(address: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BypassElement()
-    instance = ZZZ()
+    Instance = BypassElement
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, address=None):
@@ -592,10 +580,7 @@ class BypassElementCollection(ConfigurationElementCollection):
     
     BypassElementCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BypassElementCollection()
-    instance = ZZZ()
+    Instance = BypassElementCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, element):
         """
@@ -1046,10 +1031,7 @@ class ConnectionManagementElement(ConfigurationElement):
     ConnectionManagementElement()
     ConnectionManagementElement(address: str, maxConnection: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ConnectionManagementElement()
-    instance = ZZZ()
+    Instance = ConnectionManagementElement
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, address=None, maxConnection=None):
@@ -1097,10 +1079,7 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection):
     
     ConnectionManagementElementCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ConnectionManagementElementCollection()
-    instance = ZZZ()
+    Instance = ConnectionManagementElementCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, element):
         """
@@ -1553,10 +1532,7 @@ class ConnectionManagementSection(ConfigurationSection):
     
     ConnectionManagementSection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ConnectionManagementSection()
-    instance = ZZZ()
+    Instance = ConnectionManagementSection
     """hardcoded/returns an instance of the class"""
     ConnectionManagement = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the collection of connection management objects in the section.
@@ -1587,10 +1563,7 @@ class DefaultProxySection(ConfigurationSection):
     
     DefaultProxySection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultProxySection()
-    instance = ZZZ()
+    Instance = DefaultProxySection
     """hardcoded/returns an instance of the class"""
     BypassList = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the collection of resources that are not obtained using the Web proxy server.
@@ -1651,10 +1624,7 @@ class FtpCachePolicyElement(ConfigurationElement):
     
     FtpCachePolicyElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FtpCachePolicyElement()
-    instance = ZZZ()
+    Instance = FtpCachePolicyElement
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -1686,10 +1656,7 @@ class HttpCachePolicyElement(ConfigurationElement):
     
     HttpCachePolicyElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpCachePolicyElement()
-    instance = ZZZ()
+    Instance = HttpCachePolicyElement
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -1745,10 +1712,7 @@ class HttpListenerElement(ConfigurationElement):
     
     HttpListenerElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpListenerElement()
-    instance = ZZZ()
+    Instance = HttpListenerElement
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -1780,10 +1744,7 @@ Get: UnescapeRequestUrl(self: HttpListenerElement) -> bool
 
 class HttpListenerTimeoutsElement(ConfigurationElement):
     """ HttpListenerTimeoutsElement() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpListenerTimeoutsElement()
-    instance = ZZZ()
+    Instance = HttpListenerTimeoutsElement
     """hardcoded/returns an instance of the class"""
     DrainEntityBody = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: DrainEntityBody(self: HttpListenerTimeoutsElement) -> TimeSpan
@@ -1837,10 +1798,7 @@ class HttpWebRequestElement(ConfigurationElement):
     
     HttpWebRequestElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpWebRequestElement()
-    instance = ZZZ()
+    Instance = HttpWebRequestElement
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -1896,10 +1854,7 @@ class Ipv6Element(ConfigurationElement):
     
     Ipv6Element()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Ipv6Element()
-    instance = ZZZ()
+    Instance = Ipv6Element
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -1931,10 +1886,7 @@ class MailSettingsSectionGroup(ConfigurationSectionGroup):
     
     MailSettingsSectionGroup()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MailSettingsSectionGroup()
-    instance = ZZZ()
+    Instance = MailSettingsSectionGroup
     """hardcoded/returns an instance of the class"""
     Smtp = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the SMTP settings for the local computer.
@@ -1951,10 +1903,7 @@ class ModuleElement(ConfigurationElement):
     
     ModuleElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ModuleElement()
-    instance = ZZZ()
+    Instance = ModuleElement
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -1986,10 +1935,7 @@ class NetSectionGroup(ConfigurationSectionGroup):
     
     NetSectionGroup()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetSectionGroup()
-    instance = ZZZ()
+    Instance = NetSectionGroup
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetSectionGroup(config):
@@ -2060,10 +2006,7 @@ class PerformanceCountersElement(ConfigurationElement):
     
     PerformanceCountersElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PerformanceCountersElement()
-    instance = ZZZ()
+    Instance = PerformanceCountersElement
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -2095,10 +2038,7 @@ class ProxyElement(ConfigurationElement):
     
     ProxyElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProxyElement()
-    instance = ZZZ()
+    Instance = ProxyElement
     """hardcoded/returns an instance of the class"""
     AutoDetect = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets and sets an System.Net.Configuration.ProxyElement.AutoDetectValues value that controls whether the Web proxy is automatically detected.
@@ -2166,10 +2106,7 @@ class RequestCachingSection(ConfigurationSection):
     
     RequestCachingSection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RequestCachingSection()
-    instance = ZZZ()
+    Instance = RequestCachingSection
     """hardcoded/returns an instance of the class"""
     DefaultFtpCachePolicy = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the default FTP caching behavior for the local computer.
@@ -2239,10 +2176,7 @@ class ServicePointManagerElement(ConfigurationElement):
     
     ServicePointManagerElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ServicePointManagerElement()
-    instance = ZZZ()
+    Instance = ServicePointManagerElement
     """hardcoded/returns an instance of the class"""
     CheckCertificateName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets a Boolean value that controls checking host name information in an X509 certificate.
@@ -2322,10 +2256,7 @@ class SettingsSection(ConfigurationSection):
     
     SettingsSection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsSection()
-    instance = ZZZ()
+    Instance = SettingsSection
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -2403,10 +2334,7 @@ class SmtpNetworkElement(ConfigurationElement):
     
     SmtpNetworkElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpNetworkElement()
-    instance = ZZZ()
+    Instance = SmtpNetworkElement
     """hardcoded/returns an instance of the class"""
     ClientDomain = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the client domain name used in the initial SMTP protocol request to connect to an SMTP mail server.
@@ -2494,10 +2422,7 @@ class SmtpSection(ConfigurationSection):
     
     SmtpSection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpSection()
-    instance = ZZZ()
+    Instance = SmtpSection
     """hardcoded/returns an instance of the class"""
     DeliveryFormat = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: DeliveryFormat(self: SmtpSection) -> SmtpDeliveryFormat
@@ -2557,10 +2482,7 @@ class SmtpSpecifiedPickupDirectoryElement(ConfigurationElement):
     
     SmtpSpecifiedPickupDirectoryElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpSpecifiedPickupDirectoryElement()
-    instance = ZZZ()
+    Instance = SmtpSpecifiedPickupDirectoryElement
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -2592,10 +2514,7 @@ class SocketElement(ConfigurationElement):
     
     SocketElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SocketElement()
-    instance = ZZZ()
+    Instance = SocketElement
     """hardcoded/returns an instance of the class"""
     AlwaysUseCompletionPortsForAccept = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets a Boolean value that specifies whether completion ports are used when accepting connections.
@@ -2639,10 +2558,7 @@ Set: IPProtectionLevel(self: SocketElement) = value
 
 class UnicodeDecodingConformance:
     """ enum UnicodeDecodingConformance, values: Auto (0), Compat (2), Loose (3), Strict (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UnicodeDecodingConformance()
-    instance = ZZZ()
+    Instance = UnicodeDecodingConformance
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2686,10 +2602,7 @@ class UnicodeDecodingConformance:
 
 class UnicodeEncodingConformance:
     """ enum UnicodeEncodingConformance, values: Auto (0), Compat (2), Strict (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UnicodeEncodingConformance()
-    instance = ZZZ()
+    Instance = UnicodeEncodingConformance
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2736,10 +2649,7 @@ class WebProxyScriptElement(ConfigurationElement):
     
     WebProxyScriptElement()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebProxyScriptElement()
-    instance = ZZZ()
+    Instance = WebProxyScriptElement
     """hardcoded/returns an instance of the class"""
     DownloadTimeout = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the Web proxy script download timeout using the format hours:minutes:seconds.
@@ -2773,10 +2683,7 @@ class WebRequestModuleElement(ConfigurationElement):
     WebRequestModuleElement(prefix: str, type: str)
     WebRequestModuleElement(prefix: str, type: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebRequestModuleElement()
-    instance = ZZZ()
+    Instance = WebRequestModuleElement
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, prefix=None, type=None):
@@ -2825,10 +2732,7 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection):
     
     WebRequestModuleElementCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebRequestModuleElementCollection()
-    instance = ZZZ()
+    Instance = WebRequestModuleElementCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, element):
         """
@@ -3281,10 +3185,7 @@ class WebRequestModulesSection(ConfigurationSection):
     
     WebRequestModulesSection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebRequestModulesSection()
-    instance = ZZZ()
+    Instance = WebRequestModulesSection
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
@@ -3311,10 +3212,7 @@ Get: WebRequestModules(self: WebRequestModulesSection) -> WebRequestModuleElemen
 
 class WebUtilityElement(ConfigurationElement):
     """ WebUtilityElement() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebUtilityElement()
-    instance = ZZZ()
+    Instance = WebUtilityElement
     """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.

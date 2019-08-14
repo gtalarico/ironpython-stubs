@@ -10,10 +10,7 @@
 
 class MessageExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessageExtensions()
-    instance = ZZZ()
+    Instance = MessageExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def AppendLogLine(message, line):

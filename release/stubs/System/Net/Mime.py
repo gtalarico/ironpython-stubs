@@ -15,10 +15,7 @@ class ContentDisposition():
     ContentDisposition()
     ContentDisposition(disposition: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ContentDisposition()
-    instance = ZZZ()
+    Instance = ContentDisposition
     """hardcoded/returns an instance of the class"""
     def Equals(self, rparam):
         """
@@ -136,10 +133,7 @@ class ContentType():
     ContentType()
     ContentType(contentType: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ContentType()
-    instance = ZZZ()
+    Instance = ContentType
     """hardcoded/returns an instance of the class"""
     def Equals(self, rparam):
         """
@@ -228,10 +222,7 @@ Get: Parameters(self: ContentType) -> StringDictionary
 
 class DispositionTypeNames():
     """ Supplies the strings used to specify the disposition type for an e-mail attachment. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DispositionTypeNames()
-    instance = ZZZ()
+    Instance = DispositionTypeNames
     """hardcoded/returns an instance of the class"""
     Attachment = 'attachment'
     Inline = 'inline'
@@ -243,10 +234,7 @@ class DispositionTypeNames():
 
 class MediaTypeNames():
     """ Specifies the media type information for an e-mail message attachment. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MediaTypeNames()
-    instance = ZZZ()
+    Instance = MediaTypeNames
     """hardcoded/returns an instance of the class"""
     Application = None
     Image = None
@@ -264,10 +252,7 @@ class TransferEncoding:
     
     enum TransferEncoding, values: Base64 (1), EightBit (3), QuotedPrintable (0), SevenBit (2), Unknown (-1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TransferEncoding()
-    instance = ZZZ()
+    Instance = TransferEncoding
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

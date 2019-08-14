@@ -11,10 +11,7 @@ from System.Collections.Generic import *
 
 class CacheObject:
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CacheObject()
-    instance = ZZZ()
+    Instance = CacheObject
     """hardcoded/returns an instance of the class"""
     def IsLifeExpired(self, lifeTimeConfig):
         """ IsLifeExpired(self: CacheObject, lifeTimeConfig: Dictionary[CacheLifeTimes, int]) -> bool """
@@ -81,10 +78,7 @@ class CachableByteArray(Cachable):
     CachableByteArray()
     CachableByteArray(value: Array[Byte])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CachableByteArray()
-    instance = ZZZ()
+    Instance = CachableByteArray
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -115,10 +109,7 @@ class CachableString(Cachable):
     CachableString()
     CachableString(value: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CachableString()
-    instance = ZZZ()
+    Instance = CachableString
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -138,10 +129,7 @@ class CachableString(Cachable):
 
 class Cache(Dictionary):
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Cache()
-    instance = ZZZ()
+    Instance = Cache
     """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
@@ -187,10 +175,7 @@ class Cache(Dictionary):
 
 class CacheKey():
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CacheKey()
-    instance = ZZZ()
+    Instance = CacheKey
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Construct(subject, subjectInstanceId=None, identity=None, constructionOptions=None):
@@ -289,10 +274,7 @@ Get: InstanceId(self: CacheKey) -> str
 
 class CacheKeyContructionOptionsEnum:
     """ enum CacheKeyContructionOptionsEnum, values: Global (5), Session (2), System (1), User (0), UserSystemCombination (4), Zone (3) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CacheKeyContructionOptionsEnum()
-    instance = ZZZ()
+    Instance = CacheKeyContructionOptionsEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -338,10 +320,7 @@ class CacheKeyContructionOptionsEnum:
 
 class CacheLifeTimes:
     """ enum CacheLifeTimes, values: ExpireImmediately (4), LiveIntermediate (2), LiveLong (1), LiveShort (3), NeverExpire (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CacheLifeTimes()
-    instance = ZZZ()
+    Instance = CacheLifeTimes
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -386,10 +365,7 @@ class CacheLifeTimes:
 
 class ICachable:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICachable()
-    instance = ZZZ()
+    Instance = ICachable
     """hardcoded/returns an instance of the class"""
     def IsLifeExpired(self, lifeTimeConfig):
         """ IsLifeExpired(self: ICachable, lifeTimeConfig: Dictionary[CacheLifeTimes, int]) -> bool """
@@ -434,10 +410,7 @@ Set: Key(self: ICachable) = value
 
 class OnCacheObjectEventArgs():
     """ OnCacheObjectEventArgs(key: CacheKey, value: ICachable) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OnCacheObjectEventArgs()
-    instance = ZZZ()
+    Instance = OnCacheObjectEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, key, value):

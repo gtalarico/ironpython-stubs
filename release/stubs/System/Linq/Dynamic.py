@@ -10,10 +10,7 @@
 
 class DynamicClass():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DynamicClass()
-    instance = ZZZ()
+    Instance = DynamicClass
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """ ToString(self: DynamicClass) -> str """
@@ -22,10 +19,7 @@ class DynamicClass():
 
 class DynamicExpression():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DynamicExpression()
-    instance = ZZZ()
+    Instance = DynamicExpression
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateClass(properties):
@@ -58,10 +52,7 @@ class DynamicExpression():
 
 class DynamicProperty():
     """ DynamicProperty(name: str, type: Type) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DynamicProperty()
-    instance = ZZZ()
+    Instance = DynamicProperty
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, name, type):
@@ -82,10 +73,7 @@ class DynamicProperty():
 
 class DynamicQueryable():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DynamicQueryable()
-    instance = ZZZ()
+    Instance = DynamicQueryable
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Any(source):
@@ -147,10 +135,7 @@ class DynamicQueryable():
 
 class ParseException(Exception):
     """ ParseException(message: str, position: int) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ParseException()
-    instance = ZZZ()
+    Instance = ParseException
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """ ToString(self: ParseException) -> str """

@@ -10,10 +10,7 @@
 
 class GeneratorBase:
     """ GeneratorBase() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GeneratorBase()
-    instance = ZZZ()
+    Instance = GeneratorBase
     """hardcoded/returns an instance of the class"""
     def Generate(self, startingNumber, numbersToGenerate, ascending, prefix, suffix, length, arguments):
         """
@@ -41,10 +38,7 @@ class GeneratorBase:
 
 class IGenerator:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IGenerator()
-    instance = ZZZ()
+    Instance = IGenerator
     """hardcoded/returns an instance of the class"""
     def Generate(self, startingNumber, numbersToGenerate, ascending, prefix, suffix, length, arguments):
         """ Generate(self: IGenerator, startingNumber: int, numbersToGenerate: int, ascending: bool, prefix: str, suffix: str, length: int, *arguments: Array[object]) -> IEnumerable[IGeneratedBarcode] """
@@ -57,10 +51,7 @@ class IGenerator:
 
 class SSCCGenerator(GeneratorBase):
     """ SSCCGenerator() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCGenerator()
-    instance = ZZZ()
+    Instance = SSCCGenerator
     """hardcoded/returns an instance of the class"""
     def Generate(self, startingNumber, numbersToGenerate, ascending, prefix, suffix, length, arguments):
         """

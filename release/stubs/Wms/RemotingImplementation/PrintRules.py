@@ -10,10 +10,7 @@
 
 class PrinterRuleSorter:
     """ PrinterRuleSorter() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrinterRuleSorter()
-    instance = ZZZ()
+    Instance = PrinterRuleSorter
     """hardcoded/returns an instance of the class"""
     def Compare(self, x, y):
         """ Compare(self: PrinterRuleSorter, x: PrintRule, y: PrintRule) -> int """

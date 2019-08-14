@@ -11,10 +11,7 @@ from Wms.RemotingImplementation import *
 
 class DataSetPickListPtP(DataSet):
     """ DataSetPickListPtP() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DataSetPickListPtP()
-    instance = ZZZ()
+    Instance = DataSetPickListPtP
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: DataSetPickListPtP) -> DataSet """

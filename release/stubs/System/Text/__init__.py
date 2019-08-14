@@ -10,10 +10,7 @@
 
 class Encoding:
     """ Represents a character encoding. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Encoding()
-    instance = ZZZ()
+    Instance = Encoding
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """
@@ -510,10 +507,7 @@ class ASCIIEncoding(Encoding):
     
     ASCIIEncoding()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ASCIIEncoding()
-    instance = ZZZ()
+    Instance = ASCIIEncoding
     """hardcoded/returns an instance of the class"""
     def GetByteCount(self, chars, *__args):
         """
@@ -690,10 +684,7 @@ Get: IsSingleByte(self: ASCIIEncoding) -> bool
 
 class Decoder():
     """ Converts a sequence of encoded bytes into a set of characters. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Decoder()
-    instance = ZZZ()
+    Instance = Decoder
     """hardcoded/returns an instance of the class"""
     def Convert(self, bytes, *__args):
         """
@@ -820,10 +811,7 @@ Get: FallbackBuffer(self: Decoder) -> DecoderFallbackBuffer
 
 class DecoderFallback():
     """ Provides a failure-handling mechanism, called a fallback, for an encoded input byte sequence that cannot be converted to an output character. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DecoderFallback()
-    instance = ZZZ()
+    Instance = DecoderFallback
     """hardcoded/returns an instance of the class"""
     def CreateFallbackBuffer(self):
         """
@@ -852,10 +840,7 @@ class DecoderExceptionFallback(DecoderFallback):
     
     DecoderExceptionFallback()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DecoderExceptionFallback()
-    instance = ZZZ()
+    Instance = DecoderExceptionFallback
     """hardcoded/returns an instance of the class"""
     def CreateFallbackBuffer(self):
         """
@@ -904,10 +889,7 @@ Get: MaxCharCount(self: DecoderExceptionFallback) -> int
 
 class DecoderFallbackBuffer():
     """ Provides a buffer that allows a fallback handler to return an alternate string to a decoder when it cannot decode an input byte sequence. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DecoderFallbackBuffer()
-    instance = ZZZ()
+    Instance = DecoderFallbackBuffer
     """hardcoded/returns an instance of the class"""
     def Fallback(self, bytesUnknown, index):
         """
@@ -963,10 +945,7 @@ class DecoderExceptionFallbackBuffer(DecoderFallbackBuffer):
     
     DecoderExceptionFallbackBuffer()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DecoderExceptionFallbackBuffer()
-    instance = ZZZ()
+    Instance = DecoderExceptionFallbackBuffer
     """hardcoded/returns an instance of the class"""
     def Fallback(self, bytesUnknown, index):
         """
@@ -1017,10 +996,7 @@ class DecoderFallbackException(ArgumentException):
     DecoderFallbackException(message: str, innerException: Exception)
     DecoderFallbackException(message: str, bytesUnknown: Array[Byte], index: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DecoderFallbackException()
-    instance = ZZZ()
+    Instance = DecoderFallbackException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1067,10 +1043,7 @@ class DecoderReplacementFallback(DecoderFallback):
     DecoderReplacementFallback()
     DecoderReplacementFallback(replacement: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DecoderReplacementFallback()
-    instance = ZZZ()
+    Instance = DecoderReplacementFallback
     """hardcoded/returns an instance of the class"""
     def CreateFallbackBuffer(self):
         """
@@ -1139,10 +1112,7 @@ class DecoderReplacementFallbackBuffer(DecoderFallbackBuffer):
     
     DecoderReplacementFallbackBuffer(fallback: DecoderReplacementFallback)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DecoderReplacementFallbackBuffer()
-    instance = ZZZ()
+    Instance = DecoderReplacementFallbackBuffer
     """hardcoded/returns an instance of the class"""
     def Fallback(self, bytesUnknown, index):
         """
@@ -1199,10 +1169,7 @@ Get: Remaining(self: DecoderReplacementFallbackBuffer) -> int
 
 class Encoder():
     """ Converts a set of characters into a sequence of bytes. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Encoder()
-    instance = ZZZ()
+    Instance = Encoder
     """hardcoded/returns an instance of the class"""
     def Convert(self, chars, *__args):
         """
@@ -1311,10 +1278,7 @@ Get: FallbackBuffer(self: Encoder) -> EncoderFallbackBuffer
 
 class EncoderFallback():
     """ Provides a failure-handling mechanism, called a fallback, for an input character that cannot be converted to an encoded output byte sequence. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EncoderFallback()
-    instance = ZZZ()
+    Instance = EncoderFallback
     """hardcoded/returns an instance of the class"""
     def CreateFallbackBuffer(self):
         """
@@ -1343,10 +1307,7 @@ class EncoderExceptionFallback(EncoderFallback):
     
     EncoderExceptionFallback()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EncoderExceptionFallback()
-    instance = ZZZ()
+    Instance = EncoderExceptionFallback
     """hardcoded/returns an instance of the class"""
     def CreateFallbackBuffer(self):
         """
@@ -1395,10 +1356,7 @@ Get: MaxCharCount(self: EncoderExceptionFallback) -> int
 
 class EncoderFallbackBuffer():
     """ Provides a buffer that allows a fallback handler to return an alternate string to an encoder when it cannot encode an input character. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EncoderFallbackBuffer()
-    instance = ZZZ()
+    Instance = EncoderFallbackBuffer
     """hardcoded/returns an instance of the class"""
     def Fallback(self, *__args):
         """
@@ -1462,10 +1420,7 @@ class EncoderExceptionFallbackBuffer(EncoderFallbackBuffer):
     
     EncoderExceptionFallbackBuffer()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EncoderExceptionFallbackBuffer()
-    instance = ZZZ()
+    Instance = EncoderExceptionFallbackBuffer
     """hardcoded/returns an instance of the class"""
     def Fallback(self, *__args):
         """
@@ -1526,10 +1481,7 @@ class EncoderFallbackException(ArgumentException):
     EncoderFallbackException(message: str)
     EncoderFallbackException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EncoderFallbackException()
-    instance = ZZZ()
+    Instance = EncoderFallbackException
     """hardcoded/returns an instance of the class"""
     def IsUnknownSurrogate(self):
         """
@@ -1598,10 +1550,7 @@ class EncoderReplacementFallback(EncoderFallback):
     EncoderReplacementFallback()
     EncoderReplacementFallback(replacement: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EncoderReplacementFallback()
-    instance = ZZZ()
+    Instance = EncoderReplacementFallback
     """hardcoded/returns an instance of the class"""
     def CreateFallbackBuffer(self):
         """
@@ -1670,10 +1619,7 @@ class EncoderReplacementFallbackBuffer(EncoderFallbackBuffer):
     
     EncoderReplacementFallbackBuffer(fallback: EncoderReplacementFallback)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EncoderReplacementFallbackBuffer()
-    instance = ZZZ()
+    Instance = EncoderReplacementFallbackBuffer
     """hardcoded/returns an instance of the class"""
     def Fallback(self, *__args):
         """
@@ -1740,10 +1686,7 @@ Get: Remaining(self: EncoderReplacementFallbackBuffer) -> int
 
 class EncodingInfo():
     """ Provides basic information about an encoding. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EncodingInfo()
-    instance = ZZZ()
+    Instance = EncodingInfo
     """hardcoded/returns an instance of the class"""
     def Equals(self, value):
         """
@@ -1806,10 +1749,7 @@ Get: Name(self: EncodingInfo) -> str
 
 class EncodingProvider():
     """ EncodingProvider() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EncodingProvider()
-    instance = ZZZ()
+    Instance = EncodingProvider
     """hardcoded/returns an instance of the class"""
     def GetEncoding(self, *__args):
         """
@@ -1827,10 +1767,7 @@ class NormalizationForm:
     
     enum NormalizationForm, values: FormC (1), FormD (2), FormKC (5), FormKD (6)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NormalizationForm()
-    instance = ZZZ()
+    Instance = NormalizationForm
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1883,10 +1820,7 @@ class StringBuilder:
     StringBuilder(value: str, startIndex: int, length: int, capacity: int)
     StringBuilder(capacity: int, maxCapacity: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StringBuilder()
-    instance = ZZZ()
+    Instance = StringBuilder
     """hardcoded/returns an instance of the class"""
     def Append(self, value, *__args):
         """
@@ -2399,10 +2333,7 @@ class UnicodeEncoding(Encoding):
     UnicodeEncoding(bigEndian: bool, byteOrderMark: bool)
     UnicodeEncoding(bigEndian: bool, byteOrderMark: bool, throwOnInvalidBytes: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UnicodeEncoding()
-    instance = ZZZ()
+    Instance = UnicodeEncoding
     """hardcoded/returns an instance of the class"""
     def Equals(self, value):
         """
@@ -2625,10 +2556,7 @@ class UTF32Encoding(Encoding):
     UTF32Encoding(bigEndian: bool, byteOrderMark: bool)
     UTF32Encoding(bigEndian: bool, byteOrderMark: bool, throwOnInvalidCharacters: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UTF32Encoding()
-    instance = ZZZ()
+    Instance = UTF32Encoding
     """hardcoded/returns an instance of the class"""
     def Equals(self, value):
         """
@@ -2848,10 +2776,7 @@ class UTF7Encoding(Encoding):
     UTF7Encoding()
     UTF7Encoding(allowOptionals: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UTF7Encoding()
-    instance = ZZZ()
+    Instance = UTF7Encoding
     """hardcoded/returns an instance of the class"""
     def Equals(self, value):
         """
@@ -3061,10 +2986,7 @@ class UTF8Encoding(Encoding):
     UTF8Encoding(encoderShouldEmitUTF8Identifier: bool)
     UTF8Encoding(encoderShouldEmitUTF8Identifier: bool, throwOnInvalidBytes: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UTF8Encoding()
-    instance = ZZZ()
+    Instance = UTF8Encoding
     """hardcoded/returns an instance of the class"""
     def Equals(self, value):
         """

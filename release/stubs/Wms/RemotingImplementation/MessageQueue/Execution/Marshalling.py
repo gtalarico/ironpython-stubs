@@ -10,10 +10,7 @@
 
 class MarshalledMessageHandlerExecutor():
     """ MarshalledMessageHandlerExecutor(lifetime: TimeSpan) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MarshalledMessageHandlerExecutor()
-    instance = ZZZ()
+    Instance = MarshalledMessageHandlerExecutor
     """hardcoded/returns an instance of the class"""
     def Execute(self, handlerDescriptor, message):
         """ Execute(self: MarshalledMessageHandlerExecutor, handlerDescriptor: MessageHandlerDescriptor, message: IMessage) -> HandleResult """
@@ -30,10 +27,7 @@ class MarshalledMessageHandlerExecutor():
 
 class MarshalledMessagePublisherExecutor():
     """ MarshalledMessagePublisherExecutor(lifetime: TimeSpan) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MarshalledMessagePublisherExecutor()
-    instance = ZZZ()
+    Instance = MarshalledMessagePublisherExecutor
     """hardcoded/returns an instance of the class"""
     def Execute(self, publisherDescriptor):
         """ Execute(self: MarshalledMessagePublisherExecutor, publisherDescriptor: MessagePublisherDescriptor) """
@@ -55,10 +49,7 @@ class MarshalledMessagePublisherExecutor():
 
 class MessagePublisherExecutorStateServer:
     """ MessagePublisherExecutorStateServer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessagePublisherExecutorStateServer()
-    instance = ZZZ()
+    Instance = MessagePublisherExecutorStateServer
     """hardcoded/returns an instance of the class"""
     def MemberwiseClone(self, *args): #cannot find CLR method
         """

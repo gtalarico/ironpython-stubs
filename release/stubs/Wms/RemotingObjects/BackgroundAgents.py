@@ -12,10 +12,7 @@ from Wms.RemotingObjects import *
 
 class BackgroundAgent(DbObject):
     """ BackgroundAgent() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BackgroundAgent()
-    instance = ZZZ()
+    Instance = BackgroundAgent
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -79,10 +76,7 @@ Set: Type(self: BackgroundAgent) = value
 
 class BackgroundAgents(List):
     """ BackgroundAgents() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BackgroundAgents()
-    instance = ZZZ()
+    Instance = BackgroundAgents
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -106,10 +100,7 @@ class BackgroundAgents(List):
 
 class BackgroundAgentStatus():
     """ BackgroundAgentStatus() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BackgroundAgentStatus()
-    instance = ZZZ()
+    Instance = BackgroundAgentStatus
     """hardcoded/returns an instance of the class"""
     ActiveAgents = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: ActiveAgents(self: BackgroundAgentStatus) -> int
@@ -127,10 +118,7 @@ Set: InactiveAgents(self: BackgroundAgentStatus) = value
 
 class BackgroundAgentType:
     """ enum BackgroundAgentType, values: PrintAgent (1), Unknown (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BackgroundAgentType()
-    instance = ZZZ()
+    Instance = BackgroundAgentType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -176,10 +164,7 @@ class PingMessage():
     
     PingMessage()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PingMessage()
-    instance = ZZZ()
+    Instance = PingMessage
     """hardcoded/returns an instance of the class"""
     AgentType = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Type of the agent that sends this message

@@ -11,10 +11,7 @@ from System import *
 
 class GetValidValues(MulticastDelegate):
     """ GetValidValues(object: object, method: IntPtr) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetValidValues()
-    instance = ZZZ()
+    Instance = GetValidValues
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, callback, object):
         """ BeginInvoke(self: GetValidValues, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -88,10 +85,7 @@ class GetValidValues(MulticastDelegate):
 
 class ISystemSettingsAttribute:
     """ Defines base interface for creating attributes to enricht system settting properties. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ISystemSettingsAttribute()
-    instance = ZZZ()
+    Instance = ISystemSettingsAttribute
     """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: ISystemSettingsAttribute, row: SystemSettingsTableRow) """
@@ -108,10 +102,7 @@ class Group:
     
     Group(sortKey: str, name: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Group()
-    instance = ZZZ()
+    Instance = Group
     """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: Group, row: SystemSettingsTableRow) """
@@ -151,10 +142,7 @@ class Label:
     
     Label(value: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Label()
-    instance = ZZZ()
+    Instance = Label
     """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: Label, row: SystemSettingsTableRow) """
@@ -185,10 +173,7 @@ class MachineSetting:
     
     MachineSetting()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MachineSetting()
-    instance = ZZZ()
+    Instance = MachineSetting
     """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: MachineSetting, row: SystemSettingsTableRow) """
@@ -205,10 +190,7 @@ class MaxLength:
     
     MaxLength(value: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MaxLength()
-    instance = ZZZ()
+    Instance = MaxLength
     """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: MaxLength, row: SystemSettingsTableRow) """
@@ -239,10 +221,7 @@ class Renderer:
     
     Renderer(value: RenderingTypes)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Renderer()
-    instance = ZZZ()
+    Instance = Renderer
     """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: Renderer, row: SystemSettingsTableRow) """
@@ -273,10 +252,7 @@ class RenderingTypes:
     
     enum RenderingTypes, values: Auto (0), PlainTextArea (2), RichTextArea (1), WarehouseCombo (3)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RenderingTypes()
-    instance = ZZZ()
+    Instance = RenderingTypes
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -320,10 +296,7 @@ class RenderingTypes:
 
 class SettingAttributesHelper():
     """ SettingAttributesHelper() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingAttributesHelper()
-    instance = ZZZ()
+    Instance = SettingAttributesHelper
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def ConvertToTable(settings, topLevelOnly):
@@ -342,10 +315,7 @@ class UserSetting:
     
     UserSetting()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UserSetting()
-    instance = ZZZ()
+    Instance = UserSetting
     """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: UserSetting, row: SystemSettingsTableRow) """
@@ -363,10 +333,7 @@ class ValidValuePattern:
     ValidValuePattern(regex: str)
     ValidValuePattern(regex: str, errorMessage: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ValidValuePattern()
-    instance = ZZZ()
+    Instance = ValidValuePattern
     """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: ValidValuePattern, row: SystemSettingsTableRow) """
@@ -391,10 +358,7 @@ class ValidValues:
     
     ValidValues(delegateName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ValidValues()
-    instance = ZZZ()
+    Instance = ValidValues
     """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: ValidValues, row: SystemSettingsTableRow) """

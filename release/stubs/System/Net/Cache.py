@@ -14,10 +14,7 @@ class HttpCacheAgeControl:
     
     enum HttpCacheAgeControl, values: MaxAge (2), MaxAgeAndMaxStale (6), MaxAgeAndMinFresh (3), MaxStale (4), MinFresh (1), None (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpCacheAgeControl()
-    instance = ZZZ()
+    Instance = HttpCacheAgeControl
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -67,10 +64,7 @@ class HttpRequestCacheLevel:
     
     enum HttpRequestCacheLevel, values: BypassCache (1), CacheIfAvailable (3), CacheOnly (2), CacheOrNextCacheOnly (7), Default (0), NoCacheNoStore (6), Refresh (8), Reload (5), Revalidate (4)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpRequestCacheLevel()
-    instance = ZZZ()
+    Instance = HttpRequestCacheLevel
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -124,10 +118,7 @@ class RequestCachePolicy():
     RequestCachePolicy()
     RequestCachePolicy(level: RequestCacheLevel)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RequestCachePolicy()
-    instance = ZZZ()
+    Instance = RequestCachePolicy
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
@@ -166,10 +157,7 @@ class HttpRequestCachePolicy(RequestCachePolicy):
     HttpRequestCachePolicy(cacheSyncDate: DateTime)
     HttpRequestCachePolicy(cacheAgeControl: HttpCacheAgeControl, maxAge: TimeSpan, freshOrStale: TimeSpan, cacheSyncDate: DateTime)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpRequestCachePolicy()
-    instance = ZZZ()
+    Instance = HttpRequestCachePolicy
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
@@ -235,10 +223,7 @@ class RequestCacheLevel:
     
     enum RequestCacheLevel, values: BypassCache (1), CacheIfAvailable (3), CacheOnly (2), Default (0), NoCacheNoStore (6), Reload (5), Revalidate (4)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RequestCacheLevel()
-    instance = ZZZ()
+    Instance = RequestCacheLevel
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

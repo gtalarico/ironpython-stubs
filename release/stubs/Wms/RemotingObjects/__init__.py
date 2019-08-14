@@ -21,10 +21,7 @@ def ResultObject(): # real signature unknown; restored from __doc__
 
 class AnswerOptionsEnum:
     """ enum (flags) AnswerOptionsEnum, values: Abort (4), Cancel (2), Ignore (16), No (64), NoResponse (0), OK (1), Retry (8), Yes (32) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AnswerOptionsEnum()
-    instance = ZZZ()
+    Instance = AnswerOptionsEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -72,10 +69,7 @@ class AnswerOptionsEnum:
 
 class AnswerOptionsEnumHelper():
     """ AnswerOptionsEnumHelper() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AnswerOptionsEnumHelper()
-    instance = ZZZ()
+    Instance = AnswerOptionsEnumHelper
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def ConvertFromDialogResult(result):
@@ -95,10 +89,7 @@ class AnswerOptionsEnumHelper():
 
 class IFindableList:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IFindableList()
-    instance = ZZZ()
+    Instance = IFindableList
     """hardcoded/returns an instance of the class"""
     def ExistsByProperty(self, id):
         """ ExistsByProperty(self: IFindableList, id: str) -> bool """
@@ -143,10 +134,7 @@ class IFindableList:
 
 class Answers(FindableList):
     """ Answers() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Answers()
-    instance = ZZZ()
+    Instance = Answers
     """hardcoded/returns an instance of the class"""
     def GetAnswerCount(self, countAnswer):
         """ GetAnswerCount(self: Answers, countAnswer: AnswerOptionsEnum) -> int """
@@ -213,10 +201,7 @@ class BatchInfo():
     BatchInfo(text: str)
     BatchInfo(text: str, tag: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchInfo()
-    instance = ZZZ()
+    Instance = BatchInfo
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, text, tag=None):
@@ -259,10 +244,7 @@ class ChangeBarcodeArgs():
     ChangeBarcodeArgs()
     ChangeBarcodeArgs(itemCode: str, barcode: str, creditor: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ChangeBarcodeArgs()
-    instance = ZZZ()
+    Instance = ChangeBarcodeArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, itemCode=None, barcode=None, creditor=None):
@@ -302,10 +284,7 @@ Set: ItemCode(self: ChangeBarcodeArgs) = value
 
 class DataBindingTypes:
     """ enum DataBindingTypes, values: DisplayMember (1), UniqueId (2), ValueMember (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DataBindingTypes()
-    instance = ZZZ()
+    Instance = DataBindingTypes
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -348,10 +327,7 @@ class DataBindingTypes:
 
 class DbObject:
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DbObject()
-    instance = ZZZ()
+    Instance = DbObject
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -400,10 +376,7 @@ Set: ModifiedOn(self: DbObject) = value
 
 class Device(DbObject):
     """ Device() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Device()
-    instance = ZZZ()
+    Instance = Device
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -451,10 +424,7 @@ class DeviceInformation():
     DeviceInformation()
     DeviceInformation(type: DeviceTypesEnum, name: str, serialNumber: str, operatingSystem: str, hardwareInformation: List[str])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DeviceInformation()
-    instance = ZZZ()
+    Instance = DeviceInformation
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, type=None, name=None, serialNumber=None, operatingSystem=None, hardwareInformation=None):
@@ -508,10 +478,7 @@ Set: Type(self: DeviceInformation) = value
 
 class Devices(FindableList):
     """ Devices() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Devices()
-    instance = ZZZ()
+    Instance = Devices
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -535,10 +502,7 @@ class Devices(FindableList):
 
 class DeviceTypesEnum:
     """ enum DeviceTypesEnum, values: Handheld (2), Other (0), Portal (3), Terminal (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DeviceTypesEnum()
-    instance = ZZZ()
+    Instance = DeviceTypesEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -586,10 +550,7 @@ class Error():
     Error(text: str, details: str)
     Error(key: str, text: str, details: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Error()
-    instance = ZZZ()
+    Instance = Error
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -624,10 +585,7 @@ Get: Text(self: Error) -> str
 
 class Errors(List):
     """ Errors() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Errors()
-    instance = ZZZ()
+    Instance = Errors
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
@@ -666,10 +624,7 @@ class FindableList(List):
     FindableList[T]()
     FindableList[T](collection: IEnumerable[T])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FindableList()
-    instance = ZZZ()
+    Instance = FindableList
     """hardcoded/returns an instance of the class"""
     def ExistsByProperty(self, id):
         """ ExistsByProperty(self: FindableList[T], id: str) -> bool """
@@ -798,10 +753,7 @@ Get: PreserveState(self: FindableList[T]) -> bool
 
 class GetLogLinesArgs():
     """ GetLogLinesArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetLogLinesArgs()
-    instance = ZZZ()
+    Instance = GetLogLinesArgs
     """hardcoded/returns an instance of the class"""
     Device = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -879,10 +831,7 @@ Set: Zone(self: GetLogLinesArgs) = value
 
 class HistoryFilterBase():
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryFilterBase()
-    instance = ZZZ()
+    Instance = HistoryFilterBase
     """hardcoded/returns an instance of the class"""
     FromDate = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: FromDate(self: HistoryFilterBase) -> Nullable[DateTime]
@@ -910,10 +859,7 @@ Set: TimeSpan(self: HistoryFilterBase) = value
 
 class IDbObject:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDbObject()
-    instance = ZZZ()
+    Instance = IDbObject
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -955,10 +901,7 @@ Set: ModifiedOn(self: IDbObject) = value
 
 class ImplementedFunctionalities():
     """ ImplementedFunctionalities() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ImplementedFunctionalities()
-    instance = ZZZ()
+    Instance = ImplementedFunctionalities
     """hardcoded/returns an instance of the class"""
     def ToMobileVariant(self):
         """
@@ -1187,10 +1130,7 @@ Get: ValidateOrders(self: ImplementedFunctionalities) -> bool
 
 class IPagedList:
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPagedList()
-    instance = ZZZ()
+    Instance = IPagedList
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1212,10 +1152,7 @@ class Items(FindableList):
     
     Items()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Items()
-    instance = ZZZ()
+    Instance = Items
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(items):
@@ -1247,10 +1184,7 @@ class Items(FindableList):
 
 class IUniqueHashable:
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IUniqueHashable()
-    instance = ZZZ()
+    Instance = IUniqueHashable
     """hardcoded/returns an instance of the class"""
     def GetUniqueHashCode(self):
         """ GetUniqueHashCode(self: IUniqueHashable) -> str """
@@ -1267,10 +1201,7 @@ class License():
     
     License()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return License()
-    instance = ZZZ()
+    Instance = License
     """hardcoded/returns an instance of the class"""
     AddressLine1 = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """First address line container street and number
@@ -1403,10 +1334,7 @@ Set: Warnings(self: License) = value
 
 class LogLine(DbObject):
     """ LogLine() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LogLine()
-    instance = ZZZ()
+    Instance = LogLine
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1566,10 +1494,7 @@ class Mapping():
     Mapping[TKey, TValue, TInfo](key: TKey, value: TValue)
     Mapping[TKey, TValue, TInfo](key: TKey, value: TValue, info: TInfo)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Mapping()
-    instance = ZZZ()
+    Instance = Mapping
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, key, value, info=None):
@@ -1609,10 +1534,7 @@ class Mappings():
     Mappings[TKey, TValue, TInfo](capacity: int)
     Mappings[TKey, TValue, TInfo]()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Mappings()
-    instance = ZZZ()
+    Instance = Mappings
     """hardcoded/returns an instance of the class"""
     def Add(self, key, value, info=None):
         """ Add(self: Mappings[TKey, TValue, TInfo], key: TKey, value: TValue)Add(self: Mappings[TKey, TValue, TInfo], key: TKey, value: TValue, info: TInfo) """
@@ -1665,10 +1587,7 @@ class Mappings():
 
 class OrderTypeEnum:
     """ enum OrderTypeEnum, values: Purchase (0), Replenishment (3), Rma (1), Rtv (4), Sales (2) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OrderTypeEnum()
-    instance = ZZZ()
+    Instance = OrderTypeEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1717,10 +1636,7 @@ class PagedList(List):
     PagedList[T](capacity: int)
     PagedList[T](collection: IEnumerable[T])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PagedList()
-    instance = ZZZ()
+    Instance = PagedList
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -1767,10 +1683,7 @@ class PagingParams():
     PagingParams()
     PagingParams(start: int, limit: int, sortColumn: str, sortDirection: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PagingParams()
-    instance = ZZZ()
+    Instance = PagingParams
     """hardcoded/returns an instance of the class"""
     def GetHashCode(self):
         """
@@ -1835,10 +1748,7 @@ Set: Start(self: PagingParams) = value
 
 class ProfilingLogEntries(FindableList):
     """ ProfilingLogEntries() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProfilingLogEntries()
-    instance = ZZZ()
+    Instance = ProfilingLogEntries
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -1865,10 +1775,7 @@ class ProfilingUserNode():
     ProfilingUserNode()
     ProfilingUserNode(userKey: int, userName: str, machineName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProfilingUserNode()
-    instance = ZZZ()
+    Instance = ProfilingUserNode
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """ ToString(self: ProfilingUserNode) -> str """
@@ -1910,10 +1817,7 @@ Set: UserName(self: ProfilingUserNode) = value
 
 class ProfilingLogEntry(ProfilingUserNode):
     """ ProfilingLogEntry() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProfilingLogEntry()
-    instance = ZZZ()
+    Instance = ProfilingLogEntry
     """hardcoded/returns an instance of the class"""
     AccessId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: AccessId(self: ProfilingLogEntry) -> str
@@ -2021,10 +1925,7 @@ Set: WindowsIdentity(self: ProfilingLogEntry) = value
 
 class ProfilingUserNodes(FindableList):
     """ ProfilingUserNodes() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProfilingUserNodes()
-    instance = ZZZ()
+    Instance = ProfilingUserNodes
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -2052,10 +1953,7 @@ class Question():
     Question(key: str, text: str, possibleAnswers: int)
     Question(key: str, text: str, details: str, possibleAnswers: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Question()
-    instance = ZZZ()
+    Instance = Question
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, key=None, text=None, *__args):
@@ -2107,10 +2005,7 @@ Set: Text(self: Question) = value
 
 class QuestionConstants():
     """ QuestionConstants() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return QuestionConstants()
-    instance = ZZZ()
+    Instance = QuestionConstants
     """hardcoded/returns an instance of the class"""
     PreReceiptsArchive = 'PreReceiptsArchive'
     PreReceiptsDelete = 'PreReceiptsDelete'
@@ -2120,10 +2015,7 @@ class QuestionConstants():
 
 class Questions(List):
     """ Questions() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Questions()
-    instance = ZZZ()
+    Instance = Questions
     """hardcoded/returns an instance of the class"""
     def ContainsKey(self, key):
         """ ContainsKey(self: Questions, key: str) -> bool """
@@ -2183,10 +2075,7 @@ class RemotingException(Exception):
     RemotingException(message: str)
     RemotingException(message: str, innerEx: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingException()
-    instance = ZZZ()
+    Instance = RemotingException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2216,10 +2105,7 @@ class RemotingArgumentException(RemotingException):
     RemotingArgumentException(message: str)
     RemotingArgumentException(message: str, inner: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingArgumentException()
-    instance = ZZZ()
+    Instance = RemotingArgumentException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2248,10 +2134,7 @@ class RemotingDbException(RemotingException):
     RemotingDbException()
     RemotingDbException(Message: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingDbException()
-    instance = ZZZ()
+    Instance = RemotingDbException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2280,10 +2163,7 @@ class RemotingInsufficientRightsException(RemotingException):
     RemotingInsufficientRightsException(message: str)
     RemotingInsufficientRightsException(message: str, innerEx: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingInsufficientRightsException()
-    instance = ZZZ()
+    Instance = RemotingInsufficientRightsException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2313,10 +2193,7 @@ class RemotingLostErpHostException(RemotingException):
     RemotingLostErpHostException(message: str)
     RemotingLostErpHostException(message: str, innerEx: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingLostErpHostException()
-    instance = ZZZ()
+    Instance = RemotingLostErpHostException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2346,10 +2223,7 @@ class RemotingMessageException(RemotingException):
     RemotingMessageException(message: str)
     RemotingMessageException(message: str, innerEx: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingMessageException()
-    instance = ZZZ()
+    Instance = RemotingMessageException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2378,10 +2252,7 @@ class RemotingSecurityViolationException(RemotingException):
     RemotingSecurityViolationException()
     RemotingSecurityViolationException(Message: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingSecurityViolationException()
-    instance = ZZZ()
+    Instance = RemotingSecurityViolationException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2406,10 +2277,7 @@ class RemotingSecurityViolationException(RemotingException):
 
 class Schedule():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Schedule()
-    instance = ZZZ()
+    Instance = Schedule
     """hardcoded/returns an instance of the class"""
     def IsWithinSchedule(self, value):
         """
@@ -2435,10 +2303,7 @@ class SerializableDictionary(Dictionary):
     SerializableDictionary[TKey, TValue](dictionary: IDictionary[TKey, TValue])
     SerializableDictionary[TKey, TValue](info: SerializationInfo, context: StreamingContext)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SerializableDictionary()
-    instance = ZZZ()
+    Instance = SerializableDictionary
     """hardcoded/returns an instance of the class"""
     def GetSchema(self):
         """ GetSchema(self: SerializableDictionary[TKey, TValue]) -> XmlSchema """
@@ -2483,10 +2348,7 @@ class SerializableDictionary(Dictionary):
 
 class ServerHealthEnum:
     """ enum ServerHealthEnum, values: DatabaseUpdateNeeded (4), DifferentHookVersions (5), InvalidConnection (2), InvalidLicense (1), NoDatabase (3), NotReady (6), NotRunning (7), Ok (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ServerHealthEnum()
-    instance = ZZZ()
+    Instance = ServerHealthEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2534,10 +2396,7 @@ class ServerHealthEnum:
 
 class Session():
     """ Session() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Session()
-    instance = ZZZ()
+    Instance = Session
     """hardcoded/returns an instance of the class"""
     AccessId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -2590,10 +2449,7 @@ Set: UserName(self: Session) = value
 
 class Sessions(FindableList):
     """ Sessions() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Sessions()
-    instance = ZZZ()
+    Instance = Sessions
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -2620,10 +2476,7 @@ class Sessions(FindableList):
 
 class StateTransition():
     """ StateTransition[T](currentStatus: T, newStatus: T) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StateTransition()
-    instance = ZZZ()
+    Instance = StateTransition
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """ Equals(self: StateTransition[T], obj: object) -> bool """
@@ -2654,10 +2507,7 @@ class Tag(DbObject):
     Tag()
     Tag(description: str, color: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Tag()
-    instance = ZZZ()
+    Instance = Tag
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """ Equals(self: Tag, obj: object) -> bool """
@@ -2752,10 +2602,7 @@ class Tags(List):
     Tags(collection: IEnumerable[Tag])
     Tags()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Tags()
-    instance = ZZZ()
+    Instance = Tags
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """ ToString(self: Tags) -> str """
@@ -2796,10 +2643,7 @@ class Tags(List):
 
 class TagTarget:
     """ enum TagTarget, values: Batch (2), NotSet (0), Order (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TagTarget()
-    instance = ZZZ()
+    Instance = TagTarget
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2842,10 +2686,7 @@ class TagTarget:
 
 class ThreadSafeList:
     """ ThreadSafeList[T]() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ThreadSafeList()
-    instance = ZZZ()
+    Instance = ThreadSafeList
     """hardcoded/returns an instance of the class"""
     def Clear(self):
         """ Clear(self: ThreadSafeList[T]) """
@@ -2916,10 +2757,7 @@ Get: Count(self: ThreadSafeList[T]) -> int
 
 class TimeFilterEnum:
     """ enum TimeFilterEnum, values: All (3), Today (0), Tomorrow (1), UpcomingWeek (2) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TimeFilterEnum()
-    instance = ZZZ()
+    Instance = TimeFilterEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2963,10 +2801,7 @@ class TimeFilterEnum:
 
 class TimeFilterHistoryEnum:
     """ enum TimeFilterHistoryEnum, values: All (3), LastWeek (2), Today (0), Yesterday (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TimeFilterHistoryEnum()
-    instance = ZZZ()
+    Instance = TimeFilterHistoryEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3010,10 +2845,7 @@ class TimeFilterHistoryEnum:
 
 class UiDataBindingTypeAttribute:
     """ UiDataBindingTypeAttribute(type: DataBindingTypes) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UiDataBindingTypeAttribute()
-    instance = ZZZ()
+    Instance = UiDataBindingTypeAttribute
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetDisplayMember(type):
@@ -3061,10 +2893,7 @@ Get: Type(self: UiDataBindingTypeAttribute) -> DataBindingTypes
 
 class UnitTypeEnum:
     """ enum UnitTypeEnum, values: Length (2), Other (1), Time (3), Unspecified (0), Weight (4) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UnitTypeEnum()
-    instance = ZZZ()
+    Instance = UnitTypeEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3109,10 +2938,7 @@ class UnitTypeEnum:
 
 class User(DbObject):
     """ User() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return User()
-    instance = ZZZ()
+    Instance = User
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """ Equals(self: User, obj: object) -> bool """
@@ -3200,10 +3026,7 @@ Set: Username(self: User) = value
 
 class Users(List):
     """ Users() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Users()
-    instance = ZZZ()
+    Instance = Users
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -3230,10 +3053,7 @@ class Users(List):
 
 class UserWithSecrets(User):
     """ UserWithSecrets() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UserWithSecrets()
-    instance = ZZZ()
+    Instance = UserWithSecrets
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -3260,10 +3080,7 @@ class Warning():
     Warning(key: str, text: str, allowsRetry: bool)
     Warning(key: str, text: str, details: str, allowsRetry: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Warning()
-    instance = ZZZ()
+    Instance = Warning
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, key=None, text=None, *__args):
@@ -3315,10 +3132,7 @@ Get: Text(self: Warning) -> str
 
 class Warnings(List):
     """ Warnings() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Warnings()
-    instance = ZZZ()
+    Instance = Warnings
     """hardcoded/returns an instance of the class"""
     def ContainsKey(self, key):
         """ ContainsKey(self: Warnings, key: str) -> bool """

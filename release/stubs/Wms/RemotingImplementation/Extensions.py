@@ -10,10 +10,7 @@
 
 class DataFlowExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DataFlowExtensions()
-    instance = ZZZ()
+    Instance = DataFlowExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CopyResultFrom(this, from_):
@@ -27,10 +24,7 @@ class DataFlowExtensions():
 
 class GeneralExtensionMethods():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GeneralExtensionMethods()
-    instance = ZZZ()
+    Instance = GeneralExtensionMethods
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetCultureForUser(general, userid):
@@ -44,10 +38,7 @@ class GeneralExtensionMethods():
 
 class HttpClientExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpClientExtensions()
-    instance = ZZZ()
+    Instance = HttpClientExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def DownloadFileAsync(client, url, filepath, cancellationToken, fileMode):

@@ -14,10 +14,7 @@ class ActiveDesignerEventArgs(EventArgs):
     
     ActiveDesignerEventArgs(oldDesigner: IDesignerHost, newDesigner: IDesignerHost)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ActiveDesignerEventArgs()
-    instance = ZZZ()
+    Instance = ActiveDesignerEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, oldDesigner, newDesigner):
@@ -46,10 +43,7 @@ class ActiveDesignerEventHandler(MulticastDelegate):
     
     ActiveDesignerEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ActiveDesignerEventHandler()
-    instance = ZZZ()
+    Instance = ActiveDesignerEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: ActiveDesignerEventHandler, sender: object, e: ActiveDesignerEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -130,10 +124,7 @@ class CheckoutException(ExternalException):
     CheckoutException(message: str, errorCode: int)
     CheckoutException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CheckoutException()
-    instance = ZZZ()
+    Instance = CheckoutException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -166,10 +157,7 @@ class CommandID():
     
     CommandID(menuGroup: Guid, commandID: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CommandID()
-    instance = ZZZ()
+    Instance = CommandID
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -232,10 +220,7 @@ class ComponentChangedEventArgs(EventArgs):
     
     ComponentChangedEventArgs(component: object, member: MemberDescriptor, oldValue: object, newValue: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentChangedEventArgs()
-    instance = ZZZ()
+    Instance = ComponentChangedEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, component, member, oldValue, newValue):
@@ -278,10 +263,7 @@ class ComponentChangedEventHandler(MulticastDelegate):
     
     ComponentChangedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentChangedEventHandler()
-    instance = ZZZ()
+    Instance = ComponentChangedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: ComponentChangedEventHandler, sender: object, e: ComponentChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -359,10 +341,7 @@ class ComponentChangingEventArgs(EventArgs):
     
     ComponentChangingEventArgs(component: object, member: MemberDescriptor)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentChangingEventArgs()
-    instance = ZZZ()
+    Instance = ComponentChangingEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, component, member):
@@ -391,10 +370,7 @@ class ComponentChangingEventHandler(MulticastDelegate):
     
     ComponentChangingEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentChangingEventHandler()
-    instance = ZZZ()
+    Instance = ComponentChangingEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: ComponentChangingEventHandler, sender: object, e: ComponentChangingEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -472,10 +448,7 @@ class ComponentEventArgs(EventArgs):
     
     ComponentEventArgs(component: IComponent)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentEventArgs()
-    instance = ZZZ()
+    Instance = ComponentEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, component):
@@ -497,10 +470,7 @@ class ComponentEventHandler(MulticastDelegate):
     
     ComponentEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentEventHandler()
-    instance = ZZZ()
+    Instance = ComponentEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: ComponentEventHandler, sender: object, e: ComponentEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -578,10 +548,7 @@ class ComponentRenameEventArgs(EventArgs):
     
     ComponentRenameEventArgs(component: object, oldName: str, newName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentRenameEventArgs()
-    instance = ZZZ()
+    Instance = ComponentRenameEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, component, oldName, newName):
@@ -617,10 +584,7 @@ class ComponentRenameEventHandler(MulticastDelegate):
     
     ComponentRenameEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentRenameEventHandler()
-    instance = ZZZ()
+    Instance = ComponentRenameEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: ComponentRenameEventHandler, sender: object, e: ComponentRenameEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -699,10 +663,7 @@ class DesignerCollection:
     DesignerCollection(designers: Array[IDesignerHost])
     DesignerCollection(designers: IList)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerCollection()
-    instance = ZZZ()
+    Instance = DesignerCollection
     """hardcoded/returns an instance of the class"""
     def GetEnumerator(self):
         """
@@ -756,10 +717,7 @@ class DesignerEventArgs(EventArgs):
     
     DesignerEventArgs(host: IDesignerHost)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerEventArgs()
-    instance = ZZZ()
+    Instance = DesignerEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, host):
@@ -781,10 +739,7 @@ class DesignerEventHandler(MulticastDelegate):
     
     DesignerEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerEventHandler()
-    instance = ZZZ()
+    Instance = DesignerEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: DesignerEventHandler, sender: object, e: DesignerEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -858,10 +813,7 @@ class DesignerEventHandler(MulticastDelegate):
 
 class IDesignerOptionService:
     """ Provides access to the designer options located on the Tools menu under the Options command in the Visual Studio development environment. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerOptionService()
-    instance = ZZZ()
+    Instance = IDesignerOptionService
     """hardcoded/returns an instance of the class"""
     def GetOptionValue(self, pageName, valueName):
         """
@@ -893,10 +845,7 @@ class IDesignerOptionService:
 
 class DesignerOptionService:
     """ Provides a base class for getting and setting option values for a designer. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerOptionService()
-    instance = ZZZ()
+    Instance = DesignerOptionService
     """hardcoded/returns an instance of the class"""
     def CreateOptionCollection(self, *args): #cannot find CLR method
         """ CreateOptionCollection(self: DesignerOptionService, parent: DesignerOptionCollection, name: str, value: object) -> DesignerOptionCollection """
@@ -931,10 +880,7 @@ Get: Options(self: DesignerOptionService) -> DesignerOptionCollection
 
 class DesignerTransaction:
     """ Provides a way to group a series of design-time actions to improve performance and enable most types of changes to be undone. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerTransaction()
-    instance = ZZZ()
+    Instance = DesignerTransaction
     """hardcoded/returns an instance of the class"""
     def Cancel(self):
         """
@@ -1027,10 +973,7 @@ class DesignerTransactionCloseEventArgs(EventArgs):
     DesignerTransactionCloseEventArgs(commit: bool)
     DesignerTransactionCloseEventArgs(commit: bool, lastTransaction: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerTransactionCloseEventArgs()
-    instance = ZZZ()
+    Instance = DesignerTransactionCloseEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, commit, lastTransaction=None):
@@ -1062,10 +1005,7 @@ class DesignerTransactionCloseEventHandler(MulticastDelegate):
     
     DesignerTransactionCloseEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerTransactionCloseEventHandler()
-    instance = ZZZ()
+    Instance = DesignerTransactionCloseEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: DesignerTransactionCloseEventHandler, sender: object, e: DesignerTransactionCloseEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -1143,10 +1083,7 @@ class MenuCommand():
     
     MenuCommand(handler: EventHandler, command: CommandID)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MenuCommand()
-    instance = ZZZ()
+    Instance = MenuCommand
     """hardcoded/returns an instance of the class"""
     def Invoke(self, arg=None):
         """
@@ -1248,10 +1185,7 @@ class DesignerVerb(MenuCommand):
     DesignerVerb(text: str, handler: EventHandler)
     DesignerVerb(text: str, handler: EventHandler, startCommandID: CommandID)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerVerb()
-    instance = ZZZ()
+    Instance = DesignerVerb
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
@@ -1294,10 +1228,7 @@ class DesignerVerbCollection(CollectionBase):
     DesignerVerbCollection()
     DesignerVerbCollection(value: Array[DesignerVerb])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerVerbCollection()
-    instance = ZZZ()
+    Instance = DesignerVerbCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
@@ -1505,10 +1436,7 @@ class DesigntimeLicenseContext(LicenseContext):
     
     DesigntimeLicenseContext()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesigntimeLicenseContext()
-    instance = ZZZ()
+    Instance = DesigntimeLicenseContext
     """hardcoded/returns an instance of the class"""
     def GetSavedLicenseKey(self, type, resourceAssembly):
         """
@@ -1547,10 +1475,7 @@ Get: UsageMode(self: DesigntimeLicenseContext) -> LicenseUsageMode
 
 class DesigntimeLicenseContextSerializer():
     """ Provides support for design-time license context serialization. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesigntimeLicenseContextSerializer()
-    instance = ZZZ()
+    Instance = DesigntimeLicenseContextSerializer
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Serialize(o, cryptoKey, context):
@@ -1571,10 +1496,7 @@ class HelpContextType:
     
     enum HelpContextType, values: Ambient (0), Selection (2), ToolWindowSelection (3), Window (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HelpContextType()
-    instance = ZZZ()
+    Instance = HelpContextType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1624,10 +1546,7 @@ class HelpKeywordAttribute:
     HelpKeywordAttribute(keyword: str)
     HelpKeywordAttribute(t: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HelpKeywordAttribute()
-    instance = ZZZ()
+    Instance = HelpKeywordAttribute
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -1698,10 +1617,7 @@ class HelpKeywordType:
     
     enum HelpKeywordType, values: F1Keyword (0), FilterKeyword (2), GeneralKeyword (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HelpKeywordType()
-    instance = ZZZ()
+    Instance = HelpKeywordType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1744,10 +1660,7 @@ class HelpKeywordType:
 
 class IComponentChangeService:
     """ Provides an interface to add and remove the event handlers for events that add, change, remove or rename components, and provides methods to raise a System.ComponentModel.Design.IComponentChangeService.ComponentChanged or System.ComponentModel.Design.IComponentChangeService.ComponentChanging event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IComponentChangeService()
-    instance = ZZZ()
+    Instance = IComponentChangeService
     """hardcoded/returns an instance of the class"""
     def OnComponentChanged(self, component, member, oldValue, newValue):
         """
@@ -1786,10 +1699,7 @@ class IComponentChangeService:
 
 class IComponentDiscoveryService:
     """ Enables enumeration of components at design time. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IComponentDiscoveryService()
-    instance = ZZZ()
+    Instance = IComponentDiscoveryService
     """hardcoded/returns an instance of the class"""
     def GetComponentTypes(self, designerHost, baseType):
         """
@@ -1810,10 +1720,7 @@ class IComponentDiscoveryService:
 
 class IComponentInitializer:
     """ Provides a set of recommended default values during component creation. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IComponentInitializer()
-    instance = ZZZ()
+    Instance = IComponentInitializer
     """hardcoded/returns an instance of the class"""
     def InitializeExistingComponent(self, defaultValues):
         """
@@ -1840,10 +1747,7 @@ class IComponentInitializer:
 
 class IDesigner:
     """ Provides the basic framework for building a custom designer. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDesigner()
-    instance = ZZZ()
+    Instance = IDesigner
     """hardcoded/returns an instance of the class"""
     def DoDefaultAction(self):
         """
@@ -1883,10 +1787,7 @@ Get: Verbs(self: IDesigner) -> DesignerVerbCollection
 
 class IDesignerEventService:
     """ Provides event notifications when root designers are added and removed, when a selected component changes, and when the current root designer changes. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerEventService()
-    instance = ZZZ()
+    Instance = IDesignerEventService
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1915,10 +1816,7 @@ Get: Designers(self: IDesignerEventService) -> DesignerCollection
 
 class IDesignerFilter:
     """ Provides an interface that enables a designer to access and filter the dictionaries of a System.ComponentModel.TypeDescriptor that stores the property, attribute, and event descriptors that a component designer can expose to the design-time environment. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerFilter()
-    instance = ZZZ()
+    Instance = IDesignerFilter
     """hardcoded/returns an instance of the class"""
     def PostFilterAttributes(self, attributes):
         """
@@ -1983,10 +1881,7 @@ class IDesignerFilter:
 
 class IServiceContainer:
     """ Provides a container for services. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IServiceContainer()
-    instance = ZZZ()
+    Instance = IServiceContainer
     """hardcoded/returns an instance of the class"""
     def AddService(self, serviceType, *__args):
         """
@@ -2040,10 +1935,7 @@ class IServiceContainer:
 
 class IDesignerHost:
     """ Provides an interface for managing designer transactions and components. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerHost()
-    instance = ZZZ()
+    Instance = IDesignerHost
     """hardcoded/returns an instance of the class"""
     def Activate(self):
         """
@@ -2179,10 +2071,7 @@ Get: TransactionDescription(self: IDesignerHost) -> str
 
 class IDesignerHostTransactionState:
     """ Specifies methods for the designer host to report on the state of transactions. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerHostTransactionState()
-    instance = ZZZ()
+    Instance = IDesignerHostTransactionState
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2199,10 +2088,7 @@ Get: IsClosingTransaction(self: IDesignerHostTransactionState) -> bool
 
 class IDictionaryService:
     """ Provides a basic, component site-specific, key-value pair dictionary through a service that a designer can use to store user-defined data. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDictionaryService()
-    instance = ZZZ()
+    Instance = IDictionaryService
     """hardcoded/returns an instance of the class"""
     def GetKey(self, value):
         """
@@ -2243,10 +2129,7 @@ class IDictionaryService:
 
 class IEventBindingService:
     """ Provides a service for registering event handlers for component events. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEventBindingService()
-    instance = ZZZ()
+    Instance = IEventBindingService
     """hardcoded/returns an instance of the class"""
     def CreateUniqueMethodName(self, component, e):
         """
@@ -2333,10 +2216,7 @@ class IEventBindingService:
 
 class IExtenderListService:
     """ Provides an interface that can list extender providers. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IExtenderListService()
-    instance = ZZZ()
+    Instance = IExtenderListService
     """hardcoded/returns an instance of the class"""
     def GetExtenderProviders(self):
         """
@@ -2354,10 +2234,7 @@ class IExtenderListService:
 
 class IExtenderProviderService:
     """ Provides an interface for adding and removing extender providers at design time. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IExtenderProviderService()
-    instance = ZZZ()
+    Instance = IExtenderProviderService
     """hardcoded/returns an instance of the class"""
     def AddExtenderProvider(self, provider):
         """
@@ -2384,10 +2261,7 @@ class IExtenderProviderService:
 
 class IHelpService:
     """ Provides methods for showing Help topics and adding and removing Help keywords at design time. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IHelpService()
-    instance = ZZZ()
+    Instance = IHelpService
     """hardcoded/returns an instance of the class"""
     def AddContextAttribute(self, name, value, keywordType):
         """
@@ -2462,10 +2336,7 @@ class IHelpService:
 
 class IInheritanceService:
     """ Provides methods for identifying the components of a component. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IInheritanceService()
-    instance = ZZZ()
+    Instance = IInheritanceService
     """hardcoded/returns an instance of the class"""
     def AddInheritedComponents(self, component, container):
         """
@@ -2497,10 +2368,7 @@ class IInheritanceService:
 
 class IMenuCommandService:
     """ Provides methods to manage the global designer verbs and menu commands available in design mode, and to show some types of shortcut menus. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IMenuCommandService()
-    instance = ZZZ()
+    Instance = IMenuCommandService
     """hardcoded/returns an instance of the class"""
     def AddCommand(self, command):
         """
@@ -2586,10 +2454,7 @@ Get: Verbs(self: IMenuCommandService) -> DesignerVerbCollection
 
 class IReferenceService:
     """ Provides an interface for obtaining references to objects within a project by name or type, obtaining the name of a specified object, and for locating the parent of a specified object within a designer project. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IReferenceService()
-    instance = ZZZ()
+    Instance = IReferenceService
     """hardcoded/returns an instance of the class"""
     def GetComponent(self, reference):
         """
@@ -2646,10 +2511,7 @@ class IReferenceService:
 
 class IResourceService:
     """ Provides an interface for designers to access resource readers and writers for specific System.Globalization.CultureInfo resource types. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IResourceService()
-    instance = ZZZ()
+    Instance = IResourceService
     """hardcoded/returns an instance of the class"""
     def GetResourceReader(self, info):
         """
@@ -2680,10 +2542,7 @@ class IResourceService:
 
 class IRootDesigner:
     """ Provides support for root-level designer view technologies. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IRootDesigner()
-    instance = ZZZ()
+    Instance = IRootDesigner
     """hardcoded/returns an instance of the class"""
     def GetView(self, technology):
         """
@@ -2719,10 +2578,7 @@ Get: SupportedTechnologies(self: IRootDesigner) -> Array[ViewTechnology]
 
 class ISelectionService:
     """ Provides an interface for a designer to select components. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ISelectionService()
-    instance = ZZZ()
+    Instance = ISelectionService
     """hardcoded/returns an instance of the class"""
     def GetComponentSelected(self, component):
         """
@@ -2783,10 +2639,7 @@ Get: SelectionCount(self: ISelectionService) -> int
 
 class ITreeDesigner:
     """ Provides support for building a set of related custom designers. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITreeDesigner()
-    instance = ZZZ()
+    Instance = ITreeDesigner
     """hardcoded/returns an instance of the class"""
     def __enter__(self, *args): #cannot find CLR method
         """ __enter__(self: IDisposable) -> object """
@@ -2818,10 +2671,7 @@ Get: Parent(self: ITreeDesigner) -> IDesigner
 
 class ITypeDescriptorFilterService:
     """ Provides an interface to modify the set of member descriptors for a component in design mode. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeDescriptorFilterService()
-    instance = ZZZ()
+    Instance = ITypeDescriptorFilterService
     """hardcoded/returns an instance of the class"""
     def FilterAttributes(self, component, attributes):
         """
@@ -2866,10 +2716,7 @@ class ITypeDescriptorFilterService:
 
 class ITypeDiscoveryService:
     """ Discovers available types at design time. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeDiscoveryService()
-    instance = ZZZ()
+    Instance = ITypeDiscoveryService
     """hardcoded/returns an instance of the class"""
     def GetTypes(self, baseType, excludeGlobalTypes):
         """
@@ -2890,10 +2737,7 @@ class ITypeDiscoveryService:
 
 class ITypeResolutionService:
     """ Provides an interface to retrieve an assembly or type by name. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeResolutionService()
-    instance = ZZZ()
+    Instance = ITypeResolutionService
     """hardcoded/returns an instance of the class"""
     def GetAssembly(self, name, throwOnError=None):
         """
@@ -2970,10 +2814,7 @@ class SelectionTypes:
     
     enum (flags) SelectionTypes, values: Add (64), Auto (1), Click (16), MouseDown (4), MouseUp (8), Normal (1), Primary (16), Remove (128), Replace (2), Toggle (32), Valid (31)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SelectionTypes()
-    instance = ZZZ()
+    Instance = SelectionTypes
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3029,10 +2870,7 @@ class ServiceContainer:
     ServiceContainer()
     ServiceContainer(parentProvider: IServiceProvider)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ServiceContainer()
-    instance = ZZZ()
+    Instance = ServiceContainer
     """hardcoded/returns an instance of the class"""
     def AddService(self, serviceType, *__args):
         """
@@ -3130,10 +2968,7 @@ class ServiceCreatorCallback(MulticastDelegate):
     
     ServiceCreatorCallback(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ServiceCreatorCallback()
-    instance = ZZZ()
+    Instance = ServiceCreatorCallback
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, container, serviceType, callback, object):
         """ BeginInvoke(self: ServiceCreatorCallback, container: IServiceContainer, serviceType: Type, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -3211,10 +3046,7 @@ class StandardCommands():
     
     StandardCommands()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StandardCommands()
-    instance = ZZZ()
+    Instance = StandardCommands
     """hardcoded/returns an instance of the class"""
     AlignBottom = None
     AlignHorizontalCenters = None
@@ -3279,10 +3111,7 @@ class StandardToolWindows():
     
     StandardToolWindows()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StandardToolWindows()
-    instance = ZZZ()
+    Instance = StandardToolWindows
     """hardcoded/returns an instance of the class"""
     ObjectBrowser = None
     OutputWindow = None
@@ -3296,10 +3125,7 @@ class StandardToolWindows():
 
 class TypeDescriptionProviderService():
     """ Provides a type description provider for a specified type. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeDescriptionProviderService()
-    instance = ZZZ()
+    Instance = TypeDescriptionProviderService
     """hardcoded/returns an instance of the class"""
     def GetProvider(self, *__args):
         """
@@ -3325,10 +3151,7 @@ class ViewTechnology:
     
     enum ViewTechnology, values: Default (2), Passthrough (0), WindowsForms (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ViewTechnology()
-    instance = ZZZ()
+    Instance = ViewTechnology
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

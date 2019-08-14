@@ -10,10 +10,7 @@
 
 class ClearResourceCachePostDbUpgradeAction:
     """ ClearResourceCachePostDbUpgradeAction(general: General) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ClearResourceCachePostDbUpgradeAction()
-    instance = ZZZ()
+    Instance = ClearResourceCachePostDbUpgradeAction
     """hardcoded/returns an instance of the class"""
     def Execute(self):
         """ Execute(self: ClearResourceCachePostDbUpgradeAction) """

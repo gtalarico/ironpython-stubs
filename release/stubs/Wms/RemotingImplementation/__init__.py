@@ -11,10 +11,7 @@ from System import *
 
 class AppHost():
     """ AppHost() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AppHost()
-    instance = ZZZ()
+    Instance = AppHost
     """hardcoded/returns an instance of the class"""
     def CreateContainer(self):
         """ CreateContainer(self: AppHost) -> UnityContainer """
@@ -31,10 +28,7 @@ class AppHost():
 
 class BusinessLayerExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BusinessLayerExtensions()
-    instance = ZZZ()
+    Instance = BusinessLayerExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def ConvertTo(db, mapExpr):
@@ -47,10 +41,7 @@ class BusinessLayerExtensions():
 
 class CallerContext:
     """ CallerContext() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CallerContext()
-    instance = ZZZ()
+    Instance = CallerContext
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -69,10 +60,7 @@ class CallerContext:
 
 class Constants():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Constants()
-    instance = ZZZ()
+    Instance = Constants
     """hardcoded/returns an instance of the class"""
     AdminZoneId = 2
     AutoDisposeDeadObjectInterval = 5
@@ -133,10 +121,7 @@ class Constants():
 
 class DataSet(DataSet):
     """ DataSet() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DataSet()
-    instance = ZZZ()
+    Instance = DataSet
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: DataSet) -> DataSet """
@@ -335,10 +320,7 @@ Set: SchemaSerializationMode(self: DataSet) = value
 
 class DocumentQueue(MarshalByRefObject):
     """ DocumentQueue(printingService: IPrintingService, storageProvider: StorageProvider, printJobsQueuer: PrintJobsQueuer) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DocumentQueue()
-    instance = ZZZ()
+    Instance = DocumentQueue
     """hardcoded/returns an instance of the class"""
     def AddPrintJob(self, args):
         """ AddPrintJob(self: DocumentQueue, args: AddPrintJob) -> Task[Guid] """
@@ -474,10 +456,7 @@ class DocumentQueue(MarshalByRefObject):
 
 class ExceptionHelper():
     """ ExceptionHelper() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExceptionHelper()
-    instance = ZZZ()
+    Instance = ExceptionHelper
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def IsRetryPossible(ex, currentIdentity):
@@ -492,10 +471,7 @@ class ExceptionHelper():
 
 class ExtendedUnityServiceLocator(UnityServiceLocator):
     """ ExtendedUnityServiceLocator(container: IUnityContainer) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExtendedUnityServiceLocator()
-    instance = ZZZ()
+    Instance = ExtendedUnityServiceLocator
     """hardcoded/returns an instance of the class"""
     def DoGetAllInstances(self, *args): #cannot find CLR method
         """ DoGetAllInstances(self: UnityServiceLocator, serviceType: Type) -> IEnumerable[object] """
@@ -540,10 +516,7 @@ class ExtendedUnityServiceLocator(UnityServiceLocator):
 
 class General(MarshalByRefObject):
     """ General(stockManager: IStockManager, passwordHasher: IPasswordHasher, documentQueue: IDocumentQueue) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return General()
-    instance = ZZZ()
+    Instance = General
     """hardcoded/returns an instance of the class"""
     def AddOrUpdateErpLock(self, lock):
         """ AddOrUpdateErpLock(self: General, lock: ErpLock) -> int """
@@ -1697,10 +1670,7 @@ Set: CurrentLicense(self: General) = value
 
 class IApplicationSettings:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IApplicationSettings()
-    instance = ZZZ()
+    Instance = IApplicationSettings
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1795,10 +1765,7 @@ class IApplicationSettings:
 
 class ICentralAuthoritySystem:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICentralAuthoritySystem()
-    instance = ZZZ()
+    Instance = ICentralAuthoritySystem
     """hardcoded/returns an instance of the class"""
     def RestartGooglePubSubServices(self):
         """ RestartGooglePubSubServices(self: ICentralAuthoritySystem) """
@@ -1823,10 +1790,7 @@ class ICentralAuthoritySystem:
 
 class IExtendedServiceLocator:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IExtendedServiceLocator()
-    instance = ZZZ()
+    Instance = IExtendedServiceLocator
     """hardcoded/returns an instance of the class"""
     def IsRegistered(self, type=None):
         """
@@ -1842,10 +1806,7 @@ class IExtendedServiceLocator:
 
 class Inbound(MarshalByRefObject):
     """ Inbound(stockManager: IStockManager, messaging: IMessaging, general: IGeneral) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Inbound()
-    instance = ZZZ()
+    Instance = Inbound
     """hardcoded/returns an instance of the class"""
     def AddOrUpdateLicensePlateToReceipt(self, cacheKey, licensePlate):
         """ AddOrUpdateLicensePlateToReceipt(self: Inbound, cacheKey: CacheKey, licensePlate: LicensePlate) -> LicensePlate """
@@ -2128,10 +2089,7 @@ class Inbound(MarshalByRefObject):
 
 class Inventory(MarshalByRefObject):
     """ Inventory(stockManager: IStockManager, countCacheKeyConstructor: ICacheKeyConstructor[Count]) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Inventory()
-    instance = ZZZ()
+    Instance = Inventory
     """hardcoded/returns an instance of the class"""
     def AddCountItemIdentitification(self, key, itemId, overwriteIfExists):
         """ AddCountItemIdentitification(self: Inventory, key: CacheKey, itemId: ItemIdentification, overwriteIfExists: bool) -> bool """
@@ -2553,18 +2511,12 @@ class Inventory(MarshalByRefObject):
 
 class Mailer():
     """ Mailer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Mailer()
-    instance = ZZZ()
+    Instance = Mailer
     """hardcoded/returns an instance of the class"""
 
 class Messaging(MarshalByRefObject):
     """ Messaging() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Messaging()
-    instance = ZZZ()
+    Instance = Messaging
     """hardcoded/returns an instance of the class"""
     def ChangeMessagesStatus(self, messageIds, newStatus):
         """ ChangeMessagesStatus(self: Messaging, messageIds: List[Guid], newStatus: MessageStatus) """
@@ -2667,10 +2619,7 @@ class Messaging(MarshalByRefObject):
 
 class NotificationCenter(MarshalByRefObject):
     """ NotificationCenter(general: General) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NotificationCenter()
-    instance = ZZZ()
+    Instance = NotificationCenter
     """hardcoded/returns an instance of the class"""
     def AddNotification(self, notificationToInsert):
         """ AddNotification(self: NotificationCenter, notificationToInsert: InsertNotificationArgs) """
@@ -2753,10 +2702,7 @@ class NotificationSummary(MarshalByRefObject):
     NotificationSummary(implementationContainer: NotificationTypeContainer)
     NotificationSummary()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NotificationSummary()
-    instance = ZZZ()
+    Instance = NotificationSummary
     """hardcoded/returns an instance of the class"""
     def DeleteConfiguration(self, notificationSummaryId):
         """ DeleteConfiguration(self: NotificationSummary, notificationSummaryId: int) """
@@ -2827,10 +2773,7 @@ class NotificationSummary(MarshalByRefObject):
 
 class NumberGeneration(MarshalByRefObject):
     """ NumberGeneration() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NumberGeneration()
-    instance = ZZZ()
+    Instance = NumberGeneration
     """hardcoded/returns an instance of the class"""
     def AddUsedNumber(self, args):
         """ AddUsedNumber(self: NumberGeneration, args: AddUsedNumberArgs) """
@@ -2901,10 +2844,7 @@ class NumberGeneration(MarshalByRefObject):
 
 class OfflineScanning(MarshalByRefObject):
     """ OfflineScanning(appSettings: IApplicationSettings, general: General, messaging: Messaging) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OfflineScanning()
-    instance = ZZZ()
+    Instance = OfflineScanning
     """hardcoded/returns an instance of the class"""
     def AddScanner(self, args):
         """ AddScanner(self: OfflineScanning, args: AddScannerArgs) """
@@ -2998,10 +2938,7 @@ class OfflineScanning(MarshalByRefObject):
 
 class OnGetDestinationLocationForLine(MulticastDelegate):
     """ OnGetDestinationLocationForLine(object: object, method: IntPtr) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OnGetDestinationLocationForLine()
-    instance = ZZZ()
+    Instance = OnGetDestinationLocationForLine
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, line, defaultWarehouseLocationCodeOutbound, callback, object):
         """ BeginInvoke(self: OnGetDestinationLocationForLine, line: OutboundOrderLine, defaultWarehouseLocationCodeOutbound: str, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -3075,10 +3012,7 @@ class OnGetDestinationLocationForLine(MulticastDelegate):
 
 class Outbound(MarshalByRefObject):
     """ Outbound(stockManager: IStockManager, messaging: Messaging) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Outbound()
-    instance = ZZZ()
+    Instance = Outbound
     """hardcoded/returns an instance of the class"""
     def AddDirectOrder(self, args):
         """ AddDirectOrder(self: Outbound, args: DirectOrderCrudArgs) -> DataFlowObject[DirectOrder] """
@@ -3626,10 +3560,7 @@ class Outbound(MarshalByRefObject):
 
 class Printing(MarshalByRefObject):
     """ Printing(general: General) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Printing()
-    instance = ZZZ()
+    Instance = Printing
     """hardcoded/returns an instance of the class"""
     def GetPickListsAll(self, pickLists):
         """ GetPickListsAll(self: Printing) -> (int, ReportItems) """
@@ -3689,10 +3620,7 @@ class Printing(MarshalByRefObject):
 
 class PyLogger():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PyLogger()
-    instance = ZZZ()
+    Instance = PyLogger
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Debug(msg):
@@ -3736,10 +3664,7 @@ class PyLogger():
 
 class RemotePublishing(MarshalByRefObject):
     """ RemotePublishing(appSettings: IApplicationSettings, general: General) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RemotePublishing()
-    instance = ZZZ()
+    Instance = RemotePublishing
     """hardcoded/returns an instance of the class"""
     def AddRemotePublisher(self, req):
         """ AddRemotePublisher(self: RemotePublishing, req: AddRemotePublisherArgs) -> Publisher """

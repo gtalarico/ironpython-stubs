@@ -10,10 +10,7 @@
 
 class DataFlowObjectHelper():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DataFlowObjectHelper()
-    instance = ZZZ()
+    Instance = DataFlowObjectHelper
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def AreAllQuestionAnsweredPositive(dfObject):
@@ -45,10 +42,7 @@ class DataFlowObjectHelper():
 
 class DecimalExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DecimalExtensions()
-    instance = ZZZ()
+    Instance = DecimalExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FormatDecimal(value):
@@ -62,10 +56,7 @@ class DecimalExtensions():
 
 class GlobalizationHelper():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GlobalizationHelper()
-    instance = ZZZ()
+    Instance = GlobalizationHelper
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def ClearResourceCache():
@@ -97,10 +88,7 @@ class GlobalizationHelper():
 
 class LabelHelper():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LabelHelper()
-    instance = ZZZ()
+    Instance = LabelHelper
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetPlaceholders(label, systemFieldsRegEx):
@@ -123,10 +111,7 @@ class LabelHelper():
 
 class OrderMatchesCustomerValidator():
     """ OrderMatchesCustomerValidator() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OrderMatchesCustomerValidator()
-    instance = ZZZ()
+    Instance = OrderMatchesCustomerValidator
     """hardcoded/returns an instance of the class"""
     def OrderMatchesCustomer(self, order, customer):
         """ OrderMatchesCustomer(self: OrderMatchesCustomerValidator, order: OutboundOrder, customer: Customer) -> bool """
@@ -150,10 +135,7 @@ Set: OrderMatchesCustomerDelegate(self: OrderMatchesCustomerValidator) = value
 
 class SettingsHelper:
     """ SettingsHelper(settingsObject: object) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsHelper()
-    instance = ZZZ()
+    Instance = SettingsHelper
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """ Dispose(self: SettingsHelper) """
@@ -199,10 +181,7 @@ class SettingsHelper:
 
 class StringHelpers():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StringHelpers()
-    instance = ZZZ()
+    Instance = StringHelpers
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateMessageFromCollection(message, collection):

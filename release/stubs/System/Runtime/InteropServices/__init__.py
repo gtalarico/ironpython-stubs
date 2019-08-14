@@ -10,10 +10,7 @@
 
 class _Attribute:
     """ Exposes the System.Attribute class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _Attribute()
-    instance = ZZZ()
+    Instance = _Attribute
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -76,10 +73,7 @@ class AllowReversePInvokeCallsAttribute:
     
     AllowReversePInvokeCallsAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AllowReversePInvokeCallsAttribute()
-    instance = ZZZ()
+    Instance = AllowReversePInvokeCallsAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -88,10 +82,7 @@ class AllowReversePInvokeCallsAttribute:
 
 class Architecture:
     """ enum Architecture, values: Arm (2), Arm64 (3), X64 (1), X86 (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Architecture()
-    instance = ZZZ()
+    Instance = Architecture
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -139,10 +130,7 @@ class ArrayWithOffset():
     
     ArrayWithOffset(array: object, offset: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ArrayWithOffset()
-    instance = ZZZ()
+    Instance = ArrayWithOffset
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -211,10 +199,7 @@ class AssemblyRegistrationFlags:
     
     enum (flags) AssemblyRegistrationFlags, values: None (0), SetCodeBase (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AssemblyRegistrationFlags()
-    instance = ZZZ()
+    Instance = AssemblyRegistrationFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -260,10 +245,7 @@ class AutomationProxyAttribute:
     
     AutomationProxyAttribute(val: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AutomationProxyAttribute()
-    instance = ZZZ()
+    Instance = AutomationProxyAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -289,10 +271,7 @@ class BestFitMappingAttribute:
     
     BestFitMappingAttribute(BestFitMapping: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BestFitMappingAttribute()
-    instance = ZZZ()
+    Instance = BestFitMappingAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -316,10 +295,7 @@ Get: BestFitMapping(self: BestFitMappingAttribute) -> bool
 
 class BINDPTR():
     """ Use System.Runtime.InteropServices.ComTypes.BINDPTR instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BINDPTR()
-    instance = ZZZ()
+    Instance = BINDPTR
     """hardcoded/returns an instance of the class"""
     lpfuncdesc = None
     lptcomp = None
@@ -328,10 +304,7 @@ class BINDPTR():
 
 class BIND_OPTS():
     """ Use System.Runtime.InteropServices.ComTypes.BIND_OPTS instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BIND_OPTS()
-    instance = ZZZ()
+    Instance = BIND_OPTS
     """hardcoded/returns an instance of the class"""
     cbStruct = None
     dwTickCountDeadline = None
@@ -346,10 +319,7 @@ class BStrWrapper():
     BStrWrapper(value: str)
     BStrWrapper(value: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BStrWrapper()
-    instance = ZZZ()
+    Instance = BStrWrapper
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, value):
@@ -374,10 +344,7 @@ class CALLCONV:
     
     enum CALLCONV, values: CC_CDECL (1), CC_MACPASCAL (3), CC_MAX (9), CC_MPWCDECL (7), CC_MPWPASCAL (8), CC_MSCPASCAL (2), CC_PASCAL (2), CC_RESERVED (5), CC_STDCALL (4), CC_SYSCALL (6)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CALLCONV()
-    instance = ZZZ()
+    Instance = CALLCONV
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -431,10 +398,7 @@ class CallingConvention:
     
     enum CallingConvention, values: Cdecl (2), FastCall (5), StdCall (3), ThisCall (4), Winapi (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CallingConvention()
-    instance = ZZZ()
+    Instance = CallingConvention
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -483,10 +447,7 @@ class CharSet:
     
     enum CharSet, values: Ansi (2), Auto (4), None (1), Unicode (3)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CharSet()
-    instance = ZZZ()
+    Instance = CharSet
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -535,10 +496,7 @@ class ClassInterfaceAttribute:
     ClassInterfaceAttribute(classInterfaceType: ClassInterfaceType)
     ClassInterfaceAttribute(classInterfaceType: Int16)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ClassInterfaceAttribute()
-    instance = ZZZ()
+    Instance = ClassInterfaceAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -567,10 +525,7 @@ class ClassInterfaceType:
     
     enum ClassInterfaceType, values: AutoDispatch (1), AutoDual (2), None (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ClassInterfaceType()
-    instance = ZZZ()
+    Instance = ClassInterfaceType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -617,10 +572,7 @@ class CoClassAttribute:
     
     CoClassAttribute(coClass: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CoClassAttribute()
-    instance = ZZZ()
+    Instance = CoClassAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -646,10 +598,7 @@ class ComAliasNameAttribute:
     
     ComAliasNameAttribute(alias: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComAliasNameAttribute()
-    instance = ZZZ()
+    Instance = ComAliasNameAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -675,10 +624,7 @@ class ComCompatibleVersionAttribute:
     
     ComCompatibleVersionAttribute(major: int, minor: int, build: int, revision: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComCompatibleVersionAttribute()
-    instance = ZZZ()
+    Instance = ComCompatibleVersionAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -725,10 +671,7 @@ class ComConversionLossAttribute:
     
     ComConversionLossAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComConversionLossAttribute()
-    instance = ZZZ()
+    Instance = ComConversionLossAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -741,10 +684,7 @@ class ComDefaultInterfaceAttribute:
     
     ComDefaultInterfaceAttribute(defaultInterface: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComDefaultInterfaceAttribute()
-    instance = ZZZ()
+    Instance = ComDefaultInterfaceAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -770,10 +710,7 @@ class ComEventInterfaceAttribute:
     
     ComEventInterfaceAttribute(SourceInterface: Type, EventProvider: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComEventInterfaceAttribute()
-    instance = ZZZ()
+    Instance = ComEventInterfaceAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -802,10 +739,7 @@ Get: SourceInterface(self: ComEventInterfaceAttribute) -> Type
 
 class ComEventsHelper():
     """ Provides methods that enable .NET Framework delegates that handle events to be added and removed from COM objects. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComEventsHelper()
-    instance = ZZZ()
+    Instance = ComEventsHelper
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Combine(rcw, iid, dispid, d):
@@ -850,10 +784,7 @@ class ExternalException(SystemException):
     ExternalException(message: str, inner: Exception)
     ExternalException(message: str, errorCode: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExternalException()
-    instance = ZZZ()
+    Instance = ExternalException
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
@@ -905,10 +836,7 @@ class COMException(ExternalException):
     COMException(message: str, inner: Exception)
     COMException(message: str, errorCode: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return COMException()
-    instance = ZZZ()
+    Instance = COMException
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
@@ -949,10 +877,7 @@ class ComImportAttribute:
     
     ComImportAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComImportAttribute()
-    instance = ZZZ()
+    Instance = ComImportAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -965,10 +890,7 @@ class ComInterfaceType:
     
     enum ComInterfaceType, values: InterfaceIsDual (0), InterfaceIsIDispatch (2), InterfaceIsIInspectable (3), InterfaceIsIUnknown (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComInterfaceType()
-    instance = ZZZ()
+    Instance = ComInterfaceType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1016,10 +938,7 @@ class ComMemberType:
     
     enum ComMemberType, values: Method (0), PropGet (1), PropSet (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComMemberType()
-    instance = ZZZ()
+    Instance = ComMemberType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1066,10 +985,7 @@ class ComRegisterFunctionAttribute:
     
     ComRegisterFunctionAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComRegisterFunctionAttribute()
-    instance = ZZZ()
+    Instance = ComRegisterFunctionAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1086,10 +1002,7 @@ class ComSourceInterfacesAttribute:
     ComSourceInterfacesAttribute(sourceInterface1: Type, sourceInterface2: Type, sourceInterface3: Type)
     ComSourceInterfacesAttribute(sourceInterface1: Type, sourceInterface2: Type, sourceInterface3: Type, sourceInterface4: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComSourceInterfacesAttribute()
-    instance = ZZZ()
+    Instance = ComSourceInterfacesAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1121,10 +1034,7 @@ class ComUnregisterFunctionAttribute:
     
     ComUnregisterFunctionAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComUnregisterFunctionAttribute()
-    instance = ZZZ()
+    Instance = ComUnregisterFunctionAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1137,10 +1047,7 @@ class ComVisibleAttribute:
     
     ComVisibleAttribute(visibility: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComVisibleAttribute()
-    instance = ZZZ()
+    Instance = ComVisibleAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1162,10 +1069,7 @@ Get: Value(self: ComVisibleAttribute) -> bool
 
 class CONNECTDATA():
     """ Use System.Runtime.InteropServices.ComTypes.CONNECTDATA instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CONNECTDATA()
-    instance = ZZZ()
+    Instance = CONNECTDATA
     """hardcoded/returns an instance of the class"""
     dwCookie = None
     pUnk = None
@@ -1173,10 +1077,7 @@ class CONNECTDATA():
 
 class CriticalHandle(CriticalFinalizerObject):
     """ Represents a wrapper class for handle resources. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CriticalHandle()
-    instance = ZZZ()
+    Instance = CriticalHandle
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -1260,10 +1161,7 @@ class CurrencyWrapper():
     CurrencyWrapper(obj: Decimal)
     CurrencyWrapper(obj: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CurrencyWrapper()
-    instance = ZZZ()
+    Instance = CurrencyWrapper
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, obj):
@@ -1288,10 +1186,7 @@ class CustomQueryInterfaceMode:
     
     enum CustomQueryInterfaceMode, values: Allow (1), Ignore (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CustomQueryInterfaceMode()
-    instance = ZZZ()
+    Instance = CustomQueryInterfaceMode
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1337,10 +1232,7 @@ class CustomQueryInterfaceResult:
     
     enum CustomQueryInterfaceResult, values: Failed (2), Handled (0), NotHandled (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CustomQueryInterfaceResult()
-    instance = ZZZ()
+    Instance = CustomQueryInterfaceResult
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1387,10 +1279,7 @@ class DefaultCharSetAttribute:
     
     DefaultCharSetAttribute(charSet: CharSet)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultCharSetAttribute()
-    instance = ZZZ()
+    Instance = DefaultCharSetAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1412,10 +1301,7 @@ Get: CharSet(self: DefaultCharSetAttribute) -> CharSet
 
 class DefaultDllImportSearchPathsAttribute:
     """ DefaultDllImportSearchPathsAttribute(paths: DllImportSearchPath) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultDllImportSearchPathsAttribute()
-    instance = ZZZ()
+    Instance = DefaultDllImportSearchPathsAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1439,10 +1325,7 @@ class DefaultParameterValueAttribute:
     
     DefaultParameterValueAttribute(value: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultParameterValueAttribute()
-    instance = ZZZ()
+    Instance = DefaultParameterValueAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1468,10 +1351,7 @@ class DESCKIND:
     
     enum DESCKIND, values: DESCKIND_FUNCDESC (1), DESCKIND_IMPLICITAPPOBJ (4), DESCKIND_MAX (5), DESCKIND_NONE (0), DESCKIND_TYPECOMP (3), DESCKIND_VARDESC (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DESCKIND()
-    instance = ZZZ()
+    Instance = DESCKIND
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1521,10 +1401,7 @@ class DispatchWrapper():
     
     DispatchWrapper(obj: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DispatchWrapper()
-    instance = ZZZ()
+    Instance = DispatchWrapper
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, obj):
@@ -1546,10 +1423,7 @@ class DispIdAttribute:
     
     DispIdAttribute(dispId: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DispIdAttribute()
-    instance = ZZZ()
+    Instance = DispIdAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1571,10 +1445,7 @@ Get: Value(self: DispIdAttribute) -> int
 
 class DISPPARAMS():
     """ Use System.Runtime.InteropServices.ComTypes.DISPPARAMS instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DISPPARAMS()
-    instance = ZZZ()
+    Instance = DISPPARAMS
     """hardcoded/returns an instance of the class"""
     cArgs = None
     cNamedArgs = None
@@ -1588,10 +1459,7 @@ class DllImportAttribute:
     
     DllImportAttribute(dllName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DllImportAttribute()
-    instance = ZZZ()
+    Instance = DllImportAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1622,10 +1490,7 @@ Get: Value(self: DllImportAttribute) -> str
 
 class DllImportSearchPath:
     """ enum (flags) DllImportSearchPath, values: ApplicationDirectory (512), AssemblyDirectory (2), LegacyBehavior (0), SafeDirectories (4096), System32 (2048), UseDllDirectoryForDependencies (256), UserDirectories (1024) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DllImportSearchPath()
-    instance = ZZZ()
+    Instance = DllImportSearchPath
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1672,10 +1537,7 @@ class DllImportSearchPath:
 
 class ELEMDESC():
     """ Use System.Runtime.InteropServices.ComTypes.ELEMDESC instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ELEMDESC()
-    instance = ZZZ()
+    Instance = ELEMDESC
     """hardcoded/returns an instance of the class"""
     desc = None
     DESCUNION = None
@@ -1690,10 +1552,7 @@ class ErrorWrapper():
     ErrorWrapper(errorCode: object)
     ErrorWrapper(e: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ErrorWrapper()
-    instance = ZZZ()
+    Instance = ErrorWrapper
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -1715,10 +1574,7 @@ Get: ErrorCode(self: ErrorWrapper) -> int
 
 class EXCEPINFO():
     """ Use System.Runtime.InteropServices.ComTypes.EXCEPINFO instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EXCEPINFO()
-    instance = ZZZ()
+    Instance = EXCEPINFO
     """hardcoded/returns an instance of the class"""
     bstrDescription = None
     bstrHelpFile = None
@@ -1736,10 +1592,7 @@ class ExporterEventKind:
     
     enum ExporterEventKind, values: ERROR_REFTOINVALIDASSEMBLY (2), NOTIF_CONVERTWARNING (1), NOTIF_TYPECONVERTED (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExporterEventKind()
-    instance = ZZZ()
+    Instance = ExporterEventKind
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1782,10 +1635,7 @@ class ExporterEventKind:
 
 class ExtensibleClassFactory():
     """ Enables customization of managed objects that extend from unmanaged objects during creation. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExtensibleClassFactory()
-    instance = ZZZ()
+    Instance = ExtensibleClassFactory
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def RegisterObjectCreationCallback(callback):
@@ -1804,10 +1654,7 @@ class FieldOffsetAttribute:
     
     FieldOffsetAttribute(offset: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FieldOffsetAttribute()
-    instance = ZZZ()
+    Instance = FieldOffsetAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1829,10 +1676,7 @@ Get: Value(self: FieldOffsetAttribute) -> int
 
 class FILETIME():
     """ Use System.Runtime.InteropServices.ComTypes.FILETIME instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FILETIME()
-    instance = ZZZ()
+    Instance = FILETIME
     """hardcoded/returns an instance of the class"""
     dwHighDateTime = None
     dwLowDateTime = None
@@ -1840,10 +1684,7 @@ class FILETIME():
 
 class FUNCDESC():
     """ Use System.Runtime.InteropServices.ComTypes.FUNCDESC instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FUNCDESC()
-    instance = ZZZ()
+    Instance = FUNCDESC
     """hardcoded/returns an instance of the class"""
     callconv = None
     cParams = None
@@ -1865,10 +1706,7 @@ class FUNCFLAGS:
     
     enum (flags) FUNCFLAGS, values: FUNCFLAG_FBINDABLE (4), FUNCFLAG_FDEFAULTBIND (32), FUNCFLAG_FDEFAULTCOLLELEM (256), FUNCFLAG_FDISPLAYBIND (16), FUNCFLAG_FHIDDEN (64), FUNCFLAG_FIMMEDIATEBIND (4096), FUNCFLAG_FNONBROWSABLE (1024), FUNCFLAG_FREPLACEABLE (2048), FUNCFLAG_FREQUESTEDIT (8), FUNCFLAG_FRESTRICTED (1), FUNCFLAG_FSOURCE (2), FUNCFLAG_FUIDEFAULT (512), FUNCFLAG_FUSESGETLASTERROR (128)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FUNCFLAGS()
-    instance = ZZZ()
+    Instance = FUNCFLAGS
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1925,10 +1763,7 @@ class FUNCKIND:
     
     enum FUNCKIND, values: FUNC_DISPATCH (4), FUNC_NONVIRTUAL (2), FUNC_PUREVIRTUAL (1), FUNC_STATIC (3), FUNC_VIRTUAL (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FUNCKIND()
-    instance = ZZZ()
+    Instance = FUNCKIND
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1973,10 +1808,7 @@ class FUNCKIND:
 
 class GCHandle():
     """ Provides a way to access a managed object from unmanaged memory. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GCHandle()
-    instance = ZZZ()
+    Instance = GCHandle
     """hardcoded/returns an instance of the class"""
     def AddrOfPinnedObject(self):
         """
@@ -2090,10 +1922,7 @@ class GCHandleType:
     
     enum GCHandleType, values: Normal (2), Pinned (3), Weak (0), WeakTrackResurrection (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GCHandleType()
-    instance = ZZZ()
+    Instance = GCHandleType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2141,10 +1970,7 @@ class GuidAttribute:
     
     GuidAttribute(guid: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GuidAttribute()
-    instance = ZZZ()
+    Instance = GuidAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2171,10 +1997,7 @@ class HandleCollector():
     HandleCollector(name: str, initialThreshold: int)
     HandleCollector(name: str, initialThreshold: int, maximumThreshold: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HandleCollector()
-    instance = ZZZ()
+    Instance = HandleCollector
     """hardcoded/returns an instance of the class"""
     def Add(self):
         """
@@ -2238,10 +2061,7 @@ class HandleRef():
     
     HandleRef(wrapper: object, handle: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HandleRef()
-    instance = ZZZ()
+    Instance = HandleRef
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def ToIntPtr(value):
@@ -2282,10 +2102,7 @@ Get: Wrapper(self: HandleRef) -> object
 
 class ICustomAdapter:
     """ Provides a way for clients to access the actual object, rather than the adapter object handed out by a custom marshaler. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICustomAdapter()
-    instance = ZZZ()
+    Instance = ICustomAdapter
     """hardcoded/returns an instance of the class"""
     def GetUnderlyingObject(self):
         """
@@ -2303,10 +2120,7 @@ class ICustomAdapter:
 
 class ICustomFactory:
     """ Enables users to write activation code for managed objects that extend System.MarshalByRefObject. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICustomFactory()
-    instance = ZZZ()
+    Instance = ICustomFactory
     """hardcoded/returns an instance of the class"""
     def CreateInstance(self, serverType):
         """
@@ -2326,10 +2140,7 @@ class ICustomFactory:
 
 class ICustomMarshaler:
     """ Provides custom wrappers for handling method calls. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICustomMarshaler()
-    instance = ZZZ()
+    Instance = ICustomMarshaler
     """hardcoded/returns an instance of the class"""
     def CleanUpManagedData(self, ManagedObj):
         """
@@ -2387,10 +2198,7 @@ class ICustomMarshaler:
 
 class ICustomQueryInterface:
     """ Enables developers to provide a custom, managed implementation of the IUnknown::QueryInterface(REFIID riid, void **ppvObject) method. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICustomQueryInterface()
-    instance = ZZZ()
+    Instance = ICustomQueryInterface
     """hardcoded/returns an instance of the class"""
     def GetInterface(self, iid, ppv):
         """
@@ -2415,10 +2223,7 @@ class IDispatchImplAttribute:
     IDispatchImplAttribute(implType: IDispatchImplType)
     IDispatchImplAttribute(implType: Int16)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDispatchImplAttribute()
-    instance = ZZZ()
+    Instance = IDispatchImplAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2447,10 +2252,7 @@ class IDispatchImplType:
     
     enum IDispatchImplType, values: CompatibleImpl (2), InternalImpl (1), SystemDefinedImpl (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDispatchImplType()
-    instance = ZZZ()
+    Instance = IDispatchImplType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2493,10 +2295,7 @@ class IDispatchImplType:
 
 class IDLDESC():
     """ Use System.Runtime.InteropServices.ComTypes.IDLDESC instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDLDESC()
-    instance = ZZZ()
+    Instance = IDLDESC
     """hardcoded/returns an instance of the class"""
     dwReserved = None
     wIDLFlags = None
@@ -2508,10 +2307,7 @@ class IDLFLAG:
     
     enum (flags) IDLFLAG, values: IDLFLAG_FIN (1), IDLFLAG_FLCID (4), IDLFLAG_FOUT (2), IDLFLAG_FRETVAL (8), IDLFLAG_NONE (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDLFLAG()
-    instance = ZZZ()
+    Instance = IDLFLAG
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2560,10 +2356,7 @@ class IMPLTYPEFLAGS:
     
     enum (flags) IMPLTYPEFLAGS, values: IMPLTYPEFLAG_FDEFAULT (1), IMPLTYPEFLAG_FDEFAULTVTABLE (8), IMPLTYPEFLAG_FRESTRICTED (4), IMPLTYPEFLAG_FSOURCE (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IMPLTYPEFLAGS()
-    instance = ZZZ()
+    Instance = IMPLTYPEFLAGS
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2611,10 +2404,7 @@ class ImportedFromTypeLibAttribute:
     
     ImportedFromTypeLibAttribute(tlbFile: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ImportedFromTypeLibAttribute()
-    instance = ZZZ()
+    Instance = ImportedFromTypeLibAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2640,10 +2430,7 @@ class ImporterEventKind:
     
     enum ImporterEventKind, values: ERROR_REFTOINVALIDTYPELIB (2), NOTIF_CONVERTWARNING (1), NOTIF_TYPECONVERTED (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ImporterEventKind()
-    instance = ZZZ()
+    Instance = ImporterEventKind
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2690,10 +2477,7 @@ class InAttribute:
     
     InAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InAttribute()
-    instance = ZZZ()
+    Instance = InAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2707,10 +2491,7 @@ class InterfaceTypeAttribute:
     InterfaceTypeAttribute(interfaceType: ComInterfaceType)
     InterfaceTypeAttribute(interfaceType: Int16)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InterfaceTypeAttribute()
-    instance = ZZZ()
+    Instance = InterfaceTypeAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2741,10 +2522,7 @@ class InvalidComObjectException(SystemException):
     InvalidComObjectException(message: str)
     InvalidComObjectException(message: str, inner: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InvalidComObjectException()
-    instance = ZZZ()
+    Instance = InvalidComObjectException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2777,10 +2555,7 @@ class InvalidOleVariantTypeException(SystemException):
     InvalidOleVariantTypeException(message: str)
     InvalidOleVariantTypeException(message: str, inner: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InvalidOleVariantTypeException()
-    instance = ZZZ()
+    Instance = InvalidOleVariantTypeException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2811,10 +2586,7 @@ class INVOKEKIND:
     
     enum INVOKEKIND, values: INVOKE_FUNC (1), INVOKE_PROPERTYGET (2), INVOKE_PROPERTYPUT (4), INVOKE_PROPERTYPUTREF (8)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INVOKEKIND()
-    instance = ZZZ()
+    Instance = INVOKEKIND
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2858,10 +2630,7 @@ class INVOKEKIND:
 
 class IRegistrationServices:
     """ Provides a set of services for registering and unregistering managed assemblies for use from COM. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IRegistrationServices()
-    instance = ZZZ()
+    Instance = IRegistrationServices
     """hardcoded/returns an instance of the class"""
     def GetManagedCategoryGuid(self):
         """
@@ -2959,10 +2728,7 @@ class IRegistrationServices:
 
 class ITypeLibConverter:
     """ Provides a set of services that convert a managed assembly to a COM type library and vice versa. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeLibConverter()
-    instance = ZZZ()
+    Instance = ITypeLibConverter
     """hardcoded/returns an instance of the class"""
     def ConvertAssemblyToTypeLib(self, assembly, typeLibName, flags, notifySink):
         """
@@ -3031,10 +2797,7 @@ class ITypeLibConverter:
 
 class ITypeLibExporterNameProvider:
     """ Provides control over the casing of names when exported to a type library. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeLibExporterNameProvider()
-    instance = ZZZ()
+    Instance = ITypeLibExporterNameProvider
     """hardcoded/returns an instance of the class"""
     def GetNames(self):
         """
@@ -3052,10 +2815,7 @@ class ITypeLibExporterNameProvider:
 
 class ITypeLibExporterNotifySink:
     """ Provides a callback mechanism for the assembly converter to inform the caller of the status of the conversion, and involve the caller in the conversion process itself. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeLibExporterNotifySink()
-    instance = ZZZ()
+    Instance = ITypeLibExporterNotifySink
     """hardcoded/returns an instance of the class"""
     def ReportEvent(self, eventKind, eventCode, eventMsg):
         """
@@ -3086,10 +2846,7 @@ class ITypeLibExporterNotifySink:
 
 class ITypeLibImporterNotifySink:
     """ Provides a callback mechanism for the type library converter to inform the caller of the status of the conversion, and involve the caller in the conversion process itself. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeLibImporterNotifySink()
-    instance = ZZZ()
+    Instance = ITypeLibImporterNotifySink
     """hardcoded/returns an instance of the class"""
     def ReportEvent(self, eventKind, eventCode, eventMsg):
         """
@@ -3124,10 +2881,7 @@ class LayoutKind:
     
     enum LayoutKind, values: Auto (3), Explicit (2), Sequential (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LayoutKind()
-    instance = ZZZ()
+    Instance = LayoutKind
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3174,10 +2928,7 @@ class LCIDConversionAttribute:
     
     LCIDConversionAttribute(lcid: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LCIDConversionAttribute()
-    instance = ZZZ()
+    Instance = LCIDConversionAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -3203,10 +2954,7 @@ class LIBFLAGS:
     
     enum (flags) LIBFLAGS, values: LIBFLAG_FCONTROL (2), LIBFLAG_FHASDISKIMAGE (8), LIBFLAG_FHIDDEN (4), LIBFLAG_FRESTRICTED (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LIBFLAGS()
-    instance = ZZZ()
+    Instance = LIBFLAGS
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3254,10 +3002,7 @@ class ManagedToNativeComInteropStubAttribute:
     
     ManagedToNativeComInteropStubAttribute(classType: Type, methodName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ManagedToNativeComInteropStubAttribute()
-    instance = ZZZ()
+    Instance = ManagedToNativeComInteropStubAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -3286,10 +3031,7 @@ Get: MethodName(self: ManagedToNativeComInteropStubAttribute) -> str
 
 class Marshal():
     """ Provides a collection of methods for allocating unmanaged memory, copying unmanaged memory blocks, and converting managed to unmanaged types, as well as other miscellaneous methods used when interacting with unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Marshal()
-    instance = ZZZ()
+    Instance = Marshal
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def AddRef(pUnk):
@@ -5017,10 +4759,7 @@ class MarshalAsAttribute:
     MarshalAsAttribute(unmanagedType: UnmanagedType)
     MarshalAsAttribute(unmanagedType: Int16)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MarshalAsAttribute()
-    instance = ZZZ()
+    Instance = MarshalAsAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -5061,10 +4800,7 @@ class MarshalDirectiveException(SystemException):
     MarshalDirectiveException(message: str)
     MarshalDirectiveException(message: str, inner: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MarshalDirectiveException()
-    instance = ZZZ()
+    Instance = MarshalDirectiveException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -5095,10 +4831,7 @@ class ObjectCreationDelegate(MulticastDelegate):
     
     ObjectCreationDelegate(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ObjectCreationDelegate()
-    instance = ZZZ()
+    Instance = ObjectCreationDelegate
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, aggregator, callback, object):
         """ BeginInvoke(self: ObjectCreationDelegate, aggregator: IntPtr, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -5176,10 +4909,7 @@ class OptionalAttribute:
     
     OptionalAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OptionalAttribute()
-    instance = ZZZ()
+    Instance = OptionalAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -5188,10 +4918,7 @@ class OptionalAttribute:
 
 class OSPlatform:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OSPlatform()
-    instance = ZZZ()
+    Instance = OSPlatform
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Create(osPlatform):
@@ -5242,10 +4969,7 @@ class OutAttribute:
     
     OutAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OutAttribute()
-    instance = ZZZ()
+    Instance = OutAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -5254,10 +4978,7 @@ class OutAttribute:
 
 class PARAMDESC():
     """ Use System.Runtime.InteropServices.ComTypes.PARAMDESC instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PARAMDESC()
-    instance = ZZZ()
+    Instance = PARAMDESC
     """hardcoded/returns an instance of the class"""
     lpVarValue = None
     wParamFlags = None
@@ -5269,10 +4990,7 @@ class PARAMFLAG:
     
     enum (flags) PARAMFLAG, values: PARAMFLAG_FHASCUSTDATA (64), PARAMFLAG_FHASDEFAULT (32), PARAMFLAG_FIN (1), PARAMFLAG_FLCID (4), PARAMFLAG_FOPT (16), PARAMFLAG_FOUT (2), PARAMFLAG_FRETVAL (8), PARAMFLAG_NONE (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PARAMFLAG()
-    instance = ZZZ()
+    Instance = PARAMFLAG
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -5324,10 +5042,7 @@ class PreserveSigAttribute:
     
     PreserveSigAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PreserveSigAttribute()
-    instance = ZZZ()
+    Instance = PreserveSigAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -5340,10 +5055,7 @@ class PrimaryInteropAssemblyAttribute:
     
     PrimaryInteropAssemblyAttribute(major: int, minor: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrimaryInteropAssemblyAttribute()
-    instance = ZZZ()
+    Instance = PrimaryInteropAssemblyAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -5376,10 +5088,7 @@ class ProgIdAttribute:
     
     ProgIdAttribute(progId: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProgIdAttribute()
-    instance = ZZZ()
+    Instance = ProgIdAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -5405,10 +5114,7 @@ class RegistrationClassContext:
     
     enum (flags) RegistrationClassContext, values: DisableActivateAsActivator (32768), EnableActivateAsActivator (65536), EnableCodeDownload (8192), FromDefaultContext (131072), InProcessHandler (2), InProcessHandler16 (32), InProcessServer (1), InProcessServer16 (8), LocalServer (4), NoCodeDownload (1024), NoCustomMarshal (4096), NoFailureLog (16384), RemoteServer (16), Reserved1 (64), Reserved2 (128), Reserved3 (256), Reserved4 (512), Reserved5 (2048)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegistrationClassContext()
-    instance = ZZZ()
+    Instance = RegistrationClassContext
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -5470,10 +5176,7 @@ class RegistrationConnectionType:
     
     enum (flags) RegistrationConnectionType, values: MultipleUse (1), MultiSeparate (2), SingleUse (0), Surrogate (8), Suspended (4)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegistrationConnectionType()
-    instance = ZZZ()
+    Instance = RegistrationConnectionType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -5522,10 +5225,7 @@ class RegistrationServices:
     
     RegistrationServices()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegistrationServices()
-    instance = ZZZ()
+    Instance = RegistrationServices
     """hardcoded/returns an instance of the class"""
     def GetManagedCategoryGuid(self):
         """
@@ -5656,10 +5356,7 @@ class RuntimeEnvironment():
     
     RuntimeEnvironment()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RuntimeEnvironment()
-    instance = ZZZ()
+    Instance = RuntimeEnvironment
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromGlobalAccessCache(a):
@@ -5724,10 +5421,7 @@ class RuntimeEnvironment():
 
 class RuntimeInformation():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RuntimeInformation()
-    instance = ZZZ()
+    Instance = RuntimeInformation
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def IsOSPlatform(osPlatform):
@@ -5751,10 +5445,7 @@ class SafeArrayRankMismatchException(SystemException):
     SafeArrayRankMismatchException(message: str)
     SafeArrayRankMismatchException(message: str, inner: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SafeArrayRankMismatchException()
-    instance = ZZZ()
+    Instance = SafeArrayRankMismatchException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -5787,10 +5478,7 @@ class SafeArrayTypeMismatchException(SystemException):
     SafeArrayTypeMismatchException(message: str)
     SafeArrayTypeMismatchException(message: str, inner: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SafeArrayTypeMismatchException()
-    instance = ZZZ()
+    Instance = SafeArrayTypeMismatchException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -5817,10 +5505,7 @@ class SafeArrayTypeMismatchException(SystemException):
 
 class SafeHandle(CriticalFinalizerObject):
     """ Represents a wrapper class for operating system handles. This class must be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SafeHandle()
-    instance = ZZZ()
+    Instance = SafeHandle
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -5926,10 +5611,7 @@ Get: IsInvalid(self: SafeHandle) -> bool
 
 class SafeBuffer(SafeHandleZeroOrMinusOneIsInvalid):
     """ Provides a controlled memory buffer that can be used for reading and writing. Attempts to access memory outside the controlled buffer (underruns and overruns) raise exceptions. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SafeBuffer()
-    instance = ZZZ()
+    Instance = SafeBuffer
     """hardcoded/returns an instance of the class"""
     def AcquirePointer(self, pointer):
         """
@@ -6046,10 +5728,7 @@ class SEHException(ExternalException):
     SEHException(message: str)
     SEHException(message: str, inner: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SEHException()
-    instance = ZZZ()
+    Instance = SEHException
     """hardcoded/returns an instance of the class"""
     def CanResume(self):
         """
@@ -6089,10 +5768,7 @@ class SetWin32ContextInIDispatchAttribute:
     
     SetWin32ContextInIDispatchAttribute()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SetWin32ContextInIDispatchAttribute()
-    instance = ZZZ()
+    Instance = SetWin32ContextInIDispatchAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6101,10 +5777,7 @@ class SetWin32ContextInIDispatchAttribute:
 
 class StandardOleMarshalObject(MarshalByRefObject):
     """ Replaces the standard common language runtime (CLR) free-threaded marshaler with the standard OLE STA marshaler. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StandardOleMarshalObject()
-    instance = ZZZ()
+    Instance = StandardOleMarshalObject
     """hardcoded/returns an instance of the class"""
     def MemberwiseClone(self, *args): #cannot find CLR method
         """
@@ -6131,10 +5804,7 @@ class StandardOleMarshalObject(MarshalByRefObject):
 
 class STATSTG():
     """ Use System.Runtime.InteropServices.ComTypes.STATSTG instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return STATSTG()
-    instance = ZZZ()
+    Instance = STATSTG
     """hardcoded/returns an instance of the class"""
     atime = None
     cbSize = None
@@ -6156,10 +5826,7 @@ class StructLayoutAttribute:
     StructLayoutAttribute(layoutKind: LayoutKind)
     StructLayoutAttribute(layoutKind: Int16)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StructLayoutAttribute()
-    instance = ZZZ()
+    Instance = StructLayoutAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6192,10 +5859,7 @@ class SYSKIND:
     
     enum SYSKIND, values: SYS_MAC (2), SYS_WIN16 (0), SYS_WIN32 (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SYSKIND()
-    instance = ZZZ()
+    Instance = SYSKIND
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -6238,10 +5902,7 @@ class SYSKIND:
 
 class TYPEATTR():
     """ Use System.Runtime.InteropServices.ComTypes.TYPEATTR instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TYPEATTR()
-    instance = ZZZ()
+    Instance = TYPEATTR
     """hardcoded/returns an instance of the class"""
     cbAlignment = None
     cbSizeInstance = None
@@ -6266,10 +5927,7 @@ class TYPEATTR():
 
 class TYPEDESC():
     """ Use System.Runtime.InteropServices.ComTypes.TYPEDESC instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TYPEDESC()
-    instance = ZZZ()
+    Instance = TYPEDESC
     """hardcoded/returns an instance of the class"""
     lpValue = None
     vt = None
@@ -6281,10 +5939,7 @@ class TYPEFLAGS:
     
     enum (flags) TYPEFLAGS, values: TYPEFLAG_FAGGREGATABLE (1024), TYPEFLAG_FAPPOBJECT (1), TYPEFLAG_FCANCREATE (2), TYPEFLAG_FCONTROL (32), TYPEFLAG_FDISPATCHABLE (4096), TYPEFLAG_FDUAL (64), TYPEFLAG_FHIDDEN (16), TYPEFLAG_FLICENSED (4), TYPEFLAG_FNONEXTENSIBLE (128), TYPEFLAG_FOLEAUTOMATION (256), TYPEFLAG_FPREDECLID (8), TYPEFLAG_FPROXY (16384), TYPEFLAG_FREPLACEABLE (2048), TYPEFLAG_FRESTRICTED (512), TYPEFLAG_FREVERSEBIND (8192)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TYPEFLAGS()
-    instance = ZZZ()
+    Instance = TYPEFLAGS
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -6344,10 +5999,7 @@ class TypeIdentifierAttribute:
     TypeIdentifierAttribute()
     TypeIdentifierAttribute(scope: str, identifier: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeIdentifierAttribute()
-    instance = ZZZ()
+    Instance = TypeIdentifierAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6383,10 +6035,7 @@ class TYPEKIND:
     
     enum TYPEKIND, values: TKIND_ALIAS (6), TKIND_COCLASS (5), TKIND_DISPATCH (4), TKIND_ENUM (0), TKIND_INTERFACE (3), TKIND_MAX (8), TKIND_MODULE (2), TKIND_RECORD (1), TKIND_UNION (7)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TYPEKIND()
-    instance = ZZZ()
+    Instance = TYPEKIND
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -6435,10 +6084,7 @@ class TYPEKIND:
 
 class TYPELIBATTR():
     """ Use System.Runtime.InteropServices.ComTypes.TYPELIBATTR instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TYPELIBATTR()
-    instance = ZZZ()
+    Instance = TYPELIBATTR
     """hardcoded/returns an instance of the class"""
     guid = None
     lcid = None
@@ -6454,10 +6100,7 @@ class TypeLibConverter:
     
     TypeLibConverter()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeLibConverter()
-    instance = ZZZ()
+    Instance = TypeLibConverter
     """hardcoded/returns an instance of the class"""
     def ConvertAssemblyToTypeLib(self, assembly, strTypeLibName, flags, notifySink):
         """
@@ -6534,10 +6177,7 @@ class TypeLibExporterFlags:
     
     enum (flags) TypeLibExporterFlags, values: CallerResolvedReferences (2), ExportAs32Bit (16), ExportAs64Bit (32), None (0), OldNames (4), OnlyReferenceRegistered (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeLibExporterFlags()
-    instance = ZZZ()
+    Instance = TypeLibExporterFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -6588,10 +6228,7 @@ class TypeLibFuncAttribute:
     TypeLibFuncAttribute(flags: TypeLibFuncFlags)
     TypeLibFuncAttribute(flags: Int16)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeLibFuncAttribute()
-    instance = ZZZ()
+    Instance = TypeLibFuncAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6620,10 +6257,7 @@ class TypeLibFuncFlags:
     
     enum (flags) TypeLibFuncFlags, values: FBindable (4), FDefaultBind (32), FDefaultCollelem (256), FDisplayBind (16), FHidden (64), FImmediateBind (4096), FNonBrowsable (1024), FReplaceable (2048), FRequestEdit (8), FRestricted (1), FSource (2), FUiDefault (512), FUsesGetLastError (128)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeLibFuncFlags()
-    instance = ZZZ()
+    Instance = TypeLibFuncFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -6680,10 +6314,7 @@ class TypeLibImportClassAttribute:
     
     TypeLibImportClassAttribute(importClass: Type)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeLibImportClassAttribute()
-    instance = ZZZ()
+    Instance = TypeLibImportClassAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6709,10 +6340,7 @@ class TypeLibImporterFlags:
     
     enum (flags) TypeLibImporterFlags, values: ImportAsAgnostic (2048), ImportAsArm (16384), ImportAsItanium (1024), ImportAsX64 (512), ImportAsX86 (256), NoDefineVersionResource (8192), None (0), PreventClassMembers (16), PrimaryInteropAssembly (1), ReflectionOnlyLoading (4096), SafeArrayAsSystemArray (4), SerializableValueClasses (32), TransformDispRetVals (8), UnsafeInterfaces (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeLibImporterFlags()
-    instance = ZZZ()
+    Instance = TypeLibImporterFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -6771,10 +6399,7 @@ class TypeLibTypeAttribute:
     TypeLibTypeAttribute(flags: TypeLibTypeFlags)
     TypeLibTypeAttribute(flags: Int16)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeLibTypeAttribute()
-    instance = ZZZ()
+    Instance = TypeLibTypeAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6803,10 +6428,7 @@ class TypeLibTypeFlags:
     
     enum (flags) TypeLibTypeFlags, values: FAggregatable (1024), FAppObject (1), FCanCreate (2), FControl (32), FDispatchable (4096), FDual (64), FHidden (16), FLicensed (4), FNonExtensible (128), FOleAutomation (256), FPreDeclId (8), FReplaceable (2048), FRestricted (512), FReverseBind (8192)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeLibTypeFlags()
-    instance = ZZZ()
+    Instance = TypeLibTypeFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -6865,10 +6487,7 @@ class TypeLibVarAttribute:
     TypeLibVarAttribute(flags: TypeLibVarFlags)
     TypeLibVarAttribute(flags: Int16)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeLibVarAttribute()
-    instance = ZZZ()
+    Instance = TypeLibVarAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6897,10 +6516,7 @@ class TypeLibVarFlags:
     
     enum (flags) TypeLibVarFlags, values: FBindable (4), FDefaultBind (32), FDefaultCollelem (256), FDisplayBind (16), FHidden (64), FImmediateBind (4096), FNonBrowsable (1024), FReadOnly (1), FReplaceable (2048), FRequestEdit (8), FRestricted (128), FSource (2), FUiDefault (512)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeLibVarFlags()
-    instance = ZZZ()
+    Instance = TypeLibVarFlags
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -6957,10 +6573,7 @@ class TypeLibVersionAttribute:
     
     TypeLibVersionAttribute(major: int, minor: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TypeLibVersionAttribute()
-    instance = ZZZ()
+    Instance = TypeLibVersionAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6989,10 +6602,7 @@ Get: MinorVersion(self: TypeLibVersionAttribute) -> int
 
 class UCOMIBindCtx:
     """ Use System.Runtime.InteropServices.ComTypes.BIND_OPTS instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UCOMIBindCtx()
-    instance = ZZZ()
+    Instance = UCOMIBindCtx
     """hardcoded/returns an instance of the class"""
     def EnumObjectParam(self, ppenum):
         """
@@ -7093,10 +6703,7 @@ class UCOMIBindCtx:
 
 class UCOMIConnectionPoint:
     """ Use System.Runtime.InteropServices.ComTypes.IConnectionPoint instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UCOMIConnectionPoint()
-    instance = ZZZ()
+    Instance = UCOMIConnectionPoint
     """hardcoded/returns an instance of the class"""
     def Advise(self, pUnkSink, pdwCookie):
         """
@@ -7148,10 +6755,7 @@ class UCOMIConnectionPoint:
 
 class UCOMIConnectionPointContainer:
     """ Use System.Runtime.InteropServices.ComTypes.IConnectionPointContainer instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UCOMIConnectionPointContainer()
-    instance = ZZZ()
+    Instance = UCOMIConnectionPointContainer
     """hardcoded/returns an instance of the class"""
     def EnumConnectionPoints(self, ppEnum):
         """
@@ -7178,10 +6782,7 @@ class UCOMIConnectionPointContainer:
 
 class UCOMIEnumConnectionPoints:
     """ Use System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UCOMIEnumConnectionPoints()
-    instance = ZZZ()
+    Instance = UCOMIEnumConnectionPoints
     """hardcoded/returns an instance of the class"""
     def Clone(self, ppenum):
         """
@@ -7229,10 +6830,7 @@ class UCOMIEnumConnectionPoints:
 
 class UCOMIEnumConnections:
     """ Use System.Runtime.InteropServices.ComTypes.IEnumConnections instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UCOMIEnumConnections()
-    instance = ZZZ()
+    Instance = UCOMIEnumConnections
     """hardcoded/returns an instance of the class"""
     def Clone(self, ppenum):
         """
@@ -7278,10 +6876,7 @@ class UCOMIEnumConnections:
 
 class UCOMIEnumMoniker:
     """ Use System.Runtime.InteropServices.ComTypes.IEnumMoniker instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UCOMIEnumMoniker()
-    instance = ZZZ()
+    Instance = UCOMIEnumMoniker
     """hardcoded/returns an instance of the class"""
     def Clone(self, ppenum):
         """
@@ -7329,10 +6924,7 @@ class UCOMIEnumMoniker:
 
 class UCOMIEnumString:
     """ Use System.Runtime.InteropServices.ComTypes.IEnumString instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UCOMIEnumString()
-    instance = ZZZ()
+    Instance = UCOMIEnumString
     """hardcoded/returns an instance of the class"""
     def Clone(self, ppenum):
         """
@@ -7380,10 +6972,7 @@ class UCOMIEnumString:
 
 class UCOMIEnumVARIANT:
     """ Use System.Runtime.InteropServices.ComTypes.IEnumVARIANT instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UCOMIEnumVARIANT()
-    instance = ZZZ()
+    Instance = UCOMIEnumVARIANT
     """hardcoded/returns an instance of the class"""
     def Clone(self, ppenum):
         """
@@ -7434,10 +7023,7 @@ class UCOMIEnumVARIANT:
 
 class UCOMIMoniker:
     """ Use System.Runtime.InteropServices.ComTypes.IMoniker instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UCOMIMoniker()
-    instance = ZZZ()
+    Instance = UCOMIMoniker
     """hardcoded/returns an instance of the class"""
     def BindToObject(self, pbc, pmkToLeft, riidResult, ppvResult):
         """
@@ -7646,10 +7232,7 @@ class UCOMIMoniker:
 
 class UCOMIPersistFile:
     """ Use System.Runtime.InteropServices.ComTypes.IPersistFile instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UCOMIPersistFile()
-    instance = ZZZ()
+    Instance = UCOMIPersistFile
     """hardcoded/returns an instance of the class"""
     def GetClassID(self, pClassID):
         """
@@ -7712,10 +7295,7 @@ class UCOMIPersistFile:
 
 class UCOMIRunningObjectTable:
     """ Use System.Runtime.InteropServices.ComTypes.IRunningObjectTable instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UCOMIRunningObjectTable()
-    instance = ZZZ()
+    Instance = UCOMIRunningObjectTable
     """hardcoded/returns an instance of the class"""
     def EnumRunning(self, ppenumMoniker):
         """
@@ -7793,10 +7373,7 @@ class UCOMIRunningObjectTable:
 
 class UCOMIStream:
     """ Use System.Runtime.InteropServices.ComTypes.IStream instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UCOMIStream()
-    instance = ZZZ()
+    Instance = UCOMIStream
     """hardcoded/returns an instance of the class"""
     def Clone(self, ppstm):
         """
@@ -7916,10 +7493,7 @@ class UCOMIStream:
 
 class UCOMITypeComp:
     """ Use System.Runtime.InteropServices.ComTypes.ITypeComp instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UCOMITypeComp()
-    instance = ZZZ()
+    Instance = UCOMITypeComp
     """hardcoded/returns an instance of the class"""
     def Bind(self, szName, lHashVal, wFlags, ppTInfo, pDescKind, pBindPtr):
         """
@@ -7951,10 +7525,7 @@ class UCOMITypeComp:
 
 class UCOMITypeInfo:
     """ Use System.Runtime.InteropServices.ComTypes.ITypeInfo instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UCOMITypeInfo()
-    instance = ZZZ()
+    Instance = UCOMITypeInfo
     """hardcoded/returns an instance of the class"""
     def AddressOfMember(self, memid, invKind, ppv):
         """
@@ -8152,10 +7723,7 @@ class UCOMITypeInfo:
 
 class UCOMITypeLib:
     """ Use System.Runtime.InteropServices.ComTypes.ITypeLib instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UCOMITypeLib()
-    instance = ZZZ()
+    Instance = UCOMITypeLib
     """hardcoded/returns an instance of the class"""
     def FindName(self, szNameBuf, lHashVal, ppTInfo, rgMemId, pcFound):
         """
@@ -8267,10 +7835,7 @@ class UnknownWrapper():
     
     UnknownWrapper(obj: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UnknownWrapper()
-    instance = ZZZ()
+    Instance = UnknownWrapper
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, obj):
@@ -8292,10 +7857,7 @@ class UnmanagedFunctionPointerAttribute:
     
     UnmanagedFunctionPointerAttribute(callingConvention: CallingConvention)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UnmanagedFunctionPointerAttribute()
-    instance = ZZZ()
+    Instance = UnmanagedFunctionPointerAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -8326,10 +7888,7 @@ class UnmanagedType:
     
     enum UnmanagedType, values: AnsiBStr (35), AsAny (40), Bool (2), BStr (19), ByValArray (30), ByValTStr (23), Currency (15), CustomMarshaler (44), Error (45), FunctionPtr (38), HString (47), I1 (3), I2 (5), I4 (7), I8 (9), IDispatch (26), IInspectable (46), Interface (28), IUnknown (25), LPArray (42), LPStr (20), LPStruct (43), LPTStr (22), LPUTF8Str (48), LPWStr (21), R4 (11), R8 (12), SafeArray (29), Struct (27), SysInt (31), SysUInt (32), TBStr (36), U1 (4), U2 (6), U4 (8), U8 (10), VariantBool (37), VBByRefStr (34)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UnmanagedType()
-    instance = ZZZ()
+    Instance = UnmanagedType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -8407,10 +7966,7 @@ class UnmanagedType:
 
 class VARDESC():
     """ Use System.Runtime.InteropServices.ComTypes.VARDESC instead. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return VARDESC()
-    instance = ZZZ()
+    Instance = VARDESC
     """hardcoded/returns an instance of the class"""
     DESCUNION = None
     elemdescVar = None
@@ -8426,10 +7982,7 @@ class VarEnum:
     
     enum VarEnum, values: VT_ARRAY (8192), VT_BLOB (65), VT_BLOB_OBJECT (70), VT_BOOL (11), VT_BSTR (8), VT_BYREF (16384), VT_CARRAY (28), VT_CF (71), VT_CLSID (72), VT_CY (6), VT_DATE (7), VT_DECIMAL (14), VT_DISPATCH (9), VT_EMPTY (0), VT_ERROR (10), VT_FILETIME (64), VT_HRESULT (25), VT_I1 (16), VT_I2 (2), VT_I4 (3), VT_I8 (20), VT_INT (22), VT_LPSTR (30), VT_LPWSTR (31), VT_NULL (1), VT_PTR (26), VT_R4 (4), VT_R8 (5), VT_RECORD (36), VT_SAFEARRAY (27), VT_STORAGE (67), VT_STORED_OBJECT (69), VT_STREAM (66), VT_STREAMED_OBJECT (68), VT_UI1 (17), VT_UI2 (18), VT_UI4 (19), VT_UI8 (21), VT_UINT (23), VT_UNKNOWN (13), VT_USERDEFINED (29), VT_VARIANT (12), VT_VECTOR (4096), VT_VOID (24)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return VarEnum()
-    instance = ZZZ()
+    Instance = VarEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -8517,10 +8070,7 @@ class VARFLAGS:
     
     enum (flags) VARFLAGS, values: VARFLAG_FBINDABLE (4), VARFLAG_FDEFAULTBIND (32), VARFLAG_FDEFAULTCOLLELEM (256), VARFLAG_FDISPLAYBIND (16), VARFLAG_FHIDDEN (64), VARFLAG_FIMMEDIATEBIND (4096), VARFLAG_FNONBROWSABLE (1024), VARFLAG_FREADONLY (1), VARFLAG_FREPLACEABLE (2048), VARFLAG_FREQUESTEDIT (8), VARFLAG_FRESTRICTED (128), VARFLAG_FSOURCE (2), VARFLAG_FUIDEFAULT (512)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return VARFLAGS()
-    instance = ZZZ()
+    Instance = VARFLAGS
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -8577,10 +8127,7 @@ class VariantWrapper():
     
     VariantWrapper(obj: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return VariantWrapper()
-    instance = ZZZ()
+    Instance = VariantWrapper
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, obj):
@@ -8598,10 +8145,7 @@ Get: WrappedObject(self: VariantWrapper) -> object
 
 class _Activator:
     """ Exposes the System.Activator class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _Activator()
-    instance = ZZZ()
+    Instance = _Activator
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -8660,10 +8204,7 @@ class _Activator:
 
 class _Assembly:
     """ Exposes the public members of the System.Reflection.Assembly class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _Assembly()
-    instance = ZZZ()
+    Instance = _Assembly
     """hardcoded/returns an instance of the class"""
     def CreateInstance(self, typeName, ignoreCase=None, bindingAttr=None, binder=None, args=None, culture=None, activationAttributes=None):
         """
@@ -9064,10 +8605,7 @@ Get: Location(self: _Assembly) -> str
 
 class _AssemblyBuilder:
     """ Exposes the System.Reflection.Emit.AssemblyBuilder class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _AssemblyBuilder()
-    instance = ZZZ()
+    Instance = _AssemblyBuilder
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -9126,10 +8664,7 @@ class _AssemblyBuilder:
 
 class _AssemblyName:
     """ Exposes the System.Reflection.AssemblyName class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _AssemblyName()
-    instance = ZZZ()
+    Instance = _AssemblyName
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -9188,10 +8723,7 @@ class _AssemblyName:
 
 class _ConstructorBuilder:
     """ Exposes the System.Reflection.Emit.ConstructorBuilder class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _ConstructorBuilder()
-    instance = ZZZ()
+    Instance = _ConstructorBuilder
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -9250,10 +8782,7 @@ class _ConstructorBuilder:
 
 class _ConstructorInfo:
     """ Exposes the public members of the System.Reflection.ConstructorInfo class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _ConstructorInfo()
-    instance = ZZZ()
+    Instance = _ConstructorInfo
     """hardcoded/returns an instance of the class"""
     def Equals(self, other):
         """
@@ -9623,10 +9152,7 @@ Get: ReflectedType(self: _ConstructorInfo) -> Type
 
 class _CustomAttributeBuilder:
     """ Exposes the System.Reflection.Emit.CustomAttributeBuilder class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _CustomAttributeBuilder()
-    instance = ZZZ()
+    Instance = _CustomAttributeBuilder
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -9685,10 +9211,7 @@ class _CustomAttributeBuilder:
 
 class _EnumBuilder:
     """ Exposes the System.Reflection.Emit.EnumBuilder class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _EnumBuilder()
-    instance = ZZZ()
+    Instance = _EnumBuilder
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -9747,10 +9270,7 @@ class _EnumBuilder:
 
 class _EventBuilder:
     """ Exposes the System.Reflection.Emit.EventBuilder class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _EventBuilder()
-    instance = ZZZ()
+    Instance = _EventBuilder
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -9809,10 +9329,7 @@ class _EventBuilder:
 
 class _EventInfo:
     """ Exposes the public members of the System.Reflection.EventInfo class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _EventInfo()
-    instance = ZZZ()
+    Instance = _EventInfo
     """hardcoded/returns an instance of the class"""
     def AddEventHandler(self, target, handler):
         """
@@ -10068,10 +9585,7 @@ Get: ReflectedType(self: _EventInfo) -> Type
 
 class _Exception:
     """ Exposes the public members of the System.Exception class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _Exception()
-    instance = ZZZ()
+    Instance = _Exception
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -10192,10 +9706,7 @@ Get: TargetSite(self: _Exception) -> MethodBase
 
 class _FieldBuilder:
     """ Exposes the System.Reflection.Emit.FieldBuilder class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _FieldBuilder()
-    instance = ZZZ()
+    Instance = _FieldBuilder
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -10254,10 +9765,7 @@ class _FieldBuilder:
 
 class _FieldInfo:
     """ Exposes the public members of the System.Reflection.FieldInfo class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _FieldInfo()
-    instance = ZZZ()
+    Instance = _FieldInfo
     """hardcoded/returns an instance of the class"""
     def Equals(self, other):
         """
@@ -10580,10 +10088,7 @@ Get: ReflectedType(self: _FieldInfo) -> Type
 
 class _ILGenerator:
     """ Exposes the System.Reflection.Emit.ILGenerator class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _ILGenerator()
-    instance = ZZZ()
+    Instance = _ILGenerator
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -10642,10 +10147,7 @@ class _ILGenerator:
 
 class _LocalBuilder:
     """ Exposes the System.Reflection.Emit.LocalBuilder class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _LocalBuilder()
-    instance = ZZZ()
+    Instance = _LocalBuilder
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -10704,10 +10206,7 @@ class _LocalBuilder:
 
 class _MemberInfo:
     """ Exposes the public members of the System.Reflection.MemberInfo class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _MemberInfo()
-    instance = ZZZ()
+    Instance = _MemberInfo
     """hardcoded/returns an instance of the class"""
     def Equals(self, other):
         """
@@ -10870,10 +10369,7 @@ Get: ReflectedType(self: _MemberInfo) -> Type
 
 class _MethodBase:
     """ Exposes the public members of the System.Reflection.MethodBase class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _MethodBase()
-    instance = ZZZ()
+    Instance = _MethodBase
     """hardcoded/returns an instance of the class"""
     def Equals(self, other):
         """
@@ -11196,10 +10692,7 @@ Get: ReflectedType(self: _MethodBase) -> Type
 
 class _MethodBuilder:
     """ Exposes the System.Reflection.Emit.MethodBuilder class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _MethodBuilder()
-    instance = ZZZ()
+    Instance = _MethodBuilder
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -11258,10 +10751,7 @@ class _MethodBuilder:
 
 class _MethodInfo:
     """ Exposes the public members of the System.Reflection.MethodInfo class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _MethodInfo()
-    instance = ZZZ()
+    Instance = _MethodInfo
     """hardcoded/returns an instance of the class"""
     def Equals(self, other):
         """
@@ -11607,10 +11097,7 @@ Get: ReturnTypeCustomAttributes(self: _MethodInfo) -> ICustomAttributeProvider
 
 class _MethodRental:
     """ Exposes the System.Reflection.Emit.MethodRental class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _MethodRental()
-    instance = ZZZ()
+    Instance = _MethodRental
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -11669,10 +11156,7 @@ class _MethodRental:
 
 class _Module:
     """ Exposes the System.Reflection.Module class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _Module()
-    instance = ZZZ()
+    Instance = _Module
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -11731,10 +11215,7 @@ class _Module:
 
 class _ModuleBuilder:
     """ Exposes the System.Reflection.Emit.ModuleBuilder class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _ModuleBuilder()
-    instance = ZZZ()
+    Instance = _ModuleBuilder
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -11793,10 +11274,7 @@ class _ModuleBuilder:
 
 class _ParameterBuilder:
     """ Exposes the System.Reflection.Emit.ParameterBuilder class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _ParameterBuilder()
-    instance = ZZZ()
+    Instance = _ParameterBuilder
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -11855,10 +11333,7 @@ class _ParameterBuilder:
 
 class _ParameterInfo:
     """ Exposes the System.Reflection.ParameterInfo class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _ParameterInfo()
-    instance = ZZZ()
+    Instance = _ParameterInfo
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -11917,10 +11392,7 @@ class _ParameterInfo:
 
 class _PropertyBuilder:
     """ Exposes the System.Reflection.Emit.PropertyBuilder class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _PropertyBuilder()
-    instance = ZZZ()
+    Instance = _PropertyBuilder
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -11979,10 +11451,7 @@ class _PropertyBuilder:
 
 class _PropertyInfo:
     """ Exposes the public members of the System.Reflection.PropertyInfo class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _PropertyInfo()
-    instance = ZZZ()
+    Instance = _PropertyInfo
     """hardcoded/returns an instance of the class"""
     def Equals(self, other):
         """
@@ -12302,10 +11771,7 @@ Get: ReflectedType(self: _PropertyInfo) -> Type
 
 class _SignatureHelper:
     """ Exposes the System.Reflection.Emit.SignatureHelper class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _SignatureHelper()
-    instance = ZZZ()
+    Instance = _SignatureHelper
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -12364,10 +11830,7 @@ class _SignatureHelper:
 
 class _Thread:
     """ Exposes the System.Threading.Thread class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _Thread()
-    instance = ZZZ()
+    Instance = _Thread
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """
@@ -12426,10 +11889,7 @@ class _Thread:
 
 class _Type:
     """ Exposes the public members of the System.Type class to the unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _Type()
-    instance = ZZZ()
+    Instance = _Type
     """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """
@@ -13527,10 +12987,7 @@ Get: UnderlyingSystemType(self: _Type) -> Type
 
 class _TypeBuilder:
     """ Exposes the System.Reflection.Emit.TypeBuilder class to unmanaged code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return _TypeBuilder()
-    instance = ZZZ()
+    Instance = _TypeBuilder
     """hardcoded/returns an instance of the class"""
     def GetIDsOfNames(self, riid, rgszNames, cNames, lcid, rgDispId):
         """

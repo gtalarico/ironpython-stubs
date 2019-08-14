@@ -10,10 +10,7 @@
 
 class CompatibilitySwitch():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CompatibilitySwitch()
-    instance = ZZZ()
+    Instance = CompatibilitySwitch
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetValue(compatibilitySwitchName):
@@ -37,10 +34,7 @@ class ComponentGuaranteesAttribute:
     
     ComponentGuaranteesAttribute(guarantees: ComponentGuaranteesOptions)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentGuaranteesAttribute()
-    instance = ZZZ()
+    Instance = ComponentGuaranteesAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -66,10 +60,7 @@ class ComponentGuaranteesOptions:
     
     enum (flags) ComponentGuaranteesOptions, values: Exchange (1), None (0), SideBySide (4), Stable (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentGuaranteesOptions()
-    instance = ZZZ()
+    Instance = ComponentGuaranteesOptions
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -119,10 +110,7 @@ class FrameworkName:
     FrameworkName(identifier: str, version: Version, profile: str)
     FrameworkName(frameworkName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FrameworkName()
-    instance = ZZZ()
+    Instance = FrameworkName
     """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """
@@ -228,10 +216,7 @@ class ResourceConsumptionAttribute:
     ResourceConsumptionAttribute(resourceScope: ResourceScope)
     ResourceConsumptionAttribute(resourceScope: ResourceScope, consumptionScope: ResourceScope)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ResourceConsumptionAttribute()
-    instance = ZZZ()
+    Instance = ResourceConsumptionAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -267,10 +252,7 @@ class ResourceExposureAttribute:
     
     ResourceExposureAttribute(exposureLevel: ResourceScope)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ResourceExposureAttribute()
-    instance = ZZZ()
+    Instance = ResourceExposureAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -296,10 +278,7 @@ class ResourceScope:
     
     enum (flags) ResourceScope, values: AppDomain (4), Assembly (32), Library (8), Machine (1), None (0), Private (16), Process (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ResourceScope()
-    instance = ZZZ()
+    Instance = ResourceScope
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -350,10 +329,7 @@ class TargetFrameworkAttribute:
     
     TargetFrameworkAttribute(frameworkName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TargetFrameworkAttribute()
-    instance = ZZZ()
+    Instance = TargetFrameworkAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -383,10 +359,7 @@ Get: FrameworkName(self: TargetFrameworkAttribute) -> str
 
 class VersioningHelper():
     """ Provides methods to aid developers in writing version-safe code. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return VersioningHelper()
-    instance = ZZZ()
+    Instance = VersioningHelper
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def MakeVersionSafeName(name, from_, to, type=None):

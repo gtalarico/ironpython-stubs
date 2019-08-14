@@ -11,10 +11,7 @@ from Wms.EdiMessaging import *
 
 class BosOutboundFilesMessageHandler(MessageHandlerBase):
     """ BosOutboundFilesMessageHandler(offlineScanning: IOfflineScanning) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BosOutboundFilesMessageHandler()
-    instance = ZZZ()
+    Instance = BosOutboundFilesMessageHandler
     """hardcoded/returns an instance of the class"""
     def CanHandle(self, message):
         """ CanHandle(self: BosOutboundFilesMessageHandler, message: IMessage) -> bool """

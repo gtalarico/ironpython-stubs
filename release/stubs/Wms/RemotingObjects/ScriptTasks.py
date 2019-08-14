@@ -11,10 +11,7 @@ from Wms.RemotingObjects import *
 
 class ScriptTask(DbObject):
     """ ScriptTask() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ScriptTask()
-    instance = ZZZ()
+    Instance = ScriptTask
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -210,10 +207,7 @@ Set: ZoneId(self: ScriptTask) = value
 
 class ScriptTaskPriority:
     """ enum ScriptTaskPriority, values: High (3), Low (1), Normal (2) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ScriptTaskPriority()
-    instance = ZZZ()
+    Instance = ScriptTaskPriority
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -256,10 +250,7 @@ class ScriptTaskPriority:
 
 class ScriptTasks(FindableList):
     """ ScriptTasks() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ScriptTasks()
-    instance = ZZZ()
+    Instance = ScriptTasks
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """

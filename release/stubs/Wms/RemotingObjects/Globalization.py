@@ -11,10 +11,7 @@ from System.Collections.Generic import *
 
 class SaveTranslationArgs():
     """ SaveTranslationArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SaveTranslationArgs()
-    instance = ZZZ()
+    Instance = SaveTranslationArgs
     """hardcoded/returns an instance of the class"""
     LocaleId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Langauge it is translated to
@@ -53,10 +50,7 @@ Set: Value(self: SaveTranslationArgs) = value
 
 class Translation():
     """ Translation() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Translation()
-    instance = ZZZ()
+    Instance = Translation
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def LoadFromRegistry():
@@ -108,10 +102,7 @@ Set: ResourseSet(self: Translation) = value
 
 class Translations(List):
     """ Translations() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Translations()
-    instance = ZZZ()
+    Instance = Translations
     """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """ Add(self: Translations, culture: str, resourseSet: str) """

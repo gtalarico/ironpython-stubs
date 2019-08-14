@@ -10,10 +10,7 @@
 
 class PickReferenceExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PickReferenceExtensions()
-    instance = ZZZ()
+    Instance = PickReferenceExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def AddOrUpdate(this, reference, type, warehouseCode, warehouseLocationCode, itemCode, itemId, quantity, parent, orderNumber):

@@ -10,10 +10,7 @@
 
 class ChangePrintJobStatusMessage():
     """ ChangePrintJobStatusMessage() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ChangePrintJobStatusMessage()
-    instance = ZZZ()
+    Instance = ChangePrintJobStatusMessage
     """hardcoded/returns an instance of the class"""
     ExternalJobId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Job id giving by External service.
@@ -63,10 +60,7 @@ class GetStatusOfJobsMessage():
     
     GetStatusOfJobsMessage()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetStatusOfJobsMessage()
-    instance = ZZZ()
+    Instance = GetStatusOfJobsMessage
     """hardcoded/returns an instance of the class"""
     Jobs = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Jobs we want a report of, if possible.
@@ -86,10 +80,7 @@ class PrintJobDispatchedMessage():
     
     PrintJobDispatchedMessage()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobDispatchedMessage()
-    instance = ZZZ()
+    Instance = PrintJobDispatchedMessage
     """hardcoded/returns an instance of the class"""
     ExternalJobId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Job id the job got by the external platform when dispatching job.
@@ -139,10 +130,7 @@ class StartPrintJobMessage():
     
     StartPrintJobMessage()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StartPrintJobMessage()
-    instance = ZZZ()
+    Instance = StartPrintJobMessage
     """hardcoded/returns an instance of the class"""
     BlobContainerName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Blob container name where the document contents are stored under.

@@ -14,10 +14,7 @@ class ProcessDirectOrderMessage(MessageBase):
     ProcessDirectOrderMessage()
     ProcessDirectOrderMessage(message: IMessage)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessDirectOrderMessage()
-    instance = ZZZ()
+    Instance = ProcessDirectOrderMessage
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -46,10 +43,7 @@ class ProcessDirectOrderMessageData():
     ProcessDirectOrderMessageData()
     ProcessDirectOrderMessageData(directOrder: DirectOrder)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessDirectOrderMessageData()
-    instance = ZZZ()
+    Instance = ProcessDirectOrderMessageData
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, directOrder=None):
@@ -95,10 +89,7 @@ class ProcessPreReceiptMessage(MessageBase):
     ProcessPreReceiptMessage()
     ProcessPreReceiptMessage(message: IMessage)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessPreReceiptMessage()
-    instance = ZZZ()
+    Instance = ProcessPreReceiptMessage
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -124,10 +115,7 @@ Set: Data(self: ProcessPreReceiptMessage) = value
 
 class ProcessPreReceiptMessageData():
     """ ProcessPreReceiptMessageData() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessPreReceiptMessageData()
-    instance = ZZZ()
+    Instance = ProcessPreReceiptMessageData
     """hardcoded/returns an instance of the class"""
     DefaultInboundLocation = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: DefaultInboundLocation(self: ProcessPreReceiptMessageData) -> str
@@ -166,10 +154,7 @@ class ProcessSalesOrderMessage(MessageBase):
     ProcessSalesOrderMessage()
     ProcessSalesOrderMessage(message: IMessage)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessSalesOrderMessage()
-    instance = ZZZ()
+    Instance = ProcessSalesOrderMessage
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -195,10 +180,7 @@ Set: Data(self: ProcessSalesOrderMessage) = value
 
 class ProcessSalesOrderMessageData():
     """ ProcessSalesOrderMessageData() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessSalesOrderMessageData()
-    instance = ZZZ()
+    Instance = ProcessSalesOrderMessageData
     """hardcoded/returns an instance of the class"""
     Arguments = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Arguments(self: ProcessSalesOrderMessageData) -> ProcessSalesOrderLinesArgs
@@ -222,10 +204,7 @@ Set: Order(self: ProcessSalesOrderMessageData) = value
 
 class StockOnLocationChangedMessage(MessageBase):
     """ StockOnLocationChangedMessage() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StockOnLocationChangedMessage()
-    instance = ZZZ()
+    Instance = StockOnLocationChangedMessage
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

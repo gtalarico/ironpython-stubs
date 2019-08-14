@@ -12,10 +12,7 @@ from Wms.RemotingObjects import *
 
 class BarcodeStructure():
     """ BarcodeStructure() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeStructure()
-    instance = ZZZ()
+    Instance = BarcodeStructure
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Parse(match, definition, replacedValues):
@@ -145,10 +142,7 @@ Set: Serial(self: BarcodeStructure) = value
 
 class BarcodeStructureDefinition(DbObject):
     """ BarcodeStructureDefinition() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeStructureDefinition()
-    instance = ZZZ()
+    Instance = BarcodeStructureDefinition
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: BarcodeStructureDefinition) -> object """
@@ -258,10 +252,7 @@ class BarcodeStructureDefinitionFilter():
     BarcodeStructureDefinitionFilter(searchText: str)
     BarcodeStructureDefinitionFilter(active: Nullable[bool])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeStructureDefinitionFilter()
-    instance = ZZZ()
+    Instance = BarcodeStructureDefinitionFilter
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -281,10 +272,7 @@ class BarcodeStructureDefinitionFilter():
 
 class BarcodeStructureDefinitions(FindableList):
     """ BarcodeStructureDefinitions() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeStructureDefinitions()
-    instance = ZZZ()
+    Instance = BarcodeStructureDefinitions
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: BarcodeStructureDefinitions) -> object """
@@ -325,10 +313,7 @@ Set: TotalRows(self: BarcodeStructureDefinitions) = value
 
 class BarcodeStructureResultEnum:
     """ enum (flags) BarcodeStructureResultEnum, values: InputRequired (1), NoInputRequired (2), NoMatchFound (4), None (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeStructureResultEnum()
-    instance = ZZZ()
+    Instance = BarcodeStructureResultEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -378,10 +363,7 @@ class BarcodeStructureSerials(ReadOnlyCollection):
     BarcodeStructureSerials()
     BarcodeStructureSerials(list: IList[str])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeStructureSerials()
-    instance = ZZZ()
+    Instance = BarcodeStructureSerials
     """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """
@@ -460,10 +442,7 @@ class BarcodeStructureSerials(ReadOnlyCollection):
 
 class BarcodeType():
     """ BarcodeType() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeType()
-    instance = ZZZ()
+    Instance = BarcodeType
     """hardcoded/returns an instance of the class"""
     Description = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -517,10 +496,7 @@ Set: Value(self: BarcodeType) = value
 
 class BarcodeTypes(FindableList):
     """ BarcodeTypes() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeTypes()
-    instance = ZZZ()
+    Instance = BarcodeTypes
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """ ToString(self: BarcodeTypes) -> str """
@@ -555,10 +531,7 @@ class ExpectScanOfEnum:
     
     enum (flags) ExpectScanOfEnum, values: Batch (4), Colli (128), GS1 (256), LicensePlate (64), Location (16), Order (32), Product (1), Quantity (8), Raw (512), Serial (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExpectScanOfEnum()
-    instance = ZZZ()
+    Instance = ExpectScanOfEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -608,10 +581,7 @@ class ExpectScanOfEnum:
 
 class GeneratedBarcode:
     """ GeneratedBarcode(barcode: str) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GeneratedBarcode()
-    instance = ZZZ()
+    Instance = GeneratedBarcode
     """hardcoded/returns an instance of the class"""
     def ToBarcode(self, includeApplicationIdentifier=None):
         """
@@ -653,10 +623,7 @@ class GeneratedBarcode:
 
 class IGeneratedBarcode:
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IGeneratedBarcode()
-    instance = ZZZ()
+    Instance = IGeneratedBarcode
     """hardcoded/returns an instance of the class"""
     def ToBarcode(self, includeApplicationIdentifier=None):
         """

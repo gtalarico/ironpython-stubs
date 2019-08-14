@@ -10,10 +10,7 @@
 
 class MessageSerialization():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessageSerialization()
-    instance = ZZZ()
+    Instance = MessageSerialization
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Deserialize(stream):

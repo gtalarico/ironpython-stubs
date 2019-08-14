@@ -14,10 +14,7 @@ class DuplicateAddressDetectionState:
     
     enum DuplicateAddressDetectionState, values: Deprecated (3), Duplicate (2), Invalid (0), Preferred (4), Tentative (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DuplicateAddressDetectionState()
-    instance = ZZZ()
+    Instance = DuplicateAddressDetectionState
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -62,10 +59,7 @@ class DuplicateAddressDetectionState:
 
 class GatewayIPAddressInformation():
     """ Represents the IP address of the network gateway. This class cannot be instantiated. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GatewayIPAddressInformation()
-    instance = ZZZ()
+    Instance = GatewayIPAddressInformation
     """hardcoded/returns an instance of the class"""
     Address = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get the IP address of the gateway.
@@ -78,10 +72,7 @@ Get: Address(self: GatewayIPAddressInformation) -> IPAddress
 
 class GatewayIPAddressInformationCollection:
     """ Stores a set of System.Net.NetworkInformation.GatewayIPAddressInformation types. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GatewayIPAddressInformationCollection()
-    instance = ZZZ()
+    Instance = GatewayIPAddressInformationCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, address):
         """
@@ -187,10 +178,7 @@ Get: IsReadOnly(self: GatewayIPAddressInformationCollection) -> bool
 
 class IcmpV4Statistics():
     """ Provides Internet Control Message Protocol for IPv4 (ICMPv4) statistical data for the local computer. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IcmpV4Statistics()
-    instance = ZZZ()
+    Instance = IcmpV4Statistics
     """hardcoded/returns an instance of the class"""
     AddressMaskRepliesReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of Internet Control Message Protocol version 4 (ICMPv4) Address Mask Reply messages that were received.
@@ -378,10 +366,7 @@ Get: TimestampRequestsSent(self: IcmpV4Statistics) -> Int64
 
 class IcmpV6Statistics():
     """ Provides Internet Control Message Protocol for Internet Protocol version 6 (ICMPv6) statistical data for the local computer. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IcmpV6Statistics()
-    instance = ZZZ()
+    Instance = IcmpV6Statistics
     """hardcoded/returns an instance of the class"""
     DestinationUnreachableMessagesReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of Internet Control Message Protocol version 6 (ICMPv6) messages received because of a packet having an unreachable address in its destination.
@@ -611,10 +596,7 @@ Get: TimeExceededMessagesSent(self: IcmpV6Statistics) -> Int64
 
 class IPAddressCollection:
     """ Stores a set of System.Net.IPAddress types. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPAddressCollection()
-    instance = ZZZ()
+    Instance = IPAddressCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, address):
         """
@@ -719,10 +701,7 @@ Get: IsReadOnly(self: IPAddressCollection) -> bool
 
 class IPAddressInformation():
     """ Provides information about a network interface address. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPAddressInformation()
-    instance = ZZZ()
+    Instance = IPAddressInformation
     """hardcoded/returns an instance of the class"""
     Address = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the Internet Protocol (IP) address.
@@ -749,10 +728,7 @@ Get: IsTransient(self: IPAddressInformation) -> bool
 
 class IPAddressInformationCollection:
     """ Stores a set of System.Net.NetworkInformation.IPAddressInformation types. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPAddressInformationCollection()
-    instance = ZZZ()
+    Instance = IPAddressInformationCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, address):
         """
@@ -858,10 +834,7 @@ Get: IsReadOnly(self: IPAddressInformationCollection) -> bool
 
 class IPGlobalProperties():
     """ Provides information about the network connectivity of the local computer. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPGlobalProperties()
-    instance = ZZZ()
+    Instance = IPGlobalProperties
     """hardcoded/returns an instance of the class"""
     def BeginGetUnicastAddresses(self, callback, state):
         """
@@ -1048,10 +1021,7 @@ Get: NodeType(self: IPGlobalProperties) -> NetBiosNodeType
 
 class IPGlobalStatistics():
     """ Provides Internet Protocol (IP) statistical data. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPGlobalStatistics()
-    instance = ZZZ()
+    Instance = IPGlobalStatistics
     """hardcoded/returns an instance of the class"""
     DefaultTtl = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the default time-to-live (TTL) value for Internet Protocol (IP) packets.
@@ -1211,10 +1181,7 @@ Get: ReceivedPacketsWithUnknownProtocol(self: IPGlobalStatistics) -> Int64
 
 class IPInterfaceProperties():
     """ Provides information about network interfaces that support Internet Protocol version 4 (IPv4) or Internet Protocol version 6 (IPv6). """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPInterfaceProperties()
-    instance = ZZZ()
+    Instance = IPInterfaceProperties
     """hardcoded/returns an instance of the class"""
     def GetIPv4Properties(self):
         """
@@ -1308,10 +1275,7 @@ Get: WinsServersAddresses(self: IPInterfaceProperties) -> IPAddressCollection
 
 class IPInterfaceStatistics():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPInterfaceStatistics()
-    instance = ZZZ()
+    Instance = IPInterfaceStatistics
     """hardcoded/returns an instance of the class"""
     BytesReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: BytesReceived(self: IPInterfaceStatistics) -> Int64
@@ -1381,10 +1345,7 @@ class IPStatus:
     
     enum IPStatus, values: BadDestination (11018), BadHeader (11042), BadOption (11007), BadRoute (11012), DestinationHostUnreachable (11003), DestinationNetworkUnreachable (11002), DestinationPortUnreachable (11005), DestinationProhibited (11004), DestinationProtocolUnreachable (11004), DestinationScopeMismatch (11045), DestinationUnreachable (11040), HardwareError (11008), IcmpError (11044), NoResources (11006), PacketTooBig (11009), ParameterProblem (11015), SourceQuench (11016), Success (0), TimedOut (11010), TimeExceeded (11041), TtlExpired (11013), TtlReassemblyTimeExceeded (11014), Unknown (-1), UnrecognizedNextHeader (11043)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPStatus()
-    instance = ZZZ()
+    Instance = IPStatus
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1448,10 +1409,7 @@ class IPStatus:
 
 class IPv4InterfaceProperties():
     """ Provides information about network interfaces that support Internet Protocol version 4 (IPv4). """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPv4InterfaceProperties()
-    instance = ZZZ()
+    Instance = IPv4InterfaceProperties
     """hardcoded/returns an instance of the class"""
     Index = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the index of the network interface associated with the Internet Protocol version 4 (IPv4) address.
@@ -1506,10 +1464,7 @@ Get: UsesWins(self: IPv4InterfaceProperties) -> bool
 
 class IPv4InterfaceStatistics():
     """ Provides statistical data for a network interface on the local computer. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPv4InterfaceStatistics()
-    instance = ZZZ()
+    Instance = IPv4InterfaceStatistics
     """hardcoded/returns an instance of the class"""
     BytesReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of bytes that were received on the interface.
@@ -1599,10 +1554,7 @@ Get: UnicastPacketsSent(self: IPv4InterfaceStatistics) -> Int64
 
 class IPv6InterfaceProperties():
     """ Provides information about network interfaces that support Internet Protocol version 6 (IPv6). """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPv6InterfaceProperties()
-    instance = ZZZ()
+    Instance = IPv6InterfaceProperties
     """hardcoded/returns an instance of the class"""
     def GetScopeId(self, scopeLevel):
         """ GetScopeId(self: IPv6InterfaceProperties, scopeLevel: ScopeLevel) -> Int64 """
@@ -1626,10 +1578,7 @@ Get: Mtu(self: IPv6InterfaceProperties) -> int
 
 class MulticastIPAddressInformation:
     """ Provides information about a network interface's multicast address. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MulticastIPAddressInformation()
-    instance = ZZZ()
+    Instance = MulticastIPAddressInformation
     """hardcoded/returns an instance of the class"""
     AddressPreferredLifetime = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of seconds remaining during which this address is the preferred address.
@@ -1677,10 +1626,7 @@ Get: SuffixOrigin(self: MulticastIPAddressInformation) -> SuffixOrigin
 
 class MulticastIPAddressInformationCollection:
     """ Stores a set of System.Net.NetworkInformation.MulticastIPAddressInformation types. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MulticastIPAddressInformationCollection()
-    instance = ZZZ()
+    Instance = MulticastIPAddressInformationCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, address):
         """
@@ -1790,10 +1736,7 @@ class NetBiosNodeType:
     
     enum NetBiosNodeType, values: Broadcast (1), Hybrid (8), Mixed (4), Peer2Peer (2), Unknown (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetBiosNodeType()
-    instance = ZZZ()
+    Instance = NetBiosNodeType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1842,10 +1785,7 @@ class NetworkAddressChangedEventHandler(MulticastDelegate):
     
     NetworkAddressChangedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetworkAddressChangedEventHandler()
-    instance = ZZZ()
+    Instance = NetworkAddressChangedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: NetworkAddressChangedEventHandler, sender: object, e: EventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -1923,10 +1863,7 @@ class NetworkAvailabilityChangedEventHandler(MulticastDelegate):
     
     NetworkAvailabilityChangedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetworkAvailabilityChangedEventHandler()
-    instance = ZZZ()
+    Instance = NetworkAvailabilityChangedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: NetworkAvailabilityChangedEventHandler, sender: object, e: NetworkAvailabilityEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -2000,10 +1937,7 @@ class NetworkAvailabilityChangedEventHandler(MulticastDelegate):
 
 class NetworkAvailabilityEventArgs(EventArgs):
     """ Provides data for the System.Net.NetworkInformation.NetworkChange.NetworkAvailabilityChanged event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetworkAvailabilityEventArgs()
-    instance = ZZZ()
+    Instance = NetworkAvailabilityEventArgs
     """hardcoded/returns an instance of the class"""
     IsAvailable = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the current status of the network connection.
@@ -2020,10 +1954,7 @@ class NetworkChange():
     
     NetworkChange()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetworkChange()
-    instance = ZZZ()
+    Instance = NetworkChange
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def RegisterNetworkChange(nc):
@@ -2040,10 +1971,7 @@ class NetworkInformationAccess:
     
     enum (flags) NetworkInformationAccess, values: None (0), Ping (4), Read (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetworkInformationAccess()
-    instance = ZZZ()
+    Instance = NetworkInformationAccess
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2091,10 +2019,7 @@ class NetworkInformationException(Win32Exception):
     NetworkInformationException()
     NetworkInformationException(errorCode: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetworkInformationException()
-    instance = ZZZ()
+    Instance = NetworkInformationException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2133,10 +2058,7 @@ class NetworkInformationPermission(CodeAccessPermission):
     NetworkInformationPermission(state: PermissionState)
     NetworkInformationPermission(access: NetworkInformationAccess)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetworkInformationPermission()
-    instance = ZZZ()
+    Instance = NetworkInformationPermission
     """hardcoded/returns an instance of the class"""
     def AddPermission(self, access):
         """
@@ -2250,10 +2172,7 @@ class NetworkInformationPermissionAttribute(CodeAccessSecurityAttribute):
     
     NetworkInformationPermissionAttribute(action: SecurityAction)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetworkInformationPermissionAttribute()
-    instance = ZZZ()
+    Instance = NetworkInformationPermissionAttribute
     """hardcoded/returns an instance of the class"""
     def CreatePermission(self):
         """
@@ -2288,10 +2207,7 @@ Set: Access(self: NetworkInformationPermissionAttribute) = value
 
 class NetworkInterface():
     """ Provides configuration and statistical information for a network interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetworkInterface()
-    instance = ZZZ()
+    Instance = NetworkInterface
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetAllNetworkInterfaces():
@@ -2422,10 +2338,7 @@ class NetworkInterfaceComponent:
     
     enum NetworkInterfaceComponent, values: IPv4 (0), IPv6 (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetworkInterfaceComponent()
-    instance = ZZZ()
+    Instance = NetworkInterfaceComponent
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2471,10 +2384,7 @@ class NetworkInterfaceType:
     
     enum NetworkInterfaceType, values: AsymmetricDsl (94), Atm (37), BasicIsdn (20), Ethernet (6), Ethernet3Megabit (26), FastEthernetFx (69), FastEthernetT (62), Fddi (15), GenericModem (48), GigabitEthernet (117), HighPerformanceSerialBus (144), IPOverAtm (114), Isdn (63), Loopback (24), MultiRateSymmetricDsl (143), Ppp (23), PrimaryIsdn (21), RateAdaptDsl (95), Slip (28), SymmetricDsl (96), TokenRing (9), Tunnel (131), Unknown (1), VeryHighSpeedDsl (97), Wireless80211 (71), Wman (237), Wwanpp (243), Wwanpp2 (244)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NetworkInterfaceType()
-    instance = ZZZ()
+    Instance = NetworkInterfaceType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2546,10 +2456,7 @@ class OperationalStatus:
     
     enum OperationalStatus, values: Dormant (5), Down (2), LowerLayerDown (7), NotPresent (6), Testing (3), Unknown (4), Up (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OperationalStatus()
-    instance = ZZZ()
+    Instance = OperationalStatus
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2600,10 +2507,7 @@ class PhysicalAddress():
     
     PhysicalAddress(address: Array[Byte])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PhysicalAddress()
-    instance = ZZZ()
+    Instance = PhysicalAddress
     """hardcoded/returns an instance of the class"""
     def Equals(self, comparand):
         """
@@ -2676,10 +2580,7 @@ class Ping(Component):
     
     Ping()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Ping()
-    instance = ZZZ()
+    Instance = Ping
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -2972,10 +2873,7 @@ class Ping(Component):
 
 class PingCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.NetworkInformation.Ping.PingCompleted event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PingCompletedEventArgs()
-    instance = ZZZ()
+    Instance = PingCompletedEventArgs
     """hardcoded/returns an instance of the class"""
     Reply = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets an object that contains data that describes an attempt to send an Internet Control Message Protocol (ICMP) echo request message and receive a corresponding ICMP echo reply message.
@@ -2992,10 +2890,7 @@ class PingCompletedEventHandler(MulticastDelegate):
     
     PingCompletedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PingCompletedEventHandler()
-    instance = ZZZ()
+    Instance = PingCompletedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: PingCompletedEventHandler, sender: object, e: PingCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -3074,10 +2969,7 @@ class PingException:
     PingException(message: str)
     PingException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PingException()
-    instance = ZZZ()
+    Instance = PingException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -3108,10 +3000,7 @@ class PingOptions():
     PingOptions(ttl: int, dontFragment: bool)
     PingOptions()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PingOptions()
-    instance = ZZZ()
+    Instance = PingOptions
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, ttl=None, dontFragment=None):
@@ -3141,10 +3030,7 @@ Set: Ttl(self: PingOptions) = value
 
 class PingReply():
     """ Provides information about the status and data resulting from a erload:System.Net.NetworkInformation.Ping.Send or erload:System.Net.NetworkInformation.Ping.SendAsync operation. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PingReply()
-    instance = ZZZ()
+    Instance = PingReply
     """hardcoded/returns an instance of the class"""
     Address = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the address of the host that sends the Internet Control Message Protocol (ICMP) echo reply.
@@ -3189,10 +3075,7 @@ class PrefixOrigin:
     
     enum PrefixOrigin, values: Dhcp (3), Manual (1), Other (0), RouterAdvertisement (4), WellKnown (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrefixOrigin()
-    instance = ZZZ()
+    Instance = PrefixOrigin
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3237,10 +3120,7 @@ class PrefixOrigin:
 
 class ScopeLevel:
     """ enum ScopeLevel, values: Admin (4), Global (14), Interface (1), Link (2), None (0), Organization (8), Site (5), Subnet (3) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ScopeLevel()
-    instance = ZZZ()
+    Instance = ScopeLevel
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3292,10 +3172,7 @@ class SuffixOrigin:
     
     enum SuffixOrigin, values: LinkLayerAddress (4), Manual (1), OriginDhcp (3), Other (0), Random (5), WellKnown (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SuffixOrigin()
-    instance = ZZZ()
+    Instance = SuffixOrigin
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3341,10 +3218,7 @@ class SuffixOrigin:
 
 class TcpConnectionInformation():
     """ Provides information about the Transmission Control Protocol (TCP) connections on the local computer. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TcpConnectionInformation()
-    instance = ZZZ()
+    Instance = TcpConnectionInformation
     """hardcoded/returns an instance of the class"""
     LocalEndPoint = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the local endpoint of a Transmission Control Protocol (TCP) connection.
@@ -3375,10 +3249,7 @@ class TcpState:
     
     enum TcpState, values: Closed (1), CloseWait (8), Closing (9), DeleteTcb (12), Established (5), FinWait1 (6), FinWait2 (7), LastAck (10), Listen (2), SynReceived (4), SynSent (3), TimeWait (11), Unknown (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TcpState()
-    instance = ZZZ()
+    Instance = TcpState
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3431,10 +3302,7 @@ class TcpState:
 
 class TcpStatistics():
     """ Provides Transmission Control Protocol (TCP) statistical data. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TcpStatistics()
-    instance = ZZZ()
+    Instance = TcpStatistics
     """hardcoded/returns an instance of the class"""
     ConnectionsAccepted = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of accepted Transmission Control Protocol (TCP) connection requests.
@@ -3538,10 +3406,7 @@ Get: SegmentsSent(self: TcpStatistics) -> Int64
 
 class UdpStatistics():
     """ Provides User Datagram Protocol (UDP) statistical data. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UdpStatistics()
-    instance = ZZZ()
+    Instance = UdpStatistics
     """hardcoded/returns an instance of the class"""
     DatagramsReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of User Datagram Protocol (UDP) datagrams that were received.
@@ -3582,10 +3447,7 @@ Get: UdpListeners(self: UdpStatistics) -> int
 
 class UnicastIPAddressInformation:
     """ Provides information about a network interface's unicast address. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UnicastIPAddressInformation()
-    instance = ZZZ()
+    Instance = UnicastIPAddressInformation
     """hardcoded/returns an instance of the class"""
     AddressPreferredLifetime = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of seconds remaining during which this address is the preferred address.
@@ -3645,10 +3507,7 @@ Get: SuffixOrigin(self: UnicastIPAddressInformation) -> SuffixOrigin
 
 class UnicastIPAddressInformationCollection:
     """ Stores a set of System.Net.NetworkInformation.UnicastIPAddressInformation types. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UnicastIPAddressInformationCollection()
-    instance = ZZZ()
+    Instance = UnicastIPAddressInformationCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, address):
         """

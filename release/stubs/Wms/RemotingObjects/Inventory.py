@@ -19,10 +19,7 @@ class AddWarehouseTransferItemIdentitificationArgs():
     AddWarehouseTransferItemIdentitificationArgs()
     AddWarehouseTransferItemIdentitificationArgs(itemId: str, quantity: Decimal)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AddWarehouseTransferItemIdentitificationArgs()
-    instance = ZZZ()
+    Instance = AddWarehouseTransferItemIdentitificationArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, itemId=None, quantity=None):
@@ -68,10 +65,7 @@ Set: OverwriteIfExists(self: AddWarehouseTransferItemIdentitificationArgs) = val
 
 class AddWarehouseTransferQuantityArgs():
     """ AddWarehouseTransferQuantityArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AddWarehouseTransferQuantityArgs()
-    instance = ZZZ()
+    Instance = AddWarehouseTransferQuantityArgs
     """hardcoded/returns an instance of the class"""
     ItemCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -109,10 +103,7 @@ Set: Quantity(self: AddWarehouseTransferQuantityArgs) = value
 
 class AllocatedStockItem:
     """ AllocatedStockItem() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AllocatedStockItem()
-    instance = ZZZ()
+    Instance = AllocatedStockItem
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: AllocatedStockItem) -> object """
@@ -219,10 +210,7 @@ class AllocatedStockItemReference:
     AllocatedStockItemReference()
     AllocatedStockItemReference(type: AllocatedStockItemTypesEnum, id: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AllocatedStockItemReference()
-    instance = ZZZ()
+    Instance = AllocatedStockItemReference
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: AllocatedStockItemReference) -> AllocatedStockItemReference """
@@ -304,10 +292,7 @@ Set: Type(self: AllocatedStockItemReference) = value
 
 class AllocatedStockItemTypesEnum:
     """ enum AllocatedStockItemTypesEnum, values: Batch (0), DirectOrder (2), MessageQueue (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AllocatedStockItemTypesEnum()
-    instance = ZZZ()
+    Instance = AllocatedStockItemTypesEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -350,10 +335,7 @@ class AllocatedStockItemTypesEnum:
 
 class AssignedItemIdsFilterType:
     """ enum AssignedItemIdsFilterType, values: AssignedOnly (2), Exclude (1), Include (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AssignedItemIdsFilterType()
-    instance = ZZZ()
+    Instance = AssignedItemIdsFilterType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -396,10 +378,7 @@ class AssignedItemIdsFilterType:
 
 class AssignType:
     """ enum AssignType, values: All (5), ItemId (2), None (0), Production (4), Purchase (3), Stock (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AssignType()
-    instance = ZZZ()
+    Instance = AssignType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -449,10 +428,7 @@ class BatchItemLocationBase():
     BatchItemLocationBase(itemId: ItemIdentification)
     BatchItemLocationBase(quantity: Decimal)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchItemLocationBase()
-    instance = ZZZ()
+    Instance = BatchItemLocationBase
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -501,10 +477,7 @@ Set: WarehouseCode(self: BatchItemLocationBase) = value
 
 class ChangeLicensePlateStatusArgs():
     """ ChangeLicensePlateStatusArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ChangeLicensePlateStatusArgs()
-    instance = ZZZ()
+    Instance = ChangeLicensePlateStatusArgs
     """hardcoded/returns an instance of the class"""
     Description = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -534,10 +507,7 @@ Set: NewStatus(self: ChangeLicensePlateStatusArgs) = value
 
 class CheckLicensePlateIntegrityArgs():
     """ CheckLicensePlateIntegrityArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CheckLicensePlateIntegrityArgs()
-    instance = ZZZ()
+    Instance = CheckLicensePlateIntegrityArgs
     """hardcoded/returns an instance of the class"""
     AutoChangeStateToActiveIfNotBroken = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Auto changes the state of the lp to Active when it passes the integrity check.
@@ -567,10 +537,7 @@ Set: LicensePlateId(self: CheckLicensePlateIntegrityArgs) = value
 
 class CheckLicensePlateIntegrityResult():
     """ CheckLicensePlateIntegrityResult() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CheckLicensePlateIntegrityResult()
-    instance = ZZZ()
+    Instance = CheckLicensePlateIntegrityResult
     """hardcoded/returns an instance of the class"""
     ErrorMessage = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -592,10 +559,7 @@ Set: IsValid(self: CheckLicensePlateIntegrityResult) = value
 
 class CreateLicensePlateFromReceiptArgs():
     """ CreateLicensePlateFromReceiptArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CreateLicensePlateFromReceiptArgs()
-    instance = ZZZ()
+    Instance = CreateLicensePlateFromReceiptArgs
     """hardcoded/returns an instance of the class"""
     Lp = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -617,10 +581,7 @@ Set: Reference(self: CreateLicensePlateFromReceiptArgs) = value
 
 class EnhancedStockAllocations(Cachable):
     """ EnhancedStockAllocations() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EnhancedStockAllocations()
-    instance = ZZZ()
+    Instance = EnhancedStockAllocations
     """hardcoded/returns an instance of the class"""
     def GetSchema(self):
         """ GetSchema(self: EnhancedStockAllocations) -> XmlSchema """
@@ -665,10 +626,7 @@ class EnhancedStockAllocations(Cachable):
 
 class FilterOptions:
     """ enum FilterOptions, values: EmptyLocations (2), None (0), StockLocations (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FilterOptions()
-    instance = ZZZ()
+    Instance = FilterOptions
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -714,10 +672,7 @@ class GenerateReplenishmentOrdersArgs():
     GenerateReplenishmentOrdersArgs()
     GenerateReplenishmentOrdersArgs(warehouseCodes: List[str])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GenerateReplenishmentOrdersArgs()
-    instance = ZZZ()
+    Instance = GenerateReplenishmentOrdersArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, warehouseCodes=None):
@@ -743,10 +698,7 @@ class GetAllItemIdentificationsArgs():
     
     GetAllItemIdentificationsArgs()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetAllItemIdentificationsArgs()
-    instance = ZZZ()
+    Instance = GetAllItemIdentificationsArgs
     """hardcoded/returns an instance of the class"""
     FilterDate = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: FilterDate(self: GetAllItemIdentificationsArgs) -> DateTime
@@ -777,10 +729,7 @@ Set: SearchText(self: GetAllItemIdentificationsArgs) = value
 
 class GetAllocationsArgs():
     """ GetAllocationsArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetAllocationsArgs()
-    instance = ZZZ()
+    Instance = GetAllocationsArgs
     """hardcoded/returns an instance of the class"""
     ItemCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -815,10 +764,7 @@ class GetItemArgs():
     GetItemArgs()
     GetItemArgs(itemCode: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetItemArgs()
-    instance = ZZZ()
+    Instance = GetItemArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, itemCode=None):
@@ -850,10 +796,7 @@ class GetItemIdentificationArgs():
     GetItemIdentificationArgs(item: Item, warehouseCode: str, warehouseLocationCode: str, itemId: str, onlyActive: bool)
     GetItemIdentificationArgs(item: Item, warehouseCode: str, warehouseLocationCode: str, itemId: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetItemIdentificationArgs()
-    instance = ZZZ()
+    Instance = GetItemIdentificationArgs
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -927,10 +870,7 @@ class GetItemLocationsArgs():
     GetItemLocationsArgs(itemCode: str, warehouseCode: str, onlyDefaultLocation: bool)
     GetItemLocationsArgs(itemCode: str, warehouseCode: str, warehouseLocationCode: str, filter: str, onlyDefaultLocation: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetItemLocationsArgs()
-    instance = ZZZ()
+    Instance = GetItemLocationsArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -1008,10 +948,7 @@ class GetItemsArgs():
     
     GetItemsArgs()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetItemsArgs()
-    instance = ZZZ()
+    Instance = GetItemsArgs
     """hardcoded/returns an instance of the class"""
     IncludeBlockedItems = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1057,10 +994,7 @@ class GetItemsOnLocationArgs():
     GetItemsOnLocationArgs(paging: PagingParams, warehouseCode: str, warehouseLocationCode: str)
     GetItemsOnLocationArgs(paging: PagingParams, warehouseCode: str, warehouseLocationCode: str, itemCode: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetItemsOnLocationArgs()
-    instance = ZZZ()
+    Instance = GetItemsOnLocationArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -1135,10 +1069,7 @@ Set: WarehouseLocationCode(self: GetItemsOnLocationArgs) = value
 
 class GetItemsOnLocationLeftToAddToLpArgs():
     """ GetItemsOnLocationLeftToAddToLpArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetItemsOnLocationLeftToAddToLpArgs()
-    instance = ZZZ()
+    Instance = GetItemsOnLocationLeftToAddToLpArgs
     """hardcoded/returns an instance of the class"""
     LocationCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1166,10 +1097,7 @@ class GetItemStockListArgs():
     GetItemStockListArgs(itemCode: str, warehouseCode: str, warehouseLocationCode: str)
     GetItemStockListArgs(itemCode: str, warehouseCode: str, warehouseLocationCode: str, filter: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetItemStockListArgs()
-    instance = ZZZ()
+    Instance = GetItemStockListArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, itemCode=None, warehouseCode=None, warehouseLocationCode=None, filter=None):
@@ -1228,10 +1156,7 @@ class GetItemStockTotalsArgs():
     
     GetItemStockTotalsArgs()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetItemStockTotalsArgs()
-    instance = ZZZ()
+    Instance = GetItemStockTotalsArgs
     """hardcoded/returns an instance of the class"""
     ItemCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1253,10 +1178,7 @@ Set: WarehouseCode(self: GetItemStockTotalsArgs) = value
 
 class GetLicensePlateByCodeArgs():
     """ GetLicensePlateByCodeArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetLicensePlateByCodeArgs()
-    instance = ZZZ()
+    Instance = GetLicensePlateByCodeArgs
     """hardcoded/returns an instance of the class"""
     Code = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1278,10 +1200,7 @@ Set: Statusses(self: GetLicensePlateByCodeArgs) = value
 
 class GetLicensePlateItemAuditLogEntriesArgs():
     """ GetLicensePlateItemAuditLogEntriesArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetLicensePlateItemAuditLogEntriesArgs()
-    instance = ZZZ()
+    Instance = GetLicensePlateItemAuditLogEntriesArgs
     """hardcoded/returns an instance of the class"""
     LicensePlateId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1295,10 +1214,7 @@ Set: LicensePlateId(self: GetLicensePlateItemAuditLogEntriesArgs) = value
 
 class GetLicensePlateItemsArgs():
     """ GetLicensePlateItemsArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetLicensePlateItemsArgs()
-    instance = ZZZ()
+    Instance = GetLicensePlateItemsArgs
     """hardcoded/returns an instance of the class"""
     FilterText = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1320,10 +1236,7 @@ Set: LicensePlateId(self: GetLicensePlateItemsArgs) = value
 
 class GetLicensePlatesArgs():
     """ GetLicensePlatesArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetLicensePlatesArgs()
-    instance = ZZZ()
+    Instance = GetLicensePlatesArgs
     """hardcoded/returns an instance of the class"""
     Code = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1377,10 +1290,7 @@ Set: WarehouseCode(self: GetLicensePlatesArgs) = value
 
 class GetStockListArgs():
     """ GetStockListArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetStockListArgs()
-    instance = ZZZ()
+    Instance = GetStockListArgs
     """hardcoded/returns an instance of the class"""
     Items = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1406,10 +1316,7 @@ class GetStockManagerListArgs():
     
     GetStockManagerListArgs()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetStockManagerListArgs()
-    instance = ZZZ()
+    Instance = GetStockManagerListArgs
     """hardcoded/returns an instance of the class"""
     AssignType = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: AssignType(self: GetStockManagerListArgs) -> AssignType
@@ -1497,10 +1404,7 @@ class GetWarehouseLocationsArgs():
     GetWarehouseLocationsArgs(paging: PagingParams, warehouseCode: str, warehouseLocationCode: str, filter: str)
     GetWarehouseLocationsArgs(warehouseLocationCodeFrom: str, warehouseLocationCodeTo: str, warehouseCode: str, paging: PagingParams)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetWarehouseLocationsArgs()
-    instance = ZZZ()
+    Instance = GetWarehouseLocationsArgs
     """hardcoded/returns an instance of the class"""
     def GetHashCode(self):
         """ GetHashCode(self: GetWarehouseLocationsArgs) -> int """
@@ -1581,10 +1485,7 @@ class GetWarehousesArgs():
     GetWarehousesArgs(warehouseLocationCode: str, active: bool)
     GetWarehousesArgs(warehouseCode: str, warehouseLocationCode: str, active: bool, defaultInboundLocation: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetWarehousesArgs()
-    instance = ZZZ()
+    Instance = GetWarehousesArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -1644,10 +1545,7 @@ Set: WarehouseLocationCode(self: GetWarehousesArgs) = value
 
 class HistoryReplenishmentOrder(HistoryOutboundOrder):
     """ HistoryReplenishmentOrder() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryReplenishmentOrder()
-    instance = ZZZ()
+    Instance = HistoryReplenishmentOrder
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: HistoryReplenishmentOrder) -> object """
@@ -1701,10 +1599,7 @@ Get: Type(self: HistoryReplenishmentOrder) -> OutboundOrderTypeEnum
 
 class HistoryReplenishmentOrders(HistoryOutboundOrders):
     """ HistoryReplenishmentOrders() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryReplenishmentOrders()
-    instance = ZZZ()
+    Instance = HistoryReplenishmentOrders
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(list):
@@ -1733,10 +1628,7 @@ class HistoryReplenishmentOrders(HistoryOutboundOrders):
 
 class IAllocatedStockItem:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IAllocatedStockItem()
-    instance = ZZZ()
+    Instance = IAllocatedStockItem
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1805,10 +1697,7 @@ Set: WarehouseLocationCode(self: IAllocatedStockItem) = value
 
 class Item(CacheObject):
     """ Item() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Item()
-    instance = ZZZ()
+    Instance = Item
     """hardcoded/returns an instance of the class"""
     def ExpectedScanType(self, checkRegistration):
         """ ExpectedScanType(self: Item, checkRegistration: bool) -> ExpectScanOfEnum """
@@ -2042,10 +1931,7 @@ Set: UnitType(self: Item) = value
 
 class ItemBelongsToLicensePlateArgs():
     """ ItemBelongsToLicensePlateArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemBelongsToLicensePlateArgs()
-    instance = ZZZ()
+    Instance = ItemBelongsToLicensePlateArgs
     """hardcoded/returns an instance of the class"""
     ItemCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -2099,10 +1985,7 @@ Set: WarehouseCode(self: ItemBelongsToLicensePlateArgs) = value
 
 class ItemIdentificationBase():
     """ ItemIdentificationBase() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemIdentificationBase()
-    instance = ZZZ()
+    Instance = ItemIdentificationBase
     """hardcoded/returns an instance of the class"""
     BeginDate = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: BeginDate(self: ItemIdentificationBase) -> Nullable[DateTime]
@@ -2139,10 +2022,7 @@ class ItemIdentification:
     ItemIdentification(number: str, quantityReceived: Decimal, quantityUsed: Decimal, quantityAvailable: Decimal, quantityAssigned: Decimal, beginDate: Nullable[DateTime], endDate: Nullable[DateTime], blocked: bool, quantity: Decimal)
     ItemIdentification(number: str, itemCode: str, quantityReceived: Decimal, quantityUsed: Decimal, quantityAvailable: Decimal, quantityAssigned: Decimal, quantityAllocated: Decimal, quantityAllocatedOriginal: Decimal, quantityOriginal: Decimal, beginDate: Nullable[DateTime], endDate: Nullable[DateTime], blocked: bool, quantity: Decimal, warehouseCode: str, warehouseLocationCode: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemIdentification()
-    instance = ZZZ()
+    Instance = ItemIdentification
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: ItemIdentification) -> object """
@@ -2356,10 +2236,7 @@ class ItemIdentificationMetaData():
     ItemIdentificationMetaData()
     ItemIdentificationMetaData(itemCode: str, itemId: str, isBlocked: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemIdentificationMetaData()
-    instance = ZZZ()
+    Instance = ItemIdentificationMetaData
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, itemCode=None, itemId=None, isBlocked=None):
@@ -2391,10 +2268,7 @@ Set: ItemId(self: ItemIdentificationMetaData) = value
 
 class ItemIdentificationRegistration:
     """ enum (flags) ItemIdentificationRegistration, values: Complete (1), OnlyOutbound (2), Unknown (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemIdentificationRegistration()
-    instance = ZZZ()
+    Instance = ItemIdentificationRegistration
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2444,10 +2318,7 @@ class ItemIdentifications(FindableList):
     ItemIdentifications(collection: IEnumerable[ItemIdentification])
     ItemIdentifications(collection: List[ItemIdentification])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemIdentifications()
-    instance = ZZZ()
+    Instance = ItemIdentifications
     """hardcoded/returns an instance of the class"""
     def AddRange(self, collection):
         """ AddRange(self: ItemIdentifications, collection: IEnumerable[ItemIdentification]) -> List[ItemIdentification] """
@@ -2537,10 +2408,7 @@ Get: PreserveState(self: ItemIdentifications) -> bool
 
 class ItemIdGenerateArgs():
     """ ItemIdGenerateArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemIdGenerateArgs()
-    instance = ZZZ()
+    Instance = ItemIdGenerateArgs
     """hardcoded/returns an instance of the class"""
     def AddGeneratedNumber(self, itemId):
         """ AddGeneratedNumber(self: ItemIdGenerateArgs, itemId: ItemIdentification) """
@@ -2662,10 +2530,7 @@ class ItemInfo(CacheObject):
     
     ItemInfo()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemInfo()
-    instance = ZZZ()
+    Instance = ItemInfo
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2750,10 +2615,7 @@ Set: UnitCode(self: ItemInfo) = value
 
 class LocationBase():
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LocationBase()
-    instance = ZZZ()
+    Instance = LocationBase
     """hardcoded/returns an instance of the class"""
     Code = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -2786,10 +2648,7 @@ class Location(LocationBase):
     
     Location()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Location()
-    instance = ZZZ()
+    Instance = Location
     """hardcoded/returns an instance of the class"""
     Description = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -2887,10 +2746,7 @@ Get: TypeName(self: Location) -> str
 
 class ItemLocation(Location):
     """ ItemLocation() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemLocation()
-    instance = ZZZ()
+    Instance = ItemLocation
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: ItemLocation) -> object """
@@ -2938,10 +2794,7 @@ Set: Stock(self: ItemLocation) = value
 
 class ItemLocationComparer:
     """ ItemLocationComparer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemLocationComparer()
-    instance = ZZZ()
+    Instance = ItemLocationComparer
     """hardcoded/returns an instance of the class"""
     def Compare(self, x, y):
         """ Compare(self: ItemLocationComparer, x: ItemLocation, y: ItemLocation) -> int """
@@ -2962,10 +2815,7 @@ class ItemLocationComparer:
 
 class ItemLocations(FindableList):
     """ ItemLocations() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemLocations()
-    instance = ZZZ()
+    Instance = ItemLocations
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -3005,10 +2855,7 @@ class ItemPackLocation(BatchItemLocationBase):
     ItemPackLocation()
     ItemPackLocation(boxGuid: Guid, quantity: Decimal, isContainer: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemPackLocation()
-    instance = ZZZ()
+    Instance = ItemPackLocation
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: ItemPackLocation) -> object """
@@ -3075,10 +2922,7 @@ Set: QuantityProcessed(self: ItemPackLocation) = value
 
 class ItemPackLocations(List):
     """ ItemPackLocations() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemPackLocations()
-    instance = ZZZ()
+    Instance = ItemPackLocations
     """hardcoded/returns an instance of the class"""
     def ClearExceptForContainer(self):
         """ ClearExceptForContainer(self: ItemPackLocations) """
@@ -3130,10 +2974,7 @@ Get: QuantityPacked(self: ItemPackLocations) -> Decimal
 
 class ItemPickLocation(BatchItemLocationBase):
     """ ItemPickLocation() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemPickLocation()
-    instance = ZZZ()
+    Instance = ItemPickLocation
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: ItemPickLocation) -> object """
@@ -3222,10 +3063,7 @@ Set: QuantityAllocatedOriginal(self: ItemPickLocation) = value
 
 class ItemPickLocations(List):
     """ ItemPickLocations() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemPickLocations()
-    instance = ZZZ()
+    Instance = ItemPickLocations
     """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """ Add(self: ItemPickLocations, itemPickLocation: ItemPickLocation) """
@@ -3273,10 +3111,7 @@ class ItemStock:
     
     ItemStock()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemStock()
-    instance = ZZZ()
+    Instance = ItemStock
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: ItemStock) -> object """
@@ -3487,10 +3322,7 @@ class ItemStockAllocation(AllocatedStockItem):
     ItemStockAllocation()
     ItemStockAllocation(allocatedStockItem: AllocatedStockItem)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemStockAllocation()
-    instance = ZZZ()
+    Instance = ItemStockAllocation
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: ItemStockAllocation) -> ItemStockAllocation """
@@ -3562,10 +3394,7 @@ Set: OrderNumber(self: ItemStockAllocation) = value
 
 class ItemStockAllocationList(FindableList):
     """ ItemStockAllocationList() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemStockAllocationList()
-    instance = ZZZ()
+    Instance = ItemStockAllocationList
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(allocations):
@@ -3612,10 +3441,7 @@ Set: TotalRowsMatched(self: ItemStockAllocationList) = value
 
 class ItemStockEqualityComparer(EqualityComparer):
     """ ItemStockEqualityComparer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemStockEqualityComparer()
-    instance = ZZZ()
+    Instance = ItemStockEqualityComparer
     """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """ Equals(self: ItemStockEqualityComparer, x: ItemStock, y: ItemStock) -> bool """
@@ -3640,10 +3466,7 @@ class ItemStockList(FindableList):
     
     ItemStockList()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemStockList()
-    instance = ZZZ()
+    Instance = ItemStockList
     """hardcoded/returns an instance of the class"""
     def FindFirstItemStock(self, itemCode, itemId):
         """
@@ -3690,10 +3513,7 @@ Set: TotalRowsMatched(self: ItemStockList) = value
 
 class ItemStockLocation(LocationBase):
     """ ItemStockLocation() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemStockLocation()
-    instance = ZZZ()
+    Instance = ItemStockLocation
     """hardcoded/returns an instance of the class"""
     IsDefaultLocation = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -3749,10 +3569,7 @@ class ItemStockLocationList(FindableList):
     
     ItemStockLocationList()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemStockLocationList()
-    instance = ZZZ()
+    Instance = ItemStockLocationList
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(list):
@@ -3787,10 +3604,7 @@ class ItemStockTotals():
     
     ItemStockTotals()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemStockTotals()
-    instance = ZZZ()
+    Instance = ItemStockTotals
     """hardcoded/returns an instance of the class"""
     ItemCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -3831,10 +3645,7 @@ class ItemStockWithAllocations:
     ItemStockWithAllocations()
     ItemStockWithAllocations(stock: ItemStock)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemStockWithAllocations()
-    instance = ZZZ()
+    Instance = ItemStockWithAllocations
     """hardcoded/returns an instance of the class"""
     def AddAllocations(self, allocations):
         """ AddAllocations(self: ItemStockWithAllocations, allocations: List[ItemStockAllocation]) -> bool """
@@ -3888,10 +3699,7 @@ Set: QuantityAllocated(self: ItemStockWithAllocations) = value
 
 class ItemStockWithAllocationsList(FindableList):
     """ ItemStockWithAllocationsList() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemStockWithAllocationsList()
-    instance = ZZZ()
+    Instance = ItemStockWithAllocationsList
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(allocations):
@@ -3930,10 +3738,7 @@ Set: TotalRowsMatched(self: ItemStockWithAllocationsList) = value
 
 class ItemStockWithLocations():
     """ ItemStockWithLocations() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemStockWithLocations()
-    instance = ZZZ()
+    Instance = ItemStockWithLocations
     """hardcoded/returns an instance of the class"""
     BeginDate = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: BeginDate(self: ItemStockWithLocations) -> DateTime
@@ -3981,10 +3786,7 @@ Set: WarehouseCode(self: ItemStockWithLocations) = value
 
 class ItemTypeEnum:
     """ enum ItemTypeEnum, values: LicensePlate (1), Regular (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemTypeEnum()
-    instance = ZZZ()
+    Instance = ItemTypeEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4026,10 +3828,7 @@ class ItemTypeEnum:
 
 class LicensePlate(DbObject):
     """ LicensePlate() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicensePlate()
-    instance = ZZZ()
+    Instance = LicensePlate
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -4121,10 +3920,7 @@ Set: WarehouseCode(self: LicensePlate) = value
 
 class LicensePlateAuditLog(DbObject):
     """ LicensePlateAuditLog() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicensePlateAuditLog()
-    instance = ZZZ()
+    Instance = LicensePlateAuditLog
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -4191,10 +3987,7 @@ Get: OldStatusAsString(self: LicensePlateAuditLog) -> str
 
 class LicensePlateAuditLogs(FindableList):
     """ LicensePlateAuditLogs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicensePlateAuditLogs()
-    instance = ZZZ()
+    Instance = LicensePlateAuditLogs
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -4231,10 +4024,7 @@ Set: TotalRowsMatched(self: LicensePlateAuditLogs) = value
 
 class LicensePlateBarcodeStructureInfo():
     """ LicensePlateBarcodeStructureInfo() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicensePlateBarcodeStructureInfo()
-    instance = ZZZ()
+    Instance = LicensePlateBarcodeStructureInfo
     """hardcoded/returns an instance of the class"""
     BestBeforeDate = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -4280,10 +4070,7 @@ Set: NoOfItems(self: LicensePlateBarcodeStructureInfo) = value
 
 class LicensePlateItem(DbObject):
     """ LicensePlateItem() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicensePlateItem()
-    instance = ZZZ()
+    Instance = LicensePlateItem
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -4360,10 +4147,7 @@ Set: Quantity(self: LicensePlateItem) = value
 
 class LicensePlateItems(FindableList):
     """ LicensePlateItems() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicensePlateItems()
-    instance = ZZZ()
+    Instance = LicensePlateItems
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -4404,10 +4188,7 @@ class LicensePlates(FindableList):
     
     LicensePlates()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicensePlates()
-    instance = ZZZ()
+    Instance = LicensePlates
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -4444,10 +4225,7 @@ Set: TotalRowsMatched(self: LicensePlates) = value
 
 class LicensePlateStatusEnum:
     """ enum (flags) LicensePlateStatusEnum, values: Active (1), Archived (16), Broken (8), Inactive (4), InTransfer (32), Pending (2) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicensePlateStatusEnum()
-    instance = ZZZ()
+    Instance = LicensePlateStatusEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4493,10 +4271,7 @@ class LicensePlateStatusEnum:
 
 class LocationItem:
     """ LocationItem() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LocationItem()
-    instance = ZZZ()
+    Instance = LocationItem
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -4557,10 +4332,7 @@ class LocationItems(FindableList):
     
     LocationItems()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LocationItems()
-    instance = ZZZ()
+    Instance = LocationItems
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -4603,10 +4375,7 @@ class LocationPickTypeEnum:
     
     enum (flags) LocationPickTypeEnum, values: Bulk (1), Pick (0), Unspecified (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LocationPickTypeEnum()
-    instance = ZZZ()
+    Instance = LocationPickTypeEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4649,10 +4418,7 @@ class LocationPickTypeEnum:
 
 class LocationPickTypeEnumExtensions():
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LocationPickTypeEnumExtensions()
-    instance = ZZZ()
+    Instance = LocationPickTypeEnumExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def IsTypeInValue(val, type):
@@ -4666,10 +4432,7 @@ class LocationPickTypeEnumExtensions():
 
 class Locations(FindableList):
     """ Locations() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Locations()
-    instance = ZZZ()
+    Instance = Locations
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromItemLocations(itemLocations):
@@ -4711,10 +4474,7 @@ Set: TotalRowsMatched(self: Locations) = value
 
 class LocationsBase(FindableList):
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LocationsBase()
-    instance = ZZZ()
+    Instance = LocationsBase
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -4738,10 +4498,7 @@ class LocationsBase(FindableList):
 
 class LocationTypeEnum:
     """ enum LocationTypeEnum, values: FixedItemLocation (1), MultipleItemLocation (0), Unspecified (3), VariableItemLocation (2) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LocationTypeEnum()
-    instance = ZZZ()
+    Instance = LocationTypeEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4785,10 +4542,7 @@ class LocationTypeEnum:
 
 class LpLocationItem():
     """ LpLocationItem() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LpLocationItem()
-    instance = ZZZ()
+    Instance = LpLocationItem
     """hardcoded/returns an instance of the class"""
     IsBatchItem = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -4850,10 +4604,7 @@ Set: Stock(self: LpLocationItem) = value
 
 class PrintLicensePlateLabelArgs(PrintBaseArgs):
     """ PrintLicensePlateLabelArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintLicensePlateLabelArgs()
-    instance = ZZZ()
+    Instance = PrintLicensePlateLabelArgs
     """hardcoded/returns an instance of the class"""
     LabelName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -4875,10 +4626,7 @@ Set: LicensePlateId(self: PrintLicensePlateLabelArgs) = value
 
 class ProcessWarehouseTransferArgs():
     """ ProcessWarehouseTransferArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessWarehouseTransferArgs()
-    instance = ZZZ()
+    Instance = ProcessWarehouseTransferArgs
     """hardcoded/returns an instance of the class"""
     CacheKey = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: CacheKey(self: ProcessWarehouseTransferArgs) -> CacheKey
@@ -4896,10 +4644,7 @@ Set: CustomReference(self: ProcessWarehouseTransferArgs) = value
 
 class ReplenishmentOrder(OutboundOrder):
     """ ReplenishmentOrder() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReplenishmentOrder()
-    instance = ZZZ()
+    Instance = ReplenishmentOrder
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: ReplenishmentOrder) -> object """
@@ -4961,10 +4706,7 @@ Get: Type(self: ReplenishmentOrder) -> OutboundOrderTypeEnum
 
 class ReplenishmentOrderLine(OutboundOrderLine):
     """ ReplenishmentOrderLine() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReplenishmentOrderLine()
-    instance = ZZZ()
+    Instance = ReplenishmentOrderLine
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -4994,10 +4736,7 @@ Get: Type(self: ReplenishmentOrderLine) -> OutboundOrderTypeEnum
 
 class ReplenishmentOrderLines(OutboundOrderLines):
     """ ReplenishmentOrderLines() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReplenishmentOrderLines()
-    instance = ZZZ()
+    Instance = ReplenishmentOrderLines
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(list):
@@ -5038,10 +4777,7 @@ Set: TotalRowsMatched(self: ReplenishmentOrderLines) = value
 
 class ReplenishmentOrders(OutboundOrders):
     """ ReplenishmentOrders() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReplenishmentOrders()
-    instance = ZZZ()
+    Instance = ReplenishmentOrders
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(list):
@@ -5074,10 +4810,7 @@ class Warehouse():
     
     Warehouse()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Warehouse()
-    instance = ZZZ()
+    Instance = Warehouse
     """hardcoded/returns an instance of the class"""
     Active = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -5216,10 +4949,7 @@ class Warehouses(FindableList):
     Warehouses()
     Warehouses(filterWarehouses: IEnumerable[Warehouse])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Warehouses()
-    instance = ZZZ()
+    Instance = Warehouses
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -5258,10 +4988,7 @@ class WarehouseTransfer(CacheObject):
     
     WarehouseTransfer()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WarehouseTransfer()
-    instance = ZZZ()
+    Instance = WarehouseTransfer
     """hardcoded/returns an instance of the class"""
     def GetHashCode(self):
         """ GetHashCode(self: WarehouseTransfer) -> int """
@@ -5359,10 +5086,7 @@ Set: WarehouseCodeTo(self: WarehouseTransfer) = value
 
 class WarehouseTransferItem():
     """ WarehouseTransferItem() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WarehouseTransferItem()
-    instance = ZZZ()
+    Instance = WarehouseTransferItem
     """hardcoded/returns an instance of the class"""
     Description = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -5438,10 +5162,7 @@ class WarehouseTransferItems(List):
     WarehouseTransferItems()
     WarehouseTransferItems(parent: WarehouseTransfer)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WarehouseTransferItems()
-    instance = ZZZ()
+    Instance = WarehouseTransferItems
     """hardcoded/returns an instance of the class"""
     def Add(self, item):
         """ Add(self: WarehouseTransferItems, item: WarehouseTransferItem) """
@@ -5492,10 +5213,7 @@ class WarehouseTransferItems(List):
 
 class WarehouseTransferType:
     """ enum WarehouseTransferType, values: DirectTransfer (3), InterBranch (1), LicensePlateItems (2), Normal (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WarehouseTransferType()
-    instance = ZZZ()
+    Instance = WarehouseTransferType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

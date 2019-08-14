@@ -10,10 +10,7 @@
 
 class SafeRpcExecutionContext():
     """ SafeRpcExecutionContext() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SafeRpcExecutionContext()
-    instance = ZZZ()
+    Instance = SafeRpcExecutionContext
     """hardcoded/returns an instance of the class"""
     Id = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """

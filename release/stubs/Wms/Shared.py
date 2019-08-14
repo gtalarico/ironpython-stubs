@@ -10,10 +10,7 @@
 
 class ILoggingService:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ILoggingService()
-    instance = ZZZ()
+    Instance = ILoggingService
     """hardcoded/returns an instance of the class"""
     def Debug(self, *__args):
         """ Debug(self: ILoggingService, message: str)Debug(self: ILoggingService, format: str, *args: Array[object]) """
@@ -78,10 +75,7 @@ class ILoggingService:
 
 class ITraceLoggingService:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITraceLoggingService()
-    instance = ZZZ()
+    Instance = ITraceLoggingService
     """hardcoded/returns an instance of the class"""
     def IsTracingEnabled(self):
         """ IsTracingEnabled(self: ITraceLoggingService) -> bool """
@@ -102,10 +96,7 @@ class ITraceLoggingService:
 
 class TraceExtProperties:
     """ enum TraceExtProperties, values: ElapsedSeconds (4), MethodId (0), MethodName (1), MethodPreviousId (6), MethodPreviousName (5), ParameterList (3), ReturnParam (2), TimeStart (7), TimeStop (8) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TraceExtProperties()
-    instance = ZZZ()
+    Instance = TraceExtProperties
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -154,10 +145,7 @@ class TraceExtProperties:
 
 class TraceType:
     """ enum TraceType, values: Start (1), Stop (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TraceType()
-    instance = ZZZ()
+    Instance = TraceType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

@@ -12,10 +12,7 @@ from Wms.RemotingObjects import *
 
 class ActivityEnum:
     """ enum ActivityEnum, values: BatchCreated (0), BatchFinished (1), ProcessedPack (7), ProcessedPick (6), ProcessShipment (8), StartedPacking (4), StartedPicking (2), StoppedPacking (5), StoppedPicking (3) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ActivityEnum()
-    instance = ZZZ()
+    Instance = ActivityEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -64,10 +61,7 @@ class ActivityEnum:
 
 class BatchBase(CacheObject):
     """ BatchBase() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchBase()
-    instance = ZZZ()
+    Instance = BatchBase
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: BatchBase) -> object """
@@ -340,10 +334,7 @@ class Batch(BatchBase):
     Batch()
     Batch(tag: object)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Batch()
-    instance = ZZZ()
+    Instance = Batch
     """hardcoded/returns an instance of the class"""
     def AddOrMergeSoLine(self, line):
         """ AddOrMergeSoLine(self: Batch, line: OutboundOrderLine) """
@@ -560,10 +551,7 @@ Set: ShipOrders(self: Batch) = value
 
 class BatchActivityEntry:
     """ BatchActivityEntry() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchActivityEntry()
-    instance = ZZZ()
+    Instance = BatchActivityEntry
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: BatchActivityEntry) -> object """
@@ -631,10 +619,7 @@ Set: Time(self: BatchActivityEntry) = value
 
 class BatchAgeSortComparer:
     """ BatchAgeSortComparer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchAgeSortComparer()
-    instance = ZZZ()
+    Instance = BatchAgeSortComparer
     """hardcoded/returns an instance of the class"""
     def Compare(self, x, y):
         """ Compare(self: BatchAgeSortComparer, x: Batch, y: Batch) -> int """
@@ -655,10 +640,7 @@ class BatchAgeSortComparer:
 
 class BatchBaseAgeSortComparer:
     """ BatchBaseAgeSortComparer() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchBaseAgeSortComparer()
-    instance = ZZZ()
+    Instance = BatchBaseAgeSortComparer
     """hardcoded/returns an instance of the class"""
     def Compare(self, x, y):
         """ Compare(self: BatchBaseAgeSortComparer, x: BatchBase, y: BatchBase) -> int """
@@ -679,10 +661,7 @@ class BatchBaseAgeSortComparer:
 
 class BatchBaseList(FindableList):
     """ BatchBaseList() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchBaseList()
-    instance = ZZZ()
+    Instance = BatchBaseList
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -709,10 +688,7 @@ class BatchBaseList(FindableList):
 
 class BatchCreatedByClientTypeEnum:
     """ enum BatchCreatedByClientTypeEnum, values: AdHocPicking (1), Portal (0), Script (2), Touch (3) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchCreatedByClientTypeEnum()
-    instance = ZZZ()
+    Instance = BatchCreatedByClientTypeEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -759,10 +735,7 @@ class Batches(FindableList):
     Batches()
     Batches(filterBatches: IEnumerable[Batch])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Batches()
-    instance = ZZZ()
+    Instance = Batches
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(list):
@@ -814,10 +787,7 @@ class Batches(FindableList):
 
 class BatchFilterArgs():
     """ BatchFilterArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchFilterArgs()
-    instance = ZZZ()
+    Instance = BatchFilterArgs
     """hardcoded/returns an instance of the class"""
     Barcode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Barcode(self: BatchFilterArgs) -> str
@@ -853,10 +823,7 @@ Set: TagsToFilter(self: BatchFilterArgs) = value
 
 class BatchFilterResult():
     """ BatchFilterResult() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchFilterResult()
-    instance = ZZZ()
+    Instance = BatchFilterResult
     """hardcoded/returns an instance of the class"""
     BarcodeResult = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -887,10 +854,7 @@ Set: Customer(self: BatchFilterResult) = value
 
 class BatchPickLocation:
     """ BatchPickLocation() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchPickLocation()
-    instance = ZZZ()
+    Instance = BatchPickLocation
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def ConstructUniqueId(itemCode, warehouseCode, locationCode, itemIdNumber, innerReference, outerReference):
@@ -1061,10 +1025,7 @@ Set: VendorItemCode(self: BatchPickLocation) = value
 
 class BatchPickLocationIndicatorEnum:
     """ enum BatchPickLocationIndicatorEnum, values: Complete (2), MarkedAsPicked (3), None (0), Partial (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchPickLocationIndicatorEnum()
-    instance = ZZZ()
+    Instance = BatchPickLocationIndicatorEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1108,10 +1069,7 @@ class BatchPickLocationIndicatorEnum:
 
 class BatchPickLocations(FindableList):
     """ BatchPickLocations() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchPickLocations()
-    instance = ZZZ()
+    Instance = BatchPickLocations
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(list):
@@ -1143,10 +1101,7 @@ class BatchPickLocations(FindableList):
 
 class BatchProcessAction:
     """ enum BatchProcessAction, values: Default (0), Mobile (2), MobileToTerminal (1), Terminal (3) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchProcessAction()
-    instance = ZZZ()
+    Instance = BatchProcessAction
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1190,10 +1145,7 @@ class BatchProcessAction:
 
 class BatchScanArgs():
     """ BatchScanArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchScanArgs()
-    instance = ZZZ()
+    Instance = BatchScanArgs
     """hardcoded/returns an instance of the class"""
     Barcode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1239,10 +1191,7 @@ Set: WarehouseLocationCode(self: BatchScanArgs) = value
 
 class BatchScanResult():
     """ BatchScanResult() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchScanResult()
-    instance = ZZZ()
+    Instance = BatchScanResult
     """hardcoded/returns an instance of the class"""
     BarcodeResult = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: BarcodeResult(self: BatchScanResult) -> BarcodeStructureResultEnum
@@ -1284,10 +1233,7 @@ Set: Message(self: BatchScanResult) = value
 
 class BatchStatus:
     """ enum BatchStatus, values: Approved (0), FullyPacked (5), New (-1), Packing (4), Picking (1), PickingAndPacking (2), ReadyToPack (3), Shipping (6) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchStatus()
-    instance = ZZZ()
+    Instance = BatchStatus
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1335,10 +1281,7 @@ class BatchStatus:
 
 class BatchUpdateArgs():
     """ BatchUpdateArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BatchUpdateArgs()
-    instance = ZZZ()
+    Instance = BatchUpdateArgs
     """hardcoded/returns an instance of the class"""
     AllocationProfileId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1400,10 +1343,7 @@ Set: Tags(self: BatchUpdateArgs) = value
 
 class DifferFromRouteOptions:
     """ enum DifferFromRouteOptions, values: Allow (0), AllowWithMessage (1), DontAllow (2) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DifferFromRouteOptions()
-    instance = ZZZ()
+    Instance = DifferFromRouteOptions
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1446,10 +1386,7 @@ class DifferFromRouteOptions:
 
 class GetBatchArgs():
     """ GetBatchArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetBatchArgs()
-    instance = ZZZ()
+    Instance = GetBatchArgs
     """hardcoded/returns an instance of the class"""
     CreatedByClientType = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1511,10 +1448,7 @@ Set: UseStatus(self: GetBatchArgs) = value
 
 class GetBatchToConsolidateToArgs():
     """ GetBatchToConsolidateToArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetBatchToConsolidateToArgs()
-    instance = ZZZ()
+    Instance = GetBatchToConsolidateToArgs
     """hardcoded/returns an instance of the class"""
     UseComparerToFindBatch = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1538,10 +1472,7 @@ Set: ZoneIdToCheckForPackBatch(self: GetBatchToConsolidateToArgs) = value
 
 class GetItemsToPackArgs():
     """ GetItemsToPackArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetItemsToPackArgs()
-    instance = ZZZ()
+    Instance = GetItemsToPackArgs
     """hardcoded/returns an instance of the class"""
     BatchIds = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1576,10 +1507,7 @@ class PickArgs():
     PickArgs(itemCode: str, warehouseCode: str, locationCode: str, quantity: Decimal, itemId: str)
     PickArgs(itemCode: str, warehouseCode: str, locationCode: str, quantity: Decimal, itemId: ItemIdentification)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PickArgs()
-    instance = ZZZ()
+    Instance = PickArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, itemCode=None, warehouseCode=None, locationCode=None, quantity=None, itemId=None):
@@ -1691,10 +1619,7 @@ Set: WarehouseCode(self: PickArgs) = value
 
 class PickItemIdRangeArgs(PickArgs):
     """ PickItemIdRangeArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PickItemIdRangeArgs()
-    instance = ZZZ()
+    Instance = PickItemIdRangeArgs
     """hardcoded/returns an instance of the class"""
     GenerateArgs = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1708,10 +1633,7 @@ Set: GenerateArgs(self: PickItemIdRangeArgs) = value
 
 class PickItemIdsArgs(PickArgs):
     """ PickItemIdsArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PickItemIdsArgs()
-    instance = ZZZ()
+    Instance = PickItemIdsArgs
     """hardcoded/returns an instance of the class"""
     ItemIds = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1725,10 +1647,7 @@ Set: ItemIds(self: PickItemIdsArgs) = value
 
 class PickResult():
     """ PickResult() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PickResult()
-    instance = ZZZ()
+    Instance = PickResult
     """hardcoded/returns an instance of the class"""
     PickLocations = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1753,10 +1672,7 @@ Set: Positions(self: PickResult) = value
 
 class ProcessBatchPickingArgs():
     """ ProcessBatchPickingArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessBatchPickingArgs()
-    instance = ZZZ()
+    Instance = ProcessBatchPickingArgs
     """hardcoded/returns an instance of the class"""
     CacheKey = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1778,10 +1694,7 @@ Set: NewPackBatchId(self: ProcessBatchPickingArgs) = value
 
 class ProcessPickState:
     """ enum ProcessPickState, values: Allocated (3), Deallocated (2), Done (4), NotSet (0), Transferred (1) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessPickState()
-    instance = ZZZ()
+    Instance = ProcessPickState
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1826,10 +1739,7 @@ class ProcessPickState:
 
 class ProcessSalesOrderLinesArgs():
     """ ProcessSalesOrderLinesArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessSalesOrderLinesArgs()
-    instance = ZZZ()
+    Instance = ProcessSalesOrderLinesArgs
     """hardcoded/returns an instance of the class"""
     AllowToDeliverMoreThanOrdered = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """

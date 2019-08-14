@@ -15,10 +15,7 @@ class VBCodeProvider(CodeDomProvider):
     VBCodeProvider()
     VBCodeProvider(providerOptions: IDictionary[str, str])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return VBCodeProvider()
-    instance = ZZZ()
+    Instance = VBCodeProvider
     """hardcoded/returns an instance of the class"""
     def CreateCompiler(self):
         """

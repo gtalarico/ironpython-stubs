@@ -10,10 +10,7 @@
 
 class Activity():
     """ Activity() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Activity()
-    instance = ZZZ()
+    Instance = Activity
     """hardcoded/returns an instance of the class"""
     Current = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """The current progress
@@ -77,10 +74,7 @@ Get: Workers(self: Activity) -> List[str]
 
 class Progress():
     """ Progress() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Progress()
-    instance = ZZZ()
+    Instance = Progress
     """hardcoded/returns an instance of the class"""
     Current = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Current(self: Progress) -> Decimal

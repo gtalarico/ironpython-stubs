@@ -10,10 +10,7 @@
 
 class ComponentSerializationService():
     """ Provides the base class for serializing a set of components or serializable objects into a serialization store. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentSerializationService()
-    instance = ZZZ()
+    Instance = ComponentSerializationService
     """hardcoded/returns an instance of the class"""
     def CreateStore(self):
         """
@@ -125,10 +122,7 @@ class ContextStack():
     
     ContextStack()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ContextStack()
-    instance = ZZZ()
+    Instance = ContextStack
     """hardcoded/returns an instance of the class"""
     def Append(self, context):
         """
@@ -177,10 +171,7 @@ class DefaultSerializationProviderAttribute:
     DefaultSerializationProviderAttribute(providerType: Type)
     DefaultSerializationProviderAttribute(providerTypeName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultSerializationProviderAttribute()
-    instance = ZZZ()
+    Instance = DefaultSerializationProviderAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -205,10 +196,7 @@ Get: ProviderTypeName(self: DefaultSerializationProviderAttribute) -> str
 
 class DesignerLoader():
     """ Provides a basic designer loader interface that can be used to implement a custom designer loader. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerLoader()
-    instance = ZZZ()
+    Instance = DesignerLoader
     """hardcoded/returns an instance of the class"""
     def BeginLoad(self, host):
         """
@@ -250,10 +238,7 @@ class DesignerSerializerAttribute:
     DesignerSerializerAttribute(serializerTypeName: str, baseSerializerType: Type)
     DesignerSerializerAttribute(serializerTypeName: str, baseSerializerTypeName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerSerializerAttribute()
-    instance = ZZZ()
+    Instance = DesignerSerializerAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -293,10 +278,7 @@ Get: TypeId(self: DesignerSerializerAttribute) -> object
 
 class IDesignerLoaderHost:
     """ Provides an interface that can extend a designer host to support loading from a serialized state. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerLoaderHost()
-    instance = ZZZ()
+    Instance = IDesignerLoaderHost
     """hardcoded/returns an instance of the class"""
     def EndLoad(self, baseClassName, successful, errorCollection):
         """
@@ -323,10 +305,7 @@ class IDesignerLoaderHost:
 
 class IDesignerLoaderHost2:
     """ Provides an interface that extends System.ComponentModel.Design.Serialization.IDesignerLoaderHost to specify whether errors are tolerated while loading a design document. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerLoaderHost2()
-    instance = ZZZ()
+    Instance = IDesignerLoaderHost2
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -352,10 +331,7 @@ Set: IgnoreErrorsDuringReload(self: IDesignerLoaderHost2) = value
 
 class IDesignerLoaderService:
     """ Provides an interface that can extend a designer loader to support asynchronous loading of external components. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerLoaderService()
-    instance = ZZZ()
+    Instance = IDesignerLoaderService
     """hardcoded/returns an instance of the class"""
     def AddLoadDependency(self):
         """
@@ -390,10 +366,7 @@ class IDesignerLoaderService:
 
 class IDesignerSerializationManager:
     """ Provides an interface that can manage design-time serialization. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerSerializationManager()
-    instance = ZZZ()
+    Instance = IDesignerSerializationManager
     """hardcoded/returns an instance of the class"""
     def AddSerializationProvider(self, provider):
         """
@@ -521,10 +494,7 @@ Get: Properties(self: IDesignerSerializationManager) -> PropertyDescriptorCollec
 
 class IDesignerSerializationProvider:
     """ Provides an interface that enables access to a serializer. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerSerializationProvider()
-    instance = ZZZ()
+    Instance = IDesignerSerializationProvider
     """hardcoded/returns an instance of the class"""
     def GetSerializer(self, manager, currentSerializer, objectType, serializerType):
         """
@@ -547,10 +517,7 @@ class IDesignerSerializationProvider:
 
 class IDesignerSerializationService:
     """ Provides an interface that can invoke serialization and deserialization. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerSerializationService()
-    instance = ZZZ()
+    Instance = IDesignerSerializationService
     """hardcoded/returns an instance of the class"""
     def Deserialize(self, serializationData):
         """
@@ -581,10 +548,7 @@ class IDesignerSerializationService:
 
 class INameCreationService:
     """ Provides a service that can generate unique names for objects. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INameCreationService()
-    instance = ZZZ()
+    Instance = INameCreationService
     """hardcoded/returns an instance of the class"""
     def CreateName(self, container, dataType):
         """
@@ -630,10 +594,7 @@ class InstanceDescriptor():
     InstanceDescriptor(member: MemberInfo, arguments: ICollection, isComplete: bool)
     InstanceDescriptor(member: MemberInfo, arguments: ICollection)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InstanceDescriptor()
-    instance = ZZZ()
+    Instance = InstanceDescriptor
     """hardcoded/returns an instance of the class"""
     def Invoke(self):
         """
@@ -681,10 +642,7 @@ class MemberRelationship():
     
     MemberRelationship(owner: object, member: MemberDescriptor)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MemberRelationship()
-    instance = ZZZ()
+    Instance = MemberRelationship
     """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
@@ -749,10 +707,7 @@ Get: Owner(self: MemberRelationship) -> object
 
 class MemberRelationshipService():
     """ Provides the base class for relating one member to another. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MemberRelationshipService()
-    instance = ZZZ()
+    Instance = MemberRelationshipService
     """hardcoded/returns an instance of the class"""
     def GetRelationship(self, *args): #cannot find CLR method
         """
@@ -802,10 +757,7 @@ class ResolveNameEventArgs(EventArgs):
     
     ResolveNameEventArgs(name: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ResolveNameEventArgs()
-    instance = ZZZ()
+    Instance = ResolveNameEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, name):
@@ -835,10 +787,7 @@ class ResolveNameEventHandler(MulticastDelegate):
     
     ResolveNameEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ResolveNameEventHandler()
-    instance = ZZZ()
+    Instance = ResolveNameEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: ResolveNameEventHandler, sender: object, e: ResolveNameEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -918,10 +867,7 @@ class RootDesignerSerializerAttribute:
     RootDesignerSerializerAttribute(serializerType: Type, baseSerializerType: Type, reloadable: bool)
     RootDesignerSerializerAttribute(serializerTypeName: str, baseSerializerType: Type, reloadable: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RootDesignerSerializerAttribute()
-    instance = ZZZ()
+    Instance = RootDesignerSerializerAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -968,10 +914,7 @@ Get: TypeId(self: RootDesignerSerializerAttribute) -> object
 
 class SerializationStore:
     """ Provides the base class for storing serialization data for the System.ComponentModel.Design.Serialization.ComponentSerializationService. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SerializationStore()
-    instance = ZZZ()
+    Instance = SerializationStore
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """

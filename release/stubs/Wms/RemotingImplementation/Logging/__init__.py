@@ -11,10 +11,7 @@ from Wms.RemotingImplementation.TaskScheduler import *
 
 class CleanUpLogTask(TaskBase):
     """ CleanUpLogTask(settings: SystemSettings) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CleanUpLogTask()
-    instance = ZZZ()
+    Instance = CleanUpLogTask
     """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: CleanUpLogTask) """
@@ -35,10 +32,7 @@ Set: Settings(self: CleanUpLogTask) = value
 
 class NLogLoggingBootstrapper():
     """ NLogLoggingBootstrapper() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NLogLoggingBootstrapper()
-    instance = ZZZ()
+    Instance = NLogLoggingBootstrapper
     """hardcoded/returns an instance of the class"""
     def Init(self):
         """ Init(self: NLogLoggingBootstrapper) """
@@ -47,10 +41,7 @@ class NLogLoggingBootstrapper():
 
 class NLogLoggingService(Logger):
     """ NLogLoggingService() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NLogLoggingService()
-    instance = ZZZ()
+    Instance = NLogLoggingService
     """hardcoded/returns an instance of the class"""
     def Error(self, *__args):
         """ Error(self: NLogLoggingService, exception: Exception) """
@@ -123,10 +114,7 @@ class NLogLoggingService(Logger):
 
 class NLogTraceLoggingService(Logger):
     """ NLogTraceLoggingService() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NLogTraceLoggingService()
-    instance = ZZZ()
+    Instance = NLogTraceLoggingService
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetTraceLoggingService():

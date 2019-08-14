@@ -11,10 +11,7 @@ from Wms.RemotingObjects import *
 
 class LocationClassification(DbObject):
     """ LocationClassification() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LocationClassification()
-    instance = ZZZ()
+    Instance = LocationClassification
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -138,10 +135,7 @@ Set: WarehouseLayoutSettingsId(self: LocationClassification) = value
 
 class LocationClassifications(FindableList):
     """ LocationClassifications() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LocationClassifications()
-    instance = ZZZ()
+    Instance = LocationClassifications
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -171,10 +165,7 @@ class LocationClassificationsFilter():
     LocationClassificationsFilter()
     LocationClassificationsFilter(storageAssignmentClassificationId: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LocationClassificationsFilter()
-    instance = ZZZ()
+    Instance = LocationClassificationsFilter
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, storageAssignmentClassificationId=None):
@@ -189,10 +180,7 @@ class LocationClassificationsFilter():
 
 class StorageAssignmentClassification(DbObject):
     """ StorageAssignmentClassification() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StorageAssignmentClassification()
-    instance = ZZZ()
+    Instance = StorageAssignmentClassification
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -237,10 +225,7 @@ Set: SortOrder(self: StorageAssignmentClassification) = value
 
 class StorageAssignmentClassifications(FindableList):
     """ StorageAssignmentClassifications() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StorageAssignmentClassifications()
-    instance = ZZZ()
+    Instance = StorageAssignmentClassifications
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -272,10 +257,7 @@ class StorageAssignmentClassificationsFilter():
     StorageAssignmentClassificationsFilter(id: int, searchText: str)
     StorageAssignmentClassificationsFilter(searchText: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StorageAssignmentClassificationsFilter()
-    instance = ZZZ()
+    Instance = StorageAssignmentClassificationsFilter
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):

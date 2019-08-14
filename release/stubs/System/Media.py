@@ -16,10 +16,7 @@ class SoundPlayer(Component):
     SoundPlayer(soundLocation: str)
     SoundPlayer(stream: Stream)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SoundPlayer()
-    instance = ZZZ()
+    Instance = SoundPlayer
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -219,10 +216,7 @@ Set: Tag(self: SoundPlayer) = value
 
 class SystemSound():
     """ Represents a system sound type. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SystemSound()
-    instance = ZZZ()
+    Instance = SystemSound
     """hardcoded/returns an instance of the class"""
     def Play(self):
         """
@@ -234,10 +228,7 @@ class SystemSound():
 
 class SystemSounds():
     """ Retrieves sounds associated with a set of Windows operating system sound-event types. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SystemSounds()
-    instance = ZZZ()
+    Instance = SystemSounds
     """hardcoded/returns an instance of the class"""
     Asterisk = None
     Beep = None

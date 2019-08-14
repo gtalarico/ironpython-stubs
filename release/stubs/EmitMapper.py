@@ -10,10 +10,7 @@
 
 class Mapper():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Mapper()
-    instance = ZZZ()
+    Instance = Mapper
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def MapTo(source, dest, config=None):

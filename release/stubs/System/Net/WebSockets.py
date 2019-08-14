@@ -10,10 +10,7 @@
 
 class WebSocket:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocket()
-    instance = ZZZ()
+    Instance = WebSocket
     """hardcoded/returns an instance of the class"""
     def Abort(self):
         """ Abort(self: WebSocket) """
@@ -114,10 +111,7 @@ class WebSocket:
 
 class ClientWebSocket(WebSocket):
     """ ClientWebSocket() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ClientWebSocket()
-    instance = ZZZ()
+    Instance = ClientWebSocket
     """hardcoded/returns an instance of the class"""
     def Abort(self):
         """ Abort(self: ClientWebSocket) """
@@ -188,10 +182,7 @@ class ClientWebSocket(WebSocket):
 
 class ClientWebSocketOptions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ClientWebSocketOptions()
-    instance = ZZZ()
+    Instance = ClientWebSocketOptions
     """hardcoded/returns an instance of the class"""
     def AddSubProtocol(self, subProtocol):
         """ AddSubProtocol(self: ClientWebSocketOptions, subProtocol: str) """
@@ -245,10 +236,7 @@ Set: UseDefaultCredentials(self: ClientWebSocketOptions) = value
 
 class WebSocketContext():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocketContext()
-    instance = ZZZ()
+    Instance = WebSocketContext
     """hardcoded/returns an instance of the class"""
     CookieCollection = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: CookieCollection(self: WebSocketContext) -> CookieCollection
@@ -314,10 +302,7 @@ class WebSocketContext():
 
 class HttpListenerWebSocketContext(WebSocketContext):
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HttpListenerWebSocketContext()
-    instance = ZZZ()
+    Instance = HttpListenerWebSocketContext
     """hardcoded/returns an instance of the class"""
     CookieCollection = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: CookieCollection(self: HttpListenerWebSocketContext) -> CookieCollection
@@ -383,10 +368,7 @@ class HttpListenerWebSocketContext(WebSocketContext):
 
 class WebSocketCloseStatus:
     """ enum WebSocketCloseStatus, values: Empty (1005), EndpointUnavailable (1001), InternalServerError (1011), InvalidMessageType (1003), InvalidPayloadData (1007), MandatoryExtension (1010), MessageTooBig (1009), NormalClosure (1000), PolicyViolation (1008), ProtocolError (1002) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocketCloseStatus()
-    instance = ZZZ()
+    Instance = WebSocketCloseStatus
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -436,10 +418,7 @@ class WebSocketCloseStatus:
 
 class WebSocketError:
     """ enum WebSocketError, values: ConnectionClosedPrematurely (8), Faulted (2), HeaderError (7), InvalidMessageType (1), InvalidState (9), NativeError (3), NotAWebSocket (4), Success (0), UnsupportedProtocol (6), UnsupportedVersion (5) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocketError()
-    instance = ZZZ()
+    Instance = WebSocketError
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -504,10 +483,7 @@ class WebSocketException(Win32Exception):
     WebSocketException(message: str)
     WebSocketException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocketException()
-    instance = ZZZ()
+    Instance = WebSocketException
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """ GetObjectData(self: WebSocketException, info: SerializationInfo, context: StreamingContext) """
@@ -559,10 +535,7 @@ class WebSocketException(Win32Exception):
 
 class WebSocketMessageType:
     """ enum WebSocketMessageType, values: Binary (1), Close (2), Text (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocketMessageType()
-    instance = ZZZ()
+    Instance = WebSocketMessageType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -608,10 +581,7 @@ class WebSocketReceiveResult():
     WebSocketReceiveResult(count: int, messageType: WebSocketMessageType, endOfMessage: bool)
     WebSocketReceiveResult(count: int, messageType: WebSocketMessageType, endOfMessage: bool, closeStatus: Nullable[WebSocketCloseStatus], closeStatusDescription: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocketReceiveResult()
-    instance = ZZZ()
+    Instance = WebSocketReceiveResult
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, count, messageType, endOfMessage, closeStatus=None, closeStatusDescription=None):
@@ -650,10 +620,7 @@ class WebSocketReceiveResult():
 
 class WebSocketState:
     """ enum WebSocketState, values: Aborted (6), Closed (5), CloseReceived (4), CloseSent (3), Connecting (1), None (0), Open (2) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocketState()
-    instance = ZZZ()
+    Instance = WebSocketState
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

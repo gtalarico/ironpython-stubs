@@ -12,10 +12,7 @@ from Wms.EdiMessaging.Processor import *
 
 class BwServerPrintJobMessageProcessor(MessageProcessor):
     """ BwServerPrintJobMessageProcessor(queueProvider: IQueueProvider) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BwServerPrintJobMessageProcessor()
-    instance = ZZZ()
+    Instance = BwServerPrintJobMessageProcessor
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, queueProvider):
@@ -27,10 +24,7 @@ class BwServerPrintJobMessageProcessor(MessageProcessor):
 
 class CleanupDocumentQueueTask(TaskBase):
     """ CleanupDocumentQueueTask(settings: SystemSettings) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CleanupDocumentQueueTask()
-    instance = ZZZ()
+    Instance = CleanupDocumentQueueTask
     """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: CleanupDocumentQueueTask) """
@@ -50,10 +44,7 @@ class CleanupDocumentQueueTask(TaskBase):
 
 class DocumentQueueExtensionMethods():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DocumentQueueExtensionMethods()
-    instance = ZZZ()
+    Instance = DocumentQueueExtensionMethods
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def AddPrintJobSync(queue, job):
@@ -85,10 +76,7 @@ class DocumentQueueExtensionMethods():
 
 class JsonMessageDispatcher():
     """ JsonMessageDispatcher(queueProvider: IQueueProvider) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return JsonMessageDispatcher()
-    instance = ZZZ()
+    Instance = JsonMessageDispatcher
     """hardcoded/returns an instance of the class"""
     def PublishMessage(self, message):
         """ PublishMessage(self: JsonMessageDispatcher, message: object) """
@@ -102,10 +90,7 @@ class JsonMessageDispatcher():
 
 class PrintJobExtensions():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobExtensions()
-    instance = ZZZ()
+    Instance = PrintJobExtensions
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def RegisterMsQueue(container, resolverName, host, queueName):
@@ -119,10 +104,7 @@ class PrintJobExtensions():
 
 class PrintJobQueueDispatcher(JsonMessageDispatcher):
     """ PrintJobQueueDispatcher(queueProvider: IQueueProvider) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobQueueDispatcher()
-    instance = ZZZ()
+    Instance = PrintJobQueueDispatcher
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, queueProvider):
@@ -132,10 +114,7 @@ class PrintJobQueueDispatcher(JsonMessageDispatcher):
 
 class PrintJobsOnStartupValidator():
     """ PrintJobsOnStartupValidator(messageDispatcher: PrintJobQueueDispatcher) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobsOnStartupValidator()
-    instance = ZZZ()
+    Instance = PrintJobsOnStartupValidator
     """hardcoded/returns an instance of the class"""
     def Start(self, cancellationToken):
         """ Start(self: PrintJobsOnStartupValidator, cancellationToken: CancellationToken) -> Task """
@@ -149,10 +128,7 @@ class PrintJobsOnStartupValidator():
 
 class PrintJobsQueuer():
     """ PrintJobsQueuer(messageDispatcher: PrintJobQueueDispatcher, storageProvider: StorageProvider) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobsQueuer()
-    instance = ZZZ()
+    Instance = PrintJobsQueuer
     """hardcoded/returns an instance of the class"""
     def QueueNextPrintJob(self, *args): #cannot find CLR method
         """ QueueNextPrintJob(self: PrintJobsQueuer) -> int """

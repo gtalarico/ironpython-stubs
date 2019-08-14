@@ -11,10 +11,7 @@ from Wms.EdiMessaging import *
 
 class IMessageHandler:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IMessageHandler()
-    instance = ZZZ()
+    Instance = IMessageHandler
     """hardcoded/returns an instance of the class"""
     def Handle(self, message):
         """ Handle(self: IMessageHandler, message: object) """
@@ -30,10 +27,7 @@ class JsonMessage(MessageBase):
     JsonMessage()
     JsonMessage(messageType: Type, jsonString: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return JsonMessage()
-    instance = ZZZ()
+    Instance = JsonMessage
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -50,10 +44,7 @@ class JsonMessage(MessageBase):
 
 class MessageHandlerBase:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessageHandlerBase()
-    instance = ZZZ()
+    Instance = MessageHandlerBase
     """hardcoded/returns an instance of the class"""
     def Handle(self, message):
         """ Handle(self: MessageHandlerBase[TMessage], message: object) """
@@ -70,10 +61,7 @@ class MessageHandlerBase:
 
 class MessageProcessor():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MessageProcessor()
-    instance = ZZZ()
+    Instance = MessageProcessor
     """hardcoded/returns an instance of the class"""
     def AddHandler(self):
         """ AddHandler[(TMessage, THandler)](self: MessageProcessor) -> MessageProcessor """

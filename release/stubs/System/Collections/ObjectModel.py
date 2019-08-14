@@ -13,10 +13,7 @@ class Collection:
     Collection[T]()
     Collection[T](list: IList[T])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Collection()
-    instance = ZZZ()
+    Instance = Collection
     """hardcoded/returns an instance of the class"""
     def Add(self, item):
         """
@@ -207,10 +204,7 @@ Get: Count(self: Collection[T]) -> int
 
 class KeyedCollection(Collection):
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return KeyedCollection()
-    instance = ZZZ()
+    Instance = KeyedCollection
     """hardcoded/returns an instance of the class"""
     def ChangeItemKey(self, *args): #cannot find CLR method
         """
@@ -344,10 +338,7 @@ class ObservableCollection(Collection):
     ObservableCollection[T](list: List[T])
     ObservableCollection[T](collection: IEnumerable[T])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ObservableCollection()
-    instance = ZZZ()
+    Instance = ObservableCollection
     """hardcoded/returns an instance of the class"""
     def BlockReentrancy(self, *args): #cannot find CLR method
         """
@@ -479,10 +470,7 @@ class ObservableCollection(Collection):
 
 class ReadOnlyCollection:
     """ ReadOnlyCollection[T](list: IList[T]) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReadOnlyCollection()
-    instance = ZZZ()
+    Instance = ReadOnlyCollection
     """hardcoded/returns an instance of the class"""
     def Contains(self, value):
         """
@@ -580,10 +568,7 @@ Get: Count(self: ReadOnlyCollection[T]) -> int
 
 class ReadOnlyDictionary:
     """ ReadOnlyDictionary[TKey, TValue](dictionary: IDictionary[TKey, TValue]) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReadOnlyDictionary()
-    instance = ZZZ()
+    Instance = ReadOnlyDictionary
     """hardcoded/returns an instance of the class"""
     def ContainsKey(self, key):
         """ ContainsKey(self: ReadOnlyDictionary[TKey, TValue], key: TKey) -> bool """
@@ -666,10 +651,7 @@ class ReadOnlyDictionary:
 
 class ReadOnlyObservableCollection(ReadOnlyCollection):
     """ ReadOnlyObservableCollection[T](list: ObservableCollection[T]) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReadOnlyObservableCollection()
-    instance = ZZZ()
+    Instance = ReadOnlyObservableCollection
     """hardcoded/returns an instance of the class"""
     def OnCollectionChanged(self, *args): #cannot find CLR method
         """

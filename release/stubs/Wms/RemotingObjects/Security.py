@@ -14,10 +14,7 @@ class AuthenticationArgs():
     
     AuthenticationArgs()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AuthenticationArgs()
-    instance = ZZZ()
+    Instance = AuthenticationArgs
     """hardcoded/returns an instance of the class"""
     ClientName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -79,10 +76,7 @@ Set: UserName(self: AuthenticationArgs) = value
 
 class RemotingIdentity():
     """ RemotingIdentity(accessId: str, clientName: str, userName: str) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingIdentity()
-    instance = ZZZ()
+    Instance = RemotingIdentity
     """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """

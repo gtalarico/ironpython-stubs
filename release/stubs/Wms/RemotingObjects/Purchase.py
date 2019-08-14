@@ -11,10 +11,7 @@ from Wms.RemotingObjects import *
 
 class DtoErrorDetails():
     """ DtoErrorDetails() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DtoErrorDetails()
-    instance = ZZZ()
+    Instance = DtoErrorDetails
     """hardcoded/returns an instance of the class"""
     ItemCodes = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: ItemCodes(self: DtoErrorDetails) -> List[str]
@@ -32,10 +29,7 @@ Set: Messages(self: DtoErrorDetails) = value
 
 class ErpProcessPurchaseOrderLinesResult():
     """ ErpProcessPurchaseOrderLinesResult() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ErpProcessPurchaseOrderLinesResult()
-    instance = ZZZ()
+    Instance = ErpProcessPurchaseOrderLinesResult
     """hardcoded/returns an instance of the class"""
     DefaultItemLocations = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: DefaultItemLocations(self: ErpProcessPurchaseOrderLinesResult) -> Dictionary[str, str]
@@ -89,10 +83,7 @@ Set: Reports(self: ErpProcessPurchaseOrderLinesResult) = value
 
 class ErpProcessReceiptResult(ErpProcessPurchaseOrderLinesResult):
     """ ErpProcessReceiptResult() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ErpProcessReceiptResult()
-    instance = ZZZ()
+    Instance = ErpProcessReceiptResult
     """hardcoded/returns an instance of the class"""
     CreatedPurchaseOrder = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -119,10 +110,7 @@ class GetHistoryPurchaseOrderPrintLinesArgs():
     GetHistoryPurchaseOrderPrintLinesArgs(purchaseReceiptGuid: Guid)
     GetHistoryPurchaseOrderPrintLinesArgs(purchaseReceiptGuid: Guid, pagingParams: PagingParams)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetHistoryPurchaseOrderPrintLinesArgs()
-    instance = ZZZ()
+    Instance = GetHistoryPurchaseOrderPrintLinesArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, purchaseReceiptGuid=None, pagingParams=None):
@@ -164,10 +152,7 @@ class GetItemsOfVendorArgs():
     GetItemsOfVendorArgs()
     GetItemsOfVendorArgs(vendorNumber: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetItemsOfVendorArgs()
-    instance = ZZZ()
+    Instance = GetItemsOfVendorArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, vendorNumber=None):
@@ -218,10 +203,7 @@ class GetItemVendorsArgs():
     GetItemVendorsArgs()
     GetItemVendorsArgs(itemCode: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetItemVendorsArgs()
-    instance = ZZZ()
+    Instance = GetItemVendorsArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, itemCode=None):
@@ -250,10 +232,7 @@ class GetPurchaseOrderLinesArgs():
     GetPurchaseOrderLinesArgs()
     GetPurchaseOrderLinesArgs(purchaseOrderIds: IEnumerable[int])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetPurchaseOrderLinesArgs()
-    instance = ZZZ()
+    Instance = GetPurchaseOrderLinesArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, purchaseOrderIds=None):
@@ -277,10 +256,7 @@ Set: Filter(self: GetPurchaseOrderLinesArgs) = value
 
 class InboundOrderArgsBase():
     """ InboundOrderArgsBase() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InboundOrderArgsBase()
-    instance = ZZZ()
+    Instance = InboundOrderArgsBase
     """hardcoded/returns an instance of the class"""
     Filter = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -329,10 +305,7 @@ class GetPurchaseOrderVendorArgs:
     GetPurchaseOrderVendorArgs()
     GetPurchaseOrderVendorArgs(warehouseCode: str, filterText: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetPurchaseOrderVendorArgs()
-    instance = ZZZ()
+    Instance = GetPurchaseOrderVendorArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, warehouseCode=None, filterText=None):
@@ -372,10 +345,7 @@ class GetVendorsArgs():
     GetVendorsArgs(id: int)
     GetVendorsArgs(id: int, filterText: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetVendorsArgs()
-    instance = ZZZ()
+    Instance = GetVendorsArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -426,10 +396,7 @@ Set: VendorNumber(self: GetVendorsArgs) = value
 
 class PurchaseOrder:
     """ PurchaseOrder() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrder()
-    instance = ZZZ()
+    Instance = PurchaseOrder
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateDummyFromVendor(orderNumber, warehouseCode, vendor):
@@ -577,10 +544,7 @@ Set: VendorZipCode(self: PurchaseOrder) = value
 
 class HistoryPurchaseOrder(PurchaseOrder):
     """ HistoryPurchaseOrder() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryPurchaseOrder()
-    instance = ZZZ()
+    Instance = HistoryPurchaseOrder
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -634,10 +598,7 @@ Set: YourReference(self: HistoryPurchaseOrder) = value
 
 class HistoryPurchaseOrders(FindableList):
     """ HistoryPurchaseOrders() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryPurchaseOrders()
-    instance = ZZZ()
+    Instance = HistoryPurchaseOrders
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -671,10 +632,7 @@ Set: TotalRowsMatched(self: HistoryPurchaseOrders) = value
 
 class HistoryPurchaseOrdersFilter(HistoryFilterBase):
     """ HistoryPurchaseOrdersFilter() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryPurchaseOrdersFilter()
-    instance = ZZZ()
+    Instance = HistoryPurchaseOrdersFilter
     """hardcoded/returns an instance of the class"""
     WarehouseCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: WarehouseCode(self: HistoryPurchaseOrdersFilter) -> str
@@ -690,10 +648,7 @@ class Vendor():
     
     Vendor()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Vendor()
-    instance = ZZZ()
+    Instance = Vendor
     """hardcoded/returns an instance of the class"""
     def GetHashCode(self):
         """ GetHashCode(self: Vendor) -> int """
@@ -843,10 +798,7 @@ class ItemVendor(Vendor):
     
     ItemVendor()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemVendor()
-    instance = ZZZ()
+    Instance = ItemVendor
     """hardcoded/returns an instance of the class"""
     def GetHashCode(self):
         """ GetHashCode(self: ItemVendor) -> int """
@@ -892,10 +844,7 @@ class ItemVendors(FindableList):
     
     ItemVendors()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemVendors()
-    instance = ZZZ()
+    Instance = ItemVendors
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -922,10 +871,7 @@ class ItemVendors(FindableList):
 
 class ProcessPurchaseOrderLinesArgs():
     """ ProcessPurchaseOrderLinesArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessPurchaseOrderLinesArgs()
-    instance = ZZZ()
+    Instance = ProcessPurchaseOrderLinesArgs
     """hardcoded/returns an instance of the class"""
     DefaultInboundLocation = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: DefaultInboundLocation(self: ProcessPurchaseOrderLinesArgs) -> str
@@ -945,10 +891,7 @@ Set: YourReference(self: ProcessPurchaseOrderLinesArgs) = value
 
 class ProcessReceiptArgs():
     """ ProcessReceiptArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessReceiptArgs()
-    instance = ZZZ()
+    Instance = ProcessReceiptArgs
     """hardcoded/returns an instance of the class"""
     DocumentPrinter = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1010,10 +953,7 @@ class PurchaseOrderArgs:
     PurchaseOrderArgs(warehouseCode: str, vendorNumber: str, searchText: str)
     PurchaseOrderArgs(warehouseCode: str, vendorNumber: str, searchText: str, timeSpan: TimeFilterEnum)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrderArgs()
-    instance = ZZZ()
+    Instance = PurchaseOrderArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -1049,10 +989,7 @@ class PurchaseOrderLine:
     
     PurchaseOrderLine()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrderLine()
-    instance = ZZZ()
+    Instance = PurchaseOrderLine
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromItem(item, itemDefaultLocation):
@@ -1156,10 +1093,7 @@ class PurchaseOrderLines:
     
     PurchaseOrderLines()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrderLines()
-    instance = ZZZ()
+    Instance = PurchaseOrderLines
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(inboundOrderLines):
@@ -1210,10 +1144,7 @@ Get: PreserveState(self: PurchaseOrderLines) -> bool
 
 class PurchaseOrders:
     """ PurchaseOrders() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrders()
-    instance = ZZZ()
+    Instance = PurchaseOrders
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(list):
@@ -1266,10 +1197,7 @@ class PurchaseOrderVendor(Vendor):
     
     PurchaseOrderVendor()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrderVendor()
-    instance = ZZZ()
+    Instance = PurchaseOrderVendor
     """hardcoded/returns an instance of the class"""
     Barcode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1309,10 +1237,7 @@ class PurchaseOrderVendors(FindableList):
     
     PurchaseOrderVendors()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrderVendors()
-    instance = ZZZ()
+    Instance = PurchaseOrderVendors
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -1343,10 +1268,7 @@ class Vendors(FindableList):
     
     Vendors()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Vendors()
-    instance = ZZZ()
+    Instance = Vendors
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """

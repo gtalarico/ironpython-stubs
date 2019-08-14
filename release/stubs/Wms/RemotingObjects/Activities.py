@@ -10,10 +10,7 @@
 
 class GetActivityProgressArgs():
     """ GetActivityProgressArgs() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GetActivityProgressArgs()
-    instance = ZZZ()
+    Instance = GetActivityProgressArgs
     """hardcoded/returns an instance of the class"""
     CacheKey = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: CacheKey(self: GetActivityProgressArgs) -> CacheKey
@@ -43,10 +40,7 @@ Set: ProgressBarType(self: GetActivityProgressArgs) = value
 
 class ProgressBarType:
     """ enum ProgressBarType, values: Mobile (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProgressBarType()
-    instance = ZZZ()
+    Instance = ProgressBarType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

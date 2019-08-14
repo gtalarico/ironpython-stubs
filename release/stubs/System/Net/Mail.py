@@ -10,10 +10,7 @@
 
 class AttachmentBase:
     """ Base class that represents an email attachment. Classes System.Net.Mail.Attachment, System.Net.Mail.AlternateView, and System.Net.Mail.LinkedResource derive from this class. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AttachmentBase()
-    instance = ZZZ()
+    Instance = AttachmentBase
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -94,10 +91,7 @@ class AlternateView(AttachmentBase):
     AlternateView(contentStream: Stream, mediaType: str)
     AlternateView(contentStream: Stream, contentType: ContentType)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AlternateView()
-    instance = ZZZ()
+    Instance = AlternateView
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateAlternateViewFromString(content, *__args):
@@ -178,10 +172,7 @@ Get: LinkedResources(self: AlternateView) -> LinkedResourceCollection
 
 class AlternateViewCollection(Collection):
     """ Represents a collection of System.Net.Mail.AlternateView objects. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AlternateViewCollection()
-    instance = ZZZ()
+    Instance = AlternateViewCollection
     """hardcoded/returns an instance of the class"""
     def ClearItems(self, *args): #cannot find CLR method
         """ ClearItems(self: AlternateViewCollection) """
@@ -248,10 +239,7 @@ class Attachment(AttachmentBase):
     Attachment(contentStream: Stream, name: str, mediaType: str)
     Attachment(contentStream: Stream, contentType: ContentType)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Attachment()
-    instance = ZZZ()
+    Instance = Attachment
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateAttachmentFromString(content, *__args):
@@ -344,10 +332,7 @@ Set: NameEncoding(self: Attachment) = value
 
 class AttachmentCollection(Collection):
     """ Stores attachments to be sent as part of an e-mail message. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AttachmentCollection()
-    instance = ZZZ()
+    Instance = AttachmentCollection
     """hardcoded/returns an instance of the class"""
     def ClearItems(self, *args): #cannot find CLR method
         """ ClearItems(self: AttachmentCollection) """
@@ -409,10 +394,7 @@ class DeliveryNotificationOptions:
     
     enum (flags) DeliveryNotificationOptions, values: Delay (4), Never (134217728), None (0), OnFailure (2), OnSuccess (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DeliveryNotificationOptions()
-    instance = ZZZ()
+    Instance = DeliveryNotificationOptions
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -466,10 +448,7 @@ class LinkedResource(AttachmentBase):
     LinkedResource(contentStream: Stream, mediaType: str)
     LinkedResource(contentStream: Stream, contentType: ContentType)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LinkedResource()
-    instance = ZZZ()
+    Instance = LinkedResource
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateLinkedResourceFromString(content, *__args):
@@ -547,10 +526,7 @@ Set: ContentLink(self: LinkedResource) = value
 
 class LinkedResourceCollection(Collection):
     """ Stores linked resources to be sent as part of an e-mail message. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LinkedResourceCollection()
-    instance = ZZZ()
+    Instance = LinkedResourceCollection
     """hardcoded/returns an instance of the class"""
     def ClearItems(self, *args): #cannot find CLR method
         """ ClearItems(self: LinkedResourceCollection) """
@@ -614,10 +590,7 @@ class MailAddress():
     MailAddress(address: str, displayName: str)
     MailAddress(address: str, displayName: str, displayNameEncoding: Encoding)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MailAddress()
-    instance = ZZZ()
+    Instance = MailAddress
     """hardcoded/returns an instance of the class"""
     def Equals(self, value):
         """
@@ -700,10 +673,7 @@ class MailAddressCollection(Collection):
     
     MailAddressCollection()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MailAddressCollection()
-    instance = ZZZ()
+    Instance = MailAddressCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
@@ -798,10 +768,7 @@ class MailMessage:
     MailMessage(from: str, to: str, subject: str, body: str)
     MailMessage(from: MailAddress, to: MailAddress)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MailMessage()
-    instance = ZZZ()
+    Instance = MailMessage
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -987,10 +954,7 @@ class MailPriority:
     
     enum MailPriority, values: High (2), Low (1), Normal (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MailPriority()
-    instance = ZZZ()
+    Instance = MailPriority
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1037,10 +1001,7 @@ class SendCompletedEventHandler(MulticastDelegate):
     
     SendCompletedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SendCompletedEventHandler()
-    instance = ZZZ()
+    Instance = SendCompletedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SendCompletedEventHandler, sender: object, e: AsyncCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -1118,10 +1079,7 @@ class SmtpAccess:
     
     enum SmtpAccess, values: Connect (1), ConnectToUnrestrictedPort (2), None (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpAccess()
-    instance = ZZZ()
+    Instance = SmtpAccess
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1170,10 +1128,7 @@ class SmtpClient:
     SmtpClient(host: str)
     SmtpClient(host: str, port: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpClient()
-    instance = ZZZ()
+    Instance = SmtpClient
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
@@ -1366,10 +1321,7 @@ Set: UseDefaultCredentials(self: SmtpClient) = value
 
 class SmtpDeliveryFormat:
     """ enum SmtpDeliveryFormat, values: International (1), SevenBit (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpDeliveryFormat()
-    instance = ZZZ()
+    Instance = SmtpDeliveryFormat
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1415,10 +1367,7 @@ class SmtpDeliveryMethod:
     
     enum SmtpDeliveryMethod, values: Network (0), PickupDirectoryFromIis (2), SpecifiedPickupDirectory (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpDeliveryMethod()
-    instance = ZZZ()
+    Instance = SmtpDeliveryMethod
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1469,10 +1418,7 @@ class SmtpException(Exception):
     SmtpException(message: str)
     SmtpException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpException()
-    instance = ZZZ()
+    Instance = SmtpException
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, serializationInfo, streamingContext):
         """
@@ -1529,10 +1475,7 @@ class SmtpFailedRecipientException(SmtpException):
     SmtpFailedRecipientException(statusCode: SmtpStatusCode, failedRecipient: str, serverResponse: str)
     SmtpFailedRecipientException(message: str, failedRecipient: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpFailedRecipientException()
-    instance = ZZZ()
+    Instance = SmtpFailedRecipientException
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, serializationInfo, streamingContext):
         """
@@ -1587,10 +1530,7 @@ class SmtpFailedRecipientsException(SmtpFailedRecipientException):
     SmtpFailedRecipientsException(message: str, innerException: Exception)
     SmtpFailedRecipientsException(message: str, innerExceptions: Array[SmtpFailedRecipientException])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpFailedRecipientsException()
-    instance = ZZZ()
+    Instance = SmtpFailedRecipientsException
     """hardcoded/returns an instance of the class"""
     def GetObjectData(self, serializationInfo, streamingContext):
         """
@@ -1642,10 +1582,7 @@ class SmtpPermission(CodeAccessPermission):
     SmtpPermission(unrestricted: bool)
     SmtpPermission(access: SmtpAccess)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpPermission()
-    instance = ZZZ()
+    Instance = SmtpPermission
     """hardcoded/returns an instance of the class"""
     def AddPermission(self, access):
         """
@@ -1760,10 +1697,7 @@ class SmtpPermissionAttribute(CodeAccessSecurityAttribute):
     
     SmtpPermissionAttribute(action: SecurityAction)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpPermissionAttribute()
-    instance = ZZZ()
+    Instance = SmtpPermissionAttribute
     """hardcoded/returns an instance of the class"""
     def CreatePermission(self):
         """
@@ -1802,10 +1736,7 @@ class SmtpStatusCode:
     
     enum SmtpStatusCode, values: BadCommandSequence (503), CannotVerifyUserWillAttemptDelivery (252), ClientNotPermitted (454), CommandNotImplemented (502), CommandParameterNotImplemented (504), CommandUnrecognized (500), ExceededStorageAllocation (552), GeneralFailure (-1), HelpMessage (214), InsufficientStorage (452), LocalErrorInProcessing (451), MailboxBusy (450), MailboxNameNotAllowed (553), MailboxUnavailable (550), MustIssueStartTlsFirst (530), Ok (250), ServiceClosingTransmissionChannel (221), ServiceNotAvailable (421), ServiceReady (220), StartMailInput (354), SyntaxError (501), SystemStatus (211), TransactionFailed (554), UserNotLocalTryAlternatePath (551), UserNotLocalWillForward (251)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpStatusCode()
-    instance = ZZZ()
+    Instance = SmtpStatusCode
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

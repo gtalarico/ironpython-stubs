@@ -10,10 +10,7 @@
 
 class ICodeGenerator:
     """ Defines an interface for generating code. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICodeGenerator()
-    instance = ZZZ()
+    Instance = ICodeGenerator
     """hardcoded/returns an instance of the class"""
     def CreateEscapedIdentifier(self, value):
         """
@@ -142,10 +139,7 @@ class ICodeGenerator:
 
 class CodeGenerator:
     """ Provides an example implementation of the System.CodeDom.Compiler.ICodeGenerator interface. This class is abstract. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CodeGenerator()
-    instance = ZZZ()
+    Instance = CodeGenerator
     """hardcoded/returns an instance of the class"""
     def ContinueOnNewLine(self, *args): #cannot find CLR method
         """
@@ -1128,10 +1122,7 @@ class CodeGenerator:
 
 class ICodeCompiler:
     """ Defines an interface for invoking compilation of source code or a CodeDOM tree using a specific compiler. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICodeCompiler()
-    instance = ZZZ()
+    Instance = ICodeCompiler
     """hardcoded/returns an instance of the class"""
     def CompileAssemblyFromDom(self, options, compilationUnit):
         """
@@ -1212,10 +1203,7 @@ class ICodeCompiler:
 
 class CodeCompiler(CodeGenerator):
     """ Provides an example implementation of the System.CodeDom.Compiler.ICodeCompiler interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CodeCompiler()
-    instance = ZZZ()
+    Instance = CodeCompiler
     """hardcoded/returns an instance of the class"""
     def CmdArgsFromParameters(self, *args): #cannot find CLR method
         """
@@ -2288,10 +2276,7 @@ class CodeCompiler(CodeGenerator):
 
 class CodeDomProvider(Component):
     """ Provides a base class for System.CodeDom.Compiler.CodeDomProvider implementations. This class is abstract. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CodeDomProvider()
-    instance = ZZZ()
+    Instance = CodeDomProvider
     """hardcoded/returns an instance of the class"""
     def CompileAssemblyFromDom(self, options, compilationUnits):
         """
@@ -2674,10 +2659,7 @@ class CodeGeneratorOptions():
     
     CodeGeneratorOptions()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CodeGeneratorOptions()
-    instance = ZZZ()
+    Instance = CodeGeneratorOptions
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -2731,10 +2713,7 @@ Set: VerbatimOrder(self: CodeGeneratorOptions) = value
 
 class CodeParser:
     """ Provides an empty implementation of the System.CodeDom.Compiler.ICodeParser interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CodeParser()
-    instance = ZZZ()
+    Instance = CodeParser
     """hardcoded/returns an instance of the class"""
     def Parse(self, codeStream):
         """
@@ -2763,10 +2742,7 @@ class CompilerError():
     CompilerError()
     CompilerError(fileName: str, line: int, column: int, errorNumber: str, errorText: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CompilerError()
-    instance = ZZZ()
+    Instance = CompilerError
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
@@ -2843,10 +2819,7 @@ class CompilerErrorCollection(CollectionBase):
     CompilerErrorCollection(value: CompilerErrorCollection)
     CompilerErrorCollection(value: Array[CompilerError])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CompilerErrorCollection()
-    instance = ZZZ()
+    Instance = CompilerErrorCollection
     """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
@@ -3068,10 +3041,7 @@ Get: HasWarnings(self: CompilerErrorCollection) -> bool
 
 class CompilerInfo():
     """ Represents the configuration settings of a language provider. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CompilerInfo()
-    instance = ZZZ()
+    Instance = CompilerInfo
     """hardcoded/returns an instance of the class"""
     def CreateDefaultCompilerParameters(self):
         """
@@ -3163,10 +3133,7 @@ class CompilerParameters():
     CompilerParameters(assemblyNames: Array[str])
     CompilerParameters(assemblyNames: Array[str], outputName: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CompilerParameters()
-    instance = ZZZ()
+    Instance = CompilerParameters
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, assemblyNames=None, outputName=None, includeDebugInformation=None):
@@ -3309,10 +3276,7 @@ class CompilerResults():
     
     CompilerResults(tempFiles: TempFileCollection)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CompilerResults()
-    instance = ZZZ()
+    Instance = CompilerResults
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, tempFiles):
@@ -3377,10 +3341,7 @@ Set: TempFiles(self: CompilerResults) = value
 
 class Executor():
     """ Provides command execution functions for invoking compilers. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Executor()
-    instance = ZZZ()
+    Instance = Executor
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def ExecWait(cmd, tempFiles):
@@ -3459,10 +3420,7 @@ class GeneratedCodeAttribute:
     
     GeneratedCodeAttribute(tool: str, version: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GeneratedCodeAttribute()
-    instance = ZZZ()
+    Instance = GeneratedCodeAttribute
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -3495,10 +3453,7 @@ class GeneratorSupport:
     
     enum (flags) GeneratorSupport, values: ArraysOfArrays (1), AssemblyAttributes (4096), ChainedConstructorArguments (32768), ComplexExpressions (524288), DeclareDelegates (512), DeclareEnums (256), DeclareEvents (2048), DeclareIndexerProperties (33554432), DeclareInterfaces (1024), DeclareValueTypes (128), EntryPointMethod (2), GenericTypeDeclaration (16777216), GenericTypeReference (8388608), GotoStatements (4), MultidimensionalArrays (8), MultipleInterfaceMembers (131072), NestedTypes (65536), ParameterAttributes (8192), PartialTypes (4194304), PublicStaticMembers (262144), ReferenceParameters (16384), Resources (2097152), ReturnTypeAttributes (64), StaticConstructors (16), TryCatchStatements (32), Win32Resources (1048576)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GeneratorSupport()
-    instance = ZZZ()
+    Instance = GeneratorSupport
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3564,10 +3519,7 @@ class GeneratorSupport:
 
 class ICodeParser:
     """ Defines an interface for parsing code into a System.CodeDom.CodeCompileUnit. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICodeParser()
-    instance = ZZZ()
+    Instance = ICodeParser
     """hardcoded/returns an instance of the class"""
     def Parse(self, codeStream):
         """
@@ -3592,10 +3544,7 @@ class IndentedTextWriter(TextWriter):
     IndentedTextWriter(writer: TextWriter, tabString: str)
     IndentedTextWriter(writer: TextWriter)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IndentedTextWriter()
-    instance = ZZZ()
+    Instance = IndentedTextWriter
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -3847,10 +3796,7 @@ class LanguageOptions:
     
     enum (flags) LanguageOptions, values: CaseInsensitive (1), None (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LanguageOptions()
-    instance = ZZZ()
+    Instance = LanguageOptions
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3898,10 +3844,7 @@ class TempFileCollection:
     TempFileCollection()
     TempFileCollection(tempDir: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TempFileCollection()
-    instance = ZZZ()
+    Instance = TempFileCollection
     """hardcoded/returns an instance of the class"""
     def AddExtension(self, fileExtension, keepFile=None):
         """

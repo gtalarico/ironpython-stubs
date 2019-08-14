@@ -10,10 +10,7 @@
 
 class DirectOrderLogger():
     """ DirectOrderLogger(orderMapper: ObjectsMapper[DirectOrder, DirectOrders], linesMapper: ObjectsMapper[DirectOrderLine, DirectOrderLines], detailsMapper: ObjectsMapper[ItemIdentification, DirectOrderLineDetails]) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DirectOrderLogger()
-    instance = ZZZ()
+    Instance = DirectOrderLogger
     """hardcoded/returns an instance of the class"""
     def Log(self, directOrder):
         """ Log(self: DirectOrderLogger, directOrder: DirectOrder) """

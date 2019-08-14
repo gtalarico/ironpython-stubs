@@ -10,10 +10,7 @@
 
 class Capture():
     """ Represents the results from a single successful subexpression capture. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Capture()
-    instance = ZZZ()
+    Instance = Capture
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
@@ -49,10 +46,7 @@ Get: Value(self: Capture) -> str
 
 class CaptureCollection:
     """ Represents the set of captures made by a single capturing group. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CaptureCollection()
-    instance = ZZZ()
+    Instance = CaptureCollection
     """hardcoded/returns an instance of the class"""
     def CopyTo(self, array, arrayIndex):
         """
@@ -128,10 +122,7 @@ Get: SyncRoot(self: CaptureCollection) -> object
 
 class Group(Capture):
     """ Represents the results from a single capturing group. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Group()
-    instance = ZZZ()
+    Instance = Group
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def Synchronized(inner):
@@ -168,10 +159,7 @@ Get: Success(self: Group) -> bool
 
 class GroupCollection:
     """ Returns the set of captured groups in a single match. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GroupCollection()
-    instance = ZZZ()
+    Instance = GroupCollection
     """hardcoded/returns an instance of the class"""
     def CopyTo(self, array, arrayIndex):
         """
@@ -247,10 +235,7 @@ Get: SyncRoot(self: GroupCollection) -> object
 
 class Match(Group):
     """ Represents the results from a single regular expression match. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Match()
-    instance = ZZZ()
+    Instance = Match
     """hardcoded/returns an instance of the class"""
     def NextMatch(self):
         """
@@ -299,10 +284,7 @@ Get: Groups(self: Match) -> GroupCollection
 
 class MatchCollection:
     """ Represents the set of successful matches found by iteratively applying a regular expression pattern to the input string. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MatchCollection()
-    instance = ZZZ()
+    Instance = MatchCollection
     """hardcoded/returns an instance of the class"""
     def CopyTo(self, array, arrayIndex):
         """
@@ -382,10 +364,7 @@ class MatchEvaluator(MulticastDelegate):
     
     MatchEvaluator(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MatchEvaluator()
-    instance = ZZZ()
+    Instance = MatchEvaluator
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, match, callback, object):
         """ BeginInvoke(self: MatchEvaluator, match: Match, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -465,10 +444,7 @@ class Regex:
     Regex(pattern: str, options: RegexOptions)
     Regex(pattern: str, options: RegexOptions, matchTimeout: TimeSpan)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Regex()
-    instance = ZZZ()
+    Instance = Regex
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CompileToAssembly(regexinfos, assemblyname, attributes=None, resourceFile=None):
@@ -932,10 +908,7 @@ class RegexCompilationInfo():
     RegexCompilationInfo(pattern: str, options: RegexOptions, name: str, fullnamespace: str, ispublic: bool)
     RegexCompilationInfo(pattern: str, options: RegexOptions, name: str, fullnamespace: str, ispublic: bool, matchTimeout: TimeSpan)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegexCompilationInfo()
-    instance = ZZZ()
+    Instance = RegexCompilationInfo
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, pattern, options, name, fullnamespace, ispublic, matchTimeout=None):
@@ -1000,10 +973,7 @@ class RegexMatchTimeoutException(TimeoutException):
     RegexMatchTimeoutException(message: str)
     RegexMatchTimeoutException(message: str, inner: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegexMatchTimeoutException()
-    instance = ZZZ()
+    Instance = RegexMatchTimeoutException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1051,10 +1021,7 @@ class RegexOptions:
     
     enum (flags) RegexOptions, values: Compiled (8), CultureInvariant (512), ECMAScript (256), ExplicitCapture (4), IgnoreCase (1), IgnorePatternWhitespace (32), Multiline (2), None (0), RightToLeft (64), Singleline (16)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegexOptions()
-    instance = ZZZ()
+    Instance = RegexOptions
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1104,10 +1071,7 @@ class RegexOptions:
 
 class RegexRunner():
     """ The System.Text.RegularExpressions.RegexRunner class is the base class for compiled regular expressions. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegexRunner()
-    instance = ZZZ()
+    Instance = RegexRunner
     """hardcoded/returns an instance of the class"""
     def Capture(self, *args): #cannot find CLR method
         """
@@ -1296,10 +1260,7 @@ class RegexRunner():
 
 class RegexRunnerFactory():
     """ Creates a System.Text.RegularExpressions.RegexRunner class for a compiled regular expression. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegexRunnerFactory()
-    instance = ZZZ()
+    Instance = RegexRunnerFactory
     """hardcoded/returns an instance of the class"""
     def CreateInstance(self, *args): #cannot find CLR method
         """

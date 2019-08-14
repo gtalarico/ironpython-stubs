@@ -10,10 +10,7 @@
 
 class IReallocationValidator:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IReallocationValidator()
-    instance = ZZZ()
+    Instance = IReallocationValidator
     """hardcoded/returns an instance of the class"""
     def Validate(self, itemCode, warehouseCode, locationCode):
         """ Validate(self: IReallocationValidator, itemCode: str, warehouseCode: str, locationCode: str) -> bool """
@@ -33,10 +30,7 @@ Set: ErrorMessage(self: IReallocationValidator) = value
 
 class ReAllocateValidator:
     """ ReAllocateValidator(stockManager: IStockManager) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReAllocateValidator()
-    instance = ZZZ()
+    Instance = ReAllocateValidator
     """hardcoded/returns an instance of the class"""
     def Validate(self, itemCode, warehouseCode, locationCode):
         """ Validate(self: ReAllocateValidator, itemCode: str, warehouseCode: str, locationCode: str) -> bool """
@@ -65,10 +59,7 @@ Set: ErrorMessage(self: ReAllocateValidator) = value
 
 class TransferWarehouseValidator:
     """ TransferWarehouseValidator() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TransferWarehouseValidator()
-    instance = ZZZ()
+    Instance = TransferWarehouseValidator
     """hardcoded/returns an instance of the class"""
     def Validate(self, itemCode, warehouseCode, locationCode):
         """ Validate(self: TransferWarehouseValidator, itemCode: str, warehouseCode: str, locationCode: str) -> bool """

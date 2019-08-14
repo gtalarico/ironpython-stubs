@@ -11,10 +11,7 @@ from Wms.RemotingObjects import *
 
 class WarehouseLayout():
     """ WarehouseLayout() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WarehouseLayout()
-    instance = ZZZ()
+    Instance = WarehouseLayout
     """hardcoded/returns an instance of the class"""
     Aisle = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -68,10 +65,7 @@ Set: Shelve(self: WarehouseLayout) = value
 
 class WarehouseLayouts(FindableList):
     """ WarehouseLayouts() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WarehouseLayouts()
-    instance = ZZZ()
+    Instance = WarehouseLayouts
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
@@ -100,10 +94,7 @@ class WarehouseLayoutSettingFilter():
     WarehouseLayoutSettingFilter(id: int, searchText: str)
     WarehouseLayoutSettingFilter(searchText: str)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WarehouseLayoutSettingFilter()
-    instance = ZZZ()
+    Instance = WarehouseLayoutSettingFilter
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
@@ -121,10 +112,7 @@ class WarehouseLayoutSettingFilter():
 
 class WarehouseLayoutSettings(FindableList):
     """ WarehouseLayoutSettings() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return WarehouseLayoutSettings()
-    instance = ZZZ()
+    Instance = WarehouseLayoutSettings
     """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """

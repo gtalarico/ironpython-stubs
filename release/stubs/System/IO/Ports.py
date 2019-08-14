@@ -14,10 +14,7 @@ class Handshake:
     
     enum Handshake, values: None (0), RequestToSend (2), RequestToSendXOnXOff (3), XOnXOff (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Handshake()
-    instance = ZZZ()
+    Instance = Handshake
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -65,10 +62,7 @@ class Parity:
     
     enum Parity, values: Even (2), Mark (3), None (0), Odd (1), Space (4)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Parity()
-    instance = ZZZ()
+    Instance = Parity
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -117,10 +111,7 @@ class SerialData:
     
     enum SerialData, values: Chars (1), Eof (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SerialData()
-    instance = ZZZ()
+    Instance = SerialData
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -162,10 +153,7 @@ class SerialData:
 
 class SerialDataReceivedEventArgs(EventArgs):
     """ Provides data for the System.IO.Ports.SerialPort.DataReceived event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SerialDataReceivedEventArgs()
-    instance = ZZZ()
+    Instance = SerialDataReceivedEventArgs
     """hardcoded/returns an instance of the class"""
     EventType = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the event type.
@@ -182,10 +170,7 @@ class SerialDataReceivedEventHandler(MulticastDelegate):
     
     SerialDataReceivedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SerialDataReceivedEventHandler()
-    instance = ZZZ()
+    Instance = SerialDataReceivedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SerialDataReceivedEventHandler, sender: object, e: SerialDataReceivedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -263,10 +248,7 @@ class SerialError:
     
     enum SerialError, values: Frame (8), Overrun (2), RXOver (1), RXParity (4), TXFull (256)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SerialError()
-    instance = ZZZ()
+    Instance = SerialError
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -311,10 +293,7 @@ class SerialError:
 
 class SerialErrorReceivedEventArgs(EventArgs):
     """ Prepares data for the System.IO.Ports.SerialPort.ErrorReceived event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SerialErrorReceivedEventArgs()
-    instance = ZZZ()
+    Instance = SerialErrorReceivedEventArgs
     """hardcoded/returns an instance of the class"""
     EventType = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the event type.
@@ -331,10 +310,7 @@ class SerialErrorReceivedEventHandler(MulticastDelegate):
     
     SerialErrorReceivedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SerialErrorReceivedEventHandler()
-    instance = ZZZ()
+    Instance = SerialErrorReceivedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SerialErrorReceivedEventHandler, sender: object, e: SerialErrorReceivedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -412,10 +388,7 @@ class SerialPinChange:
     
     enum SerialPinChange, values: Break (64), CDChanged (32), CtsChanged (8), DsrChanged (16), Ring (256)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SerialPinChange()
-    instance = ZZZ()
+    Instance = SerialPinChange
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -460,10 +433,7 @@ class SerialPinChange:
 
 class SerialPinChangedEventArgs(EventArgs):
     """ Provides data for the System.IO.Ports.SerialPort.PinChanged event. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SerialPinChangedEventArgs()
-    instance = ZZZ()
+    Instance = SerialPinChangedEventArgs
     """hardcoded/returns an instance of the class"""
     EventType = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the event type.
@@ -480,10 +450,7 @@ class SerialPinChangedEventHandler(MulticastDelegate):
     
     SerialPinChangedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SerialPinChangedEventHandler()
-    instance = ZZZ()
+    Instance = SerialPinChangedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SerialPinChangedEventHandler, sender: object, e: SerialPinChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -567,10 +534,7 @@ class SerialPort(Component):
     SerialPort(portName: str, baudRate: int, parity: Parity, dataBits: int)
     SerialPort(portName: str, baudRate: int, parity: Parity, dataBits: int, stopBits: StopBits)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SerialPort()
-    instance = ZZZ()
+    Instance = SerialPort
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -996,10 +960,7 @@ class StopBits:
     
     enum StopBits, values: None (0), One (1), OnePointFive (3), Two (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return StopBits()
-    instance = ZZZ()
+    Instance = StopBits
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

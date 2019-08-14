@@ -11,10 +11,7 @@ from System import *
 
 class OnLogMessage(MulticastDelegate):
     """ OnLogMessage(object: object, method: IntPtr) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OnLogMessage()
-    instance = ZZZ()
+    Instance = OnLogMessage
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, message, callback, object):
         """ BeginInvoke(self: OnLogMessage, message: str, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -88,10 +85,7 @@ class OnLogMessage(MulticastDelegate):
 
 class OnStoreMessage(MulticastDelegate):
     """ OnStoreMessage(object: object, method: IntPtr) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OnStoreMessage()
-    instance = ZZZ()
+    Instance = OnStoreMessage
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, message, callback, object):
         """ BeginInvoke(self: OnStoreMessage, message: IMessage, callback: AsyncCallback, object: object) -> IAsyncResult """

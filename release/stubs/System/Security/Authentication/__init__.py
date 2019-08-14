@@ -16,10 +16,7 @@ class AuthenticationException(SystemException):
     AuthenticationException(message: str)
     AuthenticationException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AuthenticationException()
-    instance = ZZZ()
+    Instance = AuthenticationException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -50,10 +47,7 @@ class CipherAlgorithmType:
     
     enum CipherAlgorithmType, values: Aes (26129), Aes128 (26126), Aes192 (26127), Aes256 (26128), Des (26113), None (0), Null (24576), Rc2 (26114), Rc4 (26625), TripleDes (26115)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CipherAlgorithmType()
-    instance = ZZZ()
+    Instance = CipherAlgorithmType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -107,10 +101,7 @@ class ExchangeAlgorithmType:
     
     enum ExchangeAlgorithmType, values: DiffieHellman (43522), None (0), RsaKeyX (41984), RsaSign (9216)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ExchangeAlgorithmType()
-    instance = ZZZ()
+    Instance = ExchangeAlgorithmType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -158,10 +149,7 @@ class HashAlgorithmType:
     
     enum HashAlgorithmType, values: Md5 (32771), None (0), Sha1 (32772), Sha256 (32780), Sha384 (32781), Sha512 (32782)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return HashAlgorithmType()
-    instance = ZZZ()
+    Instance = HashAlgorithmType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -213,10 +201,7 @@ class InvalidCredentialException(AuthenticationException):
     InvalidCredentialException(message: str)
     InvalidCredentialException(message: str, innerException: Exception)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InvalidCredentialException()
-    instance = ZZZ()
+    Instance = InvalidCredentialException
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -247,10 +232,7 @@ class SslProtocols:
     
     enum (flags) SslProtocols, values: Default (240), None (0), Ssl2 (12), Ssl3 (48), Tls (192), Tls11 (768), Tls12 (3072)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SslProtocols()
-    instance = ZZZ()
+    Instance = SslProtocols
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

@@ -10,10 +10,7 @@
 
 class AuthenticatedStream(Stream):
     """ Provides methods for passing credentials across a stream and requesting or performing authentication for client-server applications. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AuthenticatedStream()
-    instance = ZZZ()
+    Instance = AuthenticatedStream
     """hardcoded/returns an instance of the class"""
     def CreateWaitHandle(self, *args): #cannot find CLR method
         """
@@ -130,10 +127,7 @@ class AuthenticationLevel:
     
     enum AuthenticationLevel, values: MutualAuthRequested (1), MutualAuthRequired (2), None (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AuthenticationLevel()
-    instance = ZZZ()
+    Instance = AuthenticationLevel
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -180,10 +174,7 @@ class EncryptionPolicy:
     
     enum EncryptionPolicy, values: AllowNoEncryption (1), NoEncryption (2), RequireEncryption (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EncryptionPolicy()
-    instance = ZZZ()
+    Instance = EncryptionPolicy
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -230,10 +221,7 @@ class LocalCertificateSelectionCallback(MulticastDelegate):
     
     LocalCertificateSelectionCallback(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LocalCertificateSelectionCallback()
-    instance = ZZZ()
+    Instance = LocalCertificateSelectionCallback
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, targetHost, localCertificates, remoteCertificate, acceptableIssuers, callback, object):
         """ BeginInvoke(self: LocalCertificateSelectionCallback, sender: object, targetHost: str, localCertificates: X509CertificateCollection, remoteCertificate: X509Certificate, acceptableIssuers: Array[str], callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -312,10 +300,7 @@ class NegotiateStream(AuthenticatedStream):
     NegotiateStream(innerStream: Stream)
     NegotiateStream(innerStream: Stream, leaveInnerStreamOpen: bool)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return NegotiateStream()
-    instance = ZZZ()
+    Instance = NegotiateStream
     """hardcoded/returns an instance of the class"""
     def AuthenticateAsClient(self, credential=None, *__args):
         """
@@ -825,10 +810,7 @@ class ProtectionLevel:
     
     enum ProtectionLevel, values: EncryptAndSign (2), None (0), Sign (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ProtectionLevel()
-    instance = ZZZ()
+    Instance = ProtectionLevel
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -875,10 +857,7 @@ class RemoteCertificateValidationCallback(MulticastDelegate):
     
     RemoteCertificateValidationCallback(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RemoteCertificateValidationCallback()
-    instance = ZZZ()
+    Instance = RemoteCertificateValidationCallback
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, certificate, chain, sslPolicyErrors, callback, object):
         """ BeginInvoke(self: RemoteCertificateValidationCallback, sender: object, certificate: X509Certificate, chain: X509Chain, sslPolicyErrors: SslPolicyErrors, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -956,10 +935,7 @@ class SslPolicyErrors:
     
     enum (flags) SslPolicyErrors, values: None (0), RemoteCertificateChainErrors (4), RemoteCertificateNameMismatch (2), RemoteCertificateNotAvailable (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SslPolicyErrors()
-    instance = ZZZ()
+    Instance = SslPolicyErrors
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1011,10 +987,7 @@ class SslStream(AuthenticatedStream):
     SslStream(innerStream: Stream, leaveInnerStreamOpen: bool)
     SslStream(innerStream: Stream, leaveInnerStreamOpen: bool, userCertificateValidationCallback: RemoteCertificateValidationCallback)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SslStream()
-    instance = ZZZ()
+    Instance = SslStream
     """hardcoded/returns an instance of the class"""
     def AuthenticateAsClient(self, targetHost, clientCertificates=None, *__args):
         """

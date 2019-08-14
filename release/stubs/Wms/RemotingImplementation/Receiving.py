@@ -10,10 +10,7 @@
 
 class Receiver:
     """ Receiver(lines: InboundReceiveLines, args: DataFlowObject[ReceiveArgs]) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Receiver()
-    instance = ZZZ()
+    Instance = Receiver
     """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """ Dispose(self: Receiver) """
@@ -59,10 +56,7 @@ class Receiver:
 
 class AdhocReceiver(Receiver):
     """ AdhocReceiver(lines: InboundReceiveLines, args: DataFlowObject[ReceiveArgs]) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AdhocReceiver()
-    instance = ZZZ()
+    Instance = AdhocReceiver
     """hardcoded/returns an instance of the class"""
     def Receive(self):
         """ Receive(self: Receiver, receiveLine: InboundReceiveLine, orderNumber: str, itemIdNumber: str, quantity: Decimal, endDate: Nullable[DateTime], deleteLine: bool) -> bool """
@@ -96,10 +90,7 @@ class AdhocReceiver(Receiver):
 
 class AdHocRmaReceiver(Receiver):
     """ AdHocRmaReceiver(lines: InboundReceiveLines, args: DataFlowObject[ReceiveArgs]) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AdHocRmaReceiver()
-    instance = ZZZ()
+    Instance = AdHocRmaReceiver
     """hardcoded/returns an instance of the class"""
     def AddItemIfNotExists(self, *args): #cannot find CLR method
         """ AddItemIfNotExists(self: AdHocRmaReceiver, id: str) -> bool """
@@ -145,10 +136,7 @@ class AdHocRmaReceiver(Receiver):
 
 class AdhocRmaTouchReceiver(AdHocRmaReceiver):
     """ AdhocRmaTouchReceiver(lines: InboundReceiveLines, args: DataFlowObject[ReceiveArgs]) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AdhocRmaTouchReceiver()
-    instance = ZZZ()
+    Instance = AdhocRmaTouchReceiver
     """hardcoded/returns an instance of the class"""
     def AddItemIfNotExists(self, *args): #cannot find CLR method
         """ AddItemIfNotExists(self: AdhocRmaTouchReceiver, id: str) -> bool """
@@ -198,10 +186,7 @@ class AdhocRmaTouchReceiver(AdHocRmaReceiver):
 
 class InboundReceiveLineManager():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return InboundReceiveLineManager()
-    instance = ZZZ()
+    Instance = InboundReceiveLineManager
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CheckForExistingPreReceipts(dfObject):
@@ -227,10 +212,7 @@ class InboundReceiveLineManager():
 
 class ReceiverFactory:
     """ ReceiverFactory(lines: InboundReceiveLines, dfObject: DataFlowObject[ReceiveArgs]) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiverFactory()
-    instance = ZZZ()
+    Instance = ReceiverFactory
     """hardcoded/returns an instance of the class"""
     def CreateReceiver(self):
         """ CreateReceiver(self: ReceiverFactory) -> Receiver """

@@ -10,10 +10,7 @@
 
 class PrintDatasetBase():
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PrintDatasetBase()
-    instance = ZZZ()
+    Instance = PrintDatasetBase
     """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
@@ -117,10 +114,7 @@ Set: OneLabelPerPrintAction(self: PrintDatasetBase) = value
 
 class BarcodeDataset(PrintDatasetBase):
     """ BarcodeDataset() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeDataset()
-    instance = ZZZ()
+    Instance = BarcodeDataset
     """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
@@ -180,10 +174,7 @@ Get: Name(self: BarcodeDataset) -> str
 
 class ItemPrintDataset(PrintDatasetBase):
     """ ItemPrintDataset() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemPrintDataset()
-    instance = ZZZ()
+    Instance = ItemPrintDataset
     """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
@@ -243,10 +234,7 @@ Get: Name(self: ItemPrintDataset) -> str
 
 class ItemWithItemIdPrintDataset(PrintDatasetBase):
     """ ItemWithItemIdPrintDataset() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ItemWithItemIdPrintDataset()
-    instance = ZZZ()
+    Instance = ItemWithItemIdPrintDataset
     """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
@@ -306,10 +294,7 @@ Get: Name(self: ItemWithItemIdPrintDataset) -> str
 
 class LicensePlatePrintDataset(PrintDatasetBase):
     """ LicensePlatePrintDataset() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicensePlatePrintDataset()
-    instance = ZZZ()
+    Instance = LicensePlatePrintDataset
     """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
@@ -369,10 +354,7 @@ Get: Name(self: LicensePlatePrintDataset) -> str
 
 class PickbatchPrintDataset(PrintDatasetBase):
     """ PickbatchPrintDataset() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PickbatchPrintDataset()
-    instance = ZZZ()
+    Instance = PickbatchPrintDataset
     """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
@@ -432,10 +414,7 @@ Get: Name(self: PickbatchPrintDataset) -> str
 
 class PurchaseItemIdPrintDataset(PrintDatasetBase):
     """ PurchaseItemIdPrintDataset() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseItemIdPrintDataset()
-    instance = ZZZ()
+    Instance = PurchaseItemIdPrintDataset
     """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
@@ -499,10 +478,7 @@ Get: Name(self: PurchaseItemIdPrintDataset) -> str
 
 class PurchasePrintDataset(PrintDatasetBase):
     """ PurchasePrintDataset() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PurchasePrintDataset()
-    instance = ZZZ()
+    Instance = PurchasePrintDataset
     """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
@@ -566,10 +542,7 @@ Get: Name(self: PurchasePrintDataset) -> str
 
 class RmaPrintDataset(PrintDatasetBase):
     """ RmaPrintDataset() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RmaPrintDataset()
-    instance = ZZZ()
+    Instance = RmaPrintDataset
     """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
@@ -633,10 +606,7 @@ Get: Name(self: RmaPrintDataset) -> str
 
 class SSCCHeterogeneousDataSet(PrintDatasetBase):
     """ SSCCHeterogeneousDataSet() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCHeterogeneousDataSet()
-    instance = ZZZ()
+    Instance = SSCCHeterogeneousDataSet
     """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
@@ -696,10 +666,7 @@ Get: Name(self: SSCCHeterogeneousDataSet) -> str
 
 class SSCCHomogeneousDataSet(PrintDatasetBase):
     """ SSCCHomogeneousDataSet() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCHomogeneousDataSet()
-    instance = ZZZ()
+    Instance = SSCCHomogeneousDataSet
     """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
@@ -759,10 +726,7 @@ Get: Name(self: SSCCHomogeneousDataSet) -> str
 
 class SSCCPregeneratedDataset(PrintDatasetBase):
     """ SSCCPregeneratedDataset() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCPregeneratedDataset()
-    instance = ZZZ()
+    Instance = SSCCPregeneratedDataset
     """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
@@ -822,10 +786,7 @@ Get: Name(self: SSCCPregeneratedDataset) -> str
 
 class TransportPackagePrintDataset(PrintDatasetBase):
     """ TransportPackagePrintDataset() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TransportPackagePrintDataset()
-    instance = ZZZ()
+    Instance = TransportPackagePrintDataset
     """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """

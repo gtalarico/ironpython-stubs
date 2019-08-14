@@ -11,10 +11,7 @@ from Wms.RemotingObjects import *
 
 class ErpLock(DbObject):
     """ ErpLock() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ErpLock()
-    instance = ZZZ()
+    Instance = ErpLock
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -88,10 +85,7 @@ Get: MigrateToStateAsString(self: ErpLock) -> str
 
 class ErpLockEntityType:
     """ enum ErpLockEntityType, values: PurchaseOrder (1), SalesOrder (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ErpLockEntityType()
-    instance = ZZZ()
+    Instance = ErpLockEntityType
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -133,10 +127,7 @@ class ErpLockEntityType:
 
 class ErpLockState:
     """ enum ErpLockState, values: Locked (1), Unkown (0), Unlocked (2) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ErpLockState()
-    instance = ZZZ()
+    Instance = ErpLockState
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

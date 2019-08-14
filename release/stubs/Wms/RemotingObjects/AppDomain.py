@@ -13,10 +13,7 @@ class AppDomainInformation():
     AppDomainInformation(appDomainName: str, lifetime: TimeSpan)
     AppDomainInformation()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return AppDomainInformation()
-    instance = ZZZ()
+    Instance = AppDomainInformation
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, appDomainName=None, lifetime=None):

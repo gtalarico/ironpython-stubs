@@ -10,10 +10,7 @@
 
 class MsmqOptions():
     """ MsmqOptions() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MsmqOptions()
-    instance = ZZZ()
+    Instance = MsmqOptions
     """hardcoded/returns an instance of the class"""
     Host = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Host(self: MsmqOptions) -> str

@@ -12,10 +12,7 @@ from System import *
 
 class OnGetSettingMemberHandler(MulticastDelegate):
     """ OnGetSettingMemberHandler(object: object, method: IntPtr) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OnGetSettingMemberHandler()
-    instance = ZZZ()
+    Instance = OnGetSettingMemberHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, member, settings, callback, object):
         """ BeginInvoke(self: OnGetSettingMemberHandler, member: MemberInfo, settings: SystemSettings, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -89,10 +86,7 @@ class OnGetSettingMemberHandler(MulticastDelegate):
 
 class OnGetSettingsHandler(MulticastDelegate):
     """ OnGetSettingsHandler(object: object, method: IntPtr) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OnGetSettingsHandler()
-    instance = ZZZ()
+    Instance = OnGetSettingsHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, settings, callback, object):
         """ BeginInvoke(self: OnGetSettingsHandler, settings: SystemSettings, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -166,10 +160,7 @@ class OnGetSettingsHandler(MulticastDelegate):
 
 class OnSaveSettingMemberHandler(MulticastDelegate):
     """ OnSaveSettingMemberHandler(object: object, method: IntPtr) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OnSaveSettingMemberHandler()
-    instance = ZZZ()
+    Instance = OnSaveSettingMemberHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, member, settings, callback, object):
         """ BeginInvoke(self: OnSaveSettingMemberHandler, member: MemberInfo, settings: SystemSettings, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -243,10 +234,7 @@ class OnSaveSettingMemberHandler(MulticastDelegate):
 
 class OnSaveSettingsHandler(MulticastDelegate):
     """ OnSaveSettingsHandler(object: object, method: IntPtr) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OnSaveSettingsHandler()
-    instance = ZZZ()
+    Instance = OnSaveSettingsHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, settings, callback, object):
         """ BeginInvoke(self: OnSaveSettingsHandler, settings: SystemSettings, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -320,10 +308,7 @@ class OnSaveSettingsHandler(MulticastDelegate):
 
 class PackageBase():
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PackageBase()
-    instance = ZZZ()
+    Instance = PackageBase
     """hardcoded/returns an instance of the class"""
     BoxGuid = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -529,10 +514,7 @@ Set: YourReference(self: PackageBase) = value
 
 class ServiceBase:
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ServiceBase()
-    instance = ZZZ()
+    Instance = ServiceBase
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -601,10 +583,7 @@ Set: TransportationCharge(self: ServiceBase) = value
 
 class ShipmentBase(Address):
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ShipmentBase()
-    instance = ZZZ()
+    Instance = ShipmentBase
     """hardcoded/returns an instance of the class"""
     def GetPossibleServices(self):
         """ GetPossibleServices(self: ShipmentBase) -> Services """
@@ -737,10 +716,7 @@ Get: Shipper(self: ShipmentBase) -> ShipperBase
 
 class ShipperBase:
     """  """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ShipperBase()
-    instance = ZZZ()
+    Instance = ShipperBase
     """hardcoded/returns an instance of the class"""
     def GetServiceLevels(self, services):
         """ GetServiceLevels(self: ShipperBase) -> (int, Services) """

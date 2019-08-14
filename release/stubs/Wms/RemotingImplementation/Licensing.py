@@ -10,10 +10,7 @@
 
 class LicenseExtensionMethods():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseExtensionMethods()
-    instance = ZZZ()
+    Instance = LicenseExtensionMethods
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CurrentLicenseOrDev(general):

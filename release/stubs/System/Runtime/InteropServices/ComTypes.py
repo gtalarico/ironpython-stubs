@@ -14,10 +14,7 @@ class ADVF:
     
     enum (flags) ADVF, values: ADVF_DATAONSTOP (64), ADVF_NODATA (1), ADVF_ONLYONCE (4), ADVF_PRIMEFIRST (2), ADVFCACHE_FORCEBUILTIN (16), ADVFCACHE_NOHANDLER (8), ADVFCACHE_ONSAVE (32)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ADVF()
-    instance = ZZZ()
+    Instance = ADVF
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -64,10 +61,7 @@ class ADVF:
 
 class BINDPTR():
     """ Contains a pointer to a bound-to System.Runtime.InteropServices.FUNCDESC structure, System.Runtime.InteropServices.VARDESC structure, or an ITypeComp interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BINDPTR()
-    instance = ZZZ()
+    Instance = BINDPTR
     """hardcoded/returns an instance of the class"""
     lpfuncdesc = None
     lptcomp = None
@@ -76,10 +70,7 @@ class BINDPTR():
 
 class BIND_OPTS():
     """ Stores the parameters that are used during a moniker binding operation. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return BIND_OPTS()
-    instance = ZZZ()
+    Instance = BIND_OPTS
     """hardcoded/returns an instance of the class"""
     cbStruct = None
     dwTickCountDeadline = None
@@ -93,10 +84,7 @@ class CALLCONV:
     
     enum CALLCONV, values: CC_CDECL (1), CC_MACPASCAL (3), CC_MAX (9), CC_MPWCDECL (7), CC_MPWPASCAL (8), CC_MSCPASCAL (2), CC_PASCAL (2), CC_RESERVED (5), CC_STDCALL (4), CC_SYSCALL (6)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CALLCONV()
-    instance = ZZZ()
+    Instance = CALLCONV
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -146,10 +134,7 @@ class CALLCONV:
 
 class CONNECTDATA():
     """ Describes a connection that exists to a given connection point. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return CONNECTDATA()
-    instance = ZZZ()
+    Instance = CONNECTDATA
     """hardcoded/returns an instance of the class"""
     dwCookie = None
     pUnk = None
@@ -161,10 +146,7 @@ class DATADIR:
     
     enum DATADIR, values: DATADIR_GET (1), DATADIR_SET (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DATADIR()
-    instance = ZZZ()
+    Instance = DATADIR
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -210,10 +192,7 @@ class DESCKIND:
     
     enum DESCKIND, values: DESCKIND_FUNCDESC (1), DESCKIND_IMPLICITAPPOBJ (4), DESCKIND_MAX (5), DESCKIND_NONE (0), DESCKIND_TYPECOMP (3), DESCKIND_VARDESC (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DESCKIND()
-    instance = ZZZ()
+    Instance = DESCKIND
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -259,10 +238,7 @@ class DESCKIND:
 
 class DISPPARAMS():
     """ Contains the arguments passed to a method or property by IDispatch::Invoke. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DISPPARAMS()
-    instance = ZZZ()
+    Instance = DISPPARAMS
     """hardcoded/returns an instance of the class"""
     cArgs = None
     cNamedArgs = None
@@ -276,10 +252,7 @@ class DVASPECT:
     
     enum (flags) DVASPECT, values: DVASPECT_CONTENT (1), DVASPECT_DOCPRINT (8), DVASPECT_ICON (4), DVASPECT_THUMBNAIL (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return DVASPECT()
-    instance = ZZZ()
+    Instance = DVASPECT
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -323,10 +296,7 @@ class DVASPECT:
 
 class ELEMDESC():
     """ Contains the type description and process transfer information for a variable, function, or a function parameter. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ELEMDESC()
-    instance = ZZZ()
+    Instance = ELEMDESC
     """hardcoded/returns an instance of the class"""
     desc = None
     DESCUNION = None
@@ -335,10 +305,7 @@ class ELEMDESC():
 
 class EXCEPINFO():
     """ Describes the exceptions that occur during IDispatch::Invoke. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return EXCEPINFO()
-    instance = ZZZ()
+    Instance = EXCEPINFO
     """hardcoded/returns an instance of the class"""
     bstrDescription = None
     bstrHelpFile = None
@@ -353,10 +320,7 @@ class EXCEPINFO():
 
 class FILETIME():
     """ Represents the number of 100-nanosecond intervals since January 1, 1601. This structure is a 64-bit value. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FILETIME()
-    instance = ZZZ()
+    Instance = FILETIME
     """hardcoded/returns an instance of the class"""
     dwHighDateTime = None
     dwLowDateTime = None
@@ -364,10 +328,7 @@ class FILETIME():
 
 class FORMATETC():
     """ Represents a generalized Clipboard format. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FORMATETC()
-    instance = ZZZ()
+    Instance = FORMATETC
     """hardcoded/returns an instance of the class"""
     cfFormat = None
     dwAspect = None
@@ -378,10 +339,7 @@ class FORMATETC():
 
 class FUNCDESC():
     """ Defines a function description. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FUNCDESC()
-    instance = ZZZ()
+    Instance = FUNCDESC
     """hardcoded/returns an instance of the class"""
     callconv = None
     cParams = None
@@ -403,10 +361,7 @@ class FUNCFLAGS:
     
     enum (flags) FUNCFLAGS, values: FUNCFLAG_FBINDABLE (4), FUNCFLAG_FDEFAULTBIND (32), FUNCFLAG_FDEFAULTCOLLELEM (256), FUNCFLAG_FDISPLAYBIND (16), FUNCFLAG_FHIDDEN (64), FUNCFLAG_FIMMEDIATEBIND (4096), FUNCFLAG_FNONBROWSABLE (1024), FUNCFLAG_FREPLACEABLE (2048), FUNCFLAG_FREQUESTEDIT (8), FUNCFLAG_FRESTRICTED (1), FUNCFLAG_FSOURCE (2), FUNCFLAG_FUIDEFAULT (512), FUNCFLAG_FUSESGETLASTERROR (128)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FUNCFLAGS()
-    instance = ZZZ()
+    Instance = FUNCFLAGS
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -463,10 +418,7 @@ class FUNCKIND:
     
     enum FUNCKIND, values: FUNC_DISPATCH (4), FUNC_NONVIRTUAL (2), FUNC_PUREVIRTUAL (1), FUNC_STATIC (3), FUNC_VIRTUAL (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return FUNCKIND()
-    instance = ZZZ()
+    Instance = FUNCKIND
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -511,10 +463,7 @@ class FUNCKIND:
 
 class IAdviseSink:
     """ Provides a managed definition of the IAdviseSink interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IAdviseSink()
-    instance = ZZZ()
+    Instance = IAdviseSink
     """hardcoded/returns an instance of the class"""
     def OnClose(self):
         """
@@ -570,10 +519,7 @@ class IAdviseSink:
 
 class IBindCtx:
     """ Provides the managed definition of the IBindCtx interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IBindCtx()
-    instance = ZZZ()
+    Instance = IBindCtx
     """hardcoded/returns an instance of the class"""
     def EnumObjectParam(self, ppenum):
         """
@@ -676,10 +622,7 @@ class IBindCtx:
 
 class IConnectionPoint:
     """ Provides the managed definition of the IConnectionPoint interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IConnectionPoint()
-    instance = ZZZ()
+    Instance = IConnectionPoint
     """hardcoded/returns an instance of the class"""
     def Advise(self, pUnkSink, pdwCookie):
         """
@@ -731,10 +674,7 @@ class IConnectionPoint:
 
 class IConnectionPointContainer:
     """ Provides the managed definition of the IConnectionPointContainer interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IConnectionPointContainer()
-    instance = ZZZ()
+    Instance = IConnectionPointContainer
     """hardcoded/returns an instance of the class"""
     def EnumConnectionPoints(self, ppEnum):
         """
@@ -761,10 +701,7 @@ class IConnectionPointContainer:
 
 class IDataObject:
     """ Provides the managed definition of the IDataObject interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDataObject()
-    instance = ZZZ()
+    Instance = IDataObject
     """hardcoded/returns an instance of the class"""
     def DAdvise(self, pFormatetc, advf, adviseSink, connection):
         """
@@ -925,10 +862,7 @@ class IDataObject:
 
 class IDLDESC():
     """ Contains information needed for transferring a structure element, parameter, or function return value between processes. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDLDESC()
-    instance = ZZZ()
+    Instance = IDLDESC
     """hardcoded/returns an instance of the class"""
     dwReserved = None
     wIDLFlags = None
@@ -940,10 +874,7 @@ class IDLFLAG:
     
     enum (flags) IDLFLAG, values: IDLFLAG_FIN (1), IDLFLAG_FLCID (4), IDLFLAG_FOUT (2), IDLFLAG_FRETVAL (8), IDLFLAG_NONE (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IDLFLAG()
-    instance = ZZZ()
+    Instance = IDLFLAG
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -988,10 +919,7 @@ class IDLFLAG:
 
 class IEnumConnectionPoints:
     """ Manages the definition of the IEnumConnectionPoints interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumConnectionPoints()
-    instance = ZZZ()
+    Instance = IEnumConnectionPoints
     """hardcoded/returns an instance of the class"""
     def Clone(self, ppenum):
         """
@@ -1038,10 +966,7 @@ class IEnumConnectionPoints:
 
 class IEnumConnections:
     """ Manages the definition of the IEnumConnections interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumConnections()
-    instance = ZZZ()
+    Instance = IEnumConnections
     """hardcoded/returns an instance of the class"""
     def Clone(self, ppenum):
         """
@@ -1088,10 +1013,7 @@ class IEnumConnections:
 
 class IEnumFORMATETC:
     """ Provides the managed definition of the IEnumFORMATETC interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumFORMATETC()
-    instance = ZZZ()
+    Instance = IEnumFORMATETC
     """hardcoded/returns an instance of the class"""
     def Clone(self, newEnum):
         """
@@ -1139,10 +1061,7 @@ class IEnumFORMATETC:
 
 class IEnumMoniker:
     """ Manages the definition of the IEnumMoniker interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumMoniker()
-    instance = ZZZ()
+    Instance = IEnumMoniker
     """hardcoded/returns an instance of the class"""
     def Clone(self, ppenum):
         """
@@ -1189,10 +1108,7 @@ class IEnumMoniker:
 
 class IEnumSTATDATA:
     """ Provides the managed definition of the IEnumSTATDATA interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumSTATDATA()
-    instance = ZZZ()
+    Instance = IEnumSTATDATA
     """hardcoded/returns an instance of the class"""
     def Clone(self, newEnum):
         """
@@ -1240,10 +1156,7 @@ class IEnumSTATDATA:
 
 class IEnumString:
     """ Manages the definition of the IEnumString interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumString()
-    instance = ZZZ()
+    Instance = IEnumString
     """hardcoded/returns an instance of the class"""
     def Clone(self, ppenum):
         """
@@ -1290,10 +1203,7 @@ class IEnumString:
 
 class IEnumVARIANT:
     """ Manages the definition of the IEnumVARIANT interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumVARIANT()
-    instance = ZZZ()
+    Instance = IEnumVARIANT
     """hardcoded/returns an instance of the class"""
     def Clone(self):
         """
@@ -1343,10 +1253,7 @@ class IEnumVARIANT:
 
 class IMoniker:
     """ Provides the managed definition of the IMoniker interface, with COM functionality from IPersist and IPersistStream. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IMoniker()
-    instance = ZZZ()
+    Instance = IMoniker
     """hardcoded/returns an instance of the class"""
     def BindToObject(self, pbc, pmkToLeft, riidResult, ppvResult):
         """
@@ -1567,10 +1474,7 @@ class IMPLTYPEFLAGS:
     
     enum (flags) IMPLTYPEFLAGS, values: IMPLTYPEFLAG_FDEFAULT (1), IMPLTYPEFLAG_FDEFAULTVTABLE (8), IMPLTYPEFLAG_FRESTRICTED (4), IMPLTYPEFLAG_FSOURCE (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IMPLTYPEFLAGS()
-    instance = ZZZ()
+    Instance = IMPLTYPEFLAGS
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1618,10 +1522,7 @@ class INVOKEKIND:
     
     enum (flags) INVOKEKIND, values: INVOKE_FUNC (1), INVOKE_PROPERTYGET (2), INVOKE_PROPERTYPUT (4), INVOKE_PROPERTYPUTREF (8)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return INVOKEKIND()
-    instance = ZZZ()
+    Instance = INVOKEKIND
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1665,10 +1566,7 @@ class INVOKEKIND:
 
 class IPersistFile:
     """ Provides the managed definition of the IPersistFile interface, with functionality from IPersist. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IPersistFile()
-    instance = ZZZ()
+    Instance = IPersistFile
     """hardcoded/returns an instance of the class"""
     def GetClassID(self, pClassID):
         """
@@ -1731,10 +1629,7 @@ class IPersistFile:
 
 class IRunningObjectTable:
     """ Provides the managed definition of the IRunningObjectTable interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IRunningObjectTable()
-    instance = ZZZ()
+    Instance = IRunningObjectTable
     """hardcoded/returns an instance of the class"""
     def EnumRunning(self, ppenumMoniker):
         """
@@ -1818,10 +1713,7 @@ class IRunningObjectTable:
 
 class IStream:
     """ Provides the managed definition of the IStream interface, with ISequentialStream functionality. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IStream()
-    instance = ZZZ()
+    Instance = IStream
     """hardcoded/returns an instance of the class"""
     def Clone(self, ppstm):
         """
@@ -1943,10 +1835,7 @@ class IStream:
 
 class ITypeComp:
     """ Provides the managed definition of the ITypeComp interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeComp()
-    instance = ZZZ()
+    Instance = ITypeComp
     """hardcoded/returns an instance of the class"""
     def Bind(self, szName, lHashVal, wFlags, ppTInfo, pDescKind, pBindPtr):
         """
@@ -1978,10 +1867,7 @@ class ITypeComp:
 
 class ITypeInfo:
     """ Provides the managed definition of the Component Automation ITypeInfo interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeInfo()
-    instance = ZZZ()
+    Instance = ITypeInfo
     """hardcoded/returns an instance of the class"""
     def AddressOfMember(self, memid, invKind, ppv):
         """
@@ -2187,10 +2073,7 @@ class ITypeInfo:
 
 class ITypeInfo2:
     """ Provides the managed definition of the ITypeInfo2 interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeInfo2()
-    instance = ZZZ()
+    Instance = ITypeInfo2
     """hardcoded/returns an instance of the class"""
     def AddressOfMember(self, memid, invKind, ppv):
         """
@@ -2548,10 +2431,7 @@ class ITypeInfo2:
 
 class ITypeLib:
     """ Provides the managed definition of the ITypeLib interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeLib()
-    instance = ZZZ()
+    Instance = ITypeLib
     """hardcoded/returns an instance of the class"""
     def FindName(self, szNameBuf, lHashVal, ppTInfo, rgMemId, pcFound):
         """
@@ -2661,10 +2541,7 @@ class ITypeLib:
 
 class ITypeLib2:
     """ Provides a managed definition of the ITypeLib2 interface. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeLib2()
-    instance = ZZZ()
+    Instance = ITypeLib2
     """hardcoded/returns an instance of the class"""
     def FindName(self, szNameBuf, lHashVal, ppTInfo, rgMemId, pcFound):
         """
@@ -2820,10 +2697,7 @@ class LIBFLAGS:
     
     enum (flags) LIBFLAGS, values: LIBFLAG_FCONTROL (2), LIBFLAG_FHASDISKIMAGE (8), LIBFLAG_FHIDDEN (4), LIBFLAG_FRESTRICTED (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return LIBFLAGS()
-    instance = ZZZ()
+    Instance = LIBFLAGS
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2867,10 +2741,7 @@ class LIBFLAGS:
 
 class PARAMDESC():
     """ Contains information about how to transfer a structure element, parameter, or function return value between processes. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PARAMDESC()
-    instance = ZZZ()
+    Instance = PARAMDESC
     """hardcoded/returns an instance of the class"""
     lpVarValue = None
     wParamFlags = None
@@ -2882,10 +2753,7 @@ class PARAMFLAG:
     
     enum (flags) PARAMFLAG, values: PARAMFLAG_FHASCUSTDATA (64), PARAMFLAG_FHASDEFAULT (32), PARAMFLAG_FIN (1), PARAMFLAG_FLCID (4), PARAMFLAG_FOPT (16), PARAMFLAG_FOUT (2), PARAMFLAG_FRETVAL (8), PARAMFLAG_NONE (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PARAMFLAG()
-    instance = ZZZ()
+    Instance = PARAMFLAG
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2933,10 +2801,7 @@ class PARAMFLAG:
 
 class STATDATA():
     """ Provides the managed definition of the STATDATA structure. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return STATDATA()
-    instance = ZZZ()
+    Instance = STATDATA
     """hardcoded/returns an instance of the class"""
     advf = None
     advSink = None
@@ -2946,10 +2811,7 @@ class STATDATA():
 
 class STATSTG():
     """ Contains statistical information about an open storage, stream, or byte-array object. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return STATSTG()
-    instance = ZZZ()
+    Instance = STATSTG
     """hardcoded/returns an instance of the class"""
     atime = None
     cbSize = None
@@ -2966,10 +2828,7 @@ class STATSTG():
 
 class STGMEDIUM():
     """ Provides the managed definition of the STGMEDIUM structure. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return STGMEDIUM()
-    instance = ZZZ()
+    Instance = STGMEDIUM
     """hardcoded/returns an instance of the class"""
     pUnkForRelease = None
     tymed = None
@@ -2982,10 +2841,7 @@ class SYSKIND:
     
     enum SYSKIND, values: SYS_MAC (2), SYS_WIN16 (0), SYS_WIN32 (1), SYS_WIN64 (3)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SYSKIND()
-    instance = ZZZ()
+    Instance = SYSKIND
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3033,10 +2889,7 @@ class TYMED:
     
     enum (flags) TYMED, values: TYMED_ENHMF (64), TYMED_FILE (2), TYMED_GDI (16), TYMED_HGLOBAL (1), TYMED_ISTORAGE (8), TYMED_ISTREAM (4), TYMED_MFPICT (32), TYMED_NULL (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TYMED()
-    instance = ZZZ()
+    Instance = TYMED
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3084,10 +2937,7 @@ class TYMED:
 
 class TYPEATTR():
     """ Contains attributes of a UCOMITypeInfo. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TYPEATTR()
-    instance = ZZZ()
+    Instance = TYPEATTR
     """hardcoded/returns an instance of the class"""
     cbAlignment = None
     cbSizeInstance = None
@@ -3112,10 +2962,7 @@ class TYPEATTR():
 
 class TYPEDESC():
     """ Describes the type of a variable, return type of a function, or the type of a function parameter. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TYPEDESC()
-    instance = ZZZ()
+    Instance = TYPEDESC
     """hardcoded/returns an instance of the class"""
     lpValue = None
     vt = None
@@ -3127,10 +2974,7 @@ class TYPEFLAGS:
     
     enum (flags) TYPEFLAGS, values: TYPEFLAG_FAGGREGATABLE (1024), TYPEFLAG_FAPPOBJECT (1), TYPEFLAG_FCANCREATE (2), TYPEFLAG_FCONTROL (32), TYPEFLAG_FDISPATCHABLE (4096), TYPEFLAG_FDUAL (64), TYPEFLAG_FHIDDEN (16), TYPEFLAG_FLICENSED (4), TYPEFLAG_FNONEXTENSIBLE (128), TYPEFLAG_FOLEAUTOMATION (256), TYPEFLAG_FPREDECLID (8), TYPEFLAG_FPROXY (16384), TYPEFLAG_FREPLACEABLE (2048), TYPEFLAG_FRESTRICTED (512), TYPEFLAG_FREVERSEBIND (8192)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TYPEFLAGS()
-    instance = ZZZ()
+    Instance = TYPEFLAGS
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3189,10 +3033,7 @@ class TYPEKIND:
     
     enum TYPEKIND, values: TKIND_ALIAS (6), TKIND_COCLASS (5), TKIND_DISPATCH (4), TKIND_ENUM (0), TKIND_INTERFACE (3), TKIND_MAX (8), TKIND_MODULE (2), TKIND_RECORD (1), TKIND_UNION (7)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TYPEKIND()
-    instance = ZZZ()
+    Instance = TYPEKIND
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3241,10 +3082,7 @@ class TYPEKIND:
 
 class TYPELIBATTR():
     """ Identifies a particular type library and provides localization support for member names. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TYPELIBATTR()
-    instance = ZZZ()
+    Instance = TYPELIBATTR
     """hardcoded/returns an instance of the class"""
     guid = None
     lcid = None
@@ -3256,10 +3094,7 @@ class TYPELIBATTR():
 
 class VARDESC():
     """ Describes a variable, constant, or data member. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return VARDESC()
-    instance = ZZZ()
+    Instance = VARDESC
     """hardcoded/returns an instance of the class"""
     desc = None
     DESCUNION = None
@@ -3276,10 +3111,7 @@ class VARFLAGS:
     
     enum (flags) VARFLAGS, values: VARFLAG_FBINDABLE (4), VARFLAG_FDEFAULTBIND (32), VARFLAG_FDEFAULTCOLLELEM (256), VARFLAG_FDISPLAYBIND (16), VARFLAG_FHIDDEN (64), VARFLAG_FIMMEDIATEBIND (4096), VARFLAG_FNONBROWSABLE (1024), VARFLAG_FREADONLY (1), VARFLAG_FREPLACEABLE (2048), VARFLAG_FREQUESTEDIT (8), VARFLAG_FRESTRICTED (128), VARFLAG_FSOURCE (2), VARFLAG_FUIDEFAULT (512)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return VARFLAGS()
-    instance = ZZZ()
+    Instance = VARFLAGS
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3336,10 +3168,7 @@ class VARKIND:
     
     enum VARKIND, values: VAR_CONST (2), VAR_DISPATCH (3), VAR_PERINSTANCE (0), VAR_STATIC (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return VARKIND()
-    instance = ZZZ()
+    Instance = VARKIND
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

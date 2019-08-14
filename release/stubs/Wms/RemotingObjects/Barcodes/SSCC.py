@@ -10,10 +10,7 @@
 
 class GS1Prefixes():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return GS1Prefixes()
-    instance = ZZZ()
+    Instance = GS1Prefixes
     """hardcoded/returns an instance of the class"""
     Prefixes = None
     __all__ = []
@@ -24,10 +21,7 @@ class SSCC:
     SSCC(barcode: str)
     SSCC(extensionDigit: int, companyPrefix: str, serial: int)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SSCC()
-    instance = ZZZ()
+    Instance = SSCC
     """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """

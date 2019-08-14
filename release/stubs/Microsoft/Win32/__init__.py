@@ -14,10 +14,7 @@ class IntranetZoneCredentialPolicy:
     
     IntranetZoneCredentialPolicy()
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IntranetZoneCredentialPolicy()
-    instance = ZZZ()
+    Instance = IntranetZoneCredentialPolicy
     """hardcoded/returns an instance of the class"""
     def ShouldSendCredential(self, challengeUri, request, credential, authModule):
         """
@@ -48,10 +45,7 @@ class PowerModeChangedEventArgs(EventArgs):
     
     PowerModeChangedEventArgs(mode: PowerModes)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PowerModeChangedEventArgs()
-    instance = ZZZ()
+    Instance = PowerModeChangedEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, mode):
@@ -73,10 +67,7 @@ class PowerModeChangedEventHandler(MulticastDelegate):
     
     PowerModeChangedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PowerModeChangedEventHandler()
-    instance = ZZZ()
+    Instance = PowerModeChangedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: PowerModeChangedEventHandler, sender: object, e: PowerModeChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -154,10 +145,7 @@ class PowerModes:
     
     enum PowerModes, values: Resume (1), StatusChange (2), Suspend (3)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return PowerModes()
-    instance = ZZZ()
+    Instance = PowerModes
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -200,10 +188,7 @@ class PowerModes:
 
 class Registry():
     """ Provides Microsoft.Win32.RegistryKey objects that represent the root keys in the Windows registry, and static methods to access key/value pairs. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Registry()
-    instance = ZZZ()
+    Instance = Registry
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetValue(keyName, valueName, defaultValue):
@@ -266,10 +251,7 @@ class RegistryHive:
     
     enum RegistryHive, values: ClassesRoot (-2147483648), CurrentConfig (-2147483643), CurrentUser (-2147483647), DynData (-2147483642), LocalMachine (-2147483646), PerformanceData (-2147483644), Users (-2147483645)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryHive()
-    instance = ZZZ()
+    Instance = RegistryHive
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -316,10 +298,7 @@ class RegistryHive:
 
 class RegistryKey(MarshalByRefObject):
     """ Represents a key-level node in the Windows registry. This class is a registry encapsulation. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryKey()
-    instance = ZZZ()
+    Instance = RegistryKey
     """hardcoded/returns an instance of the class"""
     def Close(self):
         """
@@ -699,10 +678,7 @@ class RegistryKeyPermissionCheck:
     
     enum RegistryKeyPermissionCheck, values: Default (0), ReadSubTree (1), ReadWriteSubTree (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryKeyPermissionCheck()
-    instance = ZZZ()
+    Instance = RegistryKeyPermissionCheck
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -749,10 +725,7 @@ class RegistryOptions:
     
     enum (flags) RegistryOptions, values: None (0), Volatile (1)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryOptions()
-    instance = ZZZ()
+    Instance = RegistryOptions
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -798,10 +771,7 @@ class RegistryValueKind:
     
     enum RegistryValueKind, values: Binary (3), DWord (4), ExpandString (2), MultiString (7), None (-1), QWord (11), String (1), Unknown (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryValueKind()
-    instance = ZZZ()
+    Instance = RegistryValueKind
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -853,10 +823,7 @@ class RegistryValueOptions:
     
     enum (flags) RegistryValueOptions, values: DoNotExpandEnvironmentNames (1), None (0)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryValueOptions()
-    instance = ZZZ()
+    Instance = RegistryValueOptions
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -902,10 +869,7 @@ class RegistryView:
     
     enum RegistryView, values: Default (0), Registry32 (512), Registry64 (256)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryView()
-    instance = ZZZ()
+    Instance = RegistryView
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -952,10 +916,7 @@ class SessionEndedEventArgs(EventArgs):
     
     SessionEndedEventArgs(reason: SessionEndReasons)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SessionEndedEventArgs()
-    instance = ZZZ()
+    Instance = SessionEndedEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, reason):
@@ -977,10 +938,7 @@ class SessionEndedEventHandler(MulticastDelegate):
     
     SessionEndedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SessionEndedEventHandler()
-    instance = ZZZ()
+    Instance = SessionEndedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SessionEndedEventHandler, sender: object, e: SessionEndedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -1058,10 +1016,7 @@ class SessionEndingEventArgs(EventArgs):
     
     SessionEndingEventArgs(reason: SessionEndReasons)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SessionEndingEventArgs()
-    instance = ZZZ()
+    Instance = SessionEndingEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, reason):
@@ -1091,10 +1046,7 @@ class SessionEndingEventHandler(MulticastDelegate):
     
     SessionEndingEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SessionEndingEventHandler()
-    instance = ZZZ()
+    Instance = SessionEndingEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SessionEndingEventHandler, sender: object, e: SessionEndingEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -1172,10 +1124,7 @@ class SessionEndReasons:
     
     enum SessionEndReasons, values: Logoff (1), SystemShutdown (2)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SessionEndReasons()
-    instance = ZZZ()
+    Instance = SessionEndReasons
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1221,10 +1170,7 @@ class SessionSwitchEventArgs(EventArgs):
     
     SessionSwitchEventArgs(reason: SessionSwitchReason)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SessionSwitchEventArgs()
-    instance = ZZZ()
+    Instance = SessionSwitchEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, reason):
@@ -1246,10 +1192,7 @@ class SessionSwitchEventHandler(MulticastDelegate):
     
     SessionSwitchEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SessionSwitchEventHandler()
-    instance = ZZZ()
+    Instance = SessionSwitchEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SessionSwitchEventHandler, sender: object, e: SessionSwitchEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -1327,10 +1270,7 @@ class SessionSwitchReason:
     
     enum SessionSwitchReason, values: ConsoleConnect (1), ConsoleDisconnect (2), RemoteConnect (3), RemoteDisconnect (4), SessionLock (7), SessionLogoff (6), SessionLogon (5), SessionRemoteControl (9), SessionUnlock (8)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SessionSwitchReason()
-    instance = ZZZ()
+    Instance = SessionSwitchReason
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1379,10 +1319,7 @@ class SessionSwitchReason:
 
 class SystemEvents():
     """ Provides access to system event notifications. This class cannot be inherited. """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return SystemEvents()
-    instance = ZZZ()
+    Instance = SystemEvents
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateTimer(interval):
@@ -1438,10 +1375,7 @@ class TimerElapsedEventArgs(EventArgs):
     
     TimerElapsedEventArgs(timerId: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TimerElapsedEventArgs()
-    instance = ZZZ()
+    Instance = TimerElapsedEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, timerId):
@@ -1463,10 +1397,7 @@ class TimerElapsedEventHandler(MulticastDelegate):
     
     TimerElapsedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return TimerElapsedEventHandler()
-    instance = ZZZ()
+    Instance = TimerElapsedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: TimerElapsedEventHandler, sender: object, e: TimerElapsedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -1544,10 +1475,7 @@ class UserPreferenceCategory:
     
     enum UserPreferenceCategory, values: Accessibility (1), Color (2), Desktop (3), General (4), Icon (5), Keyboard (6), Locale (13), Menu (7), Mouse (8), Policy (9), Power (10), Screensaver (11), VisualStyle (14), Window (12)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UserPreferenceCategory()
-    instance = ZZZ()
+    Instance = UserPreferenceCategory
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1605,10 +1533,7 @@ class UserPreferenceChangedEventArgs(EventArgs):
     
     UserPreferenceChangedEventArgs(category: UserPreferenceCategory)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UserPreferenceChangedEventArgs()
-    instance = ZZZ()
+    Instance = UserPreferenceChangedEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, category):
@@ -1630,10 +1555,7 @@ class UserPreferenceChangedEventHandler(MulticastDelegate):
     
     UserPreferenceChangedEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UserPreferenceChangedEventHandler()
-    instance = ZZZ()
+    Instance = UserPreferenceChangedEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: UserPreferenceChangedEventHandler, sender: object, e: UserPreferenceChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -1711,10 +1633,7 @@ class UserPreferenceChangingEventArgs(EventArgs):
     
     UserPreferenceChangingEventArgs(category: UserPreferenceCategory)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UserPreferenceChangingEventArgs()
-    instance = ZZZ()
+    Instance = UserPreferenceChangingEventArgs
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, category):
@@ -1736,10 +1655,7 @@ class UserPreferenceChangingEventHandler(MulticastDelegate):
     
     UserPreferenceChangingEventHandler(object: object, method: IntPtr)
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return UserPreferenceChangingEventHandler()
-    instance = ZZZ()
+    Instance = UserPreferenceChangingEventHandler
     """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: UserPreferenceChangingEventHandler, sender: object, e: UserPreferenceChangingEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """

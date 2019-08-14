@@ -12,10 +12,7 @@ from Wms.RemotingObjects import *
 
 class MyList(FindableList):
     """ MyList() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return MyList()
-    instance = ZZZ()
+    Instance = MyList
     """hardcoded/returns an instance of the class"""
     def ToString(self):
         """ ToString(self: MyList) -> str """
@@ -46,10 +43,7 @@ class MyList(FindableList):
 
 class OrderFlowLink():
     """ OrderFlowLink(orderFlowOption: OrderFlowOption, orderSelectionCode: str, orderSelectionDescription: str, Color: str) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OrderFlowLink()
-    instance = ZZZ()
+    Instance = OrderFlowLink
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, orderFlowOption, orderSelectionCode, orderSelectionDescription, Color):
@@ -92,10 +86,7 @@ Set: OrderSelectionDescription(self: OrderFlowLink) = value
 
 class OrderFlowLinks(List):
     """ OrderFlowLinks() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OrderFlowLinks()
-    instance = ZZZ()
+    Instance = OrderFlowLinks
     """hardcoded/returns an instance of the class"""
     def DeleteLinksThatAreNotEqual(self, SelectionCodes):
         """ DeleteLinksThatAreNotEqual(self: OrderFlowLinks, SelectionCodes: Array[str]) """
@@ -134,10 +125,7 @@ class OrderFlowLinks(List):
 
 class OrderFlowOption:
     """ enum OrderFlowOption, values: FulFill (2), FulFillPrintInvoice (1), PrintInvoiceFulFill (0) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OrderFlowOption()
-    instance = ZZZ()
+    Instance = OrderFlowOption
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -180,10 +168,7 @@ class OrderFlowOption:
 
 class ShippperServiceLink():
     """ ShippperServiceLink(ShipperId: str, ServiceId: str, DeliveryMethodCode: str, DeliveryMethodName: str, Color: str) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ShippperServiceLink()
-    instance = ZZZ()
+    Instance = ShippperServiceLink
     """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, ShipperId, ServiceId, DeliveryMethodCode, DeliveryMethodName, Color):
@@ -242,10 +227,7 @@ Set: ShipperId(self: ShippperServiceLink) = value
 
 class ShippperServiceLinks(List):
     """ ShippperServiceLinks() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ShippperServiceLinks()
-    instance = ZZZ()
+    Instance = ShippperServiceLinks
     """hardcoded/returns an instance of the class"""
     def DeliveryMethodCodes(self):
         """ DeliveryMethodCodes(self: ShippperServiceLinks) -> List[str] """

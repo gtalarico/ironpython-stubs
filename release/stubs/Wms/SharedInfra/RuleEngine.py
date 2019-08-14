@@ -14,10 +14,7 @@ class Condition:
     Condition(field: str, operator: str, value: str)
     Condition(field: str, operator: str, values: IEnumerable[str])
     """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Condition()
-    instance = ZZZ()
+    Instance = Condition
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -58,10 +55,7 @@ Set: Values(self: Condition) = value
 
 class ICondition:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return ICondition()
-    instance = ZZZ()
+    Instance = ICondition
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -89,10 +83,7 @@ Set: Values(self: ICondition) = value
 
 class IRule:
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return IRule()
-    instance = ZZZ()
+    Instance = IRule
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -126,10 +117,7 @@ Set: Priority(self: IRule) = value
 
 class OperatorEnum:
     """ enum OperatorEnum, values: OperatorIn (2), OperatorIs (0), OperatorIsNot (1), OperatorNotIn (3) """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return OperatorEnum()
-    instance = ZZZ()
+    Instance = OperatorEnum
     """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -173,10 +161,7 @@ class OperatorEnum:
 
 class Rule:
     """ Rule() """
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return Rule()
-    instance = ZZZ()
+    Instance = Rule
     """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -214,10 +199,7 @@ Set: Priority(self: Rule) = value
 
 class RuleEngine():
     # no doc
-    def ZZZ(self):
-        """hardcoded/mock instance of the class"""
-        return RuleEngine()
-    instance = ZZZ()
+    Instance = RuleEngine
     """hardcoded/returns an instance of the class"""
     @staticmethod
     def CalculatePriority(*__args):
