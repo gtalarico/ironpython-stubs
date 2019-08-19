@@ -15,8 +15,6 @@ class BitVector32():
     BitVector32(data: int)
     BitVector32(value: BitVector32)
     """
-    Instance = BitVector32
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateMask(previous=None):
         """
@@ -26,9 +24,7 @@ class BitVector32():
             Returns: A mask that isolates the first bit flag in the System.Collections.Specialized.BitVector32.
         CreateMask(previous: int) -> int
         
-            Creates an additional mask following the specified mask in a series of masks that can be used to retrieve individual bits in a System.Collections.Specialized.BitVector32 
-             that is set up as bit flags.
-        
+            Creates an additional mask following the specified mask in a series of masks that can be used to retrieve individual bits in a System.Collections.Specialized.BitVector32 that is set up as bit flags.
         
             previous: The mask that indicates the previous bit flag.
             Returns: A mask that isolates the bit flag following the one that previous points to in System.Collections.Specialized.BitVector32.
@@ -118,6 +114,9 @@ Get: Data(self: BitVector32) -> int
 
     Section = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BitVector32()
 
 class CollectionsUtil():
     """
@@ -125,8 +124,6 @@ class CollectionsUtil():
     
     CollectionsUtil()
     """
-    Instance = CollectionsUtil
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateCaseInsensitiveHashtable(*__args):
         """
@@ -142,9 +139,7 @@ class CollectionsUtil():
             Returns: A new case-insensitive instance of the System.Collections.Hashtable class with the default initial capacity.
         CreateCaseInsensitiveHashtable(d: IDictionary) -> Hashtable
         
-            Copies the entries from the specified dictionary to a new case-insensitive instance of the System.Collections.Hashtable class with the same initial capacity as the number 
-             of entries copied.
-        
+            Copies the entries from the specified dictionary to a new case-insensitive instance of the System.Collections.Hashtable class with the same initial capacity as the number of entries copied.
         
             d: The System.Collections.IDictionary to copy to a new case-insensitive System.Collections.Hashtable.
             Returns: A new case-insensitive instance of the System.Collections.Hashtable class containing the entries from the specified System.Collections.IDictionary.
@@ -161,6 +156,9 @@ class CollectionsUtil():
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CollectionsUtil()
 
 class HybridDictionary:
     """
@@ -171,8 +169,6 @@ class HybridDictionary:
     HybridDictionary(caseInsensitive: bool)
     HybridDictionary(initialSize: int, caseInsensitive: bool)
     """
-    Instance = HybridDictionary
-    """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
         Add(self: HybridDictionary, key: object, value: object)
@@ -206,9 +202,7 @@ class HybridDictionary:
         CopyTo(self: HybridDictionary, array: Array, index: int)
             Copies the System.Collections.Specialized.HybridDictionary entries to a one-dimensional System.Array instance at the specified index.
         
-            array: The one-dimensional System.Array that is the destination of the System.Collections.DictionaryEntry objects copied from System.Collections.Specialized.HybridDictionary. The 
-             System.Array must have zero-based indexing.
-        
+            array: The one-dimensional System.Array that is the destination of the System.Collections.DictionaryEntry objects copied from System.Collections.Specialized.HybridDictionary. The System.Array must have zero-based indexing.
             index: The zero-based index in array at which copying begins.
         """
         pass
@@ -333,22 +327,24 @@ Get: Values(self: HybridDictionary) -> ICollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HybridDictionary()
 
 class INotifyCollectionChanged:
     """ Notifies listeners of dynamic changes, such as when items get added and removed or the whole list is refreshed. """
-    Instance = INotifyCollectionChanged
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
     CollectionChanged = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return INotifyCollectionChanged()
 
 class IOrderedDictionary:
     """ Represents an indexed collection of key/value pairs. """
-    Instance = IOrderedDictionary
-    """hardcoded/returns an instance of the class"""
     def GetEnumerator(self):
         """
         GetEnumerator(self: IOrderedDictionary) -> IDictionaryEnumerator
@@ -409,6 +405,9 @@ class IOrderedDictionary:
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IOrderedDictionary()
 
 class ListDictionary:
     """
@@ -417,8 +416,6 @@ class ListDictionary:
     ListDictionary()
     ListDictionary(comparer: IComparer)
     """
-    Instance = ListDictionary
-    """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
         Add(self: ListDictionary, key: object, value: object)
@@ -452,9 +449,7 @@ class ListDictionary:
         CopyTo(self: ListDictionary, array: Array, index: int)
             Copies the System.Collections.Specialized.ListDictionary entries to a one-dimensional System.Array instance at the specified index.
         
-            array: The one-dimensional System.Array that is the destination of the System.Collections.DictionaryEntry objects copied from System.Collections.Specialized.ListDictionary. The 
-             System.Array must have zero-based indexing.
-        
+            array: The one-dimensional System.Array that is the destination of the System.Collections.DictionaryEntry objects copied from System.Collections.Specialized.ListDictionary. The System.Array must have zero-based indexing.
             index: The zero-based index in array at which copying begins.
         """
         pass
@@ -577,11 +572,12 @@ Get: Values(self: ListDictionary) -> ICollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ListDictionary()
 
 class NameObjectCollectionBase:
     """ Provides the abstract base class for a collection of associated System.String keys and System.Object values that can be accessed either with the key or with the index. """
-    Instance = NameObjectCollectionBase
-    """hardcoded/returns an instance of the class"""
     def BaseAdd(self, *args): #cannot find CLR method
         """
         BaseAdd(self: NameObjectCollectionBase, name: str, value: object)
@@ -681,9 +677,7 @@ class NameObjectCollectionBase:
     def BaseSet(self, *args): #cannot find CLR method
         """
         BaseSet(self: NameObjectCollectionBase, name: str, value: object)
-            Sets the value of the first entry with the specified key in the System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, adds an entry with 
-             the specified key and value into the System.Collections.Specialized.NameObjectCollectionBase instance.
-        
+            Sets the value of the first entry with the specified key in the System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, adds an entry with the specified key and value into the System.Collections.Specialized.NameObjectCollectionBase instance.
         
             name: The System.String key of the entry to set. The key can be null.
             value: The System.Object that represents the new value of the entry to set. The value can be null.
@@ -707,15 +701,10 @@ class NameObjectCollectionBase:
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: NameObjectCollectionBase, info: SerializationInfo, context: StreamingContext)
-            Implements the System.Runtime.Serialization.ISerializable interface and returns the data needed to serialize the System.Collections.Specialized.NameObjectCollectionBase 
-             instance.
+            Implements the System.Runtime.Serialization.ISerializable interface and returns the data needed to serialize the System.Collections.Specialized.NameObjectCollectionBase instance.
         
-        
-            info: A System.Runtime.Serialization.SerializationInfo object that contains the information required to serialize the System.Collections.Specialized.NameObjectCollectionBase 
-             instance.
-        
-            context: A System.Runtime.Serialization.StreamingContext object that contains the source and destination of the serialized stream associated with the 
-             System.Collections.Specialized.NameObjectCollectionBase instance.
+            info: A System.Runtime.Serialization.SerializationInfo object that contains the information required to serialize the System.Collections.Specialized.NameObjectCollectionBase instance.
+            context: A System.Runtime.Serialization.StreamingContext object that contains the source and destination of the serialized stream associated with the System.Collections.Specialized.NameObjectCollectionBase instance.
         """
         pass
 
@@ -782,6 +771,9 @@ Get: Keys(self: NameObjectCollectionBase) -> KeysCollection
 
     KeysCollection = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NameObjectCollectionBase()
 
 class NameValueCollection(NameObjectCollectionBase):
     """
@@ -796,8 +788,6 @@ class NameValueCollection(NameObjectCollectionBase):
     NameValueCollection(capacity: int, col: NameValueCollection)
     NameValueCollection(capacity: int, hashProvider: IHashCodeProvider, comparer: IComparer)
     """
-    Instance = NameValueCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
         Add(self: NameValueCollection, c: NameValueCollection)
@@ -911,9 +901,7 @@ class NameValueCollection(NameObjectCollectionBase):
     def BaseSet(self, *args): #cannot find CLR method
         """
         BaseSet(self: NameObjectCollectionBase, name: str, value: object)
-            Sets the value of the first entry with the specified key in the System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, adds an entry with 
-             the specified key and value into the System.Collections.Specialized.NameObjectCollectionBase instance.
-        
+            Sets the value of the first entry with the specified key in the System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, adds an entry with the specified key and value into the System.Collections.Specialized.NameObjectCollectionBase instance.
         
             name: The System.String key of the entry to set. The key can be null.
             value: The System.Object that represents the new value of the entry to set. The value can be null.
@@ -937,9 +925,7 @@ class NameValueCollection(NameObjectCollectionBase):
         CopyTo(self: NameValueCollection, dest: Array, index: int)
             Copies the entire System.Collections.Specialized.NameValueCollection to a compatible one-dimensional System.Array, starting at the specified index of the target array.
         
-            dest: The one-dimensional System.Array that is the destination of the elements copied from System.Collections.Specialized.NameValueCollection. The System.Array must have 
-             zero-based indexing.
-        
+            dest: The one-dimensional System.Array that is the destination of the elements copied from System.Collections.Specialized.NameValueCollection. The System.Array must have zero-based indexing.
             index: The zero-based index in dest at which copying begins.
         """
         pass
@@ -951,16 +937,13 @@ class NameValueCollection(NameObjectCollectionBase):
             Gets the values associated with the specified key from the System.Collections.Specialized.NameValueCollection combined into one comma-separated list.
         
             name: The System.String key of the entry that contains the values to get. The key can be null.
-            Returns: A System.String that contains a comma-separated list of the values associated with the specified key from the System.Collections.Specialized.NameValueCollection, if found; 
-             otherwise, null.
-        
+            Returns: A System.String that contains a comma-separated list of the values associated with the specified key from the System.Collections.Specialized.NameValueCollection, if found; otherwise, null.
         Get(self: NameValueCollection, index: int) -> str
         
             Gets the values at the specified index of the System.Collections.Specialized.NameValueCollection combined into one comma-separated list.
         
             index: The zero-based index of the entry that contains the values to get from the collection.
-            Returns: A System.String that contains a comma-separated list of the values at the specified index of the System.Collections.Specialized.NameValueCollection, if found; otherwise, 
-             null.
+            Returns: A System.String that contains a comma-separated list of the values at the specified index of the System.Collections.Specialized.NameValueCollection, if found; otherwise, null.
         """
         pass
 
@@ -1078,6 +1061,9 @@ Get: AllKeys(self: NameValueCollection) -> Array[str]
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NameValueCollection()
 
 class NotifyCollectionChangedAction:
     """
@@ -1085,8 +1071,6 @@ class NotifyCollectionChangedAction:
     
     enum NotifyCollectionChangedAction, values: Add (0), Move (3), Remove (1), Replace (2), Reset (4)
     """
-    Instance = NotifyCollectionChangedAction
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -1127,6 +1111,9 @@ class NotifyCollectionChangedAction:
     Reset = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NotifyCollectionChangedAction()
 
 class NotifyCollectionChangedEventArgs(EventArgs):
     """
@@ -1144,8 +1131,6 @@ class NotifyCollectionChangedEventArgs(EventArgs):
     NotifyCollectionChangedEventArgs(action: NotifyCollectionChangedAction, changedItem: object, index: int, oldIndex: int)
     NotifyCollectionChangedEventArgs(action: NotifyCollectionChangedAction, changedItems: IList, index: int, oldIndex: int)
     """
-    Instance = NotifyCollectionChangedEventArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, action, *__args):
         """
@@ -1199,6 +1184,9 @@ Get: OldStartingIndex(self: NotifyCollectionChangedEventArgs) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NotifyCollectionChangedEventArgs()
 
 class NotifyCollectionChangedEventHandler(MulticastDelegate):
     """
@@ -1206,8 +1194,6 @@ class NotifyCollectionChangedEventHandler(MulticastDelegate):
     
     NotifyCollectionChangedEventHandler(object: object, method: IntPtr)
     """
-    Instance = NotifyCollectionChangedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: NotifyCollectionChangedEventHandler, sender: object, e: NotifyCollectionChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -1229,9 +1215,7 @@ class NotifyCollectionChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1260,8 +1244,7 @@ class NotifyCollectionChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -1277,6 +1260,9 @@ class NotifyCollectionChangedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NotifyCollectionChangedEventHandler()
 
 class OrderedDictionary:
     """
@@ -1287,8 +1273,6 @@ class OrderedDictionary:
     OrderedDictionary(comparer: IEqualityComparer)
     OrderedDictionary(capacity: int, comparer: IEqualityComparer)
     """
-    Instance = OrderedDictionary
-    """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
         Add(self: OrderedDictionary, key: object, value: object)
@@ -1331,9 +1315,7 @@ class OrderedDictionary:
         CopyTo(self: OrderedDictionary, array: Array, index: int)
             Copies the System.Collections.Specialized.OrderedDictionary elements to a one-dimensional System.Array object at the specified index.
         
-            array: The one-dimensional System.Array object that is the destination of the System.Collections.DictionaryEntry objects copied from 
-             System.Collections.Specialized.OrderedDictionary collection. The System.Array must have zero-based indexing.
-        
+            array: The one-dimensional System.Array object that is the destination of the System.Collections.DictionaryEntry objects copied from System.Collections.Specialized.OrderedDictionary collection. The System.Array must have zero-based indexing.
             index: The zero-based index in array at which copying begins.
         """
         pass
@@ -1353,8 +1335,7 @@ class OrderedDictionary:
             Implements the System.Runtime.Serialization.ISerializable interface and returns the data needed to serialize the System.Collections.Specialized.OrderedDictionary collection.
         
             info: A System.Runtime.Serialization.SerializationInfo object containing the information required to serialize the System.Collections.Specialized.OrderedDictionary collection.
-            context: A System.Runtime.Serialization.StreamingContext object containing the source and destination of the serialized stream associated with the 
-             System.Collections.Specialized.OrderedDictionary.
+            context: A System.Runtime.Serialization.StreamingContext object containing the source and destination of the serialized stream associated with the System.Collections.Specialized.OrderedDictionary.
         """
         pass
 
@@ -1478,6 +1459,9 @@ Get: Values(self: OrderedDictionary) -> ICollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OrderedDictionary()
 
 class StringCollection:
     """
@@ -1485,8 +1469,6 @@ class StringCollection:
     
     StringCollection()
     """
-    Instance = StringCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: StringCollection, value: str) -> int
@@ -1530,9 +1512,7 @@ class StringCollection:
         CopyTo(self: StringCollection, array: Array[str], index: int)
             Copies the entire System.Collections.Specialized.StringCollection values to a one-dimensional array of strings, starting at the specified index of the target array.
         
-            array: The one-dimensional array of strings that is the destination of the elements copied from System.Collections.Specialized.StringCollection. The System.Array must have 
-             zero-based indexing.
-        
+            array: The one-dimensional array of strings that is the destination of the elements copied from System.Collections.Specialized.StringCollection. The System.Array must have zero-based indexing.
             index: The zero-based index in array at which copying begins.
         """
         pass
@@ -1656,6 +1636,9 @@ Get: SyncRoot(self: StringCollection) -> object
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StringCollection()
 
 class StringDictionary:
     """
@@ -1663,8 +1646,6 @@ class StringDictionary:
     
     StringDictionary()
     """
-    Instance = StringDictionary
-    """hardcoded/returns an instance of the class"""
     def Add(self, key, value):
         """
         Add(self: StringDictionary, key: str, value: str)
@@ -1795,11 +1776,12 @@ Get: Values(self: StringDictionary) -> ICollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StringDictionary()
 
 class StringEnumerator():
     """ Supports a simple iteration over a System.Collections.Specialized.StringCollection. """
-    Instance = StringEnumerator
-    """hardcoded/returns an instance of the class"""
     def MoveNext(self):
         """
         MoveNext(self: StringEnumerator) -> bool
@@ -1824,4 +1806,7 @@ Get: Current(self: StringEnumerator) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StringEnumerator()
 

@@ -13,8 +13,6 @@ class Collection:
     Collection[T]()
     Collection[T](list: IList[T])
     """
-    Instance = Collection
-    """hardcoded/returns an instance of the class"""
     def Add(self, item):
         """
         Add(self: Collection[T], item: T)
@@ -201,11 +199,12 @@ Get: Count(self: Collection[T]) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Collection()
 
 class KeyedCollection(Collection):
     # no doc
-    Instance = KeyedCollection
-    """hardcoded/returns an instance of the class"""
     def ChangeItemKey(self, *args): #cannot find CLR method
         """
         ChangeItemKey(self: KeyedCollection[TKey, TItem], item: TItem, newKey: TKey)
@@ -331,6 +330,9 @@ Get: Comparer(self: KeyedCollection[TKey, TItem]) -> IEqualityComparer[TKey]
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return KeyedCollection()
 
 class ObservableCollection(Collection):
     """
@@ -338,8 +340,6 @@ class ObservableCollection(Collection):
     ObservableCollection[T](list: List[T])
     ObservableCollection[T](collection: IEnumerable[T])
     """
-    Instance = ObservableCollection
-    """hardcoded/returns an instance of the class"""
     def BlockReentrancy(self, *args): #cannot find CLR method
         """
         BlockReentrancy(self: ObservableCollection[T]) -> IDisposable
@@ -467,11 +467,12 @@ class ObservableCollection(Collection):
     CollectionChanged = None
     PropertyChanged = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ObservableCollection()
 
 class ReadOnlyCollection:
     """ ReadOnlyCollection[T](list: IList[T]) """
-    Instance = ReadOnlyCollection
-    """hardcoded/returns an instance of the class"""
     def Contains(self, value):
         """
         Contains(self: ReadOnlyCollection[T], value: T) -> bool
@@ -565,11 +566,12 @@ Get: Count(self: ReadOnlyCollection[T]) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ReadOnlyCollection()
 
 class ReadOnlyDictionary:
     """ ReadOnlyDictionary[TKey, TValue](dictionary: IDictionary[TKey, TValue]) """
-    Instance = ReadOnlyDictionary
-    """hardcoded/returns an instance of the class"""
     def ContainsKey(self, key):
         """ ContainsKey(self: ReadOnlyDictionary[TKey, TValue], key: TKey) -> bool """
         pass
@@ -648,11 +650,12 @@ class ReadOnlyDictionary:
     KeyCollection = None
     ValueCollection = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ReadOnlyDictionary()
 
 class ReadOnlyObservableCollection(ReadOnlyCollection):
     """ ReadOnlyObservableCollection[T](list: ObservableCollection[T]) """
-    Instance = ReadOnlyObservableCollection
-    """hardcoded/returns an instance of the class"""
     def OnCollectionChanged(self, *args): #cannot find CLR method
         """
         OnCollectionChanged(self: ReadOnlyObservableCollection[T], args: NotifyCollectionChangedEventArgs)
@@ -700,4 +703,7 @@ class ReadOnlyObservableCollection(ReadOnlyCollection):
     CollectionChanged = None
     PropertyChanged = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ReadOnlyObservableCollection()
 

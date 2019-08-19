@@ -11,8 +11,6 @@ from Wms.EdiMessaging import *
 
 class ChangePrintJobStatusHandler(MessageHandlerBase):
     """ ChangePrintJobStatusHandler() """
-    Instance = ChangePrintJobStatusHandler
-    """hardcoded/returns an instance of the class"""
     def Handle(self, message):
         """ Handle(self: ChangePrintJobStatusHandler, message: ChangePrintJobStatusMessage) """
         pass
@@ -21,11 +19,12 @@ class ChangePrintJobStatusHandler(MessageHandlerBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ChangePrintJobStatusHandler()
 
 class PrintJobDispatchedHandler(MessageHandlerBase):
     """ PrintJobDispatchedHandler() """
-    Instance = PrintJobDispatchedHandler
-    """hardcoded/returns an instance of the class"""
     def Handle(self, message):
         """ Handle(self: PrintJobDispatchedHandler, message: PrintJobDispatchedMessage) """
         pass
@@ -34,4 +33,7 @@ class PrintJobDispatchedHandler(MessageHandlerBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintJobDispatchedHandler()
 

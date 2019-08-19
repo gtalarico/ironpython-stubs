@@ -10,19 +10,18 @@
 
 class GS1Prefixes():
     # no doc
-    Instance = GS1Prefixes
-    """hardcoded/returns an instance of the class"""
     Prefixes = None
     __all__ = []
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GS1Prefixes()
 
 class SSCC:
     """
     SSCC(barcode: str)
     SSCC(extensionDigit: int, companyPrefix: str, serial: int)
     """
-    Instance = SSCC
-    """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """
         Equals(self: SSCC, other: SSCC) -> bool
@@ -60,9 +59,7 @@ class SSCC:
         
             Checks if input is valid SSCC code.
                     Strips expected cosmetic characters.
-                    Deprecated use 
-             Wms.RemotingObjects.Barcodes.SSCC.SSCC.TryParse(System.String,Wms.RemotingObjects.Barcodes.SSCC.SSCC@) instead.
-        
+                    Deprecated use Wms.RemotingObjects.Barcodes.SSCC.SSCC.TryParse(System.String,Wms.RemotingObjects.Barcodes.SSCC.SSCC@) instead.
         
             barcode: uncleaned barcode
         """
@@ -109,25 +106,20 @@ class SSCC:
             Formats to a string. (Capital letter does left pad, lower case just takes number).
                     Aa - Aplicaiton identifier,
                     Ee - Extension digit,
-                    
-             Cc - Company prefix,
+                    Cc - Company prefix,
                     Ss - Serial reference,
                     Ii - integrity check digit,
                     Zz - Complete sscc code machine readable,
-                    Hh - 
-             human readable complete code.
-        
+                    Hh - human readable complete code.
         
             format: Format to string to. following characters get replaced:
                     Aa - Aplicaiton identifier,
                     Ee - Extension digit,
                     Cc - Company prefix,
-              
-                   Ss - Serial reference,
+                    Ss - Serial reference,
                     Ii - integrity check digit,
                     Zz - Complete sscc code machine readable,
                     Hh - human readable complete code.
-        
             Returns: string in the format provided.
         """
         pass
@@ -216,4 +208,7 @@ Get: SerialFromBarcode(self: SSCC) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SSCC()
 

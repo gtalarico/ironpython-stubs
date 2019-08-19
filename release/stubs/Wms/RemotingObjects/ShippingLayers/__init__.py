@@ -12,8 +12,6 @@ from System.Collections.Generic import *
 
 class Address:
     """ Address() """
-    Instance = Address
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: Address) -> object """
         pass
@@ -177,11 +175,12 @@ Set: ZipCode(self: Address) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Address()
 
 class AddTransportPackageArgs():
     """ AddTransportPackageArgs() """
-    Instance = AddTransportPackageArgs
-    """hardcoded/returns an instance of the class"""
     BoxIds = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Optional. The id's for the new Wms.RemotingObjects.ShippingLayers.TransportPackage.
 
@@ -230,6 +229,9 @@ Set: RegisterBoxIds(self: AddTransportPackageArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AddTransportPackageArgs()
 
 class Charge():
     """
@@ -237,8 +239,6 @@ class Charge():
     Charge(amount: Decimal, currencyCode: str, description: str)
     Charge(amount: Decimal, salesAmount: Decimal, currencyCode: str, description: str)
     """
-    Instance = Charge
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, amount=None, *__args):
         """
@@ -254,11 +254,12 @@ class Charge():
     Empty = None
     SalesAmount = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Charge()
 
 class Charges(List):
     """ Charges() """
-    Instance = Charges
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -280,11 +281,12 @@ class Charges(List):
 
     Empty = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Charges()
 
 class ColliPreset():
     """ ColliPreset() """
-    Instance = ColliPreset
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -452,14 +454,15 @@ Set: Width(self: ColliPreset) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ColliPreset()
 
 class ColliPresets(FindableList):
     """
     ColliPresets()
     ColliPresets(items: Array[ColliPreset])
     """
-    Instance = ColliPresets
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(list):
         """ FromIEnumerable(list: IEnumerable[ColliPreset]) -> ColliPresets """
@@ -495,11 +498,12 @@ class ColliPresets(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Id'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ColliPresets()
 
 class Countries(FindableList):
     """ Countries() """
-    Instance = Countries
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -522,14 +526,15 @@ class Countries(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Code'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Countries()
 
 class Country():
     """
     Country()
     Country(code: str, name: str)
     """
-    Instance = Country
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, code=None, name=None):
         """
@@ -551,11 +556,12 @@ Set: Name(self: Country) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Country()
 
 class DangerousItem:
     """ DangerousItem() """
-    Instance = DangerousItem
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: DangerousItem) -> object """
         pass
@@ -724,14 +730,15 @@ Set: Volume(self: DangerousItem) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DangerousItem()
 
 class DangerousItems(List):
     """
     DangerousItems()
     DangerousItems(items: IEnumerable[DangerousItem])
     """
-    Instance = DangerousItems
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: DangerousItems) -> object """
         pass
@@ -763,6 +770,9 @@ class DangerousItems(List):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DangerousItems()
 
 class Dimensions:
     """
@@ -770,8 +780,6 @@ class Dimensions:
     Dimensions()
     Dimensions(dimensions: str)
     """
-    Instance = Dimensions
-    """hardcoded/returns an instance of the class"""
     def CompareTo(self, other):
         """ CompareTo(self: Dimensions, other: Dimensions) -> int """
         pass
@@ -899,11 +907,12 @@ Set: Width(self: Dimensions) = value
 
     Empty = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Dimensions()
 
 class ExportDetails:
     """ ExportDetails() """
-    Instance = ExportDetails
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: ExportDetails) -> object """
         pass
@@ -953,11 +962,12 @@ Set: ReasonOfExport(self: ExportDetails) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ExportDetails()
 
 class HistoryShipment():
     """ HistoryShipment() """
-    Instance = HistoryShipment
-    """hardcoded/returns an instance of the class"""
     Address = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -1186,11 +1196,12 @@ Set: ZipCode(self: HistoryShipment) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HistoryShipment()
 
 class HistoryShipmentFilter(HistoryFilterBase):
     """ HistoryShipmentFilter() """
-    Instance = HistoryShipmentFilter
-    """hardcoded/returns an instance of the class"""
     SearchString = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: SearchString(self: HistoryShipmentFilter) -> str
 
@@ -1204,11 +1215,12 @@ Set: YourReference(self: HistoryShipmentFilter) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HistoryShipmentFilter()
 
 class HistoryShipmentLine():
     """ HistoryShipmentLine() """
-    Instance = HistoryShipmentLine
-    """hardcoded/returns an instance of the class"""
     ColliPresetName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: ColliPresetName(self: HistoryShipmentLine) -> str
 
@@ -1356,14 +1368,15 @@ Set: SSCC(self: HistoryShipmentLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HistoryShipmentLine()
 
 class HistoryShipmentLines(PagedList):
     """
     HistoryShipmentLines()
     HistoryShipmentLines(collection: IEnumerable[HistoryShipmentLine])
     """
-    Instance = HistoryShipmentLines
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(collection):
         """ FromIEnumerable(collection: IEnumerable[HistoryShipmentLine]) -> HistoryShipmentLines """
@@ -1414,11 +1427,12 @@ Get: PreserveState(self: HistoryShipmentLines) -> bool
     DisplayMember = 'ItemDescription'
     ValueMember = 'ItemCode'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HistoryShipmentLines()
 
 class HistoryShipments(FindableList):
     """ HistoryShipments() """
-    Instance = HistoryShipments
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -1456,11 +1470,12 @@ Set: TotalRowsMatched(self: HistoryShipments) = value
     DisplayMember = None
     ValueMember = 'Id'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HistoryShipments()
 
 class IService:
     # no doc
-    Instance = IService
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1499,11 +1514,12 @@ Set: TransportationCharge(self: IService) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IService()
 
 class IShipper:
     # no doc
-    Instance = IShipper
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1544,11 +1560,12 @@ class IShipper:
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IShipper()
 
 class LogSink():
     """ LogSink() """
-    Instance = LogSink
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Write(message, type=None):
         """ Write(message: str, type: LogSinkMessageTypes)Write(message: str) """
@@ -1557,11 +1574,12 @@ class LogSink():
     LogSinkMessage = None
     OnLogSinkMessage = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LogSink()
 
 class LogSinkMessageTypes:
     """ enum LogSinkMessageTypes, values: Debug (2), Error (0), UserInfo (1) """
-    Instance = LogSinkMessageTypes
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -1600,14 +1618,15 @@ class LogSinkMessageTypes:
     UserInfo = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LogSinkMessageTypes()
 
 class MobileService:
     """
     MobileService()
     MobileService(original: IService)
     """
-    Instance = MobileService
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1666,14 +1685,15 @@ Set: TransportationCharge(self: MobileService) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MobileService()
 
 class MobileShipper:
     """
     MobileShipper(source: IShipper)
     MobileShipper()
     """
-    Instance = MobileShipper
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1743,6 +1763,9 @@ Get: UniqueId(self: MobileShipper) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MobileShipper()
 
 class OutboundOrderItem():
     """
@@ -1750,8 +1773,6 @@ class OutboundOrderItem():
     OutboundOrderItem(orderNumber: str, boxGuid: Guid, itemCode: str, quantity: Decimal)
     OutboundOrderItem(orderNumber: str, boxGuid: Guid, itemCode: str, itemIdentificationNumber: str, quantity: Decimal)
     """
-    Instance = OutboundOrderItem
-    """hardcoded/returns an instance of the class"""
     def GetHashCode(self):
         """ GetHashCode(self: OutboundOrderItem) -> int """
         pass
@@ -1830,14 +1851,15 @@ Set: QuantityOriginal(self: OutboundOrderItem) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OutboundOrderItem()
 
 class OutboundOrderItems(List):
     """
     OutboundOrderItems()
     OutboundOrderItems(outboundOrderItems: OutboundOrderItems)
     """
-    Instance = OutboundOrderItems
-    """hardcoded/returns an instance of the class"""
     def AddOrUpdate(self, *__args):
         """ AddOrUpdate(self: OutboundOrderItems, outboundOrderItem: OutboundOrderItem)AddOrUpdate(self: OutboundOrderItems, orderNumber: str, boxGuid: Guid, itemCode: str, quantity: Decimal)AddOrUpdate(self: OutboundOrderItems, orderNumber: str, boxGuid: Guid, itemCode: str, itemIdentificationNumber: str, quantity: Decimal) """
         pass
@@ -1881,11 +1903,12 @@ class OutboundOrderItems(List):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OutboundOrderItems()
 
 class OutboundOrdersFilter():
     """ OutboundOrdersFilter() """
-    Instance = OutboundOrdersFilter
-    """hardcoded/returns an instance of the class"""
     BoxNumber = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: BoxNumber(self: OutboundOrdersFilter) -> str
 
@@ -1899,11 +1922,12 @@ Set: SearchString(self: OutboundOrdersFilter) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OutboundOrdersFilter()
 
 class Packages(List):
     """ Packages() """
-    Instance = Packages
-    """hardcoded/returns an instance of the class"""
     def GetTotalWeight(self):
         """ GetTotalWeight(self: Packages) -> Decimal """
         pass
@@ -1929,11 +1953,12 @@ class Packages(List):
 
     Empty = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Packages()
 
 class PackageType:
     """ enum PackageType, values: Box (1), Document (0), Pallet (2) """
-    Instance = PackageType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -1972,11 +1997,12 @@ class PackageType:
     Pallet = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PackageType()
 
 class PackingSlipLine:
     """ PackingSlipLine() """
-    Instance = PackingSlipLine
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: PackingSlipLine) -> object """
         pass
@@ -2185,11 +2211,12 @@ Set: WeightUom(self: PackingSlipLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PackingSlipLine()
 
 class ProcessShipmentArgs():
     """ ProcessShipmentArgs() """
-    Instance = ProcessShipmentArgs
-    """hardcoded/returns an instance of the class"""
     CacheKey = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -2207,11 +2234,12 @@ Set: ShipmentId(self: ProcessShipmentArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessShipmentArgs()
 
 class ProcessShipmentStepsEnum:
     """ enum ProcessShipmentStepsEnum, values: Done (4), LogShipment (1), PrintPackingSlip (3), ProcessInfoToErp (2), ProcessShipment (0) """
-    Instance = ProcessShipmentStepsEnum
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2252,11 +2280,12 @@ class ProcessShipmentStepsEnum:
     ProcessShipment = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessShipmentStepsEnum()
 
 class Proforma:
     """ Proforma() """
-    Instance = Proforma
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: Proforma) -> object """
         pass
@@ -2321,11 +2350,12 @@ Set: OtherCharges(self: Proforma) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Proforma()
 
 class References:
     """ References() """
-    Instance = References
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: References) -> object """
         pass
@@ -2409,11 +2439,12 @@ Set: PackageSlipNumbersAsString(self: References) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return References()
 
 class Services(FindableList):
     """ Services() """
-    Instance = Services
-    """hardcoded/returns an instance of the class"""
     def Exists(self, *__args):
         """ Exists(self: Services, serviceId: str) -> bool """
         pass
@@ -2445,18 +2476,20 @@ class Services(FindableList):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Services()
 
 class ShipmentDayClass():
     """ ShipmentDayClass() """
-    Instance = ShipmentDayClass
-    """hardcoded/returns an instance of the class"""
     ShipmentDay = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ShipmentDayClass()
 
 class ShipmentInfo():
     """ ShipmentInfo() """
-    Instance = ShipmentInfo
-    """hardcoded/returns an instance of the class"""
     ColliCount = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -2482,21 +2515,23 @@ Set: TrackingUrl(self: ShipmentInfo) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ShipmentInfo()
 
 class ShipperInitInfo():
     """ ShipperInitInfo() """
-    Instance = ShipperInitInfo
-    """hardcoded/returns an instance of the class"""
     RootShipperFolder = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ShipperInitInfo()
 
 class ShipperServiceLink(DbObject):
     """
     ShipperServiceLink()
     ShipperServiceLink(erpDeliveryMethodCode: str, erpDeliveryMethodDescription: str, shipperId: str, serviceLevel: str, allowDifferentChoice: bool)
     """
-    Instance = ShipperServiceLink
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2561,14 +2596,15 @@ Set: ShipperId(self: ShipperServiceLink) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ShipperServiceLink()
 
 class ShipperServiceLinks(FindableList):
     """
     ShipperServiceLinks()
     ShipperServiceLinks(items: Array[ShipperServiceLink])
     """
-    Instance = ShipperServiceLinks
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -2599,6 +2635,9 @@ class ShipperServiceLinks(FindableList):
     DisplayMember = 'ErpDeliveryMethodCode'
     ValueMember = 'Id'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ShipperServiceLinks()
 
 class State:
     """
@@ -2607,8 +2646,6 @@ class State:
     
     enum State, values: Packed (2), Picked (0), Processed (1), Shipped (3)
     """
-    Instance = State
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2648,6 +2685,9 @@ class State:
     Shipped = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return State()
 
 class TransportItem:
     """
@@ -2655,8 +2695,6 @@ class TransportItem:
     TransportItem(line: OutboundOrderLine, boxGuid: Guid, itemIds: ItemIdentifications, innerReference: str)
     TransportItem(line: OutboundOrderLine, boxGuid: Guid, quantity: Decimal, quantityProcessed: Decimal, registerItemIdsDuringPacking: bool, innerReference: str)
     """
-    Instance = TransportItem
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """
         Clone(self: TransportItem) -> object
@@ -2929,14 +2967,15 @@ Set: WarehouseCode(self: TransportItem) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportItem()
 
 class TransportItems(FindableList):
     """
     TransportItems()
     TransportItems(items: IEnumerable[TransportItem])
     """
-    Instance = TransportItems
-    """hardcoded/returns an instance of the class"""
     def Add(self, item, includingItemIds=None):
         """ Add(self: TransportItems, item: TransportItem)Add(self: TransportItems, item: TransportItem, includingItemIds: bool) """
         pass
@@ -2992,11 +3031,12 @@ class TransportItems(FindableList):
     DisplayMember = 'Description'
     ValueMember = 'UniqueId'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportItems()
 
 class TransportOptions():
     """ TransportOptions() """
-    Instance = TransportOptions
-    """hardcoded/returns an instance of the class"""
     CustomFields = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -3061,14 +3101,15 @@ Set: ShipperServiceLevel(self: TransportOptions) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportOptions()
 
 class TransportPackage(PackageBase):
     """
     TransportPackage(boxGuid: Guid)
     TransportPackage()
     """
-    Instance = TransportPackage
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: TransportPackage) -> object """
         pass
@@ -3132,14 +3173,15 @@ Set: TransportItems(self: TransportPackage) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportPackage()
 
 class TransportPackages(FindableList):
     """
     TransportPackages()
     TransportPackages(batches: Batches)
     """
-    Instance = TransportPackages
-    """hardcoded/returns an instance of the class"""
     def AddNew(self, basedOn=None, boxId=None, outerReference=None):
         """
         AddNew(self: TransportPackages) -> Guid
@@ -3360,11 +3402,12 @@ Get: TotalVolume(self: TransportPackages) -> Decimal
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportPackages()
 
 class TypeOfDay:
     """ enum TypeOfDay, values: WeekDays (1), WorkingDays (0) """
-    Instance = TypeOfDay
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -3402,11 +3445,12 @@ class TypeOfDay:
     WeekDays = None
     WorkingDays = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TypeOfDay()
 
 class UpdateTransportPackageArgs():
     """ UpdateTransportPackageArgs() """
-    Instance = UpdateTransportPackageArgs
-    """hardcoded/returns an instance of the class"""
     CacheKey = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -3424,11 +3468,12 @@ Set: ValidateItem(self: UpdateTransportPackageArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UpdateTransportPackageArgs()
 
 class UpdateTransportPackagesHeaderArgs():
     """ UpdateTransportPackagesHeaderArgs() """
-    Instance = UpdateTransportPackagesHeaderArgs
-    """hardcoded/returns an instance of the class"""
     Customer = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -3478,6 +3523,9 @@ Set: TransportOptions(self: UpdateTransportPackagesHeaderArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UpdateTransportPackagesHeaderArgs()
 
 # variables with complex values
 

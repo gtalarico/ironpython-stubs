@@ -10,8 +10,6 @@
 
 class AuthenticationManager():
     """ Manages the authentication modules called during the client authentication process. """
-    Instance = AuthenticationManager
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Authenticate(challenge, request, credentials):
         """
@@ -22,8 +20,7 @@ class AuthenticationManager():
             challenge: The challenge returned by the Internet resource.
             request: The System.Net.WebRequest that initiated the authentication challenge.
             credentials: The System.Net.ICredentials associated with this request.
-            Returns: An instance of the System.Net.Authorization class containing the result of the authorization attempt. If there is no authentication module to respond to the challenge, this 
-             method returns null.
+            Returns: An instance of the System.Net.Authorization class containing the result of the authorization attempt. If there is no authentication module to respond to the challenge, this method returns null.
         """
         pass
 
@@ -68,6 +65,9 @@ class AuthenticationManager():
     CustomTargetNameDictionary = None
     RegisteredModules = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AuthenticationManager()
 
 class AuthenticationSchemes:
     """
@@ -75,8 +75,6 @@ class AuthenticationSchemes:
     
     enum (flags) AuthenticationSchemes, values: Anonymous (32768), Basic (8), Digest (1), IntegratedWindowsAuthentication (6), Negotiate (2), None (0), Ntlm (4)
     """
-    Instance = AuthenticationSchemes
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -119,6 +117,9 @@ class AuthenticationSchemes:
     Ntlm = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AuthenticationSchemes()
 
 class AuthenticationSchemeSelector(MulticastDelegate):
     """
@@ -126,8 +127,6 @@ class AuthenticationSchemeSelector(MulticastDelegate):
     
     AuthenticationSchemeSelector(object: object, method: IntPtr)
     """
-    Instance = AuthenticationSchemeSelector
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, httpRequest, callback, object):
         """ BeginInvoke(self: AuthenticationSchemeSelector, httpRequest: HttpListenerRequest, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -149,9 +148,7 @@ class AuthenticationSchemeSelector(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -180,8 +177,7 @@ class AuthenticationSchemeSelector(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -197,6 +193,9 @@ class AuthenticationSchemeSelector(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AuthenticationSchemeSelector()
 
 class Authorization():
     """
@@ -206,8 +205,6 @@ class Authorization():
     Authorization(token: str, finished: bool)
     Authorization(token: str, finished: bool, connectionGroupId: str)
     """
-    Instance = Authorization
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, token, finished=None, connectionGroupId=None):
         """
@@ -255,6 +252,9 @@ Set: ProtectionRealm(self: Authorization) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Authorization()
 
 class BindIPEndPoint(MulticastDelegate):
     """
@@ -262,8 +262,6 @@ class BindIPEndPoint(MulticastDelegate):
     
     BindIPEndPoint(object: object, method: IntPtr)
     """
-    Instance = BindIPEndPoint
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, servicePoint, remoteEndPoint, retryCount, callback, object):
         """ BeginInvoke(self: BindIPEndPoint, servicePoint: ServicePoint, remoteEndPoint: IPEndPoint, retryCount: int, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -285,9 +283,7 @@ class BindIPEndPoint(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -316,8 +312,7 @@ class BindIPEndPoint(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -333,6 +328,9 @@ class BindIPEndPoint(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BindIPEndPoint()
 
 class Cookie():
     """
@@ -343,8 +341,6 @@ class Cookie():
     Cookie(name: str, value: str, path: str)
     Cookie(name: str, value: str, path: str, domain: str)
     """
-    Instance = Cookie
-    """hardcoded/returns an instance of the class"""
     def Equals(self, comparand):
         """
         Equals(self: Cookie, comparand: object) -> bool
@@ -352,9 +348,7 @@ class Cookie():
             Overrides the System.Object.Equals(System.Object) method.
         
             comparand: A reference to a System.Net.Cookie.
-            Returns: Returns true if the System.Net.Cookie is equal to comparand. Two System.Net.Cookie instances are equal if their System.Net.Cookie.Name, System.Net.Cookie.Value, 
-             System.Net.Cookie.Path, System.Net.Cookie.Domain, and System.Net.Cookie.Version properties are equal. System.Net.Cookie.Name and System.Net.Cookie.Domain string comparisons 
-             are case-insensitive.
+            Returns: Returns true if the System.Net.Cookie is equal to comparand. Two System.Net.Cookie instances are equal if their System.Net.Cookie.Name, System.Net.Cookie.Value, System.Net.Cookie.Path, System.Net.Cookie.Domain, and System.Net.Cookie.Version properties are equal. System.Net.Cookie.Name and System.Net.Cookie.Domain string comparisons are case-insensitive.
         """
         pass
 
@@ -505,6 +499,9 @@ Set: Version(self: Cookie) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Cookie()
 
 class CookieCollection:
     """
@@ -512,8 +509,6 @@ class CookieCollection:
     
     CookieCollection()
     """
-    Instance = CookieCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
         Add(self: CookieCollection, cookie: Cookie)
@@ -607,6 +602,9 @@ Get: SyncRoot(self: CookieCollection) -> object
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CookieCollection()
 
 class CookieContainer():
     """
@@ -616,14 +614,10 @@ class CookieContainer():
     CookieContainer(capacity: int)
     CookieContainer(capacity: int, perDomainCapacity: int, maxCookieSize: int)
     """
-    Instance = CookieContainer
-    """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
         Add(self: CookieContainer, cookie: Cookie)
-            Adds a System.Net.Cookie to a System.Net.CookieContainer. This method uses the domain from the System.Net.Cookie to determine which domain collection to associate the 
-             System.Net.Cookie with.
-        
+            Adds a System.Net.Cookie to a System.Net.CookieContainer. This method uses the domain from the System.Net.Cookie to determine which domain collection to associate the System.Net.Cookie with.
         
             cookie: The System.Net.Cookie to be added to the System.Net.CookieContainer.
         Add(self: CookieContainer, cookies: CookieCollection)
@@ -724,6 +718,9 @@ Set: PerDomainCapacity(self: CookieContainer) = value
     DefaultCookieLimit = 300
     DefaultPerDomainCookieLimit = 20
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CookieContainer()
 
 class CookieException(FormatException):
     """
@@ -731,8 +728,6 @@ class CookieException(FormatException):
     
     CookieException()
     """
-    Instance = CookieException
-    """hardcoded/returns an instance of the class"""
     def GetObjectData(self, serializationInfo, streamingContext):
         """
         GetObjectData(self: CookieException, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
@@ -763,6 +758,9 @@ class CookieException(FormatException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CookieException()
 
 class CredentialCache:
     """
@@ -770,22 +768,16 @@ class CredentialCache:
     
     CredentialCache()
     """
-    Instance = CredentialCache
-    """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
         Add(self: CredentialCache, uriPrefix: Uri, authType: str, cred: NetworkCredential)
-            Adds a System.Net.NetworkCredential instance to the credential cache for use with protocols other than SMTP and associates it with a Uniform Resource Identifier (URI) 
-             prefix and authentication protocol.
-        
+            Adds a System.Net.NetworkCredential instance to the credential cache for use with protocols other than SMTP and associates it with a Uniform Resource Identifier (URI) prefix and authentication protocol.
         
             uriPrefix: A System.Uri that specifies the URI prefix of the resources that the credential grants access to.
             authType: The authentication scheme used by the resource named in uriPrefix.
             cred: The System.Net.NetworkCredential to add to the credential cache.
         Add(self: CredentialCache, host: str, port: int, authenticationType: str, credential: NetworkCredential)
-            Adds a System.Net.NetworkCredential instance for use with SMTP to the credential cache and associates it with a host computer, port, and authentication protocol. 
-             Credentials added using this method are valid for SMTP only. This method does not work for HTTP or FTP requests.
-        
+            Adds a System.Net.NetworkCredential instance for use with SMTP to the credential cache and associates it with a host computer, port, and authentication protocol. Credentials added using this method are valid for SMTP only. This method does not work for HTTP or FTP requests.
         
             host: A System.String that identifies the host computer.
             port: A System.Int32 that specifies the port to connect to on host.
@@ -858,6 +850,9 @@ class CredentialCache:
     DefaultCredentials = None
     DefaultNetworkCredentials = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CredentialCache()
 
 class DecompressionMethods:
     """
@@ -865,8 +860,6 @@ class DecompressionMethods:
     
     enum (flags) DecompressionMethods, values: Deflate (2), GZip (1), None (0)
     """
-    Instance = DecompressionMethods
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -905,11 +898,12 @@ class DecompressionMethods:
     None_ =None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DecompressionMethods()
 
 class Dns():
     """ Provides simple domain name resolution functionality. """
-    Instance = Dns
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def BeginGetHostAddresses(hostNameOrAddress, requestCallback, state):
         """
@@ -982,8 +976,7 @@ class Dns():
             Ends an asynchronous request for DNS information.
         
             asyncResult: An System.IAsyncResult instance returned by a call to the System.Net.Dns.BeginGetHostAddresses(System.String,System.AsyncCallback,System.Object) method.
-            Returns: An array of type System.Net.IPAddress that holds the IP addresses for the host specified by the hostNameOrAddress parameter of 
-             System.Net.Dns.BeginGetHostAddresses(System.String,System.AsyncCallback,System.Object).
+            Returns: An array of type System.Net.IPAddress that holds the IP addresses for the host specified by the hostNameOrAddress parameter of System.Net.Dns.BeginGetHostAddresses(System.String,System.AsyncCallback,System.Object).
         """
         pass
 
@@ -1137,11 +1130,12 @@ class Dns():
         'Resolve',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Dns()
 
 class EndPoint():
     """ Identifies a network address. This is an abstract class. """
-    Instance = EndPoint
-    """hardcoded/returns an instance of the class"""
     def Create(self, socketAddress):
         """
         Create(self: EndPoint, socketAddress: SocketAddress) -> EndPoint
@@ -1170,6 +1164,9 @@ Get: AddressFamily(self: EndPoint) -> AddressFamily
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EndPoint()
 
 class DnsEndPoint(EndPoint):
     """
@@ -1178,8 +1175,6 @@ class DnsEndPoint(EndPoint):
     DnsEndPoint(host: str, port: int)
     DnsEndPoint(host: str, port: int, addressFamily: AddressFamily)
     """
-    Instance = DnsEndPoint
-    """hardcoded/returns an instance of the class"""
     def Equals(self, comparand):
         """
         Equals(self: DnsEndPoint, comparand: object) -> bool
@@ -1246,6 +1241,9 @@ Get: Port(self: DnsEndPoint) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DnsEndPoint()
 
 class DnsPermission(CodeAccessPermission):
     """
@@ -1253,8 +1251,6 @@ class DnsPermission(CodeAccessPermission):
     
     DnsPermission(state: PermissionState)
     """
-    Instance = DnsPermission
-    """hardcoded/returns an instance of the class"""
     def Copy(self):
         """
         Copy(self: DnsPermission) -> IPermission
@@ -1280,9 +1276,7 @@ class DnsPermission(CodeAccessPermission):
             Creates a permission instance that is the intersection of the current permission instance and the specified permission instance.
         
             target: The System.Net.DnsPermission instance to intersect with the current instance.
-            Returns: A System.Net.DnsPermission instance that represents the intersection of the current System.Net.DnsPermission instance with the specified System.Net.DnsPermission instance, 
-             or null if the intersection is empty. If both the current instance and target are unrestricted, this method returns a new System.Net.DnsPermission instance that is 
-             unrestricted; otherwise, it returns null.
+            Returns: A System.Net.DnsPermission instance that represents the intersection of the current System.Net.DnsPermission instance with the specified System.Net.DnsPermission instance, or null if the intersection is empty. If both the current instance and target are unrestricted, this method returns a new System.Net.DnsPermission instance that is unrestricted; otherwise, it returns null.
         """
         pass
 
@@ -1322,9 +1316,8 @@ class DnsPermission(CodeAccessPermission):
             Creates a permission instance that is the union of the current permission instance and the specified permission instance.
         
             target: The System.Net.DnsPermission instance to combine with the current instance.
-            Returns: A System.Net.DnsPermission instance that represents the union of the current System.Net.DnsPermission instance with the specified System.Net.DnsPermission instance. If 
-             target is null, this method returns a copy of the current instance. If the current instance or target is unrestricted, this method returns a System.Net.DnsPermission 
-             instance that is unrestricted; otherwise, it returns a System.Net.DnsPermission instance that is restricted.
+            Returns: A System.Net.DnsPermission instance that represents the union of the current System.Net.DnsPermission instance with the specified System.Net.DnsPermission instance. If target is null, this method returns a copy of the current instance. If the current instance or target is unrestricted, this method returns a System.Net.DnsPermission instance that is unrestricted; otherwise, it returns a System.Net.DnsPermission 
+             instance that is restricted.
         """
         pass
 
@@ -1343,6 +1336,9 @@ class DnsPermission(CodeAccessPermission):
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DnsPermission()
 
 class DnsPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -1350,8 +1346,6 @@ class DnsPermissionAttribute(CodeAccessSecurityAttribute):
     
     DnsPermissionAttribute(action: SecurityAction)
     """
-    Instance = DnsPermissionAttribute
-    """hardcoded/returns an instance of the class"""
     def CreatePermission(self):
         """
         CreatePermission(self: DnsPermissionAttribute) -> IPermission
@@ -1373,11 +1367,12 @@ class DnsPermissionAttribute(CodeAccessSecurityAttribute):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DnsPermissionAttribute()
 
 class DownloadDataCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.DownloadDataCompleted event. """
-    Instance = DownloadDataCompletedEventArgs
-    """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the data that is downloaded by a erload:System.Net.WebClient.DownloadDataAsync method.
 
@@ -1386,6 +1381,9 @@ Get: Result(self: DownloadDataCompletedEventArgs) -> Array[Byte]
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DownloadDataCompletedEventArgs()
 
 class DownloadDataCompletedEventHandler(MulticastDelegate):
     """
@@ -1393,8 +1391,6 @@ class DownloadDataCompletedEventHandler(MulticastDelegate):
     
     DownloadDataCompletedEventHandler(object: object, method: IntPtr)
     """
-    Instance = DownloadDataCompletedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: DownloadDataCompletedEventHandler, sender: object, e: DownloadDataCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -1416,9 +1412,7 @@ class DownloadDataCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1447,8 +1441,7 @@ class DownloadDataCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -1464,11 +1457,12 @@ class DownloadDataCompletedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DownloadDataCompletedEventHandler()
 
 class DownloadProgressChangedEventArgs(ProgressChangedEventArgs):
     """ Provides data for the System.Net.WebClient.DownloadProgressChanged event of a System.Net.WebClient. """
-    Instance = DownloadProgressChangedEventArgs
-    """hardcoded/returns an instance of the class"""
     BytesReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of bytes received.
 
@@ -1484,6 +1478,9 @@ Get: TotalBytesToReceive(self: DownloadProgressChangedEventArgs) -> Int64
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DownloadProgressChangedEventArgs()
 
 class DownloadProgressChangedEventHandler(MulticastDelegate):
     """
@@ -1491,8 +1488,6 @@ class DownloadProgressChangedEventHandler(MulticastDelegate):
     
     DownloadProgressChangedEventHandler(object: object, method: IntPtr)
     """
-    Instance = DownloadProgressChangedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: DownloadProgressChangedEventHandler, sender: object, e: DownloadProgressChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -1514,9 +1509,7 @@ class DownloadProgressChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1545,8 +1538,7 @@ class DownloadProgressChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -1562,11 +1554,12 @@ class DownloadProgressChangedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DownloadProgressChangedEventHandler()
 
 class DownloadStringCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.DownloadStringCompleted event. """
-    Instance = DownloadStringCompletedEventArgs
-    """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the data that is downloaded by a erload:System.Net.WebClient.DownloadStringAsync method.
 
@@ -1575,6 +1568,9 @@ Get: Result(self: DownloadStringCompletedEventArgs) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DownloadStringCompletedEventArgs()
 
 class DownloadStringCompletedEventHandler(MulticastDelegate):
     """
@@ -1582,8 +1578,6 @@ class DownloadStringCompletedEventHandler(MulticastDelegate):
     
     DownloadStringCompletedEventHandler(object: object, method: IntPtr)
     """
-    Instance = DownloadStringCompletedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: DownloadStringCompletedEventHandler, sender: object, e: DownloadStringCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -1605,9 +1599,7 @@ class DownloadStringCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1636,8 +1628,7 @@ class DownloadStringCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -1653,11 +1644,12 @@ class DownloadStringCompletedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DownloadStringCompletedEventHandler()
 
 class EndpointPermission():
     """ Defines an endpoint that is authorized by a System.Net.SocketPermission instance. """
-    Instance = EndpointPermission
-    """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
         Equals(self: EndpointPermission, obj: object) -> bool
@@ -1716,11 +1708,12 @@ Get: Transport(self: EndpointPermission) -> TransportType
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EndpointPermission()
 
 class WebRequest(MarshalByRefObject):
     """ Makes a request to a Uniform Resource Identifier (URI). This is an abstract class. """
-    Instance = WebRequest
-    """hardcoded/returns an instance of the class"""
     def Abort(self):
         """
         Abort(self: WebRequest)
@@ -1864,10 +1857,7 @@ class WebRequest(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2029,11 +2019,12 @@ Set: UseDefaultCredentials(self: WebRequest) = value
     DefaultCachePolicy = None
     DefaultWebProxy = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebRequest()
 
 class FileWebRequest(WebRequest):
     """ Provides a file system implementation of the System.Net.WebRequest class. """
-    Instance = FileWebRequest
-    """hardcoded/returns an instance of the class"""
     def Abort(self):
         """
         Abort(self: FileWebRequest)
@@ -2121,10 +2112,7 @@ class FileWebRequest(WebRequest):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2232,11 +2220,12 @@ Set: UseDefaultCredentials(self: FileWebRequest) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FileWebRequest()
 
 class WebResponse(MarshalByRefObject):
     """ Provides a response from a Uniform Resource Identifier (URI). This is an abstract class. """
-    Instance = WebResponse
-    """hardcoded/returns an instance of the class"""
     def Close(self):
         """
         Close(self: WebResponse)
@@ -2273,10 +2262,7 @@ class WebResponse(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2358,11 +2344,12 @@ Get: ResponseUri(self: WebResponse) -> Uri
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebResponse()
 
 class FileWebResponse(WebResponse):
     """ Provides a file system implementation of the System.Net.WebResponse class. """
-    Instance = FileWebResponse
-    """hardcoded/returns an instance of the class"""
     def Close(self):
         """
         Close(self: FileWebResponse)
@@ -2399,10 +2386,7 @@ class FileWebResponse(WebResponse):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2465,6 +2449,9 @@ Get: ResponseUri(self: FileWebResponse) -> Uri
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FileWebResponse()
 
 class FtpStatusCode:
     """
@@ -2472,8 +2459,6 @@ class FtpStatusCode:
     
     enum FtpStatusCode, values: AccountNeeded (532), ActionAbortedLocalProcessingError (451), ActionAbortedUnknownPageType (551), ActionNotTakenFilenameNotAllowed (553), ActionNotTakenFileUnavailable (550), ActionNotTakenFileUnavailableOrBusy (450), ActionNotTakenInsufficientSpace (452), ArgumentSyntaxError (501), BadCommandSequence (503), CantOpenData (425), ClosingControl (221), ClosingData (226), CommandExtraneous (202), CommandNotImplemented (502), CommandOK (200), CommandSyntaxError (500), ConnectionClosed (426), DataAlreadyOpen (125), DirectoryStatus (212), EnteringPassive (227), FileActionAborted (552), FileActionOK (250), FileCommandPending (350), FileStatus (213), LoggedInProceed (230), NeedLoginAccount (332), NotLoggedIn (530), OpeningData (150), PathnameCreated (257), RestartMarker (110), SendPasswordCommand (331), SendUserCommand (220), ServerWantsSecureSession (234), ServiceNotAvailable (421), ServiceTemporarilyNotAvailable (120), SystemType (215), Undefined (0)
     """
-    Instance = FtpStatusCode
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2546,11 +2531,12 @@ class FtpStatusCode:
     Undefined = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FtpStatusCode()
 
 class FtpWebRequest(WebRequest):
     """ Implements a File Transfer Protocol (FTP) client. """
-    Instance = FtpWebRequest
-    """hardcoded/returns an instance of the class"""
     def Abort(self):
         """
         Abort(self: FtpWebRequest)
@@ -2638,10 +2624,7 @@ class FtpWebRequest(WebRequest):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2815,11 +2798,12 @@ Set: UsePassive(self: FtpWebRequest) = value
 
     DefaultCachePolicy = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FtpWebRequest()
 
 class FtpWebResponse(WebResponse):
     """ Encapsulates a File Transfer Protocol (FTP) server's response to a request. """
-    Instance = FtpWebResponse
-    """hardcoded/returns an instance of the class"""
     def Close(self):
         """
         Close(self: FtpWebResponse)
@@ -2856,10 +2840,7 @@ class FtpWebResponse(WebResponse):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2949,6 +2930,9 @@ Get: WelcomeMessage(self: FtpWebResponse) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FtpWebResponse()
 
 class GlobalProxySelection():
     """
@@ -2956,8 +2940,6 @@ class GlobalProxySelection():
     
     GlobalProxySelection()
     """
-    Instance = GlobalProxySelection
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetEmptyWebProxy():
         """
@@ -2970,6 +2952,9 @@ class GlobalProxySelection():
 
     Select = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GlobalProxySelection()
 
 class HttpContinueDelegate(MulticastDelegate):
     """
@@ -2977,8 +2962,6 @@ class HttpContinueDelegate(MulticastDelegate):
     
     HttpContinueDelegate(object: object, method: IntPtr)
     """
-    Instance = HttpContinueDelegate
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, StatusCode, httpHeaders, callback, object):
         """ BeginInvoke(self: HttpContinueDelegate, StatusCode: int, httpHeaders: WebHeaderCollection, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -3000,9 +2983,7 @@ class HttpContinueDelegate(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -3031,8 +3012,7 @@ class HttpContinueDelegate(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -3048,6 +3028,9 @@ class HttpContinueDelegate(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpContinueDelegate()
 
 class HttpListener:
     """
@@ -3055,8 +3038,6 @@ class HttpListener:
     
     HttpListener()
     """
-    Instance = HttpListener
-    """hardcoded/returns an instance of the class"""
     def Abort(self):
         """
         Abort(self: HttpListener)
@@ -3223,6 +3204,9 @@ Set: UnsafeConnectionNtlmAuthentication(self: HttpListener) = value
     ExtendedProtectionSelector = None
     IsSupported = True
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpListener()
 
 class HttpListenerBasicIdentity(GenericIdentity):
     """
@@ -3230,8 +3214,6 @@ class HttpListenerBasicIdentity(GenericIdentity):
     
     HttpListenerBasicIdentity(username: str, password: str)
     """
-    Instance = HttpListenerBasicIdentity
-    """hardcoded/returns an instance of the class"""
     def CreateClaim(self, *args): #cannot find CLR method
         """ CreateClaim(self: ClaimsIdentity, reader: BinaryReader) -> Claim """
         pass
@@ -3263,11 +3245,12 @@ Get: Password(self: HttpListenerBasicIdentity) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpListenerBasicIdentity()
 
 class HttpListenerContext():
     """ Provides access to the request and response objects used by the System.Net.HttpListener class. This class cannot be inherited. """
-    Instance = HttpListenerContext
-    """hardcoded/returns an instance of the class"""
     def AcceptWebSocketAsync(self, subProtocol, *__args):
         """
         AcceptWebSocketAsync(self: HttpListenerContext, subProtocol: str) -> Task[HttpListenerWebSocketContext]
@@ -3299,6 +3282,9 @@ Get: User(self: HttpListenerContext) -> IPrincipal
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpListenerContext()
 
 class HttpListenerException(Win32Exception):
     """
@@ -3308,8 +3294,6 @@ class HttpListenerException(Win32Exception):
     HttpListenerException(errorCode: int)
     HttpListenerException(errorCode: int, message: str)
     """
-    Instance = HttpListenerException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -3340,11 +3324,12 @@ Get: ErrorCode(self: HttpListenerException) -> int
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpListenerException()
 
 class HttpListenerPrefixCollection:
     """ Represents the collection used to store Uniform Resource Identifier (URI) prefixes for System.Net.HttpListener objects. """
-    Instance = HttpListenerPrefixCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, uriPrefix):
         """
         Add(self: HttpListenerPrefixCollection, uriPrefix: str)
@@ -3453,11 +3438,12 @@ Get: IsSynchronized(self: HttpListenerPrefixCollection) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpListenerPrefixCollection()
 
 class HttpListenerRequest():
     """ Describes an incoming HTTP request to an System.Net.HttpListener object. This class cannot be inherited. """
-    Instance = HttpListenerRequest
-    """hardcoded/returns an instance of the class"""
     def BeginGetClientCertificate(self, requestCallback, state):
         """
         BeginGetClientCertificate(self: HttpListenerRequest, requestCallback: AsyncCallback, state: object) -> IAsyncResult
@@ -3696,11 +3682,12 @@ Get: UserLanguages(self: HttpListenerRequest) -> Array[str]
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpListenerRequest()
 
 class HttpListenerResponse:
     """ Represents a response to a request being handled by an System.Net.HttpListener object. """
-    Instance = HttpListenerResponse
-    """hardcoded/returns an instance of the class"""
     def Abort(self):
         """
         Abort(self: HttpListenerResponse)
@@ -3888,11 +3875,12 @@ Set: StatusDescription(self: HttpListenerResponse) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpListenerResponse()
 
 class HttpListenerTimeoutManager():
     # no doc
-    Instance = HttpListenerTimeoutManager
-    """hardcoded/returns an instance of the class"""
     DrainEntityBody = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: DrainEntityBody(self: HttpListenerTimeoutManager) -> TimeSpan
 
@@ -3930,6 +3918,9 @@ Set: RequestQueue(self: HttpListenerTimeoutManager) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpListenerTimeoutManager()
 
 class HttpRequestHeader:
     """
@@ -3937,8 +3928,6 @@ class HttpRequestHeader:
     
     enum HttpRequestHeader, values: Accept (20), AcceptCharset (21), AcceptEncoding (22), AcceptLanguage (23), Allow (10), Authorization (24), CacheControl (0), Connection (1), ContentEncoding (13), ContentLanguage (14), ContentLength (11), ContentLocation (15), ContentMd5 (16), ContentRange (17), ContentType (12), Cookie (25), Date (2), Expect (26), Expires (18), From (27), Host (28), IfMatch (29), IfModifiedSince (30), IfNoneMatch (31), IfRange (32), IfUnmodifiedSince (33), KeepAlive (3), LastModified (19), MaxForwards (34), Pragma (4), ProxyAuthorization (35), Range (37), Referer (36), Te (38), Trailer (5), TransferEncoding (6), Translate (39), Upgrade (7), UserAgent (40), Via (8), Warning (9)
     """
-    Instance = HttpRequestHeader
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -4015,6 +4004,9 @@ class HttpRequestHeader:
     Via = None
     Warning = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpRequestHeader()
 
 class HttpResponseHeader:
     """
@@ -4022,8 +4014,6 @@ class HttpResponseHeader:
     
     enum HttpResponseHeader, values: AcceptRanges (20), Age (21), Allow (10), CacheControl (0), Connection (1), ContentEncoding (13), ContentLanguage (14), ContentLength (11), ContentLocation (15), ContentMd5 (16), ContentRange (17), ContentType (12), Date (2), ETag (22), Expires (18), KeepAlive (3), LastModified (19), Location (23), Pragma (4), ProxyAuthenticate (24), RetryAfter (25), Server (26), SetCookie (27), Trailer (5), TransferEncoding (6), Upgrade (7), Vary (28), Via (8), Warning (9), WwwAuthenticate (29)
     """
-    Instance = HttpResponseHeader
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -4089,6 +4079,9 @@ class HttpResponseHeader:
     Warning = None
     WwwAuthenticate = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpResponseHeader()
 
 class HttpStatusCode:
     """
@@ -4096,8 +4089,6 @@ class HttpStatusCode:
     
     enum HttpStatusCode, values: Accepted (202), Ambiguous (300), BadGateway (502), BadRequest (400), Conflict (409), Continue (100), Created (201), ExpectationFailed (417), Forbidden (403), Found (302), GatewayTimeout (504), Gone (410), HttpVersionNotSupported (505), InternalServerError (500), LengthRequired (411), MethodNotAllowed (405), Moved (301), MovedPermanently (301), MultipleChoices (300), NoContent (204), NonAuthoritativeInformation (203), NotAcceptable (406), NotFound (404), NotImplemented (501), NotModified (304), OK (200), PartialContent (206), PaymentRequired (402), PreconditionFailed (412), ProxyAuthenticationRequired (407), Redirect (302), RedirectKeepVerb (307), RedirectMethod (303), RequestedRangeNotSatisfiable (416), RequestEntityTooLarge (413), RequestTimeout (408), RequestUriTooLong (414), ResetContent (205), SeeOther (303), ServiceUnavailable (503), SwitchingProtocols (101), TemporaryRedirect (307), Unauthorized (401), UnsupportedMediaType (415), Unused (306), UpgradeRequired (426), UseProxy (305)
     """
-    Instance = HttpStatusCode
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -4180,6 +4171,9 @@ class HttpStatusCode:
     UseProxy = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpStatusCode()
 
 class HttpVersion():
     """
@@ -4187,11 +4181,12 @@ class HttpVersion():
     
     HttpVersion()
     """
-    Instance = HttpVersion
-    """hardcoded/returns an instance of the class"""
     Version10 = None
     Version11 = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpVersion()
 
 class HttpWebRequest(WebRequest):
     """
@@ -4199,8 +4194,6 @@ class HttpWebRequest(WebRequest):
     
     HttpWebRequest()
     """
-    Instance = HttpWebRequest
-    """hardcoded/returns an instance of the class"""
     def Abort(self):
         """
         Abort(self: HttpWebRequest)
@@ -4343,10 +4336,7 @@ class HttpWebRequest(WebRequest):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -4698,6 +4688,9 @@ Set: UserAgent(self: HttpWebRequest) = value
     DefaultMaximumErrorResponseLength = 64
     DefaultMaximumResponseHeadersLength = 64
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpWebRequest()
 
 class HttpWebResponse(WebResponse):
     """
@@ -4705,8 +4698,6 @@ class HttpWebResponse(WebResponse):
     
     HttpWebResponse()
     """
-    Instance = HttpWebResponse
-    """hardcoded/returns an instance of the class"""
     def Close(self):
         """
         Close(self: HttpWebResponse)
@@ -4754,10 +4745,7 @@ class HttpWebResponse(WebResponse):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -4894,11 +4882,12 @@ Get: StatusDescription(self: HttpWebResponse) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpWebResponse()
 
 class IAuthenticationModule:
     """ Provides the base authentication interface for Web client authentication modules. """
-    Instance = IAuthenticationModule
-    """hardcoded/returns an instance of the class"""
     def Authenticate(self, challenge, request, credentials):
         """
         Authenticate(self: IAuthenticationModule, challenge: str, request: WebRequest, credentials: ICredentials) -> Authorization
@@ -4943,11 +4932,12 @@ Get: CanPreAuthenticate(self: IAuthenticationModule) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IAuthenticationModule()
 
 class ICertificatePolicy:
     """ Validates a server certificate. """
-    Instance = ICertificatePolicy
-    """hardcoded/returns an instance of the class"""
     def CheckValidationResult(self, srvPoint, certificate, request, certificateProblem):
         """
         CheckValidationResult(self: ICertificatePolicy, srvPoint: ServicePoint, certificate: X509Certificate, request: WebRequest, certificateProblem: int) -> bool
@@ -4966,11 +4956,12 @@ class ICertificatePolicy:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ICertificatePolicy()
 
 class ICredentialPolicy:
     """ Defines the credential policy to be used for resource requests that are made using System.Net.WebRequest and its derived classes. """
-    Instance = ICredentialPolicy
-    """hardcoded/returns an instance of the class"""
     def ShouldSendCredential(self, challengeUri, request, credential, authenticationModule):
         """
         ShouldSendCredential(self: ICredentialPolicy, challengeUri: Uri, request: WebRequest, credential: NetworkCredential, authenticationModule: IAuthenticationModule) -> bool
@@ -4989,11 +4980,12 @@ class ICredentialPolicy:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ICredentialPolicy()
 
 class ICredentials:
     """ Provides the base authentication interface for retrieving credentials for Web client authentication. """
-    Instance = ICredentials
-    """hardcoded/returns an instance of the class"""
     def GetCredential(self, uri, authType):
         """
         GetCredential(self: ICredentials, uri: Uri, authType: str) -> NetworkCredential
@@ -5010,11 +5002,12 @@ class ICredentials:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ICredentials()
 
 class ICredentialsByHost:
     """ Provides the interface for retrieving credentials for a host, port, and authentication type. """
-    Instance = ICredentialsByHost
-    """hardcoded/returns an instance of the class"""
     def GetCredential(self, host, port, authenticationType):
         """
         GetCredential(self: ICredentialsByHost, host: str, port: int, authenticationType: str) -> NetworkCredential
@@ -5024,8 +5017,7 @@ class ICredentialsByHost:
             host: The host computer that is authenticating the client.
             port: The port on host that the client will communicate with.
             authenticationType: The authentication protocol.
-            Returns: A System.Net.NetworkCredential for the specified host, port, and authentication protocol, or null if there are no credentials available for the specified host, port, and 
-             authentication protocol.
+            Returns: A System.Net.NetworkCredential for the specified host, port, and authentication protocol, or null if there are no credentials available for the specified host, port, and authentication protocol.
         """
         pass
 
@@ -5033,6 +5025,9 @@ class ICredentialsByHost:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ICredentialsByHost()
 
 class IPAddress():
     """
@@ -5042,8 +5037,6 @@ class IPAddress():
     IPAddress(address: Array[Byte], scopeid: Int64)
     IPAddress(address: Array[Byte])
     """
-    Instance = IPAddress
-    """hardcoded/returns an instance of the class"""
     def Equals(self, comparand):
         """
         Equals(self: IPAddress, comparand: object) -> bool
@@ -5255,6 +5248,9 @@ Set: ScopeId(self: IPAddress) = value
     Loopback = None
     None_ =None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPAddress()
 
 class IPEndPoint(EndPoint):
     """
@@ -5263,8 +5259,6 @@ class IPEndPoint(EndPoint):
     IPEndPoint(address: Int64, port: int)
     IPEndPoint(address: IPAddress, port: int)
     """
-    Instance = IPEndPoint
-    """hardcoded/returns an instance of the class"""
     def Create(self, socketAddress):
         """
         Create(self: IPEndPoint, socketAddress: SocketAddress) -> EndPoint
@@ -5356,6 +5350,9 @@ Set: Port(self: IPEndPoint) = value
     MaxPort = 65535
     MinPort = 0
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPEndPoint()
 
 class IPHostEntry():
     """
@@ -5363,8 +5360,6 @@ class IPHostEntry():
     
     IPHostEntry()
     """
-    Instance = IPHostEntry
-    """hardcoded/returns an instance of the class"""
     AddressList = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets a list of IP addresses that are associated with a host.
 
@@ -5390,11 +5385,12 @@ Set: HostName(self: IPHostEntry) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPHostEntry()
 
 class IWebProxy:
     """ Provides the base interface for implementation of proxy access for the System.Net.WebRequest class. """
-    Instance = IWebProxy
-    """hardcoded/returns an instance of the class"""
     def GetProxy(self, destination):
         """
         GetProxy(self: IWebProxy, destination: Uri) -> Uri
@@ -5430,11 +5426,12 @@ Set: Credentials(self: IWebProxy) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IWebProxy()
 
 class IWebProxyScript:
     """ Provides the base interface to load and execute scripts for automatic proxy detection. """
-    Instance = IWebProxyScript
-    """hardcoded/returns an instance of the class"""
     def Close(self):
         """
         Close(self: IWebProxyScript)
@@ -5471,11 +5468,12 @@ class IWebProxyScript:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IWebProxyScript()
 
 class IWebRequestCreate:
     """ Provides the base interface for creating System.Net.WebRequest instances. """
-    Instance = IWebRequestCreate
-    """hardcoded/returns an instance of the class"""
     def Create(self, uri):
         """
         Create(self: IWebRequestCreate, uri: Uri) -> WebRequest
@@ -5491,6 +5489,9 @@ class IWebRequestCreate:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IWebRequestCreate()
 
 class NetworkAccess:
     """
@@ -5498,8 +5499,6 @@ class NetworkAccess:
     
     enum (flags) NetworkAccess, values: Accept (128), Connect (64)
     """
-    Instance = NetworkAccess
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -5537,6 +5536,9 @@ class NetworkAccess:
     Connect = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetworkAccess()
 
 class NetworkCredential:
     """
@@ -5548,8 +5550,6 @@ class NetworkCredential:
     NetworkCredential(userName: str, password: str, domain: str)
     NetworkCredential(userName: str, password: SecureString, domain: str)
     """
-    Instance = NetworkCredential
-    """hardcoded/returns an instance of the class"""
     def GetCredential(self, *__args):
         """
         GetCredential(self: NetworkCredential, uri: Uri, authType: str) -> NetworkCredential
@@ -5566,8 +5566,7 @@ class NetworkCredential:
             host: The host computer that authenticates the client.
             port: The port on the host that the client communicates with.
             authenticationType: The type of authentication requested, as defined in the System.Net.IAuthenticationModule.AuthenticationType property.
-            Returns: A System.Net.NetworkCredential for the specified host, port, and authentication protocol, or null if there are no credentials available for the specified host, port, and 
-             authentication protocol.
+            Returns: A System.Net.NetworkCredential for the specified host, port, and authentication protocol, or null if there are no credentials available for the specified host, port, and authentication protocol.
         """
         pass
 
@@ -5623,11 +5622,12 @@ Set: UserName(self: NetworkCredential) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetworkCredential()
 
 class OpenReadCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.OpenReadCompleted event. """
-    Instance = OpenReadCompletedEventArgs
-    """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets a readable stream that contains data downloaded by a erload:System.Net.WebClient.DownloadDataAsync method.
 
@@ -5636,6 +5636,9 @@ Get: Result(self: OpenReadCompletedEventArgs) -> Stream
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OpenReadCompletedEventArgs()
 
 class OpenReadCompletedEventHandler(MulticastDelegate):
     """
@@ -5643,8 +5646,6 @@ class OpenReadCompletedEventHandler(MulticastDelegate):
     
     OpenReadCompletedEventHandler(object: object, method: IntPtr)
     """
-    Instance = OpenReadCompletedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: OpenReadCompletedEventHandler, sender: object, e: OpenReadCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -5666,9 +5667,7 @@ class OpenReadCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -5697,8 +5696,7 @@ class OpenReadCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -5714,11 +5712,12 @@ class OpenReadCompletedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OpenReadCompletedEventHandler()
 
 class OpenWriteCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.OpenWriteCompleted event. """
-    Instance = OpenWriteCompletedEventArgs
-    """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets a writable stream that is used to send data to a server.
 
@@ -5727,6 +5726,9 @@ Get: Result(self: OpenWriteCompletedEventArgs) -> Stream
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OpenWriteCompletedEventArgs()
 
 class OpenWriteCompletedEventHandler(MulticastDelegate):
     """
@@ -5734,8 +5736,6 @@ class OpenWriteCompletedEventHandler(MulticastDelegate):
     
     OpenWriteCompletedEventHandler(object: object, method: IntPtr)
     """
-    Instance = OpenWriteCompletedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: OpenWriteCompletedEventHandler, sender: object, e: OpenWriteCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -5757,9 +5757,7 @@ class OpenWriteCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -5788,8 +5786,7 @@ class OpenWriteCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -5805,6 +5802,9 @@ class OpenWriteCompletedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OpenWriteCompletedEventHandler()
 
 class ProtocolViolationException:
     """
@@ -5813,8 +5813,6 @@ class ProtocolViolationException:
     ProtocolViolationException()
     ProtocolViolationException(message: str)
     """
-    Instance = ProtocolViolationException
-    """hardcoded/returns an instance of the class"""
     def GetObjectData(self, serializationInfo, streamingContext):
         """
         GetObjectData(self: ProtocolViolationException, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
@@ -5846,6 +5844,9 @@ class ProtocolViolationException:
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProtocolViolationException()
 
 class SecurityProtocolType:
     """
@@ -5853,8 +5854,6 @@ class SecurityProtocolType:
     
     enum (flags) SecurityProtocolType, values: Ssl3 (48), SystemDefault (0), Tls (192), Tls11 (768), Tls12 (3072)
     """
-    Instance = SecurityProtocolType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -5895,11 +5894,12 @@ class SecurityProtocolType:
     Tls12 = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SecurityProtocolType()
 
 class ServicePoint():
     """ Provides connection management for HTTP connections. """
-    Instance = ServicePoint
-    """hardcoded/returns an instance of the class"""
     def CloseConnectionGroup(self, connectionGroupName):
         """
         CloseConnectionGroup(self: ServicePoint, connectionGroupName: str) -> bool
@@ -5916,14 +5916,9 @@ class ServicePoint():
         SetTcpKeepAlive(self: ServicePoint, enabled: bool, keepAliveTime: int, keepAliveInterval: int)
             Enables or disables the keep-alive option on a TCP connection.
         
-            enabled: If set to true, then the TCP keep-alive option on a TCP connection will be enabled using the specified keepAliveTime and keepAliveInterval values. If set to false, then the 
-             TCP keep-alive option is disabled and the remaining parameters are ignored.The default value is false.
-        
-            keepAliveTime: Specifies the timeout, in milliseconds, with no activity until the first keep-alive packet is sent. The value must be greater than 0.  If a value of less than or equal to 
-             zero is passed an System.ArgumentOutOfRangeException is thrown.
-        
-            keepAliveInterval: Specifies the interval, in milliseconds, between when successive keep-alive packets are sent if no acknowledgement is received.The value must be greater than 0.  If a value 
-             of less than or equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
+            enabled: If set to true, then the TCP keep-alive option on a TCP connection will be enabled using the specified keepAliveTime and keepAliveInterval values. If set to false, then the TCP keep-alive option is disabled and the remaining parameters are ignored.The default value is false.
+            keepAliveTime: Specifies the timeout, in milliseconds, with no activity until the first keep-alive packet is sent. The value must be greater than 0.  If a value of less than or equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
+            keepAliveInterval: Specifies the interval, in milliseconds, between when successive keep-alive packets are sent if no acknowledgement is received.The value must be greater than 0.  If a value of less than or equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
         """
         pass
 
@@ -6040,11 +6035,12 @@ Set: UseNagleAlgorithm(self: ServicePoint) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ServicePoint()
 
 class ServicePointManager():
     """ Manages the collection of System.Net.ServicePoint objects. """
-    Instance = ServicePointManager
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def FindServicePoint(*__args):
         """
@@ -6056,9 +6052,7 @@ class ServicePointManager():
             Returns: The System.Net.ServicePoint object that manages communications for the request.
         FindServicePoint(uriString: str, proxy: IWebProxy) -> ServicePoint
         
-            Finds an existing System.Net.ServicePoint object or creates a new System.Net.ServicePoint object to manage communications with the specified Uniform Resource Identifier 
-             (URI).
-        
+            Finds an existing System.Net.ServicePoint object or creates a new System.Net.ServicePoint object to manage communications with the specified Uniform Resource Identifier (URI).
         
             uriString: The URI of the Internet resource to be contacted.
             proxy: The proxy data for this request.
@@ -6079,14 +6073,9 @@ class ServicePointManager():
         SetTcpKeepAlive(enabled: bool, keepAliveTime: int, keepAliveInterval: int)
             Enables or disables the keep-alive option on a TCP connection.
         
-            enabled: If set to true, then the TCP keep-alive option on a TCP connection will be enabled using the specified keepAliveTime and keepAliveInterval values. If set to false, then the 
-             TCP keep-alive option is disabled and the remaining parameters are ignored.The default value is false.
-        
-            keepAliveTime: Specifies the timeout, in milliseconds, with no activity until the first keep-alive packet is sent.The value must be greater than 0.  If a value of less than or equal to 
-             zero is passed an System.ArgumentOutOfRangeException is thrown.
-        
-            keepAliveInterval: Specifies the interval, in milliseconds, between when successive keep-alive packets are sent if no acknowledgement is received.The value must be greater than 0.  If a value 
-             of less than or equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
+            enabled: If set to true, then the TCP keep-alive option on a TCP connection will be enabled using the specified keepAliveTime and keepAliveInterval values. If set to false, then the TCP keep-alive option is disabled and the remaining parameters are ignored.The default value is false.
+            keepAliveTime: Specifies the timeout, in milliseconds, with no activity until the first keep-alive packet is sent.The value must be greater than 0.  If a value of less than or equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
+            keepAliveInterval: Specifies the interval, in milliseconds, between when successive keep-alive packets are sent if no acknowledgement is received.The value must be greater than 0.  If a value of less than or equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
         """
         pass
 
@@ -6106,6 +6095,9 @@ class ServicePointManager():
     ServerCertificateValidationCallback = None
     UseNagleAlgorithm = True
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ServicePointManager()
 
 class SocketAddress():
     """
@@ -6114,8 +6106,6 @@ class SocketAddress():
     SocketAddress(family: AddressFamily, size: int)
     SocketAddress(family: AddressFamily)
     """
-    Instance = SocketAddress
-    """hardcoded/returns an instance of the class"""
     def Equals(self, comparand):
         """
         Equals(self: SocketAddress, comparand: object) -> bool
@@ -6183,6 +6173,9 @@ Get: Size(self: SocketAddress) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SocketAddress()
 
 class SocketPermission(CodeAccessPermission):
     """
@@ -6191,8 +6184,6 @@ class SocketPermission(CodeAccessPermission):
     SocketPermission(state: PermissionState)
     SocketPermission(access: NetworkAccess, transport: TransportType, hostName: str, portNumber: int)
     """
-    Instance = SocketPermission
-    """hardcoded/returns an instance of the class"""
     def AddPermission(self, access, transport, hostName, portNumber):
         """
         AddPermission(self: SocketPermission, access: NetworkAccess, transport: TransportType, hostName: str, portNumber: int)
@@ -6230,8 +6221,7 @@ class SocketPermission(CodeAccessPermission):
             Returns the logical intersection between two System.Net.SocketPermission instances.
         
             target: The System.Net.SocketPermission instance to intersect with the current instance.
-            Returns: The System.Net.SocketPermission instance that represents the intersection of two System.Net.SocketPermission instances. If the intersection is empty, the method returns 
-             null. If the target parameter is a null reference, the method returns null.
+            Returns: The System.Net.SocketPermission instance that represents the intersection of two System.Net.SocketPermission instances. If the intersection is empty, the method returns null. If the target parameter is a null reference, the method returns null.
         """
         pass
 
@@ -6242,8 +6232,7 @@ class SocketPermission(CodeAccessPermission):
             Determines if the current permission is a subset of the specified permission.
         
             target: A System.Net.SocketPermission that is to be tested for the subset relationship.
-            Returns: If target is null, this method returns true if the current instance defines no permissions; otherwise, false. If target is not null, this method returns true if the current 
-             instance defines a subset of target permissions; otherwise, false.
+            Returns: If target is null, this method returns true if the current instance defines no permissions; otherwise, false. If target is not null, this method returns true if the current instance defines a subset of target permissions; otherwise, false.
         """
         pass
 
@@ -6272,8 +6261,7 @@ class SocketPermission(CodeAccessPermission):
             Returns the logical union between two System.Net.SocketPermission instances.
         
             target: The System.Net.SocketPermission instance to combine with the current instance.
-            Returns: The System.Net.SocketPermission instance that represents the union of two System.Net.SocketPermission instances. If target parameter is null, it returns a copy of the 
-             current instance.
+            Returns: The System.Net.SocketPermission instance that represents the union of two System.Net.SocketPermission instances. If target parameter is null, it returns a copy of the current instance.
         """
         pass
 
@@ -6312,6 +6300,9 @@ Get: ConnectList(self: SocketPermission) -> IEnumerator
 
     AllPorts = -1
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SocketPermission()
 
 class SocketPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -6319,8 +6310,6 @@ class SocketPermissionAttribute(CodeAccessSecurityAttribute):
     
     SocketPermissionAttribute(action: SecurityAction)
     """
-    Instance = SocketPermissionAttribute
-    """hardcoded/returns an instance of the class"""
     def CreatePermission(self):
         """
         CreatePermission(self: SocketPermissionAttribute) -> IPermission
@@ -6375,11 +6364,12 @@ Set: Transport(self: SocketPermissionAttribute) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SocketPermissionAttribute()
 
 class TransportContext():
     """ The System.Net.TransportContext class provides additional context about the underlying transport layer. """
-    Instance = TransportContext
-    """hardcoded/returns an instance of the class"""
     def GetChannelBinding(self, kind):
         """
         GetChannelBinding(self: TransportContext, kind: ChannelBindingKind) -> ChannelBinding
@@ -6387,8 +6377,7 @@ class TransportContext():
             Retrieves the requested channel binding.
         
             kind: The type of channel binding to retrieve.
-            Returns: The requested System.Security.Authentication.ExtendedProtection.ChannelBinding, or null if the channel binding is not supported by the current transport or by the operating 
-             system.
+            Returns: The requested System.Security.Authentication.ExtendedProtection.ChannelBinding, or null if the channel binding is not supported by the current transport or by the operating system.
         """
         pass
 
@@ -6396,6 +6385,9 @@ class TransportContext():
         """ GetTlsTokenBindings(self: TransportContext) -> IEnumerable[TokenBinding] """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportContext()
 
 class TransportType:
     """
@@ -6403,8 +6395,6 @@ class TransportType:
     
     enum TransportType, values: All (3), Connectionless (1), ConnectionOriented (2), Tcp (2), Udp (1)
     """
-    Instance = TransportType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -6445,11 +6435,12 @@ class TransportType:
     Udp = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportType()
 
 class UploadDataCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.UploadDataCompleted event. """
-    Instance = UploadDataCompletedEventArgs
-    """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the server reply to a data upload operation started by calling an erload:System.Net.WebClient.UploadDataAsync method.
 
@@ -6458,6 +6449,9 @@ Get: Result(self: UploadDataCompletedEventArgs) -> Array[Byte]
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UploadDataCompletedEventArgs()
 
 class UploadDataCompletedEventHandler(MulticastDelegate):
     """
@@ -6465,8 +6459,6 @@ class UploadDataCompletedEventHandler(MulticastDelegate):
     
     UploadDataCompletedEventHandler(object: object, method: IntPtr)
     """
-    Instance = UploadDataCompletedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: UploadDataCompletedEventHandler, sender: object, e: UploadDataCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -6488,9 +6480,7 @@ class UploadDataCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -6519,8 +6509,7 @@ class UploadDataCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -6536,11 +6525,12 @@ class UploadDataCompletedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UploadDataCompletedEventHandler()
 
 class UploadFileCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.UploadFileCompleted event. """
-    Instance = UploadFileCompletedEventArgs
-    """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the server reply to a data upload operation that is started by calling an erload:System.Net.WebClient.UploadFileAsync method.
 
@@ -6549,6 +6539,9 @@ Get: Result(self: UploadFileCompletedEventArgs) -> Array[Byte]
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UploadFileCompletedEventArgs()
 
 class UploadFileCompletedEventHandler(MulticastDelegate):
     """
@@ -6556,8 +6549,6 @@ class UploadFileCompletedEventHandler(MulticastDelegate):
     
     UploadFileCompletedEventHandler(object: object, method: IntPtr)
     """
-    Instance = UploadFileCompletedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: UploadFileCompletedEventHandler, sender: object, e: UploadFileCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -6579,9 +6570,7 @@ class UploadFileCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -6610,8 +6599,7 @@ class UploadFileCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -6627,11 +6615,12 @@ class UploadFileCompletedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UploadFileCompletedEventHandler()
 
 class UploadProgressChangedEventArgs(ProgressChangedEventArgs):
     """ Provides data for the System.Net.WebClient.UploadProgressChanged event of a System.Net.WebClient. """
-    Instance = UploadProgressChangedEventArgs
-    """hardcoded/returns an instance of the class"""
     BytesReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of bytes received.
 
@@ -6661,6 +6650,9 @@ Get: TotalBytesToSend(self: UploadProgressChangedEventArgs) -> Int64
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UploadProgressChangedEventArgs()
 
 class UploadProgressChangedEventHandler(MulticastDelegate):
     """
@@ -6668,8 +6660,6 @@ class UploadProgressChangedEventHandler(MulticastDelegate):
     
     UploadProgressChangedEventHandler(object: object, method: IntPtr)
     """
-    Instance = UploadProgressChangedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: UploadProgressChangedEventHandler, sender: object, e: UploadProgressChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -6691,9 +6681,7 @@ class UploadProgressChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -6722,8 +6710,7 @@ class UploadProgressChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -6739,11 +6726,12 @@ class UploadProgressChangedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UploadProgressChangedEventHandler()
 
 class UploadStringCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.UploadStringCompleted event. """
-    Instance = UploadStringCompletedEventArgs
-    """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the server reply to a string upload operation that is started by calling an erload:System.Net.WebClient.UploadStringAsync method.
 
@@ -6752,6 +6740,9 @@ Get: Result(self: UploadStringCompletedEventArgs) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UploadStringCompletedEventArgs()
 
 class UploadStringCompletedEventHandler(MulticastDelegate):
     """
@@ -6759,8 +6750,6 @@ class UploadStringCompletedEventHandler(MulticastDelegate):
     
     UploadStringCompletedEventHandler(object: object, method: IntPtr)
     """
-    Instance = UploadStringCompletedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: UploadStringCompletedEventHandler, sender: object, e: UploadStringCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -6782,9 +6771,7 @@ class UploadStringCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -6813,8 +6800,7 @@ class UploadStringCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -6830,11 +6816,12 @@ class UploadStringCompletedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UploadStringCompletedEventHandler()
 
 class UploadValuesCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.WebClient.UploadValuesCompleted event. """
-    Instance = UploadValuesCompletedEventArgs
-    """hardcoded/returns an instance of the class"""
     Result = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the server reply to a data upload operation started by calling an erload:System.Net.WebClient.UploadValuesAsync method.
 
@@ -6843,6 +6830,9 @@ Get: Result(self: UploadValuesCompletedEventArgs) -> Array[Byte]
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UploadValuesCompletedEventArgs()
 
 class UploadValuesCompletedEventHandler(MulticastDelegate):
     """
@@ -6850,8 +6840,6 @@ class UploadValuesCompletedEventHandler(MulticastDelegate):
     
     UploadValuesCompletedEventHandler(object: object, method: IntPtr)
     """
-    Instance = UploadValuesCompletedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: UploadValuesCompletedEventHandler, sender: object, e: UploadValuesCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -6873,9 +6861,7 @@ class UploadValuesCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -6904,8 +6890,7 @@ class UploadValuesCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -6921,6 +6906,9 @@ class UploadValuesCompletedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UploadValuesCompletedEventHandler()
 
 class WebClient(Component):
     """
@@ -6928,8 +6916,6 @@ class WebClient(Component):
     
     WebClient()
     """
-    Instance = WebClient
-    """hardcoded/returns an instance of the class"""
     def CancelAsync(self):
         """
         CancelAsync(self: WebClient)
@@ -7067,8 +7053,7 @@ class WebClient(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified 
-             service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -7107,10 +7092,7 @@ class WebClient(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -7427,24 +7409,18 @@ class WebClient(Component):
         UploadFileAsync(self: WebClient, address: Uri, fileName: str)
             Uploads the specified local file to the specified resource, using the POST method. This method does not block the calling thread.
         
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or 
-             ASP page.
-        
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP page.
             fileName: The file to send to the resource.
         UploadFileAsync(self: WebClient, address: Uri, method: str, fileName: str)
             Uploads the specified local file to the specified resource, using the POST method. This method does not block the calling thread.
         
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or 
-             ASP page.
-        
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP page.
             method: The HTTP method used to send the data to the resource. If null, the default is POST for http and STOR for ftp.
             fileName: The file to send to the resource.
         UploadFileAsync(self: WebClient, address: Uri, method: str, fileName: str, userToken: object)
             Uploads the specified local file to the specified resource, using the POST method. This method does not block the calling thread.
         
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or 
-             ASP page.
-        
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP page.
             method: The HTTP method used to send the data to the resource. If null, the default is POST for http and STOR for ftp.
             fileName: The file to send to the resource.
             userToken: A user-defined object that is passed to the method invoked when the asynchronous operation completes.
@@ -7466,18 +7442,14 @@ class WebClient(Component):
         
             Uploads the specified string to the specified resource, using the POST method.
         
-            address: The URI of the resource to receive the string. For Http resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script 
-             or ASP page.
-        
+            address: The URI of the resource to receive the string. For Http resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP page.
             data: The string to be uploaded.
             Returns: A System.String containing the response sent by the server.
         UploadString(self: WebClient, address: Uri, data: str) -> str
         
             Uploads the specified string to the specified resource, using the POST method.
         
-            address: The URI of the resource to receive the string. For Http resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script 
-             or ASP page.
-        
+            address: The URI of the resource to receive the string. For Http resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP page.
             data: The string to be uploaded.
             Returns: A System.String containing the response sent by the server.
         UploadString(self: WebClient, address: str, method: str, data: str) -> str
@@ -7504,24 +7476,18 @@ class WebClient(Component):
         UploadStringAsync(self: WebClient, address: Uri, data: str)
             Uploads the specified string to the specified resource. This method does not block the calling thread.
         
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or 
-             ASP page.
-        
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP page.
             data: The string to be uploaded.
         UploadStringAsync(self: WebClient, address: Uri, method: str, data: str)
             Uploads the specified string to the specified resource. This method does not block the calling thread.
         
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or 
-             ASP page.
-        
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP page.
             method: The HTTP method used to send the file to the resource. If null, the default is POST for http and STOR for ftp.
             data: The string to be uploaded.
         UploadStringAsync(self: WebClient, address: Uri, method: str, data: str, userToken: object)
             Uploads the specified string to the specified resource. This method does not block the calling thread.
         
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or 
-             ASP page.
-        
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP page.
             method: The HTTP method used to send the file to the resource. If null, the default is POST for http and STOR for ftp.
             data: The string to be uploaded.
             userToken: A user-defined object that is passed to the method invoked when the asynchronous operation completes.
@@ -7580,17 +7546,13 @@ class WebClient(Component):
             address: The URI of the resource to receive the collection. This URI must identify a resource that can accept a request sent with the default method. See remarks.
             data: The System.Collections.Specialized.NameValueCollection to send to the resource.
         UploadValuesAsync(self: WebClient, address: Uri, method: str, data: NameValueCollection)
-            Uploads the data in the specified name/value collection to the resource identified by the specified URI, using the specified method. This method does not block the calling 
-             thread.
-        
+            Uploads the data in the specified name/value collection to the resource identified by the specified URI, using the specified method. This method does not block the calling thread.
         
             address: The URI of the resource to receive the collection. This URI must identify a resource that can accept a request sent with the method method.
             method: The method used to send the string to the resource. If null, the default is POST for http and STOR for ftp.
             data: The System.Collections.Specialized.NameValueCollection to send to the resource.
         UploadValuesAsync(self: WebClient, address: Uri, method: str, data: NameValueCollection, userToken: object)
-            Uploads the data in the specified name/value collection to the resource identified by the specified URI, using the specified method. This method does not block the calling 
-             thread, and allows the caller to pass an object to the method that is invoked when the operation completes.
-        
+            Uploads the data in the specified name/value collection to the resource identified by the specified URI, using the specified method. This method does not block the calling thread, and allows the caller to pass an object to the method that is invoked when the operation completes.
         
             address: The URI of the resource to receive the collection. This URI must identify a resource that can accept a request sent with the method method.
             method: The HTTP method used to send the string to the resource. If null, the default is POST for http and STOR for ftp.
@@ -7742,6 +7704,9 @@ Set: UseDefaultCredentials(self: WebClient) = value
     UploadValuesCompleted = None
     WriteStreamClosed = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebClient()
 
 class WebException:
     """
@@ -7753,8 +7718,6 @@ class WebException:
     WebException(message: str, status: WebExceptionStatus)
     WebException(message: str, innerException: Exception, status: WebExceptionStatus, response: WebResponse)
     """
-    Instance = WebException
-    """hardcoded/returns an instance of the class"""
     def GetObjectData(self, serializationInfo, streamingContext):
         """
         GetObjectData(self: WebException, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
@@ -7804,6 +7767,9 @@ Get: Status(self: WebException) -> WebExceptionStatus
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebException()
 
 class WebExceptionStatus:
     """
@@ -7811,8 +7777,6 @@ class WebExceptionStatus:
     
     enum WebExceptionStatus, values: CacheEntryNotFound (18), ConnectFailure (2), ConnectionClosed (8), KeepAliveFailure (12), MessageLengthLimitExceeded (17), NameResolutionFailure (1), Pending (13), PipelineFailure (5), ProtocolError (7), ProxyNameResolutionFailure (15), ReceiveFailure (3), RequestCanceled (6), RequestProhibitedByCachePolicy (19), RequestProhibitedByProxy (20), SecureChannelFailure (10), SendFailure (4), ServerProtocolViolation (11), Success (0), Timeout (14), TrustFailure (9), UnknownError (16)
     """
-    Instance = WebExceptionStatus
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -7869,6 +7833,9 @@ class WebExceptionStatus:
     UnknownError = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebExceptionStatus()
 
 class WebHeaderCollection(NameValueCollection):
     """
@@ -7876,8 +7843,6 @@ class WebHeaderCollection(NameValueCollection):
     
     WebHeaderCollection()
     """
-    Instance = WebHeaderCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
         Add(self: WebHeaderCollection, name: str, value: str)
@@ -8011,9 +7976,7 @@ class WebHeaderCollection(NameValueCollection):
     def BaseSet(self, *args): #cannot find CLR method
         """
         BaseSet(self: NameObjectCollectionBase, name: str, value: object)
-            Sets the value of the first entry with the specified key in the System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, adds an entry with 
-             the specified key and value into the System.Collections.Specialized.NameObjectCollectionBase instance.
-        
+            Sets the value of the first entry with the specified key in the System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, adds an entry with the specified key and value into the System.Collections.Specialized.NameObjectCollectionBase instance.
         
             name: The System.String key of the entry to set. The key can be null.
             value: The System.Object that represents the new value of the entry to set. The value can be null.
@@ -8251,6 +8214,9 @@ Get: Keys(self: WebHeaderCollection) -> KeysCollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebHeaderCollection()
 
 class WebPermission(CodeAccessPermission):
     """
@@ -8261,8 +8227,6 @@ class WebPermission(CodeAccessPermission):
     WebPermission(access: NetworkAccess, uriRegex: Regex)
     WebPermission(access: NetworkAccess, uriString: str)
     """
-    Instance = WebPermission
-    """hardcoded/returns an instance of the class"""
     def AddPermission(self, access, *__args):
         """
         AddPermission(self: WebPermission, access: NetworkAccess, uriString: str)
@@ -8314,8 +8278,7 @@ class WebPermission(CodeAccessPermission):
             Determines whether the current System.Net.WebPermission is a subset of the specified object.
         
             target: The System.Net.WebPermission to compare to the current System.Net.WebPermission.
-            Returns: true if the current instance is a subset of the target parameter; otherwise, false. If the target is null, the method returns true for an empty current permission that is 
-             not unrestricted and false otherwise.
+            Returns: true if the current instance is a subset of the target parameter; otherwise, false. If the target is null, the method returns true for an empty current permission that is not unrestricted and false otherwise.
         """
         pass
 
@@ -8324,8 +8287,7 @@ class WebPermission(CodeAccessPermission):
         IsUnrestricted(self: WebPermission) -> bool
         
             Checks the overall permission state of the System.Net.WebPermission.
-            Returns: true if the System.Net.WebPermission was created with the System.Security.Permissions.PermissionState.UnrestrictedSystem.Security.Permissions.PermissionState; otherwise, 
-             false.
+            Returns: true if the System.Net.WebPermission was created with the System.Security.Permissions.PermissionState.UnrestrictedSystem.Security.Permissions.PermissionState; otherwise, false.
         """
         pass
 
@@ -8345,9 +8307,7 @@ class WebPermission(CodeAccessPermission):
             Returns the logical union between two instances of the System.Net.WebPermission class.
         
             target: The System.Net.WebPermission to combine with the current System.Net.WebPermission.
-            Returns: A System.Net.WebPermission that represents the union of the current instance and the target parameter. If either WebPermission is 
-             System.Security.Permissions.PermissionState.Unrestricted, the method returns a System.Net.WebPermission that is System.Security.Permissions.PermissionState.Unrestricted. If 
-             the target is null, the method returns a copy of the current System.Net.WebPermission.
+            Returns: A System.Net.WebPermission that represents the union of the current instance and the target parameter. If either WebPermission is System.Security.Permissions.PermissionState.Unrestricted, the method returns a System.Net.WebPermission that is System.Security.Permissions.PermissionState.Unrestricted. If the target is null, the method returns a copy of the current System.Net.WebPermission.
         """
         pass
 
@@ -8386,6 +8346,9 @@ Get: ConnectList(self: WebPermission) -> IEnumerator
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebPermission()
 
 class WebPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -8393,8 +8356,6 @@ class WebPermissionAttribute(CodeAccessSecurityAttribute):
     
     WebPermissionAttribute(action: SecurityAction)
     """
-    Instance = WebPermissionAttribute
-    """hardcoded/returns an instance of the class"""
     def CreatePermission(self):
         """
         CreatePermission(self: WebPermissionAttribute) -> IPermission
@@ -8449,6 +8410,9 @@ Set: ConnectPattern(self: WebPermissionAttribute) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebPermissionAttribute()
 
 class WebProxy:
     """
@@ -8465,8 +8429,6 @@ class WebProxy:
     WebProxy(Address: str, BypassOnLocal: bool, BypassList: Array[str])
     WebProxy(Address: str, BypassOnLocal: bool, BypassList: Array[str], Credentials: ICredentials)
     """
-    Instance = WebProxy
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetDefaultProxy():
         """
@@ -8585,11 +8547,12 @@ Set: UseDefaultCredentials(self: WebProxy) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebProxy()
 
 class WebRequestMethods():
     """ Container class for System.Net.WebRequestMethods.Ftp, System.Net.WebRequestMethods.File, and System.Net.WebRequestMethods.Http classes. This class cannot be inherited """
-    Instance = WebRequestMethods
-    """hardcoded/returns an instance of the class"""
     File = None
     Ftp = None
     Http = None
@@ -8599,11 +8562,12 @@ class WebRequestMethods():
         'Http',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebRequestMethods()
 
 class WebUtility():
     """ Provides methods for encoding and decoding URLs when processing Web requests. """
-    Instance = WebUtility
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def HtmlDecode(value, output=None):
         """
@@ -8667,22 +8631,24 @@ class WebUtility():
         'UrlEncodeToBytes',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebUtility()
 
 class WriteStreamClosedEventArgs(EventArgs):
     """ WriteStreamClosedEventArgs() """
-    Instance = WriteStreamClosedEventArgs
-    """hardcoded/returns an instance of the class"""
     Error = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Error(self: WriteStreamClosedEventArgs) -> Exception
 
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WriteStreamClosedEventArgs()
 
 class WriteStreamClosedEventHandler(MulticastDelegate):
     """ WriteStreamClosedEventHandler(object: object, method: IntPtr) """
-    Instance = WriteStreamClosedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: WriteStreamClosedEventHandler, sender: object, e: WriteStreamClosedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -8704,9 +8670,7 @@ class WriteStreamClosedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -8735,8 +8699,7 @@ class WriteStreamClosedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -8752,6 +8715,9 @@ class WriteStreamClosedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WriteStreamClosedEventHandler()
 
 # variables with complex values
 

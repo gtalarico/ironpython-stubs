@@ -10,8 +10,6 @@
 
 class BosDepartment():
     """ BosDepartment() """
-    Instance = BosDepartment
-    """hardcoded/returns an instance of the class"""
     Code = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Code(self: BosDepartment) -> str
 
@@ -25,11 +23,12 @@ Set: Description(self: BosDepartment) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosDepartment()
 
 class BosKanbanBarcode():
     """ BosKanbanBarcode() """
-    Instance = BosKanbanBarcode
-    """hardcoded/returns an instance of the class"""
     Barcode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Barcode(self: BosKanbanBarcode) -> str
 
@@ -49,11 +48,12 @@ Set: Quantity(self: BosKanbanBarcode) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosKanbanBarcode()
 
 class BosProduct():
     """ BosProduct() """
-    Instance = BosProduct
-    """hardcoded/returns an instance of the class"""
     def CreateAlternativeIndex(self, code):
         """ CreateAlternativeIndex(self: BosProduct, code: str) -> BosProduct """
         pass
@@ -83,16 +83,18 @@ Set: UnitCode(self: BosProduct) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosProduct()
 
 class BosKanbanProduct(BosProduct):
     """ BosKanbanProduct() """
-    Instance = BosKanbanProduct
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosKanbanProduct()
 
 class BosKanbanReplenishmentLine():
     """ BosKanbanReplenishmentLine() """
-    Instance = BosKanbanReplenishmentLine
-    """hardcoded/returns an instance of the class"""
     Code = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Code(self: BosKanbanReplenishmentLine) -> str
 
@@ -118,11 +120,12 @@ Set: UserCode(self: BosKanbanReplenishmentLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosKanbanReplenishmentLine()
 
 class BosMeta():
     """ BosMeta() """
-    Instance = BosMeta
-    """hardcoded/returns an instance of the class"""
     AppVersion = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: AppVersion(self: BosMeta) -> str
 
@@ -135,16 +138,18 @@ Set: AppVersion(self: BosMeta) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosMeta()
 
 class BosProductIndex(BosProduct):
     """ BosProductIndex() """
-    Instance = BosProductIndex
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosProductIndex()
 
 class BosProductReplenishmentLine():
     """ BosProductReplenishmentLine() """
-    Instance = BosProductReplenishmentLine
-    """hardcoded/returns an instance of the class"""
     DepartmentCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: DepartmentCode(self: BosProductReplenishmentLine) -> str
 
@@ -176,4 +181,7 @@ Set: UserCode(self: BosProductReplenishmentLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosProductReplenishmentLine()
 

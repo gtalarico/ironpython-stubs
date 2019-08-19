@@ -10,8 +10,6 @@
 
 class BatchesExtensions():
     # no doc
-    Instance = BatchesExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def ExtractFastLookupDictionaries(this, batchNames, orderNumbers, lineNumbers, barcodes):
         """ ExtractFastLookupDictionaries(this: Batches) -> (Dictionary[str, str], Dictionary[str, str], Dictionary[str, str], Dictionary[str, str]) """
@@ -27,11 +25,12 @@ class BatchesExtensions():
         'GetUnpackedItemsOfCustomer',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BatchesExtensions()
 
 class BatchManager():
     """ BatchManager() """
-    Instance = BatchManager
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def CalculateAge(createdAt):
         """ CalculateAge(createdAt: DateTime) -> str """
@@ -109,11 +108,12 @@ class BatchManager():
 
     SyncLock = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BatchManager()
 
 class BatchPackManager:
     """ BatchPackManager(stockManager: IStockManager, transportPackages: TransportPackages) """
-    Instance = BatchPackManager
-    """hardcoded/returns an instance of the class"""
     def AddCodAmountToFirstPackage(self, result):
         """ AddCodAmountToFirstPackage(self: BatchPackManager, result: ErpProcessSalesOrderLinesResult) """
         pass
@@ -241,11 +241,12 @@ class BatchPackManager:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BatchPackManager()
 
 class BatchPickManager:
     """ BatchPickManager(batch: Batch, stock: IStockManager, settings: AllocationSettings) """
-    Instance = BatchPickManager
-    """hardcoded/returns an instance of the class"""
     def CheckBatchScanForItem(self, args):
         """ CheckBatchScanForItem(self: BatchPickManager, args: BatchScanArgs) -> BatchScanResult """
         pass
@@ -374,11 +375,12 @@ class BatchPickManager:
 
     BoxColors = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BatchPickManager()
 
 class ColliRegistrationResult():
     """ ColliRegistrationResult() """
-    Instance = ColliRegistrationResult
-    """hardcoded/returns an instance of the class"""
     def AddCount(self, count):
         """ AddCount(self: ColliRegistrationResult, count: Count) """
         pass
@@ -404,11 +406,12 @@ Set: AreColliHandled(self: ColliRegistrationResult) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ColliRegistrationResult()
 
 class ColliRegistrator:
     """ ColliRegistrator(transportPackages: TransportPackages) """
-    Instance = ColliRegistrator
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """ Dispose(self: ColliRegistrator) """
         pass
@@ -447,11 +450,12 @@ class ColliRegistrator:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ColliRegistrator()
 
 class CountForColliRegistration():
     """ CountForColliRegistration() """
-    Instance = CountForColliRegistration
-    """hardcoded/returns an instance of the class"""
     ItemCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: ItemCode(self: CountForColliRegistration) -> str
 
@@ -483,11 +487,12 @@ Set: WarehouseLocationCode(self: CountForColliRegistration) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CountForColliRegistration()
 
 class PickingList:
     """ PickingList() """
-    Instance = PickingList
-    """hardcoded/returns an instance of the class"""
     def Create(self, batch):
         """ Create(self: PickingList, batch: Batch) -> BatchPickLocations """
         pass
@@ -512,6 +517,9 @@ class PickingList:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PickingList()
 
 # variables with complex values
 

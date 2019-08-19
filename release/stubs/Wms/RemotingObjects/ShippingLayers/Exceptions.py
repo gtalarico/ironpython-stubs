@@ -14,8 +14,6 @@ class ShipperFatalException(Exception):
     ShipperFatalException(message: str)
     ShipperFatalException(message: str, innerException: Exception)
     """
-    Instance = ShipperFatalException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -33,14 +31,15 @@ class ShipperFatalException(Exception):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ShipperFatalException()
 
 class ShipperCommunicationException(ShipperFatalException):
     """
     ShipperCommunicationException(message: str, shouldRetry: bool)
     ShipperCommunicationException(message: str, innerException: Exception, shouldRetry: bool)
     """
-    Instance = ShipperCommunicationException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -66,4 +65,7 @@ Get: ShouldRetry(self: ShipperCommunicationException) -> bool
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ShipperCommunicationException()
 

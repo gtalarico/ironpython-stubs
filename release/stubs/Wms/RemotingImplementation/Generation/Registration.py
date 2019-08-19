@@ -10,8 +10,6 @@
 
 class BatchRegistrator:
     """ BatchRegistrator() """
-    Instance = BatchRegistrator
-    """hardcoded/returns an instance of the class"""
     def RegisterNumbers(self, data):
         """ RegisterNumbers(self: BatchRegistrator, data: object) """
         pass
@@ -24,11 +22,12 @@ class BatchRegistrator:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BatchRegistrator()
 
 class INumberRegistrator:
     # no doc
-    Instance = INumberRegistrator
-    """hardcoded/returns an instance of the class"""
     def RegisterNumbers(self, data):
         """ RegisterNumbers(self: INumberRegistrator, data: object) """
         pass
@@ -37,11 +36,12 @@ class INumberRegistrator:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return INumberRegistrator()
 
 class NumberRegistrationFactory():
     # no doc
-    Instance = NumberRegistrationFactory
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def RegisterNumbers(data):
         """ RegisterNumbers(data: object) """
@@ -51,11 +51,12 @@ class NumberRegistrationFactory():
         'RegisterNumbers',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NumberRegistrationFactory()
 
 class TransportPackageRegistrator:
     """ TransportPackageRegistrator() """
-    Instance = TransportPackageRegistrator
-    """hardcoded/returns an instance of the class"""
     def RegisterNumbers(self, data):
         """ RegisterNumbers(self: TransportPackageRegistrator, data: object) """
         pass
@@ -68,4 +69,7 @@ class TransportPackageRegistrator:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportPackageRegistrator()
 

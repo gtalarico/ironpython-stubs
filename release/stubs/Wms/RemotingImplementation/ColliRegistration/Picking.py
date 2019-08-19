@@ -10,8 +10,6 @@
 
 class PickReferenceExtensions():
     # no doc
-    Instance = PickReferenceExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def AddOrUpdate(this, reference, type, warehouseCode, warehouseLocationCode, itemCode, itemId, quantity, parent, orderNumber):
         """ AddOrUpdate(this: List[ColloReference], reference: str, type: ReferenceType, warehouseCode: str, warehouseLocationCode: str, itemCode: str, itemId: str, quantity: Decimal, parent: str, orderNumber: str) """
@@ -33,4 +31,7 @@ class PickReferenceExtensions():
         'FindPairs',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PickReferenceExtensions()
 

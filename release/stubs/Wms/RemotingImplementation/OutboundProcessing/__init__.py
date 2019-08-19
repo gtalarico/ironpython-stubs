@@ -10,8 +10,6 @@
 
 class ProcessHistoricShipment():
     # no doc
-    Instance = ProcessHistoricShipment
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Process(dfObject, packages):
         """ Process(dfObject: DataFlowObject[ProcessBatchPackingArgs], packages: TransportPackages) -> DataFlowObject[ProcessBatchPackingArgs] """
@@ -21,6 +19,9 @@ class ProcessHistoricShipment():
         'Process',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessHistoricShipment()
 
 # variables with complex values
 

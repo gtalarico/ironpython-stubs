@@ -204,8 +204,6 @@ def Use(name): # real signature unknown; restored from __doc__
 
 class ArgChecker():
     """ ArgChecker(prms: Array[object]) """
-    Instance = ArgChecker
-    """hardcoded/returns an instance of the class"""
     def __call__(self, *args): #cannot find CLR method
         """ x.__call__(...) <==> x(...) """
         pass
@@ -215,14 +213,15 @@ class ArgChecker():
         """ __new__(cls: type, prms: Array[object]) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ArgChecker()
 
 class StrongBox:
     """
     StrongBox[T]()
     StrongBox[T](value: T)
     """
-    Instance = StrongBox
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -241,14 +240,15 @@ class StrongBox:
 
     Value = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StrongBox()
 
 Reference = StrongBox
 
 
 class ReferencesList(List):
     """ ReferencesList() """
-    Instance = ReferencesList
-    """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """ Add(self: ReferencesList, other: Assembly) """
         pass
@@ -273,11 +273,12 @@ class ReferencesList(List):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ReferencesList()
 
 class ReturnChecker():
     """ ReturnChecker(returnType: object) """
-    Instance = ReturnChecker
-    """hardcoded/returns an instance of the class"""
     def __call__(self, *args): #cannot find CLR method
         """ x.__call__(...) <==> x(...) """
         pass
@@ -289,14 +290,15 @@ class ReturnChecker():
 
     retType = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ReturnChecker()
 
 class RuntimeArgChecker(PythonTypeSlot):
     """
     RuntimeArgChecker(function: object, expectedArgs: Array[object])
     RuntimeArgChecker(instance: object, function: object, expectedArgs: Array[object])
     """
-    Instance = RuntimeArgChecker
-    """hardcoded/returns an instance of the class"""
     def __call__(self, *args): #cannot find CLR method
         """ x.__call__(...) <==> x(...)x.__call__(...) <==> x(...) """
         pass
@@ -309,14 +311,15 @@ class RuntimeArgChecker(PythonTypeSlot):
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RuntimeArgChecker()
 
 class RuntimeReturnChecker(PythonTypeSlot):
     """
     RuntimeReturnChecker(function: object, expectedReturn: object)
     RuntimeReturnChecker(instance: object, function: object, expectedReturn: object)
     """
-    Instance = RuntimeReturnChecker
-    """hardcoded/returns an instance of the class"""
     def GetAttribute(self, instance, owner):
         """ GetAttribute(self: RuntimeReturnChecker, instance: object, owner: object) -> object """
         pass
@@ -333,6 +336,9 @@ class RuntimeReturnChecker(PythonTypeSlot):
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RuntimeReturnChecker()
 
 # variables with complex values
 

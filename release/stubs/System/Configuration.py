@@ -14,12 +14,13 @@ class SettingAttribute:
     
     SettingAttribute()
     """
-    Instance = SettingAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingAttribute()
 
 class ApplicationScopedSettingAttribute(SettingAttribute):
     """
@@ -27,17 +28,16 @@ class ApplicationScopedSettingAttribute(SettingAttribute):
     
     ApplicationScopedSettingAttribute()
     """
-    Instance = ApplicationScopedSettingAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ApplicationScopedSettingAttribute()
 
 class SettingsBase():
     """ Provides the base class used to support user property settings. """
-    Instance = SettingsBase
-    """hardcoded/returns an instance of the class"""
     def Initialize(self, context, properties, providers):
         """
         Initialize(self: SettingsBase, context: SettingsContext, properties: SettingsPropertyCollection, providers: SettingsProviderCollection)
@@ -112,11 +112,12 @@ Get: Providers(self: SettingsBase) -> SettingsProviderCollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsBase()
 
 class ApplicationSettingsBase(SettingsBase):
     """ Acts as a base class for deriving concrete wrapper classes to implement the application settings feature in Window Forms applications. """
-    Instance = ApplicationSettingsBase
-    """hardcoded/returns an instance of the class"""
     def GetPreviousVersion(self, propertyName):
         """
         GetPreviousVersion(self: ApplicationSettingsBase, propertyName: str) -> object
@@ -260,6 +261,9 @@ Set: SettingsKey(self: ApplicationSettingsBase) = value
     SettingsLoaded = None
     SettingsSaving = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ApplicationSettingsBase()
 
 class ApplicationSettingsGroup(ConfigurationSectionGroup):
     """
@@ -267,8 +271,9 @@ class ApplicationSettingsGroup(ConfigurationSectionGroup):
     
     ApplicationSettingsGroup()
     """
-    Instance = ApplicationSettingsGroup
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ApplicationSettingsGroup()
 
 class AppSettingsReader():
     """
@@ -276,15 +281,11 @@ class AppSettingsReader():
     
     AppSettingsReader()
     """
-    Instance = AppSettingsReader
-    """hardcoded/returns an instance of the class"""
     def GetValue(self, key, type):
         """
         GetValue(self: AppSettingsReader, key: str, type: Type) -> object
         
-            Gets the value for a specified key from the System.Configuration.ConfigurationSettings.AppSettings property and returns an object of the specified type containing the value 
-             from the configuration.
-        
+            Gets the value for a specified key from the System.Configuration.ConfigurationSettings.AppSettings property and returns an object of the specified type containing the value from the configuration.
         
             key: The key for which to get the value.
             type: The type of the object to return.
@@ -292,6 +293,9 @@ class AppSettingsReader():
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AppSettingsReader()
 
 class ClientSettingsSection(ConfigurationSection):
     """
@@ -299,8 +303,6 @@ class ClientSettingsSection(ConfigurationSection):
     
     ClientSettingsSection()
     """
-    Instance = ClientSettingsSection
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -323,6 +325,9 @@ Get: Settings(self: ClientSettingsSection) -> SettingElementCollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ClientSettingsSection()
 
 class ConfigurationException(SystemException):
     """
@@ -336,8 +341,6 @@ class ConfigurationException(SystemException):
     ConfigurationException(message: str, filename: str, line: int)
     ConfigurationException(message: str, inner: Exception, filename: str, line: int)
     """
-    Instance = ConfigurationException
-    """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: ConfigurationException, info: SerializationInfo, context: StreamingContext)
@@ -427,11 +430,12 @@ Get: Message(self: ConfigurationException) -> str
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConfigurationException()
 
 class ConfigurationSettings():
     """ Provides runtime versions 1.0 and 1.1 support for reading configuration sections and common configuration settings. """
-    Instance = ConfigurationSettings
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetConfig(sectionName):
         """
@@ -440,13 +444,15 @@ class ConfigurationSettings():
             Returns the System.Configuration.ConfigurationSection object for the passed configuration section name and path.
         
             sectionName: A configuration name and path, such as "system.net/settings".
-            Returns: The System.Configuration.ConfigurationSection object for the passed configuration section name and path.NoteThe System.Configuration.ConfigurationSettings class provides 
-             backward compatibility only. You should use the System.Configuration.ConfigurationManager class or System.Web.Configuration.WebConfigurationManager class instead.
+            Returns: The System.Configuration.ConfigurationSection object for the passed configuration section name and path.NoteThe System.Configuration.ConfigurationSettings class provides backward compatibility only. You should use the System.Configuration.ConfigurationManager class or System.Web.Configuration.WebConfigurationManager class instead.
         """
         pass
 
     AppSettings = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConfigurationSettings()
 
 class ConfigXmlDocument(XmlDocument):
     """
@@ -454,8 +460,6 @@ class ConfigXmlDocument(XmlDocument):
     
     ConfigXmlDocument()
     """
-    Instance = ConfigXmlDocument
-    """hardcoded/returns an instance of the class"""
     def CreateAttribute(self, *__args):
         """
         CreateAttribute(self: ConfigXmlDocument, prefix: str, localName: str, namespaceUri: str) -> XmlAttribute
@@ -607,6 +611,9 @@ Get: LineNumber(self: ConfigXmlDocument) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConfigXmlDocument()
 
 class DefaultSettingValueAttribute:
     """
@@ -614,8 +621,6 @@ class DefaultSettingValueAttribute:
     
     DefaultSettingValueAttribute(value: str)
     """
-    Instance = DefaultSettingValueAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -633,6 +638,9 @@ Get: Value(self: DefaultSettingValueAttribute) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DefaultSettingValueAttribute()
 
 class DictionarySectionHandler:
     """
@@ -640,8 +648,6 @@ class DictionarySectionHandler:
     
     DictionarySectionHandler()
     """
-    Instance = DictionarySectionHandler
-    """hardcoded/returns an instance of the class"""
     def Create(self, parent, context, section):
         """
         Create(self: DictionarySectionHandler, parent: object, context: object, section: XmlNode) -> object
@@ -674,11 +680,12 @@ class DictionarySectionHandler:
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DictionarySectionHandler()
 
 class IApplicationSettingsProvider:
     """ Defines extended capabilities for client-based application settings providers. """
-    Instance = IApplicationSettingsProvider
-    """hardcoded/returns an instance of the class"""
     def GetPreviousVersion(self, context, property):
         """
         GetPreviousVersion(self: IApplicationSettingsProvider, context: SettingsContext, property: SettingsProperty) -> SettingsPropertyValue
@@ -687,8 +694,7 @@ class IApplicationSettingsProvider:
         
             context: A System.Configuration.SettingsContext describing the current application usage.
             property: The System.Configuration.SettingsProperty whose value is to be returned.
-            Returns: A System.Configuration.SettingsPropertyValue containing the value of the specified property setting as it was last set in the previous version of the application; or null 
-             if the setting cannot be found.
+            Returns: A System.Configuration.SettingsPropertyValue containing the value of the specified property setting as it was last set in the previous version of the application; or null if the setting cannot be found.
         """
         pass
 
@@ -715,11 +721,12 @@ class IApplicationSettingsProvider:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IApplicationSettingsProvider()
 
 class IConfigurationSectionHandler:
     """ Handles the access to certain configuration sections. """
-    Instance = IConfigurationSectionHandler
-    """hardcoded/returns an instance of the class"""
     def Create(self, parent, configContext, section):
         """
         Create(self: IConfigurationSectionHandler, parent: object, configContext: object, section: XmlNode) -> object
@@ -737,11 +744,12 @@ class IConfigurationSectionHandler:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IConfigurationSectionHandler()
 
 class IConfigurationSystem:
     """ Provides standard configuration methods. """
-    Instance = IConfigurationSystem
-    """hardcoded/returns an instance of the class"""
     def GetConfig(self, configKey):
         """
         GetConfig(self: IConfigurationSystem, configKey: str) -> object
@@ -764,6 +772,9 @@ class IConfigurationSystem:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IConfigurationSystem()
 
 class IdnElement(ConfigurationElement):
     """
@@ -771,8 +782,6 @@ class IdnElement(ConfigurationElement):
     
     IdnElement()
     """
-    Instance = IdnElement
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -796,6 +805,9 @@ Set: Enabled(self: IdnElement) = value
     Properties = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IdnElement()
 
 class IgnoreSectionHandler:
     """
@@ -803,8 +815,6 @@ class IgnoreSectionHandler:
     
     IgnoreSectionHandler()
     """
-    Instance = IgnoreSectionHandler
-    """hardcoded/returns an instance of the class"""
     def Create(self, parent, configContext, section):
         """
         Create(self: IgnoreSectionHandler, parent: object, configContext: object, section: XmlNode) -> object
@@ -826,11 +836,12 @@ class IgnoreSectionHandler:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IgnoreSectionHandler()
 
 class IPersistComponentSettings:
     """ Defines standard functionality for controls or libraries that store and retrieve application settings. """
-    Instance = IPersistComponentSettings
-    """hardcoded/returns an instance of the class"""
     def LoadComponentSettings(self):
         """
         LoadComponentSettings(self: IPersistComponentSettings)
@@ -873,6 +884,9 @@ Set: SettingsKey(self: IPersistComponentSettings) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPersistComponentSettings()
 
 class IriParsingElement(ConfigurationElement):
     """
@@ -880,8 +894,6 @@ class IriParsingElement(ConfigurationElement):
     
     IriParsingElement()
     """
-    Instance = IriParsingElement
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -905,11 +917,12 @@ Set: Enabled(self: IriParsingElement) = value
     Properties = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IriParsingElement()
 
 class ISettingsProviderService:
     """ Provides an interface for defining an alternate application settings provider. """
-    Instance = ISettingsProviderService
-    """hardcoded/returns an instance of the class"""
     def GetSettingsProvider(self, property):
         """
         GetSettingsProvider(self: ISettingsProviderService, property: SettingsProperty) -> SettingsProvider
@@ -925,11 +938,12 @@ class ISettingsProviderService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ISettingsProviderService()
 
 class SettingsProvider(ProviderBase):
     """ Acts as a base class for deriving custom settings providers in the application settings architecture. """
-    Instance = SettingsProvider
-    """hardcoded/returns an instance of the class"""
     def GetPropertyValues(self, context, collection):
         """
         GetPropertyValues(self: SettingsProvider, context: SettingsContext, collection: SettingsPropertyCollection) -> SettingsPropertyValueCollection
@@ -961,6 +975,9 @@ Set: ApplicationName(self: SettingsProvider) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsProvider()
 
 class LocalFileSettingsProvider(SettingsProvider):
     """
@@ -968,8 +985,6 @@ class LocalFileSettingsProvider(SettingsProvider):
     
     LocalFileSettingsProvider()
     """
-    Instance = LocalFileSettingsProvider
-    """hardcoded/returns an instance of the class"""
     def GetPreviousVersion(self, context, property):
         """
         GetPreviousVersion(self: LocalFileSettingsProvider, context: SettingsContext, property: SettingsProperty) -> SettingsPropertyValue
@@ -1044,6 +1059,9 @@ Set: ApplicationName(self: LocalFileSettingsProvider) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LocalFileSettingsProvider()
 
 class NameValueFileSectionHandler:
     """
@@ -1051,8 +1069,6 @@ class NameValueFileSectionHandler:
     
     NameValueFileSectionHandler()
     """
-    Instance = NameValueFileSectionHandler
-    """hardcoded/returns an instance of the class"""
     def Create(self, parent, configContext, section):
         """
         Create(self: NameValueFileSectionHandler, parent: object, configContext: object, section: XmlNode) -> object
@@ -1074,6 +1090,9 @@ class NameValueFileSectionHandler:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NameValueFileSectionHandler()
 
 class NameValueSectionHandler:
     """
@@ -1081,8 +1100,6 @@ class NameValueSectionHandler:
     
     NameValueSectionHandler()
     """
-    Instance = NameValueSectionHandler
-    """hardcoded/returns an instance of the class"""
     def Create(self, parent, context, section):
         """
         Create(self: NameValueSectionHandler, parent: object, context: object, section: XmlNode) -> object
@@ -1115,6 +1132,9 @@ class NameValueSectionHandler:
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NameValueSectionHandler()
 
 class NoSettingsVersionUpgradeAttribute:
     """
@@ -1122,12 +1142,13 @@ class NoSettingsVersionUpgradeAttribute:
     
     NoSettingsVersionUpgradeAttribute()
     """
-    Instance = NoSettingsVersionUpgradeAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NoSettingsVersionUpgradeAttribute()
 
 class SchemeSettingElement(ConfigurationElement):
     """
@@ -1135,8 +1156,6 @@ class SchemeSettingElement(ConfigurationElement):
     
     SchemeSettingElement()
     """
-    Instance = SchemeSettingElement
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -1166,6 +1185,9 @@ Get: Name(self: SchemeSettingElement) -> str
     Properties = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SchemeSettingElement()
 
 class SchemeSettingElementCollection(ConfigurationElementCollection):
     """
@@ -1173,8 +1195,6 @@ class SchemeSettingElementCollection(ConfigurationElementCollection):
     
     SchemeSettingElementCollection()
     """
-    Instance = SchemeSettingElementCollection
-    """hardcoded/returns an instance of the class"""
     def BaseAdd(self, *args): #cannot find CLR method
         """
         BaseAdd(self: ConfigurationElementCollection, element: ConfigurationElement)
@@ -1185,9 +1205,7 @@ class SchemeSettingElementCollection(ConfigurationElementCollection):
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; 
-             otherwise, false.
-        
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, false.
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
         
@@ -1255,9 +1273,7 @@ class SchemeSettingElementCollection(ConfigurationElementCollection):
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the 
-             System.Configuration.ConfigurationElementCollection.
-        
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
         
             key: The key of the element to check.
             Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
@@ -1315,8 +1331,7 @@ class SchemeSettingElementCollection(ConfigurationElementCollection):
             Returns the transformed version of the specified assembly name.
         
             assemblyName: The name of the assembly.
-            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
+            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
         """
         pass
 
@@ -1327,8 +1342,7 @@ class SchemeSettingElementCollection(ConfigurationElementCollection):
             Returns the transformed version of the specified type name.
         
             typeName: The name of the type.
-            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
+            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
         """
         pass
 
@@ -1375,8 +1389,7 @@ class SchemeSettingElementCollection(ConfigurationElementCollection):
             Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default 
-             is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is true.
         """
         pass
 
@@ -1580,6 +1593,9 @@ Get: CollectionType(self: SchemeSettingElementCollection) -> ConfigurationElemen
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SchemeSettingElementCollection()
 
 class SettingChangingEventArgs(CancelEventArgs):
     """
@@ -1587,8 +1603,6 @@ class SettingChangingEventArgs(CancelEventArgs):
     
     SettingChangingEventArgs(settingName: str, settingClass: str, settingKey: str, newValue: object, cancel: bool)
     """
-    Instance = SettingChangingEventArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, settingName, settingClass, settingKey, newValue, cancel):
         """ __new__(cls: type, settingName: str, settingClass: str, settingKey: str, newValue: object, cancel: bool) """
@@ -1623,6 +1637,9 @@ Get: SettingName(self: SettingChangingEventArgs) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingChangingEventArgs()
 
 class SettingChangingEventHandler(MulticastDelegate):
     """
@@ -1630,8 +1647,6 @@ class SettingChangingEventHandler(MulticastDelegate):
     
     SettingChangingEventHandler(object: object, method: IntPtr)
     """
-    Instance = SettingChangingEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SettingChangingEventHandler, sender: object, e: SettingChangingEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -1653,9 +1668,7 @@ class SettingChangingEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1684,8 +1697,7 @@ class SettingChangingEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -1701,6 +1713,9 @@ class SettingChangingEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingChangingEventHandler()
 
 class SettingElement(ConfigurationElement):
     """
@@ -1709,8 +1724,6 @@ class SettingElement(ConfigurationElement):
     SettingElement()
     SettingElement(name: str, serializeAs: SettingsSerializeAs)
     """
-    Instance = SettingElement
-    """hardcoded/returns an instance of the class"""
     def Equals(self, settings):
         """
         Equals(self: SettingElement, settings: object) -> bool
@@ -1778,6 +1791,9 @@ Set: Value(self: SettingElement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingElement()
 
 class SettingElementCollection(ConfigurationElementCollection):
     """
@@ -1785,8 +1801,6 @@ class SettingElementCollection(ConfigurationElementCollection):
     
     SettingElementCollection()
     """
-    Instance = SettingElementCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, element):
         """
         Add(self: SettingElementCollection, element: SettingElement)
@@ -1806,9 +1820,7 @@ class SettingElementCollection(ConfigurationElementCollection):
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; 
-             otherwise, false.
-        
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, false.
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
         
@@ -1876,9 +1888,7 @@ class SettingElementCollection(ConfigurationElementCollection):
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the 
-             System.Configuration.ConfigurationElementCollection.
-        
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
         
             key: The key of the element to check.
             Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
@@ -1954,8 +1964,7 @@ class SettingElementCollection(ConfigurationElementCollection):
             Returns the transformed version of the specified assembly name.
         
             assemblyName: The name of the assembly.
-            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
+            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
         """
         pass
 
@@ -1966,8 +1975,7 @@ class SettingElementCollection(ConfigurationElementCollection):
             Returns the transformed version of the specified type name.
         
             typeName: The name of the type.
-            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
+            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
         """
         pass
 
@@ -2003,8 +2011,7 @@ class SettingElementCollection(ConfigurationElementCollection):
             Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default 
-             is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is true.
         """
         pass
 
@@ -2214,6 +2221,9 @@ Get: CollectionType(self: SettingElementCollection) -> ConfigurationElementColle
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingElementCollection()
 
 class SettingsAttributeDictionary(Hashtable):
     """
@@ -2222,8 +2232,6 @@ class SettingsAttributeDictionary(Hashtable):
     SettingsAttributeDictionary()
     SettingsAttributeDictionary(attributes: SettingsAttributeDictionary)
     """
-    Instance = SettingsAttributeDictionary
-    """hardcoded/returns an instance of the class"""
     def GetHash(self, *args): #cannot find CLR method
         """
         GetHash(self: Hashtable, key: object) -> int
@@ -2290,6 +2298,9 @@ class SettingsAttributeDictionary(Hashtable):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsAttributeDictionary()
 
 class SettingsContext(Hashtable):
     """
@@ -2297,8 +2308,6 @@ class SettingsContext(Hashtable):
     
     SettingsContext()
     """
-    Instance = SettingsContext
-    """hardcoded/returns an instance of the class"""
     def GetHash(self, *args): #cannot find CLR method
         """
         GetHash(self: Hashtable, key: object) -> int
@@ -2357,6 +2366,9 @@ class SettingsContext(Hashtable):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsContext()
 
 class SettingsDescriptionAttribute:
     """
@@ -2364,8 +2376,6 @@ class SettingsDescriptionAttribute:
     
     SettingsDescriptionAttribute(description: str)
     """
-    Instance = SettingsDescriptionAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2383,6 +2393,9 @@ Get: Description(self: SettingsDescriptionAttribute) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsDescriptionAttribute()
 
 class SettingsGroupDescriptionAttribute:
     """
@@ -2390,8 +2403,6 @@ class SettingsGroupDescriptionAttribute:
     
     SettingsGroupDescriptionAttribute(description: str)
     """
-    Instance = SettingsGroupDescriptionAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2409,6 +2420,9 @@ Get: Description(self: SettingsGroupDescriptionAttribute) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsGroupDescriptionAttribute()
 
 class SettingsGroupNameAttribute:
     """
@@ -2416,8 +2430,6 @@ class SettingsGroupNameAttribute:
     
     SettingsGroupNameAttribute(groupName: str)
     """
-    Instance = SettingsGroupNameAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2435,6 +2447,9 @@ Get: GroupName(self: SettingsGroupNameAttribute) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsGroupNameAttribute()
 
 class SettingsLoadedEventArgs(EventArgs):
     """
@@ -2442,8 +2457,6 @@ class SettingsLoadedEventArgs(EventArgs):
     
     SettingsLoadedEventArgs(provider: SettingsProvider)
     """
-    Instance = SettingsLoadedEventArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, provider):
         """ __new__(cls: type, provider: SettingsProvider) """
@@ -2457,6 +2470,9 @@ Get: Provider(self: SettingsLoadedEventArgs) -> SettingsProvider
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsLoadedEventArgs()
 
 class SettingsLoadedEventHandler(MulticastDelegate):
     """
@@ -2464,8 +2480,6 @@ class SettingsLoadedEventHandler(MulticastDelegate):
     
     SettingsLoadedEventHandler(object: object, method: IntPtr)
     """
-    Instance = SettingsLoadedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SettingsLoadedEventHandler, sender: object, e: SettingsLoadedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -2487,9 +2501,7 @@ class SettingsLoadedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2518,8 +2530,7 @@ class SettingsLoadedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -2535,6 +2546,9 @@ class SettingsLoadedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsLoadedEventHandler()
 
 class SettingsManageability:
     """
@@ -2542,8 +2556,6 @@ class SettingsManageability:
     
     enum SettingsManageability, values: Roaming (0)
     """
-    Instance = SettingsManageability
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2580,6 +2592,9 @@ class SettingsManageability:
     Roaming = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsManageability()
 
 class SettingsManageabilityAttribute:
     """
@@ -2587,8 +2602,6 @@ class SettingsManageabilityAttribute:
     
     SettingsManageabilityAttribute(manageability: SettingsManageability)
     """
-    Instance = SettingsManageabilityAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2606,6 +2619,9 @@ Get: Manageability(self: SettingsManageabilityAttribute) -> SettingsManageabilit
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsManageabilityAttribute()
 
 class SettingsProperty():
     """
@@ -2615,8 +2631,6 @@ class SettingsProperty():
     SettingsProperty(name: str, propertyType: Type, provider: SettingsProvider, isReadOnly: bool, defaultValue: object, serializeAs: SettingsSerializeAs, attributes: SettingsAttributeDictionary, throwOnErrorDeserializing: bool, throwOnErrorSerializing: bool)
     SettingsProperty(propertyToCopy: SettingsProperty)
     """
-    Instance = SettingsProperty
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
@@ -2698,6 +2712,9 @@ Set: ThrowOnErrorSerializing(self: SettingsProperty) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsProperty()
 
 class SettingsPropertyCollection:
     """
@@ -2705,8 +2722,6 @@ class SettingsPropertyCollection:
     
     SettingsPropertyCollection()
     """
-    Instance = SettingsPropertyCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, property):
         """
         Add(self: SettingsPropertyCollection, property: SettingsProperty)
@@ -2863,6 +2878,9 @@ Get: SyncRoot(self: SettingsPropertyCollection) -> object
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsPropertyCollection()
 
 class SettingsPropertyIsReadOnlyException(Exception):
     """
@@ -2872,8 +2890,6 @@ class SettingsPropertyIsReadOnlyException(Exception):
     SettingsPropertyIsReadOnlyException(message: str, innerException: Exception)
     SettingsPropertyIsReadOnlyException()
     """
-    Instance = SettingsPropertyIsReadOnlyException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2896,6 +2912,9 @@ class SettingsPropertyIsReadOnlyException(Exception):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsPropertyIsReadOnlyException()
 
 class SettingsPropertyNotFoundException(Exception):
     """
@@ -2905,8 +2924,6 @@ class SettingsPropertyNotFoundException(Exception):
     SettingsPropertyNotFoundException(message: str, innerException: Exception)
     SettingsPropertyNotFoundException()
     """
-    Instance = SettingsPropertyNotFoundException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2929,6 +2946,9 @@ class SettingsPropertyNotFoundException(Exception):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsPropertyNotFoundException()
 
 class SettingsPropertyValue():
     """
@@ -2936,8 +2956,6 @@ class SettingsPropertyValue():
     
     SettingsPropertyValue(property: SettingsProperty)
     """
-    Instance = SettingsPropertyValue
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, property):
         """ __new__(cls: type, property: SettingsProperty) """
@@ -2997,6 +3015,9 @@ Get: UsingDefaultValue(self: SettingsPropertyValue) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsPropertyValue()
 
 class SettingsPropertyValueCollection:
     """
@@ -3004,8 +3025,6 @@ class SettingsPropertyValueCollection:
     
     SettingsPropertyValueCollection()
     """
-    Instance = SettingsPropertyValueCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, property):
         """
         Add(self: SettingsPropertyValueCollection, property: SettingsPropertyValue)
@@ -3112,6 +3131,9 @@ Get: SyncRoot(self: SettingsPropertyValueCollection) -> object
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsPropertyValueCollection()
 
 class SettingsPropertyWrongTypeException(Exception):
     """
@@ -3121,8 +3143,6 @@ class SettingsPropertyWrongTypeException(Exception):
     SettingsPropertyWrongTypeException(message: str, innerException: Exception)
     SettingsPropertyWrongTypeException()
     """
-    Instance = SettingsPropertyWrongTypeException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -3145,6 +3165,9 @@ class SettingsPropertyWrongTypeException(Exception):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsPropertyWrongTypeException()
 
 class SettingsProviderAttribute:
     """
@@ -3153,8 +3176,6 @@ class SettingsProviderAttribute:
     SettingsProviderAttribute(providerTypeName: str)
     SettingsProviderAttribute(providerType: Type)
     """
-    Instance = SettingsProviderAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -3175,6 +3196,9 @@ Get: ProviderTypeName(self: SettingsProviderAttribute) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsProviderAttribute()
 
 class SettingsProviderCollection(ProviderCollection):
     """
@@ -3182,8 +3206,6 @@ class SettingsProviderCollection(ProviderCollection):
     
     SettingsProviderCollection()
     """
-    Instance = SettingsProviderCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, provider):
         """
         Add(self: SettingsProviderCollection, provider: ProviderBase)
@@ -3209,6 +3231,9 @@ class SettingsProviderCollection(ProviderCollection):
         """ __iter__(self: IEnumerable) -> object """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsProviderCollection()
 
 class SettingsSavingEventHandler(MulticastDelegate):
     """
@@ -3216,8 +3241,6 @@ class SettingsSavingEventHandler(MulticastDelegate):
     
     SettingsSavingEventHandler(object: object, method: IntPtr)
     """
-    Instance = SettingsSavingEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SettingsSavingEventHandler, sender: object, e: CancelEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -3239,9 +3262,7 @@ class SettingsSavingEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -3270,8 +3291,7 @@ class SettingsSavingEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -3287,6 +3307,9 @@ class SettingsSavingEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsSavingEventHandler()
 
 class SettingsSerializeAs:
     """
@@ -3294,8 +3317,6 @@ class SettingsSerializeAs:
     
     enum SettingsSerializeAs, values: Binary (2), ProviderSpecific (3), String (0), Xml (1)
     """
-    Instance = SettingsSerializeAs
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -3335,6 +3356,9 @@ class SettingsSerializeAs:
     value__ = None
     Xml = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsSerializeAs()
 
 class SettingsSerializeAsAttribute:
     """
@@ -3342,8 +3366,6 @@ class SettingsSerializeAsAttribute:
     
     SettingsSerializeAsAttribute(serializeAs: SettingsSerializeAs)
     """
-    Instance = SettingsSerializeAsAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -3361,6 +3383,9 @@ Get: SerializeAs(self: SettingsSerializeAsAttribute) -> SettingsSerializeAs
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsSerializeAsAttribute()
 
 class SettingValueElement(ConfigurationElement):
     """
@@ -3368,8 +3393,6 @@ class SettingValueElement(ConfigurationElement):
     
     SettingValueElement()
     """
-    Instance = SettingValueElement
-    """hardcoded/returns an instance of the class"""
     def Equals(self, settingValue):
         """
         Equals(self: SettingValueElement, settingValue: object) -> bool
@@ -3413,6 +3436,9 @@ Set: ValueXml(self: SettingValueElement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingValueElement()
 
 class SingleTagSectionHandler:
     """
@@ -3420,8 +3446,6 @@ class SingleTagSectionHandler:
     
     SingleTagSectionHandler()
     """
-    Instance = SingleTagSectionHandler
-    """hardcoded/returns an instance of the class"""
     def Create(self, parent, context, section):
         """
         Create(self: SingleTagSectionHandler, parent: object, context: object, section: XmlNode) -> object
@@ -3443,6 +3467,9 @@ class SingleTagSectionHandler:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SingleTagSectionHandler()
 
 class SpecialSetting:
     """
@@ -3450,8 +3477,6 @@ class SpecialSetting:
     
     enum SpecialSetting, values: ConnectionString (0), WebServiceUrl (1)
     """
-    Instance = SpecialSetting
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -3489,6 +3514,9 @@ class SpecialSetting:
     value__ = None
     WebServiceUrl = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SpecialSetting()
 
 class SpecialSettingAttribute:
     """
@@ -3496,8 +3524,6 @@ class SpecialSettingAttribute:
     
     SpecialSettingAttribute(specialSetting: SpecialSetting)
     """
-    Instance = SpecialSettingAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -3515,6 +3541,9 @@ Get: SpecialSetting(self: SpecialSettingAttribute) -> SpecialSetting
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SpecialSettingAttribute()
 
 class UriSection(ConfigurationSection):
     """
@@ -3522,8 +3551,6 @@ class UriSection(ConfigurationSection):
     
     UriSection()
     """
-    Instance = UriSection
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -3560,6 +3587,9 @@ Get: SchemeSettings(self: UriSection) -> SchemeSettingElementCollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UriSection()
 
 class UserScopedSettingAttribute(SettingAttribute):
     """
@@ -3567,12 +3597,13 @@ class UserScopedSettingAttribute(SettingAttribute):
     
     UserScopedSettingAttribute()
     """
-    Instance = UserScopedSettingAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UserScopedSettingAttribute()
 
 class UserSettingsGroup(ConfigurationSectionGroup):
     """
@@ -3580,8 +3611,9 @@ class UserSettingsGroup(ConfigurationSectionGroup):
     
     UserSettingsGroup()
     """
-    Instance = UserSettingsGroup
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UserSettingsGroup()
 
 # variables with complex values
 

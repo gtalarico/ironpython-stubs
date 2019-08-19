@@ -10,8 +10,6 @@
 
 class ItemPackScanArgs():
     """ ItemPackScanArgs(cacheKey: CacheKey, barcode: str, packageGuid: Guid) """
-    Instance = ItemPackScanArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, cacheKey, barcode, packageGuid):
         """ __new__(cls: type, cacheKey: CacheKey, barcode: str, packageGuid: Guid) """
@@ -33,11 +31,12 @@ class ItemPackScanArgs():
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ItemPackScanArgs()
 
 class MoveAction:
     """ enum MoveAction, values: Ignore (0), MoveBetweenColli (3), Pack (1), Unpack (2) """
-    Instance = MoveAction
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -77,11 +76,12 @@ class MoveAction:
     Unpack = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MoveAction()
 
 class MoveTransportItemsBetweenTransportPackagesArgs():
     """ MoveTransportItemsBetweenTransportPackagesArgs() """
-    Instance = MoveTransportItemsBetweenTransportPackagesArgs
-    """hardcoded/returns an instance of the class"""
     Action = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Action(self: MoveTransportItemsBetweenTransportPackagesArgs) -> MoveAction
 
@@ -113,11 +113,12 @@ Set: MoveArgs(self: MoveTransportItemsBetweenTransportPackagesArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MoveTransportItemsBetweenTransportPackagesArgs()
 
 class MoveTransportPackageItemsArgs():
     """ MoveTransportPackageItemsArgs() """
-    Instance = MoveTransportPackageItemsArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Validate(args):
         """ Validate(args: MoveTransportPackageItemsArgs) """
@@ -164,11 +165,12 @@ Set: TransportItems(self: MoveTransportPackageItemsArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MoveTransportPackageItemsArgs()
 
 class ProcessBatchPackingArgs():
     """ ProcessBatchPackingArgs() """
-    Instance = ProcessBatchPackingArgs
-    """hardcoded/returns an instance of the class"""
     CacheKey = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -186,11 +188,12 @@ Set: ValidateStock(self: ProcessBatchPackingArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessBatchPackingArgs()
 
 class ScanItemPackArgsResult():
     """ ScanItemPackArgsResult() """
-    Instance = ScanItemPackArgsResult
-    """hardcoded/returns an instance of the class"""
     BarcodeStructure = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: BarcodeStructure(self: ScanItemPackArgsResult) -> BarcodeStructure
 
@@ -210,11 +213,12 @@ Set: ScanResult(self: ScanItemPackArgsResult) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ScanItemPackArgsResult()
 
 class ScanItemPackResultType:
     """ enum ScanItemPackResultType, values: InnerReference (1), Item (0) """
-    Instance = ScanItemPackResultType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -252,11 +256,12 @@ class ScanItemPackResultType:
     Item = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ScanItemPackResultType()
 
 class TransportPackageScanEnum:
     """ enum TransportPackageScanEnum, values: None (0), Serial (2), SSCC (1) """
-    Instance = TransportPackageScanEnum
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -295,11 +300,12 @@ class TransportPackageScanEnum:
     SSCC = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportPackageScanEnum()
 
 class TransportPackageScanResult():
     """ TransportPackageScanResult() """
-    Instance = TransportPackageScanResult
-    """hardcoded/returns an instance of the class"""
     Barcode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Barcode(self: TransportPackageScanResult) -> str
 
@@ -319,4 +325,7 @@ Set: MatchedScanOfType(self: TransportPackageScanResult) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportPackageScanResult()
 

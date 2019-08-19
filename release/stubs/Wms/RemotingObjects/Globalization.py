@@ -11,8 +11,6 @@ from System.Collections.Generic import *
 
 class SaveTranslationArgs():
     """ SaveTranslationArgs() """
-    Instance = SaveTranslationArgs
-    """hardcoded/returns an instance of the class"""
     LocaleId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Langauge it is translated to
 
@@ -47,11 +45,12 @@ Set: Value(self: SaveTranslationArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SaveTranslationArgs()
 
 class Translation():
     """ Translation() """
-    Instance = Translation
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def LoadFromRegistry():
         """ LoadFromRegistry() -> str """
@@ -99,11 +98,12 @@ Set: ResourseSet(self: Translation) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Translation()
 
 class Translations(List):
     """ Translations() """
-    Instance = Translations
-    """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """ Add(self: Translations, culture: str, resourseSet: str) """
         pass
@@ -138,4 +138,7 @@ class Translations(List):
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Translations()
 

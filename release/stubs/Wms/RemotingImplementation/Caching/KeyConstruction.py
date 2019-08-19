@@ -10,8 +10,6 @@
 
 class CountCacheKeyConstructor:
     """ CountCacheKeyConstructor(hashCodeProvider: IUniqueHashCodeProvider, identityProvider: IRemotingIdentityProvider) """
-    Instance = CountCacheKeyConstructor
-    """hardcoded/returns an instance of the class"""
     def Construct(self, cachable):
         """ Construct(self: CountCacheKeyConstructor, cachable: Count) -> CacheKey """
         pass
@@ -29,11 +27,12 @@ class CountCacheKeyConstructor:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CountCacheKeyConstructor()
 
 class ICacheKeyConstructor:
     # no doc
-    Instance = ICacheKeyConstructor
-    """hardcoded/returns an instance of the class"""
     def Construct(self, cachable):
         """ Construct(self: ICacheKeyConstructor[T], cachable: T) -> CacheKey """
         pass
@@ -42,4 +41,7 @@ class ICacheKeyConstructor:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ICacheKeyConstructor()
 

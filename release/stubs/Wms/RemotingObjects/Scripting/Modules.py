@@ -11,8 +11,6 @@ from Wms.RemotingObjects import *
 
 class AddModuleArgs():
     """ AddModuleArgs() """
-    Instance = AddModuleArgs
-    """hardcoded/returns an instance of the class"""
     Content = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -38,11 +36,12 @@ Set: Path(self: AddModuleArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AddModuleArgs()
 
 class GetLibArgs():
     """ GetLibArgs() """
-    Instance = GetLibArgs
-    """hardcoded/returns an instance of the class"""
     Path = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -52,11 +51,12 @@ Set: Path(self: GetLibArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GetLibArgs()
 
 class LibContent():
     """ LibContent() """
-    Instance = LibContent
-    """hardcoded/returns an instance of the class"""
     Directory = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -98,11 +98,12 @@ Set: Type(self: LibContent) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LibContent()
 
 class LibContents(FindableList):
     """ LibContents() """
-    Instance = LibContents
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -131,11 +132,12 @@ Set: Path(self: LibContents) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LibContents()
 
 class LibContentType:
     """ enum LibContentType, values: File (1), Folder (0) """
-    Instance = LibContentType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -173,11 +175,12 @@ class LibContentType:
     Folder = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LibContentType()
 
 class ModuleArgs():
     """ ModuleArgs() """
-    Instance = ModuleArgs
-    """hardcoded/returns an instance of the class"""
     Directory = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -211,11 +214,12 @@ Set: Script(self: ModuleArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ModuleArgs()
 
 class PythonModule():
     """ PythonModule() """
-    Instance = PythonModule
-    """hardcoded/returns an instance of the class"""
     Content = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -241,4 +245,7 @@ Set: Path(self: PythonModule) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PythonModule()
 

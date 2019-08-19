@@ -11,8 +11,6 @@ from System import *
 
 class DataChangedEventHandler(MulticastDelegate):
     """ DataChangedEventHandler(object: object, method: IntPtr) """
-    Instance = DataChangedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, callback, object):
         """ BeginInvoke(self: DataChangedEventHandler, sender: object, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -34,9 +32,7 @@ class DataChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -65,8 +61,7 @@ class DataChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -82,11 +77,12 @@ class DataChangedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DataChangedEventHandler()
 
 class IClientService:
     # no doc
-    Instance = IClientService
-    """hardcoded/returns an instance of the class"""
     def BeepContinuous(self):
         """ BeepContinuous(self: IClientService) """
         pass
@@ -123,11 +119,12 @@ class IClientService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IClientService()
 
 class IDefaultItemLocationHelper:
     # no doc
-    Instance = IDefaultItemLocationHelper
-    """hardcoded/returns an instance of the class"""
     def GetDefaultItemLocationsByItemCode(self, itemCode):
         """ GetDefaultItemLocationsByItemCode(self: IDefaultItemLocationHelper, itemCode: str) -> ResultObject[FindableList[WarehouseItemLocation]] """
         pass
@@ -144,11 +141,12 @@ class IDefaultItemLocationHelper:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IDefaultItemLocationHelper()
 
 class IDocumentQueue:
     # no doc
-    Instance = IDocumentQueue
-    """hardcoded/returns an instance of the class"""
     def CopyPrintRule(self, printRuleId):
         """ CopyPrintRule(self: IDocumentQueue, printRuleId: int) -> PrintRule """
         pass
@@ -245,11 +243,12 @@ class IDocumentQueue:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IDocumentQueue()
 
 class IGeneral:
     # no doc
-    Instance = IGeneral
-    """hardcoded/returns an instance of the class"""
     def AddOrUpdateErpLock(self, lock):
         """ AddOrUpdateErpLock(self: IGeneral, lock: ErpLock) -> int """
         pass
@@ -1225,11 +1224,12 @@ Set: CurrentLicense(self: IGeneral) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IGeneral()
 
 class IInbound:
     # no doc
-    Instance = IInbound
-    """hardcoded/returns an instance of the class"""
     def AddOrUpdateLicensePlateToReceipt(self, cacheKey, licensePlate):
         """ AddOrUpdateLicensePlateToReceipt(self: IInbound, cacheKey: CacheKey, licensePlate: LicensePlate) -> LicensePlate """
         pass
@@ -1446,11 +1446,12 @@ class IInbound:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IInbound()
 
 class IInventory:
     # no doc
-    Instance = IInventory
-    """hardcoded/returns an instance of the class"""
     def AddCountItemIdentitification(self, key, itemId, overwriteIfExists):
         """ AddCountItemIdentitification(self: IInventory, key: CacheKey, itemId: ItemIdentification, overwriteIfExists: bool) -> bool """
         pass
@@ -1814,11 +1815,12 @@ class IInventory:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IInventory()
 
 class IMessaging:
     # no doc
-    Instance = IMessaging
-    """hardcoded/returns an instance of the class"""
     def ChangeMessagesStatus(self, messageIds, newStatus):
         """ ChangeMessagesStatus(self: IMessaging, messageIds: List[Guid], newStatus: MessageStatus) """
         pass
@@ -1891,11 +1893,12 @@ class IMessaging:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IMessaging()
 
 class INotificationCenter:
     # no doc
-    Instance = INotificationCenter
-    """hardcoded/returns an instance of the class"""
     def AddNotification(self, notificationToInsert):
         """ AddNotification(self: INotificationCenter, notificationToInsert: InsertNotificationArgs) """
         pass
@@ -1940,11 +1943,12 @@ class INotificationCenter:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return INotificationCenter()
 
 class INotificationSummary:
     # no doc
-    Instance = INotificationSummary
-    """hardcoded/returns an instance of the class"""
     def DeleteConfiguration(self, notificationSummaryId):
         """ DeleteConfiguration(self: INotificationSummary, notificationSummaryId: int) """
         pass
@@ -1981,11 +1985,12 @@ class INotificationSummary:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return INotificationSummary()
 
 class INumberGeneration:
     # no doc
-    Instance = INumberGeneration
-    """hardcoded/returns an instance of the class"""
     def AddUsedNumber(self, args):
         """ AddUsedNumber(self: INumberGeneration, args: AddUsedNumberArgs) """
         pass
@@ -2026,11 +2031,12 @@ class INumberGeneration:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return INumberGeneration()
 
 class IOfflineScanning:
     # no doc
-    Instance = IOfflineScanning
-    """hardcoded/returns an instance of the class"""
     def AddScanner(self, args):
         """ AddScanner(self: IOfflineScanning, args: AddScannerArgs) """
         pass
@@ -2079,11 +2085,12 @@ class IOfflineScanning:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IOfflineScanning()
 
 class IOutbound:
     # no doc
-    Instance = IOutbound
-    """hardcoded/returns an instance of the class"""
     def AddDirectOrder(self, args):
         """ AddDirectOrder(self: IOutbound, args: DirectOrderCrudArgs) -> DataFlowObject[DirectOrder] """
         pass
@@ -2512,11 +2519,12 @@ class IOutbound:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IOutbound()
 
 class IPrinting:
     # no doc
-    Instance = IPrinting
-    """hardcoded/returns an instance of the class"""
     def GetPickListsAll(self, pickLists):
         """ GetPickListsAll(self: IPrinting) -> (int, ReportItems) """
         pass
@@ -2537,11 +2545,12 @@ class IPrinting:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPrinting()
 
 class IRemotePublishing:
     # no doc
-    Instance = IRemotePublishing
-    """hardcoded/returns an instance of the class"""
     def AddRemotePublisher(self, args):
         """ AddRemotePublisher(self: IRemotePublishing, args: AddRemotePublisherArgs) -> Publisher """
         pass
@@ -2562,4 +2571,7 @@ class IRemotePublishing:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IRemotePublishing()
 

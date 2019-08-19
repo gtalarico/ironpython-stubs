@@ -10,8 +10,6 @@
 
 class Receiver:
     """ Receiver(lines: InboundReceiveLines, args: DataFlowObject[ReceiveArgs]) """
-    Instance = Receiver
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """ Dispose(self: Receiver) """
         pass
@@ -53,11 +51,12 @@ class Receiver:
     DeleteLine = None
     Lines = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Receiver()
 
 class AdhocReceiver(Receiver):
     """ AdhocReceiver(lines: InboundReceiveLines, args: DataFlowObject[ReceiveArgs]) """
-    Instance = AdhocReceiver
-    """hardcoded/returns an instance of the class"""
     def Receive(self):
         """ Receive(self: Receiver, receiveLine: InboundReceiveLine, orderNumber: str, itemIdNumber: str, quantity: Decimal, endDate: Nullable[DateTime], deleteLine: bool) -> bool """
         pass
@@ -87,11 +86,12 @@ class AdhocReceiver(Receiver):
     DeleteLine = None
     Lines = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AdhocReceiver()
 
 class AdHocRmaReceiver(Receiver):
     """ AdHocRmaReceiver(lines: InboundReceiveLines, args: DataFlowObject[ReceiveArgs]) """
-    Instance = AdHocRmaReceiver
-    """hardcoded/returns an instance of the class"""
     def AddItemIfNotExists(self, *args): #cannot find CLR method
         """ AddItemIfNotExists(self: AdHocRmaReceiver, id: str) -> bool """
         pass
@@ -133,11 +133,12 @@ class AdHocRmaReceiver(Receiver):
     Lines = None
     _item = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AdHocRmaReceiver()
 
 class AdhocRmaTouchReceiver(AdHocRmaReceiver):
     """ AdhocRmaTouchReceiver(lines: InboundReceiveLines, args: DataFlowObject[ReceiveArgs]) """
-    Instance = AdhocRmaTouchReceiver
-    """hardcoded/returns an instance of the class"""
     def AddItemIfNotExists(self, *args): #cannot find CLR method
         """ AddItemIfNotExists(self: AdhocRmaTouchReceiver, id: str) -> bool """
         pass
@@ -183,11 +184,12 @@ class AdhocRmaTouchReceiver(AdHocRmaReceiver):
     Lines = None
     _item = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AdhocRmaTouchReceiver()
 
 class InboundReceiveLineManager():
     # no doc
-    Instance = InboundReceiveLineManager
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def CheckForExistingPreReceipts(dfObject):
         """ CheckForExistingPreReceipts(dfObject: DataFlowObject[ReceiveLinesForPreReceiptArgs]) -> InboundReceiveLines """
@@ -209,11 +211,12 @@ class InboundReceiveLineManager():
         'GetInboundReceiveLines',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return InboundReceiveLineManager()
 
 class ReceiverFactory:
     """ ReceiverFactory(lines: InboundReceiveLines, dfObject: DataFlowObject[ReceiveArgs]) """
-    Instance = ReceiverFactory
-    """hardcoded/returns an instance of the class"""
     def CreateReceiver(self):
         """ CreateReceiver(self: ReceiverFactory) -> Receiver """
         pass
@@ -243,4 +246,7 @@ class ReceiverFactory:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ReceiverFactory()
 

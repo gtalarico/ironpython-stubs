@@ -11,8 +11,6 @@ from Wms.RemotingImplementation.TaskScheduler import *
 
 class CleanUpLogTask(TaskBase):
     """ CleanUpLogTask(settings: SystemSettings) """
-    Instance = CleanUpLogTask
-    """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: CleanUpLogTask) """
         pass
@@ -29,20 +27,22 @@ Set: Settings(self: CleanUpLogTask) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CleanUpLogTask()
 
 class NLogLoggingBootstrapper():
     """ NLogLoggingBootstrapper() """
-    Instance = NLogLoggingBootstrapper
-    """hardcoded/returns an instance of the class"""
     def Init(self):
         """ Init(self: NLogLoggingBootstrapper) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NLogLoggingBootstrapper()
 
 class NLogLoggingService(Logger):
     """ NLogLoggingService() """
-    Instance = NLogLoggingService
-    """hardcoded/returns an instance of the class"""
     def Error(self, *__args):
         """ Error(self: NLogLoggingService, exception: Exception) """
         pass
@@ -111,11 +111,12 @@ class NLogLoggingService(Logger):
     KeyVersion = 'bw-version'
     KeyZoneName = 'bw-zonename'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NLogLoggingService()
 
 class NLogTraceLoggingService(Logger):
     """ NLogTraceLoggingService() """
-    Instance = NLogTraceLoggingService
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetTraceLoggingService():
         """ GetTraceLoggingService() -> ITraceLoggingService """
@@ -144,6 +145,9 @@ class NLogTraceLoggingService(Logger):
     KeyCustomTraceActivityId = 'custom-activityid'
     KeyTraceType = 'trace-type'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NLogTraceLoggingService()
 
 # variables with complex values
 

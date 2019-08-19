@@ -10,8 +10,6 @@
 
 class ILoggingService:
     # no doc
-    Instance = ILoggingService
-    """hardcoded/returns an instance of the class"""
     def Debug(self, *__args):
         """ Debug(self: ILoggingService, message: str)Debug(self: ILoggingService, format: str, *args: Array[object]) """
         pass
@@ -72,11 +70,12 @@ class ILoggingService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ILoggingService()
 
 class ITraceLoggingService:
     # no doc
-    Instance = ITraceLoggingService
-    """hardcoded/returns an instance of the class"""
     def IsTracingEnabled(self):
         """ IsTracingEnabled(self: ITraceLoggingService) -> bool """
         pass
@@ -93,11 +92,12 @@ class ITraceLoggingService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ITraceLoggingService()
 
 class TraceExtProperties:
     """ enum TraceExtProperties, values: ElapsedSeconds (4), MethodId (0), MethodName (1), MethodPreviousId (6), MethodPreviousName (5), ParameterList (3), ReturnParam (2), TimeStart (7), TimeStop (8) """
-    Instance = TraceExtProperties
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -142,11 +142,12 @@ class TraceExtProperties:
     TimeStop = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TraceExtProperties()
 
 class TraceType:
     """ enum TraceType, values: Start (1), Stop (0) """
-    Instance = TraceType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -184,4 +185,7 @@ class TraceType:
     Stop = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TraceType()
 

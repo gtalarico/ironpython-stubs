@@ -17,8 +17,6 @@ class SystemSettings():
     
     SystemSettings()
     """
-    Instance = SystemSettings
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def AddValidValueDelegate(id, delegate):
         """
@@ -182,11 +180,12 @@ Set: ShipppingDeliveryTimeInterval(self: SystemSettings) = value
     ValidValueGetTranslations = 'ValidValueGetTranslations'
     ValidValueGetTypeDays = 'ValidValueGetTypeDays'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SystemSettings()
 
 class SystemSettingsTable(List):
     """ SystemSettingsTable() """
-    Instance = SystemSettingsTable
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -206,11 +205,12 @@ class SystemSettingsTable(List):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SystemSettingsTable()
 
 class SystemSettingsTableRow():
     """ SystemSettingsTableRow() """
-    Instance = SystemSettingsTableRow
-    """hardcoded/returns an instance of the class"""
     GroupName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Name of the group the settings are part of.
             Used for categorization.
@@ -318,6 +318,9 @@ Set: Value(self: SystemSettingsTableRow) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SystemSettingsTableRow()
 
 # variables with complex values
 

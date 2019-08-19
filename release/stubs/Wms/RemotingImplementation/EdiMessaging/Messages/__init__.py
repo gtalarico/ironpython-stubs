@@ -14,8 +14,6 @@ class ProcessDirectOrderMessage(MessageBase):
     ProcessDirectOrderMessage()
     ProcessDirectOrderMessage(message: IMessage)
     """
-    Instance = ProcessDirectOrderMessage
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -37,14 +35,15 @@ Set: Data(self: ProcessDirectOrderMessage) = value
 
     TypeName = 'Direct Order Fulfillment'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessDirectOrderMessage()
 
 class ProcessDirectOrderMessageData():
     """
     ProcessDirectOrderMessageData()
     ProcessDirectOrderMessageData(directOrder: DirectOrder)
     """
-    Instance = ProcessDirectOrderMessageData
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, directOrder=None):
         """
@@ -83,14 +82,15 @@ Set: IsProcessedInErp(self: ProcessDirectOrderMessageData) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessDirectOrderMessageData()
 
 class ProcessPreReceiptMessage(MessageBase):
     """
     ProcessPreReceiptMessage()
     ProcessPreReceiptMessage(message: IMessage)
     """
-    Instance = ProcessPreReceiptMessage
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -112,11 +112,12 @@ Set: Data(self: ProcessPreReceiptMessage) = value
 
     TypeName = 'Prereceipt Fulfillment'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessPreReceiptMessage()
 
 class ProcessPreReceiptMessageData():
     """ ProcessPreReceiptMessageData() """
-    Instance = ProcessPreReceiptMessageData
-    """hardcoded/returns an instance of the class"""
     DefaultInboundLocation = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: DefaultInboundLocation(self: ProcessPreReceiptMessageData) -> str
 
@@ -148,14 +149,15 @@ Set: YourReference(self: ProcessPreReceiptMessageData) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessPreReceiptMessageData()
 
 class ProcessSalesOrderMessage(MessageBase):
     """
     ProcessSalesOrderMessage()
     ProcessSalesOrderMessage(message: IMessage)
     """
-    Instance = ProcessSalesOrderMessage
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -177,11 +179,12 @@ Set: Data(self: ProcessSalesOrderMessage) = value
 
     TypeName = 'Sales Order Fulfillment'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessSalesOrderMessage()
 
 class ProcessSalesOrderMessageData():
     """ ProcessSalesOrderMessageData() """
-    Instance = ProcessSalesOrderMessageData
-    """hardcoded/returns an instance of the class"""
     Arguments = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Arguments(self: ProcessSalesOrderMessageData) -> ProcessSalesOrderLinesArgs
 
@@ -201,11 +204,12 @@ Set: Order(self: ProcessSalesOrderMessageData) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessSalesOrderMessageData()
 
 class StockOnLocationChangedMessage(MessageBase):
     """ StockOnLocationChangedMessage() """
-    Instance = StockOnLocationChangedMessage
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -219,6 +223,9 @@ Set: Location(self: StockOnLocationChangedMessage) = value
 
     TypeName = 'Stock changed on location'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StockOnLocationChangedMessage()
 
 # variables with complex values
 

@@ -14,8 +14,6 @@ class Condition:
     Condition(field: str, operator: str, value: str)
     Condition(field: str, operator: str, values: IEnumerable[str])
     """
-    Instance = Condition
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -52,11 +50,12 @@ Set: Values(self: Condition) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Condition()
 
 class ICondition:
     # no doc
-    Instance = ICondition
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -80,11 +79,12 @@ Set: Values(self: ICondition) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ICondition()
 
 class IRule:
     # no doc
-    Instance = IRule
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -114,11 +114,12 @@ Set: Priority(self: IRule) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IRule()
 
 class OperatorEnum:
     """ enum OperatorEnum, values: OperatorIn (2), OperatorIs (0), OperatorIsNot (1), OperatorNotIn (3) """
-    Instance = OperatorEnum
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -158,11 +159,12 @@ class OperatorEnum:
     OperatorNotIn = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OperatorEnum()
 
 class Rule:
     """ Rule() """
-    Instance = Rule
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -196,11 +198,12 @@ Set: Priority(self: Rule) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Rule()
 
 class RuleEngine():
     # no doc
-    Instance = RuleEngine
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def CalculatePriority(*__args):
         """ CalculatePriority(printRules: IEnumerable[IRule])CalculatePriority(rule: IRule) -> int """
@@ -222,4 +225,7 @@ class RuleEngine():
         'FindMatchingRules',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RuleEngine()
 

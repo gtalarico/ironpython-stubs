@@ -10,8 +10,6 @@
 
 class DepartmentFixedLengthLayoutFactory:
     """ DepartmentFixedLengthLayoutFactory() """
-    Instance = DepartmentFixedLengthLayoutFactory
-    """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: DepartmentFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosDepartment] """
         pass
@@ -24,11 +22,12 @@ class DepartmentFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DepartmentFixedLengthLayoutFactory()
 
 class IFixedLengthLayoutFactory:
     # no doc
-    Instance = IFixedLengthLayoutFactory
-    """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: IFixedLengthLayoutFactory[T], appVersion: str) -> IFixedLayout[T] """
         pass
@@ -37,11 +36,12 @@ class IFixedLengthLayoutFactory:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IFixedLengthLayoutFactory()
 
 class KanbanBarcodeFixedLengthLayoutFactory:
     """ KanbanBarcodeFixedLengthLayoutFactory() """
-    Instance = KanbanBarcodeFixedLengthLayoutFactory
-    """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: KanbanBarcodeFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosKanbanBarcode] """
         pass
@@ -54,11 +54,12 @@ class KanbanBarcodeFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return KanbanBarcodeFixedLengthLayoutFactory()
 
 class KanbanProductFixedLengthLayoutFactory:
     """ KanbanProductFixedLengthLayoutFactory() """
-    Instance = KanbanProductFixedLengthLayoutFactory
-    """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: KanbanProductFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosKanbanProduct] """
         pass
@@ -71,11 +72,12 @@ class KanbanProductFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return KanbanProductFixedLengthLayoutFactory()
 
 class KanbanReplenishmentLineFixedLengthLayoutFactory:
     """ KanbanReplenishmentLineFixedLengthLayoutFactory() """
-    Instance = KanbanReplenishmentLineFixedLengthLayoutFactory
-    """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: KanbanReplenishmentLineFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosKanbanReplenishmentLine] """
         pass
@@ -88,11 +90,12 @@ class KanbanReplenishmentLineFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return KanbanReplenishmentLineFixedLengthLayoutFactory()
 
 class MetaFixedLengthLayoutFactory:
     """ MetaFixedLengthLayoutFactory() """
-    Instance = MetaFixedLengthLayoutFactory
-    """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: MetaFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosMeta] """
         pass
@@ -105,11 +108,12 @@ class MetaFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MetaFixedLengthLayoutFactory()
 
 class ProductReplenishmentLineFixedLengthLayoutFactory:
     """ ProductReplenishmentLineFixedLengthLayoutFactory() """
-    Instance = ProductReplenishmentLineFixedLengthLayoutFactory
-    """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: ProductReplenishmentLineFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosProductReplenishmentLine] """
         pass
@@ -122,11 +126,12 @@ class ProductReplenishmentLineFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProductReplenishmentLineFixedLengthLayoutFactory()
 
 class ProductsFixedLengthLayoutFactory:
     """ ProductsFixedLengthLayoutFactory() """
-    Instance = ProductsFixedLengthLayoutFactory
-    """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: ProductsFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosProduct] """
         pass
@@ -139,11 +144,12 @@ class ProductsFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProductsFixedLengthLayoutFactory()
 
 class ProductsIndexFixedLengthLayoutFactory:
     """ ProductsIndexFixedLengthLayoutFactory() """
-    Instance = ProductsIndexFixedLengthLayoutFactory
-    """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: ProductsIndexFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosProductIndex] """
         pass
@@ -156,11 +162,12 @@ class ProductsIndexFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProductsIndexFixedLengthLayoutFactory()
 
 class UsersFixedLengthLayoutFactory:
     """ UsersFixedLengthLayoutFactory() """
-    Instance = UsersFixedLengthLayoutFactory
-    """hardcoded/returns an instance of the class"""
     def GetLayout(self, appVersion):
         """ GetLayout(self: UsersFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[UserWithSecrets] """
         pass
@@ -173,4 +180,7 @@ class UsersFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UsersFixedLengthLayoutFactory()
 

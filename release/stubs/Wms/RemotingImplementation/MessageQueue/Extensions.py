@@ -10,8 +10,6 @@
 
 class MessageQueueProxyExtensions():
     # no doc
-    Instance = MessageQueueProxyExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def ToMessagingMessage(proxy):
         """ ToMessagingMessage(proxy: MessageQueue) -> IMessage """
@@ -33,4 +31,7 @@ class MessageQueueProxyExtensions():
         'ToMessagingMessageWithoutBody',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MessageQueueProxyExtensions()
 

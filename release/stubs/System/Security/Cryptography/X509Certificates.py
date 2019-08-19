@@ -14,8 +14,6 @@ class OpenFlags:
     
     enum (flags) OpenFlags, values: IncludeArchived (8), MaxAllowed (2), OpenExistingOnly (4), ReadOnly (0), ReadWrite (1)
     """
-    Instance = OpenFlags
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -56,6 +54,9 @@ class OpenFlags:
     ReadWrite = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OpenFlags()
 
 class PublicKey():
     """
@@ -63,8 +64,6 @@ class PublicKey():
     
     PublicKey(oid: Oid, parameters: AsnEncodedData, keyValue: AsnEncodedData)
     """
-    Instance = PublicKey
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, oid, parameters, keyValue):
         """ __new__(cls: type, oid: Oid, parameters: AsnEncodedData, keyValue: AsnEncodedData) """
@@ -99,6 +98,9 @@ Get: Oid(self: PublicKey) -> Oid
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PublicKey()
 
 class StoreLocation:
     """
@@ -106,8 +108,6 @@ class StoreLocation:
     
     enum StoreLocation, values: CurrentUser (1), LocalMachine (2)
     """
-    Instance = StoreLocation
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -145,6 +145,9 @@ class StoreLocation:
     LocalMachine = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StoreLocation()
 
 class StoreName:
     """
@@ -152,8 +155,6 @@ class StoreName:
     
     enum StoreName, values: AddressBook (1), AuthRoot (2), CertificateAuthority (3), Disallowed (4), My (5), Root (6), TrustedPeople (7), TrustedPublisher (8)
     """
-    Instance = StoreName
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -197,6 +198,9 @@ class StoreName:
     TrustedPublisher = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StoreName()
 
 class X500DistinguishedName(AsnEncodedData):
     """
@@ -208,8 +212,6 @@ class X500DistinguishedName(AsnEncodedData):
     X500DistinguishedName(distinguishedName: str)
     X500DistinguishedName(distinguishedName: str, flag: X500DistinguishedNameFlags)
     """
-    Instance = X500DistinguishedName
-    """hardcoded/returns an instance of the class"""
     def Decode(self, flag):
         """
         Decode(self: X500DistinguishedName, flag: X500DistinguishedNameFlags) -> str
@@ -251,6 +253,9 @@ Get: Name(self: X500DistinguishedName) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X500DistinguishedName()
 
 class X500DistinguishedNameFlags:
     """
@@ -258,8 +263,6 @@ class X500DistinguishedNameFlags:
     
     enum (flags) X500DistinguishedNameFlags, values: DoNotUsePlusSign (32), DoNotUseQuotes (64), ForceUTF8Encoding (16384), None (0), Reversed (1), UseCommas (128), UseNewLines (256), UseSemicolons (16), UseT61Encoding (8192), UseUTF8Encoding (4096)
     """
-    Instance = X500DistinguishedNameFlags
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -305,6 +308,9 @@ class X500DistinguishedNameFlags:
     UseUTF8Encoding = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X500DistinguishedNameFlags()
 
 class X509Extension(AsnEncodedData):
     """
@@ -314,8 +320,6 @@ class X509Extension(AsnEncodedData):
     X509Extension(encodedExtension: AsnEncodedData, critical: bool)
     X509Extension(oid: Oid, rawData: Array[Byte], critical: bool)
     """
-    Instance = X509Extension
-    """hardcoded/returns an instance of the class"""
     def CopyFrom(self, asnEncodedData):
         """
         CopyFrom(self: X509Extension, asnEncodedData: AsnEncodedData)
@@ -344,6 +348,9 @@ Set: Critical(self: X509Extension) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509Extension()
 
 class X509BasicConstraintsExtension(X509Extension):
     """
@@ -353,14 +360,10 @@ class X509BasicConstraintsExtension(X509Extension):
     X509BasicConstraintsExtension(certificateAuthority: bool, hasPathLengthConstraint: bool, pathLengthConstraint: int, critical: bool)
     X509BasicConstraintsExtension(encodedBasicConstraints: AsnEncodedData, critical: bool)
     """
-    Instance = X509BasicConstraintsExtension
-    """hardcoded/returns an instance of the class"""
     def CopyFrom(self, asnEncodedData):
         """
         CopyFrom(self: X509BasicConstraintsExtension, asnEncodedData: AsnEncodedData)
-            Initializes a new instance of the System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension class using an System.Security.Cryptography.AsnEncodedData 
-             object.
-        
+            Initializes a new instance of the System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension class using an System.Security.Cryptography.AsnEncodedData object.
         
             asnEncodedData: The encoded data to use to create the extension.
         """
@@ -397,6 +400,9 @@ Get: PathLengthConstraint(self: X509BasicConstraintsExtension) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509BasicConstraintsExtension()
 
 class X509Certificate:
     """
@@ -417,8 +423,6 @@ class X509Certificate:
     X509Certificate(cert: X509Certificate)
     X509Certificate(info: SerializationInfo, context: StreamingContext)
     """
-    Instance = X509Certificate
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateFromCertFile(filename):
         """
@@ -468,17 +472,13 @@ class X509Certificate:
         """
         Export(self: X509Certificate, contentType: X509ContentType) -> Array[Byte]
         
-            Exports the current System.Security.Cryptography.X509Certificates.X509Certificate object to a byte array in a format described by one of the 
-             System.Security.Cryptography.X509Certificates.X509ContentType values.
-        
+            Exports the current System.Security.Cryptography.X509Certificates.X509Certificate object to a byte array in a format described by one of the System.Security.Cryptography.X509Certificates.X509ContentType values.
         
             contentType: One of the System.Security.Cryptography.X509Certificates.X509ContentType values that describes how to format the output data.
             Returns: An array of bytes that represents the current System.Security.Cryptography.X509Certificates.X509Certificate object.
         Export(self: X509Certificate, contentType: X509ContentType, password: str) -> Array[Byte]
         
-            Exports the current System.Security.Cryptography.X509Certificates.X509Certificate object to a byte array in a format described by one of the 
-             System.Security.Cryptography.X509Certificates.X509ContentType values, and using the specified password.
-        
+            Exports the current System.Security.Cryptography.X509Certificates.X509Certificate object to a byte array in a format described by one of the System.Security.Cryptography.X509Certificates.X509ContentType values, and using the specified password.
         
             contentType: One of the System.Security.Cryptography.X509Certificates.X509ContentType values that describes how to format the output data.
             password: The password required to access the X.509 certificate data.
@@ -664,9 +664,7 @@ class X509Certificate:
         
             rawData: A byte array containing data from an X.509 certificate.
         Import(self: X509Certificate, rawData: Array[Byte], password: str, keyStorageFlags: X509KeyStorageFlags)
-            Populates the System.Security.Cryptography.X509Certificates.X509Certificate object using data from a byte array, a password, and flags for determining how the private key 
-             is imported.
-        
+            Populates the System.Security.Cryptography.X509Certificates.X509Certificate object using data from a byte array, a password, and flags for determining how the private key is imported.
         
             rawData: A byte array containing data from an X.509 certificate.
             password: The password required to access the X.509 certificate data.
@@ -682,9 +680,7 @@ class X509Certificate:
         
             fileName: The name of a certificate file represented as a string.
         Import(self: X509Certificate, fileName: str, password: str, keyStorageFlags: X509KeyStorageFlags)
-            Populates the System.Security.Cryptography.X509Certificates.X509Certificate object with information from a certificate file, a password, and a 
-             System.Security.Cryptography.X509Certificates.X509KeyStorageFlags value.
-        
+            Populates the System.Security.Cryptography.X509Certificates.X509Certificate object with information from a certificate file, a password, and a System.Security.Cryptography.X509Certificates.X509KeyStorageFlags value.
         
             fileName: The name of a certificate file represented as a string.
             password: The password required to access the X.509 certificate data.
@@ -791,6 +787,9 @@ Get: Subject(self: X509Certificate) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509Certificate()
 
 class X509Certificate2(X509Certificate):
     """
@@ -810,8 +809,6 @@ class X509Certificate2(X509Certificate):
     X509Certificate2(handle: IntPtr)
     X509Certificate2(certificate: X509Certificate)
     """
-    Instance = X509Certificate2
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """ Dispose(self: X509Certificate, disposing: bool) """
         pass
@@ -853,9 +850,7 @@ class X509Certificate2(X509Certificate):
         
             rawData: A byte array containing data from an X.509 certificate.
         Import(self: X509Certificate2, rawData: Array[Byte], password: str, keyStorageFlags: X509KeyStorageFlags)
-            Populates an System.Security.Cryptography.X509Certificates.X509Certificate2 object using data from a byte array, a password, and flags for determining how to import the 
-             private key.
-        
+            Populates an System.Security.Cryptography.X509Certificates.X509Certificate2 object using data from a byte array, a password, and flags for determining how to import the private key.
         
             rawData: A byte array containing data from an X.509 certificate.
             password: The password required to access the X.509 certificate data.
@@ -871,9 +866,7 @@ class X509Certificate2(X509Certificate):
         
             fileName: The name of a certificate.
         Import(self: X509Certificate2, fileName: str, password: str, keyStorageFlags: X509KeyStorageFlags)
-            Populates an System.Security.Cryptography.X509Certificates.X509Certificate2 object with information from a certificate file, a password, and a 
-             System.Security.Cryptography.X509Certificates.X509KeyStorageFlags value.
-        
+            Populates an System.Security.Cryptography.X509Certificates.X509Certificate2 object with information from a certificate file, a password, and a System.Security.Cryptography.X509Certificates.X509KeyStorageFlags value.
         
             fileName: The name of a certificate file.
             password: The password required to access the X.509 certificate data.
@@ -904,9 +897,7 @@ class X509Certificate2(X509Certificate):
         
             Displays an X.509 certificate in text format.
         
-            verbose: true to display the public key, private key, extensions, and so forth; false to display information that is similar to the 
-             System.Security.Cryptography.X509Certificates.X509Certificate2 class, including thumbprint, serial number, subject and issuer names, and so on.
-        
+            verbose: true to display the public key, private key, extensions, and so forth; false to display information that is similar to the System.Security.Cryptography.X509Certificates.X509Certificate2 class, including thumbprint, serial number, subject and issuer names, and so on.
             Returns: The certificate information.
         """
         pass
@@ -1067,6 +1058,9 @@ Get: Version(self: X509Certificate2) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509Certificate2()
 
 class X509CertificateCollection(CollectionBase):
     """
@@ -1076,36 +1070,25 @@ class X509CertificateCollection(CollectionBase):
     X509CertificateCollection(value: X509CertificateCollection)
     X509CertificateCollection(value: Array[X509Certificate])
     """
-    Instance = X509CertificateCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: X509CertificateCollection, value: X509Certificate) -> int
         
-            Adds an System.Security.Cryptography.X509Certificates.X509Certificate with the specified value to the current 
-             System.Security.Cryptography.X509Certificates.X509CertificateCollection.
-        
+            Adds an System.Security.Cryptography.X509Certificates.X509Certificate with the specified value to the current System.Security.Cryptography.X509Certificates.X509CertificateCollection.
         
             value: The System.Security.Cryptography.X509Certificates.X509Certificate to add to the current System.Security.Cryptography.X509Certificates.X509CertificateCollection.
-            Returns: The index into the current System.Security.Cryptography.X509Certificates.X509CertificateCollection at which the new 
-             System.Security.Cryptography.X509Certificates.X509Certificate was inserted.
+            Returns: The index into the current System.Security.Cryptography.X509Certificates.X509CertificateCollection at which the new System.Security.Cryptography.X509Certificates.X509Certificate was inserted.
         """
         pass
 
     def AddRange(self, value):
         """
         AddRange(self: X509CertificateCollection, value: Array[X509Certificate])
-            Copies the elements of an array of type System.Security.Cryptography.X509Certificates.X509Certificate to the end of the current 
-             System.Security.Cryptography.X509Certificates.X509CertificateCollection.
+            Copies the elements of an array of type System.Security.Cryptography.X509Certificates.X509Certificate to the end of the current System.Security.Cryptography.X509Certificates.X509CertificateCollection.
         
-        
-            value: The array of type System.Security.Cryptography.X509Certificates.X509Certificate containing the objects to add to the current 
-             System.Security.Cryptography.X509Certificates.X509CertificateCollection.
-        
+            value: The array of type System.Security.Cryptography.X509Certificates.X509Certificate containing the objects to add to the current System.Security.Cryptography.X509Certificates.X509CertificateCollection.
         AddRange(self: X509CertificateCollection, value: X509CertificateCollection)
-            Copies the elements of the specified System.Security.Cryptography.X509Certificates.X509CertificateCollection to the end of the current 
-             System.Security.Cryptography.X509Certificates.X509CertificateCollection.
-        
+            Copies the elements of the specified System.Security.Cryptography.X509Certificates.X509CertificateCollection to the end of the current System.Security.Cryptography.X509Certificates.X509CertificateCollection.
         
             value: The System.Security.Cryptography.X509Certificates.X509CertificateCollection containing the objects to add to the collection.
         """
@@ -1115,9 +1098,7 @@ class X509CertificateCollection(CollectionBase):
         """
         Contains(self: X509CertificateCollection, value: X509Certificate) -> bool
         
-            Gets a value indicating whether the current System.Security.Cryptography.X509Certificates.X509CertificateCollection contains the specified 
-             System.Security.Cryptography.X509Certificates.X509Certificate.
-        
+            Gets a value indicating whether the current System.Security.Cryptography.X509Certificates.X509CertificateCollection contains the specified System.Security.Cryptography.X509Certificates.X509Certificate.
         
             value: The System.Security.Cryptography.X509Certificates.X509Certificate to locate.
             Returns: true if the System.Security.Cryptography.X509Certificates.X509Certificate is contained in this collection; otherwise, false.
@@ -1127,9 +1108,7 @@ class X509CertificateCollection(CollectionBase):
     def CopyTo(self, array, index):
         """
         CopyTo(self: X509CertificateCollection, array: Array[X509Certificate], index: int)
-            Copies the System.Security.Cryptography.X509Certificates.X509Certificate values in the current System.Security.Cryptography.X509Certificates.X509CertificateCollection to a 
-             one-dimensional System.Array instance at the specified index.
-        
+            Copies the System.Security.Cryptography.X509Certificates.X509Certificate values in the current System.Security.Cryptography.X509Certificates.X509CertificateCollection to a one-dimensional System.Array instance at the specified index.
         
             array: The one-dimensional System.Array that is the destination of the values copied from System.Security.Cryptography.X509Certificates.X509CertificateCollection.
             index: The index into array to begin copying.
@@ -1158,22 +1137,17 @@ class X509CertificateCollection(CollectionBase):
         """
         IndexOf(self: X509CertificateCollection, value: X509Certificate) -> int
         
-            Returns the index of the specified System.Security.Cryptography.X509Certificates.X509Certificate in the current 
-             System.Security.Cryptography.X509Certificates.X509CertificateCollection.
-        
+            Returns the index of the specified System.Security.Cryptography.X509Certificates.X509Certificate in the current System.Security.Cryptography.X509Certificates.X509CertificateCollection.
         
             value: The System.Security.Cryptography.X509Certificates.X509Certificate to locate.
-            Returns: The index of the System.Security.Cryptography.X509Certificates.X509Certificate specified by the value parameter in the 
-             System.Security.Cryptography.X509Certificates.X509CertificateCollection, if found; otherwise, -1.
+            Returns: The index of the System.Security.Cryptography.X509Certificates.X509Certificate specified by the value parameter in the System.Security.Cryptography.X509Certificates.X509CertificateCollection, if found; otherwise, -1.
         """
         pass
 
     def Insert(self, index, value):
         """
         Insert(self: X509CertificateCollection, index: int, value: X509Certificate)
-            Inserts a System.Security.Cryptography.X509Certificates.X509Certificate into the current System.Security.Cryptography.X509Certificates.X509CertificateCollection at the 
-             specified index.
-        
+            Inserts a System.Security.Cryptography.X509Certificates.X509Certificate into the current System.Security.Cryptography.X509Certificates.X509CertificateCollection at the specified index.
         
             index: The zero-based index where value should be inserted.
             value: The System.Security.Cryptography.X509Certificates.X509Certificate to insert.
@@ -1319,6 +1293,9 @@ class X509CertificateCollection(CollectionBase):
 
     X509CertificateEnumerator = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509CertificateCollection()
 
 class X509Certificate2Collection(X509CertificateCollection):
     """
@@ -1329,8 +1306,6 @@ class X509Certificate2Collection(X509CertificateCollection):
     X509Certificate2Collection(certificates: X509Certificate2Collection)
     X509Certificate2Collection(certificates: Array[X509Certificate2])
     """
-    Instance = X509Certificate2Collection
-    """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
         Add(self: X509Certificate2Collection, certificate: X509Certificate2) -> int
@@ -1345,15 +1320,11 @@ class X509Certificate2Collection(X509CertificateCollection):
     def AddRange(self, *__args):
         """
         AddRange(self: X509Certificate2Collection, certificates: Array[X509Certificate2])
-            Adds multiple System.Security.Cryptography.X509Certificates.X509Certificate2 objects in an array to the 
-             System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
-        
+            Adds multiple System.Security.Cryptography.X509Certificates.X509Certificate2 objects in an array to the System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
         
             certificates: An array of System.Security.Cryptography.X509Certificates.X509Certificate2 objects.
         AddRange(self: X509Certificate2Collection, certificates: X509Certificate2Collection)
-            Adds multiple System.Security.Cryptography.X509Certificates.X509Certificate2 objects in an System.Security.Cryptography.X509Certificates.X509Certificate2Collection object 
-             to another System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
-        
+            Adds multiple System.Security.Cryptography.X509Certificates.X509Certificate2 objects in an System.Security.Cryptography.X509Certificates.X509Certificate2Collection object to another System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
         
             certificates: An System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
         """
@@ -1392,9 +1363,7 @@ class X509Certificate2Collection(X509CertificateCollection):
         """
         Find(self: X509Certificate2Collection, findType: X509FindType, findValue: object, validOnly: bool) -> X509Certificate2Collection
         
-            Searches an System.Security.Cryptography.X509Certificates.X509Certificate2Collection object using the search criteria specified by the 
-             System.Security.Cryptography.X509Certificates.X509FindType enumeration and the findValue object.
-        
+            Searches an System.Security.Cryptography.X509Certificates.X509Certificate2Collection object using the search criteria specified by the System.Security.Cryptography.X509Certificates.X509FindType enumeration and the findValue object.
         
             findType: One of the System.Security.Cryptography.X509Certificates.X509FindType  values.
             findValue: The search criteria as an object.
@@ -1408,8 +1377,7 @@ class X509Certificate2Collection(X509CertificateCollection):
         GetEnumerator(self: X509Certificate2Collection) -> X509Certificate2Enumerator
         
             Returns an enumerator that can iterate through a System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
-            Returns: An System.Security.Cryptography.X509Certificates.X509Certificate2Enumerator object that can iterate through the 
-             System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
+            Returns: An System.Security.Cryptography.X509Certificates.X509Certificate2Enumerator object that can iterate through the System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
         """
         pass
 
@@ -1420,9 +1388,7 @@ class X509Certificate2Collection(X509CertificateCollection):
         
             rawData: A byte array containing data from an X.509 certificate.
         Import(self: X509Certificate2Collection, rawData: Array[Byte], password: str, keyStorageFlags: X509KeyStorageFlags)
-            Imports a certificate, in the form of a byte array that requires a password to access the certificate, into a 
-             System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
-        
+            Imports a certificate, in the form of a byte array that requires a password to access the certificate, into a System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
         
             rawData: A byte array containing data from an System.Security.Cryptography.X509Certificates.X509Certificate2 object.
             password: The password required to access the certificate information.
@@ -1540,23 +1506,18 @@ class X509Certificate2Collection(X509CertificateCollection):
         Remove(self: X509Certificate2Collection, certificate: X509Certificate2)
             Removes the first occurrence of a certificate from the System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
         
-            certificate: The System.Security.Cryptography.X509Certificates.X509Certificate2 object to be removed from the System.Security.Cryptography.X509Certificates.X509Certificate2Collection 
-             object.
+            certificate: The System.Security.Cryptography.X509Certificates.X509Certificate2 object to be removed from the System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
         """
         pass
 
     def RemoveRange(self, certificates):
         """
         RemoveRange(self: X509Certificate2Collection, certificates: Array[X509Certificate2])
-            Removes multiple System.Security.Cryptography.X509Certificates.X509Certificate2 objects in an array from an 
-             System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
-        
+            Removes multiple System.Security.Cryptography.X509Certificates.X509Certificate2 objects in an array from an System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
         
             certificates: An array of System.Security.Cryptography.X509Certificates.X509Certificate2 objects.
         RemoveRange(self: X509Certificate2Collection, certificates: X509Certificate2Collection)
-            Removes multiple System.Security.Cryptography.X509Certificates.X509Certificate2 objects in an System.Security.Cryptography.X509Certificates.X509Certificate2Collection 
-             object from another System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
-        
+            Removes multiple System.Security.Cryptography.X509Certificates.X509Certificate2 objects in an System.Security.Cryptography.X509Certificates.X509Certificate2Collection object from another System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
         
             certificates: An System.Security.Cryptography.X509Certificates.X509Certificate2Collection object.
         """
@@ -1603,11 +1564,12 @@ class X509Certificate2Collection(X509CertificateCollection):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509Certificate2Collection()
 
 class X509Certificate2Enumerator:
     """ Supports a simple iteration over a System.Security.Cryptography.X509Certificates.X509Certificate2Collection object. This class cannot be inherited. """
-    Instance = X509Certificate2Enumerator
-    """hardcoded/returns an instance of the class"""
     def MoveNext(self):
         """
         MoveNext(self: X509Certificate2Enumerator) -> bool
@@ -1648,6 +1610,9 @@ Get: Current(self: X509Certificate2Enumerator) -> X509Certificate2
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509Certificate2Enumerator()
 
 class X509Chain:
     """
@@ -1657,8 +1622,6 @@ class X509Chain:
     X509Chain()
     X509Chain(chainContext: IntPtr)
     """
-    Instance = X509Chain
-    """hardcoded/returns an instance of the class"""
     def Build(self, certificate):
         """
         Build(self: X509Chain, certificate: X509Certificate2) -> bool
@@ -1675,9 +1638,7 @@ class X509Chain:
         """
         Create() -> X509Chain
         
-            Creates an System.Security.Cryptography.X509Certificates.X509Chain object after querying for the mapping defined in the CryptoConfig file, and maps the chain to that 
-             mapping.
-        
+            Creates an System.Security.Cryptography.X509Certificates.X509Chain object after querying for the mapping defined in the CryptoConfig file, and maps the chain to that mapping.
             Returns: An System.Security.Cryptography.X509Certificates.X509Chain object.
         """
         pass
@@ -1753,11 +1714,12 @@ Get: ChainStatus(self: X509Chain) -> Array[X509ChainStatus]
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509Chain()
 
 class X509ChainElement():
     """ Represents an element of an X.509 chain. """
-    Instance = X509ChainElement
-    """hardcoded/returns an instance of the class"""
     Certificate = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the X.509 certificate at a particular chain element.
 
@@ -1780,11 +1742,12 @@ Get: Information(self: X509ChainElement) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509ChainElement()
 
 class X509ChainElementCollection:
     """ Represents a collection of System.Security.Cryptography.X509Certificates.X509ChainElement objects. This class cannot be inherited. """
-    Instance = X509ChainElementCollection
-    """hardcoded/returns an instance of the class"""
     def CopyTo(self, array, index):
         """
         CopyTo(self: X509ChainElementCollection, array: Array[X509ChainElement], index: int)
@@ -1846,11 +1809,12 @@ Get: SyncRoot(self: X509ChainElementCollection) -> object
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509ChainElementCollection()
 
 class X509ChainElementEnumerator:
     """ Supports a simple iteration over an System.Security.Cryptography.X509Certificates.X509ChainElementCollection. This class cannot be inherited. """
-    Instance = X509ChainElementEnumerator
-    """hardcoded/returns an instance of the class"""
     def MoveNext(self):
         """
         MoveNext(self: X509ChainElementEnumerator) -> bool
@@ -1891,6 +1855,9 @@ Get: Current(self: X509ChainElementEnumerator) -> X509ChainElement
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509ChainElementEnumerator()
 
 class X509ChainPolicy():
     """
@@ -1898,8 +1865,6 @@ class X509ChainPolicy():
     
     X509ChainPolicy()
     """
-    Instance = X509ChainPolicy
-    """hardcoded/returns an instance of the class"""
     def Reset(self):
         """
         Reset(self: X509ChainPolicy)
@@ -1969,11 +1934,12 @@ Set: VerificationTime(self: X509ChainPolicy) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509ChainPolicy()
 
 class X509ChainStatus():
     """ Provides a simple structure for storing X509 chain status and error information. """
-    Instance = X509ChainStatus
-    """hardcoded/returns an instance of the class"""
     Status = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Specifies the status of the X509 chain.
 
@@ -1991,6 +1957,9 @@ Set: StatusInformation(self: X509ChainStatus) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509ChainStatus()
 
 class X509ChainStatusFlags:
     """
@@ -1998,8 +1967,6 @@ class X509ChainStatusFlags:
     
     enum (flags) X509ChainStatusFlags, values: CtlNotSignatureValid (262144), CtlNotTimeValid (131072), CtlNotValidForUsage (524288), Cyclic (128), ExplicitDistrust (67108864), HasExcludedNameConstraint (32768), HasNotDefinedNameConstraint (8192), HasNotPermittedNameConstraint (16384), HasNotSupportedCriticalExtension (134217728), HasNotSupportedNameConstraint (4096), HasWeakSignature (1048576), InvalidBasicConstraints (1024), InvalidExtension (256), InvalidNameConstraints (2048), InvalidPolicyConstraints (512), NoError (0), NoIssuanceChainPolicy (33554432), NotSignatureValid (8), NotTimeNested (2), NotTimeValid (1), NotValidForUsage (16), OfflineRevocation (16777216), PartialChain (65536), RevocationStatusUnknown (64), Revoked (4), UntrustedRoot (32)
     """
-    Instance = X509ChainStatusFlags
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2061,6 +2028,9 @@ class X509ChainStatusFlags:
     UntrustedRoot = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509ChainStatusFlags()
 
 class X509ContentType:
     """
@@ -2068,8 +2038,6 @@ class X509ContentType:
     
     enum X509ContentType, values: Authenticode (6), Cert (1), Pfx (3), Pkcs12 (3), Pkcs7 (5), SerializedCert (2), SerializedStore (4), Unknown (0)
     """
-    Instance = X509ContentType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2113,6 +2081,9 @@ class X509ContentType:
     Unknown = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509ContentType()
 
 class X509EnhancedKeyUsageExtension(X509Extension):
     """
@@ -2122,14 +2093,10 @@ class X509EnhancedKeyUsageExtension(X509Extension):
     X509EnhancedKeyUsageExtension(enhancedKeyUsages: OidCollection, critical: bool)
     X509EnhancedKeyUsageExtension(encodedEnhancedKeyUsages: AsnEncodedData, critical: bool)
     """
-    Instance = X509EnhancedKeyUsageExtension
-    """hardcoded/returns an instance of the class"""
     def CopyFrom(self, asnEncodedData):
         """
         CopyFrom(self: X509EnhancedKeyUsageExtension, asnEncodedData: AsnEncodedData)
-            Initializes a new instance of the System.Security.Cryptography.X509Certificates.X509EnhancedKeyUsageExtension class using an System.Security.Cryptography.AsnEncodedData 
-             object.
-        
+            Initializes a new instance of the System.Security.Cryptography.X509Certificates.X509EnhancedKeyUsageExtension class using an System.Security.Cryptography.AsnEncodedData object.
         
             asnEncodedData: The encoded data to use to create the extension.
         """
@@ -2152,6 +2119,9 @@ Get: EnhancedKeyUsages(self: X509EnhancedKeyUsageExtension) -> OidCollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509EnhancedKeyUsageExtension()
 
 class X509ExtensionCollection:
     """
@@ -2159,8 +2129,6 @@ class X509ExtensionCollection:
     
     X509ExtensionCollection()
     """
-    Instance = X509ExtensionCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, extension):
         """
         Add(self: X509ExtensionCollection, extension: X509Extension) -> int
@@ -2187,8 +2155,7 @@ class X509ExtensionCollection:
         GetEnumerator(self: X509ExtensionCollection) -> X509ExtensionEnumerator
         
             Returns an enumerator that can iterate through an System.Security.Cryptography.X509Certificates.X509ExtensionCollection object.
-            Returns: An System.Security.Cryptography.X509Certificates.X509ExtensionEnumerator object to use to iterate through the 
-             System.Security.Cryptography.X509Certificates.X509ExtensionCollection object.
+            Returns: An System.Security.Cryptography.X509Certificates.X509ExtensionEnumerator object to use to iterate through the System.Security.Cryptography.X509Certificates.X509ExtensionCollection object.
         """
         pass
 
@@ -2238,11 +2205,12 @@ Get: SyncRoot(self: X509ExtensionCollection) -> object
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509ExtensionCollection()
 
 class X509ExtensionEnumerator:
     """ Supports a simple iteration over a System.Security.Cryptography.X509Certificates.X509ExtensionCollection. This class cannot be inherited. """
-    Instance = X509ExtensionEnumerator
-    """hardcoded/returns an instance of the class"""
     def MoveNext(self):
         """
         MoveNext(self: X509ExtensionEnumerator) -> bool
@@ -2283,6 +2251,9 @@ Get: Current(self: X509ExtensionEnumerator) -> X509Extension
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509ExtensionEnumerator()
 
 class X509FindType:
     """
@@ -2290,8 +2261,6 @@ class X509FindType:
     
     enum X509FindType, values: FindByApplicationPolicy (10), FindByCertificatePolicy (11), FindByExtension (12), FindByIssuerDistinguishedName (4), FindByIssuerName (3), FindByKeyUsage (13), FindBySerialNumber (5), FindBySubjectDistinguishedName (2), FindBySubjectKeyIdentifier (14), FindBySubjectName (1), FindByTemplateName (9), FindByThumbprint (0), FindByTimeExpired (8), FindByTimeNotYetValid (7), FindByTimeValid (6)
     """
-    Instance = X509FindType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2342,6 +2311,9 @@ class X509FindType:
     FindByTimeValid = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509FindType()
 
 class X509IncludeOption:
     """
@@ -2349,8 +2321,6 @@ class X509IncludeOption:
     
     enum X509IncludeOption, values: EndCertOnly (2), ExcludeRoot (1), None (0), WholeChain (3)
     """
-    Instance = X509IncludeOption
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2390,6 +2360,9 @@ class X509IncludeOption:
     value__ = None
     WholeChain = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509IncludeOption()
 
 class X509KeyStorageFlags:
     """
@@ -2397,8 +2370,6 @@ class X509KeyStorageFlags:
     
     enum (flags) X509KeyStorageFlags, values: DefaultKeySet (0), EphemeralKeySet (32), Exportable (4), MachineKeySet (2), PersistKeySet (16), UserKeySet (1), UserProtected (8)
     """
-    Instance = X509KeyStorageFlags
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2441,6 +2412,9 @@ class X509KeyStorageFlags:
     UserProtected = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509KeyStorageFlags()
 
 class X509KeyUsageExtension(X509Extension):
     """
@@ -2450,8 +2424,6 @@ class X509KeyUsageExtension(X509Extension):
     X509KeyUsageExtension(keyUsages: X509KeyUsageFlags, critical: bool)
     X509KeyUsageExtension(encodedKeyUsage: AsnEncodedData, critical: bool)
     """
-    Instance = X509KeyUsageExtension
-    """hardcoded/returns an instance of the class"""
     def CopyFrom(self, asnEncodedData):
         """
         CopyFrom(self: X509KeyUsageExtension, asnEncodedData: AsnEncodedData)
@@ -2478,6 +2450,9 @@ Get: KeyUsages(self: X509KeyUsageExtension) -> X509KeyUsageFlags
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509KeyUsageExtension()
 
 class X509KeyUsageFlags:
     """
@@ -2485,8 +2460,6 @@ class X509KeyUsageFlags:
     
     enum (flags) X509KeyUsageFlags, values: CrlSign (2), DataEncipherment (16), DecipherOnly (32768), DigitalSignature (128), EncipherOnly (1), KeyAgreement (8), KeyCertSign (4), KeyEncipherment (32), None (0), NonRepudiation (64)
     """
-    Instance = X509KeyUsageFlags
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2532,6 +2505,9 @@ class X509KeyUsageFlags:
     NonRepudiation = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509KeyUsageFlags()
 
 class X509NameType:
     """
@@ -2539,8 +2515,6 @@ class X509NameType:
     
     enum X509NameType, values: DnsFromAlternativeName (4), DnsName (3), EmailName (1), SimpleName (0), UpnName (2), UrlName (5)
     """
-    Instance = X509NameType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2582,6 +2556,9 @@ class X509NameType:
     UrlName = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509NameType()
 
 class X509RevocationFlag:
     """
@@ -2589,8 +2566,6 @@ class X509RevocationFlag:
     
     enum X509RevocationFlag, values: EndCertificateOnly (0), EntireChain (1), ExcludeRoot (2)
     """
-    Instance = X509RevocationFlag
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2629,6 +2604,9 @@ class X509RevocationFlag:
     ExcludeRoot = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509RevocationFlag()
 
 class X509RevocationMode:
     """
@@ -2636,8 +2614,6 @@ class X509RevocationMode:
     
     enum X509RevocationMode, values: NoCheck (0), Offline (2), Online (1)
     """
-    Instance = X509RevocationMode
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2676,6 +2652,9 @@ class X509RevocationMode:
     Online = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509RevocationMode()
 
 class X509Store:
     """
@@ -2689,8 +2668,6 @@ class X509Store:
     X509Store(storeName: str, storeLocation: StoreLocation)
     X509Store(storeHandle: IntPtr)
     """
-    Instance = X509Store
-    """hardcoded/returns an instance of the class"""
     def Add(self, certificate):
         """
         Add(self: X509Store, certificate: X509Certificate2)
@@ -2809,6 +2786,9 @@ Get: StoreHandle(self: X509Store) -> IntPtr
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509Store()
 
 class X509SubjectKeyIdentifierExtension(X509Extension):
     """
@@ -2821,8 +2801,6 @@ class X509SubjectKeyIdentifierExtension(X509Extension):
     X509SubjectKeyIdentifierExtension(key: PublicKey, critical: bool)
     X509SubjectKeyIdentifierExtension(key: PublicKey, algorithm: X509SubjectKeyIdentifierHashAlgorithm, critical: bool)
     """
-    Instance = X509SubjectKeyIdentifierExtension
-    """hardcoded/returns an instance of the class"""
     def CopyFrom(self, asnEncodedData):
         """
         CopyFrom(self: X509SubjectKeyIdentifierExtension, asnEncodedData: AsnEncodedData)
@@ -2852,6 +2830,9 @@ Get: SubjectKeyIdentifier(self: X509SubjectKeyIdentifierExtension) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509SubjectKeyIdentifierExtension()
 
 class X509SubjectKeyIdentifierHashAlgorithm:
     """
@@ -2859,8 +2840,6 @@ class X509SubjectKeyIdentifierHashAlgorithm:
     
     enum X509SubjectKeyIdentifierHashAlgorithm, values: CapiSha1 (2), Sha1 (0), ShortSha1 (1)
     """
-    Instance = X509SubjectKeyIdentifierHashAlgorithm
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2899,6 +2878,9 @@ class X509SubjectKeyIdentifierHashAlgorithm:
     ShortSha1 = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509SubjectKeyIdentifierHashAlgorithm()
 
 class X509VerificationFlags:
     """
@@ -2906,8 +2888,6 @@ class X509VerificationFlags:
     
     enum (flags) X509VerificationFlags, values: AllFlags (4095), AllowUnknownCertificateAuthority (16), IgnoreCertificateAuthorityRevocationUnknown (1024), IgnoreCtlNotTimeValid (2), IgnoreCtlSignerRevocationUnknown (512), IgnoreEndRevocationUnknown (256), IgnoreInvalidBasicConstraints (8), IgnoreInvalidName (64), IgnoreInvalidPolicy (128), IgnoreNotTimeNested (4), IgnoreNotTimeValid (1), IgnoreRootRevocationUnknown (2048), IgnoreWrongUsage (32), NoFlag (0)
     """
-    Instance = X509VerificationFlags
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2957,4 +2937,7 @@ class X509VerificationFlags:
     NoFlag = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return X509VerificationFlags()
 

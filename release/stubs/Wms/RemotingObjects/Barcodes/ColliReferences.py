@@ -10,8 +10,6 @@
 
 class ColliBarcodeResult():
     """ ColliBarcodeResult() """
-    Instance = ColliBarcodeResult
-    """hardcoded/returns an instance of the class"""
     Barcode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Barcode(self: ColliBarcodeResult) -> str
 
@@ -39,14 +37,15 @@ Set: Type(self: ColliBarcodeResult) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ColliBarcodeResult()
 
 class ValidateColliReferencesArgs():
     """
     ValidateColliReferencesArgs()
     ValidateColliReferencesArgs(innerReference: str, outerReference: str, *exclusion: Array[object])
     """
-    Instance = ValidateColliReferencesArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, innerReference=None, outerReference=None, exclusion=None):
         """
@@ -80,14 +79,15 @@ Set: Result(self: ValidateColliReferencesArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ValidateColliReferencesArgs()
 
 class ValidateColliReferencesResult():
     """
     ValidateColliReferencesResult()
     ValidateColliReferencesResult(isInnerReferenceValid: bool, isOuterReferenceValid: bool)
     """
-    Instance = ValidateColliReferencesResult
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, isInnerReferenceValid=None, isOuterReferenceValid=None):
         """
@@ -109,4 +109,7 @@ Set: IsOuterReferenceValid(self: ValidateColliReferencesResult) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ValidateColliReferencesResult()
 

@@ -15,8 +15,6 @@ class RpInboundFileMessage(MessageBase):
     RpInboundFileMessage(message: IMessage)
     RpInboundFileMessage(data: RpInboundFileMessageData)
     """
-    Instance = RpInboundFileMessage
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -39,11 +37,12 @@ Set: Data(self: RpInboundFileMessage) = value
 
     TypeName = 'RP Inbound File: {0}'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RpInboundFileMessage()
 
 class RpInboundFileMessageData():
     """ RpInboundFileMessageData() """
-    Instance = RpInboundFileMessageData
-    """hardcoded/returns an instance of the class"""
     Base64Content = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Base64Content(self: RpInboundFileMessageData) -> str
 
@@ -87,4 +86,7 @@ Set: Size(self: RpInboundFileMessageData) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RpInboundFileMessageData()
 

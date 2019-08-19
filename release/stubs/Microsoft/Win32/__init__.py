@@ -14,8 +14,6 @@ class IntranetZoneCredentialPolicy:
     
     IntranetZoneCredentialPolicy()
     """
-    Instance = IntranetZoneCredentialPolicy
-    """hardcoded/returns an instance of the class"""
     def ShouldSendCredential(self, challengeUri, request, credential, authModule):
         """
         ShouldSendCredential(self: IntranetZoneCredentialPolicy, challengeUri: Uri, request: WebRequest, credential: NetworkCredential, authModule: IAuthenticationModule) -> bool
@@ -38,6 +36,9 @@ class IntranetZoneCredentialPolicy:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IntranetZoneCredentialPolicy()
 
 class PowerModeChangedEventArgs(EventArgs):
     """
@@ -45,8 +46,6 @@ class PowerModeChangedEventArgs(EventArgs):
     
     PowerModeChangedEventArgs(mode: PowerModes)
     """
-    Instance = PowerModeChangedEventArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, mode):
         """ __new__(cls: type, mode: PowerModes) """
@@ -60,6 +59,9 @@ Get: Mode(self: PowerModeChangedEventArgs) -> PowerModes
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PowerModeChangedEventArgs()
 
 class PowerModeChangedEventHandler(MulticastDelegate):
     """
@@ -67,8 +69,6 @@ class PowerModeChangedEventHandler(MulticastDelegate):
     
     PowerModeChangedEventHandler(object: object, method: IntPtr)
     """
-    Instance = PowerModeChangedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: PowerModeChangedEventHandler, sender: object, e: PowerModeChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -90,9 +90,7 @@ class PowerModeChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -121,8 +119,7 @@ class PowerModeChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -138,6 +135,9 @@ class PowerModeChangedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PowerModeChangedEventHandler()
 
 class PowerModes:
     """
@@ -145,8 +145,6 @@ class PowerModes:
     
     enum PowerModes, values: Resume (1), StatusChange (2), Suspend (3)
     """
-    Instance = PowerModes
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -185,19 +183,18 @@ class PowerModes:
     Suspend = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PowerModes()
 
 class Registry():
     """ Provides Microsoft.Win32.RegistryKey objects that represent the root keys in the Windows registry, and static methods to access key/value pairs. """
-    Instance = Registry
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetValue(keyName, valueName, defaultValue):
         """
         GetValue(keyName: str, valueName: str, defaultValue: object) -> object
         
-            Retrieves the value associated with the specified name, in the specified registry key. If the name is not found in the specified key, returns a default value that you 
-             provide, or null if the specified key does not exist.
-        
+            Retrieves the value associated with the specified name, in the specified registry key. If the name is not found in the specified key, returns a default value that you provide, or null if the specified key does not exist.
         
             keyName: The full registry path of the key, beginning with a valid registry root, such as "HKEY_CURRENT_USER".
             valueName: The name of the name/value pair.
@@ -244,6 +241,9 @@ class Registry():
         'Users',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Registry()
 
 class RegistryHive:
     """
@@ -251,8 +251,6 @@ class RegistryHive:
     
     enum RegistryHive, values: ClassesRoot (-2147483648), CurrentConfig (-2147483643), CurrentUser (-2147483647), DynData (-2147483642), LocalMachine (-2147483646), PerformanceData (-2147483644), Users (-2147483645)
     """
-    Instance = RegistryHive
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -295,11 +293,12 @@ class RegistryHive:
     Users = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RegistryHive()
 
 class RegistryKey(MarshalByRefObject):
     """ Represents a key-level node in the Windows registry. This class is a registry encapsulation. """
-    Instance = RegistryKey
-    """hardcoded/returns an instance of the class"""
     def Close(self):
         """
         Close(self: RegistryKey)
@@ -362,8 +361,7 @@ class RegistryKey(MarshalByRefObject):
             Deletes the specified subkey, and specifies whether an exception is raised if the subkey is not found.
         
             subkey: The name of the subkey to delete. This string is not case-sensitive.
-            throwOnMissingSubKey: Indicates whether an exception should be raised if the specified subkey cannot be found. If this argument is true and the specified subkey does not exist, an exception is 
-             raised. If this argument is false and the specified subkey does not exist, no action is taken.
+            throwOnMissingSubKey: Indicates whether an exception should be raised if the specified subkey cannot be found. If this argument is true and the specified subkey does not exist, an exception is raised. If this argument is false and the specified subkey does not exist, no action is taken.
         """
         pass
 
@@ -377,8 +375,7 @@ class RegistryKey(MarshalByRefObject):
             Deletes the specified subkey and any child subkeys recursively, and specifies whether an exception is raised if the subkey is not found.
         
             subkey: The name of the subkey to delete. This string is not case-sensitive.
-            throwOnMissingSubKey: Indicates whether an exception should be raised if the specified subkey cannot be found. If this argument is true and the specified subkey does not exist, an exception is 
-             raised. If this argument is false and the specified subkey does not exist, no action is taken.
+            throwOnMissingSubKey: Indicates whether an exception should be raised if the specified subkey cannot be found. If this argument is true and the specified subkey does not exist, an exception is raised. If this argument is false and the specified subkey does not exist, no action is taken.
         """
         pass
 
@@ -392,8 +389,7 @@ class RegistryKey(MarshalByRefObject):
             Deletes the specified value from this key, and specifies whether an exception is raised if the value is not found.
         
             name: The name of the value to delete.
-            throwOnMissingValue: Indicates whether an exception should be raised if the specified value cannot be found. If this argument is true and the specified value does not exist, an exception is 
-             raised. If this argument is false and the specified value does not exist, no action is taken.
+            throwOnMissingValue: Indicates whether an exception should be raised if the specified value cannot be found. If this argument is true and the specified value does not exist, an exception is raised. If this argument is false and the specified value does not exist, no action is taken.
         """
         pass
 
@@ -506,10 +502,7 @@ class RegistryKey(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -671,6 +664,9 @@ Get: View(self: RegistryKey) -> RegistryView
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RegistryKey()
 
 class RegistryKeyPermissionCheck:
     """
@@ -678,8 +674,6 @@ class RegistryKeyPermissionCheck:
     
     enum RegistryKeyPermissionCheck, values: Default (0), ReadSubTree (1), ReadWriteSubTree (2)
     """
-    Instance = RegistryKeyPermissionCheck
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -718,6 +712,9 @@ class RegistryKeyPermissionCheck:
     ReadWriteSubTree = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RegistryKeyPermissionCheck()
 
 class RegistryOptions:
     """
@@ -725,8 +722,6 @@ class RegistryOptions:
     
     enum (flags) RegistryOptions, values: None (0), Volatile (1)
     """
-    Instance = RegistryOptions
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -764,6 +759,9 @@ class RegistryOptions:
     value__ = None
     Volatile = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RegistryOptions()
 
 class RegistryValueKind:
     """
@@ -771,8 +769,6 @@ class RegistryValueKind:
     
     enum RegistryValueKind, values: Binary (3), DWord (4), ExpandString (2), MultiString (7), None (-1), QWord (11), String (1), Unknown (0)
     """
-    Instance = RegistryValueKind
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -816,6 +812,9 @@ class RegistryValueKind:
     Unknown = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RegistryValueKind()
 
 class RegistryValueOptions:
     """
@@ -823,8 +822,6 @@ class RegistryValueOptions:
     
     enum (flags) RegistryValueOptions, values: DoNotExpandEnvironmentNames (1), None (0)
     """
-    Instance = RegistryValueOptions
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -862,6 +859,9 @@ class RegistryValueOptions:
     None_ =None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RegistryValueOptions()
 
 class RegistryView:
     """
@@ -869,8 +869,6 @@ class RegistryView:
     
     enum RegistryView, values: Default (0), Registry32 (512), Registry64 (256)
     """
-    Instance = RegistryView
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -909,6 +907,9 @@ class RegistryView:
     Registry64 = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RegistryView()
 
 class SessionEndedEventArgs(EventArgs):
     """
@@ -916,8 +917,6 @@ class SessionEndedEventArgs(EventArgs):
     
     SessionEndedEventArgs(reason: SessionEndReasons)
     """
-    Instance = SessionEndedEventArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, reason):
         """ __new__(cls: type, reason: SessionEndReasons) """
@@ -931,6 +930,9 @@ Get: Reason(self: SessionEndedEventArgs) -> SessionEndReasons
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SessionEndedEventArgs()
 
 class SessionEndedEventHandler(MulticastDelegate):
     """
@@ -938,8 +940,6 @@ class SessionEndedEventHandler(MulticastDelegate):
     
     SessionEndedEventHandler(object: object, method: IntPtr)
     """
-    Instance = SessionEndedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SessionEndedEventHandler, sender: object, e: SessionEndedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -961,9 +961,7 @@ class SessionEndedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -992,8 +990,7 @@ class SessionEndedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -1009,6 +1006,9 @@ class SessionEndedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SessionEndedEventHandler()
 
 class SessionEndingEventArgs(EventArgs):
     """
@@ -1016,8 +1016,6 @@ class SessionEndingEventArgs(EventArgs):
     
     SessionEndingEventArgs(reason: SessionEndReasons)
     """
-    Instance = SessionEndingEventArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, reason):
         """ __new__(cls: type, reason: SessionEndReasons) """
@@ -1039,6 +1037,9 @@ Get: Reason(self: SessionEndingEventArgs) -> SessionEndReasons
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SessionEndingEventArgs()
 
 class SessionEndingEventHandler(MulticastDelegate):
     """
@@ -1046,8 +1047,6 @@ class SessionEndingEventHandler(MulticastDelegate):
     
     SessionEndingEventHandler(object: object, method: IntPtr)
     """
-    Instance = SessionEndingEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SessionEndingEventHandler, sender: object, e: SessionEndingEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -1069,9 +1068,7 @@ class SessionEndingEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1100,8 +1097,7 @@ class SessionEndingEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -1117,6 +1113,9 @@ class SessionEndingEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SessionEndingEventHandler()
 
 class SessionEndReasons:
     """
@@ -1124,8 +1123,6 @@ class SessionEndReasons:
     
     enum SessionEndReasons, values: Logoff (1), SystemShutdown (2)
     """
-    Instance = SessionEndReasons
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -1163,6 +1160,9 @@ class SessionEndReasons:
     SystemShutdown = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SessionEndReasons()
 
 class SessionSwitchEventArgs(EventArgs):
     """
@@ -1170,8 +1170,6 @@ class SessionSwitchEventArgs(EventArgs):
     
     SessionSwitchEventArgs(reason: SessionSwitchReason)
     """
-    Instance = SessionSwitchEventArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, reason):
         """ __new__(cls: type, reason: SessionSwitchReason) """
@@ -1185,6 +1183,9 @@ Get: Reason(self: SessionSwitchEventArgs) -> SessionSwitchReason
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SessionSwitchEventArgs()
 
 class SessionSwitchEventHandler(MulticastDelegate):
     """
@@ -1192,8 +1193,6 @@ class SessionSwitchEventHandler(MulticastDelegate):
     
     SessionSwitchEventHandler(object: object, method: IntPtr)
     """
-    Instance = SessionSwitchEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SessionSwitchEventHandler, sender: object, e: SessionSwitchEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -1215,9 +1214,7 @@ class SessionSwitchEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1246,8 +1243,7 @@ class SessionSwitchEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -1263,6 +1259,9 @@ class SessionSwitchEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SessionSwitchEventHandler()
 
 class SessionSwitchReason:
     """
@@ -1270,8 +1269,6 @@ class SessionSwitchReason:
     
     enum SessionSwitchReason, values: ConsoleConnect (1), ConsoleDisconnect (2), RemoteConnect (3), RemoteDisconnect (4), SessionLock (7), SessionLogoff (6), SessionLogon (5), SessionRemoteControl (9), SessionUnlock (8)
     """
-    Instance = SessionSwitchReason
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -1316,11 +1313,12 @@ class SessionSwitchReason:
     SessionUnlock = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SessionSwitchReason()
 
 class SystemEvents():
     """ Provides access to system event notifications. This class cannot be inherited. """
-    Instance = SystemEvents
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateTimer(interval):
         """
@@ -1368,6 +1366,9 @@ class SystemEvents():
     UserPreferenceChanged = None
     UserPreferenceChanging = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SystemEvents()
 
 class TimerElapsedEventArgs(EventArgs):
     """
@@ -1375,8 +1376,6 @@ class TimerElapsedEventArgs(EventArgs):
     
     TimerElapsedEventArgs(timerId: IntPtr)
     """
-    Instance = TimerElapsedEventArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, timerId):
         """ __new__(cls: type, timerId: IntPtr) """
@@ -1390,6 +1389,9 @@ Get: TimerId(self: TimerElapsedEventArgs) -> IntPtr
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TimerElapsedEventArgs()
 
 class TimerElapsedEventHandler(MulticastDelegate):
     """
@@ -1397,8 +1399,6 @@ class TimerElapsedEventHandler(MulticastDelegate):
     
     TimerElapsedEventHandler(object: object, method: IntPtr)
     """
-    Instance = TimerElapsedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: TimerElapsedEventHandler, sender: object, e: TimerElapsedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -1420,9 +1420,7 @@ class TimerElapsedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1451,8 +1449,7 @@ class TimerElapsedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -1468,6 +1465,9 @@ class TimerElapsedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TimerElapsedEventHandler()
 
 class UserPreferenceCategory:
     """
@@ -1475,8 +1475,6 @@ class UserPreferenceCategory:
     
     enum UserPreferenceCategory, values: Accessibility (1), Color (2), Desktop (3), General (4), Icon (5), Keyboard (6), Locale (13), Menu (7), Mouse (8), Policy (9), Power (10), Screensaver (11), VisualStyle (14), Window (12)
     """
-    Instance = UserPreferenceCategory
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -1526,6 +1524,9 @@ class UserPreferenceCategory:
     VisualStyle = None
     Window = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UserPreferenceCategory()
 
 class UserPreferenceChangedEventArgs(EventArgs):
     """
@@ -1533,8 +1534,6 @@ class UserPreferenceChangedEventArgs(EventArgs):
     
     UserPreferenceChangedEventArgs(category: UserPreferenceCategory)
     """
-    Instance = UserPreferenceChangedEventArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, category):
         """ __new__(cls: type, category: UserPreferenceCategory) """
@@ -1548,6 +1547,9 @@ Get: Category(self: UserPreferenceChangedEventArgs) -> UserPreferenceCategory
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UserPreferenceChangedEventArgs()
 
 class UserPreferenceChangedEventHandler(MulticastDelegate):
     """
@@ -1555,8 +1557,6 @@ class UserPreferenceChangedEventHandler(MulticastDelegate):
     
     UserPreferenceChangedEventHandler(object: object, method: IntPtr)
     """
-    Instance = UserPreferenceChangedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: UserPreferenceChangedEventHandler, sender: object, e: UserPreferenceChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -1578,9 +1578,7 @@ class UserPreferenceChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1609,8 +1607,7 @@ class UserPreferenceChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -1626,6 +1623,9 @@ class UserPreferenceChangedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UserPreferenceChangedEventHandler()
 
 class UserPreferenceChangingEventArgs(EventArgs):
     """
@@ -1633,8 +1633,6 @@ class UserPreferenceChangingEventArgs(EventArgs):
     
     UserPreferenceChangingEventArgs(category: UserPreferenceCategory)
     """
-    Instance = UserPreferenceChangingEventArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, category):
         """ __new__(cls: type, category: UserPreferenceCategory) """
@@ -1648,6 +1646,9 @@ Get: Category(self: UserPreferenceChangingEventArgs) -> UserPreferenceCategory
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UserPreferenceChangingEventArgs()
 
 class UserPreferenceChangingEventHandler(MulticastDelegate):
     """
@@ -1655,8 +1656,6 @@ class UserPreferenceChangingEventHandler(MulticastDelegate):
     
     UserPreferenceChangingEventHandler(object: object, method: IntPtr)
     """
-    Instance = UserPreferenceChangingEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: UserPreferenceChangingEventHandler, sender: object, e: UserPreferenceChangingEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -1678,9 +1677,7 @@ class UserPreferenceChangingEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1709,8 +1706,7 @@ class UserPreferenceChangingEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -1726,6 +1722,9 @@ class UserPreferenceChangingEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UserPreferenceChangingEventHandler()
 
 # variables with complex values
 

@@ -10,8 +10,6 @@
 
 class LabelGeneratorBase():
     """ LabelGeneratorBase() """
-    Instance = LabelGeneratorBase
-    """hardcoded/returns an instance of the class"""
     def ConvertBarcodeToPrintLine(self, *args): #cannot find CLR method
         """ ConvertBarcodeToPrintLine(self: LabelGeneratorBase, barcode: IGeneratedBarcode) -> PrintLineBase """
         pass
@@ -32,13 +30,17 @@ class LabelGeneratorBase():
     PrintLines = None
     Range = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LabelGeneratorBase()
 
 class SSCCLabelGenerator(LabelGeneratorBase):
     """ SSCCLabelGenerator() """
-    Instance = SSCCLabelGenerator
-    """hardcoded/returns an instance of the class"""
     DfObject = None
     PrintLines = None
     Range = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SSCCLabelGenerator()
 

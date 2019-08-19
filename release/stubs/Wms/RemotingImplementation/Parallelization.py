@@ -10,8 +10,6 @@
 
 class Parallel():
     # no doc
-    Instance = Parallel
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def ForEach(actions):
         """ ForEach(actions: List[Action]) """
@@ -21,11 +19,12 @@ class Parallel():
         'ForEach',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Parallel()
 
 class Sequential():
     # no doc
-    Instance = Sequential
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def ForEach(items, action):
         """ ForEach[T](items: IEnumerable[T], action: Action[T]) """
@@ -35,4 +34,7 @@ class Sequential():
         'ForEach',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Sequential()
 

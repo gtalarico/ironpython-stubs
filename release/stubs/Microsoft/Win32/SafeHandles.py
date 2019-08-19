@@ -10,8 +10,6 @@
 
 class CriticalHandleMinusOneIsInvalid(CriticalHandle):
     """ Provides a base class for Win32 critical handle implementations in which the value of -1 indicates an invalid handle. """
-    Instance = CriticalHandleMinusOneIsInvalid
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: CriticalHandle, disposing: bool)
@@ -26,8 +24,7 @@ class CriticalHandleMinusOneIsInvalid(CriticalHandle):
         ReleaseHandle(self: CriticalHandle) -> bool
         
             When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed 
-             Debugging Assistant.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging Assistant.
         """
         pass
 
@@ -62,11 +59,12 @@ Get: IsInvalid(self: CriticalHandleMinusOneIsInvalid) -> bool
 
     handle = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CriticalHandleMinusOneIsInvalid()
 
 class CriticalHandleZeroOrMinusOneIsInvalid(CriticalHandle):
     """ Provides a base class for Win32 critical handle implementations in which the value of either 0 or -1 indicates an invalid handle. """
-    Instance = CriticalHandleZeroOrMinusOneIsInvalid
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: CriticalHandle, disposing: bool)
@@ -81,8 +79,7 @@ class CriticalHandleZeroOrMinusOneIsInvalid(CriticalHandle):
         ReleaseHandle(self: CriticalHandle) -> bool
         
             When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed 
-             Debugging Assistant.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging Assistant.
         """
         pass
 
@@ -117,11 +114,12 @@ Get: IsInvalid(self: CriticalHandleZeroOrMinusOneIsInvalid) -> bool
 
     handle = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CriticalHandleZeroOrMinusOneIsInvalid()
 
 class SafeAccessTokenHandle(SafeHandle):
     """ SafeAccessTokenHandle(handle: IntPtr) """
-    Instance = SafeAccessTokenHandle
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
@@ -170,11 +168,12 @@ class SafeAccessTokenHandle(SafeHandle):
     handle = None
     InvalidHandle = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SafeAccessTokenHandle()
 
 class SafeHandleZeroOrMinusOneIsInvalid(SafeHandle):
     """ Provides a base class for Win32 safe handle implementations in which the value of either 0 or -1 indicates an invalid handle. """
-    Instance = SafeHandleZeroOrMinusOneIsInvalid
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
@@ -189,8 +188,7 @@ class SafeHandleZeroOrMinusOneIsInvalid(SafeHandle):
         ReleaseHandle(self: SafeHandle) -> bool
         
             When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed 
-             Debugging Assistant.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging Assistant.
         """
         pass
 
@@ -230,6 +228,9 @@ Get: IsInvalid(self: SafeHandleZeroOrMinusOneIsInvalid) -> bool
 
     handle = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SafeHandleZeroOrMinusOneIsInvalid()
 
 class SafeFileHandle(SafeHandleZeroOrMinusOneIsInvalid):
     """
@@ -237,8 +238,6 @@ class SafeFileHandle(SafeHandleZeroOrMinusOneIsInvalid):
     
     SafeFileHandle(preexistingHandle: IntPtr, ownsHandle: bool)
     """
-    Instance = SafeFileHandle
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
@@ -280,11 +279,12 @@ class SafeFileHandle(SafeHandleZeroOrMinusOneIsInvalid):
 
     handle = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SafeFileHandle()
 
 class SafeHandleMinusOneIsInvalid(SafeHandle):
     """ Provides a base class for Win32 safe handle implementations in which the value of -1 indicates an invalid handle. """
-    Instance = SafeHandleMinusOneIsInvalid
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
@@ -299,8 +299,7 @@ class SafeHandleMinusOneIsInvalid(SafeHandle):
         ReleaseHandle(self: SafeHandle) -> bool
         
             When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed 
-             Debugging Assistant.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging Assistant.
         """
         pass
 
@@ -340,11 +339,12 @@ Get: IsInvalid(self: SafeHandleMinusOneIsInvalid) -> bool
 
     handle = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SafeHandleMinusOneIsInvalid()
 
 class SafeProcessHandle(SafeHandleZeroOrMinusOneIsInvalid):
     """ SafeProcessHandle(existingHandle: IntPtr, ownsHandle: bool) """
-    Instance = SafeProcessHandle
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
@@ -386,6 +386,9 @@ class SafeProcessHandle(SafeHandleZeroOrMinusOneIsInvalid):
 
     handle = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SafeProcessHandle()
 
 class SafeRegistryHandle(SafeHandleZeroOrMinusOneIsInvalid):
     """
@@ -393,8 +396,6 @@ class SafeRegistryHandle(SafeHandleZeroOrMinusOneIsInvalid):
     
     SafeRegistryHandle(preexistingHandle: IntPtr, ownsHandle: bool)
     """
-    Instance = SafeRegistryHandle
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
@@ -436,6 +437,9 @@ class SafeRegistryHandle(SafeHandleZeroOrMinusOneIsInvalid):
 
     handle = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SafeRegistryHandle()
 
 class SafeWaitHandle(SafeHandleZeroOrMinusOneIsInvalid):
     """
@@ -443,8 +447,6 @@ class SafeWaitHandle(SafeHandleZeroOrMinusOneIsInvalid):
     
     SafeWaitHandle(existingHandle: IntPtr, ownsHandle: bool)
     """
-    Instance = SafeWaitHandle
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
@@ -486,11 +488,12 @@ class SafeWaitHandle(SafeHandleZeroOrMinusOneIsInvalid):
 
     handle = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SafeWaitHandle()
 
 class SafeX509ChainHandle(SafeHandleZeroOrMinusOneIsInvalid):
     # no doc
-    Instance = SafeX509ChainHandle
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
@@ -527,4 +530,7 @@ class SafeX509ChainHandle(SafeHandleZeroOrMinusOneIsInvalid):
 
     handle = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SafeX509ChainHandle()
 

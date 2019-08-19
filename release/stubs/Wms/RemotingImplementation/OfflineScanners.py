@@ -10,8 +10,6 @@
 
 class GcloudInboundFileListenerBase:
     """ GcloudInboundFileListenerBase(appSetttings: GcloudInboundFileListenerOptions, general: General, messaging: Messaging) """
-    Instance = GcloudInboundFileListenerBase
-    """hardcoded/returns an instance of the class"""
     def DownloadFile(self, *args): #cannot find CLR method
         """ DownloadFile(self: GcloudInboundFileListenerBase, filepath: str) -> Task[Stream] """
         pass
@@ -52,11 +50,12 @@ class GcloudInboundFileListenerBase:
     _general = None
     _messaging = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GcloudInboundFileListenerBase()
 
 class BosInboundFileListener(GcloudInboundFileListenerBase):
     """ BosInboundFileListener(appSetttings: BosInboundFileOptions, general: General, messaging: Messaging, offlineScanning: OfflineScanning) """
-    Instance = BosInboundFileListener
-    """hardcoded/returns an instance of the class"""
     def DownloadFile(self, *args): #cannot find CLR method
         """ DownloadFile(self: BosInboundFileListener, filepath: str) -> Task[Stream] """
         pass
@@ -81,11 +80,12 @@ class BosInboundFileListener(GcloudInboundFileListenerBase):
     _general = None
     _messaging = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosInboundFileListener()
 
 class GcloudInboundFileListenerOptions():
     """ GcloudInboundFileListenerOptions() """
-    Instance = GcloudInboundFileListenerOptions
-    """hardcoded/returns an instance of the class"""
     Enabled = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Enabled(self: GcloudInboundFileListenerOptions) -> bool
 
@@ -105,21 +105,23 @@ Set: GCloudPubSubPrefix(self: GcloudInboundFileListenerOptions) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GcloudInboundFileListenerOptions()
 
 class BosInboundFileOptions(GcloudInboundFileListenerOptions):
     """ BosInboundFileOptions(appSettings: IApplicationSettings) """
-    Instance = BosInboundFileOptions
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, appSettings):
         """ __new__(cls: type, appSettings: IApplicationSettings) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosInboundFileOptions()
 
 class BosInboundFileUploadedEvent():
     """ BosInboundFileUploadedEvent() """
-    Instance = BosInboundFileUploadedEvent
-    """hardcoded/returns an instance of the class"""
     Event = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Event(self: BosInboundFileUploadedEvent) -> str
 
@@ -157,11 +159,12 @@ Set: Size(self: BosInboundFileUploadedEvent) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosInboundFileUploadedEvent()
 
 class IGcloudInboundFileListener:
     # no doc
-    Instance = IGcloudInboundFileListener
-    """hardcoded/returns an instance of the class"""
     def PullAllMessages(self, token):
         """ PullAllMessages(self: IGcloudInboundFileListener, token: CancellationToken) -> Task[int] """
         pass
@@ -180,12 +183,16 @@ class IGcloudInboundFileListener:
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IGcloudInboundFileListener()
 
 class ModuleOptions():
     """ ModuleOptions() """
-    Instance = ModuleOptions
-    """hardcoded/returns an instance of the class"""
     OfflineScanning = 'OS'
     RemotePublishing = 'RP'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ModuleOptions()
 

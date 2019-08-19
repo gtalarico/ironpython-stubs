@@ -10,8 +10,6 @@
 
 class ExtensionMethods():
     """  """
-    Instance = ExtensionMethods
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetMd5HashString(input):
         """ GetMd5HashString(input: MemoryStream) -> str """
@@ -50,4 +48,7 @@ class ExtensionMethods():
         'ToHexString',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ExtensionMethods()
 

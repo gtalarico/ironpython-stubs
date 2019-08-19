@@ -10,8 +10,6 @@
 
 class ApplicationIdentifiers():
     """ ApplicationIdentifiers() """
-    Instance = ApplicationIdentifiers
-    """hardcoded/returns an instance of the class"""
     AdditionalProductIdentification = '240'
     AmountDue_DefinedValutaBand = '390n'
     AmountDue_WithISOValutaCode = '391n'
@@ -132,14 +130,15 @@ class ApplicationIdentifiers():
     ZipCodeOfRecipient_withCountryCode = '421'
     ZipCodeOfRecipient_withoutCountryCode = '420'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ApplicationIdentifiers()
 
 class GS1Barcode:
     """
     GS1Barcode()
     GS1Barcode(applicationIdentifier: str, value: str)
     """
-    Instance = GS1Barcode
-    """hardcoded/returns an instance of the class"""
     def ToBarcode(self, includeApplicationIdentifier=None):
         """
         ToBarcode(self: GS1Barcode) -> str
@@ -190,11 +189,12 @@ class GS1Barcode:
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GS1Barcode()
 
 class ItemNumberHelper():
     """ A class to validate GS1 article numbers """
-    Instance = ItemNumberHelper
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetItemNumberType(articleNumber):
         """
@@ -295,11 +295,12 @@ class ItemNumberHelper():
         'TryConvertToGtin',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ItemNumberHelper()
 
 class ItemNumberType:
     """ enum ItemNumberType, values: ASIN (1), EAN13 (3), EAN8 (2), GTIN (4), ISBN10 (5), ISBN13 (6), ISSN (9), SKU (7), Unknown (0), UPC (8) """
-    Instance = ItemNumberType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -345,6 +346,9 @@ class ItemNumberType:
     UPC = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ItemNumberType()
 
 # variables with complex values
 

@@ -10,17 +10,16 @@
 
 class DynamicClass():
     # no doc
-    Instance = DynamicClass
-    """hardcoded/returns an instance of the class"""
     def ToString(self):
         """ ToString(self: DynamicClass) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DynamicClass()
 
 class DynamicExpression():
     # no doc
-    Instance = DynamicExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateClass(properties):
         """
@@ -49,11 +48,12 @@ class DynamicExpression():
         'ParseLambda',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DynamicExpression()
 
 class DynamicProperty():
     """ DynamicProperty(name: str, type: Type) """
-    Instance = DynamicProperty
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, name, type):
         """ __new__(cls: type, name: str, type: Type) """
@@ -70,11 +70,12 @@ class DynamicProperty():
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DynamicProperty()
 
 class DynamicQueryable():
     # no doc
-    Instance = DynamicQueryable
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Any(source):
         """ Any(source: IQueryable) -> bool """
@@ -132,11 +133,12 @@ class DynamicQueryable():
         'Where',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DynamicQueryable()
 
 class ParseException(Exception):
     """ ParseException(message: str, position: int) """
-    Instance = ParseException
-    """hardcoded/returns an instance of the class"""
     def ToString(self):
         """ ToString(self: ParseException) -> str """
         pass
@@ -161,4 +163,7 @@ class ParseException(Exception):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ParseException()
 

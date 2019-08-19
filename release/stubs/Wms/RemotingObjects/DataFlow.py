@@ -13,8 +13,6 @@ class DataFlowObject:
     DataFlowObject[T]()
     DataFlowObject[T](subject: T)
     """
-    Instance = DataFlowObject
-    """hardcoded/returns an instance of the class"""
     def AddError(self, error, details=None):
         """
         AddError(self: DataFlowObject[T], error: Error) -> DataFlowObject[T]
@@ -120,6 +118,9 @@ Set: Warnings(self: DataFlowObject[T]) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DataFlowObject()
 
 class DataFlowResultEnum:
     """
@@ -127,8 +128,6 @@ class DataFlowResultEnum:
     
     enum DataFlowResultEnum, values: Failure (0), Success (1), SuccessWithWarning (3), Unspecified (256), UserInputRequired (2)
     """
-    Instance = DataFlowResultEnum
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -169,11 +168,12 @@ class DataFlowResultEnum:
     UserInputRequired = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DataFlowResultEnum()
 
 class IDataFlowObject:
     # no doc
-    Instance = IDataFlowObject
-    """hardcoded/returns an instance of the class"""
     def IsValid(self):
         """ IsValid(self: IDataFlowObject[T]) -> bool """
         pass
@@ -217,4 +217,7 @@ Set: Warnings(self: IDataFlowObject[T]) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IDataFlowObject()
 

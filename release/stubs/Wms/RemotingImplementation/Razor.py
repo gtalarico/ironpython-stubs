@@ -10,8 +10,6 @@
 
 class BasePage:
     # no doc
-    Instance = BasePage
-    """hardcoded/returns an instance of the class"""
     def ResolveLayout(self, *args): #cannot find CLR method
         """ ResolveLayout(self: TemplateBase[TModel], name: str) -> ITemplate """
         pass
@@ -37,11 +35,12 @@ class BasePage:
 
     _context = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BasePage()
 
 class ILocalizeable:
     # no doc
-    Instance = ILocalizeable
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -53,4 +52,7 @@ Set: CultureInfo(self: ILocalizeable) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ILocalizeable()
 

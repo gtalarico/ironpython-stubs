@@ -12,8 +12,6 @@ from Wms.RemotingObjects import *
 
 class MyList(FindableList):
     """ MyList() """
-    Instance = MyList
-    """hardcoded/returns an instance of the class"""
     def ToString(self):
         """ ToString(self: MyList) -> str """
         pass
@@ -40,11 +38,12 @@ class MyList(FindableList):
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MyList()
 
 class OrderFlowLink():
     """ OrderFlowLink(orderFlowOption: OrderFlowOption, orderSelectionCode: str, orderSelectionDescription: str, Color: str) """
-    Instance = OrderFlowLink
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, orderFlowOption, orderSelectionCode, orderSelectionDescription, Color):
         """ __new__(cls: type, orderFlowOption: OrderFlowOption, orderSelectionCode: str, orderSelectionDescription: str, Color: str) """
@@ -83,11 +82,12 @@ Set: OrderSelectionDescription(self: OrderFlowLink) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OrderFlowLink()
 
 class OrderFlowLinks(List):
     """ OrderFlowLinks() """
-    Instance = OrderFlowLinks
-    """hardcoded/returns an instance of the class"""
     def DeleteLinksThatAreNotEqual(self, SelectionCodes):
         """ DeleteLinksThatAreNotEqual(self: OrderFlowLinks, SelectionCodes: Array[str]) """
         pass
@@ -122,11 +122,12 @@ class OrderFlowLinks(List):
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OrderFlowLinks()
 
 class OrderFlowOption:
     """ enum OrderFlowOption, values: FulFill (2), FulFillPrintInvoice (1), PrintInvoiceFulFill (0) """
-    Instance = OrderFlowOption
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -165,11 +166,12 @@ class OrderFlowOption:
     PrintInvoiceFulFill = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OrderFlowOption()
 
 class ShippperServiceLink():
     """ ShippperServiceLink(ShipperId: str, ServiceId: str, DeliveryMethodCode: str, DeliveryMethodName: str, Color: str) """
-    Instance = ShippperServiceLink
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, ShipperId, ServiceId, DeliveryMethodCode, DeliveryMethodName, Color):
         """ __new__(cls: type, ShipperId: str, ServiceId: str, DeliveryMethodCode: str, DeliveryMethodName: str, Color: str) """
@@ -224,11 +226,12 @@ Set: ShipperId(self: ShippperServiceLink) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ShippperServiceLink()
 
 class ShippperServiceLinks(List):
     """ ShippperServiceLinks() """
-    Instance = ShippperServiceLinks
-    """hardcoded/returns an instance of the class"""
     def DeliveryMethodCodes(self):
         """ DeliveryMethodCodes(self: ShippperServiceLinks) -> List[str] """
         pass
@@ -279,4 +282,7 @@ class ShippperServiceLinks(List):
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ShippperServiceLinks()
 

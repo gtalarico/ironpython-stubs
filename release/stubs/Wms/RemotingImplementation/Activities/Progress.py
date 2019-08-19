@@ -10,8 +10,6 @@
 
 class ProgressBase:
     # no doc
-    Instance = ProgressBase
-    """hardcoded/returns an instance of the class"""
     def GenerateProgressBarImage(self, args, progress):
         """ GenerateProgressBarImage(self: ProgressBase, args: GetActivityProgressArgs, progress: Progress) -> Array[Byte] """
         pass
@@ -32,11 +30,12 @@ class ProgressBase:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProgressBase()
 
 class BatchPackProgress(ProgressBase):
     """ BatchPackProgress() """
-    Instance = BatchPackProgress
-    """hardcoded/returns an instance of the class"""
     def GetActivity(self, args, value):
         """ GetActivity(self: BatchPackProgress, args: GetActivityProgressArgs, value: object) -> Activity """
         pass
@@ -49,11 +48,12 @@ class BatchPackProgress(ProgressBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BatchPackProgress()
 
 class BatchPickProgress(ProgressBase):
     """ BatchPickProgress() """
-    Instance = BatchPickProgress
-    """hardcoded/returns an instance of the class"""
     def GetActivity(self, args, value):
         """ GetActivity(self: BatchPickProgress, args: GetActivityProgressArgs, value: object) -> Activity """
         pass
@@ -66,11 +66,12 @@ class BatchPickProgress(ProgressBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BatchPickProgress()
 
 class IProgress:
     # no doc
-    Instance = IProgress
-    """hardcoded/returns an instance of the class"""
     def GetActivity(self, args, value):
         """ GetActivity(self: IProgress, args: GetActivityProgressArgs, value: object) -> Activity """
         pass
@@ -83,11 +84,12 @@ class IProgress:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IProgress()
 
 class ProgressFactory():
     # no doc
-    Instance = ProgressFactory
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetActivity(args, value):
         """ GetActivity(args: GetActivityProgressArgs, value: object) -> Activity """
@@ -103,11 +105,12 @@ class ProgressFactory():
         'GetProgress',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProgressFactory()
 
 class ReceiveProgress(ProgressBase):
     """ ReceiveProgress() """
-    Instance = ReceiveProgress
-    """hardcoded/returns an instance of the class"""
     def GetActivity(self, args, value):
         """ GetActivity(self: ReceiveProgress, args: GetActivityProgressArgs, value: object) -> Activity """
         pass
@@ -120,4 +123,7 @@ class ReceiveProgress(ProgressBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ReceiveProgress()
 

@@ -11,8 +11,6 @@ from Wms.RemotingObjects import *
 
 class WarehouseLayout():
     """ WarehouseLayout() """
-    Instance = WarehouseLayout
-    """hardcoded/returns an instance of the class"""
     Aisle = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -62,11 +60,12 @@ Set: Shelve(self: WarehouseLayout) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WarehouseLayout()
 
 class WarehouseLayouts(FindableList):
     """ WarehouseLayouts() """
-    Instance = WarehouseLayouts
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -86,6 +85,9 @@ class WarehouseLayouts(FindableList):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WarehouseLayouts()
 
 class WarehouseLayoutSettingFilter():
     """
@@ -94,8 +96,6 @@ class WarehouseLayoutSettingFilter():
     WarehouseLayoutSettingFilter(id: int, searchText: str)
     WarehouseLayoutSettingFilter(searchText: str)
     """
-    Instance = WarehouseLayoutSettingFilter
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
@@ -109,11 +109,12 @@ class WarehouseLayoutSettingFilter():
     Id = None
     SearchText = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WarehouseLayoutSettingFilter()
 
 class WarehouseLayoutSettings(FindableList):
     """ WarehouseLayoutSettings() """
-    Instance = WarehouseLayoutSettings
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -136,6 +137,9 @@ class WarehouseLayoutSettings(FindableList):
     DisplayMember = 'WarehouseCode'
     ValueMember = 'Id'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WarehouseLayoutSettings()
 
 # variables with complex values
 

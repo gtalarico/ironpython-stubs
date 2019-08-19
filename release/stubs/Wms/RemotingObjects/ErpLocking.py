@@ -11,8 +11,6 @@ from Wms.RemotingObjects import *
 
 class ErpLock(DbObject):
     """ ErpLock() """
-    Instance = ErpLock
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -82,11 +80,12 @@ Get: MigrateToStateAsString(self: ErpLock) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ErpLock()
 
 class ErpLockEntityType:
     """ enum ErpLockEntityType, values: PurchaseOrder (1), SalesOrder (0) """
-    Instance = ErpLockEntityType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -124,11 +123,12 @@ class ErpLockEntityType:
     SalesOrder = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ErpLockEntityType()
 
 class ErpLockState:
     """ enum ErpLockState, values: Locked (1), Unkown (0), Unlocked (2) """
-    Instance = ErpLockState
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -167,4 +167,7 @@ class ErpLockState:
     Unlocked = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ErpLockState()
 

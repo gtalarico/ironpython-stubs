@@ -14,8 +14,6 @@ class DuplicateAddressDetectionState:
     
     enum DuplicateAddressDetectionState, values: Deprecated (3), Duplicate (2), Invalid (0), Preferred (4), Tentative (1)
     """
-    Instance = DuplicateAddressDetectionState
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -56,11 +54,12 @@ class DuplicateAddressDetectionState:
     Tentative = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DuplicateAddressDetectionState()
 
 class GatewayIPAddressInformation():
     """ Represents the IP address of the network gateway. This class cannot be instantiated. """
-    Instance = GatewayIPAddressInformation
-    """hardcoded/returns an instance of the class"""
     Address = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get the IP address of the gateway.
 
@@ -69,11 +68,12 @@ Get: Address(self: GatewayIPAddressInformation) -> IPAddress
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GatewayIPAddressInformation()
 
 class GatewayIPAddressInformationCollection:
     """ Stores a set of System.Net.NetworkInformation.GatewayIPAddressInformation types. """
-    Instance = GatewayIPAddressInformationCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, address):
         """
         Add(self: GatewayIPAddressInformationCollection, address: GatewayIPAddressInformation)
@@ -116,8 +116,7 @@ class GatewayIPAddressInformationCollection:
         GetEnumerator(self: GatewayIPAddressInformationCollection) -> IEnumerator[GatewayIPAddressInformation]
         
             Returns an object that can be used to iterate through this collection.
-            Returns: An object that implements the System.Collections.IEnumerator interface and provides access to the System.Net.NetworkInformation.UnicastIPAddressInformation types in this 
-             collection.
+            Returns: An object that implements the System.Collections.IEnumerator interface and provides access to the System.Net.NetworkInformation.UnicastIPAddressInformation types in this collection.
         """
         pass
 
@@ -175,11 +174,12 @@ Get: IsReadOnly(self: GatewayIPAddressInformationCollection) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GatewayIPAddressInformationCollection()
 
 class IcmpV4Statistics():
     """ Provides Internet Control Message Protocol for IPv4 (ICMPv4) statistical data for the local computer. """
-    Instance = IcmpV4Statistics
-    """hardcoded/returns an instance of the class"""
     AddressMaskRepliesReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of Internet Control Message Protocol version 4 (ICMPv4) Address Mask Reply messages that were received.
 
@@ -363,11 +363,12 @@ Get: TimestampRequestsSent(self: IcmpV4Statistics) -> Int64
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IcmpV4Statistics()
 
 class IcmpV6Statistics():
     """ Provides Internet Control Message Protocol for Internet Protocol version 6 (ICMPv6) statistical data for the local computer. """
-    Instance = IcmpV6Statistics
-    """hardcoded/returns an instance of the class"""
     DestinationUnreachableMessagesReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of Internet Control Message Protocol version 6 (ICMPv6) messages received because of a packet having an unreachable address in its destination.
 
@@ -593,11 +594,12 @@ Get: TimeExceededMessagesSent(self: IcmpV6Statistics) -> Int64
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IcmpV6Statistics()
 
 class IPAddressCollection:
     """ Stores a set of System.Net.IPAddress types. """
-    Instance = IPAddressCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, address):
         """
         Add(self: IPAddressCollection, address: IPAddress)
@@ -698,11 +700,12 @@ Get: IsReadOnly(self: IPAddressCollection) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPAddressCollection()
 
 class IPAddressInformation():
     """ Provides information about a network interface address. """
-    Instance = IPAddressInformation
-    """hardcoded/returns an instance of the class"""
     Address = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the Internet Protocol (IP) address.
 
@@ -725,11 +728,12 @@ Get: IsTransient(self: IPAddressInformation) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPAddressInformation()
 
 class IPAddressInformationCollection:
     """ Stores a set of System.Net.NetworkInformation.IPAddressInformation types. """
-    Instance = IPAddressInformationCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, address):
         """
         Add(self: IPAddressInformationCollection, address: IPAddressInformation)
@@ -772,8 +776,7 @@ class IPAddressInformationCollection:
         GetEnumerator(self: IPAddressInformationCollection) -> IEnumerator[IPAddressInformation]
         
             Returns an object that can be used to iterate through this collection.
-            Returns: An object that implements the System.Collections.IEnumerator interface and provides access to the System.Net.NetworkInformation.IPAddressInformation types in this 
-             collection.
+            Returns: An object that implements the System.Collections.IEnumerator interface and provides access to the System.Net.NetworkInformation.IPAddressInformation types in this collection.
         """
         pass
 
@@ -831,11 +834,12 @@ Get: IsReadOnly(self: IPAddressInformationCollection) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPAddressInformationCollection()
 
 class IPGlobalProperties():
     """ Provides information about the network connectivity of the local computer. """
-    Instance = IPGlobalProperties
-    """hardcoded/returns an instance of the class"""
     def BeginGetUnicastAddresses(self, callback, state):
         """
         BeginGetUnicastAddresses(self: IPGlobalProperties, callback: AsyncCallback, state: object) -> IAsyncResult
@@ -864,8 +868,7 @@ class IPGlobalProperties():
         GetActiveTcpConnections(self: IPGlobalProperties) -> Array[TcpConnectionInformation]
         
             Returns information about the Internet Protocol version 4 (IPv4) and IPv6 Transmission Control Protocol (TCP) connections on the local computer.
-            Returns: A System.Net.NetworkInformation.TcpConnectionInformation array that contains objects that describe the active TCP connections, or an empty array if no active TCP 
-             connections are detected.
+            Returns: A System.Net.NetworkInformation.TcpConnectionInformation array that contains objects that describe the active TCP connections, or an empty array if no active TCP connections are detected.
         """
         pass
 
@@ -1018,11 +1021,12 @@ Get: NodeType(self: IPGlobalProperties) -> NetBiosNodeType
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPGlobalProperties()
 
 class IPGlobalStatistics():
     """ Provides Internet Protocol (IP) statistical data. """
-    Instance = IPGlobalStatistics
-    """hardcoded/returns an instance of the class"""
     DefaultTtl = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the default time-to-live (TTL) value for Internet Protocol (IP) packets.
 
@@ -1178,11 +1182,12 @@ Get: ReceivedPacketsWithUnknownProtocol(self: IPGlobalStatistics) -> Int64
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPGlobalStatistics()
 
 class IPInterfaceProperties():
     """ Provides information about network interfaces that support Internet Protocol version 4 (IPv4) or Internet Protocol version 6 (IPv6). """
-    Instance = IPInterfaceProperties
-    """hardcoded/returns an instance of the class"""
     def GetIPv4Properties(self):
         """
         GetIPv4Properties(self: IPInterfaceProperties) -> IPv4InterfaceProperties
@@ -1272,11 +1277,12 @@ Get: WinsServersAddresses(self: IPInterfaceProperties) -> IPAddressCollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPInterfaceProperties()
 
 class IPInterfaceStatistics():
     # no doc
-    Instance = IPInterfaceStatistics
-    """hardcoded/returns an instance of the class"""
     BytesReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: BytesReceived(self: IPInterfaceStatistics) -> Int64
 
@@ -1338,6 +1344,9 @@ class IPInterfaceStatistics():
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPInterfaceStatistics()
 
 class IPStatus:
     """
@@ -1345,8 +1354,6 @@ class IPStatus:
     
     enum IPStatus, values: BadDestination (11018), BadHeader (11042), BadOption (11007), BadRoute (11012), DestinationHostUnreachable (11003), DestinationNetworkUnreachable (11002), DestinationPortUnreachable (11005), DestinationProhibited (11004), DestinationProtocolUnreachable (11004), DestinationScopeMismatch (11045), DestinationUnreachable (11040), HardwareError (11008), IcmpError (11044), NoResources (11006), PacketTooBig (11009), ParameterProblem (11015), SourceQuench (11016), Success (0), TimedOut (11010), TimeExceeded (11041), TtlExpired (11013), TtlReassemblyTimeExceeded (11014), Unknown (-1), UnrecognizedNextHeader (11043)
     """
-    Instance = IPStatus
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -1406,11 +1413,12 @@ class IPStatus:
     UnrecognizedNextHeader = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPStatus()
 
 class IPv4InterfaceProperties():
     """ Provides information about network interfaces that support Internet Protocol version 4 (IPv4). """
-    Instance = IPv4InterfaceProperties
-    """hardcoded/returns an instance of the class"""
     Index = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the index of the network interface associated with the Internet Protocol version 4 (IPv4) address.
 
@@ -1461,11 +1469,12 @@ Get: UsesWins(self: IPv4InterfaceProperties) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPv4InterfaceProperties()
 
 class IPv4InterfaceStatistics():
     """ Provides statistical data for a network interface on the local computer. """
-    Instance = IPv4InterfaceStatistics
-    """hardcoded/returns an instance of the class"""
     BytesReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of bytes that were received on the interface.
 
@@ -1551,11 +1560,12 @@ Get: UnicastPacketsSent(self: IPv4InterfaceStatistics) -> Int64
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPv4InterfaceStatistics()
 
 class IPv6InterfaceProperties():
     """ Provides information about network interfaces that support Internet Protocol version 6 (IPv6). """
-    Instance = IPv6InterfaceProperties
-    """hardcoded/returns an instance of the class"""
     def GetScopeId(self, scopeLevel):
         """ GetScopeId(self: IPv6InterfaceProperties, scopeLevel: ScopeLevel) -> Int64 """
         pass
@@ -1575,11 +1585,12 @@ Get: Mtu(self: IPv6InterfaceProperties) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPv6InterfaceProperties()
 
 class MulticastIPAddressInformation:
     """ Provides information about a network interface's multicast address. """
-    Instance = MulticastIPAddressInformation
-    """hardcoded/returns an instance of the class"""
     AddressPreferredLifetime = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of seconds remaining during which this address is the preferred address.
 
@@ -1623,11 +1634,12 @@ Get: SuffixOrigin(self: MulticastIPAddressInformation) -> SuffixOrigin
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MulticastIPAddressInformation()
 
 class MulticastIPAddressInformationCollection:
     """ Stores a set of System.Net.NetworkInformation.MulticastIPAddressInformation types. """
-    Instance = MulticastIPAddressInformationCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, address):
         """
         Add(self: MulticastIPAddressInformationCollection, address: MulticastIPAddressInformation)
@@ -1670,8 +1682,7 @@ class MulticastIPAddressInformationCollection:
         GetEnumerator(self: MulticastIPAddressInformationCollection) -> IEnumerator[MulticastIPAddressInformation]
         
             Returns an object that can be used to iterate through this collection.
-            Returns: An object that implements the System.Collections.IEnumerator interface and provides access to the System.Net.NetworkInformation.UnicastIPAddressInformation types in this 
-             collection.
+            Returns: An object that implements the System.Collections.IEnumerator interface and provides access to the System.Net.NetworkInformation.UnicastIPAddressInformation types in this collection.
         """
         pass
 
@@ -1729,6 +1740,9 @@ Get: IsReadOnly(self: MulticastIPAddressInformationCollection) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MulticastIPAddressInformationCollection()
 
 class NetBiosNodeType:
     """
@@ -1736,8 +1750,6 @@ class NetBiosNodeType:
     
     enum NetBiosNodeType, values: Broadcast (1), Hybrid (8), Mixed (4), Peer2Peer (2), Unknown (0)
     """
-    Instance = NetBiosNodeType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -1778,6 +1790,9 @@ class NetBiosNodeType:
     Unknown = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetBiosNodeType()
 
 class NetworkAddressChangedEventHandler(MulticastDelegate):
     """
@@ -1785,8 +1800,6 @@ class NetworkAddressChangedEventHandler(MulticastDelegate):
     
     NetworkAddressChangedEventHandler(object: object, method: IntPtr)
     """
-    Instance = NetworkAddressChangedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: NetworkAddressChangedEventHandler, sender: object, e: EventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -1808,9 +1821,7 @@ class NetworkAddressChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1839,8 +1850,7 @@ class NetworkAddressChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -1856,6 +1866,9 @@ class NetworkAddressChangedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetworkAddressChangedEventHandler()
 
 class NetworkAvailabilityChangedEventHandler(MulticastDelegate):
     """
@@ -1863,8 +1876,6 @@ class NetworkAvailabilityChangedEventHandler(MulticastDelegate):
     
     NetworkAvailabilityChangedEventHandler(object: object, method: IntPtr)
     """
-    Instance = NetworkAvailabilityChangedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: NetworkAvailabilityChangedEventHandler, sender: object, e: NetworkAvailabilityEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -1886,9 +1897,7 @@ class NetworkAvailabilityChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1917,8 +1926,7 @@ class NetworkAvailabilityChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -1934,11 +1942,12 @@ class NetworkAvailabilityChangedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetworkAvailabilityChangedEventHandler()
 
 class NetworkAvailabilityEventArgs(EventArgs):
     """ Provides data for the System.Net.NetworkInformation.NetworkChange.NetworkAvailabilityChanged event. """
-    Instance = NetworkAvailabilityEventArgs
-    """hardcoded/returns an instance of the class"""
     IsAvailable = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the current status of the network connection.
 
@@ -1947,6 +1956,9 @@ Get: IsAvailable(self: NetworkAvailabilityEventArgs) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetworkAvailabilityEventArgs()
 
 class NetworkChange():
     """
@@ -1954,8 +1966,6 @@ class NetworkChange():
     
     NetworkChange()
     """
-    Instance = NetworkChange
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def RegisterNetworkChange(nc):
         """ RegisterNetworkChange(nc: NetworkChange) """
@@ -1964,6 +1974,9 @@ class NetworkChange():
     NetworkAddressChanged = None
     NetworkAvailabilityChanged = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetworkChange()
 
 class NetworkInformationAccess:
     """
@@ -1971,8 +1984,6 @@ class NetworkInformationAccess:
     
     enum (flags) NetworkInformationAccess, values: None (0), Ping (4), Read (1)
     """
-    Instance = NetworkInformationAccess
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2011,6 +2022,9 @@ class NetworkInformationAccess:
     Read = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetworkInformationAccess()
 
 class NetworkInformationException(Win32Exception):
     """
@@ -2019,8 +2033,6 @@ class NetworkInformationException(Win32Exception):
     NetworkInformationException()
     NetworkInformationException(errorCode: int)
     """
-    Instance = NetworkInformationException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2050,6 +2062,9 @@ Get: ErrorCode(self: NetworkInformationException) -> int
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetworkInformationException()
 
 class NetworkInformationPermission(CodeAccessPermission):
     """
@@ -2058,8 +2073,6 @@ class NetworkInformationPermission(CodeAccessPermission):
     NetworkInformationPermission(state: PermissionState)
     NetworkInformationPermission(access: NetworkInformationAccess)
     """
-    Instance = NetworkInformationPermission
-    """hardcoded/returns an instance of the class"""
     def AddPermission(self, access):
         """
         AddPermission(self: NetworkInformationPermission, access: NetworkInformationAccess)
@@ -2094,8 +2107,7 @@ class NetworkInformationPermission(CodeAccessPermission):
             Creates and returns a permission that is the intersection of the current permission and the specified permission.
         
             target: An System.Security.IPermission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A System.Net.NetworkInformation.NetworkInformationPermission that represents the intersection of the current permission and the specified permission. This new permission is 
-             null if the intersection is empty or target is null.
+            Returns: A System.Net.NetworkInformation.NetworkInformationPermission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty or target is null.
         """
         pass
 
@@ -2165,6 +2177,9 @@ Get: Access(self: NetworkInformationPermission) -> NetworkInformationAccess
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetworkInformationPermission()
 
 class NetworkInformationPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -2172,8 +2187,6 @@ class NetworkInformationPermissionAttribute(CodeAccessSecurityAttribute):
     
     NetworkInformationPermissionAttribute(action: SecurityAction)
     """
-    Instance = NetworkInformationPermissionAttribute
-    """hardcoded/returns an instance of the class"""
     def CreatePermission(self):
         """
         CreatePermission(self: NetworkInformationPermissionAttribute) -> IPermission
@@ -2204,11 +2217,12 @@ Set: Access(self: NetworkInformationPermissionAttribute) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetworkInformationPermissionAttribute()
 
 class NetworkInterface():
     """ Provides configuration and statistical information for a network interface. """
-    Instance = NetworkInterface
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetAllNetworkInterfaces():
         """
@@ -2331,6 +2345,9 @@ Get: SupportsMulticast(self: NetworkInterface) -> bool
     IPv6LoopbackInterfaceIndex = 1
     LoopbackInterfaceIndex = 1
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetworkInterface()
 
 class NetworkInterfaceComponent:
     """
@@ -2338,8 +2355,6 @@ class NetworkInterfaceComponent:
     
     enum NetworkInterfaceComponent, values: IPv4 (0), IPv6 (1)
     """
-    Instance = NetworkInterfaceComponent
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2377,6 +2392,9 @@ class NetworkInterfaceComponent:
     IPv6 = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetworkInterfaceComponent()
 
 class NetworkInterfaceType:
     """
@@ -2384,8 +2402,6 @@ class NetworkInterfaceType:
     
     enum NetworkInterfaceType, values: AsymmetricDsl (94), Atm (37), BasicIsdn (20), Ethernet (6), Ethernet3Megabit (26), FastEthernetFx (69), FastEthernetT (62), Fddi (15), GenericModem (48), GigabitEthernet (117), HighPerformanceSerialBus (144), IPOverAtm (114), Isdn (63), Loopback (24), MultiRateSymmetricDsl (143), Ppp (23), PrimaryIsdn (21), RateAdaptDsl (95), Slip (28), SymmetricDsl (96), TokenRing (9), Tunnel (131), Unknown (1), VeryHighSpeedDsl (97), Wireless80211 (71), Wman (237), Wwanpp (243), Wwanpp2 (244)
     """
-    Instance = NetworkInterfaceType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2449,6 +2465,9 @@ class NetworkInterfaceType:
     Wwanpp = None
     Wwanpp2 = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetworkInterfaceType()
 
 class OperationalStatus:
     """
@@ -2456,8 +2475,6 @@ class OperationalStatus:
     
     enum OperationalStatus, values: Dormant (5), Down (2), LowerLayerDown (7), NotPresent (6), Testing (3), Unknown (4), Up (1)
     """
-    Instance = OperationalStatus
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2500,6 +2517,9 @@ class OperationalStatus:
     Up = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OperationalStatus()
 
 class PhysicalAddress():
     """
@@ -2507,8 +2527,6 @@ class PhysicalAddress():
     
     PhysicalAddress(address: Array[Byte])
     """
-    Instance = PhysicalAddress
-    """hardcoded/returns an instance of the class"""
     def Equals(self, comparand):
         """
         Equals(self: PhysicalAddress, comparand: object) -> bool
@@ -2573,6 +2591,9 @@ class PhysicalAddress():
 
     None_ =None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PhysicalAddress()
 
 class Ping(Component):
     """
@@ -2580,8 +2601,6 @@ class Ping(Component):
     
     Ping()
     """
-    Instance = Ping
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: Ping, disposing: bool)
@@ -2598,8 +2617,7 @@ class Ping(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified 
-             service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -2609,10 +2627,7 @@ class Ping(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2636,178 +2651,113 @@ class Ping(Component):
         
             Attempts to send an Internet Control Message Protocol (ICMP) echo message to the specified computer, and receive a corresponding ICMP echo reply message from that computer.
         
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
-        
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message, if one was received, or provides the reason for the failure, 
-             if no message was received.
-        
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string representation of an IP address.
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message, if one was received, or provides the reason for the failure, if no message was received.
         Send(self: Ping, hostNameOrAddress: str, timeout: int) -> PingReply
         
-            Attempts to send an Internet Control Message Protocol (ICMP) echo message to the specified computer, and receive a corresponding ICMP echo reply message from that computer. 
-             This method allows you to specify a time-out value for the operation.
+            Attempts to send an Internet Control Message Protocol (ICMP) echo message to the specified computer, and receive a corresponding ICMP echo reply message from that computer. This method allows you to specify a time-out value for the operation.
         
-        
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
-        
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string representation of an IP address.
             timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message if one was received, or provides the reason for the failure if 
-             no message was received.
-        
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message if one was received, or provides the reason for the failure if no message was received.
         Send(self: Ping, address: IPAddress) -> PingReply
         
-            Attempts to send an Internet Control Message Protocol (ICMP) echo message to the computer that has the specified System.Net.IPAddress, and receive a corresponding ICMP echo 
-             reply message from that computer.
-        
+            Attempts to send an Internet Control Message Protocol (ICMP) echo message to the computer that has the specified System.Net.IPAddress, and receive a corresponding ICMP echo reply message from that computer.
         
             address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message, if one was received, or describes the reason for the failure 
-             if no message was received.
-        
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message, if one was received, or describes the reason for the failure if no message was received.
         Send(self: Ping, address: IPAddress, timeout: int) -> PingReply
         
-            Attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the computer that has the specified System.Net.IPAddress, and 
-             receive a corresponding ICMP echo reply message from that computer. This method allows you to specify a time-out value for the operation.
-        
+            Attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the computer that has the specified System.Net.IPAddress, and receive a corresponding ICMP echo reply message from that computer. This method allows you to specify a time-out value for the operation.
         
             address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
             timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message if one was received, or provides the reason for the failure if 
-             no message was received.
-        
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message if one was received, or provides the reason for the failure if no message was received.
         Send(self: Ping, hostNameOrAddress: str, timeout: int, buffer: Array[Byte]) -> PingReply
         
-            Attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the specified computer, and receive a corresponding ICMP echo 
-             reply message from that computer. This overload allows you to specify a time-out value for the operation.
+            Attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the specified computer, and receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation.
         
-        
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
-        
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string representation of an IP address.
             timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
             buffer: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message if one was received, or provides the reason for the failure if 
-             no message was received.
-        
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message if one was received, or provides the reason for the failure if no message was received.
         Send(self: Ping, address: IPAddress, timeout: int, buffer: Array[Byte]) -> PingReply
         
-            Attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the computer that has the specified System.Net.IPAddress, and 
-             receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation.
-        
+            Attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the computer that has the specified System.Net.IPAddress, and receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation.
         
             address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
             timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
             buffer: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message, if one was received, or provides the reason for the failure, 
-             if no message was received. The method will return System.Net.NetworkInformation.IPStatus.PacketTooBig if the packet exceeds the Maximum Transmission Unit (MTU).
-        
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message, if one was received, or provides the reason for the failure, if no message was received. The method will return System.Net.NetworkInformation.IPStatus.PacketTooBig if the packet exceeds the Maximum Transmission Unit (MTU).
         Send(self: Ping, hostNameOrAddress: str, timeout: int, buffer: Array[Byte], options: PingOptions) -> PingReply
         
-            Attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the specified computer, and receive a corresponding ICMP echo 
-             reply message from that computer. This overload allows you to specify a time-out value for the operation and control fragmentation and Time-to-Live values for the ICMP 
-             packet.
+            Attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the specified computer, and receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation and control fragmentation and Time-to-Live values for the ICMP packet.
         
-        
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
-        
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string representation of an IP address.
             timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
             buffer: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
             options: A System.Net.NetworkInformation.PingOptions  object used to control fragmentation and Time-to-Live values for the ICMP echo message packet.
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message if one was received, or provides the reason for the failure if 
-             no message was received.
-        
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message if one was received, or provides the reason for the failure if no message was received.
         Send(self: Ping, address: IPAddress, timeout: int, buffer: Array[Byte], options: PingOptions) -> PingReply
         
-            Attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the computer that has the specified System.Net.IPAddress and 
-             receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation and control fragmentation and 
-             Time-to-Live values for the ICMP echo message packet.
-        
+            Attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the computer that has the specified System.Net.IPAddress and receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation and control fragmentation and Time-to-Live values for the ICMP echo message packet.
         
             address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
             timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
             buffer: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
             options: A System.Net.NetworkInformation.PingOptions  object used to control fragmentation and Time-to-Live values for the ICMP echo message packet.
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message, if one was received, or provides the reason for the failure, 
-             if no message was received. The method will return System.Net.NetworkInformation.IPStatus.PacketTooBig if the packet exceeds the Maximum Transmission Unit (MTU).
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message, if one was received, or provides the reason for the failure, if no message was received. The method will return System.Net.NetworkInformation.IPStatus.PacketTooBig if the packet exceeds the Maximum Transmission Unit (MTU).
         """
         pass
 
     def SendAsync(self, *__args):
         """
         SendAsync(self: Ping, hostNameOrAddress: str, userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message to the specified computer, and receive a corresponding ICMP echo reply message from 
-             that computer.
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message to the specified computer, and receive a corresponding ICMP echo reply message from that computer.
         
-        
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
-        
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string representation of an IP address.
             userToken: An object that is passed to the method invoked when the asynchronous operation completes.
         SendAsync(self: Ping, hostNameOrAddress: str, timeout: int, userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message to the specified computer, and receive a corresponding ICMP echo reply message from 
-             that computer. This overload allows you to specify a time-out value for the operation.
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message to the specified computer, and receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation.
         
-        
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
-        
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string representation of an IP address.
             timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
             userToken: An object that is passed to the method invoked when the asynchronous operation completes.
         SendAsync(self: Ping, address: IPAddress, userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message to the computer that has the specified System.Net.IPAddress, and receive a 
-             corresponding ICMP echo reply message from that computer.
-        
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message to the computer that has the specified System.Net.IPAddress, and receive a corresponding ICMP echo reply message from that computer.
         
             address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
             userToken: An object that is passed to the method invoked when the asynchronous operation completes.
         SendAsync(self: Ping, address: IPAddress, timeout: int, userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message to the computer that has the specified System.Net.IPAddress, and receive a 
-             corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation.
-        
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message to the computer that has the specified System.Net.IPAddress, and receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation.
         
             address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
             timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
             userToken: An object that is passed to the method invoked when the asynchronous operation completes.
         SendAsync(self: Ping, hostNameOrAddress: str, timeout: int, buffer: Array[Byte], userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the specified computer, and receive a 
-             corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation.
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the specified computer, and receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation.
         
-        
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
-        
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string representation of an IP address.
             timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
             buffer: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
             userToken: An object that is passed to the method invoked when the asynchronous operation completes.
         SendAsync(self: Ping, address: IPAddress, timeout: int, buffer: Array[Byte], userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the computer that has the specified 
-             System.Net.IPAddress, and receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation.
-        
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the computer that has the specified System.Net.IPAddress, and receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation.
         
             address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
             timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
             buffer: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
             userToken: An object that is passed to the method invoked when the asynchronous operation completes.
         SendAsync(self: Ping, hostNameOrAddress: str, timeout: int, buffer: Array[Byte], options: PingOptions, userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the specified computer, and receive a 
-             corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation and control fragmentation and Time-to-Live 
-             values for the ICMP packet.
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the specified computer, and receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation and control fragmentation and Time-to-Live values for the ICMP packet.
         
-        
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
-        
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string representation of an IP address.
             timeout: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
             buffer: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
             options: A System.Net.NetworkInformation.PingOptions  object used to control fragmentation and Time-to-Live values for the ICMP echo message packet.
             userToken: An object that is passed to the method invoked when the asynchronous operation completes.
         SendAsync(self: Ping, address: IPAddress, timeout: int, buffer: Array[Byte], options: PingOptions, userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the computer that has the specified 
-             System.Net.IPAddress, and receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation and 
-             control fragmentation and Time-to-Live values for the ICMP echo message packet.
-        
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the computer that has the specified System.Net.IPAddress, and receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation and control fragmentation and Time-to-Live values for the ICMP echo message packet.
         
             address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
             timeout: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
@@ -2870,11 +2820,12 @@ class Ping(Component):
 
     PingCompleted = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Ping()
 
 class PingCompletedEventArgs(AsyncCompletedEventArgs):
     """ Provides data for the System.Net.NetworkInformation.Ping.PingCompleted event. """
-    Instance = PingCompletedEventArgs
-    """hardcoded/returns an instance of the class"""
     Reply = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets an object that contains data that describes an attempt to send an Internet Control Message Protocol (ICMP) echo request message and receive a corresponding ICMP echo reply message.
 
@@ -2883,6 +2834,9 @@ Get: Reply(self: PingCompletedEventArgs) -> PingReply
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PingCompletedEventArgs()
 
 class PingCompletedEventHandler(MulticastDelegate):
     """
@@ -2890,8 +2844,6 @@ class PingCompletedEventHandler(MulticastDelegate):
     
     PingCompletedEventHandler(object: object, method: IntPtr)
     """
-    Instance = PingCompletedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: PingCompletedEventHandler, sender: object, e: PingCompletedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -2913,9 +2865,7 @@ class PingCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2944,8 +2894,7 @@ class PingCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -2961,6 +2910,9 @@ class PingCompletedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PingCompletedEventHandler()
 
 class PingException:
     """
@@ -2969,8 +2921,6 @@ class PingException:
     PingException(message: str)
     PingException(message: str, innerException: Exception)
     """
-    Instance = PingException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2992,6 +2942,9 @@ class PingException:
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PingException()
 
 class PingOptions():
     """
@@ -3000,8 +2953,6 @@ class PingOptions():
     PingOptions(ttl: int, dontFragment: bool)
     PingOptions()
     """
-    Instance = PingOptions
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, ttl=None, dontFragment=None):
         """
@@ -3027,11 +2978,12 @@ Set: Ttl(self: PingOptions) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PingOptions()
 
 class PingReply():
     """ Provides information about the status and data resulting from a erload:System.Net.NetworkInformation.Ping.Send or erload:System.Net.NetworkInformation.Ping.SendAsync operation. """
-    Instance = PingReply
-    """hardcoded/returns an instance of the class"""
     Address = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the address of the host that sends the Internet Control Message Protocol (ICMP) echo reply.
 
@@ -3068,6 +3020,9 @@ Get: Status(self: PingReply) -> IPStatus
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PingReply()
 
 class PrefixOrigin:
     """
@@ -3075,8 +3030,6 @@ class PrefixOrigin:
     
     enum PrefixOrigin, values: Dhcp (3), Manual (1), Other (0), RouterAdvertisement (4), WellKnown (2)
     """
-    Instance = PrefixOrigin
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -3117,11 +3070,12 @@ class PrefixOrigin:
     value__ = None
     WellKnown = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrefixOrigin()
 
 class ScopeLevel:
     """ enum ScopeLevel, values: Admin (4), Global (14), Interface (1), Link (2), None (0), Organization (8), Site (5), Subnet (3) """
-    Instance = ScopeLevel
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -3165,6 +3119,9 @@ class ScopeLevel:
     Subnet = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ScopeLevel()
 
 class SuffixOrigin:
     """
@@ -3172,8 +3129,6 @@ class SuffixOrigin:
     
     enum SuffixOrigin, values: LinkLayerAddress (4), Manual (1), OriginDhcp (3), Other (0), Random (5), WellKnown (2)
     """
-    Instance = SuffixOrigin
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -3215,11 +3170,12 @@ class SuffixOrigin:
     value__ = None
     WellKnown = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SuffixOrigin()
 
 class TcpConnectionInformation():
     """ Provides information about the Transmission Control Protocol (TCP) connections on the local computer. """
-    Instance = TcpConnectionInformation
-    """hardcoded/returns an instance of the class"""
     LocalEndPoint = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the local endpoint of a Transmission Control Protocol (TCP) connection.
 
@@ -3242,6 +3198,9 @@ Get: State(self: TcpConnectionInformation) -> TcpState
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TcpConnectionInformation()
 
 class TcpState:
     """
@@ -3249,8 +3208,6 @@ class TcpState:
     
     enum TcpState, values: Closed (1), CloseWait (8), Closing (9), DeleteTcb (12), Established (5), FinWait1 (6), FinWait2 (7), LastAck (10), Listen (2), SynReceived (4), SynSent (3), TimeWait (11), Unknown (0)
     """
-    Instance = TcpState
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -3299,11 +3256,12 @@ class TcpState:
     Unknown = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TcpState()
 
 class TcpStatistics():
     """ Provides Transmission Control Protocol (TCP) statistical data. """
-    Instance = TcpStatistics
-    """hardcoded/returns an instance of the class"""
     ConnectionsAccepted = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of accepted Transmission Control Protocol (TCP) connection requests.
 
@@ -3403,11 +3361,12 @@ Get: SegmentsSent(self: TcpStatistics) -> Int64
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TcpStatistics()
 
 class UdpStatistics():
     """ Provides User Datagram Protocol (UDP) statistical data. """
-    Instance = UdpStatistics
-    """hardcoded/returns an instance of the class"""
     DatagramsReceived = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of User Datagram Protocol (UDP) datagrams that were received.
 
@@ -3444,11 +3403,12 @@ Get: UdpListeners(self: UdpStatistics) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UdpStatistics()
 
 class UnicastIPAddressInformation:
     """ Provides information about a network interface's unicast address. """
-    Instance = UnicastIPAddressInformation
-    """hardcoded/returns an instance of the class"""
     AddressPreferredLifetime = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the number of seconds remaining during which this address is the preferred address.
 
@@ -3504,11 +3464,12 @@ Get: SuffixOrigin(self: UnicastIPAddressInformation) -> SuffixOrigin
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UnicastIPAddressInformation()
 
 class UnicastIPAddressInformationCollection:
     """ Stores a set of System.Net.NetworkInformation.UnicastIPAddressInformation types. """
-    Instance = UnicastIPAddressInformationCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, address):
         """
         Add(self: UnicastIPAddressInformationCollection, address: UnicastIPAddressInformation)
@@ -3551,8 +3512,7 @@ class UnicastIPAddressInformationCollection:
         GetEnumerator(self: UnicastIPAddressInformationCollection) -> IEnumerator[UnicastIPAddressInformation]
         
             Returns an object that can be used to iterate through this collection.
-            Returns: An object that implements the System.Collections.IEnumerator interface and provides access to the System.Net.NetworkInformation.UnicastIPAddressInformation types in this 
-             collection.
+            Returns: An object that implements the System.Collections.IEnumerator interface and provides access to the System.Net.NetworkInformation.UnicastIPAddressInformation types in this collection.
         """
         pass
 
@@ -3610,4 +3570,7 @@ Get: IsReadOnly(self: UnicastIPAddressInformationCollection) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UnicastIPAddressInformationCollection()
 

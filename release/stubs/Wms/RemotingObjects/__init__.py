@@ -21,8 +21,6 @@ def ResultObject(): # real signature unknown; restored from __doc__
 
 class AnswerOptionsEnum:
     """ enum (flags) AnswerOptionsEnum, values: Abort (4), Cancel (2), Ignore (16), No (64), NoResponse (0), OK (1), Retry (8), Yes (32) """
-    Instance = AnswerOptionsEnum
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -66,11 +64,12 @@ class AnswerOptionsEnum:
     value__ = None
     Yes = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AnswerOptionsEnum()
 
 class AnswerOptionsEnumHelper():
     """ AnswerOptionsEnumHelper() """
-    Instance = AnswerOptionsEnumHelper
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def ConvertFromDialogResult(result):
         """ ConvertFromDialogResult(result: DialogResult) -> AnswerOptionsEnum """
@@ -86,11 +85,12 @@ class AnswerOptionsEnumHelper():
         """ IsAnswerAllowed(PossibleAnswers: int, Answer: AnswerOptionsEnum) -> bool """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AnswerOptionsEnumHelper()
 
 class IFindableList:
     # no doc
-    Instance = IFindableList
-    """hardcoded/returns an instance of the class"""
     def ExistsByProperty(self, id):
         """ ExistsByProperty(self: IFindableList, id: str) -> bool """
         pass
@@ -131,11 +131,12 @@ class IFindableList:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IFindableList()
 
 class Answers(FindableList):
     """ Answers() """
-    Instance = Answers
-    """hardcoded/returns an instance of the class"""
     def GetAnswerCount(self, countAnswer):
         """ GetAnswerCount(self: Answers, countAnswer: AnswerOptionsEnum) -> int """
         pass
@@ -195,14 +196,15 @@ class Answers(FindableList):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Answers()
 
 class BatchInfo():
     """
     BatchInfo(text: str)
     BatchInfo(text: str, tag: object)
     """
-    Instance = BatchInfo
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, text, tag=None):
         """
@@ -236,6 +238,9 @@ Set: Text(self: BatchInfo) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BatchInfo()
 
 class ChangeBarcodeArgs():
     """
@@ -244,8 +249,6 @@ class ChangeBarcodeArgs():
     ChangeBarcodeArgs()
     ChangeBarcodeArgs(itemCode: str, barcode: str, creditor: str)
     """
-    Instance = ChangeBarcodeArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, itemCode=None, barcode=None, creditor=None):
         """
@@ -281,11 +284,12 @@ Set: ItemCode(self: ChangeBarcodeArgs) = value
 
     Default = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ChangeBarcodeArgs()
 
 class DataBindingTypes:
     """ enum DataBindingTypes, values: DisplayMember (1), UniqueId (2), ValueMember (0) """
-    Instance = DataBindingTypes
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -324,11 +328,12 @@ class DataBindingTypes:
     ValueMember = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DataBindingTypes()
 
 class DbObject:
     """  """
-    Instance = DbObject
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -373,11 +378,12 @@ Set: ModifiedOn(self: DbObject) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DbObject()
 
 class Device(DbObject):
     """ Device() """
-    Instance = Device
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -418,14 +424,15 @@ Set: Type(self: Device) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Device()
 
 class DeviceInformation():
     """
     DeviceInformation()
     DeviceInformation(type: DeviceTypesEnum, name: str, serialNumber: str, operatingSystem: str, hardwareInformation: List[str])
     """
-    Instance = DeviceInformation
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, type=None, name=None, serialNumber=None, operatingSystem=None, hardwareInformation=None):
         """
@@ -475,11 +482,12 @@ Set: Type(self: DeviceInformation) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DeviceInformation()
 
 class Devices(FindableList):
     """ Devices() """
-    Instance = Devices
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -499,11 +507,12 @@ class Devices(FindableList):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Devices()
 
 class DeviceTypesEnum:
     """ enum DeviceTypesEnum, values: Handheld (2), Other (0), Portal (3), Terminal (1) """
-    Instance = DeviceTypesEnum
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -543,6 +552,9 @@ class DeviceTypesEnum:
     Terminal = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DeviceTypesEnum()
 
 class Error():
     """
@@ -550,8 +562,6 @@ class Error():
     Error(text: str, details: str)
     Error(key: str, text: str, details: str)
     """
-    Instance = Error
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
@@ -582,11 +592,12 @@ Get: Text(self: Error) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Error()
 
 class Errors(List):
     """ Errors() """
-    Instance = Errors
-    """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
         ToString(self: Errors) -> str
@@ -618,14 +629,15 @@ class Errors(List):
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Errors()
 
 class FindableList(List):
     """
     FindableList[T]()
     FindableList[T](collection: IEnumerable[T])
     """
-    Instance = FindableList
-    """hardcoded/returns an instance of the class"""
     def ExistsByProperty(self, id):
         """ ExistsByProperty(self: FindableList[T], id: str) -> bool """
         pass
@@ -750,11 +762,12 @@ Get: PreserveState(self: FindableList[T]) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FindableList()
 
 class GetLogLinesArgs():
     """ GetLogLinesArgs() """
-    Instance = GetLogLinesArgs
-    """hardcoded/returns an instance of the class"""
     Device = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -828,11 +841,12 @@ Set: Zone(self: GetLogLinesArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GetLogLinesArgs()
 
 class HistoryFilterBase():
     """  """
-    Instance = HistoryFilterBase
-    """hardcoded/returns an instance of the class"""
     FromDate = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: FromDate(self: HistoryFilterBase) -> Nullable[DateTime]
 
@@ -856,11 +870,12 @@ Set: TimeSpan(self: HistoryFilterBase) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HistoryFilterBase()
 
 class IDbObject:
     # no doc
-    Instance = IDbObject
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -898,11 +913,12 @@ Set: ModifiedOn(self: IDbObject) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IDbObject()
 
 class ImplementedFunctionalities():
     """ ImplementedFunctionalities() """
-    Instance = ImplementedFunctionalities
-    """hardcoded/returns an instance of the class"""
     def ToMobileVariant(self):
         """
         ToMobileVariant(self: ImplementedFunctionalities) -> ImplementedFunctionalities
@@ -1127,11 +1143,12 @@ Get: ValidateOrders(self: ImplementedFunctionalities) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ImplementedFunctionalities()
 
 class IPagedList:
     """  """
-    Instance = IPagedList
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1145,6 +1162,9 @@ Set: TotalRowsMatched(self: IPagedList) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPagedList()
 
 class Items(FindableList):
     """
@@ -1152,8 +1172,6 @@ class Items(FindableList):
     
     Items()
     """
-    Instance = Items
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(items):
         """ FromIEnumerable(items: IEnumerable[Item]) -> Items """
@@ -1181,11 +1199,12 @@ class Items(FindableList):
     DisplayMember = 'Description'
     ValueMember = 'Code'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Items()
 
 class IUniqueHashable:
     """  """
-    Instance = IUniqueHashable
-    """hardcoded/returns an instance of the class"""
     def GetUniqueHashCode(self):
         """ GetUniqueHashCode(self: IUniqueHashable) -> str """
         pass
@@ -1194,6 +1213,9 @@ class IUniqueHashable:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IUniqueHashable()
 
 class License():
     """
@@ -1201,8 +1223,6 @@ class License():
     
     License()
     """
-    Instance = License
-    """hardcoded/returns an instance of the class"""
     AddressLine1 = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """First address line container street and number
 
@@ -1331,11 +1351,12 @@ Set: Warnings(self: License) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return License()
 
 class LogLine(DbObject):
     """ LogLine() """
-    Instance = LogLine
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1488,14 +1509,15 @@ Set: Zone(self: LogLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LogLine()
 
 class Mapping():
     """
     Mapping[TKey, TValue, TInfo](key: TKey, value: TValue)
     Mapping[TKey, TValue, TInfo](key: TKey, value: TValue, info: TInfo)
     """
-    Instance = Mapping
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, key, value, info=None):
         """
@@ -1528,14 +1550,15 @@ Set: Value(self: Mapping[TKey, TValue, TInfo]) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Mapping()
 
 class Mappings():
     """
     Mappings[TKey, TValue, TInfo](capacity: int)
     Mappings[TKey, TValue, TInfo]()
     """
-    Instance = Mappings
-    """hardcoded/returns an instance of the class"""
     def Add(self, key, value, info=None):
         """ Add(self: Mappings[TKey, TValue, TInfo], key: TKey, value: TValue)Add(self: Mappings[TKey, TValue, TInfo], key: TKey, value: TValue, info: TInfo) """
         pass
@@ -1584,11 +1607,12 @@ class Mappings():
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Mappings()
 
 class OrderTypeEnum:
     """ enum OrderTypeEnum, values: Purchase (0), Replenishment (3), Rma (1), Rtv (4), Sales (2) """
-    Instance = OrderTypeEnum
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -1629,6 +1653,9 @@ class OrderTypeEnum:
     Sales = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OrderTypeEnum()
 
 class PagedList(List):
     """
@@ -1636,8 +1663,6 @@ class PagedList(List):
     PagedList[T](capacity: int)
     PagedList[T](collection: IEnumerable[T])
     """
-    Instance = PagedList
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -1675,6 +1700,9 @@ Set: TotalRowsMatched(self: PagedList[T]) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PagedList()
 
 class PagingParams():
     """
@@ -1683,8 +1711,6 @@ class PagingParams():
     PagingParams()
     PagingParams(start: int, limit: int, sortColumn: str, sortDirection: str)
     """
-    Instance = PagingParams
-    """hardcoded/returns an instance of the class"""
     def GetHashCode(self):
         """
         GetHashCode(self: PagingParams) -> int
@@ -1745,11 +1771,12 @@ Set: Start(self: PagingParams) = value
     SortColumn = None
     SortDirection = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PagingParams()
 
 class ProfilingLogEntries(FindableList):
     """ ProfilingLogEntries() """
-    Instance = ProfilingLogEntries
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -1769,14 +1796,15 @@ class ProfilingLogEntries(FindableList):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProfilingLogEntries()
 
 class ProfilingUserNode():
     """
     ProfilingUserNode()
     ProfilingUserNode(userKey: int, userName: str, machineName: str)
     """
-    Instance = ProfilingUserNode
-    """hardcoded/returns an instance of the class"""
     def ToString(self):
         """ ToString(self: ProfilingUserNode) -> str """
         pass
@@ -1814,11 +1842,12 @@ Set: UserName(self: ProfilingUserNode) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProfilingUserNode()
 
 class ProfilingLogEntry(ProfilingUserNode):
     """ ProfilingLogEntry() """
-    Instance = ProfilingLogEntry
-    """hardcoded/returns an instance of the class"""
     AccessId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: AccessId(self: ProfilingLogEntry) -> str
 
@@ -1922,11 +1951,12 @@ Set: WindowsIdentity(self: ProfilingLogEntry) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProfilingLogEntry()
 
 class ProfilingUserNodes(FindableList):
     """ ProfilingUserNodes() """
-    Instance = ProfilingUserNodes
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -1946,6 +1976,9 @@ class ProfilingUserNodes(FindableList):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProfilingUserNodes()
 
 class Question():
     """
@@ -1953,8 +1986,6 @@ class Question():
     Question(key: str, text: str, possibleAnswers: int)
     Question(key: str, text: str, details: str, possibleAnswers: int)
     """
-    Instance = Question
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, key=None, text=None, *__args):
         """
@@ -2002,21 +2033,23 @@ Set: Text(self: Question) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Question()
 
 class QuestionConstants():
     """ QuestionConstants() """
-    Instance = QuestionConstants
-    """hardcoded/returns an instance of the class"""
     PreReceiptsArchive = 'PreReceiptsArchive'
     PreReceiptsDelete = 'PreReceiptsDelete'
     PreReceiptsSave = 'PreReceiptsSave'
     PrintRmaInvoice = 'PrintRmaInvoice'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return QuestionConstants()
 
 class Questions(List):
     """ Questions() """
-    Instance = Questions
-    """hardcoded/returns an instance of the class"""
     def ContainsKey(self, key):
         """ ContainsKey(self: Questions, key: str) -> bool """
         pass
@@ -2068,6 +2101,9 @@ Get: CountNotAnswered(self: Questions) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Questions()
 
 class RemotingException(Exception):
     """
@@ -2075,8 +2111,6 @@ class RemotingException(Exception):
     RemotingException(message: str)
     RemotingException(message: str, innerEx: Exception)
     """
-    Instance = RemotingException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2098,6 +2132,9 @@ class RemotingException(Exception):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RemotingException()
 
 class RemotingArgumentException(RemotingException):
     """
@@ -2105,8 +2142,6 @@ class RemotingArgumentException(RemotingException):
     RemotingArgumentException(message: str)
     RemotingArgumentException(message: str, inner: Exception)
     """
-    Instance = RemotingArgumentException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2128,14 +2163,15 @@ class RemotingArgumentException(RemotingException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RemotingArgumentException()
 
 class RemotingDbException(RemotingException):
     """
     RemotingDbException()
     RemotingDbException(Message: str)
     """
-    Instance = RemotingDbException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2156,6 +2192,9 @@ class RemotingDbException(RemotingException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RemotingDbException()
 
 class RemotingInsufficientRightsException(RemotingException):
     """
@@ -2163,8 +2202,6 @@ class RemotingInsufficientRightsException(RemotingException):
     RemotingInsufficientRightsException(message: str)
     RemotingInsufficientRightsException(message: str, innerEx: Exception)
     """
-    Instance = RemotingInsufficientRightsException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2186,6 +2223,9 @@ class RemotingInsufficientRightsException(RemotingException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RemotingInsufficientRightsException()
 
 class RemotingLostErpHostException(RemotingException):
     """
@@ -2193,8 +2233,6 @@ class RemotingLostErpHostException(RemotingException):
     RemotingLostErpHostException(message: str)
     RemotingLostErpHostException(message: str, innerEx: Exception)
     """
-    Instance = RemotingLostErpHostException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2216,6 +2254,9 @@ class RemotingLostErpHostException(RemotingException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RemotingLostErpHostException()
 
 class RemotingMessageException(RemotingException):
     """
@@ -2223,8 +2264,6 @@ class RemotingMessageException(RemotingException):
     RemotingMessageException(message: str)
     RemotingMessageException(message: str, innerEx: Exception)
     """
-    Instance = RemotingMessageException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2246,14 +2285,15 @@ class RemotingMessageException(RemotingException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RemotingMessageException()
 
 class RemotingSecurityViolationException(RemotingException):
     """
     RemotingSecurityViolationException()
     RemotingSecurityViolationException(Message: str)
     """
-    Instance = RemotingSecurityViolationException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -2274,11 +2314,12 @@ class RemotingSecurityViolationException(RemotingException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RemotingSecurityViolationException()
 
 class Schedule():
     # no doc
-    Instance = Schedule
-    """hardcoded/returns an instance of the class"""
     def IsWithinSchedule(self, value):
         """
         IsWithinSchedule(self: Schedule, value: DateTime) -> bool
@@ -2296,6 +2337,9 @@ class Schedule():
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Schedule()
 
 class SerializableDictionary(Dictionary):
     """
@@ -2303,8 +2347,6 @@ class SerializableDictionary(Dictionary):
     SerializableDictionary[TKey, TValue](dictionary: IDictionary[TKey, TValue])
     SerializableDictionary[TKey, TValue](info: SerializationInfo, context: StreamingContext)
     """
-    Instance = SerializableDictionary
-    """hardcoded/returns an instance of the class"""
     def GetSchema(self):
         """ GetSchema(self: SerializableDictionary[TKey, TValue]) -> XmlSchema """
         pass
@@ -2345,11 +2387,12 @@ class SerializableDictionary(Dictionary):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SerializableDictionary()
 
 class ServerHealthEnum:
     """ enum ServerHealthEnum, values: DatabaseUpdateNeeded (4), DifferentHookVersions (5), InvalidConnection (2), InvalidLicense (1), NoDatabase (3), NotReady (6), NotRunning (7), Ok (0) """
-    Instance = ServerHealthEnum
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2393,11 +2436,12 @@ class ServerHealthEnum:
     Ok = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ServerHealthEnum()
 
 class Session():
     """ Session() """
-    Instance = Session
-    """hardcoded/returns an instance of the class"""
     AccessId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -2446,11 +2490,12 @@ Set: UserName(self: Session) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Session()
 
 class Sessions(FindableList):
     """ Sessions() """
-    Instance = Sessions
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -2473,11 +2518,12 @@ class Sessions(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Number'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Sessions()
 
 class StateTransition():
     """ StateTransition[T](currentStatus: T, newStatus: T) """
-    Instance = StateTransition
-    """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """ Equals(self: StateTransition[T], obj: object) -> bool """
         pass
@@ -2501,14 +2547,15 @@ class StateTransition():
     CurrentStatus = None
     NewStatus = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StateTransition()
 
 class Tag(DbObject):
     """
     Tag()
     Tag(description: str, color: str)
     """
-    Instance = Tag
-    """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """ Equals(self: Tag, obj: object) -> bool """
         pass
@@ -2596,14 +2643,15 @@ Get: TargetAsString(self: Tag) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Tag()
 
 class Tags(List):
     """
     Tags(collection: IEnumerable[Tag])
     Tags()
     """
-    Instance = Tags
-    """hardcoded/returns an instance of the class"""
     def ToString(self):
         """ ToString(self: Tags) -> str """
         pass
@@ -2640,11 +2688,12 @@ class Tags(List):
 
     TagsDelimiter = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Tags()
 
 class TagTarget:
     """ enum TagTarget, values: Batch (2), NotSet (0), Order (1) """
-    Instance = TagTarget
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2683,11 +2732,12 @@ class TagTarget:
     Order = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TagTarget()
 
 class ThreadSafeList:
     """ ThreadSafeList[T]() """
-    Instance = ThreadSafeList
-    """hardcoded/returns an instance of the class"""
     def Clear(self):
         """ Clear(self: ThreadSafeList[T]) """
         pass
@@ -2754,11 +2804,12 @@ Get: Count(self: ThreadSafeList[T]) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ThreadSafeList()
 
 class TimeFilterEnum:
     """ enum TimeFilterEnum, values: All (3), Today (0), Tomorrow (1), UpcomingWeek (2) """
-    Instance = TimeFilterEnum
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2798,11 +2849,12 @@ class TimeFilterEnum:
     UpcomingWeek = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TimeFilterEnum()
 
 class TimeFilterHistoryEnum:
     """ enum TimeFilterHistoryEnum, values: All (3), LastWeek (2), Today (0), Yesterday (1) """
-    Instance = TimeFilterHistoryEnum
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2842,11 +2894,12 @@ class TimeFilterHistoryEnum:
     value__ = None
     Yesterday = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TimeFilterHistoryEnum()
 
 class UiDataBindingTypeAttribute:
     """ UiDataBindingTypeAttribute(type: DataBindingTypes) """
-    Instance = UiDataBindingTypeAttribute
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetDisplayMember(type):
         """
@@ -2890,11 +2943,12 @@ Get: Type(self: UiDataBindingTypeAttribute) -> DataBindingTypes
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UiDataBindingTypeAttribute()
 
 class UnitTypeEnum:
     """ enum UnitTypeEnum, values: Length (2), Other (1), Time (3), Unspecified (0), Weight (4) """
-    Instance = UnitTypeEnum
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2935,11 +2989,12 @@ class UnitTypeEnum:
     value__ = None
     Weight = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UnitTypeEnum()
 
 class User(DbObject):
     """ User() """
-    Instance = User
-    """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """ Equals(self: User, obj: object) -> bool """
         pass
@@ -3023,11 +3078,12 @@ Set: Username(self: User) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return User()
 
 class Users(List):
     """ Users() """
-    Instance = Users
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -3050,11 +3106,12 @@ class Users(List):
     DisplayMember = 'FullName'
     ValueMember = 'UserId'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Users()
 
 class UserWithSecrets(User):
     """ UserWithSecrets() """
-    Instance = UserWithSecrets
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -3072,6 +3129,9 @@ Set: Salt(self: UserWithSecrets) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UserWithSecrets()
 
 class Warning():
     """
@@ -3080,8 +3140,6 @@ class Warning():
     Warning(key: str, text: str, allowsRetry: bool)
     Warning(key: str, text: str, details: str, allowsRetry: bool)
     """
-    Instance = Warning
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, key=None, text=None, *__args):
         """
@@ -3129,11 +3187,12 @@ Get: Text(self: Warning) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Warning()
 
 class Warnings(List):
     """ Warnings() """
-    Instance = Warnings
-    """hardcoded/returns an instance of the class"""
     def ContainsKey(self, key):
         """ ContainsKey(self: Warnings, key: str) -> bool """
         pass
@@ -3181,6 +3240,9 @@ Get: CountNotIgnored(self: Warnings) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Warnings()
 
 # variables with complex values
 

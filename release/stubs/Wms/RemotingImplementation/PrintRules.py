@@ -10,8 +10,6 @@
 
 class PrinterRuleSorter:
     """ PrinterRuleSorter() """
-    Instance = PrinterRuleSorter
-    """hardcoded/returns an instance of the class"""
     def Compare(self, x, y):
         """ Compare(self: PrinterRuleSorter, x: PrintRule, y: PrintRule) -> int """
         pass
@@ -28,4 +26,7 @@ class PrinterRuleSorter:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrinterRuleSorter()
 

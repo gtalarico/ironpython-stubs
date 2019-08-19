@@ -10,8 +10,6 @@
 
 class PrintDatasetBase():
     """  """
-    Instance = PrintDatasetBase
-    """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
         CreateFrom(self: PrintDatasetBase, userName: str, source: PrintLinesBase) -> DataTable
@@ -111,11 +109,12 @@ Set: OneLabelPerPrintAction(self: PrintDatasetBase) = value
     NumberOfCopies = 'NumberOfCopies'
     Quantity = 'Quantity'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintDatasetBase()
 
 class BarcodeDataset(PrintDatasetBase):
     """ BarcodeDataset() """
-    Instance = BarcodeDataset
-    """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
         CreateFrom(self: BarcodeDataset, userName: str, source: PrintLinesBase) -> DataTable
@@ -171,11 +170,12 @@ Get: Name(self: BarcodeDataset) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BarcodeDataset()
 
 class ItemPrintDataset(PrintDatasetBase):
     """ ItemPrintDataset() """
-    Instance = ItemPrintDataset
-    """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
         CreateFrom(self: ItemPrintDataset, userName: str, source: PrintLinesBase) -> DataTable
@@ -231,11 +231,12 @@ Get: Name(self: ItemPrintDataset) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ItemPrintDataset()
 
 class ItemWithItemIdPrintDataset(PrintDatasetBase):
     """ ItemWithItemIdPrintDataset() """
-    Instance = ItemWithItemIdPrintDataset
-    """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
         CreateFrom(self: ItemWithItemIdPrintDataset, userName: str, source: PrintLinesBase) -> DataTable
@@ -291,11 +292,12 @@ Get: Name(self: ItemWithItemIdPrintDataset) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ItemWithItemIdPrintDataset()
 
 class LicensePlatePrintDataset(PrintDatasetBase):
     """ LicensePlatePrintDataset() """
-    Instance = LicensePlatePrintDataset
-    """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
         CreateFrom(self: LicensePlatePrintDataset, userName: str, source: PrintLinesBase) -> DataTable
@@ -351,11 +353,12 @@ Get: Name(self: LicensePlatePrintDataset) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LicensePlatePrintDataset()
 
 class PickbatchPrintDataset(PrintDatasetBase):
     """ PickbatchPrintDataset() """
-    Instance = PickbatchPrintDataset
-    """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
         CreateFrom(self: PickbatchPrintDataset, userName: str, source: PrintLinesBase) -> DataTable
@@ -411,11 +414,12 @@ Get: Name(self: PickbatchPrintDataset) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PickbatchPrintDataset()
 
 class PurchaseItemIdPrintDataset(PrintDatasetBase):
     """ PurchaseItemIdPrintDataset() """
-    Instance = PurchaseItemIdPrintDataset
-    """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
         CreateFrom(self: PurchaseItemIdPrintDataset, userName: str, source: PrintLinesBase) -> DataTable
@@ -475,11 +479,12 @@ Get: Name(self: PurchaseItemIdPrintDataset) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PurchaseItemIdPrintDataset()
 
 class PurchasePrintDataset(PrintDatasetBase):
     """ PurchasePrintDataset() """
-    Instance = PurchasePrintDataset
-    """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
         CreateFrom(self: PurchasePrintDataset, userName: str, source: PrintLinesBase) -> DataTable
@@ -539,11 +544,12 @@ Get: Name(self: PurchasePrintDataset) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PurchasePrintDataset()
 
 class RmaPrintDataset(PrintDatasetBase):
     """ RmaPrintDataset() """
-    Instance = RmaPrintDataset
-    """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
         CreateFrom(self: RmaPrintDataset, userName: str, source: PrintLinesBase) -> DataTable
@@ -603,11 +609,12 @@ Get: Name(self: RmaPrintDataset) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RmaPrintDataset()
 
 class SSCCHeterogeneousDataSet(PrintDatasetBase):
     """ SSCCHeterogeneousDataSet() """
-    Instance = SSCCHeterogeneousDataSet
-    """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
         CreateFrom(self: SSCCHeterogeneousDataSet, userName: str, source: PrintLinesBase) -> DataTable
@@ -663,11 +670,12 @@ Get: Name(self: SSCCHeterogeneousDataSet) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SSCCHeterogeneousDataSet()
 
 class SSCCHomogeneousDataSet(PrintDatasetBase):
     """ SSCCHomogeneousDataSet() """
-    Instance = SSCCHomogeneousDataSet
-    """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
         CreateFrom(self: SSCCHomogeneousDataSet, userName: str, source: PrintLinesBase) -> DataTable
@@ -723,11 +731,12 @@ Get: Name(self: SSCCHomogeneousDataSet) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SSCCHomogeneousDataSet()
 
 class SSCCPregeneratedDataset(PrintDatasetBase):
     """ SSCCPregeneratedDataset() """
-    Instance = SSCCPregeneratedDataset
-    """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
         CreateFrom(self: SSCCPregeneratedDataset, userName: str, source: PrintLinesBase) -> DataTable
@@ -783,11 +792,12 @@ Get: Name(self: SSCCPregeneratedDataset) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SSCCPregeneratedDataset()
 
 class TransportPackagePrintDataset(PrintDatasetBase):
     """ TransportPackagePrintDataset() """
-    Instance = TransportPackagePrintDataset
-    """hardcoded/returns an instance of the class"""
     def CreateFrom(self, userName, source):
         """
         CreateFrom(self: TransportPackagePrintDataset, userName: str, source: PrintLinesBase) -> DataTable
@@ -847,4 +857,7 @@ Get: Name(self: TransportPackagePrintDataset) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportPackagePrintDataset()
 

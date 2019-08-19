@@ -20,8 +20,6 @@ class BlockingCollection:
     BlockingCollection[T](collection: IProducerConsumerCollection[T], boundedCapacity: int)
     BlockingCollection[T](collection: IProducerConsumerCollection[T])
     """
-    Instance = BlockingCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, item, cancellationToken=None):
         """
         Add(self: BlockingCollection[T], item: T)
@@ -116,9 +114,7 @@ class BlockingCollection:
             Attempts to add the specified item to the System.Collections.Concurrent.BlockingCollection.
         
             item: The item to be added to the collection.
-            Returns: true if item could be added; otherwise false. If the item is a duplicate, and the underlying collection does not accept duplicate items, then an 
-             System.InvalidOperationException is thrown.
-        
+            Returns: true if item could be added; otherwise false. If the item is a duplicate, and the underlying collection does not accept duplicate items, then an System.InvalidOperationException is thrown.
         TryAdd(self: BlockingCollection[T], item: T, timeout: TimeSpan) -> bool
         
             Attempts to add the specified item to the System.Collections.Concurrent.BlockingCollection.
@@ -132,9 +128,7 @@ class BlockingCollection:
         
             item: The item to be added to the collection.
             millisecondsTimeout: The number of milliseconds to wait, or System.Threading.Timeout.Infinite (-1) to wait indefinitely.
-            Returns: true if the item could be added to the collection within the specified time; otherwise, false. If the item is a duplicate, and the underlying collection does not accept 
-             duplicate items, then an System.InvalidOperationException is thrown.
-        
+            Returns: true if the item could be added to the collection within the specified time; otherwise, false. If the item is a duplicate, and the underlying collection does not accept duplicate items, then an System.InvalidOperationException is thrown.
         TryAdd(self: BlockingCollection[T], item: T, millisecondsTimeout: int, cancellationToken: CancellationToken) -> bool
         
             Attempts to add the specified item to the System.Collections.Concurrent.BlockingCollection within the specified time period, while observing a cancellation token.
@@ -142,8 +136,7 @@ class BlockingCollection:
             item: The item to be added to the collection.
             millisecondsTimeout: The number of milliseconds to wait, or System.Threading.Timeout.Infinite (-1) to wait indefinitely.
             cancellationToken: A cancellation token to observe.
-            Returns: true if the item could be added to the collection within the specified time; otherwise, false. If the item is a duplicate, and the underlying collection does not accept 
-             duplicate items, then an System.InvalidOperationException is thrown.
+            Returns: true if the item could be added to the collection within the specified time; otherwise, false. If the item is a duplicate, and the underlying collection does not accept duplicate items, then an System.InvalidOperationException is thrown.
         """
         pass
 
@@ -247,14 +240,15 @@ Get: IsCompleted(self: BlockingCollection[T]) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BlockingCollection()
 
 class ConcurrentBag:
     """
     ConcurrentBag[T]()
     ConcurrentBag[T](collection: IEnumerable[T])
     """
-    Instance = ConcurrentBag
-    """hardcoded/returns an instance of the class"""
     def Add(self, item):
         """
         Add(self: ConcurrentBag[T], item: T)
@@ -344,6 +338,9 @@ Get: IsEmpty(self: ConcurrentBag[T]) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConcurrentBag()
 
 class ConcurrentDictionary:
     """
@@ -355,8 +352,6 @@ class ConcurrentDictionary:
     ConcurrentDictionary[TKey, TValue](concurrencyLevel: int, collection: IEnumerable[KeyValuePair[TKey, TValue]], comparer: IEqualityComparer[TKey])
     ConcurrentDictionary[TKey, TValue](concurrencyLevel: int, capacity: int, comparer: IEqualityComparer[TKey])
     """
-    Instance = ConcurrentDictionary
-    """hardcoded/returns an instance of the class"""
     def AddOrUpdate(self, key, *__args):
         """
         AddOrUpdate[TArg](self: ConcurrentDictionary[TKey, TValue], key: TKey, addValueFactory: Func[TKey, TArg, TValue], updateValueFactory: Func[TKey, TValue, TArg, TValue], factoryArgument: TArg) -> TValue
@@ -400,9 +395,7 @@ class ConcurrentDictionary:
         
             key: The key of the element to add.
             valueFactory: The function used to generate a value for the key
-            Returns: The value for the key. This will be either the existing value for the key if the key is already in the dictionary, or the new value for the key as returned by valueFactory 
-             if the key was not in the dictionary.
-        
+            Returns: The value for the key. This will be either the existing value for the key if the key is already in the dictionary, or the new value for the key as returned by valueFactory if the key was not in the dictionary.
         GetOrAdd(self: ConcurrentDictionary[TKey, TValue], key: TKey, value: TValue) -> TValue
         
             Adds a key/value pair to the System.Collections.Concurrent.ConcurrentDictionary if the key does not already exist.
@@ -542,14 +535,15 @@ Get: Values(self: ConcurrentDictionary[TKey, TValue]) -> ICollection[TValue]
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConcurrentDictionary()
 
 class ConcurrentQueue:
     """
     ConcurrentQueue[T]()
     ConcurrentQueue[T](collection: IEnumerable[T])
     """
-    Instance = ConcurrentQueue
-    """hardcoded/returns an instance of the class"""
     def CopyTo(self, array, index):
         """ CopyTo(self: ConcurrentQueue[T], array: Array[T], index: int) """
         pass
@@ -635,14 +629,15 @@ Get: IsEmpty(self: ConcurrentQueue[T]) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConcurrentQueue()
 
 class ConcurrentStack:
     """
     ConcurrentStack[T]()
     ConcurrentStack[T](collection: IEnumerable[T])
     """
-    Instance = ConcurrentStack
-    """hardcoded/returns an instance of the class"""
     def Clear(self):
         """
         Clear(self: ConcurrentStack[T])
@@ -746,11 +741,12 @@ Get: IsEmpty(self: ConcurrentStack[T]) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConcurrentStack()
 
 class EnumerablePartitionerOptions:
     """ enum (flags) EnumerablePartitionerOptions, values: NoBuffering (1), None (0) """
-    Instance = EnumerablePartitionerOptions
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -788,11 +784,12 @@ class EnumerablePartitionerOptions:
     None_ =None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EnumerablePartitionerOptions()
 
 class IProducerConsumerCollection:
     # no doc
-    Instance = IProducerConsumerCollection
-    """hardcoded/returns an instance of the class"""
     def CopyTo(self, array, index):
         """ CopyTo(self: IProducerConsumerCollection[T], array: Array[T], index: int) """
         pass
@@ -837,11 +834,12 @@ class IProducerConsumerCollection:
         """ x.__len__() <==> len(x) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IProducerConsumerCollection()
 
 class OrderablePartitioner(Partitioner):
     # no doc
-    Instance = OrderablePartitioner
-    """hardcoded/returns an instance of the class"""
     def GetDynamicPartitions(self):
         """
         GetDynamicPartitions(self: OrderablePartitioner[TSource]) -> IEnumerable[TSource]
@@ -909,4 +907,7 @@ Get: KeysOrderedInEachPartition(self: OrderablePartitioner[TSource]) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OrderablePartitioner()
 

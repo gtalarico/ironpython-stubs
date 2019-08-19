@@ -15,8 +15,6 @@ class AspNetHostingPermission(CodeAccessPermission):
     AspNetHostingPermission(state: PermissionState)
     AspNetHostingPermission(level: AspNetHostingPermissionLevel)
     """
-    Instance = AspNetHostingPermission
-    """hardcoded/returns an instance of the class"""
     def Copy(self):
         """
         Copy(self: AspNetHostingPermission) -> IPermission
@@ -113,6 +111,9 @@ Set: Level(self: AspNetHostingPermission) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AspNetHostingPermission()
 
 class AspNetHostingPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -120,8 +121,6 @@ class AspNetHostingPermissionAttribute(CodeAccessSecurityAttribute):
     
     AspNetHostingPermissionAttribute(action: SecurityAction)
     """
-    Instance = AspNetHostingPermissionAttribute
-    """hardcoded/returns an instance of the class"""
     def CreatePermission(self):
         """
         CreatePermission(self: AspNetHostingPermissionAttribute) -> IPermission
@@ -152,6 +151,9 @@ Set: Level(self: AspNetHostingPermissionAttribute) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AspNetHostingPermissionAttribute()
 
 class AspNetHostingPermissionLevel:
     """
@@ -159,8 +161,6 @@ class AspNetHostingPermissionLevel:
     
     enum AspNetHostingPermissionLevel, values: High (500), Low (300), Medium (400), Minimal (200), None (100), Unrestricted (600)
     """
-    Instance = AspNetHostingPermissionLevel
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -202,4 +202,7 @@ class AspNetHostingPermissionLevel:
     Unrestricted = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AspNetHostingPermissionLevel()
 

@@ -10,8 +10,6 @@
 
 class PrintLineToGS1MapperBase:
     # no doc
-    Instance = PrintLineToGS1MapperBase
-    """hardcoded/returns an instance of the class"""
     def ConvertToBarcode(self, propertyName, value, provider):
         """
         ConvertToBarcode(self: PrintLineToGS1MapperBase, propertyName: str, value: object, provider: IFormatProvider) -> IGeneratedBarcode
@@ -36,11 +34,12 @@ class PrintLineToGS1MapperBase:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintLineToGS1MapperBase()
 
 class HomogeneousPalletMapper(PrintLineToGS1MapperBase):
     """ HomogeneousPalletMapper() """
-    Instance = HomogeneousPalletMapper
-    """hardcoded/returns an instance of the class"""
     def ConvertToBarcode(self, propertyName, value, provider):
         """
         ConvertToBarcode(self: HomogeneousPalletMapper, propertyName: str, value: object, provider: IFormatProvider) -> IGeneratedBarcode
@@ -61,11 +60,12 @@ class HomogeneousPalletMapper(PrintLineToGS1MapperBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HomogeneousPalletMapper()
 
 class IPrintlineToGS1Mapper:
     # no doc
-    Instance = IPrintlineToGS1Mapper
-    """hardcoded/returns an instance of the class"""
     def ConvertToBarcode(self, propertyName, value, provider):
         """ ConvertToBarcode(self: IPrintlineToGS1Mapper, propertyName: str, value: object, provider: IFormatProvider) -> IGeneratedBarcode """
         pass
@@ -82,11 +82,12 @@ class IPrintlineToGS1Mapper:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPrintlineToGS1Mapper()
 
 class MixedPalletMapper(PrintLineToGS1MapperBase):
     """ MixedPalletMapper() """
-    Instance = MixedPalletMapper
-    """hardcoded/returns an instance of the class"""
     def GetMapping(self, propertyName):
         """ GetMapping(self: MixedPalletMapper, propertyName: str) -> str """
         pass
@@ -95,11 +96,12 @@ class MixedPalletMapper(PrintLineToGS1MapperBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MixedPalletMapper()
 
 class PrintLineToGS1MapperFactory():
     # no doc
-    Instance = PrintLineToGS1MapperFactory
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetMapper(datasetName):
         """ GetMapper(datasetName: str) -> IPrintlineToGS1Mapper """
@@ -109,4 +111,7 @@ class PrintLineToGS1MapperFactory():
         'GetMapper',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintLineToGS1MapperFactory()
 

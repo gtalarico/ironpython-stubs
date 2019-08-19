@@ -11,8 +11,6 @@ from System.IO import *
 
 class PythonScriptEvaluator():
     """ PythonScriptEvaluator(general: General, inventory: Inventory, outbound: Outbound, inbound: Inbound, printing: Printing, messaging: Messaging, notificationCenter: NotificationCenter, documentQueue: DocumentQueue) """
-    Instance = PythonScriptEvaluator
-    """hardcoded/returns an instance of the class"""
     def CompileScript(self, pScript):
         """ CompileScript(self: PythonScriptEvaluator, pScript: str) -> List[PythonError] """
         pass
@@ -41,11 +39,12 @@ class PythonScriptEvaluator():
         """ __new__(cls: type, general: General, inventory: Inventory, outbound: Outbound, inbound: Inbound, printing: Printing, messaging: Messaging, notificationCenter: NotificationCenter, documentQueue: DocumentQueue) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PythonScriptEvaluator()
 
 class PythonStdoutWriter(StreamWriter):
     """ PythonStdoutWriter(s: Stream) """
-    Instance = PythonStdoutWriter
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: StreamWriter, disposing: bool)
@@ -61,10 +60,7 @@ class PythonStdoutWriter(StreamWriter):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -96,11 +92,12 @@ class PythonStdoutWriter(StreamWriter):
 
     CoreNewLine = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PythonStdoutWriter()
 
 class ScriptOverridableAttribute:
     """ ScriptOverridableAttribute() """
-    Instance = ScriptOverridableAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -180,11 +177,12 @@ Set: Version(self: ScriptOverridableAttribute) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ScriptOverridableAttribute()
 
 class ScriptOverridableType:
     """ enum ScriptOverridableType, values: AddPackage (119), AddPrintJob (189), AddWarehouseTransferItemIdentitification (90), AddWarehouseTransferItems (152), AddWarehouseTransferQuantities (161), AddWarehouseTransferQuantity (91), CancelPendingPurchaseOrderReceipts (53), CancelPendingRmaOrderReceipts (28), ChangeDefaultLocation (105), ChangeItemBarcode (87), CheckZoneRightAddReferenceOnTransfer (104), CreatePreReceipt (181), CreatePreReceiptLineItemIdentifications (183), CreatePreReceiptLines (182), DeleteBatches (170), DeleteReplenishmentOrder (76), DetermineNewestStock (147), DetermineOldestStock (148), DetermineRoute (168), ExecuteMessageHandler (177), ExecuteMessagePublisher (176), GenerateReplenishmentOrder (74), GenerateReplenishmentOrderMultiple (75), GetAdhocRmaCustomersByFilter (29), GetAllowDifferentRoute (149), GetBarcodeStructure (1), GetBatchesAll (165), GetBatchesIncomplete (166), GetBatchesWithPendingPackages (167), GetBatchToConsolidateTo (172), GetCacheKeyOfTransportPackages (80), GetCustomers (69), GetCustomersPending (66), GetCustomersPendingByFilter (67), GetDefaultAllocationSettings (156), GetDefaultBatchSink (158), GetDefaultPrintAllocationSettings (157), GetHistoryOutboundOrderCustomers (17), GetHistoryPurchaseOrderPrintLines (45), GetHistoryPurchaseOrdersByFilter (43), GetHistoryPurchaseReceiptsByFilter (44), GetHistoryRmaOrderLines (33), GetHistoryRmaOrdersByFilter (32), GetHistoryShipment (120), GetHistoryShipmentsAll (121), GetHistoryShipmentsByFilter (122), GetItem (8), GetItemcodeFromBarcode (106), GetItemExistsOnDefaultInboundLocation (107), GetItemExistsOnLocation (108), GetItemIdentificationExists (109), GetItemIdentifications (111), GetItemImageLarge (112), GetItemImageSmall (113), GetItemLocationDefault (13), GetItemLocations (12), GetItems (9), GetItemsAll (11), GetItemsOnDefaultInboundLocation (114), GetItemsOnLocation (10), GetItemsOnTransportLocation (115), GetItemStockList (116), GetItemStockTotals (117), GetItemsToPack (160), GetItemVendors (35), GetLocationClassificationById (143), GetLocationClassifications (142), GetMobileShipperById (123), GetOrdersForBatch (155), GetOutboundOrderLinesBatchableByOrders (146), GetOutboundOrdersBatchable (169), GetPackages (124), GetPreReceiptLines (185), GetPreReceipts (184), GetPrintJobTypes (190), GetPurchaseOrder (36), GetPurchaseOrderLines (39), GetPurchaseOrderPrintLines (42), GetPurchaseOrdersAll (37), GetPurchaseOrdersByFilter (38), GetPurchaseReceiveLines (46), GetPurchaseReceiveLinesByKey (47), GetReplenishmentOrder (72), GetReplenishmentOrderLines (73), GetReplenishmentOrders (71), GetRmaCustomersExpectedByFilter (16), GetRmaOrder (88), GetRmaOrderItemIdentifications (89), GetRmaOrderLines (19), GetRmaOrderPrintLines (18), GetRmaOrdersAll (14), GetRmaOrdersByFilter (15), GetRmaReasons (30), GetRmaReceiveLines (20), GetRmaReceiveLinesByKey (21), GetSalesOrder (61), GetSalesOrderCostLines (65), GetSalesOrderLines (64), GetSalesOrdersAll (62), GetSalesOrdersBatchable (145), GetSalesOrdersByFilter (63), GetShipmentServices (126), GetShipperById (128), GetShippers (129), GetShipperServiceLevelsByShipperId (127), GetStorageAssignmentClassification (140), GetStorageAssignmentClassificationById (141), GetVendors (34), GetVendorsExpected (40), GetVendorsExpectedByFilter (41), GetVendorsWithPendingPreReceipts (186), GetWarehouseByCode (55), GetWarehouseLayoutsBySetting (139), GetWarehouseLayoutSettingById (138), GetWarehouseLayoutSettings (137), GetWarehouseLocations (3), GetWarehousesActive (7), GetWarehousesActiveByLocation (6), GetWarehousesActiveWithDefaultInboundLocation (5), GetWarehousesAll (2), GetWarehousesInactive (4), HandleColliForStockRegistration (70), IsBatchLimitReached (144), IsValidItemInCountGroup (153), LogAndCleanupShipment (81), MergeErpStock (118), OnMessageStatusChanged (178), OnPythonEngineBooted (0), OpenBatchForPickingById (173), OpenTransferPackagesForShipping (125), OrderMatchesCustomer (68), OrderMatchesCustomerValidator (188), PreCreatePreReceipt (180), PrepareInboundReceiveLines (57), PrepareWarehouseTransfer (92), PrepareWarehouseTransferFrom (93), PrepareWarehouseTransferItem (151), PrepareWarehouseTransferReceived (94), PrepareWarehouseTransferTo (95), PrepareWarehouseTransferToMulti (96), PrepareWarehouseTransferToMultiReceived (97), PrepareWarehouseTransferToMultiTransport (98), PrintBatchLabel (175), PrintDuplicateLabels (130), PrintPickList (174), PrintPrintLine (83), PrintPrintLines (84), PrintPrintLinesByObject (85), PrintPrintLinesByObjectAndPrinter (86), PrintPurchaseReceipt (56), PrintRmaReceipt (31), ProcessAdhocRmaOrderLines (27), ProcessBatchPacking (159), ProcessBatchPicking (77), ProcessCounts (100), ProcessDirectOrder (187), ProcessPendingReceiveLines (54), ProcessPendingRmaReceiveLines (26), ProcessPurchaseOrderLines (58), ProcessReceipt (59), ProcessReplenishmentOrder (79), ProcessRmaOrderLines (60), ProcessSalesOrder (78), ProcessShipment (131), ProcessShipmentInfo (82), PutBack (51), PutBackItemId (52), PutBackRmaItem (24), PutBackRmaItemId (25), Receive (48), ReceiveBs (49), ReceiveItemId (50), ReceiveRmaItem (22), ReceiveRmaItemId (23), RemoveCountItemIdentification (99), RemovePackage (133), RemoveWarehouseTransferItemIdentification (101), SaveBatchInCache (164), SetBatchName (163), SortOutboundOrderLinesForBatchCreation (154), SubtractWarehouseTransferQuantities (162), TransferItemFromBatch (150), TransferItems (102), UpdateBatchWithSettings (171), UpdatePackageData (134), UpdateTransportPackagesHeader (135), UpdateWarehouseTransfer (103), ValidateItemIdentification (110), ValidateOrder (179), ValidateShipment (132), VoidShipment (136) """
-    Instance = ScriptOverridableType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -411,6 +409,9 @@ class ScriptOverridableType:
     value__ = None
     VoidShipment = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ScriptOverridableType()
 
 # variables with complex values
 

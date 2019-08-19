@@ -10,8 +10,6 @@
 
 class BlobExtensions():
     # no doc
-    Instance = BlobExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetOriginalFilename(properties):
         """
@@ -33,11 +31,12 @@ class BlobExtensions():
         'SetOriginalFilename',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BlobExtensions()
 
 class StorageProvider():
     """ StorageProvider(innerProvider: IStorageProvider) """
-    Instance = StorageProvider
-    """hardcoded/returns an instance of the class"""
     def DeleteBlobAsync(self, blobId):
         """ DeleteBlobAsync(self: StorageProvider, blobId: int) -> Task """
         pass
@@ -63,4 +62,7 @@ class StorageProvider():
         """ __new__(cls: type, innerProvider: IStorageProvider) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StorageProvider()
 

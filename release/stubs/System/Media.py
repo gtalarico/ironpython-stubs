@@ -16,8 +16,6 @@ class SoundPlayer(Component):
     SoundPlayer(soundLocation: str)
     SoundPlayer(stream: Stream)
     """
-    Instance = SoundPlayer
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
@@ -34,8 +32,7 @@ class SoundPlayer(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified 
-             service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -59,10 +56,7 @@ class SoundPlayer(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -213,11 +207,12 @@ Set: Tag(self: SoundPlayer) = value
     SoundLocationChanged = None
     StreamChanged = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SoundPlayer()
 
 class SystemSound():
     """ Represents a system sound type. """
-    Instance = SystemSound
-    """hardcoded/returns an instance of the class"""
     def Play(self):
         """
         Play(self: SystemSound)
@@ -225,15 +220,19 @@ class SystemSound():
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SystemSound()
 
 class SystemSounds():
     """ Retrieves sounds associated with a set of Windows operating system sound-event types. This class cannot be inherited. """
-    Instance = SystemSounds
-    """hardcoded/returns an instance of the class"""
     Asterisk = None
     Beep = None
     Exclamation = None
     Hand = None
     Question = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SystemSounds()
 

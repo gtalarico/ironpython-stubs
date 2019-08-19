@@ -10,8 +10,6 @@
 
 class BaseRange():
     """ BaseRange(numberGeneration: INumberGeneration) """
-    Instance = BaseRange
-    """hardcoded/returns an instance of the class"""
     def AddGenerationArgs(self, *args): #cannot find CLR method
         """ AddGenerationArgs[T](self: BaseRange, dfObject: DataFlowObject[T], numberRange: NumberRange, numbersToGenerate: int) """
         pass
@@ -60,11 +58,12 @@ class BaseRange():
     EndOfRangeKey = 'WarningEndOfRange'
     _numberGeneration = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BaseRange()
 
 class NumberRangeFactory():
     # no doc
-    Instance = NumberRangeFactory
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetRange(rangeType):
         """ GetRange(rangeType: NumberRangeType) -> BaseRange """
@@ -74,11 +73,12 @@ class NumberRangeFactory():
         'GetRange',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NumberRangeFactory()
 
 class SSCCRange(BaseRange):
     """ SSCCRange(numberGeneration: INumberGeneration) """
-    Instance = SSCCRange
-    """hardcoded/returns an instance of the class"""
     def ResetRange(self, dfObject, manualReset):
         """ ResetRange(self: SSCCRange, dfObject: DataFlowObject[NumberRange], manualReset: bool) -> DataFlowObject[NumberRange] """
         pass
@@ -91,4 +91,7 @@ class SSCCRange(BaseRange):
     KeyUpdateExtensionDigit = 'UpdateExtensionDigit'
     _numberGeneration = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SSCCRange()
 

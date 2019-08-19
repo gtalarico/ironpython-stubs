@@ -10,8 +10,6 @@
 
 class BaseRemotingSink(BaseChannelObjectWithProperties):
     # no doc
-    Instance = BaseRemotingSink
-    """hardcoded/returns an instance of the class"""
     def ProcessRequest(self, *args): #cannot find CLR method
         """ ProcessRequest(self: BaseRemotingSink, message: IMessage, headers: ITransportHeaders, stream: Stream, state: object) -> (Stream, object) """
         pass
@@ -43,11 +41,12 @@ class BaseRemotingSink(BaseChannelObjectWithProperties):
     PerProviderState = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BaseRemotingSink()
 
 class MakePythonTypesSerializeableSink(BaseRemotingSink):
     """ MakePythonTypesSerializeableSink() """
-    Instance = MakePythonTypesSerializeableSink
-    """hardcoded/returns an instance of the class"""
     def ProcessRequest(self, *args): #cannot find CLR method
         """ ProcessRequest(self: BaseRemotingSink, message: IMessage, headers: ITransportHeaders, stream: Stream, state: object) -> (Stream, object) """
         pass
@@ -75,11 +74,12 @@ class MakePythonTypesSerializeableSink(BaseRemotingSink):
     PerProviderState = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MakePythonTypesSerializeableSink()
 
 class SinkProviderOf:
     """ SinkProviderOf[T]() """
-    Instance = SinkProviderOf
-    """hardcoded/returns an instance of the class"""
     def CreateSink(self, channel):
         """ CreateSink(self: SinkProviderOf[T], channel: IChannelReceiver) -> IServerChannelSink """
         pass
@@ -103,4 +103,7 @@ Set: Next(self: SinkProviderOf[T]) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SinkProviderOf()
 

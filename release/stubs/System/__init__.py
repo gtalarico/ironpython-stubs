@@ -60,8 +60,6 @@ class Object:
     
     object()
     """
-    Instance = Object
-    """hardcoded/returns an instance of the class"""
     def __delattr__(self, *args): #cannot find CLR method
         """ __delattr__(self: object, name: str) """
         pass
@@ -119,6 +117,9 @@ class Object:
 
     __class__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Object()
 
 class Exception:
     """
@@ -128,15 +129,12 @@ class Exception:
     Exception(message: str)
     Exception(message: str, innerException: Exception)
     """
-    Instance = Exception
-    """hardcoded/returns an instance of the class"""
     def GetBaseException(self):
         """
         GetBaseException(self: Exception) -> Exception
         
             When overridden in a derived class, returns the System.Exception that is the root cause of one or more subsequent exceptions.
-            Returns: The first exception thrown in a chain of exceptions. If the System.Exception.InnerException property of the current exception is a null reference (Nothing in Visual Basic), 
-             this property returns the current exception.
+            Returns: The first exception thrown in a chain of exceptions. If the System.Exception.InnerException property of the current exception is a null reference (Nothing in Visual Basic), this property returns the current exception.
         """
         pass
 
@@ -253,6 +251,9 @@ Get: TargetSite(self: Exception) -> MethodBase
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Exception()
 
 class SystemException(Exception):
     """
@@ -262,8 +263,6 @@ class SystemException(Exception):
     SystemException(message: str)
     SystemException(message: str, innerException: Exception)
     """
-    Instance = SystemException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -286,6 +285,9 @@ class SystemException(Exception):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SystemException()
 
 class AccessViolationException(SystemException):
     """
@@ -295,8 +297,6 @@ class AccessViolationException(SystemException):
     AccessViolationException(message: str)
     AccessViolationException(message: str, innerException: Exception)
     """
-    Instance = AccessViolationException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -319,11 +319,12 @@ class AccessViolationException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AccessViolationException()
 
 class IDisposable:
     """ Defines a method to release allocated resources. """
-    Instance = IDisposable
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: IDisposable)
@@ -343,11 +344,12 @@ class IDisposable:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IDisposable()
 
 class ActivationContext:
     """ Identifies the activation context for the current application. This class cannot be inherited. """
-    Instance = ActivationContext
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreatePartialActivationContext(identity, manifestPaths=None):
         """
@@ -424,11 +426,12 @@ Get: Identity(self: ActivationContext) -> ApplicationIdentity
 
     ContextForm = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ActivationContext()
 
 class Activator:
     """ Contains methods to create types of objects locally or remotely, or obtain references to existing remote objects. This class cannot be inherited. """
-    Instance = Activator
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateComInstanceFrom(assemblyName, typeName, hashValue=None, hashAlgorithm=None):
         """
@@ -459,56 +462,36 @@ class Activator:
             Creates an instance of the specified type using the constructor that best matches the specified parameters.
         
             type: The type of object to create.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the type constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the type constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
             binder: An object that uses bindingAttr and args to seek and identify the type constructor. If binder is null, the default binder is used.
-            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no 
-             parameters (the default constructor) is invoked.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the type constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
+            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no parameters (the default constructor) is invoked.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the type constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
             Returns: A reference to the newly created object.
         CreateInstance(type: Type, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object]) -> object
         
             Creates an instance of the specified type using the constructor that best matches the specified parameters.
         
             type: The type of object to create.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the type constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the type constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
             binder: An object that uses bindingAttr and args to seek and identify the type constructor. If binder is null, the default binder is used.
-            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no 
-             parameters (the default constructor) is invoked.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the type constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute 
-             object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no parameters (the default constructor) is invoked.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the type constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: A reference to the newly created object.
         CreateInstance(type: Type, *args: Array[object]) -> object
         
             Creates an instance of the specified type using the constructor that best matches the specified parameters.
         
             type: The type of object to create.
-            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no 
-             parameters (the default constructor) is invoked.
-        
+            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no parameters (the default constructor) is invoked.
             Returns: A reference to the newly created object.
         CreateInstance(type: Type, args: Array[object], activationAttributes: Array[object]) -> object
         
             Creates an instance of the specified type using the constructor that best matches the specified parameters.
         
             type: The type of object to create.
-            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no 
-             parameters (the default constructor) is invoked.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute 
-             object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no parameters (the default constructor) is invoked.
+            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: A reference to the newly created object.
         CreateInstance(type: Type) -> object
         
@@ -529,9 +512,7 @@ class Activator:
         
             assemblyName: The name of the assembly where the type named typeName is sought. If assemblyName is null, the executing assembly is searched.
             typeName: The name of the preferred type.
-            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute 
-             object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: A handle that must be unwrapped to access the newly created instance.
         CreateInstance(type: Type, nonPublic: bool) -> object
         
@@ -548,19 +529,11 @@ class Activator:
             assemblyName: The name of the assembly where the type named typeName is sought. If assemblyName is null, the executing assembly is searched.
             typeName: The name of the preferred type.
             ignoreCase: true to specify that the search for typeName is not case-sensitive; false to specify that the search is case-sensitive.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
             binder: An object that uses bindingAttr and args to seek and identify the typeName constructor. If binder is null, the default binder is used.
-            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no 
-             parameters (the default constructor) is invoked.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute 
-             object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no parameters (the default constructor) is invoked.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             securityInfo: Information used to make security policy decisions and grant code permissions.
             Returns: A handle that must be unwrapped to access the newly created instance.
         CreateInstance(assemblyName: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object]) -> ObjectHandle
@@ -570,19 +543,11 @@ class Activator:
             assemblyName: The name of the assembly where the type named typeName is sought. If assemblyName is null, the executing assembly is searched.
             typeName: The name of the preferred type.
             ignoreCase: true to specify that the search for typeName is not case-sensitive; false to specify that the search is case-sensitive.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
             binder: An object that uses bindingAttr and args to seek and identify the typeName constructor. If binder is null, the default binder is used.
-            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no 
-             parameters (the default constructor) is invoked.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute 
-             object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no parameters (the default constructor) is invoked.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: A handle that must be unwrapped to access the newly created instance.
         CreateInstance(domain: AppDomain, assemblyName: str, typeName: str) -> ObjectHandle
         
@@ -594,52 +559,32 @@ class Activator:
             Returns: A handle that must be unwrapped to access the newly created instance.
         CreateInstance(domain: AppDomain, assemblyName: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object], securityAttributes: Evidence) -> ObjectHandle
         
-            Creates an instance of the type whose name is specified in the specified remote domain, using the named assembly and the constructor that best matches the specified 
-             parameters.
-        
+            Creates an instance of the type whose name is specified in the specified remote domain, using the named assembly and the constructor that best matches the specified parameters.
         
             domain: The domain where the type named typeName is created.
             assemblyName: The name of the assembly where the type named typeName is sought. If assemblyName is null, the executing assembly is searched.
             typeName: The name of the preferred type.
             ignoreCase: true to specify that the search for typeName is not case-sensitive; false to specify that the search is case-sensitive.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
             binder: An object that uses bindingAttr and args to seek and identify the typeName constructor. If binder is null, the default binder is used.
-            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no 
-             parameters (the default constructor) is invoked.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute 
-             object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no parameters (the default constructor) is invoked.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             securityAttributes: Information used to make security policy decisions and grant code permissions.
             Returns: A handle that must be unwrapped to access the newly created instance.
         CreateInstance(domain: AppDomain, assemblyName: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object]) -> ObjectHandle
         
-            Creates an instance of the type whose name is specified in the specified remote domain, using the named assembly and the constructor that best matches the specified 
-             parameters.
-        
+            Creates an instance of the type whose name is specified in the specified remote domain, using the named assembly and the constructor that best matches the specified parameters.
         
             domain: The domain where the type named typeName is created.
             assemblyName: The name of the assembly where the type named typeName is sought. If assemblyName is null, the executing assembly is searched.
             typeName: The name of the preferred type.
             ignoreCase: true to specify that the search for typeName is not case-sensitive; false to specify that the search is case-sensitive.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
             binder: An object that uses bindingAttr and args to seek and identify the typeName constructor. If binder is null, the default binder is used.
-            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no 
-             parameters (the default constructor) is invoked.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute 
-             object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no parameters (the default constructor) is invoked.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: A handle that must be unwrapped to access the newly created instance.
         CreateInstance(activationContext: ActivationContext) -> ObjectHandle
         
@@ -673,9 +618,7 @@ class Activator:
         
             assemblyFile: The name of a file that contains an assembly where the type named typeName is sought.
             typeName: The name of the preferred type.
-            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute 
-             object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: A handle that must be unwrapped to access the newly created instance.
         CreateInstanceFrom(assemblyFile: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object], securityInfo: Evidence) -> ObjectHandle
         
@@ -684,19 +627,11 @@ class Activator:
             assemblyFile: The name of a file that contains an assembly where the type named typeName is sought.
             typeName: The name of the preferred type.
             ignoreCase: true to specify that the search for typeName is not case-sensitive; false to specify that the search is case-sensitive.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
             binder: An object that uses bindingAttr and args to seek and identify the typeName constructor. If binder is null, the default binder is used.
-            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no 
-             parameters (the default constructor) is invoked.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute 
-             object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no parameters (the default constructor) is invoked.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             securityInfo: Information used to make security policy decisions and grant code permissions.
             Returns: A handle that must be unwrapped to access the newly created instance.
         CreateInstanceFrom(assemblyFile: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object]) -> ObjectHandle
@@ -706,19 +641,11 @@ class Activator:
             assemblyFile: The name of a file that contains an assembly where the type named typeName is sought.
             typeName: The name of the preferred type.
             ignoreCase: true to specify that the search for typeName is not case-sensitive; false to specify that the search is case-sensitive.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
             binder: An object that uses bindingAttr and args to seek and identify the typeName constructor. If binder is null, the default binder is used.
-            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no 
-             parameters (the default constructor) is invoked.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute 
-             object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no parameters (the default constructor) is invoked.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: A handle that must be unwrapped to access the newly created instance.
         CreateInstanceFrom(domain: AppDomain, assemblyFile: str, typeName: str) -> ObjectHandle
         
@@ -730,52 +657,32 @@ class Activator:
             Returns: A handle that must be unwrapped to access the newly created instance.
         CreateInstanceFrom(domain: AppDomain, assemblyFile: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object], securityAttributes: Evidence) -> ObjectHandle
         
-            Creates an instance of the type whose name is specified in the specified remote domain, using the named assembly file and the constructor that best matches the specified 
-             parameters.
-        
+            Creates an instance of the type whose name is specified in the specified remote domain, using the named assembly file and the constructor that best matches the specified parameters.
         
             domain: The remote domain where the type named typeName is created.
             assemblyFile: The name of a file that contains an assembly where the type named typeName is sought.
             typeName: The name of the preferred type.
             ignoreCase: true to specify that the search for typeName is not case-sensitive; false to specify that the search is case-sensitive.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
             binder: An object that uses bindingAttr and args to seek and identify the typeName constructor. If binder is null, the default binder is used.
-            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no 
-             parameters (the default constructor) is invoked.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute 
-             object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no parameters (the default constructor) is invoked.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             securityAttributes: Information used to make security policy decisions and grant code permissions.
             Returns: A handle that must be unwrapped to access the newly created instance.
         CreateInstanceFrom(domain: AppDomain, assemblyFile: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object]) -> ObjectHandle
         
-            Creates an instance of the type whose name is specified in the specified remote domain, using the named assembly file and the constructor that best matches the specified 
-             parameters.
-        
+            Creates an instance of the type whose name is specified in the specified remote domain, using the named assembly file and the constructor that best matches the specified parameters.
         
             domain: The remote domain where the type named typeName is created.
             assemblyFile: The name of a file that contains an assembly where the type named typeName is sought.
             typeName: The name of the preferred type.
             ignoreCase: true to specify that the search for typeName is not case-sensitive; false to specify that the search is case-sensitive.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
             binder: An object that uses bindingAttr and args to seek and identify the typeName constructor. If binder is null, the default binder is used.
-            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no 
-             parameters (the default constructor) is invoked.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute 
-             object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            args: An array of arguments that match in number, order, and type the parameters of the constructor to invoke. If args is an empty array or null, the constructor that takes no parameters (the default constructor) is invoked.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. This is typically an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: A handle that must be unwrapped to access the newly created instance.
         """
         pass
@@ -809,6 +716,9 @@ class Activator:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Activator()
 
 class AggregateException(Exception):
     """
@@ -822,8 +732,6 @@ class AggregateException(Exception):
     AggregateException(message: str, innerExceptions: IEnumerable[Exception])
     AggregateException(message: str, *innerExceptions: Array[Exception])
     """
-    Instance = AggregateException
-    """hardcoded/returns an instance of the class"""
     def Flatten(self):
         """
         Flatten(self: AggregateException) -> AggregateException
@@ -899,11 +807,12 @@ Get: InnerExceptions(self: AggregateException) -> ReadOnlyCollection[Exception]
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AggregateException()
 
 class AppContext():
     # no doc
-    Instance = AppContext
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetData(name):
         """ GetData(name: str) -> object """
@@ -927,11 +836,12 @@ class AppContext():
         'TryGetSwitch',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AppContext()
 
 class MarshalByRefObject():
     """ Enables access to objects across application domain boundaries in applications that support remoting. """
-    Instance = MarshalByRefObject
-    """hardcoded/returns an instance of the class"""
     def CreateObjRef(self, requestedType):
         """
         CreateObjRef(self: MarshalByRefObject, requestedType: Type) -> ObjRef
@@ -957,17 +867,16 @@ class MarshalByRefObject():
         InitializeLifetimeService(self: MarshalByRefObject) -> object
         
             Obtains a lifetime service object to control the lifetime policy for this instance.
-            Returns: An object of type System.Runtime.Remoting.Lifetime.ILease used to control the lifetime policy for this instance. This is the current lifetime service object for this 
-             instance if one exists; otherwise, a new lifetime service object initialized to the value of the System.Runtime.Remoting.Lifetime.LifetimeServices.LeaseManagerPollTime 
-             property.
+            Returns: An object of type System.Runtime.Remoting.Lifetime.ILease used to control the lifetime policy for this instance. This is the current lifetime service object for this instance if one exists; otherwise, a new lifetime service object initialized to the value of the System.Runtime.Remoting.Lifetime.LifetimeServices.LeaseManagerPollTime property.
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MarshalByRefObject()
 
 class _AppDomain:
     """ Exposes the public members of the System.AppDomain class to unmanaged code. """
-    Instance = _AppDomain
-    """hardcoded/returns an instance of the class"""
     def AppendPrivatePath(self, path):
         """
         AppendPrivatePath(self: _AppDomain, path: str)
@@ -1006,35 +915,20 @@ class _AppDomain:
         
             assemblyName: The display name of the assembly. See System.Reflection.Assembly.FullName.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: An object that is a wrapper for the new instance specified by typeName. The return value needs to be unwrapped to access the real object.
         CreateInstance(self: _AppDomain, assemblyName: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object], securityAttributes: Evidence) -> ObjectHandle
         
-            Provides COM objects with version-independent access to the 
-             System.AppDomain.CreateInstance(System.String,System.String,System.Boolean,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.Cultu
-             reInfo,System.Object[],System.Security.Policy.Evidence) method overload.
-        
+            Provides COM objects with version-independent access to the System.AppDomain.CreateInstance(System.String,System.String,System.Boolean,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,System.Object[],System.Security.Policy.Evidence) method overload.
         
             assemblyName: The display name of the assembly. See System.Reflection.Assembly.FullName.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
             ignoreCase: A Boolean value specifying whether to perform a case-sensitive search or not.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects using reflection. If binder is 
-             null, the default binder is used.
-        
-            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default 
-             constructor is preferred, args must be an empty array or null.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
+            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects using reflection. If binder is null, the default binder is used.
+            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default constructor is preferred, args must be an empty array or null.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             securityAttributes: Information used to authorize creation of typeName.
             Returns: An object that is a wrapper for the new instance specified by typeName. The return value needs to be unwrapped to access the real object.
         """
@@ -1046,50 +940,29 @@ class _AppDomain:
         
             Provides COM objects with version-independent access to the System.AppDomain.CreateInstanceFrom(System.String,System.String) method overload.
         
-            assemblyFile: The name, including the path, of a file that contains an assembly that defines the requested type. The assembly is loaded using the 
-             System.Reflection.Assembly.LoadFrom(System.String)  method.
-        
+            assemblyFile: The name, including the path, of a file that contains an assembly that defines the requested type. The assembly is loaded using the System.Reflection.Assembly.LoadFrom(System.String)  method.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
             Returns: An object that is a wrapper for the new instance, or null if typeName is not found. The return value needs to be unwrapped to access the real object.
         CreateInstanceFrom(self: _AppDomain, assemblyFile: str, typeName: str, activationAttributes: Array[object]) -> ObjectHandle
         
             Provides COM objects with version-independent access to the System.AppDomain.CreateInstanceFrom(System.String,System.String,System.Object[]) method overload.
         
-            assemblyFile: The name, including the path, of a file that contains an assembly that defines the requested type. The assembly is loaded using the 
-             System.Reflection.Assembly.LoadFrom(System.String)  method.
-        
+            assemblyFile: The name, including the path, of a file that contains an assembly that defines the requested type. The assembly is loaded using the System.Reflection.Assembly.LoadFrom(System.String)  method.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: An object that is a wrapper for the new instance, or null if typeName is not found. The return value needs to be unwrapped to access the real object.
         CreateInstanceFrom(self: _AppDomain, assemblyFile: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object], securityAttributes: Evidence) -> ObjectHandle
         
-            Provides COM objects with version-independent access to the 
-             System.AppDomain.CreateInstanceFrom(System.String,System.String,System.Boolean,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.C
-             ultureInfo,System.Object[],System.Security.Policy.Evidence) method overload.
+            Provides COM objects with version-independent access to the System.AppDomain.CreateInstanceFrom(System.String,System.String,System.Boolean,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,System.Object[],System.Security.Policy.Evidence) method overload.
         
-        
-            assemblyFile: The name, including the path, of a file that contains an assembly that defines the requested type. The assembly is loaded using the 
-             System.Reflection.Assembly.LoadFrom(System.String)  method.
-        
+            assemblyFile: The name, including the path, of a file that contains an assembly that defines the requested type. The assembly is loaded using the System.Reflection.Assembly.LoadFrom(System.String)  method.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
             ignoreCase: A Boolean value specifying whether to perform a case-sensitive search or not.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects through reflection. If binder 
-             is null, the default binder is used.
-        
-            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default 
-             constructor is preferred, args must be an empty array or null.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
+            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects through reflection. If binder is null, the default binder is used.
+            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default constructor is preferred, args must be an empty array or null.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             securityAttributes: Information used to authorize creation of typeName.
             Returns: An object that is a wrapper for the new instance, or null if typeName is not found. The return value needs to be unwrapped to access the real object.
         """
@@ -1099,18 +972,14 @@ class _AppDomain:
         """
         DefineDynamicAssembly(self: _AppDomain, name: AssemblyName, access: AssemblyBuilderAccess) -> AssemblyBuilder
         
-            Provides COM objects with version-independent access to the 
-             System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess) method overload.
-        
+            Provides COM objects with version-independent access to the System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess) method overload.
         
             name: The unique identity of the dynamic assembly.
             access: The access mode for the dynamic assembly.
             Returns: Represents the dynamic assembly created.
         DefineDynamicAssembly(self: _AppDomain, name: AssemblyName, access: AssemblyBuilderAccess, dir: str) -> AssemblyBuilder
         
-            Provides COM objects with version-independent access to the 
-             System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.String) method overload.
-        
+            Provides COM objects with version-independent access to the System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.String) method overload.
         
             name: The unique identity of the dynamic assembly.
             access: The mode in which the dynamic assembly will be accessed.
@@ -1118,9 +987,7 @@ class _AppDomain:
             Returns: Represents the dynamic assembly created.
         DefineDynamicAssembly(self: _AppDomain, name: AssemblyName, access: AssemblyBuilderAccess, evidence: Evidence) -> AssemblyBuilder
         
-            Provides COM objects with version-independent access to the 
-             System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.Security.Policy.Evidence) method overload.
-        
+            Provides COM objects with version-independent access to the System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.Security.Policy.Evidence) method overload.
         
             name: The unique identity of the dynamic assembly.
             access: The mode in which the dynamic assembly will be accessed.
@@ -1128,10 +995,7 @@ class _AppDomain:
             Returns: Represents the dynamic assembly created.
         DefineDynamicAssembly(self: _AppDomain, name: AssemblyName, access: AssemblyBuilderAccess, requiredPermissions: PermissionSet, optionalPermissions: PermissionSet, refusedPermissions: PermissionSet) -> AssemblyBuilder
         
-            Provides COM objects with version-independent access to the 
-             System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.Security.PermissionSet,System.Security.PermissionSe
-             t,System.Security.PermissionSet) method overload.
-        
+            Provides COM objects with version-independent access to the System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.Security.PermissionSet,System.Security.PermissionSet,System.Security.PermissionSet) method overload.
         
             name: The unique identity of the dynamic assembly.
             access: The mode in which the dynamic assembly will be accessed.
@@ -1141,10 +1005,7 @@ class _AppDomain:
             Returns: Represents the dynamic assembly created.
         DefineDynamicAssembly(self: _AppDomain, name: AssemblyName, access: AssemblyBuilderAccess, dir: str, evidence: Evidence) -> AssemblyBuilder
         
-            Provides COM objects with version-independent access to the 
-             System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.String,System.Security.Policy.Evidence) method 
-             overload.
-        
+            Provides COM objects with version-independent access to the System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.String,System.Security.Policy.Evidence) method overload.
         
             name: The unique identity of the dynamic assembly.
             access: The mode in which the dynamic assembly will be accessed.
@@ -1153,10 +1014,7 @@ class _AppDomain:
             Returns: Represents the dynamic assembly created.
         DefineDynamicAssembly(self: _AppDomain, name: AssemblyName, access: AssemblyBuilderAccess, dir: str, requiredPermissions: PermissionSet, optionalPermissions: PermissionSet, refusedPermissions: PermissionSet) -> AssemblyBuilder
         
-            Provides COM objects with version-independent access to the 
-             System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.String,System.Security.PermissionSet,System.Securit
-             y.PermissionSet,System.Security.PermissionSet) method overload.
-        
+            Provides COM objects with version-independent access to the System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.String,System.Security.PermissionSet,System.Security.PermissionSet,System.Security.PermissionSet) method overload.
         
             name: The unique identity of the dynamic assembly.
             access: The mode in which the dynamic assembly will be accessed.
@@ -1167,10 +1025,7 @@ class _AppDomain:
             Returns: Represents the dynamic assembly created.
         DefineDynamicAssembly(self: _AppDomain, name: AssemblyName, access: AssemblyBuilderAccess, evidence: Evidence, requiredPermissions: PermissionSet, optionalPermissions: PermissionSet, refusedPermissions: PermissionSet) -> AssemblyBuilder
         
-            Provides COM objects with version-independent access to the 
-             System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.Security.Policy.Evidence,System.Security.Permission
-             Set,System.Security.PermissionSet,System.Security.PermissionSet) method overload.
-        
+            Provides COM objects with version-independent access to the System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.Security.Policy.Evidence,System.Security.PermissionSet,System.Security.PermissionSet,System.Security.PermissionSet) method overload.
         
             name: The unique identity of the dynamic assembly.
             access: The mode in which the dynamic assembly will be accessed.
@@ -1181,10 +1036,7 @@ class _AppDomain:
             Returns: Represents the dynamic assembly created.
         DefineDynamicAssembly(self: _AppDomain, name: AssemblyName, access: AssemblyBuilderAccess, dir: str, evidence: Evidence, requiredPermissions: PermissionSet, optionalPermissions: PermissionSet, refusedPermissions: PermissionSet) -> AssemblyBuilder
         
-            Provides COM objects with version-independent access to the 
-             System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.String,System.Security.Policy.Evidence,System.Secur
-             ity.PermissionSet,System.Security.PermissionSet,System.Security.PermissionSet) method overload.
-        
+            Provides COM objects with version-independent access to the System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.String,System.Security.Policy.Evidence,System.Security.PermissionSet,System.Security.PermissionSet,System.Security.PermissionSet) method overload.
         
             name: The unique identity of the dynamic assembly.
             access: The mode in which the dynamic assembly will be accessed.
@@ -1196,10 +1048,7 @@ class _AppDomain:
             Returns: Represents the dynamic assembly created.
         DefineDynamicAssembly(self: _AppDomain, name: AssemblyName, access: AssemblyBuilderAccess, dir: str, evidence: Evidence, requiredPermissions: PermissionSet, optionalPermissions: PermissionSet, refusedPermissions: PermissionSet, isSynchronized: bool) -> AssemblyBuilder
         
-            Provides COM objects with version-independent access to the 
-             System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.String,System.Security.Policy.Evidence,System.Secur
-             ity.PermissionSet,System.Security.PermissionSet,System.Security.PermissionSet,System.Boolean) method overload.
-        
+            Provides COM objects with version-independent access to the System.AppDomain.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.String,System.Security.Policy.Evidence,System.Security.PermissionSet,System.Security.PermissionSet,System.Security.PermissionSet,System.Boolean) method overload.
         
             name: The unique identity of the dynamic assembly.
             access: The mode in which the dynamic assembly will be accessed.
@@ -1477,8 +1326,7 @@ class _AppDomain:
         ToString(self: _AppDomain) -> str
         
             Provides COM objects with version-independent access to the System.AppDomain.ToString method.
-            Returns: A string formed by concatenating the literal string "Name:", the friendly name of the application domain, and either string representations of the context policies or the 
-             string "There are no context policies."
+            Returns: A string formed by concatenating the literal string "Name:", the friendly name of the application domain, and either string representations of the context policies or the string "There are no context policies."
         """
         pass
 
@@ -1544,11 +1392,12 @@ Get: ShadowCopyFiles(self: _AppDomain) -> bool
     TypeResolve = None
     UnhandledException = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return _AppDomain()
 
 class AppDomain(MarshalByRefObject):
     """ Represents an application domain, which is an isolated environment where applications execute. This class cannot be inherited. """
-    Instance = AppDomain
-    """hardcoded/returns an instance of the class"""
     def AppendPrivatePath(self, path):
         """
         AppendPrivatePath(self: AppDomain, path: str)
@@ -1616,9 +1465,7 @@ class AppDomain(MarshalByRefObject):
             Returns: The newly created application domain.
         CreateDomain(friendlyName: str, securityInfo: Evidence, appBasePath: str, appRelativeSearchPath: str, shadowCopyFiles: bool) -> AppDomain
         
-            Creates a new application domain with the given name, using evidence, application base path, relative search path, and a parameter that specifies whether a shadow copy of 
-             an assembly is to be loaded into the application domain.
-        
+            Creates a new application domain with the given name, using evidence, application base path, relative search path, and a parameter that specifies whether a shadow copy of an assembly is to be loaded into the application domain.
         
             friendlyName: The friendly name of the domain. This friendly name can be displayed in user interfaces to identify the domain. For more information, see System.AppDomain.FriendlyName.
             securityInfo: Evidence that establishes the identity of the code that runs in the application domain. Pass null to use the evidence of the current application domain.
@@ -1644,9 +1491,7 @@ class AppDomain(MarshalByRefObject):
         
             Creates a new application domain using the specified name, evidence, application domain setup information, default permission set, and array of fully trusted assemblies.
         
-            friendlyName: The friendly name of the domain. This friendly name can be displayed in user interfaces to identify the domain. For more information, see the description of 
-             System.AppDomain.FriendlyName.
-        
+            friendlyName: The friendly name of the domain. This friendly name can be displayed in user interfaces to identify the domain. For more information, see the description of System.AppDomain.FriendlyName.
             securityInfo: Evidence that establishes the identity of the code that runs in the application domain. Pass null to use the evidence of the current application domain.
             info: An object that contains application domain initialization information.
             grantSet: A default permission set that is granted to all assemblies loaded into the new application domain that do not have specific grants.
@@ -1654,10 +1499,7 @@ class AppDomain(MarshalByRefObject):
             Returns: The newly created application domain.
         CreateDomain(friendlyName: str, securityInfo: Evidence, appBasePath: str, appRelativeSearchPath: str, shadowCopyFiles: bool, adInit: AppDomainInitializer, adInitArgs: Array[str]) -> AppDomain
         
-            Creates a new application domain with the given name, using evidence, application base path, relative search path, and a parameter that specifies whether a shadow copy of 
-             an assembly is to be loaded into the application domain. Specifies a callback method that is invoked when the application domain is initialized, and an array of string 
-             arguments to pass the callback method.
-        
+            Creates a new application domain with the given name, using evidence, application base path, relative search path, and a parameter that specifies whether a shadow copy of an assembly is to be loaded into the application domain. Specifies a callback method that is invoked when the application domain is initialized, and an array of string arguments to pass the callback method.
         
             friendlyName: The friendly name of the domain. This friendly name can be displayed in user interfaces to identify the domain. For more information, see System.AppDomain.FriendlyName.
             securityInfo: Evidence that establishes the identity of the code that runs in the application domain. Pass null to use the evidence of the current application domain.
@@ -1685,60 +1527,34 @@ class AppDomain(MarshalByRefObject):
         
             assemblyName: The display name of the assembly. See System.Reflection.Assembly.FullName.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: An object that is a wrapper for the new instance specified by typeName. The return value needs to be unwrapped to access the real object.
         CreateInstance(self: AppDomain, assemblyName: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object], securityAttributes: Evidence) -> ObjectHandle
         
-            Creates a new instance of the specified type defined in the specified assembly. Parameters specify a binder, binding flags, constructor arguments, culture-specific 
-             information used to interpret arguments, activation attributes, and authorization to create the type.
-        
+            Creates a new instance of the specified type defined in the specified assembly. Parameters specify a binder, binding flags, constructor arguments, culture-specific information used to interpret arguments, activation attributes, and authorization to create the type.
         
             assemblyName: The display name of the assembly. See System.Reflection.Assembly.FullName.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
             ignoreCase: A Boolean value specifying whether to perform a case-sensitive search or not.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects using reflection. If binder is 
-             null, the default binder is used.
-        
-            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default 
-             constructor is preferred, args must be an empty array or null.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
+            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects using reflection. If binder is null, the default binder is used.
+            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default constructor is preferred, args must be an empty array or null.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             securityAttributes: Information used to authorize creation of typeName.
             Returns: An object that is a wrapper for the new instance specified by typeName. The return value needs to be unwrapped to access the real object.
         CreateInstance(self: AppDomain, assemblyName: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object]) -> ObjectHandle
         
-            Creates a new instance of the specified type defined in the specified assembly. Parameters specify a binder, binding flags, constructor arguments, culture-specific 
-             information used to interpret arguments, and optional activation attributes.
-        
+            Creates a new instance of the specified type defined in the specified assembly. Parameters specify a binder, binding flags, constructor arguments, culture-specific information used to interpret arguments, and optional activation attributes.
         
             assemblyName: The display name of the assembly. See System.Reflection.Assembly.FullName.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
             ignoreCase: A Boolean value specifying whether to perform a case-sensitive search or not.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects using reflection. If binder is 
-             null, the default binder is used.
-        
-            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default 
-             constructor is preferred, args must be an empty array or null.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
+            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects using reflection. If binder is null, the default binder is used.
+            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default constructor is preferred, args must be an empty array or null.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: An object that is a wrapper for the new instance specified by typeName. The return value needs to be unwrapped to access the real object.
         """
         pass
@@ -1758,9 +1574,7 @@ class AppDomain(MarshalByRefObject):
         
             assemblyName: The display name of the assembly. See System.Reflection.Assembly.FullName.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: An instance of the object specified by typeName.
         CreateInstanceAndUnwrap(self: AppDomain, assemblyName: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object], securityAttributes: Evidence) -> object
         
@@ -1769,43 +1583,25 @@ class AppDomain(MarshalByRefObject):
             assemblyName: The display name of the assembly. See System.Reflection.Assembly.FullName.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
             ignoreCase: A Boolean value specifying whether to perform a case-sensitive search or not.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects using reflection. If binder is 
-             null, the default binder is used.
-        
-            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default 
-             constructor is preferred, args must be an empty array or null.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
+            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects using reflection. If binder is null, the default binder is used.
+            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default constructor is preferred, args must be an empty array or null.
             culture: A culture-specific object used to govern the coercion of types. If culture is null, the CultureInfo for the current thread is used.
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             securityAttributes: Information used to authorize creation of typeName.
             Returns: An instance of the object specified by typeName.
         CreateInstanceAndUnwrap(self: AppDomain, assemblyName: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object]) -> object
         
-            Creates a new instance of the specified type defined in the specified assembly, specifying whether the case of the type name is ignored; the binding attributes and the 
-             binder that are used to select the type to be created; the arguments of the constructor; the culture; and the activation attributes.
-        
+            Creates a new instance of the specified type defined in the specified assembly, specifying whether the case of the type name is ignored; the binding attributes and the binder that are used to select the type to be created; the arguments of the constructor; the culture; and the activation attributes.
         
             assemblyName: The display name of the assembly. See System.Reflection.Assembly.FullName.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
             ignoreCase: A Boolean value specifying whether to perform a case-sensitive search or not.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects using reflection. If binder is 
-             null, the default binder is used.
-        
-            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default 
-             constructor is preferred, args must be an empty array or null.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
+            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects using reflection. If binder is null, the default binder is used.
+            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default constructor is preferred, args must be an empty array or null.
             culture: A culture-specific object used to govern the coercion of types. If culture is null, the CultureInfo for the current thread is used.
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: An instance of the object specified by typeName.
         """
         pass
@@ -1816,73 +1612,43 @@ class AppDomain(MarshalByRefObject):
         
             Creates a new instance of the specified type defined in the specified assembly file.
         
-            assemblyFile: The name, including the path, of a file that contains an assembly that defines the requested type. The assembly is loaded using the 
-             System.Reflection.Assembly.LoadFrom(System.String)  method.
-        
+            assemblyFile: The name, including the path, of a file that contains an assembly that defines the requested type. The assembly is loaded using the System.Reflection.Assembly.LoadFrom(System.String)  method.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
             Returns: An object that is a wrapper for the new instance, or null if typeName is not found. The return value needs to be unwrapped to access the real object.
         CreateInstanceFrom(self: AppDomain, assemblyFile: str, typeName: str, activationAttributes: Array[object]) -> ObjectHandle
         
             Creates a new instance of the specified type defined in the specified assembly file.
         
-            assemblyFile: The name, including the path, of a file that contains an assembly that defines the requested type. The assembly is loaded using the 
-             System.Reflection.Assembly.LoadFrom(System.String)  method.
-        
+            assemblyFile: The name, including the path, of a file that contains an assembly that defines the requested type. The assembly is loaded using the System.Reflection.Assembly.LoadFrom(System.String)  method.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: An object that is a wrapper for the new instance, or null if typeName is not found. The return value needs to be unwrapped to access the real object.
         CreateInstanceFrom(self: AppDomain, assemblyFile: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object], securityAttributes: Evidence) -> ObjectHandle
         
             Creates a new instance of the specified type defined in the specified assembly file.
         
-            assemblyFile: The name, including the path, of a file that contains an assembly that defines the requested type. The assembly is loaded using the 
-             System.Reflection.Assembly.LoadFrom(System.String)  method.
-        
+            assemblyFile: The name, including the path, of a file that contains an assembly that defines the requested type. The assembly is loaded using the System.Reflection.Assembly.LoadFrom(System.String)  method.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
             ignoreCase: A Boolean value specifying whether to perform a case-sensitive search or not.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects through reflection. If binder 
-             is null, the default binder is used.
-        
-            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default 
-             constructor is preferred, args must be an empty array or null.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
+            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects through reflection. If binder is null, the default binder is used.
+            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default constructor is preferred, args must be an empty array or null.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             securityAttributes: Information used to authorize creation of typeName.
             Returns: An object that is a wrapper for the new instance, or null if typeName is not found. The return value needs to be unwrapped to access the real object.
         CreateInstanceFrom(self: AppDomain, assemblyFile: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object]) -> ObjectHandle
         
             Creates a new instance of the specified type defined in the specified assembly file.
         
-            assemblyFile: The name, including the path, of a file that contains an assembly that defines the requested type. The assembly is loaded using the 
-             System.Reflection.Assembly.LoadFrom(System.String)  method.
-        
+            assemblyFile: The name, including the path, of a file that contains an assembly that defines the requested type. The assembly is loaded using the System.Reflection.Assembly.LoadFrom(System.String)  method.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
             ignoreCase: A Boolean value specifying whether to perform a case-sensitive search or not.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects through reflection. If binder 
-             is null, the default binder is used.
-        
-            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default 
-             constructor is preferred, args must be an empty array or null.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
+            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects through reflection. If binder is null, the default binder is used.
+            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default constructor is preferred, args must be an empty array or null.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: An object that is a wrapper for the new instance, or null if typeName is not found. The return value needs to be unwrapped to access the real object.
         """
         pass
@@ -1902,9 +1668,7 @@ class AppDomain(MarshalByRefObject):
         
             assemblyName: The file name and path of the assembly that defines the requested type.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly (see the System.Type.FullName property).
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: The requested object, or null if typeName is not found.
         CreateInstanceFromAndUnwrap(self: AppDomain, assemblyName: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object], securityAttributes: Evidence) -> object
         
@@ -1913,47 +1677,25 @@ class AppDomain(MarshalByRefObject):
             assemblyName: The file name and path of the assembly that defines the requested type.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
             ignoreCase: A Boolean value specifying whether to perform a case-sensitive search or not.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects through reflection. If binder 
-             is null, the default binder is used.
-        
-            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default 
-             constructor is preferred, args must be an empty array or null.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
+            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects through reflection. If binder is null, the default binder is used.
+            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default constructor is preferred, args must be an empty array or null.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             securityAttributes: Information used to authorize creation of typeName.
             Returns: The requested object, or null if typeName is not found.
         CreateInstanceFromAndUnwrap(self: AppDomain, assemblyFile: str, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object]) -> object
         
-            Creates a new instance of the specified type defined in the specified assembly file, specifying whether the case of the type name is ignored; the binding attributes and the 
-             binder that are used to select the type to be created; the arguments of the constructor; the culture; and the activation attributes.
-        
+            Creates a new instance of the specified type defined in the specified assembly file, specifying whether the case of the type name is ignored; the binding attributes and the binder that are used to select the type to be created; the arguments of the constructor; the culture; and the activation attributes.
         
             assemblyFile: The file name and path of the assembly that defines the requested type.
             typeName: The fully qualified name of the requested type, including the namespace but not the assembly, as returned by the System.Type.FullName property.
             ignoreCase: A Boolean value specifying whether to perform a case-sensitive search or not.
-            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is 
-             conducted.
-        
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects through reflection. If binder 
-             is null, the default binder is used.
-        
-            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default 
-             constructor is preferred, args must be an empty array or null.
-        
-            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the 
-             System.Globalization.CultureInfo for the current thread is used.
-        
-            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. 
-             The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
-        
+            bindingAttr: A combination of zero or more bit flags that affect the search for the typeName constructor. If bindingAttr is zero, a case-sensitive search for public constructors is conducted.
+            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects through reflection. If binder is null, the default binder is used.
+            args: The arguments to pass to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor to invoke. If the default constructor is preferred, args must be an empty array or null.
+            culture: Culture-specific information that governs the coercion of args to the formal types declared for the typeName constructor. If culture is null, the System.Globalization.CultureInfo for the current thread is used.
+            activationAttributes: An array of one or more attributes that can participate in activation. Typically, an array that contains a single System.Runtime.Remoting.Activation.UrlAttribute object. The System.Runtime.Remoting.Activation.UrlAttribute specifies the URL that is required to activate a remote object.
             Returns: The requested object, or null if typeName is not found.
         """
         pass
@@ -2220,8 +1962,7 @@ class AppDomain(MarshalByRefObject):
             Gets a nullable Boolean value that indicates whether any compatibility switches are set, and if so, whether the specified compatibility switch is set.
         
             value: The compatibility switch to test.
-            Returns: A null reference (Nothing in Visual Basic) if no compatibility switches are set; otherwise, a Boolean value that indicates whether the compatibility switch that is 
-             specified by value is set.
+            Returns: A null reference (Nothing in Visual Basic) if no compatibility switches are set; otherwise, a Boolean value that indicates whether the compatibility switch that is specified by value is set.
         """
         pass
 
@@ -2265,18 +2006,14 @@ class AppDomain(MarshalByRefObject):
             Returns: The loaded assembly.
         Load(self: AppDomain, rawAssembly: Array[Byte], rawSymbolStore: Array[Byte]) -> Assembly
         
-            Loads the System.Reflection.Assembly with a common object file format (COFF) based image containing an emitted System.Reflection.Assembly. The raw bytes representing the 
-             symbols for the System.Reflection.Assembly are also loaded.
-        
+            Loads the System.Reflection.Assembly with a common object file format (COFF) based image containing an emitted System.Reflection.Assembly. The raw bytes representing the symbols for the System.Reflection.Assembly are also loaded.
         
             rawAssembly: An array of type byte that is a COFF-based image containing an emitted assembly.
             rawSymbolStore: An array of type byte containing the raw bytes representing the symbols for the assembly.
             Returns: The loaded assembly.
         Load(self: AppDomain, rawAssembly: Array[Byte], rawSymbolStore: Array[Byte], securityEvidence: Evidence) -> Assembly
         
-            Loads the System.Reflection.Assembly with a common object file format (COFF) based image containing an emitted System.Reflection.Assembly. The raw bytes representing the 
-             symbols for the System.Reflection.Assembly are also loaded.
-        
+            Loads the System.Reflection.Assembly with a common object file format (COFF) based image containing an emitted System.Reflection.Assembly. The raw bytes representing the symbols for the System.Reflection.Assembly are also loaded.
         
             rawAssembly: An array of type byte that is a COFF-based image containing an emitted assembly.
             rawSymbolStore: An array of type byte containing the raw bytes representing the symbols for the assembly.
@@ -2305,10 +2042,7 @@ class AppDomain(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2408,8 +2142,7 @@ class AppDomain(MarshalByRefObject):
         ToString(self: AppDomain) -> str
         
             Obtains a string representation that includes the friendly name of the application domain and any context policies.
-            Returns: A string formed by concatenating the literal string "Name:", the friendly name of the application domain, and either string representations of the context policies or the 
-             string "There are no context policies."
+            Returns: A string formed by concatenating the literal string "Name:", the friendly name of the application domain, and either string representations of the context policies or the string "There are no context policies."
         """
         pass
 
@@ -2569,11 +2302,12 @@ Get: ShadowCopyFiles(self: AppDomain) -> bool
     TypeResolve = None
     UnhandledException = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AppDomain()
 
 class Delegate:
     """ Represents a delegate, which is a data structure that refers to a static method or to a class instance and an instance method of that class. """
-    Instance = Delegate
-    """hardcoded/returns an instance of the class"""
     def Call(self, *args): #cannot find CLR method
         """ x.__call__(...) <==> x(...)x.__call__(...) <==> x(...) """
         pass
@@ -2596,16 +2330,13 @@ class Delegate:
         
             a: The delegate whose invocation list comes first.
             b: The delegate whose invocation list comes last.
-            Returns: A new delegate with an invocation list that concatenates the invocation lists of a and b in that order. Returns a if b is null, returns b if a is a null reference, and 
-             returns a null reference if both a and b are null references.
-        
+            Returns: A new delegate with an invocation list that concatenates the invocation lists of a and b in that order. Returns a if b is null, returns b if a is a null reference, and returns a null reference if both a and b are null references.
         Combine(*delegates: Array[Delegate]) -> Delegate
         
             Concatenates the invocation lists of an array of delegates.
         
             delegates: The array of delegates to combine.
-            Returns: A new delegate with an invocation list that concatenates the invocation lists of the delegates in the delegates array. Returns null if delegates is null, if delegates 
-             contains zero elements, or if every entry in delegates is null.
+            Returns: A new delegate with an invocation list that concatenates the invocation lists of the delegates in the delegates array. Returns null if delegates is null, if delegates contains zero elements, or if every entry in delegates is null.
         """
         pass
 
@@ -2616,8 +2347,7 @@ class Delegate:
             Concatenates the invocation lists of the specified multicast (combinable) delegate and the current multicast (combinable) delegate.
         
             d: The multicast (combinable) delegate whose invocation list to append to the end of the invocation list of the current multicast (combinable) delegate.
-            Returns: A new multicast (combinable) delegate with an invocation list that concatenates the invocation list of the current multicast (combinable) delegate and the invocation list 
-             of d, or the current multicast (combinable) delegate if d is null.
+            Returns: A new multicast (combinable) delegate with an invocation list that concatenates the invocation list of the current multicast (combinable) delegate and the invocation list of d, or the current multicast (combinable) delegate if d is null.
         """
         pass
 
@@ -2643,9 +2373,7 @@ class Delegate:
             Returns: A delegate of the specified type that represents the specified instance method to invoke on the specified class instance.
         CreateDelegate(type: Type, target: object, method: str, ignoreCase: bool, throwOnBindFailure: bool) -> Delegate
         
-            Creates a delegate of the specified type that represents the specified instance method to invoke on the specified class instance, with the specified case-sensitivity and 
-             the specified behavior on failure to bind.
-        
+            Creates a delegate of the specified type that represents the specified instance method to invoke on the specified class instance, with the specified case-sensitivity and the specified behavior on failure to bind.
         
             type: The System.Type of delegate to create.
             target: The class instance on which method is invoked.
@@ -2672,9 +2400,7 @@ class Delegate:
             Returns: A delegate of the specified type that represents the specified static method of the specified class.
         CreateDelegate(type: Type, target: Type, method: str, ignoreCase: bool, throwOnBindFailure: bool) -> Delegate
         
-            Creates a delegate of the specified type that represents the specified static method of the specified class, with the specified case-sensitivity and the specified behavior 
-             on failure to bind.
-        
+            Creates a delegate of the specified type that represents the specified static method of the specified class, with the specified case-sensitivity and the specified behavior on failure to bind.
         
             type: The System.Type of delegate to create.
             target: The System.Type representing the class that implements method.
@@ -2700,9 +2426,7 @@ class Delegate:
             Returns: A delegate of the specified type that represents the specified static or instance method.
         CreateDelegate(type: Type, firstArgument: object, method: MethodInfo, throwOnBindFailure: bool) -> Delegate
         
-            Creates a delegate of the specified type that represents the specified static or instance method, with the specified first argument and the specified behavior on failure to 
-             bind.
-        
+            Creates a delegate of the specified type that represents the specified static or instance method, with the specified first argument and the specified behavior on failure to bind.
         
             type: A System.Type representing the type of delegate to create.
             firstArgument: An System.Object that is the first argument of the method the delegate represents. For instance methods, it must be compatible with the instance type.
@@ -2714,9 +2438,7 @@ class Delegate:
             Creates a delegate of the specified type to represent the specified static method.
         
             type: The System.Type of delegate to create.
-            method: The System.Reflection.MethodInfo describing the static or instance method the delegate is to represent. Only static methods are supported in the .NET Framework version 1.0 
-             and 1.1.
-        
+            method: The System.Reflection.MethodInfo describing the static or instance method the delegate is to represent. Only static methods are supported in the .NET Framework version 1.0 and 1.1.
             Returns: A delegate of the specified type to represent the specified static method.
         """
         pass
@@ -2727,9 +2449,7 @@ class Delegate:
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2740,9 +2460,7 @@ class Delegate:
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2812,9 +2530,8 @@ class Delegate:
         
             source: The delegate from which to remove the invocation list of value.
             value: The delegate that supplies the invocation list to remove from the invocation list of source.
-            Returns: A new delegate with an invocation list formed by taking the invocation list of source and removing the last occurrence of the invocation list of value, if the invocation 
-             list of value is found within the invocation list of source. Returns source if value is null or if the invocation list of value is not found within the invocation list of 
-             source. Returns a null reference if the invocation list of value is equal to the invocation list of source or if source is a null reference.
+            Returns: A new delegate with an invocation list formed by taking the invocation list of source and removing the last occurrence of the invocation list of value, if the invocation list of value is found within the invocation list of source. Returns source if value is null or if the invocation list of value is not found within the invocation list of source. Returns a null reference if the invocation list of value is equal to 
+             the invocation list of source or if source is a null reference.
         """
         pass
 
@@ -2827,10 +2544,8 @@ class Delegate:
         
             source: The delegate from which to remove the invocation list of value.
             value: The delegate that supplies the invocation list to remove from the invocation list of source.
-            Returns: A new delegate with an invocation list formed by taking the invocation list of source and removing all occurrences of the invocation list of value, if the invocation list 
-             of value is found within the invocation list of source. Returns source if value is null or if the invocation list of value is not found within the invocation list of 
-             source. Returns a null reference if the invocation list of value is equal to the invocation list of source, if source contains only a series of invocation lists that are 
-             equal to the invocation list of value, or if source is a null reference.
+            Returns: A new delegate with an invocation list formed by taking the invocation list of source and removing all occurrences of the invocation list of value, if the invocation list of value is found within the invocation list of source. Returns source if value is null or if the invocation list of value is not found within the invocation list of source. Returns a null reference if the invocation list of value is equal to the 
+             invocation list of source, if source contains only a series of invocation lists that are equal to the invocation list of value, or if source is a null reference.
         """
         pass
 
@@ -2841,9 +2556,8 @@ class Delegate:
             Removes the invocation list of a delegate from the invocation list of another delegate.
         
             d: The delegate that supplies the invocation list to remove from the invocation list of the current delegate.
-            Returns: A new delegate with an invocation list formed by taking the invocation list of the current delegate and removing the invocation list of value, if the invocation list of 
-             value is found within the current delegate's invocation list. Returns the current delegate if value is null or if the invocation list of value is not found within the 
-             current delegate's invocation list. Returns null if the invocation list of value is equal to the current delegate's invocation list.
+            Returns: A new delegate with an invocation list formed by taking the invocation list of the current delegate and removing the invocation list of value, if the invocation list of value is found within the current delegate's invocation list. Returns the current delegate if value is null or if the invocation list of value is not found within the current delegate's invocation list. Returns null if the invocation list of value 
+             is equal to the current delegate's invocation list.
         """
         pass
 
@@ -2897,11 +2611,12 @@ Get: Target(self: Delegate) -> object
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Delegate()
 
 class MulticastDelegate(Delegate):
     """ Represents a multicast delegate; that is, a delegate that can have more than one element in its invocation list. """
-    Instance = MulticastDelegate
-    """hardcoded/returns an instance of the class"""
     def CombineImpl(self, *args): #cannot find CLR method
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
@@ -2919,9 +2634,7 @@ class MulticastDelegate(Delegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2981,8 +2694,7 @@ class MulticastDelegate(Delegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -3008,6 +2720,9 @@ class MulticastDelegate(Delegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MulticastDelegate()
 
 class AppDomainInitializer(MulticastDelegate):
     """
@@ -3015,8 +2730,6 @@ class AppDomainInitializer(MulticastDelegate):
     
     AppDomainInitializer(object: object, method: IntPtr)
     """
-    Instance = AppDomainInitializer
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, args, callback, object):
         """ BeginInvoke(self: AppDomainInitializer, args: Array[str], callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -3038,9 +2751,7 @@ class AppDomainInitializer(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -3069,8 +2780,7 @@ class AppDomainInitializer(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -3086,6 +2796,9 @@ class AppDomainInitializer(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AppDomainInitializer()
 
 class AppDomainManager(MarshalByRefObject):
     """
@@ -3093,8 +2806,6 @@ class AppDomainManager(MarshalByRefObject):
     
     AppDomainManager()
     """
-    Instance = AppDomainManager
-    """hardcoded/returns an instance of the class"""
     def CheckSecuritySettings(self, state):
         """
         CheckSecuritySettings(self: AppDomainManager, state: SecurityState) -> bool
@@ -3178,11 +2889,12 @@ Set: InitializationFlags(self: AppDomainManager) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AppDomainManager()
 
 class IConvertible:
     """ Defines methods that convert the value of the implementing reference or value type to a common language runtime type that has an equivalent value. """
-    Instance = IConvertible
-    """hardcoded/returns an instance of the class"""
     def GetTypeCode(self):
         """
         GetTypeCode(self: IConvertible) -> TypeCode
@@ -3328,9 +3040,7 @@ class IConvertible:
         """
         ToType(self: IConvertible, conversionType: Type, provider: IFormatProvider) -> object
         
-            Converts the value of this instance to an System.Object of the specified System.Type that has an equivalent value, using the specified culture-specific formatting 
-             information.
-        
+            Converts the value of this instance to an System.Object of the specified System.Type that has an equivalent value, using the specified culture-specific formatting information.
         
             conversionType: The System.Type to which the value of this instance is converted.
             provider: An System.IFormatProvider interface implementation that supplies culture-specific formatting information.
@@ -3375,11 +3085,12 @@ class IConvertible:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IConvertible()
 
 class IFormattable:
     """ Provides functionality to format the value of an object into a string representation. """
-    Instance = IFormattable
-    """hardcoded/returns an instance of the class"""
     def ToString(self, format, formatProvider):
         """
         ToString(self: IFormattable, format: str, formatProvider: IFormatProvider) -> str
@@ -3387,9 +3098,7 @@ class IFormattable:
             Formats the value of the current instance using the specified format.
         
             format: The format to use.-or- A null reference (Nothing in Visual Basic) to use the default format defined for the type of the System.IFormattable implementation.
-            formatProvider: The provider to use to format the value.-or- A null reference (Nothing in Visual Basic) to obtain the numeric format information from the current locale setting of the 
-             operating system.
-        
+            formatProvider: The provider to use to format the value.-or- A null reference (Nothing in Visual Basic) to obtain the numeric format information from the current locale setting of the operating system.
             Returns: The value of the current instance in the specified format.
         """
         pass
@@ -3402,11 +3111,12 @@ class IFormattable:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IFormattable()
 
 class Enum:
     """ Provides the base class for enumerations. """
-    Instance = Enum
-    """hardcoded/returns an instance of the class"""
     def CompareTo(self, target):
         """
         CompareTo(self: Enum, target: object) -> int
@@ -3414,8 +3124,7 @@ class Enum:
             Compares this instance to a specified object and returns an indication of their relative values.
         
             target: An object to compare, or null.
-            Returns: A signed number that indicates the relative values of this instance and target.Value Meaning Less than zero The value of this instance is less than the value of target. 
-             Zero The value of this instance is equal to the value of target. Greater than zero The value of this instance is greater than the value of target.-or- target is null.
+            Returns: A signed number that indicates the relative values of this instance and target.Value Meaning Less than zero The value of this instance is less than the value of target. Zero The value of this instance is equal to the value of target. Greater than zero The value of this instance is greater than the value of target.-or- target is null.
         """
         pass
 
@@ -3547,9 +3256,7 @@ class Enum:
             Returns: An object of type enumType whose value is represented by value.
         Parse(enumType: Type, value: str, ignoreCase: bool) -> object
         
-            Converts the string representation of the name or numeric value of one or more enumerated constants to an equivalent enumerated object. A parameter specifies whether the 
-             operation is case-insensitive.
-        
+            Converts the string representation of the name or numeric value of one or more enumerated constants to an equivalent enumerated object. A parameter specifies whether the operation is case-insensitive.
         
             enumType: An enumeration type.
             value: A string containing the name or value to convert.
@@ -3732,6 +3439,9 @@ class Enum:
         """ __xor__(self: object, other: object) -> object """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Enum()
 
 class AppDomainManagerInitializationOptions:
     """
@@ -3739,8 +3449,6 @@ class AppDomainManagerInitializationOptions:
     
     enum (flags) AppDomainManagerInitializationOptions, values: None (0), RegisterWithHost (1)
     """
-    Instance = AppDomainManagerInitializationOptions
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -3778,6 +3486,9 @@ class AppDomainManagerInitializationOptions:
     RegisterWithHost = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AppDomainManagerInitializationOptions()
 
 class AppDomainSetup:
     """
@@ -3787,17 +3498,12 @@ class AppDomainSetup:
     AppDomainSetup(activationContext: ActivationContext)
     AppDomainSetup(activationArguments: ActivationArguments)
     """
-    Instance = AppDomainSetup
-    """hardcoded/returns an instance of the class"""
     def GetConfigurationBytes(self):
         """
         GetConfigurationBytes(self: AppDomainSetup) -> Array[Byte]
         
-            Returns the XML configuration information set by the System.AppDomainSetup.SetConfigurationBytes(System.Byte[]) method, which overrides the application's XML configuration 
-             information.
-        
-            Returns: An array that contains the XML configuration information that was set by the System.AppDomainSetup.SetConfigurationBytes(System.Byte[]) method, or null if the 
-             System.AppDomainSetup.SetConfigurationBytes(System.Byte[]) method has not been called.
+            Returns the XML configuration information set by the System.AppDomainSetup.SetConfigurationBytes(System.Byte[]) method, which overrides the application's XML configuration information.
+            Returns: An array that contains the XML configuration information that was set by the System.AppDomainSetup.SetConfigurationBytes(System.Byte[]) method, or null if the System.AppDomainSetup.SetConfigurationBytes(System.Byte[]) method has not been called.
         """
         pass
 
@@ -4029,6 +3735,9 @@ Set: TargetFrameworkName(self: AppDomainSetup) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AppDomainSetup()
 
 class AppDomainUnloadedException(SystemException):
     """
@@ -4038,8 +3747,6 @@ class AppDomainUnloadedException(SystemException):
     AppDomainUnloadedException(message: str)
     AppDomainUnloadedException(message: str, innerException: Exception)
     """
-    Instance = AppDomainUnloadedException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -4062,6 +3769,9 @@ class AppDomainUnloadedException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AppDomainUnloadedException()
 
 class ApplicationException(Exception):
     """
@@ -4071,8 +3781,6 @@ class ApplicationException(Exception):
     ApplicationException(message: str)
     ApplicationException(message: str, innerException: Exception)
     """
-    Instance = ApplicationException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -4095,6 +3803,9 @@ class ApplicationException(Exception):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ApplicationException()
 
 class ApplicationId():
     """
@@ -4102,8 +3813,6 @@ class ApplicationId():
     
     ApplicationId(publicKeyToken: Array[Byte], name: str, version: Version, processorArchitecture: str, culture: str)
     """
-    Instance = ApplicationId
-    """hardcoded/returns an instance of the class"""
     def Copy(self):
         """
         Copy(self: ApplicationId) -> ApplicationId
@@ -4190,6 +3899,9 @@ Get: Version(self: ApplicationId) -> Version
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ApplicationId()
 
 class ApplicationIdentity:
     """
@@ -4197,8 +3909,6 @@ class ApplicationIdentity:
     
     ApplicationIdentity(applicationIdentityFullName: str)
     """
-    Instance = ApplicationIdentity
-    """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
         ToString(self: ApplicationIdentity) -> str
@@ -4242,6 +3952,9 @@ Get: FullName(self: ApplicationIdentity) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ApplicationIdentity()
 
 class ArgIterator():
     """
@@ -4250,8 +3963,6 @@ class ArgIterator():
     ArgIterator(arglist: RuntimeArgumentHandle)
     ArgIterator(arglist: RuntimeArgumentHandle, ptr: Void*)
     """
-    Instance = ArgIterator
-    """hardcoded/returns an instance of the class"""
     def End(self):
         """
         End(self: ArgIterator)
@@ -4327,6 +4038,9 @@ class ArgIterator():
     def __ne__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ArgIterator()
 
 class ArgumentException(SystemException):
     """
@@ -4338,8 +4052,6 @@ class ArgumentException(SystemException):
     ArgumentException(message: str, paramName: str, innerException: Exception)
     ArgumentException(message: str, paramName: str)
     """
-    Instance = ArgumentException
-    """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: ArgumentException, info: SerializationInfo, context: StreamingContext)
@@ -4389,6 +4101,9 @@ Get: ParamName(self: ArgumentException) -> str
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ArgumentException()
 
 class ArgumentNullException(ArgumentException):
     """
@@ -4399,8 +4114,6 @@ class ArgumentNullException(ArgumentException):
     ArgumentNullException(message: str, innerException: Exception)
     ArgumentNullException(paramName: str, message: str)
     """
-    Instance = ArgumentNullException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -4424,6 +4137,9 @@ class ArgumentNullException(ArgumentException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ArgumentNullException()
 
 class ArgumentOutOfRangeException(ArgumentException):
     """
@@ -4435,8 +4151,6 @@ class ArgumentOutOfRangeException(ArgumentException):
     ArgumentOutOfRangeException(message: str, innerException: Exception)
     ArgumentOutOfRangeException(paramName: str, actualValue: object, message: str)
     """
-    Instance = ArgumentOutOfRangeException
-    """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: ArgumentOutOfRangeException, info: SerializationInfo, context: StreamingContext)
@@ -4486,6 +4200,9 @@ Get: Message(self: ArgumentOutOfRangeException) -> str
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ArgumentOutOfRangeException()
 
 class ArithmeticException(SystemException):
     """
@@ -4495,8 +4212,6 @@ class ArithmeticException(SystemException):
     ArithmeticException(message: str)
     ArithmeticException(message: str, innerException: Exception)
     """
-    Instance = ArithmeticException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -4519,11 +4234,12 @@ class ArithmeticException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ArithmeticException()
 
 class ICloneable:
     """ Supports cloning, which creates a new instance of a class with the same value as an existing instance. """
-    Instance = ICloneable
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """
         Clone(self: ICloneable) -> object
@@ -4537,11 +4253,12 @@ class ICloneable:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ICloneable()
 
 class Array:
     """ Provides methods for creating, manipulating, searching, and sorting arrays, thereby serving as the base class for all arrays in the common language runtime. """
-    Instance = Array
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def AsReadOnly(array):
         """ AsReadOnly[T](array: Array[T]) -> ReadOnlyCollection[T] """
@@ -4552,29 +4269,23 @@ class Array:
         """
         BinarySearch(array: Array, value: object) -> int
         
-            Searches an entire one-dimensional sorted System.Array for a specific element, using the System.IComparable interface implemented by each element of the System.Array and by 
-             the specified object.
-        
+            Searches an entire one-dimensional sorted System.Array for a specific element, using the System.IComparable interface implemented by each element of the System.Array and by the specified object.
         
             array: The sorted one-dimensional System.Array to search.
             value: The object to search for.
-            Returns: The index of the specified value in the specified array, if value is found. If value is not found and value is less than one or more elements in array, a negative number 
-             which is the bitwise complement of the index of the first element that is larger than value. If value is not found and value is greater than any of the elements in array, a 
-             negative number which is the bitwise complement of (the index of the last element plus 1).
+            Returns: The index of the specified value in the specified array, if value is found. If value is not found and value is less than one or more elements in array, a negative number which is the bitwise complement of the index of the first element that is larger than value. If value is not found and value is greater than any of the elements in array, a negative number which is the bitwise complement of (the index of the last 
+             element plus 1).
         
         BinarySearch(array: Array, index: int, length: int, value: object) -> int
         
-            Searches a range of elements in a one-dimensional sorted System.Array for a value, using the System.IComparable interface implemented by each element of the System.Array 
-             and by the specified value.
-        
+            Searches a range of elements in a one-dimensional sorted System.Array for a value, using the System.IComparable interface implemented by each element of the System.Array and by the specified value.
         
             array: The sorted one-dimensional System.Array to search.
             index: The starting index of the range to search.
             length: The length of the range to search.
             value: The object to search for.
-            Returns: The index of the specified value in the specified array, if value is found. If value is not found and value is less than one or more elements in array, a negative number 
-             which is the bitwise complement of the index of the first element that is larger than value. If value is not found and value is greater than any of the elements in array, a 
-             negative number which is the bitwise complement of (the index of the last element plus 1).
+            Returns: The index of the specified value in the specified array, if value is found. If value is not found and value is less than one or more elements in array, a negative number which is the bitwise complement of the index of the first element that is larger than value. If value is not found and value is greater than any of the elements in array, a negative number which is the bitwise complement of (the index of the last 
+             element plus 1).
         
         BinarySearch(array: Array, value: object, comparer: IComparer) -> int
         
@@ -4583,9 +4294,8 @@ class Array:
             array: The sorted one-dimensional System.Array to search.
             value: The object to search for.
             comparer: The System.Collections.IComparer implementation to use when comparing elements.-or- null to use the System.IComparable implementation of each element.
-            Returns: The index of the specified value in the specified array, if value is found. If value is not found and value is less than one or more elements in array, a negative number 
-             which is the bitwise complement of the index of the first element that is larger than value. If value is not found and value is greater than any of the elements in array, a 
-             negative number which is the bitwise complement of (the index of the last element plus 1).
+            Returns: The index of the specified value in the specified array, if value is found. If value is not found and value is less than one or more elements in array, a negative number which is the bitwise complement of the index of the first element that is larger than value. If value is not found and value is greater than any of the elements in array, a negative number which is the bitwise complement of (the index of the last 
+             element plus 1).
         
         BinarySearch(array: Array, index: int, length: int, value: object, comparer: IComparer) -> int
         
@@ -4596,9 +4306,8 @@ class Array:
             length: The length of the range to search.
             value: The object to search for.
             comparer: The System.Collections.IComparer implementation to use when comparing elements.-or- null to use the System.IComparable implementation of each element.
-            Returns: The index of the specified value in the specified array, if value is found. If value is not found and value is less than one or more elements in array, a negative number 
-             which is the bitwise complement of the index of the first element that is larger than value. If value is not found and value is greater than any of the elements in array, a 
-             negative number which is the bitwise complement of (the index of the last element plus 1).
+            Returns: The index of the specified value in the specified array, if value is found. If value is not found and value is less than one or more elements in array, a negative number which is the bitwise complement of the index of the first element that is larger than value. If value is not found and value is greater than any of the elements in array, a negative number which is the bitwise complement of (the index of the last 
+             element plus 1).
         
         BinarySearch[T](array: Array[T], value: T) -> int
         BinarySearch[T](array: Array[T], value: T, comparer: IComparer[T]) -> int
@@ -4632,9 +4341,7 @@ class Array:
     def ConstrainedCopy(sourceArray, sourceIndex, destinationArray, destinationIndex, length):
         """
         ConstrainedCopy(sourceArray: Array, sourceIndex: int, destinationArray: Array, destinationIndex: int, length: int)
-            Copies a range of elements from an System.Array starting at the specified source index and pastes them to another System.Array starting at the specified destination index.  
-             Guarantees that all changes are undone if the copy does not succeed completely.
-        
+            Copies a range of elements from an System.Array starting at the specified source index and pastes them to another System.Array starting at the specified destination index.  Guarantees that all changes are undone if the copy does not succeed completely.
         
             sourceArray: The System.Array that contains the data to copy.
             sourceIndex: A 32-bit integer that represents the index in the sourceArray at which copying begins.
@@ -4653,17 +4360,13 @@ class Array:
     def Copy(sourceArray, *__args):
         """
         Copy(sourceArray: Array, destinationArray: Array, length: int)
-            Copies a range of elements from an System.Array starting at the first element and pastes them into another System.Array starting at the first element. The length is 
-             specified as a 32-bit integer.
-        
+            Copies a range of elements from an System.Array starting at the first element and pastes them into another System.Array starting at the first element. The length is specified as a 32-bit integer.
         
             sourceArray: The System.Array that contains the data to copy.
             destinationArray: The System.Array that receives the data.
             length: A 32-bit integer that represents the number of elements to copy.
         Copy(sourceArray: Array, sourceIndex: int, destinationArray: Array, destinationIndex: int, length: int)
-            Copies a range of elements from an System.Array starting at the specified source index and pastes them to another System.Array starting at the specified destination index. 
-             The length and the indexes are specified as 32-bit integers.
-        
+            Copies a range of elements from an System.Array starting at the specified source index and pastes them to another System.Array starting at the specified destination index. The length and the indexes are specified as 32-bit integers.
         
             sourceArray: The System.Array that contains the data to copy.
             sourceIndex: A 32-bit integer that represents the index in the sourceArray at which copying begins.
@@ -4671,17 +4374,13 @@ class Array:
             destinationIndex: A 32-bit integer that represents the index in the destinationArray at which storing begins.
             length: A 32-bit integer that represents the number of elements to copy.
         Copy(sourceArray: Array, destinationArray: Array, length: Int64)
-            Copies a range of elements from an System.Array starting at the first element and pastes them into another System.Array starting at the first element. The length is 
-             specified as a 64-bit integer.
-        
+            Copies a range of elements from an System.Array starting at the first element and pastes them into another System.Array starting at the first element. The length is specified as a 64-bit integer.
         
             sourceArray: The System.Array that contains the data to copy.
             destinationArray: The System.Array that receives the data.
             length: A 64-bit integer that represents the number of elements to copy. The integer must be between zero and System.Int32.MaxValue, inclusive.
         Copy(sourceArray: Array, sourceIndex: Int64, destinationArray: Array, destinationIndex: Int64, length: Int64)
-            Copies a range of elements from an System.Array starting at the specified source index and pastes them to another System.Array starting at the specified destination index. 
-             The length and the indexes are specified as 64-bit integers.
-        
+            Copies a range of elements from an System.Array starting at the specified source index and pastes them to another System.Array starting at the specified destination index. The length and the indexes are specified as 64-bit integers.
         
             sourceArray: The System.Array that contains the data to copy.
             sourceIndex: A 64-bit integer that represents the index in the sourceArray at which copying begins.
@@ -4694,16 +4393,12 @@ class Array:
     def CopyTo(self, array, index):
         """
         CopyTo(self: Array, array: Array, index: int)
-            Copies all the elements of the current one-dimensional System.Array to the specified one-dimensional System.Array starting at the specified destination System.Array index. 
-             The index is specified as a 32-bit integer.
-        
+            Copies all the elements of the current one-dimensional System.Array to the specified one-dimensional System.Array starting at the specified destination System.Array index. The index is specified as a 32-bit integer.
         
             array: The one-dimensional System.Array that is the destination of the elements copied from the current System.Array.
             index: A 32-bit integer that represents the index in array at which copying begins.
         CopyTo(self: Array, array: Array, index: Int64)
-            Copies all the elements of the current one-dimensional System.Array to the specified one-dimensional System.Array starting at the specified destination System.Array index. 
-             The index is specified as a 64-bit integer.
-        
+            Copies all the elements of the current one-dimensional System.Array to the specified one-dimensional System.Array starting at the specified destination System.Array index. The index is specified as a 64-bit integer.
         
             array: The one-dimensional System.Array that is the destination of the elements copied from the current System.Array.
             index: A 64-bit integer that represents the index in array at which copying begins.
@@ -4739,23 +4434,17 @@ class Array:
             Returns: A new three-dimensional System.Array of the specified System.Type with the specified length for each dimension, using zero-based indexing.
         CreateInstance(elementType: Type, *lengths: Array[int]) -> Array
         
-            Creates a multidimensional System.Array of the specified System.Type and dimension lengths, with zero-based indexing. The dimension lengths are specified in an array of 
-             32-bit integers.
-        
+            Creates a multidimensional System.Array of the specified System.Type and dimension lengths, with zero-based indexing. The dimension lengths are specified in an array of 32-bit integers.
         
             elementType: The System.Type of the System.Array to create.
             lengths: An array of 32-bit integers that represent the size of each dimension of the System.Array to create.
             Returns: A new multidimensional System.Array of the specified System.Type with the specified length for each dimension, using zero-based indexing.
         CreateInstance(elementType: Type, *lengths: Array[Int64]) -> Array
         
-            Creates a multidimensional System.Array of the specified System.Type and dimension lengths, with zero-based indexing. The dimension lengths are specified in an array of 
-             64-bit integers.
-        
+            Creates a multidimensional System.Array of the specified System.Type and dimension lengths, with zero-based indexing. The dimension lengths are specified in an array of 64-bit integers.
         
             elementType: The System.Type of the System.Array to create.
-            lengths: An array of 64-bit integers that represent the size of each dimension of the System.Array to create. Each integer in the array must be between zero and 
-             System.Int32.MaxValue, inclusive.
-        
+            lengths: An array of 64-bit integers that represent the size of each dimension of the System.Array to create. Each integer in the array must be between zero and System.Int32.MaxValue, inclusive.
             Returns: A new multidimensional System.Array of the specified System.Type with the specified length for each dimension, using zero-based indexing.
         CreateInstance(elementType: Type, lengths: Array[int], lowerBounds: Array[int]) -> Array
         
@@ -4940,29 +4629,21 @@ class Array:
             Returns: The index of the first occurrence of value within the entire array, if found; otherwise, the lower bound of the array minus 1.
         IndexOf(array: Array, value: object, startIndex: int) -> int
         
-            Searches for the specified object and returns the index of the first occurrence within the range of elements in the one-dimensional System.Array that extends from the 
-             specified index to the last element.
-        
+            Searches for the specified object and returns the index of the first occurrence within the range of elements in the one-dimensional System.Array that extends from the specified index to the last element.
         
             array: The one-dimensional System.Array to search.
             value: The object to locate in array.
             startIndex: The starting index of the search. 0 (zero) is valid in an empty array.
-            Returns: The index of the first occurrence of value within the range of elements in array that extends from startIndex to the last element, if found; otherwise, the lower bound of 
-             the array minus 1.
-        
+            Returns: The index of the first occurrence of value within the range of elements in array that extends from startIndex to the last element, if found; otherwise, the lower bound of the array minus 1.
         IndexOf(array: Array, value: object, startIndex: int, count: int) -> int
         
-            Searches for the specified object and returns the index of the first occurrence within the range of elements in the one-dimensional System.Array that starts at the 
-             specified index and contains the specified number of elements.
-        
+            Searches for the specified object and returns the index of the first occurrence within the range of elements in the one-dimensional System.Array that starts at the specified index and contains the specified number of elements.
         
             array: The one-dimensional System.Array to search.
             value: The object to locate in array.
             startIndex: The starting index of the search. 0 (zero) is valid in an empty array.
             count: The number of elements in the section to search.
-            Returns: The index of the first occurrence of value within the range of elements in array that starts at startIndex and contains the number of elements specified in count, if found; 
-             otherwise, the lower bound of the array minus 1.
-        
+            Returns: The index of the first occurrence of value within the range of elements in array that starts at startIndex and contains the number of elements specified in count, if found; otherwise, the lower bound of the array minus 1.
         IndexOf[T](array: Array[T], value: T) -> int
         IndexOf[T](array: Array[T], value: T, startIndex: int) -> int
         IndexOf[T](array: Array[T], value: T, startIndex: int, count: int) -> int
@@ -4988,29 +4669,21 @@ class Array:
             Returns: The index of the last occurrence of value within the entire array, if found; otherwise, the lower bound of the array minus 1.
         LastIndexOf(array: Array, value: object, startIndex: int) -> int
         
-            Searches for the specified object and returns the index of the last occurrence within the range of elements in the one-dimensional System.Array that extends from the first 
-             element to the specified index.
-        
+            Searches for the specified object and returns the index of the last occurrence within the range of elements in the one-dimensional System.Array that extends from the first element to the specified index.
         
             array: The one-dimensional System.Array to search.
             value: The object to locate in array.
             startIndex: The starting index of the backward search.
-            Returns: The index of the last occurrence of value within the range of elements in array that extends from the first element to startIndex, if found; otherwise, the lower bound of 
-             the array minus 1.
-        
+            Returns: The index of the last occurrence of value within the range of elements in array that extends from the first element to startIndex, if found; otherwise, the lower bound of the array minus 1.
         LastIndexOf(array: Array, value: object, startIndex: int, count: int) -> int
         
-            Searches for the specified object and returns the index of the last occurrence within the range of elements in the one-dimensional System.Array that contains the specified 
-             number of elements and ends at the specified index.
-        
+            Searches for the specified object and returns the index of the last occurrence within the range of elements in the one-dimensional System.Array that contains the specified number of elements and ends at the specified index.
         
             array: The one-dimensional System.Array to search.
             value: The object to locate in array.
             startIndex: The starting index of the backward search.
             count: The number of elements in the section to search.
-            Returns: The index of the last occurrence of value within the range of elements in array that contains the number of elements specified in count and ends at startIndex, if found; 
-             otherwise, the lower bound of the array minus 1.
-        
+            Returns: The index of the last occurrence of value within the range of elements in array that contains the number of elements specified in count and ends at startIndex, if found; otherwise, the lower bound of the array minus 1.
         LastIndexOf[T](array: Array[T], value: T) -> int
         LastIndexOf[T](array: Array[T], value: T, startIndex: int) -> int
         LastIndexOf[T](array: Array[T], value: T, startIndex: int, count: int) -> int
@@ -5104,9 +4777,7 @@ class Array:
             length: The number of elements in the range to sort.
             comparer: The System.Collections.IComparer implementation to use when comparing elements.-or-null to use the System.IComparable implementation of each element.
         Sort(keys: Array, items: Array, comparer: IComparer)
-            Sorts a pair of one-dimensional System.Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the first System.Array 
-             using the specified System.Collections.IComparer.
-        
+            Sorts a pair of one-dimensional System.Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the first System.Array using the specified System.Collections.IComparer.
         
             keys: The one-dimensional System.Array that contains the keys to sort.
             items: The one-dimensional System.Array that contains the items that correspond to each of the keys in the keysSystem.Array.-or-null to sort only the keysSystem.Array.
@@ -5117,9 +4788,7 @@ class Array:
             array: The one-dimensional System.Array to sort.
             comparer: The System.Collections.IComparer implementation to use when comparing elements.-or-null to use the System.IComparable implementation of each element.
         Sort(keys: Array, items: Array, index: int, length: int)
-            Sorts a range of elements in a pair of one-dimensional System.Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the 
-             first System.Array using the System.IComparable implementation of each key.
-        
+            Sorts a range of elements in a pair of one-dimensional System.Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the first System.Array using the System.IComparable implementation of each key.
         
             keys: The one-dimensional System.Array that contains the keys to sort.
             items: The one-dimensional System.Array that contains the items that correspond to each of the keys in the keysSystem.Array.-or-null to sort only the keysSystem.Array.
@@ -5132,16 +4801,12 @@ class Array:
             index: The starting index of the range to sort.
             length: The number of elements in the range to sort.
         Sort(keys: Array, items: Array)
-            Sorts a pair of one-dimensional System.Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the first System.Array 
-             using the System.IComparable implementation of each key.
-        
+            Sorts a pair of one-dimensional System.Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the first System.Array using the System.IComparable implementation of each key.
         
             keys: The one-dimensional System.Array that contains the keys to sort.
             items: The one-dimensional System.Array that contains the items that correspond to each of the keys in the keysSystem.Array.-or-null to sort only the keysSystem.Array.
         Sort(keys: Array, items: Array, index: int, length: int, comparer: IComparer)
-            Sorts a range of elements in a pair of one-dimensional System.Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the 
-             first System.Array using the specified System.Collections.IComparer.
-        
+            Sorts a range of elements in a pair of one-dimensional System.Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the first System.Array using the specified System.Collections.IComparer.
         
             keys: The one-dimensional System.Array that contains the keys to sort.
             items: The one-dimensional System.Array that contains the items that correspond to each of the keys in the keysSystem.Array.-or-null to sort only the keysSystem.Array.
@@ -5288,14 +4953,15 @@ Get: SyncRoot(self: Array) -> object
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Array()
 
 class ArraySegment:
     """
     ArraySegment[T](array: Array[T])
     ArraySegment[T](array: Array[T], offset: int, count: int)
     """
-    Instance = ArraySegment
-    """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
         Equals(self: ArraySegment[T], obj: object) -> bool
@@ -5394,6 +5060,9 @@ Get: Offset(self: ArraySegment[T]) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ArraySegment()
 
 class ArrayTypeMismatchException(SystemException):
     """
@@ -5403,8 +5072,6 @@ class ArrayTypeMismatchException(SystemException):
     ArrayTypeMismatchException(message: str)
     ArrayTypeMismatchException(message: str, innerException: Exception)
     """
-    Instance = ArrayTypeMismatchException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -5427,6 +5094,9 @@ class ArrayTypeMismatchException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ArrayTypeMismatchException()
 
 class EventArgs():
     """
@@ -5434,10 +5104,11 @@ class EventArgs():
     
     EventArgs()
     """
-    Instance = EventArgs
-    """hardcoded/returns an instance of the class"""
     Empty = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EventArgs()
 
 class AssemblyLoadEventArgs(EventArgs):
     """
@@ -5445,8 +5116,6 @@ class AssemblyLoadEventArgs(EventArgs):
     
     AssemblyLoadEventArgs(loadedAssembly: Assembly)
     """
-    Instance = AssemblyLoadEventArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, loadedAssembly):
         """ __new__(cls: type, loadedAssembly: Assembly) """
@@ -5460,6 +5129,9 @@ Get: LoadedAssembly(self: AssemblyLoadEventArgs) -> Assembly
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AssemblyLoadEventArgs()
 
 class AssemblyLoadEventHandler(MulticastDelegate):
     """
@@ -5467,8 +5139,6 @@ class AssemblyLoadEventHandler(MulticastDelegate):
     
     AssemblyLoadEventHandler(object: object, method: IntPtr)
     """
-    Instance = AssemblyLoadEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, args, callback, object):
         """ BeginInvoke(self: AssemblyLoadEventHandler, sender: object, args: AssemblyLoadEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -5490,9 +5160,7 @@ class AssemblyLoadEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -5521,8 +5189,7 @@ class AssemblyLoadEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -5538,6 +5205,9 @@ class AssemblyLoadEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AssemblyLoadEventHandler()
 
 class AsyncCallback(MulticastDelegate):
     """
@@ -5545,8 +5215,6 @@ class AsyncCallback(MulticastDelegate):
     
     AsyncCallback(object: object, method: IntPtr)
     """
-    Instance = AsyncCallback
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, ar, callback, object):
         """ BeginInvoke(self: AsyncCallback, ar: IAsyncResult, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -5568,9 +5236,7 @@ class AsyncCallback(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -5599,8 +5265,7 @@ class AsyncCallback(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -5616,11 +5281,12 @@ class AsyncCallback(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AsyncCallback()
 
 class Attribute:
     """ Represents the base class for custom attributes. """
-    Instance = Attribute
-    """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
         Equals(self: Attribute, obj: object) -> bool
@@ -5644,9 +5310,7 @@ class Attribute:
             Returns: A reference to the single custom attribute of type attributeType that is applied to element, or null if there is no such attribute.
         GetCustomAttribute(element: MemberInfo, attributeType: Type, inherit: bool) -> Attribute
         
-            Retrieves a custom attribute applied to a member of a type. Parameters specify the member, the type of the custom attribute to search for, and whether to search ancestors 
-             of the member.
-        
+            Retrieves a custom attribute applied to a member of a type. Parameters specify the member, the type of the custom attribute to search for, and whether to search ancestors of the member.
         
             element: An object derived from the System.Reflection.MemberInfo class that describes a constructor, event, field, method, or property member of a class.
             attributeType: The type, or a base type, of the custom attribute to search for.
@@ -5661,9 +5325,7 @@ class Attribute:
             Returns: A reference to the single custom attribute of type attributeType that is applied to element, or null if there is no such attribute.
         GetCustomAttribute(element: ParameterInfo, attributeType: Type, inherit: bool) -> Attribute
         
-            Retrieves a custom attribute applied to a method parameter. Parameters specify the method parameter, the type of the custom attribute to search for, and whether to search 
-             ancestors of the method parameter.
-        
+            Retrieves a custom attribute applied to a method parameter. Parameters specify the method parameter, the type of the custom attribute to search for, and whether to search ancestors of the method parameter.
         
             element: An object derived from the System.Reflection.ParameterInfo class that describes a parameter of a member of a class.
             attributeType: The type, or a base type, of the custom attribute to search for.
@@ -5714,9 +5376,7 @@ class Attribute:
             Returns: An System.Attribute array that contains the custom attributes of type type applied to element, or an empty array if no such custom attributes exist.
         GetCustomAttributes(element: MemberInfo, type: Type, inherit: bool) -> Array[Attribute]
         
-            Retrieves an array of the custom attributes applied to a member of a type. Parameters specify the member, the type of the custom attribute to search for, and whether to 
-             search ancestors of the member.
-        
+            Retrieves an array of the custom attributes applied to a member of a type. Parameters specify the member, the type of the custom attribute to search for, and whether to search ancestors of the member.
         
             element: An object derived from the System.Reflection.MemberInfo class that describes a constructor, event, field, method, or property member of a class.
             type: The type, or a base type, of the custom attribute to search for.
@@ -5730,9 +5390,7 @@ class Attribute:
             Returns: An System.Attribute array that contains the custom attributes applied to element, or an empty array if no such custom attributes exist.
         GetCustomAttributes(element: MemberInfo, inherit: bool) -> Array[Attribute]
         
-            Retrieves an array of the custom attributes applied to a member of a type. Parameters specify the member, the type of the custom attribute to search for, and whether to 
-             search ancestors of the member.
-        
+            Retrieves an array of the custom attributes applied to a member of a type. Parameters specify the member, the type of the custom attribute to search for, and whether to search ancestors of the member.
         
             element: An object derived from the System.Reflection.MemberInfo class that describes a constructor, event, field, method, or property member of a class.
             inherit: If true, specifies to also search the ancestors of element for custom attributes.
@@ -5752,9 +5410,7 @@ class Attribute:
             Returns: An System.Attribute array that contains the custom attributes of type attributeType applied to element, or an empty array if no such custom attributes exist.
         GetCustomAttributes(element: ParameterInfo, attributeType: Type, inherit: bool) -> Array[Attribute]
         
-            Retrieves an array of the custom attributes applied to a method parameter. Parameters specify the method parameter, the type of the custom attribute to search for, and 
-             whether to search ancestors of the method parameter.
-        
+            Retrieves an array of the custom attributes applied to a method parameter. Parameters specify the method parameter, the type of the custom attribute to search for, and whether to search ancestors of the method parameter.
         
             element: An object derived from the System.Reflection.ParameterInfo class that describes a parameter of a member of a class.
             attributeType: The type, or a base type, of the custom attribute to search for.
@@ -5804,9 +5460,7 @@ class Attribute:
             Returns: An System.Attribute array that contains the custom attributes of type attributeType applied to element, or an empty array if no such custom attributes exist.
         GetCustomAttributes(element: Assembly, attributeType: Type, inherit: bool) -> Array[Attribute]
         
-            Retrieves an array of the custom attributes applied to an assembly. Parameters specify the assembly, the type of the custom attribute to search for, and an ignored search 
-             option.
-        
+            Retrieves an array of the custom attributes applied to an assembly. Parameters specify the assembly, the type of the custom attribute to search for, and an ignored search option.
         
             element: An object derived from the System.Reflection.Assembly class that describes a reusable collection of modules.
             attributeType: The type, or a base type, of the custom attribute to search for.
@@ -5858,9 +5512,7 @@ class Attribute:
             Returns: true if a custom attribute of type attributeType is applied to element; otherwise, false.
         IsDefined(element: MemberInfo, attributeType: Type, inherit: bool) -> bool
         
-            Determines whether any custom attributes are applied to a member of a type. Parameters specify the member, the type of the custom attribute to search for, and whether to 
-             search ancestors of the member.
-        
+            Determines whether any custom attributes are applied to a member of a type. Parameters specify the member, the type of the custom attribute to search for, and whether to search ancestors of the member.
         
             element: An object derived from the System.Reflection.MemberInfo class that describes a constructor, event, field, method, type, or property member of a class.
             attributeType: The type, or a base type, of the custom attribute to search for.
@@ -5875,9 +5527,7 @@ class Attribute:
             Returns: true if a custom attribute of type attributeType is applied to element; otherwise, false.
         IsDefined(element: ParameterInfo, attributeType: Type, inherit: bool) -> bool
         
-            Determines whether any custom attributes are applied to a method parameter. Parameters specify the method parameter, the type of the custom attribute to search for, and 
-             whether to search ancestors of the method parameter.
-        
+            Determines whether any custom attributes are applied to a method parameter. Parameters specify the method parameter, the type of the custom attribute to search for, and whether to search ancestors of the method parameter.
         
             element: An object derived from the System.Reflection.ParameterInfo class that describes a parameter of a member of a class.
             attributeType: The type, or a base type, of the custom attribute to search for.
@@ -5892,9 +5542,7 @@ class Attribute:
             Returns: true if a custom attribute of type attributeType is applied to element; otherwise, false.
         IsDefined(element: Module, attributeType: Type, inherit: bool) -> bool
         
-            Determines whether any custom attributes are applied to a module. Parameters specify the module, the type of the custom attribute to search for, and an ignored search 
-             option.
-        
+            Determines whether any custom attributes are applied to a module. Parameters specify the module, the type of the custom attribute to search for, and an ignored search option.
         
             element: An object derived from the System.Reflection.Module class that describes a portable executable file.
             attributeType: The type, or a base type, of the custom attribute to search for.
@@ -5909,9 +5557,7 @@ class Attribute:
             Returns: true if a custom attribute of type attributeType is applied to element; otherwise, false.
         IsDefined(element: Assembly, attributeType: Type, inherit: bool) -> bool
         
-            Determines whether any custom attributes are applied to an assembly. Parameters specify the assembly, the type of the custom attribute to search for, and an ignored search 
-             option.
-        
+            Determines whether any custom attributes are applied to an assembly. Parameters specify the assembly, the type of the custom attribute to search for, and an ignored search option.
         
             element: An object derived from the System.Reflection.Assembly class that describes a reusable collection of modules.
             attributeType: The type, or a base type, of the custom attribute to search for.
@@ -5957,6 +5603,9 @@ Get: TypeId(self: Attribute) -> object
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Attribute()
 
 class AttributeTargets:
     """
@@ -5964,8 +5613,6 @@ class AttributeTargets:
     
     enum (flags) AttributeTargets, values: All (32767), Assembly (1), Class (4), Constructor (32), Delegate (4096), Enum (16), Event (512), Field (256), GenericParameter (16384), Interface (1024), Method (64), Module (2), Parameter (2048), Property (128), ReturnValue (8192), Struct (8)
     """
-    Instance = AttributeTargets
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -6017,6 +5664,9 @@ class AttributeTargets:
     Struct = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AttributeTargets()
 
 class AttributeUsageAttribute:
     """
@@ -6024,8 +5674,6 @@ class AttributeUsageAttribute:
     
     AttributeUsageAttribute(validOn: AttributeTargets)
     """
-    Instance = AttributeUsageAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -6062,6 +5710,9 @@ Get: ValidOn(self: AttributeUsageAttribute) -> AttributeTargets
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AttributeUsageAttribute()
 
 class BadImageFormatException(SystemException):
     """
@@ -6073,8 +5724,6 @@ class BadImageFormatException(SystemException):
     BadImageFormatException(message: str, fileName: str)
     BadImageFormatException(message: str, fileName: str, inner: Exception)
     """
-    Instance = BadImageFormatException
-    """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: BadImageFormatException, info: SerializationInfo, context: StreamingContext)
@@ -6140,6 +5789,9 @@ Get: Message(self: BadImageFormatException) -> str
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BadImageFormatException()
 
 class Base64FormattingOptions:
     """
@@ -6147,8 +5799,6 @@ class Base64FormattingOptions:
     
     enum (flags) Base64FormattingOptions, values: InsertLineBreaks (1), None (0)
     """
-    Instance = Base64FormattingOptions
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -6186,11 +5836,12 @@ class Base64FormattingOptions:
     None_ =None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Base64FormattingOptions()
 
 class BitConverter():
     """ Converts base data types to an array of bytes, and an array of bytes to base data types. """
-    Instance = BitConverter
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def DoubleToInt64Bits(value):
         """
@@ -6457,11 +6108,12 @@ class BitConverter():
         'ToUInt64',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BitConverter()
 
 class Int32():
     """ Represents a 32-bit signed integer. """
-    Instance = Int32
-    """hardcoded/returns an instance of the class"""
     def bit_length(self, *args): #cannot find CLR method
         """ bit_length(value: int) -> int """
         pass
@@ -6667,11 +6319,12 @@ class Int32():
     numerator = None
     real = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Int32()
 
 class Boolean(int):
     """ Represents a Boolean value. """
-    Instance = Boolean
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *args): #cannot find CLR constructor
         """
@@ -6680,11 +6333,12 @@ class Boolean(int):
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Boolean()
 
 class Buffer():
     """ Manipulates arrays of primitive types. """
-    Instance = Buffer
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def BlockCopy(src, srcOffset, dst, dstOffset, count):
         """
@@ -6749,11 +6403,12 @@ class Buffer():
         'SetByte',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Buffer()
 
 class Byte:
     """ Represents an 8-bit unsigned integer. """
-    Instance = Byte
-    """hardcoded/returns an instance of the class"""
     def bit_length(self, *args): #cannot find CLR method
         """ bit_length(value: Byte) -> int """
         pass
@@ -6765,16 +6420,13 @@ class Byte:
             Compares this instance to a specified object and returns an indication of their relative values.
         
             value: An object to compare, or null.
-            Returns: A signed integer that indicates the relative order of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance 
-             is equal to value. Greater than zero This instance is greater than value.-or- value is null.
-        
+            Returns: A signed integer that indicates the relative order of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is equal to value. Greater than zero This instance is greater than value.-or- value is null.
         CompareTo(self: Byte, value: Byte) -> int
         
             Compares this instance to a specified 8-bit unsigned integer and returns an indication of their relative values.
         
             value: An 8-bit unsigned integer to compare.
-            Returns: A signed integer that indicates the relative order of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance 
-             is equal to value. Greater than zero This instance is greater than value.
+            Returns: A signed integer that indicates the relative order of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is equal to value. Greater than zero This instance is greater than value.
         """
         pass
 
@@ -6831,9 +6483,7 @@ class Byte:
             Converts the string representation of a number in a specified style to its System.Byte equivalent.
         
             s: A string that contains a number to convert. The string is interpreted using the style specified by style.
-            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Integer.
-        
+            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
             Returns: A byte value that is equivalent to the number contained in s.
         Parse(s: str, provider: IFormatProvider) -> Byte
         
@@ -6847,9 +6497,7 @@ class Byte:
             Converts the string representation of a number in a specified style and culture-specific format to its System.Byte equivalent.
         
             s: A string that contains a number to convert. The string is interpreted using the style specified by style.
-            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Integer.
-        
+            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
             provider: An object that supplies culture-specific information about the format of s. If provider is null, the thread current culture is used.
             Returns: A byte value that is equivalent to the number contained in s.
         """
@@ -6894,14 +6542,10 @@ class Byte:
             Returns: true if s was converted successfully; otherwise, false.
         TryParse(s: str, style: NumberStyles, provider: IFormatProvider) -> (bool, Byte)
         
-            Converts the string representation of a number in a specified style and culture-specific format to its System.Byte equivalent. A return value indicates whether the 
-             conversion succeeded or failed.
-        
+            Converts the string representation of a number in a specified style and culture-specific format to its System.Byte equivalent. A return value indicates whether the conversion succeeded or failed.
         
             s: A string containing a number to convert. The string is interpreted using the style specified by style.
-            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Integer.
-        
+            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
             provider: An object that supplies culture-specific formatting information about s. If provider is null, the thread current culture is used.
             Returns: true if s was converted successfully; otherwise, false.
         """
@@ -7126,6 +6770,9 @@ class Byte:
     numerator = None
     real = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Byte()
 
 class CannotUnloadAppDomainException(SystemException):
     """
@@ -7135,8 +6782,6 @@ class CannotUnloadAppDomainException(SystemException):
     CannotUnloadAppDomainException(message: str)
     CannotUnloadAppDomainException(message: str, innerException: Exception)
     """
-    Instance = CannotUnloadAppDomainException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -7159,32 +6804,26 @@ class CannotUnloadAppDomainException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CannotUnloadAppDomainException()
 
 class Char:
     """ Represents a character as a UTF-16 code unit. """
-    Instance = Char
-    """hardcoded/returns an instance of the class"""
     def CompareTo(self, value):
         """
         CompareTo(self: Char, value: object) -> int
         
-            Compares this instance to a specified object and indicates whether this instance precedes, follows, or appears in the same position in the sort order as the specified 
-             System.Object.
-        
+            Compares this instance to a specified object and indicates whether this instance precedes, follows, or appears in the same position in the sort order as the specified System.Object.
         
             value: An object to compare this instance to, or null.
-            Returns: A signed number indicating the position of this instance in the sort order in relation to the value parameter.Return Value Description Less than zero This instance precedes 
-             value. Zero This instance has the same position in the sort order as value. Greater than zero This instance follows value.-or- value is null.
-        
+            Returns: A signed number indicating the position of this instance in the sort order in relation to the value parameter.Return Value Description Less than zero This instance precedes value. Zero This instance has the same position in the sort order as value. Greater than zero This instance follows value.-or- value is null.
         CompareTo(self: Char, value: Char) -> int
         
-            Compares this instance to a specified System.Char object and indicates whether this instance precedes, follows, or appears in the same position in the sort order as the 
-             specified System.Char object.
-        
+            Compares this instance to a specified System.Char object and indicates whether this instance precedes, follows, or appears in the same position in the sort order as the specified System.Char object.
         
             value: A System.Char object to compare.
-            Returns: A signed number indicating the position of this instance in the sort order in relation to the value parameter.Return Value Description Less than zero This instance precedes 
-             value. Zero This instance has the same position in the sort order as value. Greater than zero This instance follows value.
+            Returns: A signed number indicating the position of this instance in the sort order in relation to the value parameter.Return Value Description Less than zero This instance precedes value. Zero This instance has the same position in the sort order as value. Greater than zero This instance follows value.
         """
         pass
 
@@ -7511,17 +7150,14 @@ class Char:
         
             s: A string.
             index: The starting position of the pair of characters to evaluate within s.
-            Returns: true if the s parameter includes adjacent characters at positions index and index + 1, and the numeric value of the character at position index ranges from U+D800 through 
-             U+DBFF, and the numeric value of the character at position index+1 ranges from U+DC00 through U+DFFF; otherwise, false.
-        
+            Returns: true if the s parameter includes adjacent characters at positions index and index + 1, and the numeric value of the character at position index ranges from U+D800 through U+DBFF, and the numeric value of the character at position index+1 ranges from U+DC00 through U+DFFF; otherwise, false.
         IsSurrogatePair(highSurrogate: Char, lowSurrogate: Char) -> bool
         
             Indicates whether the two specified System.Char objects form a surrogate pair.
         
             highSurrogate: The character to evaluate as the high surrogate of a surrogate pair.
             lowSurrogate: The character to evaluate as the low surrogate of a surrogate pair.
-            Returns: true if the numeric value of the highSurrogate parameter ranges from U+D800 through U+DBFF, and the numeric value of the lowSurrogate parameter ranges from U+DC00 through 
-             U+DFFF; otherwise, false.
+            Returns: true if the numeric value of the highSurrogate parameter ranges from U+D800 through U+DBFF, and the numeric value of the lowSurrogate parameter ranges from U+DC00 through U+DFFF; otherwise, false.
         """
         pass
 
@@ -7732,11 +7368,12 @@ class Char:
     MaxValue = None
     MinValue = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Char()
 
 class CharEnumerator:
     """ Supports iterating over a System.String object and reading its individual characters. This class cannot be inherited. """
-    Instance = CharEnumerator
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """
         Clone(self: CharEnumerator) -> object
@@ -7808,6 +7445,9 @@ Get: Current(self: CharEnumerator) -> Char
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CharEnumerator()
 
 class CLSCompliantAttribute:
     """
@@ -7815,8 +7455,6 @@ class CLSCompliantAttribute:
     
     CLSCompliantAttribute(isCompliant: bool)
     """
-    Instance = CLSCompliantAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -7837,11 +7475,12 @@ Get: IsCompliant(self: CLSCompliantAttribute) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CLSCompliantAttribute()
 
 class Comparison(MulticastDelegate):
     """ Comparison[T](object: object, method: IntPtr) """
-    Instance = Comparison
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, x, y, callback, object):
         """ BeginInvoke(self: Comparison[T], x: T, y: T, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -7863,9 +7502,7 @@ class Comparison(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -7894,8 +7531,7 @@ class Comparison(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -7911,11 +7547,12 @@ class Comparison(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Comparison()
 
 class Console():
     """ Represents the standard input, output, and error streams for console applications. This class cannot be inherited. """
-    Instance = Console
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Beep(frequency=None, duration=None):
         """
@@ -8028,18 +7665,13 @@ class Console():
         ReadKey() -> ConsoleKeyInfo
         
             Obtains the next character or function key pressed by the user. The pressed key is displayed in the console window.
-            Returns: A System.ConsoleKeyInfo object that describes the System.ConsoleKey constant and Unicode character, if any, that correspond to the pressed console key. The 
-             System.ConsoleKeyInfo object also describes, in a bitwise combination of System.ConsoleModifiers values, whether one or more SHIFT, ALT, or CTRL modifier keys was pressed 
-             simultaneously with the console key.
-        
+            Returns: A System.ConsoleKeyInfo object that describes the System.ConsoleKey constant and Unicode character, if any, that correspond to the pressed console key. The System.ConsoleKeyInfo object also describes, in a bitwise combination of System.ConsoleModifiers values, whether one or more SHIFT, ALT, or CTRL modifier keys was pressed simultaneously with the console key.
         ReadKey(intercept: bool) -> ConsoleKeyInfo
         
             Obtains the next character or function key pressed by the user. The pressed key is optionally displayed in the console window.
         
             intercept: Determines whether to display the pressed key in the console window. true to not display the pressed key; otherwise, false.
-            Returns: A System.ConsoleKeyInfo object that describes the System.ConsoleKey constant and Unicode character, if any, that correspond to the pressed console key. The 
-             System.ConsoleKeyInfo object also describes, in a bitwise combination of System.ConsoleModifiers values, whether one or more SHIFT, ALT, or CTRL modifier keys was pressed 
-             simultaneously with the console key.
+            Returns: A System.ConsoleKeyInfo object that describes the System.ConsoleKey constant and Unicode character, if any, that correspond to the pressed console key. The System.ConsoleKeyInfo object also describes, in a bitwise combination of System.ConsoleModifiers values, whether one or more SHIFT, ALT, or CTRL modifier keys was pressed simultaneously with the console key.
         """
         pass
 
@@ -8266,9 +7898,7 @@ class Console():
         
             value: The value to write.
         WriteLine(format: str, arg0: object, arg1: object, arg2: object, arg3: object)
-            Writes the text representation of the specified objects and variable-length parameter list, followed by the current line terminator, to the standard output stream using the 
-             specified format information.
-        
+            Writes the text representation of the specified objects and variable-length parameter list, followed by the current line terminator, to the standard output stream using the specified format information.
         
             format: A composite format string (see Remarks).
             arg0: The first object to write using format.
@@ -8314,9 +7944,7 @@ class Console():
         
             value: The value to write.
         WriteLine(format: str, *arg: Array[object])
-            Writes the text representation of the specified array of objects, followed by the current line terminator, to the standard output stream using the specified format 
-             information.
-        
+            Writes the text representation of the specified array of objects, followed by the current line terminator, to the standard output stream using the specified format information.
         
             format: A composite format string (see Remarks).
             arg: An array of objects to write using format.
@@ -8325,7 +7953,7 @@ class Console():
 
     BackgroundColor = None
     BufferHeight = 3000
-    BufferWidth = 203
+    BufferWidth = 449
     CancelKeyPress = None
     CapsLock = False
     CursorLeft = 0
@@ -8347,10 +7975,10 @@ class Console():
     OutputEncoding = None
     Title = 'Administrator:  '
     TreatControlCAsInput = False
-    WindowHeight = 14
+    WindowHeight = 13
     WindowLeft = 0
-    WindowTop = 2986
-    WindowWidth = 203
+    WindowTop = 2987
+    WindowWidth = 449
     __all__ = [
         'Beep',
         'CancelKeyPress',
@@ -8374,11 +8002,12 @@ class Console():
         'WriteLine',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Console()
 
 class ConsoleCancelEventArgs(EventArgs):
     """ Provides data for the System.Console.CancelKeyPress event. This class cannot be inherited. """
-    Instance = ConsoleCancelEventArgs
-    """hardcoded/returns an instance of the class"""
     Cancel = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets a value indicating whether simultaneously pressing the System.ConsoleModifiers.Control modifier key and System.ConsoleKey.C console key (CTRL+C) terminates the current process.
 
@@ -8395,6 +8024,9 @@ Get: SpecialKey(self: ConsoleCancelEventArgs) -> ConsoleSpecialKey
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConsoleCancelEventArgs()
 
 class ConsoleCancelEventHandler(MulticastDelegate):
     """
@@ -8402,8 +8034,6 @@ class ConsoleCancelEventHandler(MulticastDelegate):
     
     ConsoleCancelEventHandler(object: object, method: IntPtr)
     """
-    Instance = ConsoleCancelEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: ConsoleCancelEventHandler, sender: object, e: ConsoleCancelEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -8425,9 +8055,7 @@ class ConsoleCancelEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -8456,8 +8084,7 @@ class ConsoleCancelEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -8473,6 +8100,9 @@ class ConsoleCancelEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConsoleCancelEventHandler()
 
 class ConsoleColor:
     """
@@ -8480,8 +8110,6 @@ class ConsoleColor:
     
     enum ConsoleColor, values: Black (0), Blue (9), Cyan (11), DarkBlue (1), DarkCyan (3), DarkGray (8), DarkGreen (2), DarkMagenta (5), DarkRed (4), DarkYellow (6), Gray (7), Green (10), Magenta (13), Red (12), White (15), Yellow (14)
     """
-    Instance = ConsoleColor
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -8533,6 +8161,9 @@ class ConsoleColor:
     White = None
     Yellow = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConsoleColor()
 
 class ConsoleKey:
     """
@@ -8540,8 +8171,6 @@ class ConsoleKey:
     
     enum ConsoleKey, values: A (65), Add (107), Applications (93), Attention (246), B (66), Backspace (8), BrowserBack (166), BrowserFavorites (171), BrowserForward (167), BrowserHome (172), BrowserRefresh (168), BrowserSearch (170), BrowserStop (169), C (67), Clear (12), CrSel (247), D (68), D0 (48), D1 (49), D2 (50), D3 (51), D4 (52), D5 (53), D6 (54), D7 (55), D8 (56), D9 (57), Decimal (110), Delete (46), Divide (111), DownArrow (40), E (69), End (35), Enter (13), EraseEndOfFile (249), Escape (27), Execute (43), ExSel (248), F (70), F1 (112), F10 (121), F11 (122), F12 (123), F13 (124), F14 (125), F15 (126), F16 (127), F17 (128), F18 (129), F19 (130), F2 (113), F20 (131), F21 (132), F22 (133), F23 (134), F24 (135), F3 (114), F4 (115), F5 (116), F6 (117), F7 (118), F8 (119), F9 (120), G (71), H (72), Help (47), Home (36), I (73), Insert (45), J (74), K (75), L (76), LaunchApp1 (182), LaunchApp2 (183), LaunchMail (180), LaunchMediaSelect (181), LeftArrow (37), LeftWindows (91), M (77), MediaNext (176), MediaPlay (179), MediaPrevious (177), MediaStop (178), Multiply (106), N (78), NoName (252), NumPad0 (96), NumPad1 (97), NumPad2 (98), NumPad3 (99), NumPad4 (100), NumPad5 (101), NumPad6 (102), NumPad7 (103), NumPad8 (104), NumPad9 (105), O (79), Oem1 (186), Oem102 (226), Oem2 (191), Oem3 (192), Oem4 (219), Oem5 (220), Oem6 (221), Oem7 (222), Oem8 (223), OemClear (254), OemComma (188), OemMinus (189), OemPeriod (190), OemPlus (187), P (80), Pa1 (253), Packet (231), PageDown (34), PageUp (33), Pause (19), Play (250), Print (42), PrintScreen (44), Process (229), Q (81), R (82), RightArrow (39), RightWindows (92), S (83), Select (41), Separator (108), Sleep (95), Spacebar (32), Subtract (109), T (84), Tab (9), U (85), UpArrow (38), V (86), VolumeDown (174), VolumeMute (173), VolumeUp (175), W (87), X (88), Y (89), Z (90), Zoom (251)
     """
-    Instance = ConsoleKey
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -8721,6 +8350,9 @@ class ConsoleKey:
     Z = None
     Zoom = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConsoleKey()
 
 class ConsoleKeyInfo():
     """
@@ -8728,8 +8360,6 @@ class ConsoleKeyInfo():
     
     ConsoleKeyInfo(keyChar: Char, key: ConsoleKey, shift: bool, alt: bool, control: bool)
     """
-    Instance = ConsoleKeyInfo
-    """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """
         Equals(self: ConsoleKeyInfo, value: object) -> bool
@@ -8794,6 +8424,9 @@ Get: Modifiers(self: ConsoleKeyInfo) -> ConsoleModifiers
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConsoleKeyInfo()
 
 class ConsoleModifiers:
     """
@@ -8801,8 +8434,6 @@ class ConsoleModifiers:
     
     enum (flags) ConsoleModifiers, values: Alt (1), Control (4), Shift (2)
     """
-    Instance = ConsoleModifiers
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -8841,6 +8472,9 @@ class ConsoleModifiers:
     Shift = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConsoleModifiers()
 
 class ConsoleSpecialKey:
     """
@@ -8848,8 +8482,6 @@ class ConsoleSpecialKey:
     
     enum ConsoleSpecialKey, values: ControlBreak (1), ControlC (0)
     """
-    Instance = ConsoleSpecialKey
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -8887,11 +8519,15 @@ class ConsoleSpecialKey:
     ControlC = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConsoleSpecialKey()
 
 class ContextBoundObject(MarshalByRefObject):
     """ Defines the base class for all context-bound classes. """
-    Instance = ContextBoundObject
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ContextBoundObject()
 
 class ContextMarshalException(SystemException):
     """
@@ -8901,8 +8537,6 @@ class ContextMarshalException(SystemException):
     ContextMarshalException(message: str)
     ContextMarshalException(message: str, inner: Exception)
     """
-    Instance = ContextMarshalException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -8925,6 +8559,9 @@ class ContextMarshalException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ContextMarshalException()
 
 class ContextStaticAttribute:
     """
@@ -8932,8 +8569,6 @@ class ContextStaticAttribute:
     
     ContextStaticAttribute()
     """
-    Instance = ContextStaticAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -8941,11 +8576,12 @@ class ContextStaticAttribute:
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ContextStaticAttribute()
 
 class Convert():
     """ Converts a base data type to another base data type. """
-    Instance = Convert
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def ChangeType(value, *__args):
         """
@@ -8955,9 +8591,7 @@ class Convert():
         
             value: An object that implements the System.IConvertible interface.
             typeCode: The type of object to return.
-            Returns: An object whose underlying type is typeCode and whose value is equivalent to value.-or-A null reference (Nothing in Visual Basic), if value is null and typeCode is 
-             System.TypeCode.Empty, System.TypeCode.String, or System.TypeCode.Object.
-        
+            Returns: An object whose underlying type is typeCode and whose value is equivalent to value.-or-A null reference (Nothing in Visual Basic), if value is null and typeCode is System.TypeCode.Empty, System.TypeCode.String, or System.TypeCode.Object.
         ChangeType(value: object, typeCode: TypeCode, provider: IFormatProvider) -> object
         
             Returns an object of the specified type whose value is equivalent to the specified object. A parameter supplies culture-specific formatting information.
@@ -8965,18 +8599,14 @@ class Convert():
             value: An object that implements the System.IConvertible interface.
             typeCode: The type of object to return.
             provider: An object that supplies culture-specific formatting information.
-            Returns: An object whose underlying type is typeCode and whose value is equivalent to value.-or- A null reference (Nothing in Visual Basic), if value is null and typeCode is 
-             System.TypeCode.Empty, System.TypeCode.String, or System.TypeCode.Object.
-        
+            Returns: An object whose underlying type is typeCode and whose value is equivalent to value.-or- A null reference (Nothing in Visual Basic), if value is null and typeCode is System.TypeCode.Empty, System.TypeCode.String, or System.TypeCode.Object.
         ChangeType(value: object, conversionType: Type) -> object
         
             Returns an object of the specified type and whose value is equivalent to the specified object.
         
             value: An object that implements the System.IConvertible interface.
             conversionType: The type of object to return.
-            Returns: An object whose type is conversionType and whose value is equivalent to value.-or-A null reference (Nothing in Visual Basic), if value is null and conversionType is not a 
-             value type.
-        
+            Returns: An object whose type is conversionType and whose value is equivalent to value.-or-A null reference (Nothing in Visual Basic), if value is null and conversionType is not a value type.
         ChangeType(value: object, conversionType: Type, provider: IFormatProvider) -> object
         
             Returns an object of the specified type whose value is equivalent to the specified object. A parameter supplies culture-specific formatting information.
@@ -8984,8 +8614,7 @@ class Convert():
             value: An object that implements the System.IConvertible interface.
             conversionType: The type of object to return.
             provider: An object that supplies culture-specific formatting information.
-            Returns: An object whose type is conversionType and whose value is equivalent to value.-or- value, if the System.Type of value and conversionType are equal.-or- A null reference 
-             (Nothing in Visual Basic), if value is null and conversionType is not a value type.
+            Returns: An object whose type is conversionType and whose value is equivalent to value.-or- value, if the System.Type of value and conversionType are equal.-or- A null reference (Nothing in Visual Basic), if value is null and conversionType is not a value type.
         """
         pass
 
@@ -8994,9 +8623,7 @@ class Convert():
         """
         FromBase64CharArray(inArray: Array[Char], offset: int, length: int) -> Array[Byte]
         
-            Converts a subset of a Unicode character array, which encodes binary data as base-64 digits, to an equivalent 8-bit unsigned integer array. Parameters specify the subset in 
-             the input array and the number of elements to convert.
-        
+            Converts a subset of a Unicode character array, which encodes binary data as base-64 digits, to an equivalent 8-bit unsigned integer array. Parameters specify the subset in the input array and the number of elements to convert.
         
             inArray: A Unicode character array.
             offset: A position within inArray.
@@ -9046,9 +8673,7 @@ class Convert():
         """
         ToBase64CharArray(inArray: Array[Byte], offsetIn: int, length: int, outArray: Array[Char], offsetOut: int) -> int
         
-            Converts a subset of an 8-bit unsigned integer array to an equivalent subset of a Unicode character array encoded with base-64 digits. Parameters specify the subsets as 
-             offsets in the input and output arrays, and the number of elements in the input array to convert.
-        
+            Converts a subset of an 8-bit unsigned integer array to an equivalent subset of a Unicode character array encoded with base-64 digits. Parameters specify the subsets as offsets in the input and output arrays, and the number of elements in the input array to convert.
         
             inArray: An input array of 8-bit unsigned integers.
             offsetIn: A position within inArray.
@@ -9058,9 +8683,7 @@ class Convert():
             Returns: A 32-bit signed integer containing the number of bytes in outArray.
         ToBase64CharArray(inArray: Array[Byte], offsetIn: int, length: int, outArray: Array[Char], offsetOut: int, options: Base64FormattingOptions) -> int
         
-            Converts a subset of an 8-bit unsigned integer array to an equivalent subset of a Unicode character array encoded with base-64 digits. Parameters specify the subsets as 
-             offsets in the input and output arrays, the number of elements in the input array to convert, and whether line breaks are inserted in the output array.
-        
+            Converts a subset of an 8-bit unsigned integer array to an equivalent subset of a Unicode character array encoded with base-64 digits. Parameters specify the subsets as offsets in the input and output arrays, the number of elements in the input array to convert, and whether line breaks are inserted in the output array.
         
             inArray: An input array of 8-bit unsigned integers.
             offsetIn: A position within inArray.
@@ -9083,18 +8706,14 @@ class Convert():
             Returns: The string representation, in base 64, of the contents of inArray.
         ToBase64String(inArray: Array[Byte], options: Base64FormattingOptions) -> str
         
-            Converts an array of 8-bit unsigned integers to its equivalent string representation that is encoded with base-64 digits. A parameter specifies whether to insert line 
-             breaks in the return value.
-        
+            Converts an array of 8-bit unsigned integers to its equivalent string representation that is encoded with base-64 digits. A parameter specifies whether to insert line breaks in the return value.
         
             inArray: An array of 8-bit unsigned integers.
             options: System.Base64FormattingOptions.InsertLineBreaks to insert a line break every 76 characters, or System.Base64FormattingOptions.None to not insert line breaks.
             Returns: The string representation in base 64 of the elements in inArray.
         ToBase64String(inArray: Array[Byte], offset: int, length: int) -> str
         
-            Converts a subset of an array of 8-bit unsigned integers to its equivalent string representation that is encoded with base-64 digits. Parameters specify the subset as an 
-             offset in the input array, and the number of elements in the array to convert.
-        
+            Converts a subset of an array of 8-bit unsigned integers to its equivalent string representation that is encoded with base-64 digits. Parameters specify the subset as an offset in the input array, and the number of elements in the array to convert.
         
             inArray: An array of 8-bit unsigned integers.
             offset: An offset in inArray.
@@ -9102,9 +8721,7 @@ class Convert():
             Returns: The string representation in base 64 of length elements of inArray, starting at position offset.
         ToBase64String(inArray: Array[Byte], offset: int, length: int, options: Base64FormattingOptions) -> str
         
-            Converts a subset of an array of 8-bit unsigned integers to its equivalent string representation that is encoded with base-64 digits. Parameters specify the subset as an 
-             offset in the input array, the number of elements in the array to convert, and whether to insert line breaks in the return value.
-        
+            Converts a subset of an array of 8-bit unsigned integers to its equivalent string representation that is encoded with base-64 digits. Parameters specify the subset as an offset in the input array, the number of elements in the array to convert, and whether to insert line breaks in the return value.
         
             inArray: An array of 8-bit unsigned integers.
             offset: An offset in inArray.
@@ -9122,9 +8739,7 @@ class Convert():
             Converts the value of a specified object to an equivalent Boolean value.
         
             value: An object that implements the System.IConvertible interface, or null.
-            Returns: true or false, which reflects the value returned by invoking the System.IConvertible.ToBoolean(System.IFormatProvider) method for the underlying type of value. If value is 
-             null, the method returns false.
-        
+            Returns: true or false, which reflects the value returned by invoking the System.IConvertible.ToBoolean(System.IFormatProvider) method for the underlying type of value. If value is null, the method returns false.
         ToBoolean(value: float) -> bool
         
             Converts the value of the specified double-precision floating-point number to an equivalent Boolean value.
@@ -9216,9 +8831,7 @@ class Convert():
         
             value: An object that implements the System.IConvertible interface, or null.
             provider: An object that supplies culture-specific formatting information.
-            Returns: true or false, which reflects the value returned by invoking the System.IConvertible.ToBoolean(System.IFormatProvider) method for the underlying type of value. If value is 
-             null, the method returns false.
-        
+            Returns: true or false, which reflects the value returned by invoking the System.IConvertible.ToBoolean(System.IFormatProvider) method for the underlying type of value. If value is null, the method returns false.
         ToBoolean(value: Decimal) -> bool
         
             Converts the value of the specified decimal number to an equivalent Boolean value.
@@ -9261,25 +8874,19 @@ class Convert():
             Converts the value of the specified decimal number to an equivalent 8-bit unsigned integer.
         
             value: The number to convert.
-            Returns: value, rounded to the nearest 8-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is 
-             converted to 6.
-        
+            Returns: value, rounded to the nearest 8-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToByte(value: float) -> Byte
         
             Converts the value of the specified double-precision floating-point number to an equivalent 8-bit unsigned integer.
         
             value: The double-precision floating-point number to convert.
-            Returns: value, rounded to the nearest 8-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is 
-             converted to 6.
-        
+            Returns: value, rounded to the nearest 8-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToByte(value: Single) -> Byte
         
             Converts the value of the specified single-precision floating-point number to an equivalent 8-bit unsigned integer.
         
             value: A single-precision floating-point number.
-            Returns: value, rounded to the nearest 8-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is 
-             converted to 6.
-        
+            Returns: value, rounded to the nearest 8-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToByte(value: UInt64) -> Byte
         
             Converts the value of the specified 64-bit unsigned integer to an equivalent 8-bit unsigned integer.
@@ -9722,9 +9329,7 @@ class Convert():
             Returns: A double-precision floating-point number that is equivalent to value, or zero if value is null.
         ToDouble(value: str, provider: IFormatProvider) -> float
         
-            Converts the specified string representation of a number to an equivalent double-precision floating-point number, using the specified culture-specific formatting 
-             information.
-        
+            Converts the specified string representation of a number to an equivalent double-precision floating-point number, using the specified culture-specific formatting information.
         
             value: A string that contains the number to convert.
             provider: An object that supplies culture-specific formatting information.
@@ -9856,25 +9461,19 @@ class Convert():
             Converts the value of the specified decimal number to an equivalent 16-bit signed integer.
         
             value: The decimal number to convert.
-            Returns: value, rounded to the nearest 16-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is 
-             converted to 6.
-        
+            Returns: value, rounded to the nearest 16-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToInt16(value: float) -> Int16
         
             Converts the value of the specified double-precision floating-point number to an equivalent 16-bit signed integer.
         
             value: The double-precision floating-point number to convert.
-            Returns: value, rounded to the nearest 16-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is 
-             converted to 6.
-        
+            Returns: value, rounded to the nearest 16-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToInt16(value: Single) -> Int16
         
             Converts the value of the specified single-precision floating-point number to an equivalent 16-bit signed integer.
         
             value: The single-precision floating-point number to convert.
-            Returns: value, rounded to the nearest 16-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is 
-             converted to 6.
-        
+            Returns: value, rounded to the nearest 16-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToInt16(value: UInt64) -> Int16
         
             Converts the value of the specified 64-bit unsigned integer to an equivalent 16-bit signed integer.
@@ -9985,25 +9584,19 @@ class Convert():
             Converts the value of the specified decimal number to an equivalent 32-bit signed integer.
         
             value: The decimal number to convert.
-            Returns: value, rounded to the nearest 32-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is 
-             converted to 6.
-        
+            Returns: value, rounded to the nearest 32-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToInt32(value: float) -> int
         
             Converts the value of the specified double-precision floating-point number to an equivalent 32-bit signed integer.
         
             value: The double-precision floating-point number to convert.
-            Returns: value, rounded to the nearest 32-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is 
-             converted to 6.
-        
+            Returns: value, rounded to the nearest 32-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToInt32(value: Single) -> int
         
             Converts the value of the specified single-precision floating-point number to an equivalent 32-bit signed integer.
         
             value: The single-precision floating-point number to convert.
-            Returns: value, rounded to the nearest 32-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is 
-             converted to 6.
-        
+            Returns: value, rounded to the nearest 32-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToInt32(value: UInt64) -> int
         
             Converts the value of the specified 64-bit unsigned integer to an equivalent 32-bit signed integer.
@@ -10114,25 +9707,19 @@ class Convert():
             Converts the value of the specified decimal number to an equivalent 64-bit signed integer.
         
             value: The decimal number to convert.
-            Returns: value, rounded to the nearest 64-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is 
-             converted to 6.
-        
+            Returns: value, rounded to the nearest 64-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToInt64(value: float) -> Int64
         
             Converts the value of the specified double-precision floating-point number to an equivalent 64-bit signed integer.
         
             value: The double-precision floating-point number to convert.
-            Returns: value, rounded to the nearest 64-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is 
-             converted to 6.
-        
+            Returns: value, rounded to the nearest 64-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToInt64(value: Single) -> Int64
         
             Converts the value of the specified single-precision floating-point number to an equivalent 64-bit signed integer.
         
             value: The single-precision floating-point number to convert.
-            Returns: value, rounded to the nearest 64-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is 
-             converted to 6.
-        
+            Returns: value, rounded to the nearest 64-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToInt64(value: Int64) -> Int64
         
             Returns the specified 64-bit signed integer; no actual conversion is performed.
@@ -10243,25 +9830,19 @@ class Convert():
             Converts the value of the specified decimal number to an equivalent 8-bit signed integer.
         
             value: The decimal number to convert.
-            Returns: value, rounded to the nearest 8-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is 
-             converted to 6.
-        
+            Returns: value, rounded to the nearest 8-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToSByte(value: float) -> SByte
         
             Converts the value of the specified double-precision floating-point number to an equivalent 8-bit signed integer.
         
             value: The double-precision floating-point number to convert.
-            Returns: value, rounded to the nearest 8-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is 
-             converted to 6.
-        
+            Returns: value, rounded to the nearest 8-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToSByte(value: Single) -> SByte
         
             Converts the value of the specified single-precision floating-point number to an equivalent 8-bit signed integer.
         
             value: The single-precision floating-point number to convert.
-            Returns: value, rounded to the nearest 8-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is 
-             converted to 6.
-        
+            Returns: value, rounded to the nearest 8-bit signed integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToSByte(value: UInt64) -> SByte
         
             Converts the value of the specified 64-bit unsigned integer to an equivalent 8-bit signed integer.
@@ -10356,9 +9937,7 @@ class Convert():
             Returns: A single-precision floating-point number that is equivalent to value, or zero if value is null.
         ToSingle(value: str, provider: IFormatProvider) -> Single
         
-            Converts the specified string representation of a number to an equivalent single-precision floating-point number, using the specified culture-specific formatting 
-             information.
-        
+            Converts the specified string representation of a number to an equivalent single-precision floating-point number, using the specified culture-specific formatting information.
         
             value: A string that contains the number to convert.
             provider: An object that supplies culture-specific formatting information.
@@ -10374,17 +9953,13 @@ class Convert():
             Converts the value of the specified decimal number to an equivalent single-precision floating-point number.
         
             value: The decimal number to convert.
-            Returns: A single-precision floating-point number that is equivalent to value.value is rounded using rounding to nearest. For example, when rounded to two decimals, the value 2.345 
-             becomes 2.34 and the value 2.355 becomes 2.36.
-        
+            Returns: A single-precision floating-point number that is equivalent to value.value is rounded using rounding to nearest. For example, when rounded to two decimals, the value 2.345 becomes 2.34 and the value 2.355 becomes 2.36.
         ToSingle(value: float) -> Single
         
             Converts the value of the specified double-precision floating-point number to an equivalent single-precision floating-point number.
         
             value: The double-precision floating-point number to convert.
-            Returns: A single-precision floating-point number that is equivalent to value.value is rounded using rounding to nearest. For example, when rounded to two decimals, the value 2.345 
-             becomes 2.34 and the value 2.355 becomes 2.36.
-        
+            Returns: A single-precision floating-point number that is equivalent to value.value is rounded using rounding to nearest. For example, when rounded to two decimals, the value 2.345 becomes 2.34 and the value 2.355 becomes 2.36.
         ToSingle(value: Single) -> Single
         
             Returns the specified single-precision floating-point number; no actual conversion is performed.
@@ -10497,9 +10072,7 @@ class Convert():
             Returns: The string representation of value.
         ToString(value: Single, provider: IFormatProvider) -> str
         
-            Converts the value of the specified single-precision floating-point number to its equivalent string representation, using the specified culture-specific formatting 
-             information.
-        
+            Converts the value of the specified single-precision floating-point number to its equivalent string representation, using the specified culture-specific formatting information.
         
             value: The single-precision floating-point number to convert.
             provider: An object that supplies culture-specific formatting information.
@@ -10738,25 +10311,19 @@ class Convert():
             Converts the value of the specified decimal number to an equivalent 16-bit unsigned integer.
         
             value: The decimal number to convert.
-            Returns: value, rounded to the nearest 16-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 
-             is converted to 6.
-        
+            Returns: value, rounded to the nearest 16-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToUInt16(value: float) -> UInt16
         
             Converts the value of the specified double-precision floating-point number to an equivalent 16-bit unsigned integer.
         
             value: The double-precision floating-point number to convert.
-            Returns: value, rounded to the nearest 16-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 
-             is converted to 6.
-        
+            Returns: value, rounded to the nearest 16-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToUInt16(value: Single) -> UInt16
         
             Converts the value of the specified single-precision floating-point number to an equivalent 16-bit unsigned integer.
         
             value: The single-precision floating-point number to convert.
-            Returns: value, rounded to the nearest 16-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 
-             is converted to 6.
-        
+            Returns: value, rounded to the nearest 16-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToUInt16(value: UInt64) -> UInt16
         
             Converts the value of the specified 64-bit unsigned integer to an equivalent 16-bit unsigned integer.
@@ -10867,25 +10434,19 @@ class Convert():
             Converts the value of the specified decimal number to an equivalent 32-bit unsigned integer.
         
             value: The decimal number to convert.
-            Returns: value, rounded to the nearest 32-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 
-             is converted to 6.
-        
+            Returns: value, rounded to the nearest 32-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToUInt32(value: float) -> UInt32
         
             Converts the value of the specified double-precision floating-point number to an equivalent 32-bit unsigned integer.
         
             value: The double-precision floating-point number to convert.
-            Returns: value, rounded to the nearest 32-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 
-             is converted to 6.
-        
+            Returns: value, rounded to the nearest 32-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToUInt32(value: Single) -> UInt32
         
             Converts the value of the specified single-precision floating-point number to an equivalent 32-bit unsigned integer.
         
             value: The single-precision floating-point number to convert.
-            Returns: value, rounded to the nearest 32-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 
-             is converted to 6.
-        
+            Returns: value, rounded to the nearest 32-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToUInt32(value: UInt64) -> UInt32
         
             Converts the value of the specified 64-bit unsigned integer to an equivalent 32-bit unsigned integer.
@@ -10996,25 +10557,19 @@ class Convert():
             Converts the value of the specified decimal number to an equivalent 64-bit unsigned integer.
         
             value: The decimal number to convert.
-            Returns: value, rounded to the nearest 64-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 
-             is converted to 6.
-        
+            Returns: value, rounded to the nearest 64-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToUInt64(value: float) -> UInt64
         
             Converts the value of the specified double-precision floating-point number to an equivalent 64-bit unsigned integer.
         
             value: The double-precision floating-point number to convert.
-            Returns: value, rounded to the nearest 64-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 
-             is converted to 6.
-        
+            Returns: value, rounded to the nearest 64-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToUInt64(value: Single) -> UInt64
         
             Converts the value of the specified single-precision floating-point number to an equivalent 64-bit unsigned integer.
         
             value: The single-precision floating-point number to convert.
-            Returns: value, rounded to the nearest 64-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 
-             is converted to 6.
-        
+            Returns: value, rounded to the nearest 64-bit unsigned integer. If value is halfway between two whole numbers, the even number is returned; that is, 4.5 is converted to 4, and 5.5 is converted to 6.
         ToUInt64(value: UInt64) -> UInt64
         
             Returns the specified 64-bit unsigned integer; no actual conversion is performed.
@@ -11125,11 +10680,12 @@ class Convert():
         'ToUInt64',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Convert()
 
 class Converter(MulticastDelegate):
     """ Converter[TInput, TOutput](object: object, method: IntPtr) """
-    Instance = Converter
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, input, callback, object):
         """ BeginInvoke(self: Converter[TInput, TOutput], input: TInput, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -11151,9 +10707,7 @@ class Converter(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -11182,8 +10736,7 @@ class Converter(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -11199,6 +10752,9 @@ class Converter(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Converter()
 
 class CrossAppDomainDelegate(MulticastDelegate):
     """
@@ -11206,8 +10762,6 @@ class CrossAppDomainDelegate(MulticastDelegate):
     
     CrossAppDomainDelegate(object: object, method: IntPtr)
     """
-    Instance = CrossAppDomainDelegate
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, callback, object):
         """ BeginInvoke(self: CrossAppDomainDelegate, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -11229,9 +10783,7 @@ class CrossAppDomainDelegate(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -11260,8 +10812,7 @@ class CrossAppDomainDelegate(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -11277,6 +10828,9 @@ class CrossAppDomainDelegate(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CrossAppDomainDelegate()
 
 class DataMisalignedException(SystemException):
     """
@@ -11286,8 +10840,6 @@ class DataMisalignedException(SystemException):
     DataMisalignedException(message: str)
     DataMisalignedException(message: str, innerException: Exception)
     """
-    Instance = DataMisalignedException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -11309,6 +10861,9 @@ class DataMisalignedException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DataMisalignedException()
 
 class DateTime:
     """
@@ -11326,8 +10881,6 @@ class DateTime:
     DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, calendar: Calendar)
     DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, calendar: Calendar, kind: DateTimeKind)
     """
-    Instance = DateTime
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: DateTime, value: TimeSpan) -> DateTime
@@ -11436,8 +10989,7 @@ class DateTime:
         
             t1: The first object to compare.
             t2: The second object to compare.
-            Returns: A signed number indicating the relative values of t1 and t2.Value Type Condition Less than zero t1 is earlier than t2. Zero t1 is the same as t2. Greater than zero t1 is 
-             later than t2.
+            Returns: A signed number indicating the relative values of t1 and t2.Value Type Condition Less than zero t1 is earlier than t2. Zero t1 is the same as t2. Greater than zero t1 is later than t2.
         """
         pass
 
@@ -11445,23 +10997,16 @@ class DateTime:
         """
         CompareTo(self: DateTime, value: object) -> int
         
-            Compares the value of this instance to a specified object that contains a specified System.DateTime value, and returns an integer that indicates whether this instance is 
-             earlier than, the same as, or later than the specified System.DateTime value.
-        
+            Compares the value of this instance to a specified object that contains a specified System.DateTime value, and returns an integer that indicates whether this instance is earlier than, the same as, or later than the specified System.DateTime value.
         
             value: A boxed object to compare, or null.
-            Returns: A signed number indicating the relative values of this instance and value.Value Description Less than zero This instance is earlier than value. Zero This instance is the 
-             same as value. Greater than zero This instance is later than value, or value is null.
-        
+            Returns: A signed number indicating the relative values of this instance and value.Value Description Less than zero This instance is earlier than value. Zero This instance is the same as value. Greater than zero This instance is later than value, or value is null.
         CompareTo(self: DateTime, value: DateTime) -> int
         
-            Compares the value of this instance to a specified System.DateTime value and returns an integer that indicates whether this instance is earlier than, the same as, or later 
-             than the specified System.DateTime value.
-        
+            Compares the value of this instance to a specified System.DateTime value and returns an integer that indicates whether this instance is earlier than, the same as, or later than the specified System.DateTime value.
         
             value: The object to compare to the current instance.
-            Returns: A signed number indicating the relative values of this instance and the value parameter.Value Description Less than zero This instance is earlier than value. Zero This 
-             instance is the same as value. Greater than zero This instance is later than value.
+            Returns: A signed number indicating the relative values of this instance and the value parameter.Value Description Less than zero This instance is earlier than value. Zero This instance is the same as value. Greater than zero This instance is later than value.
         """
         pass
 
@@ -11558,9 +11103,7 @@ class DateTime:
             Returns: A string array where each element is the representation of the value of this instance formatted with one of the standard date and time format specifiers.
         GetDateTimeFormats(self: DateTime, provider: IFormatProvider) -> Array[str]
         
-            Converts the value of this instance to all the string representations supported by the standard date and time format specifiers and the specified culture-specific 
-             formatting information.
-        
+            Converts the value of this instance to all the string representations supported by the standard date and time format specifiers and the specified culture-specific formatting information.
         
             provider: An object that supplies culture-specific formatting information about this instance.
             Returns: A string array where each element is the representation of the value of this instance formatted with one of the standard date and time format specifiers.
@@ -11572,9 +11115,7 @@ class DateTime:
             Returns: A string array where each element is the representation of the value of this instance formatted with the format standard date and time format specifier.
         GetDateTimeFormats(self: DateTime, format: Char, provider: IFormatProvider) -> Array[str]
         
-            Converts the value of this instance to all the string representations supported by the specified standard date and time format specifier and culture-specific formatting 
-             information.
-        
+            Converts the value of this instance to all the string representations supported by the specified standard date and time format specifier and culture-specific formatting information.
         
             format: A date and time format string (see Remarks).
             provider: An object that supplies culture-specific formatting information about this instance.
@@ -11605,8 +11146,7 @@ class DateTime:
         IsDaylightSavingTime(self: DateTime) -> bool
         
             Indicates whether this instance of System.DateTime is within the daylight saving time range for the current time zone.
-            Returns: true if System.DateTime.Kind is System.DateTimeKind.Local or System.DateTimeKind.Unspecified and the value of this instance of System.DateTime is within the daylight saving 
-             time range for the current time zone. false if System.DateTime.Kind is System.DateTimeKind.Utc.
+            Returns: true if System.DateTime.Kind is System.DateTimeKind.Local or System.DateTimeKind.Unspecified and the value of this instance of System.DateTime is within the daylight saving time range for the current time zone. false if System.DateTime.Kind is System.DateTimeKind.Utc.
         """
         pass
 
@@ -11640,15 +11180,11 @@ class DateTime:
             Returns: An object that is equivalent to the date and time contained in s as specified by provider.
         Parse(s: str, provider: IFormatProvider, styles: DateTimeStyles) -> DateTime
         
-            Converts the specified string representation of a date and time to its System.DateTime equivalent using the specified culture-specific format information and formatting 
-             style.
-        
+            Converts the specified string representation of a date and time to its System.DateTime equivalent using the specified culture-specific format information and formatting style.
         
             s: A string containing a date and time to convert.
             provider: An object that supplies culture-specific formatting information about s.
-            styles: A bitwise combination of the enumeration values that indicates the style elements that can be present in s for the parse operation to succeed and that defines how to 
-             interpret the parsed date in relation to the current time zone or the current date. A typical value to specify is System.Globalization.DateTimeStyles.None.
-        
+            styles: A bitwise combination of the enumeration values that indicates the style elements that can be present in s for the parse operation to succeed and that defines how to interpret the parsed date in relation to the current time zone or the current date. A typical value to specify is System.Globalization.DateTimeStyles.None.
             Returns: An object that is equivalent to the date and time contained in s, as specified by provider and styles.
         """
         pass
@@ -11658,9 +11194,7 @@ class DateTime:
         """
         ParseExact(s: str, format: str, provider: IFormatProvider) -> DateTime
         
-            Converts the specified string representation of a date and time to its System.DateTime equivalent using the specified format and culture-specific format information. The 
-             format of the string representation must match the specified format exactly.
-        
+            Converts the specified string representation of a date and time to its System.DateTime equivalent using the specified format and culture-specific format information. The format of the string representation must match the specified format exactly.
         
             s: A string that contains a date and time to convert.
             format: A format specifier that defines the required format of s.
@@ -11668,22 +11202,16 @@ class DateTime:
             Returns: An object that is equivalent to the date and time contained in s, as specified by format and provider.
         ParseExact(s: str, format: str, provider: IFormatProvider, style: DateTimeStyles) -> DateTime
         
-            Converts the specified string representation of a date and time to its System.DateTime equivalent using the specified format, culture-specific format information, and 
-             style. The format of the string representation must match the specified format exactly or an exception is thrown.
-        
+            Converts the specified string representation of a date and time to its System.DateTime equivalent using the specified format, culture-specific format information, and style. The format of the string representation must match the specified format exactly or an exception is thrown.
         
             s: A string containing a date and time to convert.
             format: A format specifier that defines the required format of s.
             provider: An object that supplies culture-specific formatting information about s.
-            style: A bitwise combination of the enumeration values that provides additional information about s, about style elements that may be present in s, or about the conversion from s 
-             to a System.DateTime value. A typical value to specify is System.Globalization.DateTimeStyles.None.
-        
+            style: A bitwise combination of the enumeration values that provides additional information about s, about style elements that may be present in s, or about the conversion from s to a System.DateTime value. A typical value to specify is System.Globalization.DateTimeStyles.None.
             Returns: An object that is equivalent to the date and time contained in s, as specified by format, provider, and style.
         ParseExact(s: str, formats: Array[str], provider: IFormatProvider, style: DateTimeStyles) -> DateTime
         
-            Converts the specified string representation of a date and time to its System.DateTime equivalent using the specified array of formats, culture-specific format information, 
-             and style. The format of the string representation must match at least one of the specified formats exactly or an exception is thrown.
-        
+            Converts the specified string representation of a date and time to its System.DateTime equivalent using the specified array of formats, culture-specific format information, and style. The format of the string representation must match at least one of the specified formats exactly or an exception is thrown.
         
             s: A string containing one or more dates and times to convert.
             formats: An array of allowable formats of s.
@@ -11698,9 +11226,7 @@ class DateTime:
         """
         SpecifyKind(value: DateTime, kind: DateTimeKind) -> DateTime
         
-            Creates a new System.DateTime object that has the same number of ticks as the specified System.DateTime, but is designated as either local time, Coordinated Universal Time 
-             (UTC), or neither, as indicated by the specified System.DateTimeKind value.
-        
+            Creates a new System.DateTime object that has the same number of ticks as the specified System.DateTime, but is designated as either local time, Coordinated Universal Time (UTC), or neither, as indicated by the specified System.DateTimeKind value.
         
             value: A date and time.
             kind: One of the enumeration values that indicates whether the new object represents local time, UTC, or neither.
@@ -11757,9 +11283,7 @@ class DateTime:
         ToLocalTime(self: DateTime) -> DateTime
         
             Converts the value of the current System.DateTime object to local time.
-            Returns: An object whose System.DateTime.Kind property is System.DateTimeKind.Local, and whose value is the local time equivalent to the value of the current System.DateTime object, 
-             or System.DateTime.MaxValue if the converted value is too large to be represented by a System.DateTime object, or System.DateTime.MinValue if the converted value is too 
-             small to be represented as a System.DateTime object.
+            Returns: An object whose System.DateTime.Kind property is System.DateTimeKind.Local, and whose value is the local time equivalent to the value of the current System.DateTime object, or System.DateTime.MaxValue if the converted value is too large to be represented by a System.DateTime object, or System.DateTime.MinValue if the converted value is too small to be represented as a System.DateTime object.
         """
         pass
 
@@ -11841,9 +11365,7 @@ class DateTime:
         ToUniversalTime(self: DateTime) -> DateTime
         
             Converts the value of the current System.DateTime object to Coordinated Universal Time (UTC).
-            Returns: An object whose System.DateTime.Kind property is System.DateTimeKind.Utc, and whose value is the UTC equivalent to the value of the current System.DateTime object, or 
-             System.DateTime.MaxValue if the converted value is too large to be represented by a System.DateTime object, or System.DateTime.MinValue if the converted value is too small 
-             to be represented by a System.DateTime object.
+            Returns: An object whose System.DateTime.Kind property is System.DateTimeKind.Utc, and whose value is the UTC equivalent to the value of the current System.DateTime object, or System.DateTime.MaxValue if the converted value is too large to be represented by a System.DateTime object, or System.DateTime.MinValue if the converted value is too small to be represented by a System.DateTime object.
         """
         pass
 
@@ -11858,15 +11380,11 @@ class DateTime:
             Returns: true if the s parameter was converted successfully; otherwise, false.
         TryParse(s: str, provider: IFormatProvider, styles: DateTimeStyles) -> (bool, DateTime)
         
-            Converts the specified string representation of a date and time to its System.DateTime equivalent using the specified culture-specific format information and formatting 
-             style, and returns a value that indicates whether the conversion succeeded.
-        
+            Converts the specified string representation of a date and time to its System.DateTime equivalent using the specified culture-specific format information and formatting style, and returns a value that indicates whether the conversion succeeded.
         
             s: A string containing a date and time to convert.
             provider: An object that supplies culture-specific formatting information about s.
-            styles: A bitwise combination of enumeration values that defines how to interpret the parsed date in relation to the current time zone or the current date. A typical value to 
-             specify is System.Globalization.DateTimeStyles.None.
-        
+            styles: A bitwise combination of enumeration values that defines how to interpret the parsed date in relation to the current time zone or the current date. A typical value to specify is System.Globalization.DateTimeStyles.None.
             Returns: true if the s parameter was converted successfully; otherwise, false.
         """
         pass
@@ -11876,9 +11394,7 @@ class DateTime:
         """
         TryParseExact(s: str, format: str, provider: IFormatProvider, style: DateTimeStyles) -> (bool, DateTime)
         
-            Converts the specified string representation of a date and time to its System.DateTime equivalent using the specified format, culture-specific format information, and 
-             style. The format of the string representation must match the specified format exactly. The method returns a value that indicates whether the conversion succeeded.
-        
+            Converts the specified string representation of a date and time to its System.DateTime equivalent using the specified format, culture-specific format information, and style. The format of the string representation must match the specified format exactly. The method returns a value that indicates whether the conversion succeeded.
         
             s: A string containing a date and time to convert.
             format: The required format of s.
@@ -11887,10 +11403,7 @@ class DateTime:
             Returns: true if s was converted successfully; otherwise, false.
         TryParseExact(s: str, formats: Array[str], provider: IFormatProvider, style: DateTimeStyles) -> (bool, DateTime)
         
-            Converts the specified string representation of a date and time to its System.DateTime equivalent using the specified array of formats, culture-specific format information, 
-             and style. The format of the string representation must match at least one of the specified formats exactly. The method returns a value that indicates whether the 
-             conversion succeeded.
-        
+            Converts the specified string representation of a date and time to its System.DateTime equivalent using the specified array of formats, culture-specific format information, and style. The format of the string representation must match at least one of the specified formats exactly. The method returns a value that indicates whether the conversion succeeded.
         
             s: A string containing one or more dates and times to convert.
             formats: An array of allowable formats of s.
@@ -12078,11 +11591,12 @@ Get: Year(self: DateTime) -> int
     Today = None
     UtcNow = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DateTime()
 
 class DateTimeExtensions():
     # no doc
-    Instance = DateTimeExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def AddWorkday(date):
         """ AddWorkday(date: DateTime) -> DateTime """
@@ -12104,6 +11618,9 @@ class DateTimeExtensions():
         'IsWorkday',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DateTimeExtensions()
 
 class DateTimeKind:
     """
@@ -12111,8 +11628,6 @@ class DateTimeKind:
     
     enum DateTimeKind, values: Local (2), Unspecified (0), Utc (1)
     """
-    Instance = DateTimeKind
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -12151,6 +11666,9 @@ class DateTimeKind:
     Utc = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DateTimeKind()
 
 class DateTimeOffset:
     """
@@ -12163,8 +11681,6 @@ class DateTimeOffset:
     DateTimeOffset(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, offset: TimeSpan)
     DateTimeOffset(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, calendar: Calendar, offset: TimeSpan)
     """
-    Instance = DateTimeOffset
-    """hardcoded/returns an instance of the class"""
     def Add(self, timeSpan):
         """
         Add(self: DateTimeOffset, timeSpan: TimeSpan) -> DateTimeOffset
@@ -12205,8 +11721,7 @@ class DateTimeOffset:
             Adds a specified number of milliseconds to the current System.DateTimeOffset object.
         
             milliseconds: A number of whole and fractional milliseconds. The number can be negative or positive.
-            Returns: An object whose value is the sum of the date and time represented by the current System.DateTimeOffset object and the number of whole milliseconds represented by 
-             milliseconds.
+            Returns: An object whose value is the sum of the date and time represented by the current System.DateTimeOffset object and the number of whole milliseconds represented by milliseconds.
         """
         pass
 
@@ -12274,8 +11789,7 @@ class DateTimeOffset:
         
             first: The first object to compare.
             second: The second object to compare.
-            Returns: A signed integer that indicates whether the value of the first parameter is earlier than, later than, or the same time as the value of the second parameter, as the 
-             following table shows.Return valueMeaningLess than zerofirst is earlier than second.Zerofirst is equal to second.Greater than zerofirst is later than second.
+            Returns: A signed integer that indicates whether the value of the first parameter is earlier than, later than, or the same time as the value of the second parameter, as the following table shows.Return valueMeaningLess than zerofirst is earlier than second.Zerofirst is equal to second.Greater than zerofirst is later than second.
         """
         pass
 
@@ -12283,14 +11797,10 @@ class DateTimeOffset:
         """
         CompareTo(self: DateTimeOffset, other: DateTimeOffset) -> int
         
-            Compares the current System.DateTimeOffset object to a specified System.DateTimeOffset object and indicates whether the current object is earlier than, the same as, or 
-             later than the second System.DateTimeOffset object.
-        
+            Compares the current System.DateTimeOffset object to a specified System.DateTimeOffset object and indicates whether the current object is earlier than, the same as, or later than the second System.DateTimeOffset object.
         
             other: An object to compare with the current System.DateTimeOffset object.
-            Returns: A signed integer that indicates the relationship between the current System.DateTimeOffset object and other, as the following table shows.Return ValueDescriptionLess than 
-             zeroThe current System.DateTimeOffset object is earlier than other.ZeroThe current System.DateTimeOffset object is the same as other.Greater than zero.The current 
-             System.DateTimeOffset object is later than other.
+            Returns: A signed integer that indicates the relationship between the current System.DateTimeOffset object and other, as the following table shows.Return ValueDescriptionLess than zeroThe current System.DateTimeOffset object is earlier than other.ZeroThe current System.DateTimeOffset object is the same as other.Greater than zero.The current System.DateTimeOffset object is later than other.
         """
         pass
 
@@ -12378,9 +11888,7 @@ class DateTimeOffset:
             Returns: An object that is equivalent to the date and time that is contained in input, as specified by formatProvider.
         Parse(input: str, formatProvider: IFormatProvider, styles: DateTimeStyles) -> DateTimeOffset
         
-            Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified culture-specific format information and 
-             formatting style.
-        
+            Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified culture-specific format information and formatting style.
         
             input: A string that contains a date and time to convert.
             formatProvider: An object that provides culture-specific format information about input.
@@ -12394,9 +11902,7 @@ class DateTimeOffset:
         """
         ParseExact(input: str, format: str, formatProvider: IFormatProvider) -> DateTimeOffset
         
-            Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified format and culture-specific format information. 
-             The format of the string representation must match the specified format exactly.
-        
+            Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified format and culture-specific format information. The format of the string representation must match the specified format exactly.
         
             input: A string that contains a date and time to convert.
             format: A format specifier that defines the expected format of input.
@@ -12404,9 +11910,7 @@ class DateTimeOffset:
             Returns: An object that is equivalent to the date and time that is contained in input as specified by format and formatProvider.
         ParseExact(input: str, format: str, formatProvider: IFormatProvider, styles: DateTimeStyles) -> DateTimeOffset
         
-            Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified format, culture-specific format information, and 
-             style. The format of the string representation must match the specified format exactly.
-        
+            Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified format, culture-specific format information, and style. The format of the string representation must match the specified format exactly.
         
             input: A string that contains a date and time to convert.
             format: A format specifier that defines the expected format of input.
@@ -12415,9 +11919,7 @@ class DateTimeOffset:
             Returns: An object that is equivalent to the date and time that is contained in the input parameter, as specified by the format, formatProvider, and styles parameters.
         ParseExact(input: str, formats: Array[str], formatProvider: IFormatProvider, styles: DateTimeStyles) -> DateTimeOffset
         
-            Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified formats, culture-specific format information, 
-             and style. The format of the string representation must match one of the specified formats exactly.
-        
+            Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified formats, culture-specific format information, and style. The format of the string representation must match one of the specified formats exactly.
         
             input: A string that contains a date and time to convert.
             formats: An array of format specifiers that define the expected formats of input.
@@ -12469,8 +11971,7 @@ class DateTimeOffset:
             Converts the value of the current System.DateTimeOffset object to the date and time specified by an offset value.
         
             offset: The offset to convert the System.DateTimeOffset value to.
-            Returns: An object that is equal to the original System.DateTimeOffset object (that is, their System.DateTimeOffset.ToUniversalTime methods return identical points in time) but 
-             whose System.DateTimeOffset.Offset property is set to offset.
+            Returns: An object that is equal to the original System.DateTimeOffset object (that is, their System.DateTimeOffset.ToUniversalTime methods return identical points in time) but whose System.DateTimeOffset.Offset property is set to offset.
         """
         pass
 
@@ -12524,17 +12025,13 @@ class DateTimeOffset:
         """
         TryParse(input: str) -> (bool, DateTimeOffset)
         
-            Tries to converts a specified string representation of a date and time to its System.DateTimeOffset equivalent, and returns a value that indicates whether the conversion 
-             succeeded.
-        
+            Tries to converts a specified string representation of a date and time to its System.DateTimeOffset equivalent, and returns a value that indicates whether the conversion succeeded.
         
             input: A string that contains a date and time to convert.
             Returns: true if the input parameter is successfully converted; otherwise, false.
         TryParse(input: str, formatProvider: IFormatProvider, styles: DateTimeStyles) -> (bool, DateTimeOffset)
         
-            Tries to convert a specified string representation of a date and time to its System.DateTimeOffset equivalent, and returns a value that indicates whether the conversion 
-             succeeded.
-        
+            Tries to convert a specified string representation of a date and time to its System.DateTimeOffset equivalent, and returns a value that indicates whether the conversion succeeded.
         
             input: A string that contains a date and time to convert.
             formatProvider: An object that provides culture-specific formatting information about input.
@@ -12548,9 +12045,7 @@ class DateTimeOffset:
         """
         TryParseExact(input: str, format: str, formatProvider: IFormatProvider, styles: DateTimeStyles) -> (bool, DateTimeOffset)
         
-            Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified format, culture-specific format information, and 
-             style. The format of the string representation must match the specified format exactly.
-        
+            Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified format, culture-specific format information, and style. The format of the string representation must match the specified format exactly.
         
             input: A string that contains a date and time to convert.
             format: A format specifier that defines the required format of input.
@@ -12559,9 +12054,7 @@ class DateTimeOffset:
             Returns: true if the input parameter is successfully converted; otherwise, false.
         TryParseExact(input: str, formats: Array[str], formatProvider: IFormatProvider, styles: DateTimeStyles) -> (bool, DateTimeOffset)
         
-            Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified array of formats, culture-specific format 
-             information, and style. The format of the string representation must match one of the specified formats exactly.
-        
+            Converts the specified string representation of a date and time to its System.DateTimeOffset equivalent using the specified array of formats, culture-specific format information, and style. The format of the string representation must match one of the specified formats exactly.
         
             input: A string that contains a date and time to convert.
             formats: An array that defines the expected formats of input.
@@ -12771,6 +12264,9 @@ Get: Year(self: DateTimeOffset) -> int
     Now = None
     UtcNow = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DateTimeOffset()
 
 class DayOfWeek:
     """
@@ -12778,8 +12274,6 @@ class DayOfWeek:
     
     enum DayOfWeek, values: Friday (5), Monday (1), Saturday (6), Sunday (0), Thursday (4), Tuesday (2), Wednesday (3)
     """
-    Instance = DayOfWeek
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -12822,11 +12316,12 @@ class DayOfWeek:
     value__ = None
     Wednesday = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DayOfWeek()
 
 class DBNull:
     """ Represents a nonexistent value. This class cannot be inherited. """
-    Instance = DBNull
-    """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: DBNull, info: SerializationInfo, context: StreamingContext)
@@ -12881,6 +12376,9 @@ class DBNull:
 
     Value = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DBNull()
 
 class Decimal:
     """
@@ -12895,8 +12393,6 @@ class Decimal:
     Decimal(bits: Array[int])
     Decimal(lo: int, mid: int, hi: int, isNegative: bool, scale: Byte)
     """
-    Instance = Decimal
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Add(d1, d2):
         """
@@ -12931,8 +12427,7 @@ class Decimal:
         
             d1: The first value to compare.
             d2: The second value to compare.
-            Returns: A signed number indicating the relative values of d1 and d2.Return Value Meaning Less than zero d1 is less than d2. Zero d1 and d2 are equal. Greater than zero d1 is 
-             greater than d2.
+            Returns: A signed number indicating the relative values of d1 and d2.Return Value Meaning Less than zero d1 is less than d2. Zero d1 and d2 are equal. Greater than zero d1 is greater than d2.
         """
         pass
 
@@ -12943,16 +12438,13 @@ class Decimal:
             Compares this instance to a specified System.Object.
         
             value: The object to compare with this instance, or null.
-            Returns: A signed number indicating the relative values of this instance and value.Return Value Meaning Less than zero This instance is less than value. Zero This instance is equal 
-             to value. Greater than zero This instance is greater than value.-or- value is null.
-        
+            Returns: A signed number indicating the relative values of this instance and value.Return Value Meaning Less than zero This instance is less than value. Zero This instance is equal to value. Greater than zero This instance is greater than value.-or- value is null.
         CompareTo(self: Decimal, value: Decimal) -> int
         
             Compares this instance to a specified System.Decimal object.
         
             value: The object to compare with this instance.
-            Returns: A signed number indicating the relative values of this instance and value.Return Value Meaning Less than zero This instance is less than value. Zero This instance is equal 
-             to value. Greater than zero This instance is greater than value.
+            Returns: A signed number indicating the relative values of this instance and value.Return Value Meaning Less than zero This instance is less than value. Zero This instance is equal to value. Greater than zero This instance is greater than value.
         """
         pass
 
@@ -13001,8 +12493,7 @@ class Decimal:
             Rounds a specified System.Decimal number to the closest integer toward negative infinity.
         
             d: The value to round.
-            Returns: If d has a fractional part, the next whole System.Decimal number toward negative infinity that is less than d.-or- If d doesn't have a fractional part, d is returned 
-             unchanged.
+            Returns: If d has a fractional part, the next whole System.Decimal number toward negative infinity that is less than d.-or- If d doesn't have a fractional part, d is returned unchanged.
         """
         pass
 
@@ -13087,9 +12578,7 @@ class Decimal:
             Converts the string representation of a number in a specified style to its System.Decimal equivalent.
         
             s: The string representation of the number to convert.
-            style: A bitwise combination of System.Globalization.NumberStyles values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Number.
-        
+            style: A bitwise combination of System.Globalization.NumberStyles values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Number.
             Returns: The System.Decimal number equivalent to the number contained in s as specified by style.
         Parse(s: str, provider: IFormatProvider) -> Decimal
         
@@ -13103,9 +12592,7 @@ class Decimal:
             Converts the string representation of a number to its System.Decimal equivalent using the specified style and culture-specific format.
         
             s: The string representation of the number to convert.
-            style: A bitwise combination of System.Globalization.NumberStyles values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Number.
-        
+            style: A bitwise combination of System.Globalization.NumberStyles values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Number.
             provider: An System.IFormatProvider object that supplies culture-specific information about the format of s.
             Returns: The System.Decimal number equivalent to the number contained in s as specified by style and provider.
         """
@@ -13146,9 +12633,7 @@ class Decimal:
         
             d: A decimal number to round.
             mode: A value that specifies how to round d if it is midway between two other numbers.
-            Returns: The integer that is nearest to the d parameter. If d is halfway between two numbers, one of which is even and the other odd, the mode parameter determines which of the two 
-             numbers is returned.
-        
+            Returns: The integer that is nearest to the d parameter. If d is halfway between two numbers, one of which is even and the other odd, the mode parameter determines which of the two numbers is returned.
         Round(d: Decimal, decimals: int, mode: MidpointRounding) -> Decimal
         
             Rounds a decimal value to a specified precision. A parameter specifies how to round the value if it is midway between two other numbers.
@@ -13156,8 +12641,7 @@ class Decimal:
             d: A decimal number to round.
             decimals: The number of significant decimal places (precision) in the return value.
             mode: A value that specifies how to round d if it is midway between two other numbers.
-            Returns: The number that is nearest to the d parameter with a precision equal to the decimals parameter. If d is halfway between two numbers, one of which is even and the other odd, 
-             the mode parameter determines which of the two numbers is returned. If the precision of d is less than decimals, d is returned unchanged.
+            Returns: The number that is nearest to the d parameter with a precision equal to the decimals parameter. If d is halfway between two numbers, one of which is even and the other odd, the mode parameter determines which of the two numbers is returned. If the precision of d is less than decimals, d is returned unchanged.
         """
         pass
 
@@ -13357,9 +12841,7 @@ class Decimal:
             Returns: true if s was converted successfully; otherwise, false.
         TryParse(s: str, style: NumberStyles, provider: IFormatProvider) -> (bool, Decimal)
         
-            Converts the string representation of a number to its System.Decimal equivalent using the specified style and culture-specific format. A return value indicates whether the 
-             conversion succeeded or failed.
-        
+            Converts the string representation of a number to its System.Decimal equivalent using the specified style and culture-specific format. A return value indicates whether the conversion succeeded or failed.
         
             s: The string representation of the number to convert.
             style: A bitwise combination of enumeration values that indicates the permitted format of s. A typical value to specify is System.Globalization.NumberStyles.Number.
@@ -13531,6 +13013,9 @@ class Decimal:
     One = None
     Zero = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Decimal()
 
 class DivideByZeroException(ArithmeticException):
     """
@@ -13540,8 +13025,6 @@ class DivideByZeroException(ArithmeticException):
     DivideByZeroException(message: str)
     DivideByZeroException(message: str, innerException: Exception)
     """
-    Instance = DivideByZeroException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -13564,6 +13047,9 @@ class DivideByZeroException(ArithmeticException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DivideByZeroException()
 
 class TypeLoadException(SystemException):
     """
@@ -13573,8 +13059,6 @@ class TypeLoadException(SystemException):
     TypeLoadException(message: str)
     TypeLoadException(message: str, inner: Exception)
     """
-    Instance = TypeLoadException
-    """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: TypeLoadException, info: SerializationInfo, context: StreamingContext)
@@ -13622,6 +13106,9 @@ Get: TypeName(self: TypeLoadException) -> str
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TypeLoadException()
 
 class DllNotFoundException(TypeLoadException):
     """
@@ -13631,8 +13118,6 @@ class DllNotFoundException(TypeLoadException):
     DllNotFoundException(message: str)
     DllNotFoundException(message: str, inner: Exception)
     """
-    Instance = DllNotFoundException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -13655,11 +13140,12 @@ class DllNotFoundException(TypeLoadException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DllNotFoundException()
 
 class Double():
     """ Represents a double-precision floating-point number. """
-    Instance = Double
-    """hardcoded/returns an instance of the class"""
     def as_integer_ratio(self, *args): #cannot find CLR method
         """ as_integer_ratio(self: float) -> tuple """
         pass
@@ -13831,6 +13317,9 @@ class Double():
     imag = None
     real = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Double()
 
 class DuplicateWaitObjectException(ArgumentException):
     """
@@ -13841,8 +13330,6 @@ class DuplicateWaitObjectException(ArgumentException):
     DuplicateWaitObjectException(parameterName: str, message: str)
     DuplicateWaitObjectException(message: str, innerException: Exception)
     """
-    Instance = DuplicateWaitObjectException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -13866,6 +13353,9 @@ class DuplicateWaitObjectException(ArgumentException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DuplicateWaitObjectException()
 
 class EntryPointNotFoundException(TypeLoadException):
     """
@@ -13875,8 +13365,6 @@ class EntryPointNotFoundException(TypeLoadException):
     EntryPointNotFoundException(message: str)
     EntryPointNotFoundException(message: str, inner: Exception)
     """
-    Instance = EntryPointNotFoundException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -13899,11 +13387,12 @@ class EntryPointNotFoundException(TypeLoadException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EntryPointNotFoundException()
 
 class Environment():
     """ Provides information about, and means to manipulate, the current environment and platform. This class cannot be inherited. """
-    Instance = Environment
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Exit(exitCode):
         """
@@ -13934,9 +13423,7 @@ class Environment():
         
             message: A message that explains why the process was terminated, or null if no explanation is provided.
         FailFast(message: str, exception: Exception)
-            Immediately terminates a process after writing a message to the Windows Application event log, and then includes the message and exception information in error reporting to 
-             Microsoft.
-        
+            Immediately terminates a process after writing a message to the Windows Application event log, and then includes the message and exception information in error reporting to Microsoft.
         
             message: A message that explains why the process was terminated, or null if no explanation is provided.
             exception: An exception that represents the error that caused the termination. This is typically the exception in a catch block.
@@ -13949,8 +13436,7 @@ class Environment():
         GetCommandLineArgs() -> Array[str]
         
             Returns a string array containing the command-line arguments for the current process.
-            Returns: An array of string where each element contains a command-line argument. The first element is the executable file name, and the following zero or more elements contain the 
-             remaining command-line arguments.
+            Returns: An array of string where each element contains a command-line argument. The first element is the executable file name, and the following zero or more elements contain the remaining command-line arguments.
         """
         pass
 
@@ -13985,8 +13471,7 @@ class Environment():
             Retrieves all environment variable names and their values from the current process, or from the Windows operating system registry key for the current user or local machine.
         
             target: One of the System.EnvironmentVariableTarget values.
-            Returns: A dictionary that contains all environment variable names and their values from the source specified by the target parameter; otherwise, an empty dictionary if no 
-             environment variables are found.
+            Returns: A dictionary that contains all environment variable names and their values from the source specified by the target parameter; otherwise, an empty dictionary if no environment variables are found.
         """
         pass
 
@@ -14004,8 +13489,7 @@ class Environment():
         GetLogicalDrives() -> Array[str]
         
             Returns an array of string containing the names of the logical drives on the current computer.
-            Returns: An array of strings where each element contains the name of a logical drive. For example, if the computer's hard drive is the first logical drive, the first element 
-             returned is "C:\".
+            Returns: An array of strings where each element contains the name of a logical drive. For example, if the computer's hard drive is the first logical drive, the first element returned is "C:\".
         """
         pass
 
@@ -14018,9 +13502,7 @@ class Environment():
             variable: The name of an environment variable.
             value: A value to assign to variable.
         SetEnvironmentVariable(variable: str, value: str, target: EnvironmentVariableTarget)
-            Creates, modifies, or deletes an environment variable stored in the current process or in the Windows operating system registry key reserved for the current user or local 
-             machine.
-        
+            Creates, modifies, or deletes an environment variable stored in the current process or in the Windows operating system registry key reserved for the current user or local machine.
         
             variable: The name of an environment variable.
             value: A value to assign to variable.
@@ -14044,7 +13526,7 @@ class Environment():
     StackTrace = '   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)\r\n   at System.Environment.get_StackTrace()\r\n   at Microsoft.Scripting.Interpreter.FuncCallInstruction`1.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.Interpreter.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.LightLambda.Run3[T0,T1,T2,TRet](T0 arg0, T1 arg1, T2 arg2)\r\n   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)\r\n   at Microsoft.Scripting.Interpreter.FuncCallInstruction`5.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.Interpreter.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.LightLambda.Run3[T0,T1,T2,TRet](T0 arg0, T1 arg1, T2 arg2)\r\n   at IronPython.Runtime.Types.BuiltinFunction.Call0(CodeContext context, SiteLocalStorage`1 storage, Object instance)\r\n   at IronPython.Runtime.Types.ReflectedProperty.CallGetter(CodeContext context, PythonType owner, SiteLocalStorage`1 storage, Object instance)\r\n   at IronPython.Runtime.Types.ReflectedProperty.TryGetValue(CodeContext context, Object instance, PythonType owner, Object& value)\r\n   at IronPython.Runtime.Binding.MetaPythonType.FastGetBinderHelper.SlotAccessDelegate.Target(CodeContext context, Object self, Object& result)\r\n   at IronPython.Runtime.Types.TypeGetBase.RunDelegates(Object self, CodeContext context)\r\n   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)\r\n   at IronPython.Runtime.Types.PythonType.TryGetBoundAttr(CodeContext context, Object o, String name, Object& ret)\r\n   at IronPython.Runtime.Operations.PythonOps.GetBoundAttr(CodeContext context, Object o, String name)\r\n   at redo_class$450(Closure , PythonFunction , Object , Object , Object , Object , Object , Object , Object , Object )\r\n   at CallSite.Target(Closure , CallSite , CodeContext , Object , Object , Object , Object , Object , Object , Object , Object )\r\n   at redo$438(Closure , PythonFunction , Object , Object , Object )\r\n   at System.Dynamic.UpdateDelegates.UpdateAndExecute5[T0,T1,T2,T3,T4,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4)\r\n   at IronPython.Runtime.Method.MethodBinding`2.SelfTarget(CallSite site, CodeContext context, Object target, T0 arg0, T1 arg1)\r\n   at redo_module$435(Closure , PythonFunction , Object , Object , Object , Object )\r\n   at process_one$428(Closure , PythonFunction , Object , Object , Object , Object , Object )\r\n   at create_stubs$427(Closure , PythonFunction , Object , Object )\r\n   at lambda_method(Closure , Object[] , StrongBox`1[] , InterpretedFrame )\r\n   at Microsoft.Scripting.Interpreter.Interpreter.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.LightLambda.Run5[T0,T1,T2,T3,T4,TRet](T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4)\r\n   at Microsoft.Scripting.Interpreter.FuncCallInstruction`7.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.Interpreter.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.LightLambda.Run7[T0,T1,T2,T3,T4,T5,T6,TRet](T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)\r\n   at Microsoft.Scripting.Interpreter.DynamicInstruction`7.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.Interpreter.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.LightLambda.Run2[T0,T1,TRet](T0 arg0, T1 arg1)\r\n   at IronPython.Runtime.Operations.PythonOps.QualifiedExec(CodeContext context, Object code, PythonDictionary globals, Object locals)\r\n   at Microsoft.Scripting.Interpreter.ActionCallInstruction`4.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.Interpreter.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.LightLambda.Run8[T0,T1,T2,T3,T4,T5,T6,T7,TRet](T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)\r\n   at IronPython.Compiler.PythonCallTargets.OriginalCallTarget7(PythonFunction function, Object arg0, Object arg1, Object arg2, Object arg3, Object arg4, Object arg5, Object arg6)\r\n   at System.Dynamic.UpdateDelegates.UpdateAndExecute9[T0,T1,T2,T3,T4,T5,T6,T7,T8,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)\r\n   at Microsoft.Scripting.Interpreter.DynamicInstruction`10.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.Interpreter.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.LightLambda.Run7[T0,T1,T2,T3,T4,T5,T6,TRet](T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)\r\n   at IronPython.Compiler.PythonCallTargets.OriginalCallTarget6(PythonFunction function, Object arg0, Object arg1, Object arg2, Object arg3, Object arg4, Object arg5)\r\n   at System.Dynamic.UpdateDelegates.UpdateAndExecute8[T0,T1,T2,T3,T4,T5,T6,T7,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)\r\n   at IronPython.Compiler.Ast.CallExpression.Invoke6Instruction.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.Interpreter.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.LightLambda.Run5[T0,T1,T2,T3,T4,TRet](T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4)\r\n   at IronPython.Compiler.PythonCallTargets.OriginalCallTarget4(PythonFunction function, Object arg0, Object arg1, Object arg2, Object arg3)\r\n   at Microsoft.Scripting.Interpreter.FuncCallInstruction`7.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.Interpreter.Run(InterpretedFrame frame)\r\n   at Microsoft.Scripting.Interpreter.LightLambda.Run5[T0,T1,T2,T3,T4,TRet](T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4)\r\n   at System.Dynamic.UpdateDelegates.UpdateAndExecute4[T0,T1,T2,T3,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3)\r\n   at IronPython.Runtime.PythonContext.CallWithKeywords(Object func, Object[] args, IDictionary`2 dict)\r\n   at IronPython.Runtime.Operations.PythonCalls.CallWithKeywordArgs(CodeContext context, Object func, Object[] args, String[] names)\r\n   at IronPython.Hosting.PythonCommandLine.Run()\r\n   at Microsoft.Scripting.Hosting.Shell.CommandLine.Run(ScriptEngine engine, IConsole console, ConsoleOptions options)\r\n   at Microsoft.Scripting.Hosting.Shell.ConsoleHost.RunCommandLine()\r\n   at Microsoft.Scripting.Hosting.Shell.ConsoleHost.ExecuteInternal()\r\n   at Microsoft.Scripting.Hosting.Shell.ConsoleHost.Run(String[] args)\r\n   at PythonConsoleHost.Main(String[] args)'
     SystemDirectory = 'C:\\windows\\system32'
     SystemPageSize = 4096
-    TickCount = -849630515
+    TickCount = -414100046
     UserDomainName = 'TRANCON'
     UserInteractive = True
     UserName = 'k.pawiroredjo'
@@ -14064,6 +13546,9 @@ class Environment():
         'SpecialFolderOption',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Environment()
 
 class EnvironmentVariableTarget:
     """
@@ -14071,8 +13556,6 @@ class EnvironmentVariableTarget:
     
     enum EnvironmentVariableTarget, values: Machine (2), Process (0), User (1)
     """
-    Instance = EnvironmentVariableTarget
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -14111,6 +13594,9 @@ class EnvironmentVariableTarget:
     User = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EnvironmentVariableTarget()
 
 class ExecutionEngineException(SystemException):
     """
@@ -14120,8 +13606,6 @@ class ExecutionEngineException(SystemException):
     ExecutionEngineException(message: str)
     ExecutionEngineException(message: str, innerException: Exception)
     """
-    Instance = ExecutionEngineException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -14143,6 +13627,9 @@ class ExecutionEngineException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ExecutionEngineException()
 
 class MemberAccessException(SystemException):
     """
@@ -14152,8 +13639,6 @@ class MemberAccessException(SystemException):
     MemberAccessException(message: str)
     MemberAccessException(message: str, inner: Exception)
     """
-    Instance = MemberAccessException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -14176,6 +13661,9 @@ class MemberAccessException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MemberAccessException()
 
 class FieldAccessException(MemberAccessException):
     """
@@ -14185,8 +13673,6 @@ class FieldAccessException(MemberAccessException):
     FieldAccessException(message: str)
     FieldAccessException(message: str, inner: Exception)
     """
-    Instance = FieldAccessException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -14209,11 +13695,12 @@ class FieldAccessException(MemberAccessException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FieldAccessException()
 
 class UriParser():
     """ Parses a new URI scheme. This is an abstract class. """
-    Instance = UriParser
-    """hardcoded/returns an instance of the class"""
     def GetComponents(self, *args): #cannot find CLR method
         """
         GetComponents(self: UriParser, uri: Uri, components: UriComponents, format: UriFormat) -> str
@@ -14315,6 +13802,9 @@ class UriParser():
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UriParser()
 
 class FileStyleUriParser(UriParser):
     """
@@ -14322,8 +13812,9 @@ class FileStyleUriParser(UriParser):
     
     FileStyleUriParser()
     """
-    Instance = FileStyleUriParser
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FileStyleUriParser()
 
 class FlagsAttribute:
     """
@@ -14331,8 +13822,6 @@ class FlagsAttribute:
     
     FlagsAttribute()
     """
-    Instance = FlagsAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -14340,6 +13829,9 @@ class FlagsAttribute:
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FlagsAttribute()
 
 class FormatException(SystemException):
     """
@@ -14349,8 +13841,6 @@ class FormatException(SystemException):
     FormatException(message: str)
     FormatException(message: str, innerException: Exception)
     """
-    Instance = FormatException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -14373,11 +13863,12 @@ class FormatException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FormatException()
 
 class FormattableString:
     # no doc
-    Instance = FormattableString
-    """hardcoded/returns an instance of the class"""
     def GetArgument(self, index):
         """ GetArgument(self: FormattableString, index: int) -> object """
         pass
@@ -14424,6 +13915,9 @@ class FormattableString:
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FormattableString()
 
 class FtpStyleUriParser(UriParser):
     """
@@ -14431,13 +13925,12 @@ class FtpStyleUriParser(UriParser):
     
     FtpStyleUriParser()
     """
-    Instance = FtpStyleUriParser
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FtpStyleUriParser()
 
 class GC():
     """ Controls the system garbage collector, a service that automatically reclaims unused memory. """
-    Instance = GC
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def AddMemoryPressure(bytesAllocated):
         """
@@ -14514,9 +14007,7 @@ class GC():
         """
         GetTotalMemory(forceFullCollection: bool) -> Int64
         
-            Retrieves the number of bytes currently thought to be allocated. A parameter indicates whether this method can wait a short interval before returning, to allow the system 
-             to collect garbage and finalize objects.
-        
+            Retrieves the number of bytes currently thought to be allocated. A parameter indicates whether this method can wait a short interval before returning, to allow the system to collect garbage and finalize objects.
         
             forceFullCollection: true to indicate that this method can wait for garbage collection to occur before returning; otherwise, false.
             Returns: A number that is the best available approximation of the number of bytes currently allocated in managed memory.
@@ -14593,9 +14084,7 @@ class GC():
             Returns: The status of the registered garbage collection notification.
         WaitForFullGCApproach(millisecondsTimeout: int) -> GCNotificationStatus
         
-            Returns, in a specified time-out period, the status of a registered notification for determining whether a full garbage collection by the common language runtime is 
-             imminent.
-        
+            Returns, in a specified time-out period, the status of a registered notification for determining whether a full garbage collection by the common language runtime is imminent.
         
             millisecondsTimeout: The length of time to wait before a notification status can be obtained. Specify -1 to wait indefinitely.
             Returns: The status of the registered garbage collection notification.
@@ -14611,9 +14100,7 @@ class GC():
             Returns: The status of the registered garbage collection notification.
         WaitForFullGCComplete(millisecondsTimeout: int) -> GCNotificationStatus
         
-            Returns, in a specified time-out period, the status of a registered notification for determining whether a full garbage collection by common language the runtime has 
-             completed.
-        
+            Returns, in a specified time-out period, the status of a registered notification for determining whether a full garbage collection by common language the runtime has completed.
         
             millisecondsTimeout: The length of time to wait before a notification status can be obtained. Specify -1 to wait indefinitely.
             Returns: The status of the registered garbage collection notification.
@@ -14648,6 +14135,9 @@ class GC():
         'WaitForPendingFinalizers',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GC()
 
 class GCCollectionMode:
     """
@@ -14655,8 +14145,6 @@ class GCCollectionMode:
     
     enum GCCollectionMode, values: Default (0), Forced (1), Optimized (2)
     """
-    Instance = GCCollectionMode
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -14695,6 +14183,9 @@ class GCCollectionMode:
     Optimized = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GCCollectionMode()
 
 class GCNotificationStatus:
     """
@@ -14702,8 +14193,6 @@ class GCNotificationStatus:
     
     enum GCNotificationStatus, values: Canceled (2), Failed (1), NotApplicable (4), Succeeded (0), Timeout (3)
     """
-    Instance = GCNotificationStatus
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -14744,6 +14233,9 @@ class GCNotificationStatus:
     Timeout = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GCNotificationStatus()
 
 class GenericUriParser(UriParser):
     """
@@ -14751,13 +14243,14 @@ class GenericUriParser(UriParser):
     
     GenericUriParser(options: GenericUriParserOptions)
     """
-    Instance = GenericUriParser
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, options):
         """ __new__(cls: type, options: GenericUriParserOptions) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GenericUriParser()
 
 class GenericUriParserOptions:
     """
@@ -14765,8 +14258,6 @@ class GenericUriParserOptions:
     
     enum (flags) GenericUriParserOptions, values: AllowEmptyAuthority (2), Default (0), DontCompressPath (128), DontConvertPathBackslashes (64), DontUnescapePathDotsAndSlashes (256), GenericAuthority (1), Idn (512), IriParsing (1024), NoFragment (32), NoPort (8), NoQuery (16), NoUserInfo (4)
     """
-    Instance = GenericUriParserOptions
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -14814,6 +14305,9 @@ class GenericUriParserOptions:
     NoUserInfo = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GenericUriParserOptions()
 
 class GopherStyleUriParser(UriParser):
     """
@@ -14821,8 +14315,9 @@ class GopherStyleUriParser(UriParser):
     
     GopherStyleUriParser()
     """
-    Instance = GopherStyleUriParser
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GopherStyleUriParser()
 
 class Guid:
     """
@@ -14834,8 +14329,6 @@ class Guid:
     Guid(a: int, b: Int16, c: Int16, d: Byte, e: Byte, f: Byte, g: Byte, h: Byte, i: Byte, j: Byte, k: Byte)
     Guid(g: str)
     """
-    Instance = Guid
-    """hardcoded/returns an instance of the class"""
     def CompareTo(self, value):
         """
         CompareTo(self: Guid, value: object) -> int
@@ -14843,16 +14336,13 @@ class Guid:
             Compares this instance to a specified object and returns an indication of their relative values.
         
             value: An object to compare, or null.
-            Returns: A signed number indicating the relative values of this instance and value.Return value Description A negative integer This instance is less than value. Zero This instance 
-             is equal to value. A positive integer This instance is greater than value, or value is null.
-        
+            Returns: A signed number indicating the relative values of this instance and value.Return value Description A negative integer This instance is less than value. Zero This instance is equal to value. A positive integer This instance is greater than value, or value is null.
         CompareTo(self: Guid, value: Guid) -> int
         
             Compares this instance to a specified System.Guid object and returns an indication of their relative values.
         
             value: An object to compare to this instance.
-            Returns: A signed number indicating the relative values of this instance and value.Return value Description A negative integer This instance is less than value. Zero This instance 
-             is equal to value. A positive integer This instance is greater than value.
+            Returns: A signed number indicating the relative values of this instance and value.Return value Description A negative integer This instance is less than value. Zero This instance is equal to value. A positive integer This instance is greater than value.
         """
         pass
 
@@ -14931,27 +14421,18 @@ class Guid:
         ToString(self: Guid) -> str
         
             Returns a string representation of the value of this instance in registry format.
-            Returns: The value of this System.Guid, formatted using the "D" format specifier as follows: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx where the value of the GUID is represented as a 
-             series of lowercase hexadecimal digits in groups of 8, 4, 4, 4, and 12 digits and separated by hyphens. An example of a return value is 
-             "382c74c3-721d-4f34-80e5-57657b6cbc27".
-        
+            Returns: The value of this System.Guid, formatted using the "D" format specifier as follows: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx where the value of the GUID is represented as a series of lowercase hexadecimal digits in groups of 8, 4, 4, 4, and 12 digits and separated by hyphens. An example of a return value is "382c74c3-721d-4f34-80e5-57657b6cbc27".
         ToString(self: Guid, format: str) -> str
         
             Returns a string representation of the value of this System.Guid instance, according to the provided format specifier.
         
-            format: A single format specifier that indicates how to format the value of this System.Guid. The format parameter can be "N", "D", "B", "P", or "X". If format is null or an empty 
-             string (""), "D" is used.
-        
+            format: A single format specifier that indicates how to format the value of this System.Guid. The format parameter can be "N", "D", "B", "P", or "X". If format is null or an empty string (""), "D" is used.
             Returns: The value of this System.Guid, represented as a series of lowercase hexadecimal digits in the specified format.
         ToString(self: Guid, format: str, provider: IFormatProvider) -> str
         
-            Returns a string representation of the value of this instance of the System.Guid structure, according to the provided format specifier and culture-specific format 
-             information.
+            Returns a string representation of the value of this instance of the System.Guid structure, according to the provided format specifier and culture-specific format information.
         
-        
-            format: A single format specifier that indicates how to format the value of this System.Guid. The format parameter can be "N", "D", "B", "P", or "X". If format is null or an empty 
-             string (""), "D" is used.
-        
+            format: A single format specifier that indicates how to format the value of this System.Guid. The format parameter can be "N", "D", "B", "P", or "X". If format is null or an empty string (""), "D" is used.
             provider: (Reserved) An object that supplies culture-specific formatting services.
             Returns: The value of this System.Guid, represented as a series of lowercase hexadecimal digits in the specified format.
         """
@@ -15034,6 +14515,9 @@ class Guid:
 
     Empty = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Guid()
 
 class HttpStyleUriParser(UriParser):
     """
@@ -15041,13 +14525,12 @@ class HttpStyleUriParser(UriParser):
     
     HttpStyleUriParser()
     """
-    Instance = HttpStyleUriParser
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpStyleUriParser()
 
 class IAppDomainSetup:
     """ Represents assembly binding information that can be added to an instance of System.AppDomain. """
-    Instance = IAppDomainSetup
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -15133,11 +14616,12 @@ Set: ShadowCopyFiles(self: IAppDomainSetup) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IAppDomainSetup()
 
 class IAsyncResult:
     """ Represents the status of an asynchronous operation. """
-    Instance = IAsyncResult
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -15171,11 +14655,12 @@ Get: IsCompleted(self: IAsyncResult) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IAsyncResult()
 
 class ICustomFormatter:
     """ Defines a method that supports custom formatting of the value of an object. """
-    Instance = ICustomFormatter
-    """hardcoded/returns an instance of the class"""
     def Format(self, format, arg, formatProvider):
         """
         Format(self: ICustomFormatter, format: str, arg: object, formatProvider: IFormatProvider) -> str
@@ -15193,11 +14678,12 @@ class ICustomFormatter:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ICustomFormatter()
 
 class IEquatable:
     # no doc
-    Instance = IEquatable
-    """hardcoded/returns an instance of the class"""
     def Equals(self, other):
         """
         Equals(self: IEquatable[T], other: T) -> bool
@@ -15217,11 +14703,12 @@ class IEquatable:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IEquatable()
 
 class IFormatProvider:
     """ Provides a mechanism for retrieving an object to control formatting. """
-    Instance = IFormatProvider
-    """hardcoded/returns an instance of the class"""
     def GetFormat(self, formatType):
         """
         GetFormat(self: IFormatProvider, formatType: Type) -> object
@@ -15237,6 +14724,9 @@ class IFormatProvider:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IFormatProvider()
 
 class IndexOutOfRangeException(SystemException):
     """
@@ -15246,8 +14736,6 @@ class IndexOutOfRangeException(SystemException):
     IndexOutOfRangeException(message: str)
     IndexOutOfRangeException(message: str, innerException: Exception)
     """
-    Instance = IndexOutOfRangeException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -15269,6 +14757,9 @@ class IndexOutOfRangeException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IndexOutOfRangeException()
 
 class InsufficientExecutionStackException(SystemException):
     """
@@ -15278,8 +14769,6 @@ class InsufficientExecutionStackException(SystemException):
     InsufficientExecutionStackException(message: str)
     InsufficientExecutionStackException(message: str, innerException: Exception)
     """
-    Instance = InsufficientExecutionStackException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -15301,6 +14790,9 @@ class InsufficientExecutionStackException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return InsufficientExecutionStackException()
 
 class OutOfMemoryException(SystemException):
     """
@@ -15310,8 +14802,6 @@ class OutOfMemoryException(SystemException):
     OutOfMemoryException(message: str)
     OutOfMemoryException(message: str, innerException: Exception)
     """
-    Instance = OutOfMemoryException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -15334,6 +14824,9 @@ class OutOfMemoryException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OutOfMemoryException()
 
 class InsufficientMemoryException(OutOfMemoryException):
     """
@@ -15343,8 +14836,6 @@ class InsufficientMemoryException(OutOfMemoryException):
     InsufficientMemoryException(message: str)
     InsufficientMemoryException(message: str, innerException: Exception)
     """
-    Instance = InsufficientMemoryException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -15366,11 +14857,12 @@ class InsufficientMemoryException(OutOfMemoryException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return InsufficientMemoryException()
 
 class Int16:
     """ Represents a 16-bit signed integer. """
-    Instance = Int16
-    """hardcoded/returns an instance of the class"""
     def bit_length(self, *args): #cannot find CLR method
         """ bit_length(value: Int16) -> int """
         pass
@@ -15379,23 +14871,16 @@ class Int16:
         """
         CompareTo(self: Int16, value: object) -> int
         
-            Compares this instance to a specified object and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than the value of 
-             the object.
-        
+            Compares this instance to a specified object and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than the value of the object.
         
             value: An object to compare, or null.
-            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is 
-             equal to value. Greater than zero This instance is greater than value.-or- value is null.
-        
+            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is equal to value. Greater than zero This instance is greater than value.-or- value is null.
         CompareTo(self: Int16, value: Int16) -> int
         
-            Compares this instance to a specified 16-bit signed integer and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than 
-             the value of the specified 16-bit signed integer.
-        
+            Compares this instance to a specified 16-bit signed integer and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than the value of the specified 16-bit signed integer.
         
             value: An integer to compare.
-            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is 
-             equal to value. Greater than zero This instance is greater than value.
+            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is equal to value. Greater than zero This instance is greater than value.
         """
         pass
 
@@ -15452,9 +14937,7 @@ class Int16:
             Converts the string representation of a number in a specified style to its 16-bit signed integer equivalent.
         
             s: A string containing a number to convert.
-            style: A bitwise combination of the enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Integer.
-        
+            style: A bitwise combination of the enumeration values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
             Returns: A 16-bit signed integer equivalent to the number specified in s.
         Parse(s: str, provider: IFormatProvider) -> Int16
         
@@ -15468,9 +14951,7 @@ class Int16:
             Converts the string representation of a number in a specified style and culture-specific format to its 16-bit signed integer equivalent.
         
             s: A string containing a number to convert.
-            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Integer.
-        
+            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
             provider: An System.IFormatProvider that supplies culture-specific formatting information about s.
             Returns: A 16-bit signed integer equivalent to the number specified in s.
         """
@@ -15481,9 +14962,7 @@ class Int16:
         ToString(self: Int16) -> str
         
             Converts the numeric value of this instance to its equivalent string representation.
-            Returns: The string representation of the value of this instance, consisting of a minus sign if the value is negative, and a sequence of digits ranging from 0 to 9 with no leading 
-             zeroes.
-        
+            Returns: The string representation of the value of this instance, consisting of a minus sign if the value is negative, and a sequence of digits ranging from 0 to 9 with no leading zeroes.
         ToString(self: Int16, provider: IFormatProvider) -> str
         
             Converts the numeric value of this instance to its equivalent string representation using the specified culture-specific format information.
@@ -15517,14 +14996,10 @@ class Int16:
             Returns: true if s was converted successfully; otherwise, false.
         TryParse(s: str, style: NumberStyles, provider: IFormatProvider) -> (bool, Int16)
         
-            Converts the string representation of a number in a specified style and culture-specific format to its 16-bit signed integer equivalent. A return value indicates whether 
-             the conversion succeeded or failed.
-        
+            Converts the string representation of a number in a specified style and culture-specific format to its 16-bit signed integer equivalent. A return value indicates whether the conversion succeeded or failed.
         
             s: A string containing a number to convert. The string is interpreted using the style specified by style.
-            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Integer.
-        
+            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
             provider: An object that supplies culture-specific formatting information about s.
             Returns: true if s was converted successfully; otherwise, false.
         """
@@ -15707,11 +15182,12 @@ class Int16:
     numerator = None
     real = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Int16()
 
 class Int64:
     """ Represents a 64-bit signed integer. """
-    Instance = Int64
-    """hardcoded/returns an instance of the class"""
     def bit_length(self, *args): #cannot find CLR method
         """ bit_length(value: Int64) -> int """
         pass
@@ -15723,16 +15199,13 @@ class Int64:
             Compares this instance to a specified object and returns an indication of their relative values.
         
             value: An object to compare, or null.
-            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is 
-             equal to value. Greater than zero This instance is greater than value.-or- value is null.
-        
+            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is equal to value. Greater than zero This instance is greater than value.-or- value is null.
         CompareTo(self: Int64, value: Int64) -> int
         
             Compares this instance to a specified 64-bit signed integer and returns an indication of their relative values.
         
             value: An integer to compare.
-            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is 
-             equal to value. Greater than zero This instance is greater than value.
+            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is equal to value. Greater than zero This instance is greater than value.
         """
         pass
 
@@ -15789,9 +15262,7 @@ class Int64:
             Converts the string representation of a number in a specified style to its 64-bit signed integer equivalent.
         
             s: A string containing a number to convert.
-            style: A bitwise combination of System.Globalization.NumberStyles values that indicates the permitted format of s. A typical value to specify is 
-             System.Globalization.NumberStyles.Integer.
-        
+            style: A bitwise combination of System.Globalization.NumberStyles values that indicates the permitted format of s. A typical value to specify is System.Globalization.NumberStyles.Integer.
             Returns: A 64-bit signed integer equivalent to the number specified in s.
         Parse(s: str, provider: IFormatProvider) -> Int64
         
@@ -15805,9 +15276,7 @@ class Int64:
             Converts the string representation of a number in a specified style and culture-specific format to its 64-bit signed integer equivalent.
         
             s: A string containing a number to convert.
-            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Integer.
-        
+            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
             provider: An System.IFormatProvider that supplies culture-specific formatting information about s.
             Returns: A 64-bit signed integer equivalent to the number specified in s.
         """
@@ -15818,9 +15287,7 @@ class Int64:
         ToString(self: Int64) -> str
         
             Converts the numeric value of this instance to its equivalent string representation.
-            Returns: The string representation of the value of this instance, consisting of a minus sign if the value is negative, and a sequence of digits ranging from 0 to 9 with no leading 
-             zeroes.
-        
+            Returns: The string representation of the value of this instance, consisting of a minus sign if the value is negative, and a sequence of digits ranging from 0 to 9 with no leading zeroes.
         ToString(self: Int64, provider: IFormatProvider) -> str
         
             Converts the numeric value of this instance to its equivalent string representation using the specified culture-specific format information.
@@ -15854,14 +15321,10 @@ class Int64:
             Returns: true if s was converted successfully; otherwise, false.
         TryParse(s: str, style: NumberStyles, provider: IFormatProvider) -> (bool, Int64)
         
-            Converts the string representation of a number in a specified style and culture-specific format to its 64-bit signed integer equivalent. A return value indicates whether 
-             the conversion succeeded or failed.
-        
+            Converts the string representation of a number in a specified style and culture-specific format to its 64-bit signed integer equivalent. A return value indicates whether the conversion succeeded or failed.
         
             s: A string containing a number to convert. The string is interpreted using the style specified by style.
-            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Integer.
-        
+            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
             provider: An object that supplies culture-specific formatting information about s.
             Returns: true if s was converted successfully; otherwise, false.
         """
@@ -16044,6 +15507,9 @@ class Int64:
     numerator = None
     real = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Int64()
 
 class IntPtr:
     """
@@ -16053,8 +15519,6 @@ class IntPtr:
     IntPtr(value: Int64)
     IntPtr(value: Void*)
     """
-    Instance = IntPtr
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Add(pointer, offset):
         """
@@ -16194,6 +15658,9 @@ class IntPtr:
     Size = 8
     Zero = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IntPtr()
 
 class InvalidCastException(SystemException):
     """
@@ -16204,8 +15671,6 @@ class InvalidCastException(SystemException):
     InvalidCastException(message: str, innerException: Exception)
     InvalidCastException(message: str, errorCode: int)
     """
-    Instance = InvalidCastException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -16229,6 +15694,9 @@ class InvalidCastException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return InvalidCastException()
 
 class InvalidOperationException(SystemException):
     """
@@ -16238,8 +15706,6 @@ class InvalidOperationException(SystemException):
     InvalidOperationException(message: str)
     InvalidOperationException(message: str, innerException: Exception)
     """
-    Instance = InvalidOperationException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -16262,6 +15728,9 @@ class InvalidOperationException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return InvalidOperationException()
 
 class InvalidProgramException(SystemException):
     """
@@ -16271,8 +15740,6 @@ class InvalidProgramException(SystemException):
     InvalidProgramException(message: str)
     InvalidProgramException(message: str, inner: Exception)
     """
-    Instance = InvalidProgramException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -16294,6 +15761,9 @@ class InvalidProgramException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return InvalidProgramException()
 
 class InvalidTimeZoneException(Exception):
     """
@@ -16303,8 +15773,6 @@ class InvalidTimeZoneException(Exception):
     InvalidTimeZoneException(message: str, innerException: Exception)
     InvalidTimeZoneException()
     """
-    Instance = InvalidTimeZoneException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -16327,11 +15795,12 @@ class InvalidTimeZoneException(Exception):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return InvalidTimeZoneException()
 
 class IObservable:
     # no doc
-    Instance = IObservable
-    """hardcoded/returns an instance of the class"""
     def Subscribe(self, observer):
         """
         Subscribe(self: IObservable[T], observer: IObserver[T]) -> IDisposable
@@ -16347,11 +15816,12 @@ class IObservable:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IObservable()
 
 class IObserver:
     # no doc
-    Instance = IObserver
-    """hardcoded/returns an instance of the class"""
     def OnCompleted(self):
         """
         OnCompleted(self: IObserver[T])
@@ -16381,11 +15851,12 @@ class IObserver:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IObserver()
 
 class IProgress:
     # no doc
-    Instance = IProgress
-    """hardcoded/returns an instance of the class"""
     def Report(self, value):
         """ Report(self: IProgress[T], value: T) """
         pass
@@ -16394,11 +15865,12 @@ class IProgress:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IProgress()
 
 class IServiceProvider:
     """ Defines a mechanism for retrieving a service object; that is, an object that provides custom support to other objects. """
-    Instance = IServiceProvider
-    """hardcoded/returns an instance of the class"""
     def GetService(self, serviceType):
         """
         GetService(self: IServiceProvider, serviceType: Type) -> object
@@ -16414,6 +15886,9 @@ class IServiceProvider:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IServiceProvider()
 
 class Lazy():
     """
@@ -16424,15 +15899,12 @@ class Lazy():
     Lazy[T](mode: LazyThreadSafetyMode)
     Lazy[T](valueFactory: Func[T], isThreadSafe: bool)
     """
-    Instance = Lazy
-    """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
         ToString(self: Lazy[T]) -> str
         
             Creates and returns a string representation of the System.Lazy property for this instance.
-            Returns: The result of calling the System.Object.ToString method on the System.Lazy property for this instance, if the value has been created (that is, if the System.Lazy property 
-             returns true). Otherwise, a string indicating that the value has not been created.
+            Returns: The result of calling the System.Object.ToString method on the System.Lazy property for this instance, if the value has been created (that is, if the System.Lazy property returns true). Otherwise, a string indicating that the value has not been created.
         """
         pass
 
@@ -16463,6 +15935,9 @@ Get: Value(self: Lazy[T]) -> T
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Lazy()
 
 class LdapStyleUriParser(UriParser):
     """
@@ -16470,8 +15945,9 @@ class LdapStyleUriParser(UriParser):
     
     LdapStyleUriParser()
     """
-    Instance = LdapStyleUriParser
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LdapStyleUriParser()
 
 class LoaderOptimization:
     """
@@ -16479,8 +15955,6 @@ class LoaderOptimization:
     
     enum LoaderOptimization, values: DisallowBindings (4), DomainMask (3), MultiDomain (2), MultiDomainHost (3), NotSpecified (0), SingleDomain (1)
     """
-    Instance = LoaderOptimization
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -16522,6 +15996,9 @@ class LoaderOptimization:
     SingleDomain = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LoaderOptimization()
 
 class LoaderOptimizationAttribute:
     """
@@ -16530,8 +16007,6 @@ class LoaderOptimizationAttribute:
     LoaderOptimizationAttribute(value: Byte)
     LoaderOptimizationAttribute(value: LoaderOptimization)
     """
-    Instance = LoaderOptimizationAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -16552,16 +16027,18 @@ Get: Value(self: LoaderOptimizationAttribute) -> LoaderOptimization
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LoaderOptimizationAttribute()
 
 class LocalDataStoreSlot():
     """ Encapsulates a memory slot to store local data. This class cannot be inherited. """
-    Instance = LocalDataStoreSlot
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LocalDataStoreSlot()
 
 class Math():
     """ Provides constants and static methods for trigonometric, logarithmic, and other common mathematical functions. """
-    Instance = Math
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Abs(value):
         """
@@ -16633,7 +16110,7 @@ class Math():
             Returns the angle whose tangent is the specified number.
         
             d: A number representing a tangent.
-                        """
+                """
         pass
 
     @staticmethod
@@ -16645,7 +16122,7 @@ class Math():
         
             y: The y coordinate of a point.
             x: The x coordinate of a point.
-                                        """
+                        """
         pass
 
     @staticmethod
@@ -16675,8 +16152,7 @@ class Math():
             Returns the smallest integral value that is greater than or equal to the specified double-precision floating-point number.
         
             a: A double-precision floating-point number.
-            Returns: The smallest integral value that is greater than or equal to a. If a is equal to System.Double.NaN, System.Double.NegativeInfinity, or System.Double.PositiveInfinity, that 
-             value is returned. Note that this method returns a System.Double instead of an integral type.
+            Returns: The smallest integral value that is greater than or equal to a. If a is equal to System.Double.NaN, System.Double.NegativeInfinity, or System.Double.PositiveInfinity, that value is returned. Note that this method returns a System.Double instead of an integral type.
         """
         pass
 
@@ -16700,8 +16176,7 @@ class Math():
             Returns the hyperbolic cosine of the specified angle.
         
             value: An angle, measured in radians.
-            Returns: The hyperbolic cosine of value. If value is equal to System.Double.NegativeInfinity or System.Double.PositiveInfinity, System.Double.PositiveInfinity is returned. If value 
-             is equal to System.Double.NaN, System.Double.NaN is returned.
+            Returns: The hyperbolic cosine of value. If value is equal to System.Double.NegativeInfinity or System.Double.PositiveInfinity, System.Double.PositiveInfinity is returned. If value is equal to System.Double.NaN, System.Double.NaN is returned.
         """
         pass
 
@@ -16733,8 +16208,7 @@ class Math():
             Returns e raised to the specified power.
         
             d: A number specifying a power.
-            Returns: The number e raised to the power d. If d equals System.Double.NaN or System.Double.PositiveInfinity, that value is returned. If d equals System.Double.NegativeInfinity, 0 
-             is returned.
+            Returns: The number e raised to the power d. If d equals System.Double.NaN or System.Double.PositiveInfinity, that value is returned. If d equals System.Double.NegativeInfinity, 0 is returned.
         """
         pass
 
@@ -16765,8 +16239,7 @@ class Math():
         
             x: A dividend.
             y: A divisor.
-            Returns: A number equal to x - (y Q), where Q is the quotient of x / y rounded to the nearest integer (if x / y falls halfway between two integers, the even integer is returned).If 
-             x - (y Q) is zero, the value +0 is returned if x is positive, or -0 if x is negative.If y = 0, System.Double.NaN is returned.
+            Returns: A number equal to x - (y Q), where Q is the quotient of x / y rounded to the nearest integer (if x / y falls halfway between two integers, the even integer is returned).If x - (y Q) is zero, the value +0 is returned if x is positive, or -0 if x is negative.If y = 0, System.Double.NaN is returned.
         """
         pass
 
@@ -16778,19 +16251,15 @@ class Math():
             Returns the natural (base e) logarithm of a specified number.
         
             d: A number whose logarithm is to be found.
-            Returns: One of the values in the following table. d parameterReturn value Positive The natural logarithm of d; that is, ln d, or log edZero System.Double.NegativeInfinityNegative 
-             System.Double.NaNEqual to System.Double.NaNSystem.Double.NaNEqual to System.Double.PositiveInfinitySystem.Double.PositiveInfinity
-        
+            Returns: One of the values in the following table. d parameterReturn value Positive The natural logarithm of d; that is, ln d, or log edZero System.Double.NegativeInfinityNegative System.Double.NaNEqual to System.Double.NaNSystem.Double.NaNEqual to System.Double.PositiveInfinitySystem.Double.PositiveInfinity
         Log(a: float, newBase: float) -> float
         
             Returns the logarithm of a specified number in a specified base.
         
             a: A number whose logarithm is to be found.
             newBase: The base of the logarithm.
-            Returns: One of the values in the following table. (+Infinity denotes System.Double.PositiveInfinity, -Infinity denotes System.Double.NegativeInfinity, and NaN denotes 
-             System.Double.NaN.)anewBaseReturn valuea> 0(0 <newBase< 1) -or-(newBase> 1)lognewBase(a)a< 0(any value)NaN(any value)newBase< 0NaNa != 1newBase = 0NaNa != 1newBase = 
-             +InfinityNaNa = NaN(any value)NaN(any value)newBase = NaNNaN(any value)newBase = 1NaNa = 00 <newBase< 1 +Infinitya = 0newBase> 1-Infinitya =  +Infinity0 <newBase< 
-             1-Infinitya =  +InfinitynewBase> 1+Infinitya = 1newBase = 00a = 1newBase = +Infinity0
+            Returns: One of the values in the following table. (+Infinity denotes System.Double.PositiveInfinity, -Infinity denotes System.Double.NegativeInfinity, and NaN denotes System.Double.NaN.)anewBaseReturn valuea> 0(0 <newBase< 1) -or-(newBase> 1)lognewBase(a)a< 0(any value)NaN(any value)newBase< 0NaNa != 1newBase = 0NaNa != 1newBase = +InfinityNaNa = NaN(any value)NaN(any value)newBase = NaNNaN(any value)newBase = 1NaNa = 00 
+             <newBase< 1 +Infinitya = 0newBase> 1-Infinitya =  +Infinity0 <newBase< 1-Infinitya =  +InfinitynewBase> 1+Infinitya = 1newBase = 00a = 1newBase = +Infinity0
         """
         pass
 
@@ -16802,8 +16271,7 @@ class Math():
             Returns the base 10 logarithm of a specified number.
         
             d: A number whose logarithm is to be found.
-            Returns: One of the values in the following table. d parameter Return value Positive The base 10 log of d; that is, log 10d. Zero System.Double.NegativeInfinityNegative 
-             System.Double.NaNEqual to System.Double.NaNSystem.Double.NaNEqual to System.Double.PositiveInfinitySystem.Double.PositiveInfinity
+            Returns: One of the values in the following table. d parameter Return value Positive The base 10 log of d; that is, log 10d. Zero System.Double.NegativeInfinityNegative System.Double.NaNEqual to System.Double.NaNSystem.Double.NaNEqual to System.Double.PositiveInfinitySystem.Double.PositiveInfinity
         """
         pass
 
@@ -16994,9 +16462,7 @@ class Math():
             Rounds a double-precision floating-point value to the nearest integral value.
         
             a: A double-precision floating-point number to be rounded.
-            Returns: The integer nearest a. If the fractional component of a is halfway between two integers, one of which is even and the other odd, then the even number is returned. Note that 
-             this method returns a System.Double instead of an integral type.
-        
+            Returns: The integer nearest a. If the fractional component of a is halfway between two integers, one of which is even and the other odd, then the even number is returned. Note that this method returns a System.Double instead of an integral type.
         Round(value: float, digits: int) -> float
         
             Rounds a double-precision floating-point value to a specified number of fractional digits.
@@ -17013,9 +16479,7 @@ class Math():
             Returns: The integer nearest value. If value is halfway between two integers, one of which is even and the other odd, then mode determines which of the two is returned.
         Round(value: float, digits: int, mode: MidpointRounding) -> float
         
-            Rounds a double-precision floating-point value to the specified number of fractional digits. A parameter specifies how to round the value if it is midway between two other 
-             numbers.
-        
+            Rounds a double-precision floating-point value to the specified number of fractional digits. A parameter specifies how to round the value if it is midway between two other numbers.
         
             value: A double-precision floating-point number to be rounded.
             digits: The number of fractional digits in the return value.
@@ -17026,9 +16490,7 @@ class Math():
             Rounds a decimal value to the nearest integral value.
         
             d: A decimal number to be rounded.
-            Returns: The integer nearest parameter d. If the fractional component of d is halfway between two integers, one of which is even and the other odd, the even number is returned. Note 
-             that this method returns a System.Decimal instead of an integral type.
-        
+            Returns: The integer nearest parameter d. If the fractional component of d is halfway between two integers, one of which is even and the other odd, the even number is returned. Note that this method returns a System.Decimal instead of an integral type.
         Round(d: Decimal, decimals: int) -> Decimal
         
             Rounds a decimal value to a specified number of fractional digits.
@@ -17062,56 +16524,43 @@ class Math():
             Returns a value indicating the sign of an 8-bit signed integer.
         
             value: A signed number.
-            Returns: A number that indicates the sign of value, as shown in the following table.Return value Meaning -1 value is less than zero. 0 value is equal to zero. 1 value is greater 
-             than zero.
-        
+            Returns: A number that indicates the sign of value, as shown in the following table.Return value Meaning -1 value is less than zero. 0 value is equal to zero. 1 value is greater than zero.
         Sign(value: Int16) -> int
         
             Returns a value indicating the sign of a 16-bit signed integer.
         
             value: A signed number.
-            Returns: A number that indicates the sign of value, as shown in the following table.Return value Meaning -1 value is less than zero. 0 value is equal to zero. 1 value is greater 
-             than zero.
-        
+            Returns: A number that indicates the sign of value, as shown in the following table.Return value Meaning -1 value is less than zero. 0 value is equal to zero. 1 value is greater than zero.
         Sign(value: int) -> int
         
             Returns a value indicating the sign of a 32-bit signed integer.
         
             value: A signed number.
-            Returns: A number that indicates the sign of value, as shown in the following table.Return value Meaning -1 value is less than zero. 0 value is equal to zero. 1 value is greater 
-             than zero.
-        
+            Returns: A number that indicates the sign of value, as shown in the following table.Return value Meaning -1 value is less than zero. 0 value is equal to zero. 1 value is greater than zero.
         Sign(value: Int64) -> int
         
             Returns a value indicating the sign of a 64-bit signed integer.
         
             value: A signed number.
-            Returns: A number that indicates the sign of value, as shown in the following table.Return value Meaning -1 value is less than zero. 0 value is equal to zero. 1 value is greater 
-             than zero.
-        
+            Returns: A number that indicates the sign of value, as shown in the following table.Return value Meaning -1 value is less than zero. 0 value is equal to zero. 1 value is greater than zero.
         Sign(value: Single) -> int
         
             Returns a value indicating the sign of a single-precision floating-point number.
         
             value: A signed number.
-            Returns: A number that indicates the sign of value, as shown in the following table.Return value Meaning -1 value is less than zero. 0 value is equal to zero. 1 value is greater 
-             than zero.
-        
+            Returns: A number that indicates the sign of value, as shown in the following table.Return value Meaning -1 value is less than zero. 0 value is equal to zero. 1 value is greater than zero.
         Sign(value: float) -> int
         
             Returns a value indicating the sign of a double-precision floating-point number.
         
             value: A signed number.
-            Returns: A number that indicates the sign of value, as shown in the following table.Return value Meaning -1 value is less than zero. 0 value is equal to zero. 1 value is greater 
-             than zero.
-        
+            Returns: A number that indicates the sign of value, as shown in the following table.Return value Meaning -1 value is less than zero. 0 value is equal to zero. 1 value is greater than zero.
         Sign(value: Decimal) -> int
         
             Returns a value indicating the sign of a decimal number.
         
             value: A signed decimal number.
-            Returns: A number that indicates the sign of value, as shown in the following table.Return value Meaning -1 value is less than zero. 0 value is equal to zero. 1 value is greater 
-             than zero.
+            Returns: A number that indicates the sign of value, as shown in the following table.Return value Meaning -1 value is less than zero. 0 value is equal to zero. 1 value is greater than zero.
         """
         pass
 
@@ -17135,8 +16584,7 @@ class Math():
             Returns the hyperbolic sine of the specified angle.
         
             value: An angle, measured in radians.
-            Returns: The hyperbolic sine of value. If value is equal to System.Double.NegativeInfinity, System.Double.PositiveInfinity, or System.Double.NaN, this method returns a System.Double 
-             equal to value.
+            Returns: The hyperbolic sine of value. If value is equal to System.Double.NegativeInfinity, System.Double.PositiveInfinity, or System.Double.NaN, this method returns a System.Double equal to value.
         """
         pass
 
@@ -17148,8 +16596,7 @@ class Math():
             Returns the square root of a specified number.
         
             d: A number.
-            Returns: One of the values in the following table. d parameter Return value Zero, or positive The positive square root of d. Negative System.Double.NaNEquals 
-             System.Double.NaNSystem.Double.NaNEquals System.Double.PositiveInfinitySystem.Double.PositiveInfinity
+            Returns: One of the values in the following table. d parameter Return value Zero, or positive The positive square root of d. Negative System.Double.NaNEquals System.Double.NaNSystem.Double.NaNEquals System.Double.PositiveInfinitySystem.Double.PositiveInfinity
         """
         pass
 
@@ -17173,8 +16620,7 @@ class Math():
             Returns the hyperbolic tangent of the specified angle.
         
             value: An angle, measured in radians.
-            Returns: The hyperbolic tangent of value. If value is equal to System.Double.NegativeInfinity, this method returns -1. If value is equal to System.Double.PositiveInfinity, this 
-             method returns 1. If value is equal to System.Double.NaN, this method returns System.Double.NaN.
+            Returns: The hyperbolic tangent of value. If value is equal to System.Double.NegativeInfinity, this method returns -1. If value is equal to System.Double.PositiveInfinity, this method returns 1. If value is equal to System.Double.NaN, this method returns System.Double.NaN.
         """
         pass
 
@@ -17192,8 +16638,7 @@ class Math():
             Calculates the integral part of a specified double-precision floating-point number.
         
             d: A number to truncate.
-            Returns: The integral part of d; that is, the number that remains after any fractional digits have been discarded, or one of the values listed in the following table. dReturn 
-             valueSystem.Double.NaNSystem.Double.NaNSystem.Double.NegativeInfinitySystem.Double.NegativeInfinitySystem.Double.PositiveInfinitySystem.Double.PositiveInfinity
+            Returns: The integral part of d; that is, the number that remains after any fractional digits have been discarded, or one of the values listed in the following table. dReturn valueSystem.Double.NaNSystem.Double.NaNSystem.Double.NegativeInfinitySystem.Double.NegativeInfinitySystem.Double.PositiveInfinitySystem.Double.PositiveInfinity
         """
         pass
 
@@ -17230,6 +16675,9 @@ class Math():
         'Truncate',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Math()
 
 class MethodAccessException(MemberAccessException):
     """
@@ -17239,8 +16687,6 @@ class MethodAccessException(MemberAccessException):
     MethodAccessException(message: str)
     MethodAccessException(message: str, inner: Exception)
     """
-    Instance = MethodAccessException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -17263,6 +16709,9 @@ class MethodAccessException(MemberAccessException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MethodAccessException()
 
 class MidpointRounding:
     """
@@ -17270,8 +16719,6 @@ class MidpointRounding:
     
     enum MidpointRounding, values: AwayFromZero (1), ToEven (0)
     """
-    Instance = MidpointRounding
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -17309,6 +16756,9 @@ class MidpointRounding:
     ToEven = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MidpointRounding()
 
 class MissingMemberException(MemberAccessException):
     """
@@ -17319,14 +16769,10 @@ class MissingMemberException(MemberAccessException):
     MissingMemberException(message: str, inner: Exception)
     MissingMemberException(className: str, memberName: str)
     """
-    Instance = MissingMemberException
-    """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: MissingMemberException, info: SerializationInfo, context: StreamingContext)
-            Sets the System.Runtime.Serialization.SerializationInfo object with the class name, the member name, the signature of the missing member, and additional exception 
-             information.
-        
+            Sets the System.Runtime.Serialization.SerializationInfo object with the class name, the member name, the signature of the missing member, and additional exception information.
         
             info: The object that holds the serialized object data.
             context: The contextual information about the source or destination.
@@ -17367,6 +16813,9 @@ Get: Message(self: MissingMemberException) -> str
     SerializeObjectState = None
     Signature = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MissingMemberException()
 
 class MissingFieldException(MissingMemberException):
     """
@@ -17377,8 +16826,6 @@ class MissingFieldException(MissingMemberException):
     MissingFieldException(message: str, inner: Exception)
     MissingFieldException(className: str, fieldName: str)
     """
-    Instance = MissingFieldException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -17413,6 +16860,9 @@ Get: Message(self: MissingFieldException) -> str
     SerializeObjectState = None
     Signature = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MissingFieldException()
 
 class MissingMethodException(MissingMemberException):
     """
@@ -17423,8 +16873,6 @@ class MissingMethodException(MissingMemberException):
     MissingMethodException(message: str, inner: Exception)
     MissingMethodException(className: str, methodName: str)
     """
-    Instance = MissingMethodException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -17459,11 +16907,12 @@ Get: Message(self: MissingMethodException) -> str
     SerializeObjectState = None
     Signature = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MissingMethodException()
 
 class ModuleHandle():
     """ Represents a runtime handle for a module. """
-    Instance = ModuleHandle
-    """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """
         Equals(self: ModuleHandle, obj: object) -> bool
@@ -17528,9 +16977,7 @@ class ModuleHandle():
             Returns: A System.RuntimeFieldHandle for the field identified by fieldToken.
         ResolveFieldHandle(self: ModuleHandle, fieldToken: int, typeInstantiationContext: Array[RuntimeTypeHandle], methodInstantiationContext: Array[RuntimeTypeHandle]) -> RuntimeFieldHandle
         
-            Returns a runtime field handle for the field identified by the specified metadata token, specifying the generic type arguments of the type and method where the token is in 
-             scope.
-        
+            Returns a runtime field handle for the field identified by the specified metadata token, specifying the generic type arguments of the type and method where the token is in scope.
         
             fieldToken: A metadata token that identifies a field in the module.
             typeInstantiationContext: An array of System.RuntimeTypeHandle structures representing the generic type arguments of the type where the token is in scope, or null if that type is not generic.
@@ -17549,9 +16996,7 @@ class ModuleHandle():
             Returns: A System.RuntimeMethodHandle for the method or constructor identified by methodToken.
         ResolveMethodHandle(self: ModuleHandle, methodToken: int, typeInstantiationContext: Array[RuntimeTypeHandle], methodInstantiationContext: Array[RuntimeTypeHandle]) -> RuntimeMethodHandle
         
-            Returns a runtime method handle for the method or constructor identified by the specified metadata token, specifying the generic type arguments of the type and method where 
-             the token is in scope.
-        
+            Returns a runtime method handle for the method or constructor identified by the specified metadata token, specifying the generic type arguments of the type and method where the token is in scope.
         
             methodToken: A metadata token that identifies a method or constructor in the module.
             typeInstantiationContext: An array of System.RuntimeTypeHandle structures representing the generic type arguments of the type where the token is in scope, or null if that type is not generic.
@@ -17570,15 +17015,11 @@ class ModuleHandle():
             Returns: A System.RuntimeTypeHandle for the type identified by typeToken.
         ResolveTypeHandle(self: ModuleHandle, typeToken: int, typeInstantiationContext: Array[RuntimeTypeHandle], methodInstantiationContext: Array[RuntimeTypeHandle]) -> RuntimeTypeHandle
         
-            Returns a runtime type handle for the type identified by the specified metadata token, specifying the generic type arguments of the type and method where the token is in 
-             scope.
-        
+            Returns a runtime type handle for the type identified by the specified metadata token, specifying the generic type arguments of the type and method where the token is in scope.
         
             typeToken: A metadata token that identifies a type in the module.
             typeInstantiationContext: An array of System.RuntimeTypeHandle structures representing the generic type arguments of the type where the token is in scope, or null if that type is not generic.
-            methodInstantiationContext: An array of System.RuntimeTypeHandle structures objects representing the generic type arguments of the method where the token is in scope, or null if that method is not 
-             generic.
-        
+            methodInstantiationContext: An array of System.RuntimeTypeHandle structures objects representing the generic type arguments of the method where the token is in scope, or null if that method is not generic.
             Returns: A System.RuntimeTypeHandle for the type identified by typeToken.
         """
         pass
@@ -17600,6 +17041,9 @@ Get: MDStreamVersion(self: ModuleHandle) -> int
 
     EmptyHandle = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ModuleHandle()
 
 class MTAThreadAttribute:
     """
@@ -17607,12 +17051,13 @@ class MTAThreadAttribute:
     
     MTAThreadAttribute()
     """
-    Instance = MTAThreadAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MTAThreadAttribute()
 
 class MulticastNotSupportedException(SystemException):
     """
@@ -17622,8 +17067,6 @@ class MulticastNotSupportedException(SystemException):
     MulticastNotSupportedException(message: str)
     MulticastNotSupportedException(message: str, inner: Exception)
     """
-    Instance = MulticastNotSupportedException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -17645,6 +17088,9 @@ class MulticastNotSupportedException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MulticastNotSupportedException()
 
 class NetPipeStyleUriParser(UriParser):
     """
@@ -17652,8 +17098,9 @@ class NetPipeStyleUriParser(UriParser):
     
     NetPipeStyleUriParser()
     """
-    Instance = NetPipeStyleUriParser
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetPipeStyleUriParser()
 
 class NetTcpStyleUriParser(UriParser):
     """
@@ -17661,8 +17108,9 @@ class NetTcpStyleUriParser(UriParser):
     
     NetTcpStyleUriParser()
     """
-    Instance = NetTcpStyleUriParser
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetTcpStyleUriParser()
 
 class NewsStyleUriParser(UriParser):
     """
@@ -17670,8 +17118,9 @@ class NewsStyleUriParser(UriParser):
     
     NewsStyleUriParser()
     """
-    Instance = NewsStyleUriParser
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NewsStyleUriParser()
 
 class NonSerializedAttribute:
     """
@@ -17679,12 +17128,13 @@ class NonSerializedAttribute:
     
     NonSerializedAttribute()
     """
-    Instance = NonSerializedAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NonSerializedAttribute()
 
 class NotFiniteNumberException(ArithmeticException):
     """
@@ -17697,8 +17147,6 @@ class NotFiniteNumberException(ArithmeticException):
     NotFiniteNumberException(message: str, innerException: Exception)
     NotFiniteNumberException(message: str, offendingNumber: float, innerException: Exception)
     """
-    Instance = NotFiniteNumberException
-    """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: NotFiniteNumberException, info: SerializationInfo, context: StreamingContext)
@@ -17742,6 +17190,9 @@ Get: OffendingNumber(self: NotFiniteNumberException) -> float
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NotFiniteNumberException()
 
 class NotImplementedException(SystemException):
     """
@@ -17751,8 +17202,6 @@ class NotImplementedException(SystemException):
     NotImplementedException(message: str)
     NotImplementedException(message: str, inner: Exception)
     """
-    Instance = NotImplementedException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -17775,6 +17224,9 @@ class NotImplementedException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NotImplementedException()
 
 class NotSupportedException(SystemException):
     """
@@ -17784,8 +17236,6 @@ class NotSupportedException(SystemException):
     NotSupportedException(message: str)
     NotSupportedException(message: str, innerException: Exception)
     """
-    Instance = NotSupportedException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -17808,6 +17258,9 @@ class NotSupportedException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NotSupportedException()
 
 class NullReferenceException(SystemException):
     """
@@ -17817,8 +17270,6 @@ class NullReferenceException(SystemException):
     NullReferenceException(message: str)
     NullReferenceException(message: str, innerException: Exception)
     """
-    Instance = NullReferenceException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -17841,6 +17292,9 @@ class NullReferenceException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NullReferenceException()
 
 class ObjectDisposedException:
     """
@@ -17850,8 +17304,6 @@ class ObjectDisposedException:
     ObjectDisposedException(objectName: str, message: str)
     ObjectDisposedException(message: str, innerException: Exception)
     """
-    Instance = ObjectDisposedException
-    """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: ObjectDisposedException, info: SerializationInfo, context: StreamingContext)
@@ -17899,6 +17351,9 @@ Get: ObjectName(self: ObjectDisposedException) -> str
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ObjectDisposedException()
 
 class ObsoleteAttribute:
     """
@@ -17908,8 +17363,6 @@ class ObsoleteAttribute:
     ObsoleteAttribute(message: str)
     ObsoleteAttribute(message: str, error: bool)
     """
-    Instance = ObsoleteAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -17941,6 +17394,9 @@ Get: Message(self: ObsoleteAttribute) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ObsoleteAttribute()
 
 class OperatingSystem:
     """
@@ -17948,8 +17404,6 @@ class OperatingSystem:
     
     OperatingSystem(platform: PlatformID, version: Version)
     """
-    Instance = OperatingSystem
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """
         Clone(self: OperatingSystem) -> object
@@ -18026,6 +17480,9 @@ Get: VersionString(self: OperatingSystem) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OperatingSystem()
 
 class OperationCanceledException(SystemException):
     """
@@ -18038,8 +17495,6 @@ class OperationCanceledException(SystemException):
     OperationCanceledException(message: str, token: CancellationToken)
     OperationCanceledException(message: str, innerException: Exception, token: CancellationToken)
     """
-    Instance = OperationCanceledException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -18073,6 +17528,9 @@ Get: CancellationToken(self: OperationCanceledException) -> CancellationToken
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OperationCanceledException()
 
 class OverflowException(ArithmeticException):
     """
@@ -18082,8 +17540,6 @@ class OverflowException(ArithmeticException):
     OverflowException(message: str)
     OverflowException(message: str, innerException: Exception)
     """
-    Instance = OverflowException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -18106,6 +17562,9 @@ class OverflowException(ArithmeticException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OverflowException()
 
 class ParamArrayAttribute:
     """
@@ -18113,12 +17572,13 @@ class ParamArrayAttribute:
     
     ParamArrayAttribute()
     """
-    Instance = ParamArrayAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ParamArrayAttribute()
 
 class PlatformID:
     """
@@ -18126,8 +17586,6 @@ class PlatformID:
     
     enum PlatformID, values: MacOSX (6), Unix (4), Win32NT (2), Win32S (0), Win32Windows (1), WinCE (3), Xbox (5)
     """
-    Instance = PlatformID
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -18170,6 +17628,9 @@ class PlatformID:
     WinCE = None
     Xbox = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PlatformID()
 
 class PlatformNotSupportedException(NotSupportedException):
     """
@@ -18179,8 +17640,6 @@ class PlatformNotSupportedException(NotSupportedException):
     PlatformNotSupportedException(message: str)
     PlatformNotSupportedException(message: str, inner: Exception)
     """
-    Instance = PlatformNotSupportedException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -18203,11 +17662,12 @@ class PlatformNotSupportedException(NotSupportedException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PlatformNotSupportedException()
 
 class Predicate(MulticastDelegate):
     """ Predicate[T](object: object, method: IntPtr) """
-    Instance = Predicate
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, obj, callback, object):
         """ BeginInvoke(self: Predicate[T], obj: T, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -18229,9 +17689,7 @@ class Predicate(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -18260,8 +17718,7 @@ class Predicate(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -18277,14 +17734,15 @@ class Predicate(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Predicate()
 
 class Progress:
     """
     Progress[T]()
     Progress[T](handler: Action[T])
     """
-    Instance = Progress
-    """hardcoded/returns an instance of the class"""
     def OnReport(self, *args): #cannot find CLR method
         """ OnReport(self: Progress[T], value: T) """
         pass
@@ -18307,6 +17765,9 @@ class Progress:
 
     ProgressChanged = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Progress()
 
 class Random():
     """
@@ -18315,8 +17776,6 @@ class Random():
     Random()
     Random(Seed: int)
     """
-    Instance = Random
-    """hardcoded/returns an instance of the class"""
     def Next(self, *__args):
         """
         Next(self: Random) -> int
@@ -18329,16 +17788,13 @@ class Random():
         
             minValue: The inclusive lower bound of the random number returned.
             maxValue: The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.
-            Returns: A 32-bit signed integer greater than or equal to minValue and less than maxValue; that is, the range of return values includes minValue but not maxValue. If minValue equals 
-             maxValue, minValue is returned.
-        
+            Returns: A 32-bit signed integer greater than or equal to minValue and less than maxValue; that is, the range of return values includes minValue but not maxValue. If minValue equals maxValue, minValue is returned.
         Next(self: Random, maxValue: int) -> int
         
             Returns a nonnegative random number less than the specified maximum.
         
             maxValue: The exclusive upper bound of the random number to be generated. maxValue must be greater than or equal to zero.
-            Returns: A 32-bit signed integer greater than or equal to zero, and less than maxValue; that is, the range of return values ordinarily includes zero but not maxValue. However, if 
-             maxValue equals zero, maxValue is returned.
+            Returns: A 32-bit signed integer greater than or equal to zero, and less than maxValue; that is, the range of return values ordinarily includes zero but not maxValue. However, if maxValue equals zero, maxValue is returned.
         """
         pass
 
@@ -18377,6 +17833,9 @@ class Random():
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Random()
 
 class RankException(SystemException):
     """
@@ -18386,8 +17845,6 @@ class RankException(SystemException):
     RankException(message: str)
     RankException(message: str, innerException: Exception)
     """
-    Instance = RankException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -18410,6 +17867,9 @@ class RankException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RankException()
 
 class ResolveEventArgs(EventArgs):
     """
@@ -18418,8 +17878,6 @@ class ResolveEventArgs(EventArgs):
     ResolveEventArgs(name: str)
     ResolveEventArgs(name: str, requestingAssembly: Assembly)
     """
-    Instance = ResolveEventArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, name, requestingAssembly=None):
         """
@@ -18443,6 +17901,9 @@ Get: RequestingAssembly(self: ResolveEventArgs) -> Assembly
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ResolveEventArgs()
 
 class ResolveEventHandler(MulticastDelegate):
     """
@@ -18450,8 +17911,6 @@ class ResolveEventHandler(MulticastDelegate):
     
     ResolveEventHandler(object: object, method: IntPtr)
     """
-    Instance = ResolveEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, args, callback, object):
         """ BeginInvoke(self: ResolveEventHandler, sender: object, args: ResolveEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -18473,9 +17932,7 @@ class ResolveEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -18504,8 +17961,7 @@ class ResolveEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -18521,16 +17977,18 @@ class ResolveEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ResolveEventHandler()
 
 class RuntimeArgumentHandle():
     """ References a variable-length argument list. """
-    Instance = RuntimeArgumentHandle
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RuntimeArgumentHandle()
 
 class RuntimeFieldHandle:
     """ Represents a field using an internal metadata token. """
-    Instance = RuntimeFieldHandle
-    """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """
         Equals(self: RuntimeFieldHandle, obj: object) -> bool
@@ -18591,11 +18049,12 @@ Get: Value(self: RuntimeFieldHandle) -> IntPtr
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RuntimeFieldHandle()
 
 class RuntimeMethodHandle:
     """ System.RuntimeMethodHandle is a handle to the internal metadata representation of a method. """
-    Instance = RuntimeMethodHandle
-    """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """
         Equals(self: RuntimeMethodHandle, obj: object) -> bool
@@ -18670,11 +18129,12 @@ Get: Value(self: RuntimeMethodHandle) -> IntPtr
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RuntimeMethodHandle()
 
 class RuntimeTypeHandle:
     """ Represents a type using an internal metadata token. """
-    Instance = RuntimeTypeHandle
-    """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """
         Equals(self: RuntimeTypeHandle, handle: RuntimeTypeHandle) -> bool
@@ -18749,11 +18209,12 @@ Get: Value(self: RuntimeTypeHandle) -> IntPtr
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RuntimeTypeHandle()
 
 class SByte:
     """ Represents an 8-bit signed integer. """
-    Instance = SByte
-    """hardcoded/returns an instance of the class"""
     def bit_length(self, *args): #cannot find CLR method
         """ bit_length(value: SByte) -> int """
         pass
@@ -18765,16 +18226,13 @@ class SByte:
             Compares this instance to a specified object and returns an indication of their relative values.
         
             obj: An object to compare, or null.
-            Returns: A signed number indicating the relative values of this instance and obj.Return Value Description Less than zero This instance is less than obj. Zero This instance is equal 
-             to obj. Greater than zero This instance is greater than obj.-or- obj is null.
-        
+            Returns: A signed number indicating the relative values of this instance and obj.Return Value Description Less than zero This instance is less than obj. Zero This instance is equal to obj. Greater than zero This instance is greater than obj.-or- obj is null.
         CompareTo(self: SByte, value: SByte) -> int
         
             Compares this instance to a specified 8-bit signed integer and returns an indication of their relative values.
         
             value: An 8-bit signed integer to compare.
-            Returns: A signed integer that indicates the relative order of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance 
-             is equal to value. Greater than zero This instance is greater than value.
+            Returns: A signed integer that indicates the relative order of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is equal to value. Greater than zero This instance is greater than value.
         """
         pass
 
@@ -18831,9 +18289,7 @@ class SByte:
             Converts the string representation of a number in a specified style to its 8-bit signed integer equivalent.
         
             s: A string that contains a number to convert. The string is interpreted using the style specified by style.
-            style: A bitwise combination of the enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Integer.
-        
+            style: A bitwise combination of the enumeration values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
             Returns: An 8-bit signed integer that is equivalent to the number specified in s.
         Parse(s: str, provider: IFormatProvider) -> SByte
         
@@ -18847,9 +18303,7 @@ class SByte:
             Converts the string representation of a number that is in a specified style and culture-specific format to its 8-bit signed equivalent.
         
             s: A string that contains the number to convert. The string is interpreted by using the style specified by style.
-            style: A bitwise combination of the enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Integer.
-        
+            style: A bitwise combination of the enumeration values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
             provider: An object that supplies culture-specific formatting information about s. If provider is null, the thread current culture is used.
             Returns: An 8-bit signed byte value that is equivalent to the number specified in the s parameter.
         """
@@ -18860,9 +18314,7 @@ class SByte:
         ToString(self: SByte) -> str
         
             Converts the numeric value of this instance to its equivalent string representation.
-            Returns: The string representation of the value of this instance, consisting of a negative sign if the value is negative, and a sequence of digits ranging from 0 to 9 with no 
-             leading zeroes.
-        
+            Returns: The string representation of the value of this instance, consisting of a negative sign if the value is negative, and a sequence of digits ranging from 0 to 9 with no leading zeroes.
         ToString(self: SByte, provider: IFormatProvider) -> str
         
             Converts the numeric value of this instance to its equivalent string representation using the specified culture-specific format information.
@@ -18896,9 +18348,7 @@ class SByte:
             Returns: true if s was converted successfully; otherwise, false.
         TryParse(s: str, style: NumberStyles, provider: IFormatProvider) -> (bool, SByte)
         
-            Tries to convert the string representation of a number in a specified style and culture-specific format to its System.SByte equivalent, and returns a value that indicates 
-             whether the conversion succeeded.
-        
+            Tries to convert the string representation of a number in a specified style and culture-specific format to its System.SByte equivalent, and returns a value that indicates whether the conversion succeeded.
         
             s: A string representing a number to convert.
             style: A bitwise combination of enumeration values that indicates the permitted format of s. A typical value to specify is System.Globalization.NumberStyles.Integer.
@@ -19084,6 +18534,9 @@ class SByte:
     numerator = None
     real = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SByte()
 
 class SerializableAttribute:
     """
@@ -19091,42 +18544,33 @@ class SerializableAttribute:
     
     SerializableAttribute()
     """
-    Instance = SerializableAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SerializableAttribute()
 
 class Single:
     """ Represents a single-precision floating-point number. """
-    Instance = Single
-    """hardcoded/returns an instance of the class"""
     def CompareTo(self, value):
         """
         CompareTo(self: Single, value: object) -> int
         
-            Compares this instance to a specified object and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than the value of 
-             the specified object.
-        
+            Compares this instance to a specified object and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than the value of the specified object.
         
             value: An object to compare, or null.
-            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value.-or- This instance is not 
-             a number (System.Single.NaN) and value is a number. Zero This instance is equal to value.-or- This instance and value are both not a number (System.Single.NaN), 
-             System.Single.PositiveInfinity, or System.Single.NegativeInfinity. Greater than zero This instance is greater than value.-or- This instance is a number and value is not a 
-             number (System.Single.NaN).-or- value is null.
+            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value.-or- This instance is not a number (System.Single.NaN) and value is a number. Zero This instance is equal to value.-or- This instance and value are both not a number (System.Single.NaN), System.Single.PositiveInfinity, or System.Single.NegativeInfinity. Greater than zero 
+             This instance is greater than value.-or- This instance is a number and value is not a number (System.Single.NaN).-or- value is null.
         
         CompareTo(self: Single, value: Single) -> int
         
-            Compares this instance to a specified single-precision floating-point number and returns an integer that indicates whether the value of this instance is less than, equal 
-             to, or greater than the value of the specified single-precision floating-point number.
-        
+            Compares this instance to a specified single-precision floating-point number and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than the value of the specified single-precision floating-point number.
         
             value: A single-precision floating-point number to compare.
-            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value.-or- This instance is not 
-             a number (System.Single.NaN) and value is a number. Zero This instance is equal to value.-or- Both this instance and value are not a number (System.Single.NaN), 
-             System.Single.PositiveInfinity, or System.Single.NegativeInfinity. Greater than zero This instance is greater than value.-or- This instance is a number and value is not a 
-             number (System.Single.NaN).
+            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value.-or- This instance is not a number (System.Single.NaN) and value is a number. Zero This instance is equal to value.-or- Both this instance and value are not a number (System.Single.NaN), System.Single.PositiveInfinity, or System.Single.NegativeInfinity. Greater than zero 
+             This instance is greater than value.-or- This instance is a number and value is not a number (System.Single.NaN).
         """
         pass
 
@@ -19231,9 +18675,7 @@ class Single:
             Converts the string representation of a number in a specified style to its single-precision floating-point number equivalent.
         
             s: A string that contains a number to convert.
-            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Float combined with System.Globalization.NumberStyles.AllowThousands.
-        
+            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Float combined with System.Globalization.NumberStyles.AllowThousands.
             Returns: A single-precision floating-point number that is equivalent to the numeric value or symbol specified in s.
         Parse(s: str, provider: IFormatProvider) -> Single
         
@@ -19247,9 +18689,7 @@ class Single:
             Converts the string representation of a number in a specified style and culture-specific format to its single-precision floating-point number equivalent.
         
             s: A string that contains a number to convert.
-            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Float combined with System.Globalization.NumberStyles.AllowThousands.
-        
+            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Float combined with System.Globalization.NumberStyles.AllowThousands.
             provider: An object that supplies culture-specific formatting information about s.
             Returns: A single-precision floating-point number equivalent to the numeric value or symbol specified in s.
         """
@@ -19294,14 +18734,10 @@ class Single:
             Returns: true if s was converted successfully; otherwise, false.
         TryParse(s: str, style: NumberStyles, provider: IFormatProvider) -> (bool, Single)
         
-            Converts the string representation of a number in a specified style and culture-specific format to its single-precision floating-point number equivalent. A return value 
-             indicates whether the conversion succeeded or failed.
-        
+            Converts the string representation of a number in a specified style and culture-specific format to its single-precision floating-point number equivalent. A return value indicates whether the conversion succeeded or failed.
         
             s: A string representing a number to convert.
-            style: A bitwise combination of enumeration values that indicates the permitted format of s. A typical value to specify is System.Globalization.NumberStyles.Float combined with 
-             System.Globalization.NumberStyles.AllowThousands.
-        
+            style: A bitwise combination of enumeration values that indicates the permitted format of s. A typical value to specify is System.Globalization.NumberStyles.Float combined with System.Globalization.NumberStyles.AllowThousands.
             provider: An object that supplies culture-specific formatting information about s.
             Returns: true if s was converted successfully; otherwise, false.
         """
@@ -19458,6 +18894,9 @@ class Single:
     PositiveInfinity = None
     real = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Single()
 
 class StackOverflowException(SystemException):
     """
@@ -19467,8 +18906,6 @@ class StackOverflowException(SystemException):
     StackOverflowException(message: str)
     StackOverflowException(message: str, innerException: Exception)
     """
-    Instance = StackOverflowException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -19490,6 +18927,9 @@ class StackOverflowException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StackOverflowException()
 
 class STAThreadAttribute:
     """
@@ -19497,12 +18937,13 @@ class STAThreadAttribute:
     
     STAThreadAttribute()
     """
-    Instance = STAThreadAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return STAThreadAttribute()
 
 class String():
     """
@@ -19517,8 +18958,6 @@ class String():
     str(value: Array[Char])
     str(c: Char, count: int)
     """
-    Instance = String
-    """hardcoded/returns an instance of the class"""
     def capitalize(self, *args): #cannot find CLR method
         """ capitalize(self: str) -> str """
         pass
@@ -19870,11 +19309,12 @@ class String():
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return String()
 
 class StringComparer:
     """ Represents a string comparison operation that uses specific case and culture-based or ordinal comparison rules. """
-    Instance = StringComparer
-    """hardcoded/returns an instance of the class"""
     def Compare(self, x, y):
         """
         Compare(self: StringComparer, x: object, y: object) -> int
@@ -19883,17 +19323,14 @@ class StringComparer:
         
             x: An object to compare to y.
             y: An object to compare to x.
-            Returns: A signed integer that indicates the relative values of x and y, as shown in the following table.ValueMeaningLess than zerox is less than y. -or-x is null.Zerox is equal to 
-             y.Greater than zerox is greater than y.-or-y is null.
-        
+            Returns: A signed integer that indicates the relative values of x and y, as shown in the following table.ValueMeaningLess than zerox is less than y. -or-x is null.Zerox is equal to y.Greater than zerox is greater than y.-or-y is null.
         Compare(self: StringComparer, x: str, y: str) -> int
         
             When overridden in a derived class, compares two strings and returns an indication of their relative sort order.
         
             x: A string to compare to y.
             y: A string to compare to x.
-            Returns: A signed integer that indicates the relative values of x and y, as shown in the following table.ValueMeaningLess than zerox is less than y.-or-x is null.Zerox is equal to 
-             y.Greater than zerox is greater than y.-or-y is null.
+            Returns: A signed integer that indicates the relative values of x and y, as shown in the following table.ValueMeaningLess than zerox is less than y.-or-x is null.Zerox is equal to y.Greater than zerox is greater than y.-or-y is null.
         """
         pass
 
@@ -19906,8 +19343,7 @@ class StringComparer:
         
             culture: A culture whose linguistic rules are used to perform a string comparison.
             ignoreCase: true to specify that comparison operations be case-insensitive; false to specify that comparison operations be case-sensitive.
-            Returns: A new System.StringComparer object that performs string comparisons according to the comparison rules used by the culture parameter and the case rule specified by the 
-             ignoreCase parameter.
+            Returns: A new System.StringComparer object that performs string comparisons according to the comparison rules used by the culture parameter and the case rule specified by the ignoreCase parameter.
         """
         pass
 
@@ -19973,6 +19409,9 @@ class StringComparer:
     Ordinal = None
     OrdinalIgnoreCase = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StringComparer()
 
 class StringComparison:
     """
@@ -19980,8 +19419,6 @@ class StringComparison:
     
     enum StringComparison, values: CurrentCulture (0), CurrentCultureIgnoreCase (1), InvariantCulture (2), InvariantCultureIgnoreCase (3), Ordinal (4), OrdinalIgnoreCase (5)
     """
-    Instance = StringComparison
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -20023,11 +19460,12 @@ class StringComparison:
     OrdinalIgnoreCase = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StringComparison()
 
 class StringNormalizationExtensions():
     # no doc
-    Instance = StringNormalizationExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def IsNormalized(value, normalizationForm=None):
         """
@@ -20049,6 +19487,9 @@ class StringNormalizationExtensions():
         'Normalize',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StringNormalizationExtensions()
 
 class StringSplitOptions:
     """
@@ -20056,8 +19497,6 @@ class StringSplitOptions:
     
     enum (flags) StringSplitOptions, values: None (0), RemoveEmptyEntries (1)
     """
-    Instance = StringSplitOptions
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -20095,6 +19534,9 @@ class StringSplitOptions:
     RemoveEmptyEntries = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StringSplitOptions()
 
 class ThreadStaticAttribute:
     """
@@ -20102,8 +19544,6 @@ class ThreadStaticAttribute:
     
     ThreadStaticAttribute()
     """
-    Instance = ThreadStaticAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -20111,6 +19551,9 @@ class ThreadStaticAttribute:
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ThreadStaticAttribute()
 
 class TimeoutException(SystemException):
     """
@@ -20120,8 +19563,6 @@ class TimeoutException(SystemException):
     TimeoutException(message: str)
     TimeoutException(message: str, innerException: Exception)
     """
-    Instance = TimeoutException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -20144,6 +19585,9 @@ class TimeoutException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TimeoutException()
 
 class TimeSpan:
     """
@@ -20154,8 +19598,6 @@ class TimeSpan:
     TimeSpan(days: int, hours: int, minutes: int, seconds: int)
     TimeSpan(days: int, hours: int, minutes: int, seconds: int, milliseconds: int)
     """
-    Instance = TimeSpan
-    """hardcoded/returns an instance of the class"""
     def Add(self, ts):
         """
         Add(self: TimeSpan, ts: TimeSpan) -> TimeSpan
@@ -20187,18 +19629,13 @@ class TimeSpan:
             Compares this instance to a specified object and returns an integer that indicates whether this instance is shorter than, equal to, or longer than the specified object.
         
             value: An object to compare, or null.
-            Returns: One of the following values.Value Description -1 This instance is shorter than value. 0 This instance is equal to value. 1 This instance is longer than value.-or- value is 
-             null.
-        
+            Returns: One of the following values.Value Description -1 This instance is shorter than value. 0 This instance is equal to value. 1 This instance is longer than value.-or- value is null.
         CompareTo(self: TimeSpan, value: TimeSpan) -> int
         
-            Compares this instance to a specified System.TimeSpan object and returns an integer that indicates whether this instance is shorter than, equal to, or longer than the 
-             System.TimeSpan object.
-        
+            Compares this instance to a specified System.TimeSpan object and returns an integer that indicates whether this instance is shorter than, equal to, or longer than the System.TimeSpan object.
         
             value: An object to compare to this instance.
-            Returns: A signed number indicating the relative values of this instance and value.Value Description A negative integer This instance is shorter than value. Zero This instance is 
-             equal to value. A positive integer This instance is longer than value.
+            Returns: A signed number indicating the relative values of this instance and value.Value Description A negative integer This instance is shorter than value. Zero This instance is equal to value. A positive integer This instance is longer than value.
         """
         pass
 
@@ -20349,9 +19786,7 @@ class TimeSpan:
         """
         ParseExact(input: str, format: str, formatProvider: IFormatProvider) -> TimeSpan
         
-            Converts the string representation of a time interval to its System.TimeSpan equivalent by using the specified format and culture-specific format information. The format of 
-             the string representation must match the specified format exactly.
-        
+            Converts the string representation of a time interval to its System.TimeSpan equivalent by using the specified format and culture-specific format information. The format of the string representation must match the specified format exactly.
         
             input: A string that specifies the time interval to convert.
             format: A standard or custom format string that defines the required format of input.
@@ -20359,9 +19794,7 @@ class TimeSpan:
             Returns: A time interval that corresponds to input, as specified by format and formatProvider.
         ParseExact(input: str, formats: Array[str], formatProvider: IFormatProvider) -> TimeSpan
         
-            Converts the string representation of a time interval to its System.TimeSpan equivalent by using the specified array of format strings and culture-specific format 
-             information. The format of the string representation must match one of the specified formats exactly.
-        
+            Converts the string representation of a time interval to its System.TimeSpan equivalent by using the specified array of format strings and culture-specific format information. The format of the string representation must match one of the specified formats exactly.
         
             input: A string that specifies the time interval to convert.
             formats: A array of standard or custom format strings that defines the required format of input.
@@ -20369,9 +19802,7 @@ class TimeSpan:
             Returns: A time interval that corresponds to input, as specified by formats and formatProvider.
         ParseExact(input: str, format: str, formatProvider: IFormatProvider, styles: TimeSpanStyles) -> TimeSpan
         
-            Converts the string representation of a time interval to its System.TimeSpan equivalent by using the specified format, culture-specific format information, and styles. The 
-             format of the string representation must match the specified format exactly.
-        
+            Converts the string representation of a time interval to its System.TimeSpan equivalent by using the specified format, culture-specific format information, and styles. The format of the string representation must match the specified format exactly.
         
             input: A string that specifies the time interval to convert.
             format: A standard or custom format string that defines the required format of input.
@@ -20380,9 +19811,7 @@ class TimeSpan:
             Returns: A time interval that corresponds to input, as specified by format, formatProvider, and styles.
         ParseExact(input: str, formats: Array[str], formatProvider: IFormatProvider, styles: TimeSpanStyles) -> TimeSpan
         
-            Converts the string representation of a time interval to its System.TimeSpan equivalent by using the specified formats, culture-specific format information, and styles. The 
-             format of the string representation must match one of the specified formats exactly.
-        
+            Converts the string representation of a time interval to its System.TimeSpan equivalent by using the specified formats, culture-specific format information, and styles. The format of the string representation must match one of the specified formats exactly.
         
             input: A string that specifies the time interval to convert.
             formats: A array of standard or custom format strings that define the required format of input.
@@ -20433,21 +19862,14 @@ class TimeSpan:
             Converts the string representation of a time interval to its System.TimeSpan equivalent and returns a value that indicates whether the conversion succeeded.
         
             s: A string that specifies the time interval to convert.
-            Returns: true if s was converted successfully; otherwise, false. This operation returns false if the s parameter is null or System.String.Empty, has an invalid format, represents a 
-             time interval that is less than System.TimeSpan.MinValue or greater than System.TimeSpan.MaxValue, or has at least one days, hours, minutes, or seconds component outside 
-             its valid range.
-        
+            Returns: true if s was converted successfully; otherwise, false. This operation returns false if the s parameter is null or System.String.Empty, has an invalid format, represents a time interval that is less than System.TimeSpan.MinValue or greater than System.TimeSpan.MaxValue, or has at least one days, hours, minutes, or seconds component outside its valid range.
         TryParse(input: str, formatProvider: IFormatProvider) -> (bool, TimeSpan)
         
-            Converts the string representation of a time interval to its System.TimeSpan equivalent by using the specified culture-specific formatting information, and returns a value 
-             that indicates whether the conversion succeeded.
-        
+            Converts the string representation of a time interval to its System.TimeSpan equivalent by using the specified culture-specific formatting information, and returns a value that indicates whether the conversion succeeded.
         
             input: A string that specifies the time interval to convert.
             formatProvider: An object that supplies culture-specific formatting information.
-            Returns: true if input was converted successfully; otherwise, false. This operation returns false if the input parameter is null or System.String.Empty, has an invalid format, 
-             represents a time interval that is less than System.TimeSpan.MinValue or greater than System.TimeSpan.MaxValue, or has at least one days, hours, minutes, or seconds 
-             component outside its valid range.
+            Returns: true if input was converted successfully; otherwise, false. This operation returns false if the input parameter is null or System.String.Empty, has an invalid format, represents a time interval that is less than System.TimeSpan.MinValue or greater than System.TimeSpan.MaxValue, or has at least one days, hours, minutes, or seconds component outside its valid range.
         """
         pass
 
@@ -20456,9 +19878,7 @@ class TimeSpan:
         """
         TryParseExact(input: str, format: str, formatProvider: IFormatProvider) -> (bool, TimeSpan)
         
-            Converts the string representation of a time interval to its System.TimeSpan equivalent by using the specified format and culture-specific format information, and returns a 
-             value that indicates whether the conversion succeeded. The format of the string representation must match the specified format exactly.
-        
+            Converts the string representation of a time interval to its System.TimeSpan equivalent by using the specified format and culture-specific format information, and returns a value that indicates whether the conversion succeeded. The format of the string representation must match the specified format exactly.
         
             input: A string that specifies the time interval to convert.
             format: A standard or custom format string that defines the required format of input.
@@ -20466,9 +19886,7 @@ class TimeSpan:
             Returns: true if input was converted successfully; otherwise, false.
         TryParseExact(input: str, formats: Array[str], formatProvider: IFormatProvider) -> (bool, TimeSpan)
         
-            Converts the specified string representation of a time interval to its System.TimeSpan equivalent by using the specified formats and culture-specific format information, 
-             and returns a value that indicates whether the conversion succeeded. The format of the string representation must match one of the specified formats exactly.
-        
+            Converts the specified string representation of a time interval to its System.TimeSpan equivalent by using the specified formats and culture-specific format information, and returns a value that indicates whether the conversion succeeded. The format of the string representation must match one of the specified formats exactly.
         
             input: A string that specifies the time interval to convert.
             formats: A array of standard or custom format strings that define the acceptable formats of input.
@@ -20476,9 +19894,7 @@ class TimeSpan:
             Returns: true if input was converted successfully; otherwise, false.
         TryParseExact(input: str, format: str, formatProvider: IFormatProvider, styles: TimeSpanStyles) -> (bool, TimeSpan)
         
-            Converts the string representation of a time interval to its System.TimeSpan equivalent by using the specified format, culture-specific format information, and styles, and 
-             returns a value that indicates whether the conversion succeeded. The format of the string representation must match the specified format exactly.
-        
+            Converts the string representation of a time interval to its System.TimeSpan equivalent by using the specified format, culture-specific format information, and styles, and returns a value that indicates whether the conversion succeeded. The format of the string representation must match the specified format exactly.
         
             input: A string that specifies the time interval to convert.
             format: A standard or custom format string that defines the required format of input.
@@ -20487,9 +19903,7 @@ class TimeSpan:
             Returns: true if input was converted successfully; otherwise, false.
         TryParseExact(input: str, formats: Array[str], formatProvider: IFormatProvider, styles: TimeSpanStyles) -> (bool, TimeSpan)
         
-            Converts the specified string representation of a time interval to its System.TimeSpan equivalent by using the specified formats, culture-specific format information, and 
-             styles, and returns a value that indicates whether the conversion succeeded. The format of the string representation must match one of the specified formats exactly.
-        
+            Converts the specified string representation of a time interval to its System.TimeSpan equivalent by using the specified formats, culture-specific format information, and styles, and returns a value that indicates whether the conversion succeeded. The format of the string representation must match one of the specified formats exactly.
         
             input: A string that specifies the time interval to convert.
             formats: A array of standard or custom format strings that define the acceptable formats of input.
@@ -20686,11 +20100,12 @@ Get: TotalSeconds(self: TimeSpan) -> float
     TicksPerSecond = None
     Zero = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TimeSpan()
 
 class TimeZone():
     """ Represents a time zone. """
-    Instance = TimeZone
-    """hardcoded/returns an instance of the class"""
     def GetDaylightChanges(self, year):
         """
         GetDaylightChanges(self: TimeZone, year: int) -> DaylightTime
@@ -20770,11 +20185,12 @@ Get: StandardName(self: TimeZone) -> str
 
     CurrentTimeZone = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TimeZone()
 
 class TimeZoneInfo:
     """ Represents any time zone in the world. """
-    Instance = TimeZoneInfo
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def ClearCachedData():
         """
@@ -20848,8 +20264,7 @@ class TimeZoneInfo:
         
             dateTime: The Coordinated Universal Time (UTC).
             destinationTimeZone: The time zone to convert dateTime to.
-            Returns: The date and time in the destination time zone. Its System.DateTime.Kind property is System.DateTimeKind.Utc if destinationTimeZone is System.TimeZoneInfo.Utc; otherwise, 
-             its System.DateTime.Kind property is System.DateTimeKind.Unspecified.
+            Returns: The date and time in the destination time zone. Its System.DateTime.Kind property is System.DateTimeKind.Utc if destinationTimeZone is System.TimeZoneInfo.Utc; otherwise, its System.DateTime.Kind property is System.DateTimeKind.Unspecified.
         """
         pass
 
@@ -20861,17 +20276,14 @@ class TimeZoneInfo:
             Converts the current date and time to Coordinated Universal Time (UTC).
         
             dateTime: The date and time to convert.
-            Returns: The Coordinated Universal Time (UTC) that corresponds to the dateTime parameter. The System.DateTime value's System.DateTime.Kind property is always set to 
-             System.DateTimeKind.Utc.
-        
+            Returns: The Coordinated Universal Time (UTC) that corresponds to the dateTime parameter. The System.DateTime value's System.DateTime.Kind property is always set to System.DateTimeKind.Utc.
         ConvertTimeToUtc(dateTime: DateTime, sourceTimeZone: TimeZoneInfo) -> DateTime
         
             Converts the time in a specified time zone to Coordinated Universal Time (UTC).
         
             dateTime: The date and time to convert.
             sourceTimeZone: The time zone of dateTime.
-            Returns: The Coordinated Universal Time (UTC) that corresponds to the dateTime parameter. The System.DateTime object's System.DateTime.Kind property is always set to 
-             System.DateTimeKind.Utc.
+            Returns: The Coordinated Universal Time (UTC) that corresponds to the dateTime parameter. The System.DateTime object's System.DateTime.Kind property is always set to System.DateTimeKind.Utc.
         """
         pass
 
@@ -21133,6 +20545,9 @@ Get: SupportsDaylightSavingTime(self: TimeZoneInfo) -> bool
     TransitionTime = None
     Utc = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TimeZoneInfo()
 
 class TimeZoneNotFoundException(Exception):
     """
@@ -21142,8 +20557,6 @@ class TimeZoneNotFoundException(Exception):
     TimeZoneNotFoundException(message: str, innerException: Exception)
     TimeZoneNotFoundException()
     """
-    Instance = TimeZoneNotFoundException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -21166,11 +20579,12 @@ class TimeZoneNotFoundException(Exception):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TimeZoneNotFoundException()
 
 class TupleExtensions():
     # no doc
-    Instance = TupleExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Deconstruct(value, item1, item2=None, item3=None, item4=None, item5=None, item6=None, item7=None, item8=None, item9=None, item10=None, item11=None, item12=None, item13=None, item14=None, item15=None, item16=None, item17=None, item18=None, item19=None, item20=None, item21=None):
         """
@@ -21258,11 +20672,12 @@ class TupleExtensions():
         'ToValueTuple',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TupleExtensions()
 
 class Type(MemberInfo):
     """ Represents type declarations: class types, interface types, array types, value types, enumeration types, type parameters, generic type definitions, and open or closed constructed generic types. """
-    Instance = Type
-    """hardcoded/returns an instance of the class"""
     def Equals(self, o):
         """
         Equals(self: Type, o: object) -> bool
@@ -21270,9 +20685,7 @@ class Type(MemberInfo):
             Determines if the underlying system type of the current System.Type is the same as the underlying system type of the specified System.Object.
         
             o: The object whose underlying system type is to be compared with the underlying system type of the current System.Type.
-            Returns: true if the underlying system type of o is the same as the underlying system type of the current System.Type; otherwise, false. This method also returns false if the object 
-             specified by the o parameter is not a Type.
-        
+            Returns: true if the underlying system type of o is the same as the underlying system type of the current System.Type; otherwise, false. This method also returns false if the object specified by the o parameter is not a Type.
         Equals(self: Type, o: Type) -> bool
         
             Determines if the underlying system type of the current System.Type is the same as the underlying system type of the specified System.Type.
@@ -21314,8 +20727,7 @@ class Type(MemberInfo):
         
             filter: The delegate that compares the interfaces against filterCriteria.
             filterCriteria: The search criteria that determines whether an interface should be included in the returned array.
-            Returns: An array of System.Type objects representing a filtered list of the interfaces implemented or inherited by the current System.Type, or an empty array of type System.Type if 
-             no interfaces matching the filter are implemented or inherited by the current System.Type.
+            Returns: An array of System.Type objects representing a filtered list of the interfaces implemented or inherited by the current System.Type, or an empty array of type System.Type if no interfaces matching the filter are implemented or inherited by the current System.Type.
         """
         pass
 
@@ -21327,15 +20739,11 @@ class Type(MemberInfo):
         
             memberType: An object that indicates the type of member to search for.
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            filter: The delegate that does the comparisons, returning true if the member currently being inspected matches the filterCriteria and false otherwise. You can use the 
-             FilterAttribute, FilterName, and FilterNameIgnoreCase delegates supplied by this class. The first uses the fields of FieldAttributes, MethodAttributes, and 
-             MethodImplAttributes as search criteria, and the other two delegates use String objects as the search criteria.
+            filter: The delegate that does the comparisons, returning true if the member currently being inspected matches the filterCriteria and false otherwise. You can use the FilterAttribute, FilterName, and FilterNameIgnoreCase delegates supplied by this class. The first uses the fields of FieldAttributes, MethodAttributes, and MethodImplAttributes as search criteria, and the other two delegates use String objects as the search 
+             criteria.
         
-            filterCriteria: The search criteria that determines whether a member is returned in the array of MemberInfo objects.The fields of FieldAttributes, MethodAttributes, and 
-             MethodImplAttributes can be used in conjunction with the FilterAttribute delegate supplied by this class.
-        
-            Returns: A filtered array of System.Reflection.MemberInfo objects of the specified member type.-or- An empty array of type System.Reflection.MemberInfo, if the current System.Type 
-             does not have members of type memberType that match the filter criteria.
+            filterCriteria: The search criteria that determines whether a member is returned in the array of MemberInfo objects.The fields of FieldAttributes, MethodAttributes, and MethodImplAttributes can be used in conjunction with the FilterAttribute delegate supplied by this class.
+            Returns: A filtered array of System.Reflection.MemberInfo objects of the specified member type.-or- An empty array of type System.Reflection.MemberInfo, if the current System.Type does not have members of type memberType that match the filter criteria.
         """
         pass
 
@@ -21364,41 +20772,25 @@ class Type(MemberInfo):
             Searches for a constructor whose parameters match the specified argument types and modifiers, using the specified binding constraints and the specified calling convention.
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member 
-             through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
-        
-            callConvention: The object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers are used for arguments, and 
-             the stack is cleaned up.
-        
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the constructor to get.-or- An empty array of the type System.Type (that is, 
-             Type[] types = new Type[0]) to get a constructor that takes no parameters.
-        
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does 
-             not process this parameter.
-        
+            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
+            callConvention: The object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers are used for arguments, and the stack is cleaned up.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the constructor to get.-or- An empty array of the type System.Type (that is, Type[] types = new Type[0]) to get a constructor that takes no parameters.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does not process this parameter.
             Returns: An object representing the constructor that matches the specified requirements, if found; otherwise, null.
         GetConstructor(self: Type, bindingAttr: BindingFlags, binder: Binder, types: Array[Type], modifiers: Array[ParameterModifier]) -> ConstructorInfo
         
             Searches for a constructor whose parameters match the specified argument types and modifiers, using the specified binding constraints.
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member 
-             through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
-        
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the constructor to get.-or- An empty array of the type System.Type (that is, 
-             Type[] types = new Type[0]) to get a constructor that takes no parameters.-or- System.Type.EmptyTypes.
-        
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the parameter type array. The default 
-             binder does not process this parameter.
-        
+            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the constructor to get.-or- An empty array of the type System.Type (that is, Type[] types = new Type[0]) to get a constructor that takes no parameters.-or- System.Type.EmptyTypes.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the parameter type array. The default binder does not process this parameter.
             Returns: A System.Reflection.ConstructorInfo object representing the constructor that matches the specified requirements, if found; otherwise, null.
         GetConstructor(self: Type, types: Array[Type]) -> ConstructorInfo
         
             Searches for a public instance constructor whose parameters match the types in the specified array.
         
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the desired constructor.-or- An empty array of System.Type objects, to get a 
-             constructor that takes no parameters. Such an empty array is provided by the static field System.Type.EmptyTypes.
-        
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the desired constructor.-or- An empty array of System.Type objects, to get a constructor that takes no parameters. Such an empty array is provided by the static field System.Type.EmptyTypes.
             Returns: An object representing the public instance constructor whose parameters match the types in the parameter type array, if found; otherwise, null.
         """
         pass
@@ -21407,23 +20799,13 @@ class Type(MemberInfo):
         """
         GetConstructorImpl(self: Type, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Array[Type], modifiers: Array[ParameterModifier]) -> ConstructorInfo
         
-            When overridden in a derived class, searches for a constructor whose parameters match the specified argument types and modifiers, using the specified binding constraints 
-             and the specified calling convention.
-        
+            When overridden in a derived class, searches for a constructor whose parameters match the specified argument types and modifiers, using the specified binding constraints and the specified calling convention.
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member 
-             through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
-        
-            callConvention: The object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers are used for arguments, and 
-             the stack is cleaned up.
-        
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the constructor to get.-or- An empty array of the type System.Type (that is, 
-             Type[] types = new Type[0]) to get a constructor that takes no parameters.
-        
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does 
-             not process this parameter.
-        
+            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
+            callConvention: The object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers are used for arguments, and the stack is cleaned up.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the constructor to get.-or- An empty array of the type System.Type (that is, Type[] types = new Type[0]) to get a constructor that takes no parameters.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does not process this parameter.
             Returns: A System.Reflection.ConstructorInfo object representing the constructor that matches the specified requirements, if found; otherwise, null.
         """
         pass
@@ -21435,17 +20817,14 @@ class Type(MemberInfo):
             When overridden in a derived class, searches for the constructors defined for the current System.Type, using the specified BindingFlags.
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            Returns: An array of System.Reflection.ConstructorInfo objects representing all constructors defined for the current System.Type that match the specified binding constraints, 
-             including the type initializer if it is defined. Returns an empty array of type System.Reflection.ConstructorInfo if no constructors are defined for the current 
-             System.Type, if none of the defined constructors match the binding constraints, or if the current System.Type represents a type parameter in the definition of a generic 
-             type or generic method.
+            Returns: An array of System.Reflection.ConstructorInfo objects representing all constructors defined for the current System.Type that match the specified binding constraints, including the type initializer if it is defined. Returns an empty array of type System.Reflection.ConstructorInfo if no constructors are defined for the current System.Type, if none of the defined constructors match the binding constraints, or if the 
+             current System.Type represents a type parameter in the definition of a generic type or generic method.
         
         GetConstructors(self: Type) -> Array[ConstructorInfo]
         
             Returns all the public constructors defined for the current System.Type.
-            Returns: An array of System.Reflection.ConstructorInfo objects representing all the public instance constructors defined for the current System.Type, but not including the type 
-             initializer (static constructor). If no public instance constructors are defined for the current System.Type, or if the current System.Type represents a type parameter in 
-             the definition of a generic type or generic method, an empty array of type System.Reflection.ConstructorInfo is returned.
+            Returns: An array of System.Reflection.ConstructorInfo objects representing all the public instance constructors defined for the current System.Type, but not including the type initializer (static constructor). If no public instance constructors are defined for the current System.Type, or if the current System.Type represents a type parameter in the definition of a generic type or generic method, an empty array of type 
+             System.Reflection.ConstructorInfo is returned.
         """
         pass
 
@@ -21454,8 +20833,7 @@ class Type(MemberInfo):
         GetDefaultMembers(self: Type) -> Array[MemberInfo]
         
             Searches for the members defined for the current System.Type whose System.Reflection.DefaultMemberAttribute is set.
-            Returns: An array of System.Reflection.MemberInfo objects representing all default members of the current System.Type.-or- An empty array of type System.Reflection.MemberInfo, if 
-             the current System.Type does not have default members.
+            Returns: An array of System.Reflection.MemberInfo objects representing all default members of the current System.Type.-or- An empty array of type System.Reflection.MemberInfo, if the current System.Type does not have default members.
         """
         pass
 
@@ -21464,8 +20842,7 @@ class Type(MemberInfo):
         GetElementType(self: Type) -> Type
         
             When overridden in a derived class, returns the System.Type of the object encompassed or referred to by the current array, pointer or reference type.
-            Returns: The System.Type of the object encompassed or referred to by the current array, pointer, or reference type, or null if the current System.Type is not an array or a pointer, 
-             or is not passed by reference, or represents a generic type or a type parameter in the definition of a generic type or generic method.
+            Returns: The System.Type of the object encompassed or referred to by the current array, pointer, or reference type, or null if the current System.Type is not an array or a pointer, or is not passed by reference, or represents a generic type or a type parameter in the definition of a generic type or generic method.
         """
         pass
 
@@ -21530,17 +20907,13 @@ class Type(MemberInfo):
         GetEvents(self: Type) -> Array[EventInfo]
         
             Returns all the public events that are declared or inherited by the current System.Type.
-            Returns: An array of System.Reflection.EventInfo objects representing all the public events which are declared or inherited by the current System.Type.-or- An empty array of type 
-             System.Reflection.EventInfo, if the current System.Type does not have public events.
-        
+            Returns: An array of System.Reflection.EventInfo objects representing all the public events which are declared or inherited by the current System.Type.-or- An empty array of type System.Reflection.EventInfo, if the current System.Type does not have public events.
         GetEvents(self: Type, bindingAttr: BindingFlags) -> Array[EventInfo]
         
             When overridden in a derived class, searches for events that are declared or inherited by the current System.Type, using the specified binding constraints.
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            Returns: An array of System.Reflection.EventInfo objects representing all events that are declared or inherited by the current System.Type that match the specified binding 
-             constraints.-or- An empty array of type System.Reflection.EventInfo, if the current System.Type does not have events, or if none of the events match the binding 
-             constraints.
+            Returns: An array of System.Reflection.EventInfo objects representing all events that are declared or inherited by the current System.Type that match the specified binding constraints.-or- An empty array of type System.Reflection.EventInfo, if the current System.Type does not have events, or if none of the events match the binding constraints.
         """
         pass
 
@@ -21567,16 +20940,13 @@ class Type(MemberInfo):
         GetFields(self: Type) -> Array[FieldInfo]
         
             Returns all the public fields of the current System.Type.
-            Returns: An array of System.Reflection.FieldInfo objects representing all the public fields defined for the current System.Type.-or- An empty array of type 
-             System.Reflection.FieldInfo, if no public fields are defined for the current System.Type.
-        
+            Returns: An array of System.Reflection.FieldInfo objects representing all the public fields defined for the current System.Type.-or- An empty array of type System.Reflection.FieldInfo, if no public fields are defined for the current System.Type.
         GetFields(self: Type, bindingAttr: BindingFlags) -> Array[FieldInfo]
         
             When overridden in a derived class, searches for the fields defined for the current System.Type, using the specified binding constraints.
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            Returns: An array of System.Reflection.FieldInfo objects representing all fields defined for the current System.Type that match the specified binding constraints.-or- An empty array 
-             of type System.Reflection.FieldInfo, if no fields are defined for the current System.Type, or if none of the defined fields match the binding constraints.
+            Returns: An array of System.Reflection.FieldInfo objects representing all fields defined for the current System.Type that match the specified binding constraints.-or- An empty array of type System.Reflection.FieldInfo, if no fields are defined for the current System.Type, or if none of the defined fields match the binding constraints.
         """
         pass
 
@@ -21629,9 +20999,7 @@ class Type(MemberInfo):
             When overridden in a derived class, searches for the specified interface, specifying whether to do a case-insensitive search for the interface name.
         
             name: The string containing the name of the interface to get. For generic interfaces, this is the mangled name.
-            ignoreCase: true to ignore the case of that part of name that specifies the simple interface name (the part that specifies the namespace must be correctly cased).-or- false to perform 
-             a case-sensitive search for all parts of name.
-        
+            ignoreCase: true to ignore the case of that part of name that specifies the simple interface name (the part that specifies the namespace must be correctly cased).-or- false to perform a case-sensitive search for all parts of name.
             Returns: An object representing the interface with the specified name, implemented or inherited by the current System.Type, if found; otherwise, null.
         """
         pass
@@ -21652,8 +21020,7 @@ class Type(MemberInfo):
         GetInterfaces(self: Type) -> Array[Type]
         
             When overridden in a derived class, gets all the interfaces implemented or inherited by the current System.Type.
-            Returns: An array of System.Type objects representing all the interfaces implemented or inherited by the current System.Type.-or- An empty array of type System.Type, if no 
-             interfaces are implemented or inherited by the current System.Type.
+            Returns: An array of System.Type objects representing all the interfaces implemented or inherited by the current System.Type.-or- An empty array of type System.Type, if no interfaces are implemented or inherited by the current System.Type.
         """
         pass
 
@@ -21688,16 +21055,13 @@ class Type(MemberInfo):
         GetMembers(self: Type) -> Array[MemberInfo]
         
             Returns all the public members of the current System.Type.
-            Returns: An array of System.Reflection.MemberInfo objects representing all the public members of the current System.Type.-or- An empty array of type System.Reflection.MemberInfo, if 
-             the current System.Type does not have public members.
-        
+            Returns: An array of System.Reflection.MemberInfo objects representing all the public members of the current System.Type.-or- An empty array of type System.Reflection.MemberInfo, if the current System.Type does not have public members.
         GetMembers(self: Type, bindingAttr: BindingFlags) -> Array[MemberInfo]
         
             When overridden in a derived class, searches for the members defined for the current System.Type, using the specified binding constraints.
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            Returns: An array of System.Reflection.MemberInfo objects representing all members defined for the current System.Type that match the specified binding constraints.-or- An empty 
-             array of type System.Reflection.MemberInfo, if no members are defined for the current System.Type, or if none of the defined members match the binding constraints.
+            Returns: An array of System.Reflection.MemberInfo objects representing all members defined for the current System.Type that match the specified binding constraints.-or- An empty array of type System.Reflection.MemberInfo, if no members are defined for the current System.Type, or if none of the defined members match the binding constraints.
         """
         pass
 
@@ -21705,24 +21069,14 @@ class Type(MemberInfo):
         """
         GetMethod(self: Type, name: str, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Array[Type], modifiers: Array[ParameterModifier]) -> MethodInfo
         
-            Searches for the specified method whose parameters match the specified argument types and modifiers, using the specified binding constraints and the specified calling 
-             convention.
-        
+            Searches for the specified method whose parameters match the specified argument types and modifiers, using the specified binding constraints and the specified calling convention.
         
             name: The string containing the name of the method to get.
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member 
-             through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
-        
-            callConvention: The object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers are used for arguments, and 
-             how the stack is cleaned up.
-        
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of System.Type objects (as provided by 
-             the System.Type.EmptyTypes field) to get a method that takes no parameters.
-        
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. To be only used when 
-             calling through COM interop, and only parameters that are passed by reference are handled. The default binder does not process this parameter.
-        
+            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
+            callConvention: The object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers are used for arguments, and how the stack is cleaned up.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of System.Type objects (as provided by the System.Type.EmptyTypes field) to get a method that takes no parameters.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. To be only used when calling through COM interop, and only parameters that are passed by reference are handled. The default binder does not process this parameter.
             Returns: An object representing the method that matches the specified requirements, if found; otherwise, null.
         GetMethod(self: Type, name: str, bindingAttr: BindingFlags, binder: Binder, types: Array[Type], modifiers: Array[ParameterModifier]) -> MethodInfo
         
@@ -21730,36 +21084,24 @@ class Type(MemberInfo):
         
             name: The string containing the name of the method to get.
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member 
-             through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
-        
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of System.Type objects (as provided by 
-             the System.Type.EmptyTypes field) to get a method that takes no parameters.
-        
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. To be only used when 
-             calling through COM interop, and only parameters that are passed by reference are handled. The default binder does not process this parameter.
-        
+            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of System.Type objects (as provided by the System.Type.EmptyTypes field) to get a method that takes no parameters.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. To be only used when calling through COM interop, and only parameters that are passed by reference are handled. The default binder does not process this parameter.
             Returns: An object representing the method that matches the specified requirements, if found; otherwise, null.
         GetMethod(self: Type, name: str, types: Array[Type], modifiers: Array[ParameterModifier]) -> MethodInfo
         
             Searches for the specified public method whose parameters match the specified argument types and modifiers.
         
             name: The string containing the name of the public method to get.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of System.Type objects (as provided by 
-             the System.Type.EmptyTypes field) to get a method that takes no parameters.
-        
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. To be only used when 
-             calling through COM interop, and only parameters that are passed by reference are handled. The default binder does not process this parameter.
-        
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of System.Type objects (as provided by the System.Type.EmptyTypes field) to get a method that takes no parameters.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. To be only used when calling through COM interop, and only parameters that are passed by reference are handled. The default binder does not process this parameter.
             Returns: An object representing the public method that matches the specified requirements, if found; otherwise, null.
         GetMethod(self: Type, name: str, types: Array[Type]) -> MethodInfo
         
             Searches for the specified public method whose parameters match the specified argument types.
         
             name: The string containing the name of the public method to get.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of System.Type objects (as provided by 
-             the System.Type.EmptyTypes field) to get a method that takes no parameters.
-        
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of System.Type objects (as provided by the System.Type.EmptyTypes field) to get a method that takes no parameters.
             Returns: An object representing the public method whose parameters match the specified argument types, if found; otherwise, null.
         GetMethod(self: Type, name: str, bindingAttr: BindingFlags) -> MethodInfo
         
@@ -21781,24 +21123,14 @@ class Type(MemberInfo):
         """
         GetMethodImpl(self: Type, name: str, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Array[Type], modifiers: Array[ParameterModifier]) -> MethodInfo
         
-            When overridden in a derived class, searches for the specified method whose parameters match the specified argument types and modifiers, using the specified binding 
-             constraints and the specified calling convention.
-        
+            When overridden in a derived class, searches for the specified method whose parameters match the specified argument types and modifiers, using the specified binding constraints and the specified calling convention.
         
             name: The string containing the name of the method to get.
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member 
-             through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
-        
-            callConvention: The object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers are used for arguments, and 
-             what process cleans up the stack.
-        
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of the type System.Type (that is, 
-             Type[] types = new Type[0]) to get a method that takes no parameters.-or- null. If types is null, arguments are not matched.
-        
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does 
-             not process this parameter.
-        
+            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
+            callConvention: The object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers are used for arguments, and what process cleans up the stack.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of the type System.Type (that is, Type[] types = new Type[0]) to get a method that takes no parameters.-or- null. If types is null, arguments are not matched.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does not process this parameter.
             Returns: An object representing the method that matches the specified requirements, if found; otherwise, null.
         """
         pass
@@ -21810,14 +21142,11 @@ class Type(MemberInfo):
             When overridden in a derived class, searches for the methods defined for the current System.Type, using the specified binding constraints.
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            Returns: An array of System.Reflection.MethodInfo objects representing all methods defined for the current System.Type that match the specified binding constraints.-or- An empty 
-             array of type System.Reflection.MethodInfo, if no methods are defined for the current System.Type, or if none of the defined methods match the binding constraints.
-        
+            Returns: An array of System.Reflection.MethodInfo objects representing all methods defined for the current System.Type that match the specified binding constraints.-or- An empty array of type System.Reflection.MethodInfo, if no methods are defined for the current System.Type, or if none of the defined methods match the binding constraints.
         GetMethods(self: Type) -> Array[MethodInfo]
         
             Returns all the public methods of the current System.Type.
-            Returns: An array of System.Reflection.MethodInfo objects representing all the public methods defined for the current System.Type.-or- An empty array of type 
-             System.Reflection.MethodInfo, if no public methods are defined for the current System.Type.
+            Returns: An array of System.Reflection.MethodInfo objects representing all the public methods defined for the current System.Type.-or- An empty array of type System.Reflection.MethodInfo, if no public methods are defined for the current System.Type.
         """
         pass
 
@@ -21844,16 +21173,13 @@ class Type(MemberInfo):
         GetNestedTypes(self: Type) -> Array[Type]
         
             Returns the public types nested in the current System.Type.
-            Returns: An array of System.Type objects representing the public types nested in the current System.Type (the search is not recursive), or an empty array of type System.Type if no 
-             public types are nested in the current System.Type.
-        
+            Returns: An array of System.Type objects representing the public types nested in the current System.Type (the search is not recursive), or an empty array of type System.Type if no public types are nested in the current System.Type.
         GetNestedTypes(self: Type, bindingAttr: BindingFlags) -> Array[Type]
         
             When overridden in a derived class, searches for the types nested in the current System.Type, using the specified binding constraints.
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            Returns: An array of System.Type objects representing all the types nested in the current System.Type that match the specified binding constraints (the search is not recursive), or 
-             an empty array of type System.Type, if no nested types are found that match the binding constraints.
+            Returns: An array of System.Type objects representing all the types nested in the current System.Type that match the specified binding constraints (the search is not recursive), or an empty array of type System.Type, if no nested types are found that match the binding constraints.
         """
         pass
 
@@ -21864,14 +21190,11 @@ class Type(MemberInfo):
             When overridden in a derived class, searches for the properties of the current System.Type, using the specified binding constraints.
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            Returns: An array of System.Reflection.PropertyInfo objects representing all properties of the current System.Type that match the specified binding constraints.-or- An empty array 
-             of type System.Reflection.PropertyInfo, if the current System.Type does not have properties, or if none of the properties match the binding constraints.
-        
+            Returns: An array of System.Reflection.PropertyInfo objects representing all properties of the current System.Type that match the specified binding constraints.-or- An empty array of type System.Reflection.PropertyInfo, if the current System.Type does not have properties, or if none of the properties match the binding constraints.
         GetProperties(self: Type) -> Array[PropertyInfo]
         
             Returns all the public properties of the current System.Type.
-            Returns: An array of System.Reflection.PropertyInfo objects representing all public properties of the current System.Type.-or- An empty array of type System.Reflection.PropertyInfo, 
-             if the current System.Type does not have public properties.
+            Returns: An array of System.Reflection.PropertyInfo objects representing all public properties of the current System.Type.-or- An empty array of type System.Reflection.PropertyInfo, if the current System.Type does not have public properties.
         """
         pass
 
@@ -21883,16 +21206,10 @@ class Type(MemberInfo):
         
             name: The string containing the name of the property to get.
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member 
-             through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
-        
+            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
             returnType: The return type of the property.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type (that 
-             is, Type[] types = new Type[0]) to get a property that is not indexed.
-        
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does 
-             not process this parameter.
-        
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type (that is, Type[] types = new Type[0]) to get a property that is not indexed.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does not process this parameter.
             Returns: An object representing the property that matches the specified requirements, if found; otherwise, null.
         GetProperty(self: Type, name: str, returnType: Type, types: Array[Type], modifiers: Array[ParameterModifier]) -> PropertyInfo
         
@@ -21900,12 +21217,8 @@ class Type(MemberInfo):
         
             name: The string containing the name of the public property to get.
             returnType: The return type of the property.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type (that 
-             is, Type[] types = new Type[0]) to get a property that is not indexed.
-        
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does 
-             not process this parameter.
-        
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type (that is, Type[] types = new Type[0]) to get a property that is not indexed.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does not process this parameter.
             Returns: An object representing the public property that matches the specified requirements, if found; otherwise, null.
         GetProperty(self: Type, name: str, bindingAttr: BindingFlags) -> PropertyInfo
         
@@ -21920,18 +21233,14 @@ class Type(MemberInfo):
         
             name: The string containing the name of the public property to get.
             returnType: The return type of the property.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type (that 
-             is, Type[] types = new Type[0]) to get a property that is not indexed.
-        
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type (that is, Type[] types = new Type[0]) to get a property that is not indexed.
             Returns: An object representing the public property whose parameters match the specified argument types, if found; otherwise, null.
         GetProperty(self: Type, name: str, types: Array[Type]) -> PropertyInfo
         
             Searches for the specified public property whose parameters match the specified argument types.
         
             name: The string containing the name of the public property to get.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type (that 
-             is, Type[] types = new Type[0]) to get a property that is not indexed.
-        
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type (that is, Type[] types = new Type[0]) to get a property that is not indexed.
             Returns: An object representing the public property whose parameters match the specified argument types, if found; otherwise, null.
         GetProperty(self: Type, name: str, returnType: Type) -> PropertyInfo
         
@@ -21953,22 +21262,14 @@ class Type(MemberInfo):
         """
         GetPropertyImpl(self: Type, name: str, bindingAttr: BindingFlags, binder: Binder, returnType: Type, types: Array[Type], modifiers: Array[ParameterModifier]) -> PropertyInfo
         
-            When overridden in a derived class, searches for the specified property whose parameters match the specified argument types and modifiers, using the specified binding 
-             constraints.
-        
+            When overridden in a derived class, searches for the specified property whose parameters match the specified argument types and modifiers, using the specified binding constraints.
         
             name: The string containing the name of the property to get.
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded member, coercion of argument types, and invocation of a member 
-             through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
-        
+            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded member, coercion of argument types, and invocation of a member through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder.
             returnType: The return type of the property.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type (that 
-             is, Type[] types = new Type[0]) to get a property that is not indexed.
-        
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does 
-             not process this parameter.
-        
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type (that is, Type[] types = new Type[0]) to get a property that is not indexed.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does not process this parameter.
             Returns: An object representing the property that matches the specified requirements, if found; otherwise, null.
         """
         pass
@@ -21979,36 +21280,22 @@ class Type(MemberInfo):
         
             Gets the System.Type with the specified name, specifying whether to perform a case-sensitive search and whether to throw an exception if the type is not found.
         
-            typeName: The assembly-qualified name of the type to get. See System.Type.AssemblyQualifiedName. If the type is in the currently executing assembly or in Mscorlib.dll, it is 
-             sufficient to supply the type name qualified by its namespace.
-        
-            throwOnError: true to throw an exception if the type cannot be found; false to return null.Specifying false also suppresses some other exception conditions, but not all of them. See the 
-             Exceptions section.
-        
+            typeName: The assembly-qualified name of the type to get. See System.Type.AssemblyQualifiedName. If the type is in the currently executing assembly or in Mscorlib.dll, it is sufficient to supply the type name qualified by its namespace.
+            throwOnError: true to throw an exception if the type cannot be found; false to return null.Specifying false also suppresses some other exception conditions, but not all of them. See the Exceptions section.
             ignoreCase: true to perform a case-insensitive search for typeName, false to perform a case-sensitive search for typeName.
-            Returns: The type with the specified name. If the type is not found, the throwOnError parameter specifies whether null is returned or an exception is thrown. In some cases, an 
-             exception is thrown regardless of the value of throwOnError. See the Exceptions section.
-        
+            Returns: The type with the specified name. If the type is not found, the throwOnError parameter specifies whether null is returned or an exception is thrown. In some cases, an exception is thrown regardless of the value of throwOnError. See the Exceptions section.
         GetType(typeName: str, throwOnError: bool) -> Type
         
             Gets the System.Type with the specified name, performing a case-sensitive search and specifying whether to throw an exception if the type is not found.
         
-            typeName: The assembly-qualified name of the type to get. See System.Type.AssemblyQualifiedName. If the type is in the currently executing assembly or in Mscorlib.dll, it is 
-             sufficient to supply the type name qualified by its namespace.
-        
-            throwOnError: true to throw an exception if the type cannot be found; false to return null. Specifying false also suppresses some other exception conditions, but not all of them. See the 
-             Exceptions section.
-        
-            Returns: The type with the specified name. If the type is not found, the throwOnError parameter specifies whether null is returned or an exception is thrown. In some cases, an 
-             exception is thrown regardless of the value of throwOnError. See the Exceptions section.
-        
+            typeName: The assembly-qualified name of the type to get. See System.Type.AssemblyQualifiedName. If the type is in the currently executing assembly or in Mscorlib.dll, it is sufficient to supply the type name qualified by its namespace.
+            throwOnError: true to throw an exception if the type cannot be found; false to return null. Specifying false also suppresses some other exception conditions, but not all of them. See the Exceptions section.
+            Returns: The type with the specified name. If the type is not found, the throwOnError parameter specifies whether null is returned or an exception is thrown. In some cases, an exception is thrown regardless of the value of throwOnError. See the Exceptions section.
         GetType(typeName: str) -> Type
         
             Gets the System.Type with the specified name, performing a case-sensitive search.
         
-            typeName: The assembly-qualified name of the type to get. See System.Type.AssemblyQualifiedName. If the type is in the currently executing assembly or in Mscorlib.dll, it is 
-             sufficient to supply the type name qualified by its namespace.
-        
+            typeName: The assembly-qualified name of the type to get. See System.Type.AssemblyQualifiedName. If the type is in the currently executing assembly or in Mscorlib.dll, it is sufficient to supply the type name qualified by its namespace.
             Returns: The type with the specified name, if found; otherwise, null.
         GetType(typeName: str, assemblyResolver: Func[AssemblyName, Assembly], typeResolver: Func[Assembly, str, bool, Type]) -> Type
         GetType(typeName: str, assemblyResolver: Func[AssemblyName, Assembly], typeResolver: Func[Assembly, str, bool, Type], throwOnError: bool) -> Type
@@ -22078,9 +21365,7 @@ class Type(MemberInfo):
             Returns: System.__ComObject regardless of whether the CLSID is valid.
         GetTypeFromCLSID(clsid: Guid, server: str, throwOnError: bool) -> Type
         
-            Gets the type associated with the specified class identifier (CLSID) from the specified server, specifying whether to throw an exception if an error occurs while loading 
-             the type.
-        
+            Gets the type associated with the specified class identifier (CLSID) from the specified server, specifying whether to throw an exception if an error occurs while loading the type.
         
             clsid: The CLSID of the type to get.
             server: The server from which to load the type. If the server name is null, this method automatically reverts to the local machine.
@@ -22126,9 +21411,7 @@ class Type(MemberInfo):
             Returns: The type associated with the specified program identifier (progID), if progID is a valid entry in the registry and a type is associated with it; otherwise, null.
         GetTypeFromProgID(progID: str, server: str, throwOnError: bool) -> Type
         
-            Gets the type associated with the specified program identifier (progID) from the specified server, specifying whether to throw an exception if an error occurs while loading 
-             the type.
-        
+            Gets the type associated with the specified program identifier (progID) from the specified server, specifying whether to throw an exception if an error occurs while loading the type.
         
             progID: The progID of the System.Type to get.
             server: The server from which to load the type. If the server name is null, this method automatically reverts to the local machine.
@@ -22153,9 +21436,7 @@ class Type(MemberInfo):
         """
         HasElementTypeImpl(self: Type) -> bool
         
-            When overridden in a derived class, implements the System.Type.HasElementType property and determines whether the current System.Type encompasses or refers to another type; 
-             that is, whether the current System.Type is an array, a pointer, or is passed by reference.
-        
+            When overridden in a derived class, implements the System.Type.HasElementType property and determines whether the current System.Type encompasses or refers to another type; that is, whether the current System.Type is an array, a pointer, or is passed by reference.
             Returns: true if the System.Type is an array, a pointer, or is passed by reference; otherwise, false.
         """
         pass
@@ -22166,62 +21447,38 @@ class Type(MemberInfo):
         
             When overridden in a derived class, invokes the specified member, using the specified binding constraints and matching the specified argument list, modifiers and culture.
         
-            name: The string containing the name of the constructor, method, property, or field member to invoke.-or- An empty string ("") to invoke the default member. -or-For IDispatch 
-             members, a string representing the DispID, for example "[DispID=3]".
-        
-            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted. The access can be one of the BindingFlags such as Public, 
-             NonPublic, Private, InvokeMethod, GetField, and so on. The type of lookup need not be specified. If the type of lookup is omitted, BindingFlags.Public | 
-             BindingFlags.Instance | BindingFlags.Static are used.
-        
-            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member 
-             through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder. Note that explicitly defining a System.Reflection.Binder object 
-             may be required for successfully invoking method overloads with variable arguments.
+            name: The string containing the name of the constructor, method, property, or field member to invoke.-or- An empty string ("") to invoke the default member. -or-For IDispatch members, a string representing the DispID, for example "[DispID=3]".
+            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted. The access can be one of the BindingFlags such as Public, NonPublic, Private, InvokeMethod, GetField, and so on. The type of lookup need not be specified. If the type of lookup is omitted, BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static are used.
+            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder. Note that explicitly defining a System.Reflection.Binder object may be required for successfully invoking method overloads with variable 
+             arguments.
         
             target: The object on which to invoke the specified member.
             args: An array containing the arguments to pass to the member to invoke.
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the args array. A parameter's associated 
-             attributes are stored in the member's signature. The default binder processes this parameter only when calling a COM component.
-        
-            culture: The System.Globalization.CultureInfo object representing the globalization locale to use, which may be necessary for locale-specific conversions, such as converting a 
-             numeric String to a Double.-or- A null reference (Nothing in Visual Basic) to use the current thread's System.Globalization.CultureInfo.
-        
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the args array. A parameter's associated attributes are stored in the member's signature. The default binder processes this parameter only when calling a COM component.
+            culture: The System.Globalization.CultureInfo object representing the globalization locale to use, which may be necessary for locale-specific conversions, such as converting a numeric String to a Double.-or- A null reference (Nothing in Visual Basic) to use the current thread's System.Globalization.CultureInfo.
             namedParameters: An array containing the names of the parameters to which the values in the args array are passed.
             Returns: An object representing the return value of the invoked member.
         InvokeMember(self: Type, name: str, invokeAttr: BindingFlags, binder: Binder, target: object, args: Array[object], culture: CultureInfo) -> object
         
             Invokes the specified member, using the specified binding constraints and matching the specified argument list and culture.
         
-            name: The string containing the name of the constructor, method, property, or field member to invoke.-or- An empty string ("") to invoke the default member. -or-For IDispatch 
-             members, a string representing the DispID, for example "[DispID=3]".
-        
-            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted. The access can be one of the BindingFlags such as Public, 
-             NonPublic, Private, InvokeMethod, GetField, and so on. The type of lookup need not be specified. If the type of lookup is omitted, BindingFlags.Public | 
-             BindingFlags.Instance | BindingFlags.Static are used.
-        
-            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member 
-             through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder. Note that explicitly defining a System.Reflection.Binder object 
-             may be required for successfully invoking method overloads with variable arguments.
+            name: The string containing the name of the constructor, method, property, or field member to invoke.-or- An empty string ("") to invoke the default member. -or-For IDispatch members, a string representing the DispID, for example "[DispID=3]".
+            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted. The access can be one of the BindingFlags such as Public, NonPublic, Private, InvokeMethod, GetField, and so on. The type of lookup need not be specified. If the type of lookup is omitted, BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static are used.
+            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder. Note that explicitly defining a System.Reflection.Binder object may be required for successfully invoking method overloads with variable 
+             arguments.
         
             target: The object on which to invoke the specified member.
             args: An array containing the arguments to pass to the member to invoke.
-            culture: The object representing the globalization locale to use, which may be necessary for locale-specific conversions, such as converting a numeric System.String to a 
-             System.Double.-or- A null reference (Nothing in Visual Basic) to use the current thread's System.Globalization.CultureInfo.
-        
+            culture: The object representing the globalization locale to use, which may be necessary for locale-specific conversions, such as converting a numeric System.String to a System.Double.-or- A null reference (Nothing in Visual Basic) to use the current thread's System.Globalization.CultureInfo.
             Returns: An object representing the return value of the invoked member.
         InvokeMember(self: Type, name: str, invokeAttr: BindingFlags, binder: Binder, target: object, args: Array[object]) -> object
         
             Invokes the specified member, using the specified binding constraints and matching the specified argument list.
         
-            name: The string containing the name of the constructor, method, property, or field member to invoke.-or- An empty string ("") to invoke the default member. -or-For IDispatch 
-             members, a string representing the DispID, for example "[DispID=3]".
-        
-            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted. The access can be one of the BindingFlags such as Public, 
-             NonPublic, Private, InvokeMethod, GetField, and so on. The type of lookup need not be specified. If the type of lookup is omitted, BindingFlags.Public | 
-             BindingFlags.Instance | BindingFlags.Static are used.
-        
-            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member 
-             through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder. Note that explicitly defining a System.Reflection.Binder object 
-             may be required for successfully invoking method overloads with variable arguments.
+            name: The string containing the name of the constructor, method, property, or field member to invoke.-or- An empty string ("") to invoke the default member. -or-For IDispatch members, a string representing the DispID, for example "[DispID=3]".
+            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted. The access can be one of the BindingFlags such as Public, NonPublic, Private, InvokeMethod, GetField, and so on. The type of lookup need not be specified. If the type of lookup is omitted, BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static are used.
+            binder: An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.-or- A null reference (Nothing in Visual Basic), to use the System.Type.DefaultBinder. Note that explicitly defining a System.Reflection.Binder object may be required for successfully invoking method overloads with variable 
+             arguments.
         
             target: The object on which to invoke the specified member.
             args: An array containing the arguments to pass to the member to invoke.
@@ -22245,8 +21502,7 @@ class Type(MemberInfo):
             Determines whether an instance of the current System.Type can be assigned from an instance of the specified Type.
         
             c: The type to compare with the current type.
-            Returns: true if c and the current Type represent the same type, or if the current Type is in the inheritance hierarchy of c, or if the current Type is an interface that c 
-             implements, or if c is a generic type parameter and the current Type represents one of the constraints of c. false if none of these conditions are true, or if c is null.
+            Returns: true if c and the current Type represent the same type, or if the current Type is in the inheritance hierarchy of c, or if the current Type is an interface that c implements, or if c is a generic type parameter and the current Type represents one of the constraints of c. false if none of these conditions are true, or if c is null.
         """
         pass
 
@@ -22295,8 +21551,7 @@ class Type(MemberInfo):
             Determines whether two COM types have the same identity and are eligible for type equivalence.
         
             other: The COM type that is tested for equivalence with the current type.
-            Returns: true if the COM types are equivalent; otherwise, false. This method also returns false if one type is in an assembly that is loaded for execution, and the other is in an 
-             assembly that is loaded into the reflection-only context.
+            Returns: true if the COM types are equivalent; otherwise, false. This method also returns false if one type is in an assembly that is loaded for execution, and the other is in an assembly that is loaded into the reflection-only context.
         """
         pass
 
@@ -22307,8 +21562,7 @@ class Type(MemberInfo):
             Determines whether the specified object is an instance of the current System.Type.
         
             o: The object to compare with the current type.
-            Returns: true if the current Type is in the inheritance hierarchy of the object represented by o, or if the current Type is an interface that o supports. false if neither of these 
-             conditions is the case, or if o is null, or if the current Type is an open generic type (that is, System.Type.ContainsGenericParameters returns true).
+            Returns: true if the current Type is in the inheritance hierarchy of the object represented by o, or if the current Type is an interface that o supports. false if neither of these conditions is the case, or if o is null, or if the current Type is an open generic type (that is, System.Type.ContainsGenericParameters returns true).
         """
         pass
 
@@ -22346,8 +21600,7 @@ class Type(MemberInfo):
             Determines whether the class represented by the current System.Type derives from the class represented by the specified System.Type.
         
             c: The type to compare with the current type.
-            Returns: true if the Type represented by the c parameter and the current Type represent classes, and the class represented by the current Type derives from the class represented by 
-             c; otherwise, false. This method also returns false if c and the current Type represent the same class.
+            Returns: true if the Type represented by the c parameter and the current Type represent classes, and the class represented by the current Type derives from the class represented by c; otherwise, false. This method also returns false if c and the current Type represent the same class.
         """
         pass
 
@@ -22388,9 +21641,7 @@ class Type(MemberInfo):
         """
         MakeGenericType(self: Type, *typeArguments: Array[Type]) -> Type
         
-            Substitutes the elements of an array of types for the type parameters of the current generic type definition and returns a System.Type object representing the resulting 
-             constructed type.
-        
+            Substitutes the elements of an array of types for the type parameters of the current generic type definition and returns a System.Type object representing the resulting constructed type.
         
             typeArguments: An array of types to be substituted for the type parameters of the current generic type.
             Returns: A System.Type representing the constructed type formed by substituting the elements of typeArguments for the type parameters of the current generic type.
@@ -22411,17 +21662,12 @@ class Type(MemberInfo):
         """
         ReflectionOnlyGetType(typeName: str, throwIfNotFound: bool, ignoreCase: bool) -> Type
         
-            Gets the System.Type with the specified name, specifying whether to perform a case-sensitive search and whether to throw an exception if the type is not found. The type is 
-             loaded for reflection only, not for execution.
-        
+            Gets the System.Type with the specified name, specifying whether to perform a case-sensitive search and whether to throw an exception if the type is not found. The type is loaded for reflection only, not for execution.
         
             typeName: The assembly-qualified name of the System.Type to get.
-            throwIfNotFound: true to throw a System.TypeLoadException if the type cannot be found; false to return null if the type cannot be found. Specifying false also suppresses some other 
-             exception conditions, but not all of them. See the Exceptions section.
-        
+            throwIfNotFound: true to throw a System.TypeLoadException if the type cannot be found; false to return null if the type cannot be found. Specifying false also suppresses some other exception conditions, but not all of them. See the Exceptions section.
             ignoreCase: true to perform a case-insensitive search for typeName; false to perform a case-sensitive search for typeName.
-            Returns: The type with the specified name, if found; otherwise, null. If the type is not found, the throwIfNotFound parameter specifies whether null is returned or an exception is 
-             thrown. In some cases, an exception is thrown regardless of the value of throwIfNotFound. See the Exceptions section.
+            Returns: The type with the specified name, if found; otherwise, null. If the type is not found, the throwIfNotFound parameter specifies whether null is returned or an exception is thrown. In some cases, an exception is thrown regardless of the value of throwIfNotFound. See the Exceptions section.
         """
         pass
 
@@ -22873,6 +22119,9 @@ Get: UnderlyingSystemType(self: Type) -> Type
     EmptyTypes = None
     Missing = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Type()
 
 class TypeAccessException(TypeLoadException):
     """
@@ -22882,8 +22131,6 @@ class TypeAccessException(TypeLoadException):
     TypeAccessException(message: str)
     TypeAccessException(message: str, inner: Exception)
     """
-    Instance = TypeAccessException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -22906,6 +22153,9 @@ class TypeAccessException(TypeLoadException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TypeAccessException()
 
 class TypeCode:
     """
@@ -22913,8 +22163,6 @@ class TypeCode:
     
     enum TypeCode, values: Boolean (3), Byte (6), Char (4), DateTime (16), DBNull (2), Decimal (15), Double (14), Empty (0), Int16 (7), Int32 (9), Int64 (11), Object (1), SByte (5), Single (13), String (18), UInt16 (8), UInt32 (10), UInt64 (12)
     """
-    Instance = TypeCode
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -22968,11 +22216,12 @@ class TypeCode:
     UInt64 = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TypeCode()
 
 class TypedReference():
     """ Describes objects that contain both a managed pointer to a location and a runtime representation of the type that may be stored at that location. """
-    Instance = TypedReference
-    """hardcoded/returns an instance of the class"""
     def Equals(self, o):
         """
         Equals(self: TypedReference, o: object) -> bool
@@ -23013,9 +22262,7 @@ class TypedReference():
             Makes a TypedReference for a field identified by a specified object and list of field descriptions.
         
             target: An object that contains the field described by the first element of flds.
-            flds: A list of field descriptions where each element describes a field that contains the field described by the succeeding element. Each described field must be a value type. 
-             The field descriptions must be RuntimeFieldInfo objects supplied by the type system.
-        
+            flds: A list of field descriptions where each element describes a field that contains the field described by the succeeding element. Each described field must be a value type. The field descriptions must be RuntimeFieldInfo objects supplied by the type system.
             Returns: A System.TypedReference for the field described by the last element of flds.
         """
         pass
@@ -23062,6 +22309,9 @@ class TypedReference():
     def __ne__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TypedReference()
 
 class TypeInitializationException(SystemException):
     """
@@ -23069,8 +22319,6 @@ class TypeInitializationException(SystemException):
     
     TypeInitializationException(fullTypeName: str, innerException: Exception)
     """
-    Instance = TypeInitializationException
-    """hardcoded/returns an instance of the class"""
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: TypeInitializationException, info: SerializationInfo, context: StreamingContext)
@@ -23106,6 +22354,9 @@ Get: TypeName(self: TypeInitializationException) -> str
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TypeInitializationException()
 
 class TypeUnloadedException(SystemException):
     """
@@ -23115,8 +22366,6 @@ class TypeUnloadedException(SystemException):
     TypeUnloadedException(message: str)
     TypeUnloadedException(message: str, innerException: Exception)
     """
-    Instance = TypeUnloadedException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -23139,11 +22388,12 @@ class TypeUnloadedException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TypeUnloadedException()
 
 class UInt16:
     """ Represents a 16-bit unsigned integer. """
-    Instance = UInt16
-    """hardcoded/returns an instance of the class"""
     def bit_length(self, *args): #cannot find CLR method
         """ bit_length(value: UInt16) -> int """
         pass
@@ -23155,16 +22405,13 @@ class UInt16:
             Compares this instance to a specified object and returns an indication of their relative values.
         
             value: An object to compare, or null.
-            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is 
-             equal to value. Greater than zero This instance is greater than value.-or- value is null.
-        
+            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is equal to value. Greater than zero This instance is greater than value.-or- value is null.
         CompareTo(self: UInt16, value: UInt16) -> int
         
             Compares this instance to a specified 16-bit unsigned integer and returns an indication of their relative values.
         
             value: An unsigned integer to compare.
-            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is 
-             equal to value. Greater than zero This instance is greater than value.
+            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is equal to value. Greater than zero This instance is greater than value.
         """
         pass
 
@@ -23235,9 +22482,7 @@ class UInt16:
             Converts the string representation of a number in a specified style and culture-specific format to its 16-bit unsigned integer equivalent.
         
             s: A string that represents the number to convert. The string is interpreted by using the style specified by the style parameter.
-            style: A bitwise combination of enumeration values that indicate the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Integer.
-        
+            style: A bitwise combination of enumeration values that indicate the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
             provider: An object that supplies culture-specific formatting information about s.
             Returns: A 16-bit unsigned integer equivalent to the number specified in s.
         """
@@ -23282,9 +22527,7 @@ class UInt16:
             Returns: true if s was converted successfully; otherwise, false.
         TryParse(s: str, style: NumberStyles, provider: IFormatProvider) -> (bool, UInt16)
         
-            Tries to convert the string representation of a number in a specified style and culture-specific format to its 16-bit unsigned integer equivalent. A return value indicates 
-             whether the conversion succeeded or failed.
-        
+            Tries to convert the string representation of a number in a specified style and culture-specific format to its 16-bit unsigned integer equivalent. A return value indicates whether the conversion succeeded or failed.
         
             s: A string that represents the number to convert. The string is interpreted by using the style specified by the style parameter.
             style: A bitwise combination of enumeration values that indicates the permitted format of s. A typical value to specify is System.Globalization.NumberStyles.Integer.
@@ -23512,11 +22755,12 @@ class UInt16:
     numerator = None
     real = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UInt16()
 
 class UInt32:
     """ Represents a 32-bit unsigned integer. """
-    Instance = UInt32
-    """hardcoded/returns an instance of the class"""
     def bit_length(self, *args): #cannot find CLR method
         """ bit_length(value: UInt32) -> int """
         pass
@@ -23528,16 +22772,13 @@ class UInt32:
             Compares this instance to a specified object and returns an indication of their relative values.
         
             value: An object to compare, or null.
-            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is 
-             equal to value. Greater than zero This instance is greater than value.-or- value is null.
-        
+            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is equal to value. Greater than zero This instance is greater than value.-or- value is null.
         CompareTo(self: UInt32, value: UInt32) -> int
         
             Compares this instance to a specified 32-bit unsigned integer and returns an indication of their relative values.
         
             value: An unsigned integer to compare.
-            Returns: A signed number indicating the relative values of this instance and value.Return value Description Less than zero This instance is less than value. Zero This instance is 
-             equal to value. Greater than zero This instance is greater than value.
+            Returns: A signed number indicating the relative values of this instance and value.Return value Description Less than zero This instance is less than value. Zero This instance is equal to value. Greater than zero This instance is greater than value.
         """
         pass
 
@@ -23608,9 +22849,7 @@ class UInt32:
             Converts the string representation of a number in a specified style and culture-specific format to its 32-bit unsigned integer equivalent.
         
             s: A string representing the number to convert. The string is interpreted by using the style specified by the style parameter.
-            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Integer.
-        
+            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
             provider: An object that supplies culture-specific formatting information about s.
             Returns: A 32-bit unsigned integer equivalent to the number specified in s.
         """
@@ -23655,9 +22894,7 @@ class UInt32:
             Returns: true if s was converted successfully; otherwise, false.
         TryParse(s: str, style: NumberStyles, provider: IFormatProvider) -> (bool, UInt32)
         
-            Tries to convert the string representation of a number in a specified style and culture-specific format to its 32-bit unsigned integer equivalent. A return value indicates 
-             whether the conversion succeeded or failed.
-        
+            Tries to convert the string representation of a number in a specified style and culture-specific format to its 32-bit unsigned integer equivalent. A return value indicates whether the conversion succeeded or failed.
         
             s: A string that represents the number to convert. The string is interpreted by using the style specified by the style parameter.
             style: A bitwise combination of enumeration values that indicates the permitted format of s. A typical value to specify is System.Globalization.NumberStyles.Integer.
@@ -23885,11 +23122,12 @@ class UInt32:
     numerator = None
     real = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UInt32()
 
 class UInt64:
     """ Represents a 64-bit unsigned integer. """
-    Instance = UInt64
-    """hardcoded/returns an instance of the class"""
     def bit_length(self, *args): #cannot find CLR method
         """ bit_length(value: UInt64) -> int """
         pass
@@ -23901,16 +23139,13 @@ class UInt64:
             Compares this instance to a specified object and returns an indication of their relative values.
         
             value: An object to compare, or null.
-            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is 
-             equal to value. Greater than zero This instance is greater than value.-or- value is null.
-        
+            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is equal to value. Greater than zero This instance is greater than value.-or- value is null.
         CompareTo(self: UInt64, value: UInt64) -> int
         
             Compares this instance to a specified 64-bit unsigned integer and returns an indication of their relative values.
         
             value: An unsigned integer to compare.
-            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is 
-             equal to value. Greater than zero This instance is greater than value.
+            Returns: A signed number indicating the relative values of this instance and value.Return Value Description Less than zero This instance is less than value. Zero This instance is equal to value. Greater than zero This instance is greater than value.
         """
         pass
 
@@ -23981,9 +23216,7 @@ class UInt64:
             Converts the string representation of a number in a specified style and culture-specific format to its 64-bit unsigned integer equivalent.
         
             s: A string that represents the number to convert. The string is interpreted by using the style specified by the style parameter.
-            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is 
-             System.Globalization.NumberStyles.Integer.
-        
+            style: A bitwise combination of enumeration values that indicates the style elements that can be present in s. A typical value to specify is System.Globalization.NumberStyles.Integer.
             provider: An object that supplies culture-specific formatting information about s.
             Returns: A 64-bit unsigned integer equivalent to the number specified in s.
         """
@@ -24028,9 +23261,7 @@ class UInt64:
             Returns: true if s was converted successfully; otherwise, false.
         TryParse(s: str, style: NumberStyles, provider: IFormatProvider) -> (bool, UInt64)
         
-            Tries to convert the string representation of a number in a specified style and culture-specific format to its 64-bit unsigned integer equivalent. A return value indicates 
-             whether the conversion succeeded or failed.
-        
+            Tries to convert the string representation of a number in a specified style and culture-specific format to its 64-bit unsigned integer equivalent. A return value indicates whether the conversion succeeded or failed.
         
             s: A string that represents the number to convert. The string is interpreted by using the style specified by the style parameter.
             style: A bitwise combination of enumeration values that indicates the permitted format of s. A typical value to specify is System.Globalization.NumberStyles.Integer.
@@ -24258,6 +23489,9 @@ class UInt64:
     numerator = None
     real = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UInt64()
 
 class UIntPtr:
     """
@@ -24267,8 +23501,6 @@ class UIntPtr:
     UIntPtr(value: UInt64)
     UIntPtr(value: Void*)
     """
-    Instance = UIntPtr
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Add(pointer, offset):
         """
@@ -24394,6 +23626,9 @@ class UIntPtr:
     Size = 8
     Zero = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UIntPtr()
 
 class UnauthorizedAccessException(SystemException):
     """
@@ -24403,8 +23638,6 @@ class UnauthorizedAccessException(SystemException):
     UnauthorizedAccessException(message: str)
     UnauthorizedAccessException(message: str, inner: Exception)
     """
-    Instance = UnauthorizedAccessException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -24427,6 +23660,9 @@ class UnauthorizedAccessException(SystemException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UnauthorizedAccessException()
 
 class UnhandledExceptionEventArgs(EventArgs):
     """
@@ -24434,8 +23670,6 @@ class UnhandledExceptionEventArgs(EventArgs):
     
     UnhandledExceptionEventArgs(exception: object, isTerminating: bool)
     """
-    Instance = UnhandledExceptionEventArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, exception, isTerminating):
         """ __new__(cls: type, exception: object, isTerminating: bool) """
@@ -24456,6 +23690,9 @@ Get: IsTerminating(self: UnhandledExceptionEventArgs) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UnhandledExceptionEventArgs()
 
 class UnhandledExceptionEventHandler(MulticastDelegate):
     """
@@ -24463,8 +23700,6 @@ class UnhandledExceptionEventHandler(MulticastDelegate):
     
     UnhandledExceptionEventHandler(object: object, method: IntPtr)
     """
-    Instance = UnhandledExceptionEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: UnhandledExceptionEventHandler, sender: object, e: UnhandledExceptionEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -24486,9 +23721,7 @@ class UnhandledExceptionEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -24517,8 +23750,7 @@ class UnhandledExceptionEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -24534,6 +23766,9 @@ class UnhandledExceptionEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UnhandledExceptionEventHandler()
 
 class Uri:
     """
@@ -24546,8 +23781,6 @@ class Uri:
     Uri(baseUri: Uri, relativeUri: str)
     Uri(baseUri: Uri, relativeUri: Uri)
     """
-    Instance = Uri
-    """hardcoded/returns an instance of the class"""
     def Canonicalize(self, *args): #cannot find CLR method
         """
         Canonicalize(self: Uri)
@@ -24563,8 +23796,7 @@ class Uri:
             Determines whether the specified host name is a valid DNS name.
         
             name: The host name to validate. This can be an IPv4 or IPv6 address or an Internet host name.
-            Returns: A System.UriHostNameType that indicates the type of the host name. If the type of the host name cannot be determined or if the host name is null or a zero-length string, 
-             this method returns System.UriHostNameType.Unknown.
+            Returns: A System.UriHostNameType that indicates the type of the host name. If the type of the host name cannot be determined or if the host name is null or a zero-length string, this method returns System.UriHostNameType.Unknown.
         """
         pass
 
@@ -24599,8 +23831,7 @@ class Uri:
             partsToCompare: A bitwise combination of the System.UriComponents values that specifies the parts of uri1 and uri2 to compare.
             compareFormat: One of the System.UriFormat values that specifies the character escaping used when the URI components are compared.
             comparisonType: One of the System.StringComparison values.
-            Returns: An System.Int32 value that indicates the lexical relationship between the compared System.Uri components.ValueMeaningLess than zerouri1 is less than uri2.Zerouri1 equals 
-             uri2.Greater than zerouri1 is greater than uri2.
+            Returns: An System.Int32 value that indicates the lexical relationship between the compared System.Uri components.ValueMeaningLess than zerouri1 is less than uri2.Zerouri1 equals uri2.Greater than zerouri1 is greater than uri2.
         """
         pass
 
@@ -24732,8 +23963,7 @@ class Uri:
         
             pattern: The hexadecimal representation of a character.
             index: The location in pattern where the hexadecimal representation of a character begins.
-            Returns: The character represented by the hexadecimal encoding at position index. If the character at index is not hexadecimal encoded, the character at index is returned. The value 
-             of index is incremented to point to the character following the one returned.
+            Returns: The character represented by the hexadecimal encoding at position index. If the character at index is not hexadecimal encoded, the character at index is returned. The value of index is incremented to point to the character following the one returned.
         """
         pass
 
@@ -24835,8 +24065,7 @@ class Uri:
             Determines the difference between two System.Uri instances.
         
             toUri: The URI to compare to the current URI.
-            Returns: If the hostname and scheme of this URI instance and toUri are the same, then this method returns a System.String that represents a relative URI that, when appended to the 
-             current URI instance, yields the toUri parameter.If the hostname or scheme is different, then this method returns a System.String that represents the toUri parameter.
+            Returns: If the hostname and scheme of this URI instance and toUri are the same, then this method returns a System.String that represents a relative URI that, when appended to the current URI instance, yields the toUri parameter.If the hostname or scheme is different, then this method returns a System.String that represents the toUri parameter.
         """
         pass
 
@@ -24847,8 +24076,7 @@ class Uri:
             Determines the difference between two System.Uri instances.
         
             uri: The URI to compare to the current URI.
-            Returns: If the hostname and scheme of this URI instance and uri are the same, then this method returns a relative System.Uri that, when appended to the current URI instance, yields 
-             uri.If the hostname or scheme is different, then this method returns a System.Uri  that represents the uri parameter.
+            Returns: If the hostname and scheme of this URI instance and uri are the same, then this method returns a relative System.Uri that, when appended to the current URI instance, yields uri.If the hostname or scheme is different, then this method returns a System.Uri  that represents the uri parameter.
         """
         pass
 
@@ -25121,6 +24349,9 @@ Get: UserInfo(self: Uri) -> str
     UriSchemeNews = 'news'
     UriSchemeNntp = 'nntp'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Uri()
 
 class UriBuilder():
     """
@@ -25134,8 +24365,6 @@ class UriBuilder():
     UriBuilder(scheme: str, host: str, port: int, pathValue: str)
     UriBuilder(scheme: str, host: str, port: int, path: str, extraValue: str)
     """
-    Instance = UriBuilder
-    """hardcoded/returns an instance of the class"""
     def Equals(self, rparam):
         """
         Equals(self: UriBuilder, rparam: object) -> bool
@@ -25257,6 +24486,9 @@ Set: UserName(self: UriBuilder) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UriBuilder()
 
 class UriComponents:
     """
@@ -25264,8 +24496,6 @@ class UriComponents:
     
     enum (flags) UriComponents, values: AbsoluteUri (127), Fragment (64), Host (4), HostAndPort (132), HttpRequestUrl (61), KeepDelimiter (1073741824), NormalizedHost (256), Path (16), PathAndQuery (48), Port (8), Query (32), Scheme (1), SchemeAndServer (13), SerializationInfoString (-2147483648), StrongAuthority (134), StrongPort (128), UserInfo (2)
     """
-    Instance = UriComponents
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -25318,6 +24548,9 @@ class UriComponents:
     UserInfo = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UriComponents()
 
 class UriFormat:
     """
@@ -25325,8 +24558,6 @@ class UriFormat:
     
     enum UriFormat, values: SafeUnescaped (3), Unescaped (2), UriEscaped (1)
     """
-    Instance = UriFormat
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -25365,6 +24596,9 @@ class UriFormat:
     UriEscaped = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UriFormat()
 
 class UriFormatException(FormatException):
     """
@@ -25374,8 +24608,6 @@ class UriFormatException(FormatException):
     UriFormatException(textString: str)
     UriFormatException(textString: str, e: Exception)
     """
-    Instance = UriFormatException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -25398,6 +24630,9 @@ class UriFormatException(FormatException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UriFormatException()
 
 class UriHostNameType:
     """
@@ -25405,8 +24640,6 @@ class UriHostNameType:
     
     enum UriHostNameType, values: Basic (1), Dns (2), IPv4 (3), IPv6 (4), Unknown (0)
     """
-    Instance = UriHostNameType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -25447,6 +24680,9 @@ class UriHostNameType:
     Unknown = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UriHostNameType()
 
 class UriIdnScope:
     """
@@ -25454,8 +24690,6 @@ class UriIdnScope:
     
     enum UriIdnScope, values: All (2), AllExceptIntranet (1), None (0)
     """
-    Instance = UriIdnScope
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -25494,6 +24728,9 @@ class UriIdnScope:
     None_ =None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UriIdnScope()
 
 class UriKind:
     """
@@ -25501,8 +24738,6 @@ class UriKind:
     
     enum UriKind, values: Absolute (1), Relative (2), RelativeOrAbsolute (0)
     """
-    Instance = UriKind
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -25541,6 +24776,9 @@ class UriKind:
     RelativeOrAbsolute = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UriKind()
 
 class UriPartial:
     """
@@ -25548,8 +24786,6 @@ class UriPartial:
     
     enum UriPartial, values: Authority (1), Path (2), Query (3), Scheme (0)
     """
-    Instance = UriPartial
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -25589,6 +24825,9 @@ class UriPartial:
     Scheme = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UriPartial()
 
 class UriTypeConverter(TypeConverter):
     """
@@ -25596,8 +24835,6 @@ class UriTypeConverter(TypeConverter):
     
     UriTypeConverter()
     """
-    Instance = UriTypeConverter
-    """hardcoded/returns an instance of the class"""
     def CanConvertFrom(self, *__args):
         """
         CanConvertFrom(self: UriTypeConverter, context: ITypeDescriptorContext, sourceType: Type) -> bool
@@ -25661,11 +24898,12 @@ class UriTypeConverter(TypeConverter):
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UriTypeConverter()
 
 class ValueType():
     """ Provides the base class for value types. """
-    Instance = ValueType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==y """
         pass
@@ -25673,6 +24911,9 @@ class ValueType():
     def __ne__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ValueType()
 
 class Version:
     """
@@ -25684,8 +24925,6 @@ class Version:
     Version(version: str)
     Version()
     """
-    Instance = Version
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """
         Clone(self: Version) -> object
@@ -25702,18 +24941,13 @@ class Version:
             Compares the current System.Version object to a specified object and returns an indication of their relative values.
         
             version: An object to compare, or null.
-            Returns: A signed integer that indicates the relative values of the two objects, as shown in the following table.Return value Meaning Less than zero The current System.Version 
-             object is a version before version. Zero The current System.Version object is the same version as version. Greater than zero The current System.Version object is a version 
-             subsequent to version.-or- version is null.
-        
+            Returns: A signed integer that indicates the relative values of the two objects, as shown in the following table.Return value Meaning Less than zero The current System.Version object is a version before version. Zero The current System.Version object is the same version as version. Greater than zero The current System.Version object is a version subsequent to version.-or- version is null.
         CompareTo(self: Version, value: Version) -> int
         
             Compares the current System.Version object to a specified System.Version object and returns an indication of their relative values.
         
             value: A System.Version object to compare to the current System.Version object, or null.
-            Returns: A signed integer that indicates the relative values of the two objects, as shown in the following table.Return value Meaning Less than zero The current System.Version 
-             object is a version before value. Zero The current System.Version object is the same version as value. Greater than zero The current System.Version object is a version 
-             subsequent to value. -or-value is null.
+            Returns: A signed integer that indicates the relative values of the two objects, as shown in the following table.Return value Meaning Less than zero The current System.Version object is a version before value. Zero The current System.Version object is the same version as value. Greater than zero The current System.Version object is a version subsequent to value. -or-value is null.
         """
         pass
 
@@ -25724,9 +24958,7 @@ class Version:
             Returns a value indicating whether the current System.Version object is equal to a specified object.
         
             obj: An object to compare with the current System.Version object, or null.
-            Returns: true if the current System.Version object and obj are both System.Version objects, and every component of the current System.Version object matches the corresponding 
-             component of obj; otherwise, false.
-        
+            Returns: true if the current System.Version object and obj are both System.Version objects, and every component of the current System.Version object matches the corresponding component of obj; otherwise, false.
         Equals(self: Version, obj: Version) -> bool
         
             Returns a value indicating whether the current System.Version object and a specified System.Version object represent the same value.
@@ -25762,20 +24994,16 @@ class Version:
         ToString(self: Version) -> str
         
             Converts the value of the current System.Version object to its equivalent System.String representation.
-            Returns: The System.String representation of the values of the major, minor, build, and revision components of the current System.Version object, as depicted in the following 
-             format. Each component is separated by a period character ('.'). Square brackets ('[' and ']') indicate a component that will not appear in the return value if the 
-             component is not defined: major.minor[.build[.revision]] For example, if you create a System.Version object using the constructor Version(1,1), the returned string is 
-             "1.1". If you create a System.Version object using the constructor Version(1,3,4,2), the returned string is "1.3.4.2".
+            Returns: The System.String representation of the values of the major, minor, build, and revision components of the current System.Version object, as depicted in the following format. Each component is separated by a period character ('.'). Square brackets ('[' and ']') indicate a component that will not appear in the return value if the component is not defined: major.minor[.build[.revision]] For example, if you create a 
+             System.Version object using the constructor Version(1,1), the returned string is "1.1". If you create a System.Version object using the constructor Version(1,3,4,2), the returned string is "1.3.4.2".
         
         ToString(self: Version, fieldCount: int) -> str
         
             Converts the value of the current System.Version object to its equivalent System.String representation. A specified count indicates the number of components to return.
         
             fieldCount: The number of components to return. The fieldCount ranges from 0 to 4.
-            Returns: The System.String representation of the values of the major, minor, build, and revision components of the current System.Version object, each separated by a period 
-             character ('.'). The fieldCount parameter determines how many components are returned.fieldCount Return Value 0 An empty string (""). 1 major 2 major.minor 3 
-             major.minor.build 4 major.minor.build.revision For example, if you create System.Version object using the constructor Version(1,3,5), ToString(2) returns "1.3" and 
-             ToString(4) throws an exception.
+            Returns: The System.String representation of the values of the major, minor, build, and revision components of the current System.Version object, each separated by a period character ('.'). The fieldCount parameter determines how many components are returned.fieldCount Return Value 0 An empty string (""). 1 major 2 major.minor 3 major.minor.build 4 major.minor.build.revision For example, if you create System.Version object 
+             using the constructor Version(1,3,5), ToString(2) returns "1.3" and ToString(4) throws an exception.
         """
         pass
 
@@ -25878,11 +25106,15 @@ Get: Revision(self: Version) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Version()
 
 class Void():
     """ Specifies a return value type for a method that does not return a value. """
-    Instance = Void
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Void()
 
 # variables with complex values
 

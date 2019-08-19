@@ -10,8 +10,6 @@
 
 class InstanceHelpers():
     # no doc
-    Instance = InstanceHelpers
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def SetInstanceFieldsByDictionaryValue(instance, propertyDictionary):
         """ SetInstanceFieldsByDictionaryValue(instance: object, propertyDictionary: Dictionary[str, object]) """
@@ -27,4 +25,7 @@ class InstanceHelpers():
         'SetInstancePropertiesByDictionaryValue',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return InstanceHelpers()
 

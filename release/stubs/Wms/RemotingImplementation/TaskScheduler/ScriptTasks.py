@@ -11,8 +11,6 @@ from Wms.RemotingImplementation.TaskScheduler import *
 
 class AutoDisposeTask(TaskBase):
     """ AutoDisposeTask(settings: SystemSettings) """
-    Instance = AutoDisposeTask
-    """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: AutoDisposeTask) """
         pass
@@ -29,11 +27,12 @@ Set: Settings(self: AutoDisposeTask) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AutoDisposeTask()
 
 class NotificationCleanupTask(TaskBase):
     """ NotificationCleanupTask(settings: SystemSettings) """
-    Instance = NotificationCleanupTask
-    """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: NotificationCleanupTask) """
         pass
@@ -43,23 +42,25 @@ class NotificationCleanupTask(TaskBase):
         """ __new__(cls: type, settings: SystemSettings) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NotificationCleanupTask()
 
 class NotificationSummaryTask(TaskBase):
     """ NotificationSummaryTask() """
-    Instance = NotificationSummaryTask
-    """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: NotificationSummaryTask) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NotificationSummaryTask()
 
 class PythonScriptTask(TaskBase):
     """
     PythonScriptTask()
     PythonScriptTask(task: ScriptTask)
     """
-    Instance = PythonScriptTask
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, task=None):
         """
@@ -79,4 +80,7 @@ class PythonScriptTask(TaskBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PythonScriptTask()
 

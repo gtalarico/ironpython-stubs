@@ -10,8 +10,6 @@
 
 class AuthenticatedStream(Stream):
     """ Provides methods for passing credentials across a stream and requesting or performing authentication for client-server applications. """
-    Instance = AuthenticatedStream
-    """hardcoded/returns an instance of the class"""
     def CreateWaitHandle(self, *args): #cannot find CLR method
         """
         CreateWaitHandle(self: Stream) -> WaitHandle
@@ -36,10 +34,7 @@ class AuthenticatedStream(Stream):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -120,6 +115,9 @@ Get: LeaveInnerStreamOpen(self: AuthenticatedStream) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AuthenticatedStream()
 
 class AuthenticationLevel:
     """
@@ -127,8 +125,6 @@ class AuthenticationLevel:
     
     enum AuthenticationLevel, values: MutualAuthRequested (1), MutualAuthRequired (2), None (0)
     """
-    Instance = AuthenticationLevel
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -167,6 +163,9 @@ class AuthenticationLevel:
     None_ =None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AuthenticationLevel()
 
 class EncryptionPolicy:
     """
@@ -174,8 +173,6 @@ class EncryptionPolicy:
     
     enum EncryptionPolicy, values: AllowNoEncryption (1), NoEncryption (2), RequireEncryption (0)
     """
-    Instance = EncryptionPolicy
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -214,6 +211,9 @@ class EncryptionPolicy:
     RequireEncryption = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EncryptionPolicy()
 
 class LocalCertificateSelectionCallback(MulticastDelegate):
     """
@@ -221,8 +221,6 @@ class LocalCertificateSelectionCallback(MulticastDelegate):
     
     LocalCertificateSelectionCallback(object: object, method: IntPtr)
     """
-    Instance = LocalCertificateSelectionCallback
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, targetHost, localCertificates, remoteCertificate, acceptableIssuers, callback, object):
         """ BeginInvoke(self: LocalCertificateSelectionCallback, sender: object, targetHost: str, localCertificates: X509CertificateCollection, remoteCertificate: X509Certificate, acceptableIssuers: Array[str], callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -244,9 +242,7 @@ class LocalCertificateSelectionCallback(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -275,8 +271,7 @@ class LocalCertificateSelectionCallback(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -292,6 +287,9 @@ class LocalCertificateSelectionCallback(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LocalCertificateSelectionCallback()
 
 class NegotiateStream(AuthenticatedStream):
     """
@@ -300,8 +298,6 @@ class NegotiateStream(AuthenticatedStream):
     NegotiateStream(innerStream: Stream)
     NegotiateStream(innerStream: Stream, leaveInnerStreamOpen: bool)
     """
-    Instance = NegotiateStream
-    """hardcoded/returns an instance of the class"""
     def AuthenticateAsClient(self, credential=None, *__args):
         """
         AuthenticateAsClient(self: NegotiateStream)
@@ -312,26 +308,20 @@ class NegotiateStream(AuthenticatedStream):
             credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
             targetName: The Service Principal Name (SPN) that uniquely identifies the server to authenticate.
         AuthenticateAsClient(self: NegotiateStream, credential: NetworkCredential, binding: ChannelBinding, targetName: str)
-            Called by clients to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified client credential and 
-             the channel binding.
-        
+            Called by clients to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified client credential and the channel binding.
         
             credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
             binding: The System.Security.Authentication.ExtendedProtection.ChannelBinding that is used for extended protection.
             targetName: The Service Principal Name (SPN) that uniquely identifies the server to authenticate.
         AuthenticateAsClient(self: NegotiateStream, credential: NetworkCredential, targetName: str, requiredProtectionLevel: ProtectionLevel, allowedImpersonationLevel: TokenImpersonationLevel)
-            Called by clients to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified credentials and 
-             authentication options.
-        
+            Called by clients to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified credentials and authentication options.
         
             credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
             targetName: The Service Principal Name (SPN) that uniquely identifies the server to authenticate.
             requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values, indicating the security services for the stream.
             allowedImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values, indicating how the server can use the client's credentials to access resources.
         AuthenticateAsClient(self: NegotiateStream, credential: NetworkCredential, binding: ChannelBinding, targetName: str, requiredProtectionLevel: ProtectionLevel, allowedImpersonationLevel: TokenImpersonationLevel)
-            Called by clients to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified credential, 
-             authentication options, and channel binding.
-        
+            Called by clients to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified credential, authentication options, and channel binding.
         
             credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
             binding: The System.Security.Authentication.ExtendedProtection.ChannelBinding that is used for extended protection.
@@ -356,23 +346,17 @@ class NegotiateStream(AuthenticatedStream):
         AuthenticateAsServer(self: NegotiateStream)
             Called by servers to authenticate the client, and optionally the server, in a client-server connection.
         AuthenticateAsServer(self: NegotiateStream, policy: ExtendedProtectionPolicy)
-            Called by servers to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified extended protection 
-             policy.
-        
+            Called by servers to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified extended protection policy.
         
             policy: The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy that is used for extended protection.
         AuthenticateAsServer(self: NegotiateStream, credential: NetworkCredential, requiredProtectionLevel: ProtectionLevel, requiredImpersonationLevel: TokenImpersonationLevel)
-            Called by servers to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified server credentials and 
-             authentication options.
-        
+            Called by servers to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified server credentials and authentication options.
         
             credential: The System.Net.NetworkCredential that is used to establish the identity of the server.
             requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values, indicating the security services for the stream.
             requiredImpersonationLevel: One of the System.Security.Principal.TokenImpersonationLevel values, indicating how the server can use the client's credentials to access resources.
         AuthenticateAsServer(self: NegotiateStream, credential: NetworkCredential, policy: ExtendedProtectionPolicy, requiredProtectionLevel: ProtectionLevel, requiredImpersonationLevel: TokenImpersonationLevel)
-            Called by servers to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified server credentials, 
-             authentication options, and extended protection policy.
-        
+            Called by servers to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified server credentials, authentication options, and extended protection policy.
         
             credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
             policy: The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy that is used for extended protection.
@@ -401,9 +385,7 @@ class NegotiateStream(AuthenticatedStream):
             Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
         BeginAuthenticateAsClient(self: NegotiateStream, credential: NetworkCredential, targetName: str, asyncCallback: AsyncCallback, asyncState: object) -> IAsyncResult
         
-            Called by clients to begin an asynchronous operation to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses 
-             the specified credentials. This method does not block.
-        
+            Called by clients to begin an asynchronous operation to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified credentials. This method does not block.
         
             credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
             targetName: The Service Principal Name (SPN) that uniquely identifies the server to authenticate.
@@ -412,9 +394,7 @@ class NegotiateStream(AuthenticatedStream):
             Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
         BeginAuthenticateAsClient(self: NegotiateStream, credential: NetworkCredential, binding: ChannelBinding, targetName: str, asyncCallback: AsyncCallback, asyncState: object) -> IAsyncResult
         
-            Called by clients to begin an asynchronous operation to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses 
-             the specified credentials and channel binding. This method does not block.
-        
+            Called by clients to begin an asynchronous operation to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified credentials and channel binding. This method does not block.
         
             credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
             binding: The System.Security.Authentication.ExtendedProtection.ChannelBinding that is used for extended protection.
@@ -424,9 +404,7 @@ class NegotiateStream(AuthenticatedStream):
             Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
         BeginAuthenticateAsClient(self: NegotiateStream, credential: NetworkCredential, targetName: str, requiredProtectionLevel: ProtectionLevel, allowedImpersonationLevel: TokenImpersonationLevel, asyncCallback: AsyncCallback, asyncState: object) -> IAsyncResult
         
-            Called by clients to begin an asynchronous operation to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses 
-             the specified credentials and authentication options. This method does not block.
-        
+            Called by clients to begin an asynchronous operation to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified credentials and authentication options. This method does not block.
         
             credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
             targetName: The Service Principal Name (SPN) that uniquely identifies the server to authenticate.
@@ -437,9 +415,7 @@ class NegotiateStream(AuthenticatedStream):
             Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
         BeginAuthenticateAsClient(self: NegotiateStream, credential: NetworkCredential, binding: ChannelBinding, targetName: str, requiredProtectionLevel: ProtectionLevel, allowedImpersonationLevel: TokenImpersonationLevel, asyncCallback: AsyncCallback, asyncState: object) -> IAsyncResult
         
-            Called by clients to begin an asynchronous operation to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses 
-             the specified credentials, authentication options, and channel binding. This method does not block.
-        
+            Called by clients to begin an asynchronous operation to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified credentials, authentication options, and channel binding. This method does not block.
         
             credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
             binding: The System.Security.Authentication.ExtendedProtection.ChannelBinding that is used for extended protection.
@@ -463,9 +439,7 @@ class NegotiateStream(AuthenticatedStream):
             Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
         BeginAuthenticateAsServer(self: NegotiateStream, policy: ExtendedProtectionPolicy, asyncCallback: AsyncCallback, asyncState: object) -> IAsyncResult
         
-            Called by servers to begin an asynchronous operation to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses 
-             the specified extended protection policy. This method does not block.
-        
+            Called by servers to begin an asynchronous operation to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified extended protection policy. This method does not block.
         
             policy: The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy that is used for extended protection.
             asyncCallback: An System.AsyncCallback delegate that references the method to invoke when the authentication is complete.
@@ -473,9 +447,7 @@ class NegotiateStream(AuthenticatedStream):
             Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
         BeginAuthenticateAsServer(self: NegotiateStream, credential: NetworkCredential, requiredProtectionLevel: ProtectionLevel, requiredImpersonationLevel: TokenImpersonationLevel, asyncCallback: AsyncCallback, asyncState: object) -> IAsyncResult
         
-            Called by servers to begin an asynchronous operation to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses 
-             the specified server credentials and authentication options. This method does not block.
-        
+            Called by servers to begin an asynchronous operation to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified server credentials and authentication options. This method does not block.
         
             credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
             requiredProtectionLevel: One of the System.Net.Security.ProtectionLevel values, indicating the security services for the stream.
@@ -485,9 +457,7 @@ class NegotiateStream(AuthenticatedStream):
             Returns: An System.IAsyncResult object indicating the status of the asynchronous operation.
         BeginAuthenticateAsServer(self: NegotiateStream, credential: NetworkCredential, policy: ExtendedProtectionPolicy, requiredProtectionLevel: ProtectionLevel, requiredImpersonationLevel: TokenImpersonationLevel, asyncCallback: AsyncCallback, asyncState: object) -> IAsyncResult
         
-            Called by servers to begin an asynchronous operation to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses 
-             the specified server credentials, authentication options, and extended protection policy. This method does not block.
-        
+            Called by servers to begin an asynchronous operation to authenticate the client, and optionally the server, in a client-server connection. The authentication process uses the specified server credentials, authentication options, and extended protection policy. This method does not block.
         
             credential: The System.Net.NetworkCredential that is used to establish the identity of the client.
             policy: The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy that is used for extended protection.
@@ -569,13 +539,9 @@ class NegotiateStream(AuthenticatedStream):
         """
         EndRead(self: NegotiateStream, asyncResult: IAsyncResult) -> int
         
-            Ends an asynchronous read operation that was started with a call to 
-             System.Net.Security.NegotiateStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object).
+            Ends an asynchronous read operation that was started with a call to System.Net.Security.NegotiateStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object).
         
-        
-            asyncResult: An System.IAsyncResult instance returned by a call to 
-             System.Net.Security.NegotiateStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
-        
+            asyncResult: An System.IAsyncResult instance returned by a call to System.Net.Security.NegotiateStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
             Returns: A System.Int32 value that specifies the number of bytes read from the underlying stream.
         """
         pass
@@ -583,12 +549,9 @@ class NegotiateStream(AuthenticatedStream):
     def EndWrite(self, asyncResult):
         """
         EndWrite(self: NegotiateStream, asyncResult: IAsyncResult)
-            Ends an asynchronous write operation that was started with a call to 
-             System.Net.Security.NegotiateStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object).
+            Ends an asynchronous write operation that was started with a call to System.Net.Security.NegotiateStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object).
         
-        
-            asyncResult: An System.IAsyncResult instance returned by a call to 
-             System.Net.Security.NegotiateStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
+            asyncResult: An System.IAsyncResult instance returned by a call to System.Net.Security.NegotiateStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
         """
         pass
 
@@ -605,10 +568,7 @@ class NegotiateStream(AuthenticatedStream):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -803,6 +763,9 @@ Set: WriteTimeout(self: NegotiateStream) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NegotiateStream()
 
 class ProtectionLevel:
     """
@@ -810,8 +773,6 @@ class ProtectionLevel:
     
     enum ProtectionLevel, values: EncryptAndSign (2), None (0), Sign (1)
     """
-    Instance = ProtectionLevel
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -850,6 +811,9 @@ class ProtectionLevel:
     Sign = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProtectionLevel()
 
 class RemoteCertificateValidationCallback(MulticastDelegate):
     """
@@ -857,8 +821,6 @@ class RemoteCertificateValidationCallback(MulticastDelegate):
     
     RemoteCertificateValidationCallback(object: object, method: IntPtr)
     """
-    Instance = RemoteCertificateValidationCallback
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, certificate, chain, sslPolicyErrors, callback, object):
         """ BeginInvoke(self: RemoteCertificateValidationCallback, sender: object, certificate: X509Certificate, chain: X509Chain, sslPolicyErrors: SslPolicyErrors, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -880,9 +842,7 @@ class RemoteCertificateValidationCallback(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -911,8 +871,7 @@ class RemoteCertificateValidationCallback(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -928,6 +887,9 @@ class RemoteCertificateValidationCallback(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RemoteCertificateValidationCallback()
 
 class SslPolicyErrors:
     """
@@ -935,8 +897,6 @@ class SslPolicyErrors:
     
     enum (flags) SslPolicyErrors, values: None (0), RemoteCertificateChainErrors (4), RemoteCertificateNameMismatch (2), RemoteCertificateNotAvailable (1)
     """
-    Instance = SslPolicyErrors
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -976,6 +936,9 @@ class SslPolicyErrors:
     RemoteCertificateNotAvailable = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SslPolicyErrors()
 
 class SslStream(AuthenticatedStream):
     """
@@ -987,14 +950,10 @@ class SslStream(AuthenticatedStream):
     SslStream(innerStream: Stream, leaveInnerStreamOpen: bool)
     SslStream(innerStream: Stream, leaveInnerStreamOpen: bool, userCertificateValidationCallback: RemoteCertificateValidationCallback)
     """
-    Instance = SslStream
-    """hardcoded/returns an instance of the class"""
     def AuthenticateAsClient(self, targetHost, clientCertificates=None, *__args):
         """
         AuthenticateAsClient(self: SslStream, targetHost: str, clientCertificates: X509CertificateCollection, enabledSslProtocols: SslProtocols, checkCertificateRevocation: bool)
-            Called by clients to authenticate the server and optionally the client in a client-server connection. The authentication process uses the specified certificate collection 
-             and SSL protocol.
-        
+            Called by clients to authenticate the server and optionally the client in a client-server connection. The authentication process uses the specified certificate collection and SSL protocol.
         
             targetHost: The name of the server that will share this System.Net.Security.SslStream.
             clientCertificates: The System.Security.Cryptography.X509Certificates.X509CertificateCollection that contains client certificates.
@@ -1023,9 +982,7 @@ class SslStream(AuthenticatedStream):
         
             serverCertificate: The certificate used to authenticate the server.
         AuthenticateAsServer(self: SslStream, serverCertificate: X509Certificate, clientCertificateRequired: bool, checkCertificateRevocation: bool)AuthenticateAsServer(self: SslStream, serverCertificate: X509Certificate, clientCertificateRequired: bool, enabledSslProtocols: SslProtocols, checkCertificateRevocation: bool)
-            Called by servers to begin an asynchronous operation to authenticate the server and optionally the client using the specified certificates, requirements and security 
-             protocol.
-        
+            Called by servers to begin an asynchronous operation to authenticate the server and optionally the client using the specified certificates, requirements and security protocol.
         
             serverCertificate: The X509Certificate used to authenticate the server.
             clientCertificateRequired: A System.Boolean value that specifies whether the client must supply a certificate for authentication.
@@ -1080,9 +1037,7 @@ class SslStream(AuthenticatedStream):
         BeginAuthenticateAsServer(self: SslStream, serverCertificate: X509Certificate, clientCertificateRequired: bool, checkCertificateRevocation: bool, asyncCallback: AsyncCallback, asyncState: object) -> IAsyncResult
         BeginAuthenticateAsServer(self: SslStream, serverCertificate: X509Certificate, clientCertificateRequired: bool, enabledSslProtocols: SslProtocols, checkCertificateRevocation: bool, asyncCallback: AsyncCallback, asyncState: object) -> IAsyncResult
         
-            Called by servers to begin an asynchronous operation to authenticate the server and optionally the client using the specified certificates, requirements and security 
-             protocol.
-        
+            Called by servers to begin an asynchronous operation to authenticate the server and optionally the client using the specified certificates, requirements and security protocol.
         
             serverCertificate: The X509Certificate used to authenticate the server.
             clientCertificateRequired: A System.Boolean value that specifies whether the client must supply a certificate for authentication.
@@ -1164,9 +1119,7 @@ class SslStream(AuthenticatedStream):
         """
         EndRead(self: SslStream, asyncResult: IAsyncResult) -> int
         
-            Ends an asynchronous read operation started with a previous call to 
-             System.Net.Security.SslStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object).
-        
+            Ends an asynchronous read operation started with a previous call to System.Net.Security.SslStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object).
         
             asyncResult: An System.IAsyncResult instance returned by a call to System.Net.Security.SslStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
             Returns: A System.Int32 value that specifies the number of bytes read from the underlying stream.
@@ -1176,9 +1129,7 @@ class SslStream(AuthenticatedStream):
     def EndWrite(self, asyncResult):
         """
         EndWrite(self: SslStream, asyncResult: IAsyncResult)
-            Ends an asynchronous write operation started with a previous call to 
-             System.Net.Security.SslStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object).
-        
+            Ends an asynchronous write operation started with a previous call to System.Net.Security.SslStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object).
         
             asyncResult: An System.IAsyncResult instance returned by a call to System.Net.Security.SslStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)
         """
@@ -1197,10 +1148,7 @@ class SslStream(AuthenticatedStream):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -1469,4 +1417,7 @@ Set: WriteTimeout(self: SslStream) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SslStream()
 

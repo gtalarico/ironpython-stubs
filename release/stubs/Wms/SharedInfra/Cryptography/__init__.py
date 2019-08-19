@@ -10,8 +10,6 @@
 
 class IUniqueHashCodeProvider:
     # no doc
-    Instance = IUniqueHashCodeProvider
-    """hardcoded/returns an instance of the class"""
     def CalculateHash(self, param):
         """ CalculateHash(self: IUniqueHashCodeProvider, *param: Array[object]) -> str """
         pass
@@ -20,11 +18,12 @@ class IUniqueHashCodeProvider:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IUniqueHashCodeProvider()
 
 class SHA256Base64ShortUniqueHashCodeProvider:
     """ SHA256Base64ShortUniqueHashCodeProvider() """
-    Instance = SHA256Base64ShortUniqueHashCodeProvider
-    """hardcoded/returns an instance of the class"""
     def CalculateHash(self, param):
         """ CalculateHash(self: SHA256Base64ShortUniqueHashCodeProvider, *param: Array[object]) -> str """
         pass
@@ -37,11 +36,12 @@ class SHA256Base64ShortUniqueHashCodeProvider:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SHA256Base64ShortUniqueHashCodeProvider()
 
 class SHA256CngUniqueHashCodeProvider:
     """ SHA256CngUniqueHashCodeProvider() """
-    Instance = SHA256CngUniqueHashCodeProvider
-    """hardcoded/returns an instance of the class"""
     def CalculateHash(self, param):
         """ CalculateHash(self: SHA256CngUniqueHashCodeProvider, *param: Array[object]) -> str """
         pass
@@ -54,6 +54,9 @@ class SHA256CngUniqueHashCodeProvider:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SHA256CngUniqueHashCodeProvider()
 
 # variables with complex values
 

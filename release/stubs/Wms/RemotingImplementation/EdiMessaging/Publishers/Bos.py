@@ -11,8 +11,6 @@ from Wms.EdiMessaging import *
 
 class BosGenerateDptmntDatFileMessagePublisher(MessagePublisherBase):
     """ BosGenerateDptmntDatFileMessagePublisher(offlineScanning: IOfflineScanning, layoutFactory: IFixedLengthLayoutFactory[BosDepartment]) """
-    Instance = BosGenerateDptmntDatFileMessagePublisher
-    """hardcoded/returns an instance of the class"""
     def Start(self, onStoreMessage):
         """ Start(self: BosGenerateDptmntDatFileMessagePublisher, onStoreMessage: OnStoreMessage) """
         pass
@@ -26,11 +24,12 @@ class BosGenerateDptmntDatFileMessagePublisher(MessagePublisherBase):
         """ __new__(cls: type, offlineScanning: IOfflineScanning, layoutFactory: IFixedLengthLayoutFactory[BosDepartment]) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosGenerateDptmntDatFileMessagePublisher()
 
 class BosGenerateKanbanDatFilesMessagePublisher(MessagePublisherBase):
     """ BosGenerateKanbanDatFilesMessagePublisher(offlineScanning: IOfflineScanning, layoutFactoryBarcodes: IFixedLengthLayoutFactory[BosKanbanBarcode], layoutFactoryProducts: IFixedLengthLayoutFactory[BosKanbanProduct]) """
-    Instance = BosGenerateKanbanDatFilesMessagePublisher
-    """hardcoded/returns an instance of the class"""
     def Start(self, onStoreMessage):
         """ Start(self: BosGenerateKanbanDatFilesMessagePublisher, onStoreMessage: OnStoreMessage) """
         pass
@@ -44,11 +43,12 @@ class BosGenerateKanbanDatFilesMessagePublisher(MessagePublisherBase):
         """ __new__(cls: type, offlineScanning: IOfflineScanning, layoutFactoryBarcodes: IFixedLengthLayoutFactory[BosKanbanBarcode], layoutFactoryProducts: IFixedLengthLayoutFactory[BosKanbanProduct]) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosGenerateKanbanDatFilesMessagePublisher()
 
 class BosGenerateMetaDatFileMessagePublisher(MessagePublisherBase):
     """ BosGenerateMetaDatFileMessagePublisher(offlineScanning: IOfflineScanning, layoutFactory: IFixedLengthLayoutFactory[BosMeta]) """
-    Instance = BosGenerateMetaDatFileMessagePublisher
-    """hardcoded/returns an instance of the class"""
     def Start(self, onStoreMessage):
         """ Start(self: BosGenerateMetaDatFileMessagePublisher, onStoreMessage: OnStoreMessage) """
         pass
@@ -62,11 +62,12 @@ class BosGenerateMetaDatFileMessagePublisher(MessagePublisherBase):
         """ __new__(cls: type, offlineScanning: IOfflineScanning, layoutFactory: IFixedLengthLayoutFactory[BosMeta]) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosGenerateMetaDatFileMessagePublisher()
 
 class BosGenerateProductDatFilesPublisher(MessagePublisherBase):
     """ BosGenerateProductDatFilesPublisher(general: General, offlineScanning: IOfflineScanning, layoutFactoryItem: IFixedLengthLayoutFactory[BosProduct], layoutFactoryItemIndexFactory: IFixedLengthLayoutFactory[BosProductIndex]) """
-    Instance = BosGenerateProductDatFilesPublisher
-    """hardcoded/returns an instance of the class"""
     def Start(self, onStoreMessage):
         """ Start(self: BosGenerateProductDatFilesPublisher, onStoreMessage: OnStoreMessage) """
         pass
@@ -80,11 +81,12 @@ class BosGenerateProductDatFilesPublisher(MessagePublisherBase):
         """ __new__(cls: type, general: General, offlineScanning: IOfflineScanning, layoutFactoryItem: IFixedLengthLayoutFactory[BosProduct], layoutFactoryItemIndexFactory: IFixedLengthLayoutFactory[BosProductIndex]) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosGenerateProductDatFilesPublisher()
 
 class BosGenerateUsersDatFileMessagePublisher(MessagePublisherBase):
     """ BosGenerateUsersDatFileMessagePublisher(general: General, offlineScanning: IOfflineScanning, layoutFactory: IFixedLengthLayoutFactory[UserWithSecrets]) """
-    Instance = BosGenerateUsersDatFileMessagePublisher
-    """hardcoded/returns an instance of the class"""
     def Start(self, onStoreMessage):
         """ Start(self: BosGenerateUsersDatFileMessagePublisher, onStoreMessage: OnStoreMessage) """
         pass
@@ -98,4 +100,7 @@ class BosGenerateUsersDatFileMessagePublisher(MessagePublisherBase):
         """ __new__(cls: type, general: General, offlineScanning: IOfflineScanning, layoutFactory: IFixedLengthLayoutFactory[UserWithSecrets]) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BosGenerateUsersDatFileMessagePublisher()
 

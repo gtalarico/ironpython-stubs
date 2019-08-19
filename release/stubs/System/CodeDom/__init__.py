@@ -14,8 +14,6 @@ class CodeObject():
     
     CodeObject()
     """
-    Instance = CodeObject
-    """hardcoded/returns an instance of the class"""
     UserData = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the user-definable data for the current object.
 
@@ -24,6 +22,9 @@ Get: UserData(self: CodeObject) -> IDictionary
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeObject()
 
 class CodeExpression(CodeObject):
     """
@@ -31,8 +32,9 @@ class CodeExpression(CodeObject):
     
     CodeExpression()
     """
-    Instance = CodeExpression
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeExpression()
 
 class CodeArgumentReferenceExpression(CodeExpression):
     """
@@ -41,8 +43,6 @@ class CodeArgumentReferenceExpression(CodeExpression):
     CodeArgumentReferenceExpression()
     CodeArgumentReferenceExpression(parameterName: str)
     """
-    Instance = CodeArgumentReferenceExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, parameterName=None):
         """
@@ -60,6 +60,9 @@ Set: ParameterName(self: CodeArgumentReferenceExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeArgumentReferenceExpression()
 
 class CodeArrayCreateExpression(CodeExpression):
     """
@@ -76,8 +79,6 @@ class CodeArrayCreateExpression(CodeExpression):
     CodeArrayCreateExpression(createType: str, size: CodeExpression)
     CodeArrayCreateExpression(createType: Type, size: CodeExpression)
     """
-    Instance = CodeArrayCreateExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, createType=None, *__args):
         """
@@ -126,6 +127,9 @@ Set: SizeExpression(self: CodeArrayCreateExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeArrayCreateExpression()
 
 class CodeArrayIndexerExpression(CodeExpression):
     """
@@ -134,8 +138,6 @@ class CodeArrayIndexerExpression(CodeExpression):
     CodeArrayIndexerExpression()
     CodeArrayIndexerExpression(targetObject: CodeExpression, *indices: Array[CodeExpression])
     """
-    Instance = CodeArrayIndexerExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, targetObject=None, indices=None):
         """
@@ -160,6 +162,9 @@ Set: TargetObject(self: CodeArrayIndexerExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeArrayIndexerExpression()
 
 class CodeStatement(CodeObject):
     """
@@ -167,8 +172,6 @@ class CodeStatement(CodeObject):
     
     CodeStatement()
     """
-    Instance = CodeStatement
-    """hardcoded/returns an instance of the class"""
     EndDirectives = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets a System.CodeDom.CodeDirectiveCollection object that contains end directives.
 
@@ -192,6 +195,9 @@ Get: StartDirectives(self: CodeStatement) -> CodeDirectiveCollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeStatement()
 
 class CodeAssignStatement(CodeStatement):
     """
@@ -200,8 +206,6 @@ class CodeAssignStatement(CodeStatement):
     CodeAssignStatement()
     CodeAssignStatement(left: CodeExpression, right: CodeExpression)
     """
-    Instance = CodeAssignStatement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, left=None, right=None):
         """
@@ -227,6 +231,9 @@ Set: Right(self: CodeAssignStatement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeAssignStatement()
 
 class CodeAttachEventStatement(CodeStatement):
     """
@@ -236,8 +243,6 @@ class CodeAttachEventStatement(CodeStatement):
     CodeAttachEventStatement(eventRef: CodeEventReferenceExpression, listener: CodeExpression)
     CodeAttachEventStatement(targetObject: CodeExpression, eventName: str, listener: CodeExpression)
     """
-    Instance = CodeAttachEventStatement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
@@ -264,6 +269,9 @@ Set: Listener(self: CodeAttachEventStatement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeAttachEventStatement()
 
 class CodeAttributeArgument():
     """
@@ -273,8 +281,6 @@ class CodeAttributeArgument():
     CodeAttributeArgument(value: CodeExpression)
     CodeAttributeArgument(name: str, value: CodeExpression)
     """
-    Instance = CodeAttributeArgument
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
@@ -301,6 +307,9 @@ Set: Value(self: CodeAttributeArgument) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeAttributeArgument()
 
 class CodeAttributeArgumentCollection(CollectionBase):
     """
@@ -310,8 +319,6 @@ class CodeAttributeArgumentCollection(CollectionBase):
     CodeAttributeArgumentCollection(value: CodeAttributeArgumentCollection)
     CodeAttributeArgumentCollection(value: Array[CodeAttributeArgument])
     """
-    Instance = CodeAttributeArgumentCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: CodeAttributeArgumentCollection, value: CodeAttributeArgument) -> int
@@ -515,6 +522,9 @@ class CodeAttributeArgumentCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeAttributeArgumentCollection()
 
 class CodeAttributeDeclaration():
     """
@@ -526,8 +536,6 @@ class CodeAttributeDeclaration():
     CodeAttributeDeclaration(name: str, *arguments: Array[CodeAttributeArgument])
     CodeAttributeDeclaration(attributeType: CodeTypeReference)
     """
-    Instance = CodeAttributeDeclaration
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
@@ -562,6 +570,9 @@ Set: Name(self: CodeAttributeDeclaration) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeAttributeDeclaration()
 
 class CodeAttributeDeclarationCollection(CollectionBase):
     """
@@ -571,8 +582,6 @@ class CodeAttributeDeclarationCollection(CollectionBase):
     CodeAttributeDeclarationCollection(value: CodeAttributeDeclarationCollection)
     CodeAttributeDeclarationCollection(value: Array[CodeAttributeDeclaration])
     """
-    Instance = CodeAttributeDeclarationCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: CodeAttributeDeclarationCollection, value: CodeAttributeDeclaration) -> int
@@ -776,6 +785,9 @@ class CodeAttributeDeclarationCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeAttributeDeclarationCollection()
 
 class CodeBaseReferenceExpression(CodeExpression):
     """
@@ -783,8 +795,9 @@ class CodeBaseReferenceExpression(CodeExpression):
     
     CodeBaseReferenceExpression()
     """
-    Instance = CodeBaseReferenceExpression
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeBaseReferenceExpression()
 
 class CodeBinaryOperatorExpression(CodeExpression):
     """
@@ -793,8 +806,6 @@ class CodeBinaryOperatorExpression(CodeExpression):
     CodeBinaryOperatorExpression()
     CodeBinaryOperatorExpression(left: CodeExpression, op: CodeBinaryOperatorType, right: CodeExpression)
     """
-    Instance = CodeBinaryOperatorExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, left=None, op=None, right=None):
         """
@@ -828,6 +839,9 @@ Set: Right(self: CodeBinaryOperatorExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeBinaryOperatorExpression()
 
 class CodeBinaryOperatorType:
     """
@@ -835,8 +849,6 @@ class CodeBinaryOperatorType:
     
     enum CodeBinaryOperatorType, values: Add (0), Assign (5), BitwiseAnd (10), BitwiseOr (9), BooleanAnd (12), BooleanOr (11), Divide (3), GreaterThan (15), GreaterThanOrEqual (16), IdentityEquality (7), IdentityInequality (6), LessThan (13), LessThanOrEqual (14), Modulus (4), Multiply (2), Subtract (1), ValueEquality (8)
     """
-    Instance = CodeBinaryOperatorType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -889,6 +901,9 @@ class CodeBinaryOperatorType:
     ValueEquality = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeBinaryOperatorType()
 
 class CodeCastExpression(CodeExpression):
     """
@@ -899,8 +914,6 @@ class CodeCastExpression(CodeExpression):
     CodeCastExpression(targetType: str, expression: CodeExpression)
     CodeCastExpression(targetType: Type, expression: CodeExpression)
     """
-    Instance = CodeCastExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, targetType=None, expression=None):
         """
@@ -928,6 +941,9 @@ Set: TargetType(self: CodeCastExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeCastExpression()
 
 class CodeCatchClause():
     """
@@ -938,8 +954,6 @@ class CodeCatchClause():
     CodeCatchClause(localName: str, catchExceptionType: CodeTypeReference)
     CodeCatchClause(localName: str, catchExceptionType: CodeTypeReference, *statements: Array[CodeStatement])
     """
-    Instance = CodeCatchClause
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, localName=None, catchExceptionType=None, statements=None):
         """
@@ -974,6 +988,9 @@ Get: Statements(self: CodeCatchClause) -> CodeStatementCollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeCatchClause()
 
 class CodeCatchClauseCollection(CollectionBase):
     """
@@ -983,8 +1000,6 @@ class CodeCatchClauseCollection(CollectionBase):
     CodeCatchClauseCollection(value: CodeCatchClauseCollection)
     CodeCatchClauseCollection(value: Array[CodeCatchClause])
     """
-    Instance = CodeCatchClauseCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: CodeCatchClauseCollection, value: CodeCatchClause) -> int
@@ -1188,6 +1203,9 @@ class CodeCatchClauseCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeCatchClauseCollection()
 
 class CodeDirective(CodeObject):
     """
@@ -1195,8 +1213,9 @@ class CodeDirective(CodeObject):
     
     CodeDirective()
     """
-    Instance = CodeDirective
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeDirective()
 
 class CodeChecksumPragma(CodeDirective):
     """
@@ -1205,8 +1224,6 @@ class CodeChecksumPragma(CodeDirective):
     CodeChecksumPragma()
     CodeChecksumPragma(fileName: str, checksumAlgorithmId: Guid, checksumData: Array[Byte])
     """
-    Instance = CodeChecksumPragma
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, fileName=None, checksumAlgorithmId=None, checksumData=None):
         """
@@ -1240,6 +1257,9 @@ Set: FileName(self: CodeChecksumPragma) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeChecksumPragma()
 
 class CodeComment(CodeObject):
     """
@@ -1249,8 +1269,6 @@ class CodeComment(CodeObject):
     CodeComment(text: str)
     CodeComment(text: str, docComment: bool)
     """
-    Instance = CodeComment
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, text=None, docComment=None):
         """
@@ -1277,6 +1295,9 @@ Set: Text(self: CodeComment) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeComment()
 
 class CodeCommentStatement(CodeStatement):
     """
@@ -1287,8 +1308,6 @@ class CodeCommentStatement(CodeStatement):
     CodeCommentStatement(text: str)
     CodeCommentStatement(text: str, docComment: bool)
     """
-    Instance = CodeCommentStatement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
@@ -1308,6 +1327,9 @@ Set: Comment(self: CodeCommentStatement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeCommentStatement()
 
 class CodeCommentStatementCollection(CollectionBase):
     """
@@ -1317,8 +1339,6 @@ class CodeCommentStatementCollection(CollectionBase):
     CodeCommentStatementCollection(value: CodeCommentStatementCollection)
     CodeCommentStatementCollection(value: Array[CodeCommentStatement])
     """
-    Instance = CodeCommentStatementCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: CodeCommentStatementCollection, value: CodeCommentStatement) -> int
@@ -1522,6 +1542,9 @@ class CodeCommentStatementCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeCommentStatementCollection()
 
 class CodeCompileUnit(CodeObject):
     """
@@ -1529,8 +1552,6 @@ class CodeCompileUnit(CodeObject):
     
     CodeCompileUnit()
     """
-    Instance = CodeCompileUnit
-    """hardcoded/returns an instance of the class"""
     AssemblyCustomAttributes = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets a collection of custom attributes for the generated assembly.
 
@@ -1567,6 +1588,9 @@ Get: StartDirectives(self: CodeCompileUnit) -> CodeDirectiveCollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeCompileUnit()
 
 class CodeConditionStatement(CodeStatement):
     """
@@ -1576,8 +1600,6 @@ class CodeConditionStatement(CodeStatement):
     CodeConditionStatement(condition: CodeExpression, *trueStatements: Array[CodeStatement])
     CodeConditionStatement(condition: CodeExpression, trueStatements: Array[CodeStatement], falseStatements: Array[CodeStatement])
     """
-    Instance = CodeConditionStatement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, condition=None, trueStatements=None, falseStatements=None):
         """
@@ -1610,6 +1632,9 @@ Get: TrueStatements(self: CodeConditionStatement) -> CodeStatementCollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeConditionStatement()
 
 class CodeTypeMember(CodeObject):
     """
@@ -1617,8 +1642,6 @@ class CodeTypeMember(CodeObject):
     
     CodeTypeMember()
     """
-    Instance = CodeTypeMember
-    """hardcoded/returns an instance of the class"""
     Attributes = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the attributes of the member.
 
@@ -1673,6 +1696,9 @@ Get: StartDirectives(self: CodeTypeMember) -> CodeDirectiveCollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeTypeMember()
 
 class CodeMemberMethod(CodeTypeMember):
     """
@@ -1680,8 +1706,6 @@ class CodeMemberMethod(CodeTypeMember):
     
     CodeMemberMethod()
     """
-    Instance = CodeMemberMethod
-    """hardcoded/returns an instance of the class"""
     ImplementationTypes = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the data types of the interfaces implemented by this method, unless it is a private method implementation, which is indicated by the System.CodeDom.CodeMemberMethod.PrivateImplementationType property.
 
@@ -1738,6 +1762,9 @@ Get: TypeParameters(self: CodeMemberMethod) -> CodeTypeParameterCollection
     PopulateParameters = None
     PopulateStatements = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeMemberMethod()
 
 class CodeConstructor(CodeMemberMethod):
     """
@@ -1745,8 +1772,6 @@ class CodeConstructor(CodeMemberMethod):
     
     CodeConstructor()
     """
-    Instance = CodeConstructor
-    """hardcoded/returns an instance of the class"""
     BaseConstructorArgs = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the collection of base constructor arguments.
 
@@ -1762,6 +1787,9 @@ Get: ChainedConstructorArgs(self: CodeConstructor) -> CodeExpressionCollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeConstructor()
 
 class CodeDefaultValueExpression(CodeExpression):
     """
@@ -1770,8 +1798,6 @@ class CodeDefaultValueExpression(CodeExpression):
     CodeDefaultValueExpression()
     CodeDefaultValueExpression(type: CodeTypeReference)
     """
-    Instance = CodeDefaultValueExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, type=None):
         """
@@ -1789,6 +1815,9 @@ Set: Type(self: CodeDefaultValueExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeDefaultValueExpression()
 
 class CodeDelegateCreateExpression(CodeExpression):
     """
@@ -1797,8 +1826,6 @@ class CodeDelegateCreateExpression(CodeExpression):
     CodeDelegateCreateExpression()
     CodeDelegateCreateExpression(delegateType: CodeTypeReference, targetObject: CodeExpression, methodName: str)
     """
-    Instance = CodeDelegateCreateExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, delegateType=None, targetObject=None, methodName=None):
         """
@@ -1832,6 +1859,9 @@ Set: TargetObject(self: CodeDelegateCreateExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeDelegateCreateExpression()
 
 class CodeDelegateInvokeExpression(CodeExpression):
     """
@@ -1841,8 +1871,6 @@ class CodeDelegateInvokeExpression(CodeExpression):
     CodeDelegateInvokeExpression(targetObject: CodeExpression)
     CodeDelegateInvokeExpression(targetObject: CodeExpression, *parameters: Array[CodeExpression])
     """
-    Instance = CodeDelegateInvokeExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, targetObject=None, parameters=None):
         """
@@ -1868,6 +1896,9 @@ Set: TargetObject(self: CodeDelegateInvokeExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeDelegateInvokeExpression()
 
 class CodeDirectionExpression(CodeExpression):
     """
@@ -1876,8 +1907,6 @@ class CodeDirectionExpression(CodeExpression):
     CodeDirectionExpression()
     CodeDirectionExpression(direction: FieldDirection, expression: CodeExpression)
     """
-    Instance = CodeDirectionExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, direction=None, expression=None):
         """
@@ -1903,6 +1932,9 @@ Set: Expression(self: CodeDirectionExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeDirectionExpression()
 
 class CodeDirectiveCollection(CollectionBase):
     """
@@ -1912,8 +1944,6 @@ class CodeDirectiveCollection(CollectionBase):
     CodeDirectiveCollection(value: CodeDirectiveCollection)
     CodeDirectiveCollection(value: Array[CodeDirective])
     """
-    Instance = CodeDirectiveCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: CodeDirectiveCollection, value: CodeDirective) -> int
@@ -2117,6 +2147,9 @@ class CodeDirectiveCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeDirectiveCollection()
 
 class CodeEntryPointMethod(CodeMemberMethod):
     """
@@ -2124,8 +2157,9 @@ class CodeEntryPointMethod(CodeMemberMethod):
     
     CodeEntryPointMethod()
     """
-    Instance = CodeEntryPointMethod
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeEntryPointMethod()
 
 class CodeEventReferenceExpression(CodeExpression):
     """
@@ -2134,8 +2168,6 @@ class CodeEventReferenceExpression(CodeExpression):
     CodeEventReferenceExpression()
     CodeEventReferenceExpression(targetObject: CodeExpression, eventName: str)
     """
-    Instance = CodeEventReferenceExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, targetObject=None, eventName=None):
         """
@@ -2161,6 +2193,9 @@ Set: TargetObject(self: CodeEventReferenceExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeEventReferenceExpression()
 
 class CodeExpressionCollection(CollectionBase):
     """
@@ -2170,8 +2205,6 @@ class CodeExpressionCollection(CollectionBase):
     CodeExpressionCollection(value: CodeExpressionCollection)
     CodeExpressionCollection(value: Array[CodeExpression])
     """
-    Instance = CodeExpressionCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: CodeExpressionCollection, value: CodeExpression) -> int
@@ -2375,6 +2408,9 @@ class CodeExpressionCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeExpressionCollection()
 
 class CodeExpressionStatement(CodeStatement):
     """
@@ -2383,8 +2419,6 @@ class CodeExpressionStatement(CodeStatement):
     CodeExpressionStatement()
     CodeExpressionStatement(expression: CodeExpression)
     """
-    Instance = CodeExpressionStatement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, expression=None):
         """
@@ -2402,6 +2436,9 @@ Set: Expression(self: CodeExpressionStatement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeExpressionStatement()
 
 class CodeFieldReferenceExpression(CodeExpression):
     """
@@ -2410,8 +2447,6 @@ class CodeFieldReferenceExpression(CodeExpression):
     CodeFieldReferenceExpression()
     CodeFieldReferenceExpression(targetObject: CodeExpression, fieldName: str)
     """
-    Instance = CodeFieldReferenceExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, targetObject=None, fieldName=None):
         """
@@ -2437,6 +2472,9 @@ Set: TargetObject(self: CodeFieldReferenceExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeFieldReferenceExpression()
 
 class CodeGotoStatement(CodeStatement):
     """
@@ -2445,8 +2483,6 @@ class CodeGotoStatement(CodeStatement):
     CodeGotoStatement()
     CodeGotoStatement(label: str)
     """
-    Instance = CodeGotoStatement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, label=None):
         """
@@ -2464,6 +2500,9 @@ Set: Label(self: CodeGotoStatement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeGotoStatement()
 
 class CodeIndexerExpression(CodeExpression):
     """
@@ -2472,8 +2511,6 @@ class CodeIndexerExpression(CodeExpression):
     CodeIndexerExpression()
     CodeIndexerExpression(targetObject: CodeExpression, *indices: Array[CodeExpression])
     """
-    Instance = CodeIndexerExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, targetObject=None, indices=None):
         """
@@ -2498,6 +2535,9 @@ Set: TargetObject(self: CodeIndexerExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeIndexerExpression()
 
 class CodeIterationStatement(CodeStatement):
     """
@@ -2506,8 +2546,6 @@ class CodeIterationStatement(CodeStatement):
     CodeIterationStatement()
     CodeIterationStatement(initStatement: CodeStatement, testExpression: CodeExpression, incrementStatement: CodeStatement, *statements: Array[CodeStatement])
     """
-    Instance = CodeIterationStatement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, initStatement=None, testExpression=None, incrementStatement=None, statements=None):
         """
@@ -2548,6 +2586,9 @@ Set: TestExpression(self: CodeIterationStatement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeIterationStatement()
 
 class CodeLabeledStatement(CodeStatement):
     """
@@ -2557,8 +2598,6 @@ class CodeLabeledStatement(CodeStatement):
     CodeLabeledStatement(label: str)
     CodeLabeledStatement(label: str, statement: CodeStatement)
     """
-    Instance = CodeLabeledStatement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, label=None, statement=None):
         """
@@ -2585,6 +2624,9 @@ Set: Statement(self: CodeLabeledStatement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeLabeledStatement()
 
 class CodeLinePragma():
     """
@@ -2593,8 +2635,6 @@ class CodeLinePragma():
     CodeLinePragma()
     CodeLinePragma(fileName: str, lineNumber: int)
     """
-    Instance = CodeLinePragma
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, fileName=None, lineNumber=None):
         """
@@ -2620,6 +2660,9 @@ Set: LineNumber(self: CodeLinePragma) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeLinePragma()
 
 class CodeMemberEvent(CodeTypeMember):
     """
@@ -2627,8 +2670,6 @@ class CodeMemberEvent(CodeTypeMember):
     
     CodeMemberEvent()
     """
-    Instance = CodeMemberEvent
-    """hardcoded/returns an instance of the class"""
     ImplementationTypes = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the data type that the member event implements.
 
@@ -2653,6 +2694,9 @@ Set: Type(self: CodeMemberEvent) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeMemberEvent()
 
 class CodeMemberField(CodeTypeMember):
     """
@@ -2663,8 +2707,6 @@ class CodeMemberField(CodeTypeMember):
     CodeMemberField(type: str, name: str)
     CodeMemberField(type: Type, name: str)
     """
-    Instance = CodeMemberField
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, type=None, name=None):
         """
@@ -2692,6 +2734,9 @@ Set: Type(self: CodeMemberField) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeMemberField()
 
 class CodeMemberProperty(CodeTypeMember):
     """
@@ -2699,8 +2744,6 @@ class CodeMemberProperty(CodeTypeMember):
     
     CodeMemberProperty()
     """
-    Instance = CodeMemberProperty
-    """hardcoded/returns an instance of the class"""
     GetStatements = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the collection of get statements for the property.
 
@@ -2762,6 +2805,9 @@ Set: Type(self: CodeMemberProperty) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeMemberProperty()
 
 class CodeMethodInvokeExpression(CodeExpression):
     """
@@ -2771,8 +2817,6 @@ class CodeMethodInvokeExpression(CodeExpression):
     CodeMethodInvokeExpression(targetObject: CodeExpression, methodName: str, *parameters: Array[CodeExpression])
     CodeMethodInvokeExpression(method: CodeMethodReferenceExpression, *parameters: Array[CodeExpression])
     """
-    Instance = CodeMethodInvokeExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
@@ -2798,6 +2842,9 @@ Get: Parameters(self: CodeMethodInvokeExpression) -> CodeExpressionCollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeMethodInvokeExpression()
 
 class CodeMethodReferenceExpression(CodeExpression):
     """
@@ -2807,8 +2854,6 @@ class CodeMethodReferenceExpression(CodeExpression):
     CodeMethodReferenceExpression(targetObject: CodeExpression, methodName: str)
     CodeMethodReferenceExpression(targetObject: CodeExpression, methodName: str, *typeParameters: Array[CodeTypeReference])
     """
-    Instance = CodeMethodReferenceExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, targetObject=None, methodName=None, typeParameters=None):
         """
@@ -2842,6 +2887,9 @@ Get: TypeArguments(self: CodeMethodReferenceExpression) -> CodeTypeReferenceColl
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeMethodReferenceExpression()
 
 class CodeMethodReturnStatement(CodeStatement):
     """
@@ -2850,8 +2898,6 @@ class CodeMethodReturnStatement(CodeStatement):
     CodeMethodReturnStatement()
     CodeMethodReturnStatement(expression: CodeExpression)
     """
-    Instance = CodeMethodReturnStatement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, expression=None):
         """
@@ -2869,6 +2915,9 @@ Set: Expression(self: CodeMethodReturnStatement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeMethodReturnStatement()
 
 class CodeNamespace(CodeObject):
     """
@@ -2877,8 +2926,6 @@ class CodeNamespace(CodeObject):
     CodeNamespace(name: str)
     CodeNamespace()
     """
-    Instance = CodeNamespace
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, name=None):
         """
@@ -2921,6 +2968,9 @@ Get: Types(self: CodeNamespace) -> CodeTypeDeclarationCollection
     PopulateImports = None
     PopulateTypes = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeNamespace()
 
 class CodeNamespaceCollection(CollectionBase):
     """
@@ -2930,8 +2980,6 @@ class CodeNamespaceCollection(CollectionBase):
     CodeNamespaceCollection(value: CodeNamespaceCollection)
     CodeNamespaceCollection(value: Array[CodeNamespace])
     """
-    Instance = CodeNamespaceCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: CodeNamespaceCollection, value: CodeNamespace) -> int
@@ -3135,6 +3183,9 @@ class CodeNamespaceCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeNamespaceCollection()
 
 class CodeNamespaceImport(CodeObject):
     """
@@ -3143,8 +3194,6 @@ class CodeNamespaceImport(CodeObject):
     CodeNamespaceImport(nameSpace: str)
     CodeNamespaceImport()
     """
-    Instance = CodeNamespaceImport
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, nameSpace=None):
         """
@@ -3170,6 +3219,9 @@ Set: Namespace(self: CodeNamespaceImport) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeNamespaceImport()
 
 class CodeNamespaceImportCollection:
     """
@@ -3177,8 +3229,6 @@ class CodeNamespaceImportCollection:
     
     CodeNamespaceImportCollection()
     """
-    Instance = CodeNamespaceImportCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: CodeNamespaceImportCollection, value: CodeNamespaceImport)
@@ -3263,6 +3313,9 @@ Get: Count(self: CodeNamespaceImportCollection) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeNamespaceImportCollection()
 
 class CodeObjectCreateExpression(CodeExpression):
     """
@@ -3273,8 +3326,6 @@ class CodeObjectCreateExpression(CodeExpression):
     CodeObjectCreateExpression(createType: CodeTypeReference, *parameters: Array[CodeExpression])
     CodeObjectCreateExpression(createType: Type, *parameters: Array[CodeExpression])
     """
-    Instance = CodeObjectCreateExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, createType=None, parameters=None):
         """
@@ -3301,6 +3352,9 @@ Get: Parameters(self: CodeObjectCreateExpression) -> CodeExpressionCollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeObjectCreateExpression()
 
 class CodeParameterDeclarationExpression(CodeExpression):
     """
@@ -3311,8 +3365,6 @@ class CodeParameterDeclarationExpression(CodeExpression):
     CodeParameterDeclarationExpression(type: str, name: str)
     CodeParameterDeclarationExpression(type: Type, name: str)
     """
-    Instance = CodeParameterDeclarationExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, type=None, name=None):
         """
@@ -3356,6 +3408,9 @@ Set: Type(self: CodeParameterDeclarationExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeParameterDeclarationExpression()
 
 class CodeParameterDeclarationExpressionCollection(CollectionBase):
     """
@@ -3365,8 +3420,6 @@ class CodeParameterDeclarationExpressionCollection(CollectionBase):
     CodeParameterDeclarationExpressionCollection(value: CodeParameterDeclarationExpressionCollection)
     CodeParameterDeclarationExpressionCollection(value: Array[CodeParameterDeclarationExpression])
     """
-    Instance = CodeParameterDeclarationExpressionCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: CodeParameterDeclarationExpressionCollection, value: CodeParameterDeclarationExpression) -> int
@@ -3570,6 +3623,9 @@ class CodeParameterDeclarationExpressionCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeParameterDeclarationExpressionCollection()
 
 class CodePrimitiveExpression(CodeExpression):
     """
@@ -3578,8 +3634,6 @@ class CodePrimitiveExpression(CodeExpression):
     CodePrimitiveExpression()
     CodePrimitiveExpression(value: object)
     """
-    Instance = CodePrimitiveExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, value=None):
         """
@@ -3597,6 +3651,9 @@ Set: Value(self: CodePrimitiveExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodePrimitiveExpression()
 
 class CodePropertyReferenceExpression(CodeExpression):
     """
@@ -3605,8 +3662,6 @@ class CodePropertyReferenceExpression(CodeExpression):
     CodePropertyReferenceExpression(targetObject: CodeExpression, propertyName: str)
     CodePropertyReferenceExpression()
     """
-    Instance = CodePropertyReferenceExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, targetObject=None, propertyName=None):
         """
@@ -3632,6 +3687,9 @@ Set: TargetObject(self: CodePropertyReferenceExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodePropertyReferenceExpression()
 
 class CodePropertySetValueReferenceExpression(CodeExpression):
     """
@@ -3639,8 +3697,9 @@ class CodePropertySetValueReferenceExpression(CodeExpression):
     
     CodePropertySetValueReferenceExpression()
     """
-    Instance = CodePropertySetValueReferenceExpression
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodePropertySetValueReferenceExpression()
 
 class CodeRegionDirective(CodeDirective):
     """
@@ -3649,8 +3708,6 @@ class CodeRegionDirective(CodeDirective):
     CodeRegionDirective()
     CodeRegionDirective(regionMode: CodeRegionMode, regionText: str)
     """
-    Instance = CodeRegionDirective
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, regionMode=None, regionText=None):
         """
@@ -3676,6 +3733,9 @@ Set: RegionText(self: CodeRegionDirective) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeRegionDirective()
 
 class CodeRegionMode:
     """
@@ -3683,8 +3743,6 @@ class CodeRegionMode:
     
     enum CodeRegionMode, values: End (2), None (0), Start (1)
     """
-    Instance = CodeRegionMode
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -3723,6 +3781,9 @@ class CodeRegionMode:
     Start = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeRegionMode()
 
 class CodeRemoveEventStatement(CodeStatement):
     """
@@ -3732,8 +3793,6 @@ class CodeRemoveEventStatement(CodeStatement):
     CodeRemoveEventStatement(eventRef: CodeEventReferenceExpression, listener: CodeExpression)
     CodeRemoveEventStatement(targetObject: CodeExpression, eventName: str, listener: CodeExpression)
     """
-    Instance = CodeRemoveEventStatement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
@@ -3760,6 +3819,9 @@ Set: Listener(self: CodeRemoveEventStatement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeRemoveEventStatement()
 
 class CodeSnippetCompileUnit(CodeCompileUnit):
     """
@@ -3768,8 +3830,6 @@ class CodeSnippetCompileUnit(CodeCompileUnit):
     CodeSnippetCompileUnit()
     CodeSnippetCompileUnit(value: str)
     """
-    Instance = CodeSnippetCompileUnit
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, value=None):
         """
@@ -3795,6 +3855,9 @@ Set: Value(self: CodeSnippetCompileUnit) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeSnippetCompileUnit()
 
 class CodeSnippetExpression(CodeExpression):
     """
@@ -3803,8 +3866,6 @@ class CodeSnippetExpression(CodeExpression):
     CodeSnippetExpression()
     CodeSnippetExpression(value: str)
     """
-    Instance = CodeSnippetExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, value=None):
         """
@@ -3822,6 +3883,9 @@ Set: Value(self: CodeSnippetExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeSnippetExpression()
 
 class CodeSnippetStatement(CodeStatement):
     """
@@ -3830,8 +3894,6 @@ class CodeSnippetStatement(CodeStatement):
     CodeSnippetStatement()
     CodeSnippetStatement(value: str)
     """
-    Instance = CodeSnippetStatement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, value=None):
         """
@@ -3849,6 +3911,9 @@ Set: Value(self: CodeSnippetStatement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeSnippetStatement()
 
 class CodeSnippetTypeMember(CodeTypeMember):
     """
@@ -3857,8 +3922,6 @@ class CodeSnippetTypeMember(CodeTypeMember):
     CodeSnippetTypeMember()
     CodeSnippetTypeMember(text: str)
     """
-    Instance = CodeSnippetTypeMember
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, text=None):
         """
@@ -3876,6 +3939,9 @@ Set: Text(self: CodeSnippetTypeMember) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeSnippetTypeMember()
 
 class CodeStatementCollection(CollectionBase):
     """
@@ -3885,8 +3951,6 @@ class CodeStatementCollection(CollectionBase):
     CodeStatementCollection(value: CodeStatementCollection)
     CodeStatementCollection(value: Array[CodeStatement])
     """
-    Instance = CodeStatementCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: CodeStatementCollection, value: CodeStatement) -> int
@@ -4096,6 +4160,9 @@ class CodeStatementCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeStatementCollection()
 
 class CodeThisReferenceExpression(CodeExpression):
     """
@@ -4103,8 +4170,9 @@ class CodeThisReferenceExpression(CodeExpression):
     
     CodeThisReferenceExpression()
     """
-    Instance = CodeThisReferenceExpression
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeThisReferenceExpression()
 
 class CodeThrowExceptionStatement(CodeStatement):
     """
@@ -4113,8 +4181,6 @@ class CodeThrowExceptionStatement(CodeStatement):
     CodeThrowExceptionStatement()
     CodeThrowExceptionStatement(toThrow: CodeExpression)
     """
-    Instance = CodeThrowExceptionStatement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, toThrow=None):
         """
@@ -4132,6 +4198,9 @@ Set: ToThrow(self: CodeThrowExceptionStatement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeThrowExceptionStatement()
 
 class CodeTryCatchFinallyStatement(CodeStatement):
     """
@@ -4141,8 +4210,6 @@ class CodeTryCatchFinallyStatement(CodeStatement):
     CodeTryCatchFinallyStatement(tryStatements: Array[CodeStatement], catchClauses: Array[CodeCatchClause])
     CodeTryCatchFinallyStatement(tryStatements: Array[CodeStatement], catchClauses: Array[CodeCatchClause], finallyStatements: Array[CodeStatement])
     """
-    Instance = CodeTryCatchFinallyStatement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, tryStatements=None, catchClauses=None, finallyStatements=None):
         """
@@ -4174,6 +4241,9 @@ Get: TryStatements(self: CodeTryCatchFinallyStatement) -> CodeStatementCollectio
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeTryCatchFinallyStatement()
 
 class CodeTypeConstructor(CodeMemberMethod):
     """
@@ -4181,8 +4251,9 @@ class CodeTypeConstructor(CodeMemberMethod):
     
     CodeTypeConstructor()
     """
-    Instance = CodeTypeConstructor
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeTypeConstructor()
 
 class CodeTypeDeclaration(CodeTypeMember):
     """
@@ -4191,8 +4262,6 @@ class CodeTypeDeclaration(CodeTypeMember):
     CodeTypeDeclaration(name: str)
     CodeTypeDeclaration()
     """
-    Instance = CodeTypeDeclaration
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, name=None):
         """
@@ -4274,6 +4343,9 @@ Get: TypeParameters(self: CodeTypeDeclaration) -> CodeTypeParameterCollection
     PopulateBaseTypes = None
     PopulateMembers = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeTypeDeclaration()
 
 class CodeTypeDeclarationCollection(CollectionBase):
     """
@@ -4283,8 +4355,6 @@ class CodeTypeDeclarationCollection(CollectionBase):
     CodeTypeDeclarationCollection(value: CodeTypeDeclarationCollection)
     CodeTypeDeclarationCollection(value: Array[CodeTypeDeclaration])
     """
-    Instance = CodeTypeDeclarationCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: CodeTypeDeclarationCollection, value: CodeTypeDeclaration) -> int
@@ -4488,6 +4558,9 @@ class CodeTypeDeclarationCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeTypeDeclarationCollection()
 
 class CodeTypeDelegate(CodeTypeDeclaration):
     """
@@ -4496,8 +4569,6 @@ class CodeTypeDelegate(CodeTypeDeclaration):
     CodeTypeDelegate()
     CodeTypeDelegate(name: str)
     """
-    Instance = CodeTypeDelegate
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, name=None):
         """
@@ -4522,6 +4593,9 @@ Set: ReturnType(self: CodeTypeDelegate) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeTypeDelegate()
 
 class CodeTypeMemberCollection(CollectionBase):
     """
@@ -4531,8 +4605,6 @@ class CodeTypeMemberCollection(CollectionBase):
     CodeTypeMemberCollection(value: CodeTypeMemberCollection)
     CodeTypeMemberCollection(value: Array[CodeTypeMember])
     """
-    Instance = CodeTypeMemberCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: CodeTypeMemberCollection, value: CodeTypeMember) -> int
@@ -4736,6 +4808,9 @@ class CodeTypeMemberCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeTypeMemberCollection()
 
 class CodeTypeOfExpression(CodeExpression):
     """
@@ -4746,8 +4821,6 @@ class CodeTypeOfExpression(CodeExpression):
     CodeTypeOfExpression(type: str)
     CodeTypeOfExpression(type: Type)
     """
-    Instance = CodeTypeOfExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, type=None):
         """
@@ -4767,6 +4840,9 @@ Set: Type(self: CodeTypeOfExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeTypeOfExpression()
 
 class CodeTypeParameter(CodeObject):
     """
@@ -4775,8 +4851,6 @@ class CodeTypeParameter(CodeObject):
     CodeTypeParameter()
     CodeTypeParameter(name: str)
     """
-    Instance = CodeTypeParameter
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, name=None):
         """
@@ -4816,6 +4890,9 @@ Set: Name(self: CodeTypeParameter) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeTypeParameter()
 
 class CodeTypeParameterCollection(CollectionBase):
     """
@@ -4825,8 +4902,6 @@ class CodeTypeParameterCollection(CollectionBase):
     CodeTypeParameterCollection(value: CodeTypeParameterCollection)
     CodeTypeParameterCollection(value: Array[CodeTypeParameter])
     """
-    Instance = CodeTypeParameterCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: CodeTypeParameterCollection, value: CodeTypeParameter) -> int
@@ -5034,6 +5109,9 @@ class CodeTypeParameterCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeTypeParameterCollection()
 
 class CodeTypeReference(CodeObject):
     """
@@ -5049,8 +5127,6 @@ class CodeTypeReference(CodeObject):
     CodeTypeReference(baseType: str, rank: int)
     CodeTypeReference(arrayType: CodeTypeReference, rank: int)
     """
-    Instance = CodeTypeReference
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
@@ -5106,6 +5182,9 @@ Get: TypeArguments(self: CodeTypeReference) -> CodeTypeReferenceCollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeTypeReference()
 
 class CodeTypeReferenceCollection(CollectionBase):
     """
@@ -5115,8 +5194,6 @@ class CodeTypeReferenceCollection(CollectionBase):
     CodeTypeReferenceCollection(value: CodeTypeReferenceCollection)
     CodeTypeReferenceCollection(value: Array[CodeTypeReference])
     """
-    Instance = CodeTypeReferenceCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: CodeTypeReferenceCollection, value: CodeTypeReference) -> int
@@ -5328,6 +5405,9 @@ class CodeTypeReferenceCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeTypeReferenceCollection()
 
 class CodeTypeReferenceExpression(CodeExpression):
     """
@@ -5338,8 +5418,6 @@ class CodeTypeReferenceExpression(CodeExpression):
     CodeTypeReferenceExpression(type: str)
     CodeTypeReferenceExpression(type: Type)
     """
-    Instance = CodeTypeReferenceExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, type=None):
         """
@@ -5359,6 +5437,9 @@ Set: Type(self: CodeTypeReferenceExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeTypeReferenceExpression()
 
 class CodeTypeReferenceOptions:
     """
@@ -5366,8 +5447,6 @@ class CodeTypeReferenceOptions:
     
     enum (flags) CodeTypeReferenceOptions, values: GenericTypeParameter (2), GlobalReference (1)
     """
-    Instance = CodeTypeReferenceOptions
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -5405,6 +5484,9 @@ class CodeTypeReferenceOptions:
     GlobalReference = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeTypeReferenceOptions()
 
 class CodeVariableDeclarationStatement(CodeStatement):
     """
@@ -5418,8 +5500,6 @@ class CodeVariableDeclarationStatement(CodeStatement):
     CodeVariableDeclarationStatement(type: str, name: str, initExpression: CodeExpression)
     CodeVariableDeclarationStatement(type: Type, name: str, initExpression: CodeExpression)
     """
-    Instance = CodeVariableDeclarationStatement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, type=None, name=None, initExpression=None):
         """
@@ -5458,6 +5538,9 @@ Set: Type(self: CodeVariableDeclarationStatement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeVariableDeclarationStatement()
 
 class CodeVariableReferenceExpression(CodeExpression):
     """
@@ -5466,8 +5549,6 @@ class CodeVariableReferenceExpression(CodeExpression):
     CodeVariableReferenceExpression()
     CodeVariableReferenceExpression(variableName: str)
     """
-    Instance = CodeVariableReferenceExpression
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, variableName=None):
         """
@@ -5485,6 +5566,9 @@ Set: VariableName(self: CodeVariableReferenceExpression) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CodeVariableReferenceExpression()
 
 class FieldDirection:
     """
@@ -5492,8 +5576,6 @@ class FieldDirection:
     
     enum FieldDirection, values: In (0), Out (1), Ref (2)
     """
-    Instance = FieldDirection
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -5532,6 +5614,9 @@ class FieldDirection:
     Ref = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FieldDirection()
 
 class MemberAttributes:
     """
@@ -5539,8 +5624,6 @@ class MemberAttributes:
     
     enum MemberAttributes, values: Abstract (1), AccessMask (61440), Assembly (4096), Const (5), Family (12288), FamilyAndAssembly (8192), FamilyOrAssembly (16384), Final (2), New (16), Overloaded (256), Override (4), Private (20480), Public (24576), ScopeMask (15), Static (3), VTableMask (240)
     """
-    Instance = MemberAttributes
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -5592,6 +5675,9 @@ class MemberAttributes:
     value__ = None
     VTableMask = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MemberAttributes()
 
 # variables with complex values
 

@@ -10,8 +10,6 @@
 
 class ComponentSerializationService():
     """ Provides the base class for serializing a set of components or serializable objects into a serialization store. """
-    Instance = ComponentSerializationService
-    """hardcoded/returns an instance of the class"""
     def CreateStore(self):
         """
         CreateStore(self: ComponentSerializationService) -> SerializationStore
@@ -115,6 +113,9 @@ class ComponentSerializationService():
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ComponentSerializationService()
 
 class ContextStack():
     """
@@ -122,8 +123,6 @@ class ContextStack():
     
     ContextStack()
     """
-    Instance = ContextStack
-    """hardcoded/returns an instance of the class"""
     def Append(self, context):
         """
         Append(self: ContextStack, context: object)
@@ -163,6 +162,9 @@ Get: Current(self: ContextStack) -> object
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ContextStack()
 
 class DefaultSerializationProviderAttribute:
     """
@@ -171,8 +173,6 @@ class DefaultSerializationProviderAttribute:
     DefaultSerializationProviderAttribute(providerType: Type)
     DefaultSerializationProviderAttribute(providerTypeName: str)
     """
-    Instance = DefaultSerializationProviderAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -193,11 +193,12 @@ Get: ProviderTypeName(self: DefaultSerializationProviderAttribute) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DefaultSerializationProviderAttribute()
 
 class DesignerLoader():
     """ Provides a basic designer loader interface that can be used to implement a custom designer loader. """
-    Instance = DesignerLoader
-    """hardcoded/returns an instance of the class"""
     def BeginLoad(self, host):
         """
         BeginLoad(self: DesignerLoader, host: IDesignerLoaderHost)
@@ -229,6 +230,9 @@ Get: Loading(self: DesignerLoader) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DesignerLoader()
 
 class DesignerSerializerAttribute:
     """
@@ -238,8 +242,6 @@ class DesignerSerializerAttribute:
     DesignerSerializerAttribute(serializerTypeName: str, baseSerializerType: Type)
     DesignerSerializerAttribute(serializerTypeName: str, baseSerializerTypeName: str)
     """
-    Instance = DesignerSerializerAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -275,11 +277,12 @@ Get: TypeId(self: DesignerSerializerAttribute) -> object
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DesignerSerializerAttribute()
 
 class IDesignerLoaderHost:
     """ Provides an interface that can extend a designer host to support loading from a serialized state. """
-    Instance = IDesignerLoaderHost
-    """hardcoded/returns an instance of the class"""
     def EndLoad(self, baseClassName, successful, errorCollection):
         """
         EndLoad(self: IDesignerLoaderHost, baseClassName: str, successful: bool, errorCollection: ICollection)
@@ -302,11 +305,12 @@ class IDesignerLoaderHost:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IDesignerLoaderHost()
 
 class IDesignerLoaderHost2:
     """ Provides an interface that extends System.ComponentModel.Design.Serialization.IDesignerLoaderHost to specify whether errors are tolerated while loading a design document. """
-    Instance = IDesignerLoaderHost2
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -328,11 +332,12 @@ Set: IgnoreErrorsDuringReload(self: IDesignerLoaderHost2) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IDesignerLoaderHost2()
 
 class IDesignerLoaderService:
     """ Provides an interface that can extend a designer loader to support asynchronous loading of external components. """
-    Instance = IDesignerLoaderService
-    """hardcoded/returns an instance of the class"""
     def AddLoadDependency(self):
         """
         AddLoadDependency(self: IDesignerLoaderService)
@@ -363,11 +368,12 @@ class IDesignerLoaderService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IDesignerLoaderService()
 
 class IDesignerSerializationManager:
     """ Provides an interface that can manage design-time serialization. """
-    Instance = IDesignerSerializationManager
-    """hardcoded/returns an instance of the class"""
     def AddSerializationProvider(self, provider):
         """
         AddSerializationProvider(self: IDesignerSerializationManager, provider: IDesignerSerializationProvider)
@@ -385,10 +391,7 @@ class IDesignerSerializationManager:
         
             type: The data type to create.
             arguments: The arguments to pass to the constructor for this type.
-            name: The name of the object. This name can be used to access the object later through 
-             System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance(System.String). If null is passed, the object is still created but cannot be accessed 
-             by name.
-        
+            name: The name of the object. This name can be used to access the object later through System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance(System.String). If null is passed, the object is still created but cannot be accessed by name.
             addToContainer: If true, this object is added to the design container. The object must implement System.ComponentModel.IComponent for this to have any effect.
             Returns: The newly created object instance.
         """
@@ -444,8 +447,7 @@ class IDesignerSerializationManager:
         RemoveSerializationProvider(self: IDesignerSerializationManager, provider: IDesignerSerializationProvider)
             Removes a custom serialization provider from the serialization manager.
         
-            provider: The provider to remove. This object must have been added using 
-             System.ComponentModel.Design.Serialization.IDesignerSerializationManager.AddSerializationProvider(System.ComponentModel.Design.Serialization.IDesignerSerializationProvider).
+            provider: The provider to remove. This object must have been added using System.ComponentModel.Design.Serialization.IDesignerSerializationManager.AddSerializationProvider(System.ComponentModel.Design.Serialization.IDesignerSerializationProvider).
         """
         pass
 
@@ -454,8 +456,7 @@ class IDesignerSerializationManager:
         ReportError(self: IDesignerSerializationManager, errorInformation: object)
             Reports an error in serialization.
         
-            errorInformation: The error to report. This information object can be of any object type. If it is an exception, the message of the exception is extracted and reported to the user. If it is 
-             any other type, System.Object.ToString is called to display the information to the user.
+            errorInformation: The error to report. This information object can be of any object type. If it is an exception, the message of the exception is extracted and reported to the user. If it is any other type, System.Object.ToString is called to display the information to the user.
         """
         pass
 
@@ -491,11 +492,12 @@ Get: Properties(self: IDesignerSerializationManager) -> PropertyDescriptorCollec
     ResolveName = None
     SerializationComplete = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IDesignerSerializationManager()
 
 class IDesignerSerializationProvider:
     """ Provides an interface that enables access to a serializer. """
-    Instance = IDesignerSerializationProvider
-    """hardcoded/returns an instance of the class"""
     def GetSerializer(self, manager, currentSerializer, objectType, serializerType):
         """
         GetSerializer(self: IDesignerSerializationProvider, manager: IDesignerSerializationManager, currentSerializer: object, objectType: Type, serializerType: Type) -> object
@@ -514,11 +516,12 @@ class IDesignerSerializationProvider:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IDesignerSerializationProvider()
 
 class IDesignerSerializationService:
     """ Provides an interface that can invoke serialization and deserialization. """
-    Instance = IDesignerSerializationService
-    """hardcoded/returns an instance of the class"""
     def Deserialize(self, serializationData):
         """
         Deserialize(self: IDesignerSerializationService, serializationData: object) -> ICollection
@@ -545,11 +548,12 @@ class IDesignerSerializationService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IDesignerSerializationService()
 
 class INameCreationService:
     """ Provides a service that can generate unique names for objects. """
-    Instance = INameCreationService
-    """hardcoded/returns an instance of the class"""
     def CreateName(self, container, dataType):
         """
         CreateName(self: INameCreationService, container: IContainer, dataType: Type) -> str
@@ -586,6 +590,9 @@ class INameCreationService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return INameCreationService()
 
 class InstanceDescriptor():
     """
@@ -594,8 +601,6 @@ class InstanceDescriptor():
     InstanceDescriptor(member: MemberInfo, arguments: ICollection, isComplete: bool)
     InstanceDescriptor(member: MemberInfo, arguments: ICollection)
     """
-    Instance = InstanceDescriptor
-    """hardcoded/returns an instance of the class"""
     def Invoke(self):
         """
         Invoke(self: InstanceDescriptor) -> object
@@ -635,6 +640,9 @@ Get: MemberInfo(self: InstanceDescriptor) -> MemberInfo
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return InstanceDescriptor()
 
 class MemberRelationship():
     """
@@ -642,8 +650,6 @@ class MemberRelationship():
     
     MemberRelationship(owner: object, member: MemberDescriptor)
     """
-    Instance = MemberRelationship
-    """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """
         Equals(self: MemberRelationship, obj: object) -> bool
@@ -651,8 +657,7 @@ class MemberRelationship():
             Determines whether two System.ComponentModel.Design.Serialization.MemberRelationship instances are equal.
         
             obj: The System.ComponentModel.Design.Serialization.MemberRelationship to compare with the current System.ComponentModel.Design.Serialization.MemberRelationship.
-            Returns: true if the specified System.ComponentModel.Design.Serialization.MemberRelationship is equal to the current System.ComponentModel.Design.Serialization.MemberRelationship; 
-             otherwise, false.
+            Returns: true if the specified System.ComponentModel.Design.Serialization.MemberRelationship is equal to the current System.ComponentModel.Design.Serialization.MemberRelationship; otherwise, false.
         """
         pass
 
@@ -704,11 +709,12 @@ Get: Owner(self: MemberRelationship) -> object
 
     Empty = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MemberRelationship()
 
 class MemberRelationshipService():
     """ Provides the base class for relating one member to another. """
-    Instance = MemberRelationshipService
-    """hardcoded/returns an instance of the class"""
     def GetRelationship(self, *args): #cannot find CLR method
         """
         GetRelationship(self: MemberRelationshipService, source: MemberRelationship) -> MemberRelationship
@@ -750,6 +756,9 @@ class MemberRelationshipService():
         """ x.__setitem__(i, y) <==> x[i]=x.__setitem__(i, y) <==> x[i]= """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MemberRelationshipService()
 
 class ResolveNameEventArgs(EventArgs):
     """
@@ -757,8 +766,6 @@ class ResolveNameEventArgs(EventArgs):
     
     ResolveNameEventArgs(name: str)
     """
-    Instance = ResolveNameEventArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, name):
         """ __new__(cls: type, name: str) """
@@ -780,6 +787,9 @@ Set: Value(self: ResolveNameEventArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ResolveNameEventArgs()
 
 class ResolveNameEventHandler(MulticastDelegate):
     """
@@ -787,8 +797,6 @@ class ResolveNameEventHandler(MulticastDelegate):
     
     ResolveNameEventHandler(object: object, method: IntPtr)
     """
-    Instance = ResolveNameEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: ResolveNameEventHandler, sender: object, e: ResolveNameEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -810,9 +818,7 @@ class ResolveNameEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -841,8 +847,7 @@ class ResolveNameEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -858,6 +863,9 @@ class ResolveNameEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ResolveNameEventHandler()
 
 class RootDesignerSerializerAttribute:
     """
@@ -867,8 +875,6 @@ class RootDesignerSerializerAttribute:
     RootDesignerSerializerAttribute(serializerType: Type, baseSerializerType: Type, reloadable: bool)
     RootDesignerSerializerAttribute(serializerTypeName: str, baseSerializerType: Type, reloadable: bool)
     """
-    Instance = RootDesignerSerializerAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -911,11 +917,12 @@ Get: TypeId(self: RootDesignerSerializerAttribute) -> object
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RootDesignerSerializerAttribute()
 
 class SerializationStore:
     """ Provides the base class for storing serialization data for the System.ComponentModel.Design.Serialization.ComponentSerializationService. """
-    Instance = SerializationStore
-    """hardcoded/returns an instance of the class"""
     def Close(self):
         """
         Close(self: SerializationStore)
@@ -965,4 +972,7 @@ Get: Errors(self: SerializationStore) -> ICollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SerializationStore()
 

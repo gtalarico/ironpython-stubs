@@ -15,8 +15,6 @@ def IQueue(args, kwargs): # real signature unknown
 
 class IQueueListener:
     # no doc
-    Instance = IQueueListener
-    """hardcoded/returns an instance of the class"""
     def Read(self, messageHandler, cancellationtoken):
         """ Read(self: IQueueListener, messageHandler: Action[IMessage], cancellationtoken: CancellationToken) -> Task """
         pass
@@ -25,11 +23,12 @@ class IQueueListener:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IQueueListener()
 
 class IQueuePublisher:
     # no doc
-    Instance = IQueuePublisher
-    """hardcoded/returns an instance of the class"""
     def Enqueue(self, message):
         """ Enqueue(self: IQueuePublisher, message: IMessage) """
         pass
@@ -38,14 +37,15 @@ class IQueuePublisher:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IQueuePublisher()
 
 class QueueConnectResult():
     """
     QueueConnectResult(success: bool)
     QueueConnectResult(success: bool, messages: str)
     """
-    Instance = QueueConnectResult
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, success, messages=None):
         """
@@ -65,4 +65,7 @@ class QueueConnectResult():
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return QueueConnectResult()
 

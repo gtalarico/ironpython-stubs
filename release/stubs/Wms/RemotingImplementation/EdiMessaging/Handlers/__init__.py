@@ -11,8 +11,6 @@ from Wms.EdiMessaging import *
 
 class CheckLpIntegrity_StockOnLocationChangedMessageHandler(MessageHandlerBase):
     """ CheckLpIntegrity_StockOnLocationChangedMessageHandler() """
-    Instance = CheckLpIntegrity_StockOnLocationChangedMessageHandler
-    """hardcoded/returns an instance of the class"""
     def CanHandle(self, message):
         """ CanHandle(self: CheckLpIntegrity_StockOnLocationChangedMessageHandler, message: IMessage) -> bool """
         pass
@@ -25,11 +23,12 @@ class CheckLpIntegrity_StockOnLocationChangedMessageHandler(MessageHandlerBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CheckLpIntegrity_StockOnLocationChangedMessageHandler()
 
 class ProcessDirectOrderMessageHandler(MessageHandlerBase):
     """ ProcessDirectOrderMessageHandler(messaging: IMessaging, directOrderLogger: DirectOrderLogger) """
-    Instance = ProcessDirectOrderMessageHandler
-    """hardcoded/returns an instance of the class"""
     def CanHandle(self, message):
         """ CanHandle(self: ProcessDirectOrderMessageHandler, message: IMessage) -> bool """
         pass
@@ -47,11 +46,12 @@ class ProcessDirectOrderMessageHandler(MessageHandlerBase):
         """ __new__(cls: type, messaging: IMessaging, directOrderLogger: DirectOrderLogger) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessDirectOrderMessageHandler()
 
 class ProcessPreReceiptMessageHandler(MessageHandlerBase):
     """ ProcessPreReceiptMessageHandler() """
-    Instance = ProcessPreReceiptMessageHandler
-    """hardcoded/returns an instance of the class"""
     def CanHandle(self, message):
         """ CanHandle(self: ProcessPreReceiptMessageHandler, message: IMessage) -> bool """
         pass
@@ -64,11 +64,12 @@ class ProcessPreReceiptMessageHandler(MessageHandlerBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessPreReceiptMessageHandler()
 
 class ProcessSalesOrderMessageHandler(MessageHandlerBase):
     """ ProcessSalesOrderMessageHandler(outbound: Outbound, stockManager: IStockManager) """
-    Instance = ProcessSalesOrderMessageHandler
-    """hardcoded/returns an instance of the class"""
     def CanHandle(self, message):
         """ CanHandle(self: ProcessSalesOrderMessageHandler, message: IMessage) -> bool """
         pass
@@ -86,6 +87,9 @@ class ProcessSalesOrderMessageHandler(MessageHandlerBase):
         """ __new__(cls: type, outbound: Outbound, stockManager: IStockManager) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessSalesOrderMessageHandler()
 
 # variables with complex values
 

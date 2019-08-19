@@ -10,8 +10,6 @@
 
 class RDLIsolatedReportRendererExecutor():
     """ RDLIsolatedReportRendererExecutor(lifetime: TimeSpan) """
-    Instance = RDLIsolatedReportRendererExecutor
-    """hardcoded/returns an instance of the class"""
     def Export(self, args, dataArgs):
         """ Export(self: RDLIsolatedReportRendererExecutor, args: ReportExportArgs, dataArgs: ReportDataArgs) -> ReportExport """
         pass
@@ -33,11 +31,12 @@ class RDLIsolatedReportRendererExecutor():
     StateServerChannelName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RDLIsolatedReportRendererExecutor()
 
 class RDLReportRenderer:
     """ RDLReportRenderer() """
-    Instance = RDLReportRenderer
-    """hardcoded/returns an instance of the class"""
     def Export(self, *__args):
         """
         Export[T](self: RDLReportRenderer, provider: T) -> ReportExport
@@ -57,14 +56,18 @@ class RDLReportRenderer:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RDLReportRenderer()
 
 class Utilities():
     """ Utilities() """
-    Instance = Utilities
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def LoadNativeAssemblies(rootApplicationPath):
         """ LoadNativeAssemblies(rootApplicationPath: str) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Utilities()
 

@@ -12,8 +12,6 @@ from System import *
 
 class OnGetSettingMemberHandler(MulticastDelegate):
     """ OnGetSettingMemberHandler(object: object, method: IntPtr) """
-    Instance = OnGetSettingMemberHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, member, settings, callback, object):
         """ BeginInvoke(self: OnGetSettingMemberHandler, member: MemberInfo, settings: SystemSettings, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -35,9 +33,7 @@ class OnGetSettingMemberHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -66,8 +62,7 @@ class OnGetSettingMemberHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -83,11 +78,12 @@ class OnGetSettingMemberHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OnGetSettingMemberHandler()
 
 class OnGetSettingsHandler(MulticastDelegate):
     """ OnGetSettingsHandler(object: object, method: IntPtr) """
-    Instance = OnGetSettingsHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, settings, callback, object):
         """ BeginInvoke(self: OnGetSettingsHandler, settings: SystemSettings, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -109,9 +105,7 @@ class OnGetSettingsHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -140,8 +134,7 @@ class OnGetSettingsHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -157,11 +150,12 @@ class OnGetSettingsHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OnGetSettingsHandler()
 
 class OnSaveSettingMemberHandler(MulticastDelegate):
     """ OnSaveSettingMemberHandler(object: object, method: IntPtr) """
-    Instance = OnSaveSettingMemberHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, member, settings, callback, object):
         """ BeginInvoke(self: OnSaveSettingMemberHandler, member: MemberInfo, settings: SystemSettings, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -183,9 +177,7 @@ class OnSaveSettingMemberHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -214,8 +206,7 @@ class OnSaveSettingMemberHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -231,11 +222,12 @@ class OnSaveSettingMemberHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OnSaveSettingMemberHandler()
 
 class OnSaveSettingsHandler(MulticastDelegate):
     """ OnSaveSettingsHandler(object: object, method: IntPtr) """
-    Instance = OnSaveSettingsHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, settings, callback, object):
         """ BeginInvoke(self: OnSaveSettingsHandler, settings: SystemSettings, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -257,9 +249,7 @@ class OnSaveSettingsHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -288,8 +278,7 @@ class OnSaveSettingsHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -305,11 +294,12 @@ class OnSaveSettingsHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OnSaveSettingsHandler()
 
 class PackageBase():
     """  """
-    Instance = PackageBase
-    """hardcoded/returns an instance of the class"""
     BoxGuid = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -511,11 +501,12 @@ Set: YourReference(self: PackageBase) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PackageBase()
 
 class ServiceBase:
     """  """
-    Instance = ServiceBase
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -580,11 +571,12 @@ Set: TransportationCharge(self: ServiceBase) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ServiceBase()
 
 class ShipmentBase(Address):
     # no doc
-    Instance = ShipmentBase
-    """hardcoded/returns an instance of the class"""
     def GetPossibleServices(self):
         """ GetPossibleServices(self: ShipmentBase) -> Services """
         pass
@@ -713,11 +705,12 @@ Get: Shipper(self: ShipmentBase) -> ShipperBase
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ShipmentBase()
 
 class ShipperBase:
     """  """
-    Instance = ShipperBase
-    """hardcoded/returns an instance of the class"""
     def GetServiceLevels(self, services):
         """ GetServiceLevels(self: ShipperBase) -> (int, Services) """
         pass
@@ -828,4 +821,7 @@ Get: UniqueId(self: ShipperBase) -> str
     SaveSettingMember = None
     SaveSettings = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ShipperBase()
 

@@ -10,11 +10,12 @@
 
 class AssemblyHelper():
     """ AssemblyHelper() """
-    Instance = AssemblyHelper
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def LoadAssembly(fileName, fullPath):
         """ LoadAssembly(fileName: str) -> (Assembly, str) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AssemblyHelper()
 

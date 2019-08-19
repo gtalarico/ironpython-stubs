@@ -10,8 +10,6 @@
 
 class DirectOrderLogger():
     """ DirectOrderLogger(orderMapper: ObjectsMapper[DirectOrder, DirectOrders], linesMapper: ObjectsMapper[DirectOrderLine, DirectOrderLines], detailsMapper: ObjectsMapper[ItemIdentification, DirectOrderLineDetails]) """
-    Instance = DirectOrderLogger
-    """hardcoded/returns an instance of the class"""
     def Log(self, directOrder):
         """ Log(self: DirectOrderLogger, directOrder: DirectOrder) """
         pass
@@ -21,4 +19,7 @@ class DirectOrderLogger():
         """ __new__(cls: type, orderMapper: ObjectsMapper[DirectOrder, DirectOrders], linesMapper: ObjectsMapper[DirectOrderLine, DirectOrderLines], detailsMapper: ObjectsMapper[ItemIdentification, DirectOrderLineDetails]) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DirectOrderLogger()
 

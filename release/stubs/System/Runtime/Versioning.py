@@ -10,8 +10,6 @@
 
 class CompatibilitySwitch():
     # no doc
-    Instance = CompatibilitySwitch
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetValue(compatibilitySwitchName):
         """ GetValue(compatibilitySwitchName: str) -> str """
@@ -27,6 +25,9 @@ class CompatibilitySwitch():
         'IsEnabled',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CompatibilitySwitch()
 
 class ComponentGuaranteesAttribute:
     """
@@ -34,8 +35,6 @@ class ComponentGuaranteesAttribute:
     
     ComponentGuaranteesAttribute(guarantees: ComponentGuaranteesOptions)
     """
-    Instance = ComponentGuaranteesAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -53,6 +52,9 @@ Get: Guarantees(self: ComponentGuaranteesAttribute) -> ComponentGuaranteesOption
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ComponentGuaranteesAttribute()
 
 class ComponentGuaranteesOptions:
     """
@@ -60,8 +62,6 @@ class ComponentGuaranteesOptions:
     
     enum (flags) ComponentGuaranteesOptions, values: Exchange (1), None (0), SideBySide (4), Stable (2)
     """
-    Instance = ComponentGuaranteesOptions
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -101,6 +101,9 @@ class ComponentGuaranteesOptions:
     Stable = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ComponentGuaranteesOptions()
 
 class FrameworkName:
     """
@@ -110,8 +113,6 @@ class FrameworkName:
     FrameworkName(identifier: str, version: Version, profile: str)
     FrameworkName(frameworkName: str)
     """
-    Instance = FrameworkName
-    """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """
         Equals(self: FrameworkName, obj: object) -> bool
@@ -122,9 +123,7 @@ class FrameworkName:
             Returns: true if every component of the current System.Runtime.Versioning.FrameworkName object matches the corresponding component of obj; otherwise, false.
         Equals(self: FrameworkName, other: FrameworkName) -> bool
         
-            Returns a value that indicates whether this System.Runtime.Versioning.FrameworkName instance represents the same .NET Framework version as a specified 
-             System.Runtime.Versioning.FrameworkName instance.
-        
+            Returns a value that indicates whether this System.Runtime.Versioning.FrameworkName instance represents the same .NET Framework version as a specified System.Runtime.Versioning.FrameworkName instance.
         
             other: The object to compare to the current instance.
             Returns: true if every component of the current System.Runtime.Versioning.FrameworkName object matches the corresponding component of other; otherwise, false.
@@ -208,6 +207,9 @@ Get: Version(self: FrameworkName) -> Version
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FrameworkName()
 
 class ResourceConsumptionAttribute:
     """
@@ -216,8 +218,6 @@ class ResourceConsumptionAttribute:
     ResourceConsumptionAttribute(resourceScope: ResourceScope)
     ResourceConsumptionAttribute(resourceScope: ResourceScope, consumptionScope: ResourceScope)
     """
-    Instance = ResourceConsumptionAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -245,6 +245,9 @@ Get: ResourceScope(self: ResourceConsumptionAttribute) -> ResourceScope
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ResourceConsumptionAttribute()
 
 class ResourceExposureAttribute:
     """
@@ -252,8 +255,6 @@ class ResourceExposureAttribute:
     
     ResourceExposureAttribute(exposureLevel: ResourceScope)
     """
-    Instance = ResourceExposureAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -271,6 +272,9 @@ Get: ResourceExposureLevel(self: ResourceExposureAttribute) -> ResourceScope
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ResourceExposureAttribute()
 
 class ResourceScope:
     """
@@ -278,8 +282,6 @@ class ResourceScope:
     
     enum (flags) ResourceScope, values: AppDomain (4), Assembly (32), Library (8), Machine (1), None (0), Private (16), Process (2)
     """
-    Instance = ResourceScope
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -322,6 +324,9 @@ class ResourceScope:
     Process = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ResourceScope()
 
 class TargetFrameworkAttribute:
     """
@@ -329,8 +334,6 @@ class TargetFrameworkAttribute:
     
     TargetFrameworkAttribute(frameworkName: str)
     """
-    Instance = TargetFrameworkAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -356,11 +359,12 @@ Get: FrameworkName(self: TargetFrameworkAttribute) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TargetFrameworkAttribute()
 
 class VersioningHelper():
     """ Provides methods to aid developers in writing version-safe code. This class cannot be inherited. """
-    Instance = VersioningHelper
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def MakeVersionSafeName(name, from_, to, type=None):
         """
@@ -388,4 +392,7 @@ class VersioningHelper():
         'MakeVersionSafeName',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return VersioningHelper()
 

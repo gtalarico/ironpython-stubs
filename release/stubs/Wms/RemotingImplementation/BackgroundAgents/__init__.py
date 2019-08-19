@@ -10,8 +10,6 @@
 
 class DatabaseBackgroundAgentHealthMonitor:
     """ DatabaseBackgroundAgentHealthMonitor() """
-    Instance = DatabaseBackgroundAgentHealthMonitor
-    """hardcoded/returns an instance of the class"""
     def CreateOrUpdateBackgroundAgent(self, arg):
         """ CreateOrUpdateBackgroundAgent(self: DatabaseBackgroundAgentHealthMonitor, arg: DataFlowObject[BackgroundAgent]) -> DataFlowObject[BackgroundAgent] """
         pass
@@ -44,11 +42,12 @@ class DatabaseBackgroundAgentHealthMonitor:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DatabaseBackgroundAgentHealthMonitor()
 
 class IBackgroundAgentHealthMonitor:
     # no doc
-    Instance = IBackgroundAgentHealthMonitor
-    """hardcoded/returns an instance of the class"""
     def CreateOrUpdateBackgroundAgent(self, arg):
         """ CreateOrUpdateBackgroundAgent(self: IBackgroundAgentHealthMonitor, arg: DataFlowObject[BackgroundAgent]) -> DataFlowObject[BackgroundAgent] """
         pass
@@ -77,11 +76,12 @@ class IBackgroundAgentHealthMonitor:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IBackgroundAgentHealthMonitor()
 
 class InMemoryBackgroundAgentHealthMonitor:
     """ InMemoryBackgroundAgentHealthMonitor() """
-    Instance = InMemoryBackgroundAgentHealthMonitor
-    """hardcoded/returns an instance of the class"""
     def CreateOrUpdateBackgroundAgent(self, arg):
         """ CreateOrUpdateBackgroundAgent(self: InMemoryBackgroundAgentHealthMonitor, arg: DataFlowObject[BackgroundAgent]) -> DataFlowObject[BackgroundAgent] """
         pass
@@ -116,6 +116,9 @@ class InMemoryBackgroundAgentHealthMonitor:
 
     Agents = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return InMemoryBackgroundAgentHealthMonitor()
 
 # variables with complex values
 

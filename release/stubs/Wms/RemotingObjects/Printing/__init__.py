@@ -12,8 +12,6 @@ from System.Collections.Generic import *
 
 class PrintLineBase():
     """  """
-    Instance = PrintLineBase
-    """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """ Equals(self: PrintLineBase, obj: object) -> bool """
         pass
@@ -65,11 +63,12 @@ Set: Quantity(self: PrintLineBase) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintLineBase()
 
 class BarcodePrintLine(PrintLineBase):
     """ BarcodePrintLine(barcode: str) """
-    Instance = BarcodePrintLine
-    """hardcoded/returns an instance of the class"""
     def GetHashCode(self):
         """ GetHashCode(self: BarcodePrintLine) -> int """
         pass
@@ -95,11 +94,12 @@ Get: GroupKey(self: BarcodePrintLine) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BarcodePrintLine()
 
 class PrintLinesBase(FindableList):
     """  """
-    Instance = PrintLinesBase
-    """hardcoded/returns an instance of the class"""
     def AddRange(self, collection):
         """ AddRange(self: PrintLinesBase, collection: IEnumerable[PrintLineBase]) -> List[PrintLineBase] """
         pass
@@ -125,14 +125,15 @@ class PrintLinesBase(FindableList):
 
     UniqueId = 'GroupKey'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintLinesBase()
 
 class BarcodePrintLines(PrintLinesBase):
     """
     BarcodePrintLines()
     BarcodePrintLines(collection: IEnumerable[BarcodePrintLine])
     """
-    Instance = BarcodePrintLines
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -187,11 +188,12 @@ Set: TotalRowsMatched(self: BarcodePrintLines) = value
     DisplayMember = None
     ValueMember = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BarcodePrintLines()
 
 class InboundOrderPrintLine(PrintLineBase):
     """ InboundOrderPrintLine() """
-    Instance = InboundOrderPrintLine
-    """hardcoded/returns an instance of the class"""
     def GetHashCode(self):
         """ GetHashCode(self: InboundOrderPrintLine) -> int """
         pass
@@ -304,11 +306,12 @@ Set: SupplierCode(self: InboundOrderPrintLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return InboundOrderPrintLine()
 
 class ItemPrintLine(PrintLineBase):
     """ ItemPrintLine() """
-    Instance = ItemPrintLine
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Create(item):
         """ Create(item: Item) -> ItemPrintLine """
@@ -414,14 +417,15 @@ Set: UnitCode(self: ItemPrintLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ItemPrintLine()
 
 class ItemPrintLines(PrintLinesBase):
     """
     ItemPrintLines()
     ItemPrintLines(collection: IEnumerable[ItemPrintLine])
     """
-    Instance = ItemPrintLines
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -476,11 +480,12 @@ Set: TotalRowsMatched(self: ItemPrintLines) = value
     DisplayMember = 'ItemDescription'
     ValueMember = 'ItemCode'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ItemPrintLines()
 
 class ItemWithItemIdPrintLine(PrintLineBase):
     """ ItemWithItemIdPrintLine() """
-    Instance = ItemWithItemIdPrintLine
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Create(item, itemIdentificationNumber):
         """ Create(item: Item, itemIdentificationNumber: str) -> ItemWithItemIdPrintLine """
@@ -582,11 +587,12 @@ Set: UnitCode(self: ItemWithItemIdPrintLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ItemWithItemIdPrintLine()
 
 class LabelFieldType:
     """ enum LabelFieldType, values: Barcode (2), BarcodeDescription (3), String (1), Unknown (0) """
-    Instance = LabelFieldType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -626,11 +632,12 @@ class LabelFieldType:
     Unknown = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LabelFieldType()
 
 class LicenseOptions():
     """ LicenseOptions() """
-    Instance = LicenseOptions
-    """hardcoded/returns an instance of the class"""
     PdfPrintNetCompany = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """PdfPrintNet License company name
 
@@ -648,11 +655,12 @@ Set: PdfPrintNetLicenseKey(self: LicenseOptions) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LicenseOptions()
 
 class LicensePlatePrintLine(PrintLineBase):
     """ LicensePlatePrintLine() """
-    Instance = LicensePlatePrintLine
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Create(item):
         """ Create(item: LicensePlate) -> LicensePlatePrintLine """
@@ -752,14 +760,15 @@ Set: WarehouseCode(self: LicensePlatePrintLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LicensePlatePrintLine()
 
 class LicensePlatePrintLines(PrintLinesBase):
     """
     LicensePlatePrintLines()
     LicensePlatePrintLines(collection: IEnumerable[LicensePlatePrintLine])
     """
-    Instance = LicensePlatePrintLines
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -814,11 +823,12 @@ Set: TotalRowsMatched(self: LicensePlatePrintLines) = value
     DisplayMember = 'Description'
     ValueMember = 'Code'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LicensePlatePrintLines()
 
 class PickbatchPrintLine(PrintLineBase):
     """ PickbatchPrintLine() """
-    Instance = PickbatchPrintLine
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Create(batch):
         """ Create(batch: Batch) -> PickbatchPrintLine """
@@ -890,14 +900,15 @@ Set: Tags(self: PickbatchPrintLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PickbatchPrintLine()
 
 class PickbatchPrintLines(PrintLinesBase):
     """
     PickbatchPrintLines()
     PickbatchPrintLines(collection: IEnumerable[PickbatchPrintLine])
     """
-    Instance = PickbatchPrintLines
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -952,6 +963,9 @@ Set: TotalRowsMatched(self: PickbatchPrintLines) = value
     DisplayMember = 'BatchName'
     ValueMember = 'BatchId'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PickbatchPrintLines()
 
 class PrintBaseArgs():
     """
@@ -960,8 +974,6 @@ class PrintBaseArgs():
     PrintBaseArgs()
     PrintBaseArgs(printerName: str, options: PrintingOptions)
     """
-    Instance = PrintBaseArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, printerName=None, options=None):
         """
@@ -997,11 +1009,12 @@ Set: PrintingOptions(self: PrintBaseArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintBaseArgs()
 
 class PrintDuplicateLabelArgs(PrintBaseArgs):
     """ PrintDuplicateLabelArgs() """
-    Instance = PrintDuplicateLabelArgs
-    """hardcoded/returns an instance of the class"""
     ShipmentId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -1011,11 +1024,12 @@ Set: ShipmentId(self: PrintDuplicateLabelArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintDuplicateLabelArgs()
 
 class PrintLabel(DbObject):
     """ PrintLabel() """
-    Instance = PrintLabel
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1120,11 +1134,12 @@ Set: Sys(self: PrintLabel) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintLabel()
 
 class PrintLabelArgs():
     """ PrintLabelArgs() """
-    Instance = PrintLabelArgs
-    """hardcoded/returns an instance of the class"""
     PrintLabels = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -1142,11 +1157,12 @@ Set: SelectedLabel(self: PrintLabelArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintLabelArgs()
 
 class PrintLabelItemProperties():
     """ PrintLabelItemProperties() """
-    Instance = PrintLabelItemProperties
-    """hardcoded/returns an instance of the class"""
     EndElement = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -1187,14 +1203,15 @@ Set: StartPosition(self: PrintLabelItemProperties) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintLabelItemProperties()
 
 class PrintLabelMapping():
     """
     PrintLabelMapping(placeholder: str, datasetField: str, transformation: str)
     PrintLabelMapping()
     """
-    Instance = PrintLabelMapping
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, placeholder=None, datasetField=None, transformation=None):
         """
@@ -1228,11 +1245,12 @@ Set: Transformation(self: PrintLabelMapping) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintLabelMapping()
 
 class PrintLabelMappings(FindableList):
     """ PrintLabelMappings() """
-    Instance = PrintLabelMappings
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def ConstructFrom(mappings):
         """ ConstructFrom(mappings: Mappings[str, str, str]) -> PrintLabelMappings """
@@ -1267,11 +1285,12 @@ class PrintLabelMappings(FindableList):
     DisplayMember = 'DatasetField'
     ValueMember = 'Placeholder'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintLabelMappings()
 
 class PrintLabels(FindableList):
     """ PrintLabels() """
-    Instance = PrintLabels
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -1294,11 +1313,12 @@ class PrintLabels(FindableList):
     DisplayMember = 'DisplayName'
     ValueMember = 'ID'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintLabels()
 
 class PrintPackageSlipArgs(PrintBaseArgs):
     """ PrintPackageSlipArgs() """
-    Instance = PrintPackageSlipArgs
-    """hardcoded/returns an instance of the class"""
     ShipmentId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Id of the shipment to print the package slip for.
 
@@ -1308,11 +1328,12 @@ Set: ShipmentId(self: PrintPackageSlipArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintPackageSlipArgs()
 
 class PrintPickbatchLabelArgs(PrintBaseArgs):
     """ PrintPickbatchLabelArgs() """
-    Instance = PrintPickbatchLabelArgs
-    """hardcoded/returns an instance of the class"""
     BatchIds = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Ids of the Wms.RemotingObjects.BatchPicking.Batch to print the label for
 
@@ -1330,6 +1351,9 @@ Set: PrintLabel(self: PrintPickbatchLabelArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintPickbatchLabelArgs()
 
 class PrintPickingListArgs(PrintBaseArgs):
     """
@@ -1337,8 +1361,6 @@ class PrintPickingListArgs(PrintBaseArgs):
     
     PrintPickingListArgs()
     """
-    Instance = PrintPickingListArgs
-    """hardcoded/returns an instance of the class"""
     BatchIds = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Ids of the batches to print a picklist for.
 
@@ -1356,11 +1378,12 @@ Set: Report(self: PrintPickingListArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintPickingListArgs()
 
 class PrintShipmentDocumentArgs(PrintBaseArgs):
     """ PrintShipmentDocumentArgs() """
-    Instance = PrintShipmentDocumentArgs
-    """hardcoded/returns an instance of the class"""
     ShipmentId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -1370,11 +1393,12 @@ Set: ShipmentId(self: PrintShipmentDocumentArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintShipmentDocumentArgs()
 
 class PrintSSCCLabelsArgs():
     """ PrintSSCCLabelsArgs() """
-    Instance = PrintSSCCLabelsArgs
-    """hardcoded/returns an instance of the class"""
     CacheKeyOfTransportPackages = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Wms.RemotingObjects.Caching.CacheKey of the Wms.RemotingObjects.ShippingLayers.TransportPackages to print the labels for
 
@@ -1408,11 +1432,12 @@ Set: SelectedPackageId(self: PrintSSCCLabelsArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintSSCCLabelsArgs()
 
 class PurchaseOrderPrintLine:
     """ PurchaseOrderPrintLine() """
-    Instance = PurchaseOrderPrintLine
-    """hardcoded/returns an instance of the class"""
     CurrentBarcode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """CURRENT vendor Barcode
 
@@ -1444,14 +1469,15 @@ Set: YourReference(self: PurchaseOrderPrintLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PurchaseOrderPrintLine()
 
 class PurchaseOrderPrintLines(PrintLinesBase):
     """
     PurchaseOrderPrintLines()
     PurchaseOrderPrintLines(collection: IEnumerable[PurchaseOrderPrintLine])
     """
-    Instance = PurchaseOrderPrintLines
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -1506,11 +1532,12 @@ Set: TotalRowsMatched(self: PurchaseOrderPrintLines) = value
     DisplayMember = 'ItemDescription'
     ValueMember = 'ItemCode'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PurchaseOrderPrintLines()
 
 class ReportItem():
     """ ReportItem() """
-    Instance = ReportItem
-    """hardcoded/returns an instance of the class"""
     DataSource = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -1544,11 +1571,12 @@ Set: Name(self: ReportItem) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ReportItem()
 
 class ReportItems(List):
     """ ReportItems() """
-    Instance = ReportItems
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(list):
         """ FromIEnumerable(list: IEnumerable[ReportItem]) -> ReportItems """
@@ -1576,11 +1604,12 @@ class ReportItems(List):
     DisplayMember = 'Description'
     ValueMember = 'Name'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ReportItems()
 
 class RmaOrderPrintLine:
     """ RmaOrderPrintLine() """
-    Instance = RmaOrderPrintLine
-    """hardcoded/returns an instance of the class"""
     def GetHashCode(self):
         """ GetHashCode(self: RmaOrderPrintLine) -> int """
         pass
@@ -1594,11 +1623,12 @@ Set: Reason(self: RmaOrderPrintLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RmaOrderPrintLine()
 
 class RmaOrderPrintLines(PrintLinesBase):
     """ RmaOrderPrintLines() """
-    Instance = RmaOrderPrintLines
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -1635,11 +1665,12 @@ Get: PreserveState(self: RmaOrderPrintLines) -> bool
 
     DisplayMember = 'ItemDescription'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RmaOrderPrintLines()
 
 class SSCCBasePrintLine(PrintLineBase):
     """ SSCCBasePrintLine(barcode: str, barcodeReadable: str) """
-    Instance = SSCCBasePrintLine
-    """hardcoded/returns an instance of the class"""
     def GetHashCode(self):
         """ GetHashCode(self: SSCCBasePrintLine) -> int """
         pass
@@ -1673,14 +1704,15 @@ Get: GroupKey(self: SSCCBasePrintLine) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SSCCBasePrintLine()
 
 class SSCCBasePrintLines(PrintLinesBase):
     """
     SSCCBasePrintLines()
     SSCCBasePrintLines(collection: IEnumerable[SSCCBasePrintLine])
     """
-    Instance = SSCCBasePrintLines
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -1735,14 +1767,15 @@ Set: TotalRowsMatched(self: SSCCBasePrintLines) = value
     DisplayMember = None
     ValueMember = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SSCCBasePrintLines()
 
 class SSCCHeterogeneousPrintLine(SSCCBasePrintLine):
     """
     SSCCHeterogeneousPrintLine(barcode: str, barcodeReadable: str)
     SSCCHeterogeneousPrintLine(barcode: str, barcodeReadable: str, packages: TransportPackages)
     """
-    Instance = SSCCHeterogeneousPrintLine
-    """hardcoded/returns an instance of the class"""
     def GetHashCode(self):
         """ GetHashCode(self: SSCCHeterogeneousPrintLine) -> int """
         pass
@@ -1841,14 +1874,15 @@ Set: ToZipCode(self: SSCCHeterogeneousPrintLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SSCCHeterogeneousPrintLine()
 
 class SSCCHeterogeneousPrintLines(PrintLinesBase):
     """
     SSCCHeterogeneousPrintLines()
     SSCCHeterogeneousPrintLines(collection: IEnumerable[SSCCHeterogeneousPrintLine])
     """
-    Instance = SSCCHeterogeneousPrintLines
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -1903,14 +1937,15 @@ Set: TotalRowsMatched(self: SSCCHeterogeneousPrintLines) = value
     DisplayMember = None
     ValueMember = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SSCCHeterogeneousPrintLines()
 
 class SSCCHomogeneousPrintLine(SSCCHeterogeneousPrintLine):
     """
     SSCCHomogeneousPrintLine(barcode: str, barcodeReadable: str)
     SSCCHomogeneousPrintLine(barcode: str, barcodeReadable: str, packages: TransportPackages)
     """
-    Instance = SSCCHomogeneousPrintLine
-    """hardcoded/returns an instance of the class"""
     def GetHashCode(self):
         """ GetHashCode(self: SSCCHomogeneousPrintLine) -> int """
         pass
@@ -1960,14 +1995,15 @@ Set: UnitCount(self: SSCCHomogeneousPrintLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SSCCHomogeneousPrintLine()
 
 class SSCCHomogeneousPrintLines(PrintLinesBase):
     """
     SSCCHomogeneousPrintLines()
     SSCCHomogeneousPrintLines(collection: IEnumerable[SSCCHomogeneousPrintLine])
     """
-    Instance = SSCCHomogeneousPrintLines
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -2022,11 +2058,12 @@ Set: TotalRowsMatched(self: SSCCHomogeneousPrintLines) = value
     DisplayMember = None
     ValueMember = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SSCCHomogeneousPrintLines()
 
 class TransportPackageItemPrintLine(PrintLineBase):
     """ TransportPackageItemPrintLine() """
-    Instance = TransportPackageItemPrintLine
-    """hardcoded/returns an instance of the class"""
     Barcode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -2083,14 +2120,15 @@ Set: UnitCode(self: TransportPackageItemPrintLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportPackageItemPrintLine()
 
 class TransportPackageItemsPrintLine(PrintLinesBase):
     """
     TransportPackageItemsPrintLine()
     TransportPackageItemsPrintLine(collection: IEnumerable[TransportPackageItemPrintLine])
     """
-    Instance = TransportPackageItemsPrintLine
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -2145,11 +2183,12 @@ Set: TotalRowsMatched(self: TransportPackageItemsPrintLine) = value
     DisplayMember = 'ItemCode'
     ValueMember = 'GroupKey'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportPackageItemsPrintLine()
 
 class TransportPackagePrintLine(PrintLineBase):
     """ TransportPackagePrintLine() """
-    Instance = TransportPackagePrintLine
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Create(transportPackage):
         """ Create(transportPackage: TransportPackage) -> TransportPackagePrintLine """
@@ -2551,14 +2590,15 @@ Get: UnitCode(self: TransportPackagePrintLine) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportPackagePrintLine()
 
 class TransportPackagePrintLines(PrintLinesBase):
     """
     TransportPackagePrintLines()
     TransportPackagePrintLines(collection: IEnumerable[TransportPackagePrintLine])
     """
-    Instance = TransportPackagePrintLines
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Create(transportPackages):
         """ Create(transportPackages: TransportPackages) -> TransportPackagePrintLines """
@@ -2618,6 +2658,9 @@ Set: TotalRowsMatched(self: TransportPackagePrintLines) = value
     DisplayMember = 'PackageNumber'
     ValueMember = 'PackageGuid'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportPackagePrintLines()
 
 # variables with complex values
 

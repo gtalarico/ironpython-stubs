@@ -14,8 +14,6 @@ class AssemblyTargetedPatchBandAttribute:
     
     AssemblyTargetedPatchBandAttribute(targetedPatchBand: str)
     """
-    Instance = AssemblyTargetedPatchBandAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -33,11 +31,12 @@ Get: TargetedPatchBand(self: AssemblyTargetedPatchBandAttribute) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AssemblyTargetedPatchBandAttribute()
 
 class GCLargeObjectHeapCompactionMode:
     """ enum GCLargeObjectHeapCompactionMode, values: CompactOnce (2), Default (1) """
-    Instance = GCLargeObjectHeapCompactionMode
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -75,6 +74,9 @@ class GCLargeObjectHeapCompactionMode:
     Default = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GCLargeObjectHeapCompactionMode()
 
 class GCLatencyMode:
     """
@@ -82,8 +84,6 @@ class GCLatencyMode:
     
     enum GCLatencyMode, values: Batch (0), Interactive (1), LowLatency (2), NoGCRegion (4), SustainedLowLatency (3)
     """
-    Instance = GCLatencyMode
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -124,16 +124,20 @@ class GCLatencyMode:
     SustainedLowLatency = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GCLatencyMode()
 
 class GCSettings():
     """ Specifies the garbage collection settings for the current process. """
-    Instance = GCSettings
-    """hardcoded/returns an instance of the class"""
     IsServerGC = False
     LargeObjectHeapCompactionMode = None
     LatencyMode = None
     __all__ = []
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GCSettings()
 
 class MemoryFailPoint(CriticalFinalizerObject):
     """
@@ -141,8 +145,6 @@ class MemoryFailPoint(CriticalFinalizerObject):
     
     MemoryFailPoint(sizeInMegabytes: int)
     """
-    Instance = MemoryFailPoint
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: MemoryFailPoint)
@@ -167,11 +169,12 @@ class MemoryFailPoint(CriticalFinalizerObject):
         """ __new__(cls: type, sizeInMegabytes: int) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MemoryFailPoint()
 
 class ProfileOptimization():
     # no doc
-    Instance = ProfileOptimization
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def SetProfileRoot(directoryPath):
         """ SetProfileRoot(directoryPath: str) """
@@ -187,6 +190,9 @@ class ProfileOptimization():
         'StartProfile',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProfileOptimization()
 
 class TargetedPatchingOptOutAttribute:
     """
@@ -194,8 +200,6 @@ class TargetedPatchingOptOutAttribute:
     
     TargetedPatchingOptOutAttribute(reason: str)
     """
-    Instance = TargetedPatchingOptOutAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -213,6 +217,9 @@ Get: Reason(self: TargetedPatchingOptOutAttribute) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TargetedPatchingOptOutAttribute()
 
 # variables with complex values
 

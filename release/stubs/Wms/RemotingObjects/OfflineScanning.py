@@ -10,8 +10,6 @@
 
 class AddScannerArgs():
     """ AddScannerArgs() """
-    Instance = AddScannerArgs
-    """hardcoded/returns an instance of the class"""
     Name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Name(self: AddScannerArgs) -> str
 
@@ -25,11 +23,12 @@ Set: Serialno(self: AddScannerArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AddScannerArgs()
 
 class DeleteScannerArgs():
     """ DeleteScannerArgs() """
-    Instance = DeleteScannerArgs
-    """hardcoded/returns an instance of the class"""
     Serialno = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Serialno(self: DeleteScannerArgs) -> str
 
@@ -37,11 +36,12 @@ Set: Serialno(self: DeleteScannerArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DeleteScannerArgs()
 
 class GetAppVersionFileSpecArgs():
     """ GetAppVersionFileSpecArgs() """
-    Instance = GetAppVersionFileSpecArgs
-    """hardcoded/returns an instance of the class"""
     Version = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Version(self: GetAppVersionFileSpecArgs) -> str
 
@@ -49,11 +49,12 @@ Set: Version(self: GetAppVersionFileSpecArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GetAppVersionFileSpecArgs()
 
 class SetCurrentAppVersionArgs():
     """ SetCurrentAppVersionArgs() """
-    Instance = SetCurrentAppVersionArgs
-    """hardcoded/returns an instance of the class"""
     Version = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Version(self: SetCurrentAppVersionArgs) -> str
 
@@ -61,4 +62,7 @@ Set: Version(self: SetCurrentAppVersionArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SetCurrentAppVersionArgs()
 

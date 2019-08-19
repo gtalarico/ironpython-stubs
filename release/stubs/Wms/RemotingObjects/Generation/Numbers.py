@@ -10,8 +10,6 @@
 
 class GeneratorBase:
     """ GeneratorBase() """
-    Instance = GeneratorBase
-    """hardcoded/returns an instance of the class"""
     def Generate(self, startingNumber, numbersToGenerate, ascending, prefix, suffix, length, arguments):
         """
         Generate(self: GeneratorBase, startingNumber: int, numbersToGenerate: int, ascending: bool, prefix: str, suffix: str, length: int, *arguments: Array[object]) -> IEnumerable[IGeneratedBarcode]
@@ -35,11 +33,12 @@ class GeneratorBase:
 
     RangeLocker = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GeneratorBase()
 
 class IGenerator:
     # no doc
-    Instance = IGenerator
-    """hardcoded/returns an instance of the class"""
     def Generate(self, startingNumber, numbersToGenerate, ascending, prefix, suffix, length, arguments):
         """ Generate(self: IGenerator, startingNumber: int, numbersToGenerate: int, ascending: bool, prefix: str, suffix: str, length: int, *arguments: Array[object]) -> IEnumerable[IGeneratedBarcode] """
         pass
@@ -48,11 +47,12 @@ class IGenerator:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IGenerator()
 
 class SSCCGenerator(GeneratorBase):
     """ SSCCGenerator() """
-    Instance = SSCCGenerator
-    """hardcoded/returns an instance of the class"""
     def Generate(self, startingNumber, numbersToGenerate, ascending, prefix, suffix, length, arguments):
         """
         Generate(self: SSCCGenerator, startingNumber: int, numbersToGenerate: int, ascending: bool, prefix: str, suffix: str, length: int, *arguments: Array[object]) -> IEnumerable[IGeneratedBarcode]
@@ -70,4 +70,7 @@ class SSCCGenerator(GeneratorBase):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SSCCGenerator()
 

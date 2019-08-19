@@ -12,8 +12,6 @@ from Wms.RemotingObjects import *
 
 class RightValueExtensions():
     # no doc
-    Instance = RightValueExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def IsPermitted(value):
         """ IsPermitted(value: RightValue) -> bool """
@@ -23,11 +21,12 @@ class RightValueExtensions():
         'IsPermitted',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RightValueExtensions()
 
 class Zone(DbObject):
     """ Zone() """
-    Instance = Zone
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -84,11 +83,12 @@ Set: Sys(self: Zone) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Zone()
 
 class ZoneRights(DbObject):
     """ ZoneRights() """
-    Instance = ZoneRights
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromString(zoneRightsString):
         """
@@ -1283,14 +1283,15 @@ Set: TouchMandatoryUseOfLicensePlates(self: ZoneRights) = value
 
     RightValue = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ZoneRights()
 
 class ZoneRightView():
     """
     ZoneRightView()
     ZoneRightView(propertyName: str, name: str, value: RightValue, groupSortKey: str, groupName: str)
     """
-    Instance = ZoneRightView
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, propertyName=None, name=None, value=None, groupSortKey=None, groupName=None):
         """
@@ -1340,11 +1341,12 @@ Set: Value(self: ZoneRightView) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ZoneRightView()
 
 class ZoneRightViews(FindableList):
     """ ZoneRightViews() """
-    Instance = ZoneRightViews
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -1367,11 +1369,12 @@ class ZoneRightViews(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Value'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ZoneRightViews()
 
 class Zones(FindableList):
     """ Zones() """
-    Instance = Zones
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -1394,14 +1397,15 @@ class Zones(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Id'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Zones()
 
 class ZoneUser(User):
     """
     ZoneUser(basedOn: User, isInZone: bool)
     ZoneUser()
     """
-    Instance = ZoneUser
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1426,14 +1430,15 @@ Set: IsInZone(self: ZoneUser) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ZoneUser()
 
 class ZoneUsers(List):
     """
     ZoneUsers(collection: IEnumerable[ZoneUser])
     ZoneUsers()
     """
-    Instance = ZoneUsers
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -1464,6 +1469,9 @@ class ZoneUsers(List):
     DisplayMember = 'FullName'
     ValueMember = 'UserId'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ZoneUsers()
 
 # variables with complex values
 

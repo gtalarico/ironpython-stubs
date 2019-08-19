@@ -10,8 +10,6 @@
 
 class ChannelBinding(SafeHandleZeroOrMinusOneIsInvalid):
     """ The System.Security.Authentication.ExtendedProtection.ChannelBinding class encapsulates a pointer to the opaque data used to bind an authenticated transaction to a secure channel. """
-    Instance = ChannelBinding
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
@@ -26,8 +24,7 @@ class ChannelBinding(SafeHandleZeroOrMinusOneIsInvalid):
         ReleaseHandle(self: SafeHandle) -> bool
         
             When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed 
-             Debugging Assistant.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging Assistant.
         """
         pass
 
@@ -70,6 +67,9 @@ Get: Size(self: ChannelBinding) -> int
 
     handle = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ChannelBinding()
 
 class ChannelBindingKind:
     """
@@ -77,8 +77,6 @@ class ChannelBindingKind:
     
     enum ChannelBindingKind, values: Endpoint (26), Unique (25), Unknown (0)
     """
-    Instance = ChannelBindingKind
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -117,6 +115,9 @@ class ChannelBindingKind:
     Unknown = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ChannelBindingKind()
 
 class ExtendedProtectionPolicy:
     """
@@ -127,8 +128,6 @@ class ExtendedProtectionPolicy:
     ExtendedProtectionPolicy(policyEnforcement: PolicyEnforcement, customChannelBinding: ChannelBinding)
     ExtendedProtectionPolicy(policyEnforcement: PolicyEnforcement)
     """
-    Instance = ExtendedProtectionPolicy
-    """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
         ToString(self: ExtendedProtectionPolicy) -> str
@@ -194,6 +193,9 @@ Get: ProtectionScenario(self: ExtendedProtectionPolicy) -> ProtectionScenario
 
     OSSupportsExtendedProtection = True
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ExtendedProtectionPolicy()
 
 class ExtendedProtectionPolicyTypeConverter(TypeConverter):
     """
@@ -201,8 +203,6 @@ class ExtendedProtectionPolicyTypeConverter(TypeConverter):
     
     ExtendedProtectionPolicyTypeConverter()
     """
-    Instance = ExtendedProtectionPolicyTypeConverter
-    """hardcoded/returns an instance of the class"""
     def CanConvertTo(self, *__args):
         """
         CanConvertTo(self: ExtendedProtectionPolicyTypeConverter, context: ITypeDescriptorContext, destinationType: Type) -> bool
@@ -229,6 +229,9 @@ class ExtendedProtectionPolicyTypeConverter(TypeConverter):
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ExtendedProtectionPolicyTypeConverter()
 
 class PolicyEnforcement:
     """
@@ -236,8 +239,6 @@ class PolicyEnforcement:
     
     enum PolicyEnforcement, values: Always (2), Never (0), WhenSupported (1)
     """
-    Instance = PolicyEnforcement
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -276,6 +277,9 @@ class PolicyEnforcement:
     value__ = None
     WhenSupported = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PolicyEnforcement()
 
 class ProtectionScenario:
     """
@@ -283,8 +287,6 @@ class ProtectionScenario:
     
     enum ProtectionScenario, values: TransportSelected (0), TrustedProxy (1)
     """
-    Instance = ProtectionScenario
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -322,6 +324,9 @@ class ProtectionScenario:
     TrustedProxy = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProtectionScenario()
 
 class ServiceNameCollection(ReadOnlyCollectionBase):
     """
@@ -329,8 +334,6 @@ class ServiceNameCollection(ReadOnlyCollectionBase):
     
     ServiceNameCollection(items: ICollection)
     """
-    Instance = ServiceNameCollection
-    """hardcoded/returns an instance of the class"""
     def Contains(self, searchServiceName):
         """ Contains(self: ServiceNameCollection, searchServiceName: str) -> bool """
         pass
@@ -339,23 +342,16 @@ class ServiceNameCollection(ReadOnlyCollectionBase):
         """
         Merge(self: ServiceNameCollection, serviceName: str) -> ServiceNameCollection
         
-            Merges the current System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the specified values to create a new 
-             System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the union.
-        
+            Merges the current System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the specified values to create a new System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the union.
         
             serviceName: A string that contains the specified values of service names to be used to initialize the class.
-            Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance that contains the union of the existing 
-             System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged with the specified values.
-        
+            Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance that contains the union of the existing System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged with the specified values.
         Merge(self: ServiceNameCollection, serviceNames: IEnumerable) -> ServiceNameCollection
         
-            Merges the current System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the specified values to create a new 
-             System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the union.
-        
+            Merges the current System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the specified values to create a new System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the union.
         
             serviceNames: An instance of the System.Collections.IEnumerable class that contains the specified values of service names to be merged.
-            Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance that contains the union of the existing 
-             System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged with the specified values.
+            Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance that contains the union of the existing System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged with the specified values.
         """
         pass
 
@@ -381,11 +377,12 @@ class ServiceNameCollection(ReadOnlyCollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ServiceNameCollection()
 
 class TokenBinding():
     # no doc
-    Instance = TokenBinding
-    """hardcoded/returns an instance of the class"""
     def GetRawTokenBindingId(self):
         """ GetRawTokenBindingId(self: TokenBinding) -> Array[Byte] """
         pass
@@ -396,11 +393,12 @@ class TokenBinding():
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TokenBinding()
 
 class TokenBindingType:
     """ enum TokenBindingType, values: Provided (0), Referred (1) """
-    Instance = TokenBindingType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -438,6 +436,9 @@ class TokenBindingType:
     Referred = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TokenBindingType()
 
 # variables with complex values
 

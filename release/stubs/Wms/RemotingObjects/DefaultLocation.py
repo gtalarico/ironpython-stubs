@@ -10,8 +10,6 @@
 
 class ChangeDefaultLocation:
     """ enum ChangeDefaultLocation, values: Always (0), Ask (2), Never (1) """
-    Instance = ChangeDefaultLocation
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -50,11 +48,12 @@ class ChangeDefaultLocation:
     Never = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ChangeDefaultLocation()
 
 class UpdateItemDefaultLocationArgs():
     """ UpdateItemDefaultLocationArgs() """
-    Instance = UpdateItemDefaultLocationArgs
-    """hardcoded/returns an instance of the class"""
     IsDirectTransfer = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: IsDirectTransfer(self: UpdateItemDefaultLocationArgs) -> bool
 
@@ -86,14 +85,15 @@ Set: WarehouseCode(self: UpdateItemDefaultLocationArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UpdateItemDefaultLocationArgs()
 
 class WarehouseItemLocation():
     """
     WarehouseItemLocation()
     WarehouseItemLocation(warehouseCode: str, warehouseDescription: str, warehouseLocationCode: str)
     """
-    Instance = WarehouseItemLocation
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, warehouseCode=None, warehouseDescription=None, warehouseLocationCode=None):
         """
@@ -121,4 +121,7 @@ Set: WarehouseDescription(self: WarehouseItemLocation) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WarehouseItemLocation()
 

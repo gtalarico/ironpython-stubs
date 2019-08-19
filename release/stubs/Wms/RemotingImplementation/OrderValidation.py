@@ -13,8 +13,6 @@ class OrderValidator:
     OrderValidator(orderNumber: str, orderType: OrderTypeEnum)
     OrderValidator(orderNumber: str, orderType: OrderTypeEnum, orderLines: IEnumerable[OutboundOrderLine])
     """
-    Instance = OrderValidator
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """ Dispose(self: OrderValidator) """
         pass
@@ -55,11 +53,12 @@ class OrderValidator:
     OrderType = None
     Result = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OrderValidator()
 
 class OrderValidatorFactory():
     """ OrderValidatorFactory(orderNumber: str, orderType: OrderTypeEnum) """
-    Instance = OrderValidatorFactory
-    """hardcoded/returns an instance of the class"""
     def Create(self):
         """ Create(self: OrderValidatorFactory) -> OrderValidator """
         pass
@@ -69,11 +68,12 @@ class OrderValidatorFactory():
         """ __new__(cls: type, orderNumber: str, orderType: OrderTypeEnum) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OrderValidatorFactory()
 
 class PurchasOrderValidator(OrderValidator):
     """ PurchasOrderValidator(orderNumber: str, orderType: OrderTypeEnum) """
-    Instance = PurchasOrderValidator
-    """hardcoded/returns an instance of the class"""
     def IsOrderValid(self):
         """ IsOrderValid(self: PurchasOrderValidator) -> OrderValidationResult """
         pass
@@ -99,11 +99,12 @@ class PurchasOrderValidator(OrderValidator):
     OrderType = None
     Result = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PurchasOrderValidator()
 
 class ReplenishmentOrderValidator(OrderValidator):
     """ ReplenishmentOrderValidator(orderNumber: str, orderType: OrderTypeEnum) """
-    Instance = ReplenishmentOrderValidator
-    """hardcoded/returns an instance of the class"""
     def IsOrderValid(self):
         """ IsOrderValid(self: ReplenishmentOrderValidator) -> OrderValidationResult """
         pass
@@ -129,11 +130,12 @@ class ReplenishmentOrderValidator(OrderValidator):
     OrderType = None
     Result = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ReplenishmentOrderValidator()
 
 class RmaOrderValidator(OrderValidator):
     """ RmaOrderValidator(orderNumber: str, orderType: OrderTypeEnum) """
-    Instance = RmaOrderValidator
-    """hardcoded/returns an instance of the class"""
     def IsOrderValid(self):
         """ IsOrderValid(self: RmaOrderValidator) -> OrderValidationResult """
         pass
@@ -159,11 +161,12 @@ class RmaOrderValidator(OrderValidator):
     OrderType = None
     Result = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RmaOrderValidator()
 
 class SalesOrderValidator(OrderValidator):
     """ SalesOrderValidator(orderNumber: str, orderType: OrderTypeEnum) """
-    Instance = SalesOrderValidator
-    """hardcoded/returns an instance of the class"""
     def IsOrderValid(self):
         """ IsOrderValid(self: SalesOrderValidator) -> OrderValidationResult """
         pass
@@ -189,4 +192,7 @@ class SalesOrderValidator(OrderValidator):
     OrderType = None
     Result = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SalesOrderValidator()
 

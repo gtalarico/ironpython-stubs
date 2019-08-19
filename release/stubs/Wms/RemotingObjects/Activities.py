@@ -10,8 +10,6 @@
 
 class GetActivityProgressArgs():
     """ GetActivityProgressArgs() """
-    Instance = GetActivityProgressArgs
-    """hardcoded/returns an instance of the class"""
     CacheKey = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: CacheKey(self: GetActivityProgressArgs) -> CacheKey
 
@@ -37,11 +35,12 @@ Set: ProgressBarType(self: GetActivityProgressArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GetActivityProgressArgs()
 
 class ProgressBarType:
     """ enum ProgressBarType, values: Mobile (0) """
-    Instance = ProgressBarType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -78,4 +77,7 @@ class ProgressBarType:
     Mobile = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProgressBarType()
 

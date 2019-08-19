@@ -15,8 +15,6 @@ class TaskAlreadyRunningException(Exception):
     TaskAlreadyRunningException(message: str)
     TaskAlreadyRunningException(message: str, innerException: Exception)
     """
-    Instance = TaskAlreadyRunningException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -36,11 +34,12 @@ class TaskAlreadyRunningException(Exception):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TaskAlreadyRunningException()
 
 class TaskBase():
     """ TaskBase() """
-    Instance = TaskBase
-    """hardcoded/returns an instance of the class"""
     def CalculateNextMoment(self):
         """ CalculateNextMoment(self: TaskBase) -> DateTime """
         pass
@@ -239,11 +238,12 @@ Set: Type(self: TaskBase) = value
     AlreadyRunningBehaviour = None
     LogCategory = 'Tasks'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TaskBase()
 
 class TaskScheduler():
     # no doc
-    Instance = TaskScheduler
-    """hardcoded/returns an instance of the class"""
     def AddDefaultTasks(self):
         """ AddDefaultTasks(self: TaskScheduler) """
         pass
@@ -292,11 +292,12 @@ class TaskScheduler():
 
     Instance = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TaskScheduler()
 
 class TaskType:
     """ enum TaskType, values: Erp (0), General (1), NotificationSummary (3), ScriptTask (2) """
-    Instance = TaskType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -336,6 +337,9 @@ class TaskType:
     ScriptTask = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TaskType()
 
 # variables with complex values
 

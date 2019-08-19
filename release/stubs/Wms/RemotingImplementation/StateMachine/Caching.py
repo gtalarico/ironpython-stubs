@@ -10,8 +10,6 @@
 
 class IStateMachineCache:
     # no doc
-    Instance = IStateMachineCache
-    """hardcoded/returns an instance of the class"""
     def ClearState(self, id):
         """ ClearState(self: IStateMachineCache, id: str) """
         pass
@@ -28,11 +26,12 @@ class IStateMachineCache:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IStateMachineCache()
 
 class StateMachineCacheContainer:
     """ StateMachineCacheContainer() """
-    Instance = StateMachineCacheContainer
-    """hardcoded/returns an instance of the class"""
     def ClearState(self, id):
         """ ClearState(self: StateMachineCacheContainer, id: str) """
         pass
@@ -53,4 +52,7 @@ class StateMachineCacheContainer:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StateMachineCacheContainer()
 

@@ -10,8 +10,6 @@
 
 class ExceptionFormatters():
     # no doc
-    Instance = ExceptionFormatters
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def FormatLogMessage(exception, newline):
         """ FormatLogMessage(exception: Exception, newline: str) -> str """
@@ -21,4 +19,7 @@ class ExceptionFormatters():
         'FormatLogMessage',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ExceptionFormatters()
 

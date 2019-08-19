@@ -15,8 +15,6 @@ class AuthenticationModuleElement(ConfigurationElement):
     AuthenticationModuleElement()
     AuthenticationModuleElement(typeName: str)
     """
-    Instance = AuthenticationModuleElement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, typeName=None):
         """
@@ -48,6 +46,9 @@ Set: Type(self: AuthenticationModuleElement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AuthenticationModuleElement()
 
 class AuthenticationModuleElementCollection(ConfigurationElementCollection):
     """
@@ -55,8 +56,6 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection):
     
     AuthenticationModuleElementCollection()
     """
-    Instance = AuthenticationModuleElementCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, element):
         """
         Add(self: AuthenticationModuleElementCollection, element: AuthenticationModuleElement)
@@ -76,9 +75,7 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection):
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; 
-             otherwise, false.
-        
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, false.
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
         
@@ -146,9 +143,7 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection):
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the 
-             System.Configuration.ConfigurationElementCollection.
-        
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
         
             key: The key of the element to check.
             Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
@@ -213,8 +208,7 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection):
             Returns the transformed version of the specified assembly name.
         
             assemblyName: The name of the assembly.
-            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
+            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
         """
         pass
 
@@ -225,8 +219,7 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection):
             Returns the transformed version of the specified type name.
         
             typeName: The name of the type.
-            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
+            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
         """
         pass
 
@@ -273,8 +266,7 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection):
             Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default 
-             is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is true.
         """
         pass
 
@@ -501,6 +493,9 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AuthenticationModuleElementCollection()
 
 class AuthenticationModulesSection(ConfigurationSection):
     """
@@ -508,8 +503,6 @@ class AuthenticationModulesSection(ConfigurationSection):
     
     AuthenticationModulesSection()
     """
-    Instance = AuthenticationModulesSection
-    """hardcoded/returns an instance of the class"""
     AuthenticationModules = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the collection of authentication modules in the section.
 
@@ -532,6 +525,9 @@ Get: AuthenticationModules(self: AuthenticationModulesSection) -> Authentication
     Properties = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AuthenticationModulesSection()
 
 class BypassElement(ConfigurationElement):
     """
@@ -540,8 +536,6 @@ class BypassElement(ConfigurationElement):
     BypassElement()
     BypassElement(address: str)
     """
-    Instance = BypassElement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, address=None):
         """
@@ -573,6 +567,9 @@ Set: Address(self: BypassElement) = value
     Properties = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BypassElement()
 
 class BypassElementCollection(ConfigurationElementCollection):
     """
@@ -580,8 +577,6 @@ class BypassElementCollection(ConfigurationElementCollection):
     
     BypassElementCollection()
     """
-    Instance = BypassElementCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, element):
         """
         Add(self: BypassElementCollection, element: BypassElement)
@@ -601,9 +596,7 @@ class BypassElementCollection(ConfigurationElementCollection):
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; 
-             otherwise, false.
-        
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, false.
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
         
@@ -671,9 +664,7 @@ class BypassElementCollection(ConfigurationElementCollection):
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the 
-             System.Configuration.ConfigurationElementCollection.
-        
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
         
             key: The key of the element to check.
             Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
@@ -738,8 +729,7 @@ class BypassElementCollection(ConfigurationElementCollection):
             Returns the transformed version of the specified assembly name.
         
             assemblyName: The name of the assembly.
-            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
+            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
         """
         pass
 
@@ -750,8 +740,7 @@ class BypassElementCollection(ConfigurationElementCollection):
             Returns the transformed version of the specified type name.
         
             typeName: The name of the type.
-            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
+            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
         """
         pass
 
@@ -798,8 +787,7 @@ class BypassElementCollection(ConfigurationElementCollection):
             Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default 
-             is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is true.
         """
         pass
 
@@ -1023,6 +1011,9 @@ class BypassElementCollection(ConfigurationElementCollection):
     ThrowOnDuplicate = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BypassElementCollection()
 
 class ConnectionManagementElement(ConfigurationElement):
     """
@@ -1031,8 +1022,6 @@ class ConnectionManagementElement(ConfigurationElement):
     ConnectionManagementElement()
     ConnectionManagementElement(address: str, maxConnection: int)
     """
-    Instance = ConnectionManagementElement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, address=None, maxConnection=None):
         """
@@ -1072,6 +1061,9 @@ Set: MaxConnection(self: ConnectionManagementElement) = value
     Properties = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConnectionManagementElement()
 
 class ConnectionManagementElementCollection(ConfigurationElementCollection):
     """
@@ -1079,8 +1071,6 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection):
     
     ConnectionManagementElementCollection()
     """
-    Instance = ConnectionManagementElementCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, element):
         """
         Add(self: ConnectionManagementElementCollection, element: ConnectionManagementElement)
@@ -1100,9 +1090,7 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection):
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; 
-             otherwise, false.
-        
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, false.
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
         
@@ -1170,9 +1158,7 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection):
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the 
-             System.Configuration.ConfigurationElementCollection.
-        
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
         
             key: The key of the element to check.
             Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
@@ -1237,8 +1223,7 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection):
             Returns the transformed version of the specified assembly name.
         
             assemblyName: The name of the assembly.
-            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
+            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
         """
         pass
 
@@ -1249,8 +1234,7 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection):
             Returns the transformed version of the specified type name.
         
             typeName: The name of the type.
-            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
+            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
         """
         pass
 
@@ -1297,8 +1281,7 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection):
             Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default 
-             is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is true.
         """
         pass
 
@@ -1525,6 +1508,9 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConnectionManagementElementCollection()
 
 class ConnectionManagementSection(ConfigurationSection):
     """
@@ -1532,8 +1518,6 @@ class ConnectionManagementSection(ConfigurationSection):
     
     ConnectionManagementSection()
     """
-    Instance = ConnectionManagementSection
-    """hardcoded/returns an instance of the class"""
     ConnectionManagement = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the collection of connection management objects in the section.
 
@@ -1556,6 +1540,9 @@ Get: ConnectionManagement(self: ConnectionManagementSection) -> ConnectionManage
     Properties = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConnectionManagementSection()
 
 class DefaultProxySection(ConfigurationSection):
     """
@@ -1563,8 +1550,6 @@ class DefaultProxySection(ConfigurationSection):
     
     DefaultProxySection()
     """
-    Instance = DefaultProxySection
-    """hardcoded/returns an instance of the class"""
     BypassList = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the collection of resources that are not obtained using the Web proxy server.
 
@@ -1617,6 +1602,9 @@ Set: UseDefaultCredentials(self: DefaultProxySection) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DefaultProxySection()
 
 class FtpCachePolicyElement(ConfigurationElement):
     """
@@ -1624,8 +1612,6 @@ class FtpCachePolicyElement(ConfigurationElement):
     
     FtpCachePolicyElement()
     """
-    Instance = FtpCachePolicyElement
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -1649,6 +1635,9 @@ Set: PolicyLevel(self: FtpCachePolicyElement) = value
     Properties = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FtpCachePolicyElement()
 
 class HttpCachePolicyElement(ConfigurationElement):
     """
@@ -1656,8 +1645,6 @@ class HttpCachePolicyElement(ConfigurationElement):
     
     HttpCachePolicyElement()
     """
-    Instance = HttpCachePolicyElement
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -1705,6 +1692,9 @@ Set: PolicyLevel(self: HttpCachePolicyElement) = value
     Properties = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpCachePolicyElement()
 
 class HttpListenerElement(ConfigurationElement):
     """
@@ -1712,8 +1702,6 @@ class HttpListenerElement(ConfigurationElement):
     
     HttpListenerElement()
     """
-    Instance = HttpListenerElement
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -1741,11 +1729,12 @@ Get: UnescapeRequestUrl(self: HttpListenerElement) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpListenerElement()
 
 class HttpListenerTimeoutsElement(ConfigurationElement):
     """ HttpListenerTimeoutsElement() """
-    Instance = HttpListenerTimeoutsElement
-    """hardcoded/returns an instance of the class"""
     DrainEntityBody = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: DrainEntityBody(self: HttpListenerTimeoutsElement) -> TimeSpan
 
@@ -1791,6 +1780,9 @@ class HttpListenerTimeoutsElement(ConfigurationElement):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpListenerTimeoutsElement()
 
 class HttpWebRequestElement(ConfigurationElement):
     """
@@ -1798,8 +1790,6 @@ class HttpWebRequestElement(ConfigurationElement):
     
     HttpWebRequestElement()
     """
-    Instance = HttpWebRequestElement
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -1847,6 +1837,9 @@ Set: UseUnsafeHeaderParsing(self: HttpWebRequestElement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpWebRequestElement()
 
 class Ipv6Element(ConfigurationElement):
     """
@@ -1854,8 +1847,6 @@ class Ipv6Element(ConfigurationElement):
     
     Ipv6Element()
     """
-    Instance = Ipv6Element
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -1879,6 +1870,9 @@ Set: Enabled(self: Ipv6Element) = value
     Properties = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Ipv6Element()
 
 class MailSettingsSectionGroup(ConfigurationSectionGroup):
     """
@@ -1886,8 +1880,6 @@ class MailSettingsSectionGroup(ConfigurationSectionGroup):
     
     MailSettingsSectionGroup()
     """
-    Instance = MailSettingsSectionGroup
-    """hardcoded/returns an instance of the class"""
     Smtp = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the SMTP settings for the local computer.
 
@@ -1896,6 +1888,9 @@ Get: Smtp(self: MailSettingsSectionGroup) -> SmtpSection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MailSettingsSectionGroup()
 
 class ModuleElement(ConfigurationElement):
     """
@@ -1903,8 +1898,6 @@ class ModuleElement(ConfigurationElement):
     
     ModuleElement()
     """
-    Instance = ModuleElement
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -1928,6 +1921,9 @@ Set: Type(self: ModuleElement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ModuleElement()
 
 class NetSectionGroup(ConfigurationSectionGroup):
     """
@@ -1935,8 +1931,6 @@ class NetSectionGroup(ConfigurationSectionGroup):
     
     NetSectionGroup()
     """
-    Instance = NetSectionGroup
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetSectionGroup(config):
         """
@@ -1999,6 +1993,9 @@ Get: WebRequestModules(self: NetSectionGroup) -> WebRequestModulesSection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NetSectionGroup()
 
 class PerformanceCountersElement(ConfigurationElement):
     """
@@ -2006,8 +2003,6 @@ class PerformanceCountersElement(ConfigurationElement):
     
     PerformanceCountersElement()
     """
-    Instance = PerformanceCountersElement
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -2031,6 +2026,9 @@ Set: Enabled(self: PerformanceCountersElement) = value
     Properties = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PerformanceCountersElement()
 
 class ProxyElement(ConfigurationElement):
     """
@@ -2038,8 +2036,6 @@ class ProxyElement(ConfigurationElement):
     
     ProxyElement()
     """
-    Instance = ProxyElement
-    """hardcoded/returns an instance of the class"""
     AutoDetect = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets and sets an System.Net.Configuration.ProxyElement.AutoDetectValues value that controls whether the Web proxy is automatically detected.
 
@@ -2099,6 +2095,9 @@ Set: UseSystemDefault(self: ProxyElement) = value
     BypassOnLocalValues = None
     UseSystemDefaultValues = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProxyElement()
 
 class RequestCachingSection(ConfigurationSection):
     """
@@ -2106,8 +2105,6 @@ class RequestCachingSection(ConfigurationSection):
     
     RequestCachingSection()
     """
-    Instance = RequestCachingSection
-    """hardcoded/returns an instance of the class"""
     DefaultFtpCachePolicy = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the default FTP caching behavior for the local computer.
 
@@ -2169,6 +2166,9 @@ Set: UnspecifiedMaximumAge(self: RequestCachingSection) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RequestCachingSection()
 
 class ServicePointManagerElement(ConfigurationElement):
     """
@@ -2176,8 +2176,6 @@ class ServicePointManagerElement(ConfigurationElement):
     
     ServicePointManagerElement()
     """
-    Instance = ServicePointManagerElement
-    """hardcoded/returns an instance of the class"""
     CheckCertificateName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets a Boolean value that controls checking host name information in an X509 certificate.
 
@@ -2249,6 +2247,9 @@ Set: UseNagleAlgorithm(self: ServicePointManagerElement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ServicePointManagerElement()
 
 class SettingsSection(ConfigurationSection):
     """
@@ -2256,8 +2257,6 @@ class SettingsSection(ConfigurationSection):
     
     SettingsSection()
     """
-    Instance = SettingsSection
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -2327,6 +2326,9 @@ Get: WebProxyScript(self: SettingsSection) -> WebProxyScriptElement
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsSection()
 
 class SmtpNetworkElement(ConfigurationElement):
     """
@@ -2334,8 +2336,6 @@ class SmtpNetworkElement(ConfigurationElement):
     
     SmtpNetworkElement()
     """
-    Instance = SmtpNetworkElement
-    """hardcoded/returns an instance of the class"""
     ClientDomain = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the client domain name used in the initial SMTP protocol request to connect to an SMTP mail server.
 
@@ -2415,6 +2415,9 @@ Set: UserName(self: SmtpNetworkElement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SmtpNetworkElement()
 
 class SmtpSection(ConfigurationSection):
     """
@@ -2422,8 +2425,6 @@ class SmtpSection(ConfigurationSection):
     
     SmtpSection()
     """
-    Instance = SmtpSection
-    """hardcoded/returns an instance of the class"""
     DeliveryFormat = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: DeliveryFormat(self: SmtpSection) -> SmtpDeliveryFormat
 
@@ -2475,6 +2476,9 @@ Get: SpecifiedPickupDirectory(self: SmtpSection) -> SmtpSpecifiedPickupDirectory
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SmtpSection()
 
 class SmtpSpecifiedPickupDirectoryElement(ConfigurationElement):
     """
@@ -2482,8 +2486,6 @@ class SmtpSpecifiedPickupDirectoryElement(ConfigurationElement):
     
     SmtpSpecifiedPickupDirectoryElement()
     """
-    Instance = SmtpSpecifiedPickupDirectoryElement
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -2507,6 +2509,9 @@ Set: PickupDirectoryLocation(self: SmtpSpecifiedPickupDirectoryElement) = value
     Properties = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SmtpSpecifiedPickupDirectoryElement()
 
 class SocketElement(ConfigurationElement):
     """
@@ -2514,8 +2519,6 @@ class SocketElement(ConfigurationElement):
     
     SocketElement()
     """
-    Instance = SocketElement
-    """hardcoded/returns an instance of the class"""
     AlwaysUseCompletionPortsForAccept = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets a Boolean value that specifies whether completion ports are used when accepting connections.
 
@@ -2555,11 +2558,12 @@ Set: IPProtectionLevel(self: SocketElement) = value
     Properties = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SocketElement()
 
 class UnicodeDecodingConformance:
     """ enum UnicodeDecodingConformance, values: Auto (0), Compat (2), Loose (3), Strict (1) """
-    Instance = UnicodeDecodingConformance
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2599,11 +2603,12 @@ class UnicodeDecodingConformance:
     Strict = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UnicodeDecodingConformance()
 
 class UnicodeEncodingConformance:
     """ enum UnicodeEncodingConformance, values: Auto (0), Compat (2), Strict (1) """
-    Instance = UnicodeEncodingConformance
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2642,6 +2647,9 @@ class UnicodeEncodingConformance:
     Strict = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UnicodeEncodingConformance()
 
 class WebProxyScriptElement(ConfigurationElement):
     """
@@ -2649,8 +2657,6 @@ class WebProxyScriptElement(ConfigurationElement):
     
     WebProxyScriptElement()
     """
-    Instance = WebProxyScriptElement
-    """hardcoded/returns an instance of the class"""
     DownloadTimeout = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the Web proxy script download timeout using the format hours:minutes:seconds.
 
@@ -2674,6 +2680,9 @@ Set: DownloadTimeout(self: WebProxyScriptElement) = value
     Properties = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebProxyScriptElement()
 
 class WebRequestModuleElement(ConfigurationElement):
     """
@@ -2683,8 +2692,6 @@ class WebRequestModuleElement(ConfigurationElement):
     WebRequestModuleElement(prefix: str, type: str)
     WebRequestModuleElement(prefix: str, type: Type)
     """
-    Instance = WebRequestModuleElement
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, prefix=None, type=None):
         """
@@ -2725,6 +2732,9 @@ Set: Type(self: WebRequestModuleElement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebRequestModuleElement()
 
 class WebRequestModuleElementCollection(ConfigurationElementCollection):
     """
@@ -2732,8 +2742,6 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection):
     
     WebRequestModuleElementCollection()
     """
-    Instance = WebRequestModuleElementCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, element):
         """
         Add(self: WebRequestModuleElementCollection, element: WebRequestModuleElement)
@@ -2753,9 +2761,7 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection):
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; 
-             otherwise, false.
-        
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, false.
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
         
@@ -2823,9 +2829,7 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection):
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the 
-             System.Configuration.ConfigurationElementCollection.
-        
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
         
             key: The key of the element to check.
             Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
@@ -2890,8 +2894,7 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection):
             Returns the transformed version of the specified assembly name.
         
             assemblyName: The name of the assembly.
-            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
+            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
         """
         pass
 
@@ -2902,8 +2905,7 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection):
             Returns the transformed version of the specified type name.
         
             typeName: The name of the type.
-            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
+            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
         """
         pass
 
@@ -2950,8 +2952,7 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection):
             Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default 
-             is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is true.
         """
         pass
 
@@ -3178,6 +3179,9 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebRequestModuleElementCollection()
 
 class WebRequestModulesSection(ConfigurationSection):
     """
@@ -3185,8 +3189,6 @@ class WebRequestModulesSection(ConfigurationSection):
     
     WebRequestModulesSection()
     """
-    Instance = WebRequestModulesSection
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -3209,11 +3211,12 @@ Get: WebRequestModules(self: WebRequestModulesSection) -> WebRequestModuleElemen
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebRequestModulesSection()
 
 class WebUtilityElement(ConfigurationElement):
     """ WebUtilityElement() """
-    Instance = WebUtilityElement
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -3241,4 +3244,7 @@ Set: UnicodeEncodingConformance(self: WebUtilityElement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WebUtilityElement()
 

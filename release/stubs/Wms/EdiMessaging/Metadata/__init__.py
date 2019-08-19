@@ -19,8 +19,6 @@ def MessagePublisherDescriptor(handlerType, createInstance, IMessagePublisher): 
 
 class ObjectDescriptor():
     # no doc
-    Instance = ObjectDescriptor
-    """hardcoded/returns an instance of the class"""
     def ExtractAttribute(self):
         """ ExtractAttribute(self: ObjectDescriptor) -> DescriptorAttribute """
         pass
@@ -53,6 +51,9 @@ class ObjectDescriptor():
 
     HandlerType = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ObjectDescriptor()
 
 # variables with complex values
 

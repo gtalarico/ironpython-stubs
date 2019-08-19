@@ -10,8 +10,6 @@
 
 class CachedDirectOrderRemovalHandler(CacheObjectRemovalHandlerBase):
     """ CachedDirectOrderRemovalHandler(stockManager: IStockManager) """
-    Instance = CachedDirectOrderRemovalHandler
-    """hardcoded/returns an instance of the class"""
     def Handle(self, cachable):
         """ Handle(self: CachedDirectOrderRemovalHandler, cachable: DirectOrder) """
         pass
@@ -25,11 +23,12 @@ class CachedDirectOrderRemovalHandler(CacheObjectRemovalHandlerBase):
         """ __new__(cls: type, stockManager: IStockManager) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CachedDirectOrderRemovalHandler()
 
 class CachedEnhancedStockAllocationsRemovalHandler(CacheObjectRemovalHandlerBase):
     """ CachedEnhancedStockAllocationsRemovalHandler(stockManager: IStockManager) """
-    Instance = CachedEnhancedStockAllocationsRemovalHandler
-    """hardcoded/returns an instance of the class"""
     def Handle(self, cachable):
         """ Handle(self: CachedEnhancedStockAllocationsRemovalHandler, cachable: EnhancedStockAllocations) """
         pass
@@ -43,11 +42,12 @@ class CachedEnhancedStockAllocationsRemovalHandler(CacheObjectRemovalHandlerBase
         """ __new__(cls: type, stockManager: IStockManager) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CachedEnhancedStockAllocationsRemovalHandler()
 
 class CachedInboundReceiveLinesRemovalHandler(CacheObjectRemovalHandlerBase):
     """ CachedInboundReceiveLinesRemovalHandler(inbound: Inbound) """
-    Instance = CachedInboundReceiveLinesRemovalHandler
-    """hardcoded/returns an instance of the class"""
     def Handle(self, cachable):
         """ Handle(self: CachedInboundReceiveLinesRemovalHandler, cachable: InboundReceiveLines) """
         pass
@@ -61,11 +61,12 @@ class CachedInboundReceiveLinesRemovalHandler(CacheObjectRemovalHandlerBase):
         """ __new__(cls: type, inbound: Inbound) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CachedInboundReceiveLinesRemovalHandler()
 
 class CachedRmaReceiveLinesRemovalHandler(CacheObjectRemovalHandlerBase):
     """ CachedRmaReceiveLinesRemovalHandler(inbound: Inbound) """
-    Instance = CachedRmaReceiveLinesRemovalHandler
-    """hardcoded/returns an instance of the class"""
     def Handle(self, cachable):
         """ Handle(self: CachedRmaReceiveLinesRemovalHandler, cachable: RmaReceiveLines) """
         pass
@@ -79,11 +80,12 @@ class CachedRmaReceiveLinesRemovalHandler(CacheObjectRemovalHandlerBase):
         """ __new__(cls: type, inbound: Inbound) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CachedRmaReceiveLinesRemovalHandler()
 
 class CacheObjectRemovalHandlerBase:
     # no doc
-    Instance = CacheObjectRemovalHandlerBase
-    """hardcoded/returns an instance of the class"""
     def Handle(self, cachable):
         """ Handle(self: CacheObjectRemovalHandlerBase[T], cachable: object)Handle(self: CacheObjectRemovalHandlerBase[T], cachable: T) """
         pass
@@ -96,11 +98,12 @@ class CacheObjectRemovalHandlerBase:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CacheObjectRemovalHandlerBase()
 
 class ICacheObjectRemovalHandler:
     # no doc
-    Instance = ICacheObjectRemovalHandler
-    """hardcoded/returns an instance of the class"""
     def Handle(self, cachable):
         """ Handle(self: ICacheObjectRemovalHandler[T], cachable: object)Handle(self: ICacheObjectRemovalHandler[T], cachable: T) """
         pass
@@ -109,4 +112,7 @@ class ICacheObjectRemovalHandler:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ICacheObjectRemovalHandler()
 

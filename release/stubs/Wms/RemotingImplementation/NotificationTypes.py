@@ -10,8 +10,6 @@
 
 class DailyOnWorkdaysSchedule:
     """ DailyOnWorkdaysSchedule() """
-    Instance = DailyOnWorkdaysSchedule
-    """hardcoded/returns an instance of the class"""
     def GetNextTime(self, lastTime):
         """ GetNextTime(self: DailyOnWorkdaysSchedule, lastTime: DateTime) -> DateTime """
         pass
@@ -24,11 +22,12 @@ class DailyOnWorkdaysSchedule:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DailyOnWorkdaysSchedule()
 
 class DailySchedule:
     """ DailySchedule() """
-    Instance = DailySchedule
-    """hardcoded/returns an instance of the class"""
     def GetNextTime(self, lastTime):
         """ GetNextTime(self: DailySchedule, lastTime: DateTime) -> DateTime """
         pass
@@ -41,11 +40,12 @@ class DailySchedule:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DailySchedule()
 
 class EmailDigestNotificationSummary:
     """ EmailDigestNotificationSummary(mailer: IMailer, general: General) """
-    Instance = EmailDigestNotificationSummary
-    """hardcoded/returns an instance of the class"""
     def ExecuteSummary(self, summary):
         """ ExecuteSummary(self: EmailDigestNotificationSummary, summary: ExecuteNotificationSummaryArgs) -> Task """
         pass
@@ -71,11 +71,12 @@ class EmailDigestNotificationSummary:
     ResolverName = 'EmailDigestNotificationSummary'
     TemplateData = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EmailDigestNotificationSummary()
 
 class INotificationSummaryExecution:
     # no doc
-    Instance = INotificationSummaryExecution
-    """hardcoded/returns an instance of the class"""
     def ExecuteSummary(self, summary):
         """ ExecuteSummary(self: INotificationSummaryExecution, summary: ExecuteNotificationSummaryArgs) -> Task """
         pass
@@ -88,11 +89,12 @@ class INotificationSummaryExecution:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return INotificationSummaryExecution()
 
 class INotificationSummarySchedule:
     # no doc
-    Instance = INotificationSummarySchedule
-    """hardcoded/returns an instance of the class"""
     def GetNextTime(self, lastTime):
         """ GetNextTime(self: INotificationSummarySchedule, lastTime: DateTime) -> DateTime """
         pass
@@ -101,11 +103,12 @@ class INotificationSummarySchedule:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return INotificationSummarySchedule()
 
 class NotificationTypeContainer():
     """ NotificationTypeContainer(iocContainer: IUnityContainer) """
-    Instance = NotificationTypeContainer
-    """hardcoded/returns an instance of the class"""
     def RegisterExecution(self, *__args):
         """ RegisterExecution(self: NotificationTypeContainer, implementation: Type, name: str)RegisterExecution[T](self: NotificationTypeContainer, name: str) """
         pass
@@ -138,11 +141,12 @@ class NotificationTypeContainer():
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NotificationTypeContainer()
 
 class SlackWebDigestNotificationSummary:
     """ SlackWebDigestNotificationSummary(general: General) """
-    Instance = SlackWebDigestNotificationSummary
-    """hardcoded/returns an instance of the class"""
     def ExecuteSummary(self, summary):
         """ ExecuteSummary(self: SlackWebDigestNotificationSummary, summary: ExecuteNotificationSummaryArgs) -> Task """
         pass
@@ -164,11 +168,12 @@ class SlackWebDigestNotificationSummary:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SlackWebDigestNotificationSummary()
 
 class WeeklySchedule:
     """ WeeklySchedule() """
-    Instance = WeeklySchedule
-    """hardcoded/returns an instance of the class"""
     def GetNextTime(self, lastTime):
         """ GetNextTime(self: WeeklySchedule, lastTime: DateTime) -> DateTime """
         pass
@@ -181,4 +186,7 @@ class WeeklySchedule:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return WeeklySchedule()
 

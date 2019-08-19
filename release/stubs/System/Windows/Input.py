@@ -10,8 +10,6 @@
 
 class ICommand:
     # no doc
-    Instance = ICommand
-    """hardcoded/returns an instance of the class"""
     def CanExecute(self, parameter):
         """ CanExecute(self: ICommand, parameter: object) -> bool """
         pass
@@ -26,4 +24,7 @@ class ICommand:
 
     CanExecuteChanged = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ICommand()
 

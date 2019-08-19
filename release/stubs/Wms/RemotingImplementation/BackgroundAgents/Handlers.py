@@ -11,8 +11,6 @@ from Wms.EdiMessaging import *
 
 class PingHandler(MessageHandlerBase):
     """ PingHandler(agentHealthMonitor: IBackgroundAgentHealthMonitor) """
-    Instance = PingHandler
-    """hardcoded/returns an instance of the class"""
     def Handle(self, message):
         """ Handle(self: PingHandler, message: PingMessage) """
         pass
@@ -26,4 +24,7 @@ class PingHandler(MessageHandlerBase):
         """ __new__(cls: type, agentHealthMonitor: IBackgroundAgentHealthMonitor) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PingHandler()
 

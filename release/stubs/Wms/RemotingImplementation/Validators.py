@@ -10,8 +10,6 @@
 
 class IReallocationValidator:
     # no doc
-    Instance = IReallocationValidator
-    """hardcoded/returns an instance of the class"""
     def Validate(self, itemCode, warehouseCode, locationCode):
         """ Validate(self: IReallocationValidator, itemCode: str, warehouseCode: str, locationCode: str) -> bool """
         pass
@@ -27,11 +25,12 @@ Set: ErrorMessage(self: IReallocationValidator) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IReallocationValidator()
 
 class ReAllocateValidator:
     """ ReAllocateValidator(stockManager: IStockManager) """
-    Instance = ReAllocateValidator
-    """hardcoded/returns an instance of the class"""
     def Validate(self, itemCode, warehouseCode, locationCode):
         """ Validate(self: ReAllocateValidator, itemCode: str, warehouseCode: str, locationCode: str) -> bool """
         pass
@@ -56,11 +55,12 @@ Set: ErrorMessage(self: ReAllocateValidator) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ReAllocateValidator()
 
 class TransferWarehouseValidator:
     """ TransferWarehouseValidator() """
-    Instance = TransferWarehouseValidator
-    """hardcoded/returns an instance of the class"""
     def Validate(self, itemCode, warehouseCode, locationCode):
         """ Validate(self: TransferWarehouseValidator, itemCode: str, warehouseCode: str, locationCode: str) -> bool """
         pass
@@ -80,4 +80,7 @@ Set: ErrorMessage(self: TransferWarehouseValidator) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransferWarehouseValidator()
 

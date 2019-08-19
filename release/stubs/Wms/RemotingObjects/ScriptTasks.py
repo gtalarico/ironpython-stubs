@@ -11,8 +11,6 @@ from Wms.RemotingObjects import *
 
 class ScriptTask(DbObject):
     """ ScriptTask() """
-    Instance = ScriptTask
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -204,11 +202,12 @@ Set: ZoneId(self: ScriptTask) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ScriptTask()
 
 class ScriptTaskPriority:
     """ enum ScriptTaskPriority, values: High (3), Low (1), Normal (2) """
-    Instance = ScriptTaskPriority
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -247,11 +246,12 @@ class ScriptTaskPriority:
     Normal = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ScriptTaskPriority()
 
 class ScriptTasks(FindableList):
     """ ScriptTasks() """
-    Instance = ScriptTasks
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -274,4 +274,7 @@ class ScriptTasks(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Id'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ScriptTasks()
 

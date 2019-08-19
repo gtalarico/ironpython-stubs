@@ -10,8 +10,6 @@
 
 class EnumHelper():
     """ EnumHelper() """
-    Instance = EnumHelper
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def ParseOrDefault(input, defaultValue, ignoreCase):
         """ ParseOrDefault[T](input: str, defaultValue: T, ignoreCase: bool) -> T """
@@ -22,11 +20,12 @@ class EnumHelper():
         """ TryParse[T](input: str, defaultValue: T, ignoreCase: bool) -> (bool, T) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EnumHelper()
 
 class EnumStringHelper():
     """ EnumStringHelper(enumType: Type) """
-    Instance = EnumStringHelper
-    """hardcoded/returns an instance of the class"""
     def GetListValues(self):
         """
         GetListValues(self: EnumStringHelper) -> IList
@@ -129,11 +128,12 @@ Get: EnumType(self: EnumStringHelper) -> Type
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EnumStringHelper()
 
 class EnumStringValueAttribute:
     """ EnumStringValueAttribute(value: str) """
-    Instance = EnumStringValueAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -152,4 +152,7 @@ class EnumStringValueAttribute:
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EnumStringValueAttribute()
 

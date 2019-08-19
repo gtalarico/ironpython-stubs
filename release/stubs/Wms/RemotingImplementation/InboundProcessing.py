@@ -10,8 +10,6 @@
 
 class ProcessInboundOrderHelper():
     """ ProcessInboundOrderHelper(dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
-    Instance = ProcessInboundOrderHelper
-    """hardcoded/returns an instance of the class"""
     def Execute(self):
         """ Execute(self: ProcessInboundOrderHelper) -> Tuple[ProcessInboundReceiveLinesResult, DataFlowObject[ProcessInboundReceiveLinesArgs]] """
         pass
@@ -27,11 +25,12 @@ class ProcessInboundOrderHelper():
 
     _erpResults = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessInboundOrderHelper()
 
 class ProcessAdhocPurchaseOrderHelper(ProcessInboundOrderHelper):
     """ ProcessAdhocPurchaseOrderHelper(dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
-    Instance = ProcessAdhocPurchaseOrderHelper
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, dfObject, stockManager):
         """ __new__(cls: type, dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
@@ -39,11 +38,12 @@ class ProcessAdhocPurchaseOrderHelper(ProcessInboundOrderHelper):
 
     _erpResults = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessAdhocPurchaseOrderHelper()
 
 class ProcessAdhocRmaOrderHelper(ProcessInboundOrderHelper):
     """ ProcessAdhocRmaOrderHelper(dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
-    Instance = ProcessAdhocRmaOrderHelper
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, dfObject, stockManager):
         """ __new__(cls: type, dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
@@ -51,11 +51,12 @@ class ProcessAdhocRmaOrderHelper(ProcessInboundOrderHelper):
 
     _erpResults = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessAdhocRmaOrderHelper()
 
 class ProcessInboundReceiveLinesFactory():
     # no doc
-    Instance = ProcessInboundReceiveLinesFactory
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateHelper(dfObject, stockManager, general):
         """ CreateHelper(dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager, general: IGeneral) -> ProcessInboundOrderHelper """
@@ -65,11 +66,12 @@ class ProcessInboundReceiveLinesFactory():
         'CreateHelper',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessInboundReceiveLinesFactory()
 
 class ProcessPreReceiptHelper(ProcessInboundOrderHelper):
     """ ProcessPreReceiptHelper(dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
-    Instance = ProcessPreReceiptHelper
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, dfObject, stockManager):
         """ __new__(cls: type, dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
@@ -77,11 +79,12 @@ class ProcessPreReceiptHelper(ProcessInboundOrderHelper):
 
     _erpResults = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessPreReceiptHelper()
 
 class ProcessPurchaseOrderHelper(ProcessInboundOrderHelper):
     """ ProcessPurchaseOrderHelper(dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
-    Instance = ProcessPurchaseOrderHelper
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, dfObject, stockManager):
         """ __new__(cls: type, dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
@@ -89,11 +92,12 @@ class ProcessPurchaseOrderHelper(ProcessInboundOrderHelper):
 
     _erpResults = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessPurchaseOrderHelper()
 
 class ProcessRmaOrderHelper(ProcessInboundOrderHelper):
     """ ProcessRmaOrderHelper(dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
-    Instance = ProcessRmaOrderHelper
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, dfObject, stockManager):
         """ __new__(cls: type, dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
@@ -101,4 +105,7 @@ class ProcessRmaOrderHelper(ProcessInboundOrderHelper):
 
     _erpResults = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessRmaOrderHelper()
 

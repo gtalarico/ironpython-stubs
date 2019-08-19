@@ -11,8 +11,6 @@ from Wms.RemotingImplementation.OfflineScanners import *
 
 class RemotePublishingInboundFileListener(GcloudInboundFileListenerBase):
     """ RemotePublishingInboundFileListener(appSetttings: RemotePublishingInboundFileOptions, general: General, messaging: Messaging, api: RemotePublishing) """
-    Instance = RemotePublishingInboundFileListener
-    """hardcoded/returns an instance of the class"""
     def DownloadFile(self, *args): #cannot find CLR method
         """ DownloadFile(self: RemotePublishingInboundFileListener, filepath: str) -> Task[Stream] """
         pass
@@ -37,21 +35,23 @@ class RemotePublishingInboundFileListener(GcloudInboundFileListenerBase):
     _general = None
     _messaging = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RemotePublishingInboundFileListener()
 
 class RemotePublishingInboundFileOptions(GcloudInboundFileListenerOptions):
     """ RemotePublishingInboundFileOptions(appSettings: IApplicationSettings) """
-    Instance = RemotePublishingInboundFileOptions
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, appSettings):
         """ __new__(cls: type, appSettings: IApplicationSettings) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RemotePublishingInboundFileOptions()
 
 class RemotePublishingInboundFileUploadedEvent():
     """ RemotePublishingInboundFileUploadedEvent() """
-    Instance = RemotePublishingInboundFileUploadedEvent
-    """hardcoded/returns an instance of the class"""
     Event = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Event(self: RemotePublishingInboundFileUploadedEvent) -> str
 
@@ -95,4 +95,7 @@ Set: Size(self: RemotePublishingInboundFileUploadedEvent) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RemotePublishingInboundFileUploadedEvent()
 

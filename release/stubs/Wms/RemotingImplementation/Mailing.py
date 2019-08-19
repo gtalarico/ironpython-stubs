@@ -14,8 +14,6 @@ class FileLocationMailAttachment:
     FileLocationMailAttachment(filepath: str)
     FileLocationMailAttachment(filepath: str, sendAsFilename: str)
     """
-    Instance = FileLocationMailAttachment
-    """hardcoded/returns an instance of the class"""
     def GetContentBytes(self):
         """ GetContentBytes(self: FileLocationMailAttachment) -> Array[Byte] """
         pass
@@ -42,11 +40,12 @@ class FileLocationMailAttachment:
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FileLocationMailAttachment()
 
 class IMailAttachment:
     # no doc
-    Instance = IMailAttachment
-    """hardcoded/returns an instance of the class"""
     def GetContentBytes(self):
         """ GetContentBytes(self: IMailAttachment) -> Array[Byte] """
         pass
@@ -61,11 +60,12 @@ class IMailAttachment:
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IMailAttachment()
 
 class IMailer:
     # no doc
-    Instance = IMailer
-    """hardcoded/returns an instance of the class"""
     def SendHtmlAsync(self, args, bodyHtml):
         """ SendHtmlAsync(self: IMailer, args: SendMailArgs, bodyHtml: str) -> Task """
         pass
@@ -86,11 +86,12 @@ class IMailer:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IMailer()
 
 class MailAttachment:
     """ MailAttachment(filename: str, filecontent: Array[Byte]) """
-    Instance = MailAttachment
-    """hardcoded/returns an instance of the class"""
     def GetContentBytes(self):
         """ GetContentBytes(self: MailAttachment) -> Array[Byte] """
         pass
@@ -115,11 +116,12 @@ Set: Filename(self: MailAttachment) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MailAttachment()
 
 class MailerBase:
     # no doc
-    Instance = MailerBase
-    """hardcoded/returns an instance of the class"""
     def SendHtmlAsync(self, args, bodyHtml):
         """ SendHtmlAsync(self: MailerBase, args: SendMailArgs, bodyHtml: str) -> Task """
         pass
@@ -148,6 +150,9 @@ class MailerBase:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MailerBase()
 
 class MailerException(Exception):
     """
@@ -155,8 +160,6 @@ class MailerException(Exception):
     MailerException(message: str)
     MailerException(message: str, innerException: Exception)
     """
-    Instance = MailerException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -176,14 +179,15 @@ class MailerException(Exception):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MailerException()
 
 class MailgunException(MailerException):
     """
     MailgunException(message: str)
     MailgunException(message: str, innerException: Exception)
     """
-    Instance = MailgunException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -201,11 +205,12 @@ class MailgunException(MailerException):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MailgunException()
 
 class MailgunMailer(MailerBase):
     """ MailgunMailer(settings: MailgunSettings) """
-    Instance = MailgunMailer
-    """hardcoded/returns an instance of the class"""
     def SendMail(self, *args): #cannot find CLR method
         """ SendMail(self: MailgunMailer, args: SendMailArgs, body: str, bodyIsHtml: bool) -> Task """
         pass
@@ -222,11 +227,12 @@ class MailgunMailer(MailerBase):
     ApiEndpoint = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MailgunMailer()
 
 class MailgunResponse():
     """ MailgunResponse() """
-    Instance = MailgunResponse
-    """hardcoded/returns an instance of the class"""
     Id = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Id(self: MailgunResponse) -> str
 
@@ -240,11 +246,12 @@ Set: Message(self: MailgunResponse) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MailgunResponse()
 
 class MailgunSettings():
     """ MailgunSettings() """
-    Instance = MailgunSettings
-    """hardcoded/returns an instance of the class"""
     MailgunApiKey = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: MailgunApiKey(self: MailgunSettings) -> str
 
@@ -270,11 +277,12 @@ Set: MailgunDomainBoxwise(self: MailgunSettings) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MailgunSettings()
 
 class SendMailArgs():
     """ SendMailArgs() """
-    Instance = SendMailArgs
-    """hardcoded/returns an instance of the class"""
     AddressesBcc = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: AddressesBcc(self: SendMailArgs) -> List[str]
 
@@ -312,11 +320,12 @@ Set: Subject(self: SendMailArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SendMailArgs()
 
 class SynchronousMailExtensions():
     # no doc
-    Instance = SynchronousMailExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def SendHtml(mailer, args, bodyHtml):
         """ SendHtml(mailer: IMailer, args: SendMailArgs, bodyHtml: str) """
@@ -344,4 +353,7 @@ class SynchronousMailExtensions():
         'SendText',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SynchronousMailExtensions()
 

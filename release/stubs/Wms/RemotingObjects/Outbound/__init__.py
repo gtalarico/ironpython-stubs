@@ -12,8 +12,6 @@ from Wms.RemotingObjects import *
 
 class AllocationProfile():
     """ AllocationProfile() """
-    Instance = AllocationProfile
-    """hardcoded/returns an instance of the class"""
     Description = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -39,11 +37,12 @@ Set: Name(self: AllocationProfile) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AllocationProfile()
 
 class AllocationProfiles(List):
     """ AllocationProfiles() """
-    Instance = AllocationProfiles
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -66,11 +65,12 @@ class AllocationProfiles(List):
     DisplayMember = 'Name'
     ValueMember = 'Id'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AllocationProfiles()
 
 class GetHistoryOutboundOrderCustomersArgs():
     """ GetHistoryOutboundOrderCustomersArgs() """
-    Instance = GetHistoryOutboundOrderCustomersArgs
-    """hardcoded/returns an instance of the class"""
     CustomerNumber = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -104,11 +104,12 @@ Set: Warehouse(self: GetHistoryOutboundOrderCustomersArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GetHistoryOutboundOrderCustomersArgs()
 
 class GetHistoryOutboundOrderItemArgs():
     """ GetHistoryOutboundOrderItemArgs() """
-    Instance = GetHistoryOutboundOrderItemArgs
-    """hardcoded/returns an instance of the class"""
     CustomerNumber = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -158,11 +159,12 @@ Set: SearchText(self: GetHistoryOutboundOrderItemArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GetHistoryOutboundOrderItemArgs()
 
 class GetHistoryOutboundOrdersArgs():
     """ GetHistoryOutboundOrdersArgs() """
-    Instance = GetHistoryOutboundOrdersArgs
-    """hardcoded/returns an instance of the class"""
     CacheKeyOfReceipt = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -228,11 +230,12 @@ Set: Paging(self: GetHistoryOutboundOrdersArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GetHistoryOutboundOrdersArgs()
 
 class GetOutboundOrdersArgs():
     """ GetOutboundOrdersArgs() """
-    Instance = GetOutboundOrdersArgs
-    """hardcoded/returns an instance of the class"""
     OrderNumbers = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -250,11 +253,12 @@ Set: SearchText(self: GetOutboundOrdersArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GetOutboundOrdersArgs()
 
 class HistoryOutboundOrder(DbObject):
     """  """
-    Instance = HistoryOutboundOrder
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: HistoryOutboundOrder) -> object """
         pass
@@ -702,11 +706,12 @@ Set: Warehouse(self: HistoryOutboundOrder) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HistoryOutboundOrder()
 
 class OutboundOrderLine(DbObject):
     """  """
-    Instance = OutboundOrderLine
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: OutboundOrderLine) -> object """
         pass
@@ -723,8 +728,7 @@ class OutboundOrderLine(DbObject):
         
             checkRegistration: True if the batchnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a batch item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout the 
-             whole process).
+                    complete (means the numers are registered throughout the whole process).
                     False if the check is ignored and the item is not a batch item, or when the itemids are registered
                     during delivery only.
         """
@@ -738,8 +742,7 @@ class OutboundOrderLine(DbObject):
         
             checkRegistration: True if the serialnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a serial item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout the 
-             whole process).
+                    complete (means the numers are registered throughout the whole process).
                     False if the check is ignored and the item is not a serial item, or when the itemids are registered
                     during delivery only.
         """
@@ -1176,11 +1179,12 @@ Set: WarehouseLocation(self: OutboundOrderLine) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OutboundOrderLine()
 
 class HistoryOutboundOrderLine(OutboundOrderLine):
     """ HistoryOutboundOrderLine() """
-    Instance = HistoryOutboundOrderLine
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1220,11 +1224,12 @@ Get: Type(self: HistoryOutboundOrderLine) -> OutboundOrderTypeEnum
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HistoryOutboundOrderLine()
 
 class OutboundOrderLines(FindableList):
     """ OutboundOrderLines() """
-    Instance = OutboundOrderLines
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: OutboundOrderLines) -> object """
         pass
@@ -1275,11 +1280,12 @@ Get: PreserveState(self: OutboundOrderLines) -> bool
     DisplayMember = 'ItemCode'
     ValueMember = 'Id'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OutboundOrderLines()
 
 class HistoryOutboundOrderLines(OutboundOrderLines):
     """ HistoryOutboundOrderLines() """
-    Instance = HistoryOutboundOrderLines
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -1302,11 +1308,12 @@ class HistoryOutboundOrderLines(OutboundOrderLines):
     DisplayMember = 'ItemCode'
     ValueMember = 'Id'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HistoryOutboundOrderLines()
 
 class HistoryOutboundOrders(FindableList):
     """ HistoryOutboundOrders() """
-    Instance = HistoryOutboundOrders
-    """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
         Add(self: HistoryOutboundOrders, order: HistoryOutboundOrder) -> FindableList[HistoryOutboundOrder]
@@ -1362,11 +1369,12 @@ Set: TotalRowsMatched(self: HistoryOutboundOrders) = value
     DisplayMember = 'Number'
     ValueMember = 'DbKey'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HistoryOutboundOrders()
 
 class OutboundOrder(DbObject):
     """  """
-    Instance = OutboundOrder
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: OutboundOrder) -> object """
         pass
@@ -1882,11 +1890,12 @@ Set: Warehouse(self: OutboundOrder) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OutboundOrder()
 
 class OutboundOrderLineEqualityComparer:
     """ OutboundOrderLineEqualityComparer() """
-    Instance = OutboundOrderLineEqualityComparer
-    """hardcoded/returns an instance of the class"""
     def Equals(self, *__args):
         """ Equals(self: OutboundOrderLineEqualityComparer, x: OutboundOrderLine, y: OutboundOrderLine) -> bool """
         pass
@@ -1907,11 +1916,12 @@ class OutboundOrderLineEqualityComparer:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OutboundOrderLineEqualityComparer()
 
 class OutboundOrders(FindableList):
     """ OutboundOrders() """
-    Instance = OutboundOrders
-    """hardcoded/returns an instance of the class"""
     def Add(self, *__args):
         """
         Add(self: OutboundOrders, order: OutboundOrder) -> FindableList[OutboundOrder]
@@ -1967,11 +1977,12 @@ Set: TotalRowsMatched(self: OutboundOrders) = value
     DisplayMember = 'Number'
     ValueMember = 'Id'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OutboundOrders()
 
 class OutboundOrderTypeEnum:
     """ enum OutboundOrderTypeEnum, values: ReplenishmentOrder (2), RtvOrder (3), SalesOrder (1) """
-    Instance = OutboundOrderTypeEnum
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2010,11 +2021,12 @@ class OutboundOrderTypeEnum:
     SalesOrder = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OutboundOrderTypeEnum()
 
 class PickDifferenceOptionsEnum:
     """ enum PickDifferenceOptionsEnum, values: BasedOnMarkAsPicked (1), BasedOnNonePickedItems (2), None (0) """
-    Instance = PickDifferenceOptionsEnum
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2053,14 +2065,15 @@ class PickDifferenceOptionsEnum:
     None_ =None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PickDifferenceOptionsEnum()
 
 class ValidateItemIdentificationArgs():
     """
     ValidateItemIdentificationArgs()
     ValidateItemIdentificationArgs(itemCode: str, number: str)
     """
-    Instance = ValidateItemIdentificationArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, itemCode=None, number=None):
         """
@@ -2082,6 +2095,9 @@ Set: Number(self: ValidateItemIdentificationArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ValidateItemIdentificationArgs()
 
 # variables with complex values
 

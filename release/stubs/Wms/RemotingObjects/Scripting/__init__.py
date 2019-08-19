@@ -11,8 +11,6 @@ from Wms.RemotingObjects import *
 
 class GetScriptArgs():
     """ GetScriptArgs() """
-    Instance = GetScriptArgs
-    """hardcoded/returns an instance of the class"""
     Active = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -62,14 +60,15 @@ Set: ZoneId(self: GetScriptArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GetScriptArgs()
 
 class PythonError():
     """
     PythonError(message: str, span: SourceSpan, errorCode: int, severity: ErrorSeverity)
     PythonError()
     """
-    Instance = PythonError
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, message=None, span=None, errorCode=None, severity=None):
         """
@@ -113,11 +112,12 @@ Set: Span(self: PythonError) = value
 
     ErrorSeverity = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PythonError()
 
 class ScriptSnippet():
     """ ScriptSnippet() """
-    Instance = ScriptSnippet
-    """hardcoded/returns an instance of the class"""
     Description = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
 
@@ -135,14 +135,15 @@ Set: Script(self: ScriptSnippet) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ScriptSnippet()
 
 class SourceLocation():
     """
     SourceLocation()
     SourceLocation(index: int, line: int, column: int)
     """
-    Instance = SourceLocation
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Compare(left, right):
         """ Compare(left: SourceLocation, right: SourceLocation) -> int """
@@ -224,14 +225,15 @@ Get: Line(self: SourceLocation) -> int
     MinValue = None
     None_ =None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SourceLocation()
 
 class SourceSpan():
     """
     SourceSpan()
     SourceSpan(start: SourceLocation, end: SourceLocation)
     """
-    Instance = SourceSpan
-    """hardcoded/returns an instance of the class"""
     def Equals(self, obj):
         """ Equals(self: SourceSpan, obj: object) -> bool """
         pass
@@ -291,11 +293,12 @@ Get: Start(self: SourceSpan) -> SourceLocation
     Invalid = None
     None_ =None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SourceSpan()
 
 class ZoneScript(DbObject):
     """ ZoneScript() """
-    Instance = ZoneScript
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: ZoneScript) -> object """
         pass
@@ -411,11 +414,12 @@ Set: ZoneId(self: ZoneScript) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ZoneScript()
 
 class ZoneScripts(FindableList):
     """ ZoneScripts() """
-    Instance = ZoneScripts
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(list):
         """ FromIEnumerable(list: IEnumerable[ZoneScript]) -> ZoneScripts """
@@ -443,6 +447,9 @@ class ZoneScripts(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Id'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ZoneScripts()
 
 # variables with complex values
 

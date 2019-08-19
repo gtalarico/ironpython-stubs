@@ -14,8 +14,6 @@ class HttpCacheAgeControl:
     
     enum HttpCacheAgeControl, values: MaxAge (2), MaxAgeAndMaxStale (6), MaxAgeAndMinFresh (3), MaxStale (4), MinFresh (1), None (0)
     """
-    Instance = HttpCacheAgeControl
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -57,6 +55,9 @@ class HttpCacheAgeControl:
     None_ =None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpCacheAgeControl()
 
 class HttpRequestCacheLevel:
     """
@@ -64,8 +65,6 @@ class HttpRequestCacheLevel:
     
     enum HttpRequestCacheLevel, values: BypassCache (1), CacheIfAvailable (3), CacheOnly (2), CacheOrNextCacheOnly (7), Default (0), NoCacheNoStore (6), Refresh (8), Reload (5), Revalidate (4)
     """
-    Instance = HttpRequestCacheLevel
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -110,6 +109,9 @@ class HttpRequestCacheLevel:
     Revalidate = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpRequestCacheLevel()
 
 class RequestCachePolicy():
     """
@@ -118,8 +120,6 @@ class RequestCachePolicy():
     RequestCachePolicy()
     RequestCachePolicy(level: RequestCacheLevel)
     """
-    Instance = RequestCachePolicy
-    """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
         ToString(self: RequestCachePolicy) -> str
@@ -145,6 +145,9 @@ Get: Level(self: RequestCachePolicy) -> RequestCacheLevel
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RequestCachePolicy()
 
 class HttpRequestCachePolicy(RequestCachePolicy):
     """
@@ -157,8 +160,6 @@ class HttpRequestCachePolicy(RequestCachePolicy):
     HttpRequestCachePolicy(cacheSyncDate: DateTime)
     HttpRequestCachePolicy(cacheAgeControl: HttpCacheAgeControl, maxAge: TimeSpan, freshOrStale: TimeSpan, cacheSyncDate: DateTime)
     """
-    Instance = HttpRequestCachePolicy
-    """hardcoded/returns an instance of the class"""
     def ToString(self):
         """
         ToString(self: HttpRequestCachePolicy) -> str
@@ -216,6 +217,9 @@ Get: MinFresh(self: HttpRequestCachePolicy) -> TimeSpan
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HttpRequestCachePolicy()
 
 class RequestCacheLevel:
     """
@@ -223,8 +227,6 @@ class RequestCacheLevel:
     
     enum RequestCacheLevel, values: BypassCache (1), CacheIfAvailable (3), CacheOnly (2), Default (0), NoCacheNoStore (6), Reload (5), Revalidate (4)
     """
-    Instance = RequestCacheLevel
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -267,4 +269,7 @@ class RequestCacheLevel:
     Revalidate = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RequestCacheLevel()
 

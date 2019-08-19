@@ -10,8 +10,6 @@
 
 class BuildEnvironmentLayoutRenderer(LayoutRenderer):
     """ BuildEnvironmentLayoutRenderer() """
-    Instance = BuildEnvironmentLayoutRenderer
-    """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BuildEnvironmentLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
         pass
@@ -54,11 +52,12 @@ class BuildEnvironmentLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BuildEnvironmentLayoutRenderer()
 
 class BwAccessIdLayoutRenderer(LayoutRenderer):
     """ BwAccessIdLayoutRenderer() """
-    Instance = BwAccessIdLayoutRenderer
-    """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BwAccessIdLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
         pass
@@ -101,11 +100,12 @@ class BwAccessIdLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BwAccessIdLayoutRenderer()
 
 class BwCategoryLayoutRenderer(LayoutRenderer):
     """ BwCategoryLayoutRenderer() """
-    Instance = BwCategoryLayoutRenderer
-    """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BwCategoryLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
         pass
@@ -148,11 +148,12 @@ class BwCategoryLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BwCategoryLayoutRenderer()
 
 class BwClientNameLayoutRenderer(LayoutRenderer):
     """ BwClientNameLayoutRenderer() """
-    Instance = BwClientNameLayoutRenderer
-    """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BwClientNameLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
         pass
@@ -195,11 +196,12 @@ class BwClientNameLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BwClientNameLayoutRenderer()
 
 class BwDeviceMacAddressLayoutRenderer(LayoutRenderer):
     """ BwDeviceMacAddressLayoutRenderer() """
-    Instance = BwDeviceMacAddressLayoutRenderer
-    """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BwDeviceMacAddressLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
         pass
@@ -242,11 +244,12 @@ class BwDeviceMacAddressLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BwDeviceMacAddressLayoutRenderer()
 
 class BwDeviceTypeLayoutRenderer(LayoutRenderer):
     """ BwDeviceTypeLayoutRenderer() """
-    Instance = BwDeviceTypeLayoutRenderer
-    """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BwDeviceTypeLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
         pass
@@ -289,11 +292,12 @@ class BwDeviceTypeLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BwDeviceTypeLayoutRenderer()
 
 class BwUserLayoutRenderer(LayoutRenderer):
     """ BwUserLayoutRenderer() """
-    Instance = BwUserLayoutRenderer
-    """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BwUserLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
         pass
@@ -336,11 +340,12 @@ class BwUserLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BwUserLayoutRenderer()
 
 class BwZoneNameLayoutRenderer(LayoutRenderer):
     """ BwZoneNameLayoutRenderer() """
-    Instance = BwZoneNameLayoutRenderer
-    """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: BwZoneNameLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
         pass
@@ -383,11 +388,12 @@ class BwZoneNameLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BwZoneNameLayoutRenderer()
 
 class CustomTraceActivityIdLayoutRenderer(LayoutRenderer):
     """ CustomTraceActivityIdLayoutRenderer() """
-    Instance = CustomTraceActivityIdLayoutRenderer
-    """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: CustomTraceActivityIdLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
         pass
@@ -430,11 +436,12 @@ class CustomTraceActivityIdLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CustomTraceActivityIdLayoutRenderer()
 
 class IsProfilerTraceEventLayoutRenderer(LayoutRenderer):
     """ IsProfilerTraceEventLayoutRenderer() """
-    Instance = IsProfilerTraceEventLayoutRenderer
-    """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: IsProfilerTraceEventLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
         pass
@@ -479,11 +486,12 @@ class IsProfilerTraceEventLayoutRenderer(LayoutRenderer):
 
     IsProfileTracerEventKey = 'IsProfilerTracerEvent'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IsProfilerTraceEventLayoutRenderer()
 
 class LicenseNameLayoutRenderer(LayoutRenderer):
     """ LicenseNameLayoutRenderer() """
-    Instance = LicenseNameLayoutRenderer
-    """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: LicenseNameLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
         pass
@@ -526,11 +534,12 @@ class LicenseNameLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LicenseNameLayoutRenderer()
 
 class TraceTypeLayoutRenderer(LayoutRenderer):
     """ TraceTypeLayoutRenderer() """
-    Instance = TraceTypeLayoutRenderer
-    """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: TraceTypeLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
         pass
@@ -573,11 +582,12 @@ class TraceTypeLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TraceTypeLayoutRenderer()
 
 class VersionLayoutRenderer(LayoutRenderer):
     """ VersionLayoutRenderer() """
-    Instance = VersionLayoutRenderer
-    """hardcoded/returns an instance of the class"""
     def Append(self, *args): #cannot find CLR method
         """ Append(self: VersionLayoutRenderer, builder: StringBuilder, logEvent: LogEventInfo) """
         pass
@@ -620,6 +630,9 @@ class VersionLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return VersionLayoutRenderer()
 
 # variables with complex values
 

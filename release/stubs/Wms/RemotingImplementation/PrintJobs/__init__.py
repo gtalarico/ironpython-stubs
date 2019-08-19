@@ -12,8 +12,6 @@ from Wms.EdiMessaging.Processor import *
 
 class BwServerPrintJobMessageProcessor(MessageProcessor):
     """ BwServerPrintJobMessageProcessor(queueProvider: IQueueProvider) """
-    Instance = BwServerPrintJobMessageProcessor
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, queueProvider):
         """ __new__(cls: type, queueProvider: IQueueProvider) """
@@ -21,11 +19,12 @@ class BwServerPrintJobMessageProcessor(MessageProcessor):
 
     _queueProvider = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BwServerPrintJobMessageProcessor()
 
 class CleanupDocumentQueueTask(TaskBase):
     """ CleanupDocumentQueueTask(settings: SystemSettings) """
-    Instance = CleanupDocumentQueueTask
-    """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: CleanupDocumentQueueTask) """
         pass
@@ -41,11 +40,12 @@ class CleanupDocumentQueueTask(TaskBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CleanupDocumentQueueTask()
 
 class DocumentQueueExtensionMethods():
     # no doc
-    Instance = DocumentQueueExtensionMethods
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def AddPrintJobSync(queue, job):
         """ AddPrintJobSync(queue: IAddPrintJob, job: AddPrintJob) -> Guid """
@@ -73,11 +73,12 @@ class DocumentQueueExtensionMethods():
         'ParseDocumentTypeString',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DocumentQueueExtensionMethods()
 
 class JsonMessageDispatcher():
     """ JsonMessageDispatcher(queueProvider: IQueueProvider) """
-    Instance = JsonMessageDispatcher
-    """hardcoded/returns an instance of the class"""
     def PublishMessage(self, message):
         """ PublishMessage(self: JsonMessageDispatcher, message: object) """
         pass
@@ -87,11 +88,12 @@ class JsonMessageDispatcher():
         """ __new__(cls: type, queueProvider: IQueueProvider) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return JsonMessageDispatcher()
 
 class PrintJobExtensions():
     # no doc
-    Instance = PrintJobExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def RegisterMsQueue(container, resolverName, host, queueName):
         """ RegisterMsQueue(container: IUnityContainer, resolverName: str, host: str, queueName: str) """
@@ -101,21 +103,23 @@ class PrintJobExtensions():
         'RegisterMsQueue',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintJobExtensions()
 
 class PrintJobQueueDispatcher(JsonMessageDispatcher):
     """ PrintJobQueueDispatcher(queueProvider: IQueueProvider) """
-    Instance = PrintJobQueueDispatcher
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, queueProvider):
         """ __new__(cls: type, queueProvider: IQueueProvider) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintJobQueueDispatcher()
 
 class PrintJobsOnStartupValidator():
     """ PrintJobsOnStartupValidator(messageDispatcher: PrintJobQueueDispatcher) """
-    Instance = PrintJobsOnStartupValidator
-    """hardcoded/returns an instance of the class"""
     def Start(self, cancellationToken):
         """ Start(self: PrintJobsOnStartupValidator, cancellationToken: CancellationToken) -> Task """
         pass
@@ -125,11 +129,12 @@ class PrintJobsOnStartupValidator():
         """ __new__(cls: type, messageDispatcher: PrintJobQueueDispatcher) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintJobsOnStartupValidator()
 
 class PrintJobsQueuer():
     """ PrintJobsQueuer(messageDispatcher: PrintJobQueueDispatcher, storageProvider: StorageProvider) """
-    Instance = PrintJobsQueuer
-    """hardcoded/returns an instance of the class"""
     def QueueNextPrintJob(self, *args): #cannot find CLR method
         """ QueueNextPrintJob(self: PrintJobsQueuer) -> int """
         pass
@@ -143,6 +148,9 @@ class PrintJobsQueuer():
         """ __new__(cls: type, messageDispatcher: PrintJobQueueDispatcher, storageProvider: StorageProvider) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintJobsQueuer()
 
 # variables with complex values
 

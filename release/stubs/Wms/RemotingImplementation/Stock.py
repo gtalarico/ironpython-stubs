@@ -12,8 +12,6 @@ from Wms.RemotingImplementation.TaskScheduler import *
 
 class AllocatedStockArgs():
     """ AllocatedStockArgs() """
-    Instance = AllocatedStockArgs
-    """hardcoded/returns an instance of the class"""
     ItemCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: ItemCode(self: AllocatedStockArgs) -> str
 
@@ -81,11 +79,12 @@ Set: WarehouseLocationCode(self: AllocatedStockArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AllocatedStockArgs()
 
 class AddAllocatedStockArgs(AllocatedStockArgs):
     """ AddAllocatedStockArgs() """
-    Instance = AddAllocatedStockArgs
-    """hardcoded/returns an instance of the class"""
     IsItemIdentificationItem = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: IsItemIdentificationItem(self: AddAllocatedStockArgs) -> bool
 
@@ -105,11 +104,12 @@ Set: ItemIdentificationToAdd(self: AddAllocatedStockArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AddAllocatedStockArgs()
 
 class AllocationSettings():
     """ AllocationSettings() """
-    Instance = AllocationSettings
-    """hardcoded/returns an instance of the class"""
     def GetLocationsForLine(self, line, locs):
         """ GetLocationsForLine(self: AllocationSettings, line: OutboundOrderLine, locs: IEnumerable[ItemStock]) -> IEnumerable[ItemStock] """
         pass
@@ -178,6 +178,9 @@ Set: PickTypesToInclude(self: AllocationSettings) = value
     DecreaseStockWithAssignedStock = None
     OnGetLocationsForLine = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return AllocationSettings()
 
 class BatchAllocationSink:
     """
@@ -185,8 +188,6 @@ class BatchAllocationSink:
     BatchAllocationSink(generatePick2PlaceImage: bool, preferredColumns: int)
     BatchAllocationSink(args: BatchAllocationSinkArgs)
     """
-    Instance = BatchAllocationSink
-    """hardcoded/returns an instance of the class"""
     def AddLine(self, *__args):
         """ AddLine(self: BatchAllocationSink, line: OutboundOrderLine, loc: ItemStock)AddLine(self: BatchAllocationSink, orderLine: OutboundOrderLine, location: ItemStock, allocation: AllocatedStockItem) """
         pass
@@ -257,11 +258,12 @@ Set: GetBatchDelegate(self: BatchAllocationSink) = value
 
     OnGetBatch = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BatchAllocationSink()
 
 class BatchAllocationSinkArgs():
     """ BatchAllocationSinkArgs() """
-    Instance = BatchAllocationSinkArgs
-    """hardcoded/returns an instance of the class"""
     GeneratePick2PlaceImage = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: GeneratePick2PlaceImage(self: BatchAllocationSinkArgs) -> bool
 
@@ -281,14 +283,15 @@ Set: ProcessingMode(self: BatchAllocationSinkArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BatchAllocationSinkArgs()
 
 class BatchSink(BatchAllocationSink):
     """
     BatchSink()
     BatchSink(args: BatchAllocationSinkArgs)
     """
-    Instance = BatchSink
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -301,19 +304,21 @@ class BatchSink(BatchAllocationSink):
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BatchSink()
 
 class DefaultPrintAllocationSettings(AllocationSettings):
     """ DefaultPrintAllocationSettings() """
-    Instance = DefaultPrintAllocationSettings
-    """hardcoded/returns an instance of the class"""
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DefaultPrintAllocationSettings()
 
 class EnhancedStockAllocater:
     """
     EnhancedStockAllocater(stockManager: IStockManager)
     EnhancedStockAllocater(stockManager: IStockManager, settings: AllocationSettings, allocationSink: IAllocationSink)
     """
-    Instance = EnhancedStockAllocater
-    """hardcoded/returns an instance of the class"""
     def AllocateLine(self, line):
         """ AllocateLine(self: EnhancedStockAllocater, line: OutboundOrderLine) -> bool """
         pass
@@ -375,14 +380,15 @@ Set: Settings(self: EnhancedStockAllocater) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EnhancedStockAllocater()
 
 class EnhancedStockManager:
     """
     EnhancedStockManager(messaging: IMessaging)
     EnhancedStockManager()
     """
-    Instance = EnhancedStockManager
-    """hardcoded/returns an instance of the class"""
     def AllocateOutboundOrderLine(self, item, allocationSettings, allocationSink):
         """ AllocateOutboundOrderLine(self: EnhancedStockManager, item: KeyValuePair[str, List[OutboundOrderLine]], allocationSettings: AllocationSettings, allocationSink: IAllocationSink) """
         pass
@@ -532,11 +538,12 @@ class EnhancedStockManager:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EnhancedStockManager()
 
 class IAllocationSink:
     # no doc
-    Instance = IAllocationSink
-    """hardcoded/returns an instance of the class"""
     def AddLine(self, *__args):
         """ AddLine(self: IAllocationSink, line: OutboundOrderLine, loc: ItemStock)AddLine(self: IAllocationSink, orderLine: OutboundOrderLine, location: ItemStock, allocation: AllocatedStockItem) """
         pass
@@ -557,11 +564,12 @@ class IAllocationSink:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IAllocationSink()
 
 class IStockAllocater:
     # no doc
-    Instance = IStockAllocater
-    """hardcoded/returns an instance of the class"""
     def AllocateLines(self, lines):
         """ AllocateLines(self: IStockAllocater, lines: IEnumerable[OutboundOrderLine]) """
         pass
@@ -595,11 +603,12 @@ Set: Settings(self: IStockAllocater) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IStockAllocater()
 
 class IStockManager:
     # no doc
-    Instance = IStockManager
-    """hardcoded/returns an instance of the class"""
     def AllocateOutboundOrderLines(self, orderLines, allocationSettings, allocationSink):
         """ AllocateOutboundOrderLines(self: IStockManager, orderLines: IEnumerable[OutboundOrderLine], allocationSettings: AllocationSettings, allocationSink: IAllocationSink) -> bool """
         pass
@@ -730,11 +739,12 @@ class IStockManager:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IStockManager()
 
 class ItemStockAllocationExtensions():
     # no doc
-    Instance = ItemStockAllocationExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def EnrichWithBatchData(this, batchNames, orderNumbers, lineNumbers, barcodes):
         """ EnrichWithBatchData(this: ItemStockAllocationList, batchNames: Dictionary[str, str], orderNumbers: Dictionary[str, str], lineNumbers: Dictionary[str, str], barcodes: Dictionary[str, str]) """
@@ -756,11 +766,12 @@ class ItemStockAllocationExtensions():
         'EnrichWithMessageQueueData',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ItemStockAllocationExtensions()
 
 class LocationSelectionAlgorithmType:
     """ enum LocationSelectionAlgorithmType, values: AlphabeticSort (1), AlphabeticSortBulkFirst (2), LeastLocations (0), LeastLocationsBulkFirst (3) """
-    Instance = LocationSelectionAlgorithmType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -800,11 +811,12 @@ class LocationSelectionAlgorithmType:
     LeastLocationsBulkFirst = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LocationSelectionAlgorithmType()
 
 class LockException(Exception):
     """ LockException(message: str) """
-    Instance = LockException
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -819,11 +831,12 @@ class LockException(Exception):
 
     SerializeObjectState = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LockException()
 
 class MessageQueueAllocationSink:
     """ MessageQueueAllocationSink(messageReferenceId: Nullable[Guid]) """
-    Instance = MessageQueueAllocationSink
-    """hardcoded/returns an instance of the class"""
     def AddLine(self, *__args):
         """ AddLine(self: MessageQueueAllocationSink, line: OutboundOrderLine, loc: ItemStock)AddLine(self: MessageQueueAllocationSink, orderLine: OutboundOrderLine, location: ItemStock, allocation: AllocatedStockItem) """
         pass
@@ -853,11 +866,12 @@ class MessageQueueAllocationSink:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MessageQueueAllocationSink()
 
 class MessageQueueStockAllocater:
     """ MessageQueueStockAllocater(stockManager: IStockManager, settings: AllocationSettings, allocationSink: IAllocationSink) """
-    Instance = MessageQueueStockAllocater
-    """hardcoded/returns an instance of the class"""
     def AllocateLine(self, line):
         """ AllocateLine(self: MessageQueueStockAllocater, line: OutboundOrderLine) -> bool """
         pass
@@ -916,11 +930,12 @@ Set: Settings(self: MessageQueueStockAllocater) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MessageQueueStockAllocater()
 
 class ReallocateStockArgs():
     """ ReallocateStockArgs() """
-    Instance = ReallocateStockArgs
-    """hardcoded/returns an instance of the class"""
     AllocationSettings = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: AllocationSettings(self: ReallocateStockArgs) -> AllocationSettings
 
@@ -958,14 +973,15 @@ Set: WarehouseLocationCodeTo(self: ReallocateStockArgs) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ReallocateStockArgs()
 
 class StockLock:
     """
     StockLock()
     StockLock(exclusive: bool)
     """
-    Instance = StockLock
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """ Dispose(self: StockLock) """
         pass
@@ -994,11 +1010,12 @@ class StockLock:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StockLock()
 
 class StockStreamTask(TaskBase):
     """ StockStreamTask(settings: SystemSettings) """
-    Instance = StockStreamTask
-    """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: StockStreamTask) """
         pass
@@ -1015,4 +1032,7 @@ Set: Settings(self: StockStreamTask) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StockStreamTask()
 

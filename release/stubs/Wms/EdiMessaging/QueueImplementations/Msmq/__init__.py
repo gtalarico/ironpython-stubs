@@ -10,8 +10,6 @@
 
 class MsmqOptions():
     """ MsmqOptions() """
-    Instance = MsmqOptions
-    """hardcoded/returns an instance of the class"""
     Host = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Host(self: MsmqOptions) -> str
 
@@ -25,6 +23,9 @@ Set: QueueName(self: MsmqOptions) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MsmqOptions()
 
 # variables with complex values
 

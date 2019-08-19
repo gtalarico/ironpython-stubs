@@ -10,8 +10,6 @@
 
 class Switch():
     """ Provides an abstract base class to create new debugging and tracing switches. """
-    Instance = Switch
-    """hardcoded/returns an instance of the class"""
     def GetSupportedAttributes(self, *args): #cannot find CLR method
         """
         GetSupportedAttributes(self: Switch) -> Array[str]
@@ -75,6 +73,9 @@ Get: DisplayName(self: Switch) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Switch()
 
 class BooleanSwitch(Switch):
     """
@@ -83,8 +84,6 @@ class BooleanSwitch(Switch):
     BooleanSwitch(displayName: str, description: str)
     BooleanSwitch(displayName: str, description: str, defaultSwitchValue: str)
     """
-    Instance = BooleanSwitch
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, displayName, description, defaultSwitchValue=None):
         """
@@ -112,6 +111,9 @@ Set: Enabled(self: BooleanSwitch) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BooleanSwitch()
 
 class ConditionalAttribute:
     """
@@ -119,8 +121,6 @@ class ConditionalAttribute:
     
     ConditionalAttribute(conditionString: str)
     """
-    Instance = ConditionalAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -141,11 +141,12 @@ Get: ConditionString(self: ConditionalAttribute) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConditionalAttribute()
 
 class TraceListener(MarshalByRefObject):
     """ Provides the abstract base class for the listeners who monitor trace and debug output. """
-    Instance = TraceListener
-    """hardcoded/returns an instance of the class"""
     def Close(self):
         """
         Close(self: TraceListener)
@@ -196,10 +197,7 @@ class TraceListener(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -308,9 +306,7 @@ class TraceListener(MarshalByRefObject):
         
             message: A message to write.
         WriteLine(self: TraceListener, o: object)
-            Writes the value of the object's System.Object.ToString method to the listener you create when you implement the System.Diagnostics.TraceListener class, followed by a line 
-             terminator.
-        
+            Writes the value of the object's System.Object.ToString method to the listener you create when you implement the System.Diagnostics.TraceListener class, followed by a line terminator.
         
             o: An System.Object whose fully qualified class name you want to write.
         WriteLine(self: TraceListener, message: str, category: str)
@@ -319,9 +315,7 @@ class TraceListener(MarshalByRefObject):
             message: A message to write.
             category: A category name used to organize the output.
         WriteLine(self: TraceListener, o: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the listener you create when you implement the System.Diagnostics.TraceListener class, 
-             followed by a line terminator.
-        
+            Writes a category name and the value of the object's System.Object.ToString method to the listener you create when you implement the System.Diagnostics.TraceListener class, followed by a line terminator.
         
             o: An System.Object whose fully qualified class name you want to write.
             category: A category name used to organize the output.
@@ -408,6 +402,9 @@ Set: TraceOutputOptions(self: TraceListener) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TraceListener()
 
 class TextWriterTraceListener(TraceListener):
     """
@@ -421,8 +418,6 @@ class TextWriterTraceListener(TraceListener):
     TextWriterTraceListener(fileName: str)
     TextWriterTraceListener(fileName: str, name: str)
     """
-    Instance = TextWriterTraceListener
-    """hardcoded/returns an instance of the class"""
     def Close(self):
         """
         Close(self: TextWriterTraceListener)
@@ -461,10 +456,7 @@ class TextWriterTraceListener(TraceListener):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -492,9 +484,7 @@ class TextWriterTraceListener(TraceListener):
     def WriteLine(self, *__args):
         """
         WriteLine(self: TextWriterTraceListener, message: str)
-            Writes a message to this instance's System.Diagnostics.TextWriterTraceListener.Writer followed by a line terminator. The default line terminator is a carriage return 
-             followed by a line feed (\r\n).
-        
+            Writes a message to this instance's System.Diagnostics.TextWriterTraceListener.Writer followed by a line terminator. The default line terminator is a carriage return followed by a line feed (\r\n).
         
             message: A message to write.
         """
@@ -539,6 +529,9 @@ Set: Writer(self: TextWriterTraceListener) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TextWriterTraceListener()
 
 class ConsoleTraceListener(TextWriterTraceListener):
     """
@@ -547,8 +540,6 @@ class ConsoleTraceListener(TextWriterTraceListener):
     ConsoleTraceListener()
     ConsoleTraceListener(useErrorStream: bool)
     """
-    Instance = ConsoleTraceListener
-    """hardcoded/returns an instance of the class"""
     def Close(self):
         """
         Close(self: ConsoleTraceListener)
@@ -580,10 +571,7 @@ class ConsoleTraceListener(TextWriterTraceListener):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -625,11 +613,12 @@ class ConsoleTraceListener(TextWriterTraceListener):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ConsoleTraceListener()
 
 class CorrelationManager():
     """ Correlates traces that are part of a logical transaction. """
-    Instance = CorrelationManager
-    """hardcoded/returns an instance of the class"""
     def StartLogicalOperation(self, operationId=None):
         """
         StartLogicalOperation(self: CorrelationManager, operationId: object)
@@ -664,6 +653,9 @@ Get: LogicalOperationStack(self: CorrelationManager) -> Stack
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CorrelationManager()
 
 class CounterCreationData():
     """
@@ -672,8 +664,6 @@ class CounterCreationData():
     CounterCreationData(counterName: str, counterHelp: str, counterType: PerformanceCounterType)
     CounterCreationData()
     """
-    Instance = CounterCreationData
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, counterName=None, counterHelp=None, counterType=None):
         """
@@ -707,6 +697,9 @@ Set: CounterType(self: CounterCreationData) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CounterCreationData()
 
 class CounterCreationDataCollection(CollectionBase):
     """
@@ -716,8 +709,6 @@ class CounterCreationDataCollection(CollectionBase):
     CounterCreationDataCollection(value: CounterCreationDataCollection)
     CounterCreationDataCollection(value: Array[CounterCreationData])
     """
-    Instance = CounterCreationDataCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: CounterCreationDataCollection, value: CounterCreationData) -> int
@@ -921,6 +912,9 @@ class CounterCreationDataCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CounterCreationDataCollection()
 
 class CounterSample():
     """
@@ -929,8 +923,6 @@ class CounterSample():
     CounterSample(rawValue: Int64, baseValue: Int64, counterFrequency: Int64, systemFrequency: Int64, timeStamp: Int64, timeStamp100nSec: Int64, counterType: PerformanceCounterType)
     CounterSample(rawValue: Int64, baseValue: Int64, counterFrequency: Int64, systemFrequency: Int64, timeStamp: Int64, timeStamp100nSec: Int64, counterType: PerformanceCounterType, counterTimeStamp: Int64)
     """
-    Instance = CounterSample
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Calculate(counterSample, nextCounterSample=None):
         """
@@ -1051,11 +1043,12 @@ Get: TimeStamp100nSec(self: CounterSample) -> Int64
 
     Empty = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CounterSample()
 
 class CounterSampleCalculator():
     """ Provides a set of utility functions for interpreting performance counter data. """
-    Instance = CounterSampleCalculator
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def ComputeCounterValue(*__args):
         """
@@ -1079,11 +1072,12 @@ class CounterSampleCalculator():
         'ComputeCounterValue',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CounterSampleCalculator()
 
 class DataReceivedEventArgs(EventArgs):
     """ Provides data for the System.Diagnostics.Process.OutputDataReceived and System.Diagnostics.Process.ErrorDataReceived events. """
-    Instance = DataReceivedEventArgs
-    """hardcoded/returns an instance of the class"""
     Data = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the line of characters that was written to a redirected System.Diagnostics.Process output stream.
 
@@ -1092,6 +1086,9 @@ Get: Data(self: DataReceivedEventArgs) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DataReceivedEventArgs()
 
 class DataReceivedEventHandler(MulticastDelegate):
     """
@@ -1099,8 +1096,6 @@ class DataReceivedEventHandler(MulticastDelegate):
     
     DataReceivedEventHandler(object: object, method: IntPtr)
     """
-    Instance = DataReceivedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: DataReceivedEventHandler, sender: object, e: DataReceivedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -1122,9 +1117,7 @@ class DataReceivedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1153,8 +1146,7 @@ class DataReceivedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -1170,11 +1162,12 @@ class DataReceivedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DataReceivedEventHandler()
 
 class Debug():
     """ Provides a set of methods and properties that help debug your code. This class cannot be inherited. """
-    Instance = Debug
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Assert(condition, message=None, *__args):
         """
@@ -1198,9 +1191,7 @@ class Debug():
         
             condition: The conditional expression to evaluate. If the condition is true, the specified messages are not sent and the message box is not displayed.
             message: The message to send to the System.Diagnostics.Trace.Listeners collection.
-            detailMessageFormat: The composite format string (see Remarks) to send to the System.Diagnostics.Trace.Listeners collection. This message contains text intermixed with zero or more format 
-             items, which correspond to objects in the args array.
-        
+            detailMessageFormat: The composite format string (see Remarks) to send to the System.Diagnostics.Trace.Listeners collection. This message contains text intermixed with zero or more format items, which correspond to objects in the args array.
             args: An object array that contains zero or more objects to format.
         """
         pass
@@ -1311,9 +1302,7 @@ class Debug():
             message: A message to write.
             category: A category name used to organize the output.
         WriteIf(condition: bool, value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a 
-             condition is true.
-        
+            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a condition is true.
         
             condition: The conditional expression to evaluate. If the condition is true, the category name and value are written to the trace listeners in the collection.
             value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
@@ -1370,9 +1359,7 @@ class Debug():
             message: A message to write.
             category: A category name used to organize the output.
         WriteLineIf(condition: bool, value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a 
-             condition is true.
-        
+            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a condition is true.
         
             condition: The conditional expression to evaluate. If the condition is true, the category name and value are written to the trace listeners in the collection.
             value: An object whose name is sent to the System.Diagnostics.Debug.Listeners.
@@ -1398,6 +1385,9 @@ class Debug():
         'WriteLineIf',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Debug()
 
 class DebuggableAttribute:
     """
@@ -1406,8 +1396,6 @@ class DebuggableAttribute:
     DebuggableAttribute(isJITTrackingEnabled: bool, isJITOptimizerDisabled: bool)
     DebuggableAttribute(modes: DebuggingModes)
     """
-    Instance = DebuggableAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1444,6 +1432,9 @@ Get: IsJITTrackingEnabled(self: DebuggableAttribute) -> bool
 
     DebuggingModes = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DebuggableAttribute()
 
 class Debugger():
     """
@@ -1451,8 +1442,6 @@ class Debugger():
     
     Debugger()
     """
-    Instance = Debugger
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Break():
         """
@@ -1467,8 +1456,7 @@ class Debugger():
         IsLogging() -> bool
         
             Checks to see if logging is enabled by an attached debugger.
-            Returns: true if a debugger is attached and logging is enabled; otherwise, false. The attached debugger is the registered managed debugger in the DbgManagedDebugger registry key. 
-             For more information on this key, see Enabling JIT-Attach Debugging.
+            Returns: true if a debugger is attached and logging is enabled; otherwise, false. The attached debugger is the registered managed debugger in the DbgManagedDebugger registry key. For more information on this key, see Enabling JIT-Attach Debugging.
         """
         pass
 
@@ -1505,6 +1493,9 @@ class Debugger():
     DefaultCategory = None
     IsAttached = False
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Debugger()
 
 class DebuggerBrowsableAttribute:
     """
@@ -1512,8 +1503,6 @@ class DebuggerBrowsableAttribute:
     
     DebuggerBrowsableAttribute(state: DebuggerBrowsableState)
     """
-    Instance = DebuggerBrowsableAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1531,6 +1520,9 @@ Get: State(self: DebuggerBrowsableAttribute) -> DebuggerBrowsableState
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DebuggerBrowsableAttribute()
 
 class DebuggerBrowsableState:
     """
@@ -1538,8 +1530,6 @@ class DebuggerBrowsableState:
     
     enum DebuggerBrowsableState, values: Collapsed (2), Never (0), RootHidden (3)
     """
-    Instance = DebuggerBrowsableState
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -1578,6 +1568,9 @@ class DebuggerBrowsableState:
     RootHidden = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DebuggerBrowsableState()
 
 class DebuggerDisplayAttribute:
     """
@@ -1585,8 +1578,6 @@ class DebuggerDisplayAttribute:
     
     DebuggerDisplayAttribute(value: str)
     """
-    Instance = DebuggerDisplayAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1636,6 +1627,9 @@ Get: Value(self: DebuggerDisplayAttribute) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DebuggerDisplayAttribute()
 
 class DebuggerHiddenAttribute:
     """
@@ -1643,8 +1637,6 @@ class DebuggerHiddenAttribute:
     
     DebuggerHiddenAttribute()
     """
-    Instance = DebuggerHiddenAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1652,6 +1644,9 @@ class DebuggerHiddenAttribute:
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DebuggerHiddenAttribute()
 
 class DebuggerNonUserCodeAttribute:
     """
@@ -1659,8 +1654,6 @@ class DebuggerNonUserCodeAttribute:
     
     DebuggerNonUserCodeAttribute()
     """
-    Instance = DebuggerNonUserCodeAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1668,6 +1661,9 @@ class DebuggerNonUserCodeAttribute:
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DebuggerNonUserCodeAttribute()
 
 class DebuggerStepperBoundaryAttribute:
     """
@@ -1675,8 +1671,6 @@ class DebuggerStepperBoundaryAttribute:
     
     DebuggerStepperBoundaryAttribute()
     """
-    Instance = DebuggerStepperBoundaryAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1684,6 +1678,9 @@ class DebuggerStepperBoundaryAttribute:
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DebuggerStepperBoundaryAttribute()
 
 class DebuggerStepThroughAttribute:
     """
@@ -1691,8 +1688,6 @@ class DebuggerStepThroughAttribute:
     
     DebuggerStepThroughAttribute()
     """
-    Instance = DebuggerStepThroughAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1700,6 +1695,9 @@ class DebuggerStepThroughAttribute:
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DebuggerStepThroughAttribute()
 
 class DebuggerTypeProxyAttribute:
     """
@@ -1708,8 +1706,6 @@ class DebuggerTypeProxyAttribute:
     DebuggerTypeProxyAttribute(type: Type)
     DebuggerTypeProxyAttribute(typeName: str)
     """
-    Instance = DebuggerTypeProxyAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1746,6 +1742,9 @@ Set: TargetTypeName(self: DebuggerTypeProxyAttribute) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DebuggerTypeProxyAttribute()
 
 class DebuggerVisualizerAttribute:
     """
@@ -1758,8 +1757,6 @@ class DebuggerVisualizerAttribute:
     DebuggerVisualizerAttribute(visualizer: Type, visualizerObjectSource: Type)
     DebuggerVisualizerAttribute(visualizer: Type, visualizerObjectSourceTypeName: str)
     """
-    Instance = DebuggerVisualizerAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -1815,6 +1812,9 @@ Get: VisualizerTypeName(self: DebuggerVisualizerAttribute) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DebuggerVisualizerAttribute()
 
 class DefaultTraceListener(TraceListener):
     """
@@ -1822,8 +1822,6 @@ class DefaultTraceListener(TraceListener):
     
     DefaultTraceListener()
     """
-    Instance = DefaultTraceListener
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: TraceListener, disposing: bool)
@@ -1862,10 +1860,7 @@ class DefaultTraceListener(TraceListener):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -1893,9 +1888,7 @@ class DefaultTraceListener(TraceListener):
     def WriteLine(self, *__args):
         """
         WriteLine(self: DefaultTraceListener, message: str)
-            Writes the output to the OutputDebugString function and to the System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String) method, followed by a carriage 
-             return and line feed (\r\n).
-        
+            Writes the output to the OutputDebugString function and to the System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String) method, followed by a carriage return and line feed (\r\n).
         
             message: The message to write to OutputDebugString and System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String).
         """
@@ -1935,6 +1928,9 @@ Set: LogFileName(self: DefaultTraceListener) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DefaultTraceListener()
 
 class DelimitedListTraceListener(TextWriterTraceListener):
     """
@@ -1947,8 +1943,6 @@ class DelimitedListTraceListener(TextWriterTraceListener):
     DelimitedListTraceListener(fileName: str)
     DelimitedListTraceListener(fileName: str, name: str)
     """
-    Instance = DelimitedListTraceListener
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: TextWriterTraceListener, disposing: bool)
@@ -1973,10 +1967,7 @@ class DelimitedListTraceListener(TextWriterTraceListener):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2073,6 +2064,9 @@ Set: Delimiter(self: DelimitedListTraceListener) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DelimitedListTraceListener()
 
 class DiagnosticsConfigurationHandler:
     """
@@ -2080,8 +2074,6 @@ class DiagnosticsConfigurationHandler:
     
     DiagnosticsConfigurationHandler()
     """
-    Instance = DiagnosticsConfigurationHandler
-    """hardcoded/returns an instance of the class"""
     def Create(self, parent, configContext, section):
         """
         Create(self: DiagnosticsConfigurationHandler, parent: object, configContext: object, section: XmlNode) -> object
@@ -2103,6 +2095,9 @@ class DiagnosticsConfigurationHandler:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DiagnosticsConfigurationHandler()
 
 class EntryWrittenEventArgs(EventArgs):
     """
@@ -2111,8 +2106,6 @@ class EntryWrittenEventArgs(EventArgs):
     EntryWrittenEventArgs()
     EntryWrittenEventArgs(entry: EventLogEntry)
     """
-    Instance = EntryWrittenEventArgs
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, entry=None):
         """
@@ -2129,6 +2122,9 @@ Get: Entry(self: EntryWrittenEventArgs) -> EventLogEntry
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EntryWrittenEventArgs()
 
 class EntryWrittenEventHandler(MulticastDelegate):
     """
@@ -2136,8 +2132,6 @@ class EntryWrittenEventHandler(MulticastDelegate):
     
     EntryWrittenEventHandler(object: object, method: IntPtr)
     """
-    Instance = EntryWrittenEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: EntryWrittenEventHandler, sender: object, e: EntryWrittenEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -2159,9 +2153,7 @@ class EntryWrittenEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2190,8 +2182,7 @@ class EntryWrittenEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -2207,6 +2198,9 @@ class EntryWrittenEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EntryWrittenEventHandler()
 
 class EventInstance():
     """
@@ -2215,8 +2209,6 @@ class EventInstance():
     EventInstance(instanceId: Int64, categoryId: int)
     EventInstance(instanceId: Int64, categoryId: int, entryType: EventLogEntryType)
     """
-    Instance = EventInstance
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, instanceId, categoryId, entryType=None):
         """
@@ -2250,6 +2242,9 @@ Set: InstanceId(self: EventInstance) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EventInstance()
 
 class EventLog(Component):
     """
@@ -2260,8 +2255,6 @@ class EventLog(Component):
     EventLog(logName: str, machineName: str)
     EventLog(logName: str, machineName: str, source: str)
     """
-    Instance = EventLog
-    """hardcoded/returns an instance of the class"""
     def BeginInit(self):
         """
         BeginInit(self: EventLog)
@@ -2287,21 +2280,15 @@ class EventLog(Component):
     def CreateEventSource(*__args):
         """
         CreateEventSource(source: str, logName: str)
-            Establishes the specified source name as a valid event source for writing entries to a log on the local computer. This method can also create a new custom log on the local 
-             computer.
-        
+            Establishes the specified source name as a valid event source for writing entries to a log on the local computer. This method can also create a new custom log on the local computer.
         
             source: The source name by which the application is registered on the local computer.
             logName: The name of the log the source's entries are written to. Possible values include Application, System, or a custom event log.
         CreateEventSource(source: str, logName: str, machineName: str)
-            Establishes the specified source name as a valid event source for writing entries to a log on the specified computer. This method can also be used to create a new custom 
-             log on the specified computer.
-        
+            Establishes the specified source name as a valid event source for writing entries to a log on the specified computer. This method can also be used to create a new custom log on the specified computer.
         
             source: The source by which the application is registered on the specified computer.
-            logName: The name of the log the source's entries are written to. Possible values include Application, System, or a custom event log. If you do not specify a value, logName defaults 
-             to Application.
-        
+            logName: The name of the log the source's entries are written to. Possible values include Application, System, or a custom event log. If you do not specify a value, logName defaults to Application.
             machineName: The name of the computer to register this event source with, or "." for the local computer.
         CreateEventSource(sourceData: EventSourceCreationData)
             Establishes a valid event source for writing localized event messages, using the specified configuration properties for the event source and the corresponding event log.
@@ -2363,17 +2350,13 @@ class EventLog(Component):
         
             Determines whether the log exists on the local computer.
         
-            logName: The name of the log to search for. Possible values include: Application, Security, System, other application-specific logs (such as those associated with Active Directory), 
-             or any custom log on the computer.
-        
+            logName: The name of the log to search for. Possible values include: Application, Security, System, other application-specific logs (such as those associated with Active Directory), or any custom log on the computer.
             Returns: true if the log exists on the local computer; otherwise, false.
         Exists(logName: str, machineName: str) -> bool
         
             Determines whether the log exists on the specified computer.
         
-            logName: The log for which to search. Possible values include: Application, Security, System, other application-specific logs (such as those associated with Active Directory), or 
-             any custom log on the computer.
-        
+            logName: The log for which to search. Possible values include: Application, Security, System, other application-specific logs (such as those associated with Active Directory), or any custom log on the computer.
             machineName: The name of the computer on which to search for the log, or "." for the local computer.
             Returns: true if the log exists on the specified computer; otherwise, false.
         """
@@ -2402,8 +2385,7 @@ class EventLog(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified 
-             service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -2426,10 +2408,7 @@ class EventLog(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2520,9 +2499,7 @@ class EventLog(Component):
             eventID: The application-specific identifier for the event.
             category: The application-specific subcategory associated with the message.
         WriteEntry(source: str, message: str, type: EventLogEntryType, eventID: int, category: Int16)
-            Writes an entry with the given message text, application-defined event identifier, and application-defined category to the event log, using the specified registered event 
-             source. The category can be used by the Event Viewer to filter events in the log.
-        
+            Writes an entry with the given message text, application-defined event identifier, and application-defined category to the event log, using the specified registered event source. The category can be used by the Event Viewer to filter events in the log.
         
             source: The source by which the application is registered on the specified computer.
             message: The string to write to the event log.
@@ -2530,9 +2507,7 @@ class EventLog(Component):
             eventID: The application-specific identifier for the event.
             category: The application-specific subcategory associated with the message.
         WriteEntry(source: str, message: str, type: EventLogEntryType, eventID: int, category: Int16, rawData: Array[Byte])
-            Writes an entry with the given message text, application-defined event identifier, and application-defined category to the event log (using the specified registered event 
-             source) and appends binary data to the message.
-        
+            Writes an entry with the given message text, application-defined event identifier, and application-defined category to the event log (using the specified registered event source) and appends binary data to the message.
         
             source: The source by which the application is registered on the specified computer.
             message: The string to write to the event log.
@@ -2699,11 +2674,12 @@ Set: SynchronizingObject(self: EventLog) = value
 
     EntryWritten = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EventLog()
 
 class EventLogEntry(Component):
     """ Encapsulates a single record in the event log. This class cannot be inherited. """
-    Instance = EventLogEntry
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
@@ -2731,8 +2707,7 @@ class EventLogEntry(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified 
-             service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -2742,10 +2717,7 @@ class EventLogEntry(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2890,19 +2862,18 @@ Get: UserName(self: EventLogEntry) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EventLogEntry()
 
 class EventLogEntryCollection:
     """ Defines size and enumerators for a collection of System.Diagnostics.EventLogEntry instances. """
-    Instance = EventLogEntryCollection
-    """hardcoded/returns an instance of the class"""
     def CopyTo(self, entries, index):
         """
         CopyTo(self: EventLogEntryCollection, entries: Array[EventLogEntry], index: int)
             Copies the elements of the System.Diagnostics.EventLogEntryCollection to an array of System.Diagnostics.EventLogEntry instances, starting at a particular array index.
         
-            entries: The one-dimensional array of System.Diagnostics.EventLogEntry instances that is the destination of the elements copied from the collection. The array must have zero-based 
-             indexing.
-        
+            entries: The one-dimensional array of System.Diagnostics.EventLogEntry instances that is the destination of the elements copied from the collection. The array must have zero-based indexing.
             index: The zero-based index in the array at which copying begins.
         """
         pass
@@ -2944,6 +2915,9 @@ Get: Count(self: EventLogEntryCollection) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EventLogEntryCollection()
 
 class EventLogEntryType:
     """
@@ -2951,8 +2925,6 @@ class EventLogEntryType:
     
     enum EventLogEntryType, values: Error (1), FailureAudit (16), Information (4), SuccessAudit (8), Warning (2)
     """
-    Instance = EventLogEntryType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2993,6 +2965,9 @@ class EventLogEntryType:
     value__ = None
     Warning = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EventLogEntryType()
 
 class EventLogPermission(ResourcePermissionBase):
     """
@@ -3003,8 +2978,6 @@ class EventLogPermission(ResourcePermissionBase):
     EventLogPermission(permissionAccess: EventLogPermissionAccess, machineName: str)
     EventLogPermission(permissionAccessEntries: Array[EventLogPermissionEntry])
     """
-    Instance = EventLogPermission
-    """hardcoded/returns an instance of the class"""
     def AddPermissionAccess(self, *args): #cannot find CLR method
         """
         AddPermissionAccess(self: ResourcePermissionBase, entry: ResourcePermissionBaseEntry)
@@ -3077,6 +3050,9 @@ Get: PermissionEntries(self: EventLogPermission) -> EventLogPermissionEntryColle
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EventLogPermission()
 
 class EventLogPermissionAccess:
     """
@@ -3084,8 +3060,6 @@ class EventLogPermissionAccess:
     
     enum (flags) EventLogPermissionAccess, values: Administer (48), Audit (10), Browse (2), Instrument (6), None (0), Write (16)
     """
-    Instance = EventLogPermissionAccess
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -3127,6 +3101,9 @@ class EventLogPermissionAccess:
     value__ = None
     Write = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EventLogPermissionAccess()
 
 class EventLogPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -3134,15 +3111,11 @@ class EventLogPermissionAttribute(CodeAccessSecurityAttribute):
     
     EventLogPermissionAttribute(action: SecurityAction)
     """
-    Instance = EventLogPermissionAttribute
-    """hardcoded/returns an instance of the class"""
     def CreatePermission(self):
         """
         CreatePermission(self: EventLogPermissionAttribute) -> IPermission
         
-            Creates the permission based on the System.Diagnostics.EventLogPermissionAttribute.MachineName property and the requested access levels that are set through the 
-             System.Diagnostics.EventLogPermissionAttribute.PermissionAccess property on the attribute.
-        
+            Creates the permission based on the System.Diagnostics.EventLogPermissionAttribute.MachineName property and the requested access levels that are set through the System.Diagnostics.EventLogPermissionAttribute.PermissionAccess property on the attribute.
             Returns: An System.Security.IPermission that represents the created permission.
         """
         pass
@@ -3176,6 +3149,9 @@ Set: PermissionAccess(self: EventLogPermissionAttribute) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EventLogPermissionAttribute()
 
 class EventLogPermissionEntry():
     """
@@ -3183,8 +3159,6 @@ class EventLogPermissionEntry():
     
     EventLogPermissionEntry(permissionAccess: EventLogPermissionAccess, machineName: str)
     """
-    Instance = EventLogPermissionEntry
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, permissionAccess, machineName):
         """ __new__(cls: type, permissionAccess: EventLogPermissionAccess, machineName: str) """
@@ -3205,11 +3179,12 @@ Get: PermissionAccess(self: EventLogPermissionEntry) -> EventLogPermissionAccess
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EventLogPermissionEntry()
 
 class EventLogPermissionEntryCollection(CollectionBase):
     """ Contains a strongly typed collection of System.Diagnostics.EventLogPermissionEntry objects. """
-    Instance = EventLogPermissionEntryCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: EventLogPermissionEntryCollection, value: EventLogPermissionEntry) -> int
@@ -3404,6 +3379,9 @@ class EventLogPermissionEntryCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EventLogPermissionEntryCollection()
 
 class EventLogTraceListener(TraceListener):
     """
@@ -3413,8 +3391,6 @@ class EventLogTraceListener(TraceListener):
     EventLogTraceListener(eventLog: EventLog)
     EventLogTraceListener(source: str)
     """
-    Instance = EventLogTraceListener
-    """hardcoded/returns an instance of the class"""
     def Close(self):
         """
         Close(self: EventLogTraceListener)
@@ -3441,10 +3417,7 @@ class EventLogTraceListener(TraceListener):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -3564,6 +3537,9 @@ Set: Name(self: EventLogTraceListener) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EventLogTraceListener()
 
 class EventSourceCreationData():
     """
@@ -3571,8 +3547,6 @@ class EventSourceCreationData():
     
     EventSourceCreationData(source: str, logName: str)
     """
-    Instance = EventSourceCreationData
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, source, logName):
         """ __new__(cls: type, source: str, logName: str) """
@@ -3635,11 +3609,12 @@ Set: Source(self: EventSourceCreationData) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EventSourceCreationData()
 
 class TraceFilter():
     """ Provides the base class for trace filter implementations. """
-    Instance = TraceFilter
-    """hardcoded/returns an instance of the class"""
     def ShouldTrace(self, cache, source, eventType, id, formatOrMessage, args, data1, data):
         """
         ShouldTrace(self: TraceFilter, cache: TraceEventCache, source: str, eventType: TraceEventType, id: int, formatOrMessage: str, args: Array[object], data1: object, data: Array[object]) -> bool
@@ -3658,6 +3633,9 @@ class TraceFilter():
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TraceFilter()
 
 class EventTypeFilter(TraceFilter):
     """
@@ -3665,8 +3643,6 @@ class EventTypeFilter(TraceFilter):
     
     EventTypeFilter(level: SourceLevels)
     """
-    Instance = EventTypeFilter
-    """hardcoded/returns an instance of the class"""
     def ShouldTrace(self, cache, source, eventType, id, formatOrMessage, args, data1, data):
         """
         ShouldTrace(self: EventTypeFilter, cache: TraceEventCache, source: str, eventType: TraceEventType, id: int, formatOrMessage: str, args: Array[object], data1: object, data: Array[object]) -> bool
@@ -3699,11 +3675,12 @@ Set: EventType(self: EventTypeFilter) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return EventTypeFilter()
 
 class FileVersionInfo():
     """ Provides version information for a physical file on disk. """
-    Instance = FileVersionInfo
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetVersionInfo(fileName):
         """
@@ -3712,8 +3689,7 @@ class FileVersionInfo():
             Returns a System.Diagnostics.FileVersionInfo representing the version information associated with the specified file.
         
             fileName: The fully qualified path and name of the file to retrieve the version information for.
-            Returns: A System.Diagnostics.FileVersionInfo containing information about the file. If the file did not contain version information, the System.Diagnostics.FileVersionInfo contains 
-             only the name of the file requested.
+            Returns: A System.Diagnostics.FileVersionInfo containing information about the file. If the file did not contain version information, the System.Diagnostics.FileVersionInfo contains only the name of the file requested.
         """
         pass
 
@@ -3722,12 +3698,9 @@ class FileVersionInfo():
         ToString(self: FileVersionInfo) -> str
         
             Returns a partial list of properties in the System.Diagnostics.FileVersionInfo and their values.
-            Returns: A list of the following properties in this class and their values: System.Diagnostics.FileVersionInfo.FileName, System.Diagnostics.FileVersionInfo.InternalName, 
-             System.Diagnostics.FileVersionInfo.OriginalFilename, System.Diagnostics.FileVersionInfo.FileVersion, System.Diagnostics.FileVersionInfo.FileDescription, 
-             System.Diagnostics.FileVersionInfo.ProductName, System.Diagnostics.FileVersionInfo.ProductVersion, System.Diagnostics.FileVersionInfo.IsDebug, 
-             System.Diagnostics.FileVersionInfo.IsPatched, System.Diagnostics.FileVersionInfo.IsPreRelease, System.Diagnostics.FileVersionInfo.IsPrivateBuild, 
-             System.Diagnostics.FileVersionInfo.IsSpecialBuild,System.Diagnostics.FileVersionInfo.Language.If the file did not contain version information, this list will contain only 
-             the name of the requested file. Boolean values will be false, and all other entries will be null.
+            Returns: A list of the following properties in this class and their values: System.Diagnostics.FileVersionInfo.FileName, System.Diagnostics.FileVersionInfo.InternalName, System.Diagnostics.FileVersionInfo.OriginalFilename, System.Diagnostics.FileVersionInfo.FileVersion, System.Diagnostics.FileVersionInfo.FileDescription, System.Diagnostics.FileVersionInfo.ProductName, System.Diagnostics.FileVersionInfo.ProductVersion, 
+             System.Diagnostics.FileVersionInfo.IsDebug, System.Diagnostics.FileVersionInfo.IsPatched, System.Diagnostics.FileVersionInfo.IsPreRelease, System.Diagnostics.FileVersionInfo.IsPrivateBuild, System.Diagnostics.FileVersionInfo.IsSpecialBuild,System.Diagnostics.FileVersionInfo.Language.If the file did not contain version information, this list will contain only the name of the requested file. Boolean values will be 
+             false, and all other entries will be null.
         """
         pass
 
@@ -3921,11 +3894,12 @@ Get: SpecialBuild(self: FileVersionInfo) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FileVersionInfo()
 
 class ICollectData:
     """ Prepares performance data for the performance DLL the system loads when working with performance counters. """
-    Instance = ICollectData
-    """hardcoded/returns an instance of the class"""
     def CloseData(self):
         """
         CloseData(self: ICollectData)
@@ -3950,6 +3924,9 @@ class ICollectData:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ICollectData()
 
 class InstanceData():
     """
@@ -3957,8 +3934,6 @@ class InstanceData():
     
     InstanceData(instanceName: str, sample: CounterSample)
     """
-    Instance = InstanceData
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, instanceName, sample):
         """ __new__(cls: type, instanceName: str, sample: CounterSample) """
@@ -3986,6 +3961,9 @@ Get: Sample(self: InstanceData) -> CounterSample
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return InstanceData()
 
 class InstanceDataCollection(DictionaryBase):
     """
@@ -3993,8 +3971,6 @@ class InstanceDataCollection(DictionaryBase):
     
     InstanceDataCollection(counterName: str)
     """
-    Instance = InstanceDataCollection
-    """hardcoded/returns an instance of the class"""
     def Contains(self, instanceName):
         """
         Contains(self: InstanceDataCollection, instanceName: str) -> bool
@@ -4163,6 +4139,9 @@ Get: Values(self: InstanceDataCollection) -> ICollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return InstanceDataCollection()
 
 class InstanceDataCollectionCollection(DictionaryBase):
     """
@@ -4170,15 +4149,11 @@ class InstanceDataCollectionCollection(DictionaryBase):
     
     InstanceDataCollectionCollection()
     """
-    Instance = InstanceDataCollectionCollection
-    """hardcoded/returns an instance of the class"""
     def Contains(self, counterName):
         """
         Contains(self: InstanceDataCollectionCollection, counterName: str) -> bool
         
-            Determines whether an instance data collection for the specified counter (identified by one of the indexed System.Diagnostics.InstanceDataCollection objects) exists in the 
-             collection.
-        
+            Determines whether an instance data collection for the specified counter (identified by one of the indexed System.Diagnostics.InstanceDataCollection objects) exists in the collection.
         
             counterName: The name of the performance counter.
             Returns: true if an instance data collection containing the specified counter exists in the collection; otherwise, false.
@@ -4330,6 +4305,9 @@ Get: Values(self: InstanceDataCollectionCollection) -> ICollection
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return InstanceDataCollectionCollection()
 
 class MonitoringDescriptionAttribute(DescriptionAttribute):
     """
@@ -4337,8 +4315,6 @@ class MonitoringDescriptionAttribute(DescriptionAttribute):
     
     MonitoringDescriptionAttribute(description: str)
     """
-    Instance = MonitoringDescriptionAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -4361,6 +4337,9 @@ Get: Description(self: MonitoringDescriptionAttribute) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MonitoringDescriptionAttribute()
 
 class OverflowAction:
     """
@@ -4368,8 +4347,6 @@ class OverflowAction:
     
     enum OverflowAction, values: DoNotOverwrite (-1), OverwriteAsNeeded (0), OverwriteOlder (1)
     """
-    Instance = OverflowAction
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -4408,6 +4385,9 @@ class OverflowAction:
     OverwriteOlder = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OverflowAction()
 
 class PerformanceCounter(Component):
     """
@@ -4420,8 +4400,6 @@ class PerformanceCounter(Component):
     PerformanceCounter(categoryName: str, counterName: str)
     PerformanceCounter(categoryName: str, counterName: str, readOnly: bool)
     """
-    Instance = PerformanceCounter
-    """hardcoded/returns an instance of the class"""
     def BeginInit(self):
         """
         BeginInit(self: PerformanceCounter)
@@ -4471,8 +4449,7 @@ class PerformanceCounter(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified 
-             service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -4502,10 +4479,7 @@ class PerformanceCounter(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -4654,6 +4628,9 @@ Set: ReadOnly(self: PerformanceCounter) = value
 
     DefaultFileMappingSize = 524288
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PerformanceCounter()
 
 class PerformanceCounterCategory():
     """
@@ -4663,20 +4640,14 @@ class PerformanceCounterCategory():
     PerformanceCounterCategory(categoryName: str)
     PerformanceCounterCategory(categoryName: str, machineName: str)
     """
-    Instance = PerformanceCounterCategory
-    """hardcoded/returns an instance of the class"""
     def CounterExists(self, counterName, categoryName=None, machineName=None):
         """
         CounterExists(self: PerformanceCounterCategory, counterName: str) -> bool
         
-            Determines whether the specified counter is registered to this category, which is indicated by the System.Diagnostics.PerformanceCounterCategory.CategoryName and 
-             System.Diagnostics.PerformanceCounterCategory.MachineName properties.
-        
+            Determines whether the specified counter is registered to this category, which is indicated by the System.Diagnostics.PerformanceCounterCategory.CategoryName and System.Diagnostics.PerformanceCounterCategory.MachineName properties.
         
             counterName: The name of the performance counter to look for.
-            Returns: true if the counter is registered to the category that is specified by the System.Diagnostics.PerformanceCounterCategory.CategoryName and 
-             System.Diagnostics.PerformanceCounterCategory.MachineName properties; otherwise, false.
-        
+            Returns: true if the counter is registered to the category that is specified by the System.Diagnostics.PerformanceCounterCategory.CategoryName and System.Diagnostics.PerformanceCounterCategory.MachineName properties; otherwise, false.
         CounterExists(counterName: str, categoryName: str) -> bool
         
             Determines whether the specified counter is registered to the specified category on the local computer.
@@ -4713,9 +4684,7 @@ class PerformanceCounterCategory():
         
             categoryName: The name of the custom performance counter category to create and register with the system.
             categoryHelp: A description of the custom category.
-            categoryType: One of the System.Diagnostics.PerformanceCounterCategoryType  values specifying whether the category is System.Diagnostics.PerformanceCounterCategoryType.MultiInstance, 
-             System.Diagnostics.PerformanceCounterCategoryType.SingleInstance, or System.Diagnostics.PerformanceCounterCategoryType.Unknown.
-        
+            categoryType: One of the System.Diagnostics.PerformanceCounterCategoryType  values specifying whether the category is System.Diagnostics.PerformanceCounterCategoryType.MultiInstance, System.Diagnostics.PerformanceCounterCategoryType.SingleInstance, or System.Diagnostics.PerformanceCounterCategoryType.Unknown.
             counterName: The name of a new counter to create as part of the new category.
             counterHelp: A description of the counter that is associated with the new custom category.
             Returns: A System.Diagnostics.PerformanceCounterCategory that is associated with the new system category, or performance object.
@@ -4795,8 +4764,7 @@ class PerformanceCounterCategory():
             Retrieves a list of the counters in a performance counter category that contains one or more instances.
         
             instanceName: The performance object instance for which to retrieve the list of associated counters.
-            Returns: An array of System.Diagnostics.PerformanceCounter objects indicating the counters that are associated with the specified object instance of this performance counter 
-             category.
+            Returns: An array of System.Diagnostics.PerformanceCounter objects indicating the counters that are associated with the specified object instance of this performance counter category.
         """
         pass
 
@@ -4805,8 +4773,7 @@ class PerformanceCounterCategory():
         GetInstanceNames(self: PerformanceCounterCategory) -> Array[str]
         
             Retrieves the list of performance object instances that are associated with this category.
-            Returns: An array of strings representing the performance object instance names that are associated with this category or, if the category contains only one performance object 
-             instance, a single-entry array that contains an empty string ("").
+            Returns: An array of strings representing the performance object instance names that are associated with this category or, if the category contains only one performance object instance, a single-entry array that contains an empty string ("").
         """
         pass
 
@@ -4814,9 +4781,7 @@ class PerformanceCounterCategory():
         """
         InstanceExists(self: PerformanceCounterCategory, instanceName: str) -> bool
         
-            Determines whether the specified performance object instance exists in the category that is identified by this System.Diagnostics.PerformanceCounterCategory object's 
-             System.Diagnostics.PerformanceCounterCategory.CategoryName property.
-        
+            Determines whether the specified performance object instance exists in the category that is identified by this System.Diagnostics.PerformanceCounterCategory object's System.Diagnostics.PerformanceCounterCategory.CategoryName property.
         
             instanceName: The performance object instance in this performance counter category to search for.
             Returns: true if the category contains the specified performance object instance; otherwise, false.
@@ -4887,6 +4852,9 @@ Set: MachineName(self: PerformanceCounterCategory) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PerformanceCounterCategory()
 
 class PerformanceCounterCategoryType:
     """
@@ -4894,8 +4862,6 @@ class PerformanceCounterCategoryType:
     
     enum PerformanceCounterCategoryType, values: MultiInstance (1), SingleInstance (0), Unknown (-1)
     """
-    Instance = PerformanceCounterCategoryType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -4934,6 +4900,9 @@ class PerformanceCounterCategoryType:
     Unknown = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PerformanceCounterCategoryType()
 
 class PerformanceCounterInstanceLifetime:
     """
@@ -4941,8 +4910,6 @@ class PerformanceCounterInstanceLifetime:
     
     enum PerformanceCounterInstanceLifetime, values: Global (0), Process (1)
     """
-    Instance = PerformanceCounterInstanceLifetime
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -4980,6 +4947,9 @@ class PerformanceCounterInstanceLifetime:
     Process = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PerformanceCounterInstanceLifetime()
 
 class PerformanceCounterManager:
     """
@@ -4987,8 +4957,6 @@ class PerformanceCounterManager:
     
     PerformanceCounterManager()
     """
-    Instance = PerformanceCounterManager
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -4997,6 +4965,9 @@ class PerformanceCounterManager:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PerformanceCounterManager()
 
 class PerformanceCounterPermission(ResourcePermissionBase):
     """
@@ -5007,8 +4978,6 @@ class PerformanceCounterPermission(ResourcePermissionBase):
     PerformanceCounterPermission(permissionAccess: PerformanceCounterPermissionAccess, machineName: str, categoryName: str)
     PerformanceCounterPermission(permissionAccessEntries: Array[PerformanceCounterPermissionEntry])
     """
-    Instance = PerformanceCounterPermission
-    """hardcoded/returns an instance of the class"""
     def AddPermissionAccess(self, *args): #cannot find CLR method
         """
         AddPermissionAccess(self: ResourcePermissionBase, entry: ResourcePermissionBaseEntry)
@@ -5081,6 +5050,9 @@ Get: PermissionEntries(self: PerformanceCounterPermission) -> PerformanceCounter
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PerformanceCounterPermission()
 
 class PerformanceCounterPermissionAccess:
     """
@@ -5088,8 +5060,6 @@ class PerformanceCounterPermissionAccess:
     
     enum (flags) PerformanceCounterPermissionAccess, values: Administer (7), Browse (1), Instrument (3), None (0), Read (1), Write (2)
     """
-    Instance = PerformanceCounterPermissionAccess
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -5131,6 +5101,9 @@ class PerformanceCounterPermissionAccess:
     value__ = None
     Write = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PerformanceCounterPermissionAccess()
 
 class PerformanceCounterPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -5138,15 +5111,11 @@ class PerformanceCounterPermissionAttribute(CodeAccessSecurityAttribute):
     
     PerformanceCounterPermissionAttribute(action: SecurityAction)
     """
-    Instance = PerformanceCounterPermissionAttribute
-    """hardcoded/returns an instance of the class"""
     def CreatePermission(self):
         """
         CreatePermission(self: PerformanceCounterPermissionAttribute) -> IPermission
         
-            Creates the permission based on the requested access levels that are set through the System.Diagnostics.PerformanceCounterPermissionAttribute.PermissionAccess property on 
-             the attribute.
-        
+            Creates the permission based on the requested access levels that are set through the System.Diagnostics.PerformanceCounterPermissionAttribute.PermissionAccess property on the attribute.
             Returns: An System.Security.IPermission that represents the created permission.
         """
         pass
@@ -5188,6 +5157,9 @@ Set: PermissionAccess(self: PerformanceCounterPermissionAttribute) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PerformanceCounterPermissionAttribute()
 
 class PerformanceCounterPermissionEntry():
     """
@@ -5195,8 +5167,6 @@ class PerformanceCounterPermissionEntry():
     
     PerformanceCounterPermissionEntry(permissionAccess: PerformanceCounterPermissionAccess, machineName: str, categoryName: str)
     """
-    Instance = PerformanceCounterPermissionEntry
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, permissionAccess, machineName, categoryName):
         """ __new__(cls: type, permissionAccess: PerformanceCounterPermissionAccess, machineName: str, categoryName: str) """
@@ -5224,11 +5194,12 @@ Get: PermissionAccess(self: PerformanceCounterPermissionEntry) -> PerformanceCou
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PerformanceCounterPermissionEntry()
 
 class PerformanceCounterPermissionEntryCollection(CollectionBase):
     """ Contains a strongly typed collection of System.Diagnostics.PerformanceCounterPermissionEntry objects. """
-    Instance = PerformanceCounterPermissionEntryCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, value):
         """
         Add(self: PerformanceCounterPermissionEntryCollection, value: PerformanceCounterPermissionEntry) -> int
@@ -5423,6 +5394,9 @@ class PerformanceCounterPermissionEntryCollection(CollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PerformanceCounterPermissionEntryCollection()
 
 class PerformanceCounterType:
     """
@@ -5430,8 +5404,6 @@ class PerformanceCounterType:
     
     enum PerformanceCounterType, values: AverageBase (1073939458), AverageCount64 (1073874176), AverageTimer32 (805438464), CounterDelta32 (4195328), CounterDelta64 (4195584), CounterMultiBase (1107494144), CounterMultiTimer (574686464), CounterMultiTimer100Ns (575735040), CounterMultiTimer100NsInverse (592512256), CounterMultiTimerInverse (591463680), CounterTimer (541132032), CounterTimerInverse (557909248), CountPerTimeInterval32 (4523008), CountPerTimeInterval64 (4523264), ElapsedTime (807666944), NumberOfItems32 (65536), NumberOfItems64 (65792), NumberOfItemsHEX32 (0), NumberOfItemsHEX64 (256), RateOfCountsPerSecond32 (272696320), RateOfCountsPerSecond64 (272696576), RawBase (1073939459), RawFraction (537003008), SampleBase (1073939457), SampleCounter (4260864), SampleFraction (549585920), Timer100Ns (542180608), Timer100NsInverse (558957824)
     """
-    Instance = PerformanceCounterType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -5495,6 +5467,9 @@ class PerformanceCounterType:
     Timer100NsInverse = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PerformanceCounterType()
 
 class Process(Component):
     """
@@ -5502,8 +5477,6 @@ class Process(Component):
     
     Process()
     """
-    Instance = Process
-    """hardcoded/returns an instance of the class"""
     def BeginErrorReadLine(self):
         """
         BeginErrorReadLine(self: Process)
@@ -5544,8 +5517,7 @@ class Process(Component):
         CloseMainWindow(self: Process) -> bool
         
             Closes a process that has a user interface by sending a close message to its main window.
-            Returns: true if the close message was successfully sent; false if the associated process does not have a main window or if the main window is disabled (for example if a modal 
-             dialog is being shown).
+            Returns: true if the close message was successfully sent; false if the associated process does not have a main window or if the main window is disabled (for example if a modal dialog is being shown).
         """
         pass
 
@@ -5562,8 +5534,7 @@ class Process(Component):
     def EnterDebugMode():
         """
         EnterDebugMode()
-            Puts a System.Diagnostics.Process component in state to interact with operating system processes that run in a special mode by enabling the native property SeDebugPrivilege 
-             on the current thread.
+            Puts a System.Diagnostics.Process component in state to interact with operating system processes that run in a special mode by enabling the native property SeDebugPrivilege on the current thread.
         """
         pass
 
@@ -5638,8 +5609,7 @@ class Process(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified 
-             service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -5664,10 +5634,7 @@ class Process(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -5694,63 +5661,46 @@ class Process(Component):
         """
         Start(self: Process) -> bool
         
-            Starts (or reuses) the process resource that is specified by the System.Diagnostics.Process.StartInfo property of this System.Diagnostics.Process component and associates 
-             it with the component.
-        
+            Starts (or reuses) the process resource that is specified by the System.Diagnostics.Process.StartInfo property of this System.Diagnostics.Process component and associates it with the component.
             Returns: true if a process resource is started; false if no new process resource is started (for example, if an existing process is reused).
         Start(fileName: str, userName: str, password: SecureString, domain: str) -> Process
         
-            Starts a process resource by specifying the name of an application, a user name, a password, and a domain and associates the resource with a new System.Diagnostics.Process 
-             component.
-        
+            Starts a process resource by specifying the name of an application, a user name, a password, and a domain and associates the resource with a new System.Diagnostics.Process component.
         
             fileName: The name of an application file to run in the process.
             userName: The user name to use when starting the process.
             password: A System.Security.SecureString that contains the password to use when starting the process.
             domain: The domain to use when starting the process.
-            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null if no process resource is started (for example, if an existing process is 
-             reused).
-        
+            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null if no process resource is started (for example, if an existing process is reused).
         Start(fileName: str, arguments: str, userName: str, password: SecureString, domain: str) -> Process
         
-            Starts a process resource by specifying the name of an application, a set of command-line arguments, a user name, a password, and a domain and associates the resource with 
-             a new System.Diagnostics.Process component.
-        
+            Starts a process resource by specifying the name of an application, a set of command-line arguments, a user name, a password, and a domain and associates the resource with a new System.Diagnostics.Process component.
         
             fileName: The name of an application file to run in the process.
             arguments: Command-line arguments to pass when starting the process.
             userName: The user name to use when starting the process.
             password: A System.Security.SecureString that contains the password to use when starting the process.
             domain: The domain to use when starting the process.
-            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null if no process resource is started (for example, if an existing process is 
-             reused).
-        
+            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null if no process resource is started (for example, if an existing process is reused).
         Start(fileName: str) -> Process
         
             Starts a process resource by specifying the name of a document or application file and associates the resource with a new System.Diagnostics.Process component.
         
             fileName: The name of a document or application file to run in the process.
-            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null, if no process resource is started (for example, if an existing process is 
-             reused).
-        
+            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null, if no process resource is started (for example, if an existing process is reused).
         Start(fileName: str, arguments: str) -> Process
         
-            Starts a process resource by specifying the name of an application and a set of command-line arguments, and associates the resource with a new System.Diagnostics.Process 
-             component.
-        
+            Starts a process resource by specifying the name of an application and a set of command-line arguments, and associates the resource with a new System.Diagnostics.Process component.
         
             fileName: The name of an application file to run in the process.
             arguments: Command-line arguments to pass when starting the process.
             Returns: A new System.Diagnostics.Process component that is associated with the process, or null, if no process resource is started (for example, if an existing process is reused).
         Start(startInfo: ProcessStartInfo) -> Process
         
-            Starts the process resource that is specified by the parameter containing process start information (for example, the file name of the process to start) and associates the 
-             resource with a new System.Diagnostics.Process component.
-        
+            Starts the process resource that is specified by the parameter containing process start information (for example, the file name of the process to start) and associates the resource with a new System.Diagnostics.Process component.
         
             startInfo: The System.Diagnostics.ProcessStartInfo that contains the information that is used to start the process, including the file name and any command-line arguments.
-            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null if no process resource is started (for example, if an existing process is 
-             reused).
+            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null if no process resource is started (for example, if an existing process is reused).
         """
         pass
 
@@ -5769,9 +5719,7 @@ class Process(Component):
         
             Instructs the System.Diagnostics.Process component to wait the specified number of milliseconds for the associated process to exit.
         
-            milliseconds: The amount of time, in milliseconds, to wait for the associated process to exit. The maximum is the largest possible value of a 32-bit integer, which represents infinity to 
-             the operating system.
-        
+            milliseconds: The amount of time, in milliseconds, to wait for the associated process to exit. The maximum is the largest possible value of a 32-bit integer, which represents infinity to the operating system.
             Returns: true if the associated process has exited; otherwise, false.
         WaitForExit(self: Process)
             Instructs the System.Diagnostics.Process component to wait indefinitely for the associated process to exit.
@@ -5782,19 +5730,13 @@ class Process(Component):
         """
         WaitForInputIdle(self: Process, milliseconds: int) -> bool
         
-            Causes the System.Diagnostics.Process component to wait the specified number of milliseconds for the associated process to enter an idle state. This overload applies only 
-             to processes with a user interface and, therefore, a message loop.
+            Causes the System.Diagnostics.Process component to wait the specified number of milliseconds for the associated process to enter an idle state. This overload applies only to processes with a user interface and, therefore, a message loop.
         
-        
-            milliseconds: A value of 1 to System.Int32.MaxValue that specifies the amount of time, in milliseconds, to wait for the associated process to become idle. A value of 0 specifies an 
-             immediate return, and a value of -1 specifies an infinite wait.
-        
+            milliseconds: A value of 1 to System.Int32.MaxValue that specifies the amount of time, in milliseconds, to wait for the associated process to become idle. A value of 0 specifies an immediate return, and a value of -1 specifies an infinite wait.
             Returns: true if the associated process has reached an idle state; otherwise, false.
         WaitForInputIdle(self: Process) -> bool
         
-            Causes the System.Diagnostics.Process component to wait indefinitely for the associated process to enter an idle state. This overload applies only to processes with a user 
-             interface and, therefore, a message loop.
-        
+            Causes the System.Diagnostics.Process component to wait indefinitely for the associated process to enter an idle state. This overload applies only to processes with a user interface and, therefore, a message loop.
             Returns: true if the associated process has reached an idle state.
         """
         pass
@@ -6190,11 +6132,12 @@ Get: WorkingSet64(self: Process) -> Int64
     Exited = None
     OutputDataReceived = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Process()
 
 class ProcessModule(Component):
     """ Represents a.dll or .exe file that is loaded into a particular process. """
-    Instance = ProcessModule
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
@@ -6211,8 +6154,7 @@ class ProcessModule(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified 
-             service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -6222,10 +6164,7 @@ class ProcessModule(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -6316,6 +6255,9 @@ Get: ModuleName(self: ProcessModule) -> str
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessModule()
 
 class ProcessModuleCollection(ReadOnlyCollectionBase):
     """
@@ -6323,8 +6265,6 @@ class ProcessModuleCollection(ReadOnlyCollectionBase):
     
     ProcessModuleCollection(processModules: Array[ProcessModule])
     """
-    Instance = ProcessModuleCollection
-    """hardcoded/returns an instance of the class"""
     def Contains(self, module):
         """
         Contains(self: ProcessModuleCollection, module: ProcessModule) -> bool
@@ -6383,6 +6323,9 @@ class ProcessModuleCollection(ReadOnlyCollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessModuleCollection()
 
 class ProcessPriorityClass:
     """
@@ -6390,8 +6333,6 @@ class ProcessPriorityClass:
     
     enum ProcessPriorityClass, values: AboveNormal (32768), BelowNormal (16384), High (128), Idle (64), Normal (32), RealTime (256)
     """
-    Instance = ProcessPriorityClass
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -6433,6 +6374,9 @@ class ProcessPriorityClass:
     RealTime = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessPriorityClass()
 
 class ProcessStartInfo():
     """
@@ -6442,8 +6386,6 @@ class ProcessStartInfo():
     ProcessStartInfo(fileName: str)
     ProcessStartInfo(fileName: str, arguments: str)
     """
-    Instance = ProcessStartInfo
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, fileName=None, arguments=None):
         """
@@ -6623,11 +6565,12 @@ Set: WorkingDirectory(self: ProcessStartInfo) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessStartInfo()
 
 class ProcessThread(Component):
     """ Represents an operating system process thread. """
-    Instance = ProcessThread
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
@@ -6644,8 +6587,7 @@ class ProcessThread(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified 
-             service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -6655,10 +6597,7 @@ class ProcessThread(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -6803,6 +6742,9 @@ Get: WaitReason(self: ProcessThread) -> ThreadWaitReason
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessThread()
 
 class ProcessThreadCollection(ReadOnlyCollectionBase):
     """
@@ -6810,8 +6752,6 @@ class ProcessThreadCollection(ReadOnlyCollectionBase):
     
     ProcessThreadCollection(processThreads: Array[ProcessThread])
     """
-    Instance = ProcessThreadCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, thread):
         """
         Add(self: ProcessThreadCollection, thread: ProcessThread) -> int
@@ -6904,6 +6844,9 @@ class ProcessThreadCollection(ReadOnlyCollectionBase):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessThreadCollection()
 
 class ProcessWindowStyle:
     """
@@ -6911,8 +6854,6 @@ class ProcessWindowStyle:
     
     enum ProcessWindowStyle, values: Hidden (1), Maximized (3), Minimized (2), Normal (0)
     """
-    Instance = ProcessWindowStyle
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -6952,6 +6893,9 @@ class ProcessWindowStyle:
     Normal = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessWindowStyle()
 
 class SourceFilter(TraceFilter):
     """
@@ -6959,8 +6903,6 @@ class SourceFilter(TraceFilter):
     
     SourceFilter(source: str)
     """
-    Instance = SourceFilter
-    """hardcoded/returns an instance of the class"""
     def ShouldTrace(self, cache, source, eventType, id, formatOrMessage, args, data1, data):
         """
         ShouldTrace(self: SourceFilter, cache: TraceEventCache, source: str, eventType: TraceEventType, id: int, formatOrMessage: str, args: Array[object], data1: object, data: Array[object]) -> bool
@@ -6993,6 +6935,9 @@ Set: Source(self: SourceFilter) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SourceFilter()
 
 class SourceLevels:
     """
@@ -7000,8 +6945,6 @@ class SourceLevels:
     
     enum (flags) SourceLevels, values: ActivityTracing (65280), All (-1), Critical (1), Error (3), Information (15), Off (0), Verbose (31), Warning (7)
     """
-    Instance = SourceLevels
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -7045,6 +6988,9 @@ class SourceLevels:
     Verbose = None
     Warning = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SourceLevels()
 
 class SourceSwitch(Switch):
     """
@@ -7053,8 +6999,6 @@ class SourceSwitch(Switch):
     SourceSwitch(name: str)
     SourceSwitch(displayName: str, defaultSwitchValue: str)
     """
-    Instance = SourceSwitch
-    """hardcoded/returns an instance of the class"""
     def ShouldTrace(self, eventType):
         """
         ShouldTrace(self: SourceSwitch, eventType: TraceEventType) -> bool
@@ -7093,6 +7037,9 @@ Set: Level(self: SourceSwitch) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SourceSwitch()
 
 class StackFrame():
     """
@@ -7105,8 +7052,6 @@ class StackFrame():
     StackFrame(fileName: str, lineNumber: int)
     StackFrame(fileName: str, lineNumber: int, colNumber: int)
     """
-    Instance = StackFrame
-    """hardcoded/returns an instance of the class"""
     def GetFileColumnNumber(self):
         """
         GetFileColumnNumber(self: StackFrame) -> int
@@ -7138,10 +7083,7 @@ class StackFrame():
         """
         GetILOffset(self: StackFrame) -> int
         
-            Gets the offset from the start of the Microsoft intermediate language (MSIL) code for the method that is executing. This offset might be an approximation depending on 
-             whether or not the just-in-time (JIT) compiler is generating debugging code. The generation of this debugging information is controlled by the 
-             System.Diagnostics.DebuggableAttribute.
-        
+            Gets the offset from the start of the Microsoft intermediate language (MSIL) code for the method that is executing. This offset might be an approximation depending on whether or not the just-in-time (JIT) compiler is generating debugging code. The generation of this debugging information is controlled by the System.Diagnostics.DebuggableAttribute.
             Returns: The offset from the start of the MSIL code for the method that is executing.
         """
         pass
@@ -7159,9 +7101,7 @@ class StackFrame():
         """
         GetNativeOffset(self: StackFrame) -> int
         
-            Gets the offset from the start of the native just-in-time (JIT)-compiled code for the method that is being executed. The generation of this debugging information is 
-             controlled by the System.Diagnostics.DebuggableAttribute class.
-        
+            Gets the offset from the start of the native just-in-time (JIT)-compiled code for the method that is being executed. The generation of this debugging information is controlled by the System.Diagnostics.DebuggableAttribute class.
             Returns: The offset from the start of the JIT-compiled code for the method that is being executed.
         """
         pass
@@ -7189,11 +7129,12 @@ class StackFrame():
 
     OFFSET_UNKNOWN = -1
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StackFrame()
 
 class StackFrameExtensions():
     # no doc
-    Instance = StackFrameExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetNativeImageBase(stackFrame):
         """ GetNativeImageBase(stackFrame: StackFrame) -> IntPtr """
@@ -7233,6 +7174,9 @@ class StackFrameExtensions():
         'HasSource',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StackFrameExtensions()
 
 class StackTrace():
     """
@@ -7249,8 +7193,6 @@ class StackTrace():
     StackTrace(frame: StackFrame)
     StackTrace(targetThread: Thread, needFileInfo: bool)
     """
-    Instance = StackTrace
-    """hardcoded/returns an instance of the class"""
     def GetFrame(self, index):
         """
         GetFrame(self: StackTrace, index: int) -> StackFrame
@@ -7306,6 +7248,9 @@ Get: FrameCount(self: StackTrace) -> int
 
     METHODS_TO_SKIP = 0
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StackTrace()
 
 class Stopwatch():
     """
@@ -7313,8 +7258,6 @@ class Stopwatch():
     
     Stopwatch()
     """
-    Instance = Stopwatch
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetTimestamp():
         """
@@ -7395,6 +7338,9 @@ Get: IsRunning(self: Stopwatch) -> bool
     Frequency = None
     IsHighResolution = True
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Stopwatch()
 
 class SwitchAttribute:
     """
@@ -7402,8 +7348,6 @@ class SwitchAttribute:
     
     SwitchAttribute(switchName: str, switchType: Type)
     """
-    Instance = SwitchAttribute
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetAll(assembly):
         """
@@ -7450,6 +7394,9 @@ Set: SwitchType(self: SwitchAttribute) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SwitchAttribute()
 
 class SwitchLevelAttribute:
     """
@@ -7457,8 +7404,6 @@ class SwitchLevelAttribute:
     
     SwitchLevelAttribute(switchLevelType: Type)
     """
-    Instance = SwitchLevelAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -7477,6 +7422,9 @@ Set: SwitchLevelType(self: SwitchLevelAttribute) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SwitchLevelAttribute()
 
 class ThreadPriorityLevel:
     """
@@ -7484,8 +7432,6 @@ class ThreadPriorityLevel:
     
     enum ThreadPriorityLevel, values: AboveNormal (1), BelowNormal (-1), Highest (2), Idle (-15), Lowest (-2), Normal (0), TimeCritical (15)
     """
-    Instance = ThreadPriorityLevel
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -7528,6 +7474,9 @@ class ThreadPriorityLevel:
     TimeCritical = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ThreadPriorityLevel()
 
 class ThreadState:
     """
@@ -7535,8 +7484,6 @@ class ThreadState:
     
     enum ThreadState, values: Initialized (0), Ready (1), Running (2), Standby (3), Terminated (4), Transition (6), Unknown (7), Wait (5)
     """
-    Instance = ThreadState
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -7580,6 +7527,9 @@ class ThreadState:
     value__ = None
     Wait = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ThreadState()
 
 class ThreadWaitReason:
     """
@@ -7587,8 +7537,6 @@ class ThreadWaitReason:
     
     enum ThreadWaitReason, values: EventPairHigh (7), EventPairLow (8), ExecutionDelay (4), Executive (0), FreePage (1), LpcReceive (9), LpcReply (10), PageIn (2), PageOut (12), Suspended (5), SystemAllocation (3), Unknown (13), UserRequest (6), VirtualMemory (11)
     """
-    Instance = ThreadWaitReason
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -7638,11 +7586,12 @@ class ThreadWaitReason:
     value__ = None
     VirtualMemory = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ThreadWaitReason()
 
 class Trace():
     """ Provides a set of methods and properties that help you trace the execution of your code. This class cannot be inherited. """
-    Instance = Trace
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Assert(condition, message=None, detailMessage=None):
         """
@@ -7808,9 +7757,7 @@ class Trace():
             message: A message to write.
             category: A category name used to organize the output.
         WriteIf(condition: bool, value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Trace.Listeners collection if a 
-             condition is true.
-        
+            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Trace.Listeners collection if a condition is true.
         
             condition: true to cause a message to be written; otherwise, false.
             value: An System.Object whose name is sent to the System.Diagnostics.Trace.Listeners.
@@ -7862,9 +7809,7 @@ class Trace():
             message: A message to write.
             category: A category name used to organize the output.
         WriteLineIf(condition: bool, value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Trace.Listeners collection if a 
-             condition is true.
-        
+            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Trace.Listeners collection if a condition is true.
         
             condition: true to cause a message to be written; otherwise, false.
             value: An System.Object whose name is sent to the System.Diagnostics.Trace.Listeners.
@@ -7879,6 +7824,9 @@ class Trace():
     Listeners = None
     UseGlobalLock = True
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Trace()
 
 class TraceEventCache():
     """
@@ -7886,8 +7834,6 @@ class TraceEventCache():
     
     TraceEventCache()
     """
-    Instance = TraceEventCache
-    """hardcoded/returns an instance of the class"""
     Callstack = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the call stack for the current thread.
 
@@ -7931,6 +7877,9 @@ Get: Timestamp(self: TraceEventCache) -> Int64
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TraceEventCache()
 
 class TraceEventType:
     """
@@ -7938,8 +7887,6 @@ class TraceEventType:
     
     enum TraceEventType, values: Critical (1), Error (2), Information (8), Resume (2048), Start (256), Stop (512), Suspend (1024), Transfer (4096), Verbose (16), Warning (4)
     """
-    Instance = TraceEventType
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -7985,6 +7932,9 @@ class TraceEventType:
     Verbose = None
     Warning = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TraceEventType()
 
 class TraceLevel:
     """
@@ -7992,8 +7942,6 @@ class TraceLevel:
     
     enum TraceLevel, values: Error (1), Info (3), Off (0), Verbose (4), Warning (2)
     """
-    Instance = TraceLevel
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -8034,11 +7982,12 @@ class TraceLevel:
     Verbose = None
     Warning = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TraceLevel()
 
 class TraceListenerCollection:
     """ Provides a thread-safe list of System.Diagnostics.TraceListener objects. """
-    Instance = TraceListenerCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, listener):
         """
         Add(self: TraceListenerCollection, listener: TraceListener) -> int
@@ -8190,6 +8139,9 @@ Get: Count(self: TraceListenerCollection) -> int
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TraceListenerCollection()
 
 class TraceOptions:
     """
@@ -8197,8 +8149,6 @@ class TraceOptions:
     
     enum (flags) TraceOptions, values: Callstack (32), DateTime (2), LogicalOperationStack (1), None (0), ProcessId (8), ThreadId (16), Timestamp (4)
     """
-    Instance = TraceOptions
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -8241,6 +8191,9 @@ class TraceOptions:
     Timestamp = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TraceOptions()
 
 class TraceSource():
     """
@@ -8249,8 +8202,6 @@ class TraceSource():
     TraceSource(name: str)
     TraceSource(name: str, defaultLevel: SourceLevels)
     """
-    Instance = TraceSource
-    """hardcoded/returns an instance of the class"""
     def Close(self):
         """
         Close(self: TraceSource)
@@ -8305,9 +8256,7 @@ class TraceSource():
             id: A numeric identifier for the event.
             message: The trace message to write.
         TraceEvent(self: TraceSource, eventType: TraceEventType, id: int, format: str, *args: Array[object])
-            Writes a trace event to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified event type, event identifier, and argument array 
-             and format.
-        
+            Writes a trace event to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified event type, event identifier, and argument array and format.
         
             eventType: One of the enumeration values that specifies the event type of the trace data.
             id: A numeric identifier for the event.
@@ -8323,9 +8272,7 @@ class TraceSource():
         
             message: The informative message to write.
         TraceInformation(self: TraceSource, format: str, *args: Array[object])
-            Writes an informational message to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified object array and formatting 
-             information.
-        
+            Writes an informational message to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified object array and formatting information.
         
             format: A composite format string (see Remarks) that contains text intermixed with zero or more format items, which correspond to objects in the args array.
             args: An array containing zero or more objects to format.
@@ -8335,9 +8282,7 @@ class TraceSource():
     def TraceTransfer(self, id, message, relatedActivityId):
         """
         TraceTransfer(self: TraceSource, id: int, message: str, relatedActivityId: Guid)
-            Writes a trace transfer message to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified numeric identifier, message, and 
-             related activity identifier.
-        
+            Writes a trace transfer message to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified numeric identifier, message, and related activity identifier.
         
             id: A numeric identifier for the event.
             message: The trace message to write.
@@ -8383,6 +8328,9 @@ Set: Switch(self: TraceSource) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TraceSource()
 
 class TraceSwitch(Switch):
     """
@@ -8391,8 +8339,6 @@ class TraceSwitch(Switch):
     TraceSwitch(displayName: str, description: str)
     TraceSwitch(displayName: str, description: str, defaultSwitchValue: str)
     """
-    Instance = TraceSwitch
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, displayName, description, defaultSwitchValue=None):
         """
@@ -8448,6 +8394,9 @@ Get: TraceWarning(self: TraceSwitch) -> bool
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TraceSwitch()
 
 class XmlWriterTraceListener(TextWriterTraceListener):
     """
@@ -8460,8 +8409,6 @@ class XmlWriterTraceListener(TextWriterTraceListener):
     XmlWriterTraceListener(filename: str)
     XmlWriterTraceListener(filename: str, name: str)
     """
-    Instance = XmlWriterTraceListener
-    """hardcoded/returns an instance of the class"""
     def Close(self):
         """
         Close(self: XmlWriterTraceListener)
@@ -8503,10 +8450,7 @@ class XmlWriterTraceListener(TextWriterTraceListener):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -8626,6 +8570,9 @@ class XmlWriterTraceListener(TextWriterTraceListener):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return XmlWriterTraceListener()
 
 # variables with complex values
 

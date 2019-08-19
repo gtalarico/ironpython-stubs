@@ -10,8 +10,6 @@
 
 class DefaultPackageCreator():
     """ DefaultPackageCreator(manager: BatchPackManager, customer: PackCustomer, batches: IEnumerable[Batch], packages: TransportPackages, autoPackItems: bool, addNewPackages: bool) """
-    Instance = DefaultPackageCreator
-    """hardcoded/returns an instance of the class"""
     def AddPackage(self, *args): #cannot find CLR method
         """ AddPackage(self: DefaultPackageCreator, generateSSCCNumber: bool) -> Guid """
         pass
@@ -54,11 +52,12 @@ class DefaultPackageCreator():
     _customer = None
     _transportPackages = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DefaultPackageCreator()
 
 class ColloReferencePacker(DefaultPackageCreator):
     """ ColloReferencePacker(manager: BatchPackManager, customer: PackCustomer, batches: IEnumerable[Batch], packages: TransportPackages) """
-    Instance = ColloReferencePacker
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, manager, customer, batches, packages):
         """ __new__(cls: type, manager: BatchPackManager, customer: PackCustomer, batches: IEnumerable[Batch], packages: TransportPackages) """
@@ -69,11 +68,12 @@ class ColloReferencePacker(DefaultPackageCreator):
     _customer = None
     _transportPackages = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ColloReferencePacker()
 
 class OrderPackageCreator(DefaultPackageCreator):
     """ OrderPackageCreator(manager: BatchPackManager, customer: PackCustomer, batches: IEnumerable[Batch], packages: TransportPackages) """
-    Instance = OrderPackageCreator
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, manager, customer, batches, packages):
         """ __new__(cls: type, manager: BatchPackManager, customer: PackCustomer, batches: IEnumerable[Batch], packages: TransportPackages) """
@@ -84,11 +84,12 @@ class OrderPackageCreator(DefaultPackageCreator):
     _customer = None
     _transportPackages = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OrderPackageCreator()
 
 class PackageCreatorFactory():
     # no doc
-    Instance = PackageCreatorFactory
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def Create(packages, batches, customer):
         """ Create(packages: TransportPackages, batches: IEnumerable[Batch], customer: PackCustomer) """
@@ -98,11 +99,12 @@ class PackageCreatorFactory():
         'Create',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PackageCreatorFactory()
 
 class TransportPackagesHelper():
     """ TransportPackagesHelper() """
-    Instance = TransportPackagesHelper
-    """hardcoded/returns an instance of the class"""
     def AddTransportPackage(self, args):
         """ AddTransportPackage(self: TransportPackagesHelper, args: AddTransportPackageArgs) """
         pass
@@ -122,4 +124,7 @@ class TransportPackagesHelper():
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportPackagesHelper()
 

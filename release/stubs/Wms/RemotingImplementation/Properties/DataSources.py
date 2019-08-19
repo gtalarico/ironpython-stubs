@@ -11,8 +11,6 @@ from Wms.RemotingImplementation import *
 
 class DataSetPickListPtP(DataSet):
     """ DataSetPickListPtP() """
-    Instance = DataSetPickListPtP
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: DataSetPickListPtP) -> DataSet """
         pass
@@ -23,13 +21,7 @@ class DataSetPickListPtP(DataSet):
         
             Determines the System.Data.DataSet.SchemaSerializationMode for a System.Data.DataSet.
         
-                     System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext) is invoked with during deserialization in remoting 
-             scenarios.
-        
-                     System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext) is invoked with during deserialization in remoting 
-             scenarios.
-        
-            Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema information has been omitted from the payload.
+                            Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema information has been omitted from the payload.
         DetermineSchemaSerializationMode(self: DataSet, reader: XmlReader) -> SchemaSerializationMode
         
             Determines the System.Data.DataSet.SchemaSerializationMode for a System.Data.DataSet.
@@ -198,4 +190,7 @@ Set: SchemaSerializationMode(self: DataSetPickListPtP) = value
     PickToPlaceRowChangeEvent = None
     PickToPlaceRowChangeEventHandler = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DataSetPickListPtP()
 

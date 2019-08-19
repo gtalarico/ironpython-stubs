@@ -15,8 +15,6 @@ class Count(DbObject):
     
     Count()
     """
-    Instance = Count
-    """hardcoded/returns an instance of the class"""
     def Clone(self):
         """ Clone(self: Count) -> object """
         pass
@@ -33,8 +31,7 @@ class Count(DbObject):
         
             checkRegistration: True if the batchnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a batch item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout the 
-             whole process).
+                    complete (means the numers are registered throughout the whole process).
                     False if the check is ignored and the item is not a batch item, or when the itemids are registered
                     during delivery only.
         """
@@ -52,8 +49,7 @@ class Count(DbObject):
         
             checkRegistration: True if the serialnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a serial item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout the 
-             whole process).
+                    complete (means the numers are registered throughout the whole process).
                     False if the check is ignored and the item is not a serial item, or when the itemids are registered
                     during delivery only.
         """
@@ -276,6 +272,9 @@ Set: WarehouseLocationCode(self: Count) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Count()
 
 class CountFilter():
     """
@@ -285,8 +284,6 @@ class CountFilter():
     CountFilter(warehouseCode: str, type: CountTypeEnum, countGroup: int)
     CountFilter(warehouseCode: str, type: CountTypeEnum, countGroup: int, searchText: str)
     """
-    Instance = CountFilter
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
@@ -303,11 +300,12 @@ class CountFilter():
     Type = None
     WarehouseCode = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CountFilter()
 
 class CountGroup(DbObject):
     """ CountGroup() """
-    Instance = CountGroup
-    """hardcoded/returns an instance of the class"""
     def IsLifeExpired(self, lifeTimeConfig):
         """ IsLifeExpired(self: CountGroup, lifeTimeConfig: Dictionary[CacheLifeTimes, int]) -> bool """
         pass
@@ -439,11 +437,12 @@ Set: UseScript(self: CountGroup) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CountGroup()
 
 class CountGroups(FindableList):
     """ CountGroups() """
-    Instance = CountGroups
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromIEnumerable(list):
         """ FromIEnumerable(list: IEnumerable[CountGroup]) -> CountGroups """
@@ -471,11 +470,12 @@ class CountGroups(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Id'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CountGroups()
 
 class CountGroupTypeEnum:
     """ enum CountGroupTypeEnum, values: ADHOC (1), COLLIREGISTRATION (0), PICKDIFF (2) """
-    Instance = CountGroupTypeEnum
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -514,6 +514,9 @@ class CountGroupTypeEnum:
     PICKDIFF = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CountGroupTypeEnum()
 
 class Counts(FindableList):
     """
@@ -521,8 +524,6 @@ class Counts(FindableList):
     
     Counts()
     """
-    Instance = Counts
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -555,6 +556,9 @@ Set: TotalRowsMatched(self: Counts) = value
     DisplayMember = 'ItemCode'
     ValueMember = 'Id'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Counts()
 
 class CountTypeEnum:
     """
@@ -562,8 +566,6 @@ class CountTypeEnum:
     
     enum (flags) CountTypeEnum, values: All (7), Approved (4), Count (1), SuggestCount (2)
     """
-    Instance = CountTypeEnum
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -603,6 +605,9 @@ class CountTypeEnum:
     SuggestCount = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CountTypeEnum()
 
 class ProcessCountResult():
     """
@@ -610,8 +615,6 @@ class ProcessCountResult():
     
     ProcessCountResult(success: bool)
     """
-    Instance = ProcessCountResult
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, success):
         """ __new__(cls: type, success: bool) """
@@ -621,4 +624,7 @@ class ProcessCountResult():
     ErpNewStock = None
     Success = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ProcessCountResult()
 

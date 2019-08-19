@@ -10,8 +10,6 @@
 
 class MessageExtensions():
     # no doc
-    Instance = MessageExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def AppendLogLine(message, line):
         """ AppendLogLine(message: IMessage, line: str) """
@@ -87,4 +85,7 @@ class MessageExtensions():
         'SetBodyAsXmlDocument',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MessageExtensions()
 

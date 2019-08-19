@@ -11,8 +11,6 @@ from System import *
 
 class GetValidValues(MulticastDelegate):
     """ GetValidValues(object: object, method: IntPtr) """
-    Instance = GetValidValues
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, callback, object):
         """ BeginInvoke(self: GetValidValues, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -34,9 +32,7 @@ class GetValidValues(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -65,8 +61,7 @@ class GetValidValues(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -82,11 +77,12 @@ class GetValidValues(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GetValidValues()
 
 class ISystemSettingsAttribute:
     """ Defines base interface for creating attributes to enricht system settting properties. """
-    Instance = ISystemSettingsAttribute
-    """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: ISystemSettingsAttribute, row: SystemSettingsTableRow) """
         pass
@@ -95,6 +91,9 @@ class ISystemSettingsAttribute:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ISystemSettingsAttribute()
 
 class Group:
     """
@@ -102,8 +101,6 @@ class Group:
     
     Group(sortKey: str, name: str)
     """
-    Instance = Group
-    """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: Group, row: SystemSettingsTableRow) """
         pass
@@ -134,6 +131,9 @@ Set: SortKey(self: Group) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Group()
 
 class Label:
     """
@@ -142,8 +142,6 @@ class Label:
     
     Label(value: str)
     """
-    Instance = Label
-    """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: Label, row: SystemSettingsTableRow) """
         pass
@@ -166,6 +164,9 @@ Set: Value(self: Label) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Label()
 
 class MachineSetting:
     """
@@ -173,8 +174,6 @@ class MachineSetting:
     
     MachineSetting()
     """
-    Instance = MachineSetting
-    """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: MachineSetting, row: SystemSettingsTableRow) """
         pass
@@ -183,6 +182,9 @@ class MachineSetting:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MachineSetting()
 
 class MaxLength:
     """
@@ -190,8 +192,6 @@ class MaxLength:
     
     MaxLength(value: int)
     """
-    Instance = MaxLength
-    """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: MaxLength, row: SystemSettingsTableRow) """
         pass
@@ -214,6 +214,9 @@ Set: Value(self: MaxLength) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MaxLength()
 
 class Renderer:
     """
@@ -221,8 +224,6 @@ class Renderer:
     
     Renderer(value: RenderingTypes)
     """
-    Instance = Renderer
-    """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: Renderer, row: SystemSettingsTableRow) """
         pass
@@ -245,6 +246,9 @@ Set: Value(self: Renderer) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Renderer()
 
 class RenderingTypes:
     """
@@ -252,8 +256,6 @@ class RenderingTypes:
     
     enum RenderingTypes, values: Auto (0), PlainTextArea (2), RichTextArea (1), WarehouseCombo (3)
     """
-    Instance = RenderingTypes
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -293,11 +295,12 @@ class RenderingTypes:
     value__ = None
     WarehouseCombo = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RenderingTypes()
 
 class SettingAttributesHelper():
     """ SettingAttributesHelper() """
-    Instance = SettingAttributesHelper
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def ConvertToTable(settings, topLevelOnly):
         """ ConvertToTable(settings: SystemSettings, topLevelOnly: bool) -> SystemSettingsTable """
@@ -308,6 +311,9 @@ class SettingAttributesHelper():
         """ GetMemberValue(settingsObject: object, member: MemberInfo) -> object """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingAttributesHelper()
 
 class UserSetting:
     """
@@ -315,8 +321,6 @@ class UserSetting:
     
     UserSetting()
     """
-    Instance = UserSetting
-    """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: UserSetting, row: SystemSettingsTableRow) """
         pass
@@ -325,6 +329,9 @@ class UserSetting:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UserSetting()
 
 class ValidValuePattern:
     """
@@ -333,8 +340,6 @@ class ValidValuePattern:
     ValidValuePattern(regex: str)
     ValidValuePattern(regex: str, errorMessage: str)
     """
-    Instance = ValidValuePattern
-    """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: ValidValuePattern, row: SystemSettingsTableRow) """
         pass
@@ -351,6 +356,9 @@ class ValidValuePattern:
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ValidValuePattern()
 
 class ValidValues:
     """
@@ -358,8 +366,6 @@ class ValidValues:
     
     ValidValues(delegateName: str)
     """
-    Instance = ValidValues
-    """hardcoded/returns an instance of the class"""
     def UpdateInfo(self, row):
         """ UpdateInfo(self: ValidValues, row: SystemSettingsTableRow) """
         pass
@@ -382,4 +388,7 @@ Set: DelegateName(self: ValidValues) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ValidValues()
 

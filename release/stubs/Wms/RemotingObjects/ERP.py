@@ -10,8 +10,6 @@
 
 class ErpNames:
     """ enum ErpNames, values: Exact (0), Profit (1), Unknown (2) """
-    Instance = ErpNames
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -50,4 +48,7 @@ class ErpNames:
     Unknown = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ErpNames()
 

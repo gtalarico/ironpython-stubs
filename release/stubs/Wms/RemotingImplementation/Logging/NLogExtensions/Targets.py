@@ -10,8 +10,6 @@
 
 class ExceptionExtensions():
     # no doc
-    Instance = ExceptionExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def IsLoggedToInternalLogger(exception):
         """ IsLoggedToInternalLogger(exception: Exception) -> bool """
@@ -33,11 +31,12 @@ class ExceptionExtensions():
         'MustBeRethrownImmediately',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ExceptionExtensions()
 
 class LogLevelExtensions():
     # no doc
-    Instance = LogLevelExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def ToSeverity(level):
         """ ToSeverity(level: LogLevel) -> LogSeverity """
@@ -47,14 +46,15 @@ class LogLevelExtensions():
         'ToSeverity',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LogLevelExtensions()
 
 class StackdriverLabel():
     """
     StackdriverLabel()
     StackdriverLabel(parameterName: str, parameterLayout: Layout)
     """
-    Instance = StackdriverLabel
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, parameterName=None, parameterLayout=None):
         """
@@ -76,11 +76,12 @@ Set: Name(self: StackdriverLabel) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StackdriverLabel()
 
 class StackDriverLoggingTarget(TargetWithLayout):
     """ StackDriverLoggingTarget() """
-    Instance = StackDriverLoggingTarget
-    """hardcoded/returns an instance of the class"""
     def CloseTarget(self, *args): #cannot find CLR method
         """ CloseTarget(self: StackDriverLoggingTarget) """
         pass
@@ -162,4 +163,7 @@ Set: ProjectId(self: StackDriverLoggingTarget) = value
     SyncRoot = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StackDriverLoggingTarget()
 

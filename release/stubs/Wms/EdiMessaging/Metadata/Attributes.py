@@ -13,8 +13,6 @@ class DescriptorAttribute:
     DescriptorAttribute(id: str, friendlyName: str)
     DescriptorAttribute(id: str, friendlyName: str, executeIsolated: bool)
     """
-    Instance = DescriptorAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -43,14 +41,15 @@ class DescriptorAttribute:
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DescriptorAttribute()
 
 class HandlerDescriptorAttribute(DescriptorAttribute):
     """
     HandlerDescriptorAttribute(id: str, friendlyName: str)
     HandlerDescriptorAttribute(id: str, friendlyName: str, executeIsolated: bool)
     """
-    Instance = HandlerDescriptorAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -63,14 +62,15 @@ class HandlerDescriptorAttribute(DescriptorAttribute):
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HandlerDescriptorAttribute()
 
 class PublisherDescriptorAttribute(DescriptorAttribute):
     """
     PublisherDescriptorAttribute(id: str, friendlyName: str)
     PublisherDescriptorAttribute(id: str, friendlyName: str, executeIsolated: bool)
     """
-    Instance = PublisherDescriptorAttribute
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -83,4 +83,7 @@ class PublisherDescriptorAttribute(DescriptorAttribute):
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PublisherDescriptorAttribute()
 

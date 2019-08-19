@@ -15,8 +15,6 @@ class ContentDisposition():
     ContentDisposition()
     ContentDisposition(disposition: str)
     """
-    Instance = ContentDisposition
-    """hardcoded/returns an instance of the class"""
     def Equals(self, rparam):
         """
         Equals(self: ContentDisposition, rparam: object) -> bool
@@ -125,6 +123,9 @@ Set: Size(self: ContentDisposition) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ContentDisposition()
 
 class ContentType():
     """
@@ -133,8 +134,6 @@ class ContentType():
     ContentType()
     ContentType(contentType: str)
     """
-    Instance = ContentType
-    """hardcoded/returns an instance of the class"""
     def Equals(self, rparam):
         """
         Equals(self: ContentType, rparam: object) -> bool
@@ -219,11 +218,12 @@ Get: Parameters(self: ContentType) -> StringDictionary
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ContentType()
 
 class DispositionTypeNames():
     """ Supplies the strings used to specify the disposition type for an e-mail attachment. """
-    Instance = DispositionTypeNames
-    """hardcoded/returns an instance of the class"""
     Attachment = 'attachment'
     Inline = 'inline'
     __all__ = [
@@ -231,11 +231,12 @@ class DispositionTypeNames():
         'Inline',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DispositionTypeNames()
 
 class MediaTypeNames():
     """ Specifies the media type information for an e-mail message attachment. """
-    Instance = MediaTypeNames
-    """hardcoded/returns an instance of the class"""
     Application = None
     Image = None
     Text = None
@@ -245,6 +246,9 @@ class MediaTypeNames():
         'Text',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return MediaTypeNames()
 
 class TransferEncoding:
     """
@@ -252,8 +256,6 @@ class TransferEncoding:
     
     enum TransferEncoding, values: Base64 (1), EightBit (3), QuotedPrintable (0), SevenBit (2), Unknown (-1)
     """
-    Instance = TransferEncoding
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -294,4 +296,7 @@ class TransferEncoding:
     Unknown = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransferEncoding()
 

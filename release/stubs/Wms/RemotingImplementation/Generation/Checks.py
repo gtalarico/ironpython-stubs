@@ -10,8 +10,6 @@
 
 class BatchNumbercheck:
     """ BatchNumbercheck() """
-    Instance = BatchNumbercheck
-    """hardcoded/returns an instance of the class"""
     def IsNumberUsed(self, args):
         """ IsNumberUsed(self: BatchNumbercheck, args: UsedNumberArgs) -> bool """
         pass
@@ -24,11 +22,12 @@ class BatchNumbercheck:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BatchNumbercheck()
 
 class DatabaseNumberCheck:
     """ DatabaseNumberCheck() """
-    Instance = DatabaseNumberCheck
-    """hardcoded/returns an instance of the class"""
     def IsNumberUsed(self, args):
         """ IsNumberUsed(self: DatabaseNumberCheck, args: UsedNumberArgs) -> bool """
         pass
@@ -41,11 +40,12 @@ class DatabaseNumberCheck:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DatabaseNumberCheck()
 
 class INumberCheck:
     # no doc
-    Instance = INumberCheck
-    """hardcoded/returns an instance of the class"""
     def IsNumberUsed(self, args):
         """ IsNumberUsed(self: INumberCheck, args: UsedNumberArgs) -> bool """
         pass
@@ -54,20 +54,22 @@ class INumberCheck:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return INumberCheck()
 
 class NumberCheckFactory():
     """ NumberCheckFactory() """
-    Instance = NumberCheckFactory
-    """hardcoded/returns an instance of the class"""
     def IsNumberUsed(self, args):
         """ IsNumberUsed(self: NumberCheckFactory, args: UsedNumberArgs) -> bool """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return NumberCheckFactory()
 
 class TransportPackageNumberCheck:
     """ TransportPackageNumberCheck() """
-    Instance = TransportPackageNumberCheck
-    """hardcoded/returns an instance of the class"""
     def IsNumberUsed(self, args):
         """ IsNumberUsed(self: TransportPackageNumberCheck, args: UsedNumberArgs) -> bool """
         pass
@@ -80,4 +82,7 @@ class TransportPackageNumberCheck:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TransportPackageNumberCheck()
 

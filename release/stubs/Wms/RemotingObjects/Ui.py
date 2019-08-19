@@ -14,8 +14,6 @@ class UiForm():
     
     UiForm()
     """
-    Instance = UiForm
-    """hardcoded/returns an instance of the class"""
     Fields = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Fields that are part of the form
 
@@ -25,11 +23,12 @@ Set: Fields(self: UiForm) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UiForm()
 
 class UiFormField():
     """ UiFormField() """
-    Instance = UiFormField
-    """hardcoded/returns an instance of the class"""
     AllowBlank = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Wether user is allowed to leave the field blank
 
@@ -71,4 +70,7 @@ Set: Type(self: UiFormField) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return UiFormField()
 

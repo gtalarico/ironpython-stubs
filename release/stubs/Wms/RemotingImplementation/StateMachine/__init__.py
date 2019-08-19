@@ -10,8 +10,6 @@
 
 class State():
     # no doc
-    Instance = State
-    """hardcoded/returns an instance of the class"""
     def Next(self):
         """ Next(self: State) -> State """
         pass
@@ -20,14 +18,15 @@ class State():
         """ Run(self: State, *args: Array[object]) -> Array[object] """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return State()
 
 class StateMachine():
     """
     StateMachine(initialState: State, *args: Array[object])
     StateMachine(uniqueId: str, initialState: State, mapper: Func[str, State], *args: Array[object])
     """
-    Instance = StateMachine
-    """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: StateMachine)Run[TResult](self: StateMachine) -> TResult """
         pass
@@ -40,6 +39,9 @@ class StateMachine():
         """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StateMachine()
 
 # variables with complex values
 

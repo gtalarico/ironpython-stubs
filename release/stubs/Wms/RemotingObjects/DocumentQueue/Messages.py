@@ -10,8 +10,6 @@
 
 class ChangePrintJobStatusMessage():
     """ ChangePrintJobStatusMessage() """
-    Instance = ChangePrintJobStatusMessage
-    """hardcoded/returns an instance of the class"""
     ExternalJobId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Job id giving by External service.
 
@@ -53,6 +51,9 @@ Set: TimeStamp(self: ChangePrintJobStatusMessage) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ChangePrintJobStatusMessage()
 
 class GetStatusOfJobsMessage():
     """
@@ -60,8 +61,6 @@ class GetStatusOfJobsMessage():
     
     GetStatusOfJobsMessage()
     """
-    Instance = GetStatusOfJobsMessage
-    """hardcoded/returns an instance of the class"""
     Jobs = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Jobs we want a report of, if possible.
 
@@ -73,6 +72,9 @@ Set: Jobs(self: GetStatusOfJobsMessage) = value
 
     Item = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GetStatusOfJobsMessage()
 
 class PrintJobDispatchedMessage():
     """
@@ -80,8 +82,6 @@ class PrintJobDispatchedMessage():
     
     PrintJobDispatchedMessage()
     """
-    Instance = PrintJobDispatchedMessage
-    """hardcoded/returns an instance of the class"""
     ExternalJobId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Job id the job got by the external platform when dispatching job.
 
@@ -123,6 +123,9 @@ Set: TimeStamp(self: PrintJobDispatchedMessage) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PrintJobDispatchedMessage()
 
 class StartPrintJobMessage():
     """
@@ -130,8 +133,6 @@ class StartPrintJobMessage():
     
     StartPrintJobMessage()
     """
-    Instance = StartPrintJobMessage
-    """hardcoded/returns an instance of the class"""
     BlobContainerName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Blob container name where the document contents are stored under.
 
@@ -197,4 +198,7 @@ Set: TimeStamp(self: StartPrintJobMessage) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StartPrintJobMessage()
 

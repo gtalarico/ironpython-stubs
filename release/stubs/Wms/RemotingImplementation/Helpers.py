@@ -10,8 +10,6 @@
 
 class DataFlowObjectHelper():
     # no doc
-    Instance = DataFlowObjectHelper
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def AreAllQuestionAnsweredPositive(dfObject):
         """ AreAllQuestionAnsweredPositive[T](dfObject: DataFlowObject[T]) -> DataFlowObject[T] """
@@ -39,11 +37,12 @@ class DataFlowObjectHelper():
         'LogDataFlowResult',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DataFlowObjectHelper()
 
 class DecimalExtensions():
     # no doc
-    Instance = DecimalExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def FormatDecimal(value):
         """ FormatDecimal(value: Decimal) -> str """
@@ -53,11 +52,12 @@ class DecimalExtensions():
         'FormatDecimal',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DecimalExtensions()
 
 class GlobalizationHelper():
     # no doc
-    Instance = GlobalizationHelper
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def ClearResourceCache():
         """ ClearResourceCache() """
@@ -85,11 +85,12 @@ class GlobalizationHelper():
         'SetGlobalizationSettings',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GlobalizationHelper()
 
 class LabelHelper():
     # no doc
-    Instance = LabelHelper
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def GetPlaceholders(label, systemFieldsRegEx):
         """ GetPlaceholders(label: PrintLabel, systemFieldsRegEx: str) -> List[str] """
@@ -108,11 +109,12 @@ class LabelHelper():
         'RenderLabel',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LabelHelper()
 
 class OrderMatchesCustomerValidator():
     """ OrderMatchesCustomerValidator() """
-    Instance = OrderMatchesCustomerValidator
-    """hardcoded/returns an instance of the class"""
     def OrderMatchesCustomer(self, order, customer):
         """ OrderMatchesCustomer(self: OrderMatchesCustomerValidator, order: OutboundOrder, customer: Customer) -> bool """
         pass
@@ -132,11 +134,12 @@ Set: OrderMatchesCustomerDelegate(self: OrderMatchesCustomerValidator) = value
 
     OnOrderMatchesCustomerDelegate = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return OrderMatchesCustomerValidator()
 
 class SettingsHelper:
     """ SettingsHelper(settingsObject: object) """
-    Instance = SettingsHelper
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """ Dispose(self: SettingsHelper) """
         pass
@@ -178,11 +181,12 @@ class SettingsHelper:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SettingsHelper()
 
 class StringHelpers():
     # no doc
-    Instance = StringHelpers
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateMessageFromCollection(message, collection):
         """ CreateMessageFromCollection(message: str, collection: IEnumerable[str]) -> str """
@@ -213,4 +217,7 @@ class StringHelpers():
         'RemoveNonAsciiCharacters',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StringHelpers()
 

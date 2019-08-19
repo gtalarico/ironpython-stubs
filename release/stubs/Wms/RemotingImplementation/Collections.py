@@ -10,8 +10,6 @@
 
 class BlockingQueue:
     """ BlockingQueue[T]() """
-    Instance = BlockingQueue
-    """hardcoded/returns an instance of the class"""
     def Dequeue(self):
         """ Dequeue(self: BlockingQueue[T]) -> T """
         pass
@@ -36,4 +34,7 @@ class BlockingQueue:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BlockingQueue()
 

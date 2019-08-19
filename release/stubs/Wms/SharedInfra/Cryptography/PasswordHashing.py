@@ -10,8 +10,6 @@
 
 class HashBytes():
     """ HashBytes() """
-    Instance = HashBytes
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def CreateFromString(key, salt):
         """ CreateFromString(key: str, salt: str) -> HashBytes """
@@ -20,11 +18,12 @@ class HashBytes():
     Key = None
     Salt = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HashBytes()
 
 class HashBytesExtensions():
     # no doc
-    Instance = HashBytesExtensions
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def FromString(hashBytes, key, salt):
         """ FromString(hashBytes: HashBytes, key: str, salt: str) -> HashBytes """
@@ -46,11 +45,12 @@ class HashBytesExtensions():
         'SaltAsString',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return HashBytesExtensions()
 
 class IPasswordHasher:
     # no doc
-    Instance = IPasswordHasher
-    """hardcoded/returns an instance of the class"""
     def Hash(self, password, saltLength=None, keyLength=None, iterations=None):
         """
         Hash(self: IPasswordHasher, password: str, saltLength: int, keyLength: int, iterations: int) -> HashBytes
@@ -69,11 +69,12 @@ class IPasswordHasher:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IPasswordHasher()
 
 class PBKDF2PasswordHasher:
     """ PBKDF2PasswordHasher() """
-    Instance = PBKDF2PasswordHasher
-    """hardcoded/returns an instance of the class"""
     def Hash(self, password, saltLength=None, keyLength=None, iterations=None):
         """
         Hash(self: PBKDF2PasswordHasher, password: str, saltLength: int, keyLength: int, iterations: int) -> HashBytes
@@ -96,4 +97,7 @@ class PBKDF2PasswordHasher:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PBKDF2PasswordHasher()
 

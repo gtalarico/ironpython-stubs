@@ -18,8 +18,6 @@ class Claim():
     Claim(type: str, value: str, valueType: str, issuer: str, originalIssuer: str)
     Claim(type: str, value: str, valueType: str, issuer: str, originalIssuer: str, subject: ClaimsIdentity)
     """
-    Instance = Claim
-    """hardcoded/returns an instance of the class"""
     def Clone(self, identity=None):
         """
         Clone(self: Claim) -> Claim
@@ -88,6 +86,9 @@ class Claim():
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Claim()
 
 class ClaimsIdentity:
     """
@@ -102,8 +103,6 @@ class ClaimsIdentity:
     ClaimsIdentity(identity: IIdentity, claims: IEnumerable[Claim], authenticationType: str, nameType: str, roleType: str)
     ClaimsIdentity(reader: BinaryReader)
     """
-    Instance = ClaimsIdentity
-    """hardcoded/returns an instance of the class"""
     def AddClaim(self, claim):
         """ AddClaim(self: ClaimsIdentity, claim: Claim) """
         pass
@@ -242,6 +241,9 @@ Set: Label(self: ClaimsIdentity) = value
     DefaultNameClaimType = 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'
     DefaultRoleClaimType = 'http://schemas.microsoft.com/ws/2008/06/identity/claims/role'
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ClaimsIdentity()
 
 class ClaimsPrincipal:
     """
@@ -251,8 +253,6 @@ class ClaimsPrincipal:
     ClaimsPrincipal(principal: IPrincipal)
     ClaimsPrincipal(reader: BinaryReader)
     """
-    Instance = ClaimsPrincipal
-    """hardcoded/returns an instance of the class"""
     def AddIdentities(self, identities):
         """ AddIdentities(self: ClaimsPrincipal, identities: IEnumerable[ClaimsIdentity]) """
         pass
@@ -350,11 +350,12 @@ class ClaimsPrincipal:
     ClaimsPrincipalSelector = None
     Current = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ClaimsPrincipal()
 
 class ClaimTypes():
     # no doc
-    Instance = ClaimTypes
-    """hardcoded/returns an instance of the class"""
     Actor = 'http://schemas.xmlsoap.org/ws/2009/09/identity/claims/actor'
     Anonymous = 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/anonymous'
     Authentication = 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authentication'
@@ -466,11 +467,12 @@ class ClaimTypes():
         'X500DistinguishedName',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ClaimTypes()
 
 class ClaimValueTypes():
     # no doc
-    Instance = ClaimValueTypes
-    """hardcoded/returns an instance of the class"""
     Base64Binary = 'http://www.w3.org/2001/XMLSchema#base64Binary'
     Base64Octet = 'http://www.w3.org/2001/XMLSchema#base64Octet'
     Boolean = 'http://www.w3.org/2001/XMLSchema#boolean'
@@ -528,11 +530,12 @@ class ClaimValueTypes():
         'YearMonthDuration',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ClaimValueTypes()
 
 class DynamicRoleClaimProvider():
     # no doc
-    Instance = DynamicRoleClaimProvider
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def AddDynamicRoleClaims(claimsIdentity, claims):
         """ AddDynamicRoleClaims(claimsIdentity: ClaimsIdentity, claims: IEnumerable[Claim]) """
@@ -542,4 +545,7 @@ class DynamicRoleClaimProvider():
         'AddDynamicRoleClaims',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return DynamicRoleClaimProvider()
 

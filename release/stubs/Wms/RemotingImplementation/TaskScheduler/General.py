@@ -11,10 +11,11 @@ from Wms.RemotingImplementation.TaskScheduler import *
 
 class GeneralTask(TaskBase):
     """ GeneralTask() """
-    Instance = GeneralTask
-    """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: GeneralTask) """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return GeneralTask()
 

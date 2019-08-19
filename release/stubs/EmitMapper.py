@@ -10,8 +10,6 @@
 
 class Mapper():
     # no doc
-    Instance = Mapper
-    """hardcoded/returns an instance of the class"""
     @staticmethod
     def MapTo(source, dest, config=None):
         """
@@ -33,4 +31,7 @@ class Mapper():
         'MapToNew',
     ]
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Mapper()
 

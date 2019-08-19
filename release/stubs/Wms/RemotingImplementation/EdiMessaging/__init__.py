@@ -10,8 +10,6 @@
 
 class IronPythonMessagingProvider:
     """ IronPythonMessagingProvider() """
-    Instance = IronPythonMessagingProvider
-    """hardcoded/returns an instance of the class"""
     def ClearHandlers(self):
         """ ClearHandlers(self: IronPythonMessagingProvider) """
         pass
@@ -50,11 +48,12 @@ class IronPythonMessagingProvider:
 
     Instance = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return IronPythonMessagingProvider()
 
 class StandardMessagingProvider:
     """ StandardMessagingProvider() """
-    Instance = StandardMessagingProvider
-    """hardcoded/returns an instance of the class"""
     def GetHandlers(self):
         """ GetHandlers(self: StandardMessagingProvider) -> IEnumerable[MessageHandlerDescriptor] """
         pass
@@ -75,6 +74,9 @@ class StandardMessagingProvider:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StandardMessagingProvider()
 
 # variables with complex values
 

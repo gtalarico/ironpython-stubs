@@ -14,8 +14,6 @@ class Handshake:
     
     enum Handshake, values: None (0), RequestToSend (2), RequestToSendXOnXOff (3), XOnXOff (1)
     """
-    Instance = Handshake
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -55,6 +53,9 @@ class Handshake:
     value__ = None
     XOnXOff = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Handshake()
 
 class Parity:
     """
@@ -62,8 +63,6 @@ class Parity:
     
     enum Parity, values: Even (2), Mark (3), None (0), Odd (1), Space (4)
     """
-    Instance = Parity
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -104,6 +103,9 @@ class Parity:
     Space = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Parity()
 
 class SerialData:
     """
@@ -111,8 +113,6 @@ class SerialData:
     
     enum SerialData, values: Chars (1), Eof (2)
     """
-    Instance = SerialData
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -150,11 +150,12 @@ class SerialData:
     Eof = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SerialData()
 
 class SerialDataReceivedEventArgs(EventArgs):
     """ Provides data for the System.IO.Ports.SerialPort.DataReceived event. """
-    Instance = SerialDataReceivedEventArgs
-    """hardcoded/returns an instance of the class"""
     EventType = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the event type.
 
@@ -163,6 +164,9 @@ Get: EventType(self: SerialDataReceivedEventArgs) -> SerialData
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SerialDataReceivedEventArgs()
 
 class SerialDataReceivedEventHandler(MulticastDelegate):
     """
@@ -170,8 +174,6 @@ class SerialDataReceivedEventHandler(MulticastDelegate):
     
     SerialDataReceivedEventHandler(object: object, method: IntPtr)
     """
-    Instance = SerialDataReceivedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SerialDataReceivedEventHandler, sender: object, e: SerialDataReceivedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -193,9 +195,7 @@ class SerialDataReceivedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -224,8 +224,7 @@ class SerialDataReceivedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -241,6 +240,9 @@ class SerialDataReceivedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SerialDataReceivedEventHandler()
 
 class SerialError:
     """
@@ -248,8 +250,6 @@ class SerialError:
     
     enum SerialError, values: Frame (8), Overrun (2), RXOver (1), RXParity (4), TXFull (256)
     """
-    Instance = SerialError
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -290,11 +290,12 @@ class SerialError:
     TXFull = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SerialError()
 
 class SerialErrorReceivedEventArgs(EventArgs):
     """ Prepares data for the System.IO.Ports.SerialPort.ErrorReceived event. """
-    Instance = SerialErrorReceivedEventArgs
-    """hardcoded/returns an instance of the class"""
     EventType = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the event type.
 
@@ -303,6 +304,9 @@ Get: EventType(self: SerialErrorReceivedEventArgs) -> SerialError
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SerialErrorReceivedEventArgs()
 
 class SerialErrorReceivedEventHandler(MulticastDelegate):
     """
@@ -310,8 +314,6 @@ class SerialErrorReceivedEventHandler(MulticastDelegate):
     
     SerialErrorReceivedEventHandler(object: object, method: IntPtr)
     """
-    Instance = SerialErrorReceivedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SerialErrorReceivedEventHandler, sender: object, e: SerialErrorReceivedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -333,9 +335,7 @@ class SerialErrorReceivedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -364,8 +364,7 @@ class SerialErrorReceivedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -381,6 +380,9 @@ class SerialErrorReceivedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SerialErrorReceivedEventHandler()
 
 class SerialPinChange:
     """
@@ -388,8 +390,6 @@ class SerialPinChange:
     
     enum SerialPinChange, values: Break (64), CDChanged (32), CtsChanged (8), DsrChanged (16), Ring (256)
     """
-    Instance = SerialPinChange
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -430,11 +430,12 @@ class SerialPinChange:
     Ring = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SerialPinChange()
 
 class SerialPinChangedEventArgs(EventArgs):
     """ Provides data for the System.IO.Ports.SerialPort.PinChanged event. """
-    Instance = SerialPinChangedEventArgs
-    """hardcoded/returns an instance of the class"""
     EventType = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets or sets the event type.
 
@@ -443,6 +444,9 @@ Get: EventType(self: SerialPinChangedEventArgs) -> SerialPinChange
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SerialPinChangedEventArgs()
 
 class SerialPinChangedEventHandler(MulticastDelegate):
     """
@@ -450,8 +454,6 @@ class SerialPinChangedEventHandler(MulticastDelegate):
     
     SerialPinChangedEventHandler(object: object, method: IntPtr)
     """
-    Instance = SerialPinChangedEventHandler
-    """hardcoded/returns an instance of the class"""
     def BeginInvoke(self, sender, e, callback, object):
         """ BeginInvoke(self: SerialPinChangedEventHandler, sender: object, e: SerialPinChangedEventArgs, callback: AsyncCallback, object: object) -> IAsyncResult """
         pass
@@ -473,9 +475,7 @@ class SerialPinChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not 
-             require arguments.
-        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -504,8 +504,7 @@ class SerialPinChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -521,6 +520,9 @@ class SerialPinChangedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SerialPinChangedEventHandler()
 
 class SerialPort(Component):
     """
@@ -534,8 +536,6 @@ class SerialPort(Component):
     SerialPort(portName: str, baudRate: int, parity: Parity, dataBits: int)
     SerialPort(portName: str, baudRate: int, parity: Parity, dataBits: int, stopBits: StopBits)
     """
-    Instance = SerialPort
-    """hardcoded/returns an instance of the class"""
     def Close(self):
         """
         Close(self: SerialPort)
@@ -583,8 +583,7 @@ class SerialPort(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified 
-             service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -594,10 +593,7 @@ class SerialPort(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -953,6 +949,9 @@ Set: WriteTimeout(self: SerialPort) = value
     InfiniteTimeout = -1
     PinChanged = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SerialPort()
 
 class StopBits:
     """
@@ -960,8 +959,6 @@ class StopBits:
     
     enum StopBits, values: None (0), One (1), OnePointFive (3), Two (2)
     """
-    Instance = StopBits
-    """hardcoded/returns an instance of the class"""
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -1001,4 +998,7 @@ class StopBits:
     Two = None
     value__ = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StopBits()
 

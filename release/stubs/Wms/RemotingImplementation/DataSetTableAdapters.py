@@ -11,8 +11,6 @@ from System.ComponentModel import *
 
 class PurchaseOrders_GetHistoryLinesTableAdapter(Component):
     """ PurchaseOrders_GetHistoryLinesTableAdapter() """
-    Instance = PurchaseOrders_GetHistoryLinesTableAdapter
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
@@ -37,8 +35,7 @@ class PurchaseOrders_GetHistoryLinesTableAdapter(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified 
-             service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -48,10 +45,7 @@ class PurchaseOrders_GetHistoryLinesTableAdapter(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -101,11 +95,12 @@ Set: ClearBeforeFill(self: PurchaseOrders_GetHistoryLinesTableAdapter) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return PurchaseOrders_GetHistoryLinesTableAdapter()
 
 class RmaOrders_GetHistoryLinesTableAdapter(Component):
     """ RmaOrders_GetHistoryLinesTableAdapter() """
-    Instance = RmaOrders_GetHistoryLinesTableAdapter
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
@@ -130,8 +125,7 @@ class RmaOrders_GetHistoryLinesTableAdapter(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified 
-             service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -141,10 +135,7 @@ class RmaOrders_GetHistoryLinesTableAdapter(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -194,11 +185,12 @@ Set: ClearBeforeFill(self: RmaOrders_GetHistoryLinesTableAdapter) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return RmaOrders_GetHistoryLinesTableAdapter()
 
 class Shipment_GetHistoryShipmentLinesTableAdapter(Component):
     """ Shipment_GetHistoryShipmentLinesTableAdapter() """
-    Instance = Shipment_GetHistoryShipmentLinesTableAdapter
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
@@ -223,8 +215,7 @@ class Shipment_GetHistoryShipmentLinesTableAdapter(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified 
-             service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -234,10 +225,7 @@ class Shipment_GetHistoryShipmentLinesTableAdapter(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -287,11 +275,12 @@ Set: ClearBeforeFill(self: Shipment_GetHistoryShipmentLinesTableAdapter) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Shipment_GetHistoryShipmentLinesTableAdapter()
 
 class TableAdapterManager(Component):
     """ TableAdapterManager() """
-    Instance = TableAdapterManager
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
@@ -308,8 +297,7 @@ class TableAdapterManager(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified 
-             service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -323,10 +311,7 @@ class TableAdapterManager(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls 
-             to be routed to the remote server object.
-        
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -399,4 +384,7 @@ Set: UpdateOrder(self: TableAdapterManager) = value
 
     UpdateOrderOption = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return TableAdapterManager()
 

@@ -11,8 +11,6 @@ from Wms.RemotingObjects import *
 
 class LocationClassification(DbObject):
     """ LocationClassification() """
-    Instance = LocationClassification
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -132,11 +130,12 @@ Set: WarehouseLayoutSettingsId(self: LocationClassification) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LocationClassification()
 
 class LocationClassifications(FindableList):
     """ LocationClassifications() """
-    Instance = LocationClassifications
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -159,14 +158,15 @@ class LocationClassifications(FindableList):
     DisplayMember = None
     ValueMember = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LocationClassifications()
 
 class LocationClassificationsFilter():
     """
     LocationClassificationsFilter()
     LocationClassificationsFilter(storageAssignmentClassificationId: int)
     """
-    Instance = LocationClassificationsFilter
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, storageAssignmentClassificationId=None):
         """
@@ -177,11 +177,12 @@ class LocationClassificationsFilter():
 
     StorageAssignmentClassificationId = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return LocationClassificationsFilter()
 
 class StorageAssignmentClassification(DbObject):
     """ StorageAssignmentClassification() """
-    Instance = StorageAssignmentClassification
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -222,11 +223,12 @@ Set: SortOrder(self: StorageAssignmentClassification) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StorageAssignmentClassification()
 
 class StorageAssignmentClassifications(FindableList):
     """ StorageAssignmentClassifications() """
-    Instance = StorageAssignmentClassifications
-    """hardcoded/returns an instance of the class"""
     def __getitem__(self, *args): #cannot find CLR method
         """ x.__getitem__(y) <==> x[y] """
         pass
@@ -249,6 +251,9 @@ class StorageAssignmentClassifications(FindableList):
     DisplayMember = None
     ValueMember = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StorageAssignmentClassifications()
 
 class StorageAssignmentClassificationsFilter():
     """
@@ -257,8 +262,6 @@ class StorageAssignmentClassificationsFilter():
     StorageAssignmentClassificationsFilter(id: int, searchText: str)
     StorageAssignmentClassificationsFilter(searchText: str)
     """
-    Instance = StorageAssignmentClassificationsFilter
-    """hardcoded/returns an instance of the class"""
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
@@ -272,4 +275,7 @@ class StorageAssignmentClassificationsFilter():
     Id = None
     SearchText = None
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return StorageAssignmentClassificationsFilter()
 

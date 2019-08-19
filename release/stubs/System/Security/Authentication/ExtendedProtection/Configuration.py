@@ -14,16 +14,11 @@ class ExtendedProtectionPolicyElement(ConfigurationElement):
     
     ExtendedProtectionPolicyElement()
     """
-    Instance = ExtendedProtectionPolicyElement
-    """hardcoded/returns an instance of the class"""
     def BuildPolicy(self):
         """
         BuildPolicy(self: ExtendedProtectionPolicyElement) -> ExtendedProtectionPolicy
         
-            The System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement.BuildPolicy method builds a new 
-             System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy instance based on the properties set on the 
-             System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement class.
-        
+            The System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement.BuildPolicy method builds a new System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy instance based on the properties set on the System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement class.
             Returns: A new System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy instance that represents the extended protection policy created.
         """
         pass
@@ -66,6 +61,9 @@ Set: ProtectionScenario(self: ExtendedProtectionPolicyElement) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ExtendedProtectionPolicyElement()
 
 class ServiceNameElement(ConfigurationElement):
     """
@@ -73,8 +71,6 @@ class ServiceNameElement(ConfigurationElement):
     
     ServiceNameElement()
     """
-    Instance = ServiceNameElement
-    """hardcoded/returns an instance of the class"""
     ElementProperty = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
 
@@ -98,6 +94,9 @@ Set: Name(self: ServiceNameElement) = value
     Properties = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ServiceNameElement()
 
 class ServiceNameElementCollection(ConfigurationElementCollection):
     """
@@ -105,19 +104,12 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
     
     ServiceNameElementCollection()
     """
-    Instance = ServiceNameElementCollection
-    """hardcoded/returns an instance of the class"""
     def Add(self, element):
         """
         Add(self: ServiceNameElementCollection, element: ServiceNameElement)
-            The 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Add(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameE
-             lement) method adds a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to this 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
+            The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Add(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement) method adds a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to this System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
         
-        
-            element: The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to add to this 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
+            element: The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to add to this System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
         """
         pass
 
@@ -131,9 +123,7 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; 
-             otherwise, false.
-        
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, false.
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
         
@@ -201,9 +191,7 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the 
-             System.Configuration.ConfigurationElementCollection.
-        
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
         
             key: The key of the element to check.
             Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
@@ -231,8 +219,7 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
     def Clear(self):
         """
         Clear(self: ServiceNameElementCollection)
-            The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Clear method removes all configuration element objects from this 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
+            The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Clear method removes all configuration element objects from this System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
         """
         pass
 
@@ -269,8 +256,7 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
             Returns the transformed version of the specified assembly name.
         
             assemblyName: The name of the assembly.
-            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
+            Returns: The transformed version of the assembly name. If no transformer is available, the assemblyName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
         """
         pass
 
@@ -281,8 +267,7 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
             Returns the transformed version of the specified type name.
         
             typeName: The name of the type.
-            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The 
-             System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
+            Returns: The transformed version of the specified type name. If no transformer is available, the typeName parameter value is returned unchanged. The System.Configuration.Configuration.TypeStringTransformer property is null if no transformer is available.
         """
         pass
 
@@ -290,17 +275,10 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
         """
         IndexOf(self: ServiceNameElementCollection, element: ServiceNameElement) -> int
         
-            The 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.IndexOf(System.Security.Authentication.ExtendedProtection.Configuration.ServiceN
-             ameElement) method retrieves the index of the specified configuration element in this 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
+            The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.IndexOf(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement) method retrieves the index of the specified configuration element in this System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
         
-        
-            element: The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to retrieve the index of in this 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
-        
-            Returns: The index of the specified System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement in this 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
+            element: The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to retrieve the index of in this System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
+            Returns: The index of the specified System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement in this System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
         """
         pass
 
@@ -336,8 +314,7 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
             Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default 
-             is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is true.
         """
         pass
 
@@ -413,38 +390,26 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
     def Remove(self, *__args):
         """
         Remove(self: ServiceNameElementCollection, element: ServiceNameElement)
-            The 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Remove(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNa
-             meElement) method removes a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance from this 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
+            The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Remove(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement) method removes a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance from this System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
         
-        
-            element: The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to remove from this 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
-        
+            element: The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to remove from this System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
         Remove(self: ServiceNameElementCollection, name: str)
-            The 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Remove(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNa
-             meElement) method removes a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance from this 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection based on the System.String specified.
+            The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Remove(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement) method removes a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance from this System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection based on the 
+             System.String specified.
         
         
-            name: A System.String that represents the System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to remove from this 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection
+            name: A System.String that represents the System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to remove from this System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection
         """
         pass
 
     def RemoveAt(self, index):
         """
         RemoveAt(self: ServiceNameElementCollection, index: int)
-            The 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Remove(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNa
-             meElement) method removes a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance from this 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection based on the index specified.
+            The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Remove(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement) method removes a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance from this System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection based on the index 
+             specified.
         
         
-            index: The index of the System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to remove from this 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
+            index: The index of the System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to remove from this System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
         """
         pass
 
@@ -580,4 +545,7 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return ServiceNameElementCollection()
 

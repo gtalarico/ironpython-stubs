@@ -11,8 +11,6 @@ from Wms.RemotingObjects.ShippingLayers import *
 
 class BaseState(State):
     """ BaseState() """
-    Instance = BaseState
-    """hardcoded/returns an instance of the class"""
     def Next(self):
         """ Next(self: BaseState) -> State """
         pass
@@ -46,11 +44,12 @@ Set: TransportPackages(self: BaseState) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return BaseState()
 
 class FinalizeState(BaseState):
     """ FinalizeState() """
-    Instance = FinalizeState
-    """hardcoded/returns an instance of the class"""
     def Next(self):
         """ Next(self: FinalizeState) -> State """
         pass
@@ -59,4 +58,7 @@ class FinalizeState(BaseState):
         """ Run(self: FinalizeState, *args: Array[object]) -> Array[object] """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return FinalizeState()
 

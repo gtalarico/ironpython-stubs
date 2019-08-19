@@ -10,9 +10,10 @@
 
 class Platform():
     # no doc
-    Instance = Platform
-    """hardcoded/returns an instance of the class"""
     Is64Bit = True
     __all__ = []
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Platform()
 

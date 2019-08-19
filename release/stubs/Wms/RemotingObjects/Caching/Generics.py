@@ -11,8 +11,6 @@ from Wms.RemotingObjects.Caching import *
 
 class Cachable(CacheObject):
     """ Cachable[T](value: T) """
-    Instance = Cachable
-    """hardcoded/returns an instance of the class"""
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
@@ -36,4 +34,7 @@ Get: Value(self: Cachable[T]) -> T
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return Cachable()
 

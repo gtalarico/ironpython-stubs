@@ -13,8 +13,6 @@ class SafeRpcMethod:
     SafeRpcMethod(id: int)
     SafeRpcMethod(cacheKey: CacheKey)
     """
-    Instance = SafeRpcMethod
-    """hardcoded/returns an instance of the class"""
     def Dispose(self):
         """ Dispose(self: SafeRpcMethod) """
         pass
@@ -52,4 +50,7 @@ class SafeRpcMethod:
         """ __repr__(self: object) -> str """
         pass
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return SafeRpcMethod()
 

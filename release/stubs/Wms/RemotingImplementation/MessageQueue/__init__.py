@@ -11,8 +11,6 @@ from Wms.RemotingImplementation.TaskScheduler import *
 
 class CleanupMessageQueueTask(TaskBase):
     """ CleanupMessageQueueTask(settings: SystemSettings) """
-    Instance = CleanupMessageQueueTask
-    """hardcoded/returns an instance of the class"""
     def Run(self):
         """ Run(self: CleanupMessageQueueTask) """
         pass
@@ -29,6 +27,9 @@ Set: Settings(self: CleanupMessageQueueTask) = value
 """
 
 
+    def Instance(self):
+        """hardcoded/mock instance of the class"""
+        return CleanupMessageQueueTask()
 
 # variables with complex values
 
