@@ -625,7 +625,7 @@ class ModuleRedeclarator(object):
         """
 
 
-        
+
         action("redoing class %r of module %r", p_name, p_modname)
         if seen is not None:
             if p_class in seen:
@@ -684,12 +684,12 @@ class ModuleRedeclarator(object):
         out(indent, "class ", p_name, filtered , ":",          #re.sub(regex, "", base_def)    #fix kevin ana 3/inherited classes showed up in constructor/base def replaced with ""
             skipped_bases and " # skipped bases: " + ", ".join(skipped_bases) or "")  # we dont do anything with python objects so why bother 
         out_doc_attr(out, p_class, indent + 1)
-        out(indent+1, "Instance = ",p_name)
-        out(indent+1, '"""hardcoded/returns an instance of the class"""')      #fix kevin ana added instance to every class #quickfix since instance doesn't get recognized
-        # out(indent+1, "def ZZZ(self):")
+        # out(indent+1, "Instance = ",p_name+"()")
+        # out(indent+1, '"""hardcoded/returns an instance of the class"""')      #fix kevin ana added instance to every class #quickfix since instance doesn't get recognized
+        # out(indent+1, "def __internal__(self):")
         # out(indent+2, '"""hardcoded/mock instance of the class"""')
         # out(indent+2, "return ",p_name,"()")
-        # out(indent+1, "instance = ZZZ()")
+        # out(indent+1, "instance = __internal__()")
         # out(indent+1, '"""hardcoded/returns an instance of the class"""')    #fix for linter
         methods = {}
         properties = {}
@@ -794,6 +794,10 @@ class ModuleRedeclarator(object):
             #
         if not methods and not properties and not others:
             out(indent + 1, "pass")
+        
+        out(indent+1, "def Instance(self):")
+        out(indent+2, '"""hardcoded/mock instance of the class"""')
+        out(indent+2, "return ",p_name,"()")
 
 
 

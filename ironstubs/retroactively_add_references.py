@@ -56,6 +56,7 @@ def add_references():
         count = 0
         for file in process_files:
             processing(file, classlist)
+    print "references added"
 
 
     
