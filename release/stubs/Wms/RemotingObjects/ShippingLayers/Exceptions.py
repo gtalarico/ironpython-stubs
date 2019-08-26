@@ -31,9 +31,8 @@ class ShipperFatalException(Exception):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ShipperFatalException()
+    Instance = ShipperFatalException()
+    """hardcoded/returns an instance of the class"""
 
 class ShipperCommunicationException(ShipperFatalException):
     """
@@ -65,7 +64,6 @@ Get: ShouldRetry(self: ShipperCommunicationException) -> bool
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ShipperCommunicationException()
+    Instance = ShipperCommunicationException()
+    """hardcoded/returns an instance of the class"""
 

@@ -19,9 +19,8 @@ class IMessageHandler:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IMessageHandler()
+    Instance = IMessageHandler()
+    """hardcoded/returns an instance of the class"""
 
 class JsonMessage(MessageBase):
     """
@@ -40,9 +39,8 @@ class JsonMessage(MessageBase):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return JsonMessage()
+    Instance = JsonMessage()
+    """hardcoded/returns an instance of the class"""
 
 class MessageHandlerBase:
     # no doc
@@ -58,9 +56,8 @@ class MessageHandlerBase:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessageHandlerBase()
+    Instance = MessageHandlerBase()
+    """hardcoded/returns an instance of the class"""
 
 class MessageProcessor():
     # no doc
@@ -91,7 +88,6 @@ class MessageProcessor():
 
     _queueProvider = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessageProcessor()
+    Instance = MessageProcessor()
+    """hardcoded/returns an instance of the class"""
 

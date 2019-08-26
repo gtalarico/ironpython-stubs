@@ -77,9 +77,8 @@ Set: TransferEncoding(self: AttachmentBase) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AttachmentBase()
+    Instance = AttachmentBase()
+    """hardcoded/returns an instance of the class"""
 
 class AlternateView(AttachmentBase):
     """
@@ -103,7 +102,9 @@ class AlternateView(AttachmentBase):
             Returns: An System.Net.Mail.AlternateView object that represents an alternate view of an email message.
         CreateAlternateViewFromString(content: str, contentEncoding: Encoding, mediaType: str) -> AlternateView
         
-            Creates an System.Net.Mail.AlternateView of an email message using the content specified in a System.String, the specified text encoding, and MIME media type of the content.
+            Creates an System.Net.Mail.AlternateView of an email message using the content specified in a System.String, the specified text encoding, and MIME media type of the 
+             content.
+        
         
             content: A System.String that contains the content for this attachment.
             contentEncoding: An System.Text.Encoding. This value can be null.
@@ -168,9 +169,8 @@ Get: LinkedResources(self: AlternateView) -> LinkedResourceCollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AlternateView()
+    Instance = AlternateView()
+    """hardcoded/returns an instance of the class"""
 
 class AlternateViewCollection(Collection):
     """ Represents a collection of System.Net.Mail.AlternateView objects. """
@@ -227,9 +227,8 @@ class AlternateViewCollection(Collection):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AlternateViewCollection()
+    Instance = AlternateViewCollection()
+    """hardcoded/returns an instance of the class"""
 
 class Attachment(AttachmentBase):
     """
@@ -254,7 +253,9 @@ class Attachment(AttachmentBase):
             Returns: An object of type System.Net.Mail.Attachment.
         CreateAttachmentFromString(content: str, name: str, contentEncoding: Encoding, mediaType: str) -> Attachment
         
-            Creates a mail attachment using the content from the specified string, the specified MIME content type name, character encoding, and MIME header information for the attachment.
+            Creates a mail attachment using the content from the specified string, the specified MIME content type name, character encoding, and MIME header information for the 
+             attachment.
+        
         
             content: A System.String that contains the content for this attachment.
             name: The MIME content type name value in the content type associated with this attachment.
@@ -328,9 +329,8 @@ Set: NameEncoding(self: Attachment) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Attachment()
+    Instance = Attachment()
+    """hardcoded/returns an instance of the class"""
 
 class AttachmentCollection(Collection):
     """ Stores attachments to be sent as part of an e-mail message. """
@@ -387,9 +387,8 @@ class AttachmentCollection(Collection):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AttachmentCollection()
+    Instance = AttachmentCollection()
+    """hardcoded/returns an instance of the class"""
 
 class DeliveryNotificationOptions:
     """
@@ -437,9 +436,8 @@ class DeliveryNotificationOptions:
     OnSuccess = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DeliveryNotificationOptions()
+    Instance = DeliveryNotificationOptions()
+    """hardcoded/returns an instance of the class"""
 
 class LinkedResource(AttachmentBase):
     """
@@ -457,13 +455,17 @@ class LinkedResource(AttachmentBase):
         """
         CreateLinkedResourceFromString(content: str) -> LinkedResource
         
-            Creates a System.Net.Mail.LinkedResource object from a string to be included in an email attachment as an embedded resource. The default media type is plain text, and the default content type is ASCII.
+            Creates a System.Net.Mail.LinkedResource object from a string to be included in an email attachment as an embedded resource. The default media type is plain text, and 
+             the default content type is ASCII.
+        
         
             content: A string that contains the embedded resource to be included in the email attachment.
             Returns: A System.Net.Mail.LinkedResource object that contains the embedded resource to be included in the email attachment.
         CreateLinkedResourceFromString(content: str, contentEncoding: Encoding, mediaType: str) -> LinkedResource
         
-            Creates a System.Net.Mail.LinkedResource object from a string to be included in an email attachment as an embedded resource, with the specified content type, and media type.
+            Creates a System.Net.Mail.LinkedResource object from a string to be included in an email attachment as an embedded resource, with the specified content type, and media 
+             type.
+        
         
             content: A string that contains the embedded resource to be included in the email attachment.
             contentEncoding: The type of the content.
@@ -471,7 +473,9 @@ class LinkedResource(AttachmentBase):
             Returns: A System.Net.Mail.LinkedResource object that contains the embedded resource to be included in the email attachment.
         CreateLinkedResourceFromString(content: str, contentType: ContentType) -> LinkedResource
         
-            Creates a System.Net.Mail.LinkedResource object from a string to be included in an email attachment as an embedded resource, with the specified content type, and media type as plain text.
+            Creates a System.Net.Mail.LinkedResource object from a string to be included in an email attachment as an embedded resource, with the specified content type, and media 
+             type as plain text.
+        
         
             content: A string that contains the embedded resource to be included in the email attachment.
             contentType: The type of the content.
@@ -521,9 +525,8 @@ Set: ContentLink(self: LinkedResource) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LinkedResource()
+    Instance = LinkedResource()
+    """hardcoded/returns an instance of the class"""
 
 class LinkedResourceCollection(Collection):
     """ Stores linked resources to be sent as part of an e-mail message. """
@@ -580,9 +583,8 @@ class LinkedResourceCollection(Collection):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LinkedResourceCollection()
+    Instance = LinkedResourceCollection()
+    """hardcoded/returns an instance of the class"""
 
 class MailAddress():
     """
@@ -666,9 +668,8 @@ Get: User(self: MailAddress) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MailAddress()
+    Instance = MailAddress()
+    """hardcoded/returns an instance of the class"""
 
 class MailAddressCollection(Collection):
     """
@@ -759,9 +760,8 @@ class MailAddressCollection(Collection):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MailAddressCollection()
+    Instance = MailAddressCollection()
+    """hardcoded/returns an instance of the class"""
 
 class MailMessage:
     """
@@ -949,9 +949,8 @@ Get: To(self: MailMessage) -> MailAddressCollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MailMessage()
+    Instance = MailMessage()
+    """hardcoded/returns an instance of the class"""
 
 class MailPriority:
     """
@@ -997,9 +996,8 @@ class MailPriority:
     Normal = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MailPriority()
+    Instance = MailPriority()
+    """hardcoded/returns an instance of the class"""
 
 class SendCompletedEventHandler(MulticastDelegate):
     """
@@ -1028,7 +1026,9 @@ class SendCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1057,7 +1057,8 @@ class SendCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -1073,9 +1074,8 @@ class SendCompletedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SendCompletedEventHandler()
+    Instance = SendCompletedEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class SmtpAccess:
     """
@@ -1121,9 +1121,8 @@ class SmtpAccess:
     None_ =None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpAccess()
+    Instance = SmtpAccess()
+    """hardcoded/returns an instance of the class"""
 
 class SmtpClient:
     """
@@ -1136,7 +1135,8 @@ class SmtpClient:
     def Dispose(self):
         """
         Dispose(self: SmtpClient)
-            Sends a QUIT message to the SMTP server, gracefully ends the TCP connection, and releases all resources used by the current instance of the System.Net.Mail.SmtpClient class.
+            Sends a QUIT message to the SMTP server, gracefully ends the TCP connection, and releases all resources used by the current instance of the System.Net.Mail.SmtpClient 
+             class.
         """
         pass
 
@@ -1168,7 +1168,9 @@ class SmtpClient:
     def SendAsync(self, *__args):
         """
         SendAsync(self: SmtpClient, from: str, recipients: str, subject: str, body: str, userToken: object)
-            Sends an e-mail message to an SMTP server for delivery. The message sender, recipients, subject, and message body are specified using System.String objects. This method does not block the calling thread and allows the caller to pass an object to the method that is invoked when the operation completes.
+            Sends an e-mail message to an SMTP server for delivery. The message sender, recipients, subject, and message body are specified using System.String objects. This 
+             method does not block the calling thread and allows the caller to pass an object to the method that is invoked when the operation completes.
+        
         
             from: A System.String that contains the address information of the message sender.
             recipients: A System.String that contains the address that the message is sent to.
@@ -1176,7 +1178,9 @@ class SmtpClient:
             body: A System.String that contains the message body.
             userToken: A user-defined object that is passed to the method invoked when the asynchronous operation completes.
         SendAsync(self: SmtpClient, message: MailMessage, userToken: object)
-            Sends the specified e-mail message to an SMTP server for delivery. This method does not block the calling thread and allows the caller to pass an object to the method that is invoked when the operation completes.
+            Sends the specified e-mail message to an SMTP server for delivery. This method does not block the calling thread and allows the caller to pass an object to the method 
+             that is invoked when the operation completes.
+        
         
             message: A System.Net.Mail.MailMessage that contains the message to send.
             userToken: A user-defined object that is passed to the method invoked when the asynchronous operation completes.
@@ -1317,9 +1321,8 @@ Set: UseDefaultCredentials(self: SmtpClient) = value
 
     SendCompleted = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpClient()
+    Instance = SmtpClient()
+    """hardcoded/returns an instance of the class"""
 
 class SmtpDeliveryFormat:
     """ enum SmtpDeliveryFormat, values: International (1), SevenBit (0) """
@@ -1360,9 +1363,8 @@ class SmtpDeliveryFormat:
     SevenBit = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpDeliveryFormat()
+    Instance = SmtpDeliveryFormat()
+    """hardcoded/returns an instance of the class"""
 
 class SmtpDeliveryMethod:
     """
@@ -1408,9 +1410,8 @@ class SmtpDeliveryMethod:
     SpecifiedPickupDirectory = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpDeliveryMethod()
+    Instance = SmtpDeliveryMethod()
+    """hardcoded/returns an instance of the class"""
 
 class SmtpException(Exception):
     """
@@ -1465,9 +1466,8 @@ Set: StatusCode(self: SmtpException) = value
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpException()
+    Instance = SmtpException()
+    """hardcoded/returns an instance of the class"""
 
 class SmtpFailedRecipientException(SmtpException):
     """
@@ -1523,9 +1523,8 @@ Get: FailedRecipient(self: SmtpFailedRecipientException) -> str
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpFailedRecipientException()
+    Instance = SmtpFailedRecipientException()
+    """hardcoded/returns an instance of the class"""
 
 class SmtpFailedRecipientsException(SmtpFailedRecipientException):
     """
@@ -1577,9 +1576,8 @@ Get: InnerExceptions(self: SmtpFailedRecipientsException) -> Array[SmtpFailedRec
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpFailedRecipientsException()
+    Instance = SmtpFailedRecipientsException()
+    """hardcoded/returns an instance of the class"""
 
 class SmtpPermission(CodeAccessPermission):
     """
@@ -1623,7 +1621,8 @@ class SmtpPermission(CodeAccessPermission):
             Creates and returns a permission that is the intersection of the current permission and the specified permission.
         
             target: An System.Security.IPermission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: An System.Net.Mail.SmtpPermission that represents the intersection of the current permission and the specified permission. Returns null if the intersection is empty or target is null.
+            Returns: An System.Net.Mail.SmtpPermission that represents the intersection of the current permission and the specified permission. Returns null if the intersection is empty or 
+             target is null.
         """
         pass
 
@@ -1694,9 +1693,8 @@ Get: Access(self: SmtpPermission) -> SmtpAccess
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpPermission()
+    Instance = SmtpPermission()
+    """hardcoded/returns an instance of the class"""
 
 class SmtpPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -1734,9 +1732,8 @@ Set: Access(self: SmtpPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpPermissionAttribute()
+    Instance = SmtpPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class SmtpStatusCode:
     """
@@ -1804,7 +1801,6 @@ class SmtpStatusCode:
     UserNotLocalWillForward = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SmtpStatusCode()
+    Instance = SmtpStatusCode()
+    """hardcoded/returns an instance of the class"""
 

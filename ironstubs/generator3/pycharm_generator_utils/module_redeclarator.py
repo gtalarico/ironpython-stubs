@@ -9,6 +9,7 @@ import json
 
 data = {}
 
+
 class emptylistdict(dict):
     """defaultdict not available before 2.5; simplest reimplementation using [] as default"""
 
@@ -795,9 +796,12 @@ class ModuleRedeclarator(object):
         if not methods and not properties and not others:
             out(indent + 1, "pass")
         
-        out(indent+1, "def Instance(self):")
-        out(indent+2, '"""hardcoded/mock instance of the class"""')
-        out(indent+2, "return ",p_name,"()")
+        # out(indent+1, "def Instance(self):")
+        # out(indent+2, '"""hardcoded/mock instance of the class"""')
+        # out(indent+2, "return ",p_name,"()")
+
+        out(indent+1, "Instance = ",p_name+"()")
+        out(indent+1, '"""hardcoded/returns an instance of the class"""')      #fix kevin ana added instance to every class #quickfix since instance doesn't get recognized
 
 
 
@@ -1100,6 +1104,11 @@ class ModuleRedeclarator(object):
         if self.imports_buf.isEmpty():
             self.imports_buf.out(0, "# no imports")
         self.imports_buf.out(0, "") # empty line after imports
+
+        with open('typedict.json', 'w') as outfile:
+            print "printing typedict"
+            print typedict
+            json.dump(typedict, outfile,indent=4)
         with open('classlist.json', 'w') as outfile:
             json.dump(data, outfile,indent=4)
 

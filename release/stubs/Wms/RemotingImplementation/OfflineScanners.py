@@ -50,9 +50,8 @@ class GcloudInboundFileListenerBase:
     _general = None
     _messaging = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GcloudInboundFileListenerBase()
+    Instance = GcloudInboundFileListenerBase()
+    """hardcoded/returns an instance of the class"""
 
 class BosInboundFileListener(GcloudInboundFileListenerBase):
     """ BosInboundFileListener(appSetttings: BosInboundFileOptions, general: General, messaging: Messaging, offlineScanning: OfflineScanning) """
@@ -80,9 +79,8 @@ class BosInboundFileListener(GcloudInboundFileListenerBase):
     _general = None
     _messaging = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosInboundFileListener()
+    Instance = BosInboundFileListener()
+    """hardcoded/returns an instance of the class"""
 
 class GcloudInboundFileListenerOptions():
     """ GcloudInboundFileListenerOptions() """
@@ -105,9 +103,8 @@ Set: GCloudPubSubPrefix(self: GcloudInboundFileListenerOptions) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GcloudInboundFileListenerOptions()
+    Instance = GcloudInboundFileListenerOptions()
+    """hardcoded/returns an instance of the class"""
 
 class BosInboundFileOptions(GcloudInboundFileListenerOptions):
     """ BosInboundFileOptions(appSettings: IApplicationSettings) """
@@ -116,9 +113,8 @@ class BosInboundFileOptions(GcloudInboundFileListenerOptions):
         """ __new__(cls: type, appSettings: IApplicationSettings) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosInboundFileOptions()
+    Instance = BosInboundFileOptions()
+    """hardcoded/returns an instance of the class"""
 
 class BosInboundFileUploadedEvent():
     """ BosInboundFileUploadedEvent() """
@@ -159,9 +155,8 @@ Set: Size(self: BosInboundFileUploadedEvent) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosInboundFileUploadedEvent()
+    Instance = BosInboundFileUploadedEvent()
+    """hardcoded/returns an instance of the class"""
 
 class IGcloudInboundFileListener:
     # no doc
@@ -183,16 +178,14 @@ class IGcloudInboundFileListener:
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IGcloudInboundFileListener()
+    Instance = IGcloudInboundFileListener()
+    """hardcoded/returns an instance of the class"""
 
 class ModuleOptions():
     """ ModuleOptions() """
     OfflineScanning = 'OS'
     RemotePublishing = 'RP'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ModuleOptions()
+    Instance = ModuleOptions()
+    """hardcoded/returns an instance of the class"""
 

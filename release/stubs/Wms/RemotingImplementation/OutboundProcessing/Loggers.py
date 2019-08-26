@@ -19,7 +19,6 @@ class DirectOrderLogger():
         """ __new__(cls: type, orderMapper: ObjectsMapper[DirectOrder, DirectOrders], linesMapper: ObjectsMapper[DirectOrderLine, DirectOrderLines], detailsMapper: ObjectsMapper[ItemIdentification, DirectOrderLineDetails]) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DirectOrderLogger()
+    Instance = DirectOrderLogger()
+    """hardcoded/returns an instance of the class"""
 

@@ -123,9 +123,8 @@ Set: Size(self: ContentDisposition) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ContentDisposition()
+    Instance = ContentDisposition()
+    """hardcoded/returns an instance of the class"""
 
 class ContentType():
     """
@@ -218,9 +217,8 @@ Get: Parameters(self: ContentType) -> StringDictionary
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ContentType()
+    Instance = ContentType()
+    """hardcoded/returns an instance of the class"""
 
 class DispositionTypeNames():
     """ Supplies the strings used to specify the disposition type for an e-mail attachment. """
@@ -231,9 +229,8 @@ class DispositionTypeNames():
         'Inline',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DispositionTypeNames()
+    Instance = DispositionTypeNames()
+    """hardcoded/returns an instance of the class"""
 
 class MediaTypeNames():
     """ Specifies the media type information for an e-mail message attachment. """
@@ -246,9 +243,8 @@ class MediaTypeNames():
         'Text',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MediaTypeNames()
+    Instance = MediaTypeNames()
+    """hardcoded/returns an instance of the class"""
 
 class TransferEncoding:
     """
@@ -296,7 +292,6 @@ class TransferEncoding:
     Unknown = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransferEncoding()
+    Instance = TransferEncoding()
+    """hardcoded/returns an instance of the class"""
 

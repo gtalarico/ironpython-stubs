@@ -35,9 +35,8 @@ class BasePage:
 
     _context = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BasePage()
+    Instance = BasePage()
+    """hardcoded/returns an instance of the class"""
 
 class ILocalizeable:
     # no doc
@@ -52,7 +51,6 @@ Set: CultureInfo(self: ILocalizeable) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ILocalizeable()
+    Instance = ILocalizeable()
+    """hardcoded/returns an instance of the class"""
 

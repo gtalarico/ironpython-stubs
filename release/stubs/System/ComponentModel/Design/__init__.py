@@ -34,9 +34,8 @@ Get: OldDesigner(self: ActiveDesignerEventArgs) -> IDesignerHost
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ActiveDesignerEventArgs()
+    Instance = ActiveDesignerEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ActiveDesignerEventHandler(MulticastDelegate):
     """
@@ -65,7 +64,9 @@ class ActiveDesignerEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -94,7 +95,8 @@ class ActiveDesignerEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -110,9 +112,8 @@ class ActiveDesignerEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ActiveDesignerEventHandler()
+    Instance = ActiveDesignerEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class CheckoutException(ExternalException):
     """
@@ -147,9 +148,8 @@ class CheckoutException(ExternalException):
     Canceled = None
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CheckoutException()
+    Instance = CheckoutException()
+    """hardcoded/returns an instance of the class"""
 
 class CommandID():
     """
@@ -211,9 +211,8 @@ Get: ID(self: CommandID) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CommandID()
+    Instance = CommandID()
+    """hardcoded/returns an instance of the class"""
 
 class ComponentChangedEventArgs(EventArgs):
     """
@@ -255,9 +254,8 @@ Get: OldValue(self: ComponentChangedEventArgs) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentChangedEventArgs()
+    Instance = ComponentChangedEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ComponentChangedEventHandler(MulticastDelegate):
     """
@@ -286,7 +284,9 @@ class ComponentChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -315,7 +315,8 @@ class ComponentChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -331,9 +332,8 @@ class ComponentChangedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentChangedEventHandler()
+    Instance = ComponentChangedEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class ComponentChangingEventArgs(EventArgs):
     """
@@ -361,9 +361,8 @@ Get: Member(self: ComponentChangingEventArgs) -> MemberDescriptor
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentChangingEventArgs()
+    Instance = ComponentChangingEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ComponentChangingEventHandler(MulticastDelegate):
     """
@@ -392,7 +391,9 @@ class ComponentChangingEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -421,7 +422,8 @@ class ComponentChangingEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -437,9 +439,8 @@ class ComponentChangingEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentChangingEventHandler()
+    Instance = ComponentChangingEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class ComponentEventArgs(EventArgs):
     """
@@ -460,9 +461,8 @@ Get: Component(self: ComponentEventArgs) -> IComponent
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentEventArgs()
+    Instance = ComponentEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ComponentEventHandler(MulticastDelegate):
     """
@@ -491,7 +491,9 @@ class ComponentEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -520,7 +522,8 @@ class ComponentEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -536,9 +539,8 @@ class ComponentEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentEventHandler()
+    Instance = ComponentEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class ComponentRenameEventArgs(EventArgs):
     """
@@ -573,9 +575,8 @@ Get: OldName(self: ComponentRenameEventArgs) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentRenameEventArgs()
+    Instance = ComponentRenameEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ComponentRenameEventHandler(MulticastDelegate):
     """
@@ -604,7 +605,9 @@ class ComponentRenameEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -633,7 +636,8 @@ class ComponentRenameEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -649,9 +653,8 @@ class ComponentRenameEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentRenameEventHandler()
+    Instance = ComponentRenameEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class DesignerCollection:
     """
@@ -705,9 +708,8 @@ Get: Count(self: DesignerCollection) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerCollection()
+    Instance = DesignerCollection()
+    """hardcoded/returns an instance of the class"""
 
 class DesignerEventArgs(EventArgs):
     """
@@ -728,9 +730,8 @@ Get: Designer(self: DesignerEventArgs) -> IDesignerHost
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerEventArgs()
+    Instance = DesignerEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class DesignerEventHandler(MulticastDelegate):
     """
@@ -759,7 +760,9 @@ class DesignerEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -788,7 +791,8 @@ class DesignerEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -804,9 +808,8 @@ class DesignerEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerEventHandler()
+    Instance = DesignerEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class IDesignerOptionService:
     """ Provides access to the designer options located on the Tools menu under the Options command in the Visual Studio development environment. """
@@ -837,9 +840,8 @@ class IDesignerOptionService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerOptionService()
+    Instance = IDesignerOptionService()
+    """hardcoded/returns an instance of the class"""
 
 class DesignerOptionService:
     """ Provides a base class for getting and setting option values for a designer. """
@@ -873,9 +875,8 @@ Get: Options(self: DesignerOptionService) -> DesignerOptionCollection
 
     DesignerOptionCollection = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerOptionService()
+    Instance = DesignerOptionService()
+    """hardcoded/returns an instance of the class"""
 
 class DesignerTransaction:
     """ Provides a way to group a series of design-time actions to improve performance and enable most types of changes to be undone. """
@@ -962,9 +963,8 @@ Get: Description(self: DesignerTransaction) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerTransaction()
+    Instance = DesignerTransaction()
+    """hardcoded/returns an instance of the class"""
 
 class DesignerTransactionCloseEventArgs(EventArgs):
     """
@@ -996,9 +996,8 @@ Get: TransactionCommitted(self: DesignerTransactionCloseEventArgs) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerTransactionCloseEventArgs()
+    Instance = DesignerTransactionCloseEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class DesignerTransactionCloseEventHandler(MulticastDelegate):
     """
@@ -1027,7 +1026,9 @@ class DesignerTransactionCloseEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1056,7 +1057,8 @@ class DesignerTransactionCloseEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -1072,9 +1074,8 @@ class DesignerTransactionCloseEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerTransactionCloseEventHandler()
+    Instance = DesignerTransactionCloseEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class MenuCommand():
     """
@@ -1107,7 +1108,9 @@ class MenuCommand():
         ToString(self: MenuCommand) -> str
         
             Returns a string representation of this menu command.
-            Returns: A string containing the value of the System.ComponentModel.Design.MenuCommand.CommandID property appended with the names of any flags that are set, separated by pipe bars (|). These flag properties include System.ComponentModel.Design.MenuCommand.Checked, System.ComponentModel.Design.MenuCommand.Enabled, System.ComponentModel.Design.MenuCommand.Supported, and System.ComponentModel.Design.MenuCommand.Visible.
+            Returns: A string containing the value of the System.ComponentModel.Design.MenuCommand.CommandID property appended with the names of any flags that are set, separated by pipe 
+             bars (|). These flag properties include System.ComponentModel.Design.MenuCommand.Checked, System.ComponentModel.Design.MenuCommand.Enabled, 
+             System.ComponentModel.Design.MenuCommand.Supported, and System.ComponentModel.Design.MenuCommand.Visible.
         """
         pass
 
@@ -1172,9 +1175,8 @@ Set: Visible(self: MenuCommand) = value
 
     CommandChanged = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MenuCommand()
+    Instance = MenuCommand()
+    """hardcoded/returns an instance of the class"""
 
 class DesignerVerb(MenuCommand):
     """
@@ -1216,9 +1218,8 @@ Get: Text(self: DesignerVerb) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerVerb()
+    Instance = DesignerVerb()
+    """hardcoded/returns an instance of the class"""
 
 class DesignerVerbCollection(CollectionBase):
     """
@@ -1426,9 +1427,8 @@ class DesignerVerbCollection(CollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerVerbCollection()
+    Instance = DesignerVerbCollection()
+    """hardcoded/returns an instance of the class"""
 
 class DesigntimeLicenseContext(LicenseContext):
     """
@@ -1470,9 +1470,8 @@ Get: UsageMode(self: DesigntimeLicenseContext) -> LicenseUsageMode
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesigntimeLicenseContext()
+    Instance = DesigntimeLicenseContext()
+    """hardcoded/returns an instance of the class"""
 
 class DesigntimeLicenseContextSerializer():
     """ Provides support for design-time license context serialization. """
@@ -1488,9 +1487,8 @@ class DesigntimeLicenseContextSerializer():
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesigntimeLicenseContextSerializer()
+    Instance = DesigntimeLicenseContextSerializer()
+    """hardcoded/returns an instance of the class"""
 
 class HelpContextType:
     """
@@ -1537,9 +1535,8 @@ class HelpContextType:
     value__ = None
     Window = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HelpContextType()
+    Instance = HelpContextType()
+    """hardcoded/returns an instance of the class"""
 
 class HelpKeywordAttribute:
     """
@@ -1611,9 +1608,8 @@ Get: HelpKeyword(self: HelpKeywordAttribute) -> str
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HelpKeywordAttribute()
+    Instance = HelpKeywordAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class HelpKeywordType:
     """
@@ -1659,9 +1655,8 @@ class HelpKeywordType:
     GeneralKeyword = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HelpKeywordType()
+    Instance = HelpKeywordType()
+    """hardcoded/returns an instance of the class"""
 
 class IComponentChangeService:
     """ Provides an interface to add and remove the event handlers for events that add, change, remove or rename components, and provides methods to raise a System.ComponentModel.Design.IComponentChangeService.ComponentChanged or System.ComponentModel.Design.IComponentChangeService.ComponentChanging event. """
@@ -1699,9 +1694,8 @@ class IComponentChangeService:
     ComponentRemoving = None
     ComponentRename = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IComponentChangeService()
+    Instance = IComponentChangeService()
+    """hardcoded/returns an instance of the class"""
 
 class IComponentDiscoveryService:
     """ Enables enumeration of components at design time. """
@@ -1721,9 +1715,8 @@ class IComponentDiscoveryService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IComponentDiscoveryService()
+    Instance = IComponentDiscoveryService()
+    """hardcoded/returns an instance of the class"""
 
 class IComponentInitializer:
     """ Provides a set of recommended default values during component creation. """
@@ -1749,9 +1742,8 @@ class IComponentInitializer:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IComponentInitializer()
+    Instance = IComponentInitializer()
+    """hardcoded/returns an instance of the class"""
 
 class IDesigner:
     """ Provides the basic framework for building a custom designer. """
@@ -1790,9 +1782,8 @@ Get: Verbs(self: IDesigner) -> DesignerVerbCollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDesigner()
+    Instance = IDesigner()
+    """hardcoded/returns an instance of the class"""
 
 class IDesignerEventService:
     """ Provides event notifications when root designers are added and removed, when a selected component changes, and when the current root designer changes. """
@@ -1820,16 +1811,17 @@ Get: Designers(self: IDesignerEventService) -> DesignerCollection
     DesignerDisposed = None
     SelectionChanged = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerEventService()
+    Instance = IDesignerEventService()
+    """hardcoded/returns an instance of the class"""
 
 class IDesignerFilter:
     """ Provides an interface that enables a designer to access and filter the dictionaries of a System.ComponentModel.TypeDescriptor that stores the property, attribute, and event descriptors that a component designer can expose to the design-time environment. """
     def PostFilterAttributes(self, attributes):
         """
         PostFilterAttributes(self: IDesignerFilter, attributes: IDictionary)
-            When overridden in a derived class, allows a designer to change or remove items from the set of attributes that it exposes through a System.ComponentModel.TypeDescriptor.
+            When overridden in a derived class, allows a designer to change or remove items from the set of attributes that it exposes through a 
+             System.ComponentModel.TypeDescriptor.
+        
         
             attributes: The System.Attribute objects for the class of the component. The keys in the dictionary of attributes are the System.Attribute.TypeId values of the attributes.
         """
@@ -1847,9 +1839,12 @@ class IDesignerFilter:
     def PostFilterProperties(self, properties):
         """
         PostFilterProperties(self: IDesignerFilter, properties: IDictionary)
-            When overridden in a derived class, allows a designer to change or remove items from the set of properties that it exposes through a System.ComponentModel.TypeDescriptor.
+            When overridden in a derived class, allows a designer to change or remove items from the set of properties that it exposes through a 
+             System.ComponentModel.TypeDescriptor.
         
-            properties: The System.ComponentModel.PropertyDescriptor objects that represent the properties of the class of the component. The keys in the dictionary of properties are property names.
+        
+            properties: The System.ComponentModel.PropertyDescriptor objects that represent the properties of the class of the component. The keys in the dictionary of properties are property 
+             names.
         """
         pass
 
@@ -1876,7 +1871,8 @@ class IDesignerFilter:
         PreFilterProperties(self: IDesignerFilter, properties: IDictionary)
             When overridden in a derived class, allows a designer to add items to the set of properties that it exposes through a System.ComponentModel.TypeDescriptor.
         
-            properties: The System.ComponentModel.PropertyDescriptor objects that represent the properties of the class of the component. The keys in the dictionary of properties are property names.
+            properties: The System.ComponentModel.PropertyDescriptor objects that represent the properties of the class of the component. The keys in the dictionary of properties are property 
+             names.
         """
         pass
 
@@ -1884,9 +1880,8 @@ class IDesignerFilter:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerFilter()
+    Instance = IDesignerFilter()
+    """hardcoded/returns an instance of the class"""
 
 class IServiceContainer:
     """ Provides a container for services. """
@@ -1907,12 +1902,16 @@ class IServiceContainer:
             Adds the specified service to the service container.
         
             serviceType: The type of service to add.
-            callback: A callback object that is used to create the service. This allows a service to be declared as available, but delays the creation of the object until the service is requested.
+            callback: A callback object that is used to create the service. This allows a service to be declared as available, but delays the creation of the object until the service is 
+             requested.
+        
         AddService(self: IServiceContainer, serviceType: Type, callback: ServiceCreatorCallback, promote: bool)
             Adds the specified service to the service container, and optionally promotes the service to parent service containers.
         
             serviceType: The type of service to add.
-            callback: A callback object that is used to create the service. This allows a service to be declared as available, but delays the creation of the object until the service is requested.
+            callback: A callback object that is used to create the service. This allows a service to be declared as available, but delays the creation of the object until the service is 
+             requested.
+        
             promote: true to promote this request to any parent service containers; otherwise, false.
         """
         pass
@@ -1935,9 +1934,8 @@ class IServiceContainer:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IServiceContainer()
+    Instance = IServiceContainer()
+    """hardcoded/returns an instance of the class"""
 
 class IDesignerHost:
     """ Provides an interface for managing designer transactions and components. """
@@ -1971,13 +1969,18 @@ class IDesignerHost:
         CreateTransaction(self: IDesignerHost) -> DesignerTransaction
         
             Creates a System.ComponentModel.Design.DesignerTransaction that can encapsulate event sequences to improve performance and enable undo and redo support functionality.
-            Returns: A new instance of System.ComponentModel.Design.DesignerTransaction. When you complete the steps in your transaction, you should call System.ComponentModel.Design.DesignerTransaction.Commit on this object.
+            Returns: A new instance of System.ComponentModel.Design.DesignerTransaction. When you complete the steps in your transaction, you should call 
+             System.ComponentModel.Design.DesignerTransaction.Commit on this object.
+        
         CreateTransaction(self: IDesignerHost, description: str) -> DesignerTransaction
         
-            Creates a System.ComponentModel.Design.DesignerTransaction that can encapsulate event sequences to improve performance and enable undo and redo support functionality, using the specified transaction description.
+            Creates a System.ComponentModel.Design.DesignerTransaction that can encapsulate event sequences to improve performance and enable undo and redo support functionality, 
+             using the specified transaction description.
+        
         
             description: A title or description for the newly created transaction.
-            Returns: A new System.ComponentModel.Design.DesignerTransaction. When you have completed the steps in your transaction, you should call System.ComponentModel.Design.DesignerTransaction.Commit on this object.
+            Returns: A new System.ComponentModel.Design.DesignerTransaction. When you have completed the steps in your transaction, you should call 
+             System.ComponentModel.Design.DesignerTransaction.Commit on this object.
         """
         pass
 
@@ -2067,9 +2070,8 @@ Get: TransactionDescription(self: IDesignerHost) -> str
     TransactionOpened = None
     TransactionOpening = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerHost()
+    Instance = IDesignerHost()
+    """hardcoded/returns an instance of the class"""
 
 class IDesignerHostTransactionState:
     """ Specifies methods for the designer host to report on the state of transactions. """
@@ -2085,9 +2087,8 @@ Get: IsClosingTransaction(self: IDesignerHostTransactionState) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDesignerHostTransactionState()
+    Instance = IDesignerHostTransactionState()
+    """hardcoded/returns an instance of the class"""
 
 class IDictionaryService:
     """ Provides a basic, component site-specific, key-value pair dictionary through a service that a designer can use to store user-defined data. """
@@ -2127,9 +2128,8 @@ class IDictionaryService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDictionaryService()
+    Instance = IDictionaryService()
+    """hardcoded/returns an instance of the class"""
 
 class IEventBindingService:
     """ Provides a service for registering event handlers for component events. """
@@ -2215,9 +2215,8 @@ class IEventBindingService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IEventBindingService()
+    Instance = IEventBindingService()
+    """hardcoded/returns an instance of the class"""
 
 class IExtenderListService:
     """ Provides an interface that can list extender providers. """
@@ -2234,9 +2233,8 @@ class IExtenderListService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IExtenderListService()
+    Instance = IExtenderListService()
+    """hardcoded/returns an instance of the class"""
 
 class IExtenderProviderService:
     """ Provides an interface for adding and removing extender providers at design time. """
@@ -2262,9 +2260,8 @@ class IExtenderProviderService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IExtenderProviderService()
+    Instance = IExtenderProviderService()
+    """hardcoded/returns an instance of the class"""
 
 class IHelpService:
     """ Provides methods for showing Help topics and adding and removing Help keywords at design time. """
@@ -2338,16 +2335,18 @@ class IHelpService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IHelpService()
+    Instance = IHelpService()
+    """hardcoded/returns an instance of the class"""
 
 class IInheritanceService:
     """ Provides methods for identifying the components of a component. """
     def AddInheritedComponents(self, component, container):
         """
         AddInheritedComponents(self: IInheritanceService, component: IComponent, container: IContainer)
-            Searches the specified component for fields that implement the System.ComponentModel.IComponent interface and adds each to the specified container, storing the inheritance level of each which can be retrieved using the System.ComponentModel.Design.IInheritanceService.GetInheritanceAttribute(System.ComponentModel.IComponent) method.
+            Searches the specified component for fields that implement the System.ComponentModel.IComponent interface and adds each to the specified container, storing the 
+             inheritance level of each which can be retrieved using the System.ComponentModel.Design.IInheritanceService.GetInheritanceAttribute(System.ComponentModel.IComponent) 
+             method.
+        
         
             component: The System.ComponentModel.IComponent to search. Searching begins with this component.
             container: The System.ComponentModel.IContainer to add components to.
@@ -2369,9 +2368,8 @@ class IInheritanceService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IInheritanceService()
+    Instance = IInheritanceService()
+    """hardcoded/returns an instance of the class"""
 
 class IMenuCommandService:
     """ Provides methods to manage the global designer verbs and menu commands available in design mode, and to show some types of shortcut menus. """
@@ -2456,9 +2454,8 @@ Get: Verbs(self: IMenuCommandService) -> DesignerVerbCollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IMenuCommandService()
+    Instance = IMenuCommandService()
+    """hardcoded/returns an instance of the class"""
 
 class IReferenceService:
     """ Provides an interface for obtaining references to objects within a project by name or type, obtaining the name of a specified object, and for locating the parent of a specified object within a designer project. """
@@ -2514,9 +2511,8 @@ class IReferenceService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IReferenceService()
+    Instance = IReferenceService()
+    """hardcoded/returns an instance of the class"""
 
 class IResourceService:
     """ Provides an interface for designers to access resource readers and writers for specific System.Globalization.CultureInfo resource types. """
@@ -2546,9 +2542,8 @@ class IResourceService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IResourceService()
+    Instance = IResourceService()
+    """hardcoded/returns an instance of the class"""
 
 class IRootDesigner:
     """ Provides support for root-level designer view technologies. """
@@ -2583,9 +2578,8 @@ Get: SupportedTechnologies(self: IRootDesigner) -> Array[ViewTechnology]
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IRootDesigner()
+    Instance = IRootDesigner()
+    """hardcoded/returns an instance of the class"""
 
 class ISelectionService:
     """ Provides an interface for a designer to select components. """
@@ -2645,9 +2639,8 @@ Get: SelectionCount(self: ISelectionService) -> int
     SelectionChanged = None
     SelectionChanging = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ISelectionService()
+    Instance = ISelectionService()
+    """hardcoded/returns an instance of the class"""
 
 class ITreeDesigner:
     """ Provides support for building a set of related custom designers. """
@@ -2678,9 +2671,8 @@ Get: Parent(self: ITreeDesigner) -> IDesigner
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ITreeDesigner()
+    Instance = ITreeDesigner()
+    """hardcoded/returns an instance of the class"""
 
 class ITypeDescriptorFilterService:
     """ Provides an interface to modify the set of member descriptors for a component in design mode. """
@@ -2724,9 +2716,8 @@ class ITypeDescriptorFilterService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeDescriptorFilterService()
+    Instance = ITypeDescriptorFilterService()
+    """hardcoded/returns an instance of the class"""
 
 class ITypeDiscoveryService:
     """ Discovers available types at design time. """
@@ -2746,9 +2737,8 @@ class ITypeDiscoveryService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeDiscoveryService()
+    Instance = ITypeDiscoveryService()
+    """hardcoded/returns an instance of the class"""
 
 class ITypeResolutionService:
     """ Provides an interface to retrieve an assembly or type by name. """
@@ -2820,9 +2810,8 @@ class ITypeResolutionService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeResolutionService()
+    Instance = ITypeResolutionService()
+    """hardcoded/returns an instance of the class"""
 
 class SelectionTypes:
     """
@@ -2876,9 +2865,8 @@ class SelectionTypes:
     Valid = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SelectionTypes()
+    Instance = SelectionTypes()
+    """hardcoded/returns an instance of the class"""
 
 class ServiceContainer:
     """
@@ -2976,9 +2964,8 @@ class ServiceContainer:
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ServiceContainer()
+    Instance = ServiceContainer()
+    """hardcoded/returns an instance of the class"""
 
 class ServiceCreatorCallback(MulticastDelegate):
     """
@@ -3007,7 +2994,9 @@ class ServiceCreatorCallback(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -3036,7 +3025,8 @@ class ServiceCreatorCallback(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -3052,9 +3042,8 @@ class ServiceCreatorCallback(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ServiceCreatorCallback()
+    Instance = ServiceCreatorCallback()
+    """hardcoded/returns an instance of the class"""
 
 class StandardCommands():
     """
@@ -3118,9 +3107,8 @@ class StandardCommands():
     ViewCode = None
     ViewGrid = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StandardCommands()
+    Instance = StandardCommands()
+    """hardcoded/returns an instance of the class"""
 
 class StandardToolWindows():
     """
@@ -3137,9 +3125,8 @@ class StandardToolWindows():
     TaskList = None
     Toolbox = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StandardToolWindows()
+    Instance = StandardToolWindows()
+    """hardcoded/returns an instance of the class"""
 
 class TypeDescriptionProviderService():
     """ Provides a type description provider for a specified type. """
@@ -3160,9 +3147,8 @@ class TypeDescriptionProviderService():
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TypeDescriptionProviderService()
+    Instance = TypeDescriptionProviderService()
+    """hardcoded/returns an instance of the class"""
 
 class ViewTechnology:
     """
@@ -3208,9 +3194,8 @@ class ViewTechnology:
     value__ = None
     WindowsForms = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ViewTechnology()
+    Instance = ViewTechnology()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

@@ -30,9 +30,8 @@ class LabelGeneratorBase():
     PrintLines = None
     Range = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LabelGeneratorBase()
+    Instance = LabelGeneratorBase()
+    """hardcoded/returns an instance of the class"""
 
 class SSCCLabelGenerator(LabelGeneratorBase):
     """ SSCCLabelGenerator() """
@@ -40,7 +39,6 @@ class SSCCLabelGenerator(LabelGeneratorBase):
     PrintLines = None
     Range = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCLabelGenerator()
+    Instance = SSCCLabelGenerator()
+    """hardcoded/returns an instance of the class"""
 

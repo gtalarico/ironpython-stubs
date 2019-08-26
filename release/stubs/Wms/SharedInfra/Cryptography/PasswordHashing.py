@@ -18,9 +18,8 @@ class HashBytes():
     Key = None
     Salt = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HashBytes()
+    Instance = HashBytes()
+    """hardcoded/returns an instance of the class"""
 
 class HashBytesExtensions():
     # no doc
@@ -45,9 +44,8 @@ class HashBytesExtensions():
         'SaltAsString',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HashBytesExtensions()
+    Instance = HashBytesExtensions()
+    """hardcoded/returns an instance of the class"""
 
 class IPasswordHasher:
     # no doc
@@ -69,9 +67,8 @@ class IPasswordHasher:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IPasswordHasher()
+    Instance = IPasswordHasher()
+    """hardcoded/returns an instance of the class"""
 
 class PBKDF2PasswordHasher:
     """ PBKDF2PasswordHasher() """
@@ -97,7 +94,6 @@ class PBKDF2PasswordHasher:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PBKDF2PasswordHasher()
+    Instance = PBKDF2PasswordHasher()
+    """hardcoded/returns an instance of the class"""
 

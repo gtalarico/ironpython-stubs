@@ -38,9 +38,8 @@ class MyList(FindableList):
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MyList()
+    Instance = MyList()
+    """hardcoded/returns an instance of the class"""
 
 class OrderFlowLink():
     """ OrderFlowLink(orderFlowOption: OrderFlowOption, orderSelectionCode: str, orderSelectionDescription: str, Color: str) """
@@ -82,9 +81,8 @@ Set: OrderSelectionDescription(self: OrderFlowLink) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OrderFlowLink()
+    Instance = OrderFlowLink()
+    """hardcoded/returns an instance of the class"""
 
 class OrderFlowLinks(List):
     """ OrderFlowLinks() """
@@ -122,9 +120,8 @@ class OrderFlowLinks(List):
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OrderFlowLinks()
+    Instance = OrderFlowLinks()
+    """hardcoded/returns an instance of the class"""
 
 class OrderFlowOption:
     """ enum OrderFlowOption, values: FulFill (2), FulFillPrintInvoice (1), PrintInvoiceFulFill (0) """
@@ -166,9 +163,8 @@ class OrderFlowOption:
     PrintInvoiceFulFill = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OrderFlowOption()
+    Instance = OrderFlowOption()
+    """hardcoded/returns an instance of the class"""
 
 class ShippperServiceLink():
     """ ShippperServiceLink(ShipperId: str, ServiceId: str, DeliveryMethodCode: str, DeliveryMethodName: str, Color: str) """
@@ -226,9 +222,8 @@ Set: ShipperId(self: ShippperServiceLink) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ShippperServiceLink()
+    Instance = ShippperServiceLink()
+    """hardcoded/returns an instance of the class"""
 
 class ShippperServiceLinks(List):
     """ ShippperServiceLinks() """
@@ -282,7 +277,6 @@ class ShippperServiceLinks(List):
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ShippperServiceLinks()
+    Instance = ShippperServiceLinks()
+    """hardcoded/returns an instance of the class"""
 

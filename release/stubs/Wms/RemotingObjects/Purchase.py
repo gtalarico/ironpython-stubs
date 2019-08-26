@@ -24,9 +24,8 @@ Set: Messages(self: DtoErrorDetails) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DtoErrorDetails()
+    Instance = DtoErrorDetails()
+    """hardcoded/returns an instance of the class"""
 
 class ErpProcessPurchaseOrderLinesResult():
     """ ErpProcessPurchaseOrderLinesResult() """
@@ -79,9 +78,8 @@ Set: Reports(self: ErpProcessPurchaseOrderLinesResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ErpProcessPurchaseOrderLinesResult()
+    Instance = ErpProcessPurchaseOrderLinesResult()
+    """hardcoded/returns an instance of the class"""
 
 class ErpProcessReceiptResult(ErpProcessPurchaseOrderLinesResult):
     """ ErpProcessReceiptResult() """
@@ -101,9 +99,8 @@ Get: HasPurchaseOrder(self: ErpProcessReceiptResult) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ErpProcessReceiptResult()
+    Instance = ErpProcessReceiptResult()
+    """hardcoded/returns an instance of the class"""
 
 class GetHistoryPurchaseOrderPrintLinesArgs():
     """
@@ -147,9 +144,8 @@ Set: SearchText(self: GetHistoryPurchaseOrderPrintLinesArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetHistoryPurchaseOrderPrintLinesArgs()
+    Instance = GetHistoryPurchaseOrderPrintLinesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetItemsOfVendorArgs():
     """
@@ -197,9 +193,8 @@ Set: VendorNumber(self: GetItemsOfVendorArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetItemsOfVendorArgs()
+    Instance = GetItemsOfVendorArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetItemVendorsArgs():
     """
@@ -227,9 +222,8 @@ Set: ItemCode(self: GetItemVendorsArgs) = value
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetItemVendorsArgs()
+    Instance = GetItemVendorsArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetPurchaseOrderLinesArgs():
     """
@@ -257,9 +251,8 @@ Set: Filter(self: GetPurchaseOrderLinesArgs) = value
 
     PurchaseOrderIds = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetPurchaseOrderLinesArgs()
+    Instance = GetPurchaseOrderLinesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class InboundOrderArgsBase():
     """ InboundOrderArgsBase() """
@@ -302,9 +295,8 @@ Set: WarehouseCode(self: InboundOrderArgsBase) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InboundOrderArgsBase()
+    Instance = InboundOrderArgsBase()
+    """hardcoded/returns an instance of the class"""
 
 class GetPurchaseOrderVendorArgs:
     """
@@ -340,9 +332,8 @@ Set: IncludePurchaseOrders(self: GetPurchaseOrderVendorArgs) = value
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetPurchaseOrderVendorArgs()
+    Instance = GetPurchaseOrderVendorArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetVendorsArgs():
     """
@@ -400,9 +391,8 @@ Set: VendorNumber(self: GetVendorsArgs) = value
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetVendorsArgs()
+    Instance = GetVendorsArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PurchaseOrder:
     """ PurchaseOrder() """
@@ -549,9 +539,8 @@ Set: VendorZipCode(self: PurchaseOrder) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrder()
+    Instance = PurchaseOrder()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryPurchaseOrder(PurchaseOrder):
     """ HistoryPurchaseOrder() """
@@ -604,9 +593,8 @@ Set: YourReference(self: HistoryPurchaseOrder) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryPurchaseOrder()
+    Instance = HistoryPurchaseOrder()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryPurchaseOrders(FindableList):
     """ HistoryPurchaseOrders() """
@@ -639,9 +627,8 @@ Set: TotalRowsMatched(self: HistoryPurchaseOrders) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryPurchaseOrders()
+    Instance = HistoryPurchaseOrders()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryPurchaseOrdersFilter(HistoryFilterBase):
     """ HistoryPurchaseOrdersFilter() """
@@ -652,9 +639,8 @@ Set: WarehouseCode(self: HistoryPurchaseOrdersFilter) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryPurchaseOrdersFilter()
+    Instance = HistoryPurchaseOrdersFilter()
+    """hardcoded/returns an instance of the class"""
 
 class Vendor():
     """
@@ -803,9 +789,8 @@ Set: ZipCode(self: Vendor) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Vendor()
+    Instance = Vendor()
+    """hardcoded/returns an instance of the class"""
 
 class ItemVendor(Vendor):
     """
@@ -850,9 +835,8 @@ Set: SalesUnitFactor(self: ItemVendor) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ItemVendor()
+    Instance = ItemVendor()
+    """hardcoded/returns an instance of the class"""
 
 class ItemVendors(FindableList):
     """
@@ -882,9 +866,8 @@ class ItemVendors(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Number'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ItemVendors()
+    Instance = ItemVendors()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessPurchaseOrderLinesArgs():
     """ ProcessPurchaseOrderLinesArgs() """
@@ -903,9 +886,8 @@ Set: YourReference(self: ProcessPurchaseOrderLinesArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessPurchaseOrderLinesArgs()
+    Instance = ProcessPurchaseOrderLinesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessReceiptArgs():
     """ ProcessReceiptArgs() """
@@ -956,9 +938,8 @@ Set: YourReference(self: ProcessReceiptArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessReceiptArgs()
+    Instance = ProcessReceiptArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PurchaseOrderArgs:
     """
@@ -999,9 +980,8 @@ Set: Paging(self: PurchaseOrderArgs) = value
     OrderIds = None
     VendorNumber = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrderArgs()
+    Instance = PurchaseOrderArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PurchaseOrderLine:
     """
@@ -1104,9 +1084,8 @@ Get: UniquePreReceiptsAsString(self: PurchaseOrderLine) -> List[str]
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrderLine()
+    Instance = PurchaseOrderLine()
+    """hardcoded/returns an instance of the class"""
 
 class PurchaseOrderLines:
     """
@@ -1160,9 +1139,8 @@ Get: PreserveState(self: PurchaseOrderLines) -> bool
     DisplayMember = 'ItemCode'
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrderLines()
+    Instance = PurchaseOrderLines()
+    """hardcoded/returns an instance of the class"""
 
 class PurchaseOrders:
     """ PurchaseOrders() """
@@ -1210,9 +1188,8 @@ Set: TotalRowsMatched(self: PurchaseOrders) = value
     DisplayMember = 'Number'
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrders()
+    Instance = PurchaseOrders()
+    """hardcoded/returns an instance of the class"""
 
 class PurchaseOrderVendor(Vendor):
     """
@@ -1251,9 +1228,8 @@ Set: PendingOrderCount(self: PurchaseOrderVendor) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrderVendor()
+    Instance = PurchaseOrderVendor()
+    """hardcoded/returns an instance of the class"""
 
 class PurchaseOrderVendors(FindableList):
     """
@@ -1283,9 +1259,8 @@ class PurchaseOrderVendors(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Number'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrderVendors()
+    Instance = PurchaseOrderVendors()
+    """hardcoded/returns an instance of the class"""
 
 class Vendors(FindableList):
     """
@@ -1315,7 +1290,6 @@ class Vendors(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Number'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Vendors()
+    Instance = Vendors()
+    """hardcoded/returns an instance of the class"""
 

@@ -34,9 +34,8 @@ Set: Type(self: AddUsedNumberArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AddUsedNumberArgs()
+    Instance = AddUsedNumberArgs()
+    """hardcoded/returns an instance of the class"""
 
 class UsedNumberArgs():
     """ UsedNumberArgs() """
@@ -65,9 +64,8 @@ Set: Type(self: UsedNumberArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UsedNumberArgs()
+    Instance = UsedNumberArgs()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

@@ -86,9 +86,8 @@ class Claim():
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Claim()
+    Instance = Claim()
+    """hardcoded/returns an instance of the class"""
 
 class ClaimsIdentity:
     """
@@ -241,9 +240,8 @@ Set: Label(self: ClaimsIdentity) = value
     DefaultNameClaimType = 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'
     DefaultRoleClaimType = 'http://schemas.microsoft.com/ws/2008/06/identity/claims/role'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ClaimsIdentity()
+    Instance = ClaimsIdentity()
+    """hardcoded/returns an instance of the class"""
 
 class ClaimsPrincipal:
     """
@@ -350,9 +348,8 @@ class ClaimsPrincipal:
     ClaimsPrincipalSelector = None
     Current = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ClaimsPrincipal()
+    Instance = ClaimsPrincipal()
+    """hardcoded/returns an instance of the class"""
 
 class ClaimTypes():
     # no doc
@@ -467,9 +464,8 @@ class ClaimTypes():
         'X500DistinguishedName',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ClaimTypes()
+    Instance = ClaimTypes()
+    """hardcoded/returns an instance of the class"""
 
 class ClaimValueTypes():
     # no doc
@@ -530,9 +526,8 @@ class ClaimValueTypes():
         'YearMonthDuration',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ClaimValueTypes()
+    Instance = ClaimValueTypes()
+    """hardcoded/returns an instance of the class"""
 
 class DynamicRoleClaimProvider():
     # no doc
@@ -545,7 +540,6 @@ class DynamicRoleClaimProvider():
         'AddDynamicRoleClaims',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DynamicRoleClaimProvider()
+    Instance = DynamicRoleClaimProvider()
+    """hardcoded/returns an instance of the class"""
 

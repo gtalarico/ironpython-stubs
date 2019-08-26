@@ -71,7 +71,8 @@ class VBCodeProvider(CodeDomProvider):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
+             specified service.
         """
         pass
 
@@ -81,7 +82,10 @@ class VBCodeProvider(CodeDomProvider):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -143,7 +147,6 @@ Get: LanguageOptions(self: VBCodeProvider) -> LanguageOptions
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return VBCodeProvider()
+    Instance = VBCodeProvider()
+    """hardcoded/returns an instance of the class"""
 

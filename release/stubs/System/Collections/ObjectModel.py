@@ -199,9 +199,8 @@ Get: Count(self: Collection[T]) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Collection()
+    Instance = Collection()
+    """hardcoded/returns an instance of the class"""
 
 class KeyedCollection(Collection):
     # no doc
@@ -261,7 +260,8 @@ class KeyedCollection(Collection):
             Removes the element with the specified key from the System.Collections.ObjectModel.KeyedCollection.
         
             key: The key of the element to remove.
-            Returns: true if the element is successfully removed; otherwise, false.  This method also returns false if key is not found in the System.Collections.ObjectModel.KeyedCollection.
+            Returns: true if the element is successfully removed; otherwise, false.  This method also returns false if key is not found in the 
+             System.Collections.ObjectModel.KeyedCollection.
         """
         pass
 
@@ -330,9 +330,8 @@ Get: Comparer(self: KeyedCollection[TKey, TItem]) -> IEqualityComparer[TKey]
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return KeyedCollection()
+    Instance = KeyedCollection()
+    """hardcoded/returns an instance of the class"""
 
 class ObservableCollection(Collection):
     """
@@ -467,9 +466,8 @@ class ObservableCollection(Collection):
     CollectionChanged = None
     PropertyChanged = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ObservableCollection()
+    Instance = ObservableCollection()
+    """hardcoded/returns an instance of the class"""
 
 class ReadOnlyCollection:
     """ ReadOnlyCollection[T](list: IList[T]) """
@@ -566,9 +564,8 @@ Get: Count(self: ReadOnlyCollection[T]) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReadOnlyCollection()
+    Instance = ReadOnlyCollection()
+    """hardcoded/returns an instance of the class"""
 
 class ReadOnlyDictionary:
     """ ReadOnlyDictionary[TKey, TValue](dictionary: IDictionary[TKey, TValue]) """
@@ -650,9 +647,8 @@ class ReadOnlyDictionary:
     KeyCollection = None
     ValueCollection = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReadOnlyDictionary()
+    Instance = ReadOnlyDictionary()
+    """hardcoded/returns an instance of the class"""
 
 class ReadOnlyObservableCollection(ReadOnlyCollection):
     """ ReadOnlyObservableCollection[T](list: ObservableCollection[T]) """
@@ -703,7 +699,6 @@ class ReadOnlyObservableCollection(ReadOnlyCollection):
     CollectionChanged = None
     PropertyChanged = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReadOnlyObservableCollection()
+    Instance = ReadOnlyObservableCollection()
+    """hardcoded/returns an instance of the class"""
 

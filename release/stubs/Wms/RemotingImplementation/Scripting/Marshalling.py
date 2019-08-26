@@ -33,9 +33,8 @@ class MarshalledPythonScriptEvaluator():
     StateServerChannelName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MarshalledPythonScriptEvaluator()
+    Instance = MarshalledPythonScriptEvaluator()
+    """hardcoded/returns an instance of the class"""
 
 class PythonStdoutInterProcessLogger(StreamWriter):
     """ PythonStdoutInterProcessLogger(loggerProxy: IMarshalledLogger, stream: Stream) """
@@ -54,7 +53,10 @@ class PythonStdoutInterProcessLogger(StreamWriter):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -86,7 +88,6 @@ class PythonStdoutInterProcessLogger(StreamWriter):
 
     CoreNewLine = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PythonStdoutInterProcessLogger()
+    Instance = PythonStdoutInterProcessLogger()
+    """hardcoded/returns an instance of the class"""
 

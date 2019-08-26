@@ -24,9 +24,8 @@ Set: Columns(self: Detail) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Detail()
+    Instance = Detail()
+    """hardcoded/returns an instance of the class"""
 
 class DetailColumn():
     """ DetailColumn() """
@@ -47,9 +46,8 @@ Set: Header(self: DetailColumn) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DetailColumn()
+    Instance = DetailColumn()
+    """hardcoded/returns an instance of the class"""
 
 class Details():
     """ Details() """
@@ -74,9 +72,8 @@ Set: Description(self: Details) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Details()
+    Instance = Details()
+    """hardcoded/returns an instance of the class"""
 
 class OrderValidationArgs():
     """ OrderValidationArgs() """
@@ -121,9 +118,8 @@ Set: ReturnFirstErrorOnly(self: OrderValidationArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OrderValidationArgs()
+    Instance = OrderValidationArgs()
+    """hardcoded/returns an instance of the class"""
 
 class OrderValidationCheck():
     """ OrderValidationCheck() """
@@ -182,9 +178,8 @@ Set: Success(self: OrderValidationCheck) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OrderValidationCheck()
+    Instance = OrderValidationCheck()
+    """hardcoded/returns an instance of the class"""
 
 class OrderValidationResult(FindableList):
     """ OrderValidationResult() """
@@ -265,7 +260,6 @@ Set: MessageDetails(self: OrderValidationResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OrderValidationResult()
+    Instance = OrderValidationResult()
+    """hardcoded/returns an instance of the class"""
 

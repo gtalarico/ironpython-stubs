@@ -52,9 +52,8 @@ class DefaultPackageCreator():
     _customer = None
     _transportPackages = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultPackageCreator()
+    Instance = DefaultPackageCreator()
+    """hardcoded/returns an instance of the class"""
 
 class ColloReferencePacker(DefaultPackageCreator):
     """ ColloReferencePacker(manager: BatchPackManager, customer: PackCustomer, batches: IEnumerable[Batch], packages: TransportPackages) """
@@ -68,9 +67,8 @@ class ColloReferencePacker(DefaultPackageCreator):
     _customer = None
     _transportPackages = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ColloReferencePacker()
+    Instance = ColloReferencePacker()
+    """hardcoded/returns an instance of the class"""
 
 class OrderPackageCreator(DefaultPackageCreator):
     """ OrderPackageCreator(manager: BatchPackManager, customer: PackCustomer, batches: IEnumerable[Batch], packages: TransportPackages) """
@@ -84,9 +82,8 @@ class OrderPackageCreator(DefaultPackageCreator):
     _customer = None
     _transportPackages = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OrderPackageCreator()
+    Instance = OrderPackageCreator()
+    """hardcoded/returns an instance of the class"""
 
 class PackageCreatorFactory():
     # no doc
@@ -99,9 +96,8 @@ class PackageCreatorFactory():
         'Create',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PackageCreatorFactory()
+    Instance = PackageCreatorFactory()
+    """hardcoded/returns an instance of the class"""
 
 class TransportPackagesHelper():
     """ TransportPackagesHelper() """
@@ -124,7 +120,6 @@ class TransportPackagesHelper():
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransportPackagesHelper()
+    Instance = TransportPackagesHelper()
+    """hardcoded/returns an instance of the class"""
 

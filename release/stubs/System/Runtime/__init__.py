@@ -31,9 +31,8 @@ Get: TargetedPatchBand(self: AssemblyTargetedPatchBandAttribute) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AssemblyTargetedPatchBandAttribute()
+    Instance = AssemblyTargetedPatchBandAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class GCLargeObjectHeapCompactionMode:
     """ enum GCLargeObjectHeapCompactionMode, values: CompactOnce (2), Default (1) """
@@ -74,9 +73,8 @@ class GCLargeObjectHeapCompactionMode:
     Default = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GCLargeObjectHeapCompactionMode()
+    Instance = GCLargeObjectHeapCompactionMode()
+    """hardcoded/returns an instance of the class"""
 
 class GCLatencyMode:
     """
@@ -124,9 +122,8 @@ class GCLatencyMode:
     SustainedLowLatency = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GCLatencyMode()
+    Instance = GCLatencyMode()
+    """hardcoded/returns an instance of the class"""
 
 class GCSettings():
     """ Specifies the garbage collection settings for the current process. """
@@ -135,9 +132,8 @@ class GCSettings():
     LatencyMode = None
     __all__ = []
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GCSettings()
+    Instance = GCSettings()
+    """hardcoded/returns an instance of the class"""
 
 class MemoryFailPoint(CriticalFinalizerObject):
     """
@@ -169,9 +165,8 @@ class MemoryFailPoint(CriticalFinalizerObject):
         """ __new__(cls: type, sizeInMegabytes: int) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MemoryFailPoint()
+    Instance = MemoryFailPoint()
+    """hardcoded/returns an instance of the class"""
 
 class ProfileOptimization():
     # no doc
@@ -190,9 +185,8 @@ class ProfileOptimization():
         'StartProfile',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProfileOptimization()
+    Instance = ProfileOptimization()
+    """hardcoded/returns an instance of the class"""
 
 class TargetedPatchingOptOutAttribute:
     """
@@ -217,9 +211,8 @@ Get: Reason(self: TargetedPatchingOptOutAttribute) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TargetedPatchingOptOutAttribute()
+    Instance = TargetedPatchingOptOutAttribute()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

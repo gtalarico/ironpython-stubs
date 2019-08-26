@@ -94,7 +94,8 @@ class ICodeGenerator:
             Gets the type indicated by the specified System.CodeDom.CodeTypeReference.
         
             type: A System.CodeDom.CodeTypeReference that indicates the type to return.
-            Returns: A text representation of the specified type for the language this code generator is designed to generate code in. For example, in Visual Basic, passing in type System.Int32 will return "Integer".
+            Returns: A text representation of the specified type for the language this code generator is designed to generate code in. For example, in Visual Basic, passing in type 
+             System.Int32 will return "Integer".
         """
         pass
 
@@ -133,9 +134,8 @@ class ICodeGenerator:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ICodeGenerator()
+    Instance = ICodeGenerator()
+    """hardcoded/returns an instance of the class"""
 
 class CodeGenerator:
     """ Provides an example implementation of the System.CodeDom.Compiler.ICodeGenerator interface. This class is abstract. """
@@ -1117,9 +1117,8 @@ class CodeGenerator:
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeGenerator()
+    Instance = CodeGenerator()
+    """hardcoded/returns an instance of the class"""
 
 class ICodeCompiler:
     """ Defines an interface for invoking compilation of source code or a CodeDOM tree using a specific compiler. """
@@ -1139,7 +1138,9 @@ class ICodeCompiler:
         """
         CompileAssemblyFromDomBatch(self: ICodeCompiler, options: CompilerParameters, compilationUnits: Array[CodeCompileUnit]) -> CompilerResults
         
-            Compiles an assembly based on the System.CodeDom trees contained in the specified array of System.CodeDom.CodeCompileUnit objects, using the specified compiler settings.
+            Compiles an assembly based on the System.CodeDom trees contained in the specified array of System.CodeDom.CodeCompileUnit objects, using the specified compiler 
+             settings.
+        
         
             options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for compilation.
             compilationUnits: An array of type System.CodeDom.CodeCompileUnit that indicates the code to compile.
@@ -1199,9 +1200,8 @@ class ICodeCompiler:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ICodeCompiler()
+    Instance = ICodeCompiler()
+    """hardcoded/returns an instance of the class"""
 
 class CodeCompiler(CodeGenerator):
     """ Provides an example implementation of the System.CodeDom.Compiler.ICodeCompiler interface. """
@@ -2273,9 +2273,8 @@ class CodeCompiler(CodeGenerator):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeCompiler()
+    Instance = CodeCompiler()
+    """hardcoded/returns an instance of the class"""
 
 class CodeDomProvider(Component):
     """ Provides a base class for System.CodeDom.Compiler.CodeDomProvider implementations. This class is abstract. """
@@ -2283,7 +2282,9 @@ class CodeDomProvider(Component):
         """
         CompileAssemblyFromDom(self: CodeDomProvider, options: CompilerParameters, *compilationUnits: Array[CodeCompileUnit]) -> CompilerResults
         
-            Compiles an assembly based on the System.CodeDom trees contained in the specified array of System.CodeDom.CodeCompileUnit objects, using the specified compiler settings.
+            Compiles an assembly based on the System.CodeDom trees contained in the specified array of System.CodeDom.CodeCompileUnit objects, using the specified compiler 
+             settings.
+        
         
             options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for the compilation.
             compilationUnits: An array of type System.CodeDom.CodeCompileUnit that indicates the code to compile.
@@ -2516,7 +2517,8 @@ class CodeDomProvider(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
+             specified service.
         """
         pass
 
@@ -2527,7 +2529,8 @@ class CodeDomProvider(Component):
             Gets the type indicated by the specified System.CodeDom.CodeTypeReference.
         
             type: A System.CodeDom.CodeTypeReference that indicates the type to return.
-            Returns: A text representation of the specified type, formatted for the language in which code is generated by this code generator. In Visual Basic, for example, passing in a System.CodeDom.CodeTypeReference for the System.Int32 type will return "Integer".
+            Returns: A text representation of the specified type, formatted for the language in which code is generated by this code generator. In Visual Basic, for example, passing in a 
+             System.CodeDom.CodeTypeReference for the System.Int32 type will return "Integer".
         """
         pass
 
@@ -2572,7 +2575,10 @@ class CodeDomProvider(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2648,9 +2654,8 @@ Get: LanguageOptions(self: CodeDomProvider) -> LanguageOptions
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeDomProvider()
+    Instance = CodeDomProvider()
+    """hardcoded/returns an instance of the class"""
 
 class CodeGeneratorOptions():
     """
@@ -2707,9 +2712,8 @@ Set: VerbatimOrder(self: CodeGeneratorOptions) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeGeneratorOptions()
+    Instance = CodeGeneratorOptions()
+    """hardcoded/returns an instance of the class"""
 
 class CodeParser:
     """ Provides an empty implementation of the System.CodeDom.Compiler.ICodeParser interface. """
@@ -2732,9 +2736,8 @@ class CodeParser:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeParser()
+    Instance = CodeParser()
+    """hardcoded/returns an instance of the class"""
 
 class CompilerError():
     """
@@ -2809,9 +2812,8 @@ Set: Line(self: CompilerError) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CompilerError()
+    Instance = CompilerError()
+    """hardcoded/returns an instance of the class"""
 
 class CompilerErrorCollection(CollectionBase):
     """
@@ -3038,9 +3040,8 @@ Get: HasWarnings(self: CompilerErrorCollection) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CompilerErrorCollection()
+    Instance = CompilerErrorCollection()
+    """hardcoded/returns an instance of the class"""
 
 class CompilerInfo():
     """ Represents the configuration settings of a language provider. This class cannot be inherited. """
@@ -3088,7 +3089,8 @@ class CompilerInfo():
         GetHashCode(self: CompilerInfo) -> int
         
             Returns the hash code for the current instance.
-            Returns: A 32-bit signed integer hash code for the current System.CodeDom.Compiler.CompilerInfo instance, suitable for use in hashing algorithms and data structures such as a hash table.
+            Returns: A 32-bit signed integer hash code for the current System.CodeDom.Compiler.CompilerInfo instance, suitable for use in hashing algorithms and data structures such as a 
+             hash table.
         """
         pass
 
@@ -3123,9 +3125,8 @@ Get: IsCodeDomProviderTypeValid(self: CompilerInfo) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CompilerInfo()
+    Instance = CompilerInfo()
+    """hardcoded/returns an instance of the class"""
 
 class CompilerParameters():
     """
@@ -3270,9 +3271,8 @@ Set: Win32Resource(self: CompilerParameters) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CompilerParameters()
+    Instance = CompilerParameters()
+    """hardcoded/returns an instance of the class"""
 
 class CompilerResults():
     """
@@ -3340,9 +3340,8 @@ Set: TempFiles(self: CompilerResults) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CompilerResults()
+    Instance = CompilerResults()
+    """hardcoded/returns an instance of the class"""
 
 class Executor():
     """ Provides command execution functions for invoking compilers. This class cannot be inherited. """
@@ -3362,7 +3361,9 @@ class Executor():
         """
         ExecWaitWithCapture(cmd: str, tempFiles: TempFileCollection, outputName: str, errorName: str) -> (int, str, str)
         
-            Executes the specified command using the specified temporary files and waits for the call to return, storing output and error information from the compiler in the specified strings.
+            Executes the specified command using the specified temporary files and waits for the call to return, storing output and error information from the compiler in the 
+             specified strings.
+        
         
             cmd: The command to execute.
             tempFiles: A System.CodeDom.Compiler.TempFileCollection with which to manage and store references to intermediate files generated during compilation.
@@ -3371,7 +3372,9 @@ class Executor():
             Returns: The return value from the compiler.
         ExecWaitWithCapture(cmd: str, currentDir: str, tempFiles: TempFileCollection, outputName: str, errorName: str) -> (int, str, str)
         
-            Executes the specified command using the specified current directory and temporary files, and waits for the call to return, storing output and error information from the compiler in the specified strings.
+            Executes the specified command using the specified current directory and temporary files, and waits for the call to return, storing output and error information from 
+             the compiler in the specified strings.
+        
         
             cmd: The command to execute.
             currentDir: The current directory.
@@ -3381,7 +3384,9 @@ class Executor():
             Returns: The return value from the compiler.
         ExecWaitWithCapture(userToken: IntPtr, cmd: str, tempFiles: TempFileCollection, outputName: str, errorName: str) -> (int, str, str)
         
-            Executes the specified command using the specified user token and temporary files, and waits for the call to return, storing output and error information from the compiler in the specified strings.
+            Executes the specified command using the specified user token and temporary files, and waits for the call to return, storing output and error information from the 
+             compiler in the specified strings.
+        
         
             userToken: The token to start the compiler process with.
             cmd: The command to execute.
@@ -3391,7 +3396,9 @@ class Executor():
             Returns: The return value from the compiler.
         ExecWaitWithCapture(userToken: IntPtr, cmd: str, currentDir: str, tempFiles: TempFileCollection, outputName: str, errorName: str) -> (int, str, str)
         
-            Executes the specified command using the specified user token, current directory, and temporary files; then waits for the call to return, storing output and error information from the compiler in the specified strings.
+            Executes the specified command using the specified user token, current directory, and temporary files; then waits for the call to return, storing output and error 
+             information from the compiler in the specified strings.
+        
         
             userToken: The token to start the compiler process with.
             cmd: The command to execute.
@@ -3408,9 +3415,8 @@ class Executor():
         'ExecWaitWithCapture',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Executor()
+    Instance = Executor()
+    """hardcoded/returns an instance of the class"""
 
 class GeneratedCodeAttribute:
     """
@@ -3442,9 +3448,8 @@ Get: Version(self: GeneratedCodeAttribute) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GeneratedCodeAttribute()
+    Instance = GeneratedCodeAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class GeneratorSupport:
     """
@@ -3513,9 +3518,8 @@ class GeneratorSupport:
     value__ = None
     Win32Resources = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GeneratorSupport()
+    Instance = GeneratorSupport()
+    """hardcoded/returns an instance of the class"""
 
 class ICodeParser:
     """ Defines an interface for parsing code into a System.CodeDom.CodeCompileUnit. """
@@ -3534,9 +3538,8 @@ class ICodeParser:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ICodeParser()
+    Instance = ICodeParser()
+    """hardcoded/returns an instance of the class"""
 
 class IndentedTextWriter(TextWriter):
     """
@@ -3574,7 +3577,10 @@ class IndentedTextWriter(TextWriter):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -3785,9 +3791,8 @@ Set: NewLine(self: IndentedTextWriter) = value
     CoreNewLine = None
     DefaultTabString = '    '
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IndentedTextWriter()
+    Instance = IndentedTextWriter()
+    """hardcoded/returns an instance of the class"""
 
 class LanguageOptions:
     """
@@ -3832,9 +3837,8 @@ class LanguageOptions:
     None_ =None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LanguageOptions()
+    Instance = LanguageOptions()
+    """hardcoded/returns an instance of the class"""
 
 class TempFileCollection:
     """
@@ -3865,7 +3869,9 @@ class TempFileCollection:
     def AddFile(self, fileName, keepFile):
         """
         AddFile(self: TempFileCollection, fileName: str, keepFile: bool)
-            Adds the specified file to the collection, using the specified value indicating whether to keep the file after the collection is disposed or when the System.CodeDom.Compiler.TempFileCollection.Delete method is called.
+            Adds the specified file to the collection, using the specified value indicating whether to keep the file after the collection is disposed or when the 
+             System.CodeDom.Compiler.TempFileCollection.Delete method is called.
+        
         
             fileName: The name of the file to add to the collection.
             keepFile: true if the file should be kept after use; false if the file should be deleted.
@@ -3973,7 +3979,6 @@ Get: TempDir(self: TempFileCollection) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TempFileCollection()
+    Instance = TempFileCollection()
+    """hardcoded/returns an instance of the class"""
 

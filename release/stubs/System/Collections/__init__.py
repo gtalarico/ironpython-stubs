@@ -44,7 +44,8 @@ class ArrayList:
         AddRange(self: ArrayList, c: ICollection)
             Adds the elements of an System.Collections.ICollection to the end of the System.Collections.ArrayList.
         
-            c: The System.Collections.ICollection whose elements should be added to the end of the System.Collections.ArrayList. The collection itself cannot be null, but it can contain elements that are null.
+            c: The System.Collections.ICollection whose elements should be added to the end of the System.Collections.ArrayList. The collection itself cannot be null, but it can 
+             contain elements that are null.
         """
         pass
 
@@ -57,21 +58,30 @@ class ArrayList:
             index: The zero-based starting index of the range to search.
             count: The length of the range to search.
             value: The System.Object to locate. The value can be null.
-            comparer: The System.Collections.IComparer implementation to use when comparing elements.-or- null to use the default comparer that is the System.IComparable implementation of each element.
-            Returns: The zero-based index of value in the sorted System.Collections.ArrayList, if value is found; otherwise, a negative number, which is the bitwise complement of the index of the next element that is larger than value or, if there is no larger element, the bitwise complement of System.Collections.ArrayList.Count.
+            comparer: The System.Collections.IComparer implementation to use when comparing elements.-or- null to use the default comparer that is the System.IComparable implementation of 
+             each element.
+        
+            Returns: The zero-based index of value in the sorted System.Collections.ArrayList, if value is found; otherwise, a negative number, which is the bitwise complement of the index 
+             of the next element that is larger than value or, if there is no larger element, the bitwise complement of System.Collections.ArrayList.Count.
+        
         BinarySearch(self: ArrayList, value: object) -> int
         
             Searches the entire sorted System.Collections.ArrayList for an element using the default comparer and returns the zero-based index of the element.
         
             value: The System.Object to locate. The value can be null.
-            Returns: The zero-based index of value in the sorted System.Collections.ArrayList, if value is found; otherwise, a negative number, which is the bitwise complement of the index of the next element that is larger than value or, if there is no larger element, the bitwise complement of System.Collections.ArrayList.Count.
+            Returns: The zero-based index of value in the sorted System.Collections.ArrayList, if value is found; otherwise, a negative number, which is the bitwise complement of the index 
+             of the next element that is larger than value or, if there is no larger element, the bitwise complement of System.Collections.ArrayList.Count.
+        
         BinarySearch(self: ArrayList, value: object, comparer: IComparer) -> int
         
             Searches the entire sorted System.Collections.ArrayList for an element using the specified comparer and returns the zero-based index of the element.
         
             value: The System.Object to locate. The value can be null.
-            comparer: The System.Collections.IComparer implementation to use when comparing elements.-or- null to use the default comparer that is the System.IComparable implementation of each element.
-            Returns: The zero-based index of value in the sorted System.Collections.ArrayList, if value is found; otherwise, a negative number, which is the bitwise complement of the index of the next element that is larger than value or, if there is no larger element, the bitwise complement of System.Collections.ArrayList.Count.
+            comparer: The System.Collections.IComparer implementation to use when comparing elements.-or- null to use the default comparer that is the System.IComparable implementation of 
+             each element.
+        
+            Returns: The zero-based index of value in the sorted System.Collections.ArrayList, if value is found; otherwise, a negative number, which is the bitwise complement of the index 
+             of the next element that is larger than value or, if there is no larger element, the bitwise complement of System.Collections.ArrayList.Count.
         """
         pass
 
@@ -179,19 +189,26 @@ class ArrayList:
             Returns: The zero-based index of the first occurrence of value within the entire System.Collections.ArrayList, if found; otherwise, -1.
         IndexOf(self: ArrayList, value: object, startIndex: int) -> int
         
-            Searches for the specified System.Object and returns the zero-based index of the first occurrence within the range of elements in the System.Collections.ArrayList that extends from the specified index to the last element.
+            Searches for the specified System.Object and returns the zero-based index of the first occurrence within the range of elements in the System.Collections.ArrayList that 
+             extends from the specified index to the last element.
+        
         
             value: The System.Object to locate in the System.Collections.ArrayList. The value can be null.
             startIndex: The zero-based starting index of the search. 0 (zero) is valid in an empty list.
-            Returns: The zero-based index of the first occurrence of value within the range of elements in the System.Collections.ArrayList that extends from startIndex to the last element, if found; otherwise, -1.
+            Returns: The zero-based index of the first occurrence of value within the range of elements in the System.Collections.ArrayList that extends from startIndex to the last 
+             element, if found; otherwise, -1.
+        
         IndexOf(self: ArrayList, value: object, startIndex: int, count: int) -> int
         
-            Searches for the specified System.Object and returns the zero-based index of the first occurrence within the range of elements in the System.Collections.ArrayList that starts at the specified index and contains the specified number of elements.
+            Searches for the specified System.Object and returns the zero-based index of the first occurrence within the range of elements in the System.Collections.ArrayList that 
+             starts at the specified index and contains the specified number of elements.
+        
         
             value: The System.Object to locate in the System.Collections.ArrayList. The value can be null.
             startIndex: The zero-based starting index of the search. 0 (zero) is valid in an empty list.
             count: The number of elements in the section to search.
-            Returns: The zero-based index of the first occurrence of value within the range of elements in the System.Collections.ArrayList that starts at startIndex and contains count number of elements, if found; otherwise, -1.
+            Returns: The zero-based index of the first occurrence of value within the range of elements in the System.Collections.ArrayList that starts at startIndex and contains count 
+             number of elements, if found; otherwise, -1.
         """
         pass
 
@@ -211,7 +228,8 @@ class ArrayList:
             Inserts the elements of a collection into the System.Collections.ArrayList at the specified index.
         
             index: The zero-based index at which the new elements should be inserted.
-            c: The System.Collections.ICollection whose elements should be inserted into the System.Collections.ArrayList. The collection itself cannot be null, but it can contain elements that are null.
+            c: The System.Collections.ICollection whose elements should be inserted into the System.Collections.ArrayList. The collection itself cannot be null, but it can contain 
+             elements that are null.
         """
         pass
 
@@ -225,19 +243,26 @@ class ArrayList:
             Returns: The zero-based index of the last occurrence of value within the entire the System.Collections.ArrayList, if found; otherwise, -1.
         LastIndexOf(self: ArrayList, value: object, startIndex: int) -> int
         
-            Searches for the specified System.Object and returns the zero-based index of the last occurrence within the range of elements in the System.Collections.ArrayList that extends from the first element to the specified index.
+            Searches for the specified System.Object and returns the zero-based index of the last occurrence within the range of elements in the System.Collections.ArrayList that 
+             extends from the first element to the specified index.
+        
         
             value: The System.Object to locate in the System.Collections.ArrayList. The value can be null.
             startIndex: The zero-based starting index of the backward search.
-            Returns: The zero-based index of the last occurrence of value within the range of elements in the System.Collections.ArrayList that extends from the first element to startIndex, if found; otherwise, -1.
+            Returns: The zero-based index of the last occurrence of value within the range of elements in the System.Collections.ArrayList that extends from the first element to 
+             startIndex, if found; otherwise, -1.
+        
         LastIndexOf(self: ArrayList, value: object, startIndex: int, count: int) -> int
         
-            Searches for the specified System.Object and returns the zero-based index of the last occurrence within the range of elements in the System.Collections.ArrayList that contains the specified number of elements and ends at the specified index.
+            Searches for the specified System.Object and returns the zero-based index of the last occurrence within the range of elements in the System.Collections.ArrayList that 
+             contains the specified number of elements and ends at the specified index.
+        
         
             value: The System.Object to locate in the System.Collections.ArrayList. The value can be null.
             startIndex: The zero-based starting index of the backward search.
             count: The number of elements in the section to search.
-            Returns: The zero-based index of the last occurrence of value within the range of elements in the System.Collections.ArrayList that contains count number of elements and ends at startIndex, if found; otherwise, -1.
+            Returns: The zero-based index of the last occurrence of value within the range of elements in the System.Collections.ArrayList that contains count number of elements and ends 
+             at startIndex, if found; otherwise, -1.
         """
         pass
 
@@ -318,7 +343,8 @@ class ArrayList:
             Copies the elements of a collection over a range of elements in the System.Collections.ArrayList.
         
             index: The zero-based System.Collections.ArrayList index at which to start copying the elements of c.
-            c: The System.Collections.ICollection whose elements to copy to the System.Collections.ArrayList. The collection itself cannot be null, but it can contain elements that are null.
+            c: The System.Collections.ICollection whose elements to copy to the System.Collections.ArrayList. The collection itself cannot be null, but it can contain elements that 
+             are null.
         """
         pass
 
@@ -329,13 +355,16 @@ class ArrayList:
         Sort(self: ArrayList, comparer: IComparer)
             Sorts the elements in the entire System.Collections.ArrayList using the specified comparer.
         
-            comparer: The System.Collections.IComparer implementation to use when comparing elements.-or- A null reference (Nothing in Visual Basic) to use the System.IComparable implementation of each element.
+            comparer: The System.Collections.IComparer implementation to use when comparing elements.-or- A null reference (Nothing in Visual Basic) to use the System.IComparable 
+             implementation of each element.
+        
         Sort(self: ArrayList, index: int, count: int, comparer: IComparer)
             Sorts the elements in a range of elements in System.Collections.ArrayList using the specified comparer.
         
             index: The zero-based starting index of the range to sort.
             count: The length of the range to sort.
-            comparer: The System.Collections.IComparer implementation to use when comparing elements.-or- A null reference (Nothing in Visual Basic) to use the System.IComparable implementation of each element.
+            comparer: The System.Collections.IComparer implementation to use when comparing elements.-or- A null reference (Nothing in Visual Basic) to use the System.IComparable 
+             implementation of each element.
         """
         pass
 
@@ -474,9 +503,8 @@ Get: SyncRoot(self: ArrayList) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ArrayList()
+    Instance = ArrayList()
+    """hardcoded/returns an instance of the class"""
 
 class BitArray:
     """
@@ -493,10 +521,13 @@ class BitArray:
         """
         And(self: BitArray, value: BitArray) -> BitArray
         
-            Performs the bitwise AND operation on the elements in the current System.Collections.BitArray against the corresponding elements in the specified System.Collections.BitArray.
+            Performs the bitwise AND operation on the elements in the current System.Collections.BitArray against the corresponding elements in the specified 
+             System.Collections.BitArray.
+        
         
             value: The System.Collections.BitArray with which to perform the bitwise AND operation.
-            Returns: The current instance containing the result of the bitwise AND operation on the elements in the current System.Collections.BitArray against the corresponding elements in the specified System.Collections.BitArray.
+            Returns: The current instance containing the result of the bitwise AND operation on the elements in the current System.Collections.BitArray against the corresponding elements 
+             in the specified System.Collections.BitArray.
         """
         pass
 
@@ -552,10 +583,13 @@ class BitArray:
         """
         Or(self: BitArray, value: BitArray) -> BitArray
         
-            Performs the bitwise OR operation on the elements in the current System.Collections.BitArray against the corresponding elements in the specified System.Collections.BitArray.
+            Performs the bitwise OR operation on the elements in the current System.Collections.BitArray against the corresponding elements in the specified 
+             System.Collections.BitArray.
+        
         
             value: The System.Collections.BitArray with which to perform the bitwise OR operation.
-            Returns: The current instance containing the result of the bitwise OR operation on the elements in the current System.Collections.BitArray against the corresponding elements in the specified System.Collections.BitArray.
+            Returns: The current instance containing the result of the bitwise OR operation on the elements in the current System.Collections.BitArray against the corresponding elements in 
+             the specified System.Collections.BitArray.
         """
         pass
 
@@ -582,10 +616,13 @@ class BitArray:
         """
         Xor(self: BitArray, value: BitArray) -> BitArray
         
-            Performs the bitwise exclusive OR operation on the elements in the current System.Collections.BitArray against the corresponding elements in the specified System.Collections.BitArray.
+            Performs the bitwise exclusive OR operation on the elements in the current System.Collections.BitArray against the corresponding elements in the specified 
+             System.Collections.BitArray.
+        
         
             value: The System.Collections.BitArray with which to perform the bitwise exclusive OR operation.
-            Returns: The current instance containing the result of the bitwise exclusive OR operation on the elements in the current System.Collections.BitArray against the corresponding elements in the specified System.Collections.BitArray.
+            Returns: The current instance containing the result of the bitwise exclusive OR operation on the elements in the current System.Collections.BitArray against the corresponding 
+             elements in the specified System.Collections.BitArray.
         """
         pass
 
@@ -665,9 +702,8 @@ Get: SyncRoot(self: BitArray) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BitArray()
+    Instance = BitArray()
+    """hardcoded/returns an instance of the class"""
 
 class CaseInsensitiveComparer:
     """
@@ -684,7 +720,8 @@ class CaseInsensitiveComparer:
         
             a: The first object to compare.
             b: The second object to compare.
-            Returns: A signed integer that indicates the relative values of a and b, as shown in the following table.Value Meaning Less than zero a is less than b, with casing ignored. Zero a equals b, with casing ignored. Greater than zero a is greater than b, with casing ignored.
+            Returns: A signed integer that indicates the relative values of a and b, as shown in the following table.Value Meaning Less than zero a is less than b, with casing ignored. 
+             Zero a equals b, with casing ignored. Greater than zero a is greater than b, with casing ignored.
         """
         pass
 
@@ -714,9 +751,8 @@ class CaseInsensitiveComparer:
     Default = None
     DefaultInvariant = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CaseInsensitiveComparer()
+    Instance = CaseInsensitiveComparer()
+    """hardcoded/returns an instance of the class"""
 
 class CaseInsensitiveHashCodeProvider:
     """
@@ -758,9 +794,8 @@ class CaseInsensitiveHashCodeProvider:
     Default = None
     DefaultInvariant = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CaseInsensitiveHashCodeProvider()
+    Instance = CaseInsensitiveHashCodeProvider()
+    """hardcoded/returns an instance of the class"""
 
 class IEnumerable:
     """ Exposes the enumerator, which supports a simple iteration over a non-generic collection. """
@@ -781,9 +816,8 @@ class IEnumerable:
         """ __iter__(self: IEnumerable) -> object """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumerable()
+    Instance = IEnumerable()
+    """hardcoded/returns an instance of the class"""
 
 class ICollection:
     """ Defines size, enumerators, and synchronization methods for all nongeneric collections. """
@@ -823,9 +857,8 @@ Get: SyncRoot(self: ICollection) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ICollection()
+    Instance = ICollection()
+    """hardcoded/returns an instance of the class"""
 
 class IList:
     """ Represents a non-generic collection of objects that can be individually accessed by index. """
@@ -936,9 +969,8 @@ Get: IsReadOnly(self: IList) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IList()
+    Instance = IList()
+    """hardcoded/returns an instance of the class"""
 
 class CollectionBase:
     """ Provides the abstract base class for a strongly typed collection. """
@@ -1116,9 +1148,8 @@ Get: Count(self: CollectionBase) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CollectionBase()
+    Instance = CollectionBase()
+    """hardcoded/returns an instance of the class"""
 
 class Comparer:
     """
@@ -1134,7 +1165,8 @@ class Comparer:
         
             a: The first object to compare.
             b: The second object to compare.
-            Returns: A signed integer that indicates the relative values of a and b, as shown in the following table.Value Meaning Less than zero a is less than b. Zero a equals b. Greater than zero a is greater than b.
+            Returns: A signed integer that indicates the relative values of a and b, as shown in the following table.Value Meaning Less than zero a is less than b. Zero a equals b. Greater 
+             than zero a is greater than b.
         """
         pass
 
@@ -1171,9 +1203,8 @@ class Comparer:
     Default = None
     DefaultInvariant = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Comparer()
+    Instance = Comparer()
+    """hardcoded/returns an instance of the class"""
 
 class IDictionary:
     """ Represents a nongeneric collection of key/value pairs. """
@@ -1276,9 +1307,8 @@ Get: Values(self: IDictionary) -> ICollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDictionary()
+    Instance = IDictionary()
+    """hardcoded/returns an instance of the class"""
 
 class DictionaryBase:
     """ Provides the abstract base class for a strongly typed collection of key/value pairs. """
@@ -1294,7 +1324,9 @@ class DictionaryBase:
         CopyTo(self: DictionaryBase, array: Array, index: int)
             Copies the System.Collections.DictionaryBase elements to a one-dimensional System.Array at the specified index.
         
-            array: The one-dimensional System.Array that is the destination of the System.Collections.DictionaryEntry objects copied from the System.Collections.DictionaryBase instance. The System.Array must have zero-based indexing.
+            array: The one-dimensional System.Array that is the destination of the System.Collections.DictionaryEntry objects copied from the System.Collections.DictionaryBase instance. 
+             The System.Array must have zero-based indexing.
+        
             index: The zero-based index in array at which copying begins.
         """
         pass
@@ -1454,9 +1486,8 @@ Get: Count(self: DictionaryBase) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DictionaryBase()
+    Instance = DictionaryBase()
+    """hardcoded/returns an instance of the class"""
 
 class DictionaryEntry():
     """
@@ -1490,9 +1521,8 @@ Set: Value(self: DictionaryEntry) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DictionaryEntry()
+    Instance = DictionaryEntry()
+    """hardcoded/returns an instance of the class"""
 
 class Hashtable:
     """
@@ -1578,7 +1608,9 @@ class Hashtable:
         CopyTo(self: Hashtable, array: Array, arrayIndex: int)
             Copies the System.Collections.Hashtable elements to a one-dimensional System.Array instance at the specified index.
         
-            array: The one-dimensional System.Array that is the destination of the System.Collections.DictionaryEntry objects copied from System.Collections.Hashtable. The System.Array must have zero-based indexing.
+            array: The one-dimensional System.Array that is the destination of the System.Collections.DictionaryEntry objects copied from System.Collections.Hashtable. The System.Array 
+             must have zero-based indexing.
+        
             arrayIndex: The zero-based index in array at which copying begins.
         """
         pass
@@ -1784,9 +1816,8 @@ Get: Values(self: Hashtable) -> ICollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Hashtable()
+    Instance = Hashtable()
+    """hardcoded/returns an instance of the class"""
 
 class IComparer:
     """ Exposes a method that compares two objects. """
@@ -1798,7 +1829,8 @@ class IComparer:
         
             x: The first object to compare.
             y: The second object to compare.
-            Returns: A signed integer that indicates the relative values of x and y, as shown in the following table.Value Meaning Less than zero x is less than y. Zero x equals y. Greater than zero x is greater than y.
+            Returns: A signed integer that indicates the relative values of x and y, as shown in the following table.Value Meaning Less than zero x is less than y. Zero x equals y. Greater 
+             than zero x is greater than y.
         """
         pass
 
@@ -1810,9 +1842,8 @@ class IComparer:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IComparer()
+    Instance = IComparer()
+    """hardcoded/returns an instance of the class"""
 
 class IEnumerator:
     """ Supports a simple iteration over a nongeneric collection. """
@@ -1852,9 +1883,8 @@ Get: Current(self: IEnumerator) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumerator()
+    Instance = IEnumerator()
+    """hardcoded/returns an instance of the class"""
 
 class IDictionaryEnumerator:
     """ Enumerates the elements of a nongeneric dictionary. """
@@ -1884,9 +1914,8 @@ Get: Value(self: IDictionaryEnumerator) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDictionaryEnumerator()
+    Instance = IDictionaryEnumerator()
+    """hardcoded/returns an instance of the class"""
 
 class IEqualityComparer:
     """ Defines methods to support the comparison of objects for equality. """
@@ -1921,9 +1950,8 @@ class IEqualityComparer:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IEqualityComparer()
+    Instance = IEqualityComparer()
+    """hardcoded/returns an instance of the class"""
 
 class IHashCodeProvider:
     """ Supplies a hash code for an object, using a custom hash function. """
@@ -1942,9 +1970,8 @@ class IHashCodeProvider:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IHashCodeProvider()
+    Instance = IHashCodeProvider()
+    """hardcoded/returns an instance of the class"""
 
 class IStructuralComparable:
     """ Supports the structural comparison of collection objects. """
@@ -1956,7 +1983,8 @@ class IStructuralComparable:
         
             other: The object to compare with the current instance.
             comparer: An object that compares members of the current collection object with the corresponding members of other.
-            Returns: An integer that indicates the relationship of the current collection object to other, as shown in the following table.Return valueDescription-1The current instance precedes other.0The current instance and other are equal.1The current instance follows other.
+            Returns: An integer that indicates the relationship of the current collection object to other, as shown in the following table.Return valueDescription-1The current instance 
+             precedes other.0The current instance and other are equal.1The current instance follows other.
         """
         pass
 
@@ -1983,9 +2011,8 @@ class IStructuralComparable:
     def __ne__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IStructuralComparable()
+    Instance = IStructuralComparable()
+    """hardcoded/returns an instance of the class"""
 
 class IStructuralEquatable:
     """ Defines methods to support the comparison of objects for structural equality. """
@@ -2023,9 +2050,8 @@ class IStructuralEquatable:
     def __ne__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IStructuralEquatable()
+    Instance = IStructuralEquatable()
+    """hardcoded/returns an instance of the class"""
 
 class Queue:
     """
@@ -2188,9 +2214,8 @@ Get: SyncRoot(self: Queue) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Queue()
+    Instance = Queue()
+    """hardcoded/returns an instance of the class"""
 
 class ReadOnlyCollectionBase:
     """ Provides the abstract base class for a strongly typed non-generic read-only collection. """
@@ -2235,9 +2260,8 @@ Get: Count(self: ReadOnlyCollectionBase) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReadOnlyCollectionBase()
+    Instance = ReadOnlyCollectionBase()
+    """hardcoded/returns an instance of the class"""
 
 class SortedList:
     """
@@ -2314,7 +2338,9 @@ class SortedList:
         CopyTo(self: SortedList, array: Array, arrayIndex: int)
             Copies System.Collections.SortedList elements to a one-dimensional System.Array object, starting at the specified index in the array.
         
-            array: The one-dimensional System.Array object that is the destination of the System.Collections.DictionaryEntry objects copied from System.Collections.SortedList. The System.Array must have zero-based indexing.
+            array: The one-dimensional System.Array object that is the destination of the System.Collections.DictionaryEntry objects copied from System.Collections.SortedList. The 
+             System.Array must have zero-based indexing.
+        
             arrayIndex: The zero-based index in array at which copying begins.
         """
         pass
@@ -2549,9 +2575,8 @@ Get: Values(self: SortedList) -> ICollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SortedList()
+    Instance = SortedList()
+    """hardcoded/returns an instance of the class"""
 
 class Stack:
     """
@@ -2705,9 +2730,8 @@ Get: SyncRoot(self: Stack) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Stack()
+    Instance = Stack()
+    """hardcoded/returns an instance of the class"""
 
 class StructuralComparisons():
     """ Provides objects for performing a structural comparison of two collection objects. """
@@ -2715,9 +2739,8 @@ class StructuralComparisons():
     StructuralEqualityComparer = None
     __all__ = []
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StructuralComparisons()
+    Instance = StructuralComparisons()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

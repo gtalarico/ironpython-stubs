@@ -40,7 +40,6 @@ class CachableState(Cachable):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CachableState()
+    Instance = CachableState()
+    """hardcoded/returns an instance of the class"""
 

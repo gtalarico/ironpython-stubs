@@ -23,9 +23,8 @@ class IQueueListener:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IQueueListener()
+    Instance = IQueueListener()
+    """hardcoded/returns an instance of the class"""
 
 class IQueuePublisher:
     # no doc
@@ -37,9 +36,8 @@ class IQueuePublisher:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IQueuePublisher()
+    Instance = IQueuePublisher()
+    """hardcoded/returns an instance of the class"""
 
 class QueueConnectResult():
     """
@@ -65,7 +63,6 @@ class QueueConnectResult():
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return QueueConnectResult()
+    Instance = QueueConnectResult()
+    """hardcoded/returns an instance of the class"""
 

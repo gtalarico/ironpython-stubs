@@ -53,9 +53,8 @@ Set: Suffix(self: GenerateArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GenerateArgs()
+    Instance = GenerateArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GenerateNumbersBaseArgs():
     """
@@ -151,9 +150,8 @@ Set: Type(self: GenerateNumbersBaseArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GenerateNumbersBaseArgs()
+    Instance = GenerateNumbersBaseArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GenerateBarcodeLabelArgs(GenerateNumbersBaseArgs):
     """
@@ -195,9 +193,8 @@ Set: PrintingOptions(self: GenerateBarcodeLabelArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GenerateBarcodeLabelArgs()
+    Instance = GenerateBarcodeLabelArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetNumberRangeArgs():
     """ GetNumberRangeArgs() """
@@ -228,9 +225,8 @@ Set: Type(self: GetNumberRangeArgs) = value
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetNumberRangeArgs()
+    Instance = GetNumberRangeArgs()
+    """hardcoded/returns an instance of the class"""
 
 class NumberRange(DbObject):
     """ NumberRange() """
@@ -330,9 +326,8 @@ Set: To(self: NumberRange) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NumberRange()
+    Instance = NumberRange()
+    """hardcoded/returns an instance of the class"""
 
 class NumberRangeType:
     """ enum NumberRangeType, values: PickBatch (2), Regular (0), SSCC (1) """
@@ -374,7 +369,6 @@ class NumberRangeType:
     SSCC = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NumberRangeType()
+    Instance = NumberRangeType()
+    """hardcoded/returns an instance of the class"""
 

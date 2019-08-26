@@ -37,9 +37,8 @@ Set: Data(self: RpInboundFileMessage) = value
 
     TypeName = 'RP Inbound File: {0}'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RpInboundFileMessage()
+    Instance = RpInboundFileMessage()
+    """hardcoded/returns an instance of the class"""
 
 class RpInboundFileMessageData():
     """ RpInboundFileMessageData() """
@@ -86,7 +85,6 @@ Set: Size(self: RpInboundFileMessageData) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RpInboundFileMessageData()
+    Instance = RpInboundFileMessageData()
+    """hardcoded/returns an instance of the class"""
 

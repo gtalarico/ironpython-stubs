@@ -39,9 +39,8 @@ class ConnectionEntries(FindableList):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ConnectionEntries()
+    Instance = ConnectionEntries()
+    """hardcoded/returns an instance of the class"""
 
 class ConnectionEntry():
     """
@@ -119,7 +118,6 @@ Set: Port(self: ConnectionEntry) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ConnectionEntry()
+    Instance = ConnectionEntry()
+    """hardcoded/returns an instance of the class"""
 

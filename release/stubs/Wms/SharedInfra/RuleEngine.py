@@ -50,9 +50,8 @@ Set: Values(self: Condition) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Condition()
+    Instance = Condition()
+    """hardcoded/returns an instance of the class"""
 
 class ICondition:
     # no doc
@@ -79,9 +78,8 @@ Set: Values(self: ICondition) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ICondition()
+    Instance = ICondition()
+    """hardcoded/returns an instance of the class"""
 
 class IRule:
     # no doc
@@ -114,9 +112,8 @@ Set: Priority(self: IRule) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IRule()
+    Instance = IRule()
+    """hardcoded/returns an instance of the class"""
 
 class OperatorEnum:
     """ enum OperatorEnum, values: OperatorIn (2), OperatorIs (0), OperatorIsNot (1), OperatorNotIn (3) """
@@ -159,9 +156,8 @@ class OperatorEnum:
     OperatorNotIn = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OperatorEnum()
+    Instance = OperatorEnum()
+    """hardcoded/returns an instance of the class"""
 
 class Rule:
     """ Rule() """
@@ -198,9 +194,8 @@ Set: Priority(self: Rule) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Rule()
+    Instance = Rule()
+    """hardcoded/returns an instance of the class"""
 
 class RuleEngine():
     # no doc
@@ -225,7 +220,6 @@ class RuleEngine():
         'FindMatchingRules',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RuleEngine()
+    Instance = RuleEngine()
+    """hardcoded/returns an instance of the class"""
 

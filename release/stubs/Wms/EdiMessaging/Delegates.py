@@ -32,7 +32,9 @@ class OnLogMessage(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -61,7 +63,8 @@ class OnLogMessage(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -77,9 +80,8 @@ class OnLogMessage(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OnLogMessage()
+    Instance = OnLogMessage()
+    """hardcoded/returns an instance of the class"""
 
 class OnStoreMessage(MulticastDelegate):
     """ OnStoreMessage(object: object, method: IntPtr) """
@@ -104,7 +106,9 @@ class OnStoreMessage(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -133,7 +137,8 @@ class OnStoreMessage(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -149,7 +154,6 @@ class OnStoreMessage(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OnStoreMessage()
+    Instance = OnStoreMessage()
+    """hardcoded/returns an instance of the class"""
 

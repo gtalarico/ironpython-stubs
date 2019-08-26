@@ -130,9 +130,8 @@ class ApplicationIdentifiers():
     ZipCodeOfRecipient_withCountryCode = '421'
     ZipCodeOfRecipient_withoutCountryCode = '420'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ApplicationIdentifiers()
+    Instance = ApplicationIdentifiers()
+    """hardcoded/returns an instance of the class"""
 
 class GS1Barcode:
     """
@@ -189,9 +188,8 @@ class GS1Barcode:
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GS1Barcode()
+    Instance = GS1Barcode()
+    """hardcoded/returns an instance of the class"""
 
 class ItemNumberHelper():
     """ A class to validate GS1 article numbers """
@@ -295,9 +293,8 @@ class ItemNumberHelper():
         'TryConvertToGtin',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ItemNumberHelper()
+    Instance = ItemNumberHelper()
+    """hardcoded/returns an instance of the class"""
 
 class ItemNumberType:
     """ enum ItemNumberType, values: ASIN (1), EAN13 (3), EAN8 (2), GTIN (4), ISBN10 (5), ISBN13 (6), ISSN (9), SKU (7), Unknown (0), UPC (8) """
@@ -346,9 +343,8 @@ class ItemNumberType:
     UPC = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ItemNumberType()
+    Instance = ItemNumberType()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

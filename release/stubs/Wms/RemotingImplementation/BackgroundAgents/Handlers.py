@@ -24,7 +24,6 @@ class PingHandler(MessageHandlerBase):
         """ __new__(cls: type, agentHealthMonitor: IBackgroundAgentHealthMonitor) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PingHandler()
+    Instance = PingHandler()
+    """hardcoded/returns an instance of the class"""
 

@@ -15,7 +15,6 @@ class AssemblyHelper():
         """ LoadAssembly(fileName: str) -> (Assembly, str) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AssemblyHelper()
+    Instance = AssemblyHelper()
+    """hardcoded/returns an instance of the class"""
 

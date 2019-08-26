@@ -69,9 +69,8 @@ Get: Workers(self: Activity) -> List[str]
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Activity()
+    Instance = Activity()
+    """hardcoded/returns an instance of the class"""
 
 class Progress():
     """ Progress() """
@@ -117,7 +116,6 @@ Set: Total(self: Progress) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Progress()
+    Instance = Progress()
+    """hardcoded/returns an instance of the class"""
 

@@ -130,9 +130,8 @@ Set: WarehouseLayoutSettingsId(self: LocationClassification) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LocationClassification()
+    Instance = LocationClassification()
+    """hardcoded/returns an instance of the class"""
 
 class LocationClassifications(FindableList):
     """ LocationClassifications() """
@@ -158,9 +157,8 @@ class LocationClassifications(FindableList):
     DisplayMember = None
     ValueMember = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LocationClassifications()
+    Instance = LocationClassifications()
+    """hardcoded/returns an instance of the class"""
 
 class LocationClassificationsFilter():
     """
@@ -177,9 +175,8 @@ class LocationClassificationsFilter():
 
     StorageAssignmentClassificationId = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LocationClassificationsFilter()
+    Instance = LocationClassificationsFilter()
+    """hardcoded/returns an instance of the class"""
 
 class StorageAssignmentClassification(DbObject):
     """ StorageAssignmentClassification() """
@@ -223,9 +220,8 @@ Set: SortOrder(self: StorageAssignmentClassification) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StorageAssignmentClassification()
+    Instance = StorageAssignmentClassification()
+    """hardcoded/returns an instance of the class"""
 
 class StorageAssignmentClassifications(FindableList):
     """ StorageAssignmentClassifications() """
@@ -251,9 +247,8 @@ class StorageAssignmentClassifications(FindableList):
     DisplayMember = None
     ValueMember = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StorageAssignmentClassifications()
+    Instance = StorageAssignmentClassifications()
+    """hardcoded/returns an instance of the class"""
 
 class StorageAssignmentClassificationsFilter():
     """
@@ -275,7 +270,6 @@ class StorageAssignmentClassificationsFilter():
     Id = None
     SearchText = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StorageAssignmentClassificationsFilter()
+    Instance = StorageAssignmentClassificationsFilter()
+    """hardcoded/returns an instance of the class"""
 

@@ -106,9 +106,8 @@ class WebSocket:
 
     DefaultKeepAliveInterval = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocket()
+    Instance = WebSocket()
+    """hardcoded/returns an instance of the class"""
 
 class ClientWebSocket(WebSocket):
     """ ClientWebSocket() """
@@ -178,9 +177,8 @@ class ClientWebSocket(WebSocket):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ClientWebSocket()
+    Instance = ClientWebSocket()
+    """hardcoded/returns an instance of the class"""
 
 class ClientWebSocketOptions():
     # no doc
@@ -233,9 +231,8 @@ Set: UseDefaultCredentials(self: ClientWebSocketOptions) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ClientWebSocketOptions()
+    Instance = ClientWebSocketOptions()
+    """hardcoded/returns an instance of the class"""
 
 class WebSocketContext():
     # no doc
@@ -300,9 +297,8 @@ class WebSocketContext():
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocketContext()
+    Instance = WebSocketContext()
+    """hardcoded/returns an instance of the class"""
 
 class HttpListenerWebSocketContext(WebSocketContext):
     # no doc
@@ -367,9 +363,8 @@ class HttpListenerWebSocketContext(WebSocketContext):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HttpListenerWebSocketContext()
+    Instance = HttpListenerWebSocketContext()
+    """hardcoded/returns an instance of the class"""
 
 class WebSocketCloseStatus:
     """ enum WebSocketCloseStatus, values: Empty (1005), EndpointUnavailable (1001), InternalServerError (1011), InvalidMessageType (1003), InvalidPayloadData (1007), MandatoryExtension (1010), MessageTooBig (1009), NormalClosure (1000), PolicyViolation (1008), ProtocolError (1002) """
@@ -418,9 +413,8 @@ class WebSocketCloseStatus:
     ProtocolError = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocketCloseStatus()
+    Instance = WebSocketCloseStatus()
+    """hardcoded/returns an instance of the class"""
 
 class WebSocketError:
     """ enum WebSocketError, values: ConnectionClosedPrematurely (8), Faulted (2), HeaderError (7), InvalidMessageType (1), InvalidState (9), NativeError (3), NotAWebSocket (4), Success (0), UnsupportedProtocol (6), UnsupportedVersion (5) """
@@ -469,9 +463,8 @@ class WebSocketError:
     UnsupportedVersion = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocketError()
+    Instance = WebSocketError()
+    """hardcoded/returns an instance of the class"""
 
 class WebSocketException(Win32Exception):
     """
@@ -537,9 +530,8 @@ class WebSocketException(Win32Exception):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocketException()
+    Instance = WebSocketException()
+    """hardcoded/returns an instance of the class"""
 
 class WebSocketMessageType:
     """ enum WebSocketMessageType, values: Binary (1), Close (2), Text (0) """
@@ -581,9 +573,8 @@ class WebSocketMessageType:
     Text = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocketMessageType()
+    Instance = WebSocketMessageType()
+    """hardcoded/returns an instance of the class"""
 
 class WebSocketReceiveResult():
     """
@@ -624,9 +615,8 @@ class WebSocketReceiveResult():
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocketReceiveResult()
+    Instance = WebSocketReceiveResult()
+    """hardcoded/returns an instance of the class"""
 
 class WebSocketState:
     """ enum WebSocketState, values: Aborted (6), Closed (5), CloseReceived (4), CloseSent (3), Connecting (1), None (0), Open (2) """
@@ -672,7 +662,6 @@ class WebSocketState:
     Open = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return WebSocketState()
+    Instance = WebSocketState()
+    """hardcoded/returns an instance of the class"""
 

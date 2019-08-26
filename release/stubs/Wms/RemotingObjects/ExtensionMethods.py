@@ -48,7 +48,6 @@ class ExtensionMethods():
         'ToHexString',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExtensionMethods()
+    Instance = ExtensionMethods()
+    """hardcoded/returns an instance of the class"""
 

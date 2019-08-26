@@ -25,9 +25,8 @@ class ProcessInboundOrderHelper():
 
     _erpResults = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessInboundOrderHelper()
+    Instance = ProcessInboundOrderHelper()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessAdhocPurchaseOrderHelper(ProcessInboundOrderHelper):
     """ ProcessAdhocPurchaseOrderHelper(dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
@@ -38,9 +37,8 @@ class ProcessAdhocPurchaseOrderHelper(ProcessInboundOrderHelper):
 
     _erpResults = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessAdhocPurchaseOrderHelper()
+    Instance = ProcessAdhocPurchaseOrderHelper()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessAdhocRmaOrderHelper(ProcessInboundOrderHelper):
     """ ProcessAdhocRmaOrderHelper(dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
@@ -51,9 +49,8 @@ class ProcessAdhocRmaOrderHelper(ProcessInboundOrderHelper):
 
     _erpResults = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessAdhocRmaOrderHelper()
+    Instance = ProcessAdhocRmaOrderHelper()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessInboundReceiveLinesFactory():
     # no doc
@@ -66,9 +63,8 @@ class ProcessInboundReceiveLinesFactory():
         'CreateHelper',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessInboundReceiveLinesFactory()
+    Instance = ProcessInboundReceiveLinesFactory()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessPreReceiptHelper(ProcessInboundOrderHelper):
     """ ProcessPreReceiptHelper(dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
@@ -79,9 +75,8 @@ class ProcessPreReceiptHelper(ProcessInboundOrderHelper):
 
     _erpResults = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessPreReceiptHelper()
+    Instance = ProcessPreReceiptHelper()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessPurchaseOrderHelper(ProcessInboundOrderHelper):
     """ ProcessPurchaseOrderHelper(dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
@@ -92,9 +87,8 @@ class ProcessPurchaseOrderHelper(ProcessInboundOrderHelper):
 
     _erpResults = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessPurchaseOrderHelper()
+    Instance = ProcessPurchaseOrderHelper()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessRmaOrderHelper(ProcessInboundOrderHelper):
     """ ProcessRmaOrderHelper(dfObject: DataFlowObject[ProcessInboundReceiveLinesArgs], stockManager: IStockManager) """
@@ -105,7 +99,6 @@ class ProcessRmaOrderHelper(ProcessInboundOrderHelper):
 
     _erpResults = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessRmaOrderHelper()
+    Instance = ProcessRmaOrderHelper()
+    """hardcoded/returns an instance of the class"""
 

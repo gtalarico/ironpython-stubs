@@ -34,7 +34,6 @@ Set: MethodName(self: SafeRpcExecutionContext) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SafeRpcExecutionContext()
+    Instance = SafeRpcExecutionContext()
+    """hardcoded/returns an instance of the class"""
 

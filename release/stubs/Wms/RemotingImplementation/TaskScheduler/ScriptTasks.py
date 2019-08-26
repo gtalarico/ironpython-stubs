@@ -27,9 +27,8 @@ Set: Settings(self: AutoDisposeTask) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AutoDisposeTask()
+    Instance = AutoDisposeTask()
+    """hardcoded/returns an instance of the class"""
 
 class NotificationCleanupTask(TaskBase):
     """ NotificationCleanupTask(settings: SystemSettings) """
@@ -42,9 +41,8 @@ class NotificationCleanupTask(TaskBase):
         """ __new__(cls: type, settings: SystemSettings) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NotificationCleanupTask()
+    Instance = NotificationCleanupTask()
+    """hardcoded/returns an instance of the class"""
 
 class NotificationSummaryTask(TaskBase):
     """ NotificationSummaryTask() """
@@ -52,9 +50,8 @@ class NotificationSummaryTask(TaskBase):
         """ Run(self: NotificationSummaryTask) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NotificationSummaryTask()
+    Instance = NotificationSummaryTask()
+    """hardcoded/returns an instance of the class"""
 
 class PythonScriptTask(TaskBase):
     """
@@ -80,7 +77,6 @@ class PythonScriptTask(TaskBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PythonScriptTask()
+    Instance = PythonScriptTask()
+    """hardcoded/returns an instance of the class"""
 

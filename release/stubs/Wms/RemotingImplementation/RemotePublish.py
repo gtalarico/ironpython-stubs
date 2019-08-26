@@ -35,9 +35,8 @@ class RemotePublishingInboundFileListener(GcloudInboundFileListenerBase):
     _general = None
     _messaging = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RemotePublishingInboundFileListener()
+    Instance = RemotePublishingInboundFileListener()
+    """hardcoded/returns an instance of the class"""
 
 class RemotePublishingInboundFileOptions(GcloudInboundFileListenerOptions):
     """ RemotePublishingInboundFileOptions(appSettings: IApplicationSettings) """
@@ -46,9 +45,8 @@ class RemotePublishingInboundFileOptions(GcloudInboundFileListenerOptions):
         """ __new__(cls: type, appSettings: IApplicationSettings) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RemotePublishingInboundFileOptions()
+    Instance = RemotePublishingInboundFileOptions()
+    """hardcoded/returns an instance of the class"""
 
 class RemotePublishingInboundFileUploadedEvent():
     """ RemotePublishingInboundFileUploadedEvent() """
@@ -95,7 +93,6 @@ Set: Size(self: RemotePublishingInboundFileUploadedEvent) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RemotePublishingInboundFileUploadedEvent()
+    Instance = RemotePublishingInboundFileUploadedEvent()
+    """hardcoded/returns an instance of the class"""
 

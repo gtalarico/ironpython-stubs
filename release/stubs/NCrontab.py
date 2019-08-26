@@ -36,9 +36,8 @@ class CrontabException(Exception):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CrontabException()
+    Instance = CrontabException()
+    """hardcoded/returns an instance of the class"""
 
 class CrontabField:
     # no doc
@@ -117,9 +116,8 @@ class CrontabField:
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CrontabField()
+    Instance = CrontabField()
+    """hardcoded/returns an instance of the class"""
 
 class CrontabFieldAccumulator(MulticastDelegate):
     """ CrontabFieldAccumulator(object: object, method: IntPtr) """
@@ -144,7 +142,9 @@ class CrontabFieldAccumulator(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -173,7 +173,8 @@ class CrontabFieldAccumulator(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -189,9 +190,8 @@ class CrontabFieldAccumulator(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CrontabFieldAccumulator()
+    Instance = CrontabFieldAccumulator()
+    """hardcoded/returns an instance of the class"""
 
 class CrontabFieldImpl:
     # no doc
@@ -250,9 +250,8 @@ class CrontabFieldImpl:
     Minute = None
     Month = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CrontabFieldImpl()
+    Instance = CrontabFieldImpl()
+    """hardcoded/returns an instance of the class"""
 
 class CrontabFieldKind:
     """ enum CrontabFieldKind, values: Day (2), DayOfWeek (4), Hour (1), Minute (0), Month (3) """
@@ -296,9 +295,8 @@ class CrontabFieldKind:
     Month = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CrontabFieldKind()
+    Instance = CrontabFieldKind()
+    """hardcoded/returns an instance of the class"""
 
 class CrontabSchedule():
     # no doc
@@ -327,9 +325,8 @@ class CrontabSchedule():
         """ TryParse(expression: str) -> ValueOrError[CrontabSchedule] """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CrontabSchedule()
+    Instance = CrontabSchedule()
+    """hardcoded/returns an instance of the class"""
 
 class ExceptionHandler(MulticastDelegate):
     """ ExceptionHandler(object: object, method: IntPtr) """
@@ -354,7 +351,9 @@ class ExceptionHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -383,7 +382,8 @@ class ExceptionHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -399,9 +399,8 @@ class ExceptionHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExceptionHandler()
+    Instance = ExceptionHandler()
+    """hardcoded/returns an instance of the class"""
 
 class ExceptionProvider(MulticastDelegate):
     """ ExceptionProvider(object: object, method: IntPtr) """
@@ -426,7 +425,9 @@ class ExceptionProvider(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -455,7 +456,8 @@ class ExceptionProvider(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -471,9 +473,8 @@ class ExceptionProvider(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExceptionProvider()
+    Instance = ExceptionProvider()
+    """hardcoded/returns an instance of the class"""
 
 class ICrontabField:
     # no doc
@@ -493,9 +494,8 @@ class ICrontabField:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ICrontabField()
+    Instance = ICrontabField()
+    """hardcoded/returns an instance of the class"""
 
 class ValueOrError():
     """
@@ -547,7 +547,6 @@ class ValueOrError():
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ValueOrError()
+    Instance = ValueOrError()
+    """hardcoded/returns an instance of the class"""
 

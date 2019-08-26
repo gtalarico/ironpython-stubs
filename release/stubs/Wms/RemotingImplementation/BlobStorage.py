@@ -31,9 +31,8 @@ class BlobExtensions():
         'SetOriginalFilename',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BlobExtensions()
+    Instance = BlobExtensions()
+    """hardcoded/returns an instance of the class"""
 
 class StorageProvider():
     """ StorageProvider(innerProvider: IStorageProvider) """
@@ -62,7 +61,6 @@ class StorageProvider():
         """ __new__(cls: type, innerProvider: IStorageProvider) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StorageProvider()
+    Instance = StorageProvider()
+    """hardcoded/returns an instance of the class"""
 

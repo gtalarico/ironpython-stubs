@@ -23,9 +23,8 @@ class CheckLpIntegrity_StockOnLocationChangedMessageHandler(MessageHandlerBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CheckLpIntegrity_StockOnLocationChangedMessageHandler()
+    Instance = CheckLpIntegrity_StockOnLocationChangedMessageHandler()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessDirectOrderMessageHandler(MessageHandlerBase):
     """ ProcessDirectOrderMessageHandler(messaging: IMessaging, directOrderLogger: DirectOrderLogger) """
@@ -46,9 +45,8 @@ class ProcessDirectOrderMessageHandler(MessageHandlerBase):
         """ __new__(cls: type, messaging: IMessaging, directOrderLogger: DirectOrderLogger) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessDirectOrderMessageHandler()
+    Instance = ProcessDirectOrderMessageHandler()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessPreReceiptMessageHandler(MessageHandlerBase):
     """ ProcessPreReceiptMessageHandler() """
@@ -64,9 +62,8 @@ class ProcessPreReceiptMessageHandler(MessageHandlerBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessPreReceiptMessageHandler()
+    Instance = ProcessPreReceiptMessageHandler()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessSalesOrderMessageHandler(MessageHandlerBase):
     """ ProcessSalesOrderMessageHandler(outbound: Outbound, stockManager: IStockManager) """
@@ -87,9 +84,8 @@ class ProcessSalesOrderMessageHandler(MessageHandlerBase):
         """ __new__(cls: type, outbound: Outbound, stockManager: IStockManager) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessSalesOrderMessageHandler()
+    Instance = ProcessSalesOrderMessageHandler()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

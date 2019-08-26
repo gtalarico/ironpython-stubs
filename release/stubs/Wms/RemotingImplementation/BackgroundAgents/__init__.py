@@ -42,9 +42,8 @@ class DatabaseBackgroundAgentHealthMonitor:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DatabaseBackgroundAgentHealthMonitor()
+    Instance = DatabaseBackgroundAgentHealthMonitor()
+    """hardcoded/returns an instance of the class"""
 
 class IBackgroundAgentHealthMonitor:
     # no doc
@@ -76,9 +75,8 @@ class IBackgroundAgentHealthMonitor:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IBackgroundAgentHealthMonitor()
+    Instance = IBackgroundAgentHealthMonitor()
+    """hardcoded/returns an instance of the class"""
 
 class InMemoryBackgroundAgentHealthMonitor:
     """ InMemoryBackgroundAgentHealthMonitor() """
@@ -116,9 +114,8 @@ class InMemoryBackgroundAgentHealthMonitor:
 
     Agents = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InMemoryBackgroundAgentHealthMonitor()
+    Instance = InMemoryBackgroundAgentHealthMonitor()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

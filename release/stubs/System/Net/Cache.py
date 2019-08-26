@@ -55,9 +55,8 @@ class HttpCacheAgeControl:
     None_ =None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HttpCacheAgeControl()
+    Instance = HttpCacheAgeControl()
+    """hardcoded/returns an instance of the class"""
 
 class HttpRequestCacheLevel:
     """
@@ -109,9 +108,8 @@ class HttpRequestCacheLevel:
     Revalidate = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HttpRequestCacheLevel()
+    Instance = HttpRequestCacheLevel()
+    """hardcoded/returns an instance of the class"""
 
 class RequestCachePolicy():
     """
@@ -145,9 +143,8 @@ Get: Level(self: RequestCachePolicy) -> RequestCacheLevel
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RequestCachePolicy()
+    Instance = RequestCachePolicy()
+    """hardcoded/returns an instance of the class"""
 
 class HttpRequestCachePolicy(RequestCachePolicy):
     """
@@ -217,9 +214,8 @@ Get: MinFresh(self: HttpRequestCachePolicy) -> TimeSpan
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HttpRequestCachePolicy()
+    Instance = HttpRequestCachePolicy()
+    """hardcoded/returns an instance of the class"""
 
 class RequestCacheLevel:
     """
@@ -269,7 +265,6 @@ class RequestCacheLevel:
     Revalidate = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RequestCacheLevel()
+    Instance = RequestCacheLevel()
+    """hardcoded/returns an instance of the class"""
 

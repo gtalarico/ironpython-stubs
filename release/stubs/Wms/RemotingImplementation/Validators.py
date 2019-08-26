@@ -25,9 +25,8 @@ Set: ErrorMessage(self: IReallocationValidator) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IReallocationValidator()
+    Instance = IReallocationValidator()
+    """hardcoded/returns an instance of the class"""
 
 class ReAllocateValidator:
     """ ReAllocateValidator(stockManager: IStockManager) """
@@ -55,9 +54,8 @@ Set: ErrorMessage(self: ReAllocateValidator) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReAllocateValidator()
+    Instance = ReAllocateValidator()
+    """hardcoded/returns an instance of the class"""
 
 class TransferWarehouseValidator:
     """ TransferWarehouseValidator() """
@@ -80,7 +78,6 @@ Set: ErrorMessage(self: TransferWarehouseValidator) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransferWarehouseValidator()
+    Instance = TransferWarehouseValidator()
+    """hardcoded/returns an instance of the class"""
 

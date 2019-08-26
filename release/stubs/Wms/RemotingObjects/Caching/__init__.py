@@ -70,9 +70,8 @@ Get: PreserveState(self: CacheObject) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CacheObject()
+    Instance = CacheObject()
+    """hardcoded/returns an instance of the class"""
 
 class CachableByteArray(Cachable):
     """
@@ -102,9 +101,8 @@ Get: Lifetime(self: CachableByteArray) -> CacheLifeTimes
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CachableByteArray()
+    Instance = CachableByteArray()
+    """hardcoded/returns an instance of the class"""
 
 class CachableString(Cachable):
     """
@@ -126,9 +124,8 @@ class CachableString(Cachable):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CachableString()
+    Instance = CachableString()
+    """hardcoded/returns an instance of the class"""
 
 class Cache(Dictionary):
     """  """
@@ -173,9 +170,8 @@ class Cache(Dictionary):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Cache()
+    Instance = Cache()
+    """hardcoded/returns an instance of the class"""
 
 class CacheKey():
     """  """
@@ -210,7 +206,9 @@ class CacheKey():
         GetHashCode(self: CacheKey) -> int
         
             Serves as a hash function for a particular type. System.Object.GetHashCode 
-                    is suitable for use in hashing algorithms and data structures like a hash table.
+                    is suitable for use in hashing algorithms and data structures like a hash 
+             table.
+        
             Returns: A hash code for the current System.Object.
         """
         pass
@@ -273,9 +271,8 @@ Get: InstanceId(self: CacheKey) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CacheKey()
+    Instance = CacheKey()
+    """hardcoded/returns an instance of the class"""
 
 class CacheKeyContructionOptionsEnum:
     """ enum CacheKeyContructionOptionsEnum, values: Global (5), Session (2), System (1), User (0), UserSystemCombination (4), Zone (3) """
@@ -320,9 +317,8 @@ class CacheKeyContructionOptionsEnum:
     value__ = None
     Zone = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CacheKeyContructionOptionsEnum()
+    Instance = CacheKeyContructionOptionsEnum()
+    """hardcoded/returns an instance of the class"""
 
 class CacheLifeTimes:
     """ enum CacheLifeTimes, values: ExpireImmediately (4), LiveIntermediate (2), LiveLong (1), LiveShort (3), NeverExpire (0) """
@@ -366,9 +362,8 @@ class CacheLifeTimes:
     NeverExpire = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CacheLifeTimes()
+    Instance = CacheLifeTimes()
+    """hardcoded/returns an instance of the class"""
 
 class ICachable:
     # no doc
@@ -412,9 +407,8 @@ Set: Key(self: ICachable) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ICachable()
+    Instance = ICachable()
+    """hardcoded/returns an instance of the class"""
 
 class OnCacheObjectEventArgs():
     """ OnCacheObjectEventArgs(key: CacheKey, value: ICachable) """
@@ -440,9 +434,8 @@ Set: Value(self: OnCacheObjectEventArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OnCacheObjectEventArgs()
+    Instance = OnCacheObjectEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

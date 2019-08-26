@@ -27,7 +27,6 @@ class StatusChangedEventArgs(EventArgs):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StatusChangedEventArgs()
+    Instance = StatusChangedEventArgs()
+    """hardcoded/returns an instance of the class"""
 

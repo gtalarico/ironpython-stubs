@@ -58,9 +58,8 @@ class BaseRange():
     EndOfRangeKey = 'WarningEndOfRange'
     _numberGeneration = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BaseRange()
+    Instance = BaseRange()
+    """hardcoded/returns an instance of the class"""
 
 class NumberRangeFactory():
     # no doc
@@ -73,9 +72,8 @@ class NumberRangeFactory():
         'GetRange',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NumberRangeFactory()
+    Instance = NumberRangeFactory()
+    """hardcoded/returns an instance of the class"""
 
 class SSCCRange(BaseRange):
     """ SSCCRange(numberGeneration: INumberGeneration) """
@@ -91,7 +89,6 @@ class SSCCRange(BaseRange):
     KeyUpdateExtensionDigit = 'UpdateExtensionDigit'
     _numberGeneration = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCRange()
+    Instance = SSCCRange()
+    """hardcoded/returns an instance of the class"""
 

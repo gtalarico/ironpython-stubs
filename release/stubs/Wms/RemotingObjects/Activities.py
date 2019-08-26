@@ -35,9 +35,8 @@ Set: ProgressBarType(self: GetActivityProgressArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetActivityProgressArgs()
+    Instance = GetActivityProgressArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ProgressBarType:
     """ enum ProgressBarType, values: Mobile (0) """
@@ -77,7 +76,6 @@ class ProgressBarType:
     Mobile = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProgressBarType()
+    Instance = ProgressBarType()
+    """hardcoded/returns an instance of the class"""
 

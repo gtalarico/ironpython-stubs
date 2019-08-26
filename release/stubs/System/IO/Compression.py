@@ -48,9 +48,8 @@ class CompressionLevel:
     Optimal = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CompressionLevel()
+    Instance = CompressionLevel()
+    """hardcoded/returns an instance of the class"""
 
 class CompressionMode:
     """
@@ -95,9 +94,8 @@ class CompressionMode:
     Decompress = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CompressionMode()
+    Instance = CompressionMode()
+    """hardcoded/returns an instance of the class"""
 
 class DeflateStream(Stream):
     """
@@ -163,7 +161,8 @@ class DeflateStream(Stream):
             Waits for the pending asynchronous read to complete.
         
             asyncResult: The reference to the pending asynchronous request to finish.
-            Returns: The number of bytes read from the stream, between zero (0) and the number of bytes you requested. System.IO.Compression.DeflateStream returns zero (0) only at the end of the stream; otherwise, it blocks until at least one byte is available.
+            Returns: The number of bytes read from the stream, between zero (0) and the number of bytes you requested. System.IO.Compression.DeflateStream returns zero (0) only at the end 
+             of the stream; otherwise, it blocks until at least one byte is available.
         """
         pass
 
@@ -189,7 +188,10 @@ class DeflateStream(Stream):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -316,9 +318,8 @@ Set: Position(self: DeflateStream) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DeflateStream()
+    Instance = DeflateStream()
+    """hardcoded/returns an instance of the class"""
 
 class GZipStream(Stream):
     """
@@ -384,7 +385,8 @@ class GZipStream(Stream):
             Waits for the pending asynchronous read to complete.
         
             asyncResult: The reference to the pending asynchronous request to finish.
-            Returns: The number of bytes read from the stream, between zero (0) and the number of bytes you requested. System.IO.Compression.GZipStream returns zero (0) only at the end of the stream; otherwise, it blocks until at least one byte is available.
+            Returns: The number of bytes read from the stream, between zero (0) and the number of bytes you requested. System.IO.Compression.GZipStream returns zero (0) only at the end of 
+             the stream; otherwise, it blocks until at least one byte is available.
         """
         pass
 
@@ -410,7 +412,10 @@ class GZipStream(Stream):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -537,7 +542,6 @@ Set: Position(self: GZipStream) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GZipStream()
+    Instance = GZipStream()
+    """hardcoded/returns an instance of the class"""
 

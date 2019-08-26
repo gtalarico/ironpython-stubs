@@ -118,9 +118,8 @@ Set: Warnings(self: DataFlowObject[T]) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DataFlowObject()
+    Instance = DataFlowObject()
+    """hardcoded/returns an instance of the class"""
 
 class DataFlowResultEnum:
     """
@@ -168,9 +167,8 @@ class DataFlowResultEnum:
     UserInputRequired = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DataFlowResultEnum()
+    Instance = DataFlowResultEnum()
+    """hardcoded/returns an instance of the class"""
 
 class IDataFlowObject:
     # no doc
@@ -217,7 +215,6 @@ Set: Warnings(self: IDataFlowObject[T]) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDataFlowObject()
+    Instance = IDataFlowObject()
+    """hardcoded/returns an instance of the class"""
 

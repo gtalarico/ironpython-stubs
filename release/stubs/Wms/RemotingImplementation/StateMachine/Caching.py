@@ -26,9 +26,8 @@ class IStateMachineCache:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IStateMachineCache()
+    Instance = IStateMachineCache()
+    """hardcoded/returns an instance of the class"""
 
 class StateMachineCacheContainer:
     """ StateMachineCacheContainer() """
@@ -52,7 +51,6 @@ class StateMachineCacheContainer:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StateMachineCacheContainer()
+    Instance = StateMachineCacheContainer()
+    """hardcoded/returns an instance of the class"""
 

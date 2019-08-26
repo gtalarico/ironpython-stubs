@@ -137,9 +137,8 @@ Set: Serial(self: BarcodeStructure) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeStructure()
+    Instance = BarcodeStructure()
+    """hardcoded/returns an instance of the class"""
 
 class BarcodeStructureDefinition(DbObject):
     """ BarcodeStructureDefinition() """
@@ -242,9 +241,8 @@ Set: UseScript(self: BarcodeStructureDefinition) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeStructureDefinition()
+    Instance = BarcodeStructureDefinition()
+    """hardcoded/returns an instance of the class"""
 
 class BarcodeStructureDefinitionFilter():
     """
@@ -269,9 +267,8 @@ class BarcodeStructureDefinitionFilter():
     Id = None
     SearchText = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeStructureDefinitionFilter()
+    Instance = BarcodeStructureDefinitionFilter()
+    """hardcoded/returns an instance of the class"""
 
 class BarcodeStructureDefinitions(FindableList):
     """ BarcodeStructureDefinitions() """
@@ -311,9 +308,8 @@ Set: TotalRows(self: BarcodeStructureDefinitions) = value
     DisplayMember = 'Description'
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeStructureDefinitions()
+    Instance = BarcodeStructureDefinitions()
+    """hardcoded/returns an instance of the class"""
 
 class BarcodeStructureResultEnum:
     """ enum (flags) BarcodeStructureResultEnum, values: InputRequired (1), NoInputRequired (2), NoMatchFound (4), None (0) """
@@ -356,9 +352,8 @@ class BarcodeStructureResultEnum:
     None_ =None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeStructureResultEnum()
+    Instance = BarcodeStructureResultEnum()
+    """hardcoded/returns an instance of the class"""
 
 class BarcodeStructureSerials(ReadOnlyCollection):
     """
@@ -442,9 +437,8 @@ class BarcodeStructureSerials(ReadOnlyCollection):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeStructureSerials()
+    Instance = BarcodeStructureSerials()
+    """hardcoded/returns an instance of the class"""
 
 class BarcodeType():
     """ BarcodeType() """
@@ -497,9 +491,8 @@ Set: Value(self: BarcodeType) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeType()
+    Instance = BarcodeType()
+    """hardcoded/returns an instance of the class"""
 
 class BarcodeTypes(FindableList):
     """ BarcodeTypes() """
@@ -529,9 +522,8 @@ class BarcodeTypes(FindableList):
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeTypes()
+    Instance = BarcodeTypes()
+    """hardcoded/returns an instance of the class"""
 
 class ExpectScanOfEnum:
     """
@@ -584,9 +576,8 @@ class ExpectScanOfEnum:
     Serial = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExpectScanOfEnum()
+    Instance = ExpectScanOfEnum()
+    """hardcoded/returns an instance of the class"""
 
 class GeneratedBarcode:
     """ GeneratedBarcode(barcode: str) """
@@ -627,9 +618,8 @@ class GeneratedBarcode:
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GeneratedBarcode()
+    Instance = GeneratedBarcode()
+    """hardcoded/returns an instance of the class"""
 
 class IGeneratedBarcode:
     """  """
@@ -651,9 +641,8 @@ class IGeneratedBarcode:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IGeneratedBarcode()
+    Instance = IGeneratedBarcode()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

@@ -71,9 +71,8 @@ Set: UserName(self: AuthenticationArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AuthenticationArgs()
+    Instance = AuthenticationArgs()
+    """hardcoded/returns an instance of the class"""
 
 class RemotingIdentity():
     """ RemotingIdentity(accessId: str, clientName: str, userName: str) """
@@ -191,7 +190,6 @@ Set: Zone(self: RemotingIdentity) = value
 
     Anonymous = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingIdentity()
+    Instance = RemotingIdentity()
+    """hardcoded/returns an instance of the class"""
 

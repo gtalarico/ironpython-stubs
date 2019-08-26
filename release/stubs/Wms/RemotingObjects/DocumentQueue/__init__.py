@@ -77,9 +77,8 @@ Set: PrintingOptions(self: AddPrintJob) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AddPrintJob()
+    Instance = AddPrintJob()
+    """hardcoded/returns an instance of the class"""
 
 class Attachment():
     """
@@ -131,9 +130,8 @@ Set: Metadata(self: Attachment) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Attachment()
+    Instance = Attachment()
+    """hardcoded/returns an instance of the class"""
 
 class AttributeValue():
     """ AttributeValue() """
@@ -150,9 +148,8 @@ Set: Description(self: AttributeValue) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AttributeValue()
+    Instance = AttributeValue()
+    """hardcoded/returns an instance of the class"""
 
 class DocumentDescriptor():
     """
@@ -184,9 +181,8 @@ Set: Description(self: DocumentDescriptor) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DocumentDescriptor()
+    Instance = DocumentDescriptor()
+    """hardcoded/returns an instance of the class"""
 
 class GetPrinterRulesArgs():
     """ GetPrinterRulesArgs() """
@@ -215,9 +211,8 @@ Set: JobTypes(self: GetPrinterRulesArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetPrinterRulesArgs()
+    Instance = GetPrinterRulesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetPrintJobAttributesArgs():
     """ GetPrintJobAttributesArgs() """
@@ -236,9 +231,8 @@ Set: JobType(self: GetPrintJobAttributesArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetPrintJobAttributesArgs()
+    Instance = GetPrintJobAttributesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetPrintJobAuditLogArgs():
     """ GetPrintJobAuditLogArgs() """
@@ -255,9 +249,8 @@ Set: PagingParams(self: GetPrintJobAuditLogArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetPrintJobAuditLogArgs()
+    Instance = GetPrintJobAuditLogArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetPrintJobsArgs():
     """ GetPrintJobsArgs() """
@@ -280,9 +273,8 @@ Set: Status(self: GetPrintJobsArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetPrintJobsArgs()
+    Instance = GetPrintJobsArgs()
+    """hardcoded/returns an instance of the class"""
 
 class IAddPrintJob:
     """
@@ -302,9 +294,8 @@ class IAddPrintJob:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IAddPrintJob()
+    Instance = IAddPrintJob()
+    """hardcoded/returns an instance of the class"""
 
 class Operator():
     """
@@ -332,9 +323,8 @@ Set: Description(self: Operator) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Operator()
+    Instance = Operator()
+    """hardcoded/returns an instance of the class"""
 
 class PrintJobAttribute():
     """
@@ -364,9 +354,8 @@ Set: Description(self: PrintJobAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobAttribute()
+    Instance = PrintJobAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class PrintJobAuditLogEntry(DbObject):
     """ PrintJobAuditLogEntry() """
@@ -408,9 +397,8 @@ Set: StatusChangedOn(self: PrintJobAuditLogEntry) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobAuditLogEntry()
+    Instance = PrintJobAuditLogEntry()
+    """hardcoded/returns an instance of the class"""
 
 class PrintJobConstants():
     # no doc
@@ -421,9 +409,8 @@ class PrintJobConstants():
         'QueueToAgentResolverKey',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobConstants()
+    Instance = PrintJobConstants()
+    """hardcoded/returns an instance of the class"""
 
 class PrintJobStatus:
     """ enum PrintJobStatus, values: Dispatched (18), Enqueued (10), Handled (20), HandledWithErrors (30), Handling (15), New (0), ReSubmitted (40), Unknown (50) """
@@ -470,9 +457,8 @@ class PrintJobStatus:
     Unknown = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobStatus()
+    Instance = PrintJobStatus()
+    """hardcoded/returns an instance of the class"""
 
 class PrintJobType():
     """
@@ -500,9 +486,8 @@ Set: Id(self: PrintJobType) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobType()
+    Instance = PrintJobType()
+    """hardcoded/returns an instance of the class"""
 
 class PrintRule(DbObject):
     """ PrintRule() """
@@ -631,9 +616,8 @@ Set: ZoneId(self: PrintRule) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintRule()
+    Instance = PrintRule()
+    """hardcoded/returns an instance of the class"""
 
 class PrintRuleLine(DbObject):
     """
@@ -687,9 +671,8 @@ Set: Values(self: PrintRuleLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintRuleLine()
+    Instance = PrintRuleLine()
+    """hardcoded/returns an instance of the class"""
 
 class QueuedPrintJob(DbObject):
     """ QueuedPrintJob() """
@@ -828,9 +811,8 @@ Set: ZoneId(self: QueuedPrintJob) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return QueuedPrintJob()
+    Instance = QueuedPrintJob()
+    """hardcoded/returns an instance of the class"""
 
 class RedispatchPrintJobArgs():
     """ RedispatchPrintJobArgs() """
@@ -853,9 +835,8 @@ Set: PrintingOptions(self: RedispatchPrintJobArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RedispatchPrintJobArgs()
+    Instance = RedispatchPrintJobArgs()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

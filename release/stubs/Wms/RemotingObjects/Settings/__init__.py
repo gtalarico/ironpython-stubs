@@ -180,9 +180,8 @@ Set: ShipppingDeliveryTimeInterval(self: SystemSettings) = value
     ValidValueGetTranslations = 'ValidValueGetTranslations'
     ValidValueGetTypeDays = 'ValidValueGetTypeDays'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SystemSettings()
+    Instance = SystemSettings()
+    """hardcoded/returns an instance of the class"""
 
 class SystemSettingsTable(List):
     """ SystemSettingsTable() """
@@ -205,9 +204,8 @@ class SystemSettingsTable(List):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SystemSettingsTable()
+    Instance = SystemSettingsTable()
+    """hardcoded/returns an instance of the class"""
 
 class SystemSettingsTableRow():
     """ SystemSettingsTableRow() """
@@ -318,9 +316,8 @@ Set: Value(self: SystemSettingsTableRow) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SystemSettingsTableRow()
+    Instance = SystemSettingsTableRow()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

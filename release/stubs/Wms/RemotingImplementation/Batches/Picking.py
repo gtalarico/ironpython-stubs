@@ -80,9 +80,8 @@ class RegularPicker:
     _warehouseCode = None
     _warehouseLocationCode = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RegularPicker()
+    Instance = RegularPicker()
+    """hardcoded/returns an instance of the class"""
 
 class DifferentLocationAndMorePicker(RegularPicker):
     """ DifferentLocationAndMorePicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
@@ -129,9 +128,8 @@ class DifferentLocationAndMorePicker(RegularPicker):
     _warehouseCode = None
     _warehouseLocationCode = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DifferentLocationAndMorePicker()
+    Instance = DifferentLocationAndMorePicker()
+    """hardcoded/returns an instance of the class"""
 
 class DifferentLocationPicker(DifferentLocationAndMorePicker):
     """ DifferentLocationPicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
@@ -174,9 +172,8 @@ class DifferentLocationPicker(DifferentLocationAndMorePicker):
     _warehouseCode = None
     _warehouseLocationCode = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DifferentLocationPicker()
+    Instance = DifferentLocationPicker()
+    """hardcoded/returns an instance of the class"""
 
 class ItemIdRegularPicker:
     """ ItemIdRegularPicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
@@ -294,9 +291,8 @@ class ItemIdRegularPicker:
     _warehouseCode = None
     _warehouseLocationCode = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ItemIdRegularPicker()
+    Instance = ItemIdRegularPicker()
+    """hardcoded/returns an instance of the class"""
 
 class ItemIdDifferentLocationAndMorePicker:
     """ ItemIdDifferentLocationAndMorePicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
@@ -355,9 +351,8 @@ class ItemIdDifferentLocationAndMorePicker:
     _warehouseCode = None
     _warehouseLocationCode = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ItemIdDifferentLocationAndMorePicker()
+    Instance = ItemIdDifferentLocationAndMorePicker()
+    """hardcoded/returns an instance of the class"""
 
 class ItemIdDifferentLocationPicker:
     """ ItemIdDifferentLocationPicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
@@ -408,9 +403,8 @@ class ItemIdDifferentLocationPicker:
     _warehouseCode = None
     _warehouseLocationCode = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ItemIdDifferentLocationPicker()
+    Instance = ItemIdDifferentLocationPicker()
+    """hardcoded/returns an instance of the class"""
 
 class ItemIdMorePicker:
     """ ItemIdMorePicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
@@ -465,9 +459,8 @@ class ItemIdMorePicker:
     _warehouseCode = None
     _warehouseLocationCode = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ItemIdMorePicker()
+    Instance = ItemIdMorePicker()
+    """hardcoded/returns an instance of the class"""
 
 class MorePicker(RegularPicker):
     """ MorePicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
@@ -514,9 +507,8 @@ class MorePicker(RegularPicker):
     _warehouseCode = None
     _warehouseLocationCode = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MorePicker()
+    Instance = MorePicker()
+    """hardcoded/returns an instance of the class"""
 
 class PickerFactory:
     """ PickerFactory(args: PickingArgs) """
@@ -553,9 +545,8 @@ class PickerFactory:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PickerFactory()
+    Instance = PickerFactory()
+    """hardcoded/returns an instance of the class"""
 
 class PickFlavour:
     """ enum PickFlavour, values: ChangeRoute (2), DeliverMore (1), DeliverMoreAndChangeRoute (3), Regular (0) """
@@ -598,9 +589,8 @@ class PickFlavour:
     Regular = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PickFlavour()
+    Instance = PickFlavour()
+    """hardcoded/returns an instance of the class"""
 
 class PickingArgs():
     """ PickingArgs() """
@@ -652,7 +642,6 @@ Set: WarehouseLocationCode(self: PickingArgs) = value
     UpdateAllocation = None
     UpdateAllocationDelegate = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PickingArgs()
+    Instance = PickingArgs()
+    """hardcoded/returns an instance of the class"""
 

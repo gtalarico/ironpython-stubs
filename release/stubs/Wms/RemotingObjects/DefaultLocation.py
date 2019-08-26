@@ -48,9 +48,8 @@ class ChangeDefaultLocation:
     Never = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ChangeDefaultLocation()
+    Instance = ChangeDefaultLocation()
+    """hardcoded/returns an instance of the class"""
 
 class UpdateItemDefaultLocationArgs():
     """ UpdateItemDefaultLocationArgs() """
@@ -85,9 +84,8 @@ Set: WarehouseCode(self: UpdateItemDefaultLocationArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UpdateItemDefaultLocationArgs()
+    Instance = UpdateItemDefaultLocationArgs()
+    """hardcoded/returns an instance of the class"""
 
 class WarehouseItemLocation():
     """
@@ -121,7 +119,6 @@ Set: WarehouseDescription(self: WarehouseItemLocation) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return WarehouseItemLocation()
+    Instance = WarehouseItemLocation()
+    """hardcoded/returns an instance of the class"""
 

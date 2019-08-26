@@ -19,7 +19,6 @@ class ExceptionFormatters():
         'FormatLogMessage',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExceptionFormatters()
+    Instance = ExceptionFormatters()
+    """hardcoded/returns an instance of the class"""
 

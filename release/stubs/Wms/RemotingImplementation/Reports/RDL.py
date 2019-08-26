@@ -31,9 +31,8 @@ class RDLIsolatedReportRendererExecutor():
     StateServerChannelName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RDLIsolatedReportRendererExecutor()
+    Instance = RDLIsolatedReportRendererExecutor()
+    """hardcoded/returns an instance of the class"""
 
 class RDLReportRenderer:
     """ RDLReportRenderer() """
@@ -56,9 +55,8 @@ class RDLReportRenderer:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RDLReportRenderer()
+    Instance = RDLReportRenderer()
+    """hardcoded/returns an instance of the class"""
 
 class Utilities():
     """ Utilities() """
@@ -67,7 +65,6 @@ class Utilities():
         """ LoadNativeAssemblies(rootApplicationPath: str) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Utilities()
+    Instance = Utilities()
+    """hardcoded/returns an instance of the class"""
 

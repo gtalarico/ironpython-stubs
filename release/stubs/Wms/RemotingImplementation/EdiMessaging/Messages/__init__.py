@@ -35,9 +35,8 @@ Set: Data(self: ProcessDirectOrderMessage) = value
 
     TypeName = 'Direct Order Fulfillment'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessDirectOrderMessage()
+    Instance = ProcessDirectOrderMessage()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessDirectOrderMessageData():
     """
@@ -82,9 +81,8 @@ Set: IsProcessedInErp(self: ProcessDirectOrderMessageData) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessDirectOrderMessageData()
+    Instance = ProcessDirectOrderMessageData()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessPreReceiptMessage(MessageBase):
     """
@@ -112,9 +110,8 @@ Set: Data(self: ProcessPreReceiptMessage) = value
 
     TypeName = 'Prereceipt Fulfillment'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessPreReceiptMessage()
+    Instance = ProcessPreReceiptMessage()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessPreReceiptMessageData():
     """ ProcessPreReceiptMessageData() """
@@ -149,9 +146,8 @@ Set: YourReference(self: ProcessPreReceiptMessageData) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessPreReceiptMessageData()
+    Instance = ProcessPreReceiptMessageData()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessSalesOrderMessage(MessageBase):
     """
@@ -179,9 +175,8 @@ Set: Data(self: ProcessSalesOrderMessage) = value
 
     TypeName = 'Sales Order Fulfillment'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessSalesOrderMessage()
+    Instance = ProcessSalesOrderMessage()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessSalesOrderMessageData():
     """ ProcessSalesOrderMessageData() """
@@ -204,9 +199,8 @@ Set: Order(self: ProcessSalesOrderMessageData) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessSalesOrderMessageData()
+    Instance = ProcessSalesOrderMessageData()
+    """hardcoded/returns an instance of the class"""
 
 class StockOnLocationChangedMessage(MessageBase):
     """ StockOnLocationChangedMessage() """
@@ -223,9 +217,8 @@ Set: Location(self: StockOnLocationChangedMessage) = value
 
     TypeName = 'Stock changed on location'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StockOnLocationChangedMessage()
+    Instance = StockOnLocationChangedMessage()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

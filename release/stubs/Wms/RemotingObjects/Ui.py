@@ -23,9 +23,8 @@ Set: Fields(self: UiForm) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UiForm()
+    Instance = UiForm()
+    """hardcoded/returns an instance of the class"""
 
 class UiFormField():
     """ UiFormField() """
@@ -70,7 +69,6 @@ Set: Type(self: UiFormField) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UiFormField()
+    Instance = UiFormField()
+    """hardcoded/returns an instance of the class"""
 

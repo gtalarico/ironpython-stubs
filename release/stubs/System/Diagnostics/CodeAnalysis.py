@@ -18,9 +18,8 @@ class ExcludeFromCodeCoverageAttribute:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExcludeFromCodeCoverageAttribute()
+    Instance = ExcludeFromCodeCoverageAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class SuppressMessageAttribute:
     """
@@ -84,7 +83,6 @@ Set: Target(self: SuppressMessageAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SuppressMessageAttribute()
+    Instance = SuppressMessageAttribute()
+    """hardcoded/returns an instance of the class"""
 

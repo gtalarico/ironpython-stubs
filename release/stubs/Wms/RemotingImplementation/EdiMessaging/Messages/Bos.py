@@ -29,9 +29,8 @@ Set: Name(self: BosFile) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosFile()
+    Instance = BosFile()
+    """hardcoded/returns an instance of the class"""
 
 class BosFileExtensions():
     # no doc
@@ -47,9 +46,8 @@ class BosFileExtensions():
         'AddFile',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosFileExtensions()
+    Instance = BosFileExtensions()
+    """hardcoded/returns an instance of the class"""
 
 class BosInboundFile(BosFile):
     """ BosInboundFile() """
@@ -60,9 +58,8 @@ Set: ScannerSerialNo(self: BosInboundFile) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosInboundFile()
+    Instance = BosInboundFile()
+    """hardcoded/returns an instance of the class"""
 
 class BosInboundFileExtensions():
     # no doc
@@ -81,9 +78,8 @@ class BosInboundFileExtensions():
         'ToBase64String',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosInboundFileExtensions()
+    Instance = BosInboundFileExtensions()
+    """hardcoded/returns an instance of the class"""
 
 class BosInboundFileMessage(MessageBase):
     """
@@ -111,9 +107,8 @@ Set: Data(self: BosInboundFileMessage) = value
 
     TypeName = 'BOS Inbound File: {0}'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosInboundFileMessage()
+    Instance = BosInboundFileMessage()
+    """hardcoded/returns an instance of the class"""
 
 class BosInboundFileMessageData():
     """ BosInboundFileMessageData() """
@@ -124,9 +119,8 @@ Set: File(self: BosInboundFileMessageData) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosInboundFileMessageData()
+    Instance = BosInboundFileMessageData()
+    """hardcoded/returns an instance of the class"""
 
 class BosOutboundFilesMessage(MessageBase):
     """
@@ -154,9 +148,8 @@ Set: Data(self: BosOutboundFilesMessage) = value
 
     TypeName = 'BOS Outbound File'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosOutboundFilesMessage()
+    Instance = BosOutboundFilesMessage()
+    """hardcoded/returns an instance of the class"""
 
 class BosOutboundFilesMessageData():
     """ BosOutboundFilesMessageData() """
@@ -167,7 +160,6 @@ Set: Files(self: BosOutboundFilesMessageData) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosOutboundFilesMessageData()
+    Instance = BosOutboundFilesMessageData()
+    """hardcoded/returns an instance of the class"""
 

@@ -79,9 +79,8 @@ Set: WarehouseLocationCode(self: AllocatedStockArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AllocatedStockArgs()
+    Instance = AllocatedStockArgs()
+    """hardcoded/returns an instance of the class"""
 
 class AddAllocatedStockArgs(AllocatedStockArgs):
     """ AddAllocatedStockArgs() """
@@ -104,9 +103,8 @@ Set: ItemIdentificationToAdd(self: AddAllocatedStockArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AddAllocatedStockArgs()
+    Instance = AddAllocatedStockArgs()
+    """hardcoded/returns an instance of the class"""
 
 class AllocationSettings():
     """ AllocationSettings() """
@@ -178,9 +176,8 @@ Set: PickTypesToInclude(self: AllocationSettings) = value
     DecreaseStockWithAssignedStock = None
     OnGetLocationsForLine = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AllocationSettings()
+    Instance = AllocationSettings()
+    """hardcoded/returns an instance of the class"""
 
 class BatchAllocationSink:
     """
@@ -258,9 +255,8 @@ Set: GetBatchDelegate(self: BatchAllocationSink) = value
 
     OnGetBatch = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchAllocationSink()
+    Instance = BatchAllocationSink()
+    """hardcoded/returns an instance of the class"""
 
 class BatchAllocationSinkArgs():
     """ BatchAllocationSinkArgs() """
@@ -283,9 +279,8 @@ Set: ProcessingMode(self: BatchAllocationSinkArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchAllocationSinkArgs()
+    Instance = BatchAllocationSinkArgs()
+    """hardcoded/returns an instance of the class"""
 
 class BatchSink(BatchAllocationSink):
     """
@@ -304,15 +299,13 @@ class BatchSink(BatchAllocationSink):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchSink()
+    Instance = BatchSink()
+    """hardcoded/returns an instance of the class"""
 
 class DefaultPrintAllocationSettings(AllocationSettings):
     """ DefaultPrintAllocationSettings() """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultPrintAllocationSettings()
+    Instance = DefaultPrintAllocationSettings()
+    """hardcoded/returns an instance of the class"""
 
 class EnhancedStockAllocater:
     """
@@ -380,9 +373,8 @@ Set: Settings(self: EnhancedStockAllocater) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EnhancedStockAllocater()
+    Instance = EnhancedStockAllocater()
+    """hardcoded/returns an instance of the class"""
 
 class EnhancedStockManager:
     """
@@ -538,9 +530,8 @@ class EnhancedStockManager:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EnhancedStockManager()
+    Instance = EnhancedStockManager()
+    """hardcoded/returns an instance of the class"""
 
 class IAllocationSink:
     # no doc
@@ -564,9 +555,8 @@ class IAllocationSink:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IAllocationSink()
+    Instance = IAllocationSink()
+    """hardcoded/returns an instance of the class"""
 
 class IStockAllocater:
     # no doc
@@ -603,9 +593,8 @@ Set: Settings(self: IStockAllocater) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IStockAllocater()
+    Instance = IStockAllocater()
+    """hardcoded/returns an instance of the class"""
 
 class IStockManager:
     # no doc
@@ -739,9 +728,8 @@ class IStockManager:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IStockManager()
+    Instance = IStockManager()
+    """hardcoded/returns an instance of the class"""
 
 class ItemStockAllocationExtensions():
     # no doc
@@ -766,9 +754,8 @@ class ItemStockAllocationExtensions():
         'EnrichWithMessageQueueData',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ItemStockAllocationExtensions()
+    Instance = ItemStockAllocationExtensions()
+    """hardcoded/returns an instance of the class"""
 
 class LocationSelectionAlgorithmType:
     """ enum LocationSelectionAlgorithmType, values: AlphabeticSort (1), AlphabeticSortBulkFirst (2), LeastLocations (0), LeastLocationsBulkFirst (3) """
@@ -811,9 +798,8 @@ class LocationSelectionAlgorithmType:
     LeastLocationsBulkFirst = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LocationSelectionAlgorithmType()
+    Instance = LocationSelectionAlgorithmType()
+    """hardcoded/returns an instance of the class"""
 
 class LockException(Exception):
     """ LockException(message: str) """
@@ -831,9 +817,8 @@ class LockException(Exception):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LockException()
+    Instance = LockException()
+    """hardcoded/returns an instance of the class"""
 
 class MessageQueueAllocationSink:
     """ MessageQueueAllocationSink(messageReferenceId: Nullable[Guid]) """
@@ -866,9 +851,8 @@ class MessageQueueAllocationSink:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessageQueueAllocationSink()
+    Instance = MessageQueueAllocationSink()
+    """hardcoded/returns an instance of the class"""
 
 class MessageQueueStockAllocater:
     """ MessageQueueStockAllocater(stockManager: IStockManager, settings: AllocationSettings, allocationSink: IAllocationSink) """
@@ -930,9 +914,8 @@ Set: Settings(self: MessageQueueStockAllocater) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessageQueueStockAllocater()
+    Instance = MessageQueueStockAllocater()
+    """hardcoded/returns an instance of the class"""
 
 class ReallocateStockArgs():
     """ ReallocateStockArgs() """
@@ -973,9 +956,8 @@ Set: WarehouseLocationCodeTo(self: ReallocateStockArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReallocateStockArgs()
+    Instance = ReallocateStockArgs()
+    """hardcoded/returns an instance of the class"""
 
 class StockLock:
     """
@@ -1010,9 +992,8 @@ class StockLock:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StockLock()
+    Instance = StockLock()
+    """hardcoded/returns an instance of the class"""
 
 class StockStreamTask(TaskBase):
     """ StockStreamTask(settings: SystemSettings) """
@@ -1032,7 +1013,6 @@ Set: Settings(self: StockStreamTask) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StockStreamTask()
+    Instance = StockStreamTask()
+    """hardcoded/returns an instance of the class"""
 

@@ -60,9 +60,8 @@ Set: ZoneId(self: GetScriptArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetScriptArgs()
+    Instance = GetScriptArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PythonError():
     """
@@ -112,9 +111,8 @@ Set: Span(self: PythonError) = value
 
     ErrorSeverity = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PythonError()
+    Instance = PythonError()
+    """hardcoded/returns an instance of the class"""
 
 class ScriptSnippet():
     """ ScriptSnippet() """
@@ -135,9 +133,8 @@ Set: Script(self: ScriptSnippet) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ScriptSnippet()
+    Instance = ScriptSnippet()
+    """hardcoded/returns an instance of the class"""
 
 class SourceLocation():
     """
@@ -225,9 +222,8 @@ Get: Line(self: SourceLocation) -> int
     MinValue = None
     None_ =None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SourceLocation()
+    Instance = SourceLocation()
+    """hardcoded/returns an instance of the class"""
 
 class SourceSpan():
     """
@@ -293,9 +289,8 @@ Get: Start(self: SourceSpan) -> SourceLocation
     Invalid = None
     None_ =None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SourceSpan()
+    Instance = SourceSpan()
+    """hardcoded/returns an instance of the class"""
 
 class ZoneScript(DbObject):
     """ ZoneScript() """
@@ -414,9 +409,8 @@ Set: ZoneId(self: ZoneScript) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ZoneScript()
+    Instance = ZoneScript()
+    """hardcoded/returns an instance of the class"""
 
 class ZoneScripts(FindableList):
     """ ZoneScripts() """
@@ -447,9 +441,8 @@ class ZoneScripts(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ZoneScripts()
+    Instance = ZoneScripts()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

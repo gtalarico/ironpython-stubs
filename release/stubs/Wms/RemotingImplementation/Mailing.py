@@ -40,9 +40,8 @@ class FileLocationMailAttachment:
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FileLocationMailAttachment()
+    Instance = FileLocationMailAttachment()
+    """hardcoded/returns an instance of the class"""
 
 class IMailAttachment:
     # no doc
@@ -60,9 +59,8 @@ class IMailAttachment:
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IMailAttachment()
+    Instance = IMailAttachment()
+    """hardcoded/returns an instance of the class"""
 
 class IMailer:
     # no doc
@@ -86,9 +84,8 @@ class IMailer:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IMailer()
+    Instance = IMailer()
+    """hardcoded/returns an instance of the class"""
 
 class MailAttachment:
     """ MailAttachment(filename: str, filecontent: Array[Byte]) """
@@ -116,9 +113,8 @@ Set: Filename(self: MailAttachment) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MailAttachment()
+    Instance = MailAttachment()
+    """hardcoded/returns an instance of the class"""
 
 class MailerBase:
     # no doc
@@ -150,9 +146,8 @@ class MailerBase:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MailerBase()
+    Instance = MailerBase()
+    """hardcoded/returns an instance of the class"""
 
 class MailerException(Exception):
     """
@@ -179,9 +174,8 @@ class MailerException(Exception):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MailerException()
+    Instance = MailerException()
+    """hardcoded/returns an instance of the class"""
 
 class MailgunException(MailerException):
     """
@@ -205,9 +199,8 @@ class MailgunException(MailerException):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MailgunException()
+    Instance = MailgunException()
+    """hardcoded/returns an instance of the class"""
 
 class MailgunMailer(MailerBase):
     """ MailgunMailer(settings: MailgunSettings) """
@@ -227,9 +220,8 @@ class MailgunMailer(MailerBase):
     ApiEndpoint = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MailgunMailer()
+    Instance = MailgunMailer()
+    """hardcoded/returns an instance of the class"""
 
 class MailgunResponse():
     """ MailgunResponse() """
@@ -246,9 +238,8 @@ Set: Message(self: MailgunResponse) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MailgunResponse()
+    Instance = MailgunResponse()
+    """hardcoded/returns an instance of the class"""
 
 class MailgunSettings():
     """ MailgunSettings() """
@@ -277,9 +268,8 @@ Set: MailgunDomainBoxwise(self: MailgunSettings) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MailgunSettings()
+    Instance = MailgunSettings()
+    """hardcoded/returns an instance of the class"""
 
 class SendMailArgs():
     """ SendMailArgs() """
@@ -320,9 +310,8 @@ Set: Subject(self: SendMailArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SendMailArgs()
+    Instance = SendMailArgs()
+    """hardcoded/returns an instance of the class"""
 
 class SynchronousMailExtensions():
     # no doc
@@ -353,7 +342,6 @@ class SynchronousMailExtensions():
         'SendText',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SynchronousMailExtensions()
+    Instance = SynchronousMailExtensions()
+    """hardcoded/returns an instance of the class"""
 

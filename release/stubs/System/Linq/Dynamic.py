@@ -14,9 +14,8 @@ class DynamicClass():
         """ ToString(self: DynamicClass) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DynamicClass()
+    Instance = DynamicClass()
+    """hardcoded/returns an instance of the class"""
 
 class DynamicExpression():
     # no doc
@@ -48,9 +47,8 @@ class DynamicExpression():
         'ParseLambda',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DynamicExpression()
+    Instance = DynamicExpression()
+    """hardcoded/returns an instance of the class"""
 
 class DynamicProperty():
     """ DynamicProperty(name: str, type: Type) """
@@ -70,9 +68,8 @@ class DynamicProperty():
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DynamicProperty()
+    Instance = DynamicProperty()
+    """hardcoded/returns an instance of the class"""
 
 class DynamicQueryable():
     # no doc
@@ -133,9 +130,8 @@ class DynamicQueryable():
         'Where',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DynamicQueryable()
+    Instance = DynamicQueryable()
+    """hardcoded/returns an instance of the class"""
 
 class ParseException(Exception):
     """ ParseException(message: str, position: int) """
@@ -163,7 +159,6 @@ class ParseException(Exception):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ParseException()
+    Instance = ParseException()
+    """hardcoded/returns an instance of the class"""
 

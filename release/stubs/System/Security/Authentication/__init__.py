@@ -38,9 +38,8 @@ class AuthenticationException(SystemException):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AuthenticationException()
+    Instance = AuthenticationException()
+    """hardcoded/returns an instance of the class"""
 
 class CipherAlgorithmType:
     """
@@ -93,9 +92,8 @@ class CipherAlgorithmType:
     TripleDes = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CipherAlgorithmType()
+    Instance = CipherAlgorithmType()
+    """hardcoded/returns an instance of the class"""
 
 class ExchangeAlgorithmType:
     """
@@ -142,9 +140,8 @@ class ExchangeAlgorithmType:
     RsaSign = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExchangeAlgorithmType()
+    Instance = ExchangeAlgorithmType()
+    """hardcoded/returns an instance of the class"""
 
 class HashAlgorithmType:
     """
@@ -193,9 +190,8 @@ class HashAlgorithmType:
     Sha512 = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HashAlgorithmType()
+    Instance = HashAlgorithmType()
+    """hardcoded/returns an instance of the class"""
 
 class InvalidCredentialException(AuthenticationException):
     """
@@ -227,9 +223,8 @@ class InvalidCredentialException(AuthenticationException):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InvalidCredentialException()
+    Instance = InvalidCredentialException()
+    """hardcoded/returns an instance of the class"""
 
 class SslProtocols:
     """
@@ -279,9 +274,8 @@ class SslProtocols:
     Tls12 = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SslProtocols()
+    Instance = SslProtocols()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

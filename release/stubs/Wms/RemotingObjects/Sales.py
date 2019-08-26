@@ -49,9 +49,8 @@ class BatchPackProcessingModeEnum:
     Queued = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchPackProcessingModeEnum()
+    Instance = BatchPackProcessingModeEnum()
+    """hardcoded/returns an instance of the class"""
 
 class Customer():
     """
@@ -304,9 +303,8 @@ Set: ZipCode(self: Customer) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Customer()
+    Instance = Customer()
+    """hardcoded/returns an instance of the class"""
 
 class Customers(FindableList):
     """
@@ -341,9 +339,8 @@ class Customers(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Number'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Customers()
+    Instance = Customers()
+    """hardcoded/returns an instance of the class"""
 
 class ErpProcessSalesOrderLinesResult():
     """ ErpProcessSalesOrderLinesResult() """
@@ -380,9 +377,8 @@ Set: Reports(self: ErpProcessSalesOrderLinesResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ErpProcessSalesOrderLinesResult()
+    Instance = ErpProcessSalesOrderLinesResult()
+    """hardcoded/returns an instance of the class"""
 
 class GetCustomersArgs():
     """ GetCustomersArgs() """
@@ -411,9 +407,8 @@ Set: Paging(self: GetCustomersArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetCustomersArgs()
+    Instance = GetCustomersArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetCustomersPendingArgs():
     """ GetCustomersPendingArgs() """
@@ -450,9 +445,8 @@ Set: SearchText(self: GetCustomersPendingArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetCustomersPendingArgs()
+    Instance = GetCustomersPendingArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetCustomersWithPendingPackagesArgs():
     """
@@ -496,9 +490,8 @@ Set: FilterText(self: GetCustomersWithPendingPackagesArgs) = value
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetCustomersWithPendingPackagesArgs()
+    Instance = GetCustomersWithPendingPackagesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetOutboundOrdersBatchableArgs():
     """ GetOutboundOrdersBatchableArgs() """
@@ -559,9 +552,8 @@ Set: TypeOfOrders(self: GetOutboundOrdersBatchableArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetOutboundOrdersBatchableArgs()
+    Instance = GetOutboundOrdersBatchableArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetSalesOrderCustomersArgs():
     """
@@ -605,9 +597,8 @@ Set: WarehouseCode(self: GetSalesOrderCustomersArgs) = value
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetSalesOrderCustomersArgs()
+    Instance = GetSalesOrderCustomersArgs()
+    """hardcoded/returns an instance of the class"""
 
 class HistorySalesOrder(HistoryOutboundOrder):
     """ HistorySalesOrder() """
@@ -662,9 +653,8 @@ Get: Type(self: HistorySalesOrder) -> OutboundOrderTypeEnum
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistorySalesOrder()
+    Instance = HistorySalesOrder()
+    """hardcoded/returns an instance of the class"""
 
 class HistorySalesOrders(HistoryOutboundOrders):
     """
@@ -696,9 +686,8 @@ class HistorySalesOrders(HistoryOutboundOrders):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistorySalesOrders()
+    Instance = HistorySalesOrders()
+    """hardcoded/returns an instance of the class"""
 
 class PackCustomer(Customer):
     """
@@ -804,9 +793,8 @@ Set: OutboundOrdersProcessed(self: PackCustomer) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PackCustomer()
+    Instance = PackCustomer()
+    """hardcoded/returns an instance of the class"""
 
 class PackCustomers(FindableList):
     """
@@ -857,9 +845,8 @@ class PackCustomers(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Number'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PackCustomers()
+    Instance = PackCustomers()
+    """hardcoded/returns an instance of the class"""
 
 class PartialDeliveryTypeEnum:
     """ enum PartialDeliveryTypeEnum, values: Allow (0), OnlyEntireLines (2), OnlyEntireOrder (1) """
@@ -901,9 +888,8 @@ class PartialDeliveryTypeEnum:
     OnlyEntireOrder = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PartialDeliveryTypeEnum()
+    Instance = PartialDeliveryTypeEnum()
+    """hardcoded/returns an instance of the class"""
 
 class ReplenishmentOrderArgs():
     """
@@ -997,9 +983,8 @@ Set: WarehouseToCode(self: ReplenishmentOrderArgs) = value
     OrderFilterType = None
     ReplenishmentOrderArgsOrderFilterType = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReplenishmentOrderArgs()
+    Instance = ReplenishmentOrderArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ReplenishmentOrderLinesArgs():
     """
@@ -1070,9 +1055,8 @@ Set: SearchText(self: ReplenishmentOrderLinesArgs) = value
     DaysToFuture = None
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReplenishmentOrderLinesArgs()
+    Instance = ReplenishmentOrderLinesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class SalesOrder(OutboundOrder):
     """
@@ -1118,9 +1102,8 @@ Get: Type(self: SalesOrder) -> OutboundOrderTypeEnum
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SalesOrder()
+    Instance = SalesOrder()
+    """hardcoded/returns an instance of the class"""
 
 class SalesOrderArgs():
     """
@@ -1226,9 +1209,8 @@ Set: WarehouseCode(self: SalesOrderArgs) = value
     Default = None
     SalesOrderOrderFilterType = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SalesOrderArgs()
+    Instance = SalesOrderArgs()
+    """hardcoded/returns an instance of the class"""
 
 class SalesOrderLine(OutboundOrderLine):
     """
@@ -1279,9 +1261,8 @@ Get: Type(self: SalesOrderLine) -> OutboundOrderTypeEnum
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SalesOrderLine()
+    Instance = SalesOrderLine()
+    """hardcoded/returns an instance of the class"""
 
 class SalesOrderLines(OutboundOrderLines):
     """
@@ -1313,9 +1294,8 @@ class SalesOrderLines(OutboundOrderLines):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SalesOrderLines()
+    Instance = SalesOrderLines()
+    """hardcoded/returns an instance of the class"""
 
 class SalesOrderLinesArgs():
     """
@@ -1367,9 +1347,8 @@ Set: WarehouseCode(self: SalesOrderLinesArgs) = value
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SalesOrderLinesArgs()
+    Instance = SalesOrderLinesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class SalesOrders(OutboundOrders):
     """
@@ -1401,9 +1380,8 @@ class SalesOrders(OutboundOrders):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SalesOrders()
+    Instance = SalesOrders()
+    """hardcoded/returns an instance of the class"""
 
 class SplitProcessedOutboundOrdersEnum:
     """ enum SplitProcessedOutboundOrdersEnum, values: IntoFirstColli (2), None (0), PerOutboundOrder (1) """
@@ -1445,9 +1423,8 @@ class SplitProcessedOutboundOrdersEnum:
     PerOutboundOrder = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SplitProcessedOutboundOrdersEnum()
+    Instance = SplitProcessedOutboundOrdersEnum()
+    """hardcoded/returns an instance of the class"""
 
 class StockRegistrationForColliEnum:
     """ enum StockRegistrationForColliEnum, values: Counts (2), Disabled (0), PackageSlip (1) """
@@ -1489,7 +1466,6 @@ class StockRegistrationForColliEnum:
     PackageSlip = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StockRegistrationForColliEnum()
+    Instance = StockRegistrationForColliEnum()
+    """hardcoded/returns an instance of the class"""
 

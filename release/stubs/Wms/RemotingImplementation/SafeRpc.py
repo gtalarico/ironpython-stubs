@@ -50,7 +50,6 @@ class SafeRpcMethod:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SafeRpcMethod()
+    Instance = SafeRpcMethod()
+    """hardcoded/returns an instance of the class"""
 

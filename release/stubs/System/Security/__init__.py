@@ -27,16 +27,16 @@ Set: PartialTrustVisibilityLevel(self: AllowPartiallyTrustedCallersAttribute) = 
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AllowPartiallyTrustedCallersAttribute()
+    Instance = AllowPartiallyTrustedCallersAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class CodeAccessPermission:
     """ Defines the underlying structure of all code access permissions. """
     def Assert(self):
         """
         Assert(self: CodeAccessPermission)
-            Declares that the calling code can access the resource protected by a permission demand through the code that calls this method, even if callers higher in the stack have not been granted permission to access the resource. Using System.Security.CodeAccessPermission.Assert can create security issues.
+            Declares that the calling code can access the resource protected by a permission demand through the code that calls this method, even if callers higher in the stack 
+             have not been granted permission to access the resource. Using System.Security.CodeAccessPermission.Assert can create security issues.
         """
         pass
 
@@ -203,9 +203,8 @@ class CodeAccessPermission:
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeAccessPermission()
+    Instance = CodeAccessPermission()
+    """hardcoded/returns an instance of the class"""
 
 class HostProtectionException(SystemException):
     """
@@ -273,9 +272,8 @@ Get: ProtectedResources(self: HostProtectionException) -> HostProtectionResource
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HostProtectionException()
+    Instance = HostProtectionException()
+    """hardcoded/returns an instance of the class"""
 
 class HostSecurityManager():
     """
@@ -388,9 +386,8 @@ Get: Flags(self: HostSecurityManager) -> HostSecurityManagerOptions
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HostSecurityManager()
+    Instance = HostSecurityManager()
+    """hardcoded/returns an instance of the class"""
 
 class HostSecurityManagerOptions:
     """
@@ -440,9 +437,8 @@ class HostSecurityManagerOptions:
     None_ =None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HostSecurityManagerOptions()
+    Instance = HostSecurityManagerOptions()
+    """hardcoded/returns an instance of the class"""
 
 class IEvidenceFactory:
     """ Gets an object's System.Security.Policy.Evidence. """
@@ -458,9 +454,8 @@ Get: Evidence(self: IEvidenceFactory) -> Evidence
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IEvidenceFactory()
+    Instance = IEvidenceFactory()
+    """hardcoded/returns an instance of the class"""
 
 class ISecurityEncodable:
     """ Defines the methods that convert permission object state to and from XML element representation. """
@@ -486,9 +481,8 @@ class ISecurityEncodable:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ISecurityEncodable()
+    Instance = ISecurityEncodable()
+    """hardcoded/returns an instance of the class"""
 
 class IPermission:
     """ Defines methods implemented by permission types. """
@@ -545,9 +539,8 @@ class IPermission:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IPermission()
+    Instance = IPermission()
+    """hardcoded/returns an instance of the class"""
 
 class ISecurityPolicyEncodable:
     """ Supports the methods that convert permission object state to and from an XML element representation. """
@@ -576,16 +569,16 @@ class ISecurityPolicyEncodable:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ISecurityPolicyEncodable()
+    Instance = ISecurityPolicyEncodable()
+    """hardcoded/returns an instance of the class"""
 
 class IStackWalk:
     """ Manages the stack walk that determines whether all callers in the call stack have the required permissions to access a protected resource. """
     def Assert(self):
         """
         Assert(self: IStackWalk)
-            Asserts that the calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource.
+            Asserts that the calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission 
+             to access the resource.
         """
         pass
 
@@ -606,7 +599,8 @@ class IStackWalk:
     def PermitOnly(self):
         """
         PermitOnly(self: IStackWalk)
-            Causes every System.Security.IStackWalk.Demand for all objects except the current one that passes through the calling code to fail, even if code higher in the call stack has been granted permission to access other resources.
+            Causes every System.Security.IStackWalk.Demand for all objects except the current one that passes through the calling code to fail, even if code higher in the call 
+             stack has been granted permission to access other resources.
         """
         pass
 
@@ -614,9 +608,8 @@ class IStackWalk:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IStackWalk()
+    Instance = IStackWalk()
+    """hardcoded/returns an instance of the class"""
 
 class PermissionSet:
     """
@@ -650,7 +643,8 @@ class PermissionSet:
     def Assert(self):
         """
         Assert(self: PermissionSet)
-            Declares that the calling code can access the resource protected by a permission demand through the code that calls this method, even if callers higher in the stack have not been granted permission to access the resource. Using System.Security.PermissionSet.Assert can create security vulnerabilities.
+            Declares that the calling code can access the resource protected by a permission demand through the code that calls this method, even if callers higher in the stack 
+             have not been granted permission to access the resource. Using System.Security.PermissionSet.Assert can create security vulnerabilities.
         """
         pass
 
@@ -706,7 +700,8 @@ class PermissionSet:
     def Deny(self):
         """
         Deny(self: PermissionSet)
-            Causes any System.Security.PermissionSet.Demand that passes through the calling code for a permission that has an intersection with a permission of a type contained in the current System.Security.PermissionSet to fail.
+            Causes any System.Security.PermissionSet.Demand that passes through the calling code for a permission that has an intersection with a permission of a type contained in 
+             the current System.Security.PermissionSet to fail.
         """
         pass
 
@@ -786,7 +781,8 @@ class PermissionSet:
             Creates and returns a permission set that is the intersection of the current System.Security.PermissionSet and the specified System.Security.PermissionSet.
         
             other: A permission set to intersect with the current System.Security.PermissionSet.
-            Returns: A new permission set that represents the intersection of the current System.Security.PermissionSet and the specified target. This object is null if the intersection is empty.
+            Returns: A new permission set that represents the intersection of the current System.Security.PermissionSet and the specified target. This object is null if the intersection is 
+             empty.
         """
         pass
 
@@ -822,7 +818,8 @@ class PermissionSet:
     def PermitOnly(self):
         """
         PermitOnly(self: PermissionSet)
-            Causes any System.Security.PermissionSet.Demand that passes through the calling code for any System.Security.PermissionSet that is not a subset of the current System.Security.PermissionSet to fail.
+            Causes any System.Security.PermissionSet.Demand that passes through the calling code for any System.Security.PermissionSet that is not a subset of the current 
+             System.Security.PermissionSet to fail.
         """
         pass
 
@@ -973,9 +970,8 @@ Get: SyncRoot(self: PermissionSet) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PermissionSet()
+    Instance = PermissionSet()
+    """hardcoded/returns an instance of the class"""
 
 class NamedPermissionSet(PermissionSet):
     """
@@ -1140,9 +1136,8 @@ Set: Name(self: NamedPermissionSet) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NamedPermissionSet()
+    Instance = NamedPermissionSet()
+    """hardcoded/returns an instance of the class"""
 
 class PartialTrustVisibilityLevel:
     """
@@ -1187,9 +1182,8 @@ class PartialTrustVisibilityLevel:
     value__ = None
     VisibleToAllHosts = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PartialTrustVisibilityLevel()
+    Instance = PartialTrustVisibilityLevel()
+    """hardcoded/returns an instance of the class"""
 
 class PolicyLevelType:
     """
@@ -1236,9 +1230,8 @@ class PolicyLevelType:
     User = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PolicyLevelType()
+    Instance = PolicyLevelType()
+    """hardcoded/returns an instance of the class"""
 
 class ReadOnlyPermissionSet(PermissionSet):
     """
@@ -1320,9 +1313,8 @@ Get: IsReadOnly(self: ReadOnlyPermissionSet) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReadOnlyPermissionSet()
+    Instance = ReadOnlyPermissionSet()
+    """hardcoded/returns an instance of the class"""
 
 class SecureString:
     """
@@ -1440,9 +1432,8 @@ Get: Length(self: SecureString) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecureString()
+    Instance = SecureString()
+    """hardcoded/returns an instance of the class"""
 
 class SecureStringMarshal():
     # no doc
@@ -1473,9 +1464,8 @@ class SecureStringMarshal():
         'SecureStringToGlobalAllocUnicode',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecureStringMarshal()
+    Instance = SecureStringMarshal()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityContext:
     """ Encapsulates and propagates all security-related data for execution contexts transferred across threads. This class cannot be inherited. """
@@ -1581,9 +1571,8 @@ class SecurityContext:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityContext()
+    Instance = SecurityContext()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityContextSource:
     """
@@ -1628,9 +1617,8 @@ class SecurityContextSource:
     CurrentAssembly = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityContextSource()
+    Instance = SecurityContextSource()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityCriticalAttribute:
     """
@@ -1659,9 +1647,8 @@ Get: Scope(self: SecurityCriticalAttribute) -> SecurityCriticalScope
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityCriticalAttribute()
+    Instance = SecurityCriticalAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityCriticalScope:
     """
@@ -1706,9 +1693,8 @@ class SecurityCriticalScope:
     Explicit = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityCriticalScope()
+    Instance = SecurityCriticalScope()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityElement:
     """
@@ -1763,7 +1749,8 @@ class SecurityElement:
             Compares two XML element objects for equality.
         
             other: An XML element object to which to compare the current XML element object.
-            Returns: true if the tag, attribute names and values, child elements, and text fields in the current XML element are identical to their counterparts in the other parameter; otherwise, false.
+            Returns: true if the tag, attribute names and values, child elements, and text fields in the current XML element are identical to their counterparts in the other parameter; 
+             otherwise, false.
         """
         pass
 
@@ -1925,9 +1912,8 @@ Set: Text(self: SecurityElement) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityElement()
+    Instance = SecurityElement()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityException(SystemException):
     """
@@ -2091,9 +2077,8 @@ Set: Zone(self: SecurityException) = value
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityException()
+    Instance = SecurityException()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityManager():
     """ Provides the main access point for classes interacting with the security system. This class cannot be inherited. """
@@ -2103,7 +2088,9 @@ class SecurityManager():
         CurrentThreadRequiresSecurityContextCapture() -> bool
         
             Determines whether the current thread requires a security context capture if its security state has to be re-created at a later point in time.
-            Returns: false if the stack contains no partially trusted application domains, no partially trusted assemblies, and no currently active System.Security.CodeAccessPermission.PermitOnly or System.Security.CodeAccessPermission.Deny modifiers; true if the common language runtime cannot guarantee that the stack contains none of these.
+            Returns: false if the stack contains no partially trusted application domains, no partially trusted assemblies, and no currently active 
+             System.Security.CodeAccessPermission.PermitOnly or System.Security.CodeAccessPermission.Deny modifiers; true if the common language runtime cannot guarantee that the 
+             stack contains none of these.
         """
         pass
 
@@ -2262,9 +2249,8 @@ class SecurityManager():
         'SavePolicyLevel',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityManager()
+    Instance = SecurityManager()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityRulesAttribute:
     """
@@ -2297,9 +2283,8 @@ Set: SkipVerificationInFullTrust(self: SecurityRulesAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityRulesAttribute()
+    Instance = SecurityRulesAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityRuleSet:
     """
@@ -2345,9 +2330,8 @@ class SecurityRuleSet:
     None_ =None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityRuleSet()
+    Instance = SecurityRuleSet()
+    """hardcoded/returns an instance of the class"""
 
 class SecuritySafeCriticalAttribute:
     """
@@ -2359,9 +2343,8 @@ class SecuritySafeCriticalAttribute:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecuritySafeCriticalAttribute()
+    Instance = SecuritySafeCriticalAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityState():
     """ Provides a base class for requesting the security status of an action from the System.AppDomainManager object. """
@@ -2381,9 +2364,8 @@ class SecurityState():
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityState()
+    Instance = SecurityState()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityTransparentAttribute:
     """
@@ -2395,9 +2377,8 @@ class SecurityTransparentAttribute:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityTransparentAttribute()
+    Instance = SecurityTransparentAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityTreatAsSafeAttribute:
     """
@@ -2409,9 +2390,8 @@ class SecurityTreatAsSafeAttribute:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityTreatAsSafeAttribute()
+    Instance = SecurityTreatAsSafeAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityZone:
     """
@@ -2460,9 +2440,8 @@ class SecurityZone:
     Untrusted = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityZone()
+    Instance = SecurityZone()
+    """hardcoded/returns an instance of the class"""
 
 class SuppressUnmanagedCodeSecurityAttribute:
     """
@@ -2474,9 +2453,8 @@ class SuppressUnmanagedCodeSecurityAttribute:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SuppressUnmanagedCodeSecurityAttribute()
+    Instance = SuppressUnmanagedCodeSecurityAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class UnverifiableCodeAttribute:
     """
@@ -2488,9 +2466,8 @@ class UnverifiableCodeAttribute:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UnverifiableCodeAttribute()
+    Instance = UnverifiableCodeAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class VerificationException(SystemException):
     """
@@ -2522,9 +2499,8 @@ class VerificationException(SystemException):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return VerificationException()
+    Instance = VerificationException()
+    """hardcoded/returns an instance of the class"""
 
 class XmlSyntaxException(SystemException):
     """
@@ -2559,9 +2535,8 @@ class XmlSyntaxException(SystemException):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return XmlSyntaxException()
+    Instance = XmlSyntaxException()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

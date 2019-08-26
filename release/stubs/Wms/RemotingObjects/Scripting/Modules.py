@@ -36,9 +36,8 @@ Set: Path(self: AddModuleArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AddModuleArgs()
+    Instance = AddModuleArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetLibArgs():
     """ GetLibArgs() """
@@ -51,9 +50,8 @@ Set: Path(self: GetLibArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetLibArgs()
+    Instance = GetLibArgs()
+    """hardcoded/returns an instance of the class"""
 
 class LibContent():
     """ LibContent() """
@@ -98,9 +96,8 @@ Set: Type(self: LibContent) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LibContent()
+    Instance = LibContent()
+    """hardcoded/returns an instance of the class"""
 
 class LibContents(FindableList):
     """ LibContents() """
@@ -132,9 +129,8 @@ Set: Path(self: LibContents) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LibContents()
+    Instance = LibContents()
+    """hardcoded/returns an instance of the class"""
 
 class LibContentType:
     """ enum LibContentType, values: File (1), Folder (0) """
@@ -175,9 +171,8 @@ class LibContentType:
     Folder = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LibContentType()
+    Instance = LibContentType()
+    """hardcoded/returns an instance of the class"""
 
 class ModuleArgs():
     """ ModuleArgs() """
@@ -214,9 +209,8 @@ Set: Script(self: ModuleArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ModuleArgs()
+    Instance = ModuleArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PythonModule():
     """ PythonModule() """
@@ -245,7 +239,6 @@ Set: Path(self: PythonModule) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PythonModule()
+    Instance = PythonModule()
+    """hardcoded/returns an instance of the class"""
 

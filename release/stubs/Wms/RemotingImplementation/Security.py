@@ -20,9 +20,8 @@ class IRemotingIdentityProvider:
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IRemotingIdentityProvider()
+    Instance = IRemotingIdentityProvider()
+    """hardcoded/returns an instance of the class"""
 
 class RemotingIdentityProvider:
     """ RemotingIdentityProvider() """
@@ -40,7 +39,6 @@ class RemotingIdentityProvider:
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingIdentityProvider()
+    Instance = RemotingIdentityProvider()
+    """hardcoded/returns an instance of the class"""
 

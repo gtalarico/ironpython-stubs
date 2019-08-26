@@ -130,7 +130,9 @@ class Encoding:
             Returns: The actual number of bytes written into bytes.
         GetBytes(self: Encoding, chars: Char*, charCount: int, bytes: Byte*, byteCount: int) -> int
         
-            When overridden in a derived class, encodes a set of characters starting at the specified character pointer into a sequence of bytes that are stored starting at the specified byte pointer.
+            When overridden in a derived class, encodes a set of characters starting at the specified character pointer into a sequence of bytes that are stored starting at the 
+             specified byte pointer.
+        
         
             chars: A pointer to the first character to encode.
             charCount: The number of characters to encode.
@@ -194,7 +196,9 @@ class Encoding:
             Returns: The actual number of characters written into chars.
         GetChars(self: Encoding, bytes: Byte*, byteCount: int, chars: Char*, charCount: int) -> int
         
-            When overridden in a derived class, decodes a sequence of bytes starting at the specified byte pointer into a set of characters that are stored starting at the specified character pointer.
+            When overridden in a derived class, decodes a sequence of bytes starting at the specified byte pointer into a set of characters that are stored starting at the 
+             specified character pointer.
+        
         
             bytes: A pointer to the first byte to decode.
             byteCount: The number of bytes to decode.
@@ -229,13 +233,19 @@ class Encoding:
         
             Returns the encoding associated with the specified code page identifier.
         
-            codepage: The code page identifier of the preferred encoding. Possible values are listed in the Code Page column of the table that appears in the System.Text.Encoding class topic.-or- 0 (zero), to use the default encoding.
+            codepage: The code page identifier of the preferred encoding. Possible values are listed in the Code Page column of the table that appears in the System.Text.Encoding class 
+             topic.-or- 0 (zero), to use the default encoding.
+        
             Returns: The encoding that is associated with the specified code page.
         GetEncoding(codepage: int, encoderFallback: EncoderFallback, decoderFallback: DecoderFallback) -> Encoding
         
-            Returns the encoding associated with the specified code page identifier. Parameters specify an error handler for characters that cannot be encoded and byte sequences that cannot be decoded.
+            Returns the encoding associated with the specified code page identifier. Parameters specify an error handler for characters that cannot be encoded and byte sequences 
+             that cannot be decoded.
         
-            codepage: The code page identifier of the preferred encoding. Possible values are listed in the Code Page column of the table that appears in the System.Text.Encoding class topic.-or- 0 (zero), to use the default encoding.
+        
+            codepage: The code page identifier of the preferred encoding. Possible values are listed in the Code Page column of the table that appears in the System.Text.Encoding class 
+             topic.-or- 0 (zero), to use the default encoding.
+        
             encoderFallback: An object that provides an error-handling procedure when a character cannot be encoded with the current encoding.
             decoderFallback: An object that provides an error-handling procedure when a byte sequence cannot be decoded with the current encoding.
             Returns: The encoding that is associated with the specified code page.
@@ -243,13 +253,19 @@ class Encoding:
         
             Returns the encoding associated with the specified code page name.
         
-            name: The code page name of the preferred encoding. Any value returned by the System.Text.Encoding.WebName property is valid. Possible values are listed in the Name column of the table that appears in the System.Text.Encoding class topic.
+            name: The code page name of the preferred encoding. Any value returned by the System.Text.Encoding.WebName property is valid. Possible values are listed in the Name column 
+             of the table that appears in the System.Text.Encoding class topic.
+        
             Returns: The encoding  associated with the specified code page.
         GetEncoding(name: str, encoderFallback: EncoderFallback, decoderFallback: DecoderFallback) -> Encoding
         
-            Returns the encoding associated with the specified code page name. Parameters specify an error handler for characters that cannot be encoded and byte sequences that cannot be decoded.
+            Returns the encoding associated with the specified code page name. Parameters specify an error handler for characters that cannot be encoded and byte sequences that 
+             cannot be decoded.
         
-            name: The code page name of the preferred encoding. Any value returned by the System.Text.Encoding.WebName property is valid. Possible values are listed in the Name column of the table that appears in the System.Text.Encoding class topic.
+        
+            name: The code page name of the preferred encoding. Any value returned by the System.Text.Encoding.WebName property is valid. Possible values are listed in the Name column 
+             of the table that appears in the System.Text.Encoding class topic.
+        
             encoderFallback: An object that provides an error-handling procedure when a character cannot be encoded with the current encoding.
             decoderFallback: An object that provides an error-handling procedure when a byte sequence cannot be decoded with the current encoding.
             Returns: The encoding that is associated with the specified code page.
@@ -482,9 +498,8 @@ Get: WindowsCodePage(self: Encoding) -> int
     UTF7 = None
     UTF8 = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Encoding()
+    Instance = Encoding()
+    """hardcoded/returns an instance of the class"""
 
 class ASCIIEncoding(Encoding):
     """
@@ -664,9 +679,8 @@ Get: IsSingleByte(self: ASCIIEncoding) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ASCIIEncoding()
+    Instance = ASCIIEncoding()
+    """hardcoded/returns an instance of the class"""
 
 class Decoder():
     """ Converts a sequence of encoded bytes into a set of characters. """
@@ -707,7 +721,9 @@ class Decoder():
             Returns: The number of characters produced by decoding the specified sequence of bytes and any bytes in the internal buffer.
         GetCharCount(self: Decoder, bytes: Array[Byte], index: int, count: int, flush: bool) -> int
         
-            When overridden in a derived class, calculates the number of characters produced by decoding a sequence of bytes from the specified byte array. A parameter indicates whether to clear the internal state of the decoder after the calculation.
+            When overridden in a derived class, calculates the number of characters produced by decoding a sequence of bytes from the specified byte array. A parameter indicates 
+             whether to clear the internal state of the decoder after the calculation.
+        
         
             bytes: The byte array containing the sequence of bytes to decode.
             index: The index of the first byte to decode.
@@ -716,7 +732,9 @@ class Decoder():
             Returns: The number of characters produced by decoding the specified sequence of bytes and any bytes in the internal buffer.
         GetCharCount(self: Decoder, bytes: Byte*, count: int, flush: bool) -> int
         
-            When overridden in a derived class, calculates the number of characters produced by decoding a sequence of bytes starting at the specified byte pointer. A parameter indicates whether to clear the internal state of the decoder after the calculation.
+            When overridden in a derived class, calculates the number of characters produced by decoding a sequence of bytes starting at the specified byte pointer. A parameter 
+             indicates whether to clear the internal state of the decoder after the calculation.
+        
         
             bytes: A pointer to the first byte to decode.
             count: The number of bytes to decode.
@@ -739,7 +757,9 @@ class Decoder():
             Returns: The actual number of characters written into chars.
         GetChars(self: Decoder, bytes: Array[Byte], byteIndex: int, byteCount: int, chars: Array[Char], charIndex: int, flush: bool) -> int
         
-            When overridden in a derived class, decodes a sequence of bytes from the specified byte array and any bytes in the internal buffer into the specified character array. A parameter indicates whether to clear the internal state of the decoder after the conversion.
+            When overridden in a derived class, decodes a sequence of bytes from the specified byte array and any bytes in the internal buffer into the specified character array. 
+             A parameter indicates whether to clear the internal state of the decoder after the conversion.
+        
         
             bytes: The byte array containing the sequence of bytes to decode.
             byteIndex: The index of the first byte to decode.
@@ -750,7 +770,9 @@ class Decoder():
             Returns: The actual number of characters written into the chars parameter.
         GetChars(self: Decoder, bytes: Byte*, byteCount: int, chars: Char*, charCount: int, flush: bool) -> int
         
-            When overridden in a derived class, decodes a sequence of bytes starting at the specified byte pointer and any bytes in the internal buffer into a set of characters that are stored starting at the specified character pointer. A parameter indicates whether to clear the internal state of the decoder after the conversion.
+            When overridden in a derived class, decodes a sequence of bytes starting at the specified byte pointer and any bytes in the internal buffer into a set of characters 
+             that are stored starting at the specified character pointer. A parameter indicates whether to clear the internal state of the decoder after the conversion.
+        
         
             bytes: A pointer to the first byte to decode.
             byteCount: The number of bytes to decode.
@@ -784,9 +806,8 @@ Get: FallbackBuffer(self: Decoder) -> DecoderFallbackBuffer
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Decoder()
+    Instance = Decoder()
+    """hardcoded/returns an instance of the class"""
 
 class DecoderFallback():
     """ Provides a failure-handling mechanism, called a fallback, for an encoded input byte sequence that cannot be converted to an output character. """
@@ -810,9 +831,8 @@ Get: MaxCharCount(self: DecoderFallback) -> int
     ExceptionFallback = None
     ReplacementFallback = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DecoderFallback()
+    Instance = DecoderFallback()
+    """hardcoded/returns an instance of the class"""
 
 class DecoderExceptionFallback(DecoderFallback):
     """
@@ -864,9 +884,8 @@ Get: MaxCharCount(self: DecoderExceptionFallback) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DecoderExceptionFallback()
+    Instance = DecoderExceptionFallback()
+    """hardcoded/returns an instance of the class"""
 
 class DecoderFallbackBuffer():
     """ Provides a buffer that allows a fallback handler to return an alternate string to a decoder when it cannot decode an input byte sequence. """
@@ -895,7 +914,9 @@ class DecoderFallbackBuffer():
         """
         MovePrevious(self: DecoderFallbackBuffer) -> bool
         
-            When overridden in a derived class, causes the next call to the System.Text.DecoderFallbackBuffer.GetNextChar method to access the data buffer character position that is prior to the current character position.
+            When overridden in a derived class, causes the next call to the System.Text.DecoderFallbackBuffer.GetNextChar method to access the data buffer character position that 
+             is prior to the current character position.
+        
             Returns: true if the System.Text.DecoderFallbackBuffer.MovePrevious operation was successful; otherwise, false.
         """
         pass
@@ -915,9 +936,8 @@ Get: Remaining(self: DecoderFallbackBuffer) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DecoderFallbackBuffer()
+    Instance = DecoderFallbackBuffer()
+    """hardcoded/returns an instance of the class"""
 
 class DecoderExceptionFallbackBuffer(DecoderFallbackBuffer):
     """
@@ -933,7 +953,8 @@ class DecoderExceptionFallbackBuffer(DecoderFallbackBuffer):
         
             bytesUnknown: An input array of bytes.
             index: The index position of a byte in the input.
-            Returns: None. No value is returned because the System.Text.DecoderExceptionFallbackBuffer.Fallback(System.Byte[],System.Int32) method always throws an exception. The nominal return value is true. A return value is defined, although it is unchanging, because this method implements an abstract method.
+            Returns: None. No value is returned because the System.Text.DecoderExceptionFallbackBuffer.Fallback(System.Byte[],System.Int32) method always throws an exception. The nominal 
+             return value is true. A return value is defined, although it is unchanging, because this method implements an abstract method.
         """
         pass
 
@@ -950,7 +971,9 @@ class DecoderExceptionFallbackBuffer(DecoderFallbackBuffer):
         """
         MovePrevious(self: DecoderExceptionFallbackBuffer) -> bool
         
-            Causes the next call to System.Text.DecoderExceptionFallbackBuffer.GetNextChar to access the exception data buffer character position that is prior to the current position.
+            Causes the next call to System.Text.DecoderExceptionFallbackBuffer.GetNextChar to access the exception data buffer character position that is prior to the current 
+             position.
+        
             Returns: The return value is always false. A return value is defined, although it is unchanging, because this method implements an abstract method.
         """
         pass
@@ -963,9 +986,8 @@ Get: Remaining(self: DecoderExceptionFallbackBuffer) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DecoderExceptionFallbackBuffer()
+    Instance = DecoderExceptionFallbackBuffer()
+    """hardcoded/returns an instance of the class"""
 
 class DecoderFallbackException(ArgumentException):
     """
@@ -1013,9 +1035,8 @@ Get: Index(self: DecoderFallbackException) -> int
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DecoderFallbackException()
+    Instance = DecoderFallbackException()
+    """hardcoded/returns an instance of the class"""
 
 class DecoderReplacementFallback(DecoderFallback):
     """
@@ -1040,7 +1061,8 @@ class DecoderReplacementFallback(DecoderFallback):
             Indicates whether the value of a specified object is equal to the System.Text.DecoderReplacementFallback object.
         
             value: A System.Text.DecoderReplacementFallback object.
-            Returns: true if value is a System.Text.DecoderReplacementFallback object having a System.Text.DecoderReplacementFallback.DefaultString property that is equal to the System.Text.DecoderReplacementFallback.DefaultString property of the current System.Text.DecoderReplacementFallback object; otherwise, false.
+            Returns: true if value is a System.Text.DecoderReplacementFallback object having a System.Text.DecoderReplacementFallback.DefaultString property that is equal to the 
+             System.Text.DecoderReplacementFallback.DefaultString property of the current System.Text.DecoderReplacementFallback object; otherwise, false.
         """
         pass
 
@@ -1083,9 +1105,8 @@ Get: MaxCharCount(self: DecoderReplacementFallback) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DecoderReplacementFallback()
+    Instance = DecoderReplacementFallback()
+    """hardcoded/returns an instance of the class"""
 
 class DecoderReplacementFallbackBuffer(DecoderFallbackBuffer):
     """
@@ -1118,7 +1139,9 @@ class DecoderReplacementFallbackBuffer(DecoderFallbackBuffer):
         """
         MovePrevious(self: DecoderReplacementFallbackBuffer) -> bool
         
-            Causes the next call to System.Text.DecoderReplacementFallbackBuffer.GetNextChar to access the character position in the replacement fallback buffer prior to the current character position.
+            Causes the next call to System.Text.DecoderReplacementFallbackBuffer.GetNextChar to access the character position in the replacement fallback buffer prior to the 
+             current character position.
+        
             Returns: true if the System.Text.DecoderReplacementFallbackBuffer.MovePrevious operation was successful; otherwise, false.
         """
         pass
@@ -1143,9 +1166,8 @@ Get: Remaining(self: DecoderReplacementFallbackBuffer) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DecoderReplacementFallbackBuffer()
+    Instance = DecoderReplacementFallbackBuffer()
+    """hardcoded/returns an instance of the class"""
 
 class Encoder():
     """ Converts a set of characters into a sequence of bytes. """
@@ -1178,7 +1200,9 @@ class Encoder():
         """
         GetByteCount(self: Encoder, chars: Array[Char], index: int, count: int, flush: bool) -> int
         
-            When overridden in a derived class, calculates the number of bytes produced by encoding a set of characters from the specified character array. A parameter indicates whether to clear the internal state of the encoder after the calculation.
+            When overridden in a derived class, calculates the number of bytes produced by encoding a set of characters from the specified character array. A parameter indicates 
+             whether to clear the internal state of the encoder after the calculation.
+        
         
             chars: The character array containing the set of characters to encode.
             index: The index of the first character to encode.
@@ -1187,7 +1211,9 @@ class Encoder():
             Returns: The number of bytes produced by encoding the specified characters and any characters in the internal buffer.
         GetByteCount(self: Encoder, chars: Char*, count: int, flush: bool) -> int
         
-            When overridden in a derived class, calculates the number of bytes produced by encoding a set of characters starting at the specified character pointer. A parameter indicates whether to clear the internal state of the encoder after the calculation.
+            When overridden in a derived class, calculates the number of bytes produced by encoding a set of characters starting at the specified character pointer. A parameter 
+             indicates whether to clear the internal state of the encoder after the calculation.
+        
         
             chars: A pointer to the first character to encode.
             count: The number of characters to encode.
@@ -1200,7 +1226,9 @@ class Encoder():
         """
         GetBytes(self: Encoder, chars: Array[Char], charIndex: int, charCount: int, bytes: Array[Byte], byteIndex: int, flush: bool) -> int
         
-            When overridden in a derived class, encodes a set of characters from the specified character array and any characters in the internal buffer into the specified byte array. A parameter indicates whether to clear the internal state of the encoder after the conversion.
+            When overridden in a derived class, encodes a set of characters from the specified character array and any characters in the internal buffer into the specified byte 
+             array. A parameter indicates whether to clear the internal state of the encoder after the conversion.
+        
         
             chars: The character array containing the set of characters to encode.
             charIndex: The index of the first character to encode.
@@ -1211,7 +1239,9 @@ class Encoder():
             Returns: The actual number of bytes written into bytes.
         GetBytes(self: Encoder, chars: Char*, charCount: int, bytes: Byte*, byteCount: int, flush: bool) -> int
         
-            When overridden in a derived class, encodes a set of characters starting at the specified character pointer and any characters in the internal buffer into a sequence of bytes that are stored starting at the specified byte pointer. A parameter indicates whether to clear the internal state of the encoder after the conversion.
+            When overridden in a derived class, encodes a set of characters starting at the specified character pointer and any characters in the internal buffer into a sequence 
+             of bytes that are stored starting at the specified byte pointer. A parameter indicates whether to clear the internal state of the encoder after the conversion.
+        
         
             chars: A pointer to the first character to encode.
             charCount: The number of characters to encode.
@@ -1245,9 +1275,8 @@ Get: FallbackBuffer(self: Encoder) -> EncoderFallbackBuffer
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Encoder()
+    Instance = Encoder()
+    """hardcoded/returns an instance of the class"""
 
 class EncoderFallback():
     """ Provides a failure-handling mechanism, called a fallback, for an input character that cannot be converted to an encoded output byte sequence. """
@@ -1271,9 +1300,8 @@ Get: MaxCharCount(self: EncoderFallback) -> int
     ExceptionFallback = None
     ReplacementFallback = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EncoderFallback()
+    Instance = EncoderFallback()
+    """hardcoded/returns an instance of the class"""
 
 class EncoderExceptionFallback(EncoderFallback):
     """
@@ -1325,9 +1353,8 @@ Get: MaxCharCount(self: EncoderExceptionFallback) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EncoderExceptionFallback()
+    Instance = EncoderExceptionFallback()
+    """hardcoded/returns an instance of the class"""
 
 class EncoderFallbackBuffer():
     """ Provides a buffer that allows a fallback handler to return an alternate string to an encoder when it cannot encode an input character. """
@@ -1364,7 +1391,9 @@ class EncoderFallbackBuffer():
         """
         MovePrevious(self: EncoderFallbackBuffer) -> bool
         
-            When overridden in a derived class, causes the next call to the System.Text.EncoderFallbackBuffer.GetNextChar method to access the data buffer character position that is prior to the current character position.
+            When overridden in a derived class, causes the next call to the System.Text.EncoderFallbackBuffer.GetNextChar method to access the data buffer character position that 
+             is prior to the current character position.
+        
             Returns: true if the System.Text.EncoderFallbackBuffer.MovePrevious operation was successful; otherwise, false.
         """
         pass
@@ -1384,9 +1413,8 @@ Get: Remaining(self: EncoderFallbackBuffer) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EncoderFallbackBuffer()
+    Instance = EncoderFallbackBuffer()
+    """hardcoded/returns an instance of the class"""
 
 class EncoderExceptionFallbackBuffer(EncoderFallbackBuffer):
     """
@@ -1405,7 +1433,9 @@ class EncoderExceptionFallbackBuffer(EncoderFallbackBuffer):
             Returns: None. No value is returned because the System.Text.EncoderExceptionFallbackBuffer.Fallback(System.Char,System.Int32) method always throws an exception.
         Fallback(self: EncoderExceptionFallbackBuffer, charUnknownHigh: Char, charUnknownLow: Char, index: int) -> bool
         
-            Throws an exception because the input character cannot be encoded. Parameters specify the value and index position of the surrogate pair in the input, and the nominal return value is not used.
+            Throws an exception because the input character cannot be encoded. Parameters specify the value and index position of the surrogate pair in the input, and the nominal 
+             return value is not used.
+        
         
             charUnknownHigh: The high surrogate of the input pair.
             charUnknownLow: The low surrogate of the input pair.
@@ -1419,7 +1449,8 @@ class EncoderExceptionFallbackBuffer(EncoderFallbackBuffer):
         GetNextChar(self: EncoderExceptionFallbackBuffer) -> Char
         
             Retrieves the next character in the exception fallback buffer.
-            Returns: The return value is always the Unicode character, NULL (U+0000). A return value is defined, although it is unchanging, because this method implements an abstract method.
+            Returns: The return value is always the Unicode character, NULL (U+0000). A return value is defined, although it is unchanging, because this method implements an abstract 
+             method.
         """
         pass
 
@@ -1427,7 +1458,9 @@ class EncoderExceptionFallbackBuffer(EncoderFallbackBuffer):
         """
         MovePrevious(self: EncoderExceptionFallbackBuffer) -> bool
         
-            Causes the next call to the System.Text.EncoderExceptionFallbackBuffer.GetNextChar method to access the exception data buffer character position that is prior to the current position.
+            Causes the next call to the System.Text.EncoderExceptionFallbackBuffer.GetNextChar method to access the exception data buffer character position that is prior to the 
+             current position.
+        
             Returns: The return value is always false.A return value is defined, although it is unchanging, because this method implements an abstract method.
         """
         pass
@@ -1440,9 +1473,8 @@ Get: Remaining(self: EncoderExceptionFallbackBuffer) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EncoderExceptionFallbackBuffer()
+    Instance = EncoderExceptionFallbackBuffer()
+    """hardcoded/returns an instance of the class"""
 
 class EncoderFallbackException(ArgumentException):
     """
@@ -1511,9 +1543,8 @@ Get: Index(self: EncoderFallbackException) -> int
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EncoderFallbackException()
+    Instance = EncoderFallbackException()
+    """hardcoded/returns an instance of the class"""
 
 class EncoderReplacementFallback(EncoderFallback):
     """
@@ -1538,7 +1569,8 @@ class EncoderReplacementFallback(EncoderFallback):
             Indicates whether the value of a specified object is equal to the System.Text.EncoderReplacementFallback object.
         
             value: A System.Text.EncoderReplacementFallback object.
-            Returns: true if the value parameter specifies an System.Text.EncoderReplacementFallback object and the replacement string of that object is equal to the replacement string of this System.Text.EncoderReplacementFallback object; otherwise, false.
+            Returns: true if the value parameter specifies an System.Text.EncoderReplacementFallback object and the replacement string of that object is equal to the replacement string of 
+             this System.Text.EncoderReplacementFallback object; otherwise, false.
         """
         pass
 
@@ -1581,9 +1613,8 @@ Get: MaxCharCount(self: EncoderReplacementFallback) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EncoderReplacementFallback()
+    Instance = EncoderReplacementFallback()
+    """hardcoded/returns an instance of the class"""
 
 class EncoderReplacementFallbackBuffer(EncoderFallbackBuffer):
     """
@@ -1602,7 +1633,9 @@ class EncoderReplacementFallbackBuffer(EncoderFallbackBuffer):
             Returns: true if the replacement string is not empty; false if the replacement string is empty.
         Fallback(self: EncoderReplacementFallbackBuffer, charUnknownHigh: Char, charUnknownLow: Char, index: int) -> bool
         
-            Indicates whether a replacement string can be used when an input surrogate pair cannot be encoded, or whether the surrogate pair can be ignored. Parameters specify the surrogate pair and the index position of the pair in the input.
+            Indicates whether a replacement string can be used when an input surrogate pair cannot be encoded, or whether the surrogate pair can be ignored. Parameters specify the 
+             surrogate pair and the index position of the pair in the input.
+        
         
             charUnknownHigh: The high surrogate of the input pair.
             charUnknownLow: The low surrogate of the input pair.
@@ -1624,7 +1657,9 @@ class EncoderReplacementFallbackBuffer(EncoderFallbackBuffer):
         """
         MovePrevious(self: EncoderReplacementFallbackBuffer) -> bool
         
-            Causes the next call to the System.Text.EncoderReplacementFallbackBuffer.GetNextChar method to access the character position in the replacement fallback buffer prior to the current character position.
+            Causes the next call to the System.Text.EncoderReplacementFallbackBuffer.GetNextChar method to access the character position in the replacement fallback buffer prior 
+             to the current character position.
+        
             Returns: true if the System.Text.EncoderReplacementFallbackBuffer.MovePrevious operation was successful; otherwise, false.
         """
         pass
@@ -1649,9 +1684,8 @@ Get: Remaining(self: EncoderReplacementFallbackBuffer) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EncoderReplacementFallbackBuffer()
+    Instance = EncoderReplacementFallbackBuffer()
+    """hardcoded/returns an instance of the class"""
 
 class EncodingInfo():
     """ Provides basic information about an encoding. """
@@ -1713,9 +1747,8 @@ Get: Name(self: EncodingInfo) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EncodingInfo()
+    Instance = EncodingInfo()
+    """hardcoded/returns an instance of the class"""
 
 class EncodingProvider():
     """ EncodingProvider() """
@@ -1728,9 +1761,8 @@ class EncodingProvider():
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EncodingProvider()
+    Instance = EncodingProvider()
+    """hardcoded/returns an instance of the class"""
 
 class NormalizationForm:
     """
@@ -1777,9 +1809,8 @@ class NormalizationForm:
     FormKD = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NormalizationForm()
+    Instance = NormalizationForm()
+    """hardcoded/returns an instance of the class"""
 
 class StringBuilder:
     """
@@ -1921,14 +1952,18 @@ class StringBuilder:
         """
         AppendFormat(self: StringBuilder, format: str, arg0: object) -> StringBuilder
         
-            Appends the string returned by processing a composite format string, which contains zero or more format items, to this instance. Each format item is replaced by the string representation of a single argument.
+            Appends the string returned by processing a composite format string, which contains zero or more format items, to this instance. Each format item is replaced by the 
+             string representation of a single argument.
+        
         
             format: A composite format string (see Remarks).
             arg0: An object to format.
             Returns: A reference to this instance with format appended. Each format item in format is replaced by the string representation of arg0.
         AppendFormat(self: StringBuilder, format: str, arg0: object, arg1: object) -> StringBuilder
         
-            Appends the string returned by processing a composite format string, which contains zero or more format items, to this instance. Each format item is replaced by the string representation of either of two arguments.
+            Appends the string returned by processing a composite format string, which contains zero or more format items, to this instance. Each format item is replaced by the 
+             string representation of either of two arguments.
+        
         
             format: A composite format string (see Remarks).
             arg0: The first object to format.
@@ -1936,7 +1971,9 @@ class StringBuilder:
             Returns: A reference to this instance with format appended. Each format item in format is replaced by the string representation of the corresponding object argument.
         AppendFormat(self: StringBuilder, format: str, arg0: object, arg1: object, arg2: object) -> StringBuilder
         
-            Appends the string returned by processing a composite format string, which contains zero or more format items, to this instance. Each format item is replaced by the string representation of either of three arguments.
+            Appends the string returned by processing a composite format string, which contains zero or more format items, to this instance. Each format item is replaced by the 
+             string representation of either of three arguments.
+        
         
             format: A composite format string (see Remarks).
             arg0: The first object to format.
@@ -1945,7 +1982,9 @@ class StringBuilder:
             Returns: A reference to this instance with format appended. Each format item in format is replaced by the string representation of the corresponding object argument.
         AppendFormat(self: StringBuilder, format: str, *args: Array[object]) -> StringBuilder
         
-            Appends the string returned by processing a composite format string, which contains zero or more format items, to this instance. Each format item is replaced by the string representation of a corresponding argument in a parameter array.
+            Appends the string returned by processing a composite format string, which contains zero or more format items, to this instance. Each format item is replaced by the 
+             string representation of a corresponding argument in a parameter array.
+        
         
             format: A composite format string (see Remarks).
             args: An array of objects to format.
@@ -1955,12 +1994,15 @@ class StringBuilder:
         AppendFormat(self: StringBuilder, provider: IFormatProvider, format: str, arg0: object, arg1: object, arg2: object) -> StringBuilder
         AppendFormat(self: StringBuilder, provider: IFormatProvider, format: str, *args: Array[object]) -> StringBuilder
         
-            Appends the string returned by processing a composite format string, which contains zero or more format items, to this instance. Each format item is replaced by the string representation of a corresponding argument in a parameter array using a specified format provider.
+            Appends the string returned by processing a composite format string, which contains zero or more format items, to this instance. Each format item is replaced by the 
+             string representation of a corresponding argument in a parameter array using a specified format provider.
+        
         
             provider: An object that supplies culture-specific formatting information.
             format: A composite format string (see Remarks).
             args: An array of objects to format.
-            Returns: A reference to this instance after the append operation has completed. After the append operation, this instance contains any data that existed before the operation, suffixed by a copy of format where any format specification is replaced by the string representation of the corresponding object argument.
+            Returns: A reference to this instance after the append operation has completed. After the append operation, this instance contains any data that existed before the operation, 
+             suffixed by a copy of format where any format specification is replaced by the string representation of the corresponding object argument.
         """
         pass
 
@@ -2283,9 +2325,8 @@ Get: MaxCapacity(self: StringBuilder) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StringBuilder()
+    Instance = StringBuilder()
+    """hardcoded/returns an instance of the class"""
 
 class UnicodeEncoding(Encoding):
     """
@@ -2464,7 +2505,8 @@ class UnicodeEncoding(Encoding):
         GetPreamble(self: UnicodeEncoding) -> Array[Byte]
         
             Returns a Unicode byte order mark encoded in UTF-16 format, if the constructor for this instance requests a byte order mark.
-            Returns: A byte array containing the Unicode byte order mark, if the constructor for this instance requests a byte order mark. Otherwise, this method returns a byte array of length zero.
+            Returns: A byte array containing the Unicode byte order mark, if the constructor for this instance requests a byte order mark. Otherwise, this method returns a byte array of 
+             length zero.
         """
         pass
 
@@ -2506,9 +2548,8 @@ class UnicodeEncoding(Encoding):
 
     CharSize = 2
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UnicodeEncoding()
+    Instance = UnicodeEncoding()
+    """hardcoded/returns an instance of the class"""
 
 class UTF32Encoding(Encoding):
     """
@@ -2687,7 +2728,8 @@ class UTF32Encoding(Encoding):
         GetPreamble(self: UTF32Encoding) -> Array[Byte]
         
             Returns a Unicode byte order mark encoded in UTF-32 format, if the constructor for this instance requests a byte order mark.
-            Returns: A byte array containing the Unicode byte order mark, if the constructor for this instance requests a byte order mark. Otherwise, this method returns a byte array of length zero.
+            Returns: A byte array containing the Unicode byte order mark, if the constructor for this instance requests a byte order mark. Otherwise, this method returns a byte array of 
+             length zero.
         """
         pass
 
@@ -2727,9 +2769,8 @@ class UTF32Encoding(Encoding):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UTF32Encoding()
+    Instance = UTF32Encoding()
+    """hardcoded/returns an instance of the class"""
 
 class UTF7Encoding(Encoding):
     """
@@ -2937,9 +2978,8 @@ class UTF7Encoding(Encoding):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UTF7Encoding()
+    Instance = UTF7Encoding()
+    """hardcoded/returns an instance of the class"""
 
 class UTF8Encoding(Encoding):
     """
@@ -3118,7 +3158,8 @@ class UTF8Encoding(Encoding):
         GetPreamble(self: UTF8Encoding) -> Array[Byte]
         
             Returns a Unicode byte order mark encoded in UTF-8 format, if the constructor for this instance requests a byte order mark.
-            Returns: A byte array containing the Unicode byte order mark, if the constructor for this instance requests a byte order mark. Otherwise, this method returns a byte array of length zero.
+            Returns: A byte array containing the Unicode byte order mark, if the constructor for this instance requests a byte order mark. Otherwise, this method returns a byte array of 
+             length zero.
         """
         pass
 
@@ -3158,9 +3199,8 @@ class UTF8Encoding(Encoding):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UTF8Encoding()
+    Instance = UTF8Encoding()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

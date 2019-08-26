@@ -48,7 +48,6 @@ class ErpNames:
     Unknown = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ErpNames()
+    Instance = ErpNames()
+    """hardcoded/returns an instance of the class"""
 

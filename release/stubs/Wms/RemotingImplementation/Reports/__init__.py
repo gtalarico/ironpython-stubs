@@ -20,9 +20,8 @@ class IReportDataArgsProvider:
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IReportDataArgsProvider()
+    Instance = IReportDataArgsProvider()
+    """hardcoded/returns an instance of the class"""
 
 class IReportExportArgsProvider:
     # no doc
@@ -36,9 +35,8 @@ class IReportExportArgsProvider:
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IReportExportArgsProvider()
+    Instance = IReportExportArgsProvider()
+    """hardcoded/returns an instance of the class"""
 
 class IReportPrintArgsProvider:
     # no doc
@@ -52,9 +50,8 @@ class IReportPrintArgsProvider:
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IReportPrintArgsProvider()
+    Instance = IReportPrintArgsProvider()
+    """hardcoded/returns an instance of the class"""
 
 class IReportRenderer:
     # no doc
@@ -73,9 +70,8 @@ class IReportRenderer:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IReportRenderer()
+    Instance = IReportRenderer()
+    """hardcoded/returns an instance of the class"""
 
 class ReportArgs():
     # no doc
@@ -92,9 +88,8 @@ Set: ReportParameters(self: ReportArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReportArgs()
+    Instance = ReportArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ReportDataArgs():
     """ ReportDataArgs() """
@@ -111,9 +106,8 @@ Set: MetaData(self: ReportDataArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReportDataArgs()
+    Instance = ReportDataArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ReportExport():
     """ ReportExport() """
@@ -154,9 +148,8 @@ Set: NumberOfPages(self: ReportExport) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReportExport()
+    Instance = ReportExport()
+    """hardcoded/returns an instance of the class"""
 
 class ReportExportArgs(ReportArgs):
     """ ReportExportArgs() """
@@ -167,9 +160,8 @@ Set: Format(self: ReportExportArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReportExportArgs()
+    Instance = ReportExportArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ReportExportFormat:
     """ enum ReportExportFormat, values: Excel (1), Image (3), PDF (0), Word (2) """
@@ -212,9 +204,8 @@ class ReportExportFormat:
     value__ = None
     Word = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReportExportFormat()
+    Instance = ReportExportFormat()
+    """hardcoded/returns an instance of the class"""
 
 class ReportPrintArgs(ReportArgs):
     """ ReportPrintArgs() """
@@ -237,9 +228,8 @@ Set: PrinterName(self: ReportPrintArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReportPrintArgs()
+    Instance = ReportPrintArgs()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

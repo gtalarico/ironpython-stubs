@@ -41,9 +41,8 @@ Get: Value(self: Capture) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Capture()
+    Instance = Capture()
+    """hardcoded/returns an instance of the class"""
 
 class CaptureCollection:
     """ Represents the set of captures made by a single capturing group. """
@@ -118,9 +117,8 @@ Get: SyncRoot(self: CaptureCollection) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CaptureCollection()
+    Instance = CaptureCollection()
+    """hardcoded/returns an instance of the class"""
 
 class Group(Capture):
     """ Represents the results from a single capturing group. """
@@ -156,9 +154,8 @@ Get: Success(self: Group) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Group()
+    Instance = Group()
+    """hardcoded/returns an instance of the class"""
 
 class GroupCollection:
     """ Returns the set of captured groups in a single match. """
@@ -233,9 +230,8 @@ Get: SyncRoot(self: GroupCollection) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GroupCollection()
+    Instance = GroupCollection()
+    """hardcoded/returns an instance of the class"""
 
 class Match(Group):
     """ Represents the results from a single regular expression match. """
@@ -243,7 +239,9 @@ class Match(Group):
         """
         NextMatch(self: Match) -> Match
         
-            Returns a new System.Text.RegularExpressions.Match object with the results for the next match, starting at the position at which the last match ended (at the character after the last matched character).
+            Returns a new System.Text.RegularExpressions.Match object with the results for the next match, starting at the position at which the last match ended (at the character 
+             after the last matched character).
+        
             Returns: The next regular expression match.
         """
         pass
@@ -281,9 +279,8 @@ Get: Groups(self: Match) -> GroupCollection
 
     Empty = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Match()
+    Instance = Match()
+    """hardcoded/returns an instance of the class"""
 
 class MatchCollection:
     """ Represents the set of successful matches found by iteratively applying a regular expression pattern to the input string. """
@@ -358,9 +355,8 @@ Get: SyncRoot(self: MatchCollection) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MatchCollection()
+    Instance = MatchCollection()
+    """hardcoded/returns an instance of the class"""
 
 class MatchEvaluator(MulticastDelegate):
     """
@@ -389,7 +385,9 @@ class MatchEvaluator(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -418,7 +416,8 @@ class MatchEvaluator(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -434,9 +433,8 @@ class MatchEvaluator(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MatchEvaluator()
+    Instance = MatchEvaluator()
+    """hardcoded/returns an instance of the class"""
 
 class Regex:
     """
@@ -475,7 +473,9 @@ class Regex:
         """
         Escape(str: str) -> str
         
-            Escapes a minimal set of characters (\, *, +, ?, |, {, [, (,), ^, $,., #, and white space) by replacing them with their escape codes. This instructs the regular expression engine to interpret these characters literally rather than as metacharacters.
+            Escapes a minimal set of characters (\, *, +, ?, |, {, [, (,), ^, $,., #, and white space) by replacing them with their escape codes. This instructs the regular 
+             expression engine to interpret these characters literally rather than as metacharacters.
+        
         
             str: The input string that contains the text to convert.
             Returns: A string of characters with metacharacters converted to their escaped form.
@@ -507,7 +507,8 @@ class Regex:
             Gets the group name that corresponds to the specified group number.
         
             i: The group number to convert to the corresponding group name.
-            Returns: A string that contains the group name associated with the specified group number. If there is no group name that corresponds to i, the method returns System.String.Empty.
+            Returns: A string that contains the group name associated with the specified group number. If there is no group name that corresponds to i, the method returns 
+             System.String.Empty.
         """
         pass
 
@@ -556,7 +557,9 @@ class Regex:
             Returns: true if the regular expression finds a match; otherwise, false.
         IsMatch(self: Regex, input: str, startat: int) -> bool
         
-            Indicates whether the regular expression specified in the System.Text.RegularExpressions.Regex constructor finds a match in the specified input string, beginning at the specified starting position in the string.
+            Indicates whether the regular expression specified in the System.Text.RegularExpressions.Regex constructor finds a match in the specified input string, beginning at 
+             the specified starting position in the string.
+        
         
             input: The string to search for a match.
             startat: The character position at which to start the search.
@@ -598,7 +601,9 @@ class Regex:
             Returns: An object that contains information about the match.
         Match(self: Regex, input: str, beginning: int, length: int) -> Match
         
-            Searches the input string for the first occurrence of a regular expression, beginning at the specified starting position and searching only the specified number of characters.
+            Searches the input string for the first occurrence of a regular expression, beginning at the specified starting position and searching only the specified number of 
+             characters.
+        
         
             input: The string to search for a match.
             beginning: The zero-based character position in the input string that defines the leftmost position to be searched.
@@ -655,7 +660,9 @@ class Regex:
             Returns: A new string that is identical to the input string, except that a replacement string takes the place of each matched string.
         Replace(input: str, pattern: str, replacement: str, options: RegexOptions) -> str
         
-            Within a specified input string, replaces all strings that match a specified regular expression with a specified replacement string. Specified options modify the matching operation.
+            Within a specified input string, replaces all strings that match a specified regular expression with a specified replacement string. Specified options modify the 
+             matching operation.
+        
         
             input: The string to search for a match.
             pattern: The regular expression pattern to match.
@@ -689,7 +696,9 @@ class Regex:
             Returns: A new string that is identical to the input string, except that a replacement string takes the place of each matched string.
         Replace(input: str, pattern: str, evaluator: MatchEvaluator) -> str
         
-            Within a specified input string, replaces all strings that match a specified regular expression with a string returned by a System.Text.RegularExpressions.MatchEvaluator delegate.
+            Within a specified input string, replaces all strings that match a specified regular expression with a string returned by a 
+             System.Text.RegularExpressions.MatchEvaluator delegate.
+        
         
             input: The string to search for a match.
             pattern: The regular expression pattern to match.
@@ -697,7 +706,9 @@ class Regex:
             Returns: A new string that is identical to the input string, except that a replacement string takes the place of each matched string.
         Replace(input: str, pattern: str, evaluator: MatchEvaluator, options: RegexOptions) -> str
         
-            Within a specified input string, replaces all strings that match a specified regular expression with a string returned by a System.Text.RegularExpressions.MatchEvaluator delegate. Specified options modify the matching operation.
+            Within a specified input string, replaces all strings that match a specified regular expression with a string returned by a 
+             System.Text.RegularExpressions.MatchEvaluator delegate. Specified options modify the matching operation.
+        
         
             input: The string to search for a match.
             pattern: The regular expression pattern to match.
@@ -707,14 +718,18 @@ class Regex:
         Replace(input: str, pattern: str, evaluator: MatchEvaluator, options: RegexOptions, matchTimeout: TimeSpan) -> str
         Replace(self: Regex, input: str, evaluator: MatchEvaluator) -> str
         
-            Within a specified input string, replaces all strings that match a specified regular expression with a string returned by a System.Text.RegularExpressions.MatchEvaluator delegate.
+            Within a specified input string, replaces all strings that match a specified regular expression with a string returned by a 
+             System.Text.RegularExpressions.MatchEvaluator delegate.
+        
         
             input: The string to search for a match.
             evaluator: A custom method that examines each match and returns either the original matched string or a replacement string.
             Returns: A new string that is identical to the input string, except that a replacement string takes the place of each matched string.
         Replace(self: Regex, input: str, evaluator: MatchEvaluator, count: int) -> str
         
-            Within a specified input string, replaces a specified maximum number of strings that match a regular expression pattern with a string returned by a System.Text.RegularExpressions.MatchEvaluator delegate.
+            Within a specified input string, replaces a specified maximum number of strings that match a regular expression pattern with a string returned by a 
+             System.Text.RegularExpressions.MatchEvaluator delegate.
+        
         
             input: The string to search for a match.
             evaluator: A custom method that examines each match and returns either the original matched string or a replacement string.
@@ -722,7 +737,9 @@ class Regex:
             Returns: A new string that is identical to the input string, except that a replacement string takes the place of each matched string.
         Replace(self: Regex, input: str, evaluator: MatchEvaluator, count: int, startat: int) -> str
         
-            Within a specified input substring, replaces a specified maximum number of strings that match a regular expression pattern with a string returned by a System.Text.RegularExpressions.MatchEvaluator delegate.
+            Within a specified input substring, replaces a specified maximum number of strings that match a regular expression pattern with a string returned by a 
+             System.Text.RegularExpressions.MatchEvaluator delegate.
+        
         
             input: The string to search for a match.
             evaluator: A custom method that examines each match and returns either the original matched string or a replacement string.
@@ -759,14 +776,18 @@ class Regex:
             Returns: An array of strings.
         Split(self: Regex, input: str, count: int) -> Array[str]
         
-            Splits the specified input string a specified maximum number of times at the positions defined by a regular expression specified in the System.Text.RegularExpressions.Regex constructor.
+            Splits the specified input string a specified maximum number of times at the positions defined by a regular expression specified in the 
+             System.Text.RegularExpressions.Regex constructor.
+        
         
             input: The string to be split.
             count: The maximum number of times the split can occur.
             Returns: An array of strings.
         Split(self: Regex, input: str, count: int, startat: int) -> Array[str]
         
-            Splits the specified input string a specified maximum number of times at the positions defined by a regular expression specified in the System.Text.RegularExpressions.Regex constructor. The search for the regular expression pattern starts at a specified character position in the input string.
+            Splits the specified input string a specified maximum number of times at the positions defined by a regular expression specified in the 
+             System.Text.RegularExpressions.Regex constructor. The search for the regular expression pattern starts at a specified character position in the input string.
+        
         
             input: The string to be split.
             count: The maximum number of times the split can occur.
@@ -878,9 +899,8 @@ Get: RightToLeft(self: Regex) -> bool
     pattern = None
     roptions = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Regex()
+    Instance = Regex()
+    """hardcoded/returns an instance of the class"""
 
 class RegexCompilationInfo():
     """
@@ -944,9 +964,8 @@ Set: Pattern(self: RegexCompilationInfo) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RegexCompilationInfo()
+    Instance = RegexCompilationInfo()
+    """hardcoded/returns an instance of the class"""
 
 class RegexMatchTimeoutException(TimeoutException):
     """
@@ -994,9 +1013,8 @@ class RegexMatchTimeoutException(TimeoutException):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RegexMatchTimeoutException()
+    Instance = RegexMatchTimeoutException()
+    """hardcoded/returns an instance of the class"""
 
 class RegexOptions:
     """
@@ -1049,9 +1067,8 @@ class RegexOptions:
     Singleline = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RegexOptions()
+    Instance = RegexOptions()
+    """hardcoded/returns an instance of the class"""
 
 class RegexRunner():
     """ The System.Text.RegularExpressions.RegexRunner class is the base class for compiled regular expressions. """
@@ -1066,7 +1083,9 @@ class RegexRunner():
         """
         CharInClass(ch: Char, charClass: str) -> bool
         
-            Used by a System.Text.RegularExpressions.Regex object generated by the erload:System.Text.RegularExpressions.Regex.CompileToAssembly method. Determines whether a character is in a character class.
+            Used by a System.Text.RegularExpressions.Regex object generated by the erload:System.Text.RegularExpressions.Regex.CompileToAssembly method. Determines whether a 
+             character is in a character class.
+        
         
             ch: A character to test.
             charClass: The internal name of a character class.
@@ -1237,9 +1256,8 @@ class RegexRunner():
     runtrackcount = None
     runtrackpos = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RegexRunner()
+    Instance = RegexRunner()
+    """hardcoded/returns an instance of the class"""
 
 class RegexRunnerFactory():
     """ Creates a System.Text.RegularExpressions.RegexRunner class for a compiled regular expression. """
@@ -1252,7 +1270,6 @@ class RegexRunnerFactory():
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RegexRunnerFactory()
+    Instance = RegexRunnerFactory()
+    """hardcoded/returns an instance of the class"""
 

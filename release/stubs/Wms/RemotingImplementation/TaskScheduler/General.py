@@ -15,7 +15,6 @@ class GeneralTask(TaskBase):
         """ Run(self: GeneralTask) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GeneralTask()
+    Instance = GeneralTask()
+    """hardcoded/returns an instance of the class"""
 

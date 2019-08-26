@@ -23,9 +23,8 @@ class CachedDirectOrderRemovalHandler(CacheObjectRemovalHandlerBase):
         """ __new__(cls: type, stockManager: IStockManager) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CachedDirectOrderRemovalHandler()
+    Instance = CachedDirectOrderRemovalHandler()
+    """hardcoded/returns an instance of the class"""
 
 class CachedEnhancedStockAllocationsRemovalHandler(CacheObjectRemovalHandlerBase):
     """ CachedEnhancedStockAllocationsRemovalHandler(stockManager: IStockManager) """
@@ -42,9 +41,8 @@ class CachedEnhancedStockAllocationsRemovalHandler(CacheObjectRemovalHandlerBase
         """ __new__(cls: type, stockManager: IStockManager) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CachedEnhancedStockAllocationsRemovalHandler()
+    Instance = CachedEnhancedStockAllocationsRemovalHandler()
+    """hardcoded/returns an instance of the class"""
 
 class CachedInboundReceiveLinesRemovalHandler(CacheObjectRemovalHandlerBase):
     """ CachedInboundReceiveLinesRemovalHandler(inbound: Inbound) """
@@ -61,9 +59,8 @@ class CachedInboundReceiveLinesRemovalHandler(CacheObjectRemovalHandlerBase):
         """ __new__(cls: type, inbound: Inbound) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CachedInboundReceiveLinesRemovalHandler()
+    Instance = CachedInboundReceiveLinesRemovalHandler()
+    """hardcoded/returns an instance of the class"""
 
 class CachedRmaReceiveLinesRemovalHandler(CacheObjectRemovalHandlerBase):
     """ CachedRmaReceiveLinesRemovalHandler(inbound: Inbound) """
@@ -80,9 +77,8 @@ class CachedRmaReceiveLinesRemovalHandler(CacheObjectRemovalHandlerBase):
         """ __new__(cls: type, inbound: Inbound) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CachedRmaReceiveLinesRemovalHandler()
+    Instance = CachedRmaReceiveLinesRemovalHandler()
+    """hardcoded/returns an instance of the class"""
 
 class CacheObjectRemovalHandlerBase:
     # no doc
@@ -98,9 +94,8 @@ class CacheObjectRemovalHandlerBase:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CacheObjectRemovalHandlerBase()
+    Instance = CacheObjectRemovalHandlerBase()
+    """hardcoded/returns an instance of the class"""
 
 class ICacheObjectRemovalHandler:
     # no doc
@@ -112,7 +107,6 @@ class ICacheObjectRemovalHandler:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ICacheObjectRemovalHandler()
+    Instance = ICacheObjectRemovalHandler()
+    """hardcoded/returns an instance of the class"""
 

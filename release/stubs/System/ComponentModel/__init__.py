@@ -32,9 +32,8 @@ Set: NewObject(self: AddingNewEventArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AddingNewEventArgs()
+    Instance = AddingNewEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class AddingNewEventHandler(MulticastDelegate):
     """
@@ -63,7 +62,9 @@ class AddingNewEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -92,7 +93,8 @@ class AddingNewEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -108,9 +110,8 @@ class AddingNewEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AddingNewEventHandler()
+    Instance = AddingNewEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class AmbientValueAttribute:
     """
@@ -184,9 +185,8 @@ Get: Value(self: AmbientValueAttribute) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AmbientValueAttribute()
+    Instance = AmbientValueAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class TypeConverter():
     """
@@ -368,7 +368,9 @@ class TypeConverter():
             Returns: An System.Object representing the given System.Collections.IDictionary, or null if the object cannot be created. This method always returns null.
         CreateInstance(self: TypeConverter, context: ITypeDescriptorContext, propertyValues: IDictionary) -> object
         
-            Creates an instance of the type that this System.ComponentModel.TypeConverter is associated with, using the specified context, given a set of property values for the object.
+            Creates an instance of the type that this System.ComponentModel.TypeConverter is associated with, using the specified context, given a set of property values for the 
+             object.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             propertyValues: An System.Collections.IDictionary of new property values.
@@ -403,14 +405,21 @@ class TypeConverter():
         """
         GetCreateInstanceSupported(self: TypeConverter) -> bool
         
-            Returns whether changing a value on this object requires a call to the System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) method to create a new value.
-            Returns: true if changing a property on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new value; otherwise, false.
+            Returns whether changing a value on this object requires a call to the System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) method to 
+             create a new value.
+        
+            Returns: true if changing a property on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new value; 
+             otherwise, false.
+        
         GetCreateInstanceSupported(self: TypeConverter, context: ITypeDescriptorContext) -> bool
         
-            Returns whether changing a value on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new value, using the specified context.
+            Returns whether changing a value on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new 
+             value, using the specified context.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true if changing a property on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new value; otherwise, false.
+            Returns: true if changing a property on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new value; 
+             otherwise, false.
         """
         pass
 
@@ -460,13 +469,18 @@ class TypeConverter():
         GetStandardValues(self: TypeConverter) -> ICollection
         
             Returns a collection of standard values from the default context for the data type this type converter is designed for.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection containing a standard set of valid values, or null if the data type does not support a standard set of values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection containing a standard set of valid values, or null if the data type does not support a standard set of 
+             values.
+        
         GetStandardValues(self: TypeConverter, context: ITypeDescriptorContext) -> StandardValuesCollection
         
             Returns a collection of standard values for the data type this type converter is designed for when provided with a format context.
         
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context that can be used to extract additional information about the environment from which this converter is invoked. This parameter or properties of this parameter can be null.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of values.
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context that can be used to extract additional information about the environment from which this 
+             converter is invoked. This parameter or properties of this parameter can be null.
+        
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of 
+             values.
         """
         pass
 
@@ -475,13 +489,18 @@ class TypeConverter():
         GetStandardValuesExclusive(self: TypeConverter) -> bool
         
             Returns whether the collection of standard values returned from System.ComponentModel.TypeConverter.GetStandardValues is an exclusive list.
-            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible values; false if other values are possible.
+            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of 
+             possible values; false if other values are possible.
+        
         GetStandardValuesExclusive(self: TypeConverter, context: ITypeDescriptorContext) -> bool
         
-            Returns whether the collection of standard values returned from System.ComponentModel.TypeConverter.GetStandardValues is an exclusive list of possible values, using the specified context.
+            Returns whether the collection of standard values returned from System.ComponentModel.TypeConverter.GetStandardValues is an exclusive list of possible values, using 
+             the specified context.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible values; false if other values are possible.
+            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of 
+             possible values; false if other values are possible.
         """
         pass
 
@@ -533,9 +552,8 @@ class TypeConverter():
     SimplePropertyDescriptor = None
     StandardValuesCollection = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TypeConverter()
+    Instance = TypeConverter()
+    """hardcoded/returns an instance of the class"""
 
 class CollectionConverter(TypeConverter):
     """
@@ -566,7 +584,8 @@ class CollectionConverter(TypeConverter):
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             value: An System.Object that specifies the type of array to get the properties for.
             attributes: An array of type System.Attribute that will be used as a filter.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for this data type, or null if there are no properties. This method always returns null.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for this data type, or null if there are no properties. This method always 
+             returns null.
         """
         pass
 
@@ -577,13 +596,13 @@ class CollectionConverter(TypeConverter):
             Gets a value indicating whether this object supports properties.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: false because System.ComponentModel.CollectionConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[]) should not be called to find the properties of this object. This method never returns true.
+            Returns: false because System.ComponentModel.CollectionConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[]) should not be 
+             called to find the properties of this object. This method never returns true.
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CollectionConverter()
+    Instance = CollectionConverter()
+    """hardcoded/returns an instance of the class"""
 
 class ArrayConverter(CollectionConverter):
     """
@@ -625,13 +644,13 @@ class ArrayConverter(CollectionConverter):
             Gets a value indicating whether this object supports properties.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because System.ComponentModel.ArrayConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[]) should be called to find the properties of this object. This method never returns false.
+            Returns: true because System.ComponentModel.ArrayConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[]) should be called to find 
+             the properties of this object. This method never returns false.
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ArrayConverter()
+    Instance = ArrayConverter()
+    """hardcoded/returns an instance of the class"""
 
 class AsyncCompletedEventArgs(EventArgs):
     """
@@ -677,9 +696,8 @@ Get: UserState(self: AsyncCompletedEventArgs) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AsyncCompletedEventArgs()
+    Instance = AsyncCompletedEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class AsyncCompletedEventHandler(MulticastDelegate):
     """
@@ -708,7 +726,9 @@ class AsyncCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -737,7 +757,8 @@ class AsyncCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -753,9 +774,8 @@ class AsyncCompletedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AsyncCompletedEventHandler()
+    Instance = AsyncCompletedEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class AsyncOperation():
     """ Tracks the lifetime of an asynchronous operation. """
@@ -801,9 +821,8 @@ Get: UserSuppliedState(self: AsyncOperation) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AsyncOperation()
+    Instance = AsyncOperation()
+    """hardcoded/returns an instance of the class"""
 
 class AsyncOperationManager():
     """ Provides concurrency management for classes that support asynchronous method calls. This class cannot be inherited. """
@@ -824,9 +843,8 @@ class AsyncOperationManager():
         'CreateOperation',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AsyncOperationManager()
+    Instance = AsyncOperationManager()
+    """hardcoded/returns an instance of the class"""
 
 class AttributeCollection:
     """
@@ -954,9 +972,8 @@ Get: Count(self: AttributeCollection) -> int
 
     Empty = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AttributeCollection()
+    Instance = AttributeCollection()
+    """hardcoded/returns an instance of the class"""
 
 class AttributeProviderAttribute:
     """
@@ -994,9 +1011,8 @@ Get: TypeName(self: AttributeProviderAttribute) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AttributeProviderAttribute()
+    Instance = AttributeProviderAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class Component(MarshalByRefObject):
     """
@@ -1018,7 +1034,8 @@ class Component(MarshalByRefObject):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
+             specified service.
         """
         pass
 
@@ -1028,7 +1045,10 @@ class Component(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -1094,9 +1114,8 @@ Set: Site(self: Component) = value
 
     Disposed = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Component()
+    Instance = Component()
+    """hardcoded/returns an instance of the class"""
 
 class BackgroundWorker(Component):
     """
@@ -1127,7 +1146,8 @@ class BackgroundWorker(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
+             specified service.
         """
         pass
 
@@ -1137,7 +1157,10 @@ class BackgroundWorker(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -1263,9 +1286,8 @@ Set: WorkerSupportsCancellation(self: BackgroundWorker) = value
     ProgressChanged = None
     RunWorkerCompleted = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BackgroundWorker()
+    Instance = BackgroundWorker()
+    """hardcoded/returns an instance of the class"""
 
 class BaseNumberConverter(TypeConverter):
     """ Provides a base type converter for nonfloating-point numerical types. """
@@ -1320,9 +1342,8 @@ class BaseNumberConverter(TypeConverter):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BaseNumberConverter()
+    Instance = BaseNumberConverter()
+    """hardcoded/returns an instance of the class"""
 
 class BindableAttribute:
     """
@@ -1402,9 +1423,8 @@ Get: Direction(self: BindableAttribute) -> BindingDirection
     No = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BindableAttribute()
+    Instance = BindableAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class BindableSupport:
     """
@@ -1450,9 +1470,8 @@ class BindableSupport:
     value__ = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BindableSupport()
+    Instance = BindableSupport()
+    """hardcoded/returns an instance of the class"""
 
 class BindingDirection:
     """
@@ -1497,9 +1516,8 @@ class BindingDirection:
     TwoWay = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BindingDirection()
+    Instance = BindingDirection()
+    """hardcoded/returns an instance of the class"""
 
 class IBindingList:
     """ Provides the features required to support both complex and simple scenarios when binding to a data source. """
@@ -1648,9 +1666,8 @@ Get: SupportsSorting(self: IBindingList) -> bool
 
     ListChanged = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IBindingList()
+    Instance = IBindingList()
+    """hardcoded/returns an instance of the class"""
 
 class ICancelAddNew:
     """ Adds transactional capability when adding a new item to a collection. """
@@ -1676,9 +1693,8 @@ class ICancelAddNew:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ICancelAddNew()
+    Instance = ICancelAddNew()
+    """hardcoded/returns an instance of the class"""
 
 class IRaiseItemChangedEvents:
     """ Indicates whether a class converts property change events to System.ComponentModel.IBindingList.ListChanged events. """
@@ -1694,9 +1710,8 @@ Get: RaisesItemChangedEvents(self: IRaiseItemChangedEvents) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IRaiseItemChangedEvents()
+    Instance = IRaiseItemChangedEvents()
+    """hardcoded/returns an instance of the class"""
 
 class BindingList(Collection):
     """
@@ -1760,7 +1775,9 @@ class BindingList(Collection):
         """
         FindCore(self: BindingList[T], prop: PropertyDescriptor, key: object) -> int
         
-            Searches for the index of the item that has the specified property descriptor with the specified value, if searching is implemented in a derived class; otherwise, a System.NotSupportedException.
+            Searches for the index of the item that has the specified property descriptor with the specified value, if searching is implemented in a derived class; otherwise, a 
+             System.NotSupportedException.
+        
         
             prop: The System.ComponentModel.PropertyDescriptor to search for.
             key: The value of property to match.
@@ -1936,9 +1953,8 @@ Set: RaiseListChangedEvents(self: BindingList[T]) = value
     AddingNew = None
     ListChanged = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BindingList()
+    Instance = BindingList()
+    """hardcoded/returns an instance of the class"""
 
 class BooleanConverter(TypeConverter):
     """
@@ -1986,10 +2002,14 @@ class BooleanConverter(TypeConverter):
         """
         GetStandardValuesExclusive(self: BooleanConverter, context: ITypeDescriptorContext) -> bool
         
-            Gets a value indicating whether the list of standard values returned from the System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) method is an exclusive list.
+            Gets a value indicating whether the list of standard values returned from the 
+             System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) method is an exclusive list.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list of possible values. This method never returns false.
+            Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
+             System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list of possible values. This method never 
+             returns false.
         """
         pass
 
@@ -2000,13 +2020,13 @@ class BooleanConverter(TypeConverter):
             Gets a value indicating whether this object supports a standard set of values that can be picked from a list.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) can be called to find a common set of values the object supports. This method never returns false.
+            Returns: true because System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) can be called to find a common set of values the 
+             object supports. This method never returns false.
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BooleanConverter()
+    Instance = BooleanConverter()
+    """hardcoded/returns an instance of the class"""
 
 class BrowsableAttribute:
     """
@@ -2071,9 +2091,8 @@ Get: Browsable(self: BrowsableAttribute) -> bool
     No = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BrowsableAttribute()
+    Instance = BrowsableAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class ByteConverter(BaseNumberConverter):
     """
@@ -2081,9 +2100,8 @@ class ByteConverter(BaseNumberConverter):
     
     ByteConverter()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ByteConverter()
+    Instance = ByteConverter()
+    """hardcoded/returns an instance of the class"""
 
 class CancelEventArgs(EventArgs):
     """
@@ -2109,9 +2127,8 @@ Set: Cancel(self: CancelEventArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CancelEventArgs()
+    Instance = CancelEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class CancelEventHandler(MulticastDelegate):
     """
@@ -2140,7 +2157,9 @@ class CancelEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2169,7 +2188,8 @@ class CancelEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -2185,9 +2205,8 @@ class CancelEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CancelEventHandler()
+    Instance = CancelEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class CategoryAttribute:
     """
@@ -2278,9 +2297,8 @@ Get: Category(self: CategoryAttribute) -> str
     Mouse = None
     WindowStyle = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CategoryAttribute()
+    Instance = CategoryAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class CharConverter(TypeConverter):
     """
@@ -2327,9 +2345,8 @@ class CharConverter(TypeConverter):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CharConverter()
+    Instance = CharConverter()
+    """hardcoded/returns an instance of the class"""
 
 class CollectionChangeAction:
     """
@@ -2375,9 +2392,8 @@ class CollectionChangeAction:
     Remove = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CollectionChangeAction()
+    Instance = CollectionChangeAction()
+    """hardcoded/returns an instance of the class"""
 
 class CollectionChangeEventArgs(EventArgs):
     """
@@ -2405,9 +2421,8 @@ Get: Element(self: CollectionChangeEventArgs) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CollectionChangeEventArgs()
+    Instance = CollectionChangeEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class CollectionChangeEventHandler(MulticastDelegate):
     """
@@ -2436,7 +2451,9 @@ class CollectionChangeEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2465,7 +2482,8 @@ class CollectionChangeEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -2481,9 +2499,8 @@ class CollectionChangeEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CollectionChangeEventHandler()
+    Instance = CollectionChangeEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class ComplexBindingPropertiesAttribute:
     """
@@ -2548,9 +2565,8 @@ Get: DataSource(self: ComplexBindingPropertiesAttribute) -> str
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ComplexBindingPropertiesAttribute()
+    Instance = ComplexBindingPropertiesAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class ComponentCollection(ReadOnlyCollectionBase):
     """
@@ -2591,9 +2607,8 @@ class ComponentCollection(ReadOnlyCollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentCollection()
+    Instance = ComponentCollection()
+    """hardcoded/returns an instance of the class"""
 
 class ReferenceConverter(TypeConverter):
     """
@@ -2647,7 +2662,8 @@ class ReferenceConverter(TypeConverter):
             Gets a collection of standard values for the reference data type.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of 
+             values.
         """
         pass
 
@@ -2655,10 +2671,14 @@ class ReferenceConverter(TypeConverter):
         """
         GetStandardValuesExclusive(self: ReferenceConverter, context: ITypeDescriptorContext) -> bool
         
-            Gets a value indicating whether the list of standard values returned from System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exclusive list.
+            Gets a value indicating whether the list of standard values returned from 
+             System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exclusive list.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list of possible values. This method never returns false.
+            Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
+             System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list of possible values. This method never 
+             returns false.
         """
         pass
 
@@ -2669,7 +2689,8 @@ class ReferenceConverter(TypeConverter):
             Gets a value indicating whether this object supports a standard set of values that can be picked from a list.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) can be called to find a common set of values the object supports. This method never returns false.
+            Returns: true because System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) can be called to find a common set of values the 
+             object supports. This method never returns false.
         """
         pass
 
@@ -2690,9 +2711,8 @@ class ReferenceConverter(TypeConverter):
         """ __new__(cls: type, type: Type) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReferenceConverter()
+    Instance = ReferenceConverter()
+    """hardcoded/returns an instance of the class"""
 
 class ComponentConverter(ReferenceConverter):
     """
@@ -2729,9 +2749,8 @@ class ComponentConverter(ReferenceConverter):
         """ __new__(cls: type, type: Type) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentConverter()
+    Instance = ComponentConverter()
+    """hardcoded/returns an instance of the class"""
 
 class ComponentEditor():
     """ Provides the base class for a custom component editor. """
@@ -2753,9 +2772,8 @@ class ComponentEditor():
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentEditor()
+    Instance = ComponentEditor()
+    """hardcoded/returns an instance of the class"""
 
 class ComponentResourceManager(ResourceManager):
     """
@@ -2798,9 +2816,8 @@ class ComponentResourceManager(ResourceManager):
     MainAssembly = None
     ResourceSets = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentResourceManager()
+    Instance = ComponentResourceManager()
+    """hardcoded/returns an instance of the class"""
 
 class Container:
     """
@@ -2908,9 +2925,8 @@ Get: Components(self: Container) -> ComponentCollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Container()
+    Instance = Container()
+    """hardcoded/returns an instance of the class"""
 
 class ContainerFilterService():
     """ Provides a base class for the container filter service. """
@@ -2925,9 +2941,8 @@ class ContainerFilterService():
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ContainerFilterService()
+    Instance = ContainerFilterService()
+    """hardcoded/returns an instance of the class"""
 
 class CultureInfoConverter(TypeConverter):
     """
@@ -3004,7 +3019,8 @@ class CultureInfoConverter(TypeConverter):
             Gets a collection of standard values for a System.Globalization.CultureInfo object using the specified context.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection containing a standard set of valid values, or null if the data type does not support a standard set of values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection containing a standard set of valid values, or null if the data type does not support a standard set of 
+             values.
         """
         pass
 
@@ -3012,10 +3028,14 @@ class CultureInfoConverter(TypeConverter):
         """
         GetStandardValuesExclusive(self: CultureInfoConverter, context: ITypeDescriptorContext) -> bool
         
-            Gets a value indicating whether the list of standard values returned from System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list.
+            Gets a value indicating whether the list of standard values returned from 
+             System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: false because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is not an exhaustive list of possible values (that is, other values are possible). This method never returns true.
+            Returns: false because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
+             System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is not an exhaustive list of possible values (that is, other 
+             values are possible). This method never returns true.
         """
         pass
 
@@ -3026,13 +3046,13 @@ class CultureInfoConverter(TypeConverter):
             Gets a value indicating whether this object supports a standard set of values that can be picked from a list using the specified context.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) should be called to find a common set of values the object supports. This method never returns false.
+            Returns: true because System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) should be called to find a common set of values 
+             the object supports. This method never returns false.
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CultureInfoConverter()
+    Instance = CultureInfoConverter()
+    """hardcoded/returns an instance of the class"""
 
 class CustomTypeDescriptor:
     """ Provides a simple default implementation of the System.ComponentModel.ICustomTypeDescriptor interface. """
@@ -3106,13 +3126,16 @@ class CustomTypeDescriptor:
         GetEvents(self: CustomTypeDescriptor) -> EventDescriptorCollection
         
             Returns a collection of event descriptors for the object represented by this type descriptor.
-            Returns: An System.ComponentModel.EventDescriptorCollection containing the event descriptors for the object represented by this type descriptor. The default is System.ComponentModel.EventDescriptorCollection.Empty.
+            Returns: An System.ComponentModel.EventDescriptorCollection containing the event descriptors for the object represented by this type descriptor. The default is 
+             System.ComponentModel.EventDescriptorCollection.Empty.
+        
         GetEvents(self: CustomTypeDescriptor, attributes: Array[Attribute]) -> EventDescriptorCollection
         
             Returns a filtered collection of event descriptors for the object represented by this type descriptor.
         
             attributes: An array of attributes to use as a filter. This can be null.
-            Returns: An System.ComponentModel.EventDescriptorCollection containing the event descriptions for the object represented by this type descriptor. The default is System.ComponentModel.EventDescriptorCollection.Empty.
+            Returns: An System.ComponentModel.EventDescriptorCollection containing the event descriptions for the object represented by this type descriptor. The default is 
+             System.ComponentModel.EventDescriptorCollection.Empty.
         """
         pass
 
@@ -3121,13 +3144,16 @@ class CustomTypeDescriptor:
         GetProperties(self: CustomTypeDescriptor) -> PropertyDescriptorCollection
         
             Returns a collection of property descriptors for the object represented by this type descriptor.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection containing the property descriptions for the object represented by this type descriptor. The default is System.ComponentModel.PropertyDescriptorCollection.Empty.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection containing the property descriptions for the object represented by this type descriptor. The default is 
+             System.ComponentModel.PropertyDescriptorCollection.Empty.
+        
         GetProperties(self: CustomTypeDescriptor, attributes: Array[Attribute]) -> PropertyDescriptorCollection
         
             Returns a filtered collection of property descriptors for the object represented by this type descriptor.
         
             attributes: An array of attributes to use as a filter. This can be null.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection containing the property descriptions for the object represented by this type descriptor. The default is System.ComponentModel.PropertyDescriptorCollection.Empty.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection containing the property descriptions for the object represented by this type descriptor. The default is 
+             System.ComponentModel.PropertyDescriptorCollection.Empty.
         """
         pass
 
@@ -3158,9 +3184,8 @@ class CustomTypeDescriptor:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CustomTypeDescriptor()
+    Instance = CustomTypeDescriptor()
+    """hardcoded/returns an instance of the class"""
 
 class DataErrorsChangedEventArgs(EventArgs):
     """ DataErrorsChangedEventArgs(propertyName: str) """
@@ -3175,9 +3200,8 @@ class DataErrorsChangedEventArgs(EventArgs):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DataErrorsChangedEventArgs()
+    Instance = DataErrorsChangedEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class DataObjectAttribute:
     """
@@ -3246,9 +3270,8 @@ Get: IsDataObject(self: DataObjectAttribute) -> bool
     Default = None
     NonDataObject = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DataObjectAttribute()
+    Instance = DataObjectAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class DataObjectFieldAttribute:
     """
@@ -3329,9 +3352,8 @@ Get: PrimaryKey(self: DataObjectFieldAttribute) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DataObjectFieldAttribute()
+    Instance = DataObjectFieldAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class DataObjectMethodAttribute:
     """
@@ -3405,9 +3427,8 @@ Get: MethodType(self: DataObjectMethodAttribute) -> DataObjectMethodType
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DataObjectMethodAttribute()
+    Instance = DataObjectMethodAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class DataObjectMethodType:
     """
@@ -3455,9 +3476,8 @@ class DataObjectMethodType:
     Update = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DataObjectMethodType()
+    Instance = DataObjectMethodType()
+    """hardcoded/returns an instance of the class"""
 
 class DateTimeConverter(TypeConverter):
     """
@@ -3516,9 +3536,8 @@ class DateTimeConverter(TypeConverter):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DateTimeConverter()
+    Instance = DateTimeConverter()
+    """hardcoded/returns an instance of the class"""
 
 class DateTimeOffsetConverter(TypeConverter):
     """
@@ -3577,9 +3596,8 @@ class DateTimeOffsetConverter(TypeConverter):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DateTimeOffsetConverter()
+    Instance = DateTimeOffsetConverter()
+    """hardcoded/returns an instance of the class"""
 
 class DecimalConverter(BaseNumberConverter):
     """
@@ -3613,9 +3631,8 @@ class DecimalConverter(BaseNumberConverter):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DecimalConverter()
+    Instance = DecimalConverter()
+    """hardcoded/returns an instance of the class"""
 
 class DefaultBindingPropertyAttribute:
     """
@@ -3671,9 +3688,8 @@ Get: Name(self: DefaultBindingPropertyAttribute) -> str
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultBindingPropertyAttribute()
+    Instance = DefaultBindingPropertyAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class DefaultEventAttribute:
     """
@@ -3727,9 +3743,8 @@ Get: Name(self: DefaultEventAttribute) -> str
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultEventAttribute()
+    Instance = DefaultEventAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class DefaultPropertyAttribute:
     """
@@ -3783,9 +3798,8 @@ Get: Name(self: DefaultPropertyAttribute) -> str
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultPropertyAttribute()
+    Instance = DefaultPropertyAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class DefaultValueAttribute:
     """
@@ -3863,9 +3877,8 @@ Get: Value(self: DefaultValueAttribute) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DefaultValueAttribute()
+    Instance = DefaultValueAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class DescriptionAttribute:
     """
@@ -3932,9 +3945,8 @@ Get: Description(self: DescriptionAttribute) -> str
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DescriptionAttribute()
+    Instance = DescriptionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class DesignerAttribute:
     """
@@ -4005,9 +4017,8 @@ Get: TypeId(self: DesignerAttribute) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerAttribute()
+    Instance = DesignerAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class DesignerCategoryAttribute:
     """
@@ -4084,9 +4095,8 @@ Get: TypeId(self: DesignerCategoryAttribute) -> object
     Form = None
     Generic = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerCategoryAttribute()
+    Instance = DesignerCategoryAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class DesignerSerializationVisibility:
     """
@@ -4132,9 +4142,8 @@ class DesignerSerializationVisibility:
     value__ = None
     Visible = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerSerializationVisibility()
+    Instance = DesignerSerializationVisibility()
+    """hardcoded/returns an instance of the class"""
 
 class DesignerSerializationVisibilityAttribute:
     """
@@ -4200,9 +4209,8 @@ Get: Visibility(self: DesignerSerializationVisibilityAttribute) -> DesignerSeria
     Hidden = None
     Visible = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesignerSerializationVisibilityAttribute()
+    Instance = DesignerSerializationVisibilityAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class DesignOnlyAttribute:
     """
@@ -4262,9 +4270,8 @@ Get: IsDesignOnly(self: DesignOnlyAttribute) -> bool
     No = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesignOnlyAttribute()
+    Instance = DesignOnlyAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class DesignTimeVisibleAttribute:
     """
@@ -4325,9 +4332,8 @@ Get: Visible(self: DesignTimeVisibleAttribute) -> bool
     No = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DesignTimeVisibleAttribute()
+    Instance = DesignTimeVisibleAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class DisplayNameAttribute:
     """
@@ -4399,9 +4405,8 @@ Get: DisplayName(self: DisplayNameAttribute) -> str
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DisplayNameAttribute()
+    Instance = DisplayNameAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class DoubleConverter(BaseNumberConverter):
     """
@@ -4409,9 +4414,8 @@ class DoubleConverter(BaseNumberConverter):
     
     DoubleConverter()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DoubleConverter()
+    Instance = DoubleConverter()
+    """hardcoded/returns an instance of the class"""
 
 class DoWorkEventArgs(CancelEventArgs):
     """
@@ -4440,9 +4444,8 @@ Set: Result(self: DoWorkEventArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DoWorkEventArgs()
+    Instance = DoWorkEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class DoWorkEventHandler(MulticastDelegate):
     """
@@ -4471,7 +4474,9 @@ class DoWorkEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -4500,7 +4505,8 @@ class DoWorkEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -4516,9 +4522,8 @@ class DoWorkEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DoWorkEventHandler()
+    Instance = DoWorkEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class EditorAttribute:
     """
@@ -4587,9 +4592,8 @@ Get: TypeId(self: EditorAttribute) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EditorAttribute()
+    Instance = EditorAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class EditorBrowsableAttribute:
     """
@@ -4640,9 +4644,8 @@ Get: State(self: EditorBrowsableAttribute) -> EditorBrowsableState
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EditorBrowsableAttribute()
+    Instance = EditorBrowsableAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class EditorBrowsableState:
     """
@@ -4688,9 +4691,8 @@ class EditorBrowsableState:
     Never = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EditorBrowsableState()
+    Instance = EditorBrowsableState()
+    """hardcoded/returns an instance of the class"""
 
 class EnumConverter(TypeConverter):
     """
@@ -4756,7 +4758,8 @@ class EnumConverter(TypeConverter):
             Gets a collection of standard values for the data type this validator is designed for.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of 
+             values.
         """
         pass
 
@@ -4764,10 +4767,13 @@ class EnumConverter(TypeConverter):
         """
         GetStandardValuesExclusive(self: EnumConverter, context: ITypeDescriptorContext) -> bool
         
-            Gets a value indicating whether the list of standard values returned from System.ComponentModel.TypeConverter.GetStandardValues is an exclusive list using the specified context.
+            Gets a value indicating whether the list of standard values returned from System.ComponentModel.TypeConverter.GetStandardValues is an exclusive list using the 
+             specified context.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible values; false if other values are possible.
+            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of 
+             possible values; false if other values are possible.
         """
         pass
 
@@ -4815,9 +4821,8 @@ class EnumConverter(TypeConverter):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EnumConverter()
+    Instance = EnumConverter()
+    """hardcoded/returns an instance of the class"""
 
 class MemberDescriptor():
     """ Represents a class member, such as a property or event. This is an abstract base class. """
@@ -4901,7 +4906,9 @@ class MemberDescriptor():
         
             Gets the component on which to invoke a method.
         
-            componentClass: A System.Type representing the type of component this System.ComponentModel.MemberDescriptor is bound to. For example, if this System.ComponentModel.MemberDescriptor describes a property, this parameter should be the class that the property is declared on.
+            componentClass: A System.Type representing the type of component this System.ComponentModel.MemberDescriptor is bound to. For example, if this System.ComponentModel.MemberDescriptor 
+             describes a property, this parameter should be the class that the property is declared on.
+        
             component: An instance of the object to call.
             Returns: An instance of the component to invoke. This method returns a visual designer when the property is attached to a visual designer.
         """
@@ -4995,9 +5002,8 @@ Get: Name(self: MemberDescriptor) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MemberDescriptor()
+    Instance = MemberDescriptor()
+    """hardcoded/returns an instance of the class"""
 
 class EventDescriptor(MemberDescriptor):
     """ Provides information about an event. """
@@ -5062,9 +5068,8 @@ Get: IsMulticast(self: EventDescriptor) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EventDescriptor()
+    Instance = EventDescriptor()
+    """hardcoded/returns an instance of the class"""
 
 class EventDescriptorCollection:
     """
@@ -5147,7 +5152,9 @@ class EventDescriptorCollection:
     def InternalSort(self, *args): #cannot find CLR method
         """
         InternalSort(self: EventDescriptorCollection, names: Array[str])
-            Sorts the members of this System.ComponentModel.EventDescriptorCollection. The specified order is applied first, followed by the default sort for this collection, which is usually alphabetical.
+            Sorts the members of this System.ComponentModel.EventDescriptorCollection. The specified order is applied first, followed by the default sort for this collection, 
+             which is usually alphabetical.
+        
         
             names: An array of strings describing the order in which to sort the System.ComponentModel.EventDescriptor objects in this collection.
         InternalSort(self: EventDescriptorCollection, sorter: IComparer)
@@ -5256,9 +5263,8 @@ Get: Count(self: EventDescriptorCollection) -> int
 
     Empty = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EventDescriptorCollection()
+    Instance = EventDescriptorCollection()
+    """hardcoded/returns an instance of the class"""
 
 class EventHandlerList:
     """
@@ -5326,9 +5332,8 @@ class EventHandlerList:
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EventHandlerList()
+    Instance = EventHandlerList()
+    """hardcoded/returns an instance of the class"""
 
 class ExpandableObjectConverter(TypeConverter):
     """
@@ -5360,9 +5365,8 @@ class ExpandableObjectConverter(TypeConverter):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExpandableObjectConverter()
+    Instance = ExpandableObjectConverter()
+    """hardcoded/returns an instance of the class"""
 
 class ExtenderProvidedPropertyAttribute:
     """
@@ -5432,9 +5436,8 @@ Get: ReceiverType(self: ExtenderProvidedPropertyAttribute) -> Type
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExtenderProvidedPropertyAttribute()
+    Instance = ExtenderProvidedPropertyAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class GuidConverter(TypeConverter):
     """
@@ -5493,9 +5496,8 @@ class GuidConverter(TypeConverter):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GuidConverter()
+    Instance = GuidConverter()
+    """hardcoded/returns an instance of the class"""
 
 class HandledEventArgs(EventArgs):
     """
@@ -5521,9 +5523,8 @@ Set: Handled(self: HandledEventArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HandledEventArgs()
+    Instance = HandledEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class HandledEventHandler(MulticastDelegate):
     """
@@ -5552,7 +5553,9 @@ class HandledEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -5581,7 +5584,8 @@ class HandledEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -5597,9 +5601,8 @@ class HandledEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HandledEventHandler()
+    Instance = HandledEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class IBindingListView:
     """ Extends the System.ComponentModel.IBindingList interface by providing advanced sorting and filtering capabilities. """
@@ -5672,9 +5675,8 @@ Get: SupportsFiltering(self: IBindingListView) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IBindingListView()
+    Instance = IBindingListView()
+    """hardcoded/returns an instance of the class"""
 
 class IChangeTracking:
     """ Defines the mechanism for querying the object for changes and resetting of the changed status. """
@@ -5696,9 +5698,8 @@ Get: IsChanged(self: IChangeTracking) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IChangeTracking()
+    Instance = IChangeTracking()
+    """hardcoded/returns an instance of the class"""
 
 class IComNativeDescriptorHandler:
     """ Provides a top-level mapping layer between a COM object and a System.ComponentModel.TypeDescriptor. """
@@ -5835,9 +5836,8 @@ class IComNativeDescriptorHandler:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IComNativeDescriptorHandler()
+    Instance = IComNativeDescriptorHandler()
+    """hardcoded/returns an instance of the class"""
 
 class IComponent:
     """ Provides functionality required by all components. """
@@ -5856,9 +5856,8 @@ Set: Site(self: IComponent) = value
 
     Disposed = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IComponent()
+    Instance = IComponent()
+    """hardcoded/returns an instance of the class"""
 
 class IContainer:
     """ Provides functionality for containers. Containers are objects that logically contain zero or more components. """
@@ -5901,9 +5900,8 @@ Get: Components(self: IContainer) -> ComponentCollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IContainer()
+    Instance = IContainer()
+    """hardcoded/returns an instance of the class"""
 
 class ICustomTypeDescriptor:
     """ Provides an interface that supplies dynamic custom type information for an object. """
@@ -6017,9 +6015,8 @@ class ICustomTypeDescriptor:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ICustomTypeDescriptor()
+    Instance = ICustomTypeDescriptor()
+    """hardcoded/returns an instance of the class"""
 
 class IDataErrorInfo:
     """ Provides the functionality to offer custom error information that a user interface can bind to. """
@@ -6039,9 +6036,8 @@ Get: Error(self: IDataErrorInfo) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDataErrorInfo()
+    Instance = IDataErrorInfo()
+    """hardcoded/returns an instance of the class"""
 
 class IEditableObject:
     """ Provides functionality to commit or rollback changes to an object that is used as a data source. """
@@ -6070,9 +6066,8 @@ class IEditableObject:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IEditableObject()
+    Instance = IEditableObject()
+    """hardcoded/returns an instance of the class"""
 
 class IExtenderProvider:
     """ Defines the interface for extending properties to other components in a container. """
@@ -6091,9 +6086,8 @@ class IExtenderProvider:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IExtenderProvider()
+    Instance = IExtenderProvider()
+    """hardcoded/returns an instance of the class"""
 
 class IIntellisenseBuilder:
     """ Provides an interface to facilitate the retrieval of the builder's name and to display the builder. """
@@ -6122,9 +6116,8 @@ Get: Name(self: IIntellisenseBuilder) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IIntellisenseBuilder()
+    Instance = IIntellisenseBuilder()
+    """hardcoded/returns an instance of the class"""
 
 class IListSource:
     """ Provides functionality to an object to return a list that can be bound to a data source. """
@@ -6149,9 +6142,8 @@ Get: ContainsListCollection(self: IListSource) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IListSource()
+    Instance = IListSource()
+    """hardcoded/returns an instance of the class"""
 
 class ImmutableObjectAttribute:
     """
@@ -6214,9 +6206,8 @@ Get: Immutable(self: ImmutableObjectAttribute) -> bool
     No = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ImmutableObjectAttribute()
+    Instance = ImmutableObjectAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class INestedContainer:
     """ Provides functionality for nested containers, which logically contain zero or more other components and are owned by a parent component. """
@@ -6240,9 +6231,8 @@ Get: Owner(self: INestedContainer) -> IComponent
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return INestedContainer()
+    Instance = INestedContainer()
+    """hardcoded/returns an instance of the class"""
 
 class ISite:
     """ Provides functionality required by sites. """
@@ -6280,9 +6270,8 @@ Set: Name(self: ISite) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ISite()
+    Instance = ISite()
+    """hardcoded/returns an instance of the class"""
 
 class INestedSite:
     """ Provides the ability to retrieve the full nested name of a component. """
@@ -6298,9 +6287,8 @@ Get: FullName(self: INestedSite) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return INestedSite()
+    Instance = INestedSite()
+    """hardcoded/returns an instance of the class"""
 
 class InheritanceAttribute:
     """
@@ -6382,9 +6370,8 @@ Get: InheritanceLevel(self: InheritanceAttribute) -> InheritanceLevel
     InheritedReadOnly = None
     NotInherited = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InheritanceAttribute()
+    Instance = InheritanceAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class InheritanceLevel:
     """
@@ -6430,9 +6417,8 @@ class InheritanceLevel:
     NotInherited = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InheritanceLevel()
+    Instance = InheritanceLevel()
+    """hardcoded/returns an instance of the class"""
 
 class InitializationEventAttribute:
     """
@@ -6457,9 +6443,8 @@ Get: EventName(self: InitializationEventAttribute) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InitializationEventAttribute()
+    Instance = InitializationEventAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class INotifyDataErrorInfo:
     # no doc
@@ -6479,9 +6464,8 @@ class INotifyDataErrorInfo:
 
     ErrorsChanged = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return INotifyDataErrorInfo()
+    Instance = INotifyDataErrorInfo()
+    """hardcoded/returns an instance of the class"""
 
 class INotifyPropertyChanged:
     """ Notifies clients that a property value has changed. """
@@ -6491,9 +6475,8 @@ class INotifyPropertyChanged:
 
     PropertyChanged = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return INotifyPropertyChanged()
+    Instance = INotifyPropertyChanged()
+    """hardcoded/returns an instance of the class"""
 
 class INotifyPropertyChanging:
     """ Notifies clients that a property value is changing. """
@@ -6503,9 +6486,8 @@ class INotifyPropertyChanging:
 
     PropertyChanging = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return INotifyPropertyChanging()
+    Instance = INotifyPropertyChanging()
+    """hardcoded/returns an instance of the class"""
 
 class InstallerTypeAttribute:
     """
@@ -6561,9 +6543,8 @@ Get: InstallerType(self: InstallerTypeAttribute) -> Type
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InstallerTypeAttribute()
+    Instance = InstallerTypeAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class InstanceCreationEditor():
     """ Creates an instance of a particular type of property from a drop-down box within the System.Windows.Forms.PropertyGrid. """
@@ -6587,9 +6568,8 @@ Get: Text(self: InstanceCreationEditor) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InstanceCreationEditor()
+    Instance = InstanceCreationEditor()
+    """hardcoded/returns an instance of the class"""
 
 class Int16Converter(BaseNumberConverter):
     """
@@ -6597,9 +6577,8 @@ class Int16Converter(BaseNumberConverter):
     
     Int16Converter()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Int16Converter()
+    Instance = Int16Converter()
+    """hardcoded/returns an instance of the class"""
 
 class Int32Converter(BaseNumberConverter):
     """
@@ -6607,9 +6586,8 @@ class Int32Converter(BaseNumberConverter):
     
     Int32Converter()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Int32Converter()
+    Instance = Int32Converter()
+    """hardcoded/returns an instance of the class"""
 
 class Int64Converter(BaseNumberConverter):
     """
@@ -6617,9 +6595,8 @@ class Int64Converter(BaseNumberConverter):
     
     Int64Converter()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Int64Converter()
+    Instance = Int64Converter()
+    """hardcoded/returns an instance of the class"""
 
 class InvalidAsynchronousStateException(ArgumentException):
     """
@@ -6651,9 +6628,8 @@ class InvalidAsynchronousStateException(ArgumentException):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InvalidAsynchronousStateException()
+    Instance = InvalidAsynchronousStateException()
+    """hardcoded/returns an instance of the class"""
 
 class InvalidEnumArgumentException(ArgumentException):
     """
@@ -6687,9 +6663,8 @@ class InvalidEnumArgumentException(ArgumentException):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InvalidEnumArgumentException()
+    Instance = InvalidEnumArgumentException()
+    """hardcoded/returns an instance of the class"""
 
 class IRevertibleChangeTracking:
     """ Provides support for rolling back the changes """
@@ -6703,9 +6678,8 @@ class IRevertibleChangeTracking:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IRevertibleChangeTracking()
+    Instance = IRevertibleChangeTracking()
+    """hardcoded/returns an instance of the class"""
 
 class ISupportInitialize:
     """ Specifies that this object supports a simple, transacted notification for batch initialization. """
@@ -6727,9 +6701,8 @@ class ISupportInitialize:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ISupportInitialize()
+    Instance = ISupportInitialize()
+    """hardcoded/returns an instance of the class"""
 
 class ISupportInitializeNotification:
     """ Allows coordination of initialization for a component and its dependent properties. """
@@ -6747,9 +6720,8 @@ Get: IsInitialized(self: ISupportInitializeNotification) -> bool
 
     Initialized = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ISupportInitializeNotification()
+    Instance = ISupportInitializeNotification()
+    """hardcoded/returns an instance of the class"""
 
 class ISynchronizeInvoke:
     """ Provides a way to synchronously or asynchronously execute a delegate. """
@@ -6769,9 +6741,13 @@ class ISynchronizeInvoke:
         """
         EndInvoke(self: ISynchronizeInvoke, result: IAsyncResult) -> object
         
-            Waits until the process started by calling System.ComponentModel.ISynchronizeInvoke.BeginInvoke(System.Delegate,System.Object[]) completes, and then returns the value generated by the process.
+            Waits until the process started by calling System.ComponentModel.ISynchronizeInvoke.BeginInvoke(System.Delegate,System.Object[]) completes, and then returns the value 
+             generated by the process.
         
-            result: An System.IAsyncResult interface that represents the asynchronous operation started by calling System.ComponentModel.ISynchronizeInvoke.BeginInvoke(System.Delegate,System.Object[]).
+        
+            result: An System.IAsyncResult interface that represents the asynchronous operation started by calling 
+             System.ComponentModel.ISynchronizeInvoke.BeginInvoke(System.Delegate,System.Object[]).
+        
             Returns: An System.Object that represents the return value generated by the asynchronous operation.
         """
         pass
@@ -6800,9 +6776,8 @@ Get: InvokeRequired(self: ISynchronizeInvoke) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ISynchronizeInvoke()
+    Instance = ISynchronizeInvoke()
+    """hardcoded/returns an instance of the class"""
 
 class ITypeDescriptorContext:
     """ Provides contextual information about a component, such as its container and property descriptor. """
@@ -6848,9 +6823,8 @@ Get: PropertyDescriptor(self: ITypeDescriptorContext) -> PropertyDescriptor
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeDescriptorContext()
+    Instance = ITypeDescriptorContext()
+    """hardcoded/returns an instance of the class"""
 
 class ITypedList:
     """ Provides functionality to discover the schema for a bindable list, where the properties available for binding differ from the public properties of the object to bind to. """
@@ -6880,9 +6854,8 @@ class ITypedList:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ITypedList()
+    Instance = ITypedList()
+    """hardcoded/returns an instance of the class"""
 
 class License:
     """ Provides the abstract base class for all licenses. A license is granted to a specific instance of a component. """
@@ -6917,9 +6890,8 @@ Get: LicenseKey(self: License) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return License()
+    Instance = License()
+    """hardcoded/returns an instance of the class"""
 
 class LicenseContext:
     """
@@ -6976,9 +6948,8 @@ Get: UsageMode(self: LicenseContext) -> LicenseUsageMode
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseContext()
+    Instance = LicenseContext()
+    """hardcoded/returns an instance of the class"""
 
 class LicenseException(SystemException):
     """
@@ -7030,9 +7001,8 @@ Get: LicensedType(self: LicenseException) -> Type
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseException()
+    Instance = LicenseException()
+    """hardcoded/returns an instance of the class"""
 
 class LicenseManager():
     """ Provides properties and methods to add a license to a component and to manage a System.ComponentModel.LicenseProvider. This class cannot be inherited. """
@@ -7128,9 +7098,8 @@ class LicenseManager():
     CurrentContext = None
     UsageMode = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseManager()
+    Instance = LicenseManager()
+    """hardcoded/returns an instance of the class"""
 
 class LicenseProvider():
     """ Provides the abstract base class for implementing a license provider. """
@@ -7148,9 +7117,8 @@ class LicenseProvider():
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseProvider()
+    Instance = LicenseProvider()
+    """hardcoded/returns an instance of the class"""
 
 class LicenseProviderAttribute:
     """
@@ -7217,9 +7185,8 @@ Get: TypeId(self: LicenseProviderAttribute) -> object
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseProviderAttribute()
+    Instance = LicenseProviderAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class LicenseUsageMode:
     """
@@ -7264,9 +7231,8 @@ class LicenseUsageMode:
     Runtime = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseUsageMode()
+    Instance = LicenseUsageMode()
+    """hardcoded/returns an instance of the class"""
 
 class LicFileLicenseProvider(LicenseProvider):
     """
@@ -7303,7 +7269,10 @@ class LicFileLicenseProvider(LicenseProvider):
         """
         IsKeyValid(self: LicFileLicenseProvider, key: str, type: Type) -> bool
         
-            Determines whether the key that the System.ComponentModel.LicFileLicenseProvider.GetLicense(System.ComponentModel.LicenseContext,System.Type,System.Object,System.Boolean) method retrieves is valid for the specified type.
+            Determines whether the key that the 
+             System.ComponentModel.LicFileLicenseProvider.GetLicense(System.ComponentModel.LicenseContext,System.Type,System.Object,System.Boolean) method retrieves is valid for 
+             the specified type.
+        
         
             key: The System.ComponentModel.License.LicenseKey to check.
             type: A System.Type that represents the component requesting the System.ComponentModel.License.
@@ -7311,9 +7280,8 @@ class LicFileLicenseProvider(LicenseProvider):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LicFileLicenseProvider()
+    Instance = LicFileLicenseProvider()
+    """hardcoded/returns an instance of the class"""
 
 class ListBindableAttribute:
     """
@@ -7382,9 +7350,8 @@ Get: ListBindable(self: ListBindableAttribute) -> bool
     No = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ListBindableAttribute()
+    Instance = ListBindableAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class ListChangedEventArgs(EventArgs):
     """
@@ -7434,9 +7401,8 @@ Get: PropertyDescriptor(self: ListChangedEventArgs) -> PropertyDescriptor
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ListChangedEventArgs()
+    Instance = ListChangedEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ListChangedEventHandler(MulticastDelegate):
     """
@@ -7465,7 +7431,9 @@ class ListChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -7494,7 +7462,8 @@ class ListChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -7510,9 +7479,8 @@ class ListChangedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ListChangedEventHandler()
+    Instance = ListChangedEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class ListChangedType:
     """
@@ -7563,9 +7531,8 @@ class ListChangedType:
     Reset = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ListChangedType()
+    Instance = ListChangedType()
+    """hardcoded/returns an instance of the class"""
 
 class ListSortDescription():
     """
@@ -7595,9 +7562,8 @@ Set: SortDirection(self: ListSortDescription) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ListSortDescription()
+    Instance = ListSortDescription()
+    """hardcoded/returns an instance of the class"""
 
 class ListSortDescriptionCollection:
     """
@@ -7689,9 +7655,8 @@ Get: Count(self: ListSortDescriptionCollection) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ListSortDescriptionCollection()
+    Instance = ListSortDescriptionCollection()
+    """hardcoded/returns an instance of the class"""
 
 class ListSortDirection:
     """
@@ -7736,9 +7701,8 @@ class ListSortDirection:
     Descending = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ListSortDirection()
+    Instance = ListSortDirection()
+    """hardcoded/returns an instance of the class"""
 
 class LocalizableAttribute:
     """
@@ -7803,9 +7767,8 @@ Get: IsLocalizable(self: LocalizableAttribute) -> bool
     No = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LocalizableAttribute()
+    Instance = LocalizableAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class LookupBindingPropertiesAttribute:
     """
@@ -7884,9 +7847,8 @@ Get: ValueMember(self: LookupBindingPropertiesAttribute) -> str
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LookupBindingPropertiesAttribute()
+    Instance = LookupBindingPropertiesAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class MarshalByValueComponent:
     """
@@ -7970,9 +7932,8 @@ Set: Site(self: MarshalByValueComponent) = value
 
     Disposed = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MarshalByValueComponent()
+    Instance = MarshalByValueComponent()
+    """hardcoded/returns an instance of the class"""
 
 class MaskedTextProvider:
     """
@@ -8042,7 +8003,8 @@ class MaskedTextProvider:
         
             position: The zero-based position in the formatted string to start the search.
             direction: A System.Boolean indicating the search direction; either true to search forward or false to search backward.
-            Returns: If successful, an System.Int32 representing the zero-based position of the first assigned editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
+            Returns: If successful, an System.Int32 representing the zero-based position of the first assigned editable position encountered; otherwise 
+             System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8055,7 +8017,8 @@ class MaskedTextProvider:
             startPosition: The zero-based position in the formatted string where the search starts.
             endPosition: The zero-based position in the formatted string where the search ends.
             direction: A System.Boolean indicating the search direction; either true to search forward or false to search backward.
-            Returns: If successful, an System.Int32 representing the zero-based position of the first assigned editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
+            Returns: If successful, an System.Int32 representing the zero-based position of the first assigned editable position encountered; otherwise 
+             System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8067,7 +8030,8 @@ class MaskedTextProvider:
         
             position: The zero-based position in the formatted string to start the search.
             direction: A System.Boolean indicating the search direction; either true to search forward or false to search backward.
-            Returns: If successful, an System.Int32 representing the zero-based position of the first editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
+            Returns: If successful, an System.Int32 representing the zero-based position of the first editable position encountered; otherwise 
+             System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8080,7 +8044,8 @@ class MaskedTextProvider:
             startPosition: The zero-based position in the formatted string where the search starts.
             endPosition: The zero-based position in the formatted string where the search ends.
             direction: A System.Boolean indicating the search direction; either true to search forward or false to search backward.
-            Returns: If successful, an System.Int32 representing the zero-based position of the first editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
+            Returns: If successful, an System.Int32 representing the zero-based position of the first editable position encountered; otherwise 
+             System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8092,7 +8057,8 @@ class MaskedTextProvider:
         
             position: The zero-based position in the formatted string to start the search.
             direction: A System.Boolean indicating the search direction; either true to search forward or false to search backward.
-            Returns: If successful, an System.Int32 representing the zero-based position of the first literal position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
+            Returns: If successful, an System.Int32 representing the zero-based position of the first literal position encountered; otherwise 
+             System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8105,7 +8071,8 @@ class MaskedTextProvider:
             startPosition: The zero-based position in the formatted string where the search starts.
             endPosition: The zero-based position in the formatted string where the search ends.
             direction: A System.Boolean indicating the search direction; either true to search forward or false to search backward.
-            Returns: If successful, an System.Int32 representing the zero-based position of the first literal position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
+            Returns: If successful, an System.Int32 representing the zero-based position of the first literal position encountered; otherwise 
+             System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8117,7 +8084,8 @@ class MaskedTextProvider:
         
             position: The zero-based position in the formatted string to start the search.
             direction: A System.Boolean indicating the search direction; either true to search forward or false to search backward.
-            Returns: If successful, an System.Int32 representing the zero-based position of the first unassigned editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
+            Returns: If successful, an System.Int32 representing the zero-based position of the first unassigned editable position encountered; otherwise 
+             System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8130,7 +8098,8 @@ class MaskedTextProvider:
             startPosition: The zero-based position in the formatted string where the search starts.
             endPosition: The zero-based position in the formatted string where the search ends.
             direction: A System.Boolean indicating the search direction; either true to search forward or false to search backward.
-            Returns: If successful, an System.Int32 representing the zero-based position of the first unassigned editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
+            Returns: If successful, an System.Int32 representing the zero-based position of the first unassigned editable position encountered; otherwise 
+             System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8293,7 +8262,9 @@ class MaskedTextProvider:
             Returns: true if the character was successfully replaced; otherwise, false.
         Replace(self: MaskedTextProvider, input: Char, startPosition: int, endPosition: int) -> (bool, int, MaskedTextResultHint)
         
-            Replaces a single character between the specified starting and ending positions with the specified character value, and then outputs the removal position and descriptive information.
+            Replaces a single character between the specified starting and ending positions with the specified character value, and then outputs the removal position and 
+             descriptive information.
+        
         
             input: The System.Char value that replaces the existing value.
             startPosition: The zero-based position in the formatted string where the replacement starts.
@@ -8315,7 +8286,9 @@ class MaskedTextProvider:
             Returns: true if all the characters were successfully replaced; otherwise, false.
         Replace(self: MaskedTextProvider, input: str, startPosition: int, endPosition: int) -> (bool, int, MaskedTextResultHint)
         
-            Replaces a range of editable characters between the specified starting and ending positions with the specified string, and then outputs the removal position and descriptive information.
+            Replaces a range of editable characters between the specified starting and ending positions with the specified string, and then outputs the removal position and 
+             descriptive information.
+        
         
             input: The System.String value used to replace the existing editable characters.
             startPosition: The zero-based position in the formatted string where the replacement starts.
@@ -8376,7 +8349,9 @@ class MaskedTextProvider:
             ignorePasswordChar: true to return the actual editable characters; otherwise, false to indicate that the System.ComponentModel.MaskedTextProvider.PasswordChar property is to be honored.
             startPosition: The zero-based position in the formatted string where the output begins.
             length: The number of characters to return.
-            Returns: If successful, a substring of the formatted System.String, which includes literals, prompts, and optionally password characters; otherwise the System.String.Empty string.
+            Returns: If successful, a substring of the formatted System.String, which includes literals, prompts, and optionally password characters; otherwise the System.String.Empty 
+             string.
+        
         ToString(self: MaskedTextProvider, includePrompt: bool, includeLiterals: bool) -> str
         
             Returns the formatted string, optionally including prompt and literal characters.
@@ -8392,7 +8367,9 @@ class MaskedTextProvider:
             includeLiterals: true to include literal characters in the return string; otherwise, false.
             startPosition: The zero-based position in the formatted string where the output begins.
             length: The number of characters to return.
-            Returns: If successful, a substring of the formatted System.String, which includes all the assigned character values and optionally includes literals and prompts; otherwise the System.String.Empty string.
+            Returns: If successful, a substring of the formatted System.String, which includes all the assigned character values and optionally includes literals and prompts; otherwise the 
+             System.String.Empty string.
+        
         ToString(self: MaskedTextProvider, ignorePasswordChar: bool, includePrompt: bool, includeLiterals: bool, startPosition: int, length: int) -> str
         
             Returns a substring of the formatted string, optionally including prompt, literal, and password characters.
@@ -8402,7 +8379,8 @@ class MaskedTextProvider:
             includeLiterals: true to return literal characters in the return string; otherwise, false.
             startPosition: The zero-based position in the formatted string where the output begins.
             length: The number of characters to return.
-            Returns: If successful, a substring of the formatted System.String, which includes all the assigned character values and optionally includes literals, prompts, and password characters; otherwise the System.String.Empty string.
+            Returns: If successful, a substring of the formatted System.String, which includes all the assigned character values and optionally includes literals, prompts, and password 
+             characters; otherwise the System.String.Empty string.
         """
         pass
 
@@ -8631,9 +8609,8 @@ Set: SkipLiterals(self: MaskedTextProvider) = value
     DefaultPasswordChar = None
     InvalidIndex = -1
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MaskedTextProvider()
+    Instance = MaskedTextProvider()
+    """hardcoded/returns an instance of the class"""
 
 class MaskedTextResultHint:
     """
@@ -8691,9 +8668,8 @@ class MaskedTextResultHint:
     Unknown = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MaskedTextResultHint()
+    Instance = MaskedTextResultHint()
+    """hardcoded/returns an instance of the class"""
 
 class MergablePropertyAttribute:
     """
@@ -8758,9 +8734,8 @@ Get: AllowMerge(self: MergablePropertyAttribute) -> bool
     No = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MergablePropertyAttribute()
+    Instance = MergablePropertyAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class MultilineStringConverter(TypeConverter):
     """
@@ -8806,9 +8781,8 @@ class MultilineStringConverter(TypeConverter):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MultilineStringConverter()
+    Instance = MultilineStringConverter()
+    """hardcoded/returns an instance of the class"""
 
 class NestedContainer(Container):
     """
@@ -8897,9 +8871,8 @@ Get: Owner(self: NestedContainer) -> IComponent
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NestedContainer()
+    Instance = NestedContainer()
+    """hardcoded/returns an instance of the class"""
 
 class NotifyParentPropertyAttribute:
     """
@@ -8964,9 +8937,8 @@ Get: NotifyParent(self: NotifyParentPropertyAttribute) -> bool
     No = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NotifyParentPropertyAttribute()
+    Instance = NotifyParentPropertyAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class NullableConverter(TypeConverter):
     """
@@ -9040,7 +9012,8 @@ class NullableConverter(TypeConverter):
         GetCreateInstanceSupported(self: NullableConverter, context: ITypeDescriptorContext) -> bool
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true if changing a property on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new value; otherwise, false.
+            Returns: true if changing a property on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new value; 
+             otherwise, false.
         """
         pass
 
@@ -9068,8 +9041,11 @@ class NullableConverter(TypeConverter):
         """
         GetStandardValues(self: NullableConverter, context: ITypeDescriptorContext) -> StandardValuesCollection
         
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context that can be used to extract additional information about the environment from which this converter is invoked. This parameter or properties of this parameter can be null.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of values.
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context that can be used to extract additional information about the environment from which this 
+             converter is invoked. This parameter or properties of this parameter can be null.
+        
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of 
+             values.
         """
         pass
 
@@ -9078,7 +9054,8 @@ class NullableConverter(TypeConverter):
         GetStandardValuesExclusive(self: NullableConverter, context: ITypeDescriptorContext) -> bool
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible values; false if other values are possible.
+            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of 
+             possible values; false if other values are possible.
         """
         pass
 
@@ -9127,9 +9104,8 @@ Get: UnderlyingTypeConverter(self: NullableConverter) -> TypeConverter
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NullableConverter()
+    Instance = NullableConverter()
+    """hardcoded/returns an instance of the class"""
 
 class ParenthesizePropertyNameAttribute:
     """
@@ -9196,9 +9172,8 @@ Get: NeedParenthesis(self: ParenthesizePropertyNameAttribute) -> bool
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ParenthesizePropertyNameAttribute()
+    Instance = ParenthesizePropertyNameAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class PasswordPropertyTextAttribute:
     """
@@ -9267,9 +9242,8 @@ Get: Password(self: PasswordPropertyTextAttribute) -> bool
     No = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PasswordPropertyTextAttribute()
+    Instance = PasswordPropertyTextAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class ProgressChangedEventArgs(EventArgs):
     """
@@ -9297,9 +9271,8 @@ Get: UserState(self: ProgressChangedEventArgs) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProgressChangedEventArgs()
+    Instance = ProgressChangedEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ProgressChangedEventHandler(MulticastDelegate):
     """
@@ -9328,7 +9301,9 @@ class ProgressChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -9357,7 +9332,8 @@ class ProgressChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -9373,9 +9349,8 @@ class ProgressChangedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProgressChangedEventHandler()
+    Instance = ProgressChangedEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class PropertyChangedEventArgs(EventArgs):
     """
@@ -9396,9 +9371,8 @@ Get: PropertyName(self: PropertyChangedEventArgs) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyChangedEventArgs()
+    Instance = PropertyChangedEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PropertyChangedEventHandler(MulticastDelegate):
     """
@@ -9427,7 +9401,9 @@ class PropertyChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -9456,7 +9432,8 @@ class PropertyChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -9472,9 +9449,8 @@ class PropertyChangedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyChangedEventHandler()
+    Instance = PropertyChangedEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class PropertyChangingEventArgs(EventArgs):
     """
@@ -9495,9 +9471,8 @@ Get: PropertyName(self: PropertyChangingEventArgs) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyChangingEventArgs()
+    Instance = PropertyChangingEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PropertyChangingEventHandler(MulticastDelegate):
     """
@@ -9526,7 +9501,9 @@ class PropertyChangingEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -9555,7 +9532,8 @@ class PropertyChangingEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -9571,9 +9549,8 @@ class PropertyChangingEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyChangingEventHandler()
+    Instance = PropertyChangingEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class PropertyDescriptor(MemberDescriptor):
     """ Provides an abstraction of a property on a class. """
@@ -9820,9 +9797,8 @@ Get: SupportsChangeEvents(self: PropertyDescriptor) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyDescriptor()
+    Instance = PropertyDescriptor()
+    """hardcoded/returns an instance of the class"""
 
 class PropertyDescriptorCollection:
     """
@@ -10024,9 +10000,8 @@ Get: Count(self: PropertyDescriptorCollection) -> int
 
     Empty = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyDescriptorCollection()
+    Instance = PropertyDescriptorCollection()
+    """hardcoded/returns an instance of the class"""
 
 class PropertyTabAttribute:
     """
@@ -10070,12 +10045,15 @@ class PropertyTabAttribute:
             Initializes the attribute using the specified names of tab classes and array of tab scopes.
         
             tabClassNames: An array of fully qualified type names of the types to create for tabs on the Properties window.
-            tabScopes: The scope of each tab. If the scope is System.ComponentModel.PropertyTabScope.Component, it is shown only for components with the corresponding System.ComponentModel.PropertyTabAttribute. If it is System.ComponentModel.PropertyTabScope.Document, it is shown for all components on the document.
+            tabScopes: The scope of each tab. If the scope is System.ComponentModel.PropertyTabScope.Component, it is shown only for components with the corresponding 
+             System.ComponentModel.PropertyTabAttribute. If it is System.ComponentModel.PropertyTabScope.Document, it is shown for all components on the document.
+        
         InitializeArrays(self: PropertyTabAttribute, tabClasses: Array[Type], tabScopes: Array[PropertyTabScope])
             Initializes the attribute using the specified names of tab classes and array of tab scopes.
         
             tabClasses: The types of tabs to create.
-            tabScopes: The scope of each tab. If the scope is System.ComponentModel.PropertyTabScope.Component, it is shown only for components with the corresponding System.ComponentModel.PropertyTabAttribute. If it is System.ComponentModel.PropertyTabScope.Document, it is shown for all components on the document.
+            tabScopes: The scope of each tab. If the scope is System.ComponentModel.PropertyTabScope.Component, it is shown only for components with the corresponding 
+             System.ComponentModel.PropertyTabAttribute. If it is System.ComponentModel.PropertyTabScope.Document, it is shown for all components on the document.
         """
         pass
 
@@ -10121,9 +10099,8 @@ Get: TabScopes(self: PropertyTabAttribute) -> Array[PropertyTabScope]
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyTabAttribute()
+    Instance = PropertyTabAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class PropertyTabScope:
     """
@@ -10170,9 +10147,8 @@ class PropertyTabScope:
     Static = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PropertyTabScope()
+    Instance = PropertyTabScope()
+    """hardcoded/returns an instance of the class"""
 
 class ProvidePropertyAttribute:
     """
@@ -10242,9 +10218,8 @@ Get: TypeId(self: ProvidePropertyAttribute) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProvidePropertyAttribute()
+    Instance = ProvidePropertyAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class ReadOnlyAttribute:
     """
@@ -10309,9 +10284,8 @@ Get: IsReadOnly(self: ReadOnlyAttribute) -> bool
     No = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReadOnlyAttribute()
+    Instance = ReadOnlyAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class RecommendedAsConfigurableAttribute:
     """
@@ -10376,9 +10350,8 @@ Get: RecommendedAsConfigurable(self: RecommendedAsConfigurableAttribute) -> bool
     No = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RecommendedAsConfigurableAttribute()
+    Instance = RecommendedAsConfigurableAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class RefreshEventArgs(EventArgs):
     """
@@ -10410,9 +10383,8 @@ Get: TypeChanged(self: RefreshEventArgs) -> Type
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RefreshEventArgs()
+    Instance = RefreshEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class RefreshEventHandler(MulticastDelegate):
     """
@@ -10441,7 +10413,9 @@ class RefreshEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -10470,7 +10444,8 @@ class RefreshEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -10486,9 +10461,8 @@ class RefreshEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RefreshEventHandler()
+    Instance = RefreshEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class RefreshProperties:
     """
@@ -10534,9 +10508,8 @@ class RefreshProperties:
     Repaint = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RefreshProperties()
+    Instance = RefreshProperties()
+    """hardcoded/returns an instance of the class"""
 
 class RefreshPropertiesAttribute:
     """
@@ -10601,9 +10574,8 @@ Get: RefreshProperties(self: RefreshPropertiesAttribute) -> RefreshProperties
     Default = None
     Repaint = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RefreshPropertiesAttribute()
+    Instance = RefreshPropertiesAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class RunInstallerAttribute:
     """
@@ -10668,9 +10640,8 @@ Get: RunInstaller(self: RunInstallerAttribute) -> bool
     No = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RunInstallerAttribute()
+    Instance = RunInstallerAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class RunWorkerCompletedEventArgs(AsyncCompletedEventArgs):
     """
@@ -10698,9 +10669,8 @@ Get: UserState(self: RunWorkerCompletedEventArgs) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RunWorkerCompletedEventArgs()
+    Instance = RunWorkerCompletedEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class RunWorkerCompletedEventHandler(MulticastDelegate):
     """
@@ -10729,7 +10699,9 @@ class RunWorkerCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -10758,7 +10730,8 @@ class RunWorkerCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -10774,9 +10747,8 @@ class RunWorkerCompletedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RunWorkerCompletedEventHandler()
+    Instance = RunWorkerCompletedEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class SByteConverter(BaseNumberConverter):
     """
@@ -10784,9 +10756,8 @@ class SByteConverter(BaseNumberConverter):
     
     SByteConverter()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SByteConverter()
+    Instance = SByteConverter()
+    """hardcoded/returns an instance of the class"""
 
 class SettingsBindableAttribute:
     """
@@ -10839,9 +10810,8 @@ Get: Bindable(self: SettingsBindableAttribute) -> bool
     No = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsBindableAttribute()
+    Instance = SettingsBindableAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class SingleConverter(BaseNumberConverter):
     """
@@ -10849,9 +10819,8 @@ class SingleConverter(BaseNumberConverter):
     
     SingleConverter()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SingleConverter()
+    Instance = SingleConverter()
+    """hardcoded/returns an instance of the class"""
 
 class StringConverter(TypeConverter):
     """
@@ -10884,9 +10853,8 @@ class StringConverter(TypeConverter):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StringConverter()
+    Instance = StringConverter()
+    """hardcoded/returns an instance of the class"""
 
 class SyntaxCheck():
     """ Provides methods to verify the machine name and path conform to a specific syntax. This class cannot be inherited. """
@@ -10932,9 +10900,8 @@ class SyntaxCheck():
         'CheckRootedPath',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SyntaxCheck()
+    Instance = SyntaxCheck()
+    """hardcoded/returns an instance of the class"""
 
 class TimeSpanConverter(TypeConverter):
     """
@@ -10993,9 +10960,8 @@ class TimeSpanConverter(TypeConverter):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TimeSpanConverter()
+    Instance = TimeSpanConverter()
+    """hardcoded/returns an instance of the class"""
 
 class ToolboxItemAttribute:
     """
@@ -11064,9 +11030,8 @@ Get: ToolboxItemTypeName(self: ToolboxItemAttribute) -> str
     Default = None
     None_ =None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ToolboxItemAttribute()
+    Instance = ToolboxItemAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class ToolboxItemFilterAttribute:
     """
@@ -11149,9 +11114,8 @@ Get: TypeId(self: ToolboxItemFilterAttribute) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ToolboxItemFilterAttribute()
+    Instance = ToolboxItemFilterAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class ToolboxItemFilterType:
     """
@@ -11198,9 +11162,8 @@ class ToolboxItemFilterType:
     Require = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ToolboxItemFilterType()
+    Instance = ToolboxItemFilterType()
+    """hardcoded/returns an instance of the class"""
 
 class TypeConverterAttribute:
     """
@@ -11260,9 +11223,8 @@ Get: ConverterTypeName(self: TypeConverterAttribute) -> str
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TypeConverterAttribute()
+    Instance = TypeConverterAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class TypeDescriptionProvider():
     """ Provides supplemental metadata to the System.ComponentModel.TypeDescriptor. """
@@ -11402,9 +11364,8 @@ class TypeDescriptionProvider():
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TypeDescriptionProvider()
+    Instance = TypeDescriptionProvider()
+    """hardcoded/returns an instance of the class"""
 
 class TypeDescriptionProviderAttribute:
     """
@@ -11433,9 +11394,8 @@ Get: TypeName(self: TypeDescriptionProviderAttribute) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TypeDescriptionProviderAttribute()
+    Instance = TypeDescriptionProviderAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class TypeDescriptor():
     """ Provides information about the characteristics for a component, such as its attributes, properties, and events. This class cannot be inherited. """
@@ -11575,7 +11535,9 @@ class TypeDescriptor():
             name: The name of the property.
             type: The System.Type of the property.
             attributes: The new attributes for this property.
-            Returns: A System.ComponentModel.PropertyDescriptor that is bound to the specified type and that has the specified metadata attributes merged with the existing metadata attributes.
+            Returns: A System.ComponentModel.PropertyDescriptor that is bound to the specified type and that has the specified metadata attributes merged with the existing metadata 
+             attributes.
+        
         CreateProperty(componentType: Type, oldPropertyDescriptor: PropertyDescriptor, *attributes: Array[Attribute]) -> PropertyDescriptor
         
             Creates a new property descriptor from an existing property descriptor, using the specified existing System.ComponentModel.PropertyDescriptor and attribute array.
@@ -12004,9 +11966,8 @@ class TypeDescriptor():
     InterfaceType = None
     Refreshed = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TypeDescriptor()
+    Instance = TypeDescriptor()
+    """hardcoded/returns an instance of the class"""
 
 class TypeListConverter(TypeConverter):
     """ Provides a type converter that can be used to populate a list box with available types. """
@@ -12068,7 +12029,8 @@ class TypeListConverter(TypeConverter):
             Gets a collection of standard values for the data type this validator is designed for.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of 
+             values.
         """
         pass
 
@@ -12076,10 +12038,14 @@ class TypeListConverter(TypeConverter):
         """
         GetStandardValuesExclusive(self: TypeListConverter, context: ITypeDescriptorContext) -> bool
         
-            Gets a value indicating whether the list of standard values returned from the System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) method is an exclusive list.
+            Gets a value indicating whether the list of standard values returned from the 
+             System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) method is an exclusive list.
+        
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list of possible values. This method never returns false.
+            Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
+             System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list of possible values. This method never 
+             returns false.
         """
         pass
 
@@ -12090,7 +12056,8 @@ class TypeListConverter(TypeConverter):
             Gets a value indicating whether this object supports a standard set of values that can be picked from a list using the specified context.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) should be called to find a common set of values the object supports. This method never returns false.
+            Returns: true because System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) should be called to find a common set of values 
+             the object supports. This method never returns false.
         """
         pass
 
@@ -12099,9 +12066,8 @@ class TypeListConverter(TypeConverter):
         """ __new__(cls: type, types: Array[Type]) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TypeListConverter()
+    Instance = TypeListConverter()
+    """hardcoded/returns an instance of the class"""
 
 class UInt16Converter(BaseNumberConverter):
     """
@@ -12109,9 +12075,8 @@ class UInt16Converter(BaseNumberConverter):
     
     UInt16Converter()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UInt16Converter()
+    Instance = UInt16Converter()
+    """hardcoded/returns an instance of the class"""
 
 class UInt32Converter(BaseNumberConverter):
     """
@@ -12119,9 +12084,8 @@ class UInt32Converter(BaseNumberConverter):
     
     UInt32Converter()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UInt32Converter()
+    Instance = UInt32Converter()
+    """hardcoded/returns an instance of the class"""
 
 class UInt64Converter(BaseNumberConverter):
     """
@@ -12129,9 +12093,8 @@ class UInt64Converter(BaseNumberConverter):
     
     UInt64Converter()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UInt64Converter()
+    Instance = UInt64Converter()
+    """hardcoded/returns an instance of the class"""
 
 class WarningException(SystemException):
     """
@@ -12148,8 +12111,11 @@ class WarningException(SystemException):
         GetObjectData(self: WarningException, info: SerializationInfo, context: StreamingContext)
             Sets the System.Runtime.Serialization.SerializationInfo with the parameter name and additional exception information.
         
-            info: Stores the data that was being used to serialize or deserialize the object that the System.ComponentModel.Design.Serialization.CodeDomSerializer was serializing or deserializing.
-            context: Describes the source and destination of the stream that generated the exception, as well as a means for serialization to retain that context and an additional caller-defined context.
+            info: Stores the data that was being used to serialize or deserialize the object that the System.ComponentModel.Design.Serialization.CodeDomSerializer was serializing or 
+             deserializing.
+        
+            context: Describes the source and destination of the stream that generated the exception, as well as a means for serialization to retain that context and an additional 
+             caller-defined context.
         """
         pass
 
@@ -12192,9 +12158,8 @@ Get: HelpUrl(self: WarningException) -> str
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return WarningException()
+    Instance = WarningException()
+    """hardcoded/returns an instance of the class"""
 
 class Win32Exception(ExternalException):
     """
@@ -12248,9 +12213,8 @@ Get: NativeErrorCode(self: Win32Exception) -> int
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Win32Exception()
+    Instance = Win32Exception()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

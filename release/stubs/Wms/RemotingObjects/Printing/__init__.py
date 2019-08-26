@@ -63,9 +63,8 @@ Set: Quantity(self: PrintLineBase) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintLineBase()
+    Instance = PrintLineBase()
+    """hardcoded/returns an instance of the class"""
 
 class BarcodePrintLine(PrintLineBase):
     """ BarcodePrintLine(barcode: str) """
@@ -94,9 +93,8 @@ Get: GroupKey(self: BarcodePrintLine) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodePrintLine()
+    Instance = BarcodePrintLine()
+    """hardcoded/returns an instance of the class"""
 
 class PrintLinesBase(FindableList):
     """  """
@@ -125,9 +123,8 @@ class PrintLinesBase(FindableList):
 
     UniqueId = 'GroupKey'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintLinesBase()
+    Instance = PrintLinesBase()
+    """hardcoded/returns an instance of the class"""
 
 class BarcodePrintLines(PrintLinesBase):
     """
@@ -188,9 +185,8 @@ Set: TotalRowsMatched(self: BarcodePrintLines) = value
     DisplayMember = None
     ValueMember = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodePrintLines()
+    Instance = BarcodePrintLines()
+    """hardcoded/returns an instance of the class"""
 
 class InboundOrderPrintLine(PrintLineBase):
     """ InboundOrderPrintLine() """
@@ -306,9 +302,8 @@ Set: SupplierCode(self: InboundOrderPrintLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InboundOrderPrintLine()
+    Instance = InboundOrderPrintLine()
+    """hardcoded/returns an instance of the class"""
 
 class ItemPrintLine(PrintLineBase):
     """ ItemPrintLine() """
@@ -417,9 +412,8 @@ Set: UnitCode(self: ItemPrintLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ItemPrintLine()
+    Instance = ItemPrintLine()
+    """hardcoded/returns an instance of the class"""
 
 class ItemPrintLines(PrintLinesBase):
     """
@@ -480,9 +474,8 @@ Set: TotalRowsMatched(self: ItemPrintLines) = value
     DisplayMember = 'ItemDescription'
     ValueMember = 'ItemCode'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ItemPrintLines()
+    Instance = ItemPrintLines()
+    """hardcoded/returns an instance of the class"""
 
 class ItemWithItemIdPrintLine(PrintLineBase):
     """ ItemWithItemIdPrintLine() """
@@ -587,9 +580,8 @@ Set: UnitCode(self: ItemWithItemIdPrintLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ItemWithItemIdPrintLine()
+    Instance = ItemWithItemIdPrintLine()
+    """hardcoded/returns an instance of the class"""
 
 class LabelFieldType:
     """ enum LabelFieldType, values: Barcode (2), BarcodeDescription (3), String (1), Unknown (0) """
@@ -632,9 +624,8 @@ class LabelFieldType:
     Unknown = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LabelFieldType()
+    Instance = LabelFieldType()
+    """hardcoded/returns an instance of the class"""
 
 class LicenseOptions():
     """ LicenseOptions() """
@@ -655,9 +646,8 @@ Set: PdfPrintNetLicenseKey(self: LicenseOptions) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseOptions()
+    Instance = LicenseOptions()
+    """hardcoded/returns an instance of the class"""
 
 class LicensePlatePrintLine(PrintLineBase):
     """ LicensePlatePrintLine() """
@@ -760,9 +750,8 @@ Set: WarehouseCode(self: LicensePlatePrintLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LicensePlatePrintLine()
+    Instance = LicensePlatePrintLine()
+    """hardcoded/returns an instance of the class"""
 
 class LicensePlatePrintLines(PrintLinesBase):
     """
@@ -823,9 +812,8 @@ Set: TotalRowsMatched(self: LicensePlatePrintLines) = value
     DisplayMember = 'Description'
     ValueMember = 'Code'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LicensePlatePrintLines()
+    Instance = LicensePlatePrintLines()
+    """hardcoded/returns an instance of the class"""
 
 class PickbatchPrintLine(PrintLineBase):
     """ PickbatchPrintLine() """
@@ -900,9 +888,8 @@ Set: Tags(self: PickbatchPrintLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PickbatchPrintLine()
+    Instance = PickbatchPrintLine()
+    """hardcoded/returns an instance of the class"""
 
 class PickbatchPrintLines(PrintLinesBase):
     """
@@ -963,9 +950,8 @@ Set: TotalRowsMatched(self: PickbatchPrintLines) = value
     DisplayMember = 'BatchName'
     ValueMember = 'BatchId'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PickbatchPrintLines()
+    Instance = PickbatchPrintLines()
+    """hardcoded/returns an instance of the class"""
 
 class PrintBaseArgs():
     """
@@ -1009,9 +995,8 @@ Set: PrintingOptions(self: PrintBaseArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintBaseArgs()
+    Instance = PrintBaseArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PrintDuplicateLabelArgs(PrintBaseArgs):
     """ PrintDuplicateLabelArgs() """
@@ -1024,9 +1009,8 @@ Set: ShipmentId(self: PrintDuplicateLabelArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintDuplicateLabelArgs()
+    Instance = PrintDuplicateLabelArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PrintLabel(DbObject):
     """ PrintLabel() """
@@ -1134,9 +1118,8 @@ Set: Sys(self: PrintLabel) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintLabel()
+    Instance = PrintLabel()
+    """hardcoded/returns an instance of the class"""
 
 class PrintLabelArgs():
     """ PrintLabelArgs() """
@@ -1157,9 +1140,8 @@ Set: SelectedLabel(self: PrintLabelArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintLabelArgs()
+    Instance = PrintLabelArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PrintLabelItemProperties():
     """ PrintLabelItemProperties() """
@@ -1203,9 +1185,8 @@ Set: StartPosition(self: PrintLabelItemProperties) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintLabelItemProperties()
+    Instance = PrintLabelItemProperties()
+    """hardcoded/returns an instance of the class"""
 
 class PrintLabelMapping():
     """
@@ -1245,9 +1226,8 @@ Set: Transformation(self: PrintLabelMapping) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintLabelMapping()
+    Instance = PrintLabelMapping()
+    """hardcoded/returns an instance of the class"""
 
 class PrintLabelMappings(FindableList):
     """ PrintLabelMappings() """
@@ -1285,9 +1265,8 @@ class PrintLabelMappings(FindableList):
     DisplayMember = 'DatasetField'
     ValueMember = 'Placeholder'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintLabelMappings()
+    Instance = PrintLabelMappings()
+    """hardcoded/returns an instance of the class"""
 
 class PrintLabels(FindableList):
     """ PrintLabels() """
@@ -1313,9 +1292,8 @@ class PrintLabels(FindableList):
     DisplayMember = 'DisplayName'
     ValueMember = 'ID'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintLabels()
+    Instance = PrintLabels()
+    """hardcoded/returns an instance of the class"""
 
 class PrintPackageSlipArgs(PrintBaseArgs):
     """ PrintPackageSlipArgs() """
@@ -1328,9 +1306,8 @@ Set: ShipmentId(self: PrintPackageSlipArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintPackageSlipArgs()
+    Instance = PrintPackageSlipArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PrintPickbatchLabelArgs(PrintBaseArgs):
     """ PrintPickbatchLabelArgs() """
@@ -1351,9 +1328,8 @@ Set: PrintLabel(self: PrintPickbatchLabelArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintPickbatchLabelArgs()
+    Instance = PrintPickbatchLabelArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PrintPickingListArgs(PrintBaseArgs):
     """
@@ -1378,9 +1354,8 @@ Set: Report(self: PrintPickingListArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintPickingListArgs()
+    Instance = PrintPickingListArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PrintShipmentDocumentArgs(PrintBaseArgs):
     """ PrintShipmentDocumentArgs() """
@@ -1393,9 +1368,8 @@ Set: ShipmentId(self: PrintShipmentDocumentArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintShipmentDocumentArgs()
+    Instance = PrintShipmentDocumentArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PrintSSCCLabelsArgs():
     """ PrintSSCCLabelsArgs() """
@@ -1432,9 +1406,8 @@ Set: SelectedPackageId(self: PrintSSCCLabelsArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintSSCCLabelsArgs()
+    Instance = PrintSSCCLabelsArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PurchaseOrderPrintLine:
     """ PurchaseOrderPrintLine() """
@@ -1469,9 +1442,8 @@ Set: YourReference(self: PurchaseOrderPrintLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrderPrintLine()
+    Instance = PurchaseOrderPrintLine()
+    """hardcoded/returns an instance of the class"""
 
 class PurchaseOrderPrintLines(PrintLinesBase):
     """
@@ -1532,9 +1504,8 @@ Set: TotalRowsMatched(self: PurchaseOrderPrintLines) = value
     DisplayMember = 'ItemDescription'
     ValueMember = 'ItemCode'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseOrderPrintLines()
+    Instance = PurchaseOrderPrintLines()
+    """hardcoded/returns an instance of the class"""
 
 class ReportItem():
     """ ReportItem() """
@@ -1571,9 +1542,8 @@ Set: Name(self: ReportItem) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReportItem()
+    Instance = ReportItem()
+    """hardcoded/returns an instance of the class"""
 
 class ReportItems(List):
     """ ReportItems() """
@@ -1604,9 +1574,8 @@ class ReportItems(List):
     DisplayMember = 'Description'
     ValueMember = 'Name'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReportItems()
+    Instance = ReportItems()
+    """hardcoded/returns an instance of the class"""
 
 class RmaOrderPrintLine:
     """ RmaOrderPrintLine() """
@@ -1623,9 +1592,8 @@ Set: Reason(self: RmaOrderPrintLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RmaOrderPrintLine()
+    Instance = RmaOrderPrintLine()
+    """hardcoded/returns an instance of the class"""
 
 class RmaOrderPrintLines(PrintLinesBase):
     """ RmaOrderPrintLines() """
@@ -1665,9 +1633,8 @@ Get: PreserveState(self: RmaOrderPrintLines) -> bool
 
     DisplayMember = 'ItemDescription'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RmaOrderPrintLines()
+    Instance = RmaOrderPrintLines()
+    """hardcoded/returns an instance of the class"""
 
 class SSCCBasePrintLine(PrintLineBase):
     """ SSCCBasePrintLine(barcode: str, barcodeReadable: str) """
@@ -1704,9 +1671,8 @@ Get: GroupKey(self: SSCCBasePrintLine) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCBasePrintLine()
+    Instance = SSCCBasePrintLine()
+    """hardcoded/returns an instance of the class"""
 
 class SSCCBasePrintLines(PrintLinesBase):
     """
@@ -1767,9 +1733,8 @@ Set: TotalRowsMatched(self: SSCCBasePrintLines) = value
     DisplayMember = None
     ValueMember = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCBasePrintLines()
+    Instance = SSCCBasePrintLines()
+    """hardcoded/returns an instance of the class"""
 
 class SSCCHeterogeneousPrintLine(SSCCBasePrintLine):
     """
@@ -1874,9 +1839,8 @@ Set: ToZipCode(self: SSCCHeterogeneousPrintLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCHeterogeneousPrintLine()
+    Instance = SSCCHeterogeneousPrintLine()
+    """hardcoded/returns an instance of the class"""
 
 class SSCCHeterogeneousPrintLines(PrintLinesBase):
     """
@@ -1937,9 +1901,8 @@ Set: TotalRowsMatched(self: SSCCHeterogeneousPrintLines) = value
     DisplayMember = None
     ValueMember = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCHeterogeneousPrintLines()
+    Instance = SSCCHeterogeneousPrintLines()
+    """hardcoded/returns an instance of the class"""
 
 class SSCCHomogeneousPrintLine(SSCCHeterogeneousPrintLine):
     """
@@ -1995,9 +1958,8 @@ Set: UnitCount(self: SSCCHomogeneousPrintLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCHomogeneousPrintLine()
+    Instance = SSCCHomogeneousPrintLine()
+    """hardcoded/returns an instance of the class"""
 
 class SSCCHomogeneousPrintLines(PrintLinesBase):
     """
@@ -2058,9 +2020,8 @@ Set: TotalRowsMatched(self: SSCCHomogeneousPrintLines) = value
     DisplayMember = None
     ValueMember = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCHomogeneousPrintLines()
+    Instance = SSCCHomogeneousPrintLines()
+    """hardcoded/returns an instance of the class"""
 
 class TransportPackageItemPrintLine(PrintLineBase):
     """ TransportPackageItemPrintLine() """
@@ -2120,9 +2081,8 @@ Set: UnitCode(self: TransportPackageItemPrintLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransportPackageItemPrintLine()
+    Instance = TransportPackageItemPrintLine()
+    """hardcoded/returns an instance of the class"""
 
 class TransportPackageItemsPrintLine(PrintLinesBase):
     """
@@ -2183,9 +2143,8 @@ Set: TotalRowsMatched(self: TransportPackageItemsPrintLine) = value
     DisplayMember = 'ItemCode'
     ValueMember = 'GroupKey'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransportPackageItemsPrintLine()
+    Instance = TransportPackageItemsPrintLine()
+    """hardcoded/returns an instance of the class"""
 
 class TransportPackagePrintLine(PrintLineBase):
     """ TransportPackagePrintLine() """
@@ -2590,9 +2549,8 @@ Get: UnitCode(self: TransportPackagePrintLine) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransportPackagePrintLine()
+    Instance = TransportPackagePrintLine()
+    """hardcoded/returns an instance of the class"""
 
 class TransportPackagePrintLines(PrintLinesBase):
     """
@@ -2658,9 +2616,8 @@ Set: TotalRowsMatched(self: TransportPackagePrintLines) = value
     DisplayMember = 'PackageNumber'
     ValueMember = 'PackageGuid'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransportPackagePrintLines()
+    Instance = TransportPackagePrintLines()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

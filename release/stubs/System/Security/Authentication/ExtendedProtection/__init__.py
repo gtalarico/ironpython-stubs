@@ -24,7 +24,8 @@ class ChannelBinding(SafeHandleZeroOrMinusOneIsInvalid):
         ReleaseHandle(self: SafeHandle) -> bool
         
             When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging Assistant.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed 
+             Debugging Assistant.
         """
         pass
 
@@ -67,9 +68,8 @@ Get: Size(self: ChannelBinding) -> int
 
     handle = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ChannelBinding()
+    Instance = ChannelBinding()
+    """hardcoded/returns an instance of the class"""
 
 class ChannelBindingKind:
     """
@@ -115,9 +115,8 @@ class ChannelBindingKind:
     Unknown = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ChannelBindingKind()
+    Instance = ChannelBindingKind()
+    """hardcoded/returns an instance of the class"""
 
 class ExtendedProtectionPolicy:
     """
@@ -193,9 +192,8 @@ Get: ProtectionScenario(self: ExtendedProtectionPolicy) -> ProtectionScenario
 
     OSSupportsExtendedProtection = True
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExtendedProtectionPolicy()
+    Instance = ExtendedProtectionPolicy()
+    """hardcoded/returns an instance of the class"""
 
 class ExtendedProtectionPolicyTypeConverter(TypeConverter):
     """
@@ -229,9 +227,8 @@ class ExtendedProtectionPolicyTypeConverter(TypeConverter):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExtendedProtectionPolicyTypeConverter()
+    Instance = ExtendedProtectionPolicyTypeConverter()
+    """hardcoded/returns an instance of the class"""
 
 class PolicyEnforcement:
     """
@@ -277,9 +274,8 @@ class PolicyEnforcement:
     value__ = None
     WhenSupported = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PolicyEnforcement()
+    Instance = PolicyEnforcement()
+    """hardcoded/returns an instance of the class"""
 
 class ProtectionScenario:
     """
@@ -324,9 +320,8 @@ class ProtectionScenario:
     TrustedProxy = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProtectionScenario()
+    Instance = ProtectionScenario()
+    """hardcoded/returns an instance of the class"""
 
 class ServiceNameCollection(ReadOnlyCollectionBase):
     """
@@ -342,16 +337,23 @@ class ServiceNameCollection(ReadOnlyCollectionBase):
         """
         Merge(self: ServiceNameCollection, serviceName: str) -> ServiceNameCollection
         
-            Merges the current System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the specified values to create a new System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the union.
+            Merges the current System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the specified values to create a new 
+             System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the union.
+        
         
             serviceName: A string that contains the specified values of service names to be used to initialize the class.
-            Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance that contains the union of the existing System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged with the specified values.
+            Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance that contains the union of the existing 
+             System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged with the specified values.
+        
         Merge(self: ServiceNameCollection, serviceNames: IEnumerable) -> ServiceNameCollection
         
-            Merges the current System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the specified values to create a new System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the union.
+            Merges the current System.Security.Authentication.ExtendedProtection.ServiceNameCollection with the specified values to create a new 
+             System.Security.Authentication.ExtendedProtection.ServiceNameCollection containing the union.
+        
         
             serviceNames: An instance of the System.Collections.IEnumerable class that contains the specified values of service names to be merged.
-            Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance that contains the union of the existing System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged with the specified values.
+            Returns: A new System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance that contains the union of the existing 
+             System.Security.Authentication.ExtendedProtection.ServiceNameCollection instance merged with the specified values.
         """
         pass
 
@@ -377,9 +379,8 @@ class ServiceNameCollection(ReadOnlyCollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ServiceNameCollection()
+    Instance = ServiceNameCollection()
+    """hardcoded/returns an instance of the class"""
 
 class TokenBinding():
     # no doc
@@ -393,9 +394,8 @@ class TokenBinding():
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TokenBinding()
+    Instance = TokenBinding()
+    """hardcoded/returns an instance of the class"""
 
 class TokenBindingType:
     """ enum TokenBindingType, values: Provided (0), Referred (1) """
@@ -436,9 +436,8 @@ class TokenBindingType:
     Referred = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TokenBindingType()
+    Instance = TokenBindingType()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

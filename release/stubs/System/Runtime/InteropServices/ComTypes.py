@@ -56,9 +56,8 @@ class ADVF:
     ADVF_PRIMEFIRST = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ADVF()
+    Instance = ADVF()
+    """hardcoded/returns an instance of the class"""
 
 class BINDPTR():
     """ Contains a pointer to a bound-to System.Runtime.InteropServices.FUNCDESC structure, System.Runtime.InteropServices.VARDESC structure, or an ITypeComp interface. """
@@ -66,9 +65,8 @@ class BINDPTR():
     lptcomp = None
     lpvardesc = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BINDPTR()
+    Instance = BINDPTR()
+    """hardcoded/returns an instance of the class"""
 
 class BIND_OPTS():
     """ Stores the parameters that are used during a moniker binding operation. """
@@ -77,9 +75,8 @@ class BIND_OPTS():
     grfFlags = None
     grfMode = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BIND_OPTS()
+    Instance = BIND_OPTS()
+    """hardcoded/returns an instance of the class"""
 
 class CALLCONV:
     """
@@ -132,18 +129,16 @@ class CALLCONV:
     CC_SYSCALL = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CALLCONV()
+    Instance = CALLCONV()
+    """hardcoded/returns an instance of the class"""
 
 class CONNECTDATA():
     """ Describes a connection that exists to a given connection point. """
     dwCookie = None
     pUnk = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CONNECTDATA()
+    Instance = CONNECTDATA()
+    """hardcoded/returns an instance of the class"""
 
 class DATADIR:
     """
@@ -188,9 +183,8 @@ class DATADIR:
     DATADIR_SET = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DATADIR()
+    Instance = DATADIR()
+    """hardcoded/returns an instance of the class"""
 
 class DESCKIND:
     """
@@ -239,9 +233,8 @@ class DESCKIND:
     DESCKIND_VARDESC = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DESCKIND()
+    Instance = DESCKIND()
+    """hardcoded/returns an instance of the class"""
 
 class DISPPARAMS():
     """ Contains the arguments passed to a method or property by IDispatch::Invoke. """
@@ -250,9 +243,8 @@ class DISPPARAMS():
     rgdispidNamedArgs = None
     rgvarg = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DISPPARAMS()
+    Instance = DISPPARAMS()
+    """hardcoded/returns an instance of the class"""
 
 class DVASPECT:
     """
@@ -299,9 +291,8 @@ class DVASPECT:
     DVASPECT_THUMBNAIL = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DVASPECT()
+    Instance = DVASPECT()
+    """hardcoded/returns an instance of the class"""
 
 class ELEMDESC():
     """ Contains the type description and process transfer information for a variable, function, or a function parameter. """
@@ -309,9 +300,8 @@ class ELEMDESC():
     DESCUNION = None
     tdesc = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ELEMDESC()
+    Instance = ELEMDESC()
+    """hardcoded/returns an instance of the class"""
 
 class EXCEPINFO():
     """ Describes the exceptions that occur during IDispatch::Invoke. """
@@ -325,18 +315,16 @@ class EXCEPINFO():
     wCode = None
     wReserved = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EXCEPINFO()
+    Instance = EXCEPINFO()
+    """hardcoded/returns an instance of the class"""
 
 class FILETIME():
     """ Represents the number of 100-nanosecond intervals since January 1, 1601. This structure is a 64-bit value. """
     dwHighDateTime = None
     dwLowDateTime = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FILETIME()
+    Instance = FILETIME()
+    """hardcoded/returns an instance of the class"""
 
 class FORMATETC():
     """ Represents a generalized Clipboard format. """
@@ -346,9 +334,8 @@ class FORMATETC():
     ptd = None
     tymed = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FORMATETC()
+    Instance = FORMATETC()
+    """hardcoded/returns an instance of the class"""
 
 class FUNCDESC():
     """ Defines a function description. """
@@ -365,9 +352,8 @@ class FUNCDESC():
     oVft = None
     wFuncFlags = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FUNCDESC()
+    Instance = FUNCDESC()
+    """hardcoded/returns an instance of the class"""
 
 class FUNCFLAGS:
     """
@@ -423,9 +409,8 @@ class FUNCFLAGS:
     FUNCFLAG_FUSESGETLASTERROR = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FUNCFLAGS()
+    Instance = FUNCFLAGS()
+    """hardcoded/returns an instance of the class"""
 
 class FUNCKIND:
     """
@@ -473,9 +458,8 @@ class FUNCKIND:
     FUNC_VIRTUAL = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FUNCKIND()
+    Instance = FUNCKIND()
+    """hardcoded/returns an instance of the class"""
 
 class IAdviseSink:
     """ Provides a managed definition of the IAdviseSink interface. """
@@ -492,8 +476,11 @@ class IAdviseSink:
         
             Notifies all data objects currently registered advisory sinks that data in the object has changed.
         
-            format: A System.Runtime.InteropServices.ComTypes.FORMATETC, passed by reference, which describes the format, target device, rendering, and storage information of the calling data object.
-            stgmedium: A System.Runtime.InteropServices.ComTypes.STGMEDIUM, passed by reference, which defines the storage medium (global memory, disk file, storage object, stream object, Graphics Device Interface (GDI) object, or undefined) and ownership of that medium for the calling data object.
+            format: A System.Runtime.InteropServices.ComTypes.FORMATETC, passed by reference, which describes the format, target device, rendering, and storage information of the calling 
+             data object.
+        
+            stgmedium: A System.Runtime.InteropServices.ComTypes.STGMEDIUM, passed by reference, which defines the storage medium (global memory, disk file, storage object, stream object, 
+             Graphics Device Interface (GDI) object, or undefined) and ownership of that medium for the calling data object.
         """
         pass
 
@@ -527,9 +514,8 @@ class IAdviseSink:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IAdviseSink()
+    Instance = IAdviseSink()
+    """hardcoded/returns an instance of the class"""
 
 class IBindCtx:
     """ Provides the managed definition of the IBindCtx interface. """
@@ -591,7 +577,8 @@ class IBindCtx:
     def ReleaseBoundObjects(self):
         """
         ReleaseBoundObjects(self: IBindCtx)
-            Releases all the objects currently registered with the bind context by using the System.Runtime.InteropServices.ComTypes.IBindCtx.RegisterObjectBound(System.Object) method.
+            Releases all the objects currently registered with the bind context by using the System.Runtime.InteropServices.ComTypes.IBindCtx.RegisterObjectBound(System.Object) 
+             method.
         """
         pass
 
@@ -608,7 +595,9 @@ class IBindCtx:
         """
         RevokeObjectParam(self: IBindCtx, pszKey: str) -> int
         
-            Revokes the registration of the object currently found under the specified key in the internally maintained table of contextual object parameters, if that key is currently registered.
+            Revokes the registration of the object currently found under the specified key in the internally maintained table of contextual object parameters, if that key is 
+             currently registered.
+        
         
             pszKey: The key to unregister.
             Returns: An S_OKHRESULT value if the specified key was successfully removed from the table; otherwise, an S_FALSEHRESULT value.
@@ -629,9 +618,8 @@ class IBindCtx:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IBindCtx()
+    Instance = IBindCtx()
+    """hardcoded/returns an instance of the class"""
 
 class IConnectionPoint:
     """ Provides the managed definition of the IConnectionPoint interface. """
@@ -672,7 +660,9 @@ class IConnectionPoint:
     def Unadvise(self, dwCookie):
         """
         Unadvise(self: IConnectionPoint, dwCookie: int)
-            Terminates an advisory connection previously established through the System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise(System.Object,System.Int32@) method.
+            Terminates an advisory connection previously established through the System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise(System.Object,System.Int32@) 
+             method.
+        
         
             dwCookie: The connection cookie previously returned from the System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise(System.Object,System.Int32@) method.
         """
@@ -682,9 +672,8 @@ class IConnectionPoint:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IConnectionPoint()
+    Instance = IConnectionPoint()
+    """hardcoded/returns an instance of the class"""
 
 class IConnectionPointContainer:
     """ Provides the managed definition of the IConnectionPointContainer interface. """
@@ -710,9 +699,8 @@ class IConnectionPointContainer:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IConnectionPointContainer()
+    Instance = IConnectionPointContainer()
+    """hardcoded/returns an instance of the class"""
 
 class IDataObject:
     """ Provides the managed definition of the IDataObject interface. """
@@ -720,13 +708,19 @@ class IDataObject:
         """
         DAdvise(self: IDataObject, pFormatetc: FORMATETC, advf: ADVF, adviseSink: IAdviseSink) -> (int, FORMATETC, int)
         
-            Creates a connection between a data object and an advisory sink. This method is called by an object that supports an advisory sink and enables the advisory sink to be notified of changes in the object's data.
+            Creates a connection between a data object and an advisory sink. This method is called by an object that supports an advisory sink and enables the advisory sink to be 
+             notified of changes in the object's data.
         
-            pFormatetc: A System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by reference, that defines the format, target device, aspect, and medium that will be used for future notifications.
+        
+            pFormatetc: A System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by reference, that defines the format, target device, aspect, and medium that will be used for 
+             future notifications.
+        
             advf: One of the System.Runtime.InteropServices.ComTypes.ADVF values that specifies a group of flags for controlling the advisory connection.
             adviseSink: A pointer to the System.Runtime.InteropServices.ComTypes.IAdviseSink interface on the advisory sink that will receive the change notification.
-            Returns: This method supports the standard return values E_INVALIDARG, E_UNEXPECTED, and E_OUTOFMEMORY, as well as the following: ValueDescriptionS_OKThe advisory connection was created.E_NOTIMPLThis method is not implemented on the data object.DV_E_LINDEXThere is an invalid value for System.Runtime.InteropServices.ComTypes.FORMATETC.lindex; currently, only -1 is supported.DV_E_FORMATETCThere is an invalid value for the 
-             pFormatetc parameter.OLE_E_ADVISENOTSUPPORTEDThe data object does not support change notification.
+            Returns: This method supports the standard return values E_INVALIDARG, E_UNEXPECTED, and E_OUTOFMEMORY, as well as the following: ValueDescriptionS_OKThe advisory connection 
+             was created.E_NOTIMPLThis method is not implemented on the data object.DV_E_LINDEXThere is an invalid value for 
+             System.Runtime.InteropServices.ComTypes.FORMATETC.lindex; currently, only -1 is supported.DV_E_FORMATETCThere is an invalid value for the pFormatetc 
+             parameter.OLE_E_ADVISENOTSUPPORTEDThe data object does not support change notification.
         """
         pass
 
@@ -735,7 +729,9 @@ class IDataObject:
         DUnadvise(self: IDataObject, connection: int)
             Destroys a notification connection that had been previously established.
         
-            connection: A DWORD token that specifies the connection to remove. Use the value returned by System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.ADVF,System.Runtime.InteropServices.ComTypes.IAdviseSink,System.Int32@) when the connection was originally established.
+            connection: A DWORD token that specifies the connection to remove. Use the value returned by 
+             System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.ADVF,System.Runti
+             me.InteropServices.ComTypes.IAdviseSink,System.Int32@) when the connection was originally established.
         """
         pass
 
@@ -744,7 +740,8 @@ class IDataObject:
         EnumDAdvise(self: IDataObject) -> (int, IEnumSTATDATA)
         
             Creates an object that can be used to enumerate the current advisory connections.
-            Returns: This method supports the standard return value E_OUTOFMEMORY, as well as the following:ValueDescriptionS_OKThe enumerator object is successfully instantiated or there are no connections.OLE_E_ADVISENOTSUPPORTEDThis object does not support advisory notifications.
+            Returns: This method supports the standard return value E_OUTOFMEMORY, as well as the following:ValueDescriptionS_OKThe enumerator object is successfully instantiated or there 
+             are no connections.OLE_E_ADVISENOTSUPPORTEDThis object does not support advisory notifications.
         """
         pass
 
@@ -752,12 +749,15 @@ class IDataObject:
         """
         EnumFormatEtc(self: IDataObject, direction: DATADIR) -> IEnumFORMATETC
         
-            Creates an object for enumerating the System.Runtime.InteropServices.ComTypes.FORMATETC structures for a data object. These structures are used in calls to System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@) or 
-             System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System.Boolean).
+            Creates an object for enumerating the System.Runtime.InteropServices.ComTypes.FORMATETC structures for a data object. These structures are used in calls to 
+             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@) or 
+             System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System
+             .Boolean).
         
         
             direction: One of the System.Runtime.InteropServices.ComTypes.DATADIR values that specifies the direction of the data.
-            Returns: This method supports the standard return values E_INVALIDARG and E_OUTOFMEMORY, as well as the following:ValueDescriptionS_OKThe enumerator object was successfully created.E_NOTIMPLThe direction specified by the direction parameter is not supported.OLE_S_USEREGRequests that OLE enumerate the formats from the registry.
+            Returns: This method supports the standard return values E_INVALIDARG and E_OUTOFMEMORY, as well as the following:ValueDescriptionS_OKThe enumerator object was successfully 
+             created.E_NOTIMPLThe direction specified by the direction parameter is not supported.OLE_S_USEREGRequests that OLE enumerate the formats from the registry.
         """
         pass
 
@@ -765,13 +765,20 @@ class IDataObject:
         """
         GetCanonicalFormatEtc(self: IDataObject, formatIn: FORMATETC) -> (int, FORMATETC, FORMATETC)
         
-            Provides a standard System.Runtime.InteropServices.ComTypes.FORMATETC structure that is logically equivalent to a more complex structure. Use this method to determine whether two different System.Runtime.InteropServices.ComTypes.FORMATETC structures would return the same data, removing the need for duplicate rendering.
+            Provides a standard System.Runtime.InteropServices.ComTypes.FORMATETC structure that is logically equivalent to a more complex structure. Use this method to determine 
+             whether two different System.Runtime.InteropServices.ComTypes.FORMATETC structures would return the same data, removing the need for duplicate rendering.
         
-            formatIn: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by reference, that defines the format, medium, and target device that the caller would like to use to retrieve data in a subsequent call such as System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@). The 
+        
+            formatIn: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by reference, that defines the format, medium, and target device that the caller 
+             would like to use to retrieve data in a subsequent call such as 
+             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@). The 
              System.Runtime.InteropServices.ComTypes.TYMED member is not significant in this case and should be ignored.
         
-            Returns: This method supports the standard return values E_INVALIDARG, E_UNEXPECTED, and E_OUTOFMEMORY, as well as the following: ValueDescriptionS_OKThe returned System.Runtime.InteropServices.ComTypes.FORMATETC structure is different from the one that was passed.DATA_S_SAMEFORMATETCThe System.Runtime.InteropServices.ComTypes.FORMATETC structures are the same and null is returned in the formatOut parameter.DV_E_LINDEXThere 
-             is an invalid value for System.Runtime.InteropServices.ComTypes.FORMATETC.lindex; currently, only -1 is supported.DV_E_FORMATETCThere is an invalid value for the pFormatetc parameter.OLE_E_NOTRUNNINGThe application is not running.
+            Returns: This method supports the standard return values E_INVALIDARG, E_UNEXPECTED, and E_OUTOFMEMORY, as well as the following: ValueDescriptionS_OKThe returned 
+             System.Runtime.InteropServices.ComTypes.FORMATETC structure is different from the one that was passed.DATA_S_SAMEFORMATETCThe 
+             System.Runtime.InteropServices.ComTypes.FORMATETC structures are the same and null is returned in the formatOut parameter.DV_E_LINDEXThere is an invalid value for 
+             System.Runtime.InteropServices.ComTypes.FORMATETC.lindex; currently, only -1 is supported.DV_E_FORMATETCThere is an invalid value for the pFormatetc 
+             parameter.OLE_E_NOTRUNNINGThe application is not running.
         """
         pass
 
@@ -779,11 +786,15 @@ class IDataObject:
         """
         GetData(self: IDataObject, format: FORMATETC) -> (FORMATETC, STGMEDIUM)
         
-            Obtains data from a source data object. The System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@) method, which is called by a data consumer, renders the data described in the specified System.Runtime.InteropServices.ComTypes.FORMATETC structure and transfers it through the specified 
-             System.Runtime.InteropServices.ComTypes.STGMEDIUM structure. The caller then assumes responsibility for releasing the System.Runtime.InteropServices.ComTypes.STGMEDIUM structure.
+            Obtains data from a source data object. The 
+             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@) 
+             method, which is called by a data consumer, renders the data described in the specified System.Runtime.InteropServices.ComTypes.FORMATETC structure and transfers it 
+             through the specified System.Runtime.InteropServices.ComTypes.STGMEDIUM structure. The caller then assumes responsibility for releasing the 
+             System.Runtime.InteropServices.ComTypes.STGMEDIUM structure.
         
         
-            format: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by reference, that defines the format, medium, and target device to use when passing the data. It is possible to specify more than one medium by using the Boolean OR operator, allowing the method to choose the best medium among those specified.
+            format: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by reference, that defines the format, medium, and target device to use when passing 
+             the data. It is possible to specify more than one medium by using the Boolean OR operator, allowing the method to choose the best medium among those specified.
         """
         pass
 
@@ -791,13 +802,22 @@ class IDataObject:
         """
         GetDataHere(self: IDataObject, format: FORMATETC, medium: STGMEDIUM) -> (FORMATETC, STGMEDIUM)
         
-            Obtains data from a source data object. This method, which is called by a data consumer, differs from the System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@) method in that the caller must allocate and free the specified storage medium.
+            Obtains data from a source data object. This method, which is called by a data consumer, differs from the 
+             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@) 
+             method in that the caller must allocate and free the specified storage medium.
         
-            format: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by reference, that defines the format, medium, and target device to use when passing the data. Only one medium can be specified in System.Runtime.InteropServices.ComTypes.TYMED, and only the following System.Runtime.InteropServices.ComTypes.TYMED values are valid: System.Runtime.InteropServices.ComTypes.TYMED.TYMED_ISTORAGE, 
-             System.Runtime.InteropServices.ComTypes.TYMED.TYMED_ISTREAM, System.Runtime.InteropServices.ComTypes.TYMED.TYMED_HGLOBAL, or System.Runtime.InteropServices.ComTypes.TYMED.TYMED_FILE.
         
-            medium: A System.Runtime.InteropServices.ComTypes.STGMEDIUM, passed by reference, that defines the storage medium containing the data being transferred. The medium must be allocated by the caller and filled in by System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@). The caller must also free the medium. The 
-             implementation of this method must always supply a value of null for the System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease member of the System.Runtime.InteropServices.ComTypes.STGMEDIUM structure that this parameter points to.
+            format: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by reference, that defines the format, medium, and target device to use when passing 
+             the data. Only one medium can be specified in System.Runtime.InteropServices.ComTypes.TYMED, and only the following System.Runtime.InteropServices.ComTypes.TYMED 
+             values are valid: System.Runtime.InteropServices.ComTypes.TYMED.TYMED_ISTORAGE, System.Runtime.InteropServices.ComTypes.TYMED.TYMED_ISTREAM, 
+             System.Runtime.InteropServices.ComTypes.TYMED.TYMED_HGLOBAL, or System.Runtime.InteropServices.ComTypes.TYMED.TYMED_FILE.
+        
+            medium: A System.Runtime.InteropServices.ComTypes.STGMEDIUM, passed by reference, that defines the storage medium containing the data being transferred. The medium must be 
+             allocated by the caller and filled in by 
+             System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@). 
+             The caller must also free the medium. The implementation of this method must always supply a value of null for the 
+             System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease member of the System.Runtime.InteropServices.ComTypes.STGMEDIUM structure that this parameter points 
+             to.
         """
         pass
 
@@ -805,13 +825,20 @@ class IDataObject:
         """
         QueryGetData(self: IDataObject, format: FORMATETC) -> (int, FORMATETC)
         
-            Determines whether the data object is capable of rendering the data described in the System.Runtime.InteropServices.ComTypes.FORMATETC structure. Objects attempting a paste or drop operation can call this method before calling System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@) to get an indication of 
-             whether the operation may be successful.
+            Determines whether the data object is capable of rendering the data described in the System.Runtime.InteropServices.ComTypes.FORMATETC structure. Objects attempting a 
+             paste or drop operation can call this method before calling 
+             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@) to 
+             get an indication of whether the operation may be successful.
         
         
-            format: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by reference, that defines the format, medium, and target device to use for the query.
-            Returns: This method supports the standard return values E_INVALIDARG, E_UNEXPECTED, and E_OUTOFMEMORY, as well as the following: ValueDescriptionS_OKA subsequent call to System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@) would probably be successful.DV_E_LINDEXAn invalid value for 
-             System.Runtime.InteropServices.ComTypes.FORMATETC.lindex; currently, only -1 is supported.DV_E_FORMATETCAn invalid value for the pFormatetc parameter.DV_E_TYMEDAn invalid System.Runtime.InteropServices.ComTypes.FORMATETC.tymed value.DV_E_DVASPECTAn invalid System.Runtime.InteropServices.ComTypes.FORMATETC.dwAspect value.OLE_E_NOTRUNNINGThe application is not running.
+            format: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by reference, that defines the format, medium, and target device to use for the 
+             query.
+        
+            Returns: This method supports the standard return values E_INVALIDARG, E_UNEXPECTED, and E_OUTOFMEMORY, as well as the following: ValueDescriptionS_OKA subsequent call to 
+             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@) 
+             would probably be successful.DV_E_LINDEXAn invalid value for System.Runtime.InteropServices.ComTypes.FORMATETC.lindex; currently, only -1 is supported.DV_E_FORMATETCAn 
+             invalid value for the pFormatetc parameter.DV_E_TYMEDAn invalid System.Runtime.InteropServices.ComTypes.FORMATETC.tymed value.DV_E_DVASPECTAn invalid 
+             System.Runtime.InteropServices.ComTypes.FORMATETC.dwAspect value.OLE_E_NOTRUNNINGThe application is not running.
         """
         pass
 
@@ -821,10 +848,15 @@ class IDataObject:
         
             Transfers data to the object that implements this method. This method is called by an object that contains a data source.
         
-            formatIn: A System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by reference, that defines the format used by the data object when interpreting the data contained in the storage medium.
+            formatIn: A System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by reference, that defines the format used by the data object when interpreting the data 
+             contained in the storage medium.
+        
             medium: A System.Runtime.InteropServices.ComTypes.STGMEDIUM structure, passed by reference, that defines the storage medium in which the data is being passed.
-            release: true to specify that the data object called, which implements System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System.Boolean), owns the storage medium after the call returns. This means that the data object must free the medium after it has been used by calling the ReleaseStgMedium function. false to 
-             specify that the caller retains ownership of the storage medium, and the data object called uses the storage medium for the duration of the call only.
+            release: true to specify that the data object called, which implements 
+             System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System
+             .Boolean), owns the storage medium after the call returns. This means that the data object must free the medium after it has been used by calling the ReleaseStgMedium 
+             function. false to specify that the caller retains ownership of the storage medium, and the data object called uses the storage medium for the duration of the call 
+             only.
         """
         pass
 
@@ -832,18 +864,16 @@ class IDataObject:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDataObject()
+    Instance = IDataObject()
+    """hardcoded/returns an instance of the class"""
 
 class IDLDESC():
     """ Contains information needed for transferring a structure element, parameter, or function return value between processes. """
     dwReserved = None
     wIDLFlags = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDLDESC()
+    Instance = IDLDESC()
+    """hardcoded/returns an instance of the class"""
 
 class IDLFLAG:
     """
@@ -891,9 +921,8 @@ class IDLFLAG:
     IDLFLAG_NONE = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDLFLAG()
+    Instance = IDLFLAG()
+    """hardcoded/returns an instance of the class"""
 
 class IEnumConnectionPoints:
     """ Manages the definition of the IEnumConnectionPoints interface. """
@@ -939,9 +968,8 @@ class IEnumConnectionPoints:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumConnectionPoints()
+    Instance = IEnumConnectionPoints()
+    """hardcoded/returns an instance of the class"""
 
 class IEnumConnections:
     """ Manages the definition of the IEnumConnections interface. """
@@ -987,9 +1015,8 @@ class IEnumConnections:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumConnections()
+    Instance = IEnumConnections()
+    """hardcoded/returns an instance of the class"""
 
 class IEnumFORMATETC:
     """ Provides the managed definition of the IEnumFORMATETC interface. """
@@ -1036,9 +1063,8 @@ class IEnumFORMATETC:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumFORMATETC()
+    Instance = IEnumFORMATETC()
+    """hardcoded/returns an instance of the class"""
 
 class IEnumMoniker:
     """ Manages the definition of the IEnumMoniker interface. """
@@ -1084,9 +1110,8 @@ class IEnumMoniker:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumMoniker()
+    Instance = IEnumMoniker()
+    """hardcoded/returns an instance of the class"""
 
 class IEnumSTATDATA:
     """ Provides the managed definition of the IEnumSTATDATA interface. """
@@ -1133,9 +1158,8 @@ class IEnumSTATDATA:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumSTATDATA()
+    Instance = IEnumSTATDATA()
+    """hardcoded/returns an instance of the class"""
 
 class IEnumString:
     """ Manages the definition of the IEnumString interface. """
@@ -1181,9 +1205,8 @@ class IEnumString:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumString()
+    Instance = IEnumString()
+    """hardcoded/returns an instance of the class"""
 
 class IEnumVARIANT:
     """ Manages the definition of the IEnumVARIANT interface. """
@@ -1232,9 +1255,8 @@ class IEnumVARIANT:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IEnumVARIANT()
+    Instance = IEnumVARIANT()
+    """hardcoded/returns an instance of the class"""
 
 class IMoniker:
     """ Provides the managed definition of the IMoniker interface, with COM functionality from IPersist and IPersistStream. """
@@ -1279,7 +1301,8 @@ class IMoniker:
             Combines the current moniker with another moniker, creating a new composite moniker.
         
             pmkRight: A reference to the IMoniker interface on a moniker to append to the end of the current moniker.
-            fOnlyIfNotGeneric: true to indicate that the caller requires a nongeneric composition. The operation proceeds only if pmkRight is a moniker class that the current moniker can combine with in some way other than forming a generic composite. false to indicate that the method can create a generic composite if necessary.
+            fOnlyIfNotGeneric: true to indicate that the caller requires a nongeneric composition. The operation proceeds only if pmkRight is a moniker class that the current moniker can combine 
+             with in some way other than forming a generic composite. false to indicate that the method can create a generic composite if necessary.
         """
         pass
 
@@ -1402,7 +1425,10 @@ class IMoniker:
         """
         ParseDisplayName(self: IMoniker, pbc: IBindCtx, pmkToLeft: IMoniker, pszDisplayName: str) -> (int, IMoniker)
         
-            Reads as many characters of the specified display name as the System.Runtime.InteropServices.ComTypes.IMoniker.ParseDisplayName(System.Runtime.InteropServices.ComTypes.IBindCtx,System.Runtime.InteropServices.ComTypes.IMoniker,System.String,System.Int32@,System.Runtime.InteropServices.ComTypes.IMoniker@) understands and builds a moniker corresponding to the portion read.
+            Reads as many characters of the specified display name as the 
+             System.Runtime.InteropServices.ComTypes.IMoniker.ParseDisplayName(System.Runtime.InteropServices.ComTypes.IBindCtx,System.Runtime.InteropServices.ComTypes.IMoniker,Syst
+             em.String,System.Int32@,System.Runtime.InteropServices.ComTypes.IMoniker@) understands and builds a moniker corresponding to the portion read.
+        
         
             pbc: A reference to the bind context to use in this binding operation.
             pmkToLeft: A reference to the moniker that has been built from the display name up to this point.
@@ -1446,9 +1472,8 @@ class IMoniker:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IMoniker()
+    Instance = IMoniker()
+    """hardcoded/returns an instance of the class"""
 
 class IMPLTYPEFLAGS:
     """
@@ -1495,9 +1520,8 @@ class IMPLTYPEFLAGS:
     IMPLTYPEFLAG_FSOURCE = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IMPLTYPEFLAGS()
+    Instance = IMPLTYPEFLAGS()
+    """hardcoded/returns an instance of the class"""
 
 class INVOKEKIND:
     """
@@ -1544,9 +1568,8 @@ class INVOKEKIND:
     INVOKE_PROPERTYPUTREF = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return INVOKEKIND()
+    Instance = INVOKEKIND()
+    """hardcoded/returns an instance of the class"""
 
 class IPersistFile:
     """ Provides the managed definition of the IPersistFile interface, with functionality from IPersist. """
@@ -1608,9 +1631,8 @@ class IPersistFile:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IPersistFile()
+    Instance = IPersistFile()
+    """hardcoded/returns an instance of the class"""
 
 class IRunningObjectTable:
     """ Provides the managed definition of the IRunningObjectTable interface. """
@@ -1675,7 +1697,8 @@ class IRunningObjectTable:
             grfFlags: Specifies whether the Running Object Table's (ROT) reference to punkObject is weak or strong, and controls access to the object through its entry in the ROT.
             punkObject: A reference to the object being registered as running.
             pmkObjectName: A reference to the moniker that identifies punkObject.
-            Returns: A value that can be used to identify this ROT entry in subsequent calls to System.Runtime.InteropServices.ComTypes.IRunningObjectTable.Revoke(System.Int32) or System.Runtime.InteropServices.ComTypes.IRunningObjectTable.NoteChangeTime(System.Int32,System.Runtime.InteropServices.ComTypes.FILETIME@).
+            Returns: A value that can be used to identify this ROT entry in subsequent calls to System.Runtime.InteropServices.ComTypes.IRunningObjectTable.Revoke(System.Int32) or 
+             System.Runtime.InteropServices.ComTypes.IRunningObjectTable.NoteChangeTime(System.Int32,System.Runtime.InteropServices.ComTypes.FILETIME@).
         """
         pass
 
@@ -1692,9 +1715,8 @@ class IRunningObjectTable:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IRunningObjectTable()
+    Instance = IRunningObjectTable()
+    """hardcoded/returns an instance of the class"""
 
 class IStream:
     """ Provides the managed definition of the IStream interface, with ISequentialStream functionality. """
@@ -1789,7 +1811,9 @@ class IStream:
     def UnlockRegion(self, libOffset, cb, dwLockType):
         """
         UnlockRegion(self: IStream, libOffset: Int64, cb: Int64, dwLockType: int)
-            Removes the access restriction on a range of bytes previously restricted with the System.Runtime.InteropServices.ComTypes.IStream.LockRegion(System.Int64,System.Int64,System.Int32) method.
+            Removes the access restriction on a range of bytes previously restricted with the 
+             System.Runtime.InteropServices.ComTypes.IStream.LockRegion(System.Int64,System.Int64,System.Int32) method.
+        
         
             libOffset: The byte offset for the beginning of the range.
             cb: The length, in bytes, of the range to restrict.
@@ -1804,7 +1828,8 @@ class IStream:
         
             pv: The buffer to write this stream to.
             cb: The number of bytes to write to the stream.
-            pcbWritten: On successful return, contains the actual number of bytes written to the stream object. If the caller sets this pointer to System.IntPtr.Zero, this method does not provide the actual number of bytes written.
+            pcbWritten: On successful return, contains the actual number of bytes written to the stream object. If the caller sets this pointer to System.IntPtr.Zero, this method does not 
+             provide the actual number of bytes written.
         """
         pass
 
@@ -1812,9 +1837,8 @@ class IStream:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IStream()
+    Instance = IStream()
+    """hardcoded/returns an instance of the class"""
 
 class ITypeComp:
     """ Provides the managed definition of the ITypeComp interface. """
@@ -1845,9 +1869,8 @@ class ITypeComp:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeComp()
+    Instance = ITypeComp()
+    """hardcoded/returns an instance of the class"""
 
 class ITypeInfo:
     """ Provides the managed definition of the Component Automation ITypeInfo interface. """
@@ -2012,7 +2035,9 @@ class ITypeInfo:
             memid: A value that identifies the interface member.
             wFlags: Flags that describe the context of the invoke call.
             pDispParams: A reference to a structure that contains an array of arguments, an array of DISPIDs for named arguments, and counts of the number of elements in each array.
-            pVarResult: A reference to the location at which the result is to be stored. If wFlags specifies DISPATCH_PROPERTYPUT or DISPATCH_PROPERTYPUTREF, pVarResult is ignored. Set to null if no result is desired.
+            pVarResult: A reference to the location at which the result is to be stored. If wFlags specifies DISPATCH_PROPERTYPUT or DISPATCH_PROPERTYPUTREF, pVarResult is ignored. Set to 
+             null if no result is desired.
+        
             pExcepInfo: A pointer to an exception information structure, which is filled in only if DISP_E_EXCEPTION is returned.
         """
         pass
@@ -2020,7 +2045,9 @@ class ITypeInfo:
     def ReleaseFuncDesc(self, pFuncDesc):
         """
         ReleaseFuncDesc(self: ITypeInfo, pFuncDesc: IntPtr)
-            Releases a System.Runtime.InteropServices.FUNCDESC structure previously returned by the System.Runtime.InteropServices.ComTypes.ITypeInfo.GetFuncDesc(System.Int32,System.IntPtr@) method.
+            Releases a System.Runtime.InteropServices.FUNCDESC structure previously returned by the 
+             System.Runtime.InteropServices.ComTypes.ITypeInfo.GetFuncDesc(System.Int32,System.IntPtr@) method.
+        
         
             pFuncDesc: A reference to the FUNCDESC structure to release.
         """
@@ -2029,7 +2056,9 @@ class ITypeInfo:
     def ReleaseTypeAttr(self, pTypeAttr):
         """
         ReleaseTypeAttr(self: ITypeInfo, pTypeAttr: IntPtr)
-            Releases a System.Runtime.InteropServices.TYPEATTR structure previously returned by the System.Runtime.InteropServices.ComTypes.ITypeInfo.GetTypeAttr(System.IntPtr@) method.
+            Releases a System.Runtime.InteropServices.TYPEATTR structure previously returned by the System.Runtime.InteropServices.ComTypes.ITypeInfo.GetTypeAttr(System.IntPtr@) 
+             method.
+        
         
             pTypeAttr: A reference to the TYPEATTR structure to release.
         """
@@ -2048,9 +2077,8 @@ class ITypeInfo:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeInfo()
+    Instance = ITypeInfo()
+    """hardcoded/returns an instance of the class"""
 
 class ITypeInfo2:
     """ Provides the managed definition of the ITypeInfo2 interface. """
@@ -2171,7 +2199,9 @@ class ITypeInfo2:
         """
         GetDocumentation2(self: ITypeInfo2, memid: int) -> (str, int, str)
         
-            Retrieves the documentation string, the complete Help file name and path, the localization context to use, and the context ID for the library Help topic in the Help file.
+            Retrieves the documentation string, the complete Help file name and path, the localization context to use, and the context ID for the library Help topic in the Help 
+             file.
+        
         
             memid: The member identifier for the type description.
         """
@@ -2367,7 +2397,9 @@ class ITypeInfo2:
             memid: Identifier of the interface member.
             wFlags: Flags describing the context of the invoke call.
             pDispParams: A reference to a structure that contains an array of arguments, an array of DISPIDs for named arguments, and counts of the number of elements in each array.
-            pVarResult: A reference to the location at which the result is to be stored. If wFlags specifies DISPATCH_PROPERTYPUT or DISPATCH_PROPERTYPUTREF, pVarResult is ignored. Set to null if no result is desired.
+            pVarResult: A reference to the location at which the result is to be stored. If wFlags specifies DISPATCH_PROPERTYPUT or DISPATCH_PROPERTYPUTREF, pVarResult is ignored. Set to 
+             null if no result is desired.
+        
             pExcepInfo: A pointer to an exception information structure, which is filled in only if DISP_E_EXCEPTION is returned.
         """
         pass
@@ -2375,7 +2407,9 @@ class ITypeInfo2:
     def ReleaseFuncDesc(self, pFuncDesc):
         """
         ReleaseFuncDesc(self: ITypeInfo2, pFuncDesc: IntPtr)
-            Releases a System.Runtime.InteropServices.FUNCDESC structure previously returned by the System.Runtime.InteropServices.ComTypes.ITypeInfo.GetFuncDesc(System.Int32,System.IntPtr@) method.
+            Releases a System.Runtime.InteropServices.FUNCDESC structure previously returned by the 
+             System.Runtime.InteropServices.ComTypes.ITypeInfo.GetFuncDesc(System.Int32,System.IntPtr@) method.
+        
         
             pFuncDesc: A reference to the FUNCDESC structure to release.
         """
@@ -2384,7 +2418,9 @@ class ITypeInfo2:
     def ReleaseTypeAttr(self, pTypeAttr):
         """
         ReleaseTypeAttr(self: ITypeInfo2, pTypeAttr: IntPtr)
-            Releases a System.Runtime.InteropServices.TYPEATTR structure previously returned by the System.Runtime.InteropServices.ComTypes.ITypeInfo.GetTypeAttr(System.IntPtr@) method.
+            Releases a System.Runtime.InteropServices.TYPEATTR structure previously returned by the System.Runtime.InteropServices.ComTypes.ITypeInfo.GetTypeAttr(System.IntPtr@) 
+             method.
+        
         
             pTypeAttr: A reference to the TYPEATTR structure to release.
         """
@@ -2403,9 +2439,8 @@ class ITypeInfo2:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeInfo2()
+    Instance = ITypeInfo2()
+    """hardcoded/returns an instance of the class"""
 
 class ITypeLib:
     """ Provides the managed definition of the ITypeLib interface. """
@@ -2417,7 +2452,9 @@ class ITypeLib:
         
             szNameBuf: The name to search for. This is an in/out parameter.
             lHashVal: A hash value to speed up the search, computed by the LHashValOfNameSys function. If lHashVal is 0, a value is computed.
-            pcFound: On entry, indicates how many instances to look for. For example, pcFound = 1 can be called to find the first occurrence. The search stops when one instance is found.On exit, indicates the number of instances that were found. If the in and out values of pcFound are identical, there might be more type descriptions that contain the name.
+            pcFound: On entry, indicates how many instances to look for. For example, pcFound = 1 can be called to find the first occurrence. The search stops when one instance is found.On 
+             exit, indicates the number of instances that were found. If the in and out values of pcFound are identical, there might be more type descriptions that contain the 
+             name.
         """
         pass
 
@@ -2501,7 +2538,9 @@ class ITypeLib:
     def ReleaseTLibAttr(self, pTLibAttr):
         """
         ReleaseTLibAttr(self: ITypeLib, pTLibAttr: IntPtr)
-            Releases the System.Runtime.InteropServices.TYPELIBATTR structure originally obtained from the System.Runtime.InteropServices.ComTypes.ITypeLib.GetLibAttr(System.IntPtr@) method.
+            Releases the System.Runtime.InteropServices.TYPELIBATTR structure originally obtained from the 
+             System.Runtime.InteropServices.ComTypes.ITypeLib.GetLibAttr(System.IntPtr@) method.
+        
         
             pTLibAttr: The TLIBATTR structure to release.
         """
@@ -2511,9 +2550,8 @@ class ITypeLib:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeLib()
+    Instance = ITypeLib()
+    """hardcoded/returns an instance of the class"""
 
 class ITypeLib2:
     """ Provides a managed definition of the ITypeLib2 interface. """
@@ -2525,7 +2563,9 @@ class ITypeLib2:
         
             szNameBuf: The name to search for.
             lHashVal: A hash value to speed up the search, computed by the LHashValOfNameSys function. If lHashVal is 0, a value is computed.
-            pcFound: On entry, a value, passed by reference, that indicates how many instances to look for. For example, pcFound = 1 can be called to find the first occurrence. The search stops when one instance is found.On exit, indicates the number of instances that were found. If the in and out values of pcFound are identical, there might be more type descriptions that contain the name.
+            pcFound: On entry, a value, passed by reference, that indicates how many instances to look for. For example, pcFound = 1 can be called to find the first occurrence. The search 
+             stops when one instance is found.On exit, indicates the number of instances that were found. If the in and out values of pcFound are identical, there might be more 
+             type descriptions that contain the name.
         """
         pass
 
@@ -2562,7 +2602,9 @@ class ITypeLib2:
         """
         GetDocumentation2(self: ITypeLib2, index: int) -> (str, int, str)
         
-            Retrieves the library's documentation string, the complete Help file name and path, the localization context to use, and the context ID for the library Help topic in the Help file.
+            Retrieves the library's documentation string, the complete Help file name and path, the localization context to use, and the context ID for the library Help topic in 
+             the Help file.
+        
         
             index: An index of the type description whose documentation is to be returned; if index is -1, the documentation for the library is returned.
         """
@@ -2648,7 +2690,9 @@ class ITypeLib2:
     def ReleaseTLibAttr(self, pTLibAttr):
         """
         ReleaseTLibAttr(self: ITypeLib2, pTLibAttr: IntPtr)
-            Releases the System.Runtime.InteropServices.TYPELIBATTR structure originally obtained from the System.Runtime.InteropServices.ComTypes.ITypeLib.GetLibAttr(System.IntPtr@) method.
+            Releases the System.Runtime.InteropServices.TYPELIBATTR structure originally obtained from the 
+             System.Runtime.InteropServices.ComTypes.ITypeLib.GetLibAttr(System.IntPtr@) method.
+        
         
             pTLibAttr: The TLIBATTR structure to release.
         """
@@ -2658,9 +2702,8 @@ class ITypeLib2:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ITypeLib2()
+    Instance = ITypeLib2()
+    """hardcoded/returns an instance of the class"""
 
 class LIBFLAGS:
     """
@@ -2707,18 +2750,16 @@ class LIBFLAGS:
     LIBFLAG_FRESTRICTED = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LIBFLAGS()
+    Instance = LIBFLAGS()
+    """hardcoded/returns an instance of the class"""
 
 class PARAMDESC():
     """ Contains information about how to transfer a structure element, parameter, or function return value between processes. """
     lpVarValue = None
     wParamFlags = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PARAMDESC()
+    Instance = PARAMDESC()
+    """hardcoded/returns an instance of the class"""
 
 class PARAMFLAG:
     """
@@ -2769,9 +2810,8 @@ class PARAMFLAG:
     PARAMFLAG_NONE = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PARAMFLAG()
+    Instance = PARAMFLAG()
+    """hardcoded/returns an instance of the class"""
 
 class STATDATA():
     """ Provides the managed definition of the STATDATA structure. """
@@ -2780,9 +2820,8 @@ class STATDATA():
     connection = None
     formatetc = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return STATDATA()
+    Instance = STATDATA()
+    """hardcoded/returns an instance of the class"""
 
 class STATSTG():
     """ Contains statistical information about an open storage, stream, or byte-array object. """
@@ -2798,9 +2837,8 @@ class STATSTG():
     reserved = None
     type = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return STATSTG()
+    Instance = STATSTG()
+    """hardcoded/returns an instance of the class"""
 
 class STGMEDIUM():
     """ Provides the managed definition of the STGMEDIUM structure. """
@@ -2808,9 +2846,8 @@ class STGMEDIUM():
     tymed = None
     unionmember = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return STGMEDIUM()
+    Instance = STGMEDIUM()
+    """hardcoded/returns an instance of the class"""
 
 class SYSKIND:
     """
@@ -2857,9 +2894,8 @@ class SYSKIND:
     SYS_WIN64 = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SYSKIND()
+    Instance = SYSKIND()
+    """hardcoded/returns an instance of the class"""
 
 class TYMED:
     """
@@ -2910,9 +2946,8 @@ class TYMED:
     TYMED_NULL = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TYMED()
+    Instance = TYMED()
+    """hardcoded/returns an instance of the class"""
 
 class TYPEATTR():
     """ Contains attributes of a UCOMITypeInfo. """
@@ -2936,18 +2971,16 @@ class TYPEATTR():
     wMinorVerNum = None
     wTypeFlags = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TYPEATTR()
+    Instance = TYPEATTR()
+    """hardcoded/returns an instance of the class"""
 
 class TYPEDESC():
     """ Describes the type of a variable, return type of a function, or the type of a function parameter. """
     lpValue = None
     vt = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TYPEDESC()
+    Instance = TYPEDESC()
+    """hardcoded/returns an instance of the class"""
 
 class TYPEFLAGS:
     """
@@ -3005,9 +3038,8 @@ class TYPEFLAGS:
     TYPEFLAG_FREVERSEBIND = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TYPEFLAGS()
+    Instance = TYPEFLAGS()
+    """hardcoded/returns an instance of the class"""
 
 class TYPEKIND:
     """
@@ -3059,9 +3091,8 @@ class TYPEKIND:
     TKIND_UNION = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TYPEKIND()
+    Instance = TYPEKIND()
+    """hardcoded/returns an instance of the class"""
 
 class TYPELIBATTR():
     """ Identifies a particular type library and provides localization support for member names. """
@@ -3072,9 +3103,8 @@ class TYPELIBATTR():
     wMajorVerNum = None
     wMinorVerNum = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TYPELIBATTR()
+    Instance = TYPELIBATTR()
+    """hardcoded/returns an instance of the class"""
 
 class VARDESC():
     """ Describes a variable, constant, or data member. """
@@ -3086,9 +3116,8 @@ class VARDESC():
     varkind = None
     wVarFlags = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return VARDESC()
+    Instance = VARDESC()
+    """hardcoded/returns an instance of the class"""
 
 class VARFLAGS:
     """
@@ -3144,9 +3173,8 @@ class VARFLAGS:
     VARFLAG_FSOURCE = None
     VARFLAG_FUIDEFAULT = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return VARFLAGS()
+    Instance = VARFLAGS()
+    """hardcoded/returns an instance of the class"""
 
 class VARKIND:
     """
@@ -3193,7 +3221,6 @@ class VARKIND:
     VAR_PERINSTANCE = None
     VAR_STATIC = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return VARKIND()
+    Instance = VARKIND()
+    """hardcoded/returns an instance of the class"""
 

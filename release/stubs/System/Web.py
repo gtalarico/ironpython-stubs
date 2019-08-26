@@ -111,9 +111,8 @@ Set: Level(self: AspNetHostingPermission) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AspNetHostingPermission()
+    Instance = AspNetHostingPermission()
+    """hardcoded/returns an instance of the class"""
 
 class AspNetHostingPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -151,9 +150,8 @@ Set: Level(self: AspNetHostingPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AspNetHostingPermissionAttribute()
+    Instance = AspNetHostingPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class AspNetHostingPermissionLevel:
     """
@@ -202,7 +200,6 @@ class AspNetHostingPermissionLevel:
     Unrestricted = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AspNetHostingPermissionLevel()
+    Instance = AspNetHostingPermissionLevel()
+    """hardcoded/returns an instance of the class"""
 

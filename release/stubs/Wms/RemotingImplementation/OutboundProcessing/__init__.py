@@ -19,9 +19,8 @@ class ProcessHistoricShipment():
         'Process',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessHistoricShipment()
+    Instance = ProcessHistoricShipment()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

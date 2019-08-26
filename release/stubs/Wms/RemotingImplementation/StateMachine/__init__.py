@@ -18,9 +18,8 @@ class State():
         """ Run(self: State, *args: Array[object]) -> Array[object] """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return State()
+    Instance = State()
+    """hardcoded/returns an instance of the class"""
 
 class StateMachine():
     """
@@ -39,9 +38,8 @@ class StateMachine():
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StateMachine()
+    Instance = StateMachine()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

@@ -45,7 +45,6 @@ Get: LifetimeString(self: AppDomainInformation) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AppDomainInformation()
+    Instance = AppDomainInformation()
+    """hardcoded/returns an instance of the class"""
 

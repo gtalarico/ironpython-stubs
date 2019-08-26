@@ -37,9 +37,8 @@ class DataFlowObjectHelper():
         'LogDataFlowResult',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DataFlowObjectHelper()
+    Instance = DataFlowObjectHelper()
+    """hardcoded/returns an instance of the class"""
 
 class DecimalExtensions():
     # no doc
@@ -52,9 +51,8 @@ class DecimalExtensions():
         'FormatDecimal',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DecimalExtensions()
+    Instance = DecimalExtensions()
+    """hardcoded/returns an instance of the class"""
 
 class GlobalizationHelper():
     # no doc
@@ -85,9 +83,8 @@ class GlobalizationHelper():
         'SetGlobalizationSettings',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GlobalizationHelper()
+    Instance = GlobalizationHelper()
+    """hardcoded/returns an instance of the class"""
 
 class LabelHelper():
     # no doc
@@ -109,9 +106,8 @@ class LabelHelper():
         'RenderLabel',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LabelHelper()
+    Instance = LabelHelper()
+    """hardcoded/returns an instance of the class"""
 
 class OrderMatchesCustomerValidator():
     """ OrderMatchesCustomerValidator() """
@@ -134,9 +130,8 @@ Set: OrderMatchesCustomerDelegate(self: OrderMatchesCustomerValidator) = value
 
     OnOrderMatchesCustomerDelegate = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OrderMatchesCustomerValidator()
+    Instance = OrderMatchesCustomerValidator()
+    """hardcoded/returns an instance of the class"""
 
 class SettingsHelper:
     """ SettingsHelper(settingsObject: object) """
@@ -181,9 +176,8 @@ class SettingsHelper:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SettingsHelper()
+    Instance = SettingsHelper()
+    """hardcoded/returns an instance of the class"""
 
 class StringHelpers():
     # no doc
@@ -217,7 +211,6 @@ class StringHelpers():
         'RemoveNonAsciiCharacters',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StringHelpers()
+    Instance = StringHelpers()
+    """hardcoded/returns an instance of the class"""
 

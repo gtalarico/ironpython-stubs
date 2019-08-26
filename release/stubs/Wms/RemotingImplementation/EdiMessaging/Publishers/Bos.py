@@ -24,9 +24,8 @@ class BosGenerateDptmntDatFileMessagePublisher(MessagePublisherBase):
         """ __new__(cls: type, offlineScanning: IOfflineScanning, layoutFactory: IFixedLengthLayoutFactory[BosDepartment]) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosGenerateDptmntDatFileMessagePublisher()
+    Instance = BosGenerateDptmntDatFileMessagePublisher()
+    """hardcoded/returns an instance of the class"""
 
 class BosGenerateKanbanDatFilesMessagePublisher(MessagePublisherBase):
     """ BosGenerateKanbanDatFilesMessagePublisher(offlineScanning: IOfflineScanning, layoutFactoryBarcodes: IFixedLengthLayoutFactory[BosKanbanBarcode], layoutFactoryProducts: IFixedLengthLayoutFactory[BosKanbanProduct]) """
@@ -43,9 +42,8 @@ class BosGenerateKanbanDatFilesMessagePublisher(MessagePublisherBase):
         """ __new__(cls: type, offlineScanning: IOfflineScanning, layoutFactoryBarcodes: IFixedLengthLayoutFactory[BosKanbanBarcode], layoutFactoryProducts: IFixedLengthLayoutFactory[BosKanbanProduct]) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosGenerateKanbanDatFilesMessagePublisher()
+    Instance = BosGenerateKanbanDatFilesMessagePublisher()
+    """hardcoded/returns an instance of the class"""
 
 class BosGenerateMetaDatFileMessagePublisher(MessagePublisherBase):
     """ BosGenerateMetaDatFileMessagePublisher(offlineScanning: IOfflineScanning, layoutFactory: IFixedLengthLayoutFactory[BosMeta]) """
@@ -62,9 +60,8 @@ class BosGenerateMetaDatFileMessagePublisher(MessagePublisherBase):
         """ __new__(cls: type, offlineScanning: IOfflineScanning, layoutFactory: IFixedLengthLayoutFactory[BosMeta]) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosGenerateMetaDatFileMessagePublisher()
+    Instance = BosGenerateMetaDatFileMessagePublisher()
+    """hardcoded/returns an instance of the class"""
 
 class BosGenerateProductDatFilesPublisher(MessagePublisherBase):
     """ BosGenerateProductDatFilesPublisher(general: General, offlineScanning: IOfflineScanning, layoutFactoryItem: IFixedLengthLayoutFactory[BosProduct], layoutFactoryItemIndexFactory: IFixedLengthLayoutFactory[BosProductIndex]) """
@@ -81,9 +78,8 @@ class BosGenerateProductDatFilesPublisher(MessagePublisherBase):
         """ __new__(cls: type, general: General, offlineScanning: IOfflineScanning, layoutFactoryItem: IFixedLengthLayoutFactory[BosProduct], layoutFactoryItemIndexFactory: IFixedLengthLayoutFactory[BosProductIndex]) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosGenerateProductDatFilesPublisher()
+    Instance = BosGenerateProductDatFilesPublisher()
+    """hardcoded/returns an instance of the class"""
 
 class BosGenerateUsersDatFileMessagePublisher(MessagePublisherBase):
     """ BosGenerateUsersDatFileMessagePublisher(general: General, offlineScanning: IOfflineScanning, layoutFactory: IFixedLengthLayoutFactory[UserWithSecrets]) """
@@ -100,7 +96,6 @@ class BosGenerateUsersDatFileMessagePublisher(MessagePublisherBase):
         """ __new__(cls: type, general: General, offlineScanning: IOfflineScanning, layoutFactory: IFixedLengthLayoutFactory[UserWithSecrets]) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosGenerateUsersDatFileMessagePublisher()
+    Instance = BosGenerateUsersDatFileMessagePublisher()
+    """hardcoded/returns an instance of the class"""
 

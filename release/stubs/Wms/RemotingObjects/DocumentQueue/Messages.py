@@ -51,9 +51,8 @@ Set: TimeStamp(self: ChangePrintJobStatusMessage) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ChangePrintJobStatusMessage()
+    Instance = ChangePrintJobStatusMessage()
+    """hardcoded/returns an instance of the class"""
 
 class GetStatusOfJobsMessage():
     """
@@ -72,9 +71,8 @@ Set: Jobs(self: GetStatusOfJobsMessage) = value
 
     Item = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetStatusOfJobsMessage()
+    Instance = GetStatusOfJobsMessage()
+    """hardcoded/returns an instance of the class"""
 
 class PrintJobDispatchedMessage():
     """
@@ -123,9 +121,8 @@ Set: TimeStamp(self: PrintJobDispatchedMessage) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobDispatchedMessage()
+    Instance = PrintJobDispatchedMessage()
+    """hardcoded/returns an instance of the class"""
 
 class StartPrintJobMessage():
     """
@@ -198,7 +195,6 @@ Set: TimeStamp(self: StartPrintJobMessage) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StartPrintJobMessage()
+    Instance = StartPrintJobMessage()
+    """hardcoded/returns an instance of the class"""
 

@@ -31,7 +31,6 @@ class MessageQueueProxyExtensions():
         'ToMessagingMessageWithoutBody',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessageQueueProxyExtensions()
+    Instance = MessageQueueProxyExtensions()
+    """hardcoded/returns an instance of the class"""
 

@@ -36,7 +36,6 @@ class RemotingInvalidVersionException(RemotingException):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingInvalidVersionException()
+    Instance = RemotingInvalidVersionException()
+    """hardcoded/returns an instance of the class"""
 

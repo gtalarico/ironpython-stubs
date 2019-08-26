@@ -60,9 +60,8 @@ Set: Shelve(self: WarehouseLayout) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return WarehouseLayout()
+    Instance = WarehouseLayout()
+    """hardcoded/returns an instance of the class"""
 
 class WarehouseLayouts(FindableList):
     """ WarehouseLayouts() """
@@ -85,9 +84,8 @@ class WarehouseLayouts(FindableList):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return WarehouseLayouts()
+    Instance = WarehouseLayouts()
+    """hardcoded/returns an instance of the class"""
 
 class WarehouseLayoutSettingFilter():
     """
@@ -109,9 +107,8 @@ class WarehouseLayoutSettingFilter():
     Id = None
     SearchText = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return WarehouseLayoutSettingFilter()
+    Instance = WarehouseLayoutSettingFilter()
+    """hardcoded/returns an instance of the class"""
 
 class WarehouseLayoutSettings(FindableList):
     """ WarehouseLayoutSettings() """
@@ -137,9 +134,8 @@ class WarehouseLayoutSettings(FindableList):
     DisplayMember = 'WarehouseCode'
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return WarehouseLayoutSettings()
+    Instance = WarehouseLayoutSettings()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

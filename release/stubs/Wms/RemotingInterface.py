@@ -32,7 +32,9 @@ class DataChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -61,7 +63,8 @@ class DataChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -77,9 +80,8 @@ class DataChangedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DataChangedEventHandler()
+    Instance = DataChangedEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class IClientService:
     # no doc
@@ -119,9 +121,8 @@ class IClientService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IClientService()
+    Instance = IClientService()
+    """hardcoded/returns an instance of the class"""
 
 class IDefaultItemLocationHelper:
     # no doc
@@ -141,9 +142,8 @@ class IDefaultItemLocationHelper:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDefaultItemLocationHelper()
+    Instance = IDefaultItemLocationHelper()
+    """hardcoded/returns an instance of the class"""
 
 class IDocumentQueue:
     # no doc
@@ -243,9 +243,8 @@ class IDocumentQueue:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDocumentQueue()
+    Instance = IDocumentQueue()
+    """hardcoded/returns an instance of the class"""
 
 class IGeneral:
     # no doc
@@ -1224,9 +1223,8 @@ Set: CurrentLicense(self: IGeneral) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IGeneral()
+    Instance = IGeneral()
+    """hardcoded/returns an instance of the class"""
 
 class IInbound:
     # no doc
@@ -1446,9 +1444,8 @@ class IInbound:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IInbound()
+    Instance = IInbound()
+    """hardcoded/returns an instance of the class"""
 
 class IInventory:
     # no doc
@@ -1815,9 +1812,8 @@ class IInventory:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IInventory()
+    Instance = IInventory()
+    """hardcoded/returns an instance of the class"""
 
 class IMessaging:
     # no doc
@@ -1893,9 +1889,8 @@ class IMessaging:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IMessaging()
+    Instance = IMessaging()
+    """hardcoded/returns an instance of the class"""
 
 class INotificationCenter:
     # no doc
@@ -1943,9 +1938,8 @@ class INotificationCenter:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return INotificationCenter()
+    Instance = INotificationCenter()
+    """hardcoded/returns an instance of the class"""
 
 class INotificationSummary:
     # no doc
@@ -1985,9 +1979,8 @@ class INotificationSummary:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return INotificationSummary()
+    Instance = INotificationSummary()
+    """hardcoded/returns an instance of the class"""
 
 class INumberGeneration:
     # no doc
@@ -2031,9 +2024,8 @@ class INumberGeneration:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return INumberGeneration()
+    Instance = INumberGeneration()
+    """hardcoded/returns an instance of the class"""
 
 class IOfflineScanning:
     # no doc
@@ -2085,9 +2077,8 @@ class IOfflineScanning:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IOfflineScanning()
+    Instance = IOfflineScanning()
+    """hardcoded/returns an instance of the class"""
 
 class IOutbound:
     # no doc
@@ -2519,9 +2510,8 @@ class IOutbound:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IOutbound()
+    Instance = IOutbound()
+    """hardcoded/returns an instance of the class"""
 
 class IPrinting:
     # no doc
@@ -2545,9 +2535,8 @@ class IPrinting:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IPrinting()
+    Instance = IPrinting()
+    """hardcoded/returns an instance of the class"""
 
 class IRemotePublishing:
     # no doc
@@ -2571,7 +2560,6 @@ class IRemotePublishing:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IRemotePublishing()
+    Instance = IRemotePublishing()
+    """hardcoded/returns an instance of the class"""
 

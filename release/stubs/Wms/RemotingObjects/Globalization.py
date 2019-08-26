@@ -45,9 +45,8 @@ Set: Value(self: SaveTranslationArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SaveTranslationArgs()
+    Instance = SaveTranslationArgs()
+    """hardcoded/returns an instance of the class"""
 
 class Translation():
     """ Translation() """
@@ -98,9 +97,8 @@ Set: ResourseSet(self: Translation) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Translation()
+    Instance = Translation()
+    """hardcoded/returns an instance of the class"""
 
 class Translations(List):
     """ Translations() """
@@ -138,7 +136,6 @@ class Translations(List):
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Translations()
+    Instance = Translations()
+    """hardcoded/returns an instance of the class"""
 

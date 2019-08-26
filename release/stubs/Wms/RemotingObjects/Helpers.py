@@ -25,7 +25,6 @@ class InstanceHelpers():
         'SetInstancePropertiesByDictionaryValue',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InstanceHelpers()
+    Instance = InstanceHelpers()
+    """hardcoded/returns an instance of the class"""
 

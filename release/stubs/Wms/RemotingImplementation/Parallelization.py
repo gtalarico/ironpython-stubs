@@ -19,9 +19,8 @@ class Parallel():
         'ForEach',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Parallel()
+    Instance = Parallel()
+    """hardcoded/returns an instance of the class"""
 
 class Sequential():
     # no doc
@@ -34,7 +33,6 @@ class Sequential():
         'ForEach',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Sequential()
+    Instance = Sequential()
+    """hardcoded/returns an instance of the class"""
 

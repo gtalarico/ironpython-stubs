@@ -64,9 +64,8 @@ class AnswerOptionsEnum:
     value__ = None
     Yes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AnswerOptionsEnum()
+    Instance = AnswerOptionsEnum()
+    """hardcoded/returns an instance of the class"""
 
 class AnswerOptionsEnumHelper():
     """ AnswerOptionsEnumHelper() """
@@ -85,9 +84,8 @@ class AnswerOptionsEnumHelper():
         """ IsAnswerAllowed(PossibleAnswers: int, Answer: AnswerOptionsEnum) -> bool """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AnswerOptionsEnumHelper()
+    Instance = AnswerOptionsEnumHelper()
+    """hardcoded/returns an instance of the class"""
 
 class IFindableList:
     # no doc
@@ -131,9 +129,8 @@ class IFindableList:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IFindableList()
+    Instance = IFindableList()
+    """hardcoded/returns an instance of the class"""
 
 class Answers(FindableList):
     """ Answers() """
@@ -196,9 +193,8 @@ class Answers(FindableList):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Answers()
+    Instance = Answers()
+    """hardcoded/returns an instance of the class"""
 
 class BatchInfo():
     """
@@ -238,9 +234,8 @@ Set: Text(self: BatchInfo) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchInfo()
+    Instance = BatchInfo()
+    """hardcoded/returns an instance of the class"""
 
 class ChangeBarcodeArgs():
     """
@@ -284,9 +279,8 @@ Set: ItemCode(self: ChangeBarcodeArgs) = value
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ChangeBarcodeArgs()
+    Instance = ChangeBarcodeArgs()
+    """hardcoded/returns an instance of the class"""
 
 class DataBindingTypes:
     """ enum DataBindingTypes, values: DisplayMember (1), UniqueId (2), ValueMember (0) """
@@ -328,9 +322,8 @@ class DataBindingTypes:
     ValueMember = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DataBindingTypes()
+    Instance = DataBindingTypes()
+    """hardcoded/returns an instance of the class"""
 
 class DbObject:
     """  """
@@ -378,9 +371,8 @@ Set: ModifiedOn(self: DbObject) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DbObject()
+    Instance = DbObject()
+    """hardcoded/returns an instance of the class"""
 
 class Device(DbObject):
     """ Device() """
@@ -424,9 +416,8 @@ Set: Type(self: Device) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Device()
+    Instance = Device()
+    """hardcoded/returns an instance of the class"""
 
 class DeviceInformation():
     """
@@ -482,9 +473,8 @@ Set: Type(self: DeviceInformation) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DeviceInformation()
+    Instance = DeviceInformation()
+    """hardcoded/returns an instance of the class"""
 
 class Devices(FindableList):
     """ Devices() """
@@ -507,9 +497,8 @@ class Devices(FindableList):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Devices()
+    Instance = Devices()
+    """hardcoded/returns an instance of the class"""
 
 class DeviceTypesEnum:
     """ enum DeviceTypesEnum, values: Handheld (2), Other (0), Portal (3), Terminal (1) """
@@ -552,9 +541,8 @@ class DeviceTypesEnum:
     Terminal = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DeviceTypesEnum()
+    Instance = DeviceTypesEnum()
+    """hardcoded/returns an instance of the class"""
 
 class Error():
     """
@@ -592,9 +580,8 @@ Get: Text(self: Error) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Error()
+    Instance = Error()
+    """hardcoded/returns an instance of the class"""
 
 class Errors(List):
     """ Errors() """
@@ -629,9 +616,8 @@ class Errors(List):
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Errors()
+    Instance = Errors()
+    """hardcoded/returns an instance of the class"""
 
 class FindableList(List):
     """
@@ -762,9 +748,8 @@ Get: PreserveState(self: FindableList[T]) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FindableList()
+    Instance = FindableList()
+    """hardcoded/returns an instance of the class"""
 
 class GetLogLinesArgs():
     """ GetLogLinesArgs() """
@@ -841,9 +826,8 @@ Set: Zone(self: GetLogLinesArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetLogLinesArgs()
+    Instance = GetLogLinesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryFilterBase():
     """  """
@@ -870,9 +854,8 @@ Set: TimeSpan(self: HistoryFilterBase) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryFilterBase()
+    Instance = HistoryFilterBase()
+    """hardcoded/returns an instance of the class"""
 
 class IDbObject:
     # no doc
@@ -913,9 +896,8 @@ Set: ModifiedOn(self: IDbObject) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IDbObject()
+    Instance = IDbObject()
+    """hardcoded/returns an instance of the class"""
 
 class ImplementedFunctionalities():
     """ ImplementedFunctionalities() """
@@ -1143,9 +1125,8 @@ Get: ValidateOrders(self: ImplementedFunctionalities) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ImplementedFunctionalities()
+    Instance = ImplementedFunctionalities()
+    """hardcoded/returns an instance of the class"""
 
 class IPagedList:
     """  """
@@ -1162,9 +1143,8 @@ Set: TotalRowsMatched(self: IPagedList) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IPagedList()
+    Instance = IPagedList()
+    """hardcoded/returns an instance of the class"""
 
 class Items(FindableList):
     """
@@ -1199,9 +1179,8 @@ class Items(FindableList):
     DisplayMember = 'Description'
     ValueMember = 'Code'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Items()
+    Instance = Items()
+    """hardcoded/returns an instance of the class"""
 
 class IUniqueHashable:
     """  """
@@ -1213,9 +1192,8 @@ class IUniqueHashable:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IUniqueHashable()
+    Instance = IUniqueHashable()
+    """hardcoded/returns an instance of the class"""
 
 class License():
     """
@@ -1351,9 +1329,8 @@ Set: Warnings(self: License) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return License()
+    Instance = License()
+    """hardcoded/returns an instance of the class"""
 
 class LogLine(DbObject):
     """ LogLine() """
@@ -1509,9 +1486,8 @@ Set: Zone(self: LogLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LogLine()
+    Instance = LogLine()
+    """hardcoded/returns an instance of the class"""
 
 class Mapping():
     """
@@ -1550,9 +1526,8 @@ Set: Value(self: Mapping[TKey, TValue, TInfo]) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Mapping()
+    Instance = Mapping()
+    """hardcoded/returns an instance of the class"""
 
 class Mappings():
     """
@@ -1607,9 +1582,8 @@ class Mappings():
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Mappings()
+    Instance = Mappings()
+    """hardcoded/returns an instance of the class"""
 
 class OrderTypeEnum:
     """ enum OrderTypeEnum, values: Purchase (0), Replenishment (3), Rma (1), Rtv (4), Sales (2) """
@@ -1653,9 +1627,8 @@ class OrderTypeEnum:
     Sales = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OrderTypeEnum()
+    Instance = OrderTypeEnum()
+    """hardcoded/returns an instance of the class"""
 
 class PagedList(List):
     """
@@ -1700,9 +1673,8 @@ Set: TotalRowsMatched(self: PagedList[T]) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PagedList()
+    Instance = PagedList()
+    """hardcoded/returns an instance of the class"""
 
 class PagingParams():
     """
@@ -1771,9 +1743,8 @@ Set: Start(self: PagingParams) = value
     SortColumn = None
     SortDirection = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PagingParams()
+    Instance = PagingParams()
+    """hardcoded/returns an instance of the class"""
 
 class ProfilingLogEntries(FindableList):
     """ ProfilingLogEntries() """
@@ -1796,9 +1767,8 @@ class ProfilingLogEntries(FindableList):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProfilingLogEntries()
+    Instance = ProfilingLogEntries()
+    """hardcoded/returns an instance of the class"""
 
 class ProfilingUserNode():
     """
@@ -1842,9 +1812,8 @@ Set: UserName(self: ProfilingUserNode) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProfilingUserNode()
+    Instance = ProfilingUserNode()
+    """hardcoded/returns an instance of the class"""
 
 class ProfilingLogEntry(ProfilingUserNode):
     """ ProfilingLogEntry() """
@@ -1951,9 +1920,8 @@ Set: WindowsIdentity(self: ProfilingLogEntry) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProfilingLogEntry()
+    Instance = ProfilingLogEntry()
+    """hardcoded/returns an instance of the class"""
 
 class ProfilingUserNodes(FindableList):
     """ ProfilingUserNodes() """
@@ -1976,9 +1944,8 @@ class ProfilingUserNodes(FindableList):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProfilingUserNodes()
+    Instance = ProfilingUserNodes()
+    """hardcoded/returns an instance of the class"""
 
 class Question():
     """
@@ -2033,9 +2000,8 @@ Set: Text(self: Question) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Question()
+    Instance = Question()
+    """hardcoded/returns an instance of the class"""
 
 class QuestionConstants():
     """ QuestionConstants() """
@@ -2044,9 +2010,8 @@ class QuestionConstants():
     PreReceiptsSave = 'PreReceiptsSave'
     PrintRmaInvoice = 'PrintRmaInvoice'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return QuestionConstants()
+    Instance = QuestionConstants()
+    """hardcoded/returns an instance of the class"""
 
 class Questions(List):
     """ Questions() """
@@ -2101,9 +2066,8 @@ Get: CountNotAnswered(self: Questions) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Questions()
+    Instance = Questions()
+    """hardcoded/returns an instance of the class"""
 
 class RemotingException(Exception):
     """
@@ -2132,9 +2096,8 @@ class RemotingException(Exception):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingException()
+    Instance = RemotingException()
+    """hardcoded/returns an instance of the class"""
 
 class RemotingArgumentException(RemotingException):
     """
@@ -2163,9 +2126,8 @@ class RemotingArgumentException(RemotingException):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingArgumentException()
+    Instance = RemotingArgumentException()
+    """hardcoded/returns an instance of the class"""
 
 class RemotingDbException(RemotingException):
     """
@@ -2192,9 +2154,8 @@ class RemotingDbException(RemotingException):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingDbException()
+    Instance = RemotingDbException()
+    """hardcoded/returns an instance of the class"""
 
 class RemotingInsufficientRightsException(RemotingException):
     """
@@ -2223,9 +2184,8 @@ class RemotingInsufficientRightsException(RemotingException):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingInsufficientRightsException()
+    Instance = RemotingInsufficientRightsException()
+    """hardcoded/returns an instance of the class"""
 
 class RemotingLostErpHostException(RemotingException):
     """
@@ -2254,9 +2214,8 @@ class RemotingLostErpHostException(RemotingException):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingLostErpHostException()
+    Instance = RemotingLostErpHostException()
+    """hardcoded/returns an instance of the class"""
 
 class RemotingMessageException(RemotingException):
     """
@@ -2285,9 +2244,8 @@ class RemotingMessageException(RemotingException):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingMessageException()
+    Instance = RemotingMessageException()
+    """hardcoded/returns an instance of the class"""
 
 class RemotingSecurityViolationException(RemotingException):
     """
@@ -2314,9 +2272,8 @@ class RemotingSecurityViolationException(RemotingException):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RemotingSecurityViolationException()
+    Instance = RemotingSecurityViolationException()
+    """hardcoded/returns an instance of the class"""
 
 class Schedule():
     # no doc
@@ -2337,9 +2294,8 @@ class Schedule():
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Schedule()
+    Instance = Schedule()
+    """hardcoded/returns an instance of the class"""
 
 class SerializableDictionary(Dictionary):
     """
@@ -2387,9 +2343,8 @@ class SerializableDictionary(Dictionary):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SerializableDictionary()
+    Instance = SerializableDictionary()
+    """hardcoded/returns an instance of the class"""
 
 class ServerHealthEnum:
     """ enum ServerHealthEnum, values: DatabaseUpdateNeeded (4), DifferentHookVersions (5), InvalidConnection (2), InvalidLicense (1), NoDatabase (3), NotReady (6), NotRunning (7), Ok (0) """
@@ -2436,9 +2391,8 @@ class ServerHealthEnum:
     Ok = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ServerHealthEnum()
+    Instance = ServerHealthEnum()
+    """hardcoded/returns an instance of the class"""
 
 class Session():
     """ Session() """
@@ -2490,9 +2444,8 @@ Set: UserName(self: Session) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Session()
+    Instance = Session()
+    """hardcoded/returns an instance of the class"""
 
 class Sessions(FindableList):
     """ Sessions() """
@@ -2518,9 +2471,8 @@ class Sessions(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Number'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Sessions()
+    Instance = Sessions()
+    """hardcoded/returns an instance of the class"""
 
 class StateTransition():
     """ StateTransition[T](currentStatus: T, newStatus: T) """
@@ -2547,9 +2499,8 @@ class StateTransition():
     CurrentStatus = None
     NewStatus = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StateTransition()
+    Instance = StateTransition()
+    """hardcoded/returns an instance of the class"""
 
 class Tag(DbObject):
     """
@@ -2643,9 +2594,8 @@ Get: TargetAsString(self: Tag) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Tag()
+    Instance = Tag()
+    """hardcoded/returns an instance of the class"""
 
 class Tags(List):
     """
@@ -2688,9 +2638,8 @@ class Tags(List):
 
     TagsDelimiter = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Tags()
+    Instance = Tags()
+    """hardcoded/returns an instance of the class"""
 
 class TagTarget:
     """ enum TagTarget, values: Batch (2), NotSet (0), Order (1) """
@@ -2732,9 +2681,8 @@ class TagTarget:
     Order = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TagTarget()
+    Instance = TagTarget()
+    """hardcoded/returns an instance of the class"""
 
 class ThreadSafeList:
     """ ThreadSafeList[T]() """
@@ -2804,9 +2752,8 @@ Get: Count(self: ThreadSafeList[T]) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ThreadSafeList()
+    Instance = ThreadSafeList()
+    """hardcoded/returns an instance of the class"""
 
 class TimeFilterEnum:
     """ enum TimeFilterEnum, values: All (3), Today (0), Tomorrow (1), UpcomingWeek (2) """
@@ -2849,9 +2796,8 @@ class TimeFilterEnum:
     UpcomingWeek = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TimeFilterEnum()
+    Instance = TimeFilterEnum()
+    """hardcoded/returns an instance of the class"""
 
 class TimeFilterHistoryEnum:
     """ enum TimeFilterHistoryEnum, values: All (3), LastWeek (2), Today (0), Yesterday (1) """
@@ -2894,9 +2840,8 @@ class TimeFilterHistoryEnum:
     value__ = None
     Yesterday = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TimeFilterHistoryEnum()
+    Instance = TimeFilterHistoryEnum()
+    """hardcoded/returns an instance of the class"""
 
 class UiDataBindingTypeAttribute:
     """ UiDataBindingTypeAttribute(type: DataBindingTypes) """
@@ -2943,9 +2888,8 @@ Get: Type(self: UiDataBindingTypeAttribute) -> DataBindingTypes
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UiDataBindingTypeAttribute()
+    Instance = UiDataBindingTypeAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class UnitTypeEnum:
     """ enum UnitTypeEnum, values: Length (2), Other (1), Time (3), Unspecified (0), Weight (4) """
@@ -2989,9 +2933,8 @@ class UnitTypeEnum:
     value__ = None
     Weight = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UnitTypeEnum()
+    Instance = UnitTypeEnum()
+    """hardcoded/returns an instance of the class"""
 
 class User(DbObject):
     """ User() """
@@ -3078,9 +3021,8 @@ Set: Username(self: User) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return User()
+    Instance = User()
+    """hardcoded/returns an instance of the class"""
 
 class Users(List):
     """ Users() """
@@ -3106,9 +3048,8 @@ class Users(List):
     DisplayMember = 'FullName'
     ValueMember = 'UserId'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Users()
+    Instance = Users()
+    """hardcoded/returns an instance of the class"""
 
 class UserWithSecrets(User):
     """ UserWithSecrets() """
@@ -3129,9 +3070,8 @@ Set: Salt(self: UserWithSecrets) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UserWithSecrets()
+    Instance = UserWithSecrets()
+    """hardcoded/returns an instance of the class"""
 
 class Warning():
     """
@@ -3187,9 +3127,8 @@ Get: Text(self: Warning) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Warning()
+    Instance = Warning()
+    """hardcoded/returns an instance of the class"""
 
 class Warnings(List):
     """ Warnings() """
@@ -3240,9 +3179,8 @@ Get: CountNotIgnored(self: Warnings) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Warnings()
+    Instance = Warnings()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

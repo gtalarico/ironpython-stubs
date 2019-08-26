@@ -44,9 +44,8 @@ Set: TransportPackages(self: BaseState) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BaseState()
+    Instance = BaseState()
+    """hardcoded/returns an instance of the class"""
 
 class FinalizeState(BaseState):
     """ FinalizeState() """
@@ -58,7 +57,6 @@ class FinalizeState(BaseState):
         """ Run(self: FinalizeState, *args: Array[object]) -> Array[object] """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FinalizeState()
+    Instance = FinalizeState()
+    """hardcoded/returns an instance of the class"""
 

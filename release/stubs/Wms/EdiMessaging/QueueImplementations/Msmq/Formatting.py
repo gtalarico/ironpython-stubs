@@ -25,7 +25,6 @@ class MessageSerialization():
         'Serialize',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessageSerialization()
+    Instance = MessageSerialization()
+    """hardcoded/returns an instance of the class"""
 

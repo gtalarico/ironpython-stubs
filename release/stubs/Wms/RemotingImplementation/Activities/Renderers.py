@@ -70,7 +70,6 @@ Set: Total(self: MobileProgressBarRenderer) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MobileProgressBarRenderer()
+    Instance = MobileProgressBarRenderer()
+    """hardcoded/returns an instance of the class"""
 

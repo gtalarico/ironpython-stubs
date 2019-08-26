@@ -37,9 +37,8 @@ Set: Type(self: ColliBarcodeResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ColliBarcodeResult()
+    Instance = ColliBarcodeResult()
+    """hardcoded/returns an instance of the class"""
 
 class ValidateColliReferencesArgs():
     """
@@ -79,9 +78,8 @@ Set: Result(self: ValidateColliReferencesArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ValidateColliReferencesArgs()
+    Instance = ValidateColliReferencesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ValidateColliReferencesResult():
     """
@@ -109,7 +107,6 @@ Set: IsOuterReferenceValid(self: ValidateColliReferencesResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ValidateColliReferencesResult()
+    Instance = ValidateColliReferencesResult()
+    """hardcoded/returns an instance of the class"""
 

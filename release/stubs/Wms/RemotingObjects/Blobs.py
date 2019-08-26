@@ -23,7 +23,6 @@ Set: MimeType(self: BlobContent) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BlobContent()
+    Instance = BlobContent()
+    """hardcoded/returns an instance of the class"""
 

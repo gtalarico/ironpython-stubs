@@ -80,9 +80,8 @@ Get: MigrateToStateAsString(self: ErpLock) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ErpLock()
+    Instance = ErpLock()
+    """hardcoded/returns an instance of the class"""
 
 class ErpLockEntityType:
     """ enum ErpLockEntityType, values: PurchaseOrder (1), SalesOrder (0) """
@@ -123,9 +122,8 @@ class ErpLockEntityType:
     SalesOrder = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ErpLockEntityType()
+    Instance = ErpLockEntityType()
+    """hardcoded/returns an instance of the class"""
 
 class ErpLockState:
     """ enum ErpLockState, values: Locked (1), Unkown (0), Unlocked (2) """
@@ -167,7 +165,6 @@ class ErpLockState:
     Unlocked = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ErpLockState()
+    Instance = ErpLockState()
+    """hardcoded/returns an instance of the class"""
 

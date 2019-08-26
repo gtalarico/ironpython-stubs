@@ -27,9 +27,8 @@ Set: Settings(self: CleanUpLogTask) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CleanUpLogTask()
+    Instance = CleanUpLogTask()
+    """hardcoded/returns an instance of the class"""
 
 class NLogLoggingBootstrapper():
     """ NLogLoggingBootstrapper() """
@@ -37,9 +36,8 @@ class NLogLoggingBootstrapper():
         """ Init(self: NLogLoggingBootstrapper) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NLogLoggingBootstrapper()
+    Instance = NLogLoggingBootstrapper()
+    """hardcoded/returns an instance of the class"""
 
 class NLogLoggingService(Logger):
     """ NLogLoggingService() """
@@ -111,9 +109,8 @@ class NLogLoggingService(Logger):
     KeyVersion = 'bw-version'
     KeyZoneName = 'bw-zonename'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NLogLoggingService()
+    Instance = NLogLoggingService()
+    """hardcoded/returns an instance of the class"""
 
 class NLogTraceLoggingService(Logger):
     """ NLogTraceLoggingService() """
@@ -145,9 +142,8 @@ class NLogTraceLoggingService(Logger):
     KeyCustomTraceActivityId = 'custom-activityid'
     KeyTraceType = 'trace-type'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NLogTraceLoggingService()
+    Instance = NLogTraceLoggingService()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

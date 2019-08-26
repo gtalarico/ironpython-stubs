@@ -18,9 +18,8 @@ Get: SignalTime(self: ElapsedEventArgs) -> DateTime
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ElapsedEventArgs()
+    Instance = ElapsedEventArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ElapsedEventHandler(MulticastDelegate):
     """
@@ -49,7 +48,9 @@ class ElapsedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -78,7 +79,8 @@ class ElapsedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -94,9 +96,8 @@ class ElapsedEventHandler(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ElapsedEventHandler()
+    Instance = ElapsedEventHandler()
+    """hardcoded/returns an instance of the class"""
 
 class Timer(Component):
     """
@@ -142,7 +143,8 @@ class Timer(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
+             specified service.
         """
         pass
 
@@ -152,7 +154,10 @@ class Timer(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -256,9 +261,8 @@ Set: SynchronizingObject(self: Timer) = value
 
     Elapsed = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Timer()
+    Instance = Timer()
+    """hardcoded/returns an instance of the class"""
 
 class TimersDescriptionAttribute(DescriptionAttribute):
     """
@@ -288,7 +292,6 @@ Get: Description(self: TimersDescriptionAttribute) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TimersDescriptionAttribute()
+    Instance = TimersDescriptionAttribute()
+    """hardcoded/returns an instance of the class"""
 

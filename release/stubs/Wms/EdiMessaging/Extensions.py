@@ -85,7 +85,6 @@ class MessageExtensions():
         'SetBodyAsXmlDocument',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessageExtensions()
+    Instance = MessageExtensions()
+    """hardcoded/returns an instance of the class"""
 

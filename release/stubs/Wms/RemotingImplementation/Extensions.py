@@ -19,9 +19,8 @@ class DataFlowExtensions():
         'CopyResultFrom',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DataFlowExtensions()
+    Instance = DataFlowExtensions()
+    """hardcoded/returns an instance of the class"""
 
 class GeneralExtensionMethods():
     # no doc
@@ -34,9 +33,8 @@ class GeneralExtensionMethods():
         'GetCultureForUser',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GeneralExtensionMethods()
+    Instance = GeneralExtensionMethods()
+    """hardcoded/returns an instance of the class"""
 
 class HttpClientExtensions():
     # no doc
@@ -49,7 +47,6 @@ class HttpClientExtensions():
         'DownloadFileAsync',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HttpClientExtensions()
+    Instance = HttpClientExtensions()
+    """hardcoded/returns an instance of the class"""
 

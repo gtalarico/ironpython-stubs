@@ -14,7 +14,9 @@ class SecurityAttribute:
         """
         CreatePermission(self: SecurityAttribute) -> IPermission
         
-            When overridden in a derived class, creates a permission object that can then be serialized into binary form and persistently stored along with the System.Security.Permissions.SecurityAction in an assembly's metadata.
+            When overridden in a derived class, creates a permission object that can then be serialized into binary form and persistently stored along with the 
+             System.Security.Permissions.SecurityAction in an assembly's metadata.
+        
             Returns: A serializable permission object.
         """
         pass
@@ -48,9 +50,8 @@ Set: Unrestricted(self: SecurityAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityAttribute()
+    Instance = SecurityAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class CodeAccessSecurityAttribute(SecurityAttribute):
     """ Specifies the base attribute class for code access security. """
@@ -66,9 +67,8 @@ class CodeAccessSecurityAttribute(SecurityAttribute):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeAccessSecurityAttribute()
+    Instance = CodeAccessSecurityAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class IUnrestrictedPermission:
     """ Allows a permission to expose an unrestricted state. """
@@ -85,9 +85,8 @@ class IUnrestrictedPermission:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IUnrestrictedPermission()
+    Instance = IUnrestrictedPermission()
+    """hardcoded/returns an instance of the class"""
 
 class EnvironmentPermission(CodeAccessPermission):
     """
@@ -214,9 +213,8 @@ class EnvironmentPermission(CodeAccessPermission):
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EnvironmentPermission()
+    Instance = EnvironmentPermission()
+    """hardcoded/returns an instance of the class"""
 
 class EnvironmentPermissionAccess:
     """
@@ -263,9 +261,8 @@ class EnvironmentPermissionAccess:
     value__ = None
     Write = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EnvironmentPermissionAccess()
+    Instance = EnvironmentPermissionAccess()
+    """hardcoded/returns an instance of the class"""
 
 class EnvironmentPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -319,9 +316,8 @@ Set: Write(self: EnvironmentPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EnvironmentPermissionAttribute()
+    Instance = EnvironmentPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class FileDialogPermission(CodeAccessPermission):
     """
@@ -426,9 +422,8 @@ Set: Access(self: FileDialogPermission) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FileDialogPermission()
+    Instance = FileDialogPermission()
+    """hardcoded/returns an instance of the class"""
 
 class FileDialogPermissionAccess:
     """
@@ -475,9 +470,8 @@ class FileDialogPermissionAccess:
     Save = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FileDialogPermissionAccess()
+    Instance = FileDialogPermissionAccess()
+    """hardcoded/returns an instance of the class"""
 
 class FileDialogPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -523,9 +517,8 @@ Set: Save(self: FileDialogPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FileDialogPermissionAttribute()
+    Instance = FileDialogPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class FileIOPermission(CodeAccessPermission):
     """
@@ -712,9 +705,8 @@ Set: AllLocalFiles(self: FileIOPermission) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FileIOPermission()
+    Instance = FileIOPermission()
+    """hardcoded/returns an instance of the class"""
 
 class FileIOPermissionAccess:
     """
@@ -763,9 +755,8 @@ class FileIOPermissionAccess:
     value__ = None
     Write = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FileIOPermissionAccess()
+    Instance = FileIOPermissionAccess()
+    """hardcoded/returns an instance of the class"""
 
 class FileIOPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -875,9 +866,8 @@ Set: Write(self: FileIOPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FileIOPermissionAttribute()
+    Instance = FileIOPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class GacIdentityPermission(CodeAccessPermission):
     """
@@ -964,9 +954,8 @@ class GacIdentityPermission(CodeAccessPermission):
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GacIdentityPermission()
+    Instance = GacIdentityPermission()
+    """hardcoded/returns an instance of the class"""
 
 class GacIdentityPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -995,9 +984,8 @@ class GacIdentityPermissionAttribute(CodeAccessSecurityAttribute):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GacIdentityPermissionAttribute()
+    Instance = GacIdentityPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class HostProtectionAttribute(CodeAccessSecurityAttribute):
     """
@@ -1111,9 +1099,8 @@ Set: UI(self: HostProtectionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HostProtectionAttribute()
+    Instance = HostProtectionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class HostProtectionResource:
     """
@@ -1167,9 +1154,8 @@ class HostProtectionResource:
     UI = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HostProtectionResource()
+    Instance = HostProtectionResource()
+    """hardcoded/returns an instance of the class"""
 
 class IsolatedStorageContainment:
     """
@@ -1224,9 +1210,8 @@ class IsolatedStorageContainment:
     UnrestrictedIsolatedStorage = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IsolatedStorageContainment()
+    Instance = IsolatedStorageContainment()
+    """hardcoded/returns an instance of the class"""
 
 class IsolatedStoragePermission(CodeAccessPermission):
     """ Represents access to generic isolated storage capabilities. """
@@ -1289,9 +1274,8 @@ Set: UserQuota(self: IsolatedStoragePermission) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IsolatedStoragePermission()
+    Instance = IsolatedStoragePermission()
+    """hardcoded/returns an instance of the class"""
 
 class IsolatedStorageFilePermission:
     """
@@ -1365,9 +1349,8 @@ class IsolatedStorageFilePermission:
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IsolatedStorageFilePermission()
+    Instance = IsolatedStorageFilePermission()
+    """hardcoded/returns an instance of the class"""
 
 class IsolatedStoragePermissionAttribute(CodeAccessSecurityAttribute):
     """ Allows security actions for System.Security.Permissions.IsolatedStoragePermission to be applied to code using declarative security. """
@@ -1400,9 +1383,8 @@ Set: UserQuota(self: IsolatedStoragePermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IsolatedStoragePermissionAttribute()
+    Instance = IsolatedStoragePermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class IsolatedStorageFilePermissionAttribute:
     """
@@ -1431,9 +1413,8 @@ class IsolatedStorageFilePermissionAttribute:
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IsolatedStorageFilePermissionAttribute()
+    Instance = IsolatedStorageFilePermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class KeyContainerPermission(CodeAccessPermission):
     """
@@ -1546,9 +1527,8 @@ Get: Flags(self: KeyContainerPermission) -> KeyContainerPermissionFlags
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return KeyContainerPermission()
+    Instance = KeyContainerPermission()
+    """hardcoded/returns an instance of the class"""
 
 class KeyContainerPermissionAccessEntry():
     """
@@ -1565,7 +1545,8 @@ class KeyContainerPermissionAccessEntry():
             Determines whether the specified System.Security.Permissions.KeyContainerPermissionAccessEntry object is equal to the current instance.
         
             o: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to compare with the currentinstance.
-            Returns: true if the specified System.Security.Permissions.KeyContainerPermissionAccessEntry is equal to the current System.Security.Permissions.KeyContainerPermissionAccessEntry object; otherwise, false.
+            Returns: true if the specified System.Security.Permissions.KeyContainerPermissionAccessEntry is equal to the current 
+             System.Security.Permissions.KeyContainerPermissionAccessEntry object; otherwise, false.
         """
         pass
 
@@ -1643,9 +1624,8 @@ Set: ProviderType(self: KeyContainerPermissionAccessEntry) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return KeyContainerPermissionAccessEntry()
+    Instance = KeyContainerPermissionAccessEntry()
+    """hardcoded/returns an instance of the class"""
 
 class KeyContainerPermissionAccessEntryCollection:
     """ Represents a collection of System.Security.Permissions.KeyContainerPermissionAccessEntry objects. This class cannot be inherited. """
@@ -1754,9 +1734,8 @@ Get: SyncRoot(self: KeyContainerPermissionAccessEntryCollection) -> object
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return KeyContainerPermissionAccessEntryCollection()
+    Instance = KeyContainerPermissionAccessEntryCollection()
+    """hardcoded/returns an instance of the class"""
 
 class KeyContainerPermissionAccessEntryEnumerator:
     """ Represents the enumerator for System.Security.Permissions.KeyContainerPermissionAccessEntry objects in a System.Security.Permissions.KeyContainerPermissionAccessEntryCollection. """
@@ -1803,9 +1782,8 @@ Get: Current(self: KeyContainerPermissionAccessEntryEnumerator) -> KeyContainerP
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return KeyContainerPermissionAccessEntryEnumerator()
+    Instance = KeyContainerPermissionAccessEntryEnumerator()
+    """hardcoded/returns an instance of the class"""
 
 class KeyContainerPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -1883,9 +1861,8 @@ Set: ProviderType(self: KeyContainerPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return KeyContainerPermissionAttribute()
+    Instance = KeyContainerPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class KeyContainerPermissionFlags:
     """
@@ -1939,9 +1916,8 @@ class KeyContainerPermissionFlags:
     value__ = None
     ViewAcl = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return KeyContainerPermissionFlags()
+    Instance = KeyContainerPermissionFlags()
+    """hardcoded/returns an instance of the class"""
 
 class PermissionSetAttribute(CodeAccessSecurityAttribute):
     """
@@ -2020,9 +1996,8 @@ Set: XML(self: PermissionSetAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PermissionSetAttribute()
+    Instance = PermissionSetAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class PermissionState:
     """
@@ -2067,9 +2042,8 @@ class PermissionState:
     Unrestricted = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PermissionState()
+    Instance = PermissionState()
+    """hardcoded/returns an instance of the class"""
 
 class PrincipalPermission:
     """
@@ -2214,9 +2188,8 @@ class PrincipalPermission:
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrincipalPermission()
+    Instance = PrincipalPermission()
+    """hardcoded/returns an instance of the class"""
 
 class PrincipalPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -2270,9 +2243,8 @@ Set: Role(self: PrincipalPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrincipalPermissionAttribute()
+    Instance = PrincipalPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class PublisherIdentityPermission(CodeAccessPermission):
     """
@@ -2368,9 +2340,8 @@ Set: Certificate(self: PublisherIdentityPermission) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PublisherIdentityPermission()
+    Instance = PublisherIdentityPermission()
+    """hardcoded/returns an instance of the class"""
 
 class PublisherIdentityPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -2424,9 +2395,8 @@ Set: X509Certificate(self: PublisherIdentityPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PublisherIdentityPermissionAttribute()
+    Instance = PublisherIdentityPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class ReflectionPermission(CodeAccessPermission):
     """
@@ -2531,9 +2501,8 @@ Set: Flags(self: ReflectionPermission) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReflectionPermission()
+    Instance = ReflectionPermission()
+    """hardcoded/returns an instance of the class"""
 
 class ReflectionPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -2603,9 +2572,8 @@ Set: TypeInformation(self: ReflectionPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReflectionPermissionAttribute()
+    Instance = ReflectionPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class ReflectionPermissionFlag:
     """
@@ -2654,9 +2622,8 @@ class ReflectionPermissionFlag:
     TypeInformation = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReflectionPermissionFlag()
+    Instance = ReflectionPermissionFlag()
+    """hardcoded/returns an instance of the class"""
 
 class RegistryPermission(CodeAccessPermission):
     """
@@ -2791,9 +2758,8 @@ class RegistryPermission(CodeAccessPermission):
     def __str__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryPermission()
+    Instance = RegistryPermission()
+    """hardcoded/returns an instance of the class"""
 
 class RegistryPermissionAccess:
     """
@@ -2841,9 +2807,8 @@ class RegistryPermissionAccess:
     value__ = None
     Write = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryPermissionAccess()
+    Instance = RegistryPermissionAccess()
+    """hardcoded/returns an instance of the class"""
 
 class RegistryPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -2929,9 +2894,8 @@ Set: Write(self: RegistryPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryPermissionAttribute()
+    Instance = RegistryPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class ResourcePermissionBase(CodeAccessPermission):
     """ Allows control of code access security permissions. """
@@ -3070,9 +3034,8 @@ class ResourcePermissionBase(CodeAccessPermission):
     Any = '*'
     Local = '.'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ResourcePermissionBase()
+    Instance = ResourcePermissionBase()
+    """hardcoded/returns an instance of the class"""
 
 class ResourcePermissionBaseEntry():
     """
@@ -3104,9 +3067,8 @@ Get: PermissionAccessPath(self: ResourcePermissionBaseEntry) -> Array[str]
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ResourcePermissionBaseEntry()
+    Instance = ResourcePermissionBaseEntry()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityAction:
     """
@@ -3158,9 +3120,8 @@ class SecurityAction:
     RequestRefuse = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityAction()
+    Instance = SecurityAction()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityPermission(CodeAccessPermission):
     """
@@ -3194,7 +3155,8 @@ class SecurityPermission(CodeAccessPermission):
             Creates and returns a permission that is the intersection of the current permission and the specified permission.
         
             target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission object that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+            Returns: A new permission object that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is 
+             empty.
         """
         pass
 
@@ -3265,9 +3227,8 @@ Set: Flags(self: SecurityPermission) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityPermission()
+    Instance = SecurityPermission()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -3417,9 +3378,8 @@ Set: UnmanagedCode(self: SecurityPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityPermissionAttribute()
+    Instance = SecurityPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityPermissionFlag:
     """
@@ -3478,9 +3438,8 @@ class SecurityPermissionFlag:
     UnmanagedCode = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityPermissionFlag()
+    Instance = SecurityPermissionFlag()
+    """hardcoded/returns an instance of the class"""
 
 class SiteIdentityPermission(CodeAccessPermission):
     """
@@ -3576,9 +3535,8 @@ Set: Site(self: SiteIdentityPermission) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SiteIdentityPermission()
+    Instance = SiteIdentityPermission()
+    """hardcoded/returns an instance of the class"""
 
 class SiteIdentityPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -3616,9 +3574,8 @@ Set: Site(self: SiteIdentityPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SiteIdentityPermissionAttribute()
+    Instance = SiteIdentityPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class StorePermission(CodeAccessPermission):
     """
@@ -3723,9 +3680,8 @@ Set: Flags(self: StorePermission) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StorePermission()
+    Instance = StorePermission()
+    """hardcoded/returns an instance of the class"""
 
 class StorePermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -3819,9 +3775,8 @@ Set: RemoveFromStore(self: StorePermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StorePermissionAttribute()
+    Instance = StorePermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class StorePermissionFlags:
     """
@@ -3873,9 +3828,8 @@ class StorePermissionFlags:
     RemoveFromStore = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StorePermissionFlags()
+    Instance = StorePermissionFlags()
+    """hardcoded/returns an instance of the class"""
 
 class StrongNameIdentityPermission(CodeAccessPermission):
     """
@@ -3987,9 +3941,8 @@ Set: Version(self: StrongNameIdentityPermission) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StrongNameIdentityPermission()
+    Instance = StrongNameIdentityPermission()
+    """hardcoded/returns an instance of the class"""
 
 class StrongNameIdentityPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -4043,9 +3996,8 @@ Set: Version(self: StrongNameIdentityPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StrongNameIdentityPermissionAttribute()
+    Instance = StrongNameIdentityPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class StrongNamePublicKeyBlob():
     """
@@ -4094,9 +4046,8 @@ class StrongNamePublicKeyBlob():
     def __ne__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StrongNamePublicKeyBlob()
+    Instance = StrongNamePublicKeyBlob()
+    """hardcoded/returns an instance of the class"""
 
 class TypeDescriptorPermission(CodeAccessPermission):
     """
@@ -4142,7 +4093,8 @@ class TypeDescriptorPermission(CodeAccessPermission):
         IsUnrestricted(self: TypeDescriptorPermission) -> bool
         
             Gets a value that indicates whether the type descriptor may be called from partially trusted code.
-            Returns: true if the System.Security.Permissions.TypeDescriptorPermission.Flags property is set to System.Security.Permissions.TypeDescriptorPermissionFlags.RestrictedRegistrationAccess; otherwise, false.
+            Returns: true if the System.Security.Permissions.TypeDescriptorPermission.Flags property is set to 
+             System.Security.Permissions.TypeDescriptorPermissionFlags.RestrictedRegistrationAccess; otherwise, false.
         """
         pass
 
@@ -4189,9 +4141,8 @@ Set: Flags(self: TypeDescriptorPermission) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TypeDescriptorPermission()
+    Instance = TypeDescriptorPermission()
+    """hardcoded/returns an instance of the class"""
 
 class TypeDescriptorPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -4235,9 +4186,8 @@ Set: RestrictedRegistrationAccess(self: TypeDescriptorPermissionAttribute) = val
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TypeDescriptorPermissionAttribute()
+    Instance = TypeDescriptorPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class TypeDescriptorPermissionFlags:
     """
@@ -4282,9 +4232,8 @@ class TypeDescriptorPermissionFlags:
     RestrictedRegistrationAccess = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TypeDescriptorPermissionFlags()
+    Instance = TypeDescriptorPermissionFlags()
+    """hardcoded/returns an instance of the class"""
 
 class UIPermission(CodeAccessPermission):
     """
@@ -4401,9 +4350,8 @@ Set: Window(self: UIPermission) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UIPermission()
+    Instance = UIPermission()
+    """hardcoded/returns an instance of the class"""
 
 class UIPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -4449,9 +4397,8 @@ Set: Window(self: UIPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UIPermissionAttribute()
+    Instance = UIPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class UIPermissionClipboard:
     """
@@ -4497,9 +4444,8 @@ class UIPermissionClipboard:
     OwnClipboard = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UIPermissionClipboard()
+    Instance = UIPermissionClipboard()
+    """hardcoded/returns an instance of the class"""
 
 class UIPermissionWindow:
     """
@@ -4546,9 +4492,8 @@ class UIPermissionWindow:
     SafeTopLevelWindows = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UIPermissionWindow()
+    Instance = UIPermissionWindow()
+    """hardcoded/returns an instance of the class"""
 
 class UrlIdentityPermission(CodeAccessPermission):
     """
@@ -4644,9 +4589,8 @@ Set: Url(self: UrlIdentityPermission) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UrlIdentityPermission()
+    Instance = UrlIdentityPermission()
+    """hardcoded/returns an instance of the class"""
 
 class UrlIdentityPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -4684,9 +4628,8 @@ Set: Url(self: UrlIdentityPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UrlIdentityPermissionAttribute()
+    Instance = UrlIdentityPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class ZoneIdentityPermission(CodeAccessPermission):
     """
@@ -4782,9 +4725,8 @@ Set: SecurityZone(self: ZoneIdentityPermission) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ZoneIdentityPermission()
+    Instance = ZoneIdentityPermission()
+    """hardcoded/returns an instance of the class"""
 
 class ZoneIdentityPermissionAttribute(CodeAccessSecurityAttribute):
     """
@@ -4822,7 +4764,6 @@ Set: Zone(self: ZoneIdentityPermissionAttribute) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ZoneIdentityPermissionAttribute()
+    Instance = ZoneIdentityPermissionAttribute()
+    """hardcoded/returns an instance of the class"""
 

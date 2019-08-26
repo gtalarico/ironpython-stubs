@@ -51,9 +51,8 @@ class Receiver:
     DeleteLine = None
     Lines = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Receiver()
+    Instance = Receiver()
+    """hardcoded/returns an instance of the class"""
 
 class AdhocReceiver(Receiver):
     """ AdhocReceiver(lines: InboundReceiveLines, args: DataFlowObject[ReceiveArgs]) """
@@ -86,9 +85,8 @@ class AdhocReceiver(Receiver):
     DeleteLine = None
     Lines = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AdhocReceiver()
+    Instance = AdhocReceiver()
+    """hardcoded/returns an instance of the class"""
 
 class AdHocRmaReceiver(Receiver):
     """ AdHocRmaReceiver(lines: InboundReceiveLines, args: DataFlowObject[ReceiveArgs]) """
@@ -133,9 +131,8 @@ class AdHocRmaReceiver(Receiver):
     Lines = None
     _item = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AdHocRmaReceiver()
+    Instance = AdHocRmaReceiver()
+    """hardcoded/returns an instance of the class"""
 
 class AdhocRmaTouchReceiver(AdHocRmaReceiver):
     """ AdhocRmaTouchReceiver(lines: InboundReceiveLines, args: DataFlowObject[ReceiveArgs]) """
@@ -184,9 +181,8 @@ class AdhocRmaTouchReceiver(AdHocRmaReceiver):
     Lines = None
     _item = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AdhocRmaTouchReceiver()
+    Instance = AdhocRmaTouchReceiver()
+    """hardcoded/returns an instance of the class"""
 
 class InboundReceiveLineManager():
     # no doc
@@ -211,9 +207,8 @@ class InboundReceiveLineManager():
         'GetInboundReceiveLines',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InboundReceiveLineManager()
+    Instance = InboundReceiveLineManager()
+    """hardcoded/returns an instance of the class"""
 
 class ReceiverFactory:
     """ ReceiverFactory(lines: InboundReceiveLines, dfObject: DataFlowObject[ReceiveArgs]) """
@@ -246,7 +241,6 @@ class ReceiverFactory:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiverFactory()
+    Instance = ReceiverFactory()
+    """hardcoded/returns an instance of the class"""
 

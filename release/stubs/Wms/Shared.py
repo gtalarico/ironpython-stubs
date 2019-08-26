@@ -70,9 +70,8 @@ class ILoggingService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ILoggingService()
+    Instance = ILoggingService()
+    """hardcoded/returns an instance of the class"""
 
 class ITraceLoggingService:
     # no doc
@@ -92,9 +91,8 @@ class ITraceLoggingService:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ITraceLoggingService()
+    Instance = ITraceLoggingService()
+    """hardcoded/returns an instance of the class"""
 
 class TraceExtProperties:
     """ enum TraceExtProperties, values: ElapsedSeconds (4), MethodId (0), MethodName (1), MethodPreviousId (6), MethodPreviousName (5), ParameterList (3), ReturnParam (2), TimeStart (7), TimeStop (8) """
@@ -142,9 +140,8 @@ class TraceExtProperties:
     TimeStop = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TraceExtProperties()
+    Instance = TraceExtProperties()
+    """hardcoded/returns an instance of the class"""
 
 class TraceType:
     """ enum TraceType, values: Start (1), Stop (0) """
@@ -185,7 +182,6 @@ class TraceType:
     Stop = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TraceType()
+    Instance = TraceType()
+    """hardcoded/returns an instance of the class"""
 

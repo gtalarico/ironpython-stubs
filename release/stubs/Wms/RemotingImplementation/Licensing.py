@@ -19,7 +19,6 @@ class LicenseExtensionMethods():
         'CurrentLicenseOrDev',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseExtensionMethods()
+    Instance = LicenseExtensionMethods()
+    """hardcoded/returns an instance of the class"""
 

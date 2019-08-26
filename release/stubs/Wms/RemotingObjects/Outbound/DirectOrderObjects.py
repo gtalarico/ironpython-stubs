@@ -144,9 +144,8 @@ Set: WarehouseCode(self: DirectOrder) = value
     DisplayMember = 'CustomerName'
     ValueMember = 'CustomerNumber'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DirectOrder()
+    Instance = DirectOrder()
+    """hardcoded/returns an instance of the class"""
 
 class DirectOrderCrudArgs():
     """ DirectOrderCrudArgs(directOrder: DirectOrder) """
@@ -162,9 +161,8 @@ Set: DirectOrder(self: DirectOrderCrudArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DirectOrderCrudArgs()
+    Instance = DirectOrderCrudArgs()
+    """hardcoded/returns an instance of the class"""
 
 class DirectOrderLine():
     """ DirectOrderLine(item: Item, location: Location) """
@@ -277,9 +275,8 @@ Set: Quantity(self: DirectOrderLine) = value
     NoLinenumberValue = -1
     ValueMember = 'ItemCode'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DirectOrderLine()
+    Instance = DirectOrderLine()
+    """hardcoded/returns an instance of the class"""
 
 class DirectOrderLineCrudArgs(DirectOrderCrudArgs):
     """ DirectOrderLineCrudArgs(directOrder: DirectOrder, directOrderLine: DirectOrderLine) """
@@ -295,9 +292,8 @@ Set: DirectOrderLine(self: DirectOrderLineCrudArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DirectOrderLineCrudArgs()
+    Instance = DirectOrderLineCrudArgs()
+    """hardcoded/returns an instance of the class"""
 
 class DirectOrderLineItemIdentificationCrudArgs(DirectOrderLineCrudArgs):
     """ DirectOrderLineItemIdentificationCrudArgs(order: DirectOrder, directOrderLine: DirectOrderLine, itemIdentification: ItemIdentification) """
@@ -313,9 +309,8 @@ Set: ItemIdentification(self: DirectOrderLineItemIdentificationCrudArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DirectOrderLineItemIdentificationCrudArgs()
+    Instance = DirectOrderLineItemIdentificationCrudArgs()
+    """hardcoded/returns an instance of the class"""
 
 class DirectOrderLineItemIdentificationsCrudArgs(DirectOrderLineCrudArgs):
     """ DirectOrderLineItemIdentificationsCrudArgs(directOrder: DirectOrder, directOrderLine: DirectOrderLine, itemIdentifications: ItemIdentifications) """
@@ -331,9 +326,8 @@ Set: ItemIdentifications(self: DirectOrderLineItemIdentificationsCrudArgs) = val
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DirectOrderLineItemIdentificationsCrudArgs()
+    Instance = DirectOrderLineItemIdentificationsCrudArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ErpProcessDirecOrderResult():
     """ ErpProcessDirecOrderResult() """
@@ -350,9 +344,8 @@ Set: Success(self: ErpProcessDirecOrderResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ErpProcessDirecOrderResult()
+    Instance = ErpProcessDirecOrderResult()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryDirectOrder():
     """ HistoryDirectOrder() """
@@ -429,9 +422,8 @@ Set: WarehouseCode(self: HistoryDirectOrder) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryDirectOrder()
+    Instance = HistoryDirectOrder()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryDirectOrderLine():
     """ HistoryDirectOrderLine() """
@@ -520,9 +512,8 @@ Set: WarehouseLocationCode(self: HistoryDirectOrderLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryDirectOrderLine()
+    Instance = HistoryDirectOrderLine()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryDirectOrderLinesFilter():
     """ HistoryDirectOrderLinesFilter() """
@@ -539,9 +530,8 @@ Set: SearchText(self: HistoryDirectOrderLinesFilter) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryDirectOrderLinesFilter()
+    Instance = HistoryDirectOrderLinesFilter()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryDirectOrdersFilter(HistoryFilterBase):
     """ HistoryDirectOrdersFilter() """
@@ -552,7 +542,6 @@ Set: WarehouseCode(self: HistoryDirectOrdersFilter) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryDirectOrdersFilter()
+    Instance = HistoryDirectOrdersFilter()
+    """hardcoded/returns an instance of the class"""
 

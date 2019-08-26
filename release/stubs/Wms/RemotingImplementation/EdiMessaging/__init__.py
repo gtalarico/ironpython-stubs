@@ -48,9 +48,8 @@ class IronPythonMessagingProvider:
 
     Instance = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IronPythonMessagingProvider()
+    Instance = IronPythonMessagingProvider()
+    """hardcoded/returns an instance of the class"""
 
 class StandardMessagingProvider:
     """ StandardMessagingProvider() """
@@ -74,9 +73,8 @@ class StandardMessagingProvider:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StandardMessagingProvider()
+    Instance = StandardMessagingProvider()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

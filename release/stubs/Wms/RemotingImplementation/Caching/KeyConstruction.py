@@ -27,9 +27,8 @@ class CountCacheKeyConstructor:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CountCacheKeyConstructor()
+    Instance = CountCacheKeyConstructor()
+    """hardcoded/returns an instance of the class"""
 
 class ICacheKeyConstructor:
     # no doc
@@ -41,7 +40,6 @@ class ICacheKeyConstructor:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ICacheKeyConstructor()
+    Instance = ICacheKeyConstructor()
+    """hardcoded/returns an instance of the class"""
 

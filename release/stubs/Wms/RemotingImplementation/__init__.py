@@ -23,9 +23,8 @@ class AppHost():
         """ RegisterQueues(self: AppHost, container: IUnityContainer) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AppHost()
+    Instance = AppHost()
+    """hardcoded/returns an instance of the class"""
 
 class BusinessLayerExtensions():
     # no doc
@@ -37,9 +36,8 @@ class BusinessLayerExtensions():
         'ConvertTo',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BusinessLayerExtensions()
+    Instance = BusinessLayerExtensions()
+    """hardcoded/returns an instance of the class"""
 
 class CallerContext:
     """ CallerContext() """
@@ -57,9 +55,8 @@ class CallerContext:
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CallerContext()
+    Instance = CallerContext()
+    """hardcoded/returns an instance of the class"""
 
 class Constants():
     # no doc
@@ -119,9 +116,8 @@ class Constants():
         'TraceCategoryDebug',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Constants()
+    Instance = Constants()
+    """hardcoded/returns an instance of the class"""
 
 class DataSet(DataSet):
     """ DataSet() """
@@ -135,7 +131,13 @@ class DataSet(DataSet):
         
             Determines the System.Data.DataSet.SchemaSerializationMode for a System.Data.DataSet.
         
-                            Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema information has been omitted from the payload.
+                     System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext) is invoked with during deserialization in 
+             remoting scenarios.
+        
+                     System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext) is invoked with during deserialization in 
+             remoting scenarios.
+        
+            Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema information has been omitted from the payload.
         DetermineSchemaSerializationMode(self: DataSet, reader: XmlReader) -> SchemaSerializationMode
         
             Determines the System.Data.DataSet.SchemaSerializationMode for a System.Data.DataSet.
@@ -313,9 +315,8 @@ Set: SchemaSerializationMode(self: DataSet) = value
     Shipment_GetHistoryShipmentLinesRowChangeEvent = None
     Shipment_GetHistoryShipmentLinesRowChangeEventHandler = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DataSet()
+    Instance = DataSet()
+    """hardcoded/returns an instance of the class"""
 
 class DocumentQueue(MarshalByRefObject):
     """ DocumentQueue(printingService: IPrintingService, storageProvider: StorageProvider, printJobsQueuer: PrintJobsQueuer) """
@@ -417,7 +418,10 @@ class DocumentQueue(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -447,9 +451,8 @@ class DocumentQueue(MarshalByRefObject):
         """ __new__(cls: type, printingService: IPrintingService, storageProvider: StorageProvider, printJobsQueuer: PrintJobsQueuer) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DocumentQueue()
+    Instance = DocumentQueue()
+    """hardcoded/returns an instance of the class"""
 
 class ExceptionHelper():
     """ ExceptionHelper() """
@@ -463,9 +466,8 @@ class ExceptionHelper():
         """ WrapException(ex: Exception) -> RemotingException """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExceptionHelper()
+    Instance = ExceptionHelper()
+    """hardcoded/returns an instance of the class"""
 
 class ExtendedUnityServiceLocator(UnityServiceLocator):
     """ ExtendedUnityServiceLocator(container: IUnityContainer) """
@@ -509,9 +511,8 @@ class ExtendedUnityServiceLocator(UnityServiceLocator):
         """ __new__(cls: type, container: IUnityContainer) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExtendedUnityServiceLocator()
+    Instance = ExtendedUnityServiceLocator()
+    """hardcoded/returns an instance of the class"""
 
 class General(MarshalByRefObject):
     """ General(stockManager: IStockManager, passwordHasher: IPasswordHasher, documentQueue: IDocumentQueue) """
@@ -1419,7 +1420,10 @@ class General(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -1661,9 +1665,8 @@ Set: CurrentLicense(self: General) = value
     StockManager = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return General()
+    Instance = General()
+    """hardcoded/returns an instance of the class"""
 
 class IApplicationSettings:
     # no doc
@@ -1757,9 +1760,8 @@ class IApplicationSettings:
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IApplicationSettings()
+    Instance = IApplicationSettings()
+    """hardcoded/returns an instance of the class"""
 
 class ICentralAuthoritySystem:
     # no doc
@@ -1783,9 +1785,8 @@ class ICentralAuthoritySystem:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ICentralAuthoritySystem()
+    Instance = ICentralAuthoritySystem()
+    """hardcoded/returns an instance of the class"""
 
 class IExtendedServiceLocator:
     # no doc
@@ -1800,9 +1801,8 @@ class IExtendedServiceLocator:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IExtendedServiceLocator()
+    Instance = IExtendedServiceLocator()
+    """hardcoded/returns an instance of the class"""
 
 class Inbound(MarshalByRefObject):
     """ Inbound(stockManager: IStockManager, messaging: IMessaging, general: IGeneral) """
@@ -2004,7 +2004,10 @@ class Inbound(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2081,9 +2084,8 @@ class Inbound(MarshalByRefObject):
     StockManager = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Inbound()
+    Instance = Inbound()
+    """hardcoded/returns an instance of the class"""
 
 class Inventory(MarshalByRefObject):
     """ Inventory(stockManager: IStockManager, countCacheKeyConstructor: ICacheKeyConstructor[Count]) """
@@ -2372,7 +2374,10 @@ class Inventory(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2501,15 +2506,13 @@ class Inventory(MarshalByRefObject):
     StockManager = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Inventory()
+    Instance = Inventory()
+    """hardcoded/returns an instance of the class"""
 
 class Mailer():
     """ Mailer() """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Mailer()
+    Instance = Mailer()
+    """hardcoded/returns an instance of the class"""
 
 class Messaging(MarshalByRefObject):
     """ Messaging() """
@@ -2575,7 +2578,10 @@ class Messaging(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2608,9 +2614,8 @@ class Messaging(MarshalByRefObject):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Messaging()
+    Instance = Messaging()
+    """hardcoded/returns an instance of the class"""
 
 class NotificationCenter(MarshalByRefObject):
     """ NotificationCenter(general: General) """
@@ -2668,7 +2673,10 @@ class NotificationCenter(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2686,9 +2694,8 @@ class NotificationCenter(MarshalByRefObject):
         """ __new__(cls: type, general: General) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NotificationCenter()
+    Instance = NotificationCenter()
+    """hardcoded/returns an instance of the class"""
 
 class NotificationSummary(MarshalByRefObject):
     """
@@ -2733,7 +2740,10 @@ class NotificationSummary(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2758,9 +2768,8 @@ class NotificationSummary(MarshalByRefObject):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NotificationSummary()
+    Instance = NotificationSummary()
+    """hardcoded/returns an instance of the class"""
 
 class NumberGeneration(MarshalByRefObject):
     """ NumberGeneration() """
@@ -2806,7 +2815,10 @@ class NumberGeneration(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2827,9 +2839,8 @@ class NumberGeneration(MarshalByRefObject):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NumberGeneration()
+    Instance = NumberGeneration()
+    """hardcoded/returns an instance of the class"""
 
 class OfflineScanning(MarshalByRefObject):
     """ OfflineScanning(appSettings: IApplicationSettings, general: General, messaging: Messaging) """
@@ -2883,7 +2894,10 @@ class OfflineScanning(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -2919,9 +2933,8 @@ class OfflineScanning(MarshalByRefObject):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OfflineScanning()
+    Instance = OfflineScanning()
+    """hardcoded/returns an instance of the class"""
 
 class OnGetDestinationLocationForLine(MulticastDelegate):
     """ OnGetDestinationLocationForLine(object: object, method: IntPtr) """
@@ -2946,7 +2959,9 @@ class OnGetDestinationLocationForLine(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -2975,7 +2990,8 @@ class OnGetDestinationLocationForLine(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -2991,9 +3007,8 @@ class OnGetDestinationLocationForLine(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OnGetDestinationLocationForLine()
+    Instance = OnGetDestinationLocationForLine()
+    """hardcoded/returns an instance of the class"""
 
 class Outbound(MarshalByRefObject):
     """ Outbound(stockManager: IStockManager, messaging: Messaging) """
@@ -3334,7 +3349,10 @@ class Outbound(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -3537,9 +3555,8 @@ class Outbound(MarshalByRefObject):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Outbound()
+    Instance = Outbound()
+    """hardcoded/returns an instance of the class"""
 
 class Printing(MarshalByRefObject):
     """ Printing(general: General) """
@@ -3565,7 +3582,10 @@ class Printing(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -3595,9 +3615,8 @@ class Printing(MarshalByRefObject):
         """ __new__(cls: type, general: General) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Printing()
+    Instance = Printing()
+    """hardcoded/returns an instance of the class"""
 
 class PyLogger():
     # no doc
@@ -3640,9 +3659,8 @@ class PyLogger():
         'Warn',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PyLogger()
+    Instance = PyLogger()
+    """hardcoded/returns an instance of the class"""
 
 class RemotePublishing(MarshalByRefObject):
     """ RemotePublishing(appSettings: IApplicationSettings, general: General) """
@@ -3680,7 +3698,10 @@ class RemotePublishing(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
+             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
+             remoting client calls to be routed to the remote server object.
+        
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
         
@@ -3704,9 +3725,8 @@ class RemotePublishing(MarshalByRefObject):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RemotePublishing()
+    Instance = RemotePublishing()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

@@ -27,7 +27,6 @@ Set: Settings(self: ErpLockingTask) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ErpLockingTask()
+    Instance = ErpLockingTask()
+    """hardcoded/returns an instance of the class"""
 

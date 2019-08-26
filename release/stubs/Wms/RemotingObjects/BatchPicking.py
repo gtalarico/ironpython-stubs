@@ -56,9 +56,8 @@ class ActivityEnum:
     StoppedPicking = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ActivityEnum()
+    Instance = ActivityEnum()
+    """hardcoded/returns an instance of the class"""
 
 class BatchBase(CacheObject):
     """ BatchBase() """
@@ -327,9 +326,8 @@ Set: ZoneId(self: BatchBase) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchBase()
+    Instance = BatchBase()
+    """hardcoded/returns an instance of the class"""
 
 class Batch(BatchBase):
     """
@@ -548,9 +546,8 @@ Set: ShipOrders(self: Batch) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Batch()
+    Instance = Batch()
+    """hardcoded/returns an instance of the class"""
 
 class BatchActivityEntry:
     """ BatchActivityEntry() """
@@ -617,9 +614,8 @@ Set: Time(self: BatchActivityEntry) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchActivityEntry()
+    Instance = BatchActivityEntry()
+    """hardcoded/returns an instance of the class"""
 
 class BatchAgeSortComparer:
     """ BatchAgeSortComparer() """
@@ -639,9 +635,8 @@ class BatchAgeSortComparer:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchAgeSortComparer()
+    Instance = BatchAgeSortComparer()
+    """hardcoded/returns an instance of the class"""
 
 class BatchBaseAgeSortComparer:
     """ BatchBaseAgeSortComparer() """
@@ -661,9 +656,8 @@ class BatchBaseAgeSortComparer:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchBaseAgeSortComparer()
+    Instance = BatchBaseAgeSortComparer()
+    """hardcoded/returns an instance of the class"""
 
 class BatchBaseList(FindableList):
     """ BatchBaseList() """
@@ -689,9 +683,8 @@ class BatchBaseList(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'IdAsString'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchBaseList()
+    Instance = BatchBaseList()
+    """hardcoded/returns an instance of the class"""
 
 class BatchCreatedByClientTypeEnum:
     """ enum BatchCreatedByClientTypeEnum, values: AdHocPicking (1), Portal (0), Script (2), Touch (3) """
@@ -734,9 +727,8 @@ class BatchCreatedByClientTypeEnum:
     Touch = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchCreatedByClientTypeEnum()
+    Instance = BatchCreatedByClientTypeEnum()
+    """hardcoded/returns an instance of the class"""
 
 class Batches(FindableList):
     """
@@ -790,9 +782,8 @@ class Batches(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'IdAsString'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Batches()
+    Instance = Batches()
+    """hardcoded/returns an instance of the class"""
 
 class BatchFilterArgs():
     """ BatchFilterArgs() """
@@ -827,9 +818,8 @@ Set: TagsToFilter(self: BatchFilterArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchFilterArgs()
+    Instance = BatchFilterArgs()
+    """hardcoded/returns an instance of the class"""
 
 class BatchFilterResult():
     """ BatchFilterResult() """
@@ -859,9 +849,8 @@ Set: Customer(self: BatchFilterResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchFilterResult()
+    Instance = BatchFilterResult()
+    """hardcoded/returns an instance of the class"""
 
 class BatchPickLocation:
     """ BatchPickLocation() """
@@ -1031,9 +1020,8 @@ Set: VendorItemCode(self: BatchPickLocation) = value
 
     _itemIds = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchPickLocation()
+    Instance = BatchPickLocation()
+    """hardcoded/returns an instance of the class"""
 
 class BatchPickLocationIndicatorEnum:
     """ enum BatchPickLocationIndicatorEnum, values: Complete (2), MarkedAsPicked (3), None (0), Partial (1) """
@@ -1076,9 +1064,8 @@ class BatchPickLocationIndicatorEnum:
     Partial = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchPickLocationIndicatorEnum()
+    Instance = BatchPickLocationIndicatorEnum()
+    """hardcoded/returns an instance of the class"""
 
 class BatchPickLocations(FindableList):
     """ BatchPickLocations() """
@@ -1109,9 +1096,8 @@ class BatchPickLocations(FindableList):
     DisplayMember = None
     ValueMember = 'UniqueId'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchPickLocations()
+    Instance = BatchPickLocations()
+    """hardcoded/returns an instance of the class"""
 
 class BatchProcessAction:
     """ enum BatchProcessAction, values: Default (0), Mobile (2), MobileToTerminal (1), Terminal (3) """
@@ -1154,9 +1140,8 @@ class BatchProcessAction:
     Terminal = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchProcessAction()
+    Instance = BatchProcessAction()
+    """hardcoded/returns an instance of the class"""
 
 class BatchScanArgs():
     """ BatchScanArgs() """
@@ -1201,9 +1186,8 @@ Set: WarehouseLocationCode(self: BatchScanArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchScanArgs()
+    Instance = BatchScanArgs()
+    """hardcoded/returns an instance of the class"""
 
 class BatchScanResult():
     """ BatchScanResult() """
@@ -1244,9 +1228,8 @@ Set: Message(self: BatchScanResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchScanResult()
+    Instance = BatchScanResult()
+    """hardcoded/returns an instance of the class"""
 
 class BatchStatus:
     """ enum BatchStatus, values: Approved (0), FullyPacked (5), New (-1), Packing (4), Picking (1), PickingAndPacking (2), ReadyToPack (3), Shipping (6) """
@@ -1293,9 +1276,8 @@ class BatchStatus:
     Shipping = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchStatus()
+    Instance = BatchStatus()
+    """hardcoded/returns an instance of the class"""
 
 class BatchUpdateArgs():
     """ BatchUpdateArgs() """
@@ -1356,9 +1338,8 @@ Set: Tags(self: BatchUpdateArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchUpdateArgs()
+    Instance = BatchUpdateArgs()
+    """hardcoded/returns an instance of the class"""
 
 class DifferFromRouteOptions:
     """ enum DifferFromRouteOptions, values: Allow (0), AllowWithMessage (1), DontAllow (2) """
@@ -1400,9 +1381,8 @@ class DifferFromRouteOptions:
     DontAllow = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DifferFromRouteOptions()
+    Instance = DifferFromRouteOptions()
+    """hardcoded/returns an instance of the class"""
 
 class GetBatchArgs():
     """ GetBatchArgs() """
@@ -1463,9 +1443,8 @@ Set: UseStatus(self: GetBatchArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetBatchArgs()
+    Instance = GetBatchArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetBatchToConsolidateToArgs():
     """ GetBatchToConsolidateToArgs() """
@@ -1488,9 +1467,8 @@ Set: ZoneIdToCheckForPackBatch(self: GetBatchToConsolidateToArgs) = value
 
     Comparer = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetBatchToConsolidateToArgs()
+    Instance = GetBatchToConsolidateToArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetItemsToPackArgs():
     """ GetItemsToPackArgs() """
@@ -1519,9 +1497,8 @@ Set: Customer(self: GetItemsToPackArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetItemsToPackArgs()
+    Instance = GetItemsToPackArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PickArgs():
     """
@@ -1637,9 +1614,8 @@ Set: WarehouseCode(self: PickArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PickArgs()
+    Instance = PickArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PickItemIdRangeArgs(PickArgs):
     """ PickItemIdRangeArgs() """
@@ -1652,9 +1628,8 @@ Set: GenerateArgs(self: PickItemIdRangeArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PickItemIdRangeArgs()
+    Instance = PickItemIdRangeArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PickItemIdsArgs(PickArgs):
     """ PickItemIdsArgs() """
@@ -1667,9 +1642,8 @@ Set: ItemIds(self: PickItemIdsArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PickItemIdsArgs()
+    Instance = PickItemIdsArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PickResult():
     """ PickResult() """
@@ -1693,9 +1667,8 @@ Set: Positions(self: PickResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PickResult()
+    Instance = PickResult()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessBatchPickingArgs():
     """ ProcessBatchPickingArgs() """
@@ -1716,9 +1689,8 @@ Set: NewPackBatchId(self: ProcessBatchPickingArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessBatchPickingArgs()
+    Instance = ProcessBatchPickingArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessPickState:
     """ enum ProcessPickState, values: Allocated (3), Deallocated (2), Done (4), NotSet (0), Transferred (1) """
@@ -1762,9 +1734,8 @@ class ProcessPickState:
     Transferred = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessPickState()
+    Instance = ProcessPickState()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessSalesOrderLinesArgs():
     """ ProcessSalesOrderLinesArgs() """
@@ -1807,7 +1778,6 @@ Set: PrintInvoicesSet(self: ProcessSalesOrderLinesArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessSalesOrderLinesArgs()
+    Instance = ProcessSalesOrderLinesArgs()
+    """hardcoded/returns an instance of the class"""
 

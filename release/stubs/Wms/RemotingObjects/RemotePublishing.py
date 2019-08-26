@@ -17,9 +17,8 @@ Set: Name(self: AddRemotePublisherArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AddRemotePublisherArgs()
+    Instance = AddRemotePublisherArgs()
+    """hardcoded/returns an instance of the class"""
 
 class DeleteRemotePublisherArgs():
     """ DeleteRemotePublisherArgs() """
@@ -30,9 +29,8 @@ Set: Key(self: DeleteRemotePublisherArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DeleteRemotePublisherArgs()
+    Instance = DeleteRemotePublisherArgs()
+    """hardcoded/returns an instance of the class"""
 
 class EditRemotePublisherArgs():
     """ EditRemotePublisherArgs() """
@@ -55,7 +53,6 @@ Set: Name(self: EditRemotePublisherArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EditRemotePublisherArgs()
+    Instance = EditRemotePublisherArgs()
+    """hardcoded/returns an instance of the class"""
 

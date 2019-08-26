@@ -34,9 +34,8 @@ class TaskAlreadyRunningException(Exception):
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TaskAlreadyRunningException()
+    Instance = TaskAlreadyRunningException()
+    """hardcoded/returns an instance of the class"""
 
 class TaskBase():
     """ TaskBase() """
@@ -238,9 +237,8 @@ Set: Type(self: TaskBase) = value
     AlreadyRunningBehaviour = None
     LogCategory = 'Tasks'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TaskBase()
+    Instance = TaskBase()
+    """hardcoded/returns an instance of the class"""
 
 class TaskScheduler():
     # no doc
@@ -292,9 +290,8 @@ class TaskScheduler():
 
     Instance = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TaskScheduler()
+    Instance = TaskScheduler()
+    """hardcoded/returns an instance of the class"""
 
 class TaskType:
     """ enum TaskType, values: Erp (0), General (1), NotificationSummary (3), ScriptTask (2) """
@@ -337,9 +334,8 @@ class TaskType:
     ScriptTask = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TaskType()
+    Instance = TaskType()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

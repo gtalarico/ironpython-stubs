@@ -30,9 +30,8 @@ class ProgressBase:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProgressBase()
+    Instance = ProgressBase()
+    """hardcoded/returns an instance of the class"""
 
 class BatchPackProgress(ProgressBase):
     """ BatchPackProgress() """
@@ -48,9 +47,8 @@ class BatchPackProgress(ProgressBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchPackProgress()
+    Instance = BatchPackProgress()
+    """hardcoded/returns an instance of the class"""
 
 class BatchPickProgress(ProgressBase):
     """ BatchPickProgress() """
@@ -66,9 +64,8 @@ class BatchPickProgress(ProgressBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchPickProgress()
+    Instance = BatchPickProgress()
+    """hardcoded/returns an instance of the class"""
 
 class IProgress:
     # no doc
@@ -84,9 +81,8 @@ class IProgress:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IProgress()
+    Instance = IProgress()
+    """hardcoded/returns an instance of the class"""
 
 class ProgressFactory():
     # no doc
@@ -105,9 +101,8 @@ class ProgressFactory():
         'GetProgress',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProgressFactory()
+    Instance = ProgressFactory()
+    """hardcoded/returns an instance of the class"""
 
 class ReceiveProgress(ProgressBase):
     """ ReceiveProgress() """
@@ -123,7 +118,6 @@ class ReceiveProgress(ProgressBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiveProgress()
+    Instance = ReceiveProgress()
+    """hardcoded/returns an instance of the class"""
 

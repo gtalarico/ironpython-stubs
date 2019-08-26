@@ -22,9 +22,8 @@ class BatchNumbercheck:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchNumbercheck()
+    Instance = BatchNumbercheck()
+    """hardcoded/returns an instance of the class"""
 
 class DatabaseNumberCheck:
     """ DatabaseNumberCheck() """
@@ -40,9 +39,8 @@ class DatabaseNumberCheck:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DatabaseNumberCheck()
+    Instance = DatabaseNumberCheck()
+    """hardcoded/returns an instance of the class"""
 
 class INumberCheck:
     # no doc
@@ -54,9 +52,8 @@ class INumberCheck:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return INumberCheck()
+    Instance = INumberCheck()
+    """hardcoded/returns an instance of the class"""
 
 class NumberCheckFactory():
     """ NumberCheckFactory() """
@@ -64,9 +61,8 @@ class NumberCheckFactory():
         """ IsNumberUsed(self: NumberCheckFactory, args: UsedNumberArgs) -> bool """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NumberCheckFactory()
+    Instance = NumberCheckFactory()
+    """hardcoded/returns an instance of the class"""
 
 class TransportPackageNumberCheck:
     """ TransportPackageNumberCheck() """
@@ -82,7 +78,6 @@ class TransportPackageNumberCheck:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransportPackageNumberCheck()
+    Instance = TransportPackageNumberCheck()
+    """hardcoded/returns an instance of the class"""
 

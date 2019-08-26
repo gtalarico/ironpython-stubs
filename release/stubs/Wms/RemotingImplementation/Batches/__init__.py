@@ -25,9 +25,8 @@ class BatchesExtensions():
         'GetUnpackedItemsOfCustomer',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchesExtensions()
+    Instance = BatchesExtensions()
+    """hardcoded/returns an instance of the class"""
 
 class BatchManager():
     """ BatchManager() """
@@ -108,9 +107,8 @@ class BatchManager():
 
     SyncLock = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchManager()
+    Instance = BatchManager()
+    """hardcoded/returns an instance of the class"""
 
 class BatchPackManager:
     """ BatchPackManager(stockManager: IStockManager, transportPackages: TransportPackages) """
@@ -241,9 +239,8 @@ class BatchPackManager:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchPackManager()
+    Instance = BatchPackManager()
+    """hardcoded/returns an instance of the class"""
 
 class BatchPickManager:
     """ BatchPickManager(batch: Batch, stock: IStockManager, settings: AllocationSettings) """
@@ -375,9 +372,8 @@ class BatchPickManager:
 
     BoxColors = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchPickManager()
+    Instance = BatchPickManager()
+    """hardcoded/returns an instance of the class"""
 
 class ColliRegistrationResult():
     """ ColliRegistrationResult() """
@@ -406,9 +402,8 @@ Set: AreColliHandled(self: ColliRegistrationResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ColliRegistrationResult()
+    Instance = ColliRegistrationResult()
+    """hardcoded/returns an instance of the class"""
 
 class ColliRegistrator:
     """ ColliRegistrator(transportPackages: TransportPackages) """
@@ -450,9 +445,8 @@ class ColliRegistrator:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ColliRegistrator()
+    Instance = ColliRegistrator()
+    """hardcoded/returns an instance of the class"""
 
 class CountForColliRegistration():
     """ CountForColliRegistration() """
@@ -487,9 +481,8 @@ Set: WarehouseLocationCode(self: CountForColliRegistration) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CountForColliRegistration()
+    Instance = CountForColliRegistration()
+    """hardcoded/returns an instance of the class"""
 
 class PickingList:
     """ PickingList() """
@@ -517,9 +510,8 @@ class PickingList:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PickingList()
+    Instance = PickingList()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

@@ -31,9 +31,8 @@ class ExceptionExtensions():
         'MustBeRethrownImmediately',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExceptionExtensions()
+    Instance = ExceptionExtensions()
+    """hardcoded/returns an instance of the class"""
 
 class LogLevelExtensions():
     # no doc
@@ -46,9 +45,8 @@ class LogLevelExtensions():
         'ToSeverity',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LogLevelExtensions()
+    Instance = LogLevelExtensions()
+    """hardcoded/returns an instance of the class"""
 
 class StackdriverLabel():
     """
@@ -76,9 +74,8 @@ Set: Name(self: StackdriverLabel) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StackdriverLabel()
+    Instance = StackdriverLabel()
+    """hardcoded/returns an instance of the class"""
 
 class StackDriverLoggingTarget(TargetWithLayout):
     """ StackDriverLoggingTarget() """
@@ -163,7 +160,6 @@ Set: ProjectId(self: StackDriverLoggingTarget) = value
     SyncRoot = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StackDriverLoggingTarget()
+    Instance = StackDriverLoggingTarget()
+    """hardcoded/returns an instance of the class"""
 

@@ -32,7 +32,9 @@ class GetValidValues(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
+             not require arguments.
+        
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -61,7 +63,8 @@ class GetValidValues(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -77,9 +80,8 @@ class GetValidValues(MulticastDelegate):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetValidValues()
+    Instance = GetValidValues()
+    """hardcoded/returns an instance of the class"""
 
 class ISystemSettingsAttribute:
     """ Defines base interface for creating attributes to enricht system settting properties. """
@@ -91,9 +93,8 @@ class ISystemSettingsAttribute:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ISystemSettingsAttribute()
+    Instance = ISystemSettingsAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class Group:
     """
@@ -131,9 +132,8 @@ Set: SortKey(self: Group) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Group()
+    Instance = Group()
+    """hardcoded/returns an instance of the class"""
 
 class Label:
     """
@@ -164,9 +164,8 @@ Set: Value(self: Label) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Label()
+    Instance = Label()
+    """hardcoded/returns an instance of the class"""
 
 class MachineSetting:
     """
@@ -182,9 +181,8 @@ class MachineSetting:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MachineSetting()
+    Instance = MachineSetting()
+    """hardcoded/returns an instance of the class"""
 
 class MaxLength:
     """
@@ -214,9 +212,8 @@ Set: Value(self: MaxLength) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MaxLength()
+    Instance = MaxLength()
+    """hardcoded/returns an instance of the class"""
 
 class Renderer:
     """
@@ -246,9 +243,8 @@ Set: Value(self: Renderer) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Renderer()
+    Instance = Renderer()
+    """hardcoded/returns an instance of the class"""
 
 class RenderingTypes:
     """
@@ -295,9 +291,8 @@ class RenderingTypes:
     value__ = None
     WarehouseCombo = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RenderingTypes()
+    Instance = RenderingTypes()
+    """hardcoded/returns an instance of the class"""
 
 class SettingAttributesHelper():
     """ SettingAttributesHelper() """
@@ -311,9 +306,8 @@ class SettingAttributesHelper():
         """ GetMemberValue(settingsObject: object, member: MemberInfo) -> object """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SettingAttributesHelper()
+    Instance = SettingAttributesHelper()
+    """hardcoded/returns an instance of the class"""
 
 class UserSetting:
     """
@@ -329,9 +323,8 @@ class UserSetting:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UserSetting()
+    Instance = UserSetting()
+    """hardcoded/returns an instance of the class"""
 
 class ValidValuePattern:
     """
@@ -356,9 +349,8 @@ class ValidValuePattern:
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ValidValuePattern()
+    Instance = ValidValuePattern()
+    """hardcoded/returns an instance of the class"""
 
 class ValidValues:
     """
@@ -388,7 +380,6 @@ Set: DelegateName(self: ValidValues) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ValidValues()
+    Instance = ValidValues()
+    """hardcoded/returns an instance of the class"""
 

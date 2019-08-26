@@ -21,9 +21,8 @@ class RightValueExtensions():
         'IsPermitted',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RightValueExtensions()
+    Instance = RightValueExtensions()
+    """hardcoded/returns an instance of the class"""
 
 class Zone(DbObject):
     """ Zone() """
@@ -83,9 +82,8 @@ Set: Sys(self: Zone) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Zone()
+    Instance = Zone()
+    """hardcoded/returns an instance of the class"""
 
 class ZoneRights(DbObject):
     """ ZoneRights() """
@@ -1283,9 +1281,8 @@ Set: TouchMandatoryUseOfLicensePlates(self: ZoneRights) = value
 
     RightValue = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ZoneRights()
+    Instance = ZoneRights()
+    """hardcoded/returns an instance of the class"""
 
 class ZoneRightView():
     """
@@ -1341,9 +1338,8 @@ Set: Value(self: ZoneRightView) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ZoneRightView()
+    Instance = ZoneRightView()
+    """hardcoded/returns an instance of the class"""
 
 class ZoneRightViews(FindableList):
     """ ZoneRightViews() """
@@ -1369,9 +1365,8 @@ class ZoneRightViews(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Value'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ZoneRightViews()
+    Instance = ZoneRightViews()
+    """hardcoded/returns an instance of the class"""
 
 class Zones(FindableList):
     """ Zones() """
@@ -1397,9 +1392,8 @@ class Zones(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Zones()
+    Instance = Zones()
+    """hardcoded/returns an instance of the class"""
 
 class ZoneUser(User):
     """
@@ -1430,9 +1424,8 @@ Set: IsInZone(self: ZoneUser) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ZoneUser()
+    Instance = ZoneUser()
+    """hardcoded/returns an instance of the class"""
 
 class ZoneUsers(List):
     """
@@ -1469,9 +1462,8 @@ class ZoneUsers(List):
     DisplayMember = 'FullName'
     ValueMember = 'UserId'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ZoneUsers()
+    Instance = ZoneUsers()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

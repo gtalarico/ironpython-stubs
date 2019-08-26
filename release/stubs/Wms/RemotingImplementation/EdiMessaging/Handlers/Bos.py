@@ -28,7 +28,6 @@ class BosOutboundFilesMessageHandler(MessageHandlerBase):
         """ __new__(cls: type, offlineScanning: IOfflineScanning) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BosOutboundFilesMessageHandler()
+    Instance = BosOutboundFilesMessageHandler()
+    """hardcoded/returns an instance of the class"""
 

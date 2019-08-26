@@ -23,9 +23,8 @@ Set: Success(self: HandleResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HandleResult()
+    Instance = HandleResult()
+    """hardcoded/returns an instance of the class"""
 
 class IMessage:
     # no doc
@@ -130,9 +129,8 @@ Set: Type(self: IMessage) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IMessage()
+    Instance = IMessage()
+    """hardcoded/returns an instance of the class"""
 
 class IMessageHandler:
     # no doc
@@ -172,9 +170,8 @@ Set: OnLogWarning(self: IMessageHandler) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IMessageHandler()
+    Instance = IMessageHandler()
+    """hardcoded/returns an instance of the class"""
 
 class IMessagePublisher:
     # no doc
@@ -210,9 +207,8 @@ Set: OnLogWarning(self: IMessagePublisher) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IMessagePublisher()
+    Instance = IMessagePublisher()
+    """hardcoded/returns an instance of the class"""
 
 class IMessagingProvider:
     # no doc
@@ -232,9 +228,8 @@ class IMessagingProvider:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IMessagingProvider()
+    Instance = IMessagingProvider()
+    """hardcoded/returns an instance of the class"""
 
 class IQueueProvider:
     # no doc
@@ -250,9 +245,8 @@ class IQueueProvider:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IQueueProvider()
+    Instance = IQueueProvider()
+    """hardcoded/returns an instance of the class"""
 
 class MessageBase:
     # no doc
@@ -363,9 +357,8 @@ Set: Type(self: MessageBase) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessageBase()
+    Instance = MessageBase()
+    """hardcoded/returns an instance of the class"""
 
 class MessageHandlerBase:
     # no doc
@@ -417,9 +410,8 @@ Set: OnLogWarning(self: MessageHandlerBase) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessageHandlerBase()
+    Instance = MessageHandlerBase()
+    """hardcoded/returns an instance of the class"""
 
 class MessagePriority:
     """ enum MessagePriority, values: AboveNormal (4), High (5), Highest (7), Low (2), Lowest (0), Normal (3), VeryHigh (6), VeryLow (1) """
@@ -466,9 +458,8 @@ class MessagePriority:
     VeryHigh = None
     VeryLow = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessagePriority()
+    Instance = MessagePriority()
+    """hardcoded/returns an instance of the class"""
 
 class MessagePublisherBase:
     # no doc
@@ -516,9 +507,8 @@ Set: OnLogWarning(self: MessagePublisherBase) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessagePublisherBase()
+    Instance = MessagePublisherBase()
+    """hardcoded/returns an instance of the class"""
 
 class MessageStatus:
     """ enum MessageStatus, values: Enqueued (10), Handled (20), HandledWithErrors (30), Handling (15), New (0), ReSubmitted (40), Undefined (-1) """
@@ -564,15 +554,13 @@ class MessageStatus:
     Undefined = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessageStatus()
+    Instance = MessageStatus()
+    """hardcoded/returns an instance of the class"""
 
 class MessagingProviderInitializationArguments():
     """ MessagingProviderInitializationArguments() """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessagingProviderInitializationArguments()
+    Instance = MessagingProviderInitializationArguments()
+    """hardcoded/returns an instance of the class"""
 
 class MessagingProvidersFactory():
     """ MessagingProvidersFactory() """
@@ -596,9 +584,8 @@ class MessagingProvidersFactory():
         """ InitializeAll() -> IEnumerable[IMessagingProvider] """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessagingProvidersFactory()
+    Instance = MessagingProvidersFactory()
+    """hardcoded/returns an instance of the class"""
 
 class MsmqProvider:
     """ MsmqProvider(options: MsmqOptions) """
@@ -623,9 +610,8 @@ class MsmqProvider:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MsmqProvider()
+    Instance = MsmqProvider()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

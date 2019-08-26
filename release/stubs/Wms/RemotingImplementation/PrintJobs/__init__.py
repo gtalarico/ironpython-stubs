@@ -19,9 +19,8 @@ class BwServerPrintJobMessageProcessor(MessageProcessor):
 
     _queueProvider = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BwServerPrintJobMessageProcessor()
+    Instance = BwServerPrintJobMessageProcessor()
+    """hardcoded/returns an instance of the class"""
 
 class CleanupDocumentQueueTask(TaskBase):
     """ CleanupDocumentQueueTask(settings: SystemSettings) """
@@ -40,9 +39,8 @@ class CleanupDocumentQueueTask(TaskBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CleanupDocumentQueueTask()
+    Instance = CleanupDocumentQueueTask()
+    """hardcoded/returns an instance of the class"""
 
 class DocumentQueueExtensionMethods():
     # no doc
@@ -73,9 +71,8 @@ class DocumentQueueExtensionMethods():
         'ParseDocumentTypeString',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DocumentQueueExtensionMethods()
+    Instance = DocumentQueueExtensionMethods()
+    """hardcoded/returns an instance of the class"""
 
 class JsonMessageDispatcher():
     """ JsonMessageDispatcher(queueProvider: IQueueProvider) """
@@ -88,9 +85,8 @@ class JsonMessageDispatcher():
         """ __new__(cls: type, queueProvider: IQueueProvider) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return JsonMessageDispatcher()
+    Instance = JsonMessageDispatcher()
+    """hardcoded/returns an instance of the class"""
 
 class PrintJobExtensions():
     # no doc
@@ -103,9 +99,8 @@ class PrintJobExtensions():
         'RegisterMsQueue',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobExtensions()
+    Instance = PrintJobExtensions()
+    """hardcoded/returns an instance of the class"""
 
 class PrintJobQueueDispatcher(JsonMessageDispatcher):
     """ PrintJobQueueDispatcher(queueProvider: IQueueProvider) """
@@ -114,9 +109,8 @@ class PrintJobQueueDispatcher(JsonMessageDispatcher):
         """ __new__(cls: type, queueProvider: IQueueProvider) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobQueueDispatcher()
+    Instance = PrintJobQueueDispatcher()
+    """hardcoded/returns an instance of the class"""
 
 class PrintJobsOnStartupValidator():
     """ PrintJobsOnStartupValidator(messageDispatcher: PrintJobQueueDispatcher) """
@@ -129,9 +123,8 @@ class PrintJobsOnStartupValidator():
         """ __new__(cls: type, messageDispatcher: PrintJobQueueDispatcher) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobsOnStartupValidator()
+    Instance = PrintJobsOnStartupValidator()
+    """hardcoded/returns an instance of the class"""
 
 class PrintJobsQueuer():
     """ PrintJobsQueuer(messageDispatcher: PrintJobQueueDispatcher, storageProvider: StorageProvider) """
@@ -148,9 +141,8 @@ class PrintJobsQueuer():
         """ __new__(cls: type, messageDispatcher: PrintJobQueueDispatcher, storageProvider: StorageProvider) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintJobsQueuer()
+    Instance = PrintJobsQueuer()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

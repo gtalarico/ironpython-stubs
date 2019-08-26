@@ -31,9 +31,8 @@ class ItemPackScanArgs():
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ItemPackScanArgs()
+    Instance = ItemPackScanArgs()
+    """hardcoded/returns an instance of the class"""
 
 class MoveAction:
     """ enum MoveAction, values: Ignore (0), MoveBetweenColli (3), Pack (1), Unpack (2) """
@@ -76,9 +75,8 @@ class MoveAction:
     Unpack = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MoveAction()
+    Instance = MoveAction()
+    """hardcoded/returns an instance of the class"""
 
 class MoveTransportItemsBetweenTransportPackagesArgs():
     """ MoveTransportItemsBetweenTransportPackagesArgs() """
@@ -113,9 +111,8 @@ Set: MoveArgs(self: MoveTransportItemsBetweenTransportPackagesArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MoveTransportItemsBetweenTransportPackagesArgs()
+    Instance = MoveTransportItemsBetweenTransportPackagesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class MoveTransportPackageItemsArgs():
     """ MoveTransportPackageItemsArgs() """
@@ -165,9 +162,8 @@ Set: TransportItems(self: MoveTransportPackageItemsArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MoveTransportPackageItemsArgs()
+    Instance = MoveTransportPackageItemsArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessBatchPackingArgs():
     """ ProcessBatchPackingArgs() """
@@ -188,9 +184,8 @@ Set: ValidateStock(self: ProcessBatchPackingArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessBatchPackingArgs()
+    Instance = ProcessBatchPackingArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ScanItemPackArgsResult():
     """ ScanItemPackArgsResult() """
@@ -213,9 +208,8 @@ Set: ScanResult(self: ScanItemPackArgsResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ScanItemPackArgsResult()
+    Instance = ScanItemPackArgsResult()
+    """hardcoded/returns an instance of the class"""
 
 class ScanItemPackResultType:
     """ enum ScanItemPackResultType, values: InnerReference (1), Item (0) """
@@ -256,9 +250,8 @@ class ScanItemPackResultType:
     Item = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ScanItemPackResultType()
+    Instance = ScanItemPackResultType()
+    """hardcoded/returns an instance of the class"""
 
 class TransportPackageScanEnum:
     """ enum TransportPackageScanEnum, values: None (0), Serial (2), SSCC (1) """
@@ -300,9 +293,8 @@ class TransportPackageScanEnum:
     SSCC = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransportPackageScanEnum()
+    Instance = TransportPackageScanEnum()
+    """hardcoded/returns an instance of the class"""
 
 class TransportPackageScanResult():
     """ TransportPackageScanResult() """
@@ -325,7 +317,6 @@ Set: MatchedScanOfType(self: TransportPackageScanResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransportPackageScanResult()
+    Instance = TransportPackageScanResult()
+    """hardcoded/returns an instance of the class"""
 

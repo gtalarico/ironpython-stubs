@@ -33,9 +33,8 @@ class GeneratorBase:
 
     RangeLocker = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GeneratorBase()
+    Instance = GeneratorBase()
+    """hardcoded/returns an instance of the class"""
 
 class IGenerator:
     # no doc
@@ -47,9 +46,8 @@ class IGenerator:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IGenerator()
+    Instance = IGenerator()
+    """hardcoded/returns an instance of the class"""
 
 class SSCCGenerator(GeneratorBase):
     """ SSCCGenerator() """
@@ -70,7 +68,6 @@ class SSCCGenerator(GeneratorBase):
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCGenerator()
+    Instance = SSCCGenerator()
+    """hardcoded/returns an instance of the class"""
 

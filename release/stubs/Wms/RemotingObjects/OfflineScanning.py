@@ -23,9 +23,8 @@ Set: Serialno(self: AddScannerArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AddScannerArgs()
+    Instance = AddScannerArgs()
+    """hardcoded/returns an instance of the class"""
 
 class DeleteScannerArgs():
     """ DeleteScannerArgs() """
@@ -36,9 +35,8 @@ Set: Serialno(self: DeleteScannerArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DeleteScannerArgs()
+    Instance = DeleteScannerArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetAppVersionFileSpecArgs():
     """ GetAppVersionFileSpecArgs() """
@@ -49,9 +47,8 @@ Set: Version(self: GetAppVersionFileSpecArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetAppVersionFileSpecArgs()
+    Instance = GetAppVersionFileSpecArgs()
+    """hardcoded/returns an instance of the class"""
 
 class SetCurrentAppVersionArgs():
     """ SetCurrentAppVersionArgs() """
@@ -62,7 +59,6 @@ Set: Version(self: SetCurrentAppVersionArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SetCurrentAppVersionArgs()
+    Instance = SetCurrentAppVersionArgs()
+    """hardcoded/returns an instance of the class"""
 

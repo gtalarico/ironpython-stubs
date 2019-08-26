@@ -51,9 +51,8 @@ class ObjectDescriptor():
 
     HandlerType = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ObjectDescriptor()
+    Instance = ObjectDescriptor()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

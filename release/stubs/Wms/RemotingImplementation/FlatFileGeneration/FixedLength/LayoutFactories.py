@@ -22,9 +22,8 @@ class DepartmentFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DepartmentFixedLengthLayoutFactory()
+    Instance = DepartmentFixedLengthLayoutFactory()
+    """hardcoded/returns an instance of the class"""
 
 class IFixedLengthLayoutFactory:
     # no doc
@@ -36,9 +35,8 @@ class IFixedLengthLayoutFactory:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IFixedLengthLayoutFactory()
+    Instance = IFixedLengthLayoutFactory()
+    """hardcoded/returns an instance of the class"""
 
 class KanbanBarcodeFixedLengthLayoutFactory:
     """ KanbanBarcodeFixedLengthLayoutFactory() """
@@ -54,9 +52,8 @@ class KanbanBarcodeFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return KanbanBarcodeFixedLengthLayoutFactory()
+    Instance = KanbanBarcodeFixedLengthLayoutFactory()
+    """hardcoded/returns an instance of the class"""
 
 class KanbanProductFixedLengthLayoutFactory:
     """ KanbanProductFixedLengthLayoutFactory() """
@@ -72,9 +69,8 @@ class KanbanProductFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return KanbanProductFixedLengthLayoutFactory()
+    Instance = KanbanProductFixedLengthLayoutFactory()
+    """hardcoded/returns an instance of the class"""
 
 class KanbanReplenishmentLineFixedLengthLayoutFactory:
     """ KanbanReplenishmentLineFixedLengthLayoutFactory() """
@@ -90,9 +86,8 @@ class KanbanReplenishmentLineFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return KanbanReplenishmentLineFixedLengthLayoutFactory()
+    Instance = KanbanReplenishmentLineFixedLengthLayoutFactory()
+    """hardcoded/returns an instance of the class"""
 
 class MetaFixedLengthLayoutFactory:
     """ MetaFixedLengthLayoutFactory() """
@@ -108,9 +103,8 @@ class MetaFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MetaFixedLengthLayoutFactory()
+    Instance = MetaFixedLengthLayoutFactory()
+    """hardcoded/returns an instance of the class"""
 
 class ProductReplenishmentLineFixedLengthLayoutFactory:
     """ ProductReplenishmentLineFixedLengthLayoutFactory() """
@@ -126,9 +120,8 @@ class ProductReplenishmentLineFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProductReplenishmentLineFixedLengthLayoutFactory()
+    Instance = ProductReplenishmentLineFixedLengthLayoutFactory()
+    """hardcoded/returns an instance of the class"""
 
 class ProductsFixedLengthLayoutFactory:
     """ ProductsFixedLengthLayoutFactory() """
@@ -144,9 +137,8 @@ class ProductsFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProductsFixedLengthLayoutFactory()
+    Instance = ProductsFixedLengthLayoutFactory()
+    """hardcoded/returns an instance of the class"""
 
 class ProductsIndexFixedLengthLayoutFactory:
     """ ProductsIndexFixedLengthLayoutFactory() """
@@ -162,9 +154,8 @@ class ProductsIndexFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProductsIndexFixedLengthLayoutFactory()
+    Instance = ProductsIndexFixedLengthLayoutFactory()
+    """hardcoded/returns an instance of the class"""
 
 class UsersFixedLengthLayoutFactory:
     """ UsersFixedLengthLayoutFactory() """
@@ -180,7 +171,6 @@ class UsersFixedLengthLayoutFactory:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UsersFixedLengthLayoutFactory()
+    Instance = UsersFixedLengthLayoutFactory()
+    """hardcoded/returns an instance of the class"""
 

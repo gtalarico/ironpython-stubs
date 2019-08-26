@@ -20,9 +20,8 @@ class EnumHelper():
         """ TryParse[T](input: str, defaultValue: T, ignoreCase: bool) -> (bool, T) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EnumHelper()
+    Instance = EnumHelper()
+    """hardcoded/returns an instance of the class"""
 
 class EnumStringHelper():
     """ EnumStringHelper(enumType: Type) """
@@ -128,9 +127,8 @@ Get: EnumType(self: EnumStringHelper) -> Type
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EnumStringHelper()
+    Instance = EnumStringHelper()
+    """hardcoded/returns an instance of the class"""
 
 class EnumStringValueAttribute:
     """ EnumStringValueAttribute(value: str) """
@@ -152,7 +150,6 @@ class EnumStringValueAttribute:
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EnumStringValueAttribute()
+    Instance = EnumStringValueAttribute()
+    """hardcoded/returns an instance of the class"""
 

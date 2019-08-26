@@ -21,9 +21,8 @@ Set: OlderThenDays(self: CleanupMessageHistoryArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CleanupMessageHistoryArgs()
+    Instance = CleanupMessageHistoryArgs()
+    """hardcoded/returns an instance of the class"""
 
 class DequeueResult():
     """ DequeueResult() """
@@ -44,9 +43,8 @@ Set: Message(self: DequeueResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DequeueResult()
+    Instance = DequeueResult()
+    """hardcoded/returns an instance of the class"""
 
 class ExecuteMessageHandlerArgs():
     """ ExecuteMessageHandlerArgs() """
@@ -75,9 +73,8 @@ Set: Message(self: ExecuteMessageHandlerArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExecuteMessageHandlerArgs()
+    Instance = ExecuteMessageHandlerArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ExecuteMessageHandlerResult():
     """ ExecuteMessageHandlerResult() """
@@ -98,9 +95,8 @@ Set: Success(self: ExecuteMessageHandlerResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExecuteMessageHandlerResult()
+    Instance = ExecuteMessageHandlerResult()
+    """hardcoded/returns an instance of the class"""
 
 class ExecuteMessagePublisherArgs():
     """ ExecuteMessagePublisherArgs() """
@@ -121,9 +117,8 @@ Set: PublisherId(self: ExecuteMessagePublisherArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExecuteMessagePublisherArgs()
+    Instance = ExecuteMessagePublisherArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ExecuteMessagePublisherResult():
     """ ExecuteMessagePublisherResult() """
@@ -136,9 +131,8 @@ Set: Success(self: ExecuteMessagePublisherResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExecuteMessagePublisherResult()
+    Instance = ExecuteMessagePublisherResult()
+    """hardcoded/returns an instance of the class"""
 
 class GetDistinctTypeListArgs():
     """ GetDistinctTypeListArgs() """
@@ -151,21 +145,18 @@ Set: DaysBackToIncludeInDistinct(self: GetDistinctTypeListArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetDistinctTypeListArgs()
+    Instance = GetDistinctTypeListArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetMessageHandlersArgs():
     """ GetMessageHandlersArgs() """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetMessageHandlersArgs()
+    Instance = GetMessageHandlersArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetMessagePublishersArgs():
     """ GetMessagePublishersArgs() """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetMessagePublishersArgs()
+    Instance = GetMessagePublishersArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetMessagesArgs():
     """ GetMessagesArgs() """
@@ -194,9 +185,8 @@ Set: SearchText(self: GetMessagesArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetMessagesArgs()
+    Instance = GetMessagesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class MessageBodyDecodeAs:
     """ enum MessageBodyDecodeAs, values: Ascii (0), Unicode (3), Utf16 (2), Utf8 (1) """
@@ -239,9 +229,8 @@ class MessageBodyDecodeAs:
     Utf8 = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessageBodyDecodeAs()
+    Instance = MessageBodyDecodeAs()
+    """hardcoded/returns an instance of the class"""
 
 class MessageHandlerDescriptorSerializable():
     """
@@ -289,9 +278,8 @@ Set: Id(self: MessageHandlerDescriptorSerializable) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessageHandlerDescriptorSerializable()
+    Instance = MessageHandlerDescriptorSerializable()
+    """hardcoded/returns an instance of the class"""
 
 class MessagePublisherDescriptorSerializable():
     """
@@ -339,9 +327,8 @@ Set: Id(self: MessagePublisherDescriptorSerializable) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessagePublisherDescriptorSerializable()
+    Instance = MessagePublisherDescriptorSerializable()
+    """hardcoded/returns an instance of the class"""
 
 class Messages(FindableList):
     """
@@ -378,9 +365,8 @@ Set: TotalRowsMatched(self: Messages) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Messages()
+    Instance = Messages()
+    """hardcoded/returns an instance of the class"""
 
 class MessagingMessage(MessageBase):
     """
@@ -435,7 +421,6 @@ Set: ModifiedOn(self: MessagingMessage) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MessagingMessage()
+    Instance = MessagingMessage()
+    """hardcoded/returns an instance of the class"""
 

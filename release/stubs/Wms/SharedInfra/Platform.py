@@ -13,7 +13,6 @@ class Platform():
     Is64Bit = True
     __all__ = []
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Platform()
+    Instance = Platform()
+    """hardcoded/returns an instance of the class"""
 

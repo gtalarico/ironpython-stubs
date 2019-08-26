@@ -43,7 +43,6 @@ Set: WarehouseCode(self: WarehouseLayoutSetting) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return WarehouseLayoutSetting()
+    Instance = WarehouseLayoutSetting()
+    """hardcoded/returns an instance of the class"""
 

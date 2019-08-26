@@ -25,9 +25,8 @@ class CompatibilitySwitch():
         'IsEnabled',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CompatibilitySwitch()
+    Instance = CompatibilitySwitch()
+    """hardcoded/returns an instance of the class"""
 
 class ComponentGuaranteesAttribute:
     """
@@ -52,9 +51,8 @@ Get: Guarantees(self: ComponentGuaranteesAttribute) -> ComponentGuaranteesOption
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentGuaranteesAttribute()
+    Instance = ComponentGuaranteesAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class ComponentGuaranteesOptions:
     """
@@ -101,9 +99,8 @@ class ComponentGuaranteesOptions:
     Stable = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ComponentGuaranteesOptions()
+    Instance = ComponentGuaranteesOptions()
+    """hardcoded/returns an instance of the class"""
 
 class FrameworkName:
     """
@@ -123,7 +120,9 @@ class FrameworkName:
             Returns: true if every component of the current System.Runtime.Versioning.FrameworkName object matches the corresponding component of obj; otherwise, false.
         Equals(self: FrameworkName, other: FrameworkName) -> bool
         
-            Returns a value that indicates whether this System.Runtime.Versioning.FrameworkName instance represents the same .NET Framework version as a specified System.Runtime.Versioning.FrameworkName instance.
+            Returns a value that indicates whether this System.Runtime.Versioning.FrameworkName instance represents the same .NET Framework version as a specified 
+             System.Runtime.Versioning.FrameworkName instance.
+        
         
             other: The object to compare to the current instance.
             Returns: true if every component of the current System.Runtime.Versioning.FrameworkName object matches the corresponding component of other; otherwise, false.
@@ -207,9 +206,8 @@ Get: Version(self: FrameworkName) -> Version
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FrameworkName()
+    Instance = FrameworkName()
+    """hardcoded/returns an instance of the class"""
 
 class ResourceConsumptionAttribute:
     """
@@ -245,9 +243,8 @@ Get: ResourceScope(self: ResourceConsumptionAttribute) -> ResourceScope
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ResourceConsumptionAttribute()
+    Instance = ResourceConsumptionAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class ResourceExposureAttribute:
     """
@@ -272,9 +269,8 @@ Get: ResourceExposureLevel(self: ResourceExposureAttribute) -> ResourceScope
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ResourceExposureAttribute()
+    Instance = ResourceExposureAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class ResourceScope:
     """
@@ -324,9 +320,8 @@ class ResourceScope:
     Process = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ResourceScope()
+    Instance = ResourceScope()
+    """hardcoded/returns an instance of the class"""
 
 class TargetFrameworkAttribute:
     """
@@ -359,9 +354,8 @@ Get: FrameworkName(self: TargetFrameworkAttribute) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TargetFrameworkAttribute()
+    Instance = TargetFrameworkAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class VersioningHelper():
     """ Provides methods to aid developers in writing version-safe code. This class cannot be inherited. """
@@ -392,7 +386,6 @@ class VersioningHelper():
         'MakeVersionSafeName',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return VersioningHelper()
+    Instance = VersioningHelper()
+    """hardcoded/returns an instance of the class"""
 

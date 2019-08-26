@@ -22,9 +22,8 @@ class BatchRegistrator:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BatchRegistrator()
+    Instance = BatchRegistrator()
+    """hardcoded/returns an instance of the class"""
 
 class INumberRegistrator:
     # no doc
@@ -36,9 +35,8 @@ class INumberRegistrator:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return INumberRegistrator()
+    Instance = INumberRegistrator()
+    """hardcoded/returns an instance of the class"""
 
 class NumberRegistrationFactory():
     # no doc
@@ -51,9 +49,8 @@ class NumberRegistrationFactory():
         'RegisterNumbers',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NumberRegistrationFactory()
+    Instance = NumberRegistrationFactory()
+    """hardcoded/returns an instance of the class"""
 
 class TransportPackageRegistrator:
     """ TransportPackageRegistrator() """
@@ -69,7 +66,6 @@ class TransportPackageRegistrator:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransportPackageRegistrator()
+    Instance = TransportPackageRegistrator()
+    """hardcoded/returns an instance of the class"""
 

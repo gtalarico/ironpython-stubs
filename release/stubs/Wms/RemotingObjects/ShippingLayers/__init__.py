@@ -175,9 +175,8 @@ Set: ZipCode(self: Address) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Address()
+    Instance = Address()
+    """hardcoded/returns an instance of the class"""
 
 class AddTransportPackageArgs():
     """ AddTransportPackageArgs() """
@@ -229,9 +228,8 @@ Set: RegisterBoxIds(self: AddTransportPackageArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AddTransportPackageArgs()
+    Instance = AddTransportPackageArgs()
+    """hardcoded/returns an instance of the class"""
 
 class Charge():
     """
@@ -254,9 +252,8 @@ class Charge():
     Empty = None
     SalesAmount = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Charge()
+    Instance = Charge()
+    """hardcoded/returns an instance of the class"""
 
 class Charges(List):
     """ Charges() """
@@ -281,9 +278,8 @@ class Charges(List):
 
     Empty = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Charges()
+    Instance = Charges()
+    """hardcoded/returns an instance of the class"""
 
 class ColliPreset():
     """ ColliPreset() """
@@ -454,9 +450,8 @@ Set: Width(self: ColliPreset) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ColliPreset()
+    Instance = ColliPreset()
+    """hardcoded/returns an instance of the class"""
 
 class ColliPresets(FindableList):
     """
@@ -498,9 +493,8 @@ class ColliPresets(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ColliPresets()
+    Instance = ColliPresets()
+    """hardcoded/returns an instance of the class"""
 
 class Countries(FindableList):
     """ Countries() """
@@ -526,9 +520,8 @@ class Countries(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Code'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Countries()
+    Instance = Countries()
+    """hardcoded/returns an instance of the class"""
 
 class Country():
     """
@@ -556,9 +549,8 @@ Set: Name(self: Country) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Country()
+    Instance = Country()
+    """hardcoded/returns an instance of the class"""
 
 class DangerousItem:
     """ DangerousItem() """
@@ -730,9 +722,8 @@ Set: Volume(self: DangerousItem) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DangerousItem()
+    Instance = DangerousItem()
+    """hardcoded/returns an instance of the class"""
 
 class DangerousItems(List):
     """
@@ -770,9 +761,8 @@ class DangerousItems(List):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DangerousItems()
+    Instance = DangerousItems()
+    """hardcoded/returns an instance of the class"""
 
 class Dimensions:
     """
@@ -907,9 +897,8 @@ Set: Width(self: Dimensions) = value
 
     Empty = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Dimensions()
+    Instance = Dimensions()
+    """hardcoded/returns an instance of the class"""
 
 class ExportDetails:
     """ ExportDetails() """
@@ -962,9 +951,8 @@ Set: ReasonOfExport(self: ExportDetails) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExportDetails()
+    Instance = ExportDetails()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryShipment():
     """ HistoryShipment() """
@@ -1196,9 +1184,8 @@ Set: ZipCode(self: HistoryShipment) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryShipment()
+    Instance = HistoryShipment()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryShipmentFilter(HistoryFilterBase):
     """ HistoryShipmentFilter() """
@@ -1215,9 +1202,8 @@ Set: YourReference(self: HistoryShipmentFilter) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryShipmentFilter()
+    Instance = HistoryShipmentFilter()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryShipmentLine():
     """ HistoryShipmentLine() """
@@ -1368,9 +1354,8 @@ Set: SSCC(self: HistoryShipmentLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryShipmentLine()
+    Instance = HistoryShipmentLine()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryShipmentLines(PagedList):
     """
@@ -1427,9 +1412,8 @@ Get: PreserveState(self: HistoryShipmentLines) -> bool
     DisplayMember = 'ItemDescription'
     ValueMember = 'ItemCode'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryShipmentLines()
+    Instance = HistoryShipmentLines()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryShipments(FindableList):
     """ HistoryShipments() """
@@ -1470,9 +1454,8 @@ Set: TotalRowsMatched(self: HistoryShipments) = value
     DisplayMember = None
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryShipments()
+    Instance = HistoryShipments()
+    """hardcoded/returns an instance of the class"""
 
 class IService:
     # no doc
@@ -1514,9 +1497,8 @@ Set: TransportationCharge(self: IService) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IService()
+    Instance = IService()
+    """hardcoded/returns an instance of the class"""
 
 class IShipper:
     # no doc
@@ -1560,9 +1542,8 @@ class IShipper:
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IShipper()
+    Instance = IShipper()
+    """hardcoded/returns an instance of the class"""
 
 class LogSink():
     """ LogSink() """
@@ -1574,9 +1555,8 @@ class LogSink():
     LogSinkMessage = None
     OnLogSinkMessage = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LogSink()
+    Instance = LogSink()
+    """hardcoded/returns an instance of the class"""
 
 class LogSinkMessageTypes:
     """ enum LogSinkMessageTypes, values: Debug (2), Error (0), UserInfo (1) """
@@ -1618,9 +1598,8 @@ class LogSinkMessageTypes:
     UserInfo = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LogSinkMessageTypes()
+    Instance = LogSinkMessageTypes()
+    """hardcoded/returns an instance of the class"""
 
 class MobileService:
     """
@@ -1685,9 +1664,8 @@ Set: TransportationCharge(self: MobileService) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MobileService()
+    Instance = MobileService()
+    """hardcoded/returns an instance of the class"""
 
 class MobileShipper:
     """
@@ -1763,9 +1741,8 @@ Get: UniqueId(self: MobileShipper) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MobileShipper()
+    Instance = MobileShipper()
+    """hardcoded/returns an instance of the class"""
 
 class OutboundOrderItem():
     """
@@ -1851,9 +1828,8 @@ Set: QuantityOriginal(self: OutboundOrderItem) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OutboundOrderItem()
+    Instance = OutboundOrderItem()
+    """hardcoded/returns an instance of the class"""
 
 class OutboundOrderItems(List):
     """
@@ -1903,9 +1879,8 @@ class OutboundOrderItems(List):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OutboundOrderItems()
+    Instance = OutboundOrderItems()
+    """hardcoded/returns an instance of the class"""
 
 class OutboundOrdersFilter():
     """ OutboundOrdersFilter() """
@@ -1922,9 +1897,8 @@ Set: SearchString(self: OutboundOrdersFilter) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OutboundOrdersFilter()
+    Instance = OutboundOrdersFilter()
+    """hardcoded/returns an instance of the class"""
 
 class Packages(List):
     """ Packages() """
@@ -1953,9 +1927,8 @@ class Packages(List):
 
     Empty = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Packages()
+    Instance = Packages()
+    """hardcoded/returns an instance of the class"""
 
 class PackageType:
     """ enum PackageType, values: Box (1), Document (0), Pallet (2) """
@@ -1997,9 +1970,8 @@ class PackageType:
     Pallet = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PackageType()
+    Instance = PackageType()
+    """hardcoded/returns an instance of the class"""
 
 class PackingSlipLine:
     """ PackingSlipLine() """
@@ -2211,9 +2183,8 @@ Set: WeightUom(self: PackingSlipLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PackingSlipLine()
+    Instance = PackingSlipLine()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessShipmentArgs():
     """ ProcessShipmentArgs() """
@@ -2234,9 +2205,8 @@ Set: ShipmentId(self: ProcessShipmentArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessShipmentArgs()
+    Instance = ProcessShipmentArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessShipmentStepsEnum:
     """ enum ProcessShipmentStepsEnum, values: Done (4), LogShipment (1), PrintPackingSlip (3), ProcessInfoToErp (2), ProcessShipment (0) """
@@ -2280,9 +2250,8 @@ class ProcessShipmentStepsEnum:
     ProcessShipment = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessShipmentStepsEnum()
+    Instance = ProcessShipmentStepsEnum()
+    """hardcoded/returns an instance of the class"""
 
 class Proforma:
     """ Proforma() """
@@ -2350,9 +2319,8 @@ Set: OtherCharges(self: Proforma) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Proforma()
+    Instance = Proforma()
+    """hardcoded/returns an instance of the class"""
 
 class References:
     """ References() """
@@ -2439,9 +2407,8 @@ Set: PackageSlipNumbersAsString(self: References) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return References()
+    Instance = References()
+    """hardcoded/returns an instance of the class"""
 
 class Services(FindableList):
     """ Services() """
@@ -2476,17 +2443,15 @@ class Services(FindableList):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Services()
+    Instance = Services()
+    """hardcoded/returns an instance of the class"""
 
 class ShipmentDayClass():
     """ ShipmentDayClass() """
     ShipmentDay = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ShipmentDayClass()
+    Instance = ShipmentDayClass()
+    """hardcoded/returns an instance of the class"""
 
 class ShipmentInfo():
     """ ShipmentInfo() """
@@ -2515,17 +2480,15 @@ Set: TrackingUrl(self: ShipmentInfo) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ShipmentInfo()
+    Instance = ShipmentInfo()
+    """hardcoded/returns an instance of the class"""
 
 class ShipperInitInfo():
     """ ShipperInitInfo() """
     RootShipperFolder = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ShipperInitInfo()
+    Instance = ShipperInitInfo()
+    """hardcoded/returns an instance of the class"""
 
 class ShipperServiceLink(DbObject):
     """
@@ -2596,9 +2559,8 @@ Set: ShipperId(self: ShipperServiceLink) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ShipperServiceLink()
+    Instance = ShipperServiceLink()
+    """hardcoded/returns an instance of the class"""
 
 class ShipperServiceLinks(FindableList):
     """
@@ -2635,9 +2597,8 @@ class ShipperServiceLinks(FindableList):
     DisplayMember = 'ErpDeliveryMethodCode'
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ShipperServiceLinks()
+    Instance = ShipperServiceLinks()
+    """hardcoded/returns an instance of the class"""
 
 class State:
     """
@@ -2685,9 +2646,8 @@ class State:
     Shipped = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return State()
+    Instance = State()
+    """hardcoded/returns an instance of the class"""
 
 class TransportItem:
     """
@@ -2967,9 +2927,8 @@ Set: WarehouseCode(self: TransportItem) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransportItem()
+    Instance = TransportItem()
+    """hardcoded/returns an instance of the class"""
 
 class TransportItems(FindableList):
     """
@@ -3031,9 +2990,8 @@ class TransportItems(FindableList):
     DisplayMember = 'Description'
     ValueMember = 'UniqueId'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransportItems()
+    Instance = TransportItems()
+    """hardcoded/returns an instance of the class"""
 
 class TransportOptions():
     """ TransportOptions() """
@@ -3101,9 +3059,8 @@ Set: ShipperServiceLevel(self: TransportOptions) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransportOptions()
+    Instance = TransportOptions()
+    """hardcoded/returns an instance of the class"""
 
 class TransportPackage(PackageBase):
     """
@@ -3173,9 +3130,8 @@ Set: TransportItems(self: TransportPackage) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransportPackage()
+    Instance = TransportPackage()
+    """hardcoded/returns an instance of the class"""
 
 class TransportPackages(FindableList):
     """
@@ -3402,9 +3358,8 @@ Get: TotalVolume(self: TransportPackages) -> Decimal
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransportPackages()
+    Instance = TransportPackages()
+    """hardcoded/returns an instance of the class"""
 
 class TypeOfDay:
     """ enum TypeOfDay, values: WeekDays (1), WorkingDays (0) """
@@ -3445,9 +3400,8 @@ class TypeOfDay:
     WeekDays = None
     WorkingDays = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TypeOfDay()
+    Instance = TypeOfDay()
+    """hardcoded/returns an instance of the class"""
 
 class UpdateTransportPackageArgs():
     """ UpdateTransportPackageArgs() """
@@ -3468,9 +3422,8 @@ Set: ValidateItem(self: UpdateTransportPackageArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UpdateTransportPackageArgs()
+    Instance = UpdateTransportPackageArgs()
+    """hardcoded/returns an instance of the class"""
 
 class UpdateTransportPackagesHeaderArgs():
     """ UpdateTransportPackagesHeaderArgs() """
@@ -3523,9 +3476,8 @@ Set: TransportOptions(self: UpdateTransportPackagesHeaderArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UpdateTransportPackagesHeaderArgs()
+    Instance = UpdateTransportPackagesHeaderArgs()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

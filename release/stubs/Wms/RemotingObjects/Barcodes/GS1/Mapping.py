@@ -34,9 +34,8 @@ class PrintLineToGS1MapperBase:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintLineToGS1MapperBase()
+    Instance = PrintLineToGS1MapperBase()
+    """hardcoded/returns an instance of the class"""
 
 class HomogeneousPalletMapper(PrintLineToGS1MapperBase):
     """ HomogeneousPalletMapper() """
@@ -60,9 +59,8 @@ class HomogeneousPalletMapper(PrintLineToGS1MapperBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HomogeneousPalletMapper()
+    Instance = HomogeneousPalletMapper()
+    """hardcoded/returns an instance of the class"""
 
 class IPrintlineToGS1Mapper:
     # no doc
@@ -82,9 +80,8 @@ class IPrintlineToGS1Mapper:
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IPrintlineToGS1Mapper()
+    Instance = IPrintlineToGS1Mapper()
+    """hardcoded/returns an instance of the class"""
 
 class MixedPalletMapper(PrintLineToGS1MapperBase):
     """ MixedPalletMapper() """
@@ -96,9 +93,8 @@ class MixedPalletMapper(PrintLineToGS1MapperBase):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MixedPalletMapper()
+    Instance = MixedPalletMapper()
+    """hardcoded/returns an instance of the class"""
 
 class PrintLineToGS1MapperFactory():
     # no doc
@@ -111,7 +107,6 @@ class PrintLineToGS1MapperFactory():
         'GetMapper',
     ]
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintLineToGS1MapperFactory()
+    Instance = PrintLineToGS1MapperFactory()
+    """hardcoded/returns an instance of the class"""
 

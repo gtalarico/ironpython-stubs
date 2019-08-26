@@ -37,9 +37,8 @@ Set: Reason(self: DeleteFreeRmaLineArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DeleteFreeRmaLineArgs()
+    Instance = DeleteFreeRmaLineArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetHistoryRmaOrderLinesArgs():
     """ GetHistoryRmaOrderLinesArgs() """
@@ -76,9 +75,8 @@ Set: OrderNumber(self: GetHistoryRmaOrderLinesArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetHistoryRmaOrderLinesArgs()
+    Instance = GetHistoryRmaOrderLinesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetRmaOrderArgs():
     """
@@ -131,9 +129,8 @@ Set: WarehouseCode(self: GetRmaOrderArgs) = value
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetRmaOrderArgs()
+    Instance = GetRmaOrderArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetRmaOrderCustomersArgs():
     """
@@ -169,9 +166,8 @@ Set: WarehouseCode(self: GetRmaOrderCustomersArgs) = value
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetRmaOrderCustomersArgs()
+    Instance = GetRmaOrderCustomersArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetRmaOrderLinesArgs():
     """
@@ -219,9 +215,8 @@ Set: WarehouseCode(self: GetRmaOrderLinesArgs) = value
 
     Default = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetRmaOrderLinesArgs()
+    Instance = GetRmaOrderLinesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class RmaOrder:
     """
@@ -354,9 +349,8 @@ Set: CustomerZipCode(self: RmaOrder) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RmaOrder()
+    Instance = RmaOrder()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryRmaOrder(RmaOrder):
     """ HistoryRmaOrder() """
@@ -384,9 +378,8 @@ Set: YourReference(self: HistoryRmaOrder) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryRmaOrder()
+    Instance = HistoryRmaOrder()
+    """hardcoded/returns an instance of the class"""
 
 class RmaOrderLine:
     """
@@ -456,9 +449,8 @@ Set: ReasonDescription(self: RmaOrderLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RmaOrderLine()
+    Instance = RmaOrderLine()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryRmaOrderLine(RmaOrderLine):
     """ HistoryRmaOrderLine() """
@@ -478,9 +470,8 @@ Set: DateReceived(self: HistoryRmaOrderLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryRmaOrderLine()
+    Instance = HistoryRmaOrderLine()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryRmaOrderLines(FindableList):
     """ HistoryRmaOrderLines() """
@@ -512,9 +503,8 @@ Set: TotalRowsMatched(self: HistoryRmaOrderLines) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryRmaOrderLines()
+    Instance = HistoryRmaOrderLines()
+    """hardcoded/returns an instance of the class"""
 
 class HistoryRmaOrders(FindableList):
     """ HistoryRmaOrders() """
@@ -547,9 +537,8 @@ Set: TotalRowsMatched(self: HistoryRmaOrders) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HistoryRmaOrders()
+    Instance = HistoryRmaOrders()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessAdhocRmaArgs():
     """ ProcessAdhocRmaArgs() """
@@ -594,9 +583,8 @@ Set: YourReference(self: ProcessAdhocRmaArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessAdhocRmaArgs()
+    Instance = ProcessAdhocRmaArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ReceiveRmaArgs(ReceiveArgs):
     """ ReceiveRmaArgs() """
@@ -637,9 +625,8 @@ Set: RmaReason(self: ReceiveRmaArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiveRmaArgs()
+    Instance = ReceiveRmaArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ReceiveAdhocRmaArgs(ReceiveRmaArgs):
     """ ReceiveAdhocRmaArgs() """
@@ -669,9 +656,8 @@ Set: ReceivedReceiveLines(self: ReceiveAdhocRmaArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiveAdhocRmaArgs()
+    Instance = ReceiveAdhocRmaArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ReceiveRmaMultiArgs(ReceiveItemIdMultiArgs):
     """ ReceiveRmaMultiArgs() """
@@ -727,9 +713,8 @@ Set: UnitCode(self: ReceiveRmaMultiArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiveRmaMultiArgs()
+    Instance = ReceiveRmaMultiArgs()
+    """hardcoded/returns an instance of the class"""
 
 class RmaOrderArgs():
     """
@@ -764,9 +749,8 @@ class RmaOrderArgs():
     SearchText = None
     WarehouseCode = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RmaOrderArgs()
+    Instance = RmaOrderArgs()
+    """hardcoded/returns an instance of the class"""
 
 class RmaOrderLines:
     """
@@ -801,9 +785,8 @@ class RmaOrderLines:
     DisplayMember = 'ItemCode'
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RmaOrderLines()
+    Instance = RmaOrderLines()
+    """hardcoded/returns an instance of the class"""
 
 class RmaOrders:
     """ RmaOrders() """
@@ -837,9 +820,8 @@ class RmaOrders:
     DisplayMember = 'Number'
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RmaOrders()
+    Instance = RmaOrders()
+    """hardcoded/returns an instance of the class"""
 
 class RmaReason():
     """ RmaReason() """
@@ -879,9 +861,8 @@ Set: Description(self: RmaReason) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RmaReason()
+    Instance = RmaReason()
+    """hardcoded/returns an instance of the class"""
 
 class RmaReasons(FindableList):
     """ RmaReasons() """
@@ -907,9 +888,8 @@ class RmaReasons(FindableList):
     DisplayMember = 'Description'
     ValueMember = 'Code'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RmaReasons()
+    Instance = RmaReasons()
+    """hardcoded/returns an instance of the class"""
 
 class RmaReceiveLine:
     """ RmaReceiveLine() """
@@ -998,9 +978,8 @@ Get: SalesOrderAsDescription(self: RmaReceiveLine) -> str
     DisplayMember = None
     ValueMember = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RmaReceiveLine()
+    Instance = RmaReceiveLine()
+    """hardcoded/returns an instance of the class"""
 
 class RmaReceiveLines:
     """
@@ -1102,7 +1081,6 @@ Get: OrderNumberList(self: RmaReceiveLines) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RmaReceiveLines()
+    Instance = RmaReceiveLines()
+    """hardcoded/returns an instance of the class"""
 

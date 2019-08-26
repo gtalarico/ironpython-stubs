@@ -41,9 +41,8 @@ class BaseRemotingSink(BaseChannelObjectWithProperties):
     PerProviderState = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BaseRemotingSink()
+    Instance = BaseRemotingSink()
+    """hardcoded/returns an instance of the class"""
 
 class MakePythonTypesSerializeableSink(BaseRemotingSink):
     """ MakePythonTypesSerializeableSink() """
@@ -74,9 +73,8 @@ class MakePythonTypesSerializeableSink(BaseRemotingSink):
     PerProviderState = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MakePythonTypesSerializeableSink()
+    Instance = MakePythonTypesSerializeableSink()
+    """hardcoded/returns an instance of the class"""
 
 class SinkProviderOf:
     """ SinkProviderOf[T]() """
@@ -103,7 +101,6 @@ Set: Next(self: SinkProviderOf[T]) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SinkProviderOf()
+    Instance = SinkProviderOf()
+    """hardcoded/returns an instance of the class"""
 

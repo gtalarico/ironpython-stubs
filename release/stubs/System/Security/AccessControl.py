@@ -65,9 +65,8 @@ class AccessControlActions:
     value__ = None
     View = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AccessControlActions()
+    Instance = AccessControlActions()
+    """hardcoded/returns an instance of the class"""
 
 class AccessControlModification:
     """
@@ -116,9 +115,8 @@ class AccessControlModification:
     Set = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AccessControlModification()
+    Instance = AccessControlModification()
+    """hardcoded/returns an instance of the class"""
 
 class AccessControlSections:
     """
@@ -167,9 +165,8 @@ class AccessControlSections:
     Owner = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AccessControlSections()
+    Instance = AccessControlSections()
+    """hardcoded/returns an instance of the class"""
 
 class AccessControlType:
     """
@@ -214,9 +211,8 @@ class AccessControlType:
     Deny = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AccessControlType()
+    Instance = AccessControlType()
+    """hardcoded/returns an instance of the class"""
 
 class AceEnumerator:
     """ Provides the ability to iterate through the access control entries (ACEs) in an access control list (ACL). """
@@ -260,9 +256,8 @@ Get: Current(self: AceEnumerator) -> GenericAce
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AceEnumerator()
+    Instance = AceEnumerator()
+    """hardcoded/returns an instance of the class"""
 
 class AceFlags:
     """
@@ -315,9 +310,8 @@ class AceFlags:
     SuccessfulAccess = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AceFlags()
+    Instance = AceFlags()
+    """hardcoded/returns an instance of the class"""
 
 class AceQualifier:
     """
@@ -364,9 +358,8 @@ class AceQualifier:
     SystemAudit = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AceQualifier()
+    Instance = AceQualifier()
+    """hardcoded/returns an instance of the class"""
 
 class AceType:
     """
@@ -427,9 +420,8 @@ class AceType:
     SystemAuditObject = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AceType()
+    Instance = AceType()
+    """hardcoded/returns an instance of the class"""
 
 class AuditFlags:
     """
@@ -475,9 +467,8 @@ class AuditFlags:
     Success = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AuditFlags()
+    Instance = AuditFlags()
+    """hardcoded/returns an instance of the class"""
 
 class AuthorizationRule():
     """ Determines access to securable objects. The derived classes System.Security.AccessControl.AccessRule and System.Security.AccessControl.AuditRule offer specializations for access and audit functionality. """
@@ -520,9 +511,8 @@ Get: PropagationFlags(self: AuthorizationRule) -> PropagationFlags
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AuthorizationRule()
+    Instance = AuthorizationRule()
+    """hardcoded/returns an instance of the class"""
 
 class AuthorizationRuleCollection(ReadOnlyCollectionBase):
     """
@@ -562,9 +552,8 @@ class AuthorizationRuleCollection(ReadOnlyCollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AuthorizationRuleCollection()
+    Instance = AuthorizationRuleCollection()
+    """hardcoded/returns an instance of the class"""
 
 class GenericAce():
     """ Represents an Access Control Entry (ACE), and is the base class for all other ACE classes. """
@@ -615,7 +604,9 @@ class GenericAce():
         """
         GetHashCode(self: GenericAce) -> int
         
-            Serves as a hash function for the System.Security.AccessControl.GenericAce class. The  System.Security.AccessControl.GenericAce.GetHashCode method is suitable for use in hashing algorithms and data structures like a hash table.
+            Serves as a hash function for the System.Security.AccessControl.GenericAce class. The  System.Security.AccessControl.GenericAce.GetHashCode method is suitable for use 
+             in hashing algorithms and data structures like a hash table.
+        
             Returns: A hash code for the current System.Security.AccessControl.GenericAce object.
         """
         pass
@@ -678,9 +669,8 @@ Get: PropagationFlags(self: GenericAce) -> PropagationFlags
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GenericAce()
+    Instance = GenericAce()
+    """hardcoded/returns an instance of the class"""
 
 class KnownAce(GenericAce):
     """ Encapsulates all Access Control Entry (ACE) types currently defined by Microsoft Corporation. All System.Security.AccessControl.KnownAce objects contain a 32-bit access mask and a System.Security.Principal.SecurityIdentifier object. """
@@ -701,9 +691,8 @@ Set: SecurityIdentifier(self: KnownAce) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return KnownAce()
+    Instance = KnownAce()
+    """hardcoded/returns an instance of the class"""
 
 class QualifiedAce(KnownAce):
     """ Represents an Access Control Entry (ACE) that contains a qualifier. The qualifier, represented by an System.Security.AccessControl.AceQualifier object, specifies whether the ACE allows access, denies access, causes system audits, or causes system alarms. The System.Security.AccessControl.QualifiedAce class is the abstract base class for the System.Security.AccessControl.CommonAce and System.Security.AccessControl.ObjectAce classes. """
@@ -747,9 +736,8 @@ Get: OpaqueLength(self: QualifiedAce) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return QualifiedAce()
+    Instance = QualifiedAce()
+    """hardcoded/returns an instance of the class"""
 
 class CommonAce(QualifiedAce):
     """
@@ -792,9 +780,8 @@ Get: BinaryLength(self: CommonAce) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CommonAce()
+    Instance = CommonAce()
+    """hardcoded/returns an instance of the class"""
 
 class GenericAcl:
     """ Represents an access control list (ACL) and is the base class for the System.Security.AccessControl.CommonAcl, System.Security.AccessControl.DiscretionaryAcl, System.Security.AccessControl.RawAcl, and System.Security.AccessControl.SystemAcl classes. """
@@ -891,9 +878,8 @@ Get: SyncRoot(self: GenericAcl) -> object
     AclRevisionDS = None
     MaxBinaryLength = 65535
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GenericAcl()
+    Instance = GenericAcl()
+    """hardcoded/returns an instance of the class"""
 
 class CommonAcl(GenericAcl):
     """ Represents an access control list (ACL) and is the base class for the System.Security.AccessControl.DiscretionaryAcl and System.Security.AccessControl.SystemAcl classes. """
@@ -910,7 +896,9 @@ class CommonAcl(GenericAcl):
     def Purge(self, sid):
         """
         Purge(self: CommonAcl, sid: SecurityIdentifier)
-            Removes all access control entries (ACEs) contained by this System.Security.AccessControl.CommonAcl object that are associated with the specified System.Security.Principal.SecurityIdentifier object.
+            Removes all access control entries (ACEs) contained by this System.Security.AccessControl.CommonAcl object that are associated with the specified 
+             System.Security.Principal.SecurityIdentifier object.
+        
         
             sid: The System.Security.Principal.SecurityIdentifier object to check for.
         """
@@ -986,9 +974,8 @@ Get: Revision(self: CommonAcl) -> Byte
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CommonAcl()
+    Instance = CommonAcl()
+    """hardcoded/returns an instance of the class"""
 
 class CommonObjectSecurity(ObjectSecurity):
     """ Controls access to objects without direct manipulation of access control lists (ACLs). This class is the abstract base class for the System.Security.AccessControl.NativeObjectSecurity class. """
@@ -1018,7 +1005,9 @@ class CommonObjectSecurity(ObjectSecurity):
         
             includeExplicit: true to include access rules explicitly set for the object.
             includeInherited: true to include inherited access rules.
-            targetType: Specifies whether the security identifier for which to retrieve access rules is of type T:System.Security.Principal.SecurityIdentifier or type T:System.Security.Principal.NTAccount. The value of this parameter must be a type that can be translated to  the System.Security.Principal.SecurityIdentifier type.
+            targetType: Specifies whether the security identifier for which to retrieve access rules is of type T:System.Security.Principal.SecurityIdentifier or type 
+             T:System.Security.Principal.NTAccount. The value of this parameter must be a type that can be translated to  the System.Security.Principal.SecurityIdentifier type.
+        
             Returns: The collection of access rules associated with the specified System.Security.Principal.SecurityIdentifier object.
         """
         pass
@@ -1040,7 +1029,9 @@ class CommonObjectSecurity(ObjectSecurity):
         """
         RemoveAccessRule(self: CommonObjectSecurity, rule: AccessRule) -> bool
         
-            Removes access rules that contain the same security identifier and access mask as the specified access rule from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes access rules that contain the same security identifier and access mask as the specified access rule from the Discretionary Access Control List (DACL) 
+             associated with this System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The access rule to remove.
             Returns: true if the access rule was successfully removed; otherwise, false.
@@ -1050,7 +1041,9 @@ class CommonObjectSecurity(ObjectSecurity):
     def RemoveAccessRuleAll(self, *args): #cannot find CLR method
         """
         RemoveAccessRuleAll(self: CommonObjectSecurity, rule: AccessRule)
-            Removes all access rules that have the same security identifier as the specified access rule from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes all access rules that have the same security identifier as the specified access rule from the Discretionary Access Control List (DACL) associated with this 
+             System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The access rule to remove.
         """
@@ -1059,7 +1052,9 @@ class CommonObjectSecurity(ObjectSecurity):
     def RemoveAccessRuleSpecific(self, *args): #cannot find CLR method
         """
         RemoveAccessRuleSpecific(self: CommonObjectSecurity, rule: AccessRule)
-            Removes all access rules that exactly match the specified access rule from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes all access rules that exactly match the specified access rule from the Discretionary Access Control List (DACL) associated with this 
+             System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The access rule to remove.
         """
@@ -1069,7 +1064,9 @@ class CommonObjectSecurity(ObjectSecurity):
         """
         RemoveAuditRule(self: CommonObjectSecurity, rule: AuditRule) -> bool
         
-            Removes audit rules that contain the same security identifier and access mask as the specified audit rule from the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes audit rules that contain the same security identifier and access mask as the specified audit rule from the System Access Control List (SACL) associated with 
+             this System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The audit rule to remove.
             Returns: true if the audit rule was successfully removed; otherwise, false.
@@ -1079,7 +1076,9 @@ class CommonObjectSecurity(ObjectSecurity):
     def RemoveAuditRuleAll(self, *args): #cannot find CLR method
         """
         RemoveAuditRuleAll(self: CommonObjectSecurity, rule: AuditRule)
-            Removes all audit rules that have the same security identifier as the specified audit rule from the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes all audit rules that have the same security identifier as the specified audit rule from the System Access Control List (SACL) associated with this 
+             System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The audit rule to remove.
         """
@@ -1088,7 +1087,9 @@ class CommonObjectSecurity(ObjectSecurity):
     def RemoveAuditRuleSpecific(self, *args): #cannot find CLR method
         """
         RemoveAuditRuleSpecific(self: CommonObjectSecurity, rule: AuditRule)
-            Removes all audit rules that exactly match the specified audit rule from the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes all audit rules that exactly match the specified audit rule from the System Access Control List (SACL) associated with this 
+             System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The audit rule to remove.
         """
@@ -1097,7 +1098,9 @@ class CommonObjectSecurity(ObjectSecurity):
     def ResetAccessRule(self, *args): #cannot find CLR method
         """
         ResetAccessRule(self: CommonObjectSecurity, rule: AccessRule)
-            Removes all access rules in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified access rule.
+            Removes all access rules in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds 
+             the specified access rule.
+        
         
             rule: The access rule to reset.
         """
@@ -1106,7 +1109,9 @@ class CommonObjectSecurity(ObjectSecurity):
     def SetAccessRule(self, *args): #cannot find CLR method
         """
         SetAccessRule(self: CommonObjectSecurity, rule: AccessRule)
-            Removes all access rules that contain the same security identifier and qualifier as the specified access rule in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified access rule.
+            Removes all access rules that contain the same security identifier and qualifier as the specified access rule in the Discretionary Access Control List (DACL) 
+             associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified access rule.
+        
         
             rule: The access rule to set.
         """
@@ -1115,7 +1120,9 @@ class CommonObjectSecurity(ObjectSecurity):
     def SetAuditRule(self, *args): #cannot find CLR method
         """
         SetAuditRule(self: CommonObjectSecurity, rule: AuditRule)
-            Removes all audit rules that contain the same security identifier and qualifier as the specified audit rule in the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified audit rule.
+            Removes all audit rules that contain the same security identifier and qualifier as the specified audit rule in the System Access Control List (SACL) associated with 
+             this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified audit rule.
+        
         
             rule: The audit rule to set.
         """
@@ -1157,9 +1164,8 @@ class CommonObjectSecurity(ObjectSecurity):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CommonObjectSecurity()
+    Instance = CommonObjectSecurity()
+    """hardcoded/returns an instance of the class"""
 
 class GenericSecurityDescriptor():
     """ Represents a security descriptor. A security descriptor includes an owner, a primary group, a Discretionary Access Control List (DACL), and a System Access Control List (SACL). """
@@ -1177,7 +1183,9 @@ class GenericSecurityDescriptor():
         """
         GetSddlForm(self: GenericSecurityDescriptor, includeSections: AccessControlSections) -> str
         
-            Returns the Security Descriptor Definition Language (SDDL) representation of the specified sections of the security descriptor that this System.Security.AccessControl.GenericSecurityDescriptor object represents.
+            Returns the Security Descriptor Definition Language (SDDL) representation of the specified sections of the security descriptor that this 
+             System.Security.AccessControl.GenericSecurityDescriptor object represents.
+        
         
             includeSections: Specifies which sections (access rules, audit rules, primary group, owner) of the security descriptor to get.
             Returns: The SDDL representation of the specified sections of the security descriptor associated with this System.Security.AccessControl.GenericSecurityDescriptor object.
@@ -1189,8 +1197,11 @@ class GenericSecurityDescriptor():
         """
         IsSddlConversionSupported() -> bool
         
-            Returns a boolean value that specifies whether the security descriptor associated with this  System.Security.AccessControl.GenericSecurityDescriptor object can be converted to the Security Descriptor Definition Language (SDDL) format.
-            Returns: true if the security descriptor associated with this  System.Security.AccessControl.GenericSecurityDescriptor object can be converted to the Security Descriptor Definition Language (SDDL) format; otherwise, false.
+            Returns a boolean value that specifies whether the security descriptor associated with this  System.Security.AccessControl.GenericSecurityDescriptor object can be 
+             converted to the Security Descriptor Definition Language (SDDL) format.
+        
+            Returns: true if the security descriptor associated with this  System.Security.AccessControl.GenericSecurityDescriptor object can be converted to the Security Descriptor 
+             Definition Language (SDDL) format; otherwise, false.
         """
         pass
 
@@ -1227,9 +1238,8 @@ Set: Owner(self: GenericSecurityDescriptor) = value
 
     Revision = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GenericSecurityDescriptor()
+    Instance = GenericSecurityDescriptor()
+    """hardcoded/returns an instance of the class"""
 
 class CommonSecurityDescriptor(GenericSecurityDescriptor):
     """
@@ -1251,7 +1261,9 @@ class CommonSecurityDescriptor(GenericSecurityDescriptor):
     def PurgeAccessControl(self, sid):
         """
         PurgeAccessControl(self: CommonSecurityDescriptor, sid: SecurityIdentifier)
-            Removes all access rules for the specified security identifier from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonSecurityDescriptor object.
+            Removes all access rules for the specified security identifier from the Discretionary Access Control List (DACL) associated with this 
+             System.Security.AccessControl.CommonSecurityDescriptor object.
+        
         
             sid: The security identifier for which to remove access rules.
         """
@@ -1260,7 +1272,9 @@ class CommonSecurityDescriptor(GenericSecurityDescriptor):
     def PurgeAudit(self, sid):
         """
         PurgeAudit(self: CommonSecurityDescriptor, sid: SecurityIdentifier)
-            Removes all audit rules for the specified security identifier from the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonSecurityDescriptor object.
+            Removes all audit rules for the specified security identifier from the System Access Control List (SACL) associated with this 
+             System.Security.AccessControl.CommonSecurityDescriptor object.
+        
         
             sid: The security identifier for which to remove audit rules.
         """
@@ -1269,7 +1283,9 @@ class CommonSecurityDescriptor(GenericSecurityDescriptor):
     def SetDiscretionaryAclProtection(self, isProtected, preserveInheritance):
         """
         SetDiscretionaryAclProtection(self: CommonSecurityDescriptor, isProtected: bool, preserveInheritance: bool)
-            Sets the inheritance protection for the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonSecurityDescriptor object. DACLs that are protected do not inherit access rules from parent containers.
+            Sets the inheritance protection for the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonSecurityDescriptor object. 
+             DACLs that are protected do not inherit access rules from parent containers.
+        
         
             isProtected: true to protect the DACL from inheritance.
             preserveInheritance: true to keep inherited access rules in the DACL; false to remove inherited access rules from the DACL.
@@ -1279,7 +1295,9 @@ class CommonSecurityDescriptor(GenericSecurityDescriptor):
     def SetSystemAclProtection(self, isProtected, preserveInheritance):
         """
         SetSystemAclProtection(self: CommonSecurityDescriptor, isProtected: bool, preserveInheritance: bool)
-            Sets the inheritance protection for the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonSecurityDescriptor object. SACLs that are protected do not inherit audit rules from parent containers.
+            Sets the inheritance protection for the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonSecurityDescriptor object. SACLs 
+             that are protected do not inherit audit rules from parent containers.
+        
         
             isProtected: true to protect the SACL from inheritance.
             preserveInheritance: true to keep inherited audit rules in the SACL; false to remove inherited audit rules from the SACL.
@@ -1364,9 +1382,8 @@ Set: SystemAcl(self: CommonSecurityDescriptor) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CommonSecurityDescriptor()
+    Instance = CommonSecurityDescriptor()
+    """hardcoded/returns an instance of the class"""
 
 class CompoundAce(KnownAce):
     """
@@ -1405,9 +1422,8 @@ Set: CompoundAceType(self: CompoundAce) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CompoundAce()
+    Instance = CompoundAce()
+    """hardcoded/returns an instance of the class"""
 
 class CompoundAceType:
     """
@@ -1451,9 +1467,8 @@ class CompoundAceType:
     Impersonation = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CompoundAceType()
+    Instance = CompoundAceType()
+    """hardcoded/returns an instance of the class"""
 
 class ControlFlags:
     """
@@ -1513,9 +1528,8 @@ class ControlFlags:
     SystemAclProtected = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ControlFlags()
+    Instance = ControlFlags()
+    """hardcoded/returns an instance of the class"""
 
 class CryptoKeyAccessRule(AccessRule):
     """
@@ -1545,9 +1559,8 @@ Get: CryptoKeyRights(self: CryptoKeyAccessRule) -> CryptoKeyRights
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CryptoKeyAccessRule()
+    Instance = CryptoKeyAccessRule()
+    """hardcoded/returns an instance of the class"""
 
 class CryptoKeyAuditRule(AuditRule):
     """
@@ -1577,9 +1590,8 @@ Get: CryptoKeyRights(self: CryptoKeyAuditRule) -> CryptoKeyRights
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CryptoKeyAuditRule()
+    Instance = CryptoKeyAuditRule()
+    """hardcoded/returns an instance of the class"""
 
 class CryptoKeyRights:
     """
@@ -1638,9 +1650,8 @@ class CryptoKeyRights:
     WriteData = None
     WriteExtendedAttributes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CryptoKeyRights()
+    Instance = CryptoKeyRights()
+    """hardcoded/returns an instance of the class"""
 
 class NativeObjectSecurity(CommonObjectSecurity):
     """ Provides the ability to control access to native objects without direct manipulation of Access Control Lists (ACLs). Native object types are defined by the System.Security.AccessControl.ResourceType enumeration. """
@@ -1689,9 +1700,8 @@ class NativeObjectSecurity(CommonObjectSecurity):
 
     ExceptionFromErrorCode = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NativeObjectSecurity()
+    Instance = NativeObjectSecurity()
+    """hardcoded/returns an instance of the class"""
 
 class CryptoKeySecurity(NativeObjectSecurity):
     """
@@ -1710,7 +1720,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
             accessMask: The access mask of this rule. The access mask is a 32-bit collection of anonymous bits, the meaning of which is defined by the individual integrators.
             isInherited: true if this rule is inherited from a parent container.
             inheritanceFlags: Specifies the inheritance properties of the access rule.
-            propagationFlags: Specifies whether inherited access rules are automatically propagated. The propagation flags are ignored if inheritanceFlags is set to System.Security.AccessControl.InheritanceFlags.None.
+            propagationFlags: Specifies whether inherited access rules are automatically propagated. The propagation flags are ignored if inheritanceFlags is set to 
+             System.Security.AccessControl.InheritanceFlags.None.
+        
             type: Specifies the valid access control type.
             Returns: The System.Security.AccessControl.AccessRule object that this method creates.
         """
@@ -1744,7 +1756,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
             accessMask: The access mask of this rule. The access mask is a 32-bit collection of anonymous bits, the meaning of which is defined by the individual integrators.
             isInherited: true if this rule is inherited from a parent container.
             inheritanceFlags: Specifies the inheritance properties of the audit rule.
-            propagationFlags: Specifies whether inherited audit rules are automatically propagated. The propagation flags are ignored if inheritanceFlags is set to System.Security.AccessControl.InheritanceFlags.None.
+            propagationFlags: Specifies whether inherited audit rules are automatically propagated. The propagation flags are ignored if inheritanceFlags is set to 
+             System.Security.AccessControl.InheritanceFlags.None.
+        
             flags: Specifies the conditions for which the rule is audited.
             Returns: The System.Security.AccessControl.AuditRule object that this method creates.
         """
@@ -1754,7 +1768,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
         """
         RemoveAccessRule(self: CryptoKeySecurity, rule: CryptoKeyAccessRule) -> bool
         
-            Removes access rules that contain the same security identifier and access mask as the specified access rule from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CryptoKeySecurity object.
+            Removes access rules that contain the same security identifier and access mask as the specified access rule from the Discretionary Access Control List (DACL) 
+             associated with this System.Security.AccessControl.CryptoKeySecurity object.
+        
         
             rule: The access rule to remove.
             Returns: true if the access rule was successfully removed; otherwise, false.
@@ -1764,7 +1780,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
     def RemoveAccessRuleAll(self, rule):
         """
         RemoveAccessRuleAll(self: CryptoKeySecurity, rule: CryptoKeyAccessRule)
-            Removes all access rules that have the same security identifier as the specified access rule from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CryptoKeySecurity object.
+            Removes all access rules that have the same security identifier as the specified access rule from the Discretionary Access Control List (DACL) associated with this 
+             System.Security.AccessControl.CryptoKeySecurity object.
+        
         
             rule: The access rule to remove.
         """
@@ -1773,7 +1791,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
     def RemoveAccessRuleSpecific(self, rule):
         """
         RemoveAccessRuleSpecific(self: CryptoKeySecurity, rule: CryptoKeyAccessRule)
-            Removes all access rules that exactly match the specified access rule from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CryptoKeySecurity object.
+            Removes all access rules that exactly match the specified access rule from the Discretionary Access Control List (DACL) associated with this 
+             System.Security.AccessControl.CryptoKeySecurity object.
+        
         
             rule: The access rule to remove.
         """
@@ -1783,7 +1803,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
         """
         RemoveAuditRule(self: CryptoKeySecurity, rule: CryptoKeyAuditRule) -> bool
         
-            Removes audit rules that contain the same security identifier and access mask as the specified audit rule from the System Access Control List (SACL) associated with this System.Security.AccessControl.CryptoKeySecurity object.
+            Removes audit rules that contain the same security identifier and access mask as the specified audit rule from the System Access Control List (SACL) associated with 
+             this System.Security.AccessControl.CryptoKeySecurity object.
+        
         
             rule: The audit rule to remove.
             Returns: true if the audit rule was successfully removed; otherwise, false.
@@ -1793,7 +1815,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
     def RemoveAuditRuleAll(self, rule):
         """
         RemoveAuditRuleAll(self: CryptoKeySecurity, rule: CryptoKeyAuditRule)
-            Removes all audit rules that have the same security identifier as the specified audit rule from the System Access Control List (SACL) associated with this System.Security.AccessControl.CryptoKeySecurity object.
+            Removes all audit rules that have the same security identifier as the specified audit rule from the System Access Control List (SACL) associated with this 
+             System.Security.AccessControl.CryptoKeySecurity object.
+        
         
             rule: The audit rule to remove.
         """
@@ -1802,7 +1826,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
     def RemoveAuditRuleSpecific(self, rule):
         """
         RemoveAuditRuleSpecific(self: CryptoKeySecurity, rule: CryptoKeyAuditRule)
-            Removes all audit rules that exactly match the specified audit rule from the System Access Control List (SACL) associated with this System.Security.AccessControl.CryptoKeySecurity object.
+            Removes all audit rules that exactly match the specified audit rule from the System Access Control List (SACL) associated with this 
+             System.Security.AccessControl.CryptoKeySecurity object.
+        
         
             rule: The audit rule to remove.
         """
@@ -1811,7 +1837,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
     def ResetAccessRule(self, rule):
         """
         ResetAccessRule(self: CryptoKeySecurity, rule: CryptoKeyAccessRule)
-            Removes all access rules in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CryptoKeySecurity object and then adds the specified access rule.
+            Removes all access rules in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CryptoKeySecurity object and then adds the 
+             specified access rule.
+        
         
             rule: The access rule to reset.
         """
@@ -1820,7 +1848,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
     def SetAccessRule(self, rule):
         """
         SetAccessRule(self: CryptoKeySecurity, rule: CryptoKeyAccessRule)
-            Removes all access rules that contain the same security identifier and qualifier as the specified access rule in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CryptoKeySecurity object and then adds the specified access rule.
+            Removes all access rules that contain the same security identifier and qualifier as the specified access rule in the Discretionary Access Control List (DACL) 
+             associated with this System.Security.AccessControl.CryptoKeySecurity object and then adds the specified access rule.
+        
         
             rule: The access rule to set.
         """
@@ -1829,7 +1859,9 @@ class CryptoKeySecurity(NativeObjectSecurity):
     def SetAuditRule(self, rule):
         """
         SetAuditRule(self: CryptoKeySecurity, rule: CryptoKeyAuditRule)
-            Removes all audit rules that contain the same security identifier and qualifier as the specified audit rule in the System Access Control List (SACL) associated with this System.Security.AccessControl.CryptoKeySecurity object and then adds the specified audit rule.
+            Removes all audit rules that contain the same security identifier and qualifier as the specified audit rule in the System Access Control List (SACL) associated with 
+             this System.Security.AccessControl.CryptoKeySecurity object and then adds the specified audit rule.
+        
         
             rule: The audit rule to set.
         """
@@ -1895,9 +1927,8 @@ Get: AuditRuleType(self: CryptoKeySecurity) -> Type
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CryptoKeySecurity()
+    Instance = CryptoKeySecurity()
+    """hardcoded/returns an instance of the class"""
 
 class CustomAce(GenericAce):
     """
@@ -1955,9 +1986,8 @@ Get: OpaqueLength(self: CustomAce) -> int
 
     MaxOpaqueLength = 65531
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CustomAce()
+    Instance = CustomAce()
+    """hardcoded/returns an instance of the class"""
 
 class DirectoryObjectSecurity(ObjectSecurity):
     """ Provides the ability to control access to directory objects without direct manipulation of Access Control Lists (ACLs). """
@@ -1971,7 +2001,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
             accessMask: The access mask of this rule. The access mask is a 32-bit collection of anonymous bits, the meaning of which is defined by the individual integrators.
             isInherited: true if this rule is inherited from a parent container.
             inheritanceFlags: Specifies the inheritance properties of the access rule.
-            propagationFlags: Specifies whether inherited access rules are automatically propagated. The propagation flags are ignored if inheritanceFlags is set to System.Security.AccessControl.InheritanceFlags.None.
+            propagationFlags: Specifies whether inherited access rules are automatically propagated. The propagation flags are ignored if inheritanceFlags is set to 
+             System.Security.AccessControl.InheritanceFlags.None.
+        
             type: Specifies the valid access control type.
             objectType: The identity of the class of objects to which the new access rule applies.
             inheritedObjectType: The identity of the class of child objects which can inherit the new access rule.
@@ -2007,7 +2039,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
             accessMask: The access mask of this rule. The access mask is a 32-bit collection of anonymous bits, the meaning of which is defined by the individual integrators.
             isInherited: true if this rule is inherited from a parent container.
             inheritanceFlags: Specifies the inheritance properties of the audit rule.
-            propagationFlags: Specifies whether inherited audit rules are automatically propagated. The propagation flags are ignored if inheritanceFlags is set to System.Security.AccessControl.InheritanceFlags.None.
+            propagationFlags: Specifies whether inherited audit rules are automatically propagated. The propagation flags are ignored if inheritanceFlags is set to 
+             System.Security.AccessControl.InheritanceFlags.None.
+        
             flags: Specifies the conditions for which the rule is audited.
             objectType: The identity of the class of objects to which the new audit rule applies.
             inheritedObjectType: The identity of the class of child objects which can inherit the new audit rule.
@@ -2045,7 +2079,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
         """
         RemoveAccessRule(self: DirectoryObjectSecurity, rule: ObjectAccessRule) -> bool
         
-            Removes access rules that contain the same security identifier and access mask as the specified access rule from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.DirectoryObjectSecurity object.
+            Removes access rules that contain the same security identifier and access mask as the specified access rule from the Discretionary Access Control List (DACL) 
+             associated with this System.Security.AccessControl.DirectoryObjectSecurity object.
+        
         
             rule: The access rule to remove.
             Returns: true if the access rule was successfully removed; otherwise, false.
@@ -2055,7 +2091,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
     def RemoveAccessRuleAll(self, *args): #cannot find CLR method
         """
         RemoveAccessRuleAll(self: DirectoryObjectSecurity, rule: ObjectAccessRule)
-            Removes all access rules that have the same security identifier as the specified access rule from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.DirectoryObjectSecurity object.
+            Removes all access rules that have the same security identifier as the specified access rule from the Discretionary Access Control List (DACL) associated with this 
+             System.Security.AccessControl.DirectoryObjectSecurity object.
+        
         
             rule: The access rule to remove.
         """
@@ -2064,7 +2102,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
     def RemoveAccessRuleSpecific(self, *args): #cannot find CLR method
         """
         RemoveAccessRuleSpecific(self: DirectoryObjectSecurity, rule: ObjectAccessRule)
-            Removes all access rules that exactly match the specified access rule from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.DirectoryObjectSecurity object.
+            Removes all access rules that exactly match the specified access rule from the Discretionary Access Control List (DACL) associated with this 
+             System.Security.AccessControl.DirectoryObjectSecurity object.
+        
         
             rule: The access rule to remove.
         """
@@ -2074,7 +2114,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
         """
         RemoveAuditRule(self: DirectoryObjectSecurity, rule: ObjectAuditRule) -> bool
         
-            Removes audit rules that contain the same security identifier and access mask as the specified audit rule from the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes audit rules that contain the same security identifier and access mask as the specified audit rule from the System Access Control List (SACL) associated with 
+             this System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The audit rule to remove.
             Returns: true if the audit rule was successfully removed; otherwise, false.
@@ -2084,7 +2126,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
     def RemoveAuditRuleAll(self, *args): #cannot find CLR method
         """
         RemoveAuditRuleAll(self: DirectoryObjectSecurity, rule: ObjectAuditRule)
-            Removes all audit rules that have the same security identifier as the specified audit rule from the System Access Control List (SACL) associated with this System.Security.AccessControl.DirectoryObjectSecurity object.
+            Removes all audit rules that have the same security identifier as the specified audit rule from the System Access Control List (SACL) associated with this 
+             System.Security.AccessControl.DirectoryObjectSecurity object.
+        
         
             rule: The audit rule to remove.
         """
@@ -2093,7 +2137,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
     def RemoveAuditRuleSpecific(self, *args): #cannot find CLR method
         """
         RemoveAuditRuleSpecific(self: DirectoryObjectSecurity, rule: ObjectAuditRule)
-            Removes all audit rules that exactly match the specified audit rule from the System Access Control List (SACL) associated with this System.Security.AccessControl.DirectoryObjectSecurity object.
+            Removes all audit rules that exactly match the specified audit rule from the System Access Control List (SACL) associated with this 
+             System.Security.AccessControl.DirectoryObjectSecurity object.
+        
         
             rule: The audit rule to remove.
         """
@@ -2102,7 +2148,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
     def ResetAccessRule(self, *args): #cannot find CLR method
         """
         ResetAccessRule(self: DirectoryObjectSecurity, rule: ObjectAccessRule)
-            Removes all access rules in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.DirectoryObjectSecurity object and then adds the specified access rule.
+            Removes all access rules in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.DirectoryObjectSecurity object and then 
+             adds the specified access rule.
+        
         
             rule: The access rule to reset.
         """
@@ -2111,7 +2159,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
     def SetAccessRule(self, *args): #cannot find CLR method
         """
         SetAccessRule(self: DirectoryObjectSecurity, rule: ObjectAccessRule)
-            Removes all access rules that contain the same security identifier and qualifier as the specified access rule in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.DirectoryObjectSecurity object and then adds the specified access rule.
+            Removes all access rules that contain the same security identifier and qualifier as the specified access rule in the Discretionary Access Control List (DACL) 
+             associated with this System.Security.AccessControl.DirectoryObjectSecurity object and then adds the specified access rule.
+        
         
             rule: The access rule to set.
         """
@@ -2120,7 +2170,9 @@ class DirectoryObjectSecurity(ObjectSecurity):
     def SetAuditRule(self, *args): #cannot find CLR method
         """
         SetAuditRule(self: DirectoryObjectSecurity, rule: ObjectAuditRule)
-            Removes all audit rules that contain the same security identifier and qualifier as the specified audit rule in the System Access Control List (SACL) associated with this System.Security.AccessControl.DirectoryObjectSecurity object and then adds the specified audit rule.
+            Removes all audit rules that contain the same security identifier and qualifier as the specified audit rule in the System Access Control List (SACL) associated with 
+             this System.Security.AccessControl.DirectoryObjectSecurity object and then adds the specified audit rule.
+        
         
             rule: The audit rule to set.
         """
@@ -2165,9 +2217,8 @@ class DirectoryObjectSecurity(ObjectSecurity):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DirectoryObjectSecurity()
+    Instance = DirectoryObjectSecurity()
+    """hardcoded/returns an instance of the class"""
 
 class FileSystemSecurity(NativeObjectSecurity):
     """ Represents the access control and audit security for a file or directory. """
@@ -2175,7 +2226,9 @@ class FileSystemSecurity(NativeObjectSecurity):
         """
         AccessRuleFactory(self: FileSystemSecurity, identityReference: IdentityReference, accessMask: int, isInherited: bool, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType) -> AccessRule
         
-            Initializes a new instance of the System.Security.AccessControl.FileSystemAccessRule class that represents a new access control rule for the specified user, with the specified access rights, access control, and flags.
+            Initializes a new instance of the System.Security.AccessControl.FileSystemAccessRule class that represents a new access control rule for the specified user, with the 
+             specified access rights, access control, and flags.
+        
         
             identityReference: An System.Security.Principal.IdentityReference object that represents a user account.
             accessMask: An integer that specifies an access type.
@@ -2183,7 +2236,8 @@ class FileSystemSecurity(NativeObjectSecurity):
             inheritanceFlags: One of the System.Security.AccessControl.InheritanceFlags values that specifies how to propagate access masks to child objects.
             propagationFlags: One of the System.Security.AccessControl.PropagationFlags values that specifies how to propagate Access Control Entries (ACEs) to child objects.
             type: One of the System.Security.AccessControl.AccessControlType values that specifies whether access is allowed or denied.
-            Returns: A new System.Security.AccessControl.FileSystemAccessRule object that represents a new access control rule for the specified user, with the specified access rights, access control, and flags.
+            Returns: A new System.Security.AccessControl.FileSystemAccessRule object that represents a new access control rule for the specified user, with the specified access rights, 
+             access control, and flags.
         """
         pass
 
@@ -2237,7 +2291,8 @@ class FileSystemSecurity(NativeObjectSecurity):
         RemoveAccessRuleAll(self: FileSystemSecurity, rule: FileSystemAccessRule)
             Removes all access control list (ACL) permissions for the specified user from the current file or directory.
         
-            rule: A System.Security.AccessControl.FileSystemAccessRule object that specifies a user whose access control list (ACL) permissions should be removed from a file or directory.
+            rule: A System.Security.AccessControl.FileSystemAccessRule object that specifies a user whose access control list (ACL) permissions should be removed from a file or 
+             directory.
         """
         pass
 
@@ -2246,7 +2301,8 @@ class FileSystemSecurity(NativeObjectSecurity):
         RemoveAccessRuleSpecific(self: FileSystemSecurity, rule: FileSystemAccessRule)
             Removes a single matching allow or deny access control list (ACL) permission from the current file or directory.
         
-            rule: A System.Security.AccessControl.FileSystemAccessRule object that specifies a user whose access control list (ACL) permissions should be removed from a file or directory.
+            rule: A System.Security.AccessControl.FileSystemAccessRule object that specifies a user whose access control list (ACL) permissions should be removed from a file or 
+             directory.
         """
         pass
 
@@ -2358,9 +2414,8 @@ Get: AuditRuleType(self: FileSystemSecurity) -> Type
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FileSystemSecurity()
+    Instance = FileSystemSecurity()
+    """hardcoded/returns an instance of the class"""
 
 class DirectorySecurity(FileSystemSecurity):
     """
@@ -2391,7 +2446,9 @@ class DirectorySecurity(FileSystemSecurity):
         """
         RemoveAccessRule(self: CommonObjectSecurity, rule: AccessRule) -> bool
         
-            Removes access rules that contain the same security identifier and access mask as the specified access rule from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes access rules that contain the same security identifier and access mask as the specified access rule from the Discretionary Access Control List (DACL) 
+             associated with this System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The access rule to remove.
             Returns: true if the access rule was successfully removed; otherwise, false.
@@ -2401,7 +2458,9 @@ class DirectorySecurity(FileSystemSecurity):
     def RemoveAccessRuleAll(self, rule):
         """
         RemoveAccessRuleAll(self: CommonObjectSecurity, rule: AccessRule)
-            Removes all access rules that have the same security identifier as the specified access rule from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes all access rules that have the same security identifier as the specified access rule from the Discretionary Access Control List (DACL) associated with this 
+             System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The access rule to remove.
         """
@@ -2410,7 +2469,9 @@ class DirectorySecurity(FileSystemSecurity):
     def RemoveAccessRuleSpecific(self, rule):
         """
         RemoveAccessRuleSpecific(self: CommonObjectSecurity, rule: AccessRule)
-            Removes all access rules that exactly match the specified access rule from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes all access rules that exactly match the specified access rule from the Discretionary Access Control List (DACL) associated with this 
+             System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The access rule to remove.
         """
@@ -2420,7 +2481,9 @@ class DirectorySecurity(FileSystemSecurity):
         """
         RemoveAuditRule(self: CommonObjectSecurity, rule: AuditRule) -> bool
         
-            Removes audit rules that contain the same security identifier and access mask as the specified audit rule from the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes audit rules that contain the same security identifier and access mask as the specified audit rule from the System Access Control List (SACL) associated with 
+             this System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The audit rule to remove.
             Returns: true if the audit rule was successfully removed; otherwise, false.
@@ -2430,7 +2493,9 @@ class DirectorySecurity(FileSystemSecurity):
     def RemoveAuditRuleAll(self, rule):
         """
         RemoveAuditRuleAll(self: CommonObjectSecurity, rule: AuditRule)
-            Removes all audit rules that have the same security identifier as the specified audit rule from the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes all audit rules that have the same security identifier as the specified audit rule from the System Access Control List (SACL) associated with this 
+             System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The audit rule to remove.
         """
@@ -2439,7 +2504,9 @@ class DirectorySecurity(FileSystemSecurity):
     def RemoveAuditRuleSpecific(self, rule):
         """
         RemoveAuditRuleSpecific(self: CommonObjectSecurity, rule: AuditRule)
-            Removes all audit rules that exactly match the specified audit rule from the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes all audit rules that exactly match the specified audit rule from the System Access Control List (SACL) associated with this 
+             System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The audit rule to remove.
         """
@@ -2448,7 +2515,9 @@ class DirectorySecurity(FileSystemSecurity):
     def ResetAccessRule(self, rule):
         """
         ResetAccessRule(self: CommonObjectSecurity, rule: AccessRule)
-            Removes all access rules in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified access rule.
+            Removes all access rules in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds 
+             the specified access rule.
+        
         
             rule: The access rule to reset.
         """
@@ -2457,7 +2526,9 @@ class DirectorySecurity(FileSystemSecurity):
     def SetAccessRule(self, rule):
         """
         SetAccessRule(self: CommonObjectSecurity, rule: AccessRule)
-            Removes all access rules that contain the same security identifier and qualifier as the specified access rule in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified access rule.
+            Removes all access rules that contain the same security identifier and qualifier as the specified access rule in the Discretionary Access Control List (DACL) 
+             associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified access rule.
+        
         
             rule: The access rule to set.
         """
@@ -2466,7 +2537,9 @@ class DirectorySecurity(FileSystemSecurity):
     def SetAuditRule(self, rule):
         """
         SetAuditRule(self: CommonObjectSecurity, rule: AuditRule)
-            Removes all audit rules that contain the same security identifier and qualifier as the specified audit rule in the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified audit rule.
+            Removes all audit rules that contain the same security identifier and qualifier as the specified audit rule in the System Access Control List (SACL) associated with 
+             this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified audit rule.
+        
         
             rule: The audit rule to set.
         """
@@ -2511,9 +2584,8 @@ class DirectorySecurity(FileSystemSecurity):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DirectorySecurity()
+    Instance = DirectorySecurity()
+    """hardcoded/returns an instance of the class"""
 
 class DiscretionaryAcl(CommonAcl):
     """
@@ -2534,7 +2606,9 @@ class DiscretionaryAcl(CommonAcl):
             inheritanceFlags: Flags that specify the inheritance properties of the new ACE.
             propagationFlags: Flags that specify the inheritance propagation properties for the new ACE.
         AddAccess(self: DiscretionaryAcl, accessType: AccessControlType, sid: SecurityIdentifier, rule: ObjectAccessRule)AddAccess(self: DiscretionaryAcl, accessType: AccessControlType, sid: SecurityIdentifier, accessMask: int, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, objectFlags: ObjectAceFlags, objectType: Guid, inheritedObjectType: Guid)
-            Adds an Access Control Entry (ACE) with the specified settings to the current System.Security.AccessControl.DiscretionaryAcl object. Use this method for directory object Access Control Lists (ACLs) when specifying the object type or the inherited object type for the new ACE.
+            Adds an Access Control Entry (ACE) with the specified settings to the current System.Security.AccessControl.DiscretionaryAcl object. Use this method for directory 
+             object Access Control Lists (ACLs) when specifying the object type or the inherited object type for the new ACE.
+        
         
             accessType: The type of access control (allow or deny) to add.
             sid: The System.Security.Principal.SecurityIdentifier for which to add an ACE.
@@ -2562,7 +2636,9 @@ class DiscretionaryAcl(CommonAcl):
         RemoveAccess(self: DiscretionaryAcl, accessType: AccessControlType, sid: SecurityIdentifier, rule: ObjectAccessRule) -> bool
         RemoveAccess(self: DiscretionaryAcl, accessType: AccessControlType, sid: SecurityIdentifier, accessMask: int, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, objectFlags: ObjectAceFlags, objectType: Guid, inheritedObjectType: Guid) -> bool
         
-            Removes the specified access control rule from the current System.Security.AccessControl.DiscretionaryAcl object. Use this method for directory object Access Control Lists (ACLs) when specifying the object type or the inherited object type.
+            Removes the specified access control rule from the current System.Security.AccessControl.DiscretionaryAcl object. Use this method for directory object Access Control 
+             Lists (ACLs) when specifying the object type or the inherited object type.
+        
         
             accessType: The type of access control (allow or deny) to remove.
             sid: The System.Security.Principal.SecurityIdentifier for which to remove an access control rule.
@@ -2587,7 +2663,9 @@ class DiscretionaryAcl(CommonAcl):
             inheritanceFlags: Flags that specify the inheritance properties of the ACE to be removed.
             propagationFlags: Flags that specify the inheritance propagation properties for the ACE to be removed.
         RemoveAccessSpecific(self: DiscretionaryAcl, accessType: AccessControlType, sid: SecurityIdentifier, rule: ObjectAccessRule)RemoveAccessSpecific(self: DiscretionaryAcl, accessType: AccessControlType, sid: SecurityIdentifier, accessMask: int, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, objectFlags: ObjectAceFlags, objectType: Guid, inheritedObjectType: Guid)
-            Removes the specified Access Control Entry (ACE) from the current System.Security.AccessControl.DiscretionaryAcl object. Use this method for directory object Access Control Lists (ACLs) when specifying the object type or the inherited object type for the ACE to be removed.
+            Removes the specified Access Control Entry (ACE) from the current System.Security.AccessControl.DiscretionaryAcl object. Use this method for directory object Access 
+             Control Lists (ACLs) when specifying the object type or the inherited object type for the ACE to be removed.
+        
         
             accessType: The type of access control (allow or deny) to remove.
             sid: The System.Security.Principal.SecurityIdentifier for which to remove an ACE.
@@ -2649,9 +2727,8 @@ class DiscretionaryAcl(CommonAcl):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DiscretionaryAcl()
+    Instance = DiscretionaryAcl()
+    """hardcoded/returns an instance of the class"""
 
 class EventWaitHandleAccessRule(AccessRule):
     """
@@ -2681,9 +2758,8 @@ Get: EventWaitHandleRights(self: EventWaitHandleAccessRule) -> EventWaitHandleRi
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EventWaitHandleAccessRule()
+    Instance = EventWaitHandleAccessRule()
+    """hardcoded/returns an instance of the class"""
 
 class EventWaitHandleAuditRule(AuditRule):
     """
@@ -2709,9 +2785,8 @@ Get: EventWaitHandleRights(self: EventWaitHandleAuditRule) -> EventWaitHandleRig
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EventWaitHandleAuditRule()
+    Instance = EventWaitHandleAuditRule()
+    """hardcoded/returns an instance of the class"""
 
 class EventWaitHandleRights:
     """
@@ -2761,9 +2836,8 @@ class EventWaitHandleRights:
     TakeOwnership = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EventWaitHandleRights()
+    Instance = EventWaitHandleRights()
+    """hardcoded/returns an instance of the class"""
 
 class EventWaitHandleSecurity(NativeObjectSecurity):
     """
@@ -2817,7 +2891,8 @@ class EventWaitHandleSecurity(NativeObjectSecurity):
             inheritanceFlags: Meaningless for named wait handles, because they have no hierarchy.
             propagationFlags: Meaningless for named wait handles, because they have no hierarchy.
             flags: A bitwise combination of System.Security.AccessControl.AuditFlags values specifying whether to audit successful access, failed access, or both.
-            Returns: An System.Security.AccessControl.EventWaitHandleAuditRule object representing the specified audit rule for the specified user. The return type of the method is the base class, System.Security.AccessControl.AuditRule, but the return value can be cast safely to the derived class.
+            Returns: An System.Security.AccessControl.EventWaitHandleAuditRule object representing the specified audit rule for the specified user. The return type of the method is the 
+             base class, System.Security.AccessControl.AuditRule, but the return value can be cast safely to the derived class.
         """
         pass
 
@@ -2825,9 +2900,13 @@ class EventWaitHandleSecurity(NativeObjectSecurity):
         """
         RemoveAccessRule(self: EventWaitHandleSecurity, rule: EventWaitHandleAccessRule) -> bool
         
-            Searches for an access control rule with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified access rule, and with compatible inheritance and propagation flags; if such a rule is found, the rights contained in the specified access rule are removed from it.
+            Searches for an access control rule with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified access rule, and with 
+             compatible inheritance and propagation flags; if such a rule is found, the rights contained in the specified access rule are removed from it.
         
-            rule: An System.Security.AccessControl.EventWaitHandleAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for, and a set of inheritance and propagation flags that a matching rule, if found, must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
+            rule: An System.Security.AccessControl.EventWaitHandleAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for, and a set of 
+             inheritance and propagation flags that a matching rule, if found, must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
             Returns: true if a compatible rule is found; otherwise, false.
         """
         pass
@@ -2835,9 +2914,12 @@ class EventWaitHandleSecurity(NativeObjectSecurity):
     def RemoveAccessRuleAll(self, rule):
         """
         RemoveAccessRuleAll(self: EventWaitHandleSecurity, rule: EventWaitHandleAccessRule)
-            Searches for all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule and, if found, removes them.
+            Searches for all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule and, if found, 
+             removes them.
         
-            rule: An System.Security.AccessControl.EventWaitHandleAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for. Any rights specified by this rule are ignored.
+        
+            rule: An System.Security.AccessControl.EventWaitHandleAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for. Any rights 
+             specified by this rule are ignored.
         """
         pass
 
@@ -2854,9 +2936,13 @@ class EventWaitHandleSecurity(NativeObjectSecurity):
         """
         RemoveAuditRule(self: EventWaitHandleSecurity, rule: EventWaitHandleAuditRule) -> bool
         
-            Searches for an audit rule with the same user as the specified rule, and with compatible inheritance and propagation flags; if a compatible rule is found, the rights contained in the specified rule are removed from it.
+            Searches for an audit rule with the same user as the specified rule, and with compatible inheritance and propagation flags; if a compatible rule is found, the rights 
+             contained in the specified rule are removed from it.
         
-            rule: An System.Security.AccessControl.EventWaitHandleAuditRule that specifies the user to search for and a set of inheritance and propagation flags that a matching rule, if found, must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
+            rule: An System.Security.AccessControl.EventWaitHandleAuditRule that specifies the user to search for and a set of inheritance and propagation flags that a matching rule, if 
+             found, must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
             Returns: true if a compatible rule is found; otherwise, false.
         """
         pass
@@ -2882,7 +2968,9 @@ class EventWaitHandleSecurity(NativeObjectSecurity):
     def ResetAccessRule(self, rule):
         """
         ResetAccessRule(self: EventWaitHandleSecurity, rule: EventWaitHandleAccessRule)
-            Removes all access control rules with the same user as the specified rule, regardless of System.Security.AccessControl.AccessControlType, and then adds the specified rule.
+            Removes all access control rules with the same user as the specified rule, regardless of System.Security.AccessControl.AccessControlType, and then adds the specified 
+             rule.
+        
         
             rule: The System.Security.AccessControl.EventWaitHandleAccessRule to add. The user specified by this rule determines the rules to remove before this rule is added.
         """
@@ -2891,9 +2979,12 @@ class EventWaitHandleSecurity(NativeObjectSecurity):
     def SetAccessRule(self, rule):
         """
         SetAccessRule(self: EventWaitHandleSecurity, rule: EventWaitHandleAccessRule)
-            Removes all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule, and then adds the specified rule.
+            Removes all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule, and then adds the 
+             specified rule.
         
-            rule: The System.Security.AccessControl.EventWaitHandleAccessRule to add. The user and System.Security.AccessControl.AccessControlType of this rule determine the rules to remove before this rule is added.
+        
+            rule: The System.Security.AccessControl.EventWaitHandleAccessRule to add. The user and System.Security.AccessControl.AccessControlType of this rule determine the rules to 
+             remove before this rule is added.
         """
         pass
 
@@ -2958,9 +3049,8 @@ Get: AuditRuleType(self: EventWaitHandleSecurity) -> Type
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return EventWaitHandleSecurity()
+    Instance = EventWaitHandleSecurity()
+    """hardcoded/returns an instance of the class"""
 
 class FileSecurity(FileSystemSecurity):
     """
@@ -2991,7 +3081,9 @@ class FileSecurity(FileSystemSecurity):
         """
         RemoveAccessRule(self: CommonObjectSecurity, rule: AccessRule) -> bool
         
-            Removes access rules that contain the same security identifier and access mask as the specified access rule from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes access rules that contain the same security identifier and access mask as the specified access rule from the Discretionary Access Control List (DACL) 
+             associated with this System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The access rule to remove.
             Returns: true if the access rule was successfully removed; otherwise, false.
@@ -3001,7 +3093,9 @@ class FileSecurity(FileSystemSecurity):
     def RemoveAccessRuleAll(self, rule):
         """
         RemoveAccessRuleAll(self: CommonObjectSecurity, rule: AccessRule)
-            Removes all access rules that have the same security identifier as the specified access rule from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes all access rules that have the same security identifier as the specified access rule from the Discretionary Access Control List (DACL) associated with this 
+             System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The access rule to remove.
         """
@@ -3010,7 +3104,9 @@ class FileSecurity(FileSystemSecurity):
     def RemoveAccessRuleSpecific(self, rule):
         """
         RemoveAccessRuleSpecific(self: CommonObjectSecurity, rule: AccessRule)
-            Removes all access rules that exactly match the specified access rule from the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes all access rules that exactly match the specified access rule from the Discretionary Access Control List (DACL) associated with this 
+             System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The access rule to remove.
         """
@@ -3020,7 +3116,9 @@ class FileSecurity(FileSystemSecurity):
         """
         RemoveAuditRule(self: CommonObjectSecurity, rule: AuditRule) -> bool
         
-            Removes audit rules that contain the same security identifier and access mask as the specified audit rule from the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes audit rules that contain the same security identifier and access mask as the specified audit rule from the System Access Control List (SACL) associated with 
+             this System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The audit rule to remove.
             Returns: true if the audit rule was successfully removed; otherwise, false.
@@ -3030,7 +3128,9 @@ class FileSecurity(FileSystemSecurity):
     def RemoveAuditRuleAll(self, rule):
         """
         RemoveAuditRuleAll(self: CommonObjectSecurity, rule: AuditRule)
-            Removes all audit rules that have the same security identifier as the specified audit rule from the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes all audit rules that have the same security identifier as the specified audit rule from the System Access Control List (SACL) associated with this 
+             System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The audit rule to remove.
         """
@@ -3039,7 +3139,9 @@ class FileSecurity(FileSystemSecurity):
     def RemoveAuditRuleSpecific(self, rule):
         """
         RemoveAuditRuleSpecific(self: CommonObjectSecurity, rule: AuditRule)
-            Removes all audit rules that exactly match the specified audit rule from the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonObjectSecurity object.
+            Removes all audit rules that exactly match the specified audit rule from the System Access Control List (SACL) associated with this 
+             System.Security.AccessControl.CommonObjectSecurity object.
+        
         
             rule: The audit rule to remove.
         """
@@ -3048,7 +3150,9 @@ class FileSecurity(FileSystemSecurity):
     def ResetAccessRule(self, rule):
         """
         ResetAccessRule(self: CommonObjectSecurity, rule: AccessRule)
-            Removes all access rules in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified access rule.
+            Removes all access rules in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds 
+             the specified access rule.
+        
         
             rule: The access rule to reset.
         """
@@ -3057,7 +3161,9 @@ class FileSecurity(FileSystemSecurity):
     def SetAccessRule(self, rule):
         """
         SetAccessRule(self: CommonObjectSecurity, rule: AccessRule)
-            Removes all access rules that contain the same security identifier and qualifier as the specified access rule in the Discretionary Access Control List (DACL) associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified access rule.
+            Removes all access rules that contain the same security identifier and qualifier as the specified access rule in the Discretionary Access Control List (DACL) 
+             associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified access rule.
+        
         
             rule: The access rule to set.
         """
@@ -3066,7 +3172,9 @@ class FileSecurity(FileSystemSecurity):
     def SetAuditRule(self, rule):
         """
         SetAuditRule(self: CommonObjectSecurity, rule: AuditRule)
-            Removes all audit rules that contain the same security identifier and qualifier as the specified audit rule in the System Access Control List (SACL) associated with this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified audit rule.
+            Removes all audit rules that contain the same security identifier and qualifier as the specified audit rule in the System Access Control List (SACL) associated with 
+             this System.Security.AccessControl.CommonObjectSecurity object and then adds the specified audit rule.
+        
         
             rule: The audit rule to set.
         """
@@ -3111,9 +3219,8 @@ class FileSecurity(FileSystemSecurity):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FileSecurity()
+    Instance = FileSecurity()
+    """hardcoded/returns an instance of the class"""
 
 class FileSystemAccessRule(AccessRule):
     """
@@ -3147,9 +3254,8 @@ Get: FileSystemRights(self: FileSystemAccessRule) -> FileSystemRights
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FileSystemAccessRule()
+    Instance = FileSystemAccessRule()
+    """hardcoded/returns an instance of the class"""
 
 class FileSystemAuditRule(AuditRule):
     """
@@ -3183,9 +3289,8 @@ Get: FileSystemRights(self: FileSystemAuditRule) -> FileSystemRights
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FileSystemAuditRule()
+    Instance = FileSystemAuditRule()
+    """hardcoded/returns an instance of the class"""
 
 class FileSystemRights:
     """
@@ -3251,9 +3356,8 @@ class FileSystemRights:
     WriteData = None
     WriteExtendedAttributes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FileSystemRights()
+    Instance = FileSystemRights()
+    """hardcoded/returns an instance of the class"""
 
 class InheritanceFlags:
     """
@@ -3299,9 +3403,8 @@ class InheritanceFlags:
     ObjectInherit = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InheritanceFlags()
+    Instance = InheritanceFlags()
+    """hardcoded/returns an instance of the class"""
 
 class MutexAccessRule(AccessRule):
     """
@@ -3331,9 +3434,8 @@ Get: MutexRights(self: MutexAccessRule) -> MutexRights
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MutexAccessRule()
+    Instance = MutexAccessRule()
+    """hardcoded/returns an instance of the class"""
 
 class MutexAuditRule(AuditRule):
     """
@@ -3359,9 +3461,8 @@ Get: MutexRights(self: MutexAuditRule) -> MutexRights
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MutexAuditRule()
+    Instance = MutexAuditRule()
+    """hardcoded/returns an instance of the class"""
 
 class MutexRights:
     """
@@ -3411,9 +3512,8 @@ class MutexRights:
     TakeOwnership = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MutexRights()
+    Instance = MutexRights()
+    """hardcoded/returns an instance of the class"""
 
 class MutexSecurity(NativeObjectSecurity):
     """
@@ -3468,7 +3568,8 @@ class MutexSecurity(NativeObjectSecurity):
             inheritanceFlags: Meaningless for named wait handles, because they have no hierarchy.
             propagationFlags: Meaningless for named wait handles, because they have no hierarchy.
             flags: A bitwise combination of System.Security.AccessControl.AuditFlags values that specify whether to audit successful access, failed access, or both.
-            Returns: A System.Security.AccessControl.MutexAuditRule object representing the specified audit rule for the specified user. The return type of the method is the base class, System.Security.AccessControl.AuditRule, but the return value can be cast safely to the derived class.
+            Returns: A System.Security.AccessControl.MutexAuditRule object representing the specified audit rule for the specified user. The return type of the method is the base class, 
+             System.Security.AccessControl.AuditRule, but the return value can be cast safely to the derived class.
         """
         pass
 
@@ -3476,9 +3577,13 @@ class MutexSecurity(NativeObjectSecurity):
         """
         RemoveAccessRule(self: MutexSecurity, rule: MutexAccessRule) -> bool
         
-            Searches for an access control rule with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule, and with compatible inheritance and propagation flags; if such a rule is found, the rights contained in the specified access rule are removed from it.
+            Searches for an access control rule with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule, and with compatible 
+             inheritance and propagation flags; if such a rule is found, the rights contained in the specified access rule are removed from it.
         
-            rule: A System.Security.AccessControl.MutexAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for, and a set of inheritance and propagation flags that a matching rule, if found, must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
+            rule: A System.Security.AccessControl.MutexAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for, and a set of inheritance and 
+             propagation flags that a matching rule, if found, must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
             Returns: true if a compatible rule is found; otherwise false.
         """
         pass
@@ -3486,9 +3591,12 @@ class MutexSecurity(NativeObjectSecurity):
     def RemoveAccessRuleAll(self, rule):
         """
         RemoveAccessRuleAll(self: MutexSecurity, rule: MutexAccessRule)
-            Searches for all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule and, if found, removes them.
+            Searches for all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule and, if found, 
+             removes them.
         
-            rule: A System.Security.AccessControl.MutexAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for. Any rights specified by this rule are ignored.
+        
+            rule: A System.Security.AccessControl.MutexAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for. Any rights specified by this 
+             rule are ignored.
         """
         pass
 
@@ -3505,9 +3613,13 @@ class MutexSecurity(NativeObjectSecurity):
         """
         RemoveAuditRule(self: MutexSecurity, rule: MutexAuditRule) -> bool
         
-            Searches for an audit control rule with the same user as the specified rule, and with compatible inheritance and propagation flags; if a compatible rule is found, the rights contained in the specified rule are removed from it.
+            Searches for an audit control rule with the same user as the specified rule, and with compatible inheritance and propagation flags; if a compatible rule is found, the 
+             rights contained in the specified rule are removed from it.
         
-            rule: A System.Security.AccessControl.MutexAuditRule that specifies the user to search for, and a set of inheritance and propagation flags that a matching rule, if found, must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
+            rule: A System.Security.AccessControl.MutexAuditRule that specifies the user to search for, and a set of inheritance and propagation flags that a matching rule, if found, 
+             must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
             Returns: true if a compatible rule is found; otherwise, false.
         """
         pass
@@ -3533,7 +3645,9 @@ class MutexSecurity(NativeObjectSecurity):
     def ResetAccessRule(self, rule):
         """
         ResetAccessRule(self: MutexSecurity, rule: MutexAccessRule)
-            Removes all access control rules with the same user as the specified rule, regardless of System.Security.AccessControl.AccessControlType, and then adds the specified rule.
+            Removes all access control rules with the same user as the specified rule, regardless of System.Security.AccessControl.AccessControlType, and then adds the specified 
+             rule.
+        
         
             rule: The System.Security.AccessControl.MutexAccessRule to add. The user specified by this rule determines the rules to remove before this rule is added.
         """
@@ -3542,9 +3656,12 @@ class MutexSecurity(NativeObjectSecurity):
     def SetAccessRule(self, rule):
         """
         SetAccessRule(self: MutexSecurity, rule: MutexAccessRule)
-            Removes all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule, and then adds the specified rule.
+            Removes all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule, and then adds the 
+             specified rule.
         
-            rule: The System.Security.AccessControl.MutexAccessRule to add. The user and System.Security.AccessControl.AccessControlType of this rule determine the rules to remove before this rule is added.
+        
+            rule: The System.Security.AccessControl.MutexAccessRule to add. The user and System.Security.AccessControl.AccessControlType of this rule determine the rules to remove 
+             before this rule is added.
         """
         pass
 
@@ -3617,9 +3734,8 @@ Get: AuditRuleType(self: MutexSecurity) -> Type
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MutexSecurity()
+    Instance = MutexSecurity()
+    """hardcoded/returns an instance of the class"""
 
 class ObjectAccessRule(AccessRule):
     """ Represents a combination of a user's identity, an access mask, and an access control type (allow or deny). An System.Security.AccessControl.ObjectAccessRule object also contains information about the type of object to which the rule applies, the type of child object that can inherit the rule, how the rule is inherited by child objects, and how that inheritance is propagated. """
@@ -3655,9 +3771,8 @@ Get: ObjectType(self: ObjectAccessRule) -> Guid
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ObjectAccessRule()
+    Instance = ObjectAccessRule()
+    """hardcoded/returns an instance of the class"""
 
 class ObjectAce(QualifiedAce):
     """
@@ -3724,9 +3839,8 @@ Set: ObjectAceType(self: ObjectAce) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ObjectAce()
+    Instance = ObjectAce()
+    """hardcoded/returns an instance of the class"""
 
 class ObjectAceFlags:
     """
@@ -3772,9 +3886,8 @@ class ObjectAceFlags:
     ObjectAceTypePresent = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ObjectAceFlags()
+    Instance = ObjectAceFlags()
+    """hardcoded/returns an instance of the class"""
 
 class ObjectAuditRule(AuditRule):
     """ Represents a combination of a user's identity, an access mask, and audit conditions. An System.Security.AccessControl.ObjectAuditRule object also contains information about the type of object to which the rule applies, the type of child object that can inherit the rule, how the rule is inherited by child objects, and how that inheritance is propagated. """
@@ -3810,9 +3923,8 @@ Get: ObjectType(self: ObjectAuditRule) -> Guid
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ObjectAuditRule()
+    Instance = ObjectAuditRule()
+    """hardcoded/returns an instance of the class"""
 
 class PrivilegeNotHeldException(UnauthorizedAccessException):
     """
@@ -3861,9 +3973,8 @@ Get: PrivilegeName(self: PrivilegeNotHeldException) -> str
 
     SerializeObjectState = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrivilegeNotHeldException()
+    Instance = PrivilegeNotHeldException()
+    """hardcoded/returns an instance of the class"""
 
 class PropagationFlags:
     """
@@ -3909,9 +4020,8 @@ class PropagationFlags:
     NoPropagateInherit = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PropagationFlags()
+    Instance = PropagationFlags()
+    """hardcoded/returns an instance of the class"""
 
 class RawAcl(GenericAcl):
     """
@@ -3935,7 +4045,9 @@ class RawAcl(GenericAcl):
         InsertAce(self: RawAcl, index: int, ace: GenericAce)
             Inserts the specified Access Control Entry (ACE) at the specified index.
         
-            index: The position at which to add the new ACE. Specify the value of the System.Security.AccessControl.RawAcl.Count property to insert an ACE at the end of the System.Security.AccessControl.RawAcl object.
+            index: The position at which to add the new ACE. Specify the value of the System.Security.AccessControl.RawAcl.Count property to insert an ACE at the end of the 
+             System.Security.AccessControl.RawAcl object.
+        
             ace: The ACE to insert.
         """
         pass
@@ -3999,9 +4111,8 @@ Get: Revision(self: RawAcl) -> Byte
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RawAcl()
+    Instance = RawAcl()
+    """hardcoded/returns an instance of the class"""
 
 class RawSecurityDescriptor(GenericSecurityDescriptor):
     """
@@ -4014,7 +4125,9 @@ class RawSecurityDescriptor(GenericSecurityDescriptor):
     def SetFlags(self, flags):
         """
         SetFlags(self: RawSecurityDescriptor, flags: ControlFlags)
-            Sets the System.Security.AccessControl.RawSecurityDescriptor.ControlFlags property of this System.Security.AccessControl.RawSecurityDescriptor object to the specified value.
+            Sets the System.Security.AccessControl.RawSecurityDescriptor.ControlFlags property of this System.Security.AccessControl.RawSecurityDescriptor object to the specified 
+             value.
+        
         
             flags: One or more values of the System.Security.AccessControl.ControlFlags enumeration combined with a logical OR operation.
         """
@@ -4077,9 +4190,8 @@ Set: SystemAcl(self: RawSecurityDescriptor) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RawSecurityDescriptor()
+    Instance = RawSecurityDescriptor()
+    """hardcoded/returns an instance of the class"""
 
 class RegistryAccessRule(AccessRule):
     """
@@ -4113,9 +4225,8 @@ Get: RegistryRights(self: RegistryAccessRule) -> RegistryRights
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryAccessRule()
+    Instance = RegistryAccessRule()
+    """hardcoded/returns an instance of the class"""
 
 class RegistryAuditRule(AuditRule):
     """
@@ -4145,9 +4256,8 @@ Get: RegistryRights(self: RegistryAuditRule) -> RegistryRights
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryAuditRule()
+    Instance = RegistryAuditRule()
+    """hardcoded/returns an instance of the class"""
 
 class RegistryRights:
     """
@@ -4204,9 +4314,8 @@ class RegistryRights:
     value__ = None
     WriteKey = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RegistryRights()
+    Instance = RegistryRights()
+    """hardcoded/returns an instance of the class"""
 
 class RegistrySecurity(NativeObjectSecurity):
     """
@@ -4224,7 +4333,9 @@ class RegistrySecurity(NativeObjectSecurity):
             accessMask: A bitwise combination of System.Security.AccessControl.RegistryRights values specifying the access rights to allow or deny, cast to an integer.
             isInherited: A Boolean value specifying whether the rule is inherited.
             inheritanceFlags: A bitwise combination of System.Security.AccessControl.InheritanceFlags values specifying how the rule is inherited by subkeys.
-            propagationFlags: A bitwise combination of System.Security.AccessControl.PropagationFlags values that modify the way the rule is inherited by subkeys. Meaningless if the value of inheritanceFlags is System.Security.AccessControl.InheritanceFlags.None.
+            propagationFlags: A bitwise combination of System.Security.AccessControl.PropagationFlags values that modify the way the rule is inherited by subkeys. Meaningless if the value of 
+             inheritanceFlags is System.Security.AccessControl.InheritanceFlags.None.
+        
             type: One of the System.Security.AccessControl.AccessControlType values specifying whether the rights are allowed or denied.
             Returns: A System.Security.AccessControl.RegistryAccessRule object representing the specified rights for the specified user.
         """
@@ -4252,15 +4363,20 @@ class RegistrySecurity(NativeObjectSecurity):
         """
         AuditRuleFactory(self: RegistrySecurity, identityReference: IdentityReference, accessMask: int, isInherited: bool, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags) -> AuditRule
         
-            Creates a new audit rule, specifying the user the rule applies to, the access rights to audit, the inheritance and propagation of the rule, and the outcome that triggers the rule.
+            Creates a new audit rule, specifying the user the rule applies to, the access rights to audit, the inheritance and propagation of the rule, and the outcome that 
+             triggers the rule.
+        
         
             identityReference: An System.Security.Principal.IdentityReference that identifies the user or group the rule applies to.
             accessMask: A bitwise combination of System.Security.AccessControl.RegistryRights values specifying the access rights to audit, cast to an integer.
             isInherited: A Boolean value specifying whether the rule is inherited.
             inheritanceFlags: A bitwise combination of System.Security.AccessControl.InheritanceFlags values specifying how the rule is inherited by subkeys.
-            propagationFlags: A bitwise combination of System.Security.AccessControl.PropagationFlags values that modify the way the rule is inherited by subkeys. Meaningless if the value of inheritanceFlags is System.Security.AccessControl.InheritanceFlags.None.
+            propagationFlags: A bitwise combination of System.Security.AccessControl.PropagationFlags values that modify the way the rule is inherited by subkeys. Meaningless if the value of 
+             inheritanceFlags is System.Security.AccessControl.InheritanceFlags.None.
+        
             flags: A bitwise combination of System.Security.AccessControl.AuditFlags values specifying whether to audit successful access, failed access, or both.
-            Returns: A System.Security.AccessControl.RegistryAuditRule object representing the specified audit rule for the specified user, with the specified flags. The return type of the method is the base class, System.Security.AccessControl.AuditRule, but the return value can be cast safely to the derived class.
+            Returns: A System.Security.AccessControl.RegistryAuditRule object representing the specified audit rule for the specified user, with the specified flags. The return type of the 
+             method is the base class, System.Security.AccessControl.AuditRule, but the return value can be cast safely to the derived class.
         """
         pass
 
@@ -4268,9 +4384,13 @@ class RegistrySecurity(NativeObjectSecurity):
         """
         RemoveAccessRule(self: RegistrySecurity, rule: RegistryAccessRule) -> bool
         
-            Searches for an access control rule with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified access rule, and with compatible inheritance and propagation flags; if such a rule is found, the rights contained in the specified access rule are removed from it.
+            Searches for an access control rule with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified access rule, and with 
+             compatible inheritance and propagation flags; if such a rule is found, the rights contained in the specified access rule are removed from it.
         
-            rule: A System.Security.AccessControl.RegistryAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for, and a set of inheritance and propagation flags that a matching rule, if found, must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
+            rule: A System.Security.AccessControl.RegistryAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for, and a set of inheritance 
+             and propagation flags that a matching rule, if found, must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
             Returns: true if a compatible rule is found; otherwise false.
         """
         pass
@@ -4278,9 +4398,12 @@ class RegistrySecurity(NativeObjectSecurity):
     def RemoveAccessRuleAll(self, rule):
         """
         RemoveAccessRuleAll(self: RegistrySecurity, rule: RegistryAccessRule)
-            Searches for all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule and, if found, removes them.
+            Searches for all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule and, if found, 
+             removes them.
         
-            rule: A System.Security.AccessControl.RegistryAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for. Any rights, inheritance flags, or propagation flags specified by this rule are ignored.
+        
+            rule: A System.Security.AccessControl.RegistryAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for. Any rights, inheritance 
+             flags, or propagation flags specified by this rule are ignored.
         """
         pass
 
@@ -4297,9 +4420,13 @@ class RegistrySecurity(NativeObjectSecurity):
         """
         RemoveAuditRule(self: RegistrySecurity, rule: RegistryAuditRule) -> bool
         
-            Searches for an audit control rule with the same user as the specified rule, and with compatible inheritance and propagation flags; if a compatible rule is found, the rights contained in the specified rule are removed from it.
+            Searches for an audit control rule with the same user as the specified rule, and with compatible inheritance and propagation flags; if a compatible rule is found, the 
+             rights contained in the specified rule are removed from it.
         
-            rule: A System.Security.AccessControl.RegistryAuditRule that specifies the user to search for, and a set of inheritance and propagation flags that a matching rule, if found, must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
+            rule: A System.Security.AccessControl.RegistryAuditRule that specifies the user to search for, and a set of inheritance and propagation flags that a matching rule, if found, 
+             must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
             Returns: true if a compatible rule is found; otherwise, false.
         """
         pass
@@ -4309,7 +4436,8 @@ class RegistrySecurity(NativeObjectSecurity):
         RemoveAuditRuleAll(self: RegistrySecurity, rule: RegistryAuditRule)
             Searches for all audit rules with the same user as the specified rule and, if found, removes them.
         
-            rule: A System.Security.AccessControl.RegistryAuditRule that specifies the user to search for. Any rights, inheritance flags, or propagation flags specified by this rule are ignored.
+            rule: A System.Security.AccessControl.RegistryAuditRule that specifies the user to search for. Any rights, inheritance flags, or propagation flags specified by this rule are 
+             ignored.
         """
         pass
 
@@ -4325,7 +4453,9 @@ class RegistrySecurity(NativeObjectSecurity):
     def ResetAccessRule(self, rule):
         """
         ResetAccessRule(self: RegistrySecurity, rule: RegistryAccessRule)
-            Removes all access control rules with the same user as the specified rule, regardless of System.Security.AccessControl.AccessControlType, and then adds the specified rule.
+            Removes all access control rules with the same user as the specified rule, regardless of System.Security.AccessControl.AccessControlType, and then adds the specified 
+             rule.
+        
         
             rule: The System.Security.AccessControl.RegistryAccessRule to add. The user specified by this rule determines the rules to remove before this rule is added.
         """
@@ -4334,9 +4464,12 @@ class RegistrySecurity(NativeObjectSecurity):
     def SetAccessRule(self, rule):
         """
         SetAccessRule(self: RegistrySecurity, rule: RegistryAccessRule)
-            Removes all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule, and then adds the specified rule.
+            Removes all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule, and then adds the 
+             specified rule.
         
-            rule: The System.Security.AccessControl.RegistryAccessRule to add. The user and System.Security.AccessControl.AccessControlType of this rule determine the rules to remove before this rule is added.
+        
+            rule: The System.Security.AccessControl.RegistryAccessRule to add. The user and System.Security.AccessControl.AccessControlType of this rule determine the rules to remove 
+             before this rule is added.
         """
         pass
 
@@ -4401,9 +4534,8 @@ Get: AuditRuleType(self: RegistrySecurity) -> Type
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RegistrySecurity()
+    Instance = RegistrySecurity()
+    """hardcoded/returns an instance of the class"""
 
 class ResourceType:
     """
@@ -4459,9 +4591,8 @@ class ResourceType:
     WindowObject = None
     WmiGuidObject = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ResourceType()
+    Instance = ResourceType()
+    """hardcoded/returns an instance of the class"""
 
 class SecurityInfos:
     """
@@ -4508,9 +4639,8 @@ class SecurityInfos:
     SystemAcl = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SecurityInfos()
+    Instance = SecurityInfos()
+    """hardcoded/returns an instance of the class"""
 
 class SemaphoreAccessRule(AccessRule):
     """
@@ -4540,9 +4670,8 @@ Get: SemaphoreRights(self: SemaphoreAccessRule) -> SemaphoreRights
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SemaphoreAccessRule()
+    Instance = SemaphoreAccessRule()
+    """hardcoded/returns an instance of the class"""
 
 class SemaphoreAuditRule(AuditRule):
     """
@@ -4568,9 +4697,8 @@ Get: SemaphoreRights(self: SemaphoreAuditRule) -> SemaphoreRights
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SemaphoreAuditRule()
+    Instance = SemaphoreAuditRule()
+    """hardcoded/returns an instance of the class"""
 
 class SemaphoreRights:
     """
@@ -4620,9 +4748,8 @@ class SemaphoreRights:
     TakeOwnership = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SemaphoreRights()
+    Instance = SemaphoreRights()
+    """hardcoded/returns an instance of the class"""
 
 class SemaphoreSecurity(NativeObjectSecurity):
     """
@@ -4677,7 +4804,8 @@ class SemaphoreSecurity(NativeObjectSecurity):
             inheritanceFlags: Meaningless for named wait handles, because they have no hierarchy.
             propagationFlags: Meaningless for named wait handles, because they have no hierarchy.
             flags: A bitwise combination of System.Security.AccessControl.AuditFlags values that specify whether to audit successful access, failed access, or both.
-            Returns: A System.Security.AccessControl.SemaphoreAuditRule object representing the specified audit rule for the specified user. The return type of the method is the base class, System.Security.AccessControl.AuditRule, but the return value can be cast safely to the derived class.
+            Returns: A System.Security.AccessControl.SemaphoreAuditRule object representing the specified audit rule for the specified user. The return type of the method is the base 
+             class, System.Security.AccessControl.AuditRule, but the return value can be cast safely to the derived class.
         """
         pass
 
@@ -4685,9 +4813,13 @@ class SemaphoreSecurity(NativeObjectSecurity):
         """
         RemoveAccessRule(self: SemaphoreSecurity, rule: SemaphoreAccessRule) -> bool
         
-            Searches for an access control rule with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule, and with compatible inheritance and propagation flags; if such a rule is found, the rights contained in the specified access rule are removed from it.
+            Searches for an access control rule with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule, and with compatible 
+             inheritance and propagation flags; if such a rule is found, the rights contained in the specified access rule are removed from it.
         
-            rule: A System.Security.AccessControl.SemaphoreAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for, and a set of inheritance and propagation flags that a matching rule, if found, must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
+            rule: A System.Security.AccessControl.SemaphoreAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for, and a set of inheritance 
+             and propagation flags that a matching rule, if found, must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
             Returns: true if a compatible rule is found; otherwise false.
         """
         pass
@@ -4695,9 +4827,12 @@ class SemaphoreSecurity(NativeObjectSecurity):
     def RemoveAccessRuleAll(self, rule):
         """
         RemoveAccessRuleAll(self: SemaphoreSecurity, rule: SemaphoreAccessRule)
-            Searches for all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule and, if found, removes them.
+            Searches for all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule and, if found, 
+             removes them.
         
-            rule: A System.Security.AccessControl.SemaphoreAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for. Any rights specified by this rule are ignored.
+        
+            rule: A System.Security.AccessControl.SemaphoreAccessRule that specifies the user and System.Security.AccessControl.AccessControlType to search for. Any rights specified by 
+             this rule are ignored.
         """
         pass
 
@@ -4714,9 +4849,13 @@ class SemaphoreSecurity(NativeObjectSecurity):
         """
         RemoveAuditRule(self: SemaphoreSecurity, rule: SemaphoreAuditRule) -> bool
         
-            Searches for an audit control rule with the same user as the specified rule, and with compatible inheritance and propagation flags; if a compatible rule is found, the rights contained in the specified rule are removed from it.
+            Searches for an audit control rule with the same user as the specified rule, and with compatible inheritance and propagation flags; if a compatible rule is found, the 
+             rights contained in the specified rule are removed from it.
         
-            rule: A System.Security.AccessControl.SemaphoreAuditRule that specifies the user to search for, and a set of inheritance and propagation flags that a matching rule, if found, must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
+            rule: A System.Security.AccessControl.SemaphoreAuditRule that specifies the user to search for, and a set of inheritance and propagation flags that a matching rule, if 
+             found, must be compatible with. Specifies the rights to remove from the compatible rule, if found.
+        
             Returns: true if a compatible rule is found; otherwise, false.
         """
         pass
@@ -4742,7 +4881,9 @@ class SemaphoreSecurity(NativeObjectSecurity):
     def ResetAccessRule(self, rule):
         """
         ResetAccessRule(self: SemaphoreSecurity, rule: SemaphoreAccessRule)
-            Removes all access control rules with the same user as the specified rule, regardless of System.Security.AccessControl.AccessControlType, and then adds the specified rule.
+            Removes all access control rules with the same user as the specified rule, regardless of System.Security.AccessControl.AccessControlType, and then adds the specified 
+             rule.
+        
         
             rule: The System.Security.AccessControl.SemaphoreAccessRule to add. The user specified by this rule determines the rules to remove before this rule is added.
         """
@@ -4751,9 +4892,12 @@ class SemaphoreSecurity(NativeObjectSecurity):
     def SetAccessRule(self, rule):
         """
         SetAccessRule(self: SemaphoreSecurity, rule: SemaphoreAccessRule)
-            Removes all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule, and then adds the specified rule.
+            Removes all access control rules with the same user and System.Security.AccessControl.AccessControlType (allow or deny) as the specified rule, and then adds the 
+             specified rule.
         
-            rule: The System.Security.AccessControl.SemaphoreAccessRule to add. The user and System.Security.AccessControl.AccessControlType of this rule determine the rules to remove before this rule is added.
+        
+            rule: The System.Security.AccessControl.SemaphoreAccessRule to add. The user and System.Security.AccessControl.AccessControlType of this rule determine the rules to remove 
+             before this rule is added.
         """
         pass
 
@@ -4826,9 +4970,8 @@ Get: AuditRuleType(self: SemaphoreSecurity) -> Type
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SemaphoreSecurity()
+    Instance = SemaphoreSecurity()
+    """hardcoded/returns an instance of the class"""
 
 class SystemAcl(CommonAcl):
     """
@@ -4849,7 +4992,9 @@ class SystemAcl(CommonAcl):
             inheritanceFlags: Flags that specify the inheritance properties of the new audit rule.
             propagationFlags: Flags that specify the inheritance propagation properties for the new audit rule.
         AddAudit(self: SystemAcl, sid: SecurityIdentifier, rule: ObjectAuditRule)AddAudit(self: SystemAcl, auditFlags: AuditFlags, sid: SecurityIdentifier, accessMask: int, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, objectFlags: ObjectAceFlags, objectType: Guid, inheritedObjectType: Guid)
-            Adds an audit rule with the specified settings to the current System.Security.AccessControl.SystemAcl object. Use this method for directory object Access Control Lists (ACLs) when specifying the object type or the inherited object type for the new audit rule.
+            Adds an audit rule with the specified settings to the current System.Security.AccessControl.SystemAcl object. Use this method for directory object Access Control Lists 
+             (ACLs) when specifying the object type or the inherited object type for the new audit rule.
+        
         
             auditFlags: The type of audit rule to add.
             sid: The System.Security.Principal.SecurityIdentifier for which to add an audit rule.
@@ -4877,7 +5022,9 @@ class SystemAcl(CommonAcl):
         RemoveAudit(self: SystemAcl, sid: SecurityIdentifier, rule: ObjectAuditRule) -> bool
         RemoveAudit(self: SystemAcl, auditFlags: AuditFlags, sid: SecurityIdentifier, accessMask: int, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, objectFlags: ObjectAceFlags, objectType: Guid, inheritedObjectType: Guid) -> bool
         
-            Removes the specified audit rule from the current System.Security.AccessControl.SystemAcl object. Use this method for directory object Access Control Lists (ACLs) when specifying the object type or the inherited object type.
+            Removes the specified audit rule from the current System.Security.AccessControl.SystemAcl object. Use this method for directory object Access Control Lists (ACLs) when 
+             specifying the object type or the inherited object type.
+        
         
             auditFlags: The type of audit rule to remove.
             sid: The System.Security.Principal.SecurityIdentifier for which to remove an audit rule.
@@ -4902,7 +5049,9 @@ class SystemAcl(CommonAcl):
             inheritanceFlags: Flags that specify the inheritance properties of the rule to be removed.
             propagationFlags: Flags that specify the inheritance propagation properties for the rule to be removed.
         RemoveAuditSpecific(self: SystemAcl, sid: SecurityIdentifier, rule: ObjectAuditRule)RemoveAuditSpecific(self: SystemAcl, auditFlags: AuditFlags, sid: SecurityIdentifier, accessMask: int, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, objectFlags: ObjectAceFlags, objectType: Guid, inheritedObjectType: Guid)
-            Removes the specified audit rule from the current System.Security.AccessControl.DiscretionaryAcl object. Use this method for directory object Access Control Lists (ACLs) when specifying the object type or the inherited object type.
+            Removes the specified audit rule from the current System.Security.AccessControl.DiscretionaryAcl object. Use this method for directory object Access Control Lists 
+             (ACLs) when specifying the object type or the inherited object type.
+        
         
             auditFlags: The type of audit rule to remove.
             sid: The System.Security.Principal.SecurityIdentifier for which to remove an audit rule.
@@ -4926,7 +5075,9 @@ class SystemAcl(CommonAcl):
             inheritanceFlags: Flags that specify the inheritance properties of the new audit rule.
             propagationFlags: Flags that specify the inheritance propagation properties for the new audit rule.
         SetAudit(self: SystemAcl, sid: SecurityIdentifier, rule: ObjectAuditRule)SetAudit(self: SystemAcl, auditFlags: AuditFlags, sid: SecurityIdentifier, accessMask: int, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, objectFlags: ObjectAceFlags, objectType: Guid, inheritedObjectType: Guid)
-            Sets the specified audit rule for the specified System.Security.Principal.SecurityIdentifier object. Use this method for directory object Access Control Lists (ACLs) when specifying the object type or the inherited object type.
+            Sets the specified audit rule for the specified System.Security.Principal.SecurityIdentifier object. Use this method for directory object Access Control Lists (ACLs) 
+             when specifying the object type or the inherited object type.
+        
         
             auditFlags: The audit condition to set.
             sid: The System.Security.Principal.SecurityIdentifier for which to set an audit rule.
@@ -4964,7 +5115,6 @@ class SystemAcl(CommonAcl):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SystemAcl()
+    Instance = SystemAcl()
+    """hardcoded/returns an instance of the class"""
 

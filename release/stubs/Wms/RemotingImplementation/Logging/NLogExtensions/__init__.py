@@ -52,9 +52,8 @@ class BuildEnvironmentLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BuildEnvironmentLayoutRenderer()
+    Instance = BuildEnvironmentLayoutRenderer()
+    """hardcoded/returns an instance of the class"""
 
 class BwAccessIdLayoutRenderer(LayoutRenderer):
     """ BwAccessIdLayoutRenderer() """
@@ -100,9 +99,8 @@ class BwAccessIdLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BwAccessIdLayoutRenderer()
+    Instance = BwAccessIdLayoutRenderer()
+    """hardcoded/returns an instance of the class"""
 
 class BwCategoryLayoutRenderer(LayoutRenderer):
     """ BwCategoryLayoutRenderer() """
@@ -148,9 +146,8 @@ class BwCategoryLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BwCategoryLayoutRenderer()
+    Instance = BwCategoryLayoutRenderer()
+    """hardcoded/returns an instance of the class"""
 
 class BwClientNameLayoutRenderer(LayoutRenderer):
     """ BwClientNameLayoutRenderer() """
@@ -196,9 +193,8 @@ class BwClientNameLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BwClientNameLayoutRenderer()
+    Instance = BwClientNameLayoutRenderer()
+    """hardcoded/returns an instance of the class"""
 
 class BwDeviceMacAddressLayoutRenderer(LayoutRenderer):
     """ BwDeviceMacAddressLayoutRenderer() """
@@ -244,9 +240,8 @@ class BwDeviceMacAddressLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BwDeviceMacAddressLayoutRenderer()
+    Instance = BwDeviceMacAddressLayoutRenderer()
+    """hardcoded/returns an instance of the class"""
 
 class BwDeviceTypeLayoutRenderer(LayoutRenderer):
     """ BwDeviceTypeLayoutRenderer() """
@@ -292,9 +287,8 @@ class BwDeviceTypeLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BwDeviceTypeLayoutRenderer()
+    Instance = BwDeviceTypeLayoutRenderer()
+    """hardcoded/returns an instance of the class"""
 
 class BwUserLayoutRenderer(LayoutRenderer):
     """ BwUserLayoutRenderer() """
@@ -340,9 +334,8 @@ class BwUserLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BwUserLayoutRenderer()
+    Instance = BwUserLayoutRenderer()
+    """hardcoded/returns an instance of the class"""
 
 class BwZoneNameLayoutRenderer(LayoutRenderer):
     """ BwZoneNameLayoutRenderer() """
@@ -388,9 +381,8 @@ class BwZoneNameLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BwZoneNameLayoutRenderer()
+    Instance = BwZoneNameLayoutRenderer()
+    """hardcoded/returns an instance of the class"""
 
 class CustomTraceActivityIdLayoutRenderer(LayoutRenderer):
     """ CustomTraceActivityIdLayoutRenderer() """
@@ -436,9 +428,8 @@ class CustomTraceActivityIdLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CustomTraceActivityIdLayoutRenderer()
+    Instance = CustomTraceActivityIdLayoutRenderer()
+    """hardcoded/returns an instance of the class"""
 
 class IsProfilerTraceEventLayoutRenderer(LayoutRenderer):
     """ IsProfilerTraceEventLayoutRenderer() """
@@ -486,9 +477,8 @@ class IsProfilerTraceEventLayoutRenderer(LayoutRenderer):
 
     IsProfileTracerEventKey = 'IsProfilerTracerEvent'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return IsProfilerTraceEventLayoutRenderer()
+    Instance = IsProfilerTraceEventLayoutRenderer()
+    """hardcoded/returns an instance of the class"""
 
 class LicenseNameLayoutRenderer(LayoutRenderer):
     """ LicenseNameLayoutRenderer() """
@@ -534,9 +524,8 @@ class LicenseNameLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LicenseNameLayoutRenderer()
+    Instance = LicenseNameLayoutRenderer()
+    """hardcoded/returns an instance of the class"""
 
 class TraceTypeLayoutRenderer(LayoutRenderer):
     """ TraceTypeLayoutRenderer() """
@@ -582,9 +571,8 @@ class TraceTypeLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TraceTypeLayoutRenderer()
+    Instance = TraceTypeLayoutRenderer()
+    """hardcoded/returns an instance of the class"""
 
 class VersionLayoutRenderer(LayoutRenderer):
     """ VersionLayoutRenderer() """
@@ -630,9 +618,8 @@ class VersionLayoutRenderer(LayoutRenderer):
     LoggingConfiguration = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return VersionLayoutRenderer()
+    Instance = VersionLayoutRenderer()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

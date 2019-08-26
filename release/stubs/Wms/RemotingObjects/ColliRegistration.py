@@ -132,9 +132,8 @@ Set: WarehouseLocationCode(self: ColloReference) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ColloReference()
+    Instance = ColloReference()
+    """hardcoded/returns an instance of the class"""
 
 class ColloReferencePair():
     """
@@ -198,9 +197,8 @@ Set: WarehouseLocationCode(self: ColloReferencePair) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ColloReferencePair()
+    Instance = ColloReferencePair()
+    """hardcoded/returns an instance of the class"""
 
 class ReferenceType:
     """ enum ReferenceType, values: Inner (0), Outer (1) """
@@ -241,7 +239,6 @@ class ReferenceType:
     Outer = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReferenceType()
+    Instance = ReferenceType()
+    """hardcoded/returns an instance of the class"""
 

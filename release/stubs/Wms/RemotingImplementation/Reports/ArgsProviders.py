@@ -14,9 +14,8 @@ class ReportArgsProviderBase():
         """ GetCustomOrDefaultReportPath(defaultReportPath: str, customReportPath: str, reportFile: str) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReportArgsProviderBase()
+    Instance = ReportArgsProviderBase()
+    """hardcoded/returns an instance of the class"""
 
 class ReportPackageSlipArgsProvider(ReportArgsProviderBase):
     """ ReportPackageSlipArgsProvider(general: General) """
@@ -44,9 +43,8 @@ class ReportPackageSlipArgsProvider(ReportArgsProviderBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReportPackageSlipArgsProvider()
+    Instance = ReportPackageSlipArgsProvider()
+    """hardcoded/returns an instance of the class"""
 
 class ReportPickListArgsProvider(ReportArgsProviderBase):
     """ ReportPickListArgsProvider(general: General) """
@@ -79,9 +77,8 @@ class ReportPickListArgsProvider(ReportArgsProviderBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReportPickListArgsProvider()
+    Instance = ReportPickListArgsProvider()
+    """hardcoded/returns an instance of the class"""
 
 class ReportPrereceivementReceiptArgsProvider(ReportArgsProviderBase):
     """ ReportPrereceivementReceiptArgsProvider(general: General) """
@@ -109,9 +106,8 @@ class ReportPrereceivementReceiptArgsProvider(ReportArgsProviderBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReportPrereceivementReceiptArgsProvider()
+    Instance = ReportPrereceivementReceiptArgsProvider()
+    """hardcoded/returns an instance of the class"""
 
 class ReportPurchaseReceiptArgsProvider(ReportArgsProviderBase):
     """ ReportPurchaseReceiptArgsProvider(general: General) """
@@ -139,9 +135,8 @@ class ReportPurchaseReceiptArgsProvider(ReportArgsProviderBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReportPurchaseReceiptArgsProvider()
+    Instance = ReportPurchaseReceiptArgsProvider()
+    """hardcoded/returns an instance of the class"""
 
 class ReportRmaReceiptArgsProvider(ReportArgsProviderBase):
     """ ReportRmaReceiptArgsProvider(general: General) """
@@ -169,7 +164,6 @@ class ReportRmaReceiptArgsProvider(ReportArgsProviderBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReportRmaReceiptArgsProvider()
+    Instance = ReportRmaReceiptArgsProvider()
+    """hardcoded/returns an instance of the class"""
 

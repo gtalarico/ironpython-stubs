@@ -34,7 +34,6 @@ Get: Value(self: Cachable[T]) -> T
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Cachable()
+    Instance = Cachable()
+    """hardcoded/returns an instance of the class"""
 

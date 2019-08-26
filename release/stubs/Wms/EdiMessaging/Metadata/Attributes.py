@@ -41,9 +41,8 @@ class DescriptorAttribute:
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DescriptorAttribute()
+    Instance = DescriptorAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class HandlerDescriptorAttribute(DescriptorAttribute):
     """
@@ -62,9 +61,8 @@ class HandlerDescriptorAttribute(DescriptorAttribute):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HandlerDescriptorAttribute()
+    Instance = HandlerDescriptorAttribute()
+    """hardcoded/returns an instance of the class"""
 
 class PublisherDescriptorAttribute(DescriptorAttribute):
     """
@@ -83,7 +81,6 @@ class PublisherDescriptorAttribute(DescriptorAttribute):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PublisherDescriptorAttribute()
+    Instance = PublisherDescriptorAttribute()
+    """hardcoded/returns an instance of the class"""
 

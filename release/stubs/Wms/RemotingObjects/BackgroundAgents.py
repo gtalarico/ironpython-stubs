@@ -71,9 +71,8 @@ Set: Type(self: BackgroundAgent) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BackgroundAgent()
+    Instance = BackgroundAgent()
+    """hardcoded/returns an instance of the class"""
 
 class BackgroundAgents(List):
     """ BackgroundAgents() """
@@ -96,9 +95,8 @@ class BackgroundAgents(List):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BackgroundAgents()
+    Instance = BackgroundAgents()
+    """hardcoded/returns an instance of the class"""
 
 class BackgroundAgentStatus():
     """ BackgroundAgentStatus() """
@@ -115,9 +113,8 @@ Set: InactiveAgents(self: BackgroundAgentStatus) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BackgroundAgentStatus()
+    Instance = BackgroundAgentStatus()
+    """hardcoded/returns an instance of the class"""
 
 class BackgroundAgentType:
     """ enum BackgroundAgentType, values: PrintAgent (1), Unknown (0) """
@@ -158,9 +155,8 @@ class BackgroundAgentType:
     Unknown = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BackgroundAgentType()
+    Instance = BackgroundAgentType()
+    """hardcoded/returns an instance of the class"""
 
 class PingMessage():
     """
@@ -209,7 +205,6 @@ Set: OS(self: PingMessage) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PingMessage()
+    Instance = PingMessage()
+    """hardcoded/returns an instance of the class"""
 

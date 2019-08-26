@@ -202,9 +202,8 @@ Set: ZoneId(self: ScriptTask) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ScriptTask()
+    Instance = ScriptTask()
+    """hardcoded/returns an instance of the class"""
 
 class ScriptTaskPriority:
     """ enum ScriptTaskPriority, values: High (3), Low (1), Normal (2) """
@@ -246,9 +245,8 @@ class ScriptTaskPriority:
     Normal = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ScriptTaskPriority()
+    Instance = ScriptTaskPriority()
+    """hardcoded/returns an instance of the class"""
 
 class ScriptTasks(FindableList):
     """ ScriptTasks() """
@@ -274,7 +272,6 @@ class ScriptTasks(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ScriptTasks()
+    Instance = ScriptTasks()
+    """hardcoded/returns an instance of the class"""
 

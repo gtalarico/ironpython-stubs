@@ -109,9 +109,8 @@ Set: OneLabelPerPrintAction(self: PrintDatasetBase) = value
     NumberOfCopies = 'NumberOfCopies'
     Quantity = 'Quantity'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrintDatasetBase()
+    Instance = PrintDatasetBase()
+    """hardcoded/returns an instance of the class"""
 
 class BarcodeDataset(PrintDatasetBase):
     """ BarcodeDataset() """
@@ -170,9 +169,8 @@ Get: Name(self: BarcodeDataset) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return BarcodeDataset()
+    Instance = BarcodeDataset()
+    """hardcoded/returns an instance of the class"""
 
 class ItemPrintDataset(PrintDatasetBase):
     """ ItemPrintDataset() """
@@ -231,9 +229,8 @@ Get: Name(self: ItemPrintDataset) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ItemPrintDataset()
+    Instance = ItemPrintDataset()
+    """hardcoded/returns an instance of the class"""
 
 class ItemWithItemIdPrintDataset(PrintDatasetBase):
     """ ItemWithItemIdPrintDataset() """
@@ -292,9 +289,8 @@ Get: Name(self: ItemWithItemIdPrintDataset) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ItemWithItemIdPrintDataset()
+    Instance = ItemWithItemIdPrintDataset()
+    """hardcoded/returns an instance of the class"""
 
 class LicensePlatePrintDataset(PrintDatasetBase):
     """ LicensePlatePrintDataset() """
@@ -353,9 +349,8 @@ Get: Name(self: LicensePlatePrintDataset) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return LicensePlatePrintDataset()
+    Instance = LicensePlatePrintDataset()
+    """hardcoded/returns an instance of the class"""
 
 class PickbatchPrintDataset(PrintDatasetBase):
     """ PickbatchPrintDataset() """
@@ -414,9 +409,8 @@ Get: Name(self: PickbatchPrintDataset) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PickbatchPrintDataset()
+    Instance = PickbatchPrintDataset()
+    """hardcoded/returns an instance of the class"""
 
 class PurchaseItemIdPrintDataset(PrintDatasetBase):
     """ PurchaseItemIdPrintDataset() """
@@ -479,9 +473,8 @@ Get: Name(self: PurchaseItemIdPrintDataset) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PurchaseItemIdPrintDataset()
+    Instance = PurchaseItemIdPrintDataset()
+    """hardcoded/returns an instance of the class"""
 
 class PurchasePrintDataset(PrintDatasetBase):
     """ PurchasePrintDataset() """
@@ -544,9 +537,8 @@ Get: Name(self: PurchasePrintDataset) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PurchasePrintDataset()
+    Instance = PurchasePrintDataset()
+    """hardcoded/returns an instance of the class"""
 
 class RmaPrintDataset(PrintDatasetBase):
     """ RmaPrintDataset() """
@@ -609,9 +601,8 @@ Get: Name(self: RmaPrintDataset) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RmaPrintDataset()
+    Instance = RmaPrintDataset()
+    """hardcoded/returns an instance of the class"""
 
 class SSCCHeterogeneousDataSet(PrintDatasetBase):
     """ SSCCHeterogeneousDataSet() """
@@ -670,9 +661,8 @@ Get: Name(self: SSCCHeterogeneousDataSet) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCHeterogeneousDataSet()
+    Instance = SSCCHeterogeneousDataSet()
+    """hardcoded/returns an instance of the class"""
 
 class SSCCHomogeneousDataSet(PrintDatasetBase):
     """ SSCCHomogeneousDataSet() """
@@ -731,9 +721,8 @@ Get: Name(self: SSCCHomogeneousDataSet) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCHomogeneousDataSet()
+    Instance = SSCCHomogeneousDataSet()
+    """hardcoded/returns an instance of the class"""
 
 class SSCCPregeneratedDataset(PrintDatasetBase):
     """ SSCCPregeneratedDataset() """
@@ -792,9 +781,8 @@ Get: Name(self: SSCCPregeneratedDataset) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SSCCPregeneratedDataset()
+    Instance = SSCCPregeneratedDataset()
+    """hardcoded/returns an instance of the class"""
 
 class TransportPackagePrintDataset(PrintDatasetBase):
     """ TransportPackagePrintDataset() """
@@ -857,7 +845,6 @@ Get: Name(self: TransportPackagePrintDataset) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return TransportPackagePrintDataset()
+    Instance = TransportPackagePrintDataset()
+    """hardcoded/returns an instance of the class"""
 

@@ -53,9 +53,8 @@ class OrderValidator:
     OrderType = None
     Result = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OrderValidator()
+    Instance = OrderValidator()
+    """hardcoded/returns an instance of the class"""
 
 class OrderValidatorFactory():
     """ OrderValidatorFactory(orderNumber: str, orderType: OrderTypeEnum) """
@@ -68,9 +67,8 @@ class OrderValidatorFactory():
         """ __new__(cls: type, orderNumber: str, orderType: OrderTypeEnum) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return OrderValidatorFactory()
+    Instance = OrderValidatorFactory()
+    """hardcoded/returns an instance of the class"""
 
 class PurchasOrderValidator(OrderValidator):
     """ PurchasOrderValidator(orderNumber: str, orderType: OrderTypeEnum) """
@@ -99,9 +97,8 @@ class PurchasOrderValidator(OrderValidator):
     OrderType = None
     Result = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PurchasOrderValidator()
+    Instance = PurchasOrderValidator()
+    """hardcoded/returns an instance of the class"""
 
 class ReplenishmentOrderValidator(OrderValidator):
     """ ReplenishmentOrderValidator(orderNumber: str, orderType: OrderTypeEnum) """
@@ -130,9 +127,8 @@ class ReplenishmentOrderValidator(OrderValidator):
     OrderType = None
     Result = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReplenishmentOrderValidator()
+    Instance = ReplenishmentOrderValidator()
+    """hardcoded/returns an instance of the class"""
 
 class RmaOrderValidator(OrderValidator):
     """ RmaOrderValidator(orderNumber: str, orderType: OrderTypeEnum) """
@@ -161,9 +157,8 @@ class RmaOrderValidator(OrderValidator):
     OrderType = None
     Result = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RmaOrderValidator()
+    Instance = RmaOrderValidator()
+    """hardcoded/returns an instance of the class"""
 
 class SalesOrderValidator(OrderValidator):
     """ SalesOrderValidator(orderNumber: str, orderType: OrderTypeEnum) """
@@ -192,7 +187,6 @@ class SalesOrderValidator(OrderValidator):
     OrderType = None
     Result = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return SalesOrderValidator()
+    Instance = SalesOrderValidator()
+    """hardcoded/returns an instance of the class"""
 

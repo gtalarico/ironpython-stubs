@@ -135,9 +135,8 @@ Set: TotalQuantityReceived(self: PreReceipt) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PreReceipt()
+    Instance = PreReceipt()
+    """hardcoded/returns an instance of the class"""
 
 class CreatePreReceiptArgs(PreReceipt):
     """ CreatePreReceiptArgs() """
@@ -181,9 +180,8 @@ Set: WarehouseCode(self: CreatePreReceiptArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CreatePreReceiptArgs()
+    Instance = CreatePreReceiptArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ErpInboundLocationMode:
     """ enum ErpInboundLocationMode, values: DefaultItemLocation (1), DefaultWarehouseLocation (0) """
@@ -224,9 +222,8 @@ class ErpInboundLocationMode:
     DefaultWarehouseLocation = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ErpInboundLocationMode()
+    Instance = ErpInboundLocationMode()
+    """hardcoded/returns an instance of the class"""
 
 class ErpProcessInboundOrderResult(ErpProcessPurchaseOrderLinesResult):
     """ ErpProcessInboundOrderResult() """
@@ -246,9 +243,8 @@ Get: HasOrder(self: ErpProcessInboundOrderResult) -> bool
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ErpProcessInboundOrderResult()
+    Instance = ErpProcessInboundOrderResult()
+    """hardcoded/returns an instance of the class"""
 
 class InboundOrder(DbObject):
     """ InboundOrder() """
@@ -384,9 +380,8 @@ Set: Warehouse(self: InboundOrder) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InboundOrder()
+    Instance = InboundOrder()
+    """hardcoded/returns an instance of the class"""
 
 class InboundOrderLine:
     """ InboundOrderLine() """
@@ -418,7 +413,8 @@ class InboundOrderLine:
         
             checkRegistration: True if the batchnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a batch item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout the whole process).
+                    complete (means the numers are registered throughout 
+             the whole process).
                     False if the check is ignored and the item is not a batch item, or when the itemids are registered
                     during delivery only.
         """
@@ -432,7 +428,8 @@ class InboundOrderLine:
         
             checkRegistration: True if the serialnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a serial item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout the whole process).
+                    complete (means the numers are registered throughout 
+             the whole process).
                     False if the check is ignored and the item is not a serial item, or when the itemids are registered
                     during delivery only.
         """
@@ -687,9 +684,8 @@ Set: UnitCode(self: InboundOrderLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InboundOrderLine()
+    Instance = InboundOrderLine()
+    """hardcoded/returns an instance of the class"""
 
 class InboundOrderLines(FindableList):
     """ InboundOrderLines() """
@@ -734,9 +730,8 @@ Get: PreserveState(self: InboundOrderLines) -> bool
     DisplayMember = 'ItemCode'
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InboundOrderLines()
+    Instance = InboundOrderLines()
+    """hardcoded/returns an instance of the class"""
 
 class InboundOrders(FindableList):
     """ InboundOrders() """
@@ -787,9 +782,8 @@ Get: ValueMember(self: InboundOrders) -> str
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InboundOrders()
+    Instance = InboundOrders()
+    """hardcoded/returns an instance of the class"""
 
 class InboundOrderTypeEnum:
     """ enum InboundOrderTypeEnum, values: AdhocPurchase (2), AdhocRma (3), AdhocRmaTouch (4), PreReceipt (5), Purchase (0), Rma (1) """
@@ -834,9 +828,8 @@ class InboundOrderTypeEnum:
     Rma = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InboundOrderTypeEnum()
+    Instance = InboundOrderTypeEnum()
+    """hardcoded/returns an instance of the class"""
 
 class InboundReceiveLine:
     """
@@ -1004,9 +997,8 @@ Set: UnitCode(self: InboundReceiveLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InboundReceiveLine()
+    Instance = InboundReceiveLine()
+    """hardcoded/returns an instance of the class"""
 
 class InboundReceiveLines(FindableList):
     """
@@ -1248,9 +1240,8 @@ Set: WarehouseCode(self: InboundReceiveLines) = value
 
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InboundReceiveLines()
+    Instance = InboundReceiveLines()
+    """hardcoded/returns an instance of the class"""
 
 class PrepareAdhocRmaReceiveLinesArgs():
     """ PrepareAdhocRmaReceiveLinesArgs() """
@@ -1294,9 +1285,8 @@ Set: WarehouseCode(self: PrepareAdhocRmaReceiveLinesArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrepareAdhocRmaReceiveLinesArgs()
+    Instance = PrepareAdhocRmaReceiveLinesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PrepareInboundReceiveLinesArgs():
     """ PrepareInboundReceiveLinesArgs() """
@@ -1325,9 +1315,8 @@ Set: WarehouseCode(self: PrepareInboundReceiveLinesArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PrepareInboundReceiveLinesArgs()
+    Instance = PrepareInboundReceiveLinesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PreReceiptArgs:
     """ PreReceiptArgs() """
@@ -1354,9 +1343,8 @@ Set: StatusFlags(self: PreReceiptArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PreReceiptArgs()
+    Instance = PreReceiptArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PreReceiptLine():
     """ PreReceiptLine() """
@@ -1590,9 +1578,8 @@ Set: WarehouseCode(self: PreReceiptLine) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PreReceiptLine()
+    Instance = PreReceiptLine()
+    """hardcoded/returns an instance of the class"""
 
 class PreReceiptLinesArgs():
     """
@@ -1634,9 +1621,8 @@ Set: WarehouseCode(self: PreReceiptLinesArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PreReceiptLinesArgs()
+    Instance = PreReceiptLinesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class PreReceiptReceiveLines:
     """ PreReceiptReceiveLines() """
@@ -1676,9 +1662,8 @@ Set: PreReceiptId(self: PreReceiptReceiveLines) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PreReceiptReceiveLines()
+    Instance = PreReceiptReceiveLines()
+    """hardcoded/returns an instance of the class"""
 
 class PreReceipts(PagedList):
     """ PreReceipts() """
@@ -1706,9 +1691,8 @@ class PreReceipts(PagedList):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PreReceipts()
+    Instance = PreReceipts()
+    """hardcoded/returns an instance of the class"""
 
 class PreReceiptStatus:
     """ enum (flags) PreReceiptStatus, values: Active (2), Archived (16), InProcess (4), PartiallyReceived (8), Pending (1) """
@@ -1752,9 +1736,8 @@ class PreReceiptStatus:
     Pending = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PreReceiptStatus()
+    Instance = PreReceiptStatus()
+    """hardcoded/returns an instance of the class"""
 
 class PreReceiptSummaries(List):
     """ PreReceiptSummaries() """
@@ -1787,9 +1770,8 @@ Get: UniquePreReceiptsAsString(self: PreReceiptSummaries) -> str
 
     Delimiter = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PreReceiptSummaries()
+    Instance = PreReceiptSummaries()
+    """hardcoded/returns an instance of the class"""
 
 class PreReceiptSummary():
     """ PreReceiptSummary() """
@@ -1817,9 +1799,8 @@ Set: OrderNumber(self: PreReceiptSummary) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return PreReceiptSummary()
+    Instance = PreReceiptSummary()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessInboundReceiveLinesArgs():
     """ ProcessInboundReceiveLinesArgs() """
@@ -1880,9 +1861,8 @@ Set: YourReference(self: ProcessInboundReceiveLinesArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessInboundReceiveLinesArgs()
+    Instance = ProcessInboundReceiveLinesArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessInboundReceiveLinesResult(CacheObject):
     """ ProcessInboundReceiveLinesResult() """
@@ -1920,9 +1900,8 @@ Set: Results(self: ProcessInboundReceiveLinesResult) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessInboundReceiveLinesResult()
+    Instance = ProcessInboundReceiveLinesResult()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessReceiveLinesStepsEnum:
     """ enum ProcessReceiveLinesStepsEnum, values: CreatePrintLines (2), Done (7), LogReceiveLines (1), PrintErpReceipt (5), PrintReceipt (6), ProcessReceiveLines (0), UpdateLicensePlates (4), UpdateStock (3) """
@@ -1969,9 +1948,8 @@ class ProcessReceiveLinesStepsEnum:
     UpdateStock = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessReceiveLinesStepsEnum()
+    Instance = ProcessReceiveLinesStepsEnum()
+    """hardcoded/returns an instance of the class"""
 
 class ReceiptTypeEnum:
     """ enum ReceiptTypeEnum, values: PreReceipt (0), Purchase (1) """
@@ -2012,9 +1990,8 @@ class ReceiptTypeEnum:
     Purchase = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiptTypeEnum()
+    Instance = ReceiptTypeEnum()
+    """hardcoded/returns an instance of the class"""
 
 class ReceiveArgs():
     """ ReceiveArgs() """
@@ -2091,9 +2068,8 @@ Set: UnitCode(self: ReceiveArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiveArgs()
+    Instance = ReceiveArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ReceiveItemIdMultiArgs():
     """ ReceiveItemIdMultiArgs() """
@@ -2153,9 +2129,8 @@ Set: ReceiveLineId(self: ReceiveItemIdMultiArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiveItemIdMultiArgs()
+    Instance = ReceiveItemIdMultiArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ReceiveItemIdRangeArgs:
     """ ReceiveItemIdRangeArgs() """
@@ -2192,9 +2167,8 @@ Set: ReceiveLineId(self: ReceiveItemIdRangeArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiveItemIdRangeArgs()
+    Instance = ReceiveItemIdRangeArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ReceiveLinesForPreReceiptArgs():
     """ ReceiveLinesForPreReceiptArgs() """
@@ -2231,9 +2205,8 @@ Set: WarehouseCode(self: ReceiveLinesForPreReceiptArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiveLinesForPreReceiptArgs()
+    Instance = ReceiveLinesForPreReceiptArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ReceiveWithLicensePlateArgs(ReceiveArgs):
     """ ReceiveWithLicensePlateArgs() """
@@ -2270,9 +2243,8 @@ Set: NewLicensePlates(self: ReceiveWithLicensePlateArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReceiveWithLicensePlateArgs()
+    Instance = ReceiveWithLicensePlateArgs()
+    """hardcoded/returns an instance of the class"""
 
 class UpdatePreReceiptStatusArgs():
     """ UpdatePreReceiptStatusArgs() """
@@ -2289,7 +2261,6 @@ Set: PreReceiptId(self: UpdatePreReceiptStatusArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return UpdatePreReceiptStatusArgs()
+    Instance = UpdatePreReceiptStatusArgs()
+    """hardcoded/returns an instance of the class"""
 

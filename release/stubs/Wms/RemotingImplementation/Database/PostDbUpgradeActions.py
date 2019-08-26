@@ -27,7 +27,6 @@ class ClearResourceCachePostDbUpgradeAction:
         """ __repr__(self: object) -> str """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ClearResourceCachePostDbUpgradeAction()
+    Instance = ClearResourceCachePostDbUpgradeAction()
+    """hardcoded/returns an instance of the class"""
 

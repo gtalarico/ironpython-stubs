@@ -213,9 +213,8 @@ class ArgChecker():
         """ __new__(cls: type, prms: Array[object]) """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ArgChecker()
+    Instance = ArgChecker()
+    """hardcoded/returns an instance of the class"""
 
 class StrongBox:
     """
@@ -240,9 +239,8 @@ class StrongBox:
 
     Value = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return StrongBox()
+    Instance = StrongBox()
+    """hardcoded/returns an instance of the class"""
 
 Reference = StrongBox
 
@@ -273,9 +271,8 @@ class ReferencesList(List):
         """ x.__setitem__(i, y) <==> x[i]= """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReferencesList()
+    Instance = ReferencesList()
+    """hardcoded/returns an instance of the class"""
 
 class ReturnChecker():
     """ ReturnChecker(returnType: object) """
@@ -290,9 +287,8 @@ class ReturnChecker():
 
     retType = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ReturnChecker()
+    Instance = ReturnChecker()
+    """hardcoded/returns an instance of the class"""
 
 class RuntimeArgChecker(PythonTypeSlot):
     """
@@ -311,9 +307,8 @@ class RuntimeArgChecker(PythonTypeSlot):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RuntimeArgChecker()
+    Instance = RuntimeArgChecker()
+    """hardcoded/returns an instance of the class"""
 
 class RuntimeReturnChecker(PythonTypeSlot):
     """
@@ -336,9 +331,8 @@ class RuntimeReturnChecker(PythonTypeSlot):
         """
         pass
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return RuntimeReturnChecker()
+    Instance = RuntimeReturnChecker()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

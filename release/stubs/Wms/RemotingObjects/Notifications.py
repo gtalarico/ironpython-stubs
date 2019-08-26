@@ -31,9 +31,8 @@ Set: Key(self: AddNotificationGroupArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return AddNotificationGroupArgs()
+    Instance = AddNotificationGroupArgs()
+    """hardcoded/returns an instance of the class"""
 
 class DeleteNotificationByReferenceArgs():
     """
@@ -67,9 +66,8 @@ Set: ZoneId(self: DeleteNotificationByReferenceArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DeleteNotificationByReferenceArgs()
+    Instance = DeleteNotificationByReferenceArgs()
+    """hardcoded/returns an instance of the class"""
 
 class DeleteNotificationGroupArgs():
     """
@@ -94,9 +92,8 @@ Set: Key(self: DeleteNotificationGroupArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return DeleteNotificationGroupArgs()
+    Instance = DeleteNotificationGroupArgs()
+    """hardcoded/returns an instance of the class"""
 
 class ExecuteNotificationSummaryArgs():
     """
@@ -162,9 +159,8 @@ Set: ZoneId(self: ExecuteNotificationSummaryArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ExecuteNotificationSummaryArgs()
+    Instance = ExecuteNotificationSummaryArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetNotificationsArgs():
     """
@@ -254,9 +250,8 @@ Set: ZoneId(self: GetNotificationsArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetNotificationsArgs()
+    Instance = GetNotificationsArgs()
+    """hardcoded/returns an instance of the class"""
 
 class GetNotificationsSortOrder:
     """ enum GetNotificationsSortOrder, values: Default (0), Importance (1) """
@@ -297,9 +292,8 @@ class GetNotificationsSortOrder:
     Importance = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return GetNotificationsSortOrder()
+    Instance = GetNotificationsSortOrder()
+    """hardcoded/returns an instance of the class"""
 
 class HasNotificationsArgs():
     """ HasNotificationsArgs() """
@@ -344,9 +338,8 @@ Set: ZoneId(self: HasNotificationsArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return HasNotificationsArgs()
+    Instance = HasNotificationsArgs()
+    """hardcoded/returns an instance of the class"""
 
 class InsertNotificationArgs():
     """
@@ -397,9 +390,8 @@ Set: ZoneId(self: InsertNotificationArgs) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return InsertNotificationArgs()
+    Instance = InsertNotificationArgs()
+    """hardcoded/returns an instance of the class"""
 
 class Notification():
     """
@@ -501,9 +493,8 @@ Set: ZoneId(self: Notification) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Notification()
+    Instance = Notification()
+    """hardcoded/returns an instance of the class"""
 
 class NotificationGroup():
     """
@@ -528,9 +519,8 @@ Set: Key(self: NotificationGroup) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NotificationGroup()
+    Instance = NotificationGroup()
+    """hardcoded/returns an instance of the class"""
 
 class NotificationSeverity:
     """
@@ -576,9 +566,8 @@ class NotificationSeverity:
     value__ = None
     Warning = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NotificationSeverity()
+    Instance = NotificationSeverity()
+    """hardcoded/returns an instance of the class"""
 
 class NotificationSummaryConfiguration():
     """
@@ -672,7 +661,6 @@ Set: ZoneId(self: NotificationSummaryConfiguration) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return NotificationSummaryConfiguration()
+    Instance = NotificationSummaryConfiguration()
+    """hardcoded/returns an instance of the class"""
 

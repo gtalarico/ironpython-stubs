@@ -22,9 +22,8 @@ Get: UserData(self: CodeObject) -> IDictionary
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeObject()
+    Instance = CodeObject()
+    """hardcoded/returns an instance of the class"""
 
 class CodeExpression(CodeObject):
     """
@@ -32,9 +31,8 @@ class CodeExpression(CodeObject):
     
     CodeExpression()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeExpression()
+    Instance = CodeExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeArgumentReferenceExpression(CodeExpression):
     """
@@ -60,9 +58,8 @@ Set: ParameterName(self: CodeArgumentReferenceExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeArgumentReferenceExpression()
+    Instance = CodeArgumentReferenceExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeArrayCreateExpression(CodeExpression):
     """
@@ -127,9 +124,8 @@ Set: SizeExpression(self: CodeArrayCreateExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeArrayCreateExpression()
+    Instance = CodeArrayCreateExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeArrayIndexerExpression(CodeExpression):
     """
@@ -162,9 +158,8 @@ Set: TargetObject(self: CodeArrayIndexerExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeArrayIndexerExpression()
+    Instance = CodeArrayIndexerExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeStatement(CodeObject):
     """
@@ -195,9 +190,8 @@ Get: StartDirectives(self: CodeStatement) -> CodeDirectiveCollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeStatement()
+    Instance = CodeStatement()
+    """hardcoded/returns an instance of the class"""
 
 class CodeAssignStatement(CodeStatement):
     """
@@ -231,9 +225,8 @@ Set: Right(self: CodeAssignStatement) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeAssignStatement()
+    Instance = CodeAssignStatement()
+    """hardcoded/returns an instance of the class"""
 
 class CodeAttachEventStatement(CodeStatement):
     """
@@ -269,9 +262,8 @@ Set: Listener(self: CodeAttachEventStatement) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeAttachEventStatement()
+    Instance = CodeAttachEventStatement()
+    """hardcoded/returns an instance of the class"""
 
 class CodeAttributeArgument():
     """
@@ -307,9 +299,8 @@ Set: Value(self: CodeAttributeArgument) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeAttributeArgument()
+    Instance = CodeAttributeArgument()
+    """hardcoded/returns an instance of the class"""
 
 class CodeAttributeArgumentCollection(CollectionBase):
     """
@@ -522,9 +513,8 @@ class CodeAttributeArgumentCollection(CollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeAttributeArgumentCollection()
+    Instance = CodeAttributeArgumentCollection()
+    """hardcoded/returns an instance of the class"""
 
 class CodeAttributeDeclaration():
     """
@@ -570,9 +560,8 @@ Set: Name(self: CodeAttributeDeclaration) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeAttributeDeclaration()
+    Instance = CodeAttributeDeclaration()
+    """hardcoded/returns an instance of the class"""
 
 class CodeAttributeDeclarationCollection(CollectionBase):
     """
@@ -785,9 +774,8 @@ class CodeAttributeDeclarationCollection(CollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeAttributeDeclarationCollection()
+    Instance = CodeAttributeDeclarationCollection()
+    """hardcoded/returns an instance of the class"""
 
 class CodeBaseReferenceExpression(CodeExpression):
     """
@@ -795,9 +783,8 @@ class CodeBaseReferenceExpression(CodeExpression):
     
     CodeBaseReferenceExpression()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeBaseReferenceExpression()
+    Instance = CodeBaseReferenceExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeBinaryOperatorExpression(CodeExpression):
     """
@@ -839,9 +826,8 @@ Set: Right(self: CodeBinaryOperatorExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeBinaryOperatorExpression()
+    Instance = CodeBinaryOperatorExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeBinaryOperatorType:
     """
@@ -901,9 +887,8 @@ class CodeBinaryOperatorType:
     ValueEquality = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeBinaryOperatorType()
+    Instance = CodeBinaryOperatorType()
+    """hardcoded/returns an instance of the class"""
 
 class CodeCastExpression(CodeExpression):
     """
@@ -941,9 +926,8 @@ Set: TargetType(self: CodeCastExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeCastExpression()
+    Instance = CodeCastExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeCatchClause():
     """
@@ -988,9 +972,8 @@ Get: Statements(self: CodeCatchClause) -> CodeStatementCollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeCatchClause()
+    Instance = CodeCatchClause()
+    """hardcoded/returns an instance of the class"""
 
 class CodeCatchClauseCollection(CollectionBase):
     """
@@ -1203,9 +1186,8 @@ class CodeCatchClauseCollection(CollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeCatchClauseCollection()
+    Instance = CodeCatchClauseCollection()
+    """hardcoded/returns an instance of the class"""
 
 class CodeDirective(CodeObject):
     """
@@ -1213,9 +1195,8 @@ class CodeDirective(CodeObject):
     
     CodeDirective()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeDirective()
+    Instance = CodeDirective()
+    """hardcoded/returns an instance of the class"""
 
 class CodeChecksumPragma(CodeDirective):
     """
@@ -1257,9 +1238,8 @@ Set: FileName(self: CodeChecksumPragma) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeChecksumPragma()
+    Instance = CodeChecksumPragma()
+    """hardcoded/returns an instance of the class"""
 
 class CodeComment(CodeObject):
     """
@@ -1295,9 +1275,8 @@ Set: Text(self: CodeComment) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeComment()
+    Instance = CodeComment()
+    """hardcoded/returns an instance of the class"""
 
 class CodeCommentStatement(CodeStatement):
     """
@@ -1327,9 +1306,8 @@ Set: Comment(self: CodeCommentStatement) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeCommentStatement()
+    Instance = CodeCommentStatement()
+    """hardcoded/returns an instance of the class"""
 
 class CodeCommentStatementCollection(CollectionBase):
     """
@@ -1542,9 +1520,8 @@ class CodeCommentStatementCollection(CollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeCommentStatementCollection()
+    Instance = CodeCommentStatementCollection()
+    """hardcoded/returns an instance of the class"""
 
 class CodeCompileUnit(CodeObject):
     """
@@ -1588,9 +1565,8 @@ Get: StartDirectives(self: CodeCompileUnit) -> CodeDirectiveCollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeCompileUnit()
+    Instance = CodeCompileUnit()
+    """hardcoded/returns an instance of the class"""
 
 class CodeConditionStatement(CodeStatement):
     """
@@ -1632,9 +1608,8 @@ Get: TrueStatements(self: CodeConditionStatement) -> CodeStatementCollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeConditionStatement()
+    Instance = CodeConditionStatement()
+    """hardcoded/returns an instance of the class"""
 
 class CodeTypeMember(CodeObject):
     """
@@ -1696,9 +1671,8 @@ Get: StartDirectives(self: CodeTypeMember) -> CodeDirectiveCollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeTypeMember()
+    Instance = CodeTypeMember()
+    """hardcoded/returns an instance of the class"""
 
 class CodeMemberMethod(CodeTypeMember):
     """
@@ -1762,9 +1736,8 @@ Get: TypeParameters(self: CodeMemberMethod) -> CodeTypeParameterCollection
     PopulateParameters = None
     PopulateStatements = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeMemberMethod()
+    Instance = CodeMemberMethod()
+    """hardcoded/returns an instance of the class"""
 
 class CodeConstructor(CodeMemberMethod):
     """
@@ -1787,9 +1760,8 @@ Get: ChainedConstructorArgs(self: CodeConstructor) -> CodeExpressionCollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeConstructor()
+    Instance = CodeConstructor()
+    """hardcoded/returns an instance of the class"""
 
 class CodeDefaultValueExpression(CodeExpression):
     """
@@ -1815,9 +1787,8 @@ Set: Type(self: CodeDefaultValueExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeDefaultValueExpression()
+    Instance = CodeDefaultValueExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeDelegateCreateExpression(CodeExpression):
     """
@@ -1859,9 +1830,8 @@ Set: TargetObject(self: CodeDelegateCreateExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeDelegateCreateExpression()
+    Instance = CodeDelegateCreateExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeDelegateInvokeExpression(CodeExpression):
     """
@@ -1896,9 +1866,8 @@ Set: TargetObject(self: CodeDelegateInvokeExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeDelegateInvokeExpression()
+    Instance = CodeDelegateInvokeExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeDirectionExpression(CodeExpression):
     """
@@ -1932,9 +1901,8 @@ Set: Expression(self: CodeDirectionExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeDirectionExpression()
+    Instance = CodeDirectionExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeDirectiveCollection(CollectionBase):
     """
@@ -2147,9 +2115,8 @@ class CodeDirectiveCollection(CollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeDirectiveCollection()
+    Instance = CodeDirectiveCollection()
+    """hardcoded/returns an instance of the class"""
 
 class CodeEntryPointMethod(CodeMemberMethod):
     """
@@ -2157,9 +2124,8 @@ class CodeEntryPointMethod(CodeMemberMethod):
     
     CodeEntryPointMethod()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeEntryPointMethod()
+    Instance = CodeEntryPointMethod()
+    """hardcoded/returns an instance of the class"""
 
 class CodeEventReferenceExpression(CodeExpression):
     """
@@ -2193,9 +2159,8 @@ Set: TargetObject(self: CodeEventReferenceExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeEventReferenceExpression()
+    Instance = CodeEventReferenceExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeExpressionCollection(CollectionBase):
     """
@@ -2408,9 +2373,8 @@ class CodeExpressionCollection(CollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeExpressionCollection()
+    Instance = CodeExpressionCollection()
+    """hardcoded/returns an instance of the class"""
 
 class CodeExpressionStatement(CodeStatement):
     """
@@ -2436,9 +2400,8 @@ Set: Expression(self: CodeExpressionStatement) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeExpressionStatement()
+    Instance = CodeExpressionStatement()
+    """hardcoded/returns an instance of the class"""
 
 class CodeFieldReferenceExpression(CodeExpression):
     """
@@ -2472,9 +2435,8 @@ Set: TargetObject(self: CodeFieldReferenceExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeFieldReferenceExpression()
+    Instance = CodeFieldReferenceExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeGotoStatement(CodeStatement):
     """
@@ -2500,9 +2462,8 @@ Set: Label(self: CodeGotoStatement) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeGotoStatement()
+    Instance = CodeGotoStatement()
+    """hardcoded/returns an instance of the class"""
 
 class CodeIndexerExpression(CodeExpression):
     """
@@ -2535,9 +2496,8 @@ Set: TargetObject(self: CodeIndexerExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeIndexerExpression()
+    Instance = CodeIndexerExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeIterationStatement(CodeStatement):
     """
@@ -2586,9 +2546,8 @@ Set: TestExpression(self: CodeIterationStatement) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeIterationStatement()
+    Instance = CodeIterationStatement()
+    """hardcoded/returns an instance of the class"""
 
 class CodeLabeledStatement(CodeStatement):
     """
@@ -2624,9 +2583,8 @@ Set: Statement(self: CodeLabeledStatement) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeLabeledStatement()
+    Instance = CodeLabeledStatement()
+    """hardcoded/returns an instance of the class"""
 
 class CodeLinePragma():
     """
@@ -2660,9 +2618,8 @@ Set: LineNumber(self: CodeLinePragma) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeLinePragma()
+    Instance = CodeLinePragma()
+    """hardcoded/returns an instance of the class"""
 
 class CodeMemberEvent(CodeTypeMember):
     """
@@ -2694,9 +2651,8 @@ Set: Type(self: CodeMemberEvent) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeMemberEvent()
+    Instance = CodeMemberEvent()
+    """hardcoded/returns an instance of the class"""
 
 class CodeMemberField(CodeTypeMember):
     """
@@ -2734,9 +2690,8 @@ Set: Type(self: CodeMemberField) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeMemberField()
+    Instance = CodeMemberField()
+    """hardcoded/returns an instance of the class"""
 
 class CodeMemberProperty(CodeTypeMember):
     """
@@ -2805,9 +2760,8 @@ Set: Type(self: CodeMemberProperty) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeMemberProperty()
+    Instance = CodeMemberProperty()
+    """hardcoded/returns an instance of the class"""
 
 class CodeMethodInvokeExpression(CodeExpression):
     """
@@ -2842,9 +2796,8 @@ Get: Parameters(self: CodeMethodInvokeExpression) -> CodeExpressionCollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeMethodInvokeExpression()
+    Instance = CodeMethodInvokeExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeMethodReferenceExpression(CodeExpression):
     """
@@ -2887,9 +2840,8 @@ Get: TypeArguments(self: CodeMethodReferenceExpression) -> CodeTypeReferenceColl
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeMethodReferenceExpression()
+    Instance = CodeMethodReferenceExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeMethodReturnStatement(CodeStatement):
     """
@@ -2915,9 +2867,8 @@ Set: Expression(self: CodeMethodReturnStatement) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeMethodReturnStatement()
+    Instance = CodeMethodReturnStatement()
+    """hardcoded/returns an instance of the class"""
 
 class CodeNamespace(CodeObject):
     """
@@ -2968,9 +2919,8 @@ Get: Types(self: CodeNamespace) -> CodeTypeDeclarationCollection
     PopulateImports = None
     PopulateTypes = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeNamespace()
+    Instance = CodeNamespace()
+    """hardcoded/returns an instance of the class"""
 
 class CodeNamespaceCollection(CollectionBase):
     """
@@ -3183,9 +3133,8 @@ class CodeNamespaceCollection(CollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeNamespaceCollection()
+    Instance = CodeNamespaceCollection()
+    """hardcoded/returns an instance of the class"""
 
 class CodeNamespaceImport(CodeObject):
     """
@@ -3219,9 +3168,8 @@ Set: Namespace(self: CodeNamespaceImport) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeNamespaceImport()
+    Instance = CodeNamespaceImport()
+    """hardcoded/returns an instance of the class"""
 
 class CodeNamespaceImportCollection:
     """
@@ -3313,9 +3261,8 @@ Get: Count(self: CodeNamespaceImportCollection) -> int
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeNamespaceImportCollection()
+    Instance = CodeNamespaceImportCollection()
+    """hardcoded/returns an instance of the class"""
 
 class CodeObjectCreateExpression(CodeExpression):
     """
@@ -3352,9 +3299,8 @@ Get: Parameters(self: CodeObjectCreateExpression) -> CodeExpressionCollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeObjectCreateExpression()
+    Instance = CodeObjectCreateExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeParameterDeclarationExpression(CodeExpression):
     """
@@ -3408,9 +3354,8 @@ Set: Type(self: CodeParameterDeclarationExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeParameterDeclarationExpression()
+    Instance = CodeParameterDeclarationExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeParameterDeclarationExpressionCollection(CollectionBase):
     """
@@ -3623,9 +3568,8 @@ class CodeParameterDeclarationExpressionCollection(CollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeParameterDeclarationExpressionCollection()
+    Instance = CodeParameterDeclarationExpressionCollection()
+    """hardcoded/returns an instance of the class"""
 
 class CodePrimitiveExpression(CodeExpression):
     """
@@ -3651,9 +3595,8 @@ Set: Value(self: CodePrimitiveExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodePrimitiveExpression()
+    Instance = CodePrimitiveExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodePropertyReferenceExpression(CodeExpression):
     """
@@ -3687,9 +3630,8 @@ Set: TargetObject(self: CodePropertyReferenceExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodePropertyReferenceExpression()
+    Instance = CodePropertyReferenceExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodePropertySetValueReferenceExpression(CodeExpression):
     """
@@ -3697,9 +3639,8 @@ class CodePropertySetValueReferenceExpression(CodeExpression):
     
     CodePropertySetValueReferenceExpression()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodePropertySetValueReferenceExpression()
+    Instance = CodePropertySetValueReferenceExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeRegionDirective(CodeDirective):
     """
@@ -3733,9 +3674,8 @@ Set: RegionText(self: CodeRegionDirective) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeRegionDirective()
+    Instance = CodeRegionDirective()
+    """hardcoded/returns an instance of the class"""
 
 class CodeRegionMode:
     """
@@ -3781,9 +3721,8 @@ class CodeRegionMode:
     Start = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeRegionMode()
+    Instance = CodeRegionMode()
+    """hardcoded/returns an instance of the class"""
 
 class CodeRemoveEventStatement(CodeStatement):
     """
@@ -3819,9 +3758,8 @@ Set: Listener(self: CodeRemoveEventStatement) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeRemoveEventStatement()
+    Instance = CodeRemoveEventStatement()
+    """hardcoded/returns an instance of the class"""
 
 class CodeSnippetCompileUnit(CodeCompileUnit):
     """
@@ -3855,9 +3793,8 @@ Set: Value(self: CodeSnippetCompileUnit) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeSnippetCompileUnit()
+    Instance = CodeSnippetCompileUnit()
+    """hardcoded/returns an instance of the class"""
 
 class CodeSnippetExpression(CodeExpression):
     """
@@ -3883,9 +3820,8 @@ Set: Value(self: CodeSnippetExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeSnippetExpression()
+    Instance = CodeSnippetExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeSnippetStatement(CodeStatement):
     """
@@ -3911,9 +3847,8 @@ Set: Value(self: CodeSnippetStatement) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeSnippetStatement()
+    Instance = CodeSnippetStatement()
+    """hardcoded/returns an instance of the class"""
 
 class CodeSnippetTypeMember(CodeTypeMember):
     """
@@ -3939,9 +3874,8 @@ Set: Text(self: CodeSnippetTypeMember) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeSnippetTypeMember()
+    Instance = CodeSnippetTypeMember()
+    """hardcoded/returns an instance of the class"""
 
 class CodeStatementCollection(CollectionBase):
     """
@@ -4160,9 +4094,8 @@ class CodeStatementCollection(CollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeStatementCollection()
+    Instance = CodeStatementCollection()
+    """hardcoded/returns an instance of the class"""
 
 class CodeThisReferenceExpression(CodeExpression):
     """
@@ -4170,9 +4103,8 @@ class CodeThisReferenceExpression(CodeExpression):
     
     CodeThisReferenceExpression()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeThisReferenceExpression()
+    Instance = CodeThisReferenceExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeThrowExceptionStatement(CodeStatement):
     """
@@ -4198,9 +4130,8 @@ Set: ToThrow(self: CodeThrowExceptionStatement) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeThrowExceptionStatement()
+    Instance = CodeThrowExceptionStatement()
+    """hardcoded/returns an instance of the class"""
 
 class CodeTryCatchFinallyStatement(CodeStatement):
     """
@@ -4241,9 +4172,8 @@ Get: TryStatements(self: CodeTryCatchFinallyStatement) -> CodeStatementCollectio
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeTryCatchFinallyStatement()
+    Instance = CodeTryCatchFinallyStatement()
+    """hardcoded/returns an instance of the class"""
 
 class CodeTypeConstructor(CodeMemberMethod):
     """
@@ -4251,9 +4181,8 @@ class CodeTypeConstructor(CodeMemberMethod):
     
     CodeTypeConstructor()
     """
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeTypeConstructor()
+    Instance = CodeTypeConstructor()
+    """hardcoded/returns an instance of the class"""
 
 class CodeTypeDeclaration(CodeTypeMember):
     """
@@ -4343,9 +4272,8 @@ Get: TypeParameters(self: CodeTypeDeclaration) -> CodeTypeParameterCollection
     PopulateBaseTypes = None
     PopulateMembers = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeTypeDeclaration()
+    Instance = CodeTypeDeclaration()
+    """hardcoded/returns an instance of the class"""
 
 class CodeTypeDeclarationCollection(CollectionBase):
     """
@@ -4558,9 +4486,8 @@ class CodeTypeDeclarationCollection(CollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeTypeDeclarationCollection()
+    Instance = CodeTypeDeclarationCollection()
+    """hardcoded/returns an instance of the class"""
 
 class CodeTypeDelegate(CodeTypeDeclaration):
     """
@@ -4593,9 +4520,8 @@ Set: ReturnType(self: CodeTypeDelegate) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeTypeDelegate()
+    Instance = CodeTypeDelegate()
+    """hardcoded/returns an instance of the class"""
 
 class CodeTypeMemberCollection(CollectionBase):
     """
@@ -4808,9 +4734,8 @@ class CodeTypeMemberCollection(CollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeTypeMemberCollection()
+    Instance = CodeTypeMemberCollection()
+    """hardcoded/returns an instance of the class"""
 
 class CodeTypeOfExpression(CodeExpression):
     """
@@ -4840,9 +4765,8 @@ Set: Type(self: CodeTypeOfExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeTypeOfExpression()
+    Instance = CodeTypeOfExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeTypeParameter(CodeObject):
     """
@@ -4890,9 +4814,8 @@ Set: Name(self: CodeTypeParameter) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeTypeParameter()
+    Instance = CodeTypeParameter()
+    """hardcoded/returns an instance of the class"""
 
 class CodeTypeParameterCollection(CollectionBase):
     """
@@ -5109,9 +5032,8 @@ class CodeTypeParameterCollection(CollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeTypeParameterCollection()
+    Instance = CodeTypeParameterCollection()
+    """hardcoded/returns an instance of the class"""
 
 class CodeTypeReference(CodeObject):
     """
@@ -5182,9 +5104,8 @@ Get: TypeArguments(self: CodeTypeReference) -> CodeTypeReferenceCollection
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeTypeReference()
+    Instance = CodeTypeReference()
+    """hardcoded/returns an instance of the class"""
 
 class CodeTypeReferenceCollection(CollectionBase):
     """
@@ -5405,9 +5326,8 @@ class CodeTypeReferenceCollection(CollectionBase):
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeTypeReferenceCollection()
+    Instance = CodeTypeReferenceCollection()
+    """hardcoded/returns an instance of the class"""
 
 class CodeTypeReferenceExpression(CodeExpression):
     """
@@ -5437,9 +5357,8 @@ Set: Type(self: CodeTypeReferenceExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeTypeReferenceExpression()
+    Instance = CodeTypeReferenceExpression()
+    """hardcoded/returns an instance of the class"""
 
 class CodeTypeReferenceOptions:
     """
@@ -5484,9 +5403,8 @@ class CodeTypeReferenceOptions:
     GlobalReference = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeTypeReferenceOptions()
+    Instance = CodeTypeReferenceOptions()
+    """hardcoded/returns an instance of the class"""
 
 class CodeVariableDeclarationStatement(CodeStatement):
     """
@@ -5538,9 +5456,8 @@ Set: Type(self: CodeVariableDeclarationStatement) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeVariableDeclarationStatement()
+    Instance = CodeVariableDeclarationStatement()
+    """hardcoded/returns an instance of the class"""
 
 class CodeVariableReferenceExpression(CodeExpression):
     """
@@ -5566,9 +5483,8 @@ Set: VariableName(self: CodeVariableReferenceExpression) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CodeVariableReferenceExpression()
+    Instance = CodeVariableReferenceExpression()
+    """hardcoded/returns an instance of the class"""
 
 class FieldDirection:
     """
@@ -5614,9 +5530,8 @@ class FieldDirection:
     Ref = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return FieldDirection()
+    Instance = FieldDirection()
+    """hardcoded/returns an instance of the class"""
 
 class MemberAttributes:
     """
@@ -5675,9 +5590,8 @@ class MemberAttributes:
     value__ = None
     VTableMask = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return MemberAttributes()
+    Instance = MemberAttributes()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

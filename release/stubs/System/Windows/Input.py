@@ -24,7 +24,6 @@ class ICommand:
 
     CanExecuteChanged = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ICommand()
+    Instance = ICommand()
+    """hardcoded/returns an instance of the class"""
 

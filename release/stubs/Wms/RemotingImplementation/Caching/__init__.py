@@ -28,9 +28,8 @@ Set: Settings(self: CacheCleanupTask) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CacheCleanupTask()
+    Instance = CacheCleanupTask()
+    """hardcoded/returns an instance of the class"""
 
 class CacheContainer(Cache):
     """ CacheContainer() """
@@ -136,9 +135,8 @@ Set: Settings(self: CacheContainer) = value
 
     Instance = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CacheContainer()
+    Instance = CacheContainer()
+    """hardcoded/returns an instance of the class"""
 
 class CacheSaveTask(TaskBase):
     """ CacheSaveTask(settings: SystemSettings) """
@@ -158,9 +156,8 @@ Set: Settings(self: CacheSaveTask) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CacheSaveTask()
+    Instance = CacheSaveTask()
+    """hardcoded/returns an instance of the class"""
 
 # variables with complex values
 

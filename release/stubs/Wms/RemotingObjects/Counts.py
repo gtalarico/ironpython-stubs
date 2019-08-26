@@ -31,7 +31,8 @@ class Count(DbObject):
         
             checkRegistration: True if the batchnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a batch item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout the whole process).
+                    complete (means the numers are registered throughout 
+             the whole process).
                     False if the check is ignored and the item is not a batch item, or when the itemids are registered
                     during delivery only.
         """
@@ -49,7 +50,8 @@ class Count(DbObject):
         
             checkRegistration: True if the serialnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a serial item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout the whole process).
+                    complete (means the numers are registered throughout 
+             the whole process).
                     False if the check is ignored and the item is not a serial item, or when the itemids are registered
                     during delivery only.
         """
@@ -272,9 +274,8 @@ Set: WarehouseLocationCode(self: Count) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Count()
+    Instance = Count()
+    """hardcoded/returns an instance of the class"""
 
 class CountFilter():
     """
@@ -300,9 +301,8 @@ class CountFilter():
     Type = None
     WarehouseCode = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CountFilter()
+    Instance = CountFilter()
+    """hardcoded/returns an instance of the class"""
 
 class CountGroup(DbObject):
     """ CountGroup() """
@@ -437,9 +437,8 @@ Set: UseScript(self: CountGroup) = value
 """
 
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CountGroup()
+    Instance = CountGroup()
+    """hardcoded/returns an instance of the class"""
 
 class CountGroups(FindableList):
     """ CountGroups() """
@@ -470,9 +469,8 @@ class CountGroups(FindableList):
     DisplayMember = 'Name'
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CountGroups()
+    Instance = CountGroups()
+    """hardcoded/returns an instance of the class"""
 
 class CountGroupTypeEnum:
     """ enum CountGroupTypeEnum, values: ADHOC (1), COLLIREGISTRATION (0), PICKDIFF (2) """
@@ -514,9 +512,8 @@ class CountGroupTypeEnum:
     PICKDIFF = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CountGroupTypeEnum()
+    Instance = CountGroupTypeEnum()
+    """hardcoded/returns an instance of the class"""
 
 class Counts(FindableList):
     """
@@ -556,9 +553,8 @@ Set: TotalRowsMatched(self: Counts) = value
     DisplayMember = 'ItemCode'
     ValueMember = 'Id'
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return Counts()
+    Instance = Counts()
+    """hardcoded/returns an instance of the class"""
 
 class CountTypeEnum:
     """
@@ -605,9 +601,8 @@ class CountTypeEnum:
     SuggestCount = None
     value__ = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return CountTypeEnum()
+    Instance = CountTypeEnum()
+    """hardcoded/returns an instance of the class"""
 
 class ProcessCountResult():
     """
@@ -624,7 +619,6 @@ class ProcessCountResult():
     ErpNewStock = None
     Success = None
 
-    def Instance(self):
-        """hardcoded/mock instance of the class"""
-        return ProcessCountResult()
+    Instance = ProcessCountResult()
+    """hardcoded/returns an instance of the class"""
 
