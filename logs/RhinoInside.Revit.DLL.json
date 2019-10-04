@@ -1,0 +1,11 @@
+{
+  "RhinoInside.Revit.DLL": {
+    "RhinoInside.Revit.GH": "<module 'GH' (CLS module from RhinoInside.Revit, Version=0.0.7207.33074, Culture=neutral, PublicKeyToken=null)>", 
+    "RhinoInside.Runtime.InteropServices": "<module 'InteropServices' (CLS module from RhinoInside.Revit, Version=0.0.7207.33074, Culture=neutral, PublicKeyToken=null)>", 
+    "RhinoInside.Revit": "<module 'Revit' (CLS module from RhinoInside.Revit, Version=0.0.7207.33074, Culture=neutral, PublicKeyToken=null)>", 
+    "RhinoInside": "<module 'RhinoInside' (CLS module from RhinoInside.Revit, Version=0.0.7207.33074, Culture=neutral, PublicKeyToken=null)>", 
+    "RhinoInside.Revit.GH.Types": "<module 'Types' (CLS module from RhinoInside.Revit, Version=0.0.7207.33074, Culture=neutral, PublicKeyToken=null)>", 
+    "RhinoInside.Runtime": "<module 'Runtime' (CLS module from RhinoInside.Revit, Version=0.0.7207.33074, Culture=neutral, PublicKeyToken=null)>", 
+    "RhinoInside.Revit.GH.Parameters": "<module 'Parameters' (CLS module from RhinoInside.Revit, Version=0.0.7207.33074, Culture=neutral, PublicKeyToken=null)>"
+  }
+}
