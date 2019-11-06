@@ -32,6 +32,8 @@ from utils.logger import logger
 from utils.helper import Timer
 from default_settings import PATHS, BUILTINS, ASSEMBLIES
 from make_stubs import make, dump_json_log
+from retroactively_add_references import add_references
+from make_assemblylist import make_assemblylist
 
 __version__ = '1.0.0'
 __doc__ = """
@@ -102,3 +104,5 @@ if arguments['make']:
         if option_json:
             dump_json_log(assembly_dict)
     logger.info('Done: {} seconds'.format(timer.stop()))
+    make_assemblylist()
+    add_references()

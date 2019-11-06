@@ -1,5 +1,7 @@
 from constants import *
 import keyword
+import re
+typedict = {}
 
 try:
     import inspect
@@ -399,10 +401,10 @@ def transform_optional_seq(results):
                 ret.append(sanitize_ident(token_name, is_clr) + "=" + sanitize_value(token[2]))
             elif token_name == '...':
                 # we're in a "foo, [bar, ...]"; make it "foo, *bar"
-                return ["*" + extract_alpha_prefix(
+                return [ extract_alpha_prefix(
                     results[1][1])] # we must return a seq; [1] is first simple, [1][1] is its name
             else: # just name
-                ret.append(sanitize_ident(token_name, is_clr) + "=None")
+                ret.append(sanitize_ident(token_name, is_clr))  #fix default parameter couldn't parse
         elif token_type is T_OPTIONAL:
             ret.extend(transform_optional_seq(token))
             # maybe handle T_NESTED if such cases ever occur in real life
@@ -457,6 +459,7 @@ def has_item_starting_with(p_seq, p_start):
 def out_docstring(out_func, docstring, indent):
     if not isinstance(docstring, str): return
     lines = docstring.strip().split("\n")
+
     if lines:
         if len(lines) == 1:
             out_func(indent, '""" ' + lines[0] + ' """')
@@ -514,9 +517,9 @@ def restore_by_inspect(p_func):
             dcnt -= 1
         spec.insert(0, arg)
     if varg:
-        spec.append("*" + varg)
+        spec.append("variable " + varg)           #fix* replaced with variable
     if kwarg:
-        spec.append("**" + kwarg)
+        spec.append("kwarg " + kwarg)             #fix* replaced with kwarg
     return flatten(spec)
 
 def restore_parameters_for_overloads(parameter_lists):
@@ -568,10 +571,10 @@ def qualifier_of(cls, qualifiers_to_skip):
 
 def handle_error_func(item_name, out):
     exctype, value = sys.exc_info()[:2]
-    msg = "Error generating skeleton for function %s: %s"
+    msg = "pass %s: %s"                                    #fix error generating skeleton
     args = item_name, value
     report(msg, *args)
-    out(0, "# " + msg % args)
+    out(0, "        pass")                                 #fix error generating skeleton
     out(0, "")
 
 def format_accessors(accessor_line, getter, setter, deleter):
@@ -668,7 +671,16 @@ def restore_clr(p_name, p_class):
 
     parameter_lists = []
     for m in methods:
-        parameter_lists.append([p.Name for p in m.GetParameters()])
+        #parameter_lists.append([p.Name for p in m.GetParameters()])
+        
+        parameters = []
+        for p in m.GetParameters():
+            if p.Name in keyword.kwlist or name == "None":                                 #fix keyword in parameternames
+                parameters.append(p.Name + "_" )
+            else:
+                parameters.append(p.Name)
+        parameter_lists.append(parameters)
+
     params = restore_parameters_for_overloads(parameter_lists)
     is_static = False
     if not methods[0].IsStatic:

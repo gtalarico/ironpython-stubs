@@ -2,6 +2,12 @@ import keyword
 
 from util_methods import *
 from constants import *
+import re
+import os
+import json
+
+
+data = {}
 
 
 class emptylistdict(dict):
@@ -285,6 +291,10 @@ class ModuleRedeclarator(object):
                 else: # something else, maybe representable
                     # look up this value in the module.
                     if sys.platform == "cli":
+                        name = prefix.split(" ", 1)[0]
+                        if name in keyword.kwlist or name == "None": #fix Kevin and Ana keyword in classproperty
+                            prefix = name + "_ ="
+
                         out(indent, prefix, "None", postfix)
                         return
                     found_name = ""
@@ -408,9 +418,9 @@ class ModuleRedeclarator(object):
                     elif one.startswith("*"):
                         starred = one
             if not starred:
-                seq.append("*args")
+                seq.append("args")                                                  #Fix*
             if not double_starred:
-                seq.append("**kwargs")
+                seq.append("kwargs")                                                #Fix*
         else:
             doc_node = self.SIG_DOC_NOTE
 
@@ -541,6 +551,8 @@ class ModuleRedeclarator(object):
             if sig_note:
                 out(indent, "def ", spec, ": #", sig_note)
             else:
+                if spec.split("(", 1)[0] == "__repr__":               #fix remove repr because clr takes an extra arg context 
+                    return                                            #and python cant handle that
                 out(indent, "def ", spec, ":")
             if not p_name in ['__gt__', '__ge__', '__lt__', '__le__', '__ne__', '__reduce_ex__', '__str__']:
                 out_doc_attr(out, p_func, indent + 1, p_class)
@@ -585,10 +597,10 @@ class ModuleRedeclarator(object):
                     first_param = propose_first_param(deco)
                     if first_param:
                         decl.append(first_param)
-                decl.append("*args")
-                decl.append("**kwargs")
+                decl.append("args")                                                               #Fix* kevin ana removed * because ordering
+                decl.append("kwargs")                                                             #because ordering is important in py but not in c#
                 spec = p_name + "(" + ", ".join(decl) + ")"
-            out(indent, "def ", spec, ": # ", sig_note)
+            out(indent, "def ", spec.replace("*",""), ": # ", sig_note)                           #fix
             # to reduce size of stubs, don't output same docstring twice for class and its __init__ method
             if not is_init or funcdoc != p_class.__doc__:
                 out_docstring(out, funcdoc, indent + 1)
@@ -612,6 +624,9 @@ class ModuleRedeclarator(object):
         @param p_modname name of module
         @param seen {class: name} map of classes already seen in the same namespace
         """
+
+
+
         action("redoing class %r of module %r", p_name, p_modname)
         if seen is not None:
             if p_class in seen:
@@ -655,10 +670,30 @@ class ModuleRedeclarator(object):
                     local_import = self.create_local_import(base)
                     if local_import:
                         out(indent, local_import)
-        out(indent, "class ", p_name, base_def, ":",
-            skipped_bases and " # skipped bases: " + ", ".join(skipped_bases) or "")
+        
+        regex1 = "([\[]).*?([\]]+)"
+        regex2 = "(\\bI|_).*?((?:\,)|(?:\)))|\\bEnum,?|\\bAttribute,?|\\bTemplateBase,?|\\bMarshalled\\w*,?|\\bobject,?"   #deleting templatebase:razor
+        filtered = re.sub(regex1, "", base_def)
+        filtered = re.sub(regex2, "", filtered)
+        filtered = filtered.replace(" ","")
+        if filtered.endswith(","):
+            filtered = filtered[:-1] + ')'
+        if filtered.endswith('('):
+            filtered = filtered[:-1]
+        if filtered == "":
+            filtered = "(Object)"
+        
+        data[p_name] = p_modname
+        out(indent, "class ", p_name, filtered , ":",          #re.sub(regex, "", base_def)    #fix kevin ana 3/inherited classes showed up in constructor/base def replaced with ""
+            skipped_bases and " # skipped bases: " + ", ".join(skipped_bases) or "")  # we dont do anything with python objects so why bother 
         out_doc_attr(out, p_class, indent + 1)
-        # inner parts
+        # out(indent+1, "Instance = ",p_name+"()")
+        # out(indent+1, '"""hardcoded/returns an instance of the class"""')      #fix kevin ana added instance to every class #quickfix since instance doesn't get recognized
+        # out(indent+1, "def __internal__(self):")
+        # out(indent+2, '"""hardcoded/mock instance of the class"""')
+        # out(indent+2, "return ",p_name,"()")
+        # out(indent+1, "instance = __internal__()")
+        # out(indent+1, '"""hardcoded/returns an instance of the class"""')    #fix for linter
         methods = {}
         properties = {}
         others = {}
@@ -706,7 +741,7 @@ class ModuleRedeclarator(object):
             init_method = getattr(p_class, '__init__', None)
             if init_method:
                 methods['__init__'] = init_method
-
+        
         #
         seen_funcs = {}
         for item_name in sorted_no_case(methods.keys()):
@@ -762,6 +797,13 @@ class ModuleRedeclarator(object):
             #
         if not methods and not properties and not others:
             out(indent + 1, "pass")
+        
+        # out(indent+1, "def Instance(self):")
+        # out(indent+2, '"""hardcoded/mock instance of the class"""')
+        # out(indent+2, "return ",p_name,"()")
+
+        out(indent+1, "Instance = ",p_name+"()")
+        out(indent+1, '"""hardcoded/returns an instance of the class"""')      #fix kevin ana added instance to every class #quickfix since instance doesn't get recognized
 
 
 
@@ -991,8 +1033,8 @@ class ModuleRedeclarator(object):
                 for i in range(ins_index):
                     maybe_child_bases = cls_list[i][1]
                     if cls in maybe_child_bases:
-                        ins_index = i # we could not go farther than current ins_index
-                        break         # ...and need not go fartehr than first known child
+                        ins_index = i # we could not go further than current ins_index
+                        break         # ...and need not go further than first known child
                 cls_list.insert(ins_index, (cls_name, get_mro(cls)))
             self.split_modules = self.mod_filename and len(cls_list) >= 30
             for item_name in [cls_item[0] for cls_item in cls_list]:
@@ -1064,6 +1106,13 @@ class ModuleRedeclarator(object):
         if self.imports_buf.isEmpty():
             self.imports_buf.out(0, "# no imports")
         self.imports_buf.out(0, "") # empty line after imports
+
+        with open('typedict.json', 'w') as outfile:
+            print "printing typedict"
+            print typedict
+            json.dump(typedict, outfile,indent=4)
+        with open('classlist.json', 'w') as outfile:
+            json.dump(data, outfile,indent=4)
 
     def output_import_froms(self):
         """Mention all imported names known within the module, wrapping as per PEP."""
