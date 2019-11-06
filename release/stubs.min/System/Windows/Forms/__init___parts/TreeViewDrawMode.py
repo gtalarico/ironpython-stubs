@@ -1,11 +1,13 @@
 class TreeViewDrawMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines constants that represent the ways a System.Windows.Forms.TreeView can be drawn.
-
- 
-
+ Defines constants that represent the ways a System.Windows.Forms.TreeView can be drawn.
+ 
  enum TreeViewDrawMode,values: Normal (0),OwnerDrawAll (2),OwnerDrawText (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TreeViewDrawMode()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -2,13 +2,14 @@
 # module System.Runtime.InteropServices calls itself InteropServices
 # from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
-# no imports
+# no doc
+# no important
 
 # no functions
 # classes
 from __init___parts._Attribute import _Attribute
 from __init___parts.AllowReversePInvokeCallsAttribute import AllowReversePInvokeCallsAttribute
+from __init___parts.Architecture import Architecture
 from __init___parts.ArrayWithOffset import ArrayWithOffset
 from __init___parts.AssemblyRegistrationFlags import AssemblyRegistrationFlags
 from __init___parts.AutomationProxyAttribute import AutomationProxyAttribute
@@ -96,6 +97,7 @@ from __init___parts.MarshalAsAttribute import MarshalAsAttribute
 from __init___parts.MarshalDirectiveException import MarshalDirectiveException
 from __init___parts.ObjectCreationDelegate import ObjectCreationDelegate
 from __init___parts.OptionalAttribute import OptionalAttribute
+from __init___parts.OSPlatform import OSPlatform
 from __init___parts.OutAttribute import OutAttribute
 from __init___parts.PARAMDESC import PARAMDESC
 from __init___parts.PARAMFLAG import PARAMFLAG
@@ -106,6 +108,7 @@ from __init___parts.RegistrationClassContext import RegistrationClassContext
 from __init___parts.RegistrationConnectionType import RegistrationConnectionType
 from __init___parts.RegistrationServices import RegistrationServices
 from __init___parts.RuntimeEnvironment import RuntimeEnvironment
+from __init___parts.RuntimeInformation import RuntimeInformation
 from __init___parts.SafeArrayRankMismatchException import SafeArrayRankMismatchException
 from __init___parts.SafeArrayTypeMismatchException import SafeArrayTypeMismatchException
 from __init___parts.SafeHandle import SafeHandle

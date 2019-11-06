@@ -1,11 +1,13 @@
 class TableLayoutPanelCellBorderStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the border style of a cell in a table layout control.
-
- 
-
+ Specifies the border style of a cell in a table layout control.
+ 
  enum TableLayoutPanelCellBorderStyle,values: Inset (2),InsetDouble (3),None (0),Outset (4),OutsetDouble (5),OutsetPartial (6),Single (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TableLayoutPanelCellBorderStyle()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -31,7 +33,7 @@ class TableLayoutPanelCellBorderStyle(Enum,IComparable,IFormattable,IConvertible
   pass
  Inset=None
  InsetDouble=None
- None=None
+ None_ =None
  Outset=None
  OutsetDouble=None
  OutsetPartial=None

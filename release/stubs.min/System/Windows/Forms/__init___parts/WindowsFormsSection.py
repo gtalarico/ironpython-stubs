@@ -1,38 +1,31 @@
 class WindowsFormsSection(ConfigurationSection):
  """
- Defines a new System.Configuration.ConfigurationSection for parsing application settings. This class cannot be inherited.
-
- 
-
+ Defines a new System.Configuration.ConfigurationSection for parsing application settings. This class cannot be inherited.
+ 
  WindowsFormsSection()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return WindowsFormsSection()
+
  ElementProperty=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
-
-
-
+ """Gets the System.Configuration.ConfigurationElementProperty object that represents the System.Configuration.ConfigurationElement object itself.
+
 """
 
  EvaluationContext=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the System.Configuration.ContextInformation object for the System.Configuration.ConfigurationElement object.
-
-
-
+ """Gets the System.Configuration.ContextInformation object for the System.Configuration.ConfigurationElement object.
+
 """
 
  HasContext=property(lambda self: object(),lambda self,v: None,lambda self: None)
 
  JitDebugging=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether just-in-time (JIT) debugging is used.
-
-
-
-Get: JitDebugging(self: WindowsFormsSection) -> bool
-
-
-
-Set: JitDebugging(self: WindowsFormsSection)=value
-
+ """Gets or sets a value indicating whether just-in-time (JIT) debugging is used.
+
+Get: JitDebugging(self: WindowsFormsSection) -> bool
+
+Set: JitDebugging(self: WindowsFormsSection)=value
 """
 
  Properties=property(lambda self: object(),lambda self,v: None,lambda self: None)

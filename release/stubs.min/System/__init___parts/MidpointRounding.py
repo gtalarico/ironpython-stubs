@@ -1,11 +1,14 @@
-class MidpointRounding(Enum,IComparable,IFormattable,IConvertible):
+class MidpointRounding:
  """
- Specifies how mathematical rounding methods should process a number that is midway between two numbers.
-
- 
-
+ Specifies how mathematical rounding methods should process a number that is midway between two numbers.
+ 
  enum MidpointRounding,values: AwayFromZero (1),ToEven (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MidpointRounding()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

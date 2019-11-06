@@ -1,48 +1,36 @@
 class IPHostEntry(object):
  """
- Provides a container class for Internet host address information.
-
- 
-
+ Provides a container class for Internet host address information.
+ 
  IPHostEntry()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IPHostEntry()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  AddressList=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a list of IP addresses that are associated with a host.
-
-
-
-Get: AddressList(self: IPHostEntry) -> Array[IPAddress]
-
-
-
-Set: AddressList(self: IPHostEntry)=value
-
+ """Gets or sets a list of IP addresses that are associated with a host.
+
+Get: AddressList(self: IPHostEntry) -> Array[IPAddress]
+
+Set: AddressList(self: IPHostEntry)=value
 """
 
  Aliases=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a list of aliases that are associated with a host.
-
-
-
-Get: Aliases(self: IPHostEntry) -> Array[str]
-
-
-
-Set: Aliases(self: IPHostEntry)=value
-
+ """Gets or sets a list of aliases that are associated with a host.
+
+Get: Aliases(self: IPHostEntry) -> Array[str]
+
+Set: Aliases(self: IPHostEntry)=value
 """
 
  HostName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the DNS name of the host.
-
-
-
-Get: HostName(self: IPHostEntry) -> str
-
-
-
-Set: HostName(self: IPHostEntry)=value
-
+ """Gets or sets the DNS name of the host.
+
+Get: HostName(self: IPHostEntry) -> str
+
+Set: HostName(self: IPHostEntry)=value
 """
 
 

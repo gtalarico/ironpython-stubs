@@ -1,33 +1,24 @@
-class EditorAttribute(Attribute,_Attribute):
+class EditorAttribute:
  """
- Specifies the editor to use to change a property. This class cannot be inherited.
-
- 
-
- EditorAttribute()
-
- EditorAttribute(typeName: str,baseTypeName: str)
-
- EditorAttribute(typeName: str,baseType: Type)
-
+ Specifies the editor to use to change a property. This class cannot be inherited.
+ 
+ EditorAttribute()
+ EditorAttribute(typeName: str,baseTypeName: str)
+ EditorAttribute(typeName: str,baseType: Type)
  EditorAttribute(type: Type,baseType: Type)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EditorAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
-  Equals(self: EditorAttribute,obj: object) -> bool
-
-  
-
-   Returns whether the value of the given object is equal to the current 
-
-    System.ComponentModel.EditorAttribute.
-
-  
-
-  
-
-   obj: The object to test the value equality of.
-
+  Equals(self: EditorAttribute,obj: object) -> bool
+  
+   Returns whether the value of the given object is equal to the current System.ComponentModel.EditorAttribute.
+  
+   obj: The object to test the value equality of.
    Returns: true if the value of the given object is equal to that of the current object; otherwise,false.
   """
   pass
@@ -43,48 +34,33 @@ class EditorAttribute(Attribute,_Attribute):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type)
-
-  __new__(cls: type,typeName: str,baseTypeName: str)
-
-  __new__(cls: type,typeName: str,baseType: Type)
-
+  __new__(cls: type)
+  __new__(cls: type,typeName: str,baseTypeName: str)
+  __new__(cls: type,typeName: str,baseType: Type)
   __new__(cls: type,type: Type,baseType: Type)
   """
   pass
  def __ne__(self,*args):
   pass
  EditorBaseTypeName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the name of the base class or interface serving as a lookup key for this editor.
-
-
-
-Get: EditorBaseTypeName(self: EditorAttribute) -> str
-
-
-
+ """Gets the name of the base class or interface serving as a lookup key for this editor.
+
+Get: EditorBaseTypeName(self: EditorAttribute) -> str
+
 """
 
  EditorTypeName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the name of the editor class in the System.Type.AssemblyQualifiedName format.
-
-
-
-Get: EditorTypeName(self: EditorAttribute) -> str
-
-
-
+ """Gets the name of the editor class in the System.Type.AssemblyQualifiedName format.
+
+Get: EditorTypeName(self: EditorAttribute) -> str
+
 """
 
  TypeId=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a unique ID for this attribute type.
-
-
-
-Get: TypeId(self: EditorAttribute) -> object
-
-
-
+ """Gets a unique ID for this attribute type.
+
+Get: TypeId(self: EditorAttribute) -> object
+
 """
 
 

@@ -1,11 +1,14 @@
-class SecurityProtocolType(Enum,IComparable,IFormattable,IConvertible):
+class SecurityProtocolType:
  """
- Specifies the security protocols that are supported by the Schannel security package.
-
- 
-
+ Specifies the security protocols that are supported by the Schannel security package.
+ 
  enum (flags) SecurityProtocolType,values: Ssl3 (48),SystemDefault (0),Tls (192),Tls11 (768),Tls12 (3072)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SecurityProtocolType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

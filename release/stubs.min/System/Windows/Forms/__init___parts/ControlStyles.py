@@ -1,11 +1,13 @@
 class ControlStyles(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the style and behavior of a control.
-
- 
-
+ Specifies the style and behavior of a control.
+ 
  enum (flags) ControlStyles,values: AllPaintingInWmPaint (8192),CacheText (16384),ContainerControl (1),DoubleBuffer (65536),EnableNotifyMessage (32768),FixedHeight (64),FixedWidth (32),Opaque (4),OptimizedDoubleBuffer (131072),ResizeRedraw (16),Selectable (512),StandardClick (256),StandardDoubleClick (4096),SupportsTransparentBackColor (2048),UserMouse (1024),UserPaint (2),UseTextForAccessibility (262144)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ControlStyles()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

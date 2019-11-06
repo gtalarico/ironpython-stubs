@@ -1,11 +1,13 @@
 class TickStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the location of tick marks in a System.Windows.Forms.TrackBar control.
-
- 
-
+ Specifies the location of tick marks in a System.Windows.Forms.TrackBar control.
+ 
  enum TickStyle,values: Both (3),BottomRight (2),None (0),TopLeft (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return TickStyle()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -31,7 +33,7 @@ class TickStyle(Enum,IComparable,IFormattable,IConvertible):
   pass
  Both=None
  BottomRight=None
- None=None
+ None_ =None
  TopLeft=None
  value__=None
 

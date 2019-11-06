@@ -1,21 +1,19 @@
 class ListViewGroup(object,ISerializable):
  """
- Represents a group of items displayed within a System.Windows.Forms.ListView control.
-
- 
-
- ListViewGroup()
-
- ListViewGroup(key: str,headerText: str)
-
- ListViewGroup(header: str)
-
+ Represents a group of items displayed within a System.Windows.Forms.ListView control.
+ 
+ ListViewGroup()
+ ListViewGroup(key: str,headerText: str)
+ ListViewGroup(header: str)
  ListViewGroup(header: str,headerAlignment: HorizontalAlignment)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ListViewGroup()
+
  def ToString(self):
   """
-  ToString(self: ListViewGroup) -> str
-
+  ToString(self: ListViewGroup) -> str
    Returns: A string that represents the current object.
   """
   pass
@@ -25,12 +23,9 @@ class ListViewGroup(object,ISerializable):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type)
-
-  __new__(cls: type,key: str,headerText: str)
-
-  __new__(cls: type,header: str)
-
+  __new__(cls: type)
+  __new__(cls: type,key: str,headerText: str)
+  __new__(cls: type,header: str)
   __new__(cls: type,header: str,headerAlignment: HorizontalAlignment)
   """
   pass
@@ -42,77 +37,49 @@ class ListViewGroup(object,ISerializable):
  def __str__(self,*args):
   pass
  Header=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the header text for the group.
-
-
-
-Get: Header(self: ListViewGroup) -> str
-
-
-
-Set: Header(self: ListViewGroup)=value
-
+ """Gets or sets the header text for the group.
+
+Get: Header(self: ListViewGroup) -> str
+
+Set: Header(self: ListViewGroup)=value
 """
 
  HeaderAlignment=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the alignment of the group header text.
-
-
-
-Get: HeaderAlignment(self: ListViewGroup) -> HorizontalAlignment
-
-
-
-Set: HeaderAlignment(self: ListViewGroup)=value
-
+ """Gets or sets the alignment of the group header text.
+
+Get: HeaderAlignment(self: ListViewGroup) -> HorizontalAlignment
+
+Set: HeaderAlignment(self: ListViewGroup)=value
 """
 
  Items=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a collection containing all items associated with this group.
-
-
-
-Get: Items(self: ListViewGroup) -> ListViewItemCollection
-
-
-
+ """Gets a collection containing all items associated with this group.
+
+Get: Items(self: ListViewGroup) -> ListViewItemCollection
+
 """
 
  ListView=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the System.Windows.Forms.ListView control that contains this group.
-
-
-
-Get: ListView(self: ListViewGroup) -> ListView
-
-
-
+ """Gets the System.Windows.Forms.ListView control that contains this group.
+
+Get: ListView(self: ListViewGroup) -> ListView
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the name of the group.
-
-
-
-Get: Name(self: ListViewGroup) -> str
-
-
-
-Set: Name(self: ListViewGroup)=value
-
+ """Gets or sets the name of the group.
+
+Get: Name(self: ListViewGroup) -> str
+
+Set: Name(self: ListViewGroup)=value
 """
 
  Tag=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the object that contains data about the group.
-
-
-
-Get: Tag(self: ListViewGroup) -> object
-
-
-
-Set: Tag(self: ListViewGroup)=value
-
+ """Gets or sets the object that contains data about the group.
+
+Get: Tag(self: ListViewGroup) -> object
+
+Set: Tag(self: ListViewGroup)=value
 """
 
 

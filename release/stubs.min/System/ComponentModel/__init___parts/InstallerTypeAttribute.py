@@ -1,40 +1,30 @@
-class InstallerTypeAttribute(Attribute,_Attribute):
+class InstallerTypeAttribute:
  """
- Specifies the installer for a type that installs components.
-
- 
-
- InstallerTypeAttribute(installerType: Type)
-
+ Specifies the installer for a type that installs components.
+ 
+ InstallerTypeAttribute(installerType: Type)
  InstallerTypeAttribute(typeName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InstallerTypeAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
-  Equals(self: InstallerTypeAttribute,obj: object) -> bool
-
-  
-
-   Returns whether the value of the given object is equal to the current 
-
-    System.ComponentModel.InstallerTypeAttribute.
-
-  
-
-  
-
-   obj: The object to test the value equality of.
-
+  Equals(self: InstallerTypeAttribute,obj: object) -> bool
+  
+   Returns whether the value of the given object is equal to the current System.ComponentModel.InstallerTypeAttribute.
+  
+   obj: The object to test the value equality of.
    Returns: true if the value of the given object is equal to that of the current; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
-  GetHashCode(self: InstallerTypeAttribute) -> int
-
-  
-
-   Returns the hashcode for this object.
-
+  GetHashCode(self: InstallerTypeAttribute) -> int
+  
+   Returns the hashcode for this object.
    Returns: A hash code for the current System.ComponentModel.InstallerTypeAttribute.
   """
   pass
@@ -47,22 +37,17 @@ class InstallerTypeAttribute(Attribute,_Attribute):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,installerType: Type)
-
+  __new__(cls: type,installerType: Type)
   __new__(cls: type,typeName: str)
   """
   pass
  def __ne__(self,*args):
   pass
  InstallerType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the type of installer associated with this attribute.
-
-
-
-Get: InstallerType(self: InstallerTypeAttribute) -> Type
-
-
-
+ """Gets the type of installer associated with this attribute.
+
+Get: InstallerType(self: InstallerTypeAttribute) -> Type
+
 """
 
 

@@ -2,503 +2,163 @@
 # module clr
 # from (built-in)
 # by generator 1.145
-"""
-Python module.  Stores classes,functions,and data.  Usually a module
-
-   is created by importing a file or package from disk.  But a module can also
-
-   be directly created by calling the module type and providing a name or
-
-   optionally a documentation string.
-
-
-
-module()
-"""
-# no imports
+""" module() """
+# no important
 
 # Variables with simple values
 
-IsNetStandard=False
+IsDebug=False
+IsMacOS=False
+IsMono=False
+IsNetCoreApp=False
+
+TargetFramework='.NETFramework,Version=v4.5'
 
 # functions
 
-def accepts(*types,p_object=None): # real signature unknown; restored from __doc__
- """
- accepts(*types: Array[object]) -> object
-
- 
-
-  accepts(*types) -> ArgChecker
-
-    
-
-    Decorator that returns a new callable 
-
-   object which will validate the arguments are of the specified types.
- """
+def accepts(types,p_object): # real signature unknown; restored from __doc__
+ """ accepts(*types: Array[object]) -> object """
  return object()
 
-def AddReference(*args,**kwargs): # real signature unknown
+def AddReference(args,kwargs): # real signature unknown
  """
- Adds a reference to a .NET assembly.  Parameters can be an already loaded
-
- Assembly object,a full assembly name,or a partial assembly name. After the
-
- load the assemblies namespaces and top-level types will be available via 
-
+ Adds a reference to a .NET assembly.  Parameters can be an already loaded
+ Assembly object,a full assembly name,or a partial assembly name. After the
+ load the assemblies namespaces and top-level types will be available via 
  import Namespace.
  """
  pass
-def AddReferenceByName(*args,**kwargs): # real signature unknown
+def AddReferenceByName(args,kwargs): # real signature unknown
  """
- Adds a reference to a .NET assembly.  Parameters are an assembly name. 
-
- After the load the assemblies namespaces and top-level types will be available via 
-
+ Adds a reference to a .NET assembly.  Parameters are an assembly name. 
+ After the load the assemblies namespaces and top-level types will be available via 
  import Namespace.
  """
  pass
-def AddReferenceByPartialName(*args,**kwargs): # real signature unknown
+def AddReferenceByPartialName(args,kwargs): # real signature unknown
  """
- Adds a reference to a .NET assembly.  Parameters are a partial assembly name. 
-
- After the load the assemblies namespaces and top-level types will be available via 
-
+ Adds a reference to a .NET assembly.  Parameters are a partial assembly name. 
+ After the load the assemblies namespaces and top-level types will be available via 
  import Namespace.
  """
  pass
-def AddReferenceToFile(*args,**kwargs): # real signature unknown
+def AddReferenceToFile(args,kwargs): # real signature unknown
  """
- Adds a reference to a .NET assembly.  One or more assembly names can
-
- be provided.  The assembly is searched for in the directories specified in 
-
- sys.path and dependencies will be loaded from sys.path as well.  The assembly 
-
- name should be the filename on disk without a directory specifier and 
-
- optionally including the .EXE or .DLL extension. After the load the assemblies 
-
+ Adds a reference to a .NET assembly.  One or more assembly names can
+ be provided.  The assembly is searched for in the directories specified in 
+ sys.path and dependencies will be loaded from sys.path as well.  The assembly 
+ name should be the filename on disk without a directory specifier and 
+ optionally including the .EXE or .DLL extension. After the load the assemblies 
  namespaces and top-level types will be available via import Namespace.
  """
  pass
-def AddReferenceToFileAndPath(*args,**kwargs): # real signature unknown
+def AddReferenceToFileAndPath(args,kwargs): # real signature unknown
  """
- Adds a reference to a .NET assembly.  One or more assembly names can
-
- be provided which are fully qualified names to the file on disk.  The 
-
- directory is added to sys.path and AddReferenceToFile is then called. After the 
-
- load the assemblies namespaces and top-level types will be available via 
-
+ Adds a reference to a .NET assembly.  One or more assembly names can
+ be provided which are fully qualified names to the file on disk.  The 
+ directory is added to sys.path and AddReferenceToFile is then called. After the 
+ load the assemblies namespaces and top-level types will be available via 
  import Namespace.
  """
  pass
 def AddReferenceToTypeLibrary(rcw): # real signature unknown; restored from __doc__
- """
- AddReferenceToTypeLibrary(rcw: object)
-
-  AddReferenceToTypeLibrary(rcw) -> None
-
-    
-
-    Makes the type lib desc 
-
-   available for importing. See also LoadTypeLibrary.
-
- 
-
- AddReferenceToTypeLibrary(typeLibGuid: Guid)
-
-  AddReferenceToTypeLibrary(guid) -> None
-
-    
-
-    Makes the type lib desc 
-
-   available for importing.  See also LoadTypeLibrary.
- """
+ """ AddReferenceToTypeLibrary(rcw: object)AddReferenceToTypeLibrary(typeLibGuid: Guid) """
  pass
 def ClearProfilerData(): # real signature unknown; restored from __doc__
- """
- ClearProfilerData()
-
-  Resets all profiler counters back to zero
- """
+ """ ClearProfilerData() """
  pass
-def CompileModules(assemblyName,**kwArgs,p_str=None,p_object=None,*args): # real signature unknown; NOTE: unreliably restored from __doc__ 
+def CompileModules(assemblyName,kwArgs,p_str,p_object,args): # real signature unknown; NOTE: unreliably restored from __doc__ 
  """ CompileModules(assemblyName: str,**kwArgs: IDictionary[str,object],*filenames: Array[str]) """
  pass
-def CompileSubclassTypes(assemblyName,*newTypes,p_object=None): # real signature unknown; restored from __doc__
- """
- CompileSubclassTypes(assemblyName: str,*newTypes: Array[object])
-
-  clr.CompileSubclassTypes(assemblyName,*typeDescription)
-
-    
-
-    Provides a 
-
-   helper for creating an assembly which contains pre-generated .NET 
-
-    base types for 
-
-   new-style types.
-
-    
-
-    This assembly can then be AddReferenced or put 
-
-   sys.prefix\DLLs and the cached 
-
-    types will be used instead of generating the types 
-
-   at runtime.
-
-    
-
-    This function takes the name of the assembly to save to 
-
-   and then an arbitrary 
-
-    number of parameters describing the types to be created.  
-
-   Each of those
-
-    parameter can either be a plain type or a sequence of base types.
-
-    
-
-      
-
-    clr.CompileSubclassTypes(object) -> create a base type for object
-
-     
-
-     clr.CompileSubclassTypes(object,str,System.Collections.ArrayList) -> create 
-
-    
-
-    base  types for both object and ArrayList.
-
-     
-
-    
-
-   clr.CompileSubclassTypes(object,(object,IComparable)) -> create base types for 
-
-      
-
-     object and an object which implements IComparable.
- """
+def CompileSubclassTypes(assemblyName,newTypes,p_object): # real signature unknown; restored from __doc__
+ """ CompileSubclassTypes(assemblyName: str,*newTypes: Array[object]) """
  pass
 def Convert(o,toType): # real signature unknown; restored from __doc__
- """
- Convert(o: object,toType: Type) -> object
-
- 
-
-  Attempts to convert the provided object to the specified type.  Conversions that 
-
-    
-
-   will be attempted include standard Python conversions as well as .NET implicit
-
-    and 
-
-   explicit conversions.
-
-    
-
-    If the conversion cannot be performed a 
-
-   TypeError will be raised.
- """
+ """ Convert(o: object,toType: Type) -> object """
  return object()
 
 def Deserialize(serializationFormat,data): # real signature unknown; restored from __doc__
- """
- Deserialize(serializationFormat: str,data: str) -> object
-
- 
-
-  Deserializes the result of a Serialize call.  This can be used to perform serialization
-
-   
-
-    for .NET types which are serializable.  This method is the callable object provided
-
-   
-
-    from __reduce_ex__ for .serializable .NET types.
-
-    
-
-    The first 
-
-   parameter indicates the serialization format and is the first tuple element
-
-    
-
-   returned from the Serialize call.  
-
-    
-
-    The second parameter is the 
-
-   serialized data.
- """
+ """ Deserialize(serializationFormat: str,data: str) -> object """
  return object()
 
 def Dir(o): # real signature unknown; restored from __doc__
- """
- Dir(o: object) -> list
-
- 
-
-  returns the result of dir(o) as-if "import clr" has not been performed.
- """
+ """ Dir(o: object) -> list """
  return []
 
 def DirClr(o): # real signature unknown; restored from __doc__
- """
- DirClr(o: object) -> list
-
- 
-
-  Returns the result of dir(o) as-if "import clr" has been performed.
- """
+ """ DirClr(o: object) -> list """
  return []
 
 def EnableProfiler(enable): # real signature unknown; restored from __doc__
- """
- EnableProfiler(enable: bool)
-
-  Enable or disable profiling for the current ScriptEngine.  This will only affect code
-
-     
-
-     that is compiled after the setting is changed; previously-compiled code will retain
-
-     
-
-     whatever setting was active when the code was originally compiled.
-
-    
-
-    
-
-   The easiest way to recompile a module is to reload() it.
- """
+ """ EnableProfiler(enable: bool) """
  pass
-def GetBytes(*args,**kwargs): # real signature unknown
+def GetBytes(args,kwargs): # real signature unknown
  """ Converts a string to an array of bytesConverts maxCount of a string to an array of bytes """
  pass
 def GetClrType(type): # real signature unknown; restored from __doc__
- """
- GetClrType(type: Type) -> Type
-
- 
-
-  Gets the CLR Type object from a given Python type object.
- """
+ """ GetClrType(type: Type) -> Type """
  pass
 def GetCurrentRuntime(): # real signature unknown; restored from __doc__
- """
- GetCurrentRuntime() -> ScriptDomainManager
-
- 
-
-  Gets the current ScriptDomainManager that IronPython is loaded into.  The
-
-    
-
-   ScriptDomainManager can then be used to work with the language portion of the
-
-    DLR 
-
-   hosting APIs.
- """
+ """ GetCurrentRuntime() -> ScriptDomainManager """
  pass
 def GetDynamicType(t): # real signature unknown; restored from __doc__
- """
- GetDynamicType(t: Type) -> type
-
- 
-
-  OBSOLETE: Gets the Python type object from a given CLR Type object.
-
-    
-
-    
-
-   Use clr.GetPythonType instead.
- """
+ """ GetDynamicType(t: Type) -> type """
  return type(*(),**{})
 
 def GetProfilerData(includeUnused): # real signature unknown; restored from __doc__
- """
- GetProfilerData(includeUnused: bool) -> tuple
-
- 
-
-  Returns a list of profile data. The values are tuples of Profiler.Data objects
-
-    
-
-    
-
-      All times are expressed in the same unit of measure as DateTime.Ticks
- """
+ """ GetProfilerData(includeUnused: bool) -> tuple """
  return ()
 
 def GetPythonType(t): # real signature unknown; restored from __doc__
- """
- GetPythonType(t: Type) -> type
-
- 
-
-  Gets the Python type object from a given CLR Type object.
- """
+ """ GetPythonType(t: Type) -> type """
  return type(*(),**{})
 
-def GetString(*args,**kwargs): # real signature unknown
+def GetString(args,kwargs): # real signature unknown
  """ Converts an array of bytes to a string.Converts maxCount of an array of bytes to a string """
  pass
 def GetSubclassedTypes(): # real signature unknown; restored from __doc__
- """
- GetSubclassedTypes() -> tuple
-
- 
-
-  clr.GetSubclassedTypes() -> tuple
-
-    
-
-    Returns a tuple of information 
-
-   about the types which have been subclassed. 
-
-    
-
-    This tuple can be passed 
-
-   to clr.CompileSubclassTypes to cache these
-
-    types on disk such as:
-
-    
-
-    
-
-      clr.CompileSubclassTypes('assembly',*clr.GetSubclassedTypes())
- """
+ """ GetSubclassedTypes() -> tuple """
  return ()
 
 def ImportExtensions(type): # real signature unknown; restored from __doc__
  """ ImportExtensions(type: type)ImportExtensions(namespace: namespace#) """
  pass
-def LoadAssemblyByName(*args,**kwargs): # real signature unknown
+def LoadAssemblyByName(args,kwargs): # real signature unknown
  """
- Loads an assembly from the specified assembly name and returns the assembly
-
- object.  Namespaces or types in the assembly can be accessed directly from 
-
+ Loads an assembly from the specified assembly name and returns the assembly
+ object.  Namespaces or types in the assembly can be accessed directly from 
  the assembly object.
  """
  pass
-def LoadAssemblyByPartialName(*args,**kwargs): # real signature unknown
+def LoadAssemblyByPartialName(args,kwargs): # real signature unknown
  """
- Loads an assembly from the specified partial assembly name and returns the 
-
- assembly object.  Namespaces or types in the assembly can be accessed directly 
-
+ Loads an assembly from the specified partial assembly name and returns the 
+ assembly object.  Namespaces or types in the assembly can be accessed directly 
  from the assembly object.
  """
  pass
-def LoadAssemblyFromFile(*args,**kwargs): # real signature unknown
+def LoadAssemblyFromFile(args,kwargs): # real signature unknown
  """
- Loads an assembly from the specified filename and returns the assembly
-
- object.  Namespaces or types in the assembly can be accessed directly from 
-
+ Loads an assembly from the specified filename and returns the assembly
+ object.  Namespaces or types in the assembly can be accessed directly from 
  the assembly object.
  """
  pass
-def LoadAssemblyFromFileWithPath(*args,**kwargs): # real signature unknown
+def LoadAssemblyFromFileWithPath(args,kwargs): # real signature unknown
  """
- Adds a reference to a .NET assembly.  Parameters are a full path to an. 
-
- assembly on disk. After the load the assemblies namespaces and top-level types 
-
+ Adds a reference to a .NET assembly.  Parameters are a full path to an. 
+ assembly on disk. After the load the assemblies namespaces and top-level types 
  will be available via import Namespace.
  """
  pass
 def LoadTypeLibrary(rcw): # real signature unknown; restored from __doc__
  """
- LoadTypeLibrary(rcw: object) -> ComTypeLibInfo
-
- 
-
-  LoadTypeLibrary(rcw) -> type lib desc
-
-    
-
-    Gets an ITypeLib object from 
-
-   OLE Automation compatible RCW ,
-
-    reads definitions of CoClass'es and Enum's from 
-
-   this library
-
-    and creates an object that allows to instantiate coclasses
-
-      
-
-    and get actual values for the enums.
-
- 
-
+ LoadTypeLibrary(rcw: object) -> ComTypeLibInfo
  LoadTypeLibrary(typeLibGuid: Guid) -> ComTypeLibInfo
-
- 
-
-  LoadTypeLibrary(guid) -> type lib desc
-
-    
-
-    Reads the latest registered 
-
-   type library for the corresponding GUID,
-
-    reads definitions of CoClass'es and Enum's 
-
-   from this library
-
-    and creates a IDynamicMetaObjectProvider that allows to 
-
-   instantiate coclasses
-
-    and get actual values for the enums.
  """
  pass
 def returns(type): # real signature unknown; restored from __doc__
- """
- returns(type: object) -> object
-
- 
-
-  returns(type) -> ReturnChecker
-
-    
-
-    Returns a new callable object which 
-
-   will validate the return type is of the specified type.
- """
+ """ returns(type: object) -> object """
  return object()
 
 def Self(): # real signature unknown; restored from __doc__
@@ -506,67 +166,16 @@ def Self(): # real signature unknown; restored from __doc__
  return object()
 
 def Serialize(self): # real signature unknown; restored from __doc__
- """
- Serialize(self: object) -> tuple
-
- 
-
-  Serializes data using the .NET serialization formatter for complex
-
-    types.  Returns 
-
-   a tuple identifying the serialization format and the serialized 
-
-    data which can be 
-
-   fed back into clr.Deserialize.
-
-    
-
-    Current serialization formats include 
-
-   custom formats for primitive .NET
-
-    types which aren't already recognized as tuples.  
-
-   None is used to indicate
-
-    that the Binary .NET formatter is used.
- """
+ """ Serialize(self: object) -> tuple """
  return ()
 
-def SetCommandDispatcher(dispatcher,Action=None): # real signature unknown; restored from __doc__
+def SetCommandDispatcher(dispatcher,Action): # real signature unknown; restored from __doc__
  """ SetCommandDispatcher(dispatcher: Action[Action]) -> Action[Action] """
  pass
 def Use(name): # real signature unknown; restored from __doc__
  """
- Use(name: str) -> object
-
- 
-
-  Use(name) -> module
-
-    
-
-    Attempts to load the specified module searching 
-
-   all languages in the loaded ScriptRuntime.
-
- 
-
+ Use(name: str) -> object
  Use(path: str,language: str) -> object
-
- 
-
-  Use(path,language) -> module
-
-    
-
-    Attempts to load the specified module 
-
-   belonging to a specific language loaded into the
-
-    current ScriptRuntime.
  """
  return object()
 
@@ -574,6 +183,11 @@ def Use(name): # real signature unknown; restored from __doc__
 
 class ArgChecker(object):
  """ ArgChecker(prms: Array[object]) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ArgChecker()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __call__(self,*args):
   """ x.__call__(...) <==> x(...) """
   pass
@@ -582,20 +196,23 @@ class ArgChecker(object):
   """ __new__(cls: type,prms: Array[object]) """
   pass
 
-class StrongBox(object,IStrongBox):
+class StrongBox(object):
  """
- StrongBox[T]()
-
+ StrongBox[T]()
  StrongBox[T](value: T)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StrongBox()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  @staticmethod
  def __new__(self,value=None):
   """
-  __new__(cls: type)
-
+  __new__(cls: type)
   __new__(cls: type,value: T)
   """
   pass
@@ -608,8 +225,13 @@ class StrongBox(object,IStrongBox):
 Reference=StrongBox
 
 
-class ReferencesList(List[Assembly],IList[Assembly],ICollection[Assembly],IEnumerable[Assembly],IEnumerable,IList,ICollection,IReadOnlyList[Assembly],IReadOnlyCollection[Assembly],ICodeFormattable):
+class ReferencesList(List):
  """ ReferencesList() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReferencesList()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,*__args):
   """ Add(self: ReferencesList,other: Assembly) """
   pass
@@ -625,15 +247,17 @@ class ReferencesList(List[Assembly],IList[Assembly],ICollection[Assembly],IEnume
  def __iter__(self,*args):
   """ __iter__(self: IEnumerable) -> object """
   pass
- def __repr__(self,context):
-  """ __repr__(self: ReferencesList) -> str """
-  pass
  def __setitem__(self,*args):
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
 
 class ReturnChecker(object):
  """ ReturnChecker(returnType: object) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReturnChecker()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __call__(self,*args):
   """ x.__call__(...) <==> x(...) """
   pass
@@ -646,28 +270,35 @@ class ReturnChecker(object):
 
 class RuntimeArgChecker(PythonTypeSlot):
  """
- RuntimeArgChecker(function: object,expectedArgs: Array[object])
-
+ RuntimeArgChecker(function: object,expectedArgs: Array[object])
  RuntimeArgChecker(instance: object,function: object,expectedArgs: Array[object])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RuntimeArgChecker()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __call__(self,*args):
   """ x.__call__(...) <==> x(...)x.__call__(...) <==> x(...) """
   pass
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,function: object,expectedArgs: Array[object])
-
+  __new__(cls: type,function: object,expectedArgs: Array[object])
   __new__(cls: type,instance: object,function: object,expectedArgs: Array[object])
   """
   pass
 
 class RuntimeReturnChecker(PythonTypeSlot):
  """
- RuntimeReturnChecker(function: object,expectedReturn: object)
-
+ RuntimeReturnChecker(function: object,expectedReturn: object)
  RuntimeReturnChecker(instance: object,function: object,expectedReturn: object)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RuntimeReturnChecker()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetAttribute(self,instance,owner):
   """ GetAttribute(self: RuntimeReturnChecker,instance: object,owner: object) -> object """
   pass
@@ -677,8 +308,7 @@ class RuntimeReturnChecker(PythonTypeSlot):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,function: object,expectedReturn: object)
-
+  __new__(cls: type,function: object,expectedReturn: object)
   __new__(cls: type,instance: object,function: object,expectedReturn: object)
   """
   pass

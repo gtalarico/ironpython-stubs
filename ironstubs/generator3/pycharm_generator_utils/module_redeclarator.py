@@ -680,9 +680,8 @@ class ModuleRedeclarator(object):
             filtered = filtered[:-1] + ')'
         if filtered.endswith('('):
             filtered = filtered[:-1]
-        if filtered == "":
+        if not filtered:
             filtered = "(Object)"
-        
         data[p_name] = p_modname
         out(indent, "class ", p_name, filtered , ":",          #re.sub(regex, "", base_def)    #fix kevin ana 3/inherited classes showed up in constructor/base def replaced with ""
             skipped_bases and " # skipped bases: " + ", ".join(skipped_bases) or "")  # we dont do anything with python objects so why bother 

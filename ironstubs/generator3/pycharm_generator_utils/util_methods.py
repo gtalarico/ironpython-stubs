@@ -460,6 +460,40 @@ def out_docstring(out_func, docstring, indent):
     if not isinstance(docstring, str): return
     lines = docstring.strip().split("\n")
 
+    bad_compiles = ["*","IDictionary","IEnumerable,T"]
+    class_regex = "self: (\w+).+"
+    argument_regex = "\w*:\s(\w*)"
+    type_regex = "\[(.*?)\]"
+
+    for line in lines:
+        doc_class = re.findall(class_regex,line)
+        function = line.split("(")[0]
+        arguments = re.findall(argument_regex,line)
+        types = re.findall(type_regex,line)
+
+        if doc_class and "[" not in function:
+            arguments.pop(0)
+
+            if (doc_class[0] not in typedict.keys()):
+                typedict[doc_class[0]] = {}
+            
+            if function and doc_class[0] in typedict.keys():
+                if function not in typedict[doc_class[0]]:
+                    typedict[doc_class[0]][function] = []
+                if typedict[doc_class[0]][function] == "Exception: bad compile":
+                    continue
+                for pos in range(len(arguments)):
+                    if "DataFlowObject" in arguments[pos]:
+                        arguments[pos] = types.pop(0)
+
+                if arguments not in typedict[doc_class[0]][function]:
+
+                    #check if bad compiles are in one of the arguments
+                    if any(any(substring in argument for substring in bad_compiles) for argument in arguments):
+                        typedict[doc_class[0]][function] = "Exception: bad compile"
+                        continue
+                    
+                    typedict[doc_class[0]][function].append(arguments)
     if lines:
         if len(lines) == 1:
             out_func(indent, '""" ' + lines[0] + ' """')

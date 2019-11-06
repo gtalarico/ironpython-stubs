@@ -1,30 +1,24 @@
 class HtmlElementCollection(object,ICollection,IEnumerable):
  """ Defines a collection of System.Windows.Forms.HtmlElement objects. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return HtmlElementCollection()
+
  def GetElementsByName(self,name):
   """
-  GetElementsByName(self: HtmlElementCollection,name: str) -> HtmlElementCollection
-
-  
-
-   Gets a collection of elements by their name.
-
-  
-
-   name: The name or ID of the element.
-
-   Returns: An System.Windows.Forms.HtmlElementCollection containing the elements whose 
-
-    System.Windows.Forms.HtmlElement.Name property match name.
+  GetElementsByName(self: HtmlElementCollection,name: str) -> HtmlElementCollection
+  
+   Gets a collection of elements by their name.
+  
+   name: The name or ID of the element.
+   Returns: An System.Windows.Forms.HtmlElementCollection containing the elements whose System.Windows.Forms.HtmlElement.Name property match name.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: HtmlElementCollection) -> IEnumerator
-
-  
-
-   Returns an enumerator that iterates through a collection.
-
+  GetEnumerator(self: HtmlElementCollection) -> IEnumerator
+  
+   Returns an enumerator that iterates through a collection.
    Returns: An System.Collections.IEnumerator that can be used to iterate through the collection.
   """
   pass
@@ -44,14 +38,10 @@ class HtmlElementCollection(object,ICollection,IEnumerable):
   """ __repr__(self: object) -> str """
   pass
  Count=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the number of elements in the collection.
-
-
-
-Get: Count(self: HtmlElementCollection) -> int
-
-
-
+ """Gets the number of elements in the collection.
+
+Get: Count(self: HtmlElementCollection) -> int
+
 """
 
 

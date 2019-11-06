@@ -1,11 +1,14 @@
-class ResourceType(Enum,IComparable,IFormattable,IConvertible):
+class ResourceType:
  """
- Specifies the defined native object types.
-
- 
-
+ Specifies the defined native object types.
+ 
  enum ResourceType,values: DSObject (8),DSObjectAll (9),FileObject (1),KernelObject (6),LMShare (5),Printer (3),ProviderDefined (10),RegistryKey (4),RegistryWow6432Key (12),Service (2),Unknown (0),WindowObject (7),WmiGuidObject (11)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ResourceType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

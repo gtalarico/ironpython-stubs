@@ -1,5 +1,5 @@
 {
   "__builtins__": {
-    "System": "Microsoft.Scripting.Actions.NamespaceTracker:System"
+    "clr": "<module 'clr' (built-in)>"
   }
 }

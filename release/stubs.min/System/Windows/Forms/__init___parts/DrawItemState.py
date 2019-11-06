@@ -1,11 +1,13 @@
 class DrawItemState(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the state of an item that is being drawn.
-
- 
-
+ Specifies the state of an item that is being drawn.
+ 
  enum (flags) DrawItemState,values: Checked (8),ComboBoxEdit (4096),Default (32),Disabled (4),Focus (16),Grayed (2),HotLight (64),Inactive (128),NoAccelerator (256),NoFocusRect (512),None (0),Selected (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DrawItemState()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -39,7 +41,7 @@ class DrawItemState(Enum,IComparable,IFormattable,IConvertible):
  Inactive=None
  NoAccelerator=None
  NoFocusRect=None
- None=None
+ None_ =None
  Selected=None
  value__=None
 

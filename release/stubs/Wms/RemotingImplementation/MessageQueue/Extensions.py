@@ -1,0 +1,36 @@
+# encoding: utf-8
+# module Wms.RemotingImplementation.MessageQueue.Extensions calls itself Extensions
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
+# by generator 1.145
+# no doc
+# no imports
+
+# no functions
+# classes
+
+class MessageQueueProxyExtensions():
+    # no doc
+    @staticmethod
+    def ToMessagingMessage(proxy):
+        """ ToMessagingMessage(proxy: MessageQueue) -> IMessage """
+        pass
+
+    @staticmethod
+    def ToMessagingMessageWithNewId(proxy):
+        """ ToMessagingMessageWithNewId(proxy: MessageQueue) -> IMessage """
+        pass
+
+    @staticmethod
+    def ToMessagingMessageWithoutBody(proxy):
+        """ ToMessagingMessageWithoutBody(proxy: MessageQueue) -> IMessage """
+        pass
+
+    __all__ = [
+        'ToMessagingMessage',
+        'ToMessagingMessageWithNewId',
+        'ToMessagingMessageWithoutBody',
+    ]
+
+    Instance = MessageQueueProxyExtensions()
+    """hardcoded/returns an instance of the class"""
+

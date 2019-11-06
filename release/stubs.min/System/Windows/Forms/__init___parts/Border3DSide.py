@@ -1,11 +1,13 @@
 class Border3DSide(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the sides of a rectangle to apply a three-dimensional border to.
-
- 
-
+ Specifies the sides of a rectangle to apply a three-dimensional border to.
+ 
  enum (flags) Border3DSide,values: All (2063),Bottom (8),Left (1),Middle (2048),Right (4),Top (2)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Border3DSide()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

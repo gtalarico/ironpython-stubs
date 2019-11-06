@@ -1,11 +1,14 @@
-class ListSortDirection(Enum,IComparable,IFormattable,IConvertible):
+class ListSortDirection:
  """
- Specifies the direction of a sort operation.
-
- 
-
+ Specifies the direction of a sort operation.
+ 
  enum ListSortDirection,values: Ascending (0),Descending (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ListSortDirection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

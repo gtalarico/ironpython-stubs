@@ -1,11 +1,14 @@
-class EventLogPermissionAccess(Enum,IComparable,IFormattable,IConvertible):
+class EventLogPermissionAccess:
  """
- Defines access levels used by System.Diagnostics.EventLog permission classes.
-
- 
-
+ Defines access levels used by System.Diagnostics.EventLog permission classes.
+ 
  enum (flags) EventLogPermissionAccess,values: Administer (48),Audit (10),Browse (2),Instrument (6),None (0),Write (16)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EventLogPermissionAccess()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -33,7 +36,7 @@ class EventLogPermissionAccess(Enum,IComparable,IFormattable,IConvertible):
  Audit=None
  Browse=None
  Instrument=None
- None=None
+ None_ =None
  value__=None
  Write=None
 

@@ -1,11 +1,13 @@
 class ToolStripItemAlignment(Enum,IComparable,IFormattable,IConvertible):
  """
- Determines the alignment of a System.Windows.Forms.ToolStripItem in a System.Windows.Forms.ToolStrip.
-
- 
-
+ Determines the alignment of a System.Windows.Forms.ToolStripItem in a System.Windows.Forms.ToolStrip.
+ 
  enum ToolStripItemAlignment,values: Left (0),Right (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripItemAlignment()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

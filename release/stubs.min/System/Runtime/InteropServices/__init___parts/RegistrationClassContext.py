@@ -1,11 +1,14 @@
-class RegistrationClassContext(Enum,IComparable,IFormattable,IConvertible):
+class RegistrationClassContext:
  """
- Specifies the set of execution contexts in which a class object will be made available for requests to construct instances.
-
- 
-
+ Specifies the set of execution contexts in which a class object will be made available for requests to construct instances.
+ 
  enum (flags) RegistrationClassContext,values: DisableActivateAsActivator (32768),EnableActivateAsActivator (65536),EnableCodeDownload (8192),FromDefaultContext (131072),InProcessHandler (2),InProcessHandler16 (32),InProcessServer (1),InProcessServer16 (8),LocalServer (4),NoCodeDownload (1024),NoCustomMarshal (4096),NoFailureLog (16384),RemoteServer (16),Reserved1 (64),Reserved2 (128),Reserved3 (256),Reserved4 (512),Reserved5 (2048)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RegistrationClassContext()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -77,8 +77,8 @@ if arguments['--debug']:
     logger.enable_debug()
 
 # PROJECT_DIR = os.getcwd()  # Must execute from project dir
-PKG_DIR = os.path.dirname(__file__)
-PROJECT_DIR = os.path.dirname(PKG_DIR)
+
+PROJECT_DIR = os.getcwd()
 release_dir = os.path.join(PROJECT_DIR, 'release', option_output_dir)
 os.chdir(PROJECT_DIR)
 

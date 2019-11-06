@@ -1,11 +1,14 @@
-class MaskedTextResultHint(Enum,IComparable,IFormattable,IConvertible):
+class MaskedTextResultHint:
  """
- Specifies values that succinctly describe the results of a masked text parsing operation.
-
- 
-
+ Specifies values that succinctly describe the results of a masked text parsing operation.
+ 
  enum MaskedTextResultHint,values: AlphanumericCharacterExpected (-2),AsciiCharacterExpected (-1),CharacterEscaped (1),DigitExpected (-3),InvalidInput (-51),LetterExpected (-4),NoEffect (2),NonEditPosition (-54),PositionOutOfRange (-55),PromptCharNotAllowed (-52),SideEffect (3),SignedDigitExpected (-5),Success (4),UnavailableEditPosition (-53),Unknown (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return MaskedTextResultHint()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

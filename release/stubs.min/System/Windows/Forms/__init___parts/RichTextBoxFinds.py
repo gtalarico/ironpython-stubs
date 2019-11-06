@@ -1,11 +1,13 @@
 class RichTextBoxFinds(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how a text search is carried out in a System.Windows.Forms.RichTextBox control.
-
- 
-
+ Specifies how a text search is carried out in a System.Windows.Forms.RichTextBox control.
+ 
  enum (flags) RichTextBoxFinds,values: MatchCase (4),NoHighlight (8),None (0),Reverse (16),WholeWord (2)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return RichTextBoxFinds()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -31,7 +33,7 @@ class RichTextBoxFinds(Enum,IComparable,IFormattable,IConvertible):
   pass
  MatchCase=None
  NoHighlight=None
- None=None
+ None_ =None
  Reverse=None
  value__=None
  WholeWord=None

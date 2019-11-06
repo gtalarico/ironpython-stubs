@@ -1,11 +1,13 @@
 class BindingCompleteState(Enum,IComparable,IFormattable,IConvertible):
  """
- Indicates the result of a completed binding operation.
-
- 
-
+ Indicates the result of a completed binding operation.
+ 
  enum BindingCompleteState,values: DataError (1),Exception (2),Success (0)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return BindingCompleteState()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

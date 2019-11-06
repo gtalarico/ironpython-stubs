@@ -1,11 +1,14 @@
-class AccessControlModification(Enum,IComparable,IFormattable,IConvertible):
+class AccessControlModification:
  """
- Specifies the type of access control modification to perform. This enumeration is used by methods of the System.Security.AccessControl.ObjectSecurity class and its descendents.
-
- 
-
+ Specifies the type of access control modification to perform. This enumeration is used by methods of the System.Security.AccessControl.ObjectSecurity class and its descendents.
+ 
  enum AccessControlModification,values: Add (0),Remove (3),RemoveAll (4),RemoveSpecific (5),Reset (2),Set (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AccessControlModification()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

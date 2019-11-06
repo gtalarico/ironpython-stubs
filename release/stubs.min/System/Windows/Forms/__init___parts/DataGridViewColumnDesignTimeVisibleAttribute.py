@@ -1,58 +1,36 @@
 class DataGridViewColumnDesignTimeVisibleAttribute(Attribute,_Attribute):
  """
- Specifies whether a column type is visible in the System.Windows.Forms.DataGridView designer. This class cannot be inherited.
-
- 
-
- DataGridViewColumnDesignTimeVisibleAttribute(visible: bool)
-
+ Specifies whether a column type is visible in the System.Windows.Forms.DataGridView designer. This class cannot be inherited.
+ 
+ DataGridViewColumnDesignTimeVisibleAttribute(visible: bool)
  DataGridViewColumnDesignTimeVisibleAttribute()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewColumnDesignTimeVisibleAttribute()
+
  def Equals(self,obj):
   """
-  Equals(self: DataGridViewColumnDesignTimeVisibleAttribute,obj: object) -> bool
-
-  
-
-   Gets a value indicating whether this object is equivalent to the specified object.
-
-  
-
-   obj: The System.Object to compare with the current System.Object.
-
-   Returns: true to indicate that the specified object is a 
-
-    System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute instance with the same 
-
-    System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Visible property value as this 
-
-    instance; otherwise,false.
+  Equals(self: DataGridViewColumnDesignTimeVisibleAttribute,obj: object) -> bool
+  
+   Gets a value indicating whether this object is equivalent to the specified object.
+  
+   obj: The System.Object to compare with the current System.Object.
+   Returns: true to indicate that the specified object is a System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute instance with the same System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Visible property value as this instance; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
-  GetHashCode(self: DataGridViewColumnDesignTimeVisibleAttribute) -> int
-
+  GetHashCode(self: DataGridViewColumnDesignTimeVisibleAttribute) -> int
    Returns: A 32-bit signed integer hash code.
   """
   pass
  def IsDefaultAttribute(self):
   """
-  IsDefaultAttribute(self: DataGridViewColumnDesignTimeVisibleAttribute) -> bool
-
-  
-
-   Gets a value indicating whether this attribute instance is equal to the 
-
-    System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Default attribute value.
-
-  
-
-   Returns: true to indicate that this instance is equal to the 
-
-    System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Default instance; otherwise,
-
-    false.
+  IsDefaultAttribute(self: DataGridViewColumnDesignTimeVisibleAttribute) -> bool
+  
+   Gets a value indicating whether this attribute instance is equal to the System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Default attribute value.
+   Returns: true to indicate that this instance is equal to the System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Default instance; otherwise,false.
   """
   pass
  def __eq__(self,*args):
@@ -64,22 +42,17 @@ class DataGridViewColumnDesignTimeVisibleAttribute(Attribute,_Attribute):
  @staticmethod
  def __new__(self,visible=None):
   """
-  __new__(cls: type,visible: bool)
-
+  __new__(cls: type,visible: bool)
   __new__(cls: type)
   """
   pass
  def __ne__(self,*args):
   pass
  Visible=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a value indicating whether the column type is visible in the System.Windows.Forms.DataGridView designer.
-
-
-
-Get: Visible(self: DataGridViewColumnDesignTimeVisibleAttribute) -> bool
-
-
-
+ """Gets a value indicating whether the column type is visible in the System.Windows.Forms.DataGridView designer.
+
+Get: Visible(self: DataGridViewColumnDesignTimeVisibleAttribute) -> bool
+
 """
 
 

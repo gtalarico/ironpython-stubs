@@ -2,8 +2,8 @@
 # module System.ComponentModel calls itself ComponentModel
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
-# no imports
+# no doc
+# no important
 
 # no functions
 # classes

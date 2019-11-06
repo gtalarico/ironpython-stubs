@@ -1,11 +1,13 @@
 class FlatStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the appearance of a control.
-
- 
-
+ Specifies the appearance of a control.
+ 
  enum FlatStyle,values: Flat (0),Popup (1),Standard (2),System (3)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return FlatStyle()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

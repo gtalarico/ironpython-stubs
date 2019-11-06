@@ -1,9 +1,13 @@
-class Progress(object,IProgress[T]):
+class Progress(object):
  """
- Progress[T]()
-
+ Progress[T]()
  Progress[T](handler: Action[T])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Progress()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def OnReport(self,*args):
   """ OnReport(self: Progress[T],value: T) """
   pass
@@ -13,8 +17,7 @@ class Progress(object,IProgress[T]):
  @staticmethod
  def __new__(self,handler=None):
   """
-  __new__(cls: type)
-
+  __new__(cls: type)
   __new__(cls: type,handler: Action[T])
   """
   pass

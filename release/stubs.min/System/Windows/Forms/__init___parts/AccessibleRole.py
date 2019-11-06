@@ -1,11 +1,13 @@
 class AccessibleRole(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies values representing possible roles for an accessible object.
-
- 
-
+ Specifies values representing possible roles for an accessible object.
+ 
  enum AccessibleRole,values: Alert (8),Animation (54),Application (14),Border (19),ButtonDropDown (56),ButtonDropDownGrid (58),ButtonMenu (57),Caret (7),Cell (29),Character (32),Chart (17),CheckButton (44),Client (10),Clock (61),Column (27),ColumnHeader (25),ComboBox (46),Cursor (6),Default (-1),Diagram (53),Dial (49),Dialog (18),Document (15),DropList (47),Equation (55),Graphic (40),Grip (4),Grouping (20),HelpBalloon (31),HotkeyField (50),Indicator (39),IpAddress (63),Link (30),List (33),ListItem (34),MenuBar (2),MenuItem (12),MenuPopup (11),None (0),Outline (35),OutlineButton (64),OutlineItem (36),PageTab (37),PageTabList (60),Pane (16),ProgressBar (48),PropertyPage (38),PushButton (43),RadioButton (45),Row (28),RowHeader (26),ScrollBar (3),Separator (21),Slider (51),Sound (5),SpinButton (52),SplitButton (62),StaticText (41),StatusBar (23),Table (24),Text (42),TitleBar (1),ToolBar (22),ToolTip (13),WhiteSpace (59),Window (9)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return AccessibleRole()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -67,7 +69,7 @@ class AccessibleRole(Enum,IComparable,IFormattable,IConvertible):
  MenuBar=None
  MenuItem=None
  MenuPopup=None
- None=None
+ None_ =None
  Outline=None
  OutlineButton=None
  OutlineItem=None

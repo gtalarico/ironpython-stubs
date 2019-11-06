@@ -1,11 +1,14 @@
-class GCHandleType(Enum,IComparable,IFormattable,IConvertible):
+class GCHandleType:
  """
- Represents the types of handles the System.Runtime.InteropServices.GCHandle class can allocate.
-
- 
-
+ Represents the types of handles the System.Runtime.InteropServices.GCHandle class can allocate.
+ 
  enum GCHandleType,values: Normal (2),Pinned (3),Weak (0),WeakTrackResurrection (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GCHandleType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

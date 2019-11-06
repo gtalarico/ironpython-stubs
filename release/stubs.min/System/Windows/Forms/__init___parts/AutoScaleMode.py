@@ -1,11 +1,13 @@
 class AutoScaleMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the different types of automatic scaling modes supported by Windows Forms.
-
- 
-
+ Specifies the different types of automatic scaling modes supported by Windows Forms.
+ 
  enum AutoScaleMode,values: Dpi (2),Font (1),Inherit (3),None (0)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return AutoScaleMode()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -32,6 +34,6 @@ class AutoScaleMode(Enum,IComparable,IFormattable,IConvertible):
  Dpi=None
  Font=None
  Inherit=None
- None=None
+ None_ =None
  value__=None
 

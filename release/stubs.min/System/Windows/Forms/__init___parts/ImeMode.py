@@ -1,11 +1,13 @@
 class ImeMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies a value that determines the Input Method Editor (IME) status of an object when the object is selected.
-
- 
-
+ Specifies a value that determines the Input Method Editor (IME) status of an object when the object is selected.
+ 
  enum ImeMode,values: Alpha (8),AlphaFull (7),Close (11),Disable (3),Hangul (10),HangulFull (9),Hiragana (4),Inherit (-1),Katakana (5),KatakanaHalf (6),NoControl (0),Off (2),On (1),OnHalf (12)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ImeMode()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

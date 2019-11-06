@@ -1,11 +1,14 @@
-class CustomQueryInterfaceResult(Enum,IComparable,IFormattable,IConvertible):
+class CustomQueryInterfaceResult:
  """
- Provides return values for the System.Runtime.InteropServices.ICustomQueryInterface.GetInterface(System.Guid@,System.IntPtr@) method.
-
- 
-
+ Provides return values for the System.Runtime.InteropServices.ICustomQueryInterface.GetInterface(System.Guid@,System.IntPtr@) method.
+ 
  enum CustomQueryInterfaceResult,values: Failed (2),Handled (0),NotHandled (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CustomQueryInterfaceResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

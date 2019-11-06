@@ -2,28 +2,26 @@
 # module System.Security.Permissions calls itself Permissions
 # from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
-# no imports
+# no doc
+# no important
 
 # no functions
 # classes
 
-class SecurityAttribute(Attribute,_Attribute):
+class SecurityAttribute:
  """ Specifies the base attribute class for declarative security from which System.Security.Permissions.CodeAccessSecurityAttribute is derived. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SecurityAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: SecurityAttribute) -> IPermission
-
-  
-
-   When overridden in a derived class,creates a permission object that can then be serialized into 
-
-    binary form and persistently stored along with the System.Security.Permissions.SecurityAction in 
-
-    an assembly's metadata.
-
-  
-
+  CreatePermission(self: SecurityAttribute) -> IPermission
+  
+   When overridden in a derived class,creates a permission object that can then be serialized into binary form and persistently stored along with the 
+    System.Security.Permissions.SecurityAction in an assembly's metadata.
+  
    Returns: A serializable permission object.
   """
   pass
@@ -37,35 +35,30 @@ class SecurityAttribute(Attribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  Action=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a security action.
-
-
-
-Get: Action(self: SecurityAttribute) -> SecurityAction
-
-
-
-Set: Action(self: SecurityAttribute)=value
-
+ """Gets or sets a security action.
+
+Get: Action(self: SecurityAttribute) -> SecurityAction
+
+Set: Action(self: SecurityAttribute)=value
 """
 
  Unrestricted=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether full (unrestricted) permission to the resource protected by the attribute is declared.
-
-
-
-Get: Unrestricted(self: SecurityAttribute) -> bool
-
-
-
-Set: Unrestricted(self: SecurityAttribute)=value
-
+ """Gets or sets a value indicating whether full (unrestricted) permission to the resource protected by the attribute is declared.
+
+Get: Unrestricted(self: SecurityAttribute) -> bool
+
+Set: Unrestricted(self: SecurityAttribute)=value
 """
 
 
 
-class CodeAccessSecurityAttribute(SecurityAttribute,_Attribute):
+class CodeAccessSecurityAttribute(SecurityAttribute):
  """ Specifies the base attribute class for code access security. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CodeAccessSecurityAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -78,197 +71,123 @@ class CodeAccessSecurityAttribute(SecurityAttribute,_Attribute):
 
 class IUnrestrictedPermission:
  """ Allows a permission to expose an unrestricted state. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IUnrestrictedPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def IsUnrestricted(self):
   """
-  IsUnrestricted(self: IUnrestrictedPermission) -> bool
-
-  
-
-   Returns a value indicating whether unrestricted access to the resource protected by the 
-
-    permission is allowed.
-
-  
-
-   Returns: true if unrestricted use of the resource protected by the permission is allowed; otherwise,
-
-    false.
+  IsUnrestricted(self: IUnrestrictedPermission) -> bool
+  
+   Returns a value indicating whether unrestricted access to the resource protected by the permission is allowed.
+   Returns: true if unrestricted use of the resource protected by the permission is allowed; otherwise,false.
   """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
 
-class EnvironmentPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IUnrestrictedPermission,IBuiltInPermission):
+class EnvironmentPermission(CodeAccessPermission):
  """
- Controls access to system and user environment variables. This class cannot be inherited.
-
- 
-
- EnvironmentPermission(state: PermissionState)
-
+ Controls access to system and user environment variables. This class cannot be inherited.
+ 
+ EnvironmentPermission(state: PermissionState)
  EnvironmentPermission(flag: EnvironmentPermissionAccess,pathList: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EnvironmentPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddPathList(self,flag,pathList):
   """
-  AddPathList(self: EnvironmentPermission,flag: EnvironmentPermissionAccess,pathList: str)
-
-   Adds access for the specified environment variables to the existing state of the permission.
-
-  
-
-   flag: One of the System.Security.Permissions.EnvironmentPermissionAccess values.
-
+  AddPathList(self: EnvironmentPermission,flag: EnvironmentPermissionAccess,pathList: str)
+   Adds access for the specified environment variables to the existing state of the permission.
+  
+   flag: One of the System.Security.Permissions.EnvironmentPermissionAccess values.
    pathList: A list of environment variables (semicolon-separated).
   """
   pass
  def Copy(self):
   """
-  Copy(self: EnvironmentPermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: EnvironmentPermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def FromXml(self,esd):
   """
-  FromXml(self: EnvironmentPermission,esd: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
+  FromXml(self: EnvironmentPermission,esd: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
    esd: The XML encoding to use to reconstruct the permission.
   """
   pass
  def GetPathList(self,flag):
   """
-  GetPathList(self: EnvironmentPermission,flag: EnvironmentPermissionAccess) -> str
-
-  
-
-   Gets all environment variables with the specified 
-
-    System.Security.Permissions.EnvironmentPermissionAccess.
-
-  
-
-  
-
-   flag: One of the System.Security.Permissions.EnvironmentPermissionAccess values that represents a 
-
-    single type of environment variable access.
-
-  
-
+  GetPathList(self: EnvironmentPermission,flag: EnvironmentPermissionAccess) -> str
+  
+   Gets all environment variables with the specified System.Security.Permissions.EnvironmentPermissionAccess.
+  
+   flag: One of the System.Security.Permissions.EnvironmentPermissionAccess values that represents a single type of environment variable access.
    Returns: A list of environment variables (semicolon-separated) for the selected flag.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: EnvironmentPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be of the same type as the 
-
-    current permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. This new permission is null if the intersection is empty.
+  Intersect(self: EnvironmentPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: EnvironmentPermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission that is to be tested for the subset relationship. This permission must be of the 
-
-    same type as the current permission.
-
-  
-
+  IsSubsetOf(self: EnvironmentPermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def IsUnrestricted(self):
   """
-  IsUnrestricted(self: EnvironmentPermission) -> bool
-
-  
-
-   Returns a value indicating whether the current permission is unrestricted.
-
+  IsUnrestricted(self: EnvironmentPermission) -> bool
+  
+   Returns a value indicating whether the current permission is unrestricted.
    Returns: true if the current permission is unrestricted; otherwise,false.
   """
   pass
  def SetPathList(self,flag,pathList):
   """
-  SetPathList(self: EnvironmentPermission,flag: EnvironmentPermissionAccess,pathList: str)
-
-   Sets the specified access to the specified environment variables to the existing state of the 
-
-    permission.
-
-  
-
-  
-
-   flag: One of the System.Security.Permissions.EnvironmentPermissionAccess values.
-
+  SetPathList(self: EnvironmentPermission,flag: EnvironmentPermissionAccess,pathList: str)
+   Sets the specified access to the specified environment variables to the existing state of the permission.
+  
+   flag: One of the System.Security.Permissions.EnvironmentPermissionAccess values.
    pathList: A list of environment variables (semicolon-separated).
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: EnvironmentPermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
+  ToXml(self: EnvironmentPermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
    Returns: An XML encoding of the permission,including any state information.
   """
   pass
  def Union(self,other):
   """
-  Union(self: EnvironmentPermission,other: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the current permission and the specified permission.
-
-  
-
-   other: A permission to combine with the current permission. It must be of the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: EnvironmentPermission,other: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the current permission and the specified permission.
+  
+   other: A permission to combine with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -277,8 +196,7 @@ class EnvironmentPermission(CodeAccessPermission,IPermission,ISecurityEncodable,
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
+  __new__(cls: type,state: PermissionState)
   __new__(cls: type,flag: EnvironmentPermissionAccess,pathList: str)
   """
   pass
@@ -287,14 +205,17 @@ class EnvironmentPermission(CodeAccessPermission,IPermission,ISecurityEncodable,
  def __str__(self,*args):
   pass
 
-class EnvironmentPermissionAccess(Enum,IComparable,IFormattable,IConvertible):
+class EnvironmentPermissionAccess:
  """
- Specifies access to environment variables.
-
- 
-
+ Specifies access to environment variables.
+ 
  enum (flags) EnvironmentPermissionAccess,values: AllAccess (3),NoAccess (0),Read (1),Write (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EnvironmentPermissionAccess()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -325,22 +246,22 @@ class EnvironmentPermissionAccess(Enum,IComparable,IFormattable,IConvertible):
  Write=None
 
 
-class EnvironmentPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class EnvironmentPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for System.Security.Permissions.EnvironmentPermission to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for System.Security.Permissions.EnvironmentPermission to be applied to code using declarative security. This class cannot be inherited.
+ 
  EnvironmentPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EnvironmentPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: EnvironmentPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new System.Security.Permissions.EnvironmentPermission.
-
+  CreatePermission(self: EnvironmentPermissionAttribute) -> IPermission
+  
+   Creates and returns a new System.Security.Permissions.EnvironmentPermission.
    Returns: An System.Security.Permissions.EnvironmentPermission that corresponds to this attribute.
   """
   pass
@@ -354,163 +275,103 @@ class EnvironmentPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  All=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Sets full access for the environment variables specified by the string value.
-
-
-
-Get: All(self: EnvironmentPermissionAttribute) -> str
-
-
-
-Set: All(self: EnvironmentPermissionAttribute)=value
-
+ """Sets full access for the environment variables specified by the string value.
+
+Get: All(self: EnvironmentPermissionAttribute) -> str
+
+Set: All(self: EnvironmentPermissionAttribute)=value
 """
 
  Read=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets read access for the environment variables specified by the string value.
-
-
-
-Get: Read(self: EnvironmentPermissionAttribute) -> str
-
-
-
-Set: Read(self: EnvironmentPermissionAttribute)=value
-
+ """Gets or sets read access for the environment variables specified by the string value.
+
+Get: Read(self: EnvironmentPermissionAttribute) -> str
+
+Set: Read(self: EnvironmentPermissionAttribute)=value
 """
 
  Write=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets write access for the environment variables specified by the string value.
-
-
-
-Get: Write(self: EnvironmentPermissionAttribute) -> str
-
-
-
-Set: Write(self: EnvironmentPermissionAttribute)=value
-
+ """Gets or sets write access for the environment variables specified by the string value.
+
+Get: Write(self: EnvironmentPermissionAttribute) -> str
+
+Set: Write(self: EnvironmentPermissionAttribute)=value
 """
 
 
 
-class FileDialogPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IUnrestrictedPermission,IBuiltInPermission):
+class FileDialogPermission(CodeAccessPermission):
  """
- Controls the ability to access files or folders through a File dialog box. This class cannot be inherited.
-
- 
-
- FileDialogPermission(state: PermissionState)
-
+ Controls the ability to access files or folders through a File dialog box. This class cannot be inherited.
+ 
+ FileDialogPermission(state: PermissionState)
  FileDialogPermission(access: FileDialogPermissionAccess)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileDialogPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
-  Copy(self: FileDialogPermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: FileDialogPermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def FromXml(self,esd):
   """
-  FromXml(self: FileDialogPermission,esd: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
+  FromXml(self: FileDialogPermission,esd: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
    esd: The XML encoding used to reconstruct the permission.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: FileDialogPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. This new permission is null if the intersection is empty.
+  Intersect(self: FileDialogPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: FileDialogPermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission that is to be tested for the subset relationship. This permission must be the same 
-
-    type as the current permission.
-
-  
-
+  IsSubsetOf(self: FileDialogPermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: A permission that is to be tested for the subset relationship. This permission must be the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def IsUnrestricted(self):
   """
-  IsUnrestricted(self: FileDialogPermission) -> bool
-
-  
-
-   Returns a value indicating whether the current permission is unrestricted.
-
+  IsUnrestricted(self: FileDialogPermission) -> bool
+  
+   Returns a value indicating whether the current permission is unrestricted.
    Returns: true if the current permission is unrestricted; otherwise,false.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: FileDialogPermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
+  ToXml(self: FileDialogPermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
    Returns: An XML encoding of the permission,including state information.
   """
   pass
  def Union(self,target):
   """
-  Union(self: FileDialogPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the current permission and the specified permission.
-
-  
-
-   target: A permission to combine with the current permission. It must be of the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: FileDialogPermission,target: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the current permission and the specified permission.
+  
+   target: A permission to combine with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -519,8 +380,7 @@ class FileDialogPermission(CodeAccessPermission,IPermission,ISecurityEncodable,I
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
+  __new__(cls: type,state: PermissionState)
   __new__(cls: type,access: FileDialogPermissionAccess)
   """
   pass
@@ -529,28 +389,26 @@ class FileDialogPermission(CodeAccessPermission,IPermission,ISecurityEncodable,I
  def __str__(self,*args):
   pass
  Access=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the permitted access to files.
-
-
-
-Get: Access(self: FileDialogPermission) -> FileDialogPermissionAccess
-
-
-
-Set: Access(self: FileDialogPermission)=value
-
+ """Gets or sets the permitted access to files.
+
+Get: Access(self: FileDialogPermission) -> FileDialogPermissionAccess
+
+Set: Access(self: FileDialogPermission)=value
 """
 
 
 
-class FileDialogPermissionAccess(Enum,IComparable,IFormattable,IConvertible):
+class FileDialogPermissionAccess:
  """
- Specifies the type of access to files allowed through the File dialog boxes.
-
- 
-
+ Specifies the type of access to files allowed through the File dialog boxes.
+ 
  enum (flags) FileDialogPermissionAccess,values: None (0),Open (1),OpenSave (3),Save (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileDialogPermissionAccess()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -574,29 +432,29 @@ class FileDialogPermissionAccess(Enum,IComparable,IFormattable,IConvertible):
   pass
  def __str__(self,*args):
   pass
- None=None
+ None_ =None
  Open=None
  OpenSave=None
  Save=None
  value__=None
 
 
-class FileDialogPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class FileDialogPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for System.Security.Permissions.FileDialogPermission to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for System.Security.Permissions.FileDialogPermission to be applied to code using declarative security. This class cannot be inherited.
+ 
  FileDialogPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileDialogPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: FileDialogPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new System.Security.Permissions.FileDialogPermission.
-
+  CreatePermission(self: FileDialogPermissionAttribute) -> IPermission
+  
+   Creates and returns a new System.Security.Permissions.FileDialogPermission.
    Returns: A System.Security.Permissions.FileDialogPermission that corresponds to this attribute.
   """
   pass
@@ -610,275 +468,154 @@ class FileDialogPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  Open=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether permission to open files through the file dialog is declared.
-
-
-
-Get: Open(self: FileDialogPermissionAttribute) -> bool
-
-
-
-Set: Open(self: FileDialogPermissionAttribute)=value
-
+ """Gets or sets a value indicating whether permission to open files through the file dialog is declared.
+
+Get: Open(self: FileDialogPermissionAttribute) -> bool
+
+Set: Open(self: FileDialogPermissionAttribute)=value
 """
 
  Save=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether permission to save files through the file dialog is declared.
-
-
-
-Get: Save(self: FileDialogPermissionAttribute) -> bool
-
-
-
-Set: Save(self: FileDialogPermissionAttribute)=value
-
+ """Gets or sets a value indicating whether permission to save files through the file dialog is declared.
+
+Get: Save(self: FileDialogPermissionAttribute) -> bool
+
+Set: Save(self: FileDialogPermissionAttribute)=value
 """
 
 
 
-class FileIOPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IUnrestrictedPermission,IBuiltInPermission):
+class FileIOPermission(CodeAccessPermission):
  """
- Controls the ability to access files and folders. This class cannot be inherited.
-
- 
-
- FileIOPermission(state: PermissionState)
-
- FileIOPermission(access: FileIOPermissionAccess,path: str)
-
- FileIOPermission(access: FileIOPermissionAccess,pathList: Array[str])
-
- FileIOPermission(access: FileIOPermissionAccess,control: AccessControlActions,path: str)
-
+ Controls the ability to access files and folders. This class cannot be inherited.
+ 
+ FileIOPermission(state: PermissionState)
+ FileIOPermission(access: FileIOPermissionAccess,path: str)
+ FileIOPermission(access: FileIOPermissionAccess,pathList: Array[str])
+ FileIOPermission(access: FileIOPermissionAccess,control: AccessControlActions,path: str)
  FileIOPermission(access: FileIOPermissionAccess,control: AccessControlActions,pathList: Array[str])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileIOPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddPathList(self,access,*__args):
   """
-  AddPathList(self: FileIOPermission,access: FileIOPermissionAccess,pathList: Array[str])
-
-   Adds access for the specified files and directories to the existing state of the permission.
-
-  
-
-   access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
-
+  AddPathList(self: FileIOPermission,access: FileIOPermissionAccess,path: str)
+   Adds access for the specified file or directory to the existing state of the permission.
+  
+   access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
+   path: The absolute path of a file or directory.
+  AddPathList(self: FileIOPermission,access: FileIOPermissionAccess,pathList: Array[str])
+   Adds access for the specified files and directories to the existing state of the permission.
+  
+   access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
    pathList: An array containing the absolute paths of the files and directories.
-
-  AddPathList(self: FileIOPermission,access: FileIOPermissionAccess,path: str)
-
-   Adds access for the specified file or directory to the existing state of the permission.
-
-  
-
-   access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
-
-   path: The absolute path of a file or directory.
   """
   pass
  def Copy(self):
   """
-  Copy(self: FileIOPermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: FileIOPermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def Equals(self,obj):
   """
-  Equals(self: FileIOPermission,obj: object) -> bool
-
-  
-
-   Determines whether the specified System.Security.Permissions.FileIOPermission object is equal to 
-
-    the current System.Security.Permissions.FileIOPermission.
-
-  
-
-  
-
-   obj: The System.Security.Permissions.FileIOPermission object to compare with the current 
-
-    System.Security.Permissions.FileIOPermission.
-
-  
-
-   Returns: true if the specified System.Security.Permissions.FileIOPermission is equal to the current 
-
-    System.Security.Permissions.FileIOPermission object; otherwise,false.
+  Equals(self: FileIOPermission,obj: object) -> bool
+  
+   Determines whether the specified System.Security.Permissions.FileIOPermission object is equal to the current System.Security.Permissions.FileIOPermission.
+  
+   obj: The System.Security.Permissions.FileIOPermission object to compare with the current System.Security.Permissions.FileIOPermission.
+   Returns: true if the specified System.Security.Permissions.FileIOPermission is equal to the current System.Security.Permissions.FileIOPermission object; otherwise,false.
   """
   pass
  def FromXml(self,esd):
   """
-  FromXml(self: FileIOPermission,esd: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
+  FromXml(self: FileIOPermission,esd: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
    esd: The XML encoding used to reconstruct the permission.
   """
   pass
  def GetHashCode(self):
   """
-  GetHashCode(self: FileIOPermission) -> int
-
-  
-
-   Gets a hash code for the System.Security.Permissions.FileIOPermission object that is suitable 
-
-    for use in hashing algorithms and data structures such as a hash table.
-
-  
-
+  GetHashCode(self: FileIOPermission) -> int
+  
+   Gets a hash code for the System.Security.Permissions.FileIOPermission object that is suitable for use in hashing algorithms and data structures such as a hash table.
    Returns: A hash code for the current System.Security.Permissions.FileIOPermission object.
   """
   pass
  def GetPathList(self,access):
   """
-  GetPathList(self: FileIOPermission,access: FileIOPermissionAccess) -> Array[str]
-
-  
-
-   Gets all files and directories with the specified 
-
-    System.Security.Permissions.FileIOPermissionAccess.
-
-  
-
-  
-
-   access: One of the System.Security.Permissions.FileIOPermissionAccess values that represents a single 
-
-    type of file access.
-
-  
-
-   Returns: An array containing the paths of the files and directories to which access specified by the 
-
-    access parameter is granted.
+  GetPathList(self: FileIOPermission,access: FileIOPermissionAccess) -> Array[str]
+  
+   Gets all files and directories with the specified System.Security.Permissions.FileIOPermissionAccess.
+  
+   access: One of the System.Security.Permissions.FileIOPermissionAccess values that represents a single type of file access.
+   Returns: An array containing the paths of the files and directories to which access specified by the access parameter is granted.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: FileIOPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. This new permission is null if the intersection is empty.
+  Intersect(self: FileIOPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: FileIOPermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission that is to be tested for the subset relationship. This permission must be the same 
-
-    type as the current permission.
-
-  
-
+  IsSubsetOf(self: FileIOPermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: A permission that is to be tested for the subset relationship. This permission must be the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def IsUnrestricted(self):
   """
-  IsUnrestricted(self: FileIOPermission) -> bool
-
-  
-
-   Returns a value indicating whether the current permission is unrestricted.
-
+  IsUnrestricted(self: FileIOPermission) -> bool
+  
+   Returns a value indicating whether the current permission is unrestricted.
    Returns: true if the current permission is unrestricted; otherwise,false.
   """
   pass
  def SetPathList(self,access,*__args):
   """
-  SetPathList(self: FileIOPermission,access: FileIOPermissionAccess,pathList: Array[str])
-
-   Sets the specified access to the specified files and directories,replacing the current state 
-
-    for the specified access with the new set of paths.
-
-  
-
-  
-
-   access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
-
+  SetPathList(self: FileIOPermission,access: FileIOPermissionAccess,path: str)
+   Sets the specified access to the specified file or directory,replacing the existing state of the permission.
+  
+   access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
+   path: The absolute path of the file or directory.
+  SetPathList(self: FileIOPermission,access: FileIOPermissionAccess,pathList: Array[str])
+   Sets the specified access to the specified files and directories,replacing the current state for the specified access with the new set of paths.
+  
+   access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
    pathList: An array containing the absolute paths of the files and directories.
-
-  SetPathList(self: FileIOPermission,access: FileIOPermissionAccess,path: str)
-
-   Sets the specified access to the specified file or directory,replacing the existing state of 
-
-    the permission.
-
-  
-
-  
-
-   access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
-
-   path: The absolute path of the file or directory.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: FileIOPermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
+  ToXml(self: FileIOPermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
    Returns: An XML encoding of the permission,including any state information.
   """
   pass
  def Union(self,other):
   """
-  Union(self: FileIOPermission,other: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the current permission and the specified permission.
-
-  
-
-   other: A permission to combine with the current permission. It must be the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: FileIOPermission,other: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the current permission and the specified permission.
+  
+   other: A permission to combine with the current permission. It must be the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __eq__(self,*args):
@@ -890,14 +627,10 @@ class FileIOPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStac
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
-  __new__(cls: type,access: FileIOPermissionAccess,path: str)
-
-  __new__(cls: type,access: FileIOPermissionAccess,pathList: Array[str])
-
-  __new__(cls: type,access: FileIOPermissionAccess,control: AccessControlActions,path: str)
-
+  __new__(cls: type,state: PermissionState)
+  __new__(cls: type,access: FileIOPermissionAccess,path: str)
+  __new__(cls: type,access: FileIOPermissionAccess,pathList: Array[str])
+  __new__(cls: type,access: FileIOPermissionAccess,control: AccessControlActions,path: str)
   __new__(cls: type,access: FileIOPermissionAccess,control: AccessControlActions,pathList: Array[str])
   """
   pass
@@ -908,41 +641,34 @@ class FileIOPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStac
  def __str__(self,*args):
   pass
  AllFiles=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the permitted access to all files.
-
-
-
-Get: AllFiles(self: FileIOPermission) -> FileIOPermissionAccess
-
-
-
-Set: AllFiles(self: FileIOPermission)=value
-
+ """Gets or sets the permitted access to all files.
+
+Get: AllFiles(self: FileIOPermission) -> FileIOPermissionAccess
+
+Set: AllFiles(self: FileIOPermission)=value
 """
 
  AllLocalFiles=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the permitted access to all local files.
-
-
-
-Get: AllLocalFiles(self: FileIOPermission) -> FileIOPermissionAccess
-
-
-
-Set: AllLocalFiles(self: FileIOPermission)=value
-
+ """Gets or sets the permitted access to all local files.
+
+Get: AllLocalFiles(self: FileIOPermission) -> FileIOPermissionAccess
+
+Set: AllLocalFiles(self: FileIOPermission)=value
 """
 
 
 
-class FileIOPermissionAccess(Enum,IComparable,IFormattable,IConvertible):
+class FileIOPermissionAccess:
  """
- Specifies the type of file access requested.
-
- 
-
+ Specifies the type of file access requested.
+ 
  enum (flags) FileIOPermissionAccess,values: AllAccess (15),Append (4),NoAccess (0),PathDiscovery (8),Read (1),Write (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileIOPermissionAccess()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -975,22 +701,22 @@ class FileIOPermissionAccess(Enum,IComparable,IFormattable,IConvertible):
  Write=None
 
 
-class FileIOPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class FileIOPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for System.Security.Permissions.FileIOPermission to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for System.Security.Permissions.FileIOPermission to be applied to code using declarative security. This class cannot be inherited.
+ 
  FileIOPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileIOPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: FileIOPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new System.Security.Permissions.FileIOPermission.
-
+  CreatePermission(self: FileIOPermissionAttribute) -> IPermission
+  
+   Creates and returns a new System.Security.Permissions.FileIOPermission.
    Returns: A System.Security.Permissions.FileIOPermission that corresponds to this attribute.
   """
   pass
@@ -1004,251 +730,151 @@ class FileIOPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  All=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets full access for the file or directory that is specified by the string value.
-
-
-
-Get: All(self: FileIOPermissionAttribute) -> str
-
-
-
-Set: All(self: FileIOPermissionAttribute)=value
-
+ """Gets or sets full access for the file or directory that is specified by the string value.
+
+Get: All(self: FileIOPermissionAttribute) -> str
+
+Set: All(self: FileIOPermissionAttribute)=value
 """
 
  AllFiles=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the permitted access to all files.
-
-
-
-Get: AllFiles(self: FileIOPermissionAttribute) -> FileIOPermissionAccess
-
-
-
-Set: AllFiles(self: FileIOPermissionAttribute)=value
-
+ """Gets or sets the permitted access to all files.
+
+Get: AllFiles(self: FileIOPermissionAttribute) -> FileIOPermissionAccess
+
+Set: AllFiles(self: FileIOPermissionAttribute)=value
 """
 
  AllLocalFiles=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the permitted access to all local files.
-
-
-
-Get: AllLocalFiles(self: FileIOPermissionAttribute) -> FileIOPermissionAccess
-
-
-
-Set: AllLocalFiles(self: FileIOPermissionAttribute)=value
-
+ """Gets or sets the permitted access to all local files.
+
+Get: AllLocalFiles(self: FileIOPermissionAttribute) -> FileIOPermissionAccess
+
+Set: AllLocalFiles(self: FileIOPermissionAttribute)=value
 """
 
  Append=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets append access for the file or directory that is specified by the string value.
-
-
-
-Get: Append(self: FileIOPermissionAttribute) -> str
-
-
-
-Set: Append(self: FileIOPermissionAttribute)=value
-
+ """Gets or sets append access for the file or directory that is specified by the string value.
+
+Get: Append(self: FileIOPermissionAttribute) -> str
+
+Set: Append(self: FileIOPermissionAttribute)=value
 """
 
  ChangeAccessControl=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the file or directory in which access control information can be changed.
-
-
-
-Get: ChangeAccessControl(self: FileIOPermissionAttribute) -> str
-
-
-
-Set: ChangeAccessControl(self: FileIOPermissionAttribute)=value
-
+ """Gets or sets the file or directory in which access control information can be changed.
+
+Get: ChangeAccessControl(self: FileIOPermissionAttribute) -> str
+
+Set: ChangeAccessControl(self: FileIOPermissionAttribute)=value
 """
 
  PathDiscovery=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the file or directory to which to grant path discovery.
-
-
-
-Get: PathDiscovery(self: FileIOPermissionAttribute) -> str
-
-
-
-Set: PathDiscovery(self: FileIOPermissionAttribute)=value
-
+ """Gets or sets the file or directory to which to grant path discovery.
+
+Get: PathDiscovery(self: FileIOPermissionAttribute) -> str
+
+Set: PathDiscovery(self: FileIOPermissionAttribute)=value
 """
 
  Read=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets read access for the file or directory specified by the string value.
-
-
-
-Get: Read(self: FileIOPermissionAttribute) -> str
-
-
-
-Set: Read(self: FileIOPermissionAttribute)=value
-
+ """Gets or sets read access for the file or directory specified by the string value.
+
+Get: Read(self: FileIOPermissionAttribute) -> str
+
+Set: Read(self: FileIOPermissionAttribute)=value
 """
 
  ViewAccessControl=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the file or directory in which access control information can be viewed.
-
-
-
-Get: ViewAccessControl(self: FileIOPermissionAttribute) -> str
-
-
-
-Set: ViewAccessControl(self: FileIOPermissionAttribute)=value
-
+ """Gets or sets the file or directory in which access control information can be viewed.
+
+Get: ViewAccessControl(self: FileIOPermissionAttribute) -> str
+
+Set: ViewAccessControl(self: FileIOPermissionAttribute)=value
 """
 
  ViewAndModify=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the file or directory in which file data can be viewed and modified.
-
-
-
-Get: ViewAndModify(self: FileIOPermissionAttribute) -> str
-
-
-
-Set: ViewAndModify(self: FileIOPermissionAttribute)=value
-
+ """Gets or sets the file or directory in which file data can be viewed and modified.
+
+Get: ViewAndModify(self: FileIOPermissionAttribute) -> str
+
+Set: ViewAndModify(self: FileIOPermissionAttribute)=value
 """
 
  Write=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets write access for the file or directory specified by the string value.
-
-
-
-Get: Write(self: FileIOPermissionAttribute) -> str
-
-
-
-Set: Write(self: FileIOPermissionAttribute)=value
-
+ """Gets or sets write access for the file or directory specified by the string value.
+
+Get: Write(self: FileIOPermissionAttribute) -> str
+
+Set: Write(self: FileIOPermissionAttribute)=value
 """
 
 
 
-class GacIdentityPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IBuiltInPermission):
+class GacIdentityPermission(CodeAccessPermission):
  """
- Defines the identity permission for files originating in the global assembly cache. This class cannot be inherited.
-
- 
-
- GacIdentityPermission(state: PermissionState)
-
+ Defines the identity permission for files originating in the global assembly cache. This class cannot be inherited.
+ 
+ GacIdentityPermission(state: PermissionState)
  GacIdentityPermission()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GacIdentityPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
-  Copy(self: GacIdentityPermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: GacIdentityPermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def FromXml(self,securityElement):
   """
-  FromXml(self: GacIdentityPermission,securityElement: SecurityElement)
-
-   Creates a permission from an XML encoding.
-
-  
-
-   securityElement: A System.Security.SecurityElement  that contains the XML encoding to use to create the 
-
-    permission.
+  FromXml(self: GacIdentityPermission,securityElement: SecurityElement)
+   Creates a permission from an XML encoding.
+  
+   securityElement: A System.Security.SecurityElement  that contains the XML encoding to use to create the permission.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: GacIdentityPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be of the same type as the 
-
-    current permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. The new permission is null if the intersection is empty.
+  Intersect(self: GacIdentityPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. The new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: GacIdentityPermission,target: IPermission) -> bool
-
-  
-
-   Indicates whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission object to test for the subset relationship. The permission must be of the same type 
-
-    as the current permission.
-
-  
-
+  IsSubsetOf(self: GacIdentityPermission,target: IPermission) -> bool
+  
+   Indicates whether the current permission is a subset of the specified permission.
+  
+   target: A permission object to test for the subset relationship. The permission must be of the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: GacIdentityPermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
-   Returns: A System.Security.SecurityElement that represents the XML encoding of the permission,including 
-
-    any state information.
+  ToXml(self: GacIdentityPermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
+   Returns: A System.Security.SecurityElement that represents the XML encoding of the permission,including any state information.
   """
   pass
  def Union(self,target):
   """
-  Union(self: GacIdentityPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the union of the current permission and the specified 
-
-    permission.
-
-  
-
-  
-
-   target: A permission to combine with the current permission. It must be of the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: GacIdentityPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the union of the current permission and the specified permission.
+  
+   target: A permission to combine with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -1257,8 +883,7 @@ class GacIdentityPermission(CodeAccessPermission,IPermission,ISecurityEncodable,
  @staticmethod
  def __new__(self,state=None):
   """
-  __new__(cls: type,state: PermissionState)
-
+  __new__(cls: type,state: PermissionState)
   __new__(cls: type)
   """
   pass
@@ -1267,22 +892,22 @@ class GacIdentityPermission(CodeAccessPermission,IPermission,ISecurityEncodable,
  def __str__(self,*args):
   pass
 
-class GacIdentityPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class GacIdentityPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for System.Security.Permissions.GacIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for System.Security.Permissions.GacIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
+ 
  GacIdentityPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return GacIdentityPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: GacIdentityPermissionAttribute) -> IPermission
-
-  
-
-   Creates a new System.Security.Permissions.GacIdentityPermission object.
-
+  CreatePermission(self: GacIdentityPermissionAttribute) -> IPermission
+  
+   Creates a new System.Security.Permissions.GacIdentityPermission object.
    Returns: A System.Security.Permissions.GacIdentityPermission that corresponds to this attribute.
   """
   pass
@@ -1296,24 +921,23 @@ class GacIdentityPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
 
-class HostProtectionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class HostProtectionAttribute(CodeAccessSecurityAttribute):
  """
- Allows the use of declarative security actions to determine host protection requirements. This class cannot be inherited.
-
- 
-
- HostProtectionAttribute()
-
+ Allows the use of declarative security actions to determine host protection requirements. This class cannot be inherited.
+ 
+ HostProtectionAttribute()
  HostProtectionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HostProtectionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: HostProtectionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new host protection permission.
-
+  CreatePermission(self: HostProtectionAttribute) -> IPermission
+  
+   Creates and returns a new host protection permission.
    Returns: An System.Security.IPermission that corresponds to the current attribute.
   """
   pass
@@ -1323,153 +947,105 @@ class HostProtectionAttribute(CodeAccessSecurityAttribute,_Attribute):
  @staticmethod
  def __new__(self,action=None):
   """
-  __new__(cls: type)
-
+  __new__(cls: type)
   __new__(cls: type,action: SecurityAction)
   """
   pass
  def __reduce_ex__(self,*args):
   pass
  ExternalProcessMgmt=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether external process management is exposed.
-
-
-
-Get: ExternalProcessMgmt(self: HostProtectionAttribute) -> bool
-
-
-
-Set: ExternalProcessMgmt(self: HostProtectionAttribute)=value
-
+ """Gets or sets a value indicating whether external process management is exposed.
+
+Get: ExternalProcessMgmt(self: HostProtectionAttribute) -> bool
+
+Set: ExternalProcessMgmt(self: HostProtectionAttribute)=value
 """
 
  ExternalThreading=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether external threading is exposed.
-
-
-
-Get: ExternalThreading(self: HostProtectionAttribute) -> bool
-
-
-
-Set: ExternalThreading(self: HostProtectionAttribute)=value
-
+ """Gets or sets a value indicating whether external threading is exposed.
+
+Get: ExternalThreading(self: HostProtectionAttribute) -> bool
+
+Set: ExternalThreading(self: HostProtectionAttribute)=value
 """
 
  MayLeakOnAbort=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether resources might leak memory if the operation is terminated.
-
-
-
-Get: MayLeakOnAbort(self: HostProtectionAttribute) -> bool
-
-
-
-Set: MayLeakOnAbort(self: HostProtectionAttribute)=value
-
+ """Gets or sets a value indicating whether resources might leak memory if the operation is terminated.
+
+Get: MayLeakOnAbort(self: HostProtectionAttribute) -> bool
+
+Set: MayLeakOnAbort(self: HostProtectionAttribute)=value
 """
 
  Resources=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets flags specifying categories of functionality that are potentially harmful to the host.
-
-
-
-Get: Resources(self: HostProtectionAttribute) -> HostProtectionResource
-
-
-
-Set: Resources(self: HostProtectionAttribute)=value
-
+ """Gets or sets flags specifying categories of functionality that are potentially harmful to the host.
+
+Get: Resources(self: HostProtectionAttribute) -> HostProtectionResource
+
+Set: Resources(self: HostProtectionAttribute)=value
 """
 
  SecurityInfrastructure=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether the security infrastructure is exposed.
-
-
-
-Get: SecurityInfrastructure(self: HostProtectionAttribute) -> bool
-
-
-
-Set: SecurityInfrastructure(self: HostProtectionAttribute)=value
-
+ """Gets or sets a value indicating whether the security infrastructure is exposed.
+
+Get: SecurityInfrastructure(self: HostProtectionAttribute) -> bool
+
+Set: SecurityInfrastructure(self: HostProtectionAttribute)=value
 """
 
  SelfAffectingProcessMgmt=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether self-affecting process management is exposed.
-
-
-
-Get: SelfAffectingProcessMgmt(self: HostProtectionAttribute) -> bool
-
-
-
-Set: SelfAffectingProcessMgmt(self: HostProtectionAttribute)=value
-
+ """Gets or sets a value indicating whether self-affecting process management is exposed.
+
+Get: SelfAffectingProcessMgmt(self: HostProtectionAttribute) -> bool
+
+Set: SelfAffectingProcessMgmt(self: HostProtectionAttribute)=value
 """
 
  SelfAffectingThreading=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether self-affecting threading is exposed.
-
-
-
-Get: SelfAffectingThreading(self: HostProtectionAttribute) -> bool
-
-
-
-Set: SelfAffectingThreading(self: HostProtectionAttribute)=value
-
+ """Gets or sets a value indicating whether self-affecting threading is exposed.
+
+Get: SelfAffectingThreading(self: HostProtectionAttribute) -> bool
+
+Set: SelfAffectingThreading(self: HostProtectionAttribute)=value
 """
 
  SharedState=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether shared state is exposed.
-
-
-
-Get: SharedState(self: HostProtectionAttribute) -> bool
-
-
-
-Set: SharedState(self: HostProtectionAttribute)=value
-
+ """Gets or sets a value indicating whether shared state is exposed.
+
+Get: SharedState(self: HostProtectionAttribute) -> bool
+
+Set: SharedState(self: HostProtectionAttribute)=value
 """
 
  Synchronization=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether synchronization is exposed.
-
-
-
-Get: Synchronization(self: HostProtectionAttribute) -> bool
-
-
-
-Set: Synchronization(self: HostProtectionAttribute)=value
-
+ """Gets or sets a value indicating whether synchronization is exposed.
+
+Get: Synchronization(self: HostProtectionAttribute) -> bool
+
+Set: Synchronization(self: HostProtectionAttribute)=value
 """
 
  UI=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether the user interface is exposed.
-
-
-
-Get: UI(self: HostProtectionAttribute) -> bool
-
-
-
-Set: UI(self: HostProtectionAttribute)=value
-
+ """Gets or sets a value indicating whether the user interface is exposed.
+
+Get: UI(self: HostProtectionAttribute) -> bool
+
+Set: UI(self: HostProtectionAttribute)=value
 """
 
 
 
-class HostProtectionResource(Enum,IComparable,IFormattable,IConvertible):
+class HostProtectionResource:
  """
- Specifies categories of functionality potentially harmful to the host if invoked by a method or class.
-
- 
-
+ Specifies categories of functionality potentially harmful to the host if invoked by a method or class.
+ 
  enum (flags) HostProtectionResource,values: All (511),ExternalProcessMgmt (4),ExternalThreading (16),MayLeakOnAbort (256),None (0),SecurityInfrastructure (64),SelfAffectingProcessMgmt (8),SelfAffectingThreading (32),SharedState (2),Synchronization (1),UI (128)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HostProtectionResource()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -1497,7 +1073,7 @@ class HostProtectionResource(Enum,IComparable,IFormattable,IConvertible):
  ExternalProcessMgmt=None
  ExternalThreading=None
  MayLeakOnAbort=None
- None=None
+ None_ =None
  SecurityInfrastructure=None
  SelfAffectingProcessMgmt=None
  SelfAffectingThreading=None
@@ -1507,14 +1083,17 @@ class HostProtectionResource(Enum,IComparable,IFormattable,IConvertible):
  value__=None
 
 
-class IsolatedStorageContainment(Enum,IComparable,IFormattable,IConvertible):
+class IsolatedStorageContainment:
  """
- Specifies the permitted use of isolated storage.
-
- 
-
+ Specifies the permitted use of isolated storage.
+ 
  enum IsolatedStorageContainment,values: AdministerIsolatedStorageByUser (112),ApplicationIsolationByMachine (69),ApplicationIsolationByRoamingUser (101),ApplicationIsolationByUser (21),AssemblyIsolationByMachine (64),AssemblyIsolationByRoamingUser (96),AssemblyIsolationByUser (32),DomainIsolationByMachine (48),DomainIsolationByRoamingUser (80),DomainIsolationByUser (16),None (0),UnrestrictedIsolatedStorage (240)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IsolatedStorageContainment()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -1548,43 +1127,39 @@ class IsolatedStorageContainment(Enum,IComparable,IFormattable,IConvertible):
  DomainIsolationByMachine=None
  DomainIsolationByRoamingUser=None
  DomainIsolationByUser=None
- None=None
+ None_ =None
  UnrestrictedIsolatedStorage=None
  value__=None
 
 
-class IsolatedStoragePermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IUnrestrictedPermission):
+class IsolatedStoragePermission(CodeAccessPermission):
  """ Represents access to generic isolated storage capabilities. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IsolatedStoragePermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def FromXml(self,esd):
   """
-  FromXml(self: IsolatedStoragePermission,esd: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
+  FromXml(self: IsolatedStoragePermission,esd: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
    esd: The XML encoding to use to reconstruct the permission.
   """
   pass
  def IsUnrestricted(self):
   """
-  IsUnrestricted(self: IsolatedStoragePermission) -> bool
-
-  
-
-   Returns a value indicating whether the current permission is unrestricted.
-
+  IsUnrestricted(self: IsolatedStoragePermission) -> bool
+  
+   Returns a value indicating whether the current permission is unrestricted.
    Returns: true if the current permission is unrestricted; otherwise,false.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: IsolatedStoragePermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
+  ToXml(self: IsolatedStoragePermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
    Returns: An XML encoding of the permission,including any state information.
   """
   pass
@@ -1600,126 +1175,78 @@ class IsolatedStoragePermission(CodeAccessPermission,IPermission,ISecurityEncoda
  def __str__(self,*args):
   pass
  UsageAllowed=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the type of isolated storage containment allowed.
-
-
-
-Get: UsageAllowed(self: IsolatedStoragePermission) -> IsolatedStorageContainment
-
-
-
-Set: UsageAllowed(self: IsolatedStoragePermission)=value
-
+ """Gets or sets the type of isolated storage containment allowed.
+
+Get: UsageAllowed(self: IsolatedStoragePermission) -> IsolatedStorageContainment
+
+Set: UsageAllowed(self: IsolatedStoragePermission)=value
 """
 
  UserQuota=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the quota on the overall size of each user's total store.
-
-
-
-Get: UserQuota(self: IsolatedStoragePermission) -> Int64
-
-
-
-Set: UserQuota(self: IsolatedStoragePermission)=value
-
+ """Gets or sets the quota on the overall size of each user's total store.
+
+Get: UserQuota(self: IsolatedStoragePermission) -> Int64
+
+Set: UserQuota(self: IsolatedStoragePermission)=value
 """
 
 
 
-class IsolatedStorageFilePermission(IsolatedStoragePermission,IPermission,ISecurityEncodable,IStackWalk,IUnrestrictedPermission,IBuiltInPermission):
+class IsolatedStorageFilePermission:
  """
- Specifies the allowed usage of a private virtual file system. This class cannot be inherited.
-
- 
-
+ Specifies the allowed usage of a private virtual file system. This class cannot be inherited.
+ 
  IsolatedStorageFilePermission(state: PermissionState)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IsolatedStorageFilePermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
-  Copy(self: IsolatedStorageFilePermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: IsolatedStorageFilePermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: IsolatedStorageFilePermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission object. It must be of the same type as the 
-
-    current permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. This new permission is null if the intersection is empty.
+  Intersect(self: IsolatedStorageFilePermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission object. It must be of the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: IsolatedStorageFilePermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission that is to be tested for the subset relationship. This permission must be of the 
-
-    same type as the current permission.
-
-  
-
+  IsSubsetOf(self: IsolatedStorageFilePermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: IsolatedStorageFilePermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
+  ToXml(self: IsolatedStorageFilePermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
    Returns: An XML encoding of the permission,including any state information.
   """
   pass
  def Union(self,target):
   """
-  Union(self: IsolatedStorageFilePermission,target: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the current permission and the specified permission.
-
-  
-
-   target: A permission to combine with the current permission. It must be of the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: IsolatedStorageFilePermission,target: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the current permission and the specified permission.
+  
+   target: A permission to combine with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -1734,8 +1261,13 @@ class IsolatedStorageFilePermission(IsolatedStoragePermission,IPermission,ISecur
  def __str__(self,*args):
   pass
 
-class IsolatedStoragePermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class IsolatedStoragePermissionAttribute(CodeAccessSecurityAttribute):
  """ Allows security actions for System.Security.Permissions.IsolatedStoragePermission to be applied to code using declarative security. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IsolatedStoragePermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -1746,49 +1278,39 @@ class IsolatedStoragePermissionAttribute(CodeAccessSecurityAttribute,_Attribute)
  def __reduce_ex__(self,*args):
   pass
  UsageAllowed=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the level of isolated storage that should be declared.
-
-
-
-Get: UsageAllowed(self: IsolatedStoragePermissionAttribute) -> IsolatedStorageContainment
-
-
-
-Set: UsageAllowed(self: IsolatedStoragePermissionAttribute)=value
-
+ """Gets or sets the level of isolated storage that should be declared.
+
+Get: UsageAllowed(self: IsolatedStoragePermissionAttribute) -> IsolatedStorageContainment
+
+Set: UsageAllowed(self: IsolatedStoragePermissionAttribute)=value
 """
 
  UserQuota=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the maximum user storage quota size.
-
-
-
-Get: UserQuota(self: IsolatedStoragePermissionAttribute) -> Int64
-
-
-
-Set: UserQuota(self: IsolatedStoragePermissionAttribute)=value
-
+ """Gets or sets the maximum user storage quota size.
+
+Get: UserQuota(self: IsolatedStoragePermissionAttribute) -> Int64
+
+Set: UserQuota(self: IsolatedStoragePermissionAttribute)=value
 """
 
 
 
-class IsolatedStorageFilePermissionAttribute(IsolatedStoragePermissionAttribute,_Attribute):
+class IsolatedStorageFilePermissionAttribute:
  """
- Allows security actions for System.Security.Permissions.IsolatedStorageFilePermission to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for System.Security.Permissions.IsolatedStorageFilePermission to be applied to code using declarative security. This class cannot be inherited.
+ 
  IsolatedStorageFilePermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IsolatedStorageFilePermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: IsolatedStorageFilePermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new System.Security.Permissions.IsolatedStorageFilePermission.
-
+  CreatePermission(self: IsolatedStorageFilePermissionAttribute) -> IPermission
+  
+   Creates and returns a new System.Security.Permissions.IsolatedStorageFilePermission.
    Returns: An System.Security.Permissions.IsolatedStorageFilePermission that corresponds to this attribute.
   """
   pass
@@ -1802,129 +1324,79 @@ class IsolatedStorageFilePermissionAttribute(IsolatedStoragePermissionAttribute,
  def __reduce_ex__(self,*args):
   pass
 
-class KeyContainerPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IUnrestrictedPermission,IBuiltInPermission):
+class KeyContainerPermission(CodeAccessPermission):
  """
- Controls the ability to access key containers. This class cannot be inherited.
-
- 
-
- KeyContainerPermission(flags: KeyContainerPermissionFlags)
-
- KeyContainerPermission(state: PermissionState)
-
+ Controls the ability to access key containers. This class cannot be inherited.
+ 
+ KeyContainerPermission(flags: KeyContainerPermissionFlags)
+ KeyContainerPermission(state: PermissionState)
  KeyContainerPermission(flags: KeyContainerPermissionFlags,accessList: Array[KeyContainerPermissionAccessEntry])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return KeyContainerPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
-  Copy(self: KeyContainerPermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: KeyContainerPermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def FromXml(self,securityElement):
   """
-  FromXml(self: KeyContainerPermission,securityElement: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
-   securityElement: A System.Security.SecurityElement that contains the XML encoding used to reconstruct the 
-
-    permission.
+  FromXml(self: KeyContainerPermission,securityElement: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
+   securityElement: A System.Security.SecurityElement that contains the XML encoding used to reconstruct the permission.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: KeyContainerPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. This new permission is null if the intersection is empty.
+  Intersect(self: KeyContainerPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: KeyContainerPermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission to test for the subset relationship. This permission must be the same type as the 
-
-    current permission.
-
-  
-
+  IsSubsetOf(self: KeyContainerPermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: A permission to test for the subset relationship. This permission must be the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def IsUnrestricted(self):
   """
-  IsUnrestricted(self: KeyContainerPermission) -> bool
-
-  
-
-   Determines whether the current permission is unrestricted.
-
+  IsUnrestricted(self: KeyContainerPermission) -> bool
+  
+   Determines whether the current permission is unrestricted.
    Returns: true if the current permission is unrestricted; otherwise,false.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: KeyContainerPermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
-   Returns: A System.Security.SecurityElement that contains an XML encoding of the permission,including 
-
-    state information.
+  ToXml(self: KeyContainerPermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
+   Returns: A System.Security.SecurityElement that contains an XML encoding of the permission,including state information.
   """
   pass
  def Union(self,target):
   """
-  Union(self: KeyContainerPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the current permission and the specified permission.
-
-  
-
-   target: A permission to combine with the current permission. It must be of the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: KeyContainerPermission,target: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the current permission and the specified permission.
+  
+   target: A permission to combine with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -1933,10 +1405,8 @@ class KeyContainerPermission(CodeAccessPermission,IPermission,ISecurityEncodable
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
-  __new__(cls: type,flags: KeyContainerPermissionFlags)
-
+  __new__(cls: type,state: PermissionState)
+  __new__(cls: type,flags: KeyContainerPermissionFlags)
   __new__(cls: type,flags: KeyContainerPermissionFlags,accessList: Array[KeyContainerPermissionAccessEntry])
   """
   pass
@@ -1945,80 +1415,50 @@ class KeyContainerPermission(CodeAccessPermission,IPermission,ISecurityEncodable
  def __str__(self,*args):
   pass
  AccessEntries=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the collection of System.Security.Permissions.KeyContainerPermissionAccessEntry objects associated with the current permission.
-
-
-
-Get: AccessEntries(self: KeyContainerPermission) -> KeyContainerPermissionAccessEntryCollection
-
-
-
+ """Gets the collection of System.Security.Permissions.KeyContainerPermissionAccessEntry objects associated with the current permission.
+
+Get: AccessEntries(self: KeyContainerPermission) -> KeyContainerPermissionAccessEntryCollection
+
 """
 
  Flags=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the key container permission flags that apply to all key containers associated with the permission.
-
-
-
-Get: Flags(self: KeyContainerPermission) -> KeyContainerPermissionFlags
-
-
-
+ """Gets the key container permission flags that apply to all key containers associated with the permission.
+
+Get: Flags(self: KeyContainerPermission) -> KeyContainerPermissionFlags
+
 """
 
 
 
 class KeyContainerPermissionAccessEntry(object):
  """
- Specifies access rights for specific key containers. This class cannot be inherited.
-
- 
-
- KeyContainerPermissionAccessEntry(keyContainerName: str,flags: KeyContainerPermissionFlags)
-
- KeyContainerPermissionAccessEntry(parameters: CspParameters,flags: KeyContainerPermissionFlags)
-
+ Specifies access rights for specific key containers. This class cannot be inherited.
+ 
+ KeyContainerPermissionAccessEntry(keyContainerName: str,flags: KeyContainerPermissionFlags)
+ KeyContainerPermissionAccessEntry(parameters: CspParameters,flags: KeyContainerPermissionFlags)
  KeyContainerPermissionAccessEntry(keyStore: str,providerName: str,providerType: int,keyContainerName: str,keySpec: int,flags: KeyContainerPermissionFlags)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return KeyContainerPermissionAccessEntry()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,o):
   """
-  Equals(self: KeyContainerPermissionAccessEntry,o: object) -> bool
-
-  
-
-   Determines whether the specified System.Security.Permissions.KeyContainerPermissionAccessEntry 
-
-    object is equal to the current instance.
-
-  
-
-  
-
-   o: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to compare with the 
-
-    currentinstance.
-
-  
-
-   Returns: true if the specified System.Security.Permissions.KeyContainerPermissionAccessEntry is equal to 
-
-    the current System.Security.Permissions.KeyContainerPermissionAccessEntry object; otherwise,
-
-    false.
+  Equals(self: KeyContainerPermissionAccessEntry,o: object) -> bool
+  
+   Determines whether the specified System.Security.Permissions.KeyContainerPermissionAccessEntry object is equal to the current instance.
+  
+   o: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to compare with the currentinstance.
+   Returns: true if the specified System.Security.Permissions.KeyContainerPermissionAccessEntry is equal to the current System.Security.Permissions.KeyContainerPermissionAccessEntry 
+    object; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
-  GetHashCode(self: KeyContainerPermissionAccessEntry) -> int
-
-  
-
-   Gets a hash code for the current instance that is suitable for use in hashing algorithms and 
-
-    data structures such as a hash table.
-
-  
-
+  GetHashCode(self: KeyContainerPermissionAccessEntry) -> int
+  
+   Gets a hash code for the current instance that is suitable for use in hashing algorithms and data structures such as a hash table.
    Returns: A hash code for the current System.Security.Permissions.KeyContainerPermissionAccessEntry object.
   """
   pass
@@ -2028,193 +1468,117 @@ class KeyContainerPermissionAccessEntry(object):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,keyContainerName: str,flags: KeyContainerPermissionFlags)
-
-  __new__(cls: type,parameters: CspParameters,flags: KeyContainerPermissionFlags)
-
+  __new__(cls: type,keyContainerName: str,flags: KeyContainerPermissionFlags)
+  __new__(cls: type,parameters: CspParameters,flags: KeyContainerPermissionFlags)
   __new__(cls: type,keyStore: str,providerName: str,providerType: int,keyContainerName: str,keySpec: int,flags: KeyContainerPermissionFlags)
   """
   pass
  def __ne__(self,*args):
   pass
  Flags=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the key container permissions.
-
-
-
-Get: Flags(self: KeyContainerPermissionAccessEntry) -> KeyContainerPermissionFlags
-
-
-
-Set: Flags(self: KeyContainerPermissionAccessEntry)=value
-
+ """Gets or sets the key container permissions.
+
+Get: Flags(self: KeyContainerPermissionAccessEntry) -> KeyContainerPermissionFlags
+
+Set: Flags(self: KeyContainerPermissionAccessEntry)=value
 """
 
  KeyContainerName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the key container name.
-
-
-
-Get: KeyContainerName(self: KeyContainerPermissionAccessEntry) -> str
-
-
-
-Set: KeyContainerName(self: KeyContainerPermissionAccessEntry)=value
-
+ """Gets or sets the key container name.
+
+Get: KeyContainerName(self: KeyContainerPermissionAccessEntry) -> str
+
+Set: KeyContainerName(self: KeyContainerPermissionAccessEntry)=value
 """
 
  KeySpec=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the key specification.
-
-
-
-Get: KeySpec(self: KeyContainerPermissionAccessEntry) -> int
-
-
-
-Set: KeySpec(self: KeyContainerPermissionAccessEntry)=value
-
+ """Gets or sets the key specification.
+
+Get: KeySpec(self: KeyContainerPermissionAccessEntry) -> int
+
+Set: KeySpec(self: KeyContainerPermissionAccessEntry)=value
 """
 
  KeyStore=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the name of the key store.
-
-
-
-Get: KeyStore(self: KeyContainerPermissionAccessEntry) -> str
-
-
-
-Set: KeyStore(self: KeyContainerPermissionAccessEntry)=value
-
+ """Gets or sets the name of the key store.
+
+Get: KeyStore(self: KeyContainerPermissionAccessEntry) -> str
+
+Set: KeyStore(self: KeyContainerPermissionAccessEntry)=value
 """
 
  ProviderName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the provider name.
-
-
-
-Get: ProviderName(self: KeyContainerPermissionAccessEntry) -> str
-
-
-
-Set: ProviderName(self: KeyContainerPermissionAccessEntry)=value
-
+ """Gets or sets the provider name.
+
+Get: ProviderName(self: KeyContainerPermissionAccessEntry) -> str
+
+Set: ProviderName(self: KeyContainerPermissionAccessEntry)=value
 """
 
  ProviderType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the provider type.
-
-
-
-Get: ProviderType(self: KeyContainerPermissionAccessEntry) -> int
-
-
-
-Set: ProviderType(self: KeyContainerPermissionAccessEntry)=value
-
+ """Gets or sets the provider type.
+
+Get: ProviderType(self: KeyContainerPermissionAccessEntry) -> int
+
+Set: ProviderType(self: KeyContainerPermissionAccessEntry)=value
 """
 
 
 
-class KeyContainerPermissionAccessEntryCollection(object,ICollection,IEnumerable):
+class KeyContainerPermissionAccessEntryCollection(object):
  """ Represents a collection of System.Security.Permissions.KeyContainerPermissionAccessEntry objects. This class cannot be inherited. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return KeyContainerPermissionAccessEntryCollection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Add(self,accessEntry):
   """
-  Add(self: KeyContainerPermissionAccessEntryCollection,accessEntry: KeyContainerPermissionAccessEntry) -> int
-
-  
-
-   Adds a System.Security.Permissions.KeyContainerPermissionAccessEntry object to the collection.
-
-  
-
-   accessEntry: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to add.
-
+  Add(self: KeyContainerPermissionAccessEntryCollection,accessEntry: KeyContainerPermissionAccessEntry) -> int
+  
+   Adds a System.Security.Permissions.KeyContainerPermissionAccessEntry object to the collection.
+  
+   accessEntry: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to add.
    Returns: The index at which the new element was inserted.
   """
   pass
  def Clear(self):
   """
-  Clear(self: KeyContainerPermissionAccessEntryCollection)
-
-   Removes all the System.Security.Permissions.KeyContainerPermissionAccessEntry objects from the 
-
-    collection.
+  Clear(self: KeyContainerPermissionAccessEntryCollection)
+   Removes all the System.Security.Permissions.KeyContainerPermissionAccessEntry objects from the collection.
   """
   pass
  def CopyTo(self,array,index):
   """
-  CopyTo(self: KeyContainerPermissionAccessEntryCollection,array: Array[KeyContainerPermissionAccessEntry],index: int)
-
-   Copies the elements of the collection to a compatible one-dimensional array,starting at the 
-
-    specified index of the target array.
-
-  
-
-  
-
-   array: The one-dimensional System.Security.Permissions.KeyContainerPermissionAccessEntry array that is 
-
-    the destination of the elements copied from the current collection.
-
-  
-
+  CopyTo(self: KeyContainerPermissionAccessEntryCollection,array: Array[KeyContainerPermissionAccessEntry],index: int)
+   Copies the elements of the collection to a compatible one-dimensional array,starting at the specified index of the target array.
+  
+   array: The one-dimensional System.Security.Permissions.KeyContainerPermissionAccessEntry array that is the destination of the elements copied from the current collection.
    index: The index in array at which copying begins.
   """
   pass
  def GetEnumerator(self):
   """
-  GetEnumerator(self: KeyContainerPermissionAccessEntryCollection) -> KeyContainerPermissionAccessEntryEnumerator
-
-  
-
-   Returns a System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator object that 
-
-    can be used to iterate through the objects in the collection.
-
-  
-
-   Returns: A System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator object that can be 
-
-    used to iterate through the collection.
+  GetEnumerator(self: KeyContainerPermissionAccessEntryCollection) -> KeyContainerPermissionAccessEntryEnumerator
+  
+   Returns a System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator object that can be used to iterate through the objects in the collection.
+   Returns: A System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator object that can be used to iterate through the collection.
   """
   pass
  def IndexOf(self,accessEntry):
   """
-  IndexOf(self: KeyContainerPermissionAccessEntryCollection,accessEntry: KeyContainerPermissionAccessEntry) -> int
-
-  
-
-   Gets the index in the collection of the specified 
-
-    System.Security.Permissions.KeyContainerPermissionAccessEntry object,if it exists in the 
-
-    collection.
-
-  
-
-  
-
-   accessEntry: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to locate.
-
-   Returns: The index of the specified System.Security.Permissions.KeyContainerPermissionAccessEntry object 
-
+  IndexOf(self: KeyContainerPermissionAccessEntryCollection,accessEntry: KeyContainerPermissionAccessEntry) -> int
+  
+   Gets the index in the collection of the specified System.Security.Permissions.KeyContainerPermissionAccessEntry object,if it exists in the collection.
+  
+   accessEntry: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to locate.
     """
   pass
  def Remove(self,accessEntry):
   """
-  Remove(self: KeyContainerPermissionAccessEntryCollection,accessEntry: KeyContainerPermissionAccessEntry)
-
-   Removes the specified System.Security.Permissions.KeyContainerPermissionAccessEntry object from 
-
-    thecollection.
-
-  
-
-  
-
+  Remove(self: KeyContainerPermissionAccessEntryCollection,accessEntry: KeyContainerPermissionAccessEntry)
+   Removes the specified System.Security.Permissions.KeyContainerPermissionAccessEntry object from thecollection.
+  
    accessEntry: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to remove.
   """
   pass
@@ -2239,53 +1603,41 @@ class KeyContainerPermissionAccessEntryCollection(object,ICollection,IEnumerable
   """ __repr__(self: object) -> str """
   pass
  Count=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the number of items in the collection.
-
-
-
-Get: Count(self: KeyContainerPermissionAccessEntryCollection) -> int
-
-
-
+ """Gets the number of items in the collection.
+
+Get: Count(self: KeyContainerPermissionAccessEntryCollection) -> int
+
 """
 
  IsSynchronized=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a value indicating whether the collection is synchronized (thread safe).
-
-
-
-Get: IsSynchronized(self: KeyContainerPermissionAccessEntryCollection) -> bool
-
-
-
+ """Gets a value indicating whether the collection is synchronized (thread safe).
+
+Get: IsSynchronized(self: KeyContainerPermissionAccessEntryCollection) -> bool
+
 """
 
  SyncRoot=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets an object that can be used to synchronize access to the collection.
-
-
-
-Get: SyncRoot(self: KeyContainerPermissionAccessEntryCollection) -> object
-
-
-
+ """Gets an object that can be used to synchronize access to the collection.
+
+Get: SyncRoot(self: KeyContainerPermissionAccessEntryCollection) -> object
+
 """
 
 
 
-class KeyContainerPermissionAccessEntryEnumerator(object,IEnumerator):
+class KeyContainerPermissionAccessEntryEnumerator(object):
  """ Represents the enumerator for System.Security.Permissions.KeyContainerPermissionAccessEntry objects in a System.Security.Permissions.KeyContainerPermissionAccessEntryCollection. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return KeyContainerPermissionAccessEntryEnumerator()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def MoveNext(self):
   """
-  MoveNext(self: KeyContainerPermissionAccessEntryEnumerator) -> bool
-
-  
-
-   Moves to the next element in the collection.
-
-   Returns: true if the enumerator was successfully advanced to the next element; false if the enumerator 
-
-    has passed the end of the collection.
+  MoveNext(self: KeyContainerPermissionAccessEntryEnumerator) -> bool
+  
+   Moves to the next element in the collection.
+   Returns: true if the enumerator was successfully advanced to the next element; false if the enumerator has passed the end of the collection.
   """
   pass
  def next(self,*args):
@@ -2293,8 +1645,7 @@ class KeyContainerPermissionAccessEntryEnumerator(object,IEnumerator):
   pass
  def Reset(self):
   """
-  Reset(self: KeyContainerPermissionAccessEntryEnumerator)
-
+  Reset(self: KeyContainerPermissionAccessEntryEnumerator)
    Resets the enumerator to the beginning of the collection.
   """
   pass
@@ -2310,34 +1661,30 @@ class KeyContainerPermissionAccessEntryEnumerator(object,IEnumerator):
   """ __repr__(self: object) -> str """
   pass
  Current=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the current entry in the collection.
-
-
-
-Get: Current(self: KeyContainerPermissionAccessEntryEnumerator) -> KeyContainerPermissionAccessEntry
-
-
-
+ """Gets the current entry in the collection.
+
+Get: Current(self: KeyContainerPermissionAccessEntryEnumerator) -> KeyContainerPermissionAccessEntry
+
 """
 
 
 
-class KeyContainerPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class KeyContainerPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for System.Security.Permissions.KeyContainerPermission to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for System.Security.Permissions.KeyContainerPermission to be applied to code using declarative security. This class cannot be inherited.
+ 
  KeyContainerPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return KeyContainerPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: KeyContainerPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new System.Security.Permissions.KeyContainerPermission.
-
+  CreatePermission(self: KeyContainerPermissionAttribute) -> IPermission
+  
+   Creates and returns a new System.Security.Permissions.KeyContainerPermission.
    Returns: A System.Security.Permissions.KeyContainerPermission that corresponds to the attribute.
   """
   pass
@@ -2351,93 +1698,66 @@ class KeyContainerPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  Flags=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the key container permissions.
-
-
-
-Get: Flags(self: KeyContainerPermissionAttribute) -> KeyContainerPermissionFlags
-
-
-
-Set: Flags(self: KeyContainerPermissionAttribute)=value
-
+ """Gets or sets the key container permissions.
+
+Get: Flags(self: KeyContainerPermissionAttribute) -> KeyContainerPermissionFlags
+
+Set: Flags(self: KeyContainerPermissionAttribute)=value
 """
 
  KeyContainerName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the name of the key container.
-
-
-
-Get: KeyContainerName(self: KeyContainerPermissionAttribute) -> str
-
-
-
-Set: KeyContainerName(self: KeyContainerPermissionAttribute)=value
-
+ """Gets or sets the name of the key container.
+
+Get: KeyContainerName(self: KeyContainerPermissionAttribute) -> str
+
+Set: KeyContainerName(self: KeyContainerPermissionAttribute)=value
 """
 
  KeySpec=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the key specification.
-
-
-
-Get: KeySpec(self: KeyContainerPermissionAttribute) -> int
-
-
-
-Set: KeySpec(self: KeyContainerPermissionAttribute)=value
-
+ """Gets or sets the key specification.
+
+Get: KeySpec(self: KeyContainerPermissionAttribute) -> int
+
+Set: KeySpec(self: KeyContainerPermissionAttribute)=value
 """
 
  KeyStore=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the name of the key store.
-
-
-
-Get: KeyStore(self: KeyContainerPermissionAttribute) -> str
-
-
-
-Set: KeyStore(self: KeyContainerPermissionAttribute)=value
-
+ """Gets or sets the name of the key store.
+
+Get: KeyStore(self: KeyContainerPermissionAttribute) -> str
+
+Set: KeyStore(self: KeyContainerPermissionAttribute)=value
 """
 
  ProviderName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the provider name.
-
-
-
-Get: ProviderName(self: KeyContainerPermissionAttribute) -> str
-
-
-
-Set: ProviderName(self: KeyContainerPermissionAttribute)=value
-
+ """Gets or sets the provider name.
+
+Get: ProviderName(self: KeyContainerPermissionAttribute) -> str
+
+Set: ProviderName(self: KeyContainerPermissionAttribute)=value
 """
 
  ProviderType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the provider type.
-
-
-
-Get: ProviderType(self: KeyContainerPermissionAttribute) -> int
-
-
-
-Set: ProviderType(self: KeyContainerPermissionAttribute)=value
-
+ """Gets or sets the provider type.
+
+Get: ProviderType(self: KeyContainerPermissionAttribute) -> int
+
+Set: ProviderType(self: KeyContainerPermissionAttribute)=value
 """
 
 
 
-class KeyContainerPermissionFlags(Enum,IComparable,IFormattable,IConvertible):
+class KeyContainerPermissionFlags:
  """
- Specifies the type of key container access allowed.
-
- 
-
+ Specifies the type of key container access allowed.
+ 
  enum (flags) KeyContainerPermissionFlags,values: AllFlags (13111),ChangeAcl (8192),Create (1),Decrypt (512),Delete (4),Export (32),Import (16),NoFlags (0),Open (2),Sign (256),ViewAcl (4096)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return KeyContainerPermissionFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -2475,33 +1795,30 @@ class KeyContainerPermissionFlags(Enum,IComparable,IFormattable,IConvertible):
  ViewAcl=None
 
 
-class PermissionSetAttribute(CodeAccessSecurityAttribute,_Attribute):
+class PermissionSetAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for a System.Security.PermissionSet to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for a System.Security.PermissionSet to be applied to code using declarative security. This class cannot be inherited.
+ 
  PermissionSetAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PermissionSetAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: PermissionSetAttribute) -> IPermission
-
-  
-
-   Creates and returns a new System.Security.IPermission.
-
+  CreatePermission(self: PermissionSetAttribute) -> IPermission
+  
+   Creates and returns a new System.Security.IPermission.
    Returns: A new System.Security.IPermission.
   """
   pass
  def CreatePermissionSet(self):
   """
-  CreatePermissionSet(self: PermissionSetAttribute) -> PermissionSet
-
-  
-
-   Creates and returns a new System.Security.PermissionSet.
-
+  CreatePermissionSet(self: PermissionSetAttribute) -> PermissionSet
+  
+   Creates and returns a new System.Security.PermissionSet.
    Returns: A new System.Security.PermissionSet.
   """
   pass
@@ -2515,80 +1832,58 @@ class PermissionSetAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  File=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a file containing the XML representation of a custom permission set to be declared.
-
-
-
-Get: File(self: PermissionSetAttribute) -> str
-
-
-
-Set: File(self: PermissionSetAttribute)=value
-
+ """Gets or sets a file containing the XML representation of a custom permission set to be declared.
+
+Get: File(self: PermissionSetAttribute) -> str
+
+Set: File(self: PermissionSetAttribute)=value
 """
 
  Hex=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the hexadecimal representation of the XML encoded permission set.
-
-
-
-Get: Hex(self: PermissionSetAttribute) -> str
-
-
-
-Set: Hex(self: PermissionSetAttribute)=value
-
+ """Gets or sets the hexadecimal representation of the XML encoded permission set.
+
+Get: Hex(self: PermissionSetAttribute) -> str
+
+Set: Hex(self: PermissionSetAttribute)=value
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the name of the permission set.
-
-
-
-Get: Name(self: PermissionSetAttribute) -> str
-
-
-
-Set: Name(self: PermissionSetAttribute)=value
-
+ """Gets or sets the name of the permission set.
+
+Get: Name(self: PermissionSetAttribute) -> str
+
+Set: Name(self: PermissionSetAttribute)=value
 """
 
  UnicodeEncoded=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether the file specified by System.Security.Permissions.PermissionSetAttribute.File is Unicode or ASCII encoded.
-
-
-
-Get: UnicodeEncoded(self: PermissionSetAttribute) -> bool
-
-
-
-Set: UnicodeEncoded(self: PermissionSetAttribute)=value
-
+ """Gets or sets a value indicating whether the file specified by System.Security.Permissions.PermissionSetAttribute.File is Unicode or ASCII encoded.
+
+Get: UnicodeEncoded(self: PermissionSetAttribute) -> bool
+
+Set: UnicodeEncoded(self: PermissionSetAttribute)=value
 """
 
  XML=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the XML representation of a permission set.
-
-
-
-Get: XML(self: PermissionSetAttribute) -> str
-
-
-
-Set: XML(self: PermissionSetAttribute)=value
-
+ """Gets or sets the XML representation of a permission set.
+
+Get: XML(self: PermissionSetAttribute) -> str
+
+Set: XML(self: PermissionSetAttribute)=value
 """
 
 
 
-class PermissionState(Enum,IComparable,IFormattable,IConvertible):
+class PermissionState:
  """
- Specifies whether a permission should have all or no access to resources at creation.
-
- 
-
+ Specifies whether a permission should have all or no access to resources at creation.
+ 
  enum PermissionState,values: None (0),Unrestricted (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PermissionState()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -2612,190 +1907,116 @@ class PermissionState(Enum,IComparable,IFormattable,IConvertible):
   pass
  def __str__(self,*args):
   pass
- None=None
+ None_ =None
  Unrestricted=None
  value__=None
 
 
-class PrincipalPermission(object,IPermission,ISecurityEncodable,IUnrestrictedPermission,IBuiltInPermission):
+class PrincipalPermission(object):
  """
- Allows checks against the active principal (see System.Security.Principal.IPrincipal) using the language constructs defined for both declarative and imperative security actions. This class cannot be inherited.
-
- 
-
- PrincipalPermission(state: PermissionState)
-
- PrincipalPermission(name: str,role: str)
-
+ Allows checks against the active principal (see System.Security.Principal.IPrincipal) using the language constructs defined for both declarative and imperative security actions. This class cannot be inherited.
+ 
+ PrincipalPermission(state: PermissionState)
+ PrincipalPermission(name: str,role: str)
  PrincipalPermission(name: str,role: str,isAuthenticated: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrincipalPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
-  Copy(self: PrincipalPermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: PrincipalPermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def Demand(self):
   """
-  Demand(self: PrincipalPermission)
-
-   Determines at run time whether the current principal matches the principal specified by the 
-
-    current permission.
+  Demand(self: PrincipalPermission)
+   Determines at run time whether the current principal matches the principal specified by the current permission.
   """
   pass
  def Equals(self,obj):
   """
-  Equals(self: PrincipalPermission,obj: object) -> bool
-
-  
-
-   Determines whether the specified System.Security.Permissions.PrincipalPermission object is equal 
-
-    to the current System.Security.Permissions.PrincipalPermission.
-
-  
-
-  
-
-   obj: The System.Security.Permissions.PrincipalPermission object to compare with the current 
-
-    System.Security.Permissions.PrincipalPermission.
-
-  
-
-   Returns: true if the specified System.Security.Permissions.PrincipalPermission is equal to the current 
-
-    System.Security.Permissions.PrincipalPermission object; otherwise,false.
+  Equals(self: PrincipalPermission,obj: object) -> bool
+  
+   Determines whether the specified System.Security.Permissions.PrincipalPermission object is equal to the current System.Security.Permissions.PrincipalPermission.
+  
+   obj: The System.Security.Permissions.PrincipalPermission object to compare with the current System.Security.Permissions.PrincipalPermission.
+   Returns: true if the specified System.Security.Permissions.PrincipalPermission is equal to the current System.Security.Permissions.PrincipalPermission object; otherwise,false.
   """
   pass
  def FromXml(self,elem):
   """
-  FromXml(self: PrincipalPermission,elem: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
+  FromXml(self: PrincipalPermission,elem: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
    elem: The XML encoding to use to reconstruct the permission.
   """
   pass
  def GetHashCode(self):
   """
-  GetHashCode(self: PrincipalPermission) -> int
-
-  
-
-   Gets a hash code for the System.Security.Permissions.PrincipalPermission object that is suitable 
-
-    for use in hashing algorithms and data structures such as a hash table.
-
-  
-
+  GetHashCode(self: PrincipalPermission) -> int
+  
+   Gets a hash code for the System.Security.Permissions.PrincipalPermission object that is suitable for use in hashing algorithms and data structures such as a hash table.
    Returns: A hash code for the current System.Security.Permissions.PrincipalPermission object.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: PrincipalPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be of the same type as the 
-
-    current permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. This new permission will be null if the intersection is empty.
+  Intersect(self: PrincipalPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission will be null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: PrincipalPermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: The permission that is to be tested for the subset relationship. This permission must be of the 
-
-    same type as the current permission.
-
-  
-
+  IsSubsetOf(self: PrincipalPermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: The permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def IsUnrestricted(self):
   """
-  IsUnrestricted(self: PrincipalPermission) -> bool
-
-  
-
-   Returns a value indicating whether the current permission is unrestricted.
-
+  IsUnrestricted(self: PrincipalPermission) -> bool
+  
+   Returns a value indicating whether the current permission is unrestricted.
    Returns: true if the current permission is unrestricted; otherwise,false.
   """
   pass
  def ToString(self):
   """
-  ToString(self: PrincipalPermission) -> str
-
-  
-
-   Creates and returns a string representing the current permission.
-
+  ToString(self: PrincipalPermission) -> str
+  
+   Creates and returns a string representing the current permission.
    Returns: A representation of the current permission.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: PrincipalPermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
+  ToXml(self: PrincipalPermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
    Returns: An XML encoding of the permission,including any state information.
   """
   pass
  def Union(self,other):
   """
-  Union(self: PrincipalPermission,other: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the current permission and the specified permission.
-
-  
-
-   other: A permission to combine with the current permission. This must be of the same type as the 
-
-    current permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: PrincipalPermission,other: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the current permission and the specified permission.
+  
+   other: A permission to combine with the current permission. This must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __eq__(self,*args):
@@ -2807,10 +2028,8 @@ class PrincipalPermission(object,IPermission,ISecurityEncodable,IUnrestrictedPer
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
-  __new__(cls: type,name: str,role: str)
-
+  __new__(cls: type,state: PermissionState)
+  __new__(cls: type,name: str,role: str)
   __new__(cls: type,name: str,role: str,isAuthenticated: bool)
   """
   pass
@@ -2824,22 +2043,22 @@ class PrincipalPermission(object,IPermission,ISecurityEncodable,IUnrestrictedPer
  def __str__(self,*args):
   pass
 
-class PrincipalPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class PrincipalPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for the System.Security.Permissions.PrincipalPermission class to be applied to code by using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for the System.Security.Permissions.PrincipalPermission class to be applied to code by using declarative security. This class cannot be inherited.
+ 
  PrincipalPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PrincipalPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: PrincipalPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new System.Security.Permissions.PrincipalPermission object.
-
+  CreatePermission(self: PrincipalPermissionAttribute) -> IPermission
+  
+   Creates and returns a new System.Security.Permissions.PrincipalPermission object.
    Returns: An object  that corresponds to this attribute.
   """
   pass
@@ -2853,152 +2072,95 @@ class PrincipalPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  Authenticated=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value that indicates whether the current principal has been authenticated by the underlying role-based security provider.
-
-
-
-Get: Authenticated(self: PrincipalPermissionAttribute) -> bool
-
-
-
-Set: Authenticated(self: PrincipalPermissionAttribute)=value
-
+ """Gets or sets a value that indicates whether the current principal has been authenticated by the underlying role-based security provider.
+
+Get: Authenticated(self: PrincipalPermissionAttribute) -> bool
+
+Set: Authenticated(self: PrincipalPermissionAttribute)=value
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the name of the identity associated with the current principal.
-
-
-
-Get: Name(self: PrincipalPermissionAttribute) -> str
-
-
-
-Set: Name(self: PrincipalPermissionAttribute)=value
-
+ """Gets or sets the name of the identity associated with the current principal.
+
+Get: Name(self: PrincipalPermissionAttribute) -> str
+
+Set: Name(self: PrincipalPermissionAttribute)=value
 """
 
  Role=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets membership in a specified security role.
-
-
-
-Get: Role(self: PrincipalPermissionAttribute) -> str
-
-
-
-Set: Role(self: PrincipalPermissionAttribute)=value
-
+ """Gets or sets membership in a specified security role.
+
+Get: Role(self: PrincipalPermissionAttribute) -> str
+
+Set: Role(self: PrincipalPermissionAttribute)=value
 """
 
 
 
-class PublisherIdentityPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IBuiltInPermission):
+class PublisherIdentityPermission(CodeAccessPermission):
  """
- Represents the identity of a software publisher. This class cannot be inherited.
-
- 
-
- PublisherIdentityPermission(state: PermissionState)
-
+ Represents the identity of a software publisher. This class cannot be inherited.
+ 
+ PublisherIdentityPermission(state: PermissionState)
  PublisherIdentityPermission(certificate: X509Certificate)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PublisherIdentityPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
-  Copy(self: PublisherIdentityPermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: PublisherIdentityPermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def FromXml(self,esd):
   """
-  FromXml(self: PublisherIdentityPermission,esd: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
+  FromXml(self: PublisherIdentityPermission,esd: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
    esd: The XML encoding to use to reconstruct the permission.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: PublisherIdentityPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be of the same type as the 
-
-    current permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. This new permission is null if the intersection is empty.
+  Intersect(self: PublisherIdentityPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: PublisherIdentityPermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission that is to be tested for the subset relationship. This permission must be of the 
-
-    same type as the current permission.
-
-  
-
+  IsSubsetOf(self: PublisherIdentityPermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: PublisherIdentityPermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
+  ToXml(self: PublisherIdentityPermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
    Returns: An XML encoding of the permission,including any state information.
   """
   pass
  def Union(self,target):
   """
-  Union(self: PublisherIdentityPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the current permission and the specified permission.
-
-  
-
-   target: A permission to combine with the current permission. It must be of the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: PublisherIdentityPermission,target: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the current permission and the specified permission.
+  
+   target: A permission to combine with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -3007,8 +2169,7 @@ class PublisherIdentityPermission(CodeAccessPermission,IPermission,ISecurityEnco
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
+  __new__(cls: type,state: PermissionState)
   __new__(cls: type,certificate: X509Certificate)
   """
   pass
@@ -3017,36 +2178,31 @@ class PublisherIdentityPermission(CodeAccessPermission,IPermission,ISecurityEnco
  def __str__(self,*args):
   pass
  Certificate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets an Authenticode X.509v3 certificate that represents the identity of the software publisher.
-
-
-
-Get: Certificate(self: PublisherIdentityPermission) -> X509Certificate
-
-
-
-Set: Certificate(self: PublisherIdentityPermission)=value
-
+ """Gets or sets an Authenticode X.509v3 certificate that represents the identity of the software publisher.
+
+Get: Certificate(self: PublisherIdentityPermission) -> X509Certificate
+
+Set: Certificate(self: PublisherIdentityPermission)=value
 """
 
 
 
-class PublisherIdentityPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class PublisherIdentityPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for System.Security.Permissions.PublisherIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for System.Security.Permissions.PublisherIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
+ 
  PublisherIdentityPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PublisherIdentityPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: PublisherIdentityPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new instance of System.Security.Permissions.PublisherIdentityPermission.
-
+  CreatePermission(self: PublisherIdentityPermissionAttribute) -> IPermission
+  
+   Creates and returns a new instance of System.Security.Permissions.PublisherIdentityPermission.
    Returns: A System.Security.Permissions.PublisherIdentityPermission that corresponds to this attribute.
   """
   pass
@@ -3060,163 +2216,103 @@ class PublisherIdentityPermissionAttribute(CodeAccessSecurityAttribute,_Attribut
  def __reduce_ex__(self,*args):
   pass
  CertFile=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a certification file containing an Authenticode X.509v3 certificate.
-
-
-
-Get: CertFile(self: PublisherIdentityPermissionAttribute) -> str
-
-
-
-Set: CertFile(self: PublisherIdentityPermissionAttribute)=value
-
+ """Gets or sets a certification file containing an Authenticode X.509v3 certificate.
+
+Get: CertFile(self: PublisherIdentityPermissionAttribute) -> str
+
+Set: CertFile(self: PublisherIdentityPermissionAttribute)=value
 """
 
  SignedFile=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a signed file from which to extract an Authenticode X.509v3 certificate.
-
-
-
-Get: SignedFile(self: PublisherIdentityPermissionAttribute) -> str
-
-
-
-Set: SignedFile(self: PublisherIdentityPermissionAttribute)=value
-
+ """Gets or sets a signed file from which to extract an Authenticode X.509v3 certificate.
+
+Get: SignedFile(self: PublisherIdentityPermissionAttribute) -> str
+
+Set: SignedFile(self: PublisherIdentityPermissionAttribute)=value
 """
 
  X509Certificate=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets an Authenticode X.509v3 certificate that identifies the publisher of the calling code.
-
-
-
-Get: X509Certificate(self: PublisherIdentityPermissionAttribute) -> str
-
-
-
-Set: X509Certificate(self: PublisherIdentityPermissionAttribute)=value
-
+ """Gets or sets an Authenticode X.509v3 certificate that identifies the publisher of the calling code.
+
+Get: X509Certificate(self: PublisherIdentityPermissionAttribute) -> str
+
+Set: X509Certificate(self: PublisherIdentityPermissionAttribute)=value
 """
 
 
 
-class ReflectionPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IUnrestrictedPermission,IBuiltInPermission):
+class ReflectionPermission(CodeAccessPermission):
  """
- Controls access to non-public types and members through the System.Reflection APIs. Controls some features of the System.Reflection.Emit APIs.
-
- 
-
- ReflectionPermission(state: PermissionState)
-
+ Controls access to non-public types and members through the System.Reflection APIs. Controls some features of the System.Reflection.Emit APIs.
+ 
+ ReflectionPermission(state: PermissionState)
  ReflectionPermission(flag: ReflectionPermissionFlag)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReflectionPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
-  Copy(self: ReflectionPermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: ReflectionPermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def FromXml(self,esd):
   """
-  FromXml(self: ReflectionPermission,esd: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
+  FromXml(self: ReflectionPermission,esd: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
    esd: The XML encoding to use to reconstruct the permission.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: ReflectionPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be of the same type as the 
-
-    current permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. This new permission is null if the intersection is empty.
+  Intersect(self: ReflectionPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: ReflectionPermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission that is to be tested for the subset relationship. This permission must be of the 
-
-    same type as the current permission.
-
-  
-
+  IsSubsetOf(self: ReflectionPermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def IsUnrestricted(self):
   """
-  IsUnrestricted(self: ReflectionPermission) -> bool
-
-  
-
-   Returns a value indicating whether the current permission is unrestricted.
-
+  IsUnrestricted(self: ReflectionPermission) -> bool
+  
+   Returns a value indicating whether the current permission is unrestricted.
    Returns: true if the current permission is unrestricted; otherwise,false.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: ReflectionPermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
+  ToXml(self: ReflectionPermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
    Returns: An XML encoding of the permission,including any state information.
   """
   pass
  def Union(self,other):
   """
-  Union(self: ReflectionPermission,other: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the current permission and the specified permission.
-
-  
-
-   other: A permission to combine with the current permission. It must be of the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: ReflectionPermission,other: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the current permission and the specified permission.
+  
+   other: A permission to combine with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -3225,8 +2321,7 @@ class ReflectionPermission(CodeAccessPermission,IPermission,ISecurityEncodable,I
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
+  __new__(cls: type,state: PermissionState)
   __new__(cls: type,flag: ReflectionPermissionFlag)
   """
   pass
@@ -3235,36 +2330,31 @@ class ReflectionPermission(CodeAccessPermission,IPermission,ISecurityEncodable,I
  def __str__(self,*args):
   pass
  Flags=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the type of reflection allowed for the current permission.
-
-
-
-Get: Flags(self: ReflectionPermission) -> ReflectionPermissionFlag
-
-
-
-Set: Flags(self: ReflectionPermission)=value
-
+ """Gets or sets the type of reflection allowed for the current permission.
+
+Get: Flags(self: ReflectionPermission) -> ReflectionPermissionFlag
+
+Set: Flags(self: ReflectionPermission)=value
 """
 
 
 
-class ReflectionPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class ReflectionPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for System.Security.Permissions.ReflectionPermission to be applied to code using declarative security.
-
- 
-
+ Allows security actions for System.Security.Permissions.ReflectionPermission to be applied to code using declarative security.
+ 
  ReflectionPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReflectionPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: ReflectionPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new System.Security.Permissions.ReflectionPermission.
-
+  CreatePermission(self: ReflectionPermissionAttribute) -> IPermission
+  
+   Creates and returns a new System.Security.Permissions.ReflectionPermission.
    Returns: A System.Security.Permissions.ReflectionPermission that corresponds to this attribute.
   """
   pass
@@ -3278,80 +2368,58 @@ class ReflectionPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  Flags=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the current allowed uses of reflection.
-
-
-
-Get: Flags(self: ReflectionPermissionAttribute) -> ReflectionPermissionFlag
-
-
-
-Set: Flags(self: ReflectionPermissionAttribute)=value
-
+ """Gets or sets the current allowed uses of reflection.
+
+Get: Flags(self: ReflectionPermissionAttribute) -> ReflectionPermissionFlag
+
+Set: Flags(self: ReflectionPermissionAttribute)=value
 """
 
  MemberAccess=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value that indicates whether invocation of operations on non-public members is allowed.
-
-
-
-Get: MemberAccess(self: ReflectionPermissionAttribute) -> bool
-
-
-
-Set: MemberAccess(self: ReflectionPermissionAttribute)=value
-
+ """Gets or sets a value that indicates whether invocation of operations on non-public members is allowed.
+
+Get: MemberAccess(self: ReflectionPermissionAttribute) -> bool
+
+Set: MemberAccess(self: ReflectionPermissionAttribute)=value
 """
 
  ReflectionEmit=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value that indicates whether use of certain features in System.Reflection.Emit,such as emitting debug symbols,is allowed.
-
-
-
-Get: ReflectionEmit(self: ReflectionPermissionAttribute) -> bool
-
-
-
-Set: ReflectionEmit(self: ReflectionPermissionAttribute)=value
-
+ """Gets or sets a value that indicates whether use of certain features in System.Reflection.Emit,such as emitting debug symbols,is allowed.
+
+Get: ReflectionEmit(self: ReflectionPermissionAttribute) -> bool
+
+Set: ReflectionEmit(self: ReflectionPermissionAttribute)=value
 """
 
  RestrictedMemberAccess=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value that indicates whether restricted invocation of non-public members is allowed. Restricted invocation means that the grant set of the assembly that contains the non-public member that is being invoked must be equal to,or a subset of,the grant set of the invoking assembly.
-
-
-
-Get: RestrictedMemberAccess(self: ReflectionPermissionAttribute) -> bool
-
-
-
-Set: RestrictedMemberAccess(self: ReflectionPermissionAttribute)=value
-
+ """Gets or sets a value that indicates whether restricted invocation of non-public members is allowed. Restricted invocation means that the grant set of the assembly that contains the non-public member that is being invoked must be equal to,or a subset of,the grant set of the invoking assembly.
+
+Get: RestrictedMemberAccess(self: ReflectionPermissionAttribute) -> bool
+
+Set: RestrictedMemberAccess(self: ReflectionPermissionAttribute)=value
 """
 
  TypeInformation=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value that indicates whether reflection on members that are not visible is allowed.
-
-
-
-Get: TypeInformation(self: ReflectionPermissionAttribute) -> bool
-
-
-
-Set: TypeInformation(self: ReflectionPermissionAttribute)=value
-
+ """Gets or sets a value that indicates whether reflection on members that are not visible is allowed.
+
+Get: TypeInformation(self: ReflectionPermissionAttribute) -> bool
+
+Set: TypeInformation(self: ReflectionPermissionAttribute)=value
 """
 
 
 
-class ReflectionPermissionFlag(Enum,IComparable,IFormattable,IConvertible):
+class ReflectionPermissionFlag:
  """
- Specifies the permitted use of the System.Reflection and System.Reflection.Emit namespaces.
-
- 
-
+ Specifies the permitted use of the System.Reflection and System.Reflection.Emit namespaces.
+ 
  enum (flags) ReflectionPermissionFlag,values: AllFlags (7),MemberAccess (2),NoFlags (0),ReflectionEmit (4),RestrictedMemberAccess (8),TypeInformation (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ReflectionPermissionFlag()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -3384,196 +2452,113 @@ class ReflectionPermissionFlag(Enum,IComparable,IFormattable,IConvertible):
  value__=None
 
 
-class RegistryPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IUnrestrictedPermission,IBuiltInPermission):
+class RegistryPermission(CodeAccessPermission):
  """
- Controls the ability to access registry variables. This class cannot be inherited.
-
- 
-
- RegistryPermission(state: PermissionState)
-
- RegistryPermission(access: RegistryPermissionAccess,pathList: str)
-
+ Controls the ability to access registry variables. This class cannot be inherited.
+ 
+ RegistryPermission(state: PermissionState)
+ RegistryPermission(access: RegistryPermissionAccess,pathList: str)
  RegistryPermission(access: RegistryPermissionAccess,control: AccessControlActions,pathList: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RegistryPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddPathList(self,access,*__args):
   """
-  AddPathList(self: RegistryPermission,access: RegistryPermissionAccess,control: AccessControlActions,pathList: str)
-
-   Adds access for the specified registry variables to the existing state of the permission,
-
-    specifying registry permission access and access control actions.
-
-  
-
-  
-
-   access: One of the System.Security.Permissions.RegistryPermissionAccess values.
-
-   control: One of the System.Security.AccessControl.AccessControlActions values.
-
+  AddPathList(self: RegistryPermission,access: RegistryPermissionAccess,pathList: str)
+   Adds access for the specified registry variables to the existing state of the permission.
+  
+   access: One of the System.Security.Permissions.RegistryPermissionAccess values.
+   pathList: A list of registry variables (semicolon-separated).
+  AddPathList(self: RegistryPermission,access: RegistryPermissionAccess,control: AccessControlActions,pathList: str)
+   Adds access for the specified registry variables to the existing state of the permission,specifying registry permission access and access control actions.
+  
+   access: One of the System.Security.Permissions.RegistryPermissionAccess values.
+   control: One of the System.Security.AccessControl.AccessControlActions values.
    pathList: A list of registry variables (separated by semicolons).
-
-  AddPathList(self: RegistryPermission,access: RegistryPermissionAccess,pathList: str)
-
-   Adds access for the specified registry variables to the existing state of the permission.
-
-  
-
-   access: One of the System.Security.Permissions.RegistryPermissionAccess values.
-
-   pathList: A list of registry variables (semicolon-separated).
   """
   pass
  def Copy(self):
   """
-  Copy(self: RegistryPermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: RegistryPermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def FromXml(self,esd):
   """
-  FromXml(self: RegistryPermission,esd: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
+  FromXml(self: RegistryPermission,esd: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
    esd: The XML encoding to use to reconstruct the permission.
   """
   pass
  def GetPathList(self,access):
   """
-  GetPathList(self: RegistryPermission,access: RegistryPermissionAccess) -> str
-
-  
-
-   Gets paths for all registry variables with the specified 
-
-    System.Security.Permissions.RegistryPermissionAccess.
-
-  
-
-  
-
-   access: One of the System.Security.Permissions.RegistryPermissionAccess values that represents a single 
-
-    type of registry variable access.
-
-  
-
-   Returns: A list of the registry variables (semicolon-separated) with the specified 
-
-    System.Security.Permissions.RegistryPermissionAccess.
+  GetPathList(self: RegistryPermission,access: RegistryPermissionAccess) -> str
+  
+   Gets paths for all registry variables with the specified System.Security.Permissions.RegistryPermissionAccess.
+  
+   access: One of the System.Security.Permissions.RegistryPermissionAccess values that represents a single type of registry variable access.
+   Returns: A list of the registry variables (semicolon-separated) with the specified System.Security.Permissions.RegistryPermissionAccess.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: RegistryPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be of the same type as the 
-
-    current permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. This new permission is null if the intersection is empty.
+  Intersect(self: RegistryPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: RegistryPermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission that is to be tested for the subset relationship. This permission must be of the 
-
-    same type as the current permission.
-
-  
-
+  IsSubsetOf(self: RegistryPermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def IsUnrestricted(self):
   """
-  IsUnrestricted(self: RegistryPermission) -> bool
-
-  
-
-   Returns a value indicating whether the current permission is unrestricted.
-
+  IsUnrestricted(self: RegistryPermission) -> bool
+  
+   Returns a value indicating whether the current permission is unrestricted.
    Returns: true if the current permission is unrestricted; otherwise,false.
   """
   pass
  def SetPathList(self,access,pathList):
   """
-  SetPathList(self: RegistryPermission,access: RegistryPermissionAccess,pathList: str)
-
-   Sets new access for the specified registry variable names to the existing state of the 
-
-    permission.
-
-  
-
-  
-
-   access: One of the System.Security.Permissions.RegistryPermissionAccess values.
-
+  SetPathList(self: RegistryPermission,access: RegistryPermissionAccess,pathList: str)
+   Sets new access for the specified registry variable names to the existing state of the permission.
+  
+   access: One of the System.Security.Permissions.RegistryPermissionAccess values.
    pathList: A list of registry variables (semicolon-separated).
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: RegistryPermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
+  ToXml(self: RegistryPermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
    Returns: An XML encoding of the permission,including any state information.
   """
   pass
  def Union(self,other):
   """
-  Union(self: RegistryPermission,other: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the current permission and the specified permission.
-
-  
-
-   other: A permission to combine with the current permission. It must be of the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: RegistryPermission,other: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the current permission and the specified permission.
+  
+   other: A permission to combine with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -3582,10 +2567,8 @@ class RegistryPermission(CodeAccessPermission,IPermission,ISecurityEncodable,ISt
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
-  __new__(cls: type,access: RegistryPermissionAccess,pathList: str)
-
+  __new__(cls: type,state: PermissionState)
+  __new__(cls: type,access: RegistryPermissionAccess,pathList: str)
   __new__(cls: type,access: RegistryPermissionAccess,control: AccessControlActions,pathList: str)
   """
   pass
@@ -3594,14 +2577,17 @@ class RegistryPermission(CodeAccessPermission,IPermission,ISecurityEncodable,ISt
  def __str__(self,*args):
   pass
 
-class RegistryPermissionAccess(Enum,IComparable,IFormattable,IConvertible):
+class RegistryPermissionAccess:
  """
- Specifies the permitted access to registry keys and values.
-
- 
-
+ Specifies the permitted access to registry keys and values.
+ 
  enum (flags) RegistryPermissionAccess,values: AllAccess (7),Create (4),NoAccess (0),Read (1),Write (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RegistryPermissionAccess()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -3633,22 +2619,22 @@ class RegistryPermissionAccess(Enum,IComparable,IFormattable,IConvertible):
  Write=None
 
 
-class RegistryPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class RegistryPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for System.Security.Permissions.RegistryPermission to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for System.Security.Permissions.RegistryPermission to be applied to code using declarative security. This class cannot be inherited.
+ 
  RegistryPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RegistryPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: RegistryPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new System.Security.Permissions.RegistryPermission.
-
+  CreatePermission(self: RegistryPermissionAttribute) -> IPermission
+  
+   Creates and returns a new System.Security.Permissions.RegistryPermission.
    Returns: A System.Security.Permissions.RegistryPermission that corresponds to this attribute.
   """
   pass
@@ -3662,251 +2648,160 @@ class RegistryPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  All=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets full access for the specified registry keys.
-
-
-
-Get: All(self: RegistryPermissionAttribute) -> str
-
-
-
-Set: All(self: RegistryPermissionAttribute)=value
-
+ """Gets or sets full access for the specified registry keys.
+
+Get: All(self: RegistryPermissionAttribute) -> str
+
+Set: All(self: RegistryPermissionAttribute)=value
 """
 
  ChangeAccessControl=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets change access control for the specified registry keys.
-
-
-
-Get: ChangeAccessControl(self: RegistryPermissionAttribute) -> str
-
-
-
-Set: ChangeAccessControl(self: RegistryPermissionAttribute)=value
-
+ """Gets or sets change access control for the specified registry keys.
+
+Get: ChangeAccessControl(self: RegistryPermissionAttribute) -> str
+
+Set: ChangeAccessControl(self: RegistryPermissionAttribute)=value
 """
 
  Create=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets create-level access for the specified registry keys.
-
-
-
-Get: Create(self: RegistryPermissionAttribute) -> str
-
-
-
-Set: Create(self: RegistryPermissionAttribute)=value
-
+ """Gets or sets create-level access for the specified registry keys.
+
+Get: Create(self: RegistryPermissionAttribute) -> str
+
+Set: Create(self: RegistryPermissionAttribute)=value
 """
 
  Read=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets read access for the specified registry keys.
-
-
-
-Get: Read(self: RegistryPermissionAttribute) -> str
-
-
-
-Set: Read(self: RegistryPermissionAttribute)=value
-
+ """Gets or sets read access for the specified registry keys.
+
+Get: Read(self: RegistryPermissionAttribute) -> str
+
+Set: Read(self: RegistryPermissionAttribute)=value
 """
 
  ViewAccessControl=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets view access control for the specified registry keys.
-
-
-
-Get: ViewAccessControl(self: RegistryPermissionAttribute) -> str
-
-
-
-Set: ViewAccessControl(self: RegistryPermissionAttribute)=value
-
+ """Gets or sets view access control for the specified registry keys.
+
+Get: ViewAccessControl(self: RegistryPermissionAttribute) -> str
+
+Set: ViewAccessControl(self: RegistryPermissionAttribute)=value
 """
 
  ViewAndModify=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a specified set of registry keys that can be viewed and modified.
-
-
-
-Get: ViewAndModify(self: RegistryPermissionAttribute) -> str
-
-
-
-Set: ViewAndModify(self: RegistryPermissionAttribute)=value
-
+ """Gets or sets a specified set of registry keys that can be viewed and modified.
+
+Get: ViewAndModify(self: RegistryPermissionAttribute) -> str
+
+Set: ViewAndModify(self: RegistryPermissionAttribute)=value
 """
 
  Write=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets write access for the specified registry keys.
-
-
-
-Get: Write(self: RegistryPermissionAttribute) -> str
-
-
-
-Set: Write(self: RegistryPermissionAttribute)=value
-
+ """Gets or sets write access for the specified registry keys.
+
+Get: Write(self: RegistryPermissionAttribute) -> str
+
+Set: Write(self: RegistryPermissionAttribute)=value
 """
 
 
 
-class ResourcePermissionBase(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IUnrestrictedPermission):
+class ResourcePermissionBase(CodeAccessPermission):
  """ Allows control of code access security permissions. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ResourcePermissionBase()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddPermissionAccess(self,*args):
   """
-  AddPermissionAccess(self: ResourcePermissionBase,entry: ResourcePermissionBaseEntry)
-
-   Adds a permission entry to the permission.
-
-  
-
+  AddPermissionAccess(self: ResourcePermissionBase,entry: ResourcePermissionBaseEntry)
+   Adds a permission entry to the permission.
+  
    entry: The System.Security.Permissions.ResourcePermissionBaseEntry to add.
   """
   pass
  def Clear(self,*args):
   """
-  Clear(self: ResourcePermissionBase)
-
+  Clear(self: ResourcePermissionBase)
    Clears the permission of the added permission entries.
   """
   pass
  def Copy(self):
   """
-  Copy(self: ResourcePermissionBase) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission object.
-
+  Copy(self: ResourcePermissionBase) -> IPermission
+  
+   Creates and returns an identical copy of the current permission object.
    Returns: A copy of the current permission object.
   """
   pass
  def FromXml(self,securityElement):
   """
-  FromXml(self: ResourcePermissionBase,securityElement: SecurityElement)
-
-   Reconstructs a security object with a specified state from an XML encoding.
-
-  
-
+  FromXml(self: ResourcePermissionBase,securityElement: SecurityElement)
+   Reconstructs a security object with a specified state from an XML encoding.
+  
    securityElement: The XML encoding to use to reconstruct the security object.
   """
   pass
  def GetPermissionEntries(self,*args):
   """
-  GetPermissionEntries(self: ResourcePermissionBase) -> Array[ResourcePermissionBaseEntry]
-
-  
-
-   Returns an array of the System.Security.Permissions.ResourcePermissionBaseEntry objects added to 
-
-    this permission.
-
-  
-
-   Returns: An array of System.Security.Permissions.ResourcePermissionBaseEntry objects that were added to 
-
-    this permission.
+  GetPermissionEntries(self: ResourcePermissionBase) -> Array[ResourcePermissionBaseEntry]
+  
+   Returns an array of the System.Security.Permissions.ResourcePermissionBaseEntry objects added to this permission.
+   Returns: An array of System.Security.Permissions.ResourcePermissionBaseEntry objects that were added to this permission.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: ResourcePermissionBase,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission object that is the intersection of the current permission 
-
-    object and a target permission object.
-
-  
-
-  
-
-   target: A permission object of the same type as the current permission object.
-
-   Returns: A new permission object that represents the intersection of the current object and the specified 
-
-    target. This object is null if the intersection is empty.
+  Intersect(self: ResourcePermissionBase,target: IPermission) -> IPermission
+  
+   Creates and returns a permission object that is the intersection of the current permission object and a target permission object.
+  
+   target: A permission object of the same type as the current permission object.
+   Returns: A new permission object that represents the intersection of the current object and the specified target. This object is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: ResourcePermissionBase,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission object is a subset of the specified permission.
-
-  
-
-   target: A permission object that is to be tested for the subset relationship.
-
-   Returns: true if the current permission object is a subset of the specified permission object; otherwise,
-
-    false.
+  IsSubsetOf(self: ResourcePermissionBase,target: IPermission) -> bool
+  
+   Determines whether the current permission object is a subset of the specified permission.
+  
+   target: A permission object that is to be tested for the subset relationship.
+   Returns: true if the current permission object is a subset of the specified permission object; otherwise,false.
   """
   pass
  def IsUnrestricted(self):
   """
-  IsUnrestricted(self: ResourcePermissionBase) -> bool
-
-  
-
-   Gets a value indicating whether the permission is unrestricted.
-
+  IsUnrestricted(self: ResourcePermissionBase) -> bool
+  
+   Gets a value indicating whether the permission is unrestricted.
    Returns: true if permission is unrestricted; otherwise,false.
   """
   pass
  def RemovePermissionAccess(self,*args):
   """
-  RemovePermissionAccess(self: ResourcePermissionBase,entry: ResourcePermissionBaseEntry)
-
-   Removes a permission entry from the permission.
-
-  
-
+  RemovePermissionAccess(self: ResourcePermissionBase,entry: ResourcePermissionBaseEntry)
+   Removes a permission entry from the permission.
+  
    entry: The System.Security.Permissions.ResourcePermissionBaseEntry to remove.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: ResourcePermissionBase) -> SecurityElement
-
-  
-
-   Creates and returns an XML encoding of the security object and its current state.
-
+  ToXml(self: ResourcePermissionBase) -> SecurityElement
+  
+   Creates and returns an XML encoding of the security object and its current state.
    Returns: An XML encoding of the security object,including any state information.
   """
   pass
  def Union(self,target):
   """
-  Union(self: ResourcePermissionBase,target: IPermission) -> IPermission
-
-  
-
-   Creates a permission object that combines the current permission object and the target 
-
-    permission object.
-
-  
-
-  
-
-   target: A permission object to combine with the current permission object. It must be of the same type 
-
-    as the current permission object.
-
-  
-
-   Returns: A new permission object that represents the union of the current permission object and the 
-
-    specified permission object.
+  Union(self: ResourcePermissionBase,target: IPermission) -> IPermission
+  
+   Creates a permission object that combines the current permission object and the target permission object.
+  
+   target: A permission object to combine with the current permission object. It must be of the same type as the current permission object.
+   Returns: A new permission object that represents the union of the current permission object and the specified permission object.
   """
   pass
  def __init__(self,*args):
@@ -3915,8 +2810,7 @@ class ResourcePermissionBase(CodeAccessPermission,IPermission,ISecurityEncodable
  @staticmethod
  def __new__(self,*args): #cannot find CLR constructor
   """
-  __new__(cls: type)
-
+  __new__(cls: type)
   __new__(cls: type,state: PermissionState)
   """
   pass
@@ -3925,17 +2819,13 @@ class ResourcePermissionBase(CodeAccessPermission,IPermission,ISecurityEncodable
  def __str__(self,*args):
   pass
  PermissionAccessType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets an enumeration value that describes the types of access that you are giving the resource.
-
-
-
+ """Gets or sets an enumeration value that describes the types of access that you are giving the resource.
+
 """
 
  TagNames=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets an array of strings that identify the resource you are protecting.
-
-
-
+ """Gets or sets an array of strings that identify the resource you are protecting.
+
 """
 
 
@@ -3945,54 +2835,50 @@ class ResourcePermissionBase(CodeAccessPermission,IPermission,ISecurityEncodable
 
 class ResourcePermissionBaseEntry(object):
  """
- Defines the smallest unit of a code access security permission set.
-
- 
-
- ResourcePermissionBaseEntry(permissionAccess: int,permissionAccessPath: Array[str])
-
+ Defines the smallest unit of a code access security permission set.
+ 
+ ResourcePermissionBaseEntry(permissionAccess: int,permissionAccessPath: Array[str])
  ResourcePermissionBaseEntry()
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ResourcePermissionBaseEntry()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,permissionAccess=None,permissionAccessPath=None):
   """
-  __new__(cls: type)
-
+  __new__(cls: type)
   __new__(cls: type,permissionAccess: int,permissionAccessPath: Array[str])
   """
   pass
  PermissionAccess=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets an integer representation of the access level enumeration value.
-
-
-
-Get: PermissionAccess(self: ResourcePermissionBaseEntry) -> int
-
-
-
+ """Gets an integer representation of the access level enumeration value.
+
+Get: PermissionAccess(self: ResourcePermissionBaseEntry) -> int
+
 """
 
  PermissionAccessPath=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets an array of strings that identify the resource you are protecting.
-
-
-
-Get: PermissionAccessPath(self: ResourcePermissionBaseEntry) -> Array[str]
-
-
-
+ """Gets an array of strings that identify the resource you are protecting.
+
+Get: PermissionAccessPath(self: ResourcePermissionBaseEntry) -> Array[str]
+
 """
 
 
 
-class SecurityAction(Enum,IComparable,IFormattable,IConvertible):
+class SecurityAction:
  """
- Specifies the security actions that can be performed using declarative security.
-
- 
-
+ Specifies the security actions that can be performed using declarative security.
+ 
  enum SecurityAction,values: Assert (3),Demand (2),Deny (4),InheritanceDemand (7),LinkDemand (6),PermitOnly (5),RequestMinimum (8),RequestOptional (9),RequestRefuse (10)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SecurityAction()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -4028,123 +2914,78 @@ class SecurityAction(Enum,IComparable,IFormattable,IConvertible):
  value__=None
 
 
-class SecurityPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IUnrestrictedPermission,IBuiltInPermission):
+class SecurityPermission(CodeAccessPermission):
  """
- Describes a set of security permissions applied to code. This class cannot be inherited.
-
- 
-
- SecurityPermission(state: PermissionState)
-
+ Describes a set of security permissions applied to code. This class cannot be inherited.
+ 
+ SecurityPermission(state: PermissionState)
  SecurityPermission(flag: SecurityPermissionFlag)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SecurityPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
-  Copy(self: SecurityPermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: SecurityPermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def FromXml(self,esd):
   """
-  FromXml(self: SecurityPermission,esd: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
+  FromXml(self: SecurityPermission,esd: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
    esd: The XML encoding to use to reconstruct the permission.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: SecurityPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be of the same type as the 
-
-    current permission.
-
-  
-
-   Returns: A new permission object that represents the intersection of the current permission and the 
-
-    specified permission. This new permission is null if the intersection is empty.
+  Intersect(self: SecurityPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission object that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: SecurityPermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission that is to be tested for the subset relationship. This permission must be of the 
-
-    same type as the current permission.
-
-  
-
+  IsSubsetOf(self: SecurityPermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def IsUnrestricted(self):
   """
-  IsUnrestricted(self: SecurityPermission) -> bool
-
-  
-
-   Returns a value indicating whether the current permission is unrestricted.
-
+  IsUnrestricted(self: SecurityPermission) -> bool
+  
+   Returns a value indicating whether the current permission is unrestricted.
    Returns: true if the current permission is unrestricted; otherwise,false.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: SecurityPermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
+  ToXml(self: SecurityPermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
    Returns: An XML encoding of the permission,including any state information.
   """
   pass
  def Union(self,target):
   """
-  Union(self: SecurityPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the current permission and the specified permission.
-
-  
-
-   target: A permission to combine with the current permission. It must be of the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: SecurityPermission,target: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the current permission and the specified permission.
+  
+   target: A permission to combine with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -4153,8 +2994,7 @@ class SecurityPermission(CodeAccessPermission,IPermission,ISecurityEncodable,ISt
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
+  __new__(cls: type,state: PermissionState)
   __new__(cls: type,flag: SecurityPermissionFlag)
   """
   pass
@@ -4163,36 +3003,31 @@ class SecurityPermission(CodeAccessPermission,IPermission,ISecurityEncodable,ISt
  def __str__(self,*args):
   pass
  Flags=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the security permission flags.
-
-
-
-Get: Flags(self: SecurityPermission) -> SecurityPermissionFlag
-
-
-
-Set: Flags(self: SecurityPermission)=value
-
+ """Gets or sets the security permission flags.
+
+Get: Flags(self: SecurityPermission) -> SecurityPermissionFlag
+
+Set: Flags(self: SecurityPermission)=value
 """
 
 
 
-class SecurityPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class SecurityPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for System.Security.Permissions.SecurityPermission to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for System.Security.Permissions.SecurityPermission to be applied to code using declarative security. This class cannot be inherited.
+ 
  SecurityPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SecurityPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: SecurityPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new System.Security.Permissions.SecurityPermission.
-
+  CreatePermission(self: SecurityPermissionAttribute) -> IPermission
+  
+   Creates and returns a new System.Security.Permissions.SecurityPermission.
    Returns: A System.Security.Permissions.SecurityPermission that corresponds to this attribute.
   """
   pass
@@ -4206,210 +3041,138 @@ class SecurityPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  Assertion=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether permission to assert that all this code's callers have the requisite permission for the operation is declared.
-
-
-
-Get: Assertion(self: SecurityPermissionAttribute) -> bool
-
-
-
-Set: Assertion(self: SecurityPermissionAttribute)=value
-
+ """Gets or sets a value indicating whether permission to assert that all this code's callers have the requisite permission for the operation is declared.
+
+Get: Assertion(self: SecurityPermissionAttribute) -> bool
+
+Set: Assertion(self: SecurityPermissionAttribute)=value
 """
 
  BindingRedirects=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value that indicates whether code has permission to perform binding redirection in the application configuration file.
-
-
-
-Get: BindingRedirects(self: SecurityPermissionAttribute) -> bool
-
-
-
-Set: BindingRedirects(self: SecurityPermissionAttribute)=value
-
+ """Gets or sets a value that indicates whether code has permission to perform binding redirection in the application configuration file.
+
+Get: BindingRedirects(self: SecurityPermissionAttribute) -> bool
+
+Set: BindingRedirects(self: SecurityPermissionAttribute)=value
 """
 
  ControlAppDomain=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether permission to manipulate System.AppDomain is declared.
-
-
-
-Get: ControlAppDomain(self: SecurityPermissionAttribute) -> bool
-
-
-
-Set: ControlAppDomain(self: SecurityPermissionAttribute)=value
-
+ """Gets or sets a value indicating whether permission to manipulate System.AppDomain is declared.
+
+Get: ControlAppDomain(self: SecurityPermissionAttribute) -> bool
+
+Set: ControlAppDomain(self: SecurityPermissionAttribute)=value
 """
 
  ControlDomainPolicy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether permission to alter or manipulate domain security policy is declared.
-
-
-
-Get: ControlDomainPolicy(self: SecurityPermissionAttribute) -> bool
-
-
-
-Set: ControlDomainPolicy(self: SecurityPermissionAttribute)=value
-
+ """Gets or sets a value indicating whether permission to alter or manipulate domain security policy is declared.
+
+Get: ControlDomainPolicy(self: SecurityPermissionAttribute) -> bool
+
+Set: ControlDomainPolicy(self: SecurityPermissionAttribute)=value
 """
 
  ControlEvidence=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether permission to alter or manipulate evidence is declared.
-
-
-
-Get: ControlEvidence(self: SecurityPermissionAttribute) -> bool
-
-
-
-Set: ControlEvidence(self: SecurityPermissionAttribute)=value
-
+ """Gets or sets a value indicating whether permission to alter or manipulate evidence is declared.
+
+Get: ControlEvidence(self: SecurityPermissionAttribute) -> bool
+
+Set: ControlEvidence(self: SecurityPermissionAttribute)=value
 """
 
  ControlPolicy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether permission to view and manipulate security policy is declared.
-
-
-
-Get: ControlPolicy(self: SecurityPermissionAttribute) -> bool
-
-
-
-Set: ControlPolicy(self: SecurityPermissionAttribute)=value
-
+ """Gets or sets a value indicating whether permission to view and manipulate security policy is declared.
+
+Get: ControlPolicy(self: SecurityPermissionAttribute) -> bool
+
+Set: ControlPolicy(self: SecurityPermissionAttribute)=value
 """
 
  ControlPrincipal=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether permission to manipulate the current principal is declared.
-
-
-
-Get: ControlPrincipal(self: SecurityPermissionAttribute) -> bool
-
-
-
-Set: ControlPrincipal(self: SecurityPermissionAttribute)=value
-
+ """Gets or sets a value indicating whether permission to manipulate the current principal is declared.
+
+Get: ControlPrincipal(self: SecurityPermissionAttribute) -> bool
+
+Set: ControlPrincipal(self: SecurityPermissionAttribute)=value
 """
 
  ControlThread=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether permission to manipulate threads is declared.
-
-
-
-Get: ControlThread(self: SecurityPermissionAttribute) -> bool
-
-
-
-Set: ControlThread(self: SecurityPermissionAttribute)=value
-
+ """Gets or sets a value indicating whether permission to manipulate threads is declared.
+
+Get: ControlThread(self: SecurityPermissionAttribute) -> bool
+
+Set: ControlThread(self: SecurityPermissionAttribute)=value
 """
 
  Execution=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether permission to execute code is declared.
-
-
-
-Get: Execution(self: SecurityPermissionAttribute) -> bool
-
-
-
-Set: Execution(self: SecurityPermissionAttribute)=value
-
+ """Gets or sets a value indicating whether permission to execute code is declared.
+
+Get: Execution(self: SecurityPermissionAttribute) -> bool
+
+Set: Execution(self: SecurityPermissionAttribute)=value
 """
 
  Flags=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets all permission flags comprising the System.Security.Permissions.SecurityPermission permissions.
-
-
-
-Get: Flags(self: SecurityPermissionAttribute) -> SecurityPermissionFlag
-
-
-
-Set: Flags(self: SecurityPermissionAttribute)=value
-
+ """Gets or sets all permission flags comprising the System.Security.Permissions.SecurityPermission permissions.
+
+Get: Flags(self: SecurityPermissionAttribute) -> SecurityPermissionFlag
+
+Set: Flags(self: SecurityPermissionAttribute)=value
 """
 
  Infrastructure=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether code can plug into the common language runtime infrastructure,such as adding Remoting Context Sinks,Envoy Sinks and Dynamic Sinks.
-
-
-
-Get: Infrastructure(self: SecurityPermissionAttribute) -> bool
-
-
-
-Set: Infrastructure(self: SecurityPermissionAttribute)=value
-
+ """Gets or sets a value indicating whether code can plug into the common language runtime infrastructure,such as adding Remoting Context Sinks,Envoy Sinks and Dynamic Sinks.
+
+Get: Infrastructure(self: SecurityPermissionAttribute) -> bool
+
+Set: Infrastructure(self: SecurityPermissionAttribute)=value
 """
 
  RemotingConfiguration=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether code can configure remoting types and channels.
-
-
-
-Get: RemotingConfiguration(self: SecurityPermissionAttribute) -> bool
-
-
-
-Set: RemotingConfiguration(self: SecurityPermissionAttribute)=value
-
+ """Gets or sets a value indicating whether code can configure remoting types and channels.
+
+Get: RemotingConfiguration(self: SecurityPermissionAttribute) -> bool
+
+Set: RemotingConfiguration(self: SecurityPermissionAttribute)=value
 """
 
  SerializationFormatter=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether code can use a serialization formatter to serialize or deserialize an object.
-
-
-
-Get: SerializationFormatter(self: SecurityPermissionAttribute) -> bool
-
-
-
-Set: SerializationFormatter(self: SecurityPermissionAttribute)=value
-
+ """Gets or sets a value indicating whether code can use a serialization formatter to serialize or deserialize an object.
+
+Get: SerializationFormatter(self: SecurityPermissionAttribute) -> bool
+
+Set: SerializationFormatter(self: SecurityPermissionAttribute)=value
 """
 
  SkipVerification=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether permission to bypass code verification is declared.
-
-
-
-Get: SkipVerification(self: SecurityPermissionAttribute) -> bool
-
-
-
-Set: SkipVerification(self: SecurityPermissionAttribute)=value
-
+ """Gets or sets a value indicating whether permission to bypass code verification is declared.
+
+Get: SkipVerification(self: SecurityPermissionAttribute) -> bool
+
+Set: SkipVerification(self: SecurityPermissionAttribute)=value
 """
 
  UnmanagedCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether permission to call unmanaged code is declared.
-
-
-
-Get: UnmanagedCode(self: SecurityPermissionAttribute) -> bool
-
-
-
-Set: UnmanagedCode(self: SecurityPermissionAttribute)=value
-
+ """Gets or sets a value indicating whether permission to call unmanaged code is declared.
+
+Get: UnmanagedCode(self: SecurityPermissionAttribute) -> bool
+
+Set: UnmanagedCode(self: SecurityPermissionAttribute)=value
 """
 
 
 
-class SecurityPermissionFlag(Enum,IComparable,IFormattable,IConvertible):
+class SecurityPermissionFlag:
  """
- Specifies access flags for the security permission object.
-
- 
-
+ Specifies access flags for the security permission object.
+ 
  enum (flags) SecurityPermissionFlag,values: AllFlags (16383),Assertion (1),BindingRedirects (8192),ControlAppDomain (1024),ControlDomainPolicy (256),ControlEvidence (32),ControlPolicy (64),ControlPrincipal (512),ControlThread (16),Execution (8),Infrastructure (4096),NoFlags (0),RemotingConfiguration (2048),SerializationFormatter (128),SkipVerification (4),UnmanagedCode (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SecurityPermissionFlag()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -4452,112 +3215,70 @@ class SecurityPermissionFlag(Enum,IComparable,IFormattable,IConvertible):
  value__=None
 
 
-class SiteIdentityPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IBuiltInPermission):
+class SiteIdentityPermission(CodeAccessPermission):
  """
- Defines the identity permission for the Web site from which the code originates. This class cannot be inherited.
-
- 
-
- SiteIdentityPermission(state: PermissionState)
-
+ Defines the identity permission for the Web site from which the code originates. This class cannot be inherited.
+ 
+ SiteIdentityPermission(state: PermissionState)
  SiteIdentityPermission(site: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SiteIdentityPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
-  Copy(self: SiteIdentityPermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: SiteIdentityPermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def FromXml(self,esd):
   """
-  FromXml(self: SiteIdentityPermission,esd: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
+  FromXml(self: SiteIdentityPermission,esd: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
    esd: The XML encoding to use to reconstruct the permission.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: SiteIdentityPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be of the same type as the 
-
-    current permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. This new permission is null if the intersection is empty.
+  Intersect(self: SiteIdentityPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: SiteIdentityPermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission that is to be tested for the subset relationship. This permission must be of the 
-
-    same type as the current permission.
-
-  
-
+  IsSubsetOf(self: SiteIdentityPermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: SiteIdentityPermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
+  ToXml(self: SiteIdentityPermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
    Returns: An XML encoding of the permission,including any state information.
   """
   pass
  def Union(self,target):
   """
-  Union(self: SiteIdentityPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the current permission and the specified permission.
-
-  
-
-   target: A permission to combine with the current permission. It must be of the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: SiteIdentityPermission,target: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the current permission and the specified permission.
+  
+   target: A permission to combine with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -4566,8 +3287,7 @@ class SiteIdentityPermission(CodeAccessPermission,IPermission,ISecurityEncodable
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
+  __new__(cls: type,state: PermissionState)
   __new__(cls: type,site: str)
   """
   pass
@@ -4576,36 +3296,31 @@ class SiteIdentityPermission(CodeAccessPermission,IPermission,ISecurityEncodable
  def __str__(self,*args):
   pass
  Site=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the current site.
-
-
-
-Get: Site(self: SiteIdentityPermission) -> str
-
-
-
-Set: Site(self: SiteIdentityPermission)=value
-
+ """Gets or sets the current site.
+
+Get: Site(self: SiteIdentityPermission) -> str
+
+Set: Site(self: SiteIdentityPermission)=value
 """
 
 
 
-class SiteIdentityPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class SiteIdentityPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for System.Security.Permissions.SiteIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for System.Security.Permissions.SiteIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
+ 
  SiteIdentityPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SiteIdentityPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: SiteIdentityPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new instance of System.Security.Permissions.SiteIdentityPermission.
-
+  CreatePermission(self: SiteIdentityPermissionAttribute) -> IPermission
+  
+   Creates and returns a new instance of System.Security.Permissions.SiteIdentityPermission.
    Returns: A System.Security.Permissions.SiteIdentityPermission that corresponds to this attribute.
   """
   pass
@@ -4619,141 +3334,87 @@ class SiteIdentityPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  Site=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the site name of the calling code.
-
-
-
-Get: Site(self: SiteIdentityPermissionAttribute) -> str
-
-
-
-Set: Site(self: SiteIdentityPermissionAttribute)=value
-
+ """Gets or sets the site name of the calling code.
+
+Get: Site(self: SiteIdentityPermissionAttribute) -> str
+
+Set: Site(self: SiteIdentityPermissionAttribute)=value
 """
 
 
 
-class StorePermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IUnrestrictedPermission):
+class StorePermission(CodeAccessPermission):
  """
- Controls access to stores containing X.509 certificates. This class cannot be inherited.
-
- 
-
- StorePermission(state: PermissionState)
-
+ Controls access to stores containing X.509 certificates. This class cannot be inherited.
+ 
+ StorePermission(state: PermissionState)
  StorePermission(flag: StorePermissionFlags)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StorePermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
-  Copy(self: StorePermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: StorePermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def FromXml(self,securityElement):
   """
-  FromXml(self: StorePermission,securityElement: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
-   securityElement: A System.Security.SecurityElement that contains the XML encoding to use to reconstruct the 
-
-    permission.
+  FromXml(self: StorePermission,securityElement: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
+   securityElement: A System.Security.SecurityElement that contains the XML encoding to use to reconstruct the permission.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: StorePermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be of the same type as the 
-
-    current permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. This new permission is null if the intersection is empty.
+  Intersect(self: StorePermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: StorePermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission to test for the subset relationship. This permission must be of the same type as 
-
-    the current permission.
-
-  
-
+  IsSubsetOf(self: StorePermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: A permission to test for the subset relationship. This permission must be of the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def IsUnrestricted(self):
   """
-  IsUnrestricted(self: StorePermission) -> bool
-
-  
-
-   Returns a value indicating whether the current permission is unrestricted.
-
+  IsUnrestricted(self: StorePermission) -> bool
+  
+   Returns a value indicating whether the current permission is unrestricted.
    Returns: true if the current permission is unrestricted; otherwise,false.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: StorePermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
-   Returns: A System.Security.SecurityElement that contains an XML encoding of the permission,including any 
-
-    state information.
+  ToXml(self: StorePermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
+   Returns: A System.Security.SecurityElement that contains an XML encoding of the permission,including any state information.
   """
   pass
  def Union(self,target):
   """
-  Union(self: StorePermission,target: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the current permission and the specified permission.
-
-  
-
-   target: A permission to combine with the current permission. It must be of the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: StorePermission,target: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the current permission and the specified permission.
+  
+   target: A permission to combine with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -4762,8 +3423,7 @@ class StorePermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStack
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
+  __new__(cls: type,state: PermissionState)
   __new__(cls: type,flag: StorePermissionFlags)
   """
   pass
@@ -4772,36 +3432,31 @@ class StorePermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStack
  def __str__(self,*args):
   pass
  Flags=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the type of System.Security.Cryptography.X509Certificates.X509Store access allowed by the current permission.
-
-
-
-Get: Flags(self: StorePermission) -> StorePermissionFlags
-
-
-
-Set: Flags(self: StorePermission)=value
-
+ """Gets or sets the type of System.Security.Cryptography.X509Certificates.X509Store access allowed by the current permission.
+
+Get: Flags(self: StorePermission) -> StorePermissionFlags
+
+Set: Flags(self: StorePermission)=value
 """
 
 
 
-class StorePermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class StorePermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for System.Security.Permissions.StorePermission to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for System.Security.Permissions.StorePermission to be applied to code using declarative security. This class cannot be inherited.
+ 
  StorePermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StorePermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: StorePermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new System.Security.Permissions.StorePermission.
-
+  CreatePermission(self: StorePermissionAttribute) -> IPermission
+  
+   Creates and returns a new System.Security.Permissions.StorePermission.
    Returns: A System.Security.Permissions.StorePermission that corresponds to the attribute.
   """
   pass
@@ -4815,119 +3470,82 @@ class StorePermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  AddToStore=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether the code is permitted to add to a store.
-
-
-
-Get: AddToStore(self: StorePermissionAttribute) -> bool
-
-
-
-Set: AddToStore(self: StorePermissionAttribute)=value
-
+ """Gets or sets a value indicating whether the code is permitted to add to a store.
+
+Get: AddToStore(self: StorePermissionAttribute) -> bool
+
+Set: AddToStore(self: StorePermissionAttribute)=value
 """
 
  CreateStore=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether the code is permitted to create a store.
-
-
-
-Get: CreateStore(self: StorePermissionAttribute) -> bool
-
-
-
-Set: CreateStore(self: StorePermissionAttribute)=value
-
+ """Gets or sets a value indicating whether the code is permitted to create a store.
+
+Get: CreateStore(self: StorePermissionAttribute) -> bool
+
+Set: CreateStore(self: StorePermissionAttribute)=value
 """
 
  DeleteStore=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether the code is permitted to delete a store.
-
-
-
-Get: DeleteStore(self: StorePermissionAttribute) -> bool
-
-
-
-Set: DeleteStore(self: StorePermissionAttribute)=value
-
+ """Gets or sets a value indicating whether the code is permitted to delete a store.
+
+Get: DeleteStore(self: StorePermissionAttribute) -> bool
+
+Set: DeleteStore(self: StorePermissionAttribute)=value
 """
 
  EnumerateCertificates=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether the code is permitted to enumerate the certificates in a store.
-
-
-
-Get: EnumerateCertificates(self: StorePermissionAttribute) -> bool
-
-
-
-Set: EnumerateCertificates(self: StorePermissionAttribute)=value
-
+ """Gets or sets a value indicating whether the code is permitted to enumerate the certificates in a store.
+
+Get: EnumerateCertificates(self: StorePermissionAttribute) -> bool
+
+Set: EnumerateCertificates(self: StorePermissionAttribute)=value
 """
 
  EnumerateStores=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether the code is permitted to enumerate stores.
-
-
-
-Get: EnumerateStores(self: StorePermissionAttribute) -> bool
-
-
-
-Set: EnumerateStores(self: StorePermissionAttribute)=value
-
+ """Gets or sets a value indicating whether the code is permitted to enumerate stores.
+
+Get: EnumerateStores(self: StorePermissionAttribute) -> bool
+
+Set: EnumerateStores(self: StorePermissionAttribute)=value
 """
 
  Flags=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the store permissions.
-
-
-
-Get: Flags(self: StorePermissionAttribute) -> StorePermissionFlags
-
-
-
-Set: Flags(self: StorePermissionAttribute)=value
-
+ """Gets or sets the store permissions.
+
+Get: Flags(self: StorePermissionAttribute) -> StorePermissionFlags
+
+Set: Flags(self: StorePermissionAttribute)=value
 """
 
  OpenStore=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether the code is permitted to open a store.
-
-
-
-Get: OpenStore(self: StorePermissionAttribute) -> bool
-
-
-
-Set: OpenStore(self: StorePermissionAttribute)=value
-
+ """Gets or sets a value indicating whether the code is permitted to open a store.
+
+Get: OpenStore(self: StorePermissionAttribute) -> bool
+
+Set: OpenStore(self: StorePermissionAttribute)=value
 """
 
  RemoveFromStore=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value indicating whether the code is permitted to remove a certificate from a store.
-
-
-
-Get: RemoveFromStore(self: StorePermissionAttribute) -> bool
-
-
-
-Set: RemoveFromStore(self: StorePermissionAttribute)=value
-
+ """Gets or sets a value indicating whether the code is permitted to remove a certificate from a store.
+
+Get: RemoveFromStore(self: StorePermissionAttribute) -> bool
+
+Set: RemoveFromStore(self: StorePermissionAttribute)=value
 """
 
 
 
-class StorePermissionFlags(Enum,IComparable,IFormattable,IConvertible):
+class StorePermissionFlags:
  """
- Specifies the permitted access to X.509 certificate stores.
-
- 
-
+ Specifies the permitted access to X.509 certificate stores.
+ 
  enum (flags) StorePermissionFlags,values: AddToStore (32),AllFlags (247),CreateStore (1),DeleteStore (2),EnumerateCertificates (128),EnumerateStores (4),NoFlags (0),OpenStore (16),RemoveFromStore (64)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StorePermissionFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -4963,112 +3581,70 @@ class StorePermissionFlags(Enum,IComparable,IFormattable,IConvertible):
  value__=None
 
 
-class StrongNameIdentityPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IBuiltInPermission):
+class StrongNameIdentityPermission(CodeAccessPermission):
  """
- Defines the identity permission for strong names. This class cannot be inherited.
-
- 
-
- StrongNameIdentityPermission(state: PermissionState)
-
+ Defines the identity permission for strong names. This class cannot be inherited.
+ 
+ StrongNameIdentityPermission(state: PermissionState)
  StrongNameIdentityPermission(blob: StrongNamePublicKeyBlob,name: str,version: Version)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StrongNameIdentityPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
-  Copy(self: StrongNameIdentityPermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: StrongNameIdentityPermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def FromXml(self,e):
   """
-  FromXml(self: StrongNameIdentityPermission,e: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
+  FromXml(self: StrongNameIdentityPermission,e: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
    e: The XML encoding to use to reconstruct the permission.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: StrongNameIdentityPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be of the same type as the 
-
-    current permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission,or null if the intersection is empty.
+  Intersect(self: StrongNameIdentityPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission,or null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: StrongNameIdentityPermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission that is to be tested for the subset relationship. This permission must be of the 
-
-    same type as the current permission.
-
-  
-
+  IsSubsetOf(self: StrongNameIdentityPermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: StrongNameIdentityPermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
+  ToXml(self: StrongNameIdentityPermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
    Returns: An XML encoding of the permission,including any state information.
   """
   pass
  def Union(self,target):
   """
-  Union(self: StrongNameIdentityPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the current permission and the specified permission.
-
-  
-
-   target: A permission to combine with the current permission. It must be of the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: StrongNameIdentityPermission,target: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the current permission and the specified permission.
+  
+   target: A permission to combine with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -5077,8 +3653,7 @@ class StrongNameIdentityPermission(CodeAccessPermission,IPermission,ISecurityEnc
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
+  __new__(cls: type,state: PermissionState)
   __new__(cls: type,blob: StrongNamePublicKeyBlob,name: str,version: Version)
   """
   pass
@@ -5087,62 +3662,47 @@ class StrongNameIdentityPermission(CodeAccessPermission,IPermission,ISecurityEnc
  def __str__(self,*args):
   pass
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the simple name portion of the strong name identity.
-
-
-
-Get: Name(self: StrongNameIdentityPermission) -> str
-
-
-
-Set: Name(self: StrongNameIdentityPermission)=value
-
+ """Gets or sets the simple name portion of the strong name identity.
+
+Get: Name(self: StrongNameIdentityPermission) -> str
+
+Set: Name(self: StrongNameIdentityPermission)=value
 """
 
  PublicKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the public key blob that defines the strong name identity namespace.
-
-
-
-Get: PublicKey(self: StrongNameIdentityPermission) -> StrongNamePublicKeyBlob
-
-
-
-Set: PublicKey(self: StrongNameIdentityPermission)=value
-
+ """Gets or sets the public key blob that defines the strong name identity namespace.
+
+Get: PublicKey(self: StrongNameIdentityPermission) -> StrongNamePublicKeyBlob
+
+Set: PublicKey(self: StrongNameIdentityPermission)=value
 """
 
  Version=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the version number of the identity.
-
-
-
-Get: Version(self: StrongNameIdentityPermission) -> Version
-
-
-
-Set: Version(self: StrongNameIdentityPermission)=value
-
+ """Gets or sets the version number of the identity.
+
+Get: Version(self: StrongNameIdentityPermission) -> Version
+
+Set: Version(self: StrongNameIdentityPermission)=value
 """
 
 
 
-class StrongNameIdentityPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class StrongNameIdentityPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for System.Security.Permissions.StrongNameIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for System.Security.Permissions.StrongNameIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
+ 
  StrongNameIdentityPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StrongNameIdentityPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: StrongNameIdentityPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new System.Security.Permissions.StrongNameIdentityPermission.
-
+  CreatePermission(self: StrongNameIdentityPermissionAttribute) -> IPermission
+  
+   Creates and returns a new System.Security.Permissions.StrongNameIdentityPermission.
    Returns: A System.Security.Permissions.StrongNameIdentityPermission that corresponds to this attribute.
   """
   pass
@@ -5156,94 +3716,65 @@ class StrongNameIdentityPermissionAttribute(CodeAccessSecurityAttribute,_Attribu
  def __reduce_ex__(self,*args):
   pass
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the name of the strong name identity.
-
-
-
-Get: Name(self: StrongNameIdentityPermissionAttribute) -> str
-
-
-
-Set: Name(self: StrongNameIdentityPermissionAttribute)=value
-
+ """Gets or sets the name of the strong name identity.
+
+Get: Name(self: StrongNameIdentityPermissionAttribute) -> str
+
+Set: Name(self: StrongNameIdentityPermissionAttribute)=value
 """
 
  PublicKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the public key value of the strong name identity expressed as a hexadecimal string.
-
-
-
-Get: PublicKey(self: StrongNameIdentityPermissionAttribute) -> str
-
-
-
-Set: PublicKey(self: StrongNameIdentityPermissionAttribute)=value
-
+ """Gets or sets the public key value of the strong name identity expressed as a hexadecimal string.
+
+Get: PublicKey(self: StrongNameIdentityPermissionAttribute) -> str
+
+Set: PublicKey(self: StrongNameIdentityPermissionAttribute)=value
 """
 
  Version=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the version of the strong name identity.
-
-
-
-Get: Version(self: StrongNameIdentityPermissionAttribute) -> str
-
-
-
-Set: Version(self: StrongNameIdentityPermissionAttribute)=value
-
+ """Gets or sets the version of the strong name identity.
+
+Get: Version(self: StrongNameIdentityPermissionAttribute) -> str
+
+Set: Version(self: StrongNameIdentityPermissionAttribute)=value
 """
 
 
 
 class StrongNamePublicKeyBlob(object):
  """
- Represents the public key information (called a blob) for a strong name. This class cannot be inherited.
-
- 
-
+ Represents the public key information (called a blob) for a strong name. This class cannot be inherited.
+ 
  StrongNamePublicKeyBlob(publicKey: Array[Byte])
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StrongNamePublicKeyBlob()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
-  Equals(self: StrongNamePublicKeyBlob,obj: object) -> bool
-
-  
-
-   Gets or sets a value indicating whether the current public key blob is equal to the specified 
-
-    public key blob.
-
-  
-
-  
-
-   obj: An object containing a public key blob.
-
-   Returns: true if the public key blob of the current object is equal to the public key blob of the obj 
-
-    parameter; otherwise,false.
+  Equals(self: StrongNamePublicKeyBlob,obj: object) -> bool
+  
+   Gets or sets a value indicating whether the current public key blob is equal to the specified public key blob.
+  
+   obj: An object containing a public key blob.
+   Returns: true if the public key blob of the current object is equal to the public key blob of the obj parameter; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
-  GetHashCode(self: StrongNamePublicKeyBlob) -> int
-
-  
-
-   Returns a hash code based on the public key.
-
+  GetHashCode(self: StrongNamePublicKeyBlob) -> int
+  
+   Returns a hash code based on the public key.
    Returns: The hash code based on the public key.
   """
   pass
  def ToString(self):
   """
-  ToString(self: StrongNamePublicKeyBlob) -> str
-
-  
-
-   Creates and returns a string representation of the public key blob.
-
+  ToString(self: StrongNamePublicKeyBlob) -> str
+  
+   Creates and returns a string representation of the public key blob.
    Returns: A hexadecimal version of the public key blob.
   """
   pass
@@ -5257,103 +3788,67 @@ class StrongNamePublicKeyBlob(object):
  def __ne__(self,*args):
   pass
 
-class TypeDescriptorPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IUnrestrictedPermission):
+class TypeDescriptorPermission(CodeAccessPermission):
  """
- Defines partial-trust access to the System.ComponentModel.TypeDescriptor class.
-
- 
-
- TypeDescriptorPermission(state: PermissionState)
-
+ Defines partial-trust access to the System.ComponentModel.TypeDescriptor class.
+ 
+ TypeDescriptorPermission(state: PermissionState)
  TypeDescriptorPermission(flag: TypeDescriptorPermissionFlags)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TypeDescriptorPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
-  Copy(self: TypeDescriptorPermission) -> IPermission
-
+  Copy(self: TypeDescriptorPermission) -> IPermission
    Returns: A copy of the current permission object.
   """
   pass
  def FromXml(self,securityElement):
   """
-  FromXml(self: TypeDescriptorPermission,securityElement: SecurityElement)
-
+  FromXml(self: TypeDescriptorPermission,securityElement: SecurityElement)
    securityElement: The XML encoding to use to reconstruct the security object.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: TypeDescriptorPermission,target: IPermission) -> IPermission
-
-  
-
-   target: A permission to intersect with the current permission. It must be of the same type as the 
-
-    current permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. This new permission is null if the intersection is empty.
+  Intersect(self: TypeDescriptorPermission,target: IPermission) -> IPermission
+  
+   target: A permission to intersect with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: TypeDescriptorPermission,target: IPermission) -> bool
-
-  
-
-   target: A permission that is to be tested for the subset relationship. This permission must be of the 
-
-    same type as the current permission.
-
-  
-
+  IsSubsetOf(self: TypeDescriptorPermission,target: IPermission) -> bool
+  
+   target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def IsUnrestricted(self):
   """
-  IsUnrestricted(self: TypeDescriptorPermission) -> bool
-
-  
-
-   Gets a value that indicates whether the type descriptor may be called from partially trusted 
-
-    code.
-
-  
-
-   Returns: true if the System.Security.Permissions.TypeDescriptorPermission.Flags property is set to 
-
-    System.Security.Permissions.TypeDescriptorPermissionFlags.RestrictedRegistrationAccess; 
-
-    otherwise,false.
+  IsUnrestricted(self: TypeDescriptorPermission) -> bool
+  
+   Gets a value that indicates whether the type descriptor may be called from partially trusted code.
+   Returns: true if the System.Security.Permissions.TypeDescriptorPermission.Flags property is set to 
+    System.Security.Permissions.TypeDescriptorPermissionFlags.RestrictedRegistrationAccess; otherwise,false.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: TypeDescriptorPermission) -> SecurityElement
-
+  ToXml(self: TypeDescriptorPermission) -> SecurityElement
    Returns: An XML encoding of the security object,including any state information.
   """
   pass
  def Union(self,target):
   """
-  Union(self: TypeDescriptorPermission,target: IPermission) -> IPermission
-
-  
-
-   target: A permission to combine with the current permission. It must be of the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: TypeDescriptorPermission,target: IPermission) -> IPermission
+  
+   target: A permission to combine with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -5362,8 +3857,7 @@ class TypeDescriptorPermission(CodeAccessPermission,IPermission,ISecurityEncodab
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
+  __new__(cls: type,state: PermissionState)
   __new__(cls: type,flag: TypeDescriptorPermissionFlags)
   """
   pass
@@ -5372,32 +3866,29 @@ class TypeDescriptorPermission(CodeAccessPermission,IPermission,ISecurityEncodab
  def __str__(self,*args):
   pass
  Flags=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the System.Security.Permissions.TypeDescriptorPermissionFlags for the type descriptor.
-
-
-
-Get: Flags(self: TypeDescriptorPermission) -> TypeDescriptorPermissionFlags
-
-
-
-Set: Flags(self: TypeDescriptorPermission)=value
-
+ """Gets or sets the System.Security.Permissions.TypeDescriptorPermissionFlags for the type descriptor.
+
+Get: Flags(self: TypeDescriptorPermission) -> TypeDescriptorPermissionFlags
+
+Set: Flags(self: TypeDescriptorPermission)=value
 """
 
 
 
-class TypeDescriptorPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class TypeDescriptorPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Determines the permission flags that apply to a System.ComponentModel.TypeDescriptor.
-
- 
-
+ Determines the permission flags that apply to a System.ComponentModel.TypeDescriptor.
+ 
  TypeDescriptorPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TypeDescriptorPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: TypeDescriptorPermissionAttribute) -> IPermission
-
+  CreatePermission(self: TypeDescriptorPermissionAttribute) -> IPermission
    Returns: A serializable permission object.
   """
   pass
@@ -5411,41 +3902,34 @@ class TypeDescriptorPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  Flags=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the System.Security.Permissions.TypeDescriptorPermissionFlags for the System.ComponentModel.TypeDescriptor.
-
-
-
-Get: Flags(self: TypeDescriptorPermissionAttribute) -> TypeDescriptorPermissionFlags
-
-
-
-Set: Flags(self: TypeDescriptorPermissionAttribute)=value
-
+ """Gets or sets the System.Security.Permissions.TypeDescriptorPermissionFlags for the System.ComponentModel.TypeDescriptor.
+
+Get: Flags(self: TypeDescriptorPermissionAttribute) -> TypeDescriptorPermissionFlags
+
+Set: Flags(self: TypeDescriptorPermissionAttribute)=value
 """
 
  RestrictedRegistrationAccess=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a value that indicates whether the type descriptor can be accessed from partial trust.
-
-
-
-Get: RestrictedRegistrationAccess(self: TypeDescriptorPermissionAttribute) -> bool
-
-
-
-Set: RestrictedRegistrationAccess(self: TypeDescriptorPermissionAttribute)=value
-
+ """Gets or sets a value that indicates whether the type descriptor can be accessed from partial trust.
+
+Get: RestrictedRegistrationAccess(self: TypeDescriptorPermissionAttribute) -> bool
+
+Set: RestrictedRegistrationAccess(self: TypeDescriptorPermissionAttribute)=value
 """
 
 
 
-class TypeDescriptorPermissionFlags(Enum,IComparable,IFormattable,IConvertible):
+class TypeDescriptorPermissionFlags:
  """
- Defines permission settings for type descriptors.
-
- 
-
+ Defines permission settings for type descriptors.
+ 
  enum (flags) TypeDescriptorPermissionFlags,values: NoFlags (0),RestrictedRegistrationAccess (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TypeDescriptorPermissionFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -5474,127 +3958,80 @@ class TypeDescriptorPermissionFlags(Enum,IComparable,IFormattable,IConvertible):
  value__=None
 
 
-class UIPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IUnrestrictedPermission,IBuiltInPermission):
+class UIPermission(CodeAccessPermission):
  """
- Controls the permissions related to user interfaces and the Clipboard. This class cannot be inherited.
-
- 
-
- UIPermission(state: PermissionState)
-
- UIPermission(windowFlag: UIPermissionWindow,clipboardFlag: UIPermissionClipboard)
-
- UIPermission(windowFlag: UIPermissionWindow)
-
+ Controls the permissions related to user interfaces and the Clipboard. This class cannot be inherited.
+ 
+ UIPermission(state: PermissionState)
+ UIPermission(windowFlag: UIPermissionWindow,clipboardFlag: UIPermissionClipboard)
+ UIPermission(windowFlag: UIPermissionWindow)
  UIPermission(clipboardFlag: UIPermissionClipboard)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UIPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
-  Copy(self: UIPermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: UIPermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def FromXml(self,esd):
   """
-  FromXml(self: UIPermission,esd: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
+  FromXml(self: UIPermission,esd: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
    esd: The XML encoding used to reconstruct the permission.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: UIPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. This new permission is null if the intersection is empty.
+  Intersect(self: UIPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: UIPermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission to test for the subset relationship. This permission must be the same type as the 
-
-    current permission.
-
-  
-
+  IsSubsetOf(self: UIPermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: A permission to test for the subset relationship. This permission must be the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def IsUnrestricted(self):
   """
-  IsUnrestricted(self: UIPermission) -> bool
-
-  
-
-   Returns a value indicating whether the current permission is unrestricted.
-
+  IsUnrestricted(self: UIPermission) -> bool
+  
+   Returns a value indicating whether the current permission is unrestricted.
    Returns: true if the current permission is unrestricted; otherwise,false.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: UIPermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
+  ToXml(self: UIPermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
    Returns: An XML encoding of the permission,including any state information.
   """
   pass
  def Union(self,target):
   """
-  Union(self: UIPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the permission and the specified permission.
-
-  
-
-   target: A permission to combine with the current permission. It must be the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: UIPermission,target: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the permission and the specified permission.
+  
+   target: A permission to combine with the current permission. It must be the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -5603,12 +4040,9 @@ class UIPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWal
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
-  __new__(cls: type,windowFlag: UIPermissionWindow,clipboardFlag: UIPermissionClipboard)
-
-  __new__(cls: type,windowFlag: UIPermissionWindow)
-
+  __new__(cls: type,state: PermissionState)
+  __new__(cls: type,windowFlag: UIPermissionWindow,clipboardFlag: UIPermissionClipboard)
+  __new__(cls: type,windowFlag: UIPermissionWindow)
   __new__(cls: type,clipboardFlag: UIPermissionClipboard)
   """
   pass
@@ -5617,49 +4051,39 @@ class UIPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWal
  def __str__(self,*args):
   pass
  Clipboard=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the Clipboard access represented by the permission.
-
-
-
-Get: Clipboard(self: UIPermission) -> UIPermissionClipboard
-
-
-
-Set: Clipboard(self: UIPermission)=value
-
+ """Gets or sets the Clipboard access represented by the permission.
+
+Get: Clipboard(self: UIPermission) -> UIPermissionClipboard
+
+Set: Clipboard(self: UIPermission)=value
 """
 
  Window=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the window access represented by the permission.
-
-
-
-Get: Window(self: UIPermission) -> UIPermissionWindow
-
-
-
-Set: Window(self: UIPermission)=value
-
+ """Gets or sets the window access represented by the permission.
+
+Get: Window(self: UIPermission) -> UIPermissionWindow
+
+Set: Window(self: UIPermission)=value
 """
 
 
 
-class UIPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class UIPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for System.Security.Permissions.UIPermission to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for System.Security.Permissions.UIPermission to be applied to code using declarative security. This class cannot be inherited.
+ 
  UIPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UIPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: UIPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new System.Security.Permissions.UIPermission.
-
+  CreatePermission(self: UIPermissionAttribute) -> IPermission
+  
+   Creates and returns a new System.Security.Permissions.UIPermission.
    Returns: A System.Security.Permissions.UIPermission that corresponds to this attribute.
   """
   pass
@@ -5673,41 +4097,34 @@ class UIPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  Clipboard=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the type of access to the clipboard that is permitted.
-
-
-
-Get: Clipboard(self: UIPermissionAttribute) -> UIPermissionClipboard
-
-
-
-Set: Clipboard(self: UIPermissionAttribute)=value
-
+ """Gets or sets the type of access to the clipboard that is permitted.
+
+Get: Clipboard(self: UIPermissionAttribute) -> UIPermissionClipboard
+
+Set: Clipboard(self: UIPermissionAttribute)=value
 """
 
  Window=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the type of access to the window resources that is permitted.
-
-
-
-Get: Window(self: UIPermissionAttribute) -> UIPermissionWindow
-
-
-
-Set: Window(self: UIPermissionAttribute)=value
-
+ """Gets or sets the type of access to the window resources that is permitted.
+
+Get: Window(self: UIPermissionAttribute) -> UIPermissionWindow
+
+Set: Window(self: UIPermissionAttribute)=value
 """
 
 
 
-class UIPermissionClipboard(Enum,IComparable,IFormattable,IConvertible):
+class UIPermissionClipboard:
  """
- Specifies the type of clipboard access that is allowed to the calling code.
-
- 
-
+ Specifies the type of clipboard access that is allowed to the calling code.
+ 
  enum UIPermissionClipboard,values: AllClipboard (2),NoClipboard (0),OwnClipboard (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UIPermissionClipboard()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -5737,14 +4154,17 @@ class UIPermissionClipboard(Enum,IComparable,IFormattable,IConvertible):
  value__=None
 
 
-class UIPermissionWindow(Enum,IComparable,IFormattable,IConvertible):
+class UIPermissionWindow:
  """
- Specifies the type of windows that code is allowed to use.
-
- 
-
+ Specifies the type of windows that code is allowed to use.
+ 
  enum UIPermissionWindow,values: AllWindows (3),NoWindows (0),SafeSubWindows (1),SafeTopLevelWindows (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UIPermissionWindow()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -5775,112 +4195,70 @@ class UIPermissionWindow(Enum,IComparable,IFormattable,IConvertible):
  value__=None
 
 
-class UrlIdentityPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IBuiltInPermission):
+class UrlIdentityPermission(CodeAccessPermission):
  """
- Defines the identity permission for the URL from which the code originates. This class cannot be inherited.
-
- 
-
- UrlIdentityPermission(state: PermissionState)
-
+ Defines the identity permission for the URL from which the code originates. This class cannot be inherited.
+ 
+ UrlIdentityPermission(state: PermissionState)
  UrlIdentityPermission(site: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UrlIdentityPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
-  Copy(self: UrlIdentityPermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: UrlIdentityPermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def FromXml(self,esd):
   """
-  FromXml(self: UrlIdentityPermission,esd: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
+  FromXml(self: UrlIdentityPermission,esd: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
    esd: The XML encoding to use to reconstruct the permission.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: UrlIdentityPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be of the same type as the 
-
-    current permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. This new permission is null if the intersection is empty.
+  Intersect(self: UrlIdentityPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: UrlIdentityPermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission that is to be tested for the subset relationship. This permission must be of the 
-
-    same type as the current permission.
-
-  
-
+  IsSubsetOf(self: UrlIdentityPermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: UrlIdentityPermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
+  ToXml(self: UrlIdentityPermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
    Returns: An XML encoding of the permission,including any state information.
   """
   pass
  def Union(self,target):
   """
-  Union(self: UrlIdentityPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the current permission and the specified permission.
-
-  
-
-   target: A permission to combine with the current permission. It must be of the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: UrlIdentityPermission,target: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the current permission and the specified permission.
+  
+   target: A permission to combine with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -5889,8 +4267,7 @@ class UrlIdentityPermission(CodeAccessPermission,IPermission,ISecurityEncodable,
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
+  __new__(cls: type,state: PermissionState)
   __new__(cls: type,site: str)
   """
   pass
@@ -5899,36 +4276,31 @@ class UrlIdentityPermission(CodeAccessPermission,IPermission,ISecurityEncodable,
  def __str__(self,*args):
   pass
  Url=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets a URL representing the identity of Internet code.
-
-
-
-Get: Url(self: UrlIdentityPermission) -> str
-
-
-
-Set: Url(self: UrlIdentityPermission)=value
-
+ """Gets or sets a URL representing the identity of Internet code.
+
+Get: Url(self: UrlIdentityPermission) -> str
+
+Set: Url(self: UrlIdentityPermission)=value
 """
 
 
 
-class UrlIdentityPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class UrlIdentityPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for System.Security.Permissions.UrlIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for System.Security.Permissions.UrlIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
+ 
  UrlIdentityPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UrlIdentityPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: UrlIdentityPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new System.Security.Permissions.UrlIdentityPermission.
-
+  CreatePermission(self: UrlIdentityPermissionAttribute) -> IPermission
+  
+   Creates and returns a new System.Security.Permissions.UrlIdentityPermission.
    Returns: A System.Security.Permissions.UrlIdentityPermission that corresponds to this attribute.
   """
   pass
@@ -5942,126 +4314,79 @@ class UrlIdentityPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  Url=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the full URL of the calling code.
-
-
-
-Get: Url(self: UrlIdentityPermissionAttribute) -> str
-
-
-
-Set: Url(self: UrlIdentityPermissionAttribute)=value
-
+ """Gets or sets the full URL of the calling code.
+
+Get: Url(self: UrlIdentityPermissionAttribute) -> str
+
+Set: Url(self: UrlIdentityPermissionAttribute)=value
 """
 
 
 
-class ZoneIdentityPermission(CodeAccessPermission,IPermission,ISecurityEncodable,IStackWalk,IBuiltInPermission):
+class ZoneIdentityPermission(CodeAccessPermission):
  """
- Defines the identity permission for the zone from which the code originates. This class cannot be inherited.
-
- 
-
- ZoneIdentityPermission(state: PermissionState)
-
+ Defines the identity permission for the zone from which the code originates. This class cannot be inherited.
+ 
+ ZoneIdentityPermission(state: PermissionState)
  ZoneIdentityPermission(zone: SecurityZone)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ZoneIdentityPermission()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Copy(self):
   """
-  Copy(self: ZoneIdentityPermission) -> IPermission
-
-  
-
-   Creates and returns an identical copy of the current permission.
-
+  Copy(self: ZoneIdentityPermission) -> IPermission
+  
+   Creates and returns an identical copy of the current permission.
    Returns: A copy of the current permission.
   """
   pass
  def FromXml(self,esd):
   """
-  FromXml(self: ZoneIdentityPermission,esd: SecurityElement)
-
-   Reconstructs a permission with a specified state from an XML encoding.
-
-  
-
+  FromXml(self: ZoneIdentityPermission,esd: SecurityElement)
+   Reconstructs a permission with a specified state from an XML encoding.
+  
    esd: The XML encoding to use to reconstruct the permission.
   """
   pass
  def Intersect(self,target):
   """
-  Intersect(self: ZoneIdentityPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates and returns a permission that is the intersection of the current permission and the 
-
-    specified permission.
-
-  
-
-  
-
-   target: A permission to intersect with the current permission. It must be of the same type as the 
-
-    current permission.
-
-  
-
-   Returns: A new permission that represents the intersection of the current permission and the specified 
-
-    permission. This new permission is null if the intersection is empty.
+  Intersect(self: ZoneIdentityPermission,target: IPermission) -> IPermission
+  
+   Creates and returns a permission that is the intersection of the current permission and the specified permission.
+  
+   target: A permission to intersect with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
   """
   pass
  def IsSubsetOf(self,target):
   """
-  IsSubsetOf(self: ZoneIdentityPermission,target: IPermission) -> bool
-
-  
-
-   Determines whether the current permission is a subset of the specified permission.
-
-  
-
-   target: A permission that is to be tested for the subset relationship. This permission must be of the 
-
-    same type as the current permission.
-
-  
-
+  IsSubsetOf(self: ZoneIdentityPermission,target: IPermission) -> bool
+  
+   Determines whether the current permission is a subset of the specified permission.
+  
+   target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
    Returns: true if the current permission is a subset of the specified permission; otherwise,false.
   """
   pass
  def ToXml(self):
   """
-  ToXml(self: ZoneIdentityPermission) -> SecurityElement
-
-  
-
-   Creates an XML encoding of the permission and its current state.
-
+  ToXml(self: ZoneIdentityPermission) -> SecurityElement
+  
+   Creates an XML encoding of the permission and its current state.
    Returns: An XML encoding of the permission,including any state information.
   """
   pass
  def Union(self,target):
   """
-  Union(self: ZoneIdentityPermission,target: IPermission) -> IPermission
-
-  
-
-   Creates a permission that is the union of the current permission and the specified permission.
-
-  
-
-   target: A permission to combine with the current permission. It must be of the same type as the current 
-
-    permission.
-
-  
-
-   Returns: A new permission that represents the union of the current permission and the specified 
-
-    permission.
+  Union(self: ZoneIdentityPermission,target: IPermission) -> IPermission
+  
+   Creates a permission that is the union of the current permission and the specified permission.
+  
+   target: A permission to combine with the current permission. It must be of the same type as the current permission.
+   Returns: A new permission that represents the union of the current permission and the specified permission.
   """
   pass
  def __init__(self,*args):
@@ -6070,8 +4395,7 @@ class ZoneIdentityPermission(CodeAccessPermission,IPermission,ISecurityEncodable
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type,state: PermissionState)
-
+  __new__(cls: type,state: PermissionState)
   __new__(cls: type,zone: SecurityZone)
   """
   pass
@@ -6080,36 +4404,31 @@ class ZoneIdentityPermission(CodeAccessPermission,IPermission,ISecurityEncodable
  def __str__(self,*args):
   pass
  SecurityZone=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the zone represented by the current System.Security.Permissions.ZoneIdentityPermission.
-
-
-
-Get: SecurityZone(self: ZoneIdentityPermission) -> SecurityZone
-
-
-
-Set: SecurityZone(self: ZoneIdentityPermission)=value
-
+ """Gets or sets the zone represented by the current System.Security.Permissions.ZoneIdentityPermission.
+
+Get: SecurityZone(self: ZoneIdentityPermission) -> SecurityZone
+
+Set: SecurityZone(self: ZoneIdentityPermission)=value
 """
 
 
 
-class ZoneIdentityPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
+class ZoneIdentityPermissionAttribute(CodeAccessSecurityAttribute):
  """
- Allows security actions for System.Security.Permissions.ZoneIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
-
- 
-
+ Allows security actions for System.Security.Permissions.ZoneIdentityPermission to be applied to code using declarative security. This class cannot be inherited.
+ 
  ZoneIdentityPermissionAttribute(action: SecurityAction)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ZoneIdentityPermissionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def CreatePermission(self):
   """
-  CreatePermission(self: ZoneIdentityPermissionAttribute) -> IPermission
-
-  
-
-   Creates and returns a new System.Security.Permissions.ZoneIdentityPermission.
-
+  CreatePermission(self: ZoneIdentityPermissionAttribute) -> IPermission
+  
+   Creates and returns a new System.Security.Permissions.ZoneIdentityPermission.
    Returns: A System.Security.Permissions.ZoneIdentityPermission that corresponds to this attribute.
   """
   pass
@@ -6123,16 +4442,11 @@ class ZoneIdentityPermissionAttribute(CodeAccessSecurityAttribute,_Attribute):
  def __reduce_ex__(self,*args):
   pass
  Zone=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets membership in the content zone specified by the property value.
-
-
-
-Get: Zone(self: ZoneIdentityPermissionAttribute) -> SecurityZone
-
-
-
-Set: Zone(self: ZoneIdentityPermissionAttribute)=value
-
+ """Gets or sets membership in the content zone specified by the property value.
+
+Get: Zone(self: ZoneIdentityPermissionAttribute) -> SecurityZone
+
+Set: Zone(self: ZoneIdentityPermissionAttribute)=value
 """
 
 

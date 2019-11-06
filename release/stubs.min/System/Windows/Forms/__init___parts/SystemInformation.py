@@ -1,8 +1,16 @@
 class SystemInformation(object):
  """ Provides information about the current system environment. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SystemInformation()
+
  @staticmethod
  def GetBorderSizeForDpi(dpi):
   """ GetBorderSizeForDpi(dpi: int) -> Size """
+  pass
+ @staticmethod
+ def GetHorizontalScrollBarArrowWidthForDpi(dpi):
+  """ GetHorizontalScrollBarArrowWidthForDpi(dpi: int) -> int """
   pass
  @staticmethod
  def GetHorizontalScrollBarHeightForDpi(dpi):
@@ -27,7 +35,7 @@ class SystemInformation(object):
  CaptionHeight=23
  CaretBlinkTime=530
  CaretWidth=1
- ComputerName='STUDIO-SSD'
+ ComputerName='PC018'
  CursorSize=None
  DbcsEnabled=False
  DebugOS=False
@@ -41,14 +49,14 @@ class SystemInformation(object):
  FrameBorderSize=None
  HighContrast=False
  HorizontalFocusThickness=1
- HorizontalResizeBorderThickness=8
+ HorizontalResizeBorderThickness=4
  HorizontalScrollBarArrowWidth=17
  HorizontalScrollBarHeight=17
  HorizontalScrollBarThumbWidth=17
- IconHorizontalSpacing=75
+ IconHorizontalSpacing=110
  IconSize=None
  IconSpacingSize=None
- IconVerticalSpacing=75
+ IconVerticalSpacing=80
  IsActiveWindowTrackingEnabled=False
  IsComboBoxAnimationEnabled=True
  IsDropShadowEnabled=True
@@ -81,7 +89,7 @@ class SystemInformation(object):
  MinimizedWindowSpacingSize=None
  MinimumWindowSize=None
  MinWindowTrackSize=None
- MonitorCount=2
+ MonitorCount=1
  MonitorsSameDisplayFormat=True
  MouseButtons=8
  MouseButtonsSwapped=False
@@ -103,18 +111,18 @@ class SystemInformation(object):
  ScreenOrientation=None
  Secure=False
  ShowSounds=False
- SizingBorderWidth=5
+ SizingBorderWidth=1
  SmallCaptionButtonSize=None
  SmallIconSize=None
  TerminalServerSession=False
  ToolWindowCaptionButtonSize=None
  ToolWindowCaptionHeight=23
  UIEffectsEnabled=True
- UserDomainName='STUDIO-SSD'
+ UserDomainName='TRANCON'
  UserInteractive=True
- UserName='gtalarico'
+ UserName='k.pawiroredjo'
  VerticalFocusThickness=1
- VerticalResizeBorderThickness=8
+ VerticalResizeBorderThickness=4
  VerticalScrollBarArrowHeight=17
  VerticalScrollBarThumbHeight=17
  VerticalScrollBarWidth=17

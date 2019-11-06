@@ -2,8 +2,8 @@
 # module System.Diagnostics calls itself Diagnostics
 # from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
-# no imports
+# no doc
+# no important
 
 # no functions
 # classes
@@ -81,6 +81,7 @@ from __init___parts.SourceFilter import SourceFilter
 from __init___parts.SourceLevels import SourceLevels
 from __init___parts.SourceSwitch import SourceSwitch
 from __init___parts.StackFrame import StackFrame
+from __init___parts.StackFrameExtensions import StackFrameExtensions
 from __init___parts.StackTrace import StackTrace
 from __init___parts.Stopwatch import Stopwatch
 from __init___parts.SwitchAttribute import SwitchAttribute

@@ -1,18 +1,17 @@
 class SystemPens(object):
  """ Each property of the System.Drawing.SystemPens class is a System.Drawing.Pen that is the color of a Windows display element and that has a width of 1 pixel. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return SystemPens()
+
  @staticmethod
  def FromSystemColor(c):
   """
-  FromSystemColor(c: Color) -> Pen
-
-  
-
-   Creates a System.Drawing.Pen from the specified System.Drawing.Color.
-
-  
-
-   c: The System.Drawing.Color for the new System.Drawing.Pen.
-
+  FromSystemColor(c: Color) -> Pen
+  
+   Creates a System.Drawing.Pen from the specified System.Drawing.Color.
+  
+   c: The System.Drawing.Color for the new System.Drawing.Pen.
    Returns: The System.Drawing.Pen this method creates.
   """
   pass

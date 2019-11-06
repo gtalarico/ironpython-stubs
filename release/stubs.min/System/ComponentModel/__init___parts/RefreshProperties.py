@@ -1,11 +1,14 @@
-class RefreshProperties(Enum,IComparable,IFormattable,IConvertible):
+class RefreshProperties:
  """
- Defines identifiers that indicate the type of a refresh of the Properties window.
-
- 
-
+ Defines identifiers that indicate the type of a refresh of the Properties window.
+ 
  enum RefreshProperties,values: All (1),None (0),Repaint (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return RefreshProperties()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -30,7 +33,7 @@ class RefreshProperties(Enum,IComparable,IFormattable,IConvertible):
  def __str__(self,*args):
   pass
  All=None
- None=None
+ None_ =None
  Repaint=None
  value__=None
 

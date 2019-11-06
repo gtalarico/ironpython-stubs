@@ -1,11 +1,13 @@
 class ValidationConstraints(Enum,IComparable,IFormattable,IConvertible):
  """
- Defines constants that inform System.Windows.Forms.ContainerControl.ValidateChildren(System.Windows.Forms.ValidationConstraints) about how it should validate a container's child controls.
-
- 
-
+ Defines constants that inform System.Windows.Forms.ContainerControl.ValidateChildren(System.Windows.Forms.ValidationConstraints) about how it should validate a container's child controls.
+ 
  enum (flags) ValidationConstraints,values: Enabled (2),ImmediateChildren (16),None (0),Selectable (1),TabStop (8),Visible (4)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ValidationConstraints()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -31,7 +33,7 @@ class ValidationConstraints(Enum,IComparable,IFormattable,IConvertible):
   pass
  Enabled=None
  ImmediateChildren=None
- None=None
+ None_ =None
  Selectable=None
  TabStop=None
  value__=None

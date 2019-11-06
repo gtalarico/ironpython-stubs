@@ -1,11 +1,13 @@
 class LeftRightAlignment(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether an object or text is aligned to the left or right of a reference point.
-
- 
-
+ Specifies whether an object or text is aligned to the left or right of a reference point.
+ 
  enum LeftRightAlignment,values: Left (0),Right (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return LeftRightAlignment()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

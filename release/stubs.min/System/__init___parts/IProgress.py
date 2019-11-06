@@ -1,5 +1,10 @@
 class IProgress:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IProgress()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Report(self,value):
   """ Report(self: IProgress[T],value: T) """
   pass

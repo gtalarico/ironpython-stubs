@@ -1,11 +1,14 @@
-class WatcherChangeTypes(Enum,IComparable,IFormattable,IConvertible):
+class WatcherChangeTypes:
  """
- Changes that might occur to a file or directory.
-
- 
-
+ Changes that might occur to a file or directory.
+ 
  enum (flags) WatcherChangeTypes,values: All (15),Changed (4),Created (1),Deleted (2),Renamed (8)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WatcherChangeTypes()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

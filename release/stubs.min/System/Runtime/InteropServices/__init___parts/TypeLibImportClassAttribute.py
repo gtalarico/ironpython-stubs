@@ -1,11 +1,14 @@
-class TypeLibImportClassAttribute(Attribute,_Attribute):
+class TypeLibImportClassAttribute:
  """
- Specifies which System.Type exclusively uses an interface. This class cannot be inherited.
-
- 
-
+ Specifies which System.Type exclusively uses an interface. This class cannot be inherited.
+ 
  TypeLibImportClassAttribute(importClass: Type)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TypeLibImportClassAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -14,14 +17,10 @@ class TypeLibImportClassAttribute(Attribute,_Attribute):
   """ __new__(cls: type,importClass: Type) """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the name of a System.Type object that exclusively uses an interface.
-
-
-
-Get: Value(self: TypeLibImportClassAttribute) -> str
-
-
-
+ """Gets the name of a System.Type object that exclusively uses an interface.
+
+Get: Value(self: TypeLibImportClassAttribute) -> str
+
 """
 
 

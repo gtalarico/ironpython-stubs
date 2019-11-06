@@ -1,29 +1,22 @@
-class DescriptionAttribute(Attribute,_Attribute):
+class DescriptionAttribute:
  """
- Specifies a description for a property or event.
-
- 
-
- DescriptionAttribute()
-
+ Specifies a description for a property or event.
+ 
+ DescriptionAttribute()
  DescriptionAttribute(description: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DescriptionAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
-  Equals(self: DescriptionAttribute,obj: object) -> bool
-
-  
-
-   Returns whether the value of the given object is equal to the current 
-
-    System.ComponentModel.DescriptionAttribute.
-
-  
-
-  
-
-   obj: The object to test the value equality of.
-
+  Equals(self: DescriptionAttribute,obj: object) -> bool
+  
+   Returns whether the value of the given object is equal to the current System.ComponentModel.DescriptionAttribute.
+  
+   obj: The object to test the value equality of.
    Returns: true if the value of the given object is equal to that of the current; otherwise,false.
   """
   pass
@@ -32,19 +25,10 @@ class DescriptionAttribute(Attribute,_Attribute):
   pass
  def IsDefaultAttribute(self):
   """
-  IsDefaultAttribute(self: DescriptionAttribute) -> bool
-
-  
-
-   Returns a value indicating whether this is the default 
-
-    System.ComponentModel.DescriptionAttribute instance.
-
-  
-
-   Returns: true,if this is the default System.ComponentModel.DescriptionAttribute instance; otherwise,
-
-    false.
+  IsDefaultAttribute(self: DescriptionAttribute) -> bool
+  
+   Returns a value indicating whether this is the default System.ComponentModel.DescriptionAttribute instance.
+   Returns: true,if this is the default System.ComponentModel.DescriptionAttribute instance; otherwise,false.
   """
   pass
  def __eq__(self,*args):
@@ -56,29 +40,22 @@ class DescriptionAttribute(Attribute,_Attribute):
  @staticmethod
  def __new__(self,description=None):
   """
-  __new__(cls: type)
-
+  __new__(cls: type)
   __new__(cls: type,description: str)
   """
   pass
  def __ne__(self,*args):
   pass
  Description=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the description stored in this attribute.
-
-
-
-Get: Description(self: DescriptionAttribute) -> str
-
-
-
+ """Gets the description stored in this attribute.
+
+Get: Description(self: DescriptionAttribute) -> str
+
 """
 
  DescriptionValue=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the string stored as the description.
-
-
-
+ """Gets or sets the string stored as the description.
+
 """
 
 

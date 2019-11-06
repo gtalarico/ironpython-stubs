@@ -1,11 +1,14 @@
-class ClassInterfaceType(Enum,IComparable,IFormattable,IConvertible):
+class ClassInterfaceType:
  """
- Identifies the type of class interface that is generated for a class.
-
- 
-
+ Identifies the type of class interface that is generated for a class.
+ 
  enum ClassInterfaceType,values: AutoDispatch (1),AutoDual (2),None (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ClassInterfaceType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -31,6 +34,6 @@ class ClassInterfaceType(Enum,IComparable,IFormattable,IConvertible):
   pass
  AutoDispatch=None
  AutoDual=None
- None=None
+ None_ =None
  value__=None
 

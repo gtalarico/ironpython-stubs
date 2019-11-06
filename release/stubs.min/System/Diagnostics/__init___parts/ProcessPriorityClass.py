@@ -1,11 +1,14 @@
-class ProcessPriorityClass(Enum,IComparable,IFormattable,IConvertible):
+class ProcessPriorityClass:
  """
- Indicates the priority that the system associates with a process. This value,together with the priority value of each thread of the process,determines each thread's base priority level.
-
- 
-
+ Indicates the priority that the system associates with a process. This value,together with the priority value of each thread of the process,determines each thread's base priority level.
+ 
  enum ProcessPriorityClass,values: AboveNormal (32768),BelowNormal (16384),High (128),Idle (64),Normal (32),RealTime (256)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ProcessPriorityClass()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

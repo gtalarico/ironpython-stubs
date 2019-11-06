@@ -1,20 +1,18 @@
 class IObservable:
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IObservable()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Subscribe(self,observer):
   """
-  Subscribe(self: IObservable[T],observer: IObserver[T]) -> IDisposable
-
-  
-
-   Notifies the provider that an observer is to receive notifications.
-
-  
-
-   observer: The object that is to receive notifications.
-
-   Returns: A reference to an interface that allows observers to stop receiving notifications before the 
-
-    provider has finished sending them.
+  Subscribe(self: IObservable[T],observer: IObserver[T]) -> IDisposable
+  
+   Notifies the provider that an observer is to receive notifications.
+  
+   observer: The object that is to receive notifications.
+   Returns: A reference to an interface that allows observers to stop receiving notifications before the provider has finished sending them.
   """
   pass
  def __init__(self,*args):

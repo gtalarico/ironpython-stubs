@@ -1,28 +1,20 @@
 class ICustomFormatter:
  """ Defines a method that supports custom formatting of the value of an object. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ICustomFormatter()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Format(self,format,arg,formatProvider):
   """
-  Format(self: ICustomFormatter,format: str,arg: object,formatProvider: IFormatProvider) -> str
-
-  
-
-   Converts the value of a specified object to an equivalent string representation using specified 
-
-    format and culture-specific formatting information.
-
-  
-
-  
-
-   format: A format string containing formatting specifications.
-
-   arg: An object to format.
-
-   formatProvider: An object that supplies format information about the current instance.
-
-   Returns: The string representation of the value of arg,formatted as specified by format and 
-
-    formatProvider.
+  Format(self: ICustomFormatter,format: str,arg: object,formatProvider: IFormatProvider) -> str
+  
+   Converts the value of a specified object to an equivalent string representation using specified format and culture-specific formatting information.
+  
+   format: A format string containing formatting specifications.
+   arg: An object to format.
+   formatProvider: An object that supplies format information about the current instance.
+   Returns: The string representation of the value of arg,formatted as specified by format and formatProvider.
   """
   pass
  def __init__(self,*args):

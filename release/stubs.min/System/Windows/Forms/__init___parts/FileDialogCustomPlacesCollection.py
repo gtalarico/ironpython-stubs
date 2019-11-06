@@ -1,34 +1,28 @@
-class FileDialogCustomPlacesCollection(Collection[FileDialogCustomPlace],IList[FileDialogCustomPlace],ICollection[FileDialogCustomPlace],IEnumerable[FileDialogCustomPlace],IEnumerable,IList,ICollection,IReadOnlyList[FileDialogCustomPlace],IReadOnlyCollection[FileDialogCustomPlace]):
+class FileDialogCustomPlacesCollection(Collection,IList,ICollection,IEnumerable,IEnumerable,IList,ICollection,IReadOnlyList,IReadOnlyCollection):
  """
- Represents a collection of Windows Vista�custom places for the System.Windows.Forms.FileDialog�class.
-
- 
-
+ Represents a collection of Windows Vista�custom places for the System.Windows.Forms.FileDialog�class.
+ 
  FileDialogCustomPlacesCollection()
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return FileDialogCustomPlacesCollection()
+
  def Add(self,*__args):
   """
-  Add(self: FileDialogCustomPlacesCollection,knownFolderGuid: Guid)
-
-   Adds a custom place to the System.Windows.Forms.FileDialogCustomPlacesCollection collection.
-
-  
-
+  Add(self: FileDialogCustomPlacesCollection,path: str)
+   Adds a custom place to the System.Windows.Forms.FileDialogCustomPlacesCollection collection.
+  
+   path: A folder path to the custom place.
+  Add(self: FileDialogCustomPlacesCollection,knownFolderGuid: Guid)
+   Adds a custom place to the System.Windows.Forms.FileDialogCustomPlacesCollection collection.
+  
    knownFolderGuid: A System.Guid that represents a Windows Vista Known Folder.
-
-  Add(self: FileDialogCustomPlacesCollection,path: str)
-
-   Adds a custom place to the System.Windows.Forms.FileDialogCustomPlacesCollection collection.
-
-  
-
-   path: A folder path to the custom place.
   """
   pass
  def ClearItems(self,*args):
   """
-  ClearItems(self: Collection[FileDialogCustomPlace])
-
+  ClearItems(self: Collection[FileDialogCustomPlace])
    Removes all elements from the System.Collections.ObjectModel.Collection.
   """
   pass
@@ -37,12 +31,9 @@ class FileDialogCustomPlacesCollection(Collection[FileDialogCustomPlace],IList[F
   pass
  def RemoveItem(self,*args):
   """
-  RemoveItem(self: Collection[FileDialogCustomPlace],index: int)
-
-   Removes the element at the specified index of the System.Collections.ObjectModel.Collection.
-
-  
-
+  RemoveItem(self: Collection[FileDialogCustomPlace],index: int)
+   Removes the element at the specified index of the System.Collections.ObjectModel.Collection.
+  
    index: The zero-based index of the element to remove.
   """
   pass
@@ -65,10 +56,8 @@ class FileDialogCustomPlacesCollection(Collection[FileDialogCustomPlace],IList[F
   """ x.__setitem__(i,y) <==> x[i]= """
   pass
  Items=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a System.Collections.Generic.IList wrapper around the System.Collections.ObjectModel.Collection.
-
-
-
+ """Gets a System.Collections.Generic.IList wrapper around the System.Collections.ObjectModel.Collection.
+
 """
 
 

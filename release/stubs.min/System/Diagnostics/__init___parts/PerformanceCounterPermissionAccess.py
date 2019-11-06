@@ -1,11 +1,14 @@
-class PerformanceCounterPermissionAccess(Enum,IComparable,IFormattable,IConvertible):
+class PerformanceCounterPermissionAccess:
  """
- Defines access levels used by System.Diagnostics.PerformanceCounter permission classes.
-
- 
-
+ Defines access levels used by System.Diagnostics.PerformanceCounter permission classes.
+ 
  enum (flags) PerformanceCounterPermissionAccess,values: Administer (7),Browse (1),Instrument (3),None (0),Read (1),Write (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PerformanceCounterPermissionAccess()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -32,7 +35,7 @@ class PerformanceCounterPermissionAccess(Enum,IComparable,IFormattable,IConverti
  Administer=None
  Browse=None
  Instrument=None
- None=None
+ None_ =None
  Read=None
  value__=None
  Write=None

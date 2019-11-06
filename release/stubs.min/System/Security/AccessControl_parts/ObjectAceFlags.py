@@ -1,11 +1,14 @@
-class ObjectAceFlags(Enum,IComparable,IFormattable,IConvertible):
+class ObjectAceFlags:
  """
- Specifies the presence of object types for Access Control Entries (ACEs).
-
- 
-
+ Specifies the presence of object types for Access Control Entries (ACEs).
+ 
  enum (flags) ObjectAceFlags,values: InheritedObjectAceTypePresent (2),None (0),ObjectAceTypePresent (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ObjectAceFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -30,7 +33,7 @@ class ObjectAceFlags(Enum,IComparable,IFormattable,IConvertible):
  def __str__(self,*args):
   pass
  InheritedObjectAceTypePresent=None
- None=None
+ None_ =None
  ObjectAceTypePresent=None
  value__=None
 

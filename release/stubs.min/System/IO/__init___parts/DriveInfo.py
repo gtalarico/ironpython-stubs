@@ -1,31 +1,28 @@
-class DriveInfo(object,ISerializable):
+class DriveInfo(object):
  """
- Provides access to information on a drive.
-
- 
-
+ Provides access to information on a drive.
+ 
  DriveInfo(driveName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DriveInfo()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def GetDrives():
   """
-  GetDrives() -> Array[DriveInfo]
-
-  
-
-   Retrieves the drive names of all logical drives on a computer.
-
+  GetDrives() -> Array[DriveInfo]
+  
+   Retrieves the drive names of all logical drives on a computer.
    Returns: An array of type System.IO.DriveInfo that represents the logical drives on a computer.
   """
   pass
  def ToString(self):
   """
-  ToString(self: DriveInfo) -> str
-
-  
-
-   Returns a drive name as a string.
-
+  ToString(self: DriveInfo) -> str
+  
+   Returns a drive name as a string.
    Returns: The name of the drive.
   """
   pass
@@ -44,104 +41,67 @@ class DriveInfo(object,ISerializable):
  def __str__(self,*args):
   pass
  AvailableFreeSpace=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Indicates the amount of available free space on a drive.
-
-
-
-Get: AvailableFreeSpace(self: DriveInfo) -> Int64
-
-
-
+ """Indicates the amount of available free space on a drive.
+
+Get: AvailableFreeSpace(self: DriveInfo) -> Int64
+
 """
 
  DriveFormat=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the name of the file system,such as NTFS or FAT32.
-
-
-
-Get: DriveFormat(self: DriveInfo) -> str
-
-
-
+ """Gets the name of the file system,such as NTFS or FAT32.
+
+Get: DriveFormat(self: DriveInfo) -> str
+
 """
 
  DriveType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the drive type.
-
-
-
-Get: DriveType(self: DriveInfo) -> DriveType
-
-
-
+ """Gets the drive type.
+
+Get: DriveType(self: DriveInfo) -> DriveType
+
 """
 
  IsReady=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a value indicating whether a drive is ready.
-
-
-
-Get: IsReady(self: DriveInfo) -> bool
-
-
-
+ """Gets a value indicating whether a drive is ready.
+
+Get: IsReady(self: DriveInfo) -> bool
+
 """
 
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the name of a drive.
-
-
-
-Get: Name(self: DriveInfo) -> str
-
-
-
+ """Gets the name of a drive.
+
+Get: Name(self: DriveInfo) -> str
+
 """
 
  RootDirectory=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the root directory of a drive.
-
-
-
-Get: RootDirectory(self: DriveInfo) -> DirectoryInfo
-
-
-
+ """Gets the root directory of a drive.
+
+Get: RootDirectory(self: DriveInfo) -> DirectoryInfo
+
 """
 
  TotalFreeSpace=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the total amount of free space available on a drive.
-
-
-
-Get: TotalFreeSpace(self: DriveInfo) -> Int64
-
-
-
+ """Gets the total amount of free space available on a drive.
+
+Get: TotalFreeSpace(self: DriveInfo) -> Int64
+
 """
 
  TotalSize=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the total size of storage space on a drive.
-
-
-
-Get: TotalSize(self: DriveInfo) -> Int64
-
-
-
+ """Gets the total size of storage space on a drive.
+
+Get: TotalSize(self: DriveInfo) -> Int64
+
 """
 
  VolumeLabel=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the volume label of a drive.
-
-
-
-Get: VolumeLabel(self: DriveInfo) -> str
-
-
-
-Set: VolumeLabel(self: DriveInfo)=value
-
+ """Gets or sets the volume label of a drive.
+
+Get: VolumeLabel(self: DriveInfo) -> str
+
+Set: VolumeLabel(self: DriveInfo)=value
 """
 
 

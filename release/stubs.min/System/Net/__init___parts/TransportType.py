@@ -1,11 +1,14 @@
-class TransportType(Enum,IComparable,IFormattable,IConvertible):
+class TransportType:
  """
- Defines transport types for the System.Net.SocketPermission and System.Net.Sockets.Socket classes.
-
- 
-
+ Defines transport types for the System.Net.SocketPermission and System.Net.Sockets.Socket classes.
+ 
  enum TransportType,values: All (3),Connectionless (1),ConnectionOriented (2),Tcp (2),Udp (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TransportType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

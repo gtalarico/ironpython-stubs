@@ -1,11 +1,14 @@
-class AutomationProxyAttribute(Attribute,_Attribute):
+class AutomationProxyAttribute:
  """
- Specifies whether the type should be marshaled using the Automation marshaler or a custom proxy and stub.
-
- 
-
+ Specifies whether the type should be marshaled using the Automation marshaler or a custom proxy and stub.
+ 
  AutomationProxyAttribute(val: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AutomationProxyAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -14,14 +17,10 @@ class AutomationProxyAttribute(Attribute,_Attribute):
   """ __new__(cls: type,val: bool) """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a value indicating the type of marshaler to use.
-
-
-
-Get: Value(self: AutomationProxyAttribute) -> bool
-
-
-
+ """Gets a value indicating the type of marshaler to use.
+
+Get: Value(self: AutomationProxyAttribute) -> bool
+
 """
 
 

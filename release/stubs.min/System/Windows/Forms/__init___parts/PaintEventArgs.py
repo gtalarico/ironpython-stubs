@@ -1,33 +1,24 @@
 class PaintEventArgs(EventArgs,IDisposable):
  """
- Provides data for the System.Windows.Forms.Control.Paint event.
-
- 
-
+ Provides data for the System.Windows.Forms.Control.Paint event.
+ 
  PaintEventArgs(graphics: Graphics,clipRect: Rectangle)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return PaintEventArgs()
+
  def Dispose(self):
   """
-  Dispose(self: PaintEventArgs)
-
+  Dispose(self: PaintEventArgs)
    Releases all resources used by the System.Windows.Forms.PaintEventArgs.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-
-  
-
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -37,25 +28,17 @@ class PaintEventArgs(EventArgs,IDisposable):
   """ __new__(cls: type,graphics: Graphics,clipRect: Rectangle) """
   pass
  ClipRectangle=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the rectangle in which to paint.
-
-
-
-Get: ClipRectangle(self: PaintEventArgs) -> Rectangle
-
-
-
+ """Gets the rectangle in which to paint.
+
+Get: ClipRectangle(self: PaintEventArgs) -> Rectangle
+
 """
 
  Graphics=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the graphics used to paint.
-
-
-
-Get: Graphics(self: PaintEventArgs) -> Graphics
-
-
-
+ """Gets the graphics used to paint.
+
+Get: Graphics(self: PaintEventArgs) -> Graphics
+
 """
 
 

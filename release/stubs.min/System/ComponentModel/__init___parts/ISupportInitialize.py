@@ -1,16 +1,19 @@
 class ISupportInitialize:
  """ Specifies that this object supports a simple,transacted notification for batch initialization. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ISupportInitialize()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def BeginInit(self):
   """
-  BeginInit(self: ISupportInitialize)
-
+  BeginInit(self: ISupportInitialize)
    Signals the object that initialization is starting.
   """
   pass
  def EndInit(self):
   """
-  EndInit(self: ISupportInitialize)
-
+  EndInit(self: ISupportInitialize)
    Signals the object that initialization is complete.
   """
   pass

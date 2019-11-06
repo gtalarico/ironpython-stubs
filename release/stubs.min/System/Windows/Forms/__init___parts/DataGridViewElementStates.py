@@ -1,11 +1,13 @@
 class DataGridViewElementStates(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the user interface (UI) state of a element within a System.Windows.Forms.DataGridView control.
-
- 
-
+ Specifies the user interface (UI) state of a element within a System.Windows.Forms.DataGridView control.
+ 
  enum (flags) DataGridViewElementStates,values: Displayed (1),Frozen (2),None (0),ReadOnly (4),Resizable (8),ResizableSet (16),Selected (32),Visible (64)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewElementStates()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -31,7 +33,7 @@ class DataGridViewElementStates(Enum,IComparable,IFormattable,IConvertible):
   pass
  Displayed=None
  Frozen=None
- None=None
+ None_ =None
  ReadOnly=None
  Resizable=None
  ResizableSet=None

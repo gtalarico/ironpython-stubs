@@ -1,11 +1,14 @@
-class ToolboxItemFilterType(Enum,IComparable,IFormattable,IConvertible):
+class ToolboxItemFilterType:
  """
- Defines identifiers used to indicate the type of filter that a System.ComponentModel.ToolboxItemFilterAttribute uses.
-
- 
-
+ Defines identifiers used to indicate the type of filter that a System.ComponentModel.ToolboxItemFilterAttribute uses.
+ 
  enum ToolboxItemFilterType,values: Allow (0),Custom (1),Prevent (2),Require (3)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ToolboxItemFilterType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

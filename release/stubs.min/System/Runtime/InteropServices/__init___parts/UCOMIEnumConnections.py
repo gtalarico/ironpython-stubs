@@ -1,48 +1,40 @@
 class UCOMIEnumConnections:
  """ Use System.Runtime.InteropServices.ComTypes.IEnumConnections instead. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UCOMIEnumConnections()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Clone(self,ppenum):
   """
-  Clone(self: UCOMIEnumConnections) -> UCOMIEnumConnections
-
-  
-
+  Clone(self: UCOMIEnumConnections) -> UCOMIEnumConnections
+  
    Creates another enumerator that contains the same enumeration state as the current one.
   """
   pass
  def Next(self,celt,rgelt,pceltFetched):
   """
-  Next(self: UCOMIEnumConnections,celt: int) -> (int,Array[CONNECTDATA],int)
-
-  
-
-   Retrieves a specified number of items in the enumeration sequence.
-
-  
-
-   celt: The number of System.Runtime.InteropServices.CONNECTDATA structures to return in rgelt.
-
+  Next(self: UCOMIEnumConnections,celt: int) -> (int,Array[CONNECTDATA],int)
+  
+   Retrieves a specified number of items in the enumeration sequence.
+  
+   celt: The number of System.Runtime.InteropServices.CONNECTDATA structures to return in rgelt.
    Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise,S_FALSE.
   """
   pass
  def Reset(self):
   """
-  Reset(self: UCOMIEnumConnections)
-
+  Reset(self: UCOMIEnumConnections)
    Resets the enumeration sequence to the beginning.
   """
   pass
  def Skip(self,celt):
   """
-  Skip(self: UCOMIEnumConnections,celt: int) -> int
-
-  
-
-   Skips over a specified number of items in the enumeration sequence.
-
-  
-
-   celt: The number of elements to skip in the enumeration.
-
+  Skip(self: UCOMIEnumConnections,celt: int) -> int
+  
+   Skips over a specified number of items in the enumeration sequence.
+  
+   celt: The number of elements to skip in the enumeration.
    Returns: S_OK if the number of elements skipped equals the celt parameter; otherwise,S_FALSE.
   """
   pass

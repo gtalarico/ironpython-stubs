@@ -2,14 +2,19 @@
 # module System.Net.WebSockets calls itself WebSockets
 # from System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
-# no imports
+# no doc
+# no important
 
 # no functions
 # classes
 
-class WebSocket(object,IDisposable):
+class WebSocket(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebSocket()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Abort(self):
   """ Abort(self: WebSocket) """
   pass
@@ -55,20 +60,10 @@ class WebSocket(object,IDisposable):
   """ ThrowOnInvalidState(state: WebSocketState,*validStates: Array[WebSocketState]) """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-
-  
-
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -77,39 +72,36 @@ class WebSocket(object,IDisposable):
   """ __repr__(self: object) -> str """
   pass
  CloseStatus=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CloseStatus(self: WebSocket) -> Nullable[WebSocketCloseStatus]
-
-
-
+ """Get: CloseStatus(self: WebSocket) -> Nullable[WebSocketCloseStatus]
+
 """
 
  CloseStatusDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CloseStatusDescription(self: WebSocket) -> str
-
-
-
+ """Get: CloseStatusDescription(self: WebSocket) -> str
+
 """
 
  State=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: State(self: WebSocket) -> WebSocketState
-
-
-
+ """Get: State(self: WebSocket) -> WebSocketState
+
 """
 
  SubProtocol=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SubProtocol(self: WebSocket) -> str
-
-
-
+ """Get: SubProtocol(self: WebSocket) -> str
+
 """
 
 
  DefaultKeepAliveInterval=None
 
 
-class ClientWebSocket(WebSocket,IDisposable):
+class ClientWebSocket(WebSocket):
  """ ClientWebSocket() """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ClientWebSocket()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Abort(self):
   """ Abort(self: ClientWebSocket) """
   pass
@@ -132,306 +124,240 @@ class ClientWebSocket(WebSocket,IDisposable):
   """ SendAsync(self: ClientWebSocket,buffer: ArraySegment[Byte],messageType: WebSocketMessageType,endOfMessage: bool,cancellationToken: CancellationToken) -> Task """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-
-  
-
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  CloseStatus=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CloseStatus(self: ClientWebSocket) -> Nullable[WebSocketCloseStatus]
-
-
-
+ """Get: CloseStatus(self: ClientWebSocket) -> Nullable[WebSocketCloseStatus]
+
 """
 
  CloseStatusDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CloseStatusDescription(self: ClientWebSocket) -> str
-
-
-
+ """Get: CloseStatusDescription(self: ClientWebSocket) -> str
+
 """
 
  Options=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Options(self: ClientWebSocket) -> ClientWebSocketOptions
-
-
-
+ """Get: Options(self: ClientWebSocket) -> ClientWebSocketOptions
+
 """
 
  State=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: State(self: ClientWebSocket) -> WebSocketState
-
-
-
+ """Get: State(self: ClientWebSocket) -> WebSocketState
+
 """
 
  SubProtocol=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SubProtocol(self: ClientWebSocket) -> str
-
-
-
+ """Get: SubProtocol(self: ClientWebSocket) -> str
+
 """
 
 
 
 class ClientWebSocketOptions(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ClientWebSocketOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def AddSubProtocol(self,subProtocol):
   """ AddSubProtocol(self: ClientWebSocketOptions,subProtocol: str) """
   pass
  def SetBuffer(self,receiveBufferSize,sendBufferSize,buffer=None):
-  """ SetBuffer(self: ClientWebSocketOptions,receiveBufferSize: int,sendBufferSize: int,buffer: ArraySegment[Byte])SetBuffer(self: ClientWebSocketOptions,receiveBufferSize: int,sendBufferSize: int) """
+  """ SetBuffer(self: ClientWebSocketOptions,receiveBufferSize: int,sendBufferSize: int)SetBuffer(self: ClientWebSocketOptions,receiveBufferSize: int,sendBufferSize: int,buffer: ArraySegment[Byte]) """
   pass
  def SetRequestHeader(self,headerName,headerValue):
   """ SetRequestHeader(self: ClientWebSocketOptions,headerName: str,headerValue: str) """
   pass
  ClientCertificates=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ClientCertificates(self: ClientWebSocketOptions) -> X509CertificateCollection
-
-
-
-Set: ClientCertificates(self: ClientWebSocketOptions)=value
-
+ """Get: ClientCertificates(self: ClientWebSocketOptions) -> X509CertificateCollection
+
+Set: ClientCertificates(self: ClientWebSocketOptions)=value
 """
 
  Cookies=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Cookies(self: ClientWebSocketOptions) -> CookieContainer
-
-
-
-Set: Cookies(self: ClientWebSocketOptions)=value
-
+ """Get: Cookies(self: ClientWebSocketOptions) -> CookieContainer
+
+Set: Cookies(self: ClientWebSocketOptions)=value
 """
 
  Credentials=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Credentials(self: ClientWebSocketOptions) -> ICredentials
-
-
-
-Set: Credentials(self: ClientWebSocketOptions)=value
-
+ """Get: Credentials(self: ClientWebSocketOptions) -> ICredentials
+
+Set: Credentials(self: ClientWebSocketOptions)=value
 """
 
  KeepAliveInterval=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: KeepAliveInterval(self: ClientWebSocketOptions) -> TimeSpan
-
-
-
-Set: KeepAliveInterval(self: ClientWebSocketOptions)=value
-
+ """Get: KeepAliveInterval(self: ClientWebSocketOptions) -> TimeSpan
+
+Set: KeepAliveInterval(self: ClientWebSocketOptions)=value
 """
 
  Proxy=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Proxy(self: ClientWebSocketOptions) -> IWebProxy
-
-
-
-Set: Proxy(self: ClientWebSocketOptions)=value
-
+ """Get: Proxy(self: ClientWebSocketOptions) -> IWebProxy
+
+Set: Proxy(self: ClientWebSocketOptions)=value
 """
 
  UseDefaultCredentials=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: UseDefaultCredentials(self: ClientWebSocketOptions) -> bool
-
-
-
-Set: UseDefaultCredentials(self: ClientWebSocketOptions)=value
-
+ """Get: UseDefaultCredentials(self: ClientWebSocketOptions) -> bool
+
+Set: UseDefaultCredentials(self: ClientWebSocketOptions)=value
 """
 
 
 
 class WebSocketContext(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebSocketContext()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CookieCollection=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CookieCollection(self: WebSocketContext) -> CookieCollection
-
-
-
+ """Get: CookieCollection(self: WebSocketContext) -> CookieCollection
+
 """
 
  Headers=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Headers(self: WebSocketContext) -> NameValueCollection
-
-
-
+ """Get: Headers(self: WebSocketContext) -> NameValueCollection
+
 """
 
  IsAuthenticated=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsAuthenticated(self: WebSocketContext) -> bool
-
-
-
+ """Get: IsAuthenticated(self: WebSocketContext) -> bool
+
 """
 
  IsLocal=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsLocal(self: WebSocketContext) -> bool
-
-
-
+ """Get: IsLocal(self: WebSocketContext) -> bool
+
 """
 
  IsSecureConnection=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsSecureConnection(self: WebSocketContext) -> bool
-
-
-
+ """Get: IsSecureConnection(self: WebSocketContext) -> bool
+
 """
 
  Origin=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Origin(self: WebSocketContext) -> str
-
-
-
+ """Get: Origin(self: WebSocketContext) -> str
+
 """
 
  RequestUri=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: RequestUri(self: WebSocketContext) -> Uri
-
-
-
+ """Get: RequestUri(self: WebSocketContext) -> Uri
+
 """
 
  SecWebSocketKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SecWebSocketKey(self: WebSocketContext) -> str
-
-
-
+ """Get: SecWebSocketKey(self: WebSocketContext) -> str
+
 """
 
  SecWebSocketProtocols=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SecWebSocketProtocols(self: WebSocketContext) -> IEnumerable[str]
-
-
-
+ """Get: SecWebSocketProtocols(self: WebSocketContext) -> IEnumerable[str]
+
 """
 
  SecWebSocketVersion=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SecWebSocketVersion(self: WebSocketContext) -> str
-
-
-
+ """Get: SecWebSocketVersion(self: WebSocketContext) -> str
+
 """
 
  User=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: User(self: WebSocketContext) -> IPrincipal
-
-
-
+ """Get: User(self: WebSocketContext) -> IPrincipal
+
 """
 
  WebSocket=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WebSocket(self: WebSocketContext) -> WebSocket
-
-
-
+ """Get: WebSocket(self: WebSocketContext) -> WebSocket
+
 """
 
 
 
 class HttpListenerWebSocketContext(WebSocketContext):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return HttpListenerWebSocketContext()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  CookieCollection=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CookieCollection(self: HttpListenerWebSocketContext) -> CookieCollection
-
-
-
+ """Get: CookieCollection(self: HttpListenerWebSocketContext) -> CookieCollection
+
 """
 
  Headers=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Headers(self: HttpListenerWebSocketContext) -> NameValueCollection
-
-
-
+ """Get: Headers(self: HttpListenerWebSocketContext) -> NameValueCollection
+
 """
 
  IsAuthenticated=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsAuthenticated(self: HttpListenerWebSocketContext) -> bool
-
-
-
+ """Get: IsAuthenticated(self: HttpListenerWebSocketContext) -> bool
+
 """
 
  IsLocal=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsLocal(self: HttpListenerWebSocketContext) -> bool
-
-
-
+ """Get: IsLocal(self: HttpListenerWebSocketContext) -> bool
+
 """
 
  IsSecureConnection=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsSecureConnection(self: HttpListenerWebSocketContext) -> bool
-
-
-
+ """Get: IsSecureConnection(self: HttpListenerWebSocketContext) -> bool
+
 """
 
  Origin=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Origin(self: HttpListenerWebSocketContext) -> str
-
-
-
+ """Get: Origin(self: HttpListenerWebSocketContext) -> str
+
 """
 
  RequestUri=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: RequestUri(self: HttpListenerWebSocketContext) -> Uri
-
-
-
+ """Get: RequestUri(self: HttpListenerWebSocketContext) -> Uri
+
 """
 
  SecWebSocketKey=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SecWebSocketKey(self: HttpListenerWebSocketContext) -> str
-
-
-
+ """Get: SecWebSocketKey(self: HttpListenerWebSocketContext) -> str
+
 """
 
  SecWebSocketProtocols=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SecWebSocketProtocols(self: HttpListenerWebSocketContext) -> IEnumerable[str]
-
-
-
+ """Get: SecWebSocketProtocols(self: HttpListenerWebSocketContext) -> IEnumerable[str]
+
 """
 
  SecWebSocketVersion=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: SecWebSocketVersion(self: HttpListenerWebSocketContext) -> str
-
-
-
+ """Get: SecWebSocketVersion(self: HttpListenerWebSocketContext) -> str
+
 """
 
  User=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: User(self: HttpListenerWebSocketContext) -> IPrincipal
-
-
-
+ """Get: User(self: HttpListenerWebSocketContext) -> IPrincipal
+
 """
 
  WebSocket=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WebSocket(self: HttpListenerWebSocketContext) -> WebSocket
-
-
-
+ """Get: WebSocket(self: HttpListenerWebSocketContext) -> WebSocket
+
 """
 
 
 
-class WebSocketCloseStatus(Enum,IComparable,IFormattable,IConvertible):
+class WebSocketCloseStatus:
  """ enum WebSocketCloseStatus,values: Empty (1005),EndpointUnavailable (1001),InternalServerError (1011),InvalidMessageType (1003),InvalidPayloadData (1007),MandatoryExtension (1010),MessageTooBig (1009),NormalClosure (1000),PolicyViolation (1008),ProtocolError (1002) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebSocketCloseStatus()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -468,8 +394,13 @@ class WebSocketCloseStatus(Enum,IComparable,IFormattable,IConvertible):
  value__=None
 
 
-class WebSocketError(Enum,IComparable,IFormattable,IConvertible):
+class WebSocketError:
  """ enum WebSocketError,values: ConnectionClosedPrematurely (8),Faulted (2),HeaderError (7),InvalidMessageType (1),InvalidState (9),NativeError (3),NotAWebSocket (4),Success (0),UnsupportedProtocol (6),UnsupportedVersion (5) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebSocketError()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -506,44 +437,30 @@ class WebSocketError(Enum,IComparable,IFormattable,IConvertible):
  value__=None
 
 
-class WebSocketException(Win32Exception,ISerializable,_Exception):
+class WebSocketException(Win32Exception):
  """
- WebSocketException()
-
- WebSocketException(error: WebSocketError)
-
- WebSocketException(error: WebSocketError,message: str)
-
- WebSocketException(error: WebSocketError,innerException: Exception)
-
- WebSocketException(error: WebSocketError,message: str,innerException: Exception)
-
- WebSocketException(nativeError: int)
-
- WebSocketException(nativeError: int,message: str)
-
- WebSocketException(nativeError: int,innerException: Exception)
-
- WebSocketException(error: WebSocketError,nativeError: int)
-
- WebSocketException(error: WebSocketError,nativeError: int,message: str)
-
- WebSocketException(error: WebSocketError,nativeError: int,innerException: Exception)
-
- WebSocketException(error: WebSocketError,nativeError: int,message: str,innerException: Exception)
-
- WebSocketException(message: str)
-
+ WebSocketException()
+ WebSocketException(error: WebSocketError)
+ WebSocketException(error: WebSocketError,message: str)
+ WebSocketException(error: WebSocketError,innerException: Exception)
+ WebSocketException(error: WebSocketError,message: str,innerException: Exception)
+ WebSocketException(nativeError: int)
+ WebSocketException(nativeError: int,message: str)
+ WebSocketException(nativeError: int,innerException: Exception)
+ WebSocketException(error: WebSocketError,nativeError: int)
+ WebSocketException(error: WebSocketError,nativeError: int,message: str)
+ WebSocketException(error: WebSocketError,nativeError: int,innerException: Exception)
+ WebSocketException(error: WebSocketError,nativeError: int,message: str,innerException: Exception)
+ WebSocketException(message: str)
  WebSocketException(message: str,innerException: Exception)
  """
- def add_SerializeObjectState(self,*args):
-  """ add_SerializeObjectState(self: Exception,value: EventHandler[SafeSerializationEventArgs]) """
-  pass
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebSocketException()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetObjectData(self,info,context):
   """ GetObjectData(self: WebSocketException,info: SerializationInfo,context: StreamingContext) """
-  pass
- def remove_SerializeObjectState(self,*args):
-  """ remove_SerializeObjectState(self: Exception,value: EventHandler[SafeSerializationEventArgs]) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -551,32 +468,19 @@ class WebSocketException(Win32Exception,ISerializable,_Exception):
  @staticmethod
  def __new__(self,*__args):
   """
-  __new__(cls: type)
-
-  __new__(cls: type,error: WebSocketError)
-
-  __new__(cls: type,error: WebSocketError,message: str)
-
-  __new__(cls: type,error: WebSocketError,innerException: Exception)
-
-  __new__(cls: type,error: WebSocketError,message: str,innerException: Exception)
-
-  __new__(cls: type,nativeError: int)
-
-  __new__(cls: type,nativeError: int,message: str)
-
-  __new__(cls: type,nativeError: int,innerException: Exception)
-
-  __new__(cls: type,error: WebSocketError,nativeError: int)
-
-  __new__(cls: type,error: WebSocketError,nativeError: int,message: str)
-
-  __new__(cls: type,error: WebSocketError,nativeError: int,innerException: Exception)
-
-  __new__(cls: type,error: WebSocketError,nativeError: int,message: str,innerException: Exception)
-
-  __new__(cls: type,message: str)
-
+  __new__(cls: type)
+  __new__(cls: type,error: WebSocketError)
+  __new__(cls: type,error: WebSocketError,message: str)
+  __new__(cls: type,error: WebSocketError,innerException: Exception)
+  __new__(cls: type,error: WebSocketError,message: str,innerException: Exception)
+  __new__(cls: type,nativeError: int)
+  __new__(cls: type,nativeError: int,message: str)
+  __new__(cls: type,nativeError: int,innerException: Exception)
+  __new__(cls: type,error: WebSocketError,nativeError: int)
+  __new__(cls: type,error: WebSocketError,nativeError: int,message: str)
+  __new__(cls: type,error: WebSocketError,nativeError: int,innerException: Exception)
+  __new__(cls: type,error: WebSocketError,nativeError: int,message: str,innerException: Exception)
+  __new__(cls: type,message: str)
   __new__(cls: type,message: str,innerException: Exception)
   """
   pass
@@ -585,23 +489,26 @@ class WebSocketException(Win32Exception,ISerializable,_Exception):
  def __str__(self,*args):
   pass
  ErrorCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ErrorCode(self: WebSocketException) -> int
-
-
-
+ """Get: ErrorCode(self: WebSocketException) -> int
+
 """
 
  WebSocketErrorCode=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: WebSocketErrorCode(self: WebSocketException) -> WebSocketError
-
-
-
+ """Get: WebSocketErrorCode(self: WebSocketException) -> WebSocketError
+
 """
 
 
+ SerializeObjectState=None
 
-class WebSocketMessageType(Enum,IComparable,IFormattable,IConvertible):
+
+class WebSocketMessageType:
  """ enum WebSocketMessageType,values: Binary (1),Close (2),Text (0) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebSocketMessageType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -633,57 +540,55 @@ class WebSocketMessageType(Enum,IComparable,IFormattable,IConvertible):
 
 class WebSocketReceiveResult(object):
  """
- WebSocketReceiveResult(count: int,messageType: WebSocketMessageType,endOfMessage: bool)
-
+ WebSocketReceiveResult(count: int,messageType: WebSocketMessageType,endOfMessage: bool)
  WebSocketReceiveResult(count: int,messageType: WebSocketMessageType,endOfMessage: bool,closeStatus: Nullable[WebSocketCloseStatus],closeStatusDescription: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebSocketReceiveResult()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,count,messageType,endOfMessage,closeStatus=None,closeStatusDescription=None):
   """
-  __new__(cls: type,count: int,messageType: WebSocketMessageType,endOfMessage: bool)
-
+  __new__(cls: type,count: int,messageType: WebSocketMessageType,endOfMessage: bool)
   __new__(cls: type,count: int,messageType: WebSocketMessageType,endOfMessage: bool,closeStatus: Nullable[WebSocketCloseStatus],closeStatusDescription: str)
   """
   pass
  CloseStatus=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CloseStatus(self: WebSocketReceiveResult) -> Nullable[WebSocketCloseStatus]
-
-
-
+ """Get: CloseStatus(self: WebSocketReceiveResult) -> Nullable[WebSocketCloseStatus]
+
 """
 
  CloseStatusDescription=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: CloseStatusDescription(self: WebSocketReceiveResult) -> str
-
-
-
+ """Get: CloseStatusDescription(self: WebSocketReceiveResult) -> str
+
 """
 
  Count=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Count(self: WebSocketReceiveResult) -> int
-
-
-
+ """Get: Count(self: WebSocketReceiveResult) -> int
+
 """
 
  EndOfMessage=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: EndOfMessage(self: WebSocketReceiveResult) -> bool
-
-
-
+ """Get: EndOfMessage(self: WebSocketReceiveResult) -> bool
+
 """
 
  MessageType=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: MessageType(self: WebSocketReceiveResult) -> WebSocketMessageType
-
-
-
+ """Get: MessageType(self: WebSocketReceiveResult) -> WebSocketMessageType
+
 """
 
 
 
-class WebSocketState(Enum,IComparable,IFormattable,IConvertible):
+class WebSocketState:
  """ enum WebSocketState,values: Aborted (6),Closed (5),CloseReceived (4),CloseSent (3),Connecting (1),None (0),Open (2) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return WebSocketState()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -712,7 +617,7 @@ class WebSocketState(Enum,IComparable,IFormattable,IConvertible):
  CloseReceived=None
  CloseSent=None
  Connecting=None
- None=None
+ None_ =None
  Open=None
  value__=None
 

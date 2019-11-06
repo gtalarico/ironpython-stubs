@@ -1,11 +1,13 @@
 class StatusBarPanelAutoSize(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how a System.Windows.Forms.StatusBarPanel on a System.Windows.Forms.StatusBar control behaves when the control resizes.
-
- 
-
+ Specifies how a System.Windows.Forms.StatusBarPanel on a System.Windows.Forms.StatusBar control behaves when the control resizes.
+ 
  enum StatusBarPanelAutoSize,values: Contents (3),None (1),Spring (2)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return StatusBarPanelAutoSize()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -30,7 +32,7 @@ class StatusBarPanelAutoSize(Enum,IComparable,IFormattable,IConvertible):
  def __str__(self,*args):
   pass
  Contents=None
- None=None
+ None_ =None
  Spring=None
  value__=None
 

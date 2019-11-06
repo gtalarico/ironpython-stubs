@@ -1,11 +1,14 @@
-class AccessControlSections(Enum,IComparable,IFormattable,IConvertible):
+class AccessControlSections:
  """
- Specifies which sections of a security descriptor to save or load.
-
- 
-
+ Specifies which sections of a security descriptor to save or load.
+ 
  enum (flags) AccessControlSections,values: Access (2),All (15),Audit (1),Group (8),None (0),Owner (4)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AccessControlSections()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -33,7 +36,7 @@ class AccessControlSections(Enum,IComparable,IFormattable,IConvertible):
  All=None
  Audit=None
  Group=None
- None=None
+ None_ =None
  Owner=None
  value__=None
 

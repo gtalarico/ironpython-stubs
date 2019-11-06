@@ -1,11 +1,14 @@
-class FUNCKIND(Enum,IComparable,IFormattable,IConvertible):
+class FUNCKIND:
  """
- Use System.Runtime.InteropServices.ComTypes.FUNCKIND instead.
-
- 
-
+ Use System.Runtime.InteropServices.ComTypes.FUNCKIND instead.
+ 
  enum FUNCKIND,values: FUNC_DISPATCH (4),FUNC_NONVIRTUAL (2),FUNC_PUREVIRTUAL (1),FUNC_STATIC (3),FUNC_VIRTUAL (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FUNCKIND()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

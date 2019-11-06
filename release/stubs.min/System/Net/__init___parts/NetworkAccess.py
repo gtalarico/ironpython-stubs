@@ -1,11 +1,14 @@
-class NetworkAccess(Enum,IComparable,IFormattable,IConvertible):
+class NetworkAccess:
  """
- Specifies network access permissions.
-
- 
-
+ Specifies network access permissions.
+ 
  enum (flags) NetworkAccess,values: Accept (128),Connect (64)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NetworkAccess()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -2,176 +2,128 @@
 # module Microsoft.Win32.SafeHandles calls itself SafeHandles
 # from mscorlib,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089,System,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089
 # by generator 1.145
-""" NamespaceTracker represent a CLS namespace. """
-# no imports
+# no doc
+# no important
 
 # no functions
 # classes
 
-class CriticalHandleMinusOneIsInvalid(CriticalHandle,IDisposable):
+class CriticalHandleMinusOneIsInvalid(CriticalHandle):
  """ Provides a base class for Win32 critical handle implementations in which the value of -1 indicates an invalid handle. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CriticalHandleMinusOneIsInvalid()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
-  Dispose(self: CriticalHandle,disposing: bool)
-
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.CriticalHandle class 
-
-    specifying whether to perform a normal dispose operation.
-
-  
-
-  
-
+  Dispose(self: CriticalHandle,disposing: bool)
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.CriticalHandle class specifying whether to perform a normal dispose operation.
+  
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
   pass
  def ReleaseHandle(self,*args):
   """
-  ReleaseHandle(self: CriticalHandle) -> bool
-
-  
-
-   When overridden in a derived class,executes the code required to free the handle.
-
-   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,
-
-    false. In this case,it generates a releaseHandleFailed MDA Managed Debugging Assistant.
+  ReleaseHandle(self: CriticalHandle) -> bool
+  
+   When overridden in a derived class,executes the code required to free the handle.
+   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,false. In this case,it generates a releaseHandleFailed MDA Managed 
+    Debugging Assistant.
   """
   pass
  def SetHandle(self,*args):
   """
-  SetHandle(self: CriticalHandle,handle: IntPtr)
-
-   Sets the handle to the specified pre-existing handle.
-
-  
-
+  SetHandle(self: CriticalHandle,handle: IntPtr)
+   Sets the handle to the specified pre-existing handle.
+  
    handle: The pre-existing handle to use.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-
-  
-
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  IsInvalid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a value that indicates whether the handle is invalid.
-
-
-
-Get: IsInvalid(self: CriticalHandleMinusOneIsInvalid) -> bool
-
-
-
+ """Gets a value that indicates whether the handle is invalid.
+
+Get: IsInvalid(self: CriticalHandleMinusOneIsInvalid) -> bool
+
 """
 
 
  handle=None
 
 
-class CriticalHandleZeroOrMinusOneIsInvalid(CriticalHandle,IDisposable):
+class CriticalHandleZeroOrMinusOneIsInvalid(CriticalHandle):
  """ Provides a base class for Win32 critical handle implementations in which the value of either 0 or -1 indicates an invalid handle. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CriticalHandleZeroOrMinusOneIsInvalid()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
-  Dispose(self: CriticalHandle,disposing: bool)
-
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.CriticalHandle class 
-
-    specifying whether to perform a normal dispose operation.
-
-  
-
-  
-
+  Dispose(self: CriticalHandle,disposing: bool)
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.CriticalHandle class specifying whether to perform a normal dispose operation.
+  
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
   pass
  def ReleaseHandle(self,*args):
   """
-  ReleaseHandle(self: CriticalHandle) -> bool
-
-  
-
-   When overridden in a derived class,executes the code required to free the handle.
-
-   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,
-
-    false. In this case,it generates a releaseHandleFailed MDA Managed Debugging Assistant.
+  ReleaseHandle(self: CriticalHandle) -> bool
+  
+   When overridden in a derived class,executes the code required to free the handle.
+   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,false. In this case,it generates a releaseHandleFailed MDA Managed 
+    Debugging Assistant.
   """
   pass
  def SetHandle(self,*args):
   """
-  SetHandle(self: CriticalHandle,handle: IntPtr)
-
-   Sets the handle to the specified pre-existing handle.
-
-  
-
+  SetHandle(self: CriticalHandle,handle: IntPtr)
+   Sets the handle to the specified pre-existing handle.
+  
    handle: The pre-existing handle to use.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-
-  
-
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
  IsInvalid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a value that indicates whether the handle is invalid.
-
-
-
-Get: IsInvalid(self: CriticalHandleZeroOrMinusOneIsInvalid) -> bool
-
-
-
+ """Gets a value that indicates whether the handle is invalid.
+
+Get: IsInvalid(self: CriticalHandleZeroOrMinusOneIsInvalid) -> bool
+
 """
 
 
  handle=None
 
 
-class SafeAccessTokenHandle(SafeHandle,IDisposable):
+class SafeAccessTokenHandle(SafeHandle):
  """ SafeAccessTokenHandle(handle: IntPtr) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeAccessTokenHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
-  Dispose(self: SafeHandle,disposing: bool)
-
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class 
-
-    specifying whether to perform a normal dispose operation.
-
-  
-
-  
-
+  Dispose(self: SafeHandle,disposing: bool)
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+  
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
   pass
@@ -180,30 +132,17 @@ class SafeAccessTokenHandle(SafeHandle,IDisposable):
   pass
  def SetHandle(self,*args):
   """
-  SetHandle(self: SafeHandle,handle: IntPtr)
-
-   Sets the handle to the specified pre-existing handle.
-
-  
-
+  SetHandle(self: SafeHandle,handle: IntPtr)
+   Sets the handle to the specified pre-existing handle.
+  
    handle: The pre-existing handle to use.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-
-  
-
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -213,10 +152,8 @@ class SafeAccessTokenHandle(SafeHandle,IDisposable):
   """ __new__(cls: type,handle: IntPtr) """
   pass
  IsInvalid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: IsInvalid(self: SafeAccessTokenHandle) -> bool
-
-
-
+ """Get: IsInvalid(self: SafeAccessTokenHandle) -> bool
+
 """
 
 
@@ -224,62 +161,43 @@ class SafeAccessTokenHandle(SafeHandle,IDisposable):
  InvalidHandle=None
 
 
-class SafeHandleZeroOrMinusOneIsInvalid(SafeHandle,IDisposable):
+class SafeHandleZeroOrMinusOneIsInvalid(SafeHandle):
  """ Provides a base class for Win32 safe handle implementations in which the value of either 0 or -1 indicates an invalid handle. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeHandleZeroOrMinusOneIsInvalid()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
-  Dispose(self: SafeHandle,disposing: bool)
-
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class 
-
-    specifying whether to perform a normal dispose operation.
-
-  
-
-  
-
+  Dispose(self: SafeHandle,disposing: bool)
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+  
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
   pass
  def ReleaseHandle(self,*args):
   """
-  ReleaseHandle(self: SafeHandle) -> bool
-
-  
-
-   When overridden in a derived class,executes the code required to free the handle.
-
-   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,
-
-    false. In this case,it generates a releaseHandleFailed MDA Managed Debugging Assistant.
+  ReleaseHandle(self: SafeHandle) -> bool
+  
+   When overridden in a derived class,executes the code required to free the handle.
+   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,false. In this case,it generates a releaseHandleFailed MDA Managed 
+    Debugging Assistant.
   """
   pass
  def SetHandle(self,*args):
   """
-  SetHandle(self: SafeHandle,handle: IntPtr)
-
-   Sets the handle to the specified pre-existing handle.
-
-  
-
+  SetHandle(self: SafeHandle,handle: IntPtr)
+   Sets the handle to the specified pre-existing handle.
+  
    handle: The pre-existing handle to use.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-
-  
-
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -289,40 +207,32 @@ class SafeHandleZeroOrMinusOneIsInvalid(SafeHandle,IDisposable):
   """ __new__(cls: type,ownsHandle: bool) """
   pass
  IsInvalid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a value that indicates whether the handle is invalid.
-
-
-
-Get: IsInvalid(self: SafeHandleZeroOrMinusOneIsInvalid) -> bool
-
-
-
+ """Gets a value that indicates whether the handle is invalid.
+
+Get: IsInvalid(self: SafeHandleZeroOrMinusOneIsInvalid) -> bool
+
 """
 
 
  handle=None
 
 
-class SafeFileHandle(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
+class SafeFileHandle(SafeHandleZeroOrMinusOneIsInvalid):
  """
- Represents a wrapper class for a file handle.
-
- 
-
+ Represents a wrapper class for a file handle.
+ 
  SafeFileHandle(preexistingHandle: IntPtr,ownsHandle: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeFileHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
-  Dispose(self: SafeHandle,disposing: bool)
-
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class 
-
-    specifying whether to perform a normal dispose operation.
-
-  
-
-  
-
+  Dispose(self: SafeHandle,disposing: bool)
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+  
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
   pass
@@ -331,30 +241,17 @@ class SafeFileHandle(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
   pass
  def SetHandle(self,*args):
   """
-  SetHandle(self: SafeHandle,handle: IntPtr)
-
-   Sets the handle to the specified pre-existing handle.
-
-  
-
+  SetHandle(self: SafeHandle,handle: IntPtr)
+   Sets the handle to the specified pre-existing handle.
+  
    handle: The pre-existing handle to use.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-
-  
-
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -366,62 +263,43 @@ class SafeFileHandle(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
  handle=None
 
 
-class SafeHandleMinusOneIsInvalid(SafeHandle,IDisposable):
+class SafeHandleMinusOneIsInvalid(SafeHandle):
  """ Provides a base class for Win32 safe handle implementations in which the value of -1 indicates an invalid handle. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeHandleMinusOneIsInvalid()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
-  Dispose(self: SafeHandle,disposing: bool)
-
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class 
-
-    specifying whether to perform a normal dispose operation.
-
-  
-
-  
-
+  Dispose(self: SafeHandle,disposing: bool)
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+  
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
   pass
  def ReleaseHandle(self,*args):
   """
-  ReleaseHandle(self: SafeHandle) -> bool
-
-  
-
-   When overridden in a derived class,executes the code required to free the handle.
-
-   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,
-
-    false. In this case,it generates a releaseHandleFailed MDA Managed Debugging Assistant.
+  ReleaseHandle(self: SafeHandle) -> bool
+  
+   When overridden in a derived class,executes the code required to free the handle.
+   Returns: true if the handle is released successfully; otherwise,in the event of a catastrophic failure,false. In this case,it generates a releaseHandleFailed MDA Managed 
+    Debugging Assistant.
   """
   pass
  def SetHandle(self,*args):
   """
-  SetHandle(self: SafeHandle,handle: IntPtr)
-
-   Sets the handle to the specified pre-existing handle.
-
-  
-
+  SetHandle(self: SafeHandle,handle: IntPtr)
+   Sets the handle to the specified pre-existing handle.
+  
    handle: The pre-existing handle to use.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-
-  
-
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -431,34 +309,28 @@ class SafeHandleMinusOneIsInvalid(SafeHandle,IDisposable):
   """ __new__(cls: type,ownsHandle: bool) """
   pass
  IsInvalid=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a value that indicates whether the handle is invalid.
-
-
-
-Get: IsInvalid(self: SafeHandleMinusOneIsInvalid) -> bool
-
-
-
+ """Gets a value that indicates whether the handle is invalid.
+
+Get: IsInvalid(self: SafeHandleMinusOneIsInvalid) -> bool
+
 """
 
 
  handle=None
 
 
-class SafeProcessHandle(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
+class SafeProcessHandle(SafeHandleZeroOrMinusOneIsInvalid):
  """ SafeProcessHandle(existingHandle: IntPtr,ownsHandle: bool) """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeProcessHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
-  Dispose(self: SafeHandle,disposing: bool)
-
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class 
-
-    specifying whether to perform a normal dispose operation.
-
-  
-
-  
-
+  Dispose(self: SafeHandle,disposing: bool)
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+  
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
   pass
@@ -467,30 +339,17 @@ class SafeProcessHandle(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
   pass
  def SetHandle(self,*args):
   """
-  SetHandle(self: SafeHandle,handle: IntPtr)
-
-   Sets the handle to the specified pre-existing handle.
-
-  
-
+  SetHandle(self: SafeHandle,handle: IntPtr)
+   Sets the handle to the specified pre-existing handle.
+  
    handle: The pre-existing handle to use.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-
-  
-
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -502,26 +361,22 @@ class SafeProcessHandle(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
  handle=None
 
 
-class SafeRegistryHandle(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
+class SafeRegistryHandle(SafeHandleZeroOrMinusOneIsInvalid):
  """
- Represents a safe handle to the Windows registry.
-
- 
-
+ Represents a safe handle to the Windows registry.
+ 
  SafeRegistryHandle(preexistingHandle: IntPtr,ownsHandle: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeRegistryHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
-  Dispose(self: SafeHandle,disposing: bool)
-
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class 
-
-    specifying whether to perform a normal dispose operation.
-
-  
-
-  
-
+  Dispose(self: SafeHandle,disposing: bool)
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+  
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
   pass
@@ -530,30 +385,17 @@ class SafeRegistryHandle(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
   pass
  def SetHandle(self,*args):
   """
-  SetHandle(self: SafeHandle,handle: IntPtr)
-
-   Sets the handle to the specified pre-existing handle.
-
-  
-
+  SetHandle(self: SafeHandle,handle: IntPtr)
+   Sets the handle to the specified pre-existing handle.
+  
    handle: The pre-existing handle to use.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-
-  
-
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -565,26 +407,22 @@ class SafeRegistryHandle(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
  handle=None
 
 
-class SafeWaitHandle(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
+class SafeWaitHandle(SafeHandleZeroOrMinusOneIsInvalid):
  """
- Represents a wrapper class for a wait handle.
-
- 
-
+ Represents a wrapper class for a wait handle.
+ 
  SafeWaitHandle(existingHandle: IntPtr,ownsHandle: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeWaitHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
-  Dispose(self: SafeHandle,disposing: bool)
-
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class 
-
-    specifying whether to perform a normal dispose operation.
-
-  
-
-  
-
+  Dispose(self: SafeHandle,disposing: bool)
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+  
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
   pass
@@ -593,30 +431,17 @@ class SafeWaitHandle(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
   pass
  def SetHandle(self,*args):
   """
-  SetHandle(self: SafeHandle,handle: IntPtr)
-
-   Sets the handle to the specified pre-existing handle.
-
-  
-
+  SetHandle(self: SafeHandle,handle: IntPtr)
+   Sets the handle to the specified pre-existing handle.
+  
    handle: The pre-existing handle to use.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-
-  
-
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -628,20 +453,18 @@ class SafeWaitHandle(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
  handle=None
 
 
-class SafeX509ChainHandle(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
+class SafeX509ChainHandle(SafeHandleZeroOrMinusOneIsInvalid):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SafeX509ChainHandle()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Dispose(self):
   """
-  Dispose(self: SafeHandle,disposing: bool)
-
-   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class 
-
-    specifying whether to perform a normal dispose operation.
-
-  
-
-  
-
+  Dispose(self: SafeHandle,disposing: bool)
+   Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle class specifying whether to perform a normal dispose operation.
+  
    disposing: true for a normal dispose operation; false to finalize the handle.
   """
   pass
@@ -650,30 +473,17 @@ class SafeX509ChainHandle(SafeHandleZeroOrMinusOneIsInvalid,IDisposable):
   pass
  def SetHandle(self,*args):
   """
-  SetHandle(self: SafeHandle,handle: IntPtr)
-
-   Sets the handle to the specified pre-existing handle.
-
-  
-
+  SetHandle(self: SafeHandle,handle: IntPtr)
+   Sets the handle to the specified pre-existing handle.
+  
    handle: The pre-existing handle to use.
   """
   pass
  def __enter__(self,*args):
-  """
-  __enter__(self: IDisposable) -> object
-
-  
-
-   Provides the implementation of __enter__ for objects which implement IDisposable.
-  """
+  """ __enter__(self: IDisposable) -> object """
   pass
  def __exit__(self,*args):
-  """
-  __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object)
-
-   Provides the implementation of __exit__ for objects which implement IDisposable.
-  """
+  """ __exit__(self: IDisposable,exc_type: object,exc_value: object,exc_back: object) """
   pass
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

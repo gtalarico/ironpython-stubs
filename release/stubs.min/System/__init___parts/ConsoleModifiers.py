@@ -1,11 +1,14 @@
-class ConsoleModifiers(Enum,IComparable,IFormattable,IConvertible):
+class ConsoleModifiers:
  """
- Represents the SHIFT,ALT,and CTRL modifier keys on a keyboard.
-
- 
-
+ Represents the SHIFT,ALT,and CTRL modifier keys on a keyboard.
+ 
  enum (flags) ConsoleModifiers,values: Alt (1),Control (4),Shift (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ConsoleModifiers()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

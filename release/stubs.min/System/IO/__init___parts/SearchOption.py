@@ -1,11 +1,14 @@
-class SearchOption(Enum,IComparable,IFormattable,IConvertible):
+class SearchOption:
  """
- Specifies whether to search the current directory,or the current directory and all subdirectories.
-
- 
-
+ Specifies whether to search the current directory,or the current directory and all subdirectories.
+ 
  enum SearchOption,values: AllDirectories (1),TopDirectoryOnly (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SearchOption()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

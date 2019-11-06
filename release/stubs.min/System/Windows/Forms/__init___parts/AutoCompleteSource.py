@@ -1,11 +1,13 @@
 class AutoCompleteSource(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the source for System.Windows.Forms.ComboBox and System.Windows.Forms.TextBox automatic completion functionality.
-
- 
-
+ Specifies the source for System.Windows.Forms.ComboBox and System.Windows.Forms.TextBox automatic completion functionality.
+ 
  enum AutoCompleteSource,values: AllSystemSources (7),AllUrl (6),CustomSource (64),FileSystem (1),FileSystemDirectories (32),HistoryList (2),ListItems (256),None (128),RecentlyUsedList (4)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return AutoCompleteSource()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -36,7 +38,7 @@ class AutoCompleteSource(Enum,IComparable,IFormattable,IConvertible):
  FileSystemDirectories=None
  HistoryList=None
  ListItems=None
- None=None
+ None_ =None
  RecentlyUsedList=None
  value__=None
 

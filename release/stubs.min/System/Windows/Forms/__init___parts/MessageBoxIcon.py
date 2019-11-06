@@ -1,11 +1,13 @@
 class MessageBoxIcon(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies constants defining which information to display.
-
- 
-
+ Specifies constants defining which information to display.
+ 
  enum MessageBoxIcon,values: Asterisk (64),Error (16),Exclamation (48),Hand (16),Information (64),None (0),Question (32),Stop (16),Warning (48)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return MessageBoxIcon()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -34,7 +36,7 @@ class MessageBoxIcon(Enum,IComparable,IFormattable,IConvertible):
  Exclamation=None
  Hand=None
  Information=None
- None=None
+ None_ =None
  Question=None
  Stop=None
  value__=None

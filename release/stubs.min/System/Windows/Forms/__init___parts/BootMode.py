@@ -1,11 +1,13 @@
 class BootMode(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the boot mode in which the system was started.
-
- 
-
+ Specifies the boot mode in which the system was started.
+ 
  enum BootMode,values: FailSafe (1),FailSafeWithNetwork (2),Normal (0)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return BootMode()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

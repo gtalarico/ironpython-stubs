@@ -1,11 +1,14 @@
-class NotifyFilters(Enum,IComparable,IFormattable,IConvertible):
+class NotifyFilters:
  """
- Specifies changes to watch for in a file or folder.
-
- 
-
+ Specifies changes to watch for in a file or folder.
+ 
  enum (flags) NotifyFilters,values: Attributes (4),CreationTime (64),DirectoryName (2),FileName (1),LastAccess (32),LastWrite (16),Security (256),Size (8)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NotifyFilters()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

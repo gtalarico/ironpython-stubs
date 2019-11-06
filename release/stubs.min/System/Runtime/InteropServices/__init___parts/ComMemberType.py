@@ -1,11 +1,14 @@
-class ComMemberType(Enum,IComparable,IFormattable,IConvertible):
+class ComMemberType:
  """
- Describes the type of a COM member.
-
- 
-
+ Describes the type of a COM member.
+ 
  enum ComMemberType,values: Method (0),PropGet (1),PropSet (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ComMemberType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

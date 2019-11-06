@@ -1,24 +1,22 @@
 class ContentsResizedEventArgs(EventArgs):
  """
- Provides data for the System.Windows.Forms.RichTextBox.ContentsResized event.
-
- 
-
+ Provides data for the System.Windows.Forms.RichTextBox.ContentsResized event.
+ 
  ContentsResizedEventArgs(newRectangle: Rectangle)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ContentsResizedEventArgs()
+
  @staticmethod
  def __new__(self,newRectangle):
   """ __new__(cls: type,newRectangle: Rectangle) """
   pass
  NewRectangle=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Represents the requested size of the System.Windows.Forms.RichTextBox control.
-
-
-
-Get: NewRectangle(self: ContentsResizedEventArgs) -> Rectangle
-
-
-
+ """Represents the requested size of the System.Windows.Forms.RichTextBox control.
+
+Get: NewRectangle(self: ContentsResizedEventArgs) -> Rectangle
+
 """
 
 

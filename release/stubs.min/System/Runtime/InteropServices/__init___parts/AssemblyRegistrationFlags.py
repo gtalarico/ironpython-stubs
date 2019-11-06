@@ -1,11 +1,14 @@
-class AssemblyRegistrationFlags(Enum,IComparable,IFormattable,IConvertible):
+class AssemblyRegistrationFlags:
  """
- Defines a set of flags used when registering assemblies.
-
- 
-
+ Defines a set of flags used when registering assemblies.
+ 
  enum (flags) AssemblyRegistrationFlags,values: None (0),SetCodeBase (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AssemblyRegistrationFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -29,7 +32,7 @@ class AssemblyRegistrationFlags(Enum,IComparable,IFormattable,IConvertible):
   pass
  def __str__(self,*args):
   pass
- None=None
+ None_ =None
  SetCodeBase=None
  value__=None
 

@@ -1,35 +1,30 @@
 class EventLogPermissionEntry(object):
  """
- Defines the smallest unit of a code access security permission that is set for an System.Diagnostics.EventLog.
-
- 
-
+ Defines the smallest unit of a code access security permission that is set for an System.Diagnostics.EventLog.
+ 
  EventLogPermissionEntry(permissionAccess: EventLogPermissionAccess,machineName: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EventLogPermissionEntry()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  @staticmethod
  def __new__(self,permissionAccess,machineName):
   """ __new__(cls: type,permissionAccess: EventLogPermissionAccess,machineName: str) """
   pass
  MachineName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the name of the computer on which to read or write events.
-
-
-
-Get: MachineName(self: EventLogPermissionEntry) -> str
-
-
-
+ """Gets the name of the computer on which to read or write events.
+
+Get: MachineName(self: EventLogPermissionEntry) -> str
+
 """
 
  PermissionAccess=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the permission access levels used in the permissions request.
-
-
-
-Get: PermissionAccess(self: EventLogPermissionEntry) -> EventLogPermissionAccess
-
-
-
+ """Gets the permission access levels used in the permissions request.
+
+Get: PermissionAccess(self: EventLogPermissionEntry) -> EventLogPermissionAccess
+
 """
 
 

@@ -1,11 +1,14 @@
-class UnmanagedType(Enum,IComparable,IFormattable,IConvertible):
+class UnmanagedType:
  """
- Identifies how to marshal parameters or fields to unmanaged code.
-
- 
-
+ Identifies how to marshal parameters or fields to unmanaged code.
+ 
  enum UnmanagedType,values: AnsiBStr (35),AsAny (40),Bool (2),BStr (19),ByValArray (30),ByValTStr (23),Currency (15),CustomMarshaler (44),Error (45),FunctionPtr (38),HString (47),I1 (3),I2 (5),I4 (7),I8 (9),IDispatch (26),IInspectable (46),Interface (28),IUnknown (25),LPArray (42),LPStr (20),LPStruct (43),LPTStr (22),LPUTF8Str (48),LPWStr (21),R4 (11),R8 (12),SafeArray (29),Struct (27),SysInt (31),SysUInt (32),TBStr (36),U1 (4),U2 (6),U4 (8),U8 (10),VariantBool (37),VBByRefStr (34)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return UnmanagedType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

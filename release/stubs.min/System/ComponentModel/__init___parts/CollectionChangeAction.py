@@ -1,11 +1,14 @@
-class CollectionChangeAction(Enum,IComparable,IFormattable,IConvertible):
+class CollectionChangeAction:
  """
- Specifies how the collection is changed.
-
- 
-
+ Specifies how the collection is changed.
+ 
  enum CollectionChangeAction,values: Add (1),Refresh (3),Remove (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CollectionChangeAction()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

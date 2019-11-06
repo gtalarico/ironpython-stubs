@@ -1,11 +1,14 @@
-class TraceEventType(Enum,IComparable,IFormattable,IConvertible):
+class TraceEventType:
  """
- Identifies the type of event that has caused the trace.
-
- 
-
+ Identifies the type of event that has caused the trace.
+ 
  enum TraceEventType,values: Critical (1),Error (2),Information (8),Resume (2048),Start (256),Stop (512),Suspend (1024),Transfer (4096),Verbose (16),Warning (4)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TraceEventType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

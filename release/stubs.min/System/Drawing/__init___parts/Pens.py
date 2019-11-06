@@ -1,5 +1,9 @@
 class Pens(object):
  """ Pens for all the standard colors. This class cannot be inherited. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return Pens()
+
  AliceBlue=None
  AntiqueWhite=None
  Aqua=None

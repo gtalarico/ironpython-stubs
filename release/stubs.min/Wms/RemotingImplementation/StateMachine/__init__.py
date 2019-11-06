@@ -1,0 +1,49 @@
+# encoding: utf-8
+# module Wms.RemotingImplementation.StateMachine calls itself StateMachine
+# from Wms.RemotingImplementation,Version=1.23.1.0,Culture=neutral,PublicKeyToken=null
+# by generator 1.145
+# no doc
+# no important
+from System.Collections.Generic import *
+from ..__init__ import *
+
+# no functions
+# classes
+
+class State(object):
+ # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return State()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
+ def Next(self):
+  """ Next(self: State) -> State """
+  pass
+ def Run(self,args):
+  """ Run(self: State,*args: Array[object]) -> Array[object] """
+  pass
+
+class StateMachine(object):
+ """
+ StateMachine(initialState: State,*args: Array[object])
+ StateMachine(uniqueId: str,initialState: State,mapper: Func[str,State],*args: Array[object])
+ """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return StateMachine()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
+ def Run(self):
+  """ Run(self: StateMachine)Run[TResult](self: StateMachine) -> TResult """
+  pass
+ @staticmethod
+ def __new__(self,*__args):
+  """
+  __new__(cls: type,initialState: State,*args: Array[object])
+  __new__(cls: type,uniqueId: str,initialState: State,mapper: Func[str,State],*args: Array[object])
+  """
+  pass
+
+# variables with complex values
+

@@ -1,38 +1,29 @@
-class DefaultPropertyAttribute(Attribute,_Attribute):
+class DefaultPropertyAttribute:
  """
- Specifies the default property for a component.
-
- 
-
+ Specifies the default property for a component.
+ 
  DefaultPropertyAttribute(name: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DefaultPropertyAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
-  Equals(self: DefaultPropertyAttribute,obj: object) -> bool
-
-  
-
-   Returns whether the value of the given object is equal to the current 
-
-    System.ComponentModel.DefaultPropertyAttribute.
-
-  
-
-  
-
-   obj: The object to test the value equality of.
-
+  Equals(self: DefaultPropertyAttribute,obj: object) -> bool
+  
+   Returns whether the value of the given object is equal to the current System.ComponentModel.DefaultPropertyAttribute.
+  
+   obj: The object to test the value equality of.
    Returns: true if the value of the given object is equal to that of the current; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
-  GetHashCode(self: DefaultPropertyAttribute) -> int
-
-  
-
-   Returns the hash code for this instance.
-
+  GetHashCode(self: DefaultPropertyAttribute) -> int
+  
+   Returns the hash code for this instance.
    Returns: A 32-bit signed integer hash code.
   """
   pass
@@ -49,14 +40,10 @@ class DefaultPropertyAttribute(Attribute,_Attribute):
  def __ne__(self,*args):
   pass
  Name=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the name of the default property for the component this attribute is bound to.
-
-
-
-Get: Name(self: DefaultPropertyAttribute) -> str
-
-
-
+ """Gets the name of the default property for the component this attribute is bound to.
+
+Get: Name(self: DefaultPropertyAttribute) -> str
+
 """
 
 

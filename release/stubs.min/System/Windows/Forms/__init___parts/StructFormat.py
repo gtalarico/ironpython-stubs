@@ -1,11 +1,13 @@
 class StructFormat(Enum,IComparable,IFormattable,IConvertible):
  """
- This enumeration is not used.
-
- 
-
+ This enumeration is not used.
+ 
  enum StructFormat,values: Ansi (1),Auto (3),Unicode (2)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return StructFormat()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

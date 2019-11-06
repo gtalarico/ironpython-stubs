@@ -1,54 +1,39 @@
-class ParenthesizePropertyNameAttribute(Attribute,_Attribute):
+class ParenthesizePropertyNameAttribute:
  """
- Indicates whether the name of the associated property is displayed with parentheses in the Properties window. This class cannot be inherited.
-
- 
-
- ParenthesizePropertyNameAttribute()
-
+ Indicates whether the name of the associated property is displayed with parentheses in the Properties window. This class cannot be inherited.
+ 
+ ParenthesizePropertyNameAttribute()
  ParenthesizePropertyNameAttribute(needParenthesis: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ParenthesizePropertyNameAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,o):
   """
-  Equals(self: ParenthesizePropertyNameAttribute,o: object) -> bool
-
-  
-
-   Compares the specified object to this object and tests for equality.
-
-  
-
-   o: The object to be compared.
-
+  Equals(self: ParenthesizePropertyNameAttribute,o: object) -> bool
+  
+   Compares the specified object to this object and tests for equality.
+  
+   o: The object to be compared.
    Returns: true if equal; otherwise,false.
   """
   pass
  def GetHashCode(self):
   """
-  GetHashCode(self: ParenthesizePropertyNameAttribute) -> int
-
-  
-
-   Gets the hash code for this object.
-
+  GetHashCode(self: ParenthesizePropertyNameAttribute) -> int
+  
+   Gets the hash code for this object.
    Returns: The hash code for the object the attribute belongs to.
   """
   pass
  def IsDefaultAttribute(self):
   """
-  IsDefaultAttribute(self: ParenthesizePropertyNameAttribute) -> bool
-
-  
-
-   Gets a value indicating whether the current value of the attribute is the default value for the 
-
-    attribute.
-
-  
-
-   Returns: true if the current value of the attribute is the default value of the attribute; otherwise,
-
-    false.
+  IsDefaultAttribute(self: ParenthesizePropertyNameAttribute) -> bool
+  
+   Gets a value indicating whether the current value of the attribute is the default value for the attribute.
+   Returns: true if the current value of the attribute is the default value of the attribute; otherwise,false.
   """
   pass
  def __eq__(self,*args):
@@ -60,22 +45,17 @@ class ParenthesizePropertyNameAttribute(Attribute,_Attribute):
  @staticmethod
  def __new__(self,needParenthesis=None):
   """
-  __new__(cls: type)
-
+  __new__(cls: type)
   __new__(cls: type,needParenthesis: bool)
   """
   pass
  def __ne__(self,*args):
   pass
  NeedParenthesis=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a value indicating whether the Properties window displays the name of the property in parentheses in the Properties window.
-
-
-
-Get: NeedParenthesis(self: ParenthesizePropertyNameAttribute) -> bool
-
-
-
+ """Gets a value indicating whether the Properties window displays the name of the property in parentheses in the Properties window.
+
+Get: NeedParenthesis(self: ParenthesizePropertyNameAttribute) -> bool
+
 """
 
 

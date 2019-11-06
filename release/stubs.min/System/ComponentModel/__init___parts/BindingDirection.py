@@ -1,11 +1,14 @@
-class BindingDirection(Enum,IComparable,IFormattable,IConvertible):
+class BindingDirection:
  """
- Specifies whether the template can be bound one way or two ways.
-
- 
-
+ Specifies whether the template can be bound one way or two ways.
+ 
  enum BindingDirection,values: OneWay (0),TwoWay (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return BindingDirection()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -1,11 +1,14 @@
-class SYSKIND(Enum,IComparable,IFormattable,IConvertible):
+class SYSKIND:
  """
- Use System.Runtime.InteropServices.ComTypes.SYSKIND instead.
-
- 
-
+ Use System.Runtime.InteropServices.ComTypes.SYSKIND instead.
+ 
  enum SYSKIND,values: SYS_MAC (2),SYS_WIN16 (0),SYS_WIN32 (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return SYSKIND()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

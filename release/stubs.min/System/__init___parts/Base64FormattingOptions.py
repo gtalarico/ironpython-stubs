@@ -1,11 +1,14 @@
-class Base64FormattingOptions(Enum,IComparable,IFormattable,IConvertible):
+class Base64FormattingOptions:
  """
- Specifies whether relevant erload:System.Convert.ToBase64CharArray and erload:System.Convert.ToBase64String methods insert line breaks in their output.
-
- 
-
+ Specifies whether relevant erload:System.Convert.ToBase64CharArray and erload:System.Convert.ToBase64String methods insert line breaks in their output.
+ 
  enum (flags) Base64FormattingOptions,values: InsertLineBreaks (1),None (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Base64FormattingOptions()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -30,6 +33,6 @@ class Base64FormattingOptions(Enum,IComparable,IFormattable,IConvertible):
  def __str__(self,*args):
   pass
  InsertLineBreaks=None
- None=None
+ None_ =None
  value__=None
 

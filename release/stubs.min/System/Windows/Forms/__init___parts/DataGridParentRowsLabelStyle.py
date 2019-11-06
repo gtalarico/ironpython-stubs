@@ -1,11 +1,13 @@
 class DataGridParentRowsLabelStyle(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how the parent row labels of a System.Windows.Forms.DataGrid control are displayed.
-
- 
-
+ Specifies how the parent row labels of a System.Windows.Forms.DataGrid control are displayed.
+ 
  enum DataGridParentRowsLabelStyle,values: Both (3),ColumnName (2),None (0),TableName (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridParentRowsLabelStyle()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -31,7 +33,7 @@ class DataGridParentRowsLabelStyle(Enum,IComparable,IFormattable,IConvertible):
   pass
  Both=None
  ColumnName=None
- None=None
+ None_ =None
  TableName=None
  value__=None
 

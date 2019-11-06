@@ -1,11 +1,14 @@
-class AuthenticationSchemes(Enum,IComparable,IFormattable,IConvertible):
+class AuthenticationSchemes:
  """
- Specifies protocols for authentication.
-
- 
-
+ Specifies protocols for authentication.
+ 
  enum (flags) AuthenticationSchemes,values: Anonymous (32768),Basic (8),Digest (1),IntegratedWindowsAuthentication (6),Negotiate (2),None (0),Ntlm (4)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AuthenticationSchemes()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -34,7 +37,7 @@ class AuthenticationSchemes(Enum,IComparable,IFormattable,IConvertible):
  Digest=None
  IntegratedWindowsAuthentication=None
  Negotiate=None
- None=None
+ None_ =None
  Ntlm=None
  value__=None
 

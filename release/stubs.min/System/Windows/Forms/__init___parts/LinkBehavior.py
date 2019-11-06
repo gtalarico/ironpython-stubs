@@ -1,11 +1,13 @@
 class LinkBehavior(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the behaviors of a link in a System.Windows.Forms.LinkLabel.
-
- 
-
+ Specifies the behaviors of a link in a System.Windows.Forms.LinkLabel.
+ 
  enum LinkBehavior,values: AlwaysUnderline (1),HoverUnderline (2),NeverUnderline (3),SystemDefault (0)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return LinkBehavior()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -1,11 +1,14 @@
-class ConsoleSpecialKey(Enum,IComparable,IFormattable,IConvertible):
+class ConsoleSpecialKey:
  """
- Specifies combinations of modifier and console keys that can interrupt the current process.
-
- 
-
+ Specifies combinations of modifier and console keys that can interrupt the current process.
+ 
  enum ConsoleSpecialKey,values: ControlBreak (1),ControlC (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ConsoleSpecialKey()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

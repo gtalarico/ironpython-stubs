@@ -1,5 +1,10 @@
-class FormattableString(object,IFormattable):
+class FormattableString(object):
  # no doc
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FormattableString()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetArgument(self,index):
   """ GetArgument(self: FormattableString,index: int) -> object """
   pass
@@ -12,9 +17,8 @@ class FormattableString(object,IFormattable):
   pass
  def ToString(self,formatProvider=None):
   """
+  ToString(self: FormattableString,formatProvider: IFormatProvider) -> str
   ToString(self: FormattableString) -> str
-
-  ToString(self: FormattableString,formatProvider: IFormatProvider) -> str
   """
   pass
  def __format__(self,*args):
@@ -29,17 +33,13 @@ class FormattableString(object,IFormattable):
  def __str__(self,*args):
   pass
  ArgumentCount=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: ArgumentCount(self: FormattableString) -> int
-
-
-
+ """Get: ArgumentCount(self: FormattableString) -> int
+
 """
 
  Format=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Get: Format(self: FormattableString) -> str
-
-
-
+ """Get: Format(self: FormattableString) -> str
+
 """
 
 

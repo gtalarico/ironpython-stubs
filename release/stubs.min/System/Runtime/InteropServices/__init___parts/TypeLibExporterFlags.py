@@ -1,11 +1,14 @@
-class TypeLibExporterFlags(Enum,IComparable,IFormattable,IConvertible):
+class TypeLibExporterFlags:
  """
- Indicates how a type library should be produced.
-
- 
-
+ Indicates how a type library should be produced.
+ 
  enum (flags) TypeLibExporterFlags,values: CallerResolvedReferences (2),ExportAs32Bit (16),ExportAs64Bit (32),None (0),OldNames (4),OnlyReferenceRegistered (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TypeLibExporterFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -32,7 +35,7 @@ class TypeLibExporterFlags(Enum,IComparable,IFormattable,IConvertible):
  CallerResolvedReferences=None
  ExportAs32Bit=None
  ExportAs64Bit=None
- None=None
+ None_ =None
  OldNames=None
  OnlyReferenceRegistered=None
  value__=None

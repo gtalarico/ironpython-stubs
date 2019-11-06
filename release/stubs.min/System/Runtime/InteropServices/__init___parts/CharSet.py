@@ -1,11 +1,14 @@
-class CharSet(Enum,IComparable,IFormattable,IConvertible):
+class CharSet:
  """
- Dictates which character set marshaled strings should use.
-
- 
-
+ Dictates which character set marshaled strings should use.
+ 
  enum CharSet,values: Ansi (2),Auto (4),None (1),Unicode (3)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return CharSet()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -31,7 +34,7 @@ class CharSet(Enum,IComparable,IFormattable,IConvertible):
   pass
  Ansi=None
  Auto=None
- None=None
+ None_ =None
  Unicode=None
  value__=None
 

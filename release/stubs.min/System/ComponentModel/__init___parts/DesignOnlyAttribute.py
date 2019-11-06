@@ -1,27 +1,21 @@
-class DesignOnlyAttribute(Attribute,_Attribute):
+class DesignOnlyAttribute:
  """
- Specifies whether a property can only be set at design time.
-
- 
-
+ Specifies whether a property can only be set at design time.
+ 
  DesignOnlyAttribute(isDesignOnly: bool)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DesignOnlyAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def Equals(self,obj):
   """
-  Equals(self: DesignOnlyAttribute,obj: object) -> bool
-
-  
-
-   Returns whether the value of the given object is equal to the current 
-
-    System.ComponentModel.DesignOnlyAttribute.
-
-  
-
-  
-
-   obj: The object to test the value equality of.
-
+  Equals(self: DesignOnlyAttribute,obj: object) -> bool
+  
+   Returns whether the value of the given object is equal to the current System.ComponentModel.DesignOnlyAttribute.
+  
+   obj: The object to test the value equality of.
    Returns: true if the value of the given object is equal to that of the current; otherwise,false.
   """
   pass
@@ -30,12 +24,9 @@ class DesignOnlyAttribute(Attribute,_Attribute):
   pass
  def IsDefaultAttribute(self):
   """
-  IsDefaultAttribute(self: DesignOnlyAttribute) -> bool
-
-  
-
-   Determines if this attribute is the default.
-
+  IsDefaultAttribute(self: DesignOnlyAttribute) -> bool
+  
+   Determines if this attribute is the default.
    Returns: true if the attribute is the default value for this attribute class; otherwise,false.
   """
   pass
@@ -52,14 +43,10 @@ class DesignOnlyAttribute(Attribute,_Attribute):
  def __ne__(self,*args):
   pass
  IsDesignOnly=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets a value indicating whether a property can be set only at design time.
-
-
-
-Get: IsDesignOnly(self: DesignOnlyAttribute) -> bool
-
-
-
+ """Gets a value indicating whether a property can be set only at design time.
+
+Get: IsDesignOnly(self: DesignOnlyAttribute) -> bool
+
 """
 
 

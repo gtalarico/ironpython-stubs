@@ -1,0 +1,7 @@
+{
+  "Wms.Marshalling.dll": {
+    "Wms.Marshalling": "<module 'Marshalling' (CLS module from Wms.Marshalling, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.Marshalling.Host": "<module 'Host' (CLS module from Wms.Marshalling, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms": "<module 'Wms' (CLS module from Wms.Marshalling, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

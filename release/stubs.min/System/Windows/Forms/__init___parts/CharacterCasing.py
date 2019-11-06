@@ -1,11 +1,13 @@
 class CharacterCasing(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the case of characters in a System.Windows.Forms.TextBox control.
-
- 
-
+ Specifies the case of characters in a System.Windows.Forms.TextBox control.
+ 
  enum CharacterCasing,values: Lower (2),Normal (0),Upper (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return CharacterCasing()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

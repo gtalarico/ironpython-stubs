@@ -1,11 +1,13 @@
 class ToolStripItemImageScaling(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies whether the size of the image on a System.Windows.Forms.ToolStripItem is automatically adjusted to fit on a System.Windows.Forms.ToolStrip while retaining the original image proportions.
-
- 
-
+ Specifies whether the size of the image on a System.Windows.Forms.ToolStripItem is automatically adjusted to fit on a System.Windows.Forms.ToolStrip while retaining the original image proportions.
+ 
  enum ToolStripItemImageScaling,values: None (0),SizeToFit (1)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ToolStripItemImageScaling()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -29,7 +31,7 @@ class ToolStripItemImageScaling(Enum,IComparable,IFormattable,IConvertible):
   pass
  def __str__(self,*args):
   pass
- None=None
+ None_ =None
  SizeToFit=None
  value__=None
 

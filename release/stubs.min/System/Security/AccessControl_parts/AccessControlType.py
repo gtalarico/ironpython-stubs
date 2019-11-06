@@ -1,11 +1,14 @@
-class AccessControlType(Enum,IComparable,IFormattable,IConvertible):
+class AccessControlType:
  """
- Specifies whether an System.Security.AccessControl.AccessRule object is used to allow or deny access. These values are not flags,and they cannot be combined.
-
- 
-
+ Specifies whether an System.Security.AccessControl.AccessRule object is used to allow or deny access. These values are not flags,and they cannot be combined.
+ 
  enum AccessControlType,values: Allow (0),Deny (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AccessControlType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

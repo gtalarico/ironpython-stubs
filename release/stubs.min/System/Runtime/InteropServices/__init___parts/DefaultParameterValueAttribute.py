@@ -1,11 +1,14 @@
-class DefaultParameterValueAttribute(Attribute,_Attribute):
+class DefaultParameterValueAttribute:
  """
- Sets the default value of a parameter when called from a language that supports default parameters. This class cannot be inherited.
-
- 
-
+ Sets the default value of a parameter when called from a language that supports default parameters. This class cannot be inherited.
+ 
  DefaultParameterValueAttribute(value: object)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return DefaultParameterValueAttribute()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __init__(self,*args):
   """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
   pass
@@ -14,14 +17,10 @@ class DefaultParameterValueAttribute(Attribute,_Attribute):
   """ __new__(cls: type,value: object) """
   pass
  Value=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets the default value of a parameter.
-
-
-
-Get: Value(self: DefaultParameterValueAttribute) -> object
-
-
-
+ """Gets the default value of a parameter.
+
+Get: Value(self: DefaultParameterValueAttribute) -> object
+
 """
 
 

@@ -1,11 +1,14 @@
-class ThreadWaitReason(Enum,IComparable,IFormattable,IConvertible):
+class ThreadWaitReason:
  """
- Specifies the reason a thread is waiting.
-
- 
-
+ Specifies the reason a thread is waiting.
+ 
  enum ThreadWaitReason,values: EventPairHigh (7),EventPairLow (8),ExecutionDelay (4),Executive (0),FreePage (1),LpcReceive (9),LpcReply (10),PageIn (2),PageOut (12),Suspended (5),SystemAllocation (3),Unknown (13),UserRequest (6),VirtualMemory (11)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ThreadWaitReason()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

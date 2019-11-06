@@ -1,11 +1,13 @@
 class MergeAction(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the kind of action to take if a match is found when combining menu items on a System.Windows.Forms.ToolStrip.
-
- 
-
+ Specifies the kind of action to take if a match is found when combining menu items on a System.Windows.Forms.ToolStrip.
+ 
  enum MergeAction,values: Append (0),Insert (1),MatchOnly (4),Remove (3),Replace (2)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return MergeAction()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

@@ -1,11 +1,13 @@
 class MdiLayout(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the layout of multiple document interface (MDI) child windows in an MDI parent window.
-
- 
-
+ Specifies the layout of multiple document interface (MDI) child windows in an MDI parent window.
+ 
  enum MdiLayout,values: ArrangeIcons (3),Cascade (0),TileHorizontal (1),TileVertical (2)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return MdiLayout()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

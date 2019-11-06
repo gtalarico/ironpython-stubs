@@ -1,11 +1,14 @@
-class ComInterfaceType(Enum,IComparable,IFormattable,IConvertible):
+class ComInterfaceType:
  """
- Identifies how to expose an interface to COM.
-
- 
-
+ Identifies how to expose an interface to COM.
+ 
  enum ComInterfaceType,values: InterfaceIsDual (0),InterfaceIsIDispatch (2),InterfaceIsIInspectable (3),InterfaceIsIUnknown (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ComInterfaceType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

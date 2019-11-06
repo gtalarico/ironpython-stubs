@@ -1,11 +1,13 @@
 class ListViewAlignment(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies how items align in the System.Windows.Forms.ListView.
-
- 
-
+ Specifies how items align in the System.Windows.Forms.ListView.
+ 
  enum ListViewAlignment,values: Default (0),Left (1),SnapToGrid (5),Top (2)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return ListViewAlignment()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

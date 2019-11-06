@@ -1,11 +1,14 @@
-class ControlFlags(Enum,IComparable,IFormattable,IConvertible):
+class ControlFlags:
  """
- These flags affect the security descriptor behavior.
-
- 
-
+ These flags affect the security descriptor behavior.
+ 
  enum (flags) ControlFlags,values: DiscretionaryAclAutoInherited (1024),DiscretionaryAclAutoInheritRequired (256),DiscretionaryAclDefaulted (8),DiscretionaryAclPresent (4),DiscretionaryAclProtected (4096),DiscretionaryAclUntrusted (64),GroupDefaulted (2),None (0),OwnerDefaulted (1),RMControlValid (16384),SelfRelative (32768),ServerSecurity (128),SystemAclAutoInherited (2048),SystemAclAutoInheritRequired (512),SystemAclDefaulted (32),SystemAclPresent (16),SystemAclProtected (8192)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return ControlFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -36,7 +39,7 @@ class ControlFlags(Enum,IComparable,IFormattable,IConvertible):
  DiscretionaryAclProtected=None
  DiscretionaryAclUntrusted=None
  GroupDefaulted=None
- None=None
+ None_ =None
  OwnerDefaulted=None
  RMControlValid=None
  SelfRelative=None

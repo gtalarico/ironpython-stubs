@@ -1,11 +1,14 @@
-class LayoutKind(Enum,IComparable,IFormattable,IConvertible):
+class LayoutKind:
  """
- Controls the layout of an object when it is exported to unmanaged code.
-
- 
-
+ Controls the layout of an object when it is exported to unmanaged code.
+ 
  enum LayoutKind,values: Auto (3),Explicit (2),Sequential (0)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LayoutKind()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

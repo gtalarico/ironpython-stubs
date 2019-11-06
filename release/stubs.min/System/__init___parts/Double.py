@@ -1,5 +1,10 @@
 class Double(object):
  """ Represents a double-precision floating-point number. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return Double()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def as_integer_ratio(self,*args):
   """ as_integer_ratio(self: float) -> tuple """
   pass
@@ -71,11 +76,9 @@ class Double(object):
  @staticmethod
  def __new__(self,*args): #cannot find CLR constructor
   """
+  __new__(cls: type) -> object
+  __new__(cls: type,x: object) -> object
   __new__(cls: type,s: IList[Byte]) -> object
-
-  __new__(cls: type,x: object) -> object
-
-  __new__(cls: type) -> object
   """
   pass
  def __ne__(self,*args):

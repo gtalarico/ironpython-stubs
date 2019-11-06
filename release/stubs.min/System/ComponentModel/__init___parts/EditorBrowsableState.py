@@ -1,11 +1,14 @@
-class EditorBrowsableState(Enum,IComparable,IFormattable,IConvertible):
+class EditorBrowsableState:
  """
- Specifies the browsable state of a property or method from within an editor.
-
- 
-
+ Specifies the browsable state of a property or method from within an editor.
+ 
  enum EditorBrowsableState,values: Advanced (2),Always (0),Never (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EditorBrowsableState()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

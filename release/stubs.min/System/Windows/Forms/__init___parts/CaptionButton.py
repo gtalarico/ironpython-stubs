@@ -1,11 +1,13 @@
 class CaptionButton(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies the type of caption button to display.
-
- 
-
+ Specifies the type of caption button to display.
+ 
  enum CaptionButton,values: Close (0),Help (4),Maximize (2),Minimize (1),Restore (3)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return CaptionButton()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

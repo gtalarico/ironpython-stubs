@@ -1,11 +1,14 @@
-class LIBFLAGS(Enum,IComparable,IFormattable,IConvertible):
+class LIBFLAGS:
  """
- Use System.Runtime.InteropServices.ComTypes.LIBFLAGS instead.
-
- 
-
+ Use System.Runtime.InteropServices.ComTypes.LIBFLAGS instead.
+ 
  enum (flags) LIBFLAGS,values: LIBFLAG_FCONTROL (2),LIBFLAG_FHASDISKIMAGE (8),LIBFLAG_FHIDDEN (4),LIBFLAG_FRESTRICTED (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return LIBFLAGS()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

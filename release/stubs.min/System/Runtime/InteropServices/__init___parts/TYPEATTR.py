@@ -1,5 +1,10 @@
 class TYPEATTR(object):
  """ Use System.Runtime.InteropServices.ComTypes.TYPEATTR instead. """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return TYPEATTR()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  cbAlignment=None
  cbSizeInstance=None
  cbSizeVft=None

@@ -1,72 +1,36 @@
-class NetworkCredential(object,ICredentials,ICredentialsByHost):
+class NetworkCredential(object):
  """
- Provides credentials for password-based authentication schemes such as basic,digest,NTLM,and Kerberos authentication.
-
- 
-
- NetworkCredential(userName: str,password: str)
-
- NetworkCredential()
-
- NetworkCredential(userName: str,password: SecureString)
-
- NetworkCredential(userName: str,password: str,domain: str)
-
+ Provides credentials for password-based authentication schemes such as basic,digest,NTLM,and Kerberos authentication.
+ 
+ NetworkCredential(userName: str,password: str)
+ NetworkCredential()
+ NetworkCredential(userName: str,password: SecureString)
+ NetworkCredential(userName: str,password: str,domain: str)
  NetworkCredential(userName: str,password: SecureString,domain: str)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return NetworkCredential()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def GetCredential(self,*__args):
   """
-  GetCredential(self: NetworkCredential,host: str,port: int,authenticationType: str) -> NetworkCredential
-
-  
-
-   Returns an instance of the System.Net.NetworkCredential class for the specified host,port,and 
-
-    authentication type.
-
-  
-
-  
-
-   host: The host computer that authenticates the client.
-
-   port: The port on the host that the client communicates with.
-
-   authenticationType: The type of authentication requested,as defined in the 
-
-    System.Net.IAuthenticationModule.AuthenticationType property.
-
-  
-
-   Returns: A System.Net.NetworkCredential for the specified host,port,and authentication protocol,or 
-
-    null if there are no credentials available for the specified host,port,and authentication 
-
-    protocol.
-
-  
-
-  GetCredential(self: NetworkCredential,uri: Uri,authType: str) -> NetworkCredential
-
-  
-
-   Returns an instance of the System.Net.NetworkCredential class for the specified Uniform Resource 
-
-    Identifier (URI) and authentication type.
-
-  
-
-  
-
-   uri: The URI that the client provides authentication for.
-
-   authType: The type of authentication requested,as defined in the 
-
-    System.Net.IAuthenticationModule.AuthenticationType property.
-
-  
-
-   Returns: A System.Net.NetworkCredential object.
+  GetCredential(self: NetworkCredential,uri: Uri,authType: str) -> NetworkCredential
+  
+   Returns an instance of the System.Net.NetworkCredential class for the specified Uniform Resource Identifier (URI) and authentication type.
+  
+   uri: The URI that the client provides authentication for.
+   authType: The type of authentication requested,as defined in the System.Net.IAuthenticationModule.AuthenticationType property.
+   Returns: A System.Net.NetworkCredential object.
+  GetCredential(self: NetworkCredential,host: str,port: int,authenticationType: str) -> NetworkCredential
+  
+   Returns an instance of the System.Net.NetworkCredential class for the specified host,port,and authentication type.
+  
+   host: The host computer that authenticates the client.
+   port: The port on the host that the client communicates with.
+   authenticationType: The type of authentication requested,as defined in the System.Net.IAuthenticationModule.AuthenticationType property.
+   Returns: A System.Net.NetworkCredential for the specified host,port,and authentication protocol,or null if there are no credentials available for the specified host,port,and 
+    authentication protocol.
   """
   pass
  def __init__(self,*args):
@@ -75,14 +39,10 @@ class NetworkCredential(object,ICredentials,ICredentialsByHost):
  @staticmethod
  def __new__(self,userName=None,password=None,domain=None):
   """
-  __new__(cls: type)
-
-  __new__(cls: type,userName: str,password: str)
-
-  __new__(cls: type,userName: str,password: SecureString)
-
-  __new__(cls: type,userName: str,password: str,domain: str)
-
+  __new__(cls: type)
+  __new__(cls: type,userName: str,password: str)
+  __new__(cls: type,userName: str,password: SecureString)
+  __new__(cls: type,userName: str,password: str,domain: str)
   __new__(cls: type,userName: str,password: SecureString,domain: str)
   """
   pass
@@ -90,55 +50,35 @@ class NetworkCredential(object,ICredentials,ICredentialsByHost):
   """ __repr__(self: object) -> str """
   pass
  Domain=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the domain or computer name that verifies the credentials.
-
-
-
-Get: Domain(self: NetworkCredential) -> str
-
-
-
-Set: Domain(self: NetworkCredential)=value
-
+ """Gets or sets the domain or computer name that verifies the credentials.
+
+Get: Domain(self: NetworkCredential) -> str
+
+Set: Domain(self: NetworkCredential)=value
 """
 
  Password=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the password for the user name associated with the credentials.
-
-
-
-Get: Password(self: NetworkCredential) -> str
-
-
-
-Set: Password(self: NetworkCredential)=value
-
+ """Gets or sets the password for the user name associated with the credentials.
+
+Get: Password(self: NetworkCredential) -> str
+
+Set: Password(self: NetworkCredential)=value
 """
 
  SecurePassword=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the password as a System.Security.SecureString instance.
-
-
-
-Get: SecurePassword(self: NetworkCredential) -> SecureString
-
-
-
-Set: SecurePassword(self: NetworkCredential)=value
-
+ """Gets or sets the password as a System.Security.SecureString instance.
+
+Get: SecurePassword(self: NetworkCredential) -> SecureString
+
+Set: SecurePassword(self: NetworkCredential)=value
 """
 
  UserName=property(lambda self: object(),lambda self,v: None,lambda self: None)
- """Gets or sets the user name associated with the credentials.
-
-
-
-Get: UserName(self: NetworkCredential) -> str
-
-
-
-Set: UserName(self: NetworkCredential)=value
-
+ """Gets or sets the user name associated with the credentials.
+
+Get: UserName(self: NetworkCredential) -> str
+
+Set: UserName(self: NetworkCredential)=value
 """
 
 

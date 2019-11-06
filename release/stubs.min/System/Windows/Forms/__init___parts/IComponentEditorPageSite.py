@@ -1,20 +1,20 @@
 class IComponentEditorPageSite:
  """ The site for a System.Windows.Forms.Design.ComponentEditorPage. """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return IComponentEditorPageSite()
+
  def GetControl(self):
   """
-  GetControl(self: IComponentEditorPageSite) -> Control
-
-  
-
-   Returns the parent control for the page window.
-
+  GetControl(self: IComponentEditorPageSite) -> Control
+  
+   Returns the parent control for the page window.
    Returns: The parent control for the page window.
   """
   pass
  def SetDirty(self):
   """
-  SetDirty(self: IComponentEditorPageSite)
-
+  SetDirty(self: IComponentEditorPageSite)
    Notifies the site that the editor is in a modified state.
   """
   pass

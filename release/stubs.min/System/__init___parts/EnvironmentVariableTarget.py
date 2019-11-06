@@ -1,11 +1,14 @@
-class EnvironmentVariableTarget(Enum,IComparable,IFormattable,IConvertible):
+class EnvironmentVariableTarget:
  """
- Specifies the location where an environment variable is stored or retrieved in a set or get operation.
-
- 
-
+ Specifies the location where an environment variable is stored or retrieved in a set or get operation.
+ 
  enum EnvironmentVariableTarget,values: Machine (2),Process (0),User (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return EnvironmentVariableTarget()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

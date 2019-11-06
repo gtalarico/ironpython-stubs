@@ -1,11 +1,14 @@
-class InheritanceFlags(Enum,IComparable,IFormattable,IConvertible):
+class InheritanceFlags:
  """
- Inheritance flags specify the semantics of inheritance for access control entries (ACEs).
-
- 
-
+ Inheritance flags specify the semantics of inheritance for access control entries (ACEs).
+ 
  enum (flags) InheritanceFlags,values: ContainerInherit (1),None (0),ObjectInherit (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return InheritanceFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -30,7 +33,7 @@ class InheritanceFlags(Enum,IComparable,IFormattable,IConvertible):
  def __str__(self,*args):
   pass
  ContainerInherit=None
- None=None
+ None_ =None
  ObjectInherit=None
  value__=None
 

@@ -1,11 +1,14 @@
-class FileSystemRights(Enum,IComparable,IFormattable,IConvertible):
+class FileSystemRights:
  """
- Defines the access rights to use when creating access and audit rules.
-
- 
-
+ Defines the access rights to use when creating access and audit rules.
+ 
  enum (flags) FileSystemRights,values: AppendData (4),ChangePermissions (262144),CreateDirectories (4),CreateFiles (2),Delete (65536),DeleteSubdirectoriesAndFiles (64),ExecuteFile (32),FullControl (2032127),ListDirectory (1),Modify (197055),Read (131209),ReadAndExecute (131241),ReadAttributes (128),ReadData (1),ReadExtendedAttributes (8),ReadPermissions (131072),Synchronize (1048576),TakeOwnership (524288),Traverse (32),Write (278),WriteAttributes (256),WriteData (2),WriteExtendedAttributes (16)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return FileSystemRights()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

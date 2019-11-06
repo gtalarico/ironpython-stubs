@@ -1,11 +1,14 @@
-class IMPLTYPEFLAGS(Enum,IComparable,IFormattable,IConvertible):
+class IMPLTYPEFLAGS:
  """
- Use System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS instead.
-
- 
-
+ Use System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS instead.
+ 
  enum (flags) IMPLTYPEFLAGS,values: IMPLTYPEFLAG_FDEFAULT (1),IMPLTYPEFLAG_FDEFAULTVTABLE (8),IMPLTYPEFLAG_FRESTRICTED (4),IMPLTYPEFLAG_FSOURCE (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return IMPLTYPEFLAGS()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

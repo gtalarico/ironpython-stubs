@@ -1,11 +1,14 @@
-class PropagationFlags(Enum,IComparable,IFormattable,IConvertible):
+class PropagationFlags:
  """
- Specifies how Access Control Entries (ACEs) are propagated to child objects.  These flags are significant only if inheritance flags are present.
-
- 
-
+ Specifies how Access Control Entries (ACEs) are propagated to child objects.  These flags are significant only if inheritance flags are present.
+ 
  enum (flags) PropagationFlags,values: InheritOnly (2),None (0),NoPropagateInherit (1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PropagationFlags()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -30,7 +33,7 @@ class PropagationFlags(Enum,IComparable,IFormattable,IConvertible):
  def __str__(self,*args):
   pass
  InheritOnly=None
- None=None
+ None_ =None
  NoPropagateInherit=None
  value__=None
 

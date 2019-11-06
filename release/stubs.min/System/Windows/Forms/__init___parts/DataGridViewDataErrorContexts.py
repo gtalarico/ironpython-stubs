@@ -1,11 +1,13 @@
 class DataGridViewDataErrorContexts(Enum,IComparable,IFormattable,IConvertible):
  """
- Represents the state of a data-bound System.Windows.Forms.DataGridView control when a data error occurred.
-
- 
-
+ Represents the state of a data-bound System.Windows.Forms.DataGridView control when a data error occurred.
+ 
  enum (flags) DataGridViewDataErrorContexts,values: ClipboardContent (16384),Commit (512),CurrentCellChange (4096),Display (2),Formatting (1),InitialValueRestoration (1024),LeaveControl (2048),Parsing (256),PreferredSize (4),RowDeletion (8),Scroll (8192)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewDataErrorContexts()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

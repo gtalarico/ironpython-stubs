@@ -1,11 +1,14 @@
-class PerformanceCounterCategoryType(Enum,IComparable,IFormattable,IConvertible):
+class PerformanceCounterCategoryType:
  """
- Indicates whether the performance counter category can have multiple instances.
-
- 
-
+ Indicates whether the performance counter category can have multiple instances.
+ 
  enum PerformanceCounterCategoryType,values: MultiInstance (1),SingleInstance (0),Unknown (-1)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return PerformanceCounterCategoryType()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

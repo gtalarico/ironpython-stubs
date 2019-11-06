@@ -1,11 +1,14 @@
-class AceQualifier(Enum,IComparable,IFormattable,IConvertible):
+class AceQualifier:
  """
- Specifies the function of an access control entry (ACE).
-
- 
-
+ Specifies the function of an access control entry (ACE).
+ 
  enum AceQualifier,values: AccessAllowed (0),AccessDenied (1),SystemAlarm (3),SystemAudit (2)
  """
+ def ZZZ(self):
+  """hardcoded/mock instance of the class"""
+  return AceQualifier()
+ instance=ZZZ()
+ """hardcoded/returns an instance of the class"""
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass

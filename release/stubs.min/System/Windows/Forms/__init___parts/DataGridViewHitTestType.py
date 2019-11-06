@@ -1,11 +1,13 @@
 class DataGridViewHitTestType(Enum,IComparable,IFormattable,IConvertible):
  """
- Specifies a location in a System.Windows.Forms.DataGridView control.
-
- 
-
+ Specifies a location in a System.Windows.Forms.DataGridView control.
+ 
  enum DataGridViewHitTestType,values: Cell (1),ColumnHeader (2),HorizontalScrollBar (5),None (0),RowHeader (3),TopLeftHeader (4),VerticalScrollBar (6)
  """
+ def Instance(self):
+  """ This function has been arbitrarily put into the stubs"""
+  return DataGridViewHitTestType()
+
  def __eq__(self,*args):
   """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
   pass
@@ -32,7 +34,7 @@ class DataGridViewHitTestType(Enum,IComparable,IFormattable,IConvertible):
  Cell=None
  ColumnHeader=None
  HorizontalScrollBar=None
- None=None
+ None_ =None
  RowHeader=None
  TopLeftHeader=None
  value__=None
