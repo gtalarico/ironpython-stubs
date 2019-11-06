@@ -8,7 +8,7 @@
 # no functions
 # classes
 
-class AllowPartiallyTrustedCallersAttribute:
+class AllowPartiallyTrustedCallersAttribute(Object):
     """
     Allows an assembly to be called by partially trusted code. Without this declaration, only fully trusted callers are able to use the assembly. This class cannot be inherited.
     
@@ -30,13 +30,13 @@ Set: PartialTrustVisibilityLevel(self: AllowPartiallyTrustedCallersAttribute) = 
     Instance = AllowPartiallyTrustedCallersAttribute()
     """hardcoded/returns an instance of the class"""
 
-class CodeAccessPermission:
+class CodeAccessPermission(Object):
     """ Defines the underlying structure of all code access permissions. """
     def Assert(self):
         """
         Assert(self: CodeAccessPermission)
-            Declares that the calling code can access the resource protected by a permission demand through the code that calls this method, even if callers higher in the stack 
-             have not been granted permission to access the resource. Using System.Security.CodeAccessPermission.Assert can create security issues.
+            Declares that the calling code can access the resource protected by a permission demand through the code that calls this method, even if callers higher in the stack have not been 
+             granted permission to access the resource. Using System.Security.CodeAccessPermission.Assert can create security issues.
         """
         pass
 
@@ -389,7 +389,7 @@ Get: Flags(self: HostSecurityManager) -> HostSecurityManagerOptions
     Instance = HostSecurityManager()
     """hardcoded/returns an instance of the class"""
 
-class HostSecurityManagerOptions:
+class HostSecurityManagerOptions(Object):
     """
     Specifies the security policy components to be used by the host security manager.
     
@@ -484,7 +484,7 @@ class ISecurityEncodable:
     Instance = ISecurityEncodable()
     """hardcoded/returns an instance of the class"""
 
-class IPermission:
+class IPermission(Object):
     """ Defines methods implemented by permission types. """
     def Copy(self):
         """
@@ -577,8 +577,8 @@ class IStackWalk:
     def Assert(self):
         """
         Assert(self: IStackWalk)
-            Asserts that the calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission 
-             to access the resource.
+            Asserts that the calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access 
+             the resource.
         """
         pass
 
@@ -599,8 +599,8 @@ class IStackWalk:
     def PermitOnly(self):
         """
         PermitOnly(self: IStackWalk)
-            Causes every System.Security.IStackWalk.Demand for all objects except the current one that passes through the calling code to fail, even if code higher in the call 
-             stack has been granted permission to access other resources.
+            Causes every System.Security.IStackWalk.Demand for all objects except the current one that passes through the calling code to fail, even if code higher in the call stack has been 
+             granted permission to access other resources.
         """
         pass
 
@@ -611,7 +611,7 @@ class IStackWalk:
     Instance = IStackWalk()
     """hardcoded/returns an instance of the class"""
 
-class PermissionSet:
+class PermissionSet(Object):
     """
     Represents a collection that can contain many different types of permissions.
     
@@ -643,8 +643,8 @@ class PermissionSet:
     def Assert(self):
         """
         Assert(self: PermissionSet)
-            Declares that the calling code can access the resource protected by a permission demand through the code that calls this method, even if callers higher in the stack 
-             have not been granted permission to access the resource. Using System.Security.PermissionSet.Assert can create security vulnerabilities.
+            Declares that the calling code can access the resource protected by a permission demand through the code that calls this method, even if callers higher in the stack have not been 
+             granted permission to access the resource. Using System.Security.PermissionSet.Assert can create security vulnerabilities.
         """
         pass
 
@@ -700,8 +700,8 @@ class PermissionSet:
     def Deny(self):
         """
         Deny(self: PermissionSet)
-            Causes any System.Security.PermissionSet.Demand that passes through the calling code for a permission that has an intersection with a permission of a type contained in 
-             the current System.Security.PermissionSet to fail.
+            Causes any System.Security.PermissionSet.Demand that passes through the calling code for a permission that has an intersection with a permission of a type contained in the 
+             current System.Security.PermissionSet to fail.
         """
         pass
 
@@ -781,8 +781,7 @@ class PermissionSet:
             Creates and returns a permission set that is the intersection of the current System.Security.PermissionSet and the specified System.Security.PermissionSet.
         
             other: A permission set to intersect with the current System.Security.PermissionSet.
-            Returns: A new permission set that represents the intersection of the current System.Security.PermissionSet and the specified target. This object is null if the intersection is 
-             empty.
+            Returns: A new permission set that represents the intersection of the current System.Security.PermissionSet and the specified target. This object is null if the intersection is empty.
         """
         pass
 
@@ -1139,7 +1138,7 @@ Set: Name(self: NamedPermissionSet) = value
     Instance = NamedPermissionSet()
     """hardcoded/returns an instance of the class"""
 
-class PartialTrustVisibilityLevel:
+class PartialTrustVisibilityLevel(Object):
     """
     Specifies the default partial-trust visibility for code that is marked with the System.Security.AllowPartiallyTrustedCallersAttribute (APTCA) attribute.
     
@@ -1185,7 +1184,7 @@ class PartialTrustVisibilityLevel:
     Instance = PartialTrustVisibilityLevel()
     """hardcoded/returns an instance of the class"""
 
-class PolicyLevelType:
+class PolicyLevelType(Object):
     """
     Specifies the type of a managed code policy level.
     
@@ -1316,7 +1315,7 @@ Get: IsReadOnly(self: ReadOnlyPermissionSet) -> bool
     Instance = ReadOnlyPermissionSet()
     """hardcoded/returns an instance of the class"""
 
-class SecureString:
+class SecureString(Object):
     """
     Represents text that should be kept confidential. The text is encrypted for privacy when being used, and deleted from computer memory when no longer needed. This class cannot be inherited.
     
@@ -1467,7 +1466,7 @@ class SecureStringMarshal():
     Instance = SecureStringMarshal()
     """hardcoded/returns an instance of the class"""
 
-class SecurityContext:
+class SecurityContext(Object):
     """ Encapsulates and propagates all security-related data for execution contexts transferred across threads. This class cannot be inherited. """
     @staticmethod
     def Capture():
@@ -1574,7 +1573,7 @@ class SecurityContext:
     Instance = SecurityContext()
     """hardcoded/returns an instance of the class"""
 
-class SecurityContextSource:
+class SecurityContextSource(Object):
     """
     Identifies the source for the security context.
     
@@ -1620,7 +1619,7 @@ class SecurityContextSource:
     Instance = SecurityContextSource()
     """hardcoded/returns an instance of the class"""
 
-class SecurityCriticalAttribute:
+class SecurityCriticalAttribute(Object):
     """
     Specifies that code or an assembly performs security-critical operations.
     
@@ -1650,7 +1649,7 @@ Get: Scope(self: SecurityCriticalAttribute) -> SecurityCriticalScope
     Instance = SecurityCriticalAttribute()
     """hardcoded/returns an instance of the class"""
 
-class SecurityCriticalScope:
+class SecurityCriticalScope(Object):
     """
     Specifies the scope of a System.Security.SecurityCriticalAttribute.
     
@@ -1696,7 +1695,7 @@ class SecurityCriticalScope:
     Instance = SecurityCriticalScope()
     """hardcoded/returns an instance of the class"""
 
-class SecurityElement:
+class SecurityElement(Object):
     """
     Represents the XML object model for encoding security objects. This class cannot be inherited.
     
@@ -1749,8 +1748,8 @@ class SecurityElement:
             Compares two XML element objects for equality.
         
             other: An XML element object to which to compare the current XML element object.
-            Returns: true if the tag, attribute names and values, child elements, and text fields in the current XML element are identical to their counterparts in the other parameter; 
-             otherwise, false.
+            Returns: true if the tag, attribute names and values, child elements, and text fields in the current XML element are identical to their counterparts in the other parameter; otherwise, 
+             false.
         """
         pass
 
@@ -2088,9 +2087,8 @@ class SecurityManager():
         CurrentThreadRequiresSecurityContextCapture() -> bool
         
             Determines whether the current thread requires a security context capture if its security state has to be re-created at a later point in time.
-            Returns: false if the stack contains no partially trusted application domains, no partially trusted assemblies, and no currently active 
-             System.Security.CodeAccessPermission.PermitOnly or System.Security.CodeAccessPermission.Deny modifiers; true if the common language runtime cannot guarantee that the 
-             stack contains none of these.
+            Returns: false if the stack contains no partially trusted application domains, no partially trusted assemblies, and no currently active System.Security.CodeAccessPermission.PermitOnly or 
+             System.Security.CodeAccessPermission.Deny modifiers; true if the common language runtime cannot guarantee that the stack contains none of these.
         """
         pass
 
@@ -2252,7 +2250,7 @@ class SecurityManager():
     Instance = SecurityManager()
     """hardcoded/returns an instance of the class"""
 
-class SecurityRulesAttribute:
+class SecurityRulesAttribute(Object):
     """
     Indicates the set of security rules the common language runtime should enforce for an assembly.
     
@@ -2286,7 +2284,7 @@ Set: SkipVerificationInFullTrust(self: SecurityRulesAttribute) = value
     Instance = SecurityRulesAttribute()
     """hardcoded/returns an instance of the class"""
 
-class SecurityRuleSet:
+class SecurityRuleSet(Object):
     """
     Identifies the set of security rules the common language runtime should enforce for an assembly.
     
@@ -2333,7 +2331,7 @@ class SecurityRuleSet:
     Instance = SecurityRuleSet()
     """hardcoded/returns an instance of the class"""
 
-class SecuritySafeCriticalAttribute:
+class SecuritySafeCriticalAttribute(Object):
     """
     Identifies types or members as security-critical and safely accessible by transparent code.
     
@@ -2367,7 +2365,7 @@ class SecurityState():
     Instance = SecurityState()
     """hardcoded/returns an instance of the class"""
 
-class SecurityTransparentAttribute:
+class SecurityTransparentAttribute(Object):
     """
     Specifies that an assembly cannot cause an elevation of privilege.
     
@@ -2380,7 +2378,7 @@ class SecurityTransparentAttribute:
     Instance = SecurityTransparentAttribute()
     """hardcoded/returns an instance of the class"""
 
-class SecurityTreatAsSafeAttribute:
+class SecurityTreatAsSafeAttribute(Object):
     """
     Identifies which of the nonpublic System.Security.SecurityCriticalAttribute members are accessible by transparent code within the assembly.
     
@@ -2393,7 +2391,7 @@ class SecurityTreatAsSafeAttribute:
     Instance = SecurityTreatAsSafeAttribute()
     """hardcoded/returns an instance of the class"""
 
-class SecurityZone:
+class SecurityZone(Object):
     """
     Defines the integer values corresponding to security zones used by security policy.
     
@@ -2443,7 +2441,7 @@ class SecurityZone:
     Instance = SecurityZone()
     """hardcoded/returns an instance of the class"""
 
-class SuppressUnmanagedCodeSecurityAttribute:
+class SuppressUnmanagedCodeSecurityAttribute(Object):
     """
     Allows managed code to call into unmanaged code without a stack walk. This class cannot be inherited.
     
@@ -2456,7 +2454,7 @@ class SuppressUnmanagedCodeSecurityAttribute:
     Instance = SuppressUnmanagedCodeSecurityAttribute()
     """hardcoded/returns an instance of the class"""
 
-class UnverifiableCodeAttribute:
+class UnverifiableCodeAttribute(Object):
     """
     Marks modules containing unverifiable code. This class cannot be inherited.
     

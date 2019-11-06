@@ -1,7 +1,7 @@
-from Wms.RemotingImplementation.TaskScheduler import *
+from Wms.RemotingImplementation.TaskScheduler import TaskBase
 # encoding: utf-8
 # module Wms.RemotingImplementation.TaskScheduler.ScriptTasks calls itself ScriptTasks
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports

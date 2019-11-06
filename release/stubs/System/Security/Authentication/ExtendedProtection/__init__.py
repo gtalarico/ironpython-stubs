@@ -24,8 +24,8 @@ class ChannelBinding(SafeHandleZeroOrMinusOneIsInvalid):
         ReleaseHandle(self: SafeHandle) -> bool
         
             When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed 
-             Debugging Assistant.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging 
+             Assistant.
         """
         pass
 
@@ -71,7 +71,7 @@ Get: Size(self: ChannelBinding) -> int
     Instance = ChannelBinding()
     """hardcoded/returns an instance of the class"""
 
-class ChannelBindingKind:
+class ChannelBindingKind(Object):
     """
     The System.Security.Authentication.ExtendedProtection.ChannelBindingKind enumeration represents the kinds of channel bindings that can be queried from secure channels.
     
@@ -118,7 +118,7 @@ class ChannelBindingKind:
     Instance = ChannelBindingKind()
     """hardcoded/returns an instance of the class"""
 
-class ExtendedProtectionPolicy:
+class ExtendedProtectionPolicy(Object):
     """
     The System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy class represents the extended protection policy used by the server to validate incoming client connections.
     
@@ -230,7 +230,7 @@ class ExtendedProtectionPolicyTypeConverter(TypeConverter):
     Instance = ExtendedProtectionPolicyTypeConverter()
     """hardcoded/returns an instance of the class"""
 
-class PolicyEnforcement:
+class PolicyEnforcement(Object):
     """
     The System.Security.Authentication.ExtendedProtection.PolicyEnforcement enumeration specifies when the System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy should be enforced.
     
@@ -277,7 +277,7 @@ class PolicyEnforcement:
     Instance = PolicyEnforcement()
     """hardcoded/returns an instance of the class"""
 
-class ProtectionScenario:
+class ProtectionScenario(Object):
     """
     The System.Security.Authentication.ExtendedProtection.ProtectionScenario enumeration specifies the protection scenario enforced by the policy.
     
@@ -397,7 +397,7 @@ class TokenBinding():
     Instance = TokenBinding()
     """hardcoded/returns an instance of the class"""
 
-class TokenBindingType:
+class TokenBindingType(Object):
     """ enum TokenBindingType, values: Provided (0), Referred (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

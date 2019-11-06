@@ -89,7 +89,7 @@ class Claim():
     Instance = Claim()
     """hardcoded/returns an instance of the class"""
 
-class ClaimsIdentity:
+class ClaimsIdentity(Object):
     """
     ClaimsIdentity()
     ClaimsIdentity(identity: IIdentity)
@@ -243,7 +243,7 @@ Set: Label(self: ClaimsIdentity) = value
     Instance = ClaimsIdentity()
     """hardcoded/returns an instance of the class"""
 
-class ClaimsPrincipal:
+class ClaimsPrincipal(Object):
     """
     ClaimsPrincipal()
     ClaimsPrincipal(identity: IIdentity)

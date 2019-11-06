@@ -1,7 +1,8 @@
-from System import *
+from System import Object
+from System import Exception
 # encoding: utf-8
 # module Wms.RemotingImplementation.Mailing calls itself Mailing
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -9,7 +10,7 @@ from System import *
 # no functions
 # classes
 
-class FileLocationMailAttachment:
+class FileLocationMailAttachment(Object):
     """
     FileLocationMailAttachment(filepath: str)
     FileLocationMailAttachment(filepath: str, sendAsFilename: str)
@@ -87,7 +88,7 @@ class IMailer:
     Instance = IMailer()
     """hardcoded/returns an instance of the class"""
 
-class MailAttachment:
+class MailAttachment(Object):
     """ MailAttachment(filename: str, filecontent: Array[Byte]) """
     def GetContentBytes(self):
         """ GetContentBytes(self: MailAttachment) -> Array[Byte] """
@@ -116,7 +117,7 @@ Set: Filename(self: MailAttachment) = value
     Instance = MailAttachment()
     """hardcoded/returns an instance of the class"""
 
-class MailerBase:
+class MailerBase(Object):
     # no doc
     def SendHtmlAsync(self, args, bodyHtml):
         """ SendHtmlAsync(self: MailerBase, args: SendMailArgs, bodyHtml: str) -> Task """

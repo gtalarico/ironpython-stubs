@@ -1,8 +1,8 @@
-from Wms.RemotingImplementation.TaskScheduler import *
-from Wms.EdiMessaging.Processor import *
+from Wms.RemotingImplementation.TaskScheduler import TaskBase
+from Wms.EdiMessaging.Processor import MessageProcessor
 # encoding: utf-8
 # module Wms.RemotingImplementation.PrintJobs calls itself PrintJobs
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports

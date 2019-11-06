@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingImplementation.Batches calls itself Batches
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -110,7 +111,7 @@ class BatchManager():
     Instance = BatchManager()
     """hardcoded/returns an instance of the class"""
 
-class BatchPackManager:
+class BatchPackManager(Object):
     """ BatchPackManager(stockManager: IStockManager, transportPackages: TransportPackages) """
     def AddCodAmountToFirstPackage(self, result):
         """ AddCodAmountToFirstPackage(self: BatchPackManager, result: ErpProcessSalesOrderLinesResult) """
@@ -242,7 +243,7 @@ class BatchPackManager:
     Instance = BatchPackManager()
     """hardcoded/returns an instance of the class"""
 
-class BatchPickManager:
+class BatchPickManager(Object):
     """ BatchPickManager(batch: Batch, stock: IStockManager, settings: AllocationSettings) """
     def CheckBatchScanForItem(self, args):
         """ CheckBatchScanForItem(self: BatchPickManager, args: BatchScanArgs) -> BatchScanResult """
@@ -405,7 +406,7 @@ Set: AreColliHandled(self: ColliRegistrationResult) = value
     Instance = ColliRegistrationResult()
     """hardcoded/returns an instance of the class"""
 
-class ColliRegistrator:
+class ColliRegistrator(Object):
     """ ColliRegistrator(transportPackages: TransportPackages) """
     def Dispose(self):
         """ Dispose(self: ColliRegistrator) """
@@ -484,7 +485,7 @@ Set: WarehouseLocationCode(self: CountForColliRegistration) = value
     Instance = CountForColliRegistration()
     """hardcoded/returns an instance of the class"""
 
-class PickingList:
+class PickingList(Object):
     """ PickingList() """
     def Create(self, batch):
         """ Create(self: PickingList, batch: Batch) -> BatchPickLocations """

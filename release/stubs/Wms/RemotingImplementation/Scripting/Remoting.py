@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingImplementation.Scripting.Remoting calls itself Remoting
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -76,7 +77,7 @@ class MakePythonTypesSerializeableSink(BaseRemotingSink):
     Instance = MakePythonTypesSerializeableSink()
     """hardcoded/returns an instance of the class"""
 
-class SinkProviderOf:
+class SinkProviderOf(Object):
     """ SinkProviderOf[T]() """
     def CreateSink(self, channel):
         """ CreateSink(self: SinkProviderOf[T], channel: IChannelReceiver) -> IServerChannelSink """

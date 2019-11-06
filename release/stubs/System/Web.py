@@ -153,7 +153,7 @@ Set: Level(self: AspNetHostingPermissionAttribute) = value
     Instance = AspNetHostingPermissionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class AspNetHostingPermissionLevel:
+class AspNetHostingPermissionLevel(Object):
     """
     Specifies the trust level that is granted to an ASP.NET Web application.
     

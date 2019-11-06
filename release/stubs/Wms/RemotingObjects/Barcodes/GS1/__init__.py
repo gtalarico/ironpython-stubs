@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingObjects.Barcodes.GS1 calls itself GS1
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -133,7 +134,7 @@ class ApplicationIdentifiers():
     Instance = ApplicationIdentifiers()
     """hardcoded/returns an instance of the class"""
 
-class GS1Barcode:
+class GS1Barcode(Object):
     """
     GS1Barcode()
     GS1Barcode(applicationIdentifier: str, value: str)
@@ -296,7 +297,7 @@ class ItemNumberHelper():
     Instance = ItemNumberHelper()
     """hardcoded/returns an instance of the class"""
 
-class ItemNumberType:
+class ItemNumberType(Object):
     """ enum ItemNumberType, values: ASIN (1), EAN13 (3), EAN8 (2), GTIN (4), ISBN10 (5), ISBN13 (6), ISSN (9), SKU (7), Unknown (0), UPC (8) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

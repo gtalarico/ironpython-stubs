@@ -8,7 +8,7 @@
 # no functions
 # classes
 
-class ExcludeFromCodeCoverageAttribute:
+class ExcludeFromCodeCoverageAttribute(Object):
     """
     Specifies that the attributed code should be excluded from code coverage information.
     
@@ -21,7 +21,7 @@ class ExcludeFromCodeCoverageAttribute:
     Instance = ExcludeFromCodeCoverageAttribute()
     """hardcoded/returns an instance of the class"""
 
-class SuppressMessageAttribute:
+class SuppressMessageAttribute(Object):
     """
     Suppresses reporting of a specific static analysis tool rule violation, allowing multiple suppressions on a single code artifact.
     

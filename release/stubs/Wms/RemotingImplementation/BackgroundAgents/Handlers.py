@@ -1,7 +1,7 @@
-from Wms.EdiMessaging import *
+from Wms.EdiMessaging import MessageHandlerBase
 # encoding: utf-8
 # module Wms.RemotingImplementation.BackgroundAgents.Handlers calls itself Handlers
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports

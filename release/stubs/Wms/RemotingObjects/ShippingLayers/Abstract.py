@@ -1,8 +1,9 @@
-from Wms.RemotingObjects.ShippingLayers import *
-from System import *
+from System import Object
+from Wms.RemotingObjects.ShippingLayers import Address
+from System import MulticastDelegate
 # encoding: utf-8
 # module Wms.RemotingObjects.ShippingLayers.Abstract calls itself Abstract
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -33,8 +34,8 @@ class OnGetSettingMemberHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -64,8 +65,8 @@ class OnGetSettingMemberHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -107,8 +108,8 @@ class OnGetSettingsHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -138,8 +139,8 @@ class OnGetSettingsHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -181,8 +182,8 @@ class OnSaveSettingMemberHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -212,8 +213,8 @@ class OnSaveSettingMemberHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -255,8 +256,8 @@ class OnSaveSettingsHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -286,8 +287,8 @@ class OnSaveSettingsHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -512,7 +513,7 @@ Set: YourReference(self: PackageBase) = value
     Instance = PackageBase()
     """hardcoded/returns an instance of the class"""
 
-class ServiceBase:
+class ServiceBase(Object):
     """  """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -714,7 +715,7 @@ Get: Shipper(self: ShipmentBase) -> ShipperBase
     Instance = ShipmentBase()
     """hardcoded/returns an instance of the class"""
 
-class ShipperBase:
+class ShipperBase(Object):
     """  """
     def GetServiceLevels(self, services):
         """ GetServiceLevels(self: ShipperBase) -> (int, Services) """

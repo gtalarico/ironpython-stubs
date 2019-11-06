@@ -8,7 +8,7 @@
 # no functions
 # classes
 
-class WebSocket:
+class WebSocket(Object):
     # no doc
     def Abort(self):
         """ Abort(self: WebSocket) """
@@ -366,7 +366,7 @@ class HttpListenerWebSocketContext(WebSocketContext):
     Instance = HttpListenerWebSocketContext()
     """hardcoded/returns an instance of the class"""
 
-class WebSocketCloseStatus:
+class WebSocketCloseStatus(Object):
     """ enum WebSocketCloseStatus, values: Empty (1005), EndpointUnavailable (1001), InternalServerError (1011), InvalidMessageType (1003), InvalidPayloadData (1007), MandatoryExtension (1010), MessageTooBig (1009), NormalClosure (1000), PolicyViolation (1008), ProtocolError (1002) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -416,7 +416,7 @@ class WebSocketCloseStatus:
     Instance = WebSocketCloseStatus()
     """hardcoded/returns an instance of the class"""
 
-class WebSocketError:
+class WebSocketError(Object):
     """ enum WebSocketError, values: ConnectionClosedPrematurely (8), Faulted (2), HeaderError (7), InvalidMessageType (1), InvalidState (9), NativeError (3), NotAWebSocket (4), Success (0), UnsupportedProtocol (6), UnsupportedVersion (5) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -533,7 +533,7 @@ class WebSocketException(Win32Exception):
     Instance = WebSocketException()
     """hardcoded/returns an instance of the class"""
 
-class WebSocketMessageType:
+class WebSocketMessageType(Object):
     """ enum WebSocketMessageType, values: Binary (1), Close (2), Text (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -618,7 +618,7 @@ class WebSocketReceiveResult():
     Instance = WebSocketReceiveResult()
     """hardcoded/returns an instance of the class"""
 
-class WebSocketState:
+class WebSocketState(Object):
     """ enum WebSocketState, values: Aborted (6), Closed (5), CloseReceived (4), CloseSent (3), Connecting (1), None (0), Open (2) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

@@ -8,7 +8,7 @@
 # no functions
 # classes
 
-class SettingAttribute:
+class SettingAttribute(Object):
     """
     Represents a custom settings attribute used to associate settings information with a settings property.
     
@@ -280,8 +280,8 @@ class AppSettingsReader():
         """
         GetValue(self: AppSettingsReader, key: str, type: Type) -> object
         
-            Gets the value for a specified key from the System.Configuration.ConfigurationSettings.AppSettings property and returns an object of the specified type containing the 
-             value from the configuration.
+            Gets the value for a specified key from the System.Configuration.ConfigurationSettings.AppSettings property and returns an object of the specified type containing the value from 
+             the configuration.
         
         
             key: The key for which to get the value.
@@ -438,9 +438,8 @@ class ConfigurationSettings():
             Returns the System.Configuration.ConfigurationSection object for the passed configuration section name and path.
         
             sectionName: A configuration name and path, such as "system.net/settings".
-            Returns: The System.Configuration.ConfigurationSection object for the passed configuration section name and path.NoteThe System.Configuration.ConfigurationSettings class 
-             provides backward compatibility only. You should use the System.Configuration.ConfigurationManager class or System.Web.Configuration.WebConfigurationManager class 
-             instead.
+            Returns: The System.Configuration.ConfigurationSection object for the passed configuration section name and path.NoteThe System.Configuration.ConfigurationSettings class provides backward 
+             compatibility only. You should use the System.Configuration.ConfigurationManager class or System.Web.Configuration.WebConfigurationManager class instead.
         """
         pass
 
@@ -609,7 +608,7 @@ Get: LineNumber(self: ConfigXmlDocument) -> int
     Instance = ConfigXmlDocument()
     """hardcoded/returns an instance of the class"""
 
-class DefaultSettingValueAttribute:
+class DefaultSettingValueAttribute(Object):
     """
     Specifies the default value for an application settings property.
     
@@ -635,7 +634,7 @@ Get: Value(self: DefaultSettingValueAttribute) -> str
     Instance = DefaultSettingValueAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DictionarySectionHandler:
+class DictionarySectionHandler(Object):
     """
     Provides key/value pair configuration information from a configuration section.
     
@@ -686,8 +685,8 @@ class IApplicationSettingsProvider:
         
             context: A System.Configuration.SettingsContext describing the current application usage.
             property: The System.Configuration.SettingsProperty whose value is to be returned.
-            Returns: A System.Configuration.SettingsPropertyValue containing the value of the specified property setting as it was last set in the previous version of the application; or 
-             null if the setting cannot be found.
+            Returns: A System.Configuration.SettingsPropertyValue containing the value of the specified property setting as it was last set in the previous version of the application; or null if the 
+             setting cannot be found.
         """
         pass
 
@@ -798,7 +797,7 @@ Set: Enabled(self: IdnElement) = value
     Instance = IdnElement()
     """hardcoded/returns an instance of the class"""
 
-class IgnoreSectionHandler:
+class IgnoreSectionHandler(Object):
     """
     Provides a legacy section-handler definition for configuration sections that are not handled by the System.Configuration types.
     
@@ -1046,7 +1045,7 @@ Set: ApplicationName(self: LocalFileSettingsProvider) = value
     Instance = LocalFileSettingsProvider()
     """hardcoded/returns an instance of the class"""
 
-class NameValueFileSectionHandler:
+class NameValueFileSectionHandler(Object):
     """
     Provides access to a configuration file. This type supports the .NET Framework configuration infrastructure and is not intended to be used directly from your code.
     
@@ -1076,7 +1075,7 @@ class NameValueFileSectionHandler:
     Instance = NameValueFileSectionHandler()
     """hardcoded/returns an instance of the class"""
 
-class NameValueSectionHandler:
+class NameValueSectionHandler(Object):
     """
     Provides name/value-pair configuration information from a configuration section.
     
@@ -1117,7 +1116,7 @@ class NameValueSectionHandler:
     Instance = NameValueSectionHandler()
     """hardcoded/returns an instance of the class"""
 
-class NoSettingsVersionUpgradeAttribute:
+class NoSettingsVersionUpgradeAttribute(Object):
     """
     Specifies that a settings provider should disable any logic that gets invoked when an application upgrade is detected. This class cannot be inherited.
     
@@ -1184,8 +1183,8 @@ class SchemeSettingElementCollection(ConfigurationElementCollection):
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; 
-             otherwise, false.
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, 
+             false.
         
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
@@ -1254,9 +1253,7 @@ class SchemeSettingElementCollection(ConfigurationElementCollection):
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the 
-             System.Configuration.ConfigurationElementCollection.
-        
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
         
             key: The key of the element to check.
             Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
@@ -1374,8 +1371,8 @@ class SchemeSettingElementCollection(ConfigurationElementCollection):
             Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The 
-             default is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is 
+             true.
         """
         pass
 
@@ -1502,8 +1499,7 @@ class SchemeSettingElementCollection(ConfigurationElementCollection):
     def SetReadOnly(self, *args): #cannot find CLR method
         """
         SetReadOnly(self: ConfigurationElementCollection)
-            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all 
-             sub-elements.
+            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all sub-elements.
         """
         pass
 
@@ -1653,8 +1649,8 @@ class SettingChangingEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1684,8 +1680,8 @@ class SettingChangingEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -1806,8 +1802,8 @@ class SettingElementCollection(ConfigurationElementCollection):
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; 
-             otherwise, false.
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, 
+             false.
         
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
@@ -1876,9 +1872,7 @@ class SettingElementCollection(ConfigurationElementCollection):
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the 
-             System.Configuration.ConfigurationElementCollection.
-        
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
         
             key: The key of the element to check.
             Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
@@ -2003,8 +1997,8 @@ class SettingElementCollection(ConfigurationElementCollection):
             Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The 
-             default is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is 
+             true.
         """
         pass
 
@@ -2140,8 +2134,7 @@ class SettingElementCollection(ConfigurationElementCollection):
     def SetReadOnly(self, *args): #cannot find CLR method
         """
         SetReadOnly(self: ConfigurationElementCollection)
-            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all 
-             sub-elements.
+            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all sub-elements.
         """
         pass
 
@@ -2361,7 +2354,7 @@ class SettingsContext(Hashtable):
     Instance = SettingsContext()
     """hardcoded/returns an instance of the class"""
 
-class SettingsDescriptionAttribute:
+class SettingsDescriptionAttribute(Object):
     """
     Provides a string that describes an individual configuration property. This class cannot be inherited.
     
@@ -2387,7 +2380,7 @@ Get: Description(self: SettingsDescriptionAttribute) -> str
     Instance = SettingsDescriptionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class SettingsGroupDescriptionAttribute:
+class SettingsGroupDescriptionAttribute(Object):
     """
     Provides a string that describes an application settings property group. This class cannot be inherited.
     
@@ -2413,7 +2406,7 @@ Get: Description(self: SettingsGroupDescriptionAttribute) -> str
     Instance = SettingsGroupDescriptionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class SettingsGroupNameAttribute:
+class SettingsGroupNameAttribute(Object):
     """
     Specifies a name for application settings property group. This class cannot be inherited.
     
@@ -2488,8 +2481,8 @@ class SettingsLoadedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -2519,8 +2512,8 @@ class SettingsLoadedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -2539,7 +2532,7 @@ class SettingsLoadedEventHandler(MulticastDelegate):
     Instance = SettingsLoadedEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class SettingsManageability:
+class SettingsManageability(Object):
     """
     Provides values to indicate which services should be made available to application settings.
     
@@ -2584,7 +2577,7 @@ class SettingsManageability:
     Instance = SettingsManageability()
     """hardcoded/returns an instance of the class"""
 
-class SettingsManageabilityAttribute:
+class SettingsManageabilityAttribute(Object):
     """
     Specifies special services for application settings properties. This class cannot be inherited.
     
@@ -2702,7 +2695,7 @@ Set: ThrowOnErrorSerializing(self: SettingsProperty) = value
     Instance = SettingsProperty()
     """hardcoded/returns an instance of the class"""
 
-class SettingsPropertyCollection:
+class SettingsPropertyCollection(Object):
     """
     Contains a collection of System.Configuration.SettingsProperty objects.
     
@@ -3001,7 +2994,7 @@ Get: UsingDefaultValue(self: SettingsPropertyValue) -> bool
     Instance = SettingsPropertyValue()
     """hardcoded/returns an instance of the class"""
 
-class SettingsPropertyValueCollection:
+class SettingsPropertyValueCollection(Object):
     """
     Contains a collection of settings property values that map System.Configuration.SettingsProperty objects to System.Configuration.SettingsPropertyValue objects.
     
@@ -3149,7 +3142,7 @@ class SettingsPropertyWrongTypeException(Exception):
     Instance = SettingsPropertyWrongTypeException()
     """hardcoded/returns an instance of the class"""
 
-class SettingsProviderAttribute:
+class SettingsProviderAttribute(Object):
     """
     Specifies the settings provider used to provide storage for the current application settings class or property. This class cannot be inherited.
     
@@ -3240,8 +3233,8 @@ class SettingsSavingEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -3271,8 +3264,8 @@ class SettingsSavingEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -3291,7 +3284,7 @@ class SettingsSavingEventHandler(MulticastDelegate):
     Instance = SettingsSavingEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class SettingsSerializeAs:
+class SettingsSerializeAs(Object):
     """
     Determines the serialization scheme used to store application settings.
     
@@ -3339,7 +3332,7 @@ class SettingsSerializeAs:
     Instance = SettingsSerializeAs()
     """hardcoded/returns an instance of the class"""
 
-class SettingsSerializeAsAttribute:
+class SettingsSerializeAsAttribute(Object):
     """
     Specifies the serialization mechanism that the settings provider should use. This class cannot be inherited.
     
@@ -3417,7 +3410,7 @@ Set: ValueXml(self: SettingValueElement) = value
     Instance = SettingValueElement()
     """hardcoded/returns an instance of the class"""
 
-class SingleTagSectionHandler:
+class SingleTagSectionHandler(Object):
     """
     Handles configuration sections that are represented by a single XML tag in the .config file.
     
@@ -3447,7 +3440,7 @@ class SingleTagSectionHandler:
     Instance = SingleTagSectionHandler()
     """hardcoded/returns an instance of the class"""
 
-class SpecialSetting:
+class SpecialSetting(Object):
     """
     Specifies the special setting category of a application settings property.
     
@@ -3493,7 +3486,7 @@ class SpecialSetting:
     Instance = SpecialSetting()
     """hardcoded/returns an instance of the class"""
 
-class SpecialSettingAttribute:
+class SpecialSettingAttribute(Object):
     """
     Indicates that an application settings property has a special significance. This class cannot be inherited.
     

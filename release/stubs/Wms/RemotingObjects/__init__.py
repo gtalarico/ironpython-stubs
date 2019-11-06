@@ -1,8 +1,10 @@
-from System.Collections.Generic import *
-from System import *
+from System import Object
+from System import Exception
+from System.Collections.Generic import List
+from System.Collections.Generic import Dictionary
 # encoding: utf-8
 # module Wms.RemotingObjects calls itself RemotingObjects
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -19,7 +21,7 @@ def ResultObject(): # real signature unknown; restored from __doc__
 
 # classes
 
-class AnswerOptionsEnum:
+class AnswerOptionsEnum(Object):
     """ enum (flags) AnswerOptionsEnum, values: Abort (4), Cancel (2), Ignore (16), No (64), NoResponse (0), OK (1), Retry (8), Yes (32) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -282,7 +284,7 @@ Set: ItemCode(self: ChangeBarcodeArgs) = value
     Instance = ChangeBarcodeArgs()
     """hardcoded/returns an instance of the class"""
 
-class DataBindingTypes:
+class DataBindingTypes(Object):
     """ enum DataBindingTypes, values: DisplayMember (1), UniqueId (2), ValueMember (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -325,7 +327,7 @@ class DataBindingTypes:
     Instance = DataBindingTypes()
     """hardcoded/returns an instance of the class"""
 
-class DbObject:
+class DbObject(Object):
     """  """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -500,7 +502,7 @@ class Devices(FindableList):
     Instance = Devices()
     """hardcoded/returns an instance of the class"""
 
-class DeviceTypesEnum:
+class DeviceTypesEnum(Object):
     """ enum DeviceTypesEnum, values: Handheld (2), Other (0), Portal (3), Terminal (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -622,6 +624,7 @@ class Errors(List):
 class FindableList(List):
     """
     FindableList[T]()
+    FindableList[T](Capacity: int)
     FindableList[T](collection: IEnumerable[T])
     """
     def ExistsByProperty(self, id):
@@ -682,9 +685,10 @@ class FindableList(List):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(self, collection=None):
+    def __new__(self, *__args):
         """
         __new__(cls: type)
+        __new__(cls: type, Capacity: int)
         __new__(cls: type, collection: IEnumerable[T])
         """
         pass
@@ -1585,7 +1589,7 @@ class Mappings():
     Instance = Mappings()
     """hardcoded/returns an instance of the class"""
 
-class OrderTypeEnum:
+class OrderTypeEnum(Object):
     """ enum OrderTypeEnum, values: Purchase (0), Replenishment (3), Rma (1), Rtv (4), Sales (2) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2346,7 +2350,7 @@ class SerializableDictionary(Dictionary):
     Instance = SerializableDictionary()
     """hardcoded/returns an instance of the class"""
 
-class ServerHealthEnum:
+class ServerHealthEnum(Object):
     """ enum ServerHealthEnum, values: DatabaseUpdateNeeded (4), DifferentHookVersions (5), InvalidConnection (2), InvalidLicense (1), NoDatabase (3), NotReady (6), NotRunning (7), Ok (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2641,7 +2645,7 @@ class Tags(List):
     Instance = Tags()
     """hardcoded/returns an instance of the class"""
 
-class TagTarget:
+class TagTarget(Object):
     """ enum TagTarget, values: Batch (2), NotSet (0), Order (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2684,7 +2688,7 @@ class TagTarget:
     Instance = TagTarget()
     """hardcoded/returns an instance of the class"""
 
-class ThreadSafeList:
+class ThreadSafeList(Object):
     """ ThreadSafeList[T]() """
     def Clear(self):
         """ Clear(self: ThreadSafeList[T]) """
@@ -2755,7 +2759,7 @@ Get: Count(self: ThreadSafeList[T]) -> int
     Instance = ThreadSafeList()
     """hardcoded/returns an instance of the class"""
 
-class TimeFilterEnum:
+class TimeFilterEnum(Object):
     """ enum TimeFilterEnum, values: All (3), Today (0), Tomorrow (1), UpcomingWeek (2) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2799,7 +2803,7 @@ class TimeFilterEnum:
     Instance = TimeFilterEnum()
     """hardcoded/returns an instance of the class"""
 
-class TimeFilterHistoryEnum:
+class TimeFilterHistoryEnum(Object):
     """ enum TimeFilterHistoryEnum, values: All (3), LastWeek (2), Today (0), Yesterday (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2843,7 +2847,7 @@ class TimeFilterHistoryEnum:
     Instance = TimeFilterHistoryEnum()
     """hardcoded/returns an instance of the class"""
 
-class UiDataBindingTypeAttribute:
+class UiDataBindingTypeAttribute(Object):
     """ UiDataBindingTypeAttribute(type: DataBindingTypes) """
     @staticmethod
     def GetDisplayMember(type):
@@ -2891,7 +2895,7 @@ Get: Type(self: UiDataBindingTypeAttribute) -> DataBindingTypes
     Instance = UiDataBindingTypeAttribute()
     """hardcoded/returns an instance of the class"""
 
-class UnitTypeEnum:
+class UnitTypeEnum(Object):
     """ enum UnitTypeEnum, values: Length (2), Other (1), Time (3), Unspecified (0), Weight (4) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

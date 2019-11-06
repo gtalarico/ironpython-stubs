@@ -8,7 +8,7 @@
 # no functions
 # classes
 
-class Collection:
+class Collection(Object):
     """
     Collection[T]()
     Collection[T](list: IList[T])
@@ -260,8 +260,7 @@ class KeyedCollection(Collection):
             Removes the element with the specified key from the System.Collections.ObjectModel.KeyedCollection.
         
             key: The key of the element to remove.
-            Returns: true if the element is successfully removed; otherwise, false.  This method also returns false if key is not found in the 
-             System.Collections.ObjectModel.KeyedCollection.
+            Returns: true if the element is successfully removed; otherwise, false.  This method also returns false if key is not found in the System.Collections.ObjectModel.KeyedCollection.
         """
         pass
 
@@ -469,7 +468,7 @@ class ObservableCollection(Collection):
     Instance = ObservableCollection()
     """hardcoded/returns an instance of the class"""
 
-class ReadOnlyCollection:
+class ReadOnlyCollection(Object):
     """ ReadOnlyCollection[T](list: IList[T]) """
     def Contains(self, value):
         """
@@ -567,7 +566,7 @@ Get: Count(self: ReadOnlyCollection[T]) -> int
     Instance = ReadOnlyCollection()
     """hardcoded/returns an instance of the class"""
 
-class ReadOnlyDictionary:
+class ReadOnlyDictionary(Object):
     """ ReadOnlyDictionary[TKey, TValue](dictionary: IDictionary[TKey, TValue]) """
     def ContainsKey(self, key):
         """ ContainsKey(self: ReadOnlyDictionary[TKey, TValue], key: TKey) -> bool """

@@ -8,7 +8,7 @@
 # no functions
 # classes
 
-class ValueSerializerAttribute:
+class ValueSerializerAttribute(Object):
     """
     ValueSerializerAttribute(valueSerializerType: Type)
     ValueSerializerAttribute(valueSerializerTypeName: str)

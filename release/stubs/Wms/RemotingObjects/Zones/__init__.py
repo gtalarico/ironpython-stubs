@@ -1,8 +1,10 @@
-from System.Collections.Generic import *
-from Wms.RemotingObjects import *
+from System.Collections.Generic import List
+from Wms.RemotingObjects import FindableList
+from Wms.RemotingObjects import User
+from Wms.RemotingObjects import DbObject
 # encoding: utf-8
 # module Wms.RemotingObjects.Zones calls itself Zones
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -1188,6 +1190,30 @@ Set: TouchAllowInboundRmaOrders(self: ZoneRights) = value
 Get: TouchAllowItemInfo(self: ZoneRights) -> RightValue
 
 Set: TouchAllowItemInfo(self: ZoneRights) = value
+"""
+
+    TouchAllowManualPacking = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Allow manual packing
+
+Get: TouchAllowManualPacking(self: ZoneRights) -> RightValue
+
+Set: TouchAllowManualPacking(self: ZoneRights) = value
+"""
+
+    TouchAllowManualReceivingOrders = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Allow manual receiving (purchase + rma orders)
+
+Get: TouchAllowManualReceivingOrders(self: ZoneRights) -> RightValue
+
+Set: TouchAllowManualReceivingOrders(self: ZoneRights) = value
+"""
+
+    TouchAllowManualTransferring = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Allow manual transferring
+
+Get: TouchAllowManualTransferring(self: ZoneRights) -> RightValue
+
+Set: TouchAllowManualTransferring(self: ZoneRights) = value
 """
 
     TouchAllowOutbound = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default

@@ -64,8 +64,8 @@ class ActiveDesignerEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -95,8 +95,8 @@ class ActiveDesignerEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -284,8 +284,8 @@ class ComponentChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -315,8 +315,8 @@ class ComponentChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -391,8 +391,8 @@ class ComponentChangingEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -422,8 +422,8 @@ class ComponentChangingEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -491,8 +491,8 @@ class ComponentEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -522,8 +522,8 @@ class ComponentEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -605,8 +605,8 @@ class ComponentRenameEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -636,8 +636,8 @@ class ComponentRenameEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -656,7 +656,7 @@ class ComponentRenameEventHandler(MulticastDelegate):
     Instance = ComponentRenameEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class DesignerCollection:
+class DesignerCollection(Object):
     """
     Represents a collection of designers.
     
@@ -760,8 +760,8 @@ class DesignerEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -791,8 +791,8 @@ class DesignerEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -843,7 +843,7 @@ class IDesignerOptionService:
     Instance = IDesignerOptionService()
     """hardcoded/returns an instance of the class"""
 
-class DesignerOptionService:
+class DesignerOptionService(Object):
     """ Provides a base class for getting and setting option values for a designer. """
     def CreateOptionCollection(self, *args): #cannot find CLR method
         """ CreateOptionCollection(self: DesignerOptionService, parent: DesignerOptionCollection, name: str, value: object) -> DesignerOptionCollection """
@@ -878,7 +878,7 @@ Get: Options(self: DesignerOptionService) -> DesignerOptionCollection
     Instance = DesignerOptionService()
     """hardcoded/returns an instance of the class"""
 
-class DesignerTransaction:
+class DesignerTransaction(Object):
     """ Provides a way to group a series of design-time actions to improve performance and enable most types of changes to be undone. """
     def Cancel(self):
         """
@@ -1026,8 +1026,8 @@ class DesignerTransactionCloseEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1057,8 +1057,8 @@ class DesignerTransactionCloseEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -1108,8 +1108,8 @@ class MenuCommand():
         ToString(self: MenuCommand) -> str
         
             Returns a string representation of this menu command.
-            Returns: A string containing the value of the System.ComponentModel.Design.MenuCommand.CommandID property appended with the names of any flags that are set, separated by pipe 
-             bars (|). These flag properties include System.ComponentModel.Design.MenuCommand.Checked, System.ComponentModel.Design.MenuCommand.Enabled, 
+            Returns: A string containing the value of the System.ComponentModel.Design.MenuCommand.CommandID property appended with the names of any flags that are set, separated by pipe bars (|). 
+             These flag properties include System.ComponentModel.Design.MenuCommand.Checked, System.ComponentModel.Design.MenuCommand.Enabled, 
              System.ComponentModel.Design.MenuCommand.Supported, and System.ComponentModel.Design.MenuCommand.Visible.
         """
         pass
@@ -1490,7 +1490,7 @@ class DesigntimeLicenseContextSerializer():
     Instance = DesigntimeLicenseContextSerializer()
     """hardcoded/returns an instance of the class"""
 
-class HelpContextType:
+class HelpContextType(Object):
     """
     Defines identifiers that indicate information about the context in which a request for Help information originated.
     
@@ -1538,7 +1538,7 @@ class HelpContextType:
     Instance = HelpContextType()
     """hardcoded/returns an instance of the class"""
 
-class HelpKeywordAttribute:
+class HelpKeywordAttribute(Object):
     """
     Specifies the context keyword for a class or member. This class cannot be inherited.
     
@@ -1611,7 +1611,7 @@ Get: HelpKeyword(self: HelpKeywordAttribute) -> str
     Instance = HelpKeywordAttribute()
     """hardcoded/returns an instance of the class"""
 
-class HelpKeywordType:
+class HelpKeywordType(Object):
     """
     Defines identifiers that indicate the type of a Help keyword.
     
@@ -1745,7 +1745,7 @@ class IComponentInitializer:
     Instance = IComponentInitializer()
     """hardcoded/returns an instance of the class"""
 
-class IDesigner:
+class IDesigner(Object):
     """ Provides the basic framework for building a custom designer. """
     def DoDefaultAction(self):
         """
@@ -1819,9 +1819,7 @@ class IDesignerFilter:
     def PostFilterAttributes(self, attributes):
         """
         PostFilterAttributes(self: IDesignerFilter, attributes: IDictionary)
-            When overridden in a derived class, allows a designer to change or remove items from the set of attributes that it exposes through a 
-             System.ComponentModel.TypeDescriptor.
-        
+            When overridden in a derived class, allows a designer to change or remove items from the set of attributes that it exposes through a System.ComponentModel.TypeDescriptor.
         
             attributes: The System.Attribute objects for the class of the component. The keys in the dictionary of attributes are the System.Attribute.TypeId values of the attributes.
         """
@@ -1839,12 +1837,9 @@ class IDesignerFilter:
     def PostFilterProperties(self, properties):
         """
         PostFilterProperties(self: IDesignerFilter, properties: IDictionary)
-            When overridden in a derived class, allows a designer to change or remove items from the set of properties that it exposes through a 
-             System.ComponentModel.TypeDescriptor.
+            When overridden in a derived class, allows a designer to change or remove items from the set of properties that it exposes through a System.ComponentModel.TypeDescriptor.
         
-        
-            properties: The System.ComponentModel.PropertyDescriptor objects that represent the properties of the class of the component. The keys in the dictionary of properties are property 
-             names.
+            properties: The System.ComponentModel.PropertyDescriptor objects that represent the properties of the class of the component. The keys in the dictionary of properties are property names.
         """
         pass
 
@@ -1871,8 +1866,7 @@ class IDesignerFilter:
         PreFilterProperties(self: IDesignerFilter, properties: IDictionary)
             When overridden in a derived class, allows a designer to add items to the set of properties that it exposes through a System.ComponentModel.TypeDescriptor.
         
-            properties: The System.ComponentModel.PropertyDescriptor objects that represent the properties of the class of the component. The keys in the dictionary of properties are property 
-             names.
+            properties: The System.ComponentModel.PropertyDescriptor objects that represent the properties of the class of the component. The keys in the dictionary of properties are property names.
         """
         pass
 
@@ -1883,7 +1877,7 @@ class IDesignerFilter:
     Instance = IDesignerFilter()
     """hardcoded/returns an instance of the class"""
 
-class IServiceContainer:
+class IServiceContainer(Object):
     """ Provides a container for services. """
     def AddService(self, serviceType, *__args):
         """
@@ -1902,16 +1896,12 @@ class IServiceContainer:
             Adds the specified service to the service container.
         
             serviceType: The type of service to add.
-            callback: A callback object that is used to create the service. This allows a service to be declared as available, but delays the creation of the object until the service is 
-             requested.
-        
+            callback: A callback object that is used to create the service. This allows a service to be declared as available, but delays the creation of the object until the service is requested.
         AddService(self: IServiceContainer, serviceType: Type, callback: ServiceCreatorCallback, promote: bool)
             Adds the specified service to the service container, and optionally promotes the service to parent service containers.
         
             serviceType: The type of service to add.
-            callback: A callback object that is used to create the service. This allows a service to be declared as available, but delays the creation of the object until the service is 
-             requested.
-        
+            callback: A callback object that is used to create the service. This allows a service to be declared as available, but delays the creation of the object until the service is requested.
             promote: true to promote this request to any parent service containers; otherwise, false.
         """
         pass
@@ -1937,7 +1927,7 @@ class IServiceContainer:
     Instance = IServiceContainer()
     """hardcoded/returns an instance of the class"""
 
-class IDesignerHost:
+class IDesignerHost(Object):
     """ Provides an interface for managing designer transactions and components. """
     def Activate(self):
         """
@@ -1974,8 +1964,8 @@ class IDesignerHost:
         
         CreateTransaction(self: IDesignerHost, description: str) -> DesignerTransaction
         
-            Creates a System.ComponentModel.Design.DesignerTransaction that can encapsulate event sequences to improve performance and enable undo and redo support functionality, 
-             using the specified transaction description.
+            Creates a System.ComponentModel.Design.DesignerTransaction that can encapsulate event sequences to improve performance and enable undo and redo support functionality, using the 
+             specified transaction description.
         
         
             description: A title or description for the newly created transaction.
@@ -2343,9 +2333,8 @@ class IInheritanceService:
     def AddInheritedComponents(self, component, container):
         """
         AddInheritedComponents(self: IInheritanceService, component: IComponent, container: IContainer)
-            Searches the specified component for fields that implement the System.ComponentModel.IComponent interface and adds each to the specified container, storing the 
-             inheritance level of each which can be retrieved using the System.ComponentModel.Design.IInheritanceService.GetInheritanceAttribute(System.ComponentModel.IComponent) 
-             method.
+            Searches the specified component for fields that implement the System.ComponentModel.IComponent interface and adds each to the specified container, storing the inheritance level 
+             of each which can be retrieved using the System.ComponentModel.Design.IInheritanceService.GetInheritanceAttribute(System.ComponentModel.IComponent) method.
         
         
             component: The System.ComponentModel.IComponent to search. Searching begins with this component.
@@ -2545,7 +2534,7 @@ class IResourceService:
     Instance = IResourceService()
     """hardcoded/returns an instance of the class"""
 
-class IRootDesigner:
+class IRootDesigner(Object):
     """ Provides support for root-level designer view technologies. """
     def GetView(self, technology):
         """
@@ -2642,7 +2631,7 @@ Get: SelectionCount(self: ISelectionService) -> int
     Instance = ISelectionService()
     """hardcoded/returns an instance of the class"""
 
-class ITreeDesigner:
+class ITreeDesigner(Object):
     """ Provides support for building a set of related custom designers. """
     def __enter__(self, *args): #cannot find CLR method
         """ __enter__(self: IDisposable) -> object """
@@ -2813,7 +2802,7 @@ class ITypeResolutionService:
     Instance = ITypeResolutionService()
     """hardcoded/returns an instance of the class"""
 
-class SelectionTypes:
+class SelectionTypes(Object):
     """
     Defines identifiers that indicate the type of a selection.
     
@@ -2868,7 +2857,7 @@ class SelectionTypes:
     Instance = SelectionTypes()
     """hardcoded/returns an instance of the class"""
 
-class ServiceContainer:
+class ServiceContainer(Object):
     """
     Provides a simple implementation of the System.ComponentModel.Design.IServiceContainer interface. This class cannot be inherited.
     
@@ -2994,8 +2983,8 @@ class ServiceCreatorCallback(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -3025,8 +3014,8 @@ class ServiceCreatorCallback(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -3150,7 +3139,7 @@ class TypeDescriptionProviderService():
     Instance = TypeDescriptionProviderService()
     """hardcoded/returns an instance of the class"""
 
-class ViewTechnology:
+class ViewTechnology(Object):
     """
     Defines identifiers for a set of technologies that designer hosts support.
     

@@ -1,8 +1,9 @@
-from System.Collections.Generic import *
-from Wms.RemotingObjects import *
+from System import Object
+from System.Collections.Generic import List
+from Wms.RemotingObjects import DbObject
 # encoding: utf-8
 # module Wms.RemotingObjects.BackgroundAgents calls itself BackgroundAgents
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -116,7 +117,7 @@ Set: InactiveAgents(self: BackgroundAgentStatus) = value
     Instance = BackgroundAgentStatus()
     """hardcoded/returns an instance of the class"""
 
-class BackgroundAgentType:
+class BackgroundAgentType(Object):
     """ enum BackgroundAgentType, values: PrintAgent (1), Unknown (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

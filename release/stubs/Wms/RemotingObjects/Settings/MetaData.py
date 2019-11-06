@@ -1,7 +1,8 @@
-from System import *
+from System import Object
+from System import MulticastDelegate
 # encoding: utf-8
 # module Wms.RemotingObjects.Settings.MetaData calls itself MetaData
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -32,8 +33,8 @@ class GetValidValues(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -63,8 +64,8 @@ class GetValidValues(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -96,7 +97,7 @@ class ISystemSettingsAttribute:
     Instance = ISystemSettingsAttribute()
     """hardcoded/returns an instance of the class"""
 
-class Group:
+class Group(Object):
     """
     Specify the group, the setting is part of.
     
@@ -135,7 +136,7 @@ Set: SortKey(self: Group) = value
     Instance = Group()
     """hardcoded/returns an instance of the class"""
 
-class Label:
+class Label(Object):
     """
     Specify a descriptive name for the setting.
                  Shown in UI.
@@ -167,7 +168,7 @@ Set: Value(self: Label) = value
     Instance = Label()
     """hardcoded/returns an instance of the class"""
 
-class MachineSetting:
+class MachineSetting(Object):
     """
     Specify if setting is a machine based setting.
     
@@ -184,7 +185,7 @@ class MachineSetting:
     Instance = MachineSetting()
     """hardcoded/returns an instance of the class"""
 
-class MaxLength:
+class MaxLength(Object):
     """
     Specifies maximum length of characters allowed for this property.
     
@@ -215,7 +216,7 @@ Set: Value(self: MaxLength) = value
     Instance = MaxLength()
     """hardcoded/returns an instance of the class"""
 
-class Renderer:
+class Renderer(Object):
     """
     Specify type of ui editor for setting.
     
@@ -246,11 +247,11 @@ Set: Value(self: Renderer) = value
     Instance = Renderer()
     """hardcoded/returns an instance of the class"""
 
-class RenderingTypes:
+class RenderingTypes(Object):
     """
     Types of editors that can be used for settings.
     
-    enum RenderingTypes, values: Auto (0), PlainTextArea (2), RichTextArea (1), WarehouseCombo (3)
+    enum RenderingTypes, values: Auto (0), NotificationTargetZones (4), PlainTextArea (2), RichTextArea (1), WarehouseCombo (3)
     """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -286,6 +287,7 @@ class RenderingTypes:
         pass
 
     Auto = None
+    NotificationTargetZones = None
     PlainTextArea = None
     RichTextArea = None
     value__ = None
@@ -309,7 +311,7 @@ class SettingAttributesHelper():
     Instance = SettingAttributesHelper()
     """hardcoded/returns an instance of the class"""
 
-class UserSetting:
+class UserSetting(Object):
     """
     Specify if setting is a user based setting
     
@@ -326,7 +328,7 @@ class UserSetting:
     Instance = UserSetting()
     """hardcoded/returns an instance of the class"""
 
-class ValidValuePattern:
+class ValidValuePattern(Object):
     """
     Specifies a regex pattern for allowed new setting values.
     
@@ -352,7 +354,7 @@ class ValidValuePattern:
     Instance = ValidValuePattern()
     """hardcoded/returns an instance of the class"""
 
-class ValidValues:
+class ValidValues(Object):
     """
     Specify valid values for setting.
     

@@ -1,8 +1,9 @@
-from System import *
-from Wms.RemotingImplementation.TaskScheduler import *
+from System import Exception
+from Wms.RemotingImplementation.TaskScheduler import TaskBase
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingImplementation.Stock calls itself Stock
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -179,7 +180,7 @@ Set: PickTypesToInclude(self: AllocationSettings) = value
     Instance = AllocationSettings()
     """hardcoded/returns an instance of the class"""
 
-class BatchAllocationSink:
+class BatchAllocationSink(Object):
     """
     BatchAllocationSink()
     BatchAllocationSink(generatePick2PlaceImage: bool, preferredColumns: int)
@@ -307,7 +308,7 @@ class DefaultPrintAllocationSettings(AllocationSettings):
     Instance = DefaultPrintAllocationSettings()
     """hardcoded/returns an instance of the class"""
 
-class EnhancedStockAllocater:
+class EnhancedStockAllocater(Object):
     """
     EnhancedStockAllocater(stockManager: IStockManager)
     EnhancedStockAllocater(stockManager: IStockManager, settings: AllocationSettings, allocationSink: IAllocationSink)
@@ -376,7 +377,7 @@ Set: Settings(self: EnhancedStockAllocater) = value
     Instance = EnhancedStockAllocater()
     """hardcoded/returns an instance of the class"""
 
-class EnhancedStockManager:
+class EnhancedStockManager(Object):
     """
     EnhancedStockManager(messaging: IMessaging)
     EnhancedStockManager()
@@ -558,7 +559,7 @@ class IAllocationSink:
     Instance = IAllocationSink()
     """hardcoded/returns an instance of the class"""
 
-class IStockAllocater:
+class IStockAllocater(Object):
     # no doc
     def AllocateLines(self, lines):
         """ AllocateLines(self: IStockAllocater, lines: IEnumerable[OutboundOrderLine]) """
@@ -757,7 +758,7 @@ class ItemStockAllocationExtensions():
     Instance = ItemStockAllocationExtensions()
     """hardcoded/returns an instance of the class"""
 
-class LocationSelectionAlgorithmType:
+class LocationSelectionAlgorithmType(Object):
     """ enum LocationSelectionAlgorithmType, values: AlphabeticSort (1), AlphabeticSortBulkFirst (2), LeastLocations (0), LeastLocationsBulkFirst (3) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -820,7 +821,7 @@ class LockException(Exception):
     Instance = LockException()
     """hardcoded/returns an instance of the class"""
 
-class MessageQueueAllocationSink:
+class MessageQueueAllocationSink(Object):
     """ MessageQueueAllocationSink(messageReferenceId: Nullable[Guid]) """
     def AddLine(self, *__args):
         """ AddLine(self: MessageQueueAllocationSink, line: OutboundOrderLine, loc: ItemStock)AddLine(self: MessageQueueAllocationSink, orderLine: OutboundOrderLine, location: ItemStock, allocation: AllocatedStockItem) """
@@ -854,7 +855,7 @@ class MessageQueueAllocationSink:
     Instance = MessageQueueAllocationSink()
     """hardcoded/returns an instance of the class"""
 
-class MessageQueueStockAllocater:
+class MessageQueueStockAllocater(Object):
     """ MessageQueueStockAllocater(stockManager: IStockManager, settings: AllocationSettings, allocationSink: IAllocationSink) """
     def AllocateLine(self, line):
         """ AllocateLine(self: MessageQueueStockAllocater, line: OutboundOrderLine) -> bool """
@@ -959,7 +960,7 @@ Set: WarehouseLocationCodeTo(self: ReallocateStockArgs) = value
     Instance = ReallocateStockArgs()
     """hardcoded/returns an instance of the class"""
 
-class StockLock:
+class StockLock(Object):
     """
     StockLock()
     StockLock(exclusive: bool)

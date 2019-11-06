@@ -1,8 +1,9 @@
-from Wms.EdiMessaging import *
-from Wms.RemotingObjects import *
+from Wms.EdiMessaging import MessageBase
+from System import Object
+from Wms.RemotingObjects import FindableList
 # encoding: utf-8
 # module Wms.RemotingObjects.MessageQueue calls itself MessageQueue
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -188,7 +189,7 @@ Set: SearchText(self: GetMessagesArgs) = value
     Instance = GetMessagesArgs()
     """hardcoded/returns an instance of the class"""
 
-class MessageBodyDecodeAs:
+class MessageBodyDecodeAs(Object):
     """ enum MessageBodyDecodeAs, values: Ascii (0), Unicode (3), Utf16 (2), Utf8 (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

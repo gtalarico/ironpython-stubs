@@ -1,8 +1,9 @@
-from Wms.RemotingObjects.Caching import *
-from Wms.RemotingImplementation.TaskScheduler import *
+from Wms.RemotingImplementation.TaskScheduler import TaskBase
+from System import Object
+from Wms.RemotingObjects.Caching import Cache
 # encoding: utf-8
 # module Wms.RemotingImplementation.Caching calls itself Caching
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -157,6 +158,75 @@ Set: Settings(self: CacheSaveTask) = value
 
 
     Instance = CacheSaveTask()
+    """hardcoded/returns an instance of the class"""
+
+class ICache(Object):
+    # no doc
+    def AddOrUpdate(self, namespace, key, value, *__args):
+        """ AddOrUpdate[T](self: ICache, namespace: str, key: str, value: T)AddOrUpdate[T](self: ICache, namespace: str, key: str, value: T, expiresAt: DateTimeOffset)AddOrUpdate[T](self: ICache, namespace: str, key: str, value: T, expiresIn: TimeSpan) """
+        pass
+
+    def AddOrUpdateAll(self, namespace, values, *__args):
+        """ AddOrUpdateAll[T](self: ICache, namespace: str, values: IDictionary[str, T])AddOrUpdateAll[T](self: ICache, namespace: str, values: IDictionary[str, T], expiresAt: DateTimeOffset)AddOrUpdateAll[T](self: ICache, namespace: str, values: IDictionary[str, T], expiresIn: TimeSpan) """
+        pass
+
+    def Count(self, namespace):
+        """ Count(self: ICache, namespace: str) -> int """
+        pass
+
+    def Decrement(self, namespace, key, amount):
+        """ Decrement(self: ICache, namespace: str, key: str, amount: UInt32) -> Int64 """
+        pass
+
+    def FlushAll(self, namespace):
+        """ FlushAll(self: ICache, namespace: str) """
+        pass
+
+    def GetAll(self, namespace, keys, updateExpiration):
+        """ GetAll[T](self: ICache, namespace: str, keys: IEnumerable[str], updateExpiration: bool) -> IDictionary[str, T] """
+        pass
+
+    def GetAllKeys(self, namespace):
+        """ GetAllKeys(self: ICache, namespace: str) -> IEnumerable[str] """
+        pass
+
+    def Increment(self, namespace, key, amount):
+        """ Increment(self: ICache, namespace: str, key: str, amount: UInt32) -> Int64 """
+        pass
+
+    def RemoveAll(self, namespace, keys):
+        """ RemoveAll(self: ICache, namespace: str, keys: IEnumerable[str]) """
+        pass
+
+    def TryAdd(self, namespace, key, value, *__args):
+        """
+        TryAdd[T](self: ICache, namespace: str, key: str, value: T) -> bool
+        TryAdd[T](self: ICache, namespace: str, key: str, value: T, expiresAt: DateTimeOffset) -> bool
+        TryAdd[T](self: ICache, namespace: str, key: str, value: T, expiresIn: TimeSpan) -> bool
+        """
+        pass
+
+    def TryGet(self, namespace, key):
+        """ TryGet[T](self: ICache, namespace: str, key: str) -> T """
+        pass
+
+    def TryRemove(self, namespace, key):
+        """ TryRemove(self: ICache, namespace: str, key: str) -> bool """
+        pass
+
+    def TryUpdate(self, namespace, key, value, *__args):
+        """
+        TryUpdate[T](self: ICache, namespace: str, key: str, value: T) -> bool
+        TryUpdate[T](self: ICache, namespace: str, key: str, value: T, expiresAt: DateTimeOffset) -> bool
+        TryUpdate[T](self: ICache, namespace: str, key: str, value: T, expiresIn: TimeSpan) -> bool
+        """
+        pass
+
+    def __init__(self, *args): #cannot find CLR method
+        """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+        pass
+
+    Instance = ICache()
     """hardcoded/returns an instance of the class"""
 
 # variables with complex values

@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingImplementation.Generation.Checks calls itself Checks
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -8,7 +9,7 @@
 # no functions
 # classes
 
-class BatchNumbercheck:
+class BatchNumbercheck(Object):
     """ BatchNumbercheck() """
     def IsNumberUsed(self, args):
         """ IsNumberUsed(self: BatchNumbercheck, args: UsedNumberArgs) -> bool """
@@ -25,7 +26,7 @@ class BatchNumbercheck:
     Instance = BatchNumbercheck()
     """hardcoded/returns an instance of the class"""
 
-class DatabaseNumberCheck:
+class DatabaseNumberCheck(Object):
     """ DatabaseNumberCheck() """
     def IsNumberUsed(self, args):
         """ IsNumberUsed(self: DatabaseNumberCheck, args: UsedNumberArgs) -> bool """
@@ -64,7 +65,7 @@ class NumberCheckFactory():
     Instance = NumberCheckFactory()
     """hardcoded/returns an instance of the class"""
 
-class TransportPackageNumberCheck:
+class TransportPackageNumberCheck(Object):
     """ TransportPackageNumberCheck() """
     def IsNumberUsed(self, args):
         """ IsNumberUsed(self: TransportPackageNumberCheck, args: UsedNumberArgs) -> bool """

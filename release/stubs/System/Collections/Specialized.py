@@ -24,8 +24,8 @@ class BitVector32():
             Returns: A mask that isolates the first bit flag in the System.Collections.Specialized.BitVector32.
         CreateMask(previous: int) -> int
         
-            Creates an additional mask following the specified mask in a series of masks that can be used to retrieve individual bits in a 
-             System.Collections.Specialized.BitVector32 that is set up as bit flags.
+            Creates an additional mask following the specified mask in a series of masks that can be used to retrieve individual bits in a System.Collections.Specialized.BitVector32 that is 
+             set up as bit flags.
         
         
             previous: The mask that indicates the previous bit flag.
@@ -140,8 +140,8 @@ class CollectionsUtil():
             Returns: A new case-insensitive instance of the System.Collections.Hashtable class with the default initial capacity.
         CreateCaseInsensitiveHashtable(d: IDictionary) -> Hashtable
         
-            Copies the entries from the specified dictionary to a new case-insensitive instance of the System.Collections.Hashtable class with the same initial capacity as the 
-             number of entries copied.
+            Copies the entries from the specified dictionary to a new case-insensitive instance of the System.Collections.Hashtable class with the same initial capacity as the number of 
+             entries copied.
         
         
             d: The System.Collections.IDictionary to copy to a new case-insensitive System.Collections.Hashtable.
@@ -162,7 +162,7 @@ class CollectionsUtil():
     Instance = CollectionsUtil()
     """hardcoded/returns an instance of the class"""
 
-class HybridDictionary:
+class HybridDictionary(Object):
     """
     Implements IDictionary by using a System.Collections.Specialized.ListDictionary while the collection is small, and then switching to a System.Collections.Hashtable when the collection gets large.
     
@@ -204,8 +204,8 @@ class HybridDictionary:
         CopyTo(self: HybridDictionary, array: Array, index: int)
             Copies the System.Collections.Specialized.HybridDictionary entries to a one-dimensional System.Array instance at the specified index.
         
-            array: The one-dimensional System.Array that is the destination of the System.Collections.DictionaryEntry objects copied from System.Collections.Specialized.HybridDictionary. 
-             The System.Array must have zero-based indexing.
+            array: The one-dimensional System.Array that is the destination of the System.Collections.DictionaryEntry objects copied from System.Collections.Specialized.HybridDictionary. The 
+             System.Array must have zero-based indexing.
         
             index: The zero-based index in array at which copying begins.
         """
@@ -345,7 +345,7 @@ class INotifyCollectionChanged:
     Instance = INotifyCollectionChanged()
     """hardcoded/returns an instance of the class"""
 
-class IOrderedDictionary:
+class IOrderedDictionary(Object):
     """ Represents an indexed collection of key/value pairs. """
     def GetEnumerator(self):
         """
@@ -410,7 +410,7 @@ class IOrderedDictionary:
     Instance = IOrderedDictionary()
     """hardcoded/returns an instance of the class"""
 
-class ListDictionary:
+class ListDictionary(Object):
     """
     Implements IDictionary using a singly linked list. Recommended for collections that typically contain 10 items or less.
     
@@ -450,8 +450,8 @@ class ListDictionary:
         CopyTo(self: ListDictionary, array: Array, index: int)
             Copies the System.Collections.Specialized.ListDictionary entries to a one-dimensional System.Array instance at the specified index.
         
-            array: The one-dimensional System.Array that is the destination of the System.Collections.DictionaryEntry objects copied from System.Collections.Specialized.ListDictionary. 
-             The System.Array must have zero-based indexing.
+            array: The one-dimensional System.Array that is the destination of the System.Collections.DictionaryEntry objects copied from System.Collections.Specialized.ListDictionary. The 
+             System.Array must have zero-based indexing.
         
             index: The zero-based index in array at which copying begins.
         """
@@ -578,7 +578,7 @@ Get: Values(self: ListDictionary) -> ICollection
     Instance = ListDictionary()
     """hardcoded/returns an instance of the class"""
 
-class NameObjectCollectionBase:
+class NameObjectCollectionBase(Object):
     """ Provides the abstract base class for a collection of associated System.String keys and System.Object values that can be accessed either with the key or with the index. """
     def BaseAdd(self, *args): #cannot find CLR method
         """
@@ -679,8 +679,8 @@ class NameObjectCollectionBase:
     def BaseSet(self, *args): #cannot find CLR method
         """
         BaseSet(self: NameObjectCollectionBase, name: str, value: object)
-            Sets the value of the first entry with the specified key in the System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, adds an entry 
-             with the specified key and value into the System.Collections.Specialized.NameObjectCollectionBase instance.
+            Sets the value of the first entry with the specified key in the System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, adds an entry with the 
+             specified key and value into the System.Collections.Specialized.NameObjectCollectionBase instance.
         
         
             name: The System.String key of the entry to set. The key can be null.
@@ -705,13 +705,9 @@ class NameObjectCollectionBase:
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: NameObjectCollectionBase, info: SerializationInfo, context: StreamingContext)
-            Implements the System.Runtime.Serialization.ISerializable interface and returns the data needed to serialize the 
-             System.Collections.Specialized.NameObjectCollectionBase instance.
+            Implements the System.Runtime.Serialization.ISerializable interface and returns the data needed to serialize the System.Collections.Specialized.NameObjectCollectionBase instance.
         
-        
-            info: A System.Runtime.Serialization.SerializationInfo object that contains the information required to serialize the System.Collections.Specialized.NameObjectCollectionBase 
-             instance.
-        
+            info: A System.Runtime.Serialization.SerializationInfo object that contains the information required to serialize the System.Collections.Specialized.NameObjectCollectionBase instance.
             context: A System.Runtime.Serialization.StreamingContext object that contains the source and destination of the serialized stream associated with the 
              System.Collections.Specialized.NameObjectCollectionBase instance.
         """
@@ -909,8 +905,8 @@ class NameValueCollection(NameObjectCollectionBase):
     def BaseSet(self, *args): #cannot find CLR method
         """
         BaseSet(self: NameObjectCollectionBase, name: str, value: object)
-            Sets the value of the first entry with the specified key in the System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, adds an entry 
-             with the specified key and value into the System.Collections.Specialized.NameObjectCollectionBase instance.
+            Sets the value of the first entry with the specified key in the System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, adds an entry with the 
+             specified key and value into the System.Collections.Specialized.NameObjectCollectionBase instance.
         
         
             name: The System.String key of the entry to set. The key can be null.
@@ -935,8 +931,8 @@ class NameValueCollection(NameObjectCollectionBase):
         CopyTo(self: NameValueCollection, dest: Array, index: int)
             Copies the entire System.Collections.Specialized.NameValueCollection to a compatible one-dimensional System.Array, starting at the specified index of the target array.
         
-            dest: The one-dimensional System.Array that is the destination of the elements copied from System.Collections.Specialized.NameValueCollection. The System.Array must have 
-             zero-based indexing.
+            dest: The one-dimensional System.Array that is the destination of the elements copied from System.Collections.Specialized.NameValueCollection. The System.Array must have zero-based 
+             indexing.
         
             index: The zero-based index in dest at which copying begins.
         """
@@ -949,16 +945,15 @@ class NameValueCollection(NameObjectCollectionBase):
             Gets the values associated with the specified key from the System.Collections.Specialized.NameValueCollection combined into one comma-separated list.
         
             name: The System.String key of the entry that contains the values to get. The key can be null.
-            Returns: A System.String that contains a comma-separated list of the values associated with the specified key from the System.Collections.Specialized.NameValueCollection, if 
-             found; otherwise, null.
+            Returns: A System.String that contains a comma-separated list of the values associated with the specified key from the System.Collections.Specialized.NameValueCollection, if found; 
+             otherwise, null.
         
         Get(self: NameValueCollection, index: int) -> str
         
             Gets the values at the specified index of the System.Collections.Specialized.NameValueCollection combined into one comma-separated list.
         
             index: The zero-based index of the entry that contains the values to get from the collection.
-            Returns: A System.String that contains a comma-separated list of the values at the specified index of the System.Collections.Specialized.NameValueCollection, if found; 
-             otherwise, null.
+            Returns: A System.String that contains a comma-separated list of the values at the specified index of the System.Collections.Specialized.NameValueCollection, if found; otherwise, null.
         """
         pass
 
@@ -1079,7 +1074,7 @@ Get: AllKeys(self: NameValueCollection) -> Array[str]
     Instance = NameValueCollection()
     """hardcoded/returns an instance of the class"""
 
-class NotifyCollectionChangedAction:
+class NotifyCollectionChangedAction(Object):
     """
     Describes the action that caused a System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged event.
     
@@ -1227,8 +1222,8 @@ class NotifyCollectionChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1258,8 +1253,8 @@ class NotifyCollectionChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -1278,7 +1273,7 @@ class NotifyCollectionChangedEventHandler(MulticastDelegate):
     Instance = NotifyCollectionChangedEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class OrderedDictionary:
+class OrderedDictionary(Object):
     """
     Represents a collection of key/value pairs that are accessible by the key or index.
     
@@ -1329,8 +1324,8 @@ class OrderedDictionary:
         CopyTo(self: OrderedDictionary, array: Array, index: int)
             Copies the System.Collections.Specialized.OrderedDictionary elements to a one-dimensional System.Array object at the specified index.
         
-            array: The one-dimensional System.Array object that is the destination of the System.Collections.DictionaryEntry objects copied from 
-             System.Collections.Specialized.OrderedDictionary collection. The System.Array must have zero-based indexing.
+            array: The one-dimensional System.Array object that is the destination of the System.Collections.DictionaryEntry objects copied from System.Collections.Specialized.OrderedDictionary 
+             collection. The System.Array must have zero-based indexing.
         
             index: The zero-based index in array at which copying begins.
         """
@@ -1348,13 +1343,9 @@ class OrderedDictionary:
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: OrderedDictionary, info: SerializationInfo, context: StreamingContext)
-            Implements the System.Runtime.Serialization.ISerializable interface and returns the data needed to serialize the System.Collections.Specialized.OrderedDictionary 
-             collection.
+            Implements the System.Runtime.Serialization.ISerializable interface and returns the data needed to serialize the System.Collections.Specialized.OrderedDictionary collection.
         
-        
-            info: A System.Runtime.Serialization.SerializationInfo object containing the information required to serialize the System.Collections.Specialized.OrderedDictionary 
-             collection.
-        
+            info: A System.Runtime.Serialization.SerializationInfo object containing the information required to serialize the System.Collections.Specialized.OrderedDictionary collection.
             context: A System.Runtime.Serialization.StreamingContext object containing the source and destination of the serialized stream associated with the 
              System.Collections.Specialized.OrderedDictionary.
         """
@@ -1483,7 +1474,7 @@ Get: Values(self: OrderedDictionary) -> ICollection
     Instance = OrderedDictionary()
     """hardcoded/returns an instance of the class"""
 
-class StringCollection:
+class StringCollection(Object):
     """
     Represents a collection of strings.
     
@@ -1505,8 +1496,7 @@ class StringCollection:
         AddRange(self: StringCollection, value: Array[str])
             Copies the elements of a string array to the end of the System.Collections.Specialized.StringCollection.
         
-            value: An array of strings to add to the end of the System.Collections.Specialized.StringCollection. The array itself can not be null but it can contain elements that are 
-             null.
+            value: An array of strings to add to the end of the System.Collections.Specialized.StringCollection. The array itself can not be null but it can contain elements that are null.
         """
         pass
 
@@ -1533,8 +1523,8 @@ class StringCollection:
         CopyTo(self: StringCollection, array: Array[str], index: int)
             Copies the entire System.Collections.Specialized.StringCollection values to a one-dimensional array of strings, starting at the specified index of the target array.
         
-            array: The one-dimensional array of strings that is the destination of the elements copied from System.Collections.Specialized.StringCollection. The System.Array must have 
-             zero-based indexing.
+            array: The one-dimensional array of strings that is the destination of the elements copied from System.Collections.Specialized.StringCollection. The System.Array must have zero-based 
+             indexing.
         
             index: The zero-based index in array at which copying begins.
         """
@@ -1662,7 +1652,7 @@ Get: SyncRoot(self: StringCollection) -> object
     Instance = StringCollection()
     """hardcoded/returns an instance of the class"""
 
-class StringDictionary:
+class StringDictionary(Object):
     """
     Implements a hash table with the key and the value strongly typed to be strings rather than objects.
     

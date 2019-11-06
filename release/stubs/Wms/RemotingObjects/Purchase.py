@@ -1,7 +1,9 @@
-from Wms.RemotingObjects import *
+from Wms.RemotingObjects import FindableList
+from System import Object
+from Wms.RemotingObjects import HistoryFilterBase
 # encoding: utf-8
 # module Wms.RemotingObjects.Purchase calls itself Purchase
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -298,7 +300,7 @@ Set: WarehouseCode(self: InboundOrderArgsBase) = value
     Instance = InboundOrderArgsBase()
     """hardcoded/returns an instance of the class"""
 
-class GetPurchaseOrderVendorArgs:
+class GetPurchaseOrderVendorArgs(Object):
     """
     Used to provide arguments for retrieving the vendor of a purchase orders.
     
@@ -394,7 +396,7 @@ Set: VendorNumber(self: GetVendorsArgs) = value
     Instance = GetVendorsArgs()
     """hardcoded/returns an instance of the class"""
 
-class PurchaseOrder:
+class PurchaseOrder(Object):
     """ PurchaseOrder() """
     @staticmethod
     def CreateDummyFromVendor(orderNumber, warehouseCode, vendor):
@@ -941,7 +943,7 @@ Set: YourReference(self: ProcessReceiptArgs) = value
     Instance = ProcessReceiptArgs()
     """hardcoded/returns an instance of the class"""
 
-class PurchaseOrderArgs:
+class PurchaseOrderArgs(Object):
     """
     Provides a filter for purchase orders.
     
@@ -983,7 +985,7 @@ Set: Paging(self: PurchaseOrderArgs) = value
     Instance = PurchaseOrderArgs()
     """hardcoded/returns an instance of the class"""
 
-class PurchaseOrderLine:
+class PurchaseOrderLine(Object):
     """
     Represents a single order line of a purchase order.
     
@@ -1087,7 +1089,7 @@ Get: UniquePreReceiptsAsString(self: PurchaseOrderLine) -> List[str]
     Instance = PurchaseOrderLine()
     """hardcoded/returns an instance of the class"""
 
-class PurchaseOrderLines:
+class PurchaseOrderLines(Object):
     """
     Container for the Wms.RemotingObjects.Purchase.PurchaseOrderLine objects.
     
@@ -1142,7 +1144,7 @@ Get: PreserveState(self: PurchaseOrderLines) -> bool
     Instance = PurchaseOrderLines()
     """hardcoded/returns an instance of the class"""
 
-class PurchaseOrders:
+class PurchaseOrders(Object):
     """ PurchaseOrders() """
     @staticmethod
     def FromIEnumerable(list):

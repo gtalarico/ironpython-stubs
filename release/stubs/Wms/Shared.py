@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.Shared calls itself Shared
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -94,7 +95,7 @@ class ITraceLoggingService:
     Instance = ITraceLoggingService()
     """hardcoded/returns an instance of the class"""
 
-class TraceExtProperties:
+class TraceExtProperties(Object):
     """ enum TraceExtProperties, values: ElapsedSeconds (4), MethodId (0), MethodName (1), MethodPreviousId (6), MethodPreviousName (5), ParameterList (3), ReturnParam (2), TimeStart (7), TimeStop (8) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -143,7 +144,7 @@ class TraceExtProperties:
     Instance = TraceExtProperties()
     """hardcoded/returns an instance of the class"""
 
-class TraceType:
+class TraceType(Object):
     """ enum TraceType, values: Start (1), Stop (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

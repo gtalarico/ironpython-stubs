@@ -1,7 +1,8 @@
-from Wms.RemotingImplementation.OfflineScanners import *
+from Wms.RemotingImplementation.OfflineScanners import GcloudInboundFileListenerBase
+from Wms.RemotingImplementation.OfflineScanners import GcloudInboundFileListenerOptions
 # encoding: utf-8
 # module Wms.RemotingImplementation.RemotePublish calls itself RemotePublish
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports

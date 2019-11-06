@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.SharedInfra.Cryptography calls itself Cryptography
-# from Wms.SharedInfra, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.SharedInfra, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -21,7 +22,7 @@ class IUniqueHashCodeProvider:
     Instance = IUniqueHashCodeProvider()
     """hardcoded/returns an instance of the class"""
 
-class SHA256Base64ShortUniqueHashCodeProvider:
+class SHA256Base64ShortUniqueHashCodeProvider(Object):
     """ SHA256Base64ShortUniqueHashCodeProvider() """
     def CalculateHash(self, param):
         """ CalculateHash(self: SHA256Base64ShortUniqueHashCodeProvider, *param: Array[object]) -> str """
@@ -38,7 +39,7 @@ class SHA256Base64ShortUniqueHashCodeProvider:
     Instance = SHA256Base64ShortUniqueHashCodeProvider()
     """hardcoded/returns an instance of the class"""
 
-class SHA256CngUniqueHashCodeProvider:
+class SHA256CngUniqueHashCodeProvider(Object):
     """ SHA256CngUniqueHashCodeProvider() """
     def CalculateHash(self, param):
         """ CalculateHash(self: SHA256CngUniqueHashCodeProvider, *param: Array[object]) -> str """

@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingObjects.DefaultLocation calls itself DefaultLocation
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -8,7 +9,7 @@
 # no functions
 # classes
 
-class ChangeDefaultLocation:
+class ChangeDefaultLocation(Object):
     """ enum ChangeDefaultLocation, values: Always (0), Ask (2), Never (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

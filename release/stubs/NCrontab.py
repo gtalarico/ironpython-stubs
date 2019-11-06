@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module NCrontab
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -39,7 +39,7 @@ class CrontabException(Exception):
     Instance = CrontabException()
     """hardcoded/returns an instance of the class"""
 
-class CrontabField:
+class CrontabField(Object):
     # no doc
     def Contains(self, value):
         """ Contains(self: CrontabField, value: int) -> bool """
@@ -142,8 +142,8 @@ class CrontabFieldAccumulator(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -173,8 +173,8 @@ class CrontabFieldAccumulator(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -193,7 +193,7 @@ class CrontabFieldAccumulator(MulticastDelegate):
     Instance = CrontabFieldAccumulator()
     """hardcoded/returns an instance of the class"""
 
-class CrontabFieldImpl:
+class CrontabFieldImpl(Object):
     # no doc
     def Format(self, field, writer, noNames=None):
         """ Format(self: CrontabFieldImpl, field: ICrontabField, writer: TextWriter)Format(self: CrontabFieldImpl, field: ICrontabField, writer: TextWriter, noNames: bool) """
@@ -253,7 +253,7 @@ class CrontabFieldImpl:
     Instance = CrontabFieldImpl()
     """hardcoded/returns an instance of the class"""
 
-class CrontabFieldKind:
+class CrontabFieldKind(Object):
     """ enum CrontabFieldKind, values: Day (2), DayOfWeek (4), Hour (1), Minute (0), Month (3) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -351,8 +351,8 @@ class ExceptionHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -382,8 +382,8 @@ class ExceptionHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -425,8 +425,8 @@ class ExceptionProvider(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -456,8 +456,8 @@ class ExceptionProvider(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 

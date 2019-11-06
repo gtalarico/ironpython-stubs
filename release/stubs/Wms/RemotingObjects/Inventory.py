@@ -1,12 +1,20 @@
-from Wms.RemotingObjects.Outbound import *
-from Wms.RemotingObjects.Printing import *
-from Wms.RemotingObjects.Caching.Generics import *
-from System.Collections.Generic import *
-from Wms.RemotingObjects.Caching import *
-from Wms.RemotingObjects import *
+from Wms.RemotingObjects.Outbound import OutboundOrderLines
+from System import Object
+from System.Collections.Generic import List
+from Wms.RemotingObjects.Outbound import HistoryOutboundOrder
+from Wms.RemotingObjects.Printing import PrintBaseArgs
+from Wms.RemotingObjects.Outbound import HistoryOutboundOrders
+from Wms.RemotingObjects.Caching.Generics import Cachable
+from Wms.RemotingObjects.Caching import CacheObject
+from Wms.RemotingObjects import FindableList
+from Wms.RemotingObjects import DbObject
+from Wms.RemotingObjects.Outbound import OutboundOrderLine
+from System.Collections.Generic import EqualityComparer
+from Wms.RemotingObjects.Outbound import OutboundOrder
+from Wms.RemotingObjects.Outbound import OutboundOrders
 # encoding: utf-8
 # module Wms.RemotingObjects.Inventory calls itself Inventory
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -101,7 +109,7 @@ Set: Quantity(self: AddWarehouseTransferQuantityArgs) = value
     Instance = AddWarehouseTransferQuantityArgs()
     """hardcoded/returns an instance of the class"""
 
-class AllocatedStockItem:
+class AllocatedStockItem(Object):
     """ AllocatedStockItem() """
     def Clone(self):
         """ Clone(self: AllocatedStockItem) -> object """
@@ -205,7 +213,7 @@ Set: WarehouseLocationCode(self: AllocatedStockItem) = value
     Instance = AllocatedStockItem()
     """hardcoded/returns an instance of the class"""
 
-class AllocatedStockItemReference:
+class AllocatedStockItemReference(Object):
     """
     AllocatedStockItemReference()
     AllocatedStockItemReference(type: AllocatedStockItemTypesEnum, id: str)
@@ -290,7 +298,7 @@ Set: Type(self: AllocatedStockItemReference) = value
     Instance = AllocatedStockItemReference()
     """hardcoded/returns an instance of the class"""
 
-class AllocatedStockItemTypesEnum:
+class AllocatedStockItemTypesEnum(Object):
     """ enum AllocatedStockItemTypesEnum, values: Batch (0), DirectOrder (2), MessageQueue (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -333,7 +341,7 @@ class AllocatedStockItemTypesEnum:
     Instance = AllocatedStockItemTypesEnum()
     """hardcoded/returns an instance of the class"""
 
-class AssignedItemIdsFilterType:
+class AssignedItemIdsFilterType(Object):
     """ enum AssignedItemIdsFilterType, values: AssignedOnly (2), Exclude (1), Include (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -376,7 +384,7 @@ class AssignedItemIdsFilterType:
     Instance = AssignedItemIdsFilterType()
     """hardcoded/returns an instance of the class"""
 
-class AssignType:
+class AssignType(Object):
     """ enum AssignType, values: All (5), ItemId (2), None (0), Production (4), Purchase (3), Stock (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -624,7 +632,7 @@ class EnhancedStockAllocations(Cachable):
     Instance = EnhancedStockAllocations()
     """hardcoded/returns an instance of the class"""
 
-class FilterOptions:
+class FilterOptions(Object):
     """ enum FilterOptions, values: EmptyLocations (2), None (0), StockLocations (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -710,9 +718,10 @@ Set: FilterDate(self: GetAllItemIdentificationsArgs) = value
 Set: ItemCode(self: GetAllItemIdentificationsArgs) = value
 """
 
-    PagingAmount = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: PagingAmount(self: GetAllItemIdentificationsArgs) -> int
+    Paging = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: Paging(self: GetAllItemIdentificationsArgs) -> PagingParams
 
+Set: Paging(self: GetAllItemIdentificationsArgs) = value
 """
 
     SearchText = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
@@ -816,41 +825,31 @@ class GetItemIdentificationArgs():
         pass
 
     Item = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: Item(self: GetItemIdentificationArgs) -> Item
+    """Get: Item(self: GetItemIdentificationArgs) -> Item
 
 Set: Item(self: GetItemIdentificationArgs) = value
 """
 
     ItemId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: ItemId(self: GetItemIdentificationArgs) -> str
+    """Get: ItemId(self: GetItemIdentificationArgs) -> str
 
 Set: ItemId(self: GetItemIdentificationArgs) = value
 """
 
     OnlyActive = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: OnlyActive(self: GetItemIdentificationArgs) -> bool
+    """Get: OnlyActive(self: GetItemIdentificationArgs) -> bool
 
 Set: OnlyActive(self: GetItemIdentificationArgs) = value
 """
 
     WarehouseCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: WarehouseCode(self: GetItemIdentificationArgs) -> str
+    """Get: WarehouseCode(self: GetItemIdentificationArgs) -> str
 
 Set: WarehouseCode(self: GetItemIdentificationArgs) = value
 """
 
     WarehouseLocationCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: WarehouseLocationCode(self: GetItemIdentificationArgs) -> str
+    """Get: WarehouseLocationCode(self: GetItemIdentificationArgs) -> str
 
 Set: WarehouseLocationCode(self: GetItemIdentificationArgs) = value
 """
@@ -1626,7 +1625,7 @@ class HistoryReplenishmentOrders(HistoryOutboundOrders):
     Instance = HistoryReplenishmentOrders()
     """hardcoded/returns an instance of the class"""
 
-class IAllocatedStockItem:
+class IAllocatedStockItem(Object):
     # no doc
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1695,6 +1694,31 @@ Set: WarehouseLocationCode(self: IAllocatedStockItem) = value
     Instance = IAllocatedStockItem()
     """hardcoded/returns an instance of the class"""
 
+class IComparableItemLocation:
+    # no doc
+    def __init__(self, *args): #cannot find CLR method
+        """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+        pass
+
+    Id = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: Id(self: IComparableItemLocation) -> str
+
+"""
+
+    IsDefaultLocation = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: IsDefaultLocation(self: IComparableItemLocation) -> bool
+
+"""
+
+    Stock = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: Stock(self: IComparableItemLocation) -> Decimal
+
+"""
+
+
+    Instance = IComparableItemLocation()
+    """hardcoded/returns an instance of the class"""
+
 class Item(CacheObject):
     """ Item() """
     def ExpectedScanType(self, checkRegistration):
@@ -1709,8 +1733,8 @@ class Item(CacheObject):
         
             checkRegistration: True if the batchnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a batch item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout 
-             the whole process).
+                    complete (means the numers are registered throughout the whole 
+             process).
                     False if the check is ignored and the item is not a batch item, or when the itemids are registered
                     during delivery only.
         """
@@ -1724,8 +1748,8 @@ class Item(CacheObject):
         
             checkRegistration: True if the serialnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a serial item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout 
-             the whole process).
+                    complete (means the numers are registered throughout the whole 
+             process).
                     False if the check is ignored and the item is not a serial item, or when the itemids are registered
                     during delivery only.
         """
@@ -2013,7 +2037,7 @@ Set: Quantity(self: ItemIdentificationBase) = value
     Instance = ItemIdentificationBase()
     """hardcoded/returns an instance of the class"""
 
-class ItemIdentification:
+class ItemIdentification(Object):
     """
     Contains a serial or batch of a specific item.
     
@@ -2266,7 +2290,7 @@ Set: ItemId(self: ItemIdentificationMetaData) = value
     Instance = ItemIdentificationMetaData()
     """hardcoded/returns an instance of the class"""
 
-class ItemIdentificationRegistration:
+class ItemIdentificationRegistration(Object):
     """ enum (flags) ItemIdentificationRegistration, values: Complete (1), OnlyOutbound (2), Unknown (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2326,8 +2350,8 @@ class ItemIdentifications(FindableList):
         """
         Clear(self: ItemIdentifications)
             Clears the list, calls TrimExcess, and resets the non-public field _version to 0. This is done so
-                    the object will be back in its initial state. Used for 
-             (for example) removal of PurchaseReceiveLines.
+                    the object will be back in its initial state. Used for (for 
+             example) removal of PurchaseReceiveLines.
         """
         pass
 
@@ -2773,17 +2797,13 @@ class ItemLocation(Location):
         pass
 
     IsDefaultLocation = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: IsDefaultLocation(self: ItemLocation) -> bool
+    """Get: IsDefaultLocation(self: ItemLocation) -> bool
 
 Set: IsDefaultLocation(self: ItemLocation) = value
 """
 
     Stock = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: Stock(self: ItemLocation) -> Decimal
+    """Get: Stock(self: ItemLocation) -> Decimal
 
 Set: Stock(self: ItemLocation) = value
 """
@@ -2792,10 +2812,10 @@ Set: Stock(self: ItemLocation) = value
     Instance = ItemLocation()
     """hardcoded/returns an instance of the class"""
 
-class ItemLocationComparer:
+class ItemLocationComparer(Object):
     """ ItemLocationComparer() """
     def Compare(self, x, y):
-        """ Compare(self: ItemLocationComparer, x: ItemLocation, y: ItemLocation) -> int """
+        """ Compare(self: ItemLocationComparer, x: IComparableItemLocation, y: IComparableItemLocation) -> int """
         pass
 
     def __cmp__(self, *args): #cannot find CLR method
@@ -3105,7 +3125,7 @@ class ItemPickLocations(List):
     Instance = ItemPickLocations()
     """hardcoded/returns an instance of the class"""
 
-class ItemStock:
+class ItemStock(Object):
     """
     Contains all stock info of an item.
     
@@ -3132,11 +3152,10 @@ class ItemStock:
         
             checkRegistration: True if the serial / batchnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a serial / batch item, or when the itemid registration is set to
-                    complete (means the numers are registered 
-             throughout the whole process).
+                    complete (means the numers are registered throughout 
+             the whole process).
                     False if the check is ignored and the item is not a batch item, or when the itemids are registered
-                    during 
-             delivery only.
+                    during delivery only.
         """
         pass
 
@@ -3513,26 +3532,27 @@ Set: TotalRowsMatched(self: ItemStockList) = value
 
 class ItemStockLocation(LocationBase):
     """ ItemStockLocation() """
+    def __init__(self, *args): #cannot find CLR method
+        """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+        pass
+
+    def __reduce_ex__(self, *args): #cannot find CLR method
+        pass
+
     IsDefaultLocation = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: IsDefaultLocation(self: ItemStockLocation) -> bool
+    """Get: IsDefaultLocation(self: ItemStockLocation) -> bool
 
 Set: IsDefaultLocation(self: ItemStockLocation) = value
 """
 
     ItemCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: ItemCode(self: ItemStockLocation) -> str
+    """Get: ItemCode(self: ItemStockLocation) -> str
 
 Set: ItemCode(self: ItemStockLocation) = value
 """
 
     OriginalStock = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: OriginalStock(self: ItemStockLocation) -> Decimal
+    """Get: OriginalStock(self: ItemStockLocation) -> Decimal
 
 Set: OriginalStock(self: ItemStockLocation) = value
 """
@@ -3544,19 +3564,9 @@ Set: PickType(self: ItemStockLocation) = value
 """
 
     Stock = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: Stock(self: ItemStockLocation) -> Decimal
+    """Get: Stock(self: ItemStockLocation) -> Decimal
 
 Set: Stock(self: ItemStockLocation) = value
-"""
-
-    WarehouseLocationCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: WarehouseLocationCode(self: ItemStockLocation) -> str
-
-Set: WarehouseLocationCode(self: ItemStockLocation) = value
 """
 
 
@@ -3640,7 +3650,7 @@ Set: StockOnShelf(self: ItemStockTotals) = value
     Instance = ItemStockTotals()
     """hardcoded/returns an instance of the class"""
 
-class ItemStockWithAllocations:
+class ItemStockWithAllocations(Object):
     """
     ItemStockWithAllocations()
     ItemStockWithAllocations(stock: ItemStock)
@@ -3784,7 +3794,7 @@ Set: WarehouseCode(self: ItemStockWithLocations) = value
     Instance = ItemStockWithLocations()
     """hardcoded/returns an instance of the class"""
 
-class ItemTypeEnum:
+class ItemTypeEnum(Object):
     """ enum ItemTypeEnum, values: LicensePlate (1), Regular (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -3824,6 +3834,36 @@ class ItemTypeEnum:
     value__ = None
 
     Instance = ItemTypeEnum()
+    """hardcoded/returns an instance of the class"""
+
+class IValidatableItemIdentificationNumber:
+    # no doc
+    def __init__(self, *args): #cannot find CLR method
+        """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
+        pass
+
+    DefaultBarcode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: DefaultBarcode(self: IValidatableItemIdentificationNumber) -> str
+
+"""
+
+    IsBatchNumberItem = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: IsBatchNumberItem(self: IValidatableItemIdentificationNumber) -> bool
+
+"""
+
+    IsSerialNumberItem = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: IsSerialNumberItem(self: IValidatableItemIdentificationNumber) -> bool
+
+"""
+
+    ItemCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: ItemCode(self: IValidatableItemIdentificationNumber) -> str
+
+"""
+
+
+    Instance = IValidatableItemIdentificationNumber()
     """hardcoded/returns an instance of the class"""
 
 class LicensePlate(DbObject):
@@ -4223,7 +4263,7 @@ Set: TotalRowsMatched(self: LicensePlates) = value
     Instance = LicensePlates()
     """hardcoded/returns an instance of the class"""
 
-class LicensePlateStatusEnum:
+class LicensePlateStatusEnum(Object):
     """ enum (flags) LicensePlateStatusEnum, values: Active (1), Archived (16), Broken (8), Inactive (4), InTransfer (32), Pending (2) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -4269,7 +4309,7 @@ class LicensePlateStatusEnum:
     Instance = LicensePlateStatusEnum()
     """hardcoded/returns an instance of the class"""
 
-class LocationItem:
+class LocationItem(Object):
     """ LocationItem() """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -4367,7 +4407,7 @@ Set: TotalRowsMatched(self: LocationItems) = value
     Instance = LocationItems()
     """hardcoded/returns an instance of the class"""
 
-class LocationPickTypeEnum:
+class LocationPickTypeEnum(Object):
     """
     !!!!!!!! IMPORTANT !!!!!!!!!!!
                  Do not change ordering of these values because they have an imported
@@ -4496,7 +4536,7 @@ class LocationsBase(FindableList):
     Instance = LocationsBase()
     """hardcoded/returns an instance of the class"""
 
-class LocationTypeEnum:
+class LocationTypeEnum(Object):
     """ enum LocationTypeEnum, values: FixedItemLocation (1), MultipleItemLocation (0), Unspecified (3), VariableItemLocation (2) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -5211,7 +5251,7 @@ class WarehouseTransferItems(List):
     Instance = WarehouseTransferItems()
     """hardcoded/returns an instance of the class"""
 
-class WarehouseTransferType:
+class WarehouseTransferType(Object):
     """ enum WarehouseTransferType, values: DirectTransfer (3), InterBranch (1), LicensePlateItems (2), Normal (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

@@ -1,7 +1,8 @@
-from System import *
+from System import Object
+from System import Exception
 # encoding: utf-8
 # module Wms.RemotingImplementation.TaskScheduler calls itself TaskScheduler
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -293,7 +294,7 @@ class TaskScheduler():
     Instance = TaskScheduler()
     """hardcoded/returns an instance of the class"""
 
-class TaskType:
+class TaskType(Object):
     """ enum TaskType, values: Erp (0), General (1), NotificationSummary (3), ScriptTask (2) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

@@ -1,7 +1,7 @@
-from System.Collections.Generic import *
+from System.Collections.Generic import List
 # encoding: utf-8
 # module Wms.RemotingObjects.Settings calls itself Settings
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -114,6 +114,7 @@ Set: ShipppingDeliveryTimeInterval(self: SystemSettings) = value
     DefaultWarehouseCodeAdHocReceipts = None
     DefaultWarehouseLocationCodeOutbound = None
     DefaultWarehouseOutbound = None
+    DefaultZoneId = 1
     DirectOrderGroupDescription = 'Direct orders'
     DirectOrderGroupKey = '089DIRECTORDERS'
     DirectOrderShowReferenceAfterProcessing = None
@@ -140,7 +141,7 @@ Set: ShipppingDeliveryTimeInterval(self: SystemSettings) = value
     MessageQueueRetentionTimeInDays = None
     NotificationCleanupInterval = None
     NotificationRetentionTimeInDays = None
-    NotificationTargetZone = None
+    NotificationTargetZones = None
     NumberRangeForPickBatchBarcode = None
     NumberRangeForSscc = None
     PathToCustomReports = None

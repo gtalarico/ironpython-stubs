@@ -1,7 +1,8 @@
-from Wms.EdiMessaging import *
+from Wms.EdiMessaging import MessageBase
+from System import Object
 # encoding: utf-8
 # module Wms.EdiMessaging.Processor calls itself Processor
-# from Wms.EdiMessaging, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.EdiMessaging, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -42,7 +43,7 @@ class JsonMessage(MessageBase):
     Instance = JsonMessage()
     """hardcoded/returns an instance of the class"""
 
-class MessageHandlerBase:
+class MessageHandlerBase(Object):
     # no doc
     def Handle(self, message):
         """ Handle(self: MessageHandlerBase[TMessage], message: object) """

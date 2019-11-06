@@ -1,8 +1,12 @@
-from Wms.RemotingObjects import *
-from System.Collections.Generic import *
+from Wms.RemotingObjects import DbObject
+from Wms.RemotingObjects import FindableList
+from Wms.RemotingObjects import PagedList
+from Wms.RemotingObjects import HistoryFilterBase
+from System import Object
+from System.Collections.Generic import List
 # encoding: utf-8
 # module Wms.RemotingObjects.ShippingLayers calls itself ShippingLayers
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -10,7 +14,7 @@ from System.Collections.Generic import *
 # no functions
 # classes
 
-class Address:
+class Address(Object):
     """ Address() """
     def Clone(self):
         """ Clone(self: Address) -> object """
@@ -552,7 +556,7 @@ Set: Name(self: Country) = value
     Instance = Country()
     """hardcoded/returns an instance of the class"""
 
-class DangerousItem:
+class DangerousItem(Object):
     """ DangerousItem() """
     def Clone(self):
         """ Clone(self: DangerousItem) -> object """
@@ -764,7 +768,7 @@ class DangerousItems(List):
     Instance = DangerousItems()
     """hardcoded/returns an instance of the class"""
 
-class Dimensions:
+class Dimensions(Object):
     """
     Dimensions(length: Decimal, width: Decimal, height: Decimal)
     Dimensions()
@@ -900,7 +904,7 @@ Set: Width(self: Dimensions) = value
     Instance = Dimensions()
     """hardcoded/returns an instance of the class"""
 
-class ExportDetails:
+class ExportDetails(Object):
     """ ExportDetails() """
     def Clone(self):
         """ Clone(self: ExportDetails) -> object """
@@ -1558,7 +1562,7 @@ class LogSink():
     Instance = LogSink()
     """hardcoded/returns an instance of the class"""
 
-class LogSinkMessageTypes:
+class LogSinkMessageTypes(Object):
     """ enum LogSinkMessageTypes, values: Debug (2), Error (0), UserInfo (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1601,7 +1605,7 @@ class LogSinkMessageTypes:
     Instance = LogSinkMessageTypes()
     """hardcoded/returns an instance of the class"""
 
-class MobileService:
+class MobileService(Object):
     """
     MobileService()
     MobileService(original: IService)
@@ -1667,7 +1671,7 @@ Set: TransportationCharge(self: MobileService) = value
     Instance = MobileService()
     """hardcoded/returns an instance of the class"""
 
-class MobileShipper:
+class MobileShipper(Object):
     """
     MobileShipper(source: IShipper)
     MobileShipper()
@@ -1930,7 +1934,7 @@ class Packages(List):
     Instance = Packages()
     """hardcoded/returns an instance of the class"""
 
-class PackageType:
+class PackageType(Object):
     """ enum PackageType, values: Box (1), Document (0), Pallet (2) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1973,7 +1977,7 @@ class PackageType:
     Instance = PackageType()
     """hardcoded/returns an instance of the class"""
 
-class PackingSlipLine:
+class PackingSlipLine(Object):
     """ PackingSlipLine() """
     def Clone(self):
         """ Clone(self: PackingSlipLine) -> object """
@@ -2208,7 +2212,7 @@ Set: ShipmentId(self: ProcessShipmentArgs) = value
     Instance = ProcessShipmentArgs()
     """hardcoded/returns an instance of the class"""
 
-class ProcessShipmentStepsEnum:
+class ProcessShipmentStepsEnum(Object):
     """ enum ProcessShipmentStepsEnum, values: Done (4), LogShipment (1), PrintPackingSlip (3), ProcessInfoToErp (2), ProcessShipment (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2253,7 +2257,7 @@ class ProcessShipmentStepsEnum:
     Instance = ProcessShipmentStepsEnum()
     """hardcoded/returns an instance of the class"""
 
-class Proforma:
+class Proforma(Object):
     """ Proforma() """
     def Clone(self):
         """ Clone(self: Proforma) -> object """
@@ -2322,7 +2326,7 @@ Set: OtherCharges(self: Proforma) = value
     Instance = Proforma()
     """hardcoded/returns an instance of the class"""
 
-class References:
+class References(Object):
     """ References() """
     def Clone(self):
         """ Clone(self: References) -> object """
@@ -2600,7 +2604,7 @@ class ShipperServiceLinks(FindableList):
     Instance = ShipperServiceLinks()
     """hardcoded/returns an instance of the class"""
 
-class State:
+class State(Object):
     """
     Current state of the Wms.RemotingObjects.ShippingLayers.TransportItem.
                 In a normal process a TransportItems goes through all the states.
@@ -2649,7 +2653,7 @@ class State:
     Instance = State()
     """hardcoded/returns an instance of the class"""
 
-class TransportItem:
+class TransportItem(Object):
     """
     TransportItem()
     TransportItem(line: OutboundOrderLine, boxGuid: Guid, itemIds: ItemIdentifications, innerReference: str)
@@ -2742,6 +2746,12 @@ Set: Currency(self: TransportItem) = value
     """Get: DbKey(self: TransportItem) -> int
 
 Set: DbKey(self: TransportItem) = value
+"""
+
+    DefaultBarcode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: DefaultBarcode(self: TransportItem) -> str
+
+Set: DefaultBarcode(self: TransportItem) = value
 """
 
     DefaultVendorItemCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
@@ -3357,11 +3367,16 @@ Get: TotalVolume(self: TransportPackages) -> Decimal
 
 """
 
+    UniqueId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: UniqueId(self: TransportPackages) -> Guid
+
+"""
+
 
     Instance = TransportPackages()
     """hardcoded/returns an instance of the class"""
 
-class TypeOfDay:
+class TypeOfDay(Object):
     """ enum TypeOfDay, values: WeekDays (1), WorkingDays (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

@@ -21,12 +21,12 @@ def processing(file, classlist):
     for inherited_class in filtered_classes:
         if inherited_class in classlist:
             if classlist[inherited_class] not in add_references and modulebase not in classlist[inherited_class].lower(): # and not modulebase.endswith(classlist[inherited_class].lower())
-                add_references.append(classlist[inherited_class])
+                add_references.append([classlist[inherited_class],inherited_class])
     if add_references == []:
         return
     line_to_prepend = ""
     for reference in add_references:
-        line_to_prepend += "from " + reference + " import *\n"
+        line_to_prepend += "from " + reference[0] + " import "+reference[1] + "\n"
 
     #read file in preparation
     src = open(file,"r")

@@ -1,8 +1,9 @@
-from Wms.RemotingObjects.Caching import *
-from Wms.RemotingObjects import *
+from Wms.RemotingObjects.Caching import CacheObject
+from Wms.RemotingObjects import FindableList
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingObjects.BatchPicking calls itself BatchPicking
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -10,7 +11,7 @@ from Wms.RemotingObjects import *
 # no functions
 # classes
 
-class ActivityEnum:
+class ActivityEnum(Object):
     """ enum ActivityEnum, values: BatchCreated (0), BatchFinished (1), ProcessedPack (7), ProcessedPick (6), ProcessShipment (8), StartedPacking (4), StartedPicking (2), StoppedPacking (5), StoppedPicking (3) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -549,7 +550,7 @@ Set: ShipOrders(self: Batch) = value
     Instance = Batch()
     """hardcoded/returns an instance of the class"""
 
-class BatchActivityEntry:
+class BatchActivityEntry(Object):
     """ BatchActivityEntry() """
     def Clone(self):
         """ Clone(self: BatchActivityEntry) -> object """
@@ -617,7 +618,7 @@ Set: Time(self: BatchActivityEntry) = value
     Instance = BatchActivityEntry()
     """hardcoded/returns an instance of the class"""
 
-class BatchAgeSortComparer:
+class BatchAgeSortComparer(Object):
     """ BatchAgeSortComparer() """
     def Compare(self, x, y):
         """ Compare(self: BatchAgeSortComparer, x: Batch, y: Batch) -> int """
@@ -638,7 +639,7 @@ class BatchAgeSortComparer:
     Instance = BatchAgeSortComparer()
     """hardcoded/returns an instance of the class"""
 
-class BatchBaseAgeSortComparer:
+class BatchBaseAgeSortComparer(Object):
     """ BatchBaseAgeSortComparer() """
     def Compare(self, x, y):
         """ Compare(self: BatchBaseAgeSortComparer, x: BatchBase, y: BatchBase) -> int """
@@ -686,7 +687,7 @@ class BatchBaseList(FindableList):
     Instance = BatchBaseList()
     """hardcoded/returns an instance of the class"""
 
-class BatchCreatedByClientTypeEnum:
+class BatchCreatedByClientTypeEnum(Object):
     """ enum BatchCreatedByClientTypeEnum, values: AdHocPicking (1), Portal (0), Script (2), Touch (3) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -852,7 +853,7 @@ Set: Customer(self: BatchFilterResult) = value
     Instance = BatchFilterResult()
     """hardcoded/returns an instance of the class"""
 
-class BatchPickLocation:
+class BatchPickLocation(Object):
     """ BatchPickLocation() """
     @staticmethod
     def ConstructUniqueId(itemCode, warehouseCode, locationCode, itemIdNumber, innerReference, outerReference):
@@ -1023,7 +1024,7 @@ Set: VendorItemCode(self: BatchPickLocation) = value
     Instance = BatchPickLocation()
     """hardcoded/returns an instance of the class"""
 
-class BatchPickLocationIndicatorEnum:
+class BatchPickLocationIndicatorEnum(Object):
     """ enum BatchPickLocationIndicatorEnum, values: Complete (2), MarkedAsPicked (3), None (0), Partial (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1099,7 +1100,7 @@ class BatchPickLocations(FindableList):
     Instance = BatchPickLocations()
     """hardcoded/returns an instance of the class"""
 
-class BatchProcessAction:
+class BatchProcessAction(Object):
     """ enum BatchProcessAction, values: Default (0), Mobile (2), MobileToTerminal (1), Terminal (3) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1231,7 +1232,7 @@ Set: Message(self: BatchScanResult) = value
     Instance = BatchScanResult()
     """hardcoded/returns an instance of the class"""
 
-class BatchStatus:
+class BatchStatus(Object):
     """ enum BatchStatus, values: Approved (0), FullyPacked (5), New (-1), Packing (4), Picking (1), PickingAndPacking (2), ReadyToPack (3), Shipping (6) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1341,7 +1342,7 @@ Set: Tags(self: BatchUpdateArgs) = value
     Instance = BatchUpdateArgs()
     """hardcoded/returns an instance of the class"""
 
-class DifferFromRouteOptions:
+class DifferFromRouteOptions(Object):
     """ enum DifferFromRouteOptions, values: Allow (0), AllowWithMessage (1), DontAllow (2) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1692,7 +1693,7 @@ Set: NewPackBatchId(self: ProcessBatchPickingArgs) = value
     Instance = ProcessBatchPickingArgs()
     """hardcoded/returns an instance of the class"""
 
-class ProcessPickState:
+class ProcessPickState(Object):
     """ enum ProcessPickState, values: Allocated (3), Deallocated (2), Done (4), NotSet (0), Transferred (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1740,33 +1741,25 @@ class ProcessPickState:
 class ProcessSalesOrderLinesArgs():
     """ ProcessSalesOrderLinesArgs() """
     AllowToDeliverMoreThanOrdered = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: AllowToDeliverMoreThanOrdered(self: ProcessSalesOrderLinesArgs) -> bool
+    """Get: AllowToDeliverMoreThanOrdered(self: ProcessSalesOrderLinesArgs) -> bool
 
 Set: AllowToDeliverMoreThanOrdered(self: ProcessSalesOrderLinesArgs) = value
 """
 
-    DocumentPrinter = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
+    GroupGuid = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: GroupGuid(self: ProcessSalesOrderLinesArgs) -> Guid
 
-Get: DocumentPrinter(self: ProcessSalesOrderLinesArgs) -> str
-
-Set: DocumentPrinter(self: ProcessSalesOrderLinesArgs) = value
+Set: GroupGuid(self: ProcessSalesOrderLinesArgs) = value
 """
 
     PackageSlipLayout = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: PackageSlipLayout(self: ProcessSalesOrderLinesArgs) -> str
+    """Get: PackageSlipLayout(self: ProcessSalesOrderLinesArgs) -> str
 
 Set: PackageSlipLayout(self: ProcessSalesOrderLinesArgs) = value
 """
 
     PrintInvoices = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: PrintInvoices(self: ProcessSalesOrderLinesArgs) -> bool
+    """Get: PrintInvoices(self: ProcessSalesOrderLinesArgs) -> bool
 
 Set: PrintInvoices(self: ProcessSalesOrderLinesArgs) = value
 """

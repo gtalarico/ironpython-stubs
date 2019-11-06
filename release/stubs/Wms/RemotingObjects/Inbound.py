@@ -1,10 +1,13 @@
-from Wms.RemotingObjects import *
-from Wms.RemotingObjects.Purchase import *
-from System.Collections.Generic import *
-from Wms.RemotingObjects.Caching import *
+from Wms.RemotingObjects import PagedList
+from Wms.RemotingObjects.Caching import CacheObject
+from Wms.RemotingObjects import DbObject
+from System import Object
+from System.Collections.Generic import List
+from Wms.RemotingObjects.Purchase import ErpProcessPurchaseOrderLinesResult
+from Wms.RemotingObjects import FindableList
 # encoding: utf-8
 # module Wms.RemotingObjects.Inbound calls itself Inbound
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -183,7 +186,7 @@ Set: WarehouseCode(self: CreatePreReceiptArgs) = value
     Instance = CreatePreReceiptArgs()
     """hardcoded/returns an instance of the class"""
 
-class ErpInboundLocationMode:
+class ErpInboundLocationMode(Object):
     """ enum ErpInboundLocationMode, values: DefaultItemLocation (1), DefaultWarehouseLocation (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -383,7 +386,7 @@ Set: Warehouse(self: InboundOrder) = value
     Instance = InboundOrder()
     """hardcoded/returns an instance of the class"""
 
-class InboundOrderLine:
+class InboundOrderLine(Object):
     """ InboundOrderLine() """
     def AddReceiving(self, *__args):
         """
@@ -413,8 +416,8 @@ class InboundOrderLine:
         
             checkRegistration: True if the batchnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a batch item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout 
-             the whole process).
+                    complete (means the numers are registered throughout the whole 
+             process).
                     False if the check is ignored and the item is not a batch item, or when the itemids are registered
                     during delivery only.
         """
@@ -428,8 +431,8 @@ class InboundOrderLine:
         
             checkRegistration: True if the serialnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a serial item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout 
-             the whole process).
+                    complete (means the numers are registered throughout the whole 
+             process).
                     False if the check is ignored and the item is not a serial item, or when the itemids are registered
                     during delivery only.
         """
@@ -529,6 +532,14 @@ Set: IsBatchNumberItem(self: InboundOrderLine) = value
 Get: IsFractionAllowed(self: InboundOrderLine) -> bool
 
 Set: IsFractionAllowed(self: InboundOrderLine) = value
+"""
+
+    IsGroupingAllowed = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """The property is set with a value of true by default, so orderlines are grouped ;)
+
+Get: IsGroupingAllowed(self: InboundOrderLine) -> bool
+
+Set: IsGroupingAllowed(self: InboundOrderLine) = value
 """
 
     IsProcessed = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
@@ -785,7 +796,7 @@ Get: ValueMember(self: InboundOrders) -> str
     Instance = InboundOrders()
     """hardcoded/returns an instance of the class"""
 
-class InboundOrderTypeEnum:
+class InboundOrderTypeEnum(Object):
     """ enum InboundOrderTypeEnum, values: AdhocPurchase (2), AdhocRma (3), AdhocRmaTouch (4), PreReceipt (5), Purchase (0), Rma (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -831,7 +842,7 @@ class InboundOrderTypeEnum:
     Instance = InboundOrderTypeEnum()
     """hardcoded/returns an instance of the class"""
 
-class InboundReceiveLine:
+class InboundReceiveLine(Object):
     """
     Contains the orderlines of the same item of inbound orders.
     
@@ -898,6 +909,11 @@ Set: BarcodePresent(self: InboundReceiveLine) = value
 
     CurrentVendorItemCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: CurrentVendorItemCode(self: InboundReceiveLine) -> str
+
+"""
+
+    DefaultBarcode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: DefaultBarcode(self: InboundReceiveLine) -> str
 
 """
 
@@ -1318,7 +1334,7 @@ Set: WarehouseCode(self: PrepareInboundReceiveLinesArgs) = value
     Instance = PrepareInboundReceiveLinesArgs()
     """hardcoded/returns an instance of the class"""
 
-class PreReceiptArgs:
+class PreReceiptArgs(Object):
     """ PreReceiptArgs() """
     IncludeCompleted = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """
@@ -1624,7 +1640,7 @@ Set: WarehouseCode(self: PreReceiptLinesArgs) = value
     Instance = PreReceiptLinesArgs()
     """hardcoded/returns an instance of the class"""
 
-class PreReceiptReceiveLines:
+class PreReceiptReceiveLines(Object):
     """ PreReceiptReceiveLines() """
     def GetIdsOfReceivedOrders(self):
         """ GetIdsOfReceivedOrders(self: PreReceiptReceiveLines) -> List[int] """
@@ -1694,7 +1710,7 @@ class PreReceipts(PagedList):
     Instance = PreReceipts()
     """hardcoded/returns an instance of the class"""
 
-class PreReceiptStatus:
+class PreReceiptStatus(Object):
     """ enum (flags) PreReceiptStatus, values: Active (2), Archived (16), InProcess (4), PartiallyReceived (8), Pending (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1903,7 +1919,7 @@ Set: Results(self: ProcessInboundReceiveLinesResult) = value
     Instance = ProcessInboundReceiveLinesResult()
     """hardcoded/returns an instance of the class"""
 
-class ProcessReceiveLinesStepsEnum:
+class ProcessReceiveLinesStepsEnum(Object):
     """ enum ProcessReceiveLinesStepsEnum, values: CreatePrintLines (2), Done (7), LogReceiveLines (1), PrintErpReceipt (5), PrintReceipt (6), ProcessReceiveLines (0), UpdateLicensePlates (4), UpdateStock (3) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1951,7 +1967,7 @@ class ProcessReceiveLinesStepsEnum:
     Instance = ProcessReceiveLinesStepsEnum()
     """hardcoded/returns an instance of the class"""
 
-class ReceiptTypeEnum:
+class ReceiptTypeEnum(Object):
     """ enum ReceiptTypeEnum, values: PreReceipt (0), Purchase (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2132,7 +2148,7 @@ Set: ReceiveLineId(self: ReceiveItemIdMultiArgs) = value
     Instance = ReceiveItemIdMultiArgs()
     """hardcoded/returns an instance of the class"""
 
-class ReceiveItemIdRangeArgs:
+class ReceiveItemIdRangeArgs(Object):
     """ ReceiveItemIdRangeArgs() """
     CacheKey = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """

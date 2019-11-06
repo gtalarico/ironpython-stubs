@@ -41,7 +41,7 @@ class AuthenticationException(SystemException):
     Instance = AuthenticationException()
     """hardcoded/returns an instance of the class"""
 
-class CipherAlgorithmType:
+class CipherAlgorithmType(Object):
     """
     Defines the possible cipher algorithms for the System.Net.Security.SslStream class.
     
@@ -95,7 +95,7 @@ class CipherAlgorithmType:
     Instance = CipherAlgorithmType()
     """hardcoded/returns an instance of the class"""
 
-class ExchangeAlgorithmType:
+class ExchangeAlgorithmType(Object):
     """
     Specifies the algorithm used to create keys shared by the client and server.
     
@@ -143,7 +143,7 @@ class ExchangeAlgorithmType:
     Instance = ExchangeAlgorithmType()
     """hardcoded/returns an instance of the class"""
 
-class HashAlgorithmType:
+class HashAlgorithmType(Object):
     """
     Specifies the algorithm used for generating message authentication codes (MACs).
     
@@ -226,7 +226,7 @@ class InvalidCredentialException(AuthenticationException):
     Instance = InvalidCredentialException()
     """hardcoded/returns an instance of the class"""
 
-class SslProtocols:
+class SslProtocols(Object):
     """
     Defines the possible versions of System.Security.Authentication.SslProtocols.
     

@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingImplementation.SafeRpc calls itself SafeRpc
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -8,7 +9,7 @@
 # no functions
 # classes
 
-class SafeRpcMethod:
+class SafeRpcMethod(Object):
     """
     SafeRpcMethod(id: int)
     SafeRpcMethod(cacheKey: CacheKey)

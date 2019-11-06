@@ -8,7 +8,7 @@
 # no functions
 # classes
 
-class Handshake:
+class Handshake(Object):
     """
     Specifies the control protocol used in establishing a serial port communication for a System.IO.Ports.SerialPort object.
     
@@ -56,7 +56,7 @@ class Handshake:
     Instance = Handshake()
     """hardcoded/returns an instance of the class"""
 
-class Parity:
+class Parity(Object):
     """
     Specifies the parity bit for a System.IO.Ports.SerialPort object.
     
@@ -105,7 +105,7 @@ class Parity:
     Instance = Parity()
     """hardcoded/returns an instance of the class"""
 
-class SerialData:
+class SerialData(Object):
     """
     Specifies the type of character that was received on the serial port of the System.IO.Ports.SerialPort object.
     
@@ -191,8 +191,8 @@ class SerialDataReceivedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -222,8 +222,8 @@ class SerialDataReceivedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -242,7 +242,7 @@ class SerialDataReceivedEventHandler(MulticastDelegate):
     Instance = SerialDataReceivedEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class SerialError:
+class SerialError(Object):
     """
     Specifies errors that occur on the System.IO.Ports.SerialPort object.
     
@@ -331,8 +331,8 @@ class SerialErrorReceivedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -362,8 +362,8 @@ class SerialErrorReceivedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -382,7 +382,7 @@ class SerialErrorReceivedEventHandler(MulticastDelegate):
     Instance = SerialErrorReceivedEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class SerialPinChange:
+class SerialPinChange(Object):
     """
     Specifies the type of change that occurred on the System.IO.Ports.SerialPort object.
     
@@ -471,8 +471,8 @@ class SerialPinChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -502,8 +502,8 @@ class SerialPinChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -581,8 +581,7 @@ class SerialPort(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
-             specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -592,9 +591,9 @@ class SerialPort(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -954,7 +953,7 @@ Set: WriteTimeout(self: SerialPort) = value
     Instance = SerialPort()
     """hardcoded/returns an instance of the class"""
 
-class StopBits:
+class StopBits(Object):
     """
     Specifies the number of stop bits used on the System.IO.Ports.SerialPort object.
     

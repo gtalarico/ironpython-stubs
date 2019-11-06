@@ -28,7 +28,7 @@ class CompatibilitySwitch():
     Instance = CompatibilitySwitch()
     """hardcoded/returns an instance of the class"""
 
-class ComponentGuaranteesAttribute:
+class ComponentGuaranteesAttribute(Object):
     """
     Defines the compatibility guarantee of a component, type, or type member that may span multiple versions.
     
@@ -54,7 +54,7 @@ Get: Guarantees(self: ComponentGuaranteesAttribute) -> ComponentGuaranteesOption
     Instance = ComponentGuaranteesAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ComponentGuaranteesOptions:
+class ComponentGuaranteesOptions(Object):
     """
     Describes the compatibility guarantee of a component, type, or type member that may span multiple versions.
     
@@ -102,7 +102,7 @@ class ComponentGuaranteesOptions:
     Instance = ComponentGuaranteesOptions()
     """hardcoded/returns an instance of the class"""
 
-class FrameworkName:
+class FrameworkName(Object):
     """
     Represents the name of a version of the .NET Framework.
     
@@ -209,7 +209,7 @@ Get: Version(self: FrameworkName) -> Version
     Instance = FrameworkName()
     """hardcoded/returns an instance of the class"""
 
-class ResourceConsumptionAttribute:
+class ResourceConsumptionAttribute(Object):
     """
     Specifies the resource consumed by the member of a class. This class cannot be inherited.
     
@@ -246,7 +246,7 @@ Get: ResourceScope(self: ResourceConsumptionAttribute) -> ResourceScope
     Instance = ResourceConsumptionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ResourceExposureAttribute:
+class ResourceExposureAttribute(Object):
     """
     Specifies the resource exposure for a member of a class. This class cannot be inherited.
     
@@ -272,7 +272,7 @@ Get: ResourceExposureLevel(self: ResourceExposureAttribute) -> ResourceScope
     Instance = ResourceExposureAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ResourceScope:
+class ResourceScope(Object):
     """
     Identifies the scope of a sharable resource.
     
@@ -323,7 +323,7 @@ class ResourceScope:
     Instance = ResourceScope()
     """hardcoded/returns an instance of the class"""
 
-class TargetFrameworkAttribute:
+class TargetFrameworkAttribute(Object):
     """
     Identifies the version of the .NET Framework that a particular assembly was compiled against.
     

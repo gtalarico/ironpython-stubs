@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingImplementation.EdiMessaging calls itself EdiMessaging
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -8,7 +9,7 @@
 # no functions
 # classes
 
-class IronPythonMessagingProvider:
+class IronPythonMessagingProvider(Object):
     """ IronPythonMessagingProvider() """
     def ClearHandlers(self):
         """ ClearHandlers(self: IronPythonMessagingProvider) """
@@ -51,7 +52,43 @@ class IronPythonMessagingProvider:
     Instance = IronPythonMessagingProvider()
     """hardcoded/returns an instance of the class"""
 
-class StandardMessagingProvider:
+class ProcessOutboundOrderMessageState():
+    """ ProcessOutboundOrderMessageState() """
+    IsErpIdStored = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: IsErpIdStored(self: ProcessOutboundOrderMessageState) -> bool
+
+Set: IsErpIdStored(self: ProcessOutboundOrderMessageState) = value
+"""
+
+    IsFulFilledInBoxWise = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: IsFulFilledInBoxWise(self: ProcessOutboundOrderMessageState) -> bool
+
+Set: IsFulFilledInBoxWise(self: ProcessOutboundOrderMessageState) = value
+"""
+
+    IsProcessedInErp = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: IsProcessedInErp(self: ProcessOutboundOrderMessageState) -> bool
+
+Set: IsProcessedInErp(self: ProcessOutboundOrderMessageState) = value
+"""
+
+    IsUnlockedInErp = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: IsUnlockedInErp(self: ProcessOutboundOrderMessageState) -> bool
+
+Set: IsUnlockedInErp(self: ProcessOutboundOrderMessageState) = value
+"""
+
+    PackageSlipNumber = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: PackageSlipNumber(self: ProcessOutboundOrderMessageState) -> str
+
+Set: PackageSlipNumber(self: ProcessOutboundOrderMessageState) = value
+"""
+
+
+    Instance = ProcessOutboundOrderMessageState()
+    """hardcoded/returns an instance of the class"""
+
+class StandardMessagingProvider(Object):
     """ StandardMessagingProvider() """
     def GetHandlers(self):
         """ GetHandlers(self: StandardMessagingProvider) -> IEnumerable[MessageHandlerDescriptor] """

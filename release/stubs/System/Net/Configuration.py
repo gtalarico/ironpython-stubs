@@ -74,8 +74,8 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection):
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; 
-             otherwise, false.
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, 
+             false.
         
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
@@ -144,9 +144,7 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection):
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the 
-             System.Configuration.ConfigurationElementCollection.
-        
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
         
             key: The key of the element to check.
             Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
@@ -271,8 +269,8 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection):
             Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The 
-             default is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is 
+             true.
         """
         pass
 
@@ -421,8 +419,7 @@ class AuthenticationModuleElementCollection(ConfigurationElementCollection):
     def SetReadOnly(self, *args): #cannot find CLR method
         """
         SetReadOnly(self: ConfigurationElementCollection)
-            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all 
-             sub-elements.
+            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all sub-elements.
         """
         pass
 
@@ -600,8 +597,8 @@ class BypassElementCollection(ConfigurationElementCollection):
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; 
-             otherwise, false.
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, 
+             false.
         
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
@@ -670,9 +667,7 @@ class BypassElementCollection(ConfigurationElementCollection):
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the 
-             System.Configuration.ConfigurationElementCollection.
-        
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
         
             key: The key of the element to check.
             Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
@@ -797,8 +792,8 @@ class BypassElementCollection(ConfigurationElementCollection):
             Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The 
-             default is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is 
+             true.
         """
         pass
 
@@ -947,8 +942,7 @@ class BypassElementCollection(ConfigurationElementCollection):
     def SetReadOnly(self, *args): #cannot find CLR method
         """
         SetReadOnly(self: ConfigurationElementCollection)
-            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all 
-             sub-elements.
+            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all sub-elements.
         """
         pass
 
@@ -1100,8 +1094,8 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection):
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; 
-             otherwise, false.
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, 
+             false.
         
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
@@ -1170,9 +1164,7 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection):
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the 
-             System.Configuration.ConfigurationElementCollection.
-        
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
         
             key: The key of the element to check.
             Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
@@ -1297,8 +1289,8 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection):
             Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The 
-             default is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is 
+             true.
         """
         pass
 
@@ -1447,8 +1439,7 @@ class ConnectionManagementElementCollection(ConfigurationElementCollection):
     def SetReadOnly(self, *args): #cannot find CLR method
         """
         SetReadOnly(self: ConfigurationElementCollection)
-            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all 
-             sub-elements.
+            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all sub-elements.
         """
         pass
 
@@ -2559,7 +2550,7 @@ Set: IPProtectionLevel(self: SocketElement) = value
     Instance = SocketElement()
     """hardcoded/returns an instance of the class"""
 
-class UnicodeDecodingConformance:
+class UnicodeDecodingConformance(Object):
     """ enum UnicodeDecodingConformance, values: Auto (0), Compat (2), Loose (3), Strict (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2603,7 +2594,7 @@ class UnicodeDecodingConformance:
     Instance = UnicodeDecodingConformance()
     """hardcoded/returns an instance of the class"""
 
-class UnicodeEncodingConformance:
+class UnicodeEncodingConformance(Object):
     """ enum UnicodeEncodingConformance, values: Auto (0), Compat (2), Strict (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2754,8 +2745,8 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection):
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; 
-             otherwise, false.
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, 
+             false.
         
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
@@ -2824,9 +2815,7 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection):
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the 
-             System.Configuration.ConfigurationElementCollection.
-        
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
         
             key: The key of the element to check.
             Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
@@ -2951,8 +2940,8 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection):
             Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The 
-             default is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is 
+             true.
         """
         pass
 
@@ -3101,8 +3090,7 @@ class WebRequestModuleElementCollection(ConfigurationElementCollection):
     def SetReadOnly(self, *args): #cannot find CLR method
         """
         SetReadOnly(self: ConfigurationElementCollection)
-            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all 
-             sub-elements.
+            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all sub-elements.
         """
         pass
 

@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingObjects.MetaData calls itself MetaData
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -130,7 +131,7 @@ Get: EnumType(self: EnumStringHelper) -> Type
     Instance = EnumStringHelper()
     """hardcoded/returns an instance of the class"""
 
-class EnumStringValueAttribute:
+class EnumStringValueAttribute(Object):
     """ EnumStringValueAttribute(value: str) """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

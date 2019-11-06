@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.SharedInfra.Cryptography.PasswordHashing calls itself PasswordHashing
-# from Wms.SharedInfra, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.SharedInfra, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -70,7 +71,7 @@ class IPasswordHasher:
     Instance = IPasswordHasher()
     """hardcoded/returns an instance of the class"""
 
-class PBKDF2PasswordHasher:
+class PBKDF2PasswordHasher(Object):
     """ PBKDF2PasswordHasher() """
     def Hash(self, password, saltLength=None, keyLength=None, iterations=None):
         """

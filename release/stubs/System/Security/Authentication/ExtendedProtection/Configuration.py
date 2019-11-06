@@ -109,8 +109,8 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
         """
         Add(self: ServiceNameElementCollection, element: ServiceNameElement)
             The 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Add(System.Security.Authentication.ExtendedProtection.Configuration.Service
-             NameElement) method adds a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to this 
+             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Add(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement
+             ) method adds a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to this 
              System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
         
         
@@ -129,8 +129,8 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
             Adds a configuration element to the configuration element collection.
         
             element: The System.Configuration.ConfigurationElement to add.
-            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; 
-             otherwise, false.
+            throwIfExists: true to throw an exception if the System.Configuration.ConfigurationElement specified is already contained in the System.Configuration.ConfigurationElementCollection; otherwise, 
+             false.
         
         BaseAdd(self: ConfigurationElementCollection, index: int, element: ConfigurationElement)
             Adds a configuration element to the configuration element collection.
@@ -199,9 +199,7 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
         """
         BaseIsRemoved(self: ConfigurationElementCollection, key: object) -> bool
         
-            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the 
-             System.Configuration.ConfigurationElementCollection.
-        
+            Gets a value indicating whether the System.Configuration.ConfigurationElement with the specified key has been removed from the System.Configuration.ConfigurationElementCollection.
         
             key: The key of the element to check.
             Returns: true if the System.Configuration.ConfigurationElement with the specified key has been removed; otherwise, false. The default is false.
@@ -289,9 +287,8 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
         IndexOf(self: ServiceNameElementCollection, element: ServiceNameElement) -> int
         
             The 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.IndexOf(System.Security.Authentication.ExtendedProtection.Configuration.Ser
-             viceNameElement) method retrieves the index of the specified configuration element in this 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
+             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.IndexOf(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameEle
+             ment) method retrieves the index of the specified configuration element in this System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
         
         
             element: The System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance to retrieve the index of in this 
@@ -334,8 +331,8 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
             Gets a value indicating whether the specified System.Configuration.ConfigurationElement can be removed from the System.Configuration.ConfigurationElementCollection.
         
             element: The element to check.
-            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The 
-             default is true.
+            Returns: true if the specified System.Configuration.ConfigurationElement can be removed from this System.Configuration.ConfigurationElementCollection; otherwise, false. The default is 
+             true.
         """
         pass
 
@@ -412,8 +409,8 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
         """
         Remove(self: ServiceNameElementCollection, element: ServiceNameElement)
             The 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Remove(System.Security.Authentication.ExtendedProtection.Configuration.Serv
-             iceNameElement) method removes a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance from this 
+             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Remove(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElem
+             ent) method removes a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance from this 
              System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.
         
         
@@ -422,8 +419,8 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
         
         Remove(self: ServiceNameElementCollection, name: str)
             The 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Remove(System.Security.Authentication.ExtendedProtection.Configuration.Serv
-             iceNameElement) method removes a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance from this 
+             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Remove(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElem
+             ent) method removes a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance from this 
              System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection based on the System.String specified.
         
         
@@ -436,8 +433,8 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
         """
         RemoveAt(self: ServiceNameElementCollection, index: int)
             The 
-             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Remove(System.Security.Authentication.ExtendedProtection.Configuration.Serv
-             iceNameElement) method removes a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance from this 
+             System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection.Remove(System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElem
+             ent) method removes a System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElement instance from this 
              System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection based on the index specified.
         
         
@@ -500,8 +497,7 @@ class ServiceNameElementCollection(ConfigurationElementCollection):
     def SetReadOnly(self, *args): #cannot find CLR method
         """
         SetReadOnly(self: ConfigurationElementCollection)
-            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all 
-             sub-elements.
+            Sets the System.Configuration.ConfigurationElementCollection.IsReadOnly property for the System.Configuration.ConfigurationElementCollection object and for all sub-elements.
         """
         pass
 

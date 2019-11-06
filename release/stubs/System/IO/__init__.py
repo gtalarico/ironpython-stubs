@@ -8,7 +8,7 @@
 # no functions
 # classes
 
-class BinaryReader:
+class BinaryReader(Object):
     """
     Reads primitive data types as binary values in a specific encoding.
     
@@ -52,8 +52,8 @@ class BinaryReader:
         """
         Read(self: BinaryReader) -> int
         
-            Reads characters from the underlying stream and advances the current position of the stream in accordance with the Encoding used and the specific character being read 
-             from the stream.
+            Reads characters from the underlying stream and advances the current position of the stream in accordance with the Encoding used and the specific character being read from the 
+             stream.
         
             Returns: The next character from the input stream, or -1 if no characters are currently available.
         Read(self: BinaryReader, buffer: Array[Char], index: int, count: int) -> int
@@ -63,8 +63,8 @@ class BinaryReader:
             buffer: The buffer to read data into.
             index: The starting point in the buffer at which to begin reading into the buffer.
             count: The number of characters to read.
-            Returns: The total number of characters read into the buffer. This might be less than the number of characters requested if that many characters are not currently available, or 
-             it might be zero if the end of the stream is reached.
+            Returns: The total number of characters read into the buffer. This might be less than the number of characters requested if that many characters are not currently available, or it might 
+             be zero if the end of the stream is reached.
         
         Read(self: BinaryReader, buffer: Array[Byte], index: int, count: int) -> int
         
@@ -73,8 +73,8 @@ class BinaryReader:
             buffer: The buffer to read data into.
             index: The starting point in the buffer at which to begin reading into the buffer.
             count: The number of bytes to read.
-            Returns: The number of bytes read into buffer. This might be less than the number of bytes requested if that many bytes are not available, or it might be zero if the end of the 
-             stream is reached.
+            Returns: The number of bytes read into buffer. This might be less than the number of bytes requested if that many bytes are not available, or it might be zero if the end of the stream is 
+             reached.
         """
         pass
 
@@ -120,8 +120,8 @@ class BinaryReader:
         """
         ReadChar(self: BinaryReader) -> Char
         
-            Reads the next character from the current stream and advances the current position of the stream in accordance with the Encoding used and the specific character being 
-             read from the stream.
+            Reads the next character from the current stream and advances the current position of the stream in accordance with the Encoding used and the specific character being read from 
+             the stream.
         
             Returns: A character read from the current stream.
         """
@@ -131,8 +131,8 @@ class BinaryReader:
         """
         ReadChars(self: BinaryReader, count: int) -> Array[Char]
         
-            Reads the specified number of characters from the current stream, returns the data in a character array, and advances the current position in accordance with the 
-             Encoding used and the specific character being read from the stream.
+            Reads the specified number of characters from the current stream, returns the data in a character array, and advances the current position in accordance with the Encoding used 
+             and the specific character being read from the stream.
         
         
             count: The number of characters to read.
@@ -275,7 +275,7 @@ Get: BaseStream(self: BinaryReader) -> Stream
     Instance = BinaryReader()
     """hardcoded/returns an instance of the class"""
 
-class BinaryWriter:
+class BinaryWriter(Object):
     """
     Writes primitive types in binary to a stream and supports writing strings in a specific encoding.
     
@@ -355,22 +355,22 @@ class BinaryWriter:
         
             value: The eight-byte floating-point value to write.
         Write(self: BinaryWriter, chars: Array[Char], index: int, count: int)
-            Writes a section of a character array to the current stream, and advances the current position of the stream in accordance with the Encoding used and perhaps the 
-             specific characters being written to the stream.
+            Writes a section of a character array to the current stream, and advances the current position of the stream in accordance with the Encoding used and perhaps the specific 
+             characters being written to the stream.
         
         
             chars: A character array containing the data to write.
             index: The starting point in chars from which to begin writing.
             count: The number of characters to write.
         Write(self: BinaryWriter, chars: Array[Char])
-            Writes a character array to the current stream and advances the current position of the stream in accordance with the Encoding used and the specific characters being 
-             written to the stream.
+            Writes a character array to the current stream and advances the current position of the stream in accordance with the Encoding used and the specific characters being written to 
+             the stream.
         
         
             chars: A character array containing the data to write.
         Write(self: BinaryWriter, ch: Char)
-            Writes a Unicode character to the current stream and advances the current position of the stream in accordance with the Encoding used and the specific characters being 
-             written to the stream.
+            Writes a Unicode character to the current stream and advances the current position of the stream in accordance with the Encoding used and the specific characters being written to 
+             the stream.
         
         
             ch: The non-surrogate, Unicode character to write.
@@ -397,8 +397,8 @@ class BinaryWriter:
         
             value: The four-byte floating-point value to write.
         Write(self: BinaryWriter, value: str)
-            Writes a length-prefixed string to this stream in the current encoding of the System.IO.BinaryWriter, and advances the current position of the stream in accordance 
-             with the encoding used and the specific characters being written to the stream.
+            Writes a length-prefixed string to this stream in the current encoding of the System.IO.BinaryWriter, and advances the current position of the stream in accordance with the 
+             encoding used and the specific characters being written to the stream.
         
         
             value: The value to write.
@@ -541,8 +541,8 @@ class Stream(MarshalByRefObject):
             Waits for the pending asynchronous read to complete.
         
             asyncResult: The reference to the pending asynchronous request to finish.
-            Returns: The number of bytes read from the stream, between zero (0) and the number of bytes you requested. Streams return zero (0) only at the end of the stream, otherwise, 
-             they should block until at least one byte is available.
+            Returns: The number of bytes read from the stream, between zero (0) and the number of bytes you requested. Streams return zero (0) only at the end of the stream, otherwise, they should 
+             block until at least one byte is available.
         """
         pass
 
@@ -575,9 +575,9 @@ class Stream(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -602,8 +602,8 @@ class Stream(MarshalByRefObject):
         
             offset: The zero-based byte offset in buffer at which to begin storing the data read from the current stream.
             count: The maximum number of bytes to be read from the current stream.
-            Returns: The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the 
-             end of the stream has been reached.
+            Returns: The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the 
+             stream has been reached.
         """
         pass
 
@@ -659,9 +659,7 @@ class Stream(MarshalByRefObject):
     def Write(self, buffer, offset, count):
         """
         Write(self: Stream, buffer: Array[Byte], offset: int, count: int)
-            When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes 
-             written.
-        
+            When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
         
             buffer: An array of bytes. This method copies count bytes from buffer to the current stream.
             offset: The zero-based byte offset in buffer at which to begin copying bytes to the current stream.
@@ -818,9 +816,9 @@ class BufferedStream(Stream):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -845,8 +843,8 @@ class BufferedStream(Stream):
         
             offset: The byte offset in the buffer at which to begin reading bytes.
             count: The number of bytes to be read.
-            Returns: The total number of bytes read into array. This can be less than the number of bytes requested if that many bytes are not currently available, or 0 if the end of the 
-             stream has been reached before any data can be read.
+            Returns: The total number of bytes read into array. This can be less than the number of bytes requested if that many bytes are not currently available, or 0 if the end of the stream has 
+             been reached before any data can be read.
         """
         pass
 
@@ -1219,9 +1217,7 @@ class Directory():
             Returns: A String array containing the names of files in the specified directory that match the specified search pattern. File names include the full path.
         GetFiles(path: str, searchPattern: str, searchOption: SearchOption) -> Array[str]
         
-            Returns the names of files (including their paths) that match the specified search pattern in the specified directory, using a value to determine whether to search 
-             subdirectories.
-        
+            Returns the names of files (including their paths) that match the specified search pattern in the specified directory, using a value to determine whether to search subdirectories.
         
             path: The directory to search.
             searchPattern: The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by 
@@ -1491,9 +1487,9 @@ class FileSystemInfo(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -1643,8 +1639,8 @@ class DirectoryInfo(FileSystemInfo):
             Returns: The last directory specified in path.
         CreateSubdirectory(self: DirectoryInfo, path: str, directorySecurity: DirectorySecurity) -> DirectoryInfo
         
-            Creates a subdirectory or subdirectories on the specified path with the specified security. The specified path can be relative to this instance of the 
-             System.IO.DirectoryInfo class.
+            Creates a subdirectory or subdirectories on the specified path with the specified security. The specified path can be relative to this instance of the System.IO.DirectoryInfo 
+             class.
         
         
             path: The specified path. This cannot be a different disk volume or Universal Naming Convention (UNC) name.
@@ -1746,16 +1742,16 @@ class DirectoryInfo(FileSystemInfo):
             Returns: A System.Security.AccessControl.DirectorySecurity object that encapsulates the access control rules for the directory.
         GetAccessControl(self: DirectoryInfo, includeSections: AccessControlSections) -> DirectorySecurity
         
-            Gets a System.Security.AccessControl.DirectorySecurity object that encapsulates the specified type of access control list (ACL) entries for the directory described by 
-             the current System.IO.DirectoryInfo object.
+            Gets a System.Security.AccessControl.DirectorySecurity object that encapsulates the specified type of access control list (ACL) entries for the directory described by the current 
+             System.IO.DirectoryInfo object.
         
         
             includeSections: One of the System.Security.AccessControl.AccessControlSections values that specifies the type of access control list (ACL) information to receive.
             Returns: A System.Security.AccessControl.DirectorySecurity object that encapsulates the access control rules for the file described by the path parameter.ExceptionsException 
              typeConditionSystem.SystemExceptionThe directory could not be found or modified.System.UnauthorizedAccessExceptionThe current process does not have access to open the 
-             directory.System.IO.IOExceptionAn I/O error occurred while opening the directory.System.PlatformNotSupportedExceptionThe current operating system is not Microsoft 
-             Windows 2000 or later.System.UnauthorizedAccessExceptionThe directory is read-only.-or- This operation is not supported on the current platform.-or- The caller does 
-             not have the required permission.
+             directory.System.IO.IOExceptionAn I/O error occurred while opening the directory.System.PlatformNotSupportedExceptionThe current operating system is not Microsoft Windows 2000 or 
+             later.System.UnauthorizedAccessExceptionThe directory is read-only.-or- This operation is not supported on the current platform.-or- The caller does not have the required 
+             permission.
         """
         pass
 
@@ -1773,9 +1769,7 @@ class DirectoryInfo(FileSystemInfo):
             Returns: An array of type DirectoryInfo matching searchPattern.
         GetDirectories(self: DirectoryInfo, searchPattern: str, searchOption: SearchOption) -> Array[DirectoryInfo]
         
-            Returns an array of directories in the current System.IO.DirectoryInfo matching the given search criteria and using a value to determine whether to search 
-             subdirectories.
-        
+            Returns an array of directories in the current System.IO.DirectoryInfo matching the given search criteria and using a value to determine whether to search subdirectories.
         
             searchPattern: The search string. For example, "System*" can be used to search for all directories that begin with the word "System".
             searchOption: One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories.
@@ -1835,9 +1829,9 @@ class DirectoryInfo(FileSystemInfo):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -1852,16 +1846,16 @@ class DirectoryInfo(FileSystemInfo):
         MoveTo(self: DirectoryInfo, destDirName: str)
             Moves a System.IO.DirectoryInfo instance and its contents to a new path.
         
-            destDirName: The name and path to which to move this directory. The destination cannot be another disk volume or a directory with the identical name. It can be an existing 
-             directory to which you want to add this directory as a subdirectory.
+            destDirName: The name and path to which to move this directory. The destination cannot be another disk volume or a directory with the identical name. It can be an existing directory to which 
+             you want to add this directory as a subdirectory.
         """
         pass
 
     def SetAccessControl(self, directorySecurity):
         """
         SetAccessControl(self: DirectoryInfo, directorySecurity: DirectorySecurity)
-            Applies access control list (ACL) entries described by a System.Security.AccessControl.DirectorySecurity object to the directory described by the current 
-             System.IO.DirectoryInfo object.
+            Applies access control list (ACL) entries described by a System.Security.AccessControl.DirectorySecurity object to the directory described by the current System.IO.DirectoryInfo 
+             object.
         
         
             directorySecurity: An object that describes an ACL entry to apply to the directory described by the path parameter.
@@ -1967,7 +1961,7 @@ class IOException(SystemException):
     Instance = IOException()
     """hardcoded/returns an instance of the class"""
 
-class DirectoryNotFoundException:
+class DirectoryNotFoundException(Object):
     """
     The exception that is thrown when part of a file or directory cannot be found.
     
@@ -2000,7 +1994,7 @@ class DirectoryNotFoundException:
     Instance = DirectoryNotFoundException()
     """hardcoded/returns an instance of the class"""
 
-class DriveInfo:
+class DriveInfo(Object):
     """
     Provides access to information on a drive.
     
@@ -2112,7 +2106,7 @@ Set: VolumeLabel(self: DriveInfo) = value
     Instance = DriveInfo()
     """hardcoded/returns an instance of the class"""
 
-class DriveNotFoundException:
+class DriveNotFoundException(Object):
     """
     The exception that is thrown when trying to access a drive or share that is not available.
     
@@ -2145,7 +2139,7 @@ class DriveNotFoundException:
     Instance = DriveNotFoundException()
     """hardcoded/returns an instance of the class"""
 
-class DriveType:
+class DriveType(Object):
     """
     Defines constants for drive types, including CDRom, Fixed, Network, NoRootDirectory, Ram, Removable, and Unknown.
     
@@ -2196,7 +2190,7 @@ class DriveType:
     Instance = DriveType()
     """hardcoded/returns an instance of the class"""
 
-class EndOfStreamException:
+class EndOfStreamException(Object):
     """
     The exception that is thrown when reading is attempted past the end of a stream.
     
@@ -2279,8 +2273,8 @@ class ErrorEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -2310,8 +2304,8 @@ class ErrorEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -2341,8 +2335,8 @@ class File():
     def AppendAllText(path, contents, encoding=None):
         """
         AppendAllText(path: str, contents: str)
-            Opens a file, appends the specified string to the file, and then closes the file. If the file does not exist, this method creates a file, writes the specified string 
-             to the file, then closes the file.
+            Opens a file, appends the specified string to the file, and then closes the file. If the file does not exist, this method creates a file, writes the specified string to the file, 
+             then closes the file.
         
         
             path: The file to append the specified string to.
@@ -2471,9 +2465,9 @@ class File():
             Determines whether the specified file exists.
         
             path: The file to check.
-            Returns: true if the caller has the required permissions and path contains the name of an existing file; otherwise, false. This method also returns false if path is null, an 
-             invalid path, or a zero-length string. If the caller does not have sufficient permissions to read the specified file, no exception is thrown and the method returns 
-             false regardless of the existence of path.
+            Returns: true if the caller has the required permissions and path contains the name of an existing file; otherwise, false. This method also returns false if path is null, an invalid path, 
+             or a zero-length string. If the caller does not have sufficient permissions to read the specified file, no exception is thrown and the method returns false regardless of the 
+             existence of path.
         """
         pass
 
@@ -2599,18 +2593,14 @@ class File():
             Opens a System.IO.FileStream on the specified path with read/write access.
         
             path: The file to open.
-            mode: A System.IO.FileMode value that specifies whether a file is created if one does not exist, and determines whether the contents of existing files are retained or 
-             overwritten.
-        
+            mode: A System.IO.FileMode value that specifies whether a file is created if one does not exist, and determines whether the contents of existing files are retained or overwritten.
             Returns: A System.IO.FileStream opened in the specified mode and path, with read/write access and not shared.
         Open(path: str, mode: FileMode, access: FileAccess) -> FileStream
         
             Opens a System.IO.FileStream on the specified path, with the specified mode and access.
         
             path: The file to open.
-            mode: A System.IO.FileMode value that specifies whether a file is created if one does not exist, and determines whether the contents of existing files are retained or 
-             overwritten.
-        
+            mode: A System.IO.FileMode value that specifies whether a file is created if one does not exist, and determines whether the contents of existing files are retained or overwritten.
             access: A System.IO.FileAccess value that specifies the operations that can be performed on the file.
             Returns: An unshared System.IO.FileStream that provides access to the specified file, with the specified mode and access.
         Open(path: str, mode: FileMode, access: FileAccess, share: FileShare) -> FileStream
@@ -2618,9 +2608,7 @@ class File():
             Opens a System.IO.FileStream on the specified path, having the specified mode with read, write, or read/write access and the specified sharing option.
         
             path: The file to open.
-            mode: A System.IO.FileMode value that specifies whether a file is created if one does not exist, and determines whether the contents of existing files are retained or 
-             overwritten.
-        
+            mode: A System.IO.FileMode value that specifies whether a file is created if one does not exist, and determines whether the contents of existing files are retained or overwritten.
             access: A System.IO.FileAccess value that specifies the operations that can be performed on the file.
             share: A System.IO.FileShare value specifying the type of access other threads have to the file.
             Returns: A System.IO.FileStream on the specified path, having the specified mode with read, write, or read/write access and the specified sharing option.
@@ -2742,8 +2730,8 @@ class File():
             destinationFileName: The name of the file being replaced.
             destinationBackupFileName: The name of the backup file.
         Replace(sourceFileName: str, destinationFileName: str, destinationBackupFileName: str, ignoreMetadataErrors: bool)
-            Replaces the contents of a specified file with the contents of another file, deleting the original file, and creating a backup of the replaced file and optionally 
-             ignores merge errors.
+            Replaces the contents of a specified file with the contents of another file, deleting the original file, and creating a backup of the replaced file and optionally ignores merge 
+             errors.
         
         
             sourceFileName: The name of a file that replaces the file specified by destinationFileName.
@@ -2879,9 +2867,7 @@ class File():
             path: The file to write to.
             contents: The string to write to the file.
         WriteAllText(path: str, contents: str, encoding: Encoding)
-            Creates a new file, writes the specified string to the file using the specified encoding, and then closes the file. If the target file already exists, it is 
-             overwritten.
-        
+            Creates a new file, writes the specified string to the file using the specified encoding, and then closes the file. If the target file already exists, it is overwritten.
         
             path: The file to write to.
             contents: The string to write to the file.
@@ -2934,7 +2920,7 @@ class File():
     Instance = File()
     """hardcoded/returns an instance of the class"""
 
-class FileAccess:
+class FileAccess(Object):
     """
     Defines constants for read, write, or read/write access to a file.
     
@@ -2981,7 +2967,7 @@ class FileAccess:
     Instance = FileAccess()
     """hardcoded/returns an instance of the class"""
 
-class FileAttributes:
+class FileAttributes(Object):
     """
     Provides attributes for files and directories.
     
@@ -3117,14 +3103,12 @@ class FileInfo(FileSystemInfo):
         """
         GetAccessControl(self: FileInfo) -> FileSecurity
         
-            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the access control list (ACL) entries for the file described by the current 
-             System.IO.FileInfo object.
-        
+            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the access control list (ACL) entries for the file described by the current System.IO.FileInfo object.
             Returns: A System.Security.AccessControl.FileSecurity object that encapsulates the access control rules for the current file.
         GetAccessControl(self: FileInfo, includeSections: AccessControlSections) -> FileSecurity
         
-            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the specified type of access control list (ACL) entries for the file described by the 
-             current System.IO.FileInfo object.
+            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the specified type of access control list (ACL) entries for the file described by the current 
+             System.IO.FileInfo object.
         
         
             includeSections: One of the System.Security.AccessControl.AccessControlSections values that specifies which group of access control entries to retrieve.
@@ -3138,9 +3122,9 @@ class FileInfo(FileSystemInfo):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -3216,17 +3200,15 @@ class FileInfo(FileSystemInfo):
         """
         Replace(self: FileInfo, destinationFileName: str, destinationBackupFileName: str) -> FileInfo
         
-            Replaces the contents of a specified file with the file described by the current System.IO.FileInfo object, deleting the original file, and creating a backup of the 
-             replaced file.
-        
+            Replaces the contents of a specified file with the file described by the current System.IO.FileInfo object, deleting the original file, and creating a backup of the replaced file.
         
             destinationFileName: The name of a file to replace with the current file.
             destinationBackupFileName: The name of a file with which to create a backup of the file described by the destFileName parameter.
             Returns: A System.IO.FileInfo object that encapsulates information about the file described by the destFileName parameter.
         Replace(self: FileInfo, destinationFileName: str, destinationBackupFileName: str, ignoreMetadataErrors: bool) -> FileInfo
         
-            Replaces the contents of a specified file with the file described by the current System.IO.FileInfo object, deleting the original file, and creating a backup of the 
-             replaced file.  Also specifies whether to ignore merge errors.
+            Replaces the contents of a specified file with the file described by the current System.IO.FileInfo object, deleting the original file, and creating a backup of the replaced 
+             file.  Also specifies whether to ignore merge errors.
         
         
             destinationFileName: The name of a file to replace with the current file.
@@ -3239,9 +3221,7 @@ class FileInfo(FileSystemInfo):
     def SetAccessControl(self, fileSecurity):
         """
         SetAccessControl(self: FileInfo, fileSecurity: FileSecurity)
-            Applies access control list (ACL) entries described by a System.Security.AccessControl.FileSecurity object to the file described by the current System.IO.FileInfo 
-             object.
-        
+            Applies access control list (ACL) entries described by a System.Security.AccessControl.FileSecurity object to the file described by the current System.IO.FileInfo object.
         
             fileSecurity: A System.Security.AccessControl.FileSecurity object that describes an access control list (ACL) entry to apply to the current file.
         """
@@ -3321,7 +3301,7 @@ Get: Name(self: FileInfo) -> str
     Instance = FileInfo()
     """hardcoded/returns an instance of the class"""
 
-class FileLoadException:
+class FileLoadException(Object):
     """
     The exception that is thrown when a managed assembly is found but cannot be loaded.
     
@@ -3346,8 +3326,8 @@ class FileLoadException:
         ToString(self: FileLoadException) -> str
         
             Returns the fully qualified name of the current exception, and possibly the error message, the name of the inner exception, and the stack trace.
-            Returns: A string containing the fully qualified name of this exception, and possibly the error message, the name of the inner exception, and the stack trace, depending on 
-             which System.IO.FileLoadException constructor is used.
+            Returns: A string containing the fully qualified name of this exception, and possibly the error message, the name of the inner exception, and the stack trace, depending on which 
+             System.IO.FileLoadException constructor is used.
         """
         pass
 
@@ -3400,7 +3380,7 @@ Get: Message(self: FileLoadException) -> str
     Instance = FileLoadException()
     """hardcoded/returns an instance of the class"""
 
-class FileMode:
+class FileMode(Object):
     """
     Specifies how the operating system should open a file.
     
@@ -3450,7 +3430,7 @@ class FileMode:
     Instance = FileMode()
     """hardcoded/returns an instance of the class"""
 
-class FileNotFoundException:
+class FileNotFoundException(Object):
     """
     The exception that is thrown when an attempt to access a file that does not exist on disk fails.
     
@@ -3528,7 +3508,7 @@ Get: Message(self: FileNotFoundException) -> str
     Instance = FileNotFoundException()
     """hardcoded/returns an instance of the class"""
 
-class FileOptions:
+class FileOptions(Object):
     """
     Represents additional options for creating a System.IO.FileStream object.
     
@@ -3579,7 +3559,7 @@ class FileOptions:
     Instance = FileOptions()
     """hardcoded/returns an instance of the class"""
 
-class FileShare:
+class FileShare(Object):
     """
     Contains constants for controlling the kind of access other System.IO.FileStream objects can have to the same file.
     
@@ -3704,8 +3684,8 @@ class FileStream(Stream):
             Waits for the pending asynchronous read to complete.
         
             asyncResult: The reference to the pending asynchronous request to wait for.
-            Returns: The number of bytes read from the stream, between 0 and the number of bytes you requested. Streams only return 0 at the end of the stream, otherwise, they should block 
-             until at least 1 byte is available.
+            Returns: The number of bytes read from the stream, between 0 and the number of bytes you requested. Streams only return 0 at the end of the stream, otherwise, they should block until at 
+             least 1 byte is available.
         """
         pass
 
@@ -3737,9 +3717,7 @@ class FileStream(Stream):
         """
         GetAccessControl(self: FileStream) -> FileSecurity
         
-            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the access control list (ACL) entries for the file described by the current 
-             System.IO.FileStream object.
-        
+            Gets a System.Security.AccessControl.FileSecurity object that encapsulates the access control list (ACL) entries for the file described by the current System.IO.FileStream object.
             Returns: An object that encapsulates the access control settings for the file described by the current System.IO.FileStream object.
         """
         pass
@@ -3760,9 +3738,9 @@ class FileStream(Stream):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -3787,8 +3765,8 @@ class FileStream(Stream):
         
             offset: The byte offset in array at which the read bytes will be placed.
             count: The maximum number of bytes to read.
-            Returns: The total number of bytes read into the buffer. This might be less than the number of bytes requested if that number of bytes are not currently available, or zero if 
-             the end of the stream is reached.
+            Returns: The total number of bytes read into the buffer. This might be less than the number of bytes requested if that number of bytes are not currently available, or zero if the end of 
+             the stream is reached.
         """
         pass
 
@@ -3820,9 +3798,7 @@ class FileStream(Stream):
     def SetAccessControl(self, fileSecurity):
         """
         SetAccessControl(self: FileStream, fileSecurity: FileSecurity)
-            Applies access control list (ACL) entries described by a System.Security.AccessControl.FileSecurity object to the file described by the current System.IO.FileStream 
-             object.
-        
+            Applies access control list (ACL) entries described by a System.Security.AccessControl.FileSecurity object to the file described by the current System.IO.FileStream object.
         
             fileSecurity: An object that describes an ACL entry to apply to the current file.
         """
@@ -4035,8 +4011,8 @@ class FileSystemEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -4066,8 +4042,8 @@ class FileSystemEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -4124,8 +4100,7 @@ class FileSystemWatcher(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
-             specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -4135,9 +4110,9 @@ class FileSystemWatcher(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -4202,8 +4177,8 @@ class FileSystemWatcher(Component):
             Returns: A System.IO.WaitForChangedResult that contains specific information on the change that occurred.
         WaitForChanged(self: FileSystemWatcher, changeType: WatcherChangeTypes, timeout: int) -> WaitForChangedResult
         
-            A synchronous method that returns a structure that contains specific information on the change that occurred, given the type of change you want to monitor and the time 
-             (in milliseconds) to wait before timing out.
+            A synchronous method that returns a structure that contains specific information on the change that occurred, given the type of change you want to monitor and the time (in 
+             milliseconds) to wait before timing out.
         
         
             changeType: The System.IO.WatcherChangeTypes to watch for.
@@ -4471,8 +4446,8 @@ class MemoryStream(Stream):
         GetBuffer(self: MemoryStream) -> Array[Byte]
         
             Returns the array of unsigned bytes from which this stream was created.
-            Returns: The byte array from which this stream was created, or the underlying array if a byte array was not provided to the System.IO.MemoryStream constructor during 
-             construction of the current instance.
+            Returns: The byte array from which this stream was created, or the underlying array if a byte array was not provided to the System.IO.MemoryStream constructor during construction of the 
+             current instance.
         """
         pass
 
@@ -4482,9 +4457,9 @@ class MemoryStream(Stream):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -4509,8 +4484,8 @@ class MemoryStream(Stream):
         
             offset: The zero-based byte offset in buffer at which to begin storing data from the current stream.
             count: The maximum number of bytes to read.
-            Returns: The total number of bytes written into the buffer. This can be less than the number of bytes requested if that number of bytes are not currently available, or zero if 
-             the end of the stream is reached before any bytes are read.
+            Returns: The total number of bytes written into the buffer. This can be less than the number of bytes requested if that number of bytes are not currently available, or zero if the end of 
+             the stream is reached before any bytes are read.
         """
         pass
 
@@ -4670,7 +4645,7 @@ Set: Position(self: MemoryStream) = value
     Instance = MemoryStream()
     """hardcoded/returns an instance of the class"""
 
-class NotifyFilters:
+class NotifyFilters(Object):
     """
     Specifies changes to watch for in a file or folder.
     
@@ -4733,9 +4708,9 @@ class Path():
         
             path: The path information to modify. The path cannot contain any of the characters defined in System.IO.Path.GetInvalidPathChars.
             extension: The new extension (with or without a leading period). Specify null to remove an existing extension from path.
-            Returns: The modified path information.On Windows-based desktop platforms, if path is null or an empty string (""), the path information is returned unmodified. If extension is 
-             null, the returned string contains the specified path with its extension removed. If path has no extension, and extension is not null, the returned path string 
-             contains extension appended to the end of path.
+            Returns: The modified path information.On Windows-based desktop platforms, if path is null or an empty string (""), the path information is returned unmodified. If extension is null, the 
+             returned string contains the specified path with its extension removed. If path has no extension, and extension is not null, the returned path string contains extension appended 
+             to the end of path.
         """
         pass
 
@@ -4748,9 +4723,7 @@ class Path():
         
             path1: The first path to combine.
             path2: The second path to combine.
-            Returns: The combined paths. If one of the specified paths is a zero-length string, this method returns the other path. If path2 contains an absolute path, this method returns 
-             path2.
-        
+            Returns: The combined paths. If one of the specified paths is a zero-length string, this method returns the other path. If path2 contains an absolute path, this method returns path2.
         Combine(path1: str, path2: str, path3: str) -> str
         
             Combines three strings into a path.
@@ -4797,8 +4770,8 @@ class Path():
             Returns the extension of the specified path string.
         
             path: The path string from which to get the extension.
-            Returns: The extension of the specified path (including the period "."), or null, or System.String.Empty. If path is null, System.IO.Path.GetExtension(System.String) returns 
-             null. If path does not have extension information, System.IO.Path.GetExtension(System.String) returns System.String.Empty.
+            Returns: The extension of the specified path (including the period "."), or null, or System.String.Empty. If path is null, System.IO.Path.GetExtension(System.String) returns null. If path 
+             does not have extension information, System.IO.Path.GetExtension(System.String) returns System.String.Empty.
         """
         pass
 
@@ -4810,8 +4783,8 @@ class Path():
             Returns the file name and extension of the specified path string.
         
             path: The path string from which to obtain the file name and extension.
-            Returns: The characters after the last directory character in path. If the last character of path is a directory or volume separator character, this method returns 
-             System.String.Empty. If path is null, this method returns null.
+            Returns: The characters after the last directory character in path. If the last character of path is a directory or volume separator character, this method returns System.String.Empty. If 
+             path is null, this method returns null.
         """
         pass
 
@@ -4909,8 +4882,8 @@ class Path():
             Determines whether a path includes a file name extension.
         
             path: The path to search for an extension.
-            Returns: true if the characters that follow the last directory separator (\\ or /) or volume separator (:) in the path include a period (.) followed by one or more characters; 
-             otherwise, false.
+            Returns: true if the characters that follow the last directory separator (\\ or /) or volume separator (:) in the path include a period (.) followed by one or more characters; otherwise, 
+             false.
         """
         pass
 
@@ -4957,7 +4930,7 @@ class Path():
     Instance = Path()
     """hardcoded/returns an instance of the class"""
 
-class PathTooLongException:
+class PathTooLongException(Object):
     """
     The exception that is thrown when a path or file name is longer than the system-defined maximum length.
     
@@ -5046,8 +5019,8 @@ class RenamedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -5077,8 +5050,8 @@ class RenamedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -5097,7 +5070,7 @@ class RenamedEventHandler(MulticastDelegate):
     Instance = RenamedEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class SearchOption:
+class SearchOption(Object):
     """
     Specifies whether to search the current directory, or the current directory and all subdirectories.
     
@@ -5143,7 +5116,7 @@ class SearchOption:
     Instance = SearchOption()
     """hardcoded/returns an instance of the class"""
 
-class SeekOrigin:
+class SeekOrigin(Object):
     """
     Provides the fields that represent reference points in streams for seeking.
     
@@ -5212,9 +5185,9 @@ class TextReader(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -5228,9 +5201,7 @@ class TextReader(MarshalByRefObject):
         """
         Peek(self: TextReader) -> int
         
-            Reads the next character without changing the state of the reader or the character source. Returns the next available character without actually reading it from the 
-             input stream.
-        
+            Reads the next character without changing the state of the reader or the character source. Returns the next available character without actually reading it from the input stream.
             Returns: An integer representing the next character to be read, or -1 if no more characters are available or the stream does not support seeking.
         """
         pass
@@ -5247,8 +5218,8 @@ class TextReader(MarshalByRefObject):
         
             index: The position in buffer at which to begin writing.
             count: The maximum number of characters to read. If the end of the stream is reached before count of characters is read into buffer, the current method returns.
-            Returns: The number of characters that have been read. The number will be less than or equal to count, depending on whether the data is available within the stream. This method 
-             returns zero if called when no more characters are left to read.
+            Returns: The number of characters that have been read. The number will be less than or equal to count, depending on whether the data is available within the stream. This method returns 
+             zero if called when no more characters are left to read.
         """
         pass
 
@@ -5264,8 +5235,8 @@ class TextReader(MarshalByRefObject):
         
             index: The position in buffer at which to begin writing.
             count: The maximum number of characters to read.
-            Returns: The position of the underlying stream is advanced by the number of characters that were read into buffer.The number of characters that have been read. The number will 
-             be less than or equal to count, depending on whether all input characters have been read.
+            Returns: The position of the underlying stream is advanced by the number of characters that were read into buffer.The number of characters that have been read. The number will be less 
+             than or equal to count, depending on whether all input characters have been read.
         """
         pass
 
@@ -5376,9 +5347,9 @@ class StreamReader(TextReader):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -5409,8 +5380,8 @@ class StreamReader(TextReader):
         
             index: The index of buffer at which to begin writing.
             count: The maximum number of characters to read.
-            Returns: The number of characters that have been read, or 0 if at the end of the stream and no data was read. The number will be less than or equal to the count parameter, 
-             depending on whether the data is available within the stream.
+            Returns: The number of characters that have been read, or 0 if at the end of the stream and no data was read. The number will be less than or equal to the count parameter, depending on 
+             whether the data is available within the stream.
         """
         pass
 
@@ -5544,9 +5515,9 @@ class TextWriter(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -5851,9 +5822,9 @@ class StreamWriter(TextWriter):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -5989,9 +5960,9 @@ class StringReader(TextReader):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -6022,8 +5993,8 @@ class StringReader(TextReader):
         
             index: The starting index in the buffer.
             count: The number of characters to read.
-            Returns: The total number of characters read into the buffer. This can be less than the number of characters requested if that many characters are not currently available, or 
-             zero if the end of the underlying string has been reached.
+            Returns: The total number of characters read into the buffer. This can be less than the number of characters requested if that many characters are not currently available, or zero if the 
+             end of the underlying string has been reached.
         """
         pass
 
@@ -6128,9 +6099,9 @@ class StringWriter(TextWriter):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -6225,7 +6196,7 @@ Get: Encoding(self: StringWriter) -> Encoding
     Instance = StringWriter()
     """hardcoded/returns an instance of the class"""
 
-class UnmanagedMemoryAccessor:
+class UnmanagedMemoryAccessor(Object):
     """
     Provides random access to unmanaged blocks of memory from managed code.
     
@@ -6595,9 +6566,9 @@ class UnmanagedMemoryStream(Stream):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -6622,8 +6593,8 @@ class UnmanagedMemoryStream(Stream):
         
             offset: The zero-based byte offset in buffer at which to begin storing the data read from the current stream.
             count: The maximum number of bytes to read from the current stream.
-            Returns: The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the 
-             end of the stream has been reached.
+            Returns: The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the 
+             stream has been reached.
         """
         pass
 
@@ -6801,7 +6772,7 @@ Set: TimedOut(self: WaitForChangedResult) = value
     Instance = WaitForChangedResult()
     """hardcoded/returns an instance of the class"""
 
-class WatcherChangeTypes:
+class WatcherChangeTypes(Object):
     """
     Changes that might occur to a file or directory.
     

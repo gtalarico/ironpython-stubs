@@ -8,7 +8,7 @@
 # no functions
 # classes
 
-class SecurityAttribute:
+class SecurityAttribute(Object):
     """ Specifies the base attribute class for declarative security from which System.Security.Permissions.CodeAccessSecurityAttribute is derived. """
     def CreatePermission(self):
         """
@@ -216,7 +216,7 @@ class EnvironmentPermission(CodeAccessPermission):
     Instance = EnvironmentPermission()
     """hardcoded/returns an instance of the class"""
 
-class EnvironmentPermissionAccess:
+class EnvironmentPermissionAccess(Object):
     """
     Specifies access to environment variables.
     
@@ -425,7 +425,7 @@ Set: Access(self: FileDialogPermission) = value
     Instance = FileDialogPermission()
     """hardcoded/returns an instance of the class"""
 
-class FileDialogPermissionAccess:
+class FileDialogPermissionAccess(Object):
     """
     Specifies the type of access to files allowed through the File dialog boxes.
     
@@ -708,7 +708,7 @@ Set: AllLocalFiles(self: FileIOPermission) = value
     Instance = FileIOPermission()
     """hardcoded/returns an instance of the class"""
 
-class FileIOPermissionAccess:
+class FileIOPermissionAccess(Object):
     """
     Specifies the type of file access requested.
     
@@ -1102,7 +1102,7 @@ Set: UI(self: HostProtectionAttribute) = value
     Instance = HostProtectionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class HostProtectionResource:
+class HostProtectionResource(Object):
     """
     Specifies categories of functionality potentially harmful to the host if invoked by a method or class.
     
@@ -1157,7 +1157,7 @@ class HostProtectionResource:
     Instance = HostProtectionResource()
     """hardcoded/returns an instance of the class"""
 
-class IsolatedStorageContainment:
+class IsolatedStorageContainment(Object):
     """
     Specifies the permitted use of isolated storage.
     
@@ -1277,7 +1277,7 @@ Set: UserQuota(self: IsolatedStoragePermission) = value
     Instance = IsolatedStoragePermission()
     """hardcoded/returns an instance of the class"""
 
-class IsolatedStorageFilePermission:
+class IsolatedStorageFilePermission(Object):
     """
     Specifies the allowed usage of a private virtual file system. This class cannot be inherited.
     
@@ -1386,7 +1386,7 @@ Set: UserQuota(self: IsolatedStoragePermissionAttribute) = value
     Instance = IsolatedStoragePermissionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class IsolatedStorageFilePermissionAttribute:
+class IsolatedStorageFilePermissionAttribute(Object):
     """
     Allows security actions for System.Security.Permissions.IsolatedStorageFilePermission to be applied to code using declarative security. This class cannot be inherited.
     
@@ -1545,8 +1545,8 @@ class KeyContainerPermissionAccessEntry():
             Determines whether the specified System.Security.Permissions.KeyContainerPermissionAccessEntry object is equal to the current instance.
         
             o: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to compare with the currentinstance.
-            Returns: true if the specified System.Security.Permissions.KeyContainerPermissionAccessEntry is equal to the current 
-             System.Security.Permissions.KeyContainerPermissionAccessEntry object; otherwise, false.
+            Returns: true if the specified System.Security.Permissions.KeyContainerPermissionAccessEntry is equal to the current System.Security.Permissions.KeyContainerPermissionAccessEntry object; 
+             otherwise, false.
         """
         pass
 
@@ -1627,7 +1627,7 @@ Set: ProviderType(self: KeyContainerPermissionAccessEntry) = value
     Instance = KeyContainerPermissionAccessEntry()
     """hardcoded/returns an instance of the class"""
 
-class KeyContainerPermissionAccessEntryCollection:
+class KeyContainerPermissionAccessEntryCollection(Object):
     """ Represents a collection of System.Security.Permissions.KeyContainerPermissionAccessEntry objects. This class cannot be inherited. """
     def Add(self, accessEntry):
         """
@@ -1737,7 +1737,7 @@ Get: SyncRoot(self: KeyContainerPermissionAccessEntryCollection) -> object
     Instance = KeyContainerPermissionAccessEntryCollection()
     """hardcoded/returns an instance of the class"""
 
-class KeyContainerPermissionAccessEntryEnumerator:
+class KeyContainerPermissionAccessEntryEnumerator(Object):
     """ Represents the enumerator for System.Security.Permissions.KeyContainerPermissionAccessEntry objects in a System.Security.Permissions.KeyContainerPermissionAccessEntryCollection. """
     def MoveNext(self):
         """
@@ -1864,7 +1864,7 @@ Set: ProviderType(self: KeyContainerPermissionAttribute) = value
     Instance = KeyContainerPermissionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class KeyContainerPermissionFlags:
+class KeyContainerPermissionFlags(Object):
     """
     Specifies the type of key container access allowed.
     
@@ -1999,7 +1999,7 @@ Set: XML(self: PermissionSetAttribute) = value
     Instance = PermissionSetAttribute()
     """hardcoded/returns an instance of the class"""
 
-class PermissionState:
+class PermissionState(Object):
     """
     Specifies whether a permission should have all or no access to resources at creation.
     
@@ -2045,7 +2045,7 @@ class PermissionState:
     Instance = PermissionState()
     """hardcoded/returns an instance of the class"""
 
-class PrincipalPermission:
+class PrincipalPermission(Object):
     """
     Allows checks against the active principal (see System.Security.Principal.IPrincipal) using the language constructs defined for both declarative and imperative security actions. This class cannot be inherited.
     
@@ -2575,7 +2575,7 @@ Set: TypeInformation(self: ReflectionPermissionAttribute) = value
     Instance = ReflectionPermissionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ReflectionPermissionFlag:
+class ReflectionPermissionFlag(Object):
     """
     Specifies the permitted use of the System.Reflection and System.Reflection.Emit namespaces.
     
@@ -2761,7 +2761,7 @@ class RegistryPermission(CodeAccessPermission):
     Instance = RegistryPermission()
     """hardcoded/returns an instance of the class"""
 
-class RegistryPermissionAccess:
+class RegistryPermissionAccess(Object):
     """
     Specifies the permitted access to registry keys and values.
     
@@ -3070,7 +3070,7 @@ Get: PermissionAccessPath(self: ResourcePermissionBaseEntry) -> Array[str]
     Instance = ResourcePermissionBaseEntry()
     """hardcoded/returns an instance of the class"""
 
-class SecurityAction:
+class SecurityAction(Object):
     """
     Specifies the security actions that can be performed using declarative security.
     
@@ -3155,8 +3155,7 @@ class SecurityPermission(CodeAccessPermission):
             Creates and returns a permission that is the intersection of the current permission and the specified permission.
         
             target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission object that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is 
-             empty.
+            Returns: A new permission object that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
         """
         pass
 
@@ -3381,7 +3380,7 @@ Set: UnmanagedCode(self: SecurityPermissionAttribute) = value
     Instance = SecurityPermissionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class SecurityPermissionFlag:
+class SecurityPermissionFlag(Object):
     """
     Specifies access flags for the security permission object.
     
@@ -3778,7 +3777,7 @@ Set: RemoveFromStore(self: StorePermissionAttribute) = value
     Instance = StorePermissionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class StorePermissionFlags:
+class StorePermissionFlags(Object):
     """
     Specifies the permitted access to X.509 certificate stores.
     
@@ -4093,8 +4092,8 @@ class TypeDescriptorPermission(CodeAccessPermission):
         IsUnrestricted(self: TypeDescriptorPermission) -> bool
         
             Gets a value that indicates whether the type descriptor may be called from partially trusted code.
-            Returns: true if the System.Security.Permissions.TypeDescriptorPermission.Flags property is set to 
-             System.Security.Permissions.TypeDescriptorPermissionFlags.RestrictedRegistrationAccess; otherwise, false.
+            Returns: true if the System.Security.Permissions.TypeDescriptorPermission.Flags property is set to System.Security.Permissions.TypeDescriptorPermissionFlags.RestrictedRegistrationAccess; 
+             otherwise, false.
         """
         pass
 
@@ -4189,7 +4188,7 @@ Set: RestrictedRegistrationAccess(self: TypeDescriptorPermissionAttribute) = val
     Instance = TypeDescriptorPermissionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class TypeDescriptorPermissionFlags:
+class TypeDescriptorPermissionFlags(Object):
     """
     Defines permission settings for type descriptors.
     
@@ -4400,7 +4399,7 @@ Set: Window(self: UIPermissionAttribute) = value
     Instance = UIPermissionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class UIPermissionClipboard:
+class UIPermissionClipboard(Object):
     """
     Specifies the type of clipboard access that is allowed to the calling code.
     
@@ -4447,7 +4446,7 @@ class UIPermissionClipboard:
     Instance = UIPermissionClipboard()
     """hardcoded/returns an instance of the class"""
 
-class UIPermissionWindow:
+class UIPermissionWindow(Object):
     """
     Specifies the type of windows that code is allowed to use.
     

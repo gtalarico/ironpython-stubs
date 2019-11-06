@@ -1,7 +1,8 @@
-from Wms.RemotingObjects import *
+from System import Object
+from Wms.RemotingObjects import DbObject
 # encoding: utf-8
 # module Wms.RemotingObjects.ErpLocking calls itself ErpLocking
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -83,7 +84,7 @@ Get: MigrateToStateAsString(self: ErpLock) -> str
     Instance = ErpLock()
     """hardcoded/returns an instance of the class"""
 
-class ErpLockEntityType:
+class ErpLockEntityType(Object):
     """ enum ErpLockEntityType, values: PurchaseOrder (1), SalesOrder (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -125,7 +126,7 @@ class ErpLockEntityType:
     Instance = ErpLockEntityType()
     """hardcoded/returns an instance of the class"""
 
-class ErpLockState:
+class ErpLockState(Object):
     """ enum ErpLockState, values: Locked (1), Unkown (0), Unlocked (2) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

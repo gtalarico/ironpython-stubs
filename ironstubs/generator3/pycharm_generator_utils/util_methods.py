@@ -465,8 +465,6 @@ def out_docstring(out_func, docstring, indent):
     argument_regex = "\w*:\s(\w*)"
     type_regex = "\[(.*?)\]"
 
-    print "doc is"
-    print docstring
     for line in lines:
         print line
         doc_class = re.findall(class_regex,line)
@@ -494,7 +492,6 @@ def out_docstring(out_func, docstring, indent):
                     #check if bad compiles are in one of the arguments
                     if any(any(substring in argument for substring in bad_compiles) for argument in arguments):
                         typedict[doc_class[0]][function] = "Exception: bad compile"
-
                         continue
                     
                     typedict[doc_class[0]][function].append(arguments)

@@ -1,7 +1,7 @@
-from System import *
+from System import EventArgs
 # encoding: utf-8
 # module Wms.EdiMessaging.EventArgs calls itself EventArgs
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports

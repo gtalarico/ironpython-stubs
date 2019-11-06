@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingObjects.Notifications calls itself Notifications
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -241,19 +242,11 @@ Get: UserId(self: GetNotificationsArgs) -> Nullable[int]
 Set: UserId(self: GetNotificationsArgs) = value
 """
 
-    ZoneId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Notifications in zone.
-
-Get: ZoneId(self: GetNotificationsArgs) -> int
-
-Set: ZoneId(self: GetNotificationsArgs) = value
-"""
-
 
     Instance = GetNotificationsArgs()
     """hardcoded/returns an instance of the class"""
 
-class GetNotificationsSortOrder:
+class GetNotificationsSortOrder(Object):
     """ enum GetNotificationsSortOrder, values: Default (0), Importance (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -345,8 +338,17 @@ class InsertNotificationArgs():
     """
     Message to insert Wms.RemotingObjects.Notifications.Notification in the notificatoin center
     
-    InsertNotificationArgs()
+    InsertNotificationArgs()
+    InsertNotificationArgs(zoneId: int)
     """
+    @staticmethod # known case of __new__
+    def __new__(self, zoneId=None):
+        """
+        __new__(cls: type)
+        __new__(cls: type, zoneId: int)
+        """
+        pass
+
     GotoLink = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: GotoLink(self: InsertNotificationArgs) -> str
 
@@ -384,7 +386,7 @@ Set: TranslationKey(self: InsertNotificationArgs) = value
 """
 
     ZoneId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: ZoneId(self: InsertNotificationArgs) -> Nullable[int]
+    """Get: ZoneId(self: InsertNotificationArgs) -> int
 
 Set: ZoneId(self: InsertNotificationArgs) = value
 """
@@ -522,7 +524,7 @@ Set: Key(self: NotificationGroup) = value
     Instance = NotificationGroup()
     """hardcoded/returns an instance of the class"""
 
-class NotificationSeverity:
+class NotificationSeverity(Object):
     """
     Defines the intensity/importance of the notification.
     

@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingImplementation.OfflineScanners calls itself OfflineScanners
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -8,7 +9,7 @@
 # no functions
 # classes
 
-class GcloudInboundFileListenerBase:
+class GcloudInboundFileListenerBase(Object):
     """ GcloudInboundFileListenerBase(appSetttings: GcloudInboundFileListenerOptions, general: General, messaging: Messaging) """
     def DownloadFile(self, *args): #cannot find CLR method
         """ DownloadFile(self: GcloudInboundFileListenerBase, filepath: str) -> Task[Stream] """

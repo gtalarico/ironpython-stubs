@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingImplementation.NotificationTypes calls itself NotificationTypes
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -8,7 +9,7 @@
 # no functions
 # classes
 
-class DailyOnWorkdaysSchedule:
+class DailyOnWorkdaysSchedule(Object):
     """ DailyOnWorkdaysSchedule() """
     def GetNextTime(self, lastTime):
         """ GetNextTime(self: DailyOnWorkdaysSchedule, lastTime: DateTime) -> DateTime """
@@ -25,7 +26,7 @@ class DailyOnWorkdaysSchedule:
     Instance = DailyOnWorkdaysSchedule()
     """hardcoded/returns an instance of the class"""
 
-class DailySchedule:
+class DailySchedule(Object):
     """ DailySchedule() """
     def GetNextTime(self, lastTime):
         """ GetNextTime(self: DailySchedule, lastTime: DateTime) -> DateTime """
@@ -42,7 +43,7 @@ class DailySchedule:
     Instance = DailySchedule()
     """hardcoded/returns an instance of the class"""
 
-class EmailDigestNotificationSummary:
+class EmailDigestNotificationSummary(Object):
     """ EmailDigestNotificationSummary(mailer: IMailer, general: General) """
     def ExecuteSummary(self, summary):
         """ ExecuteSummary(self: EmailDigestNotificationSummary, summary: ExecuteNotificationSummaryArgs) -> Task """
@@ -139,7 +140,7 @@ class NotificationTypeContainer():
     Instance = NotificationTypeContainer()
     """hardcoded/returns an instance of the class"""
 
-class SlackWebDigestNotificationSummary:
+class SlackWebDigestNotificationSummary(Object):
     """ SlackWebDigestNotificationSummary(general: General) """
     def ExecuteSummary(self, summary):
         """ ExecuteSummary(self: SlackWebDigestNotificationSummary, summary: ExecuteNotificationSummaryArgs) -> Task """
@@ -165,7 +166,7 @@ class SlackWebDigestNotificationSummary:
     Instance = SlackWebDigestNotificationSummary()
     """hardcoded/returns an instance of the class"""
 
-class WeeklySchedule:
+class WeeklySchedule(Object):
     """ WeeklySchedule() """
     def GetNextTime(self, lastTime):
         """ GetNextTime(self: WeeklySchedule, lastTime: DateTime) -> DateTime """

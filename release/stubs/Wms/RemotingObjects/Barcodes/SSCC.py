@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingObjects.Barcodes.SSCC calls itself SSCC
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -16,7 +17,7 @@ class GS1Prefixes():
     Instance = GS1Prefixes()
     """hardcoded/returns an instance of the class"""
 
-class SSCC:
+class SSCC(Object):
     """
     SSCC(barcode: str)
     SSCC(extensionDigit: int, companyPrefix: str, serial: int)
@@ -107,25 +108,24 @@ class SSCC:
             Formats to a string. (Capital letter does left pad, lower case just takes number).
                     Aa - Aplicaiton identifier,
                     Ee - Extension digit,
-                
-                 Cc - Company prefix,
+                    Cc - 
+             Company prefix,
                     Ss - Serial reference,
                     Ii - integrity check digit,
                     Zz - Complete sscc code machine readable,
-                  
-               Hh - human readable complete code.
+                    Hh - human 
+             readable complete code.
         
         
             format: Format to string to. following characters get replaced:
                     Aa - Aplicaiton identifier,
                     Ee - Extension digit,
                     Cc - Company prefix,
-         
-                        Ss - Serial reference,
+                    
+             Ss - Serial reference,
                     Ii - integrity check digit,
                     Zz - Complete sscc code machine readable,
-                    Hh - human readable 
-             complete code.
+                    Hh - human readable complete code.
         
             Returns: string in the format provided.
         """

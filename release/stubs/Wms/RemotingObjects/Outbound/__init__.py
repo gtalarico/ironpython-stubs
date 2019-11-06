@@ -1,8 +1,10 @@
-from System.Collections.Generic import *
-from Wms.RemotingObjects import *
+from System import Object
+from Wms.RemotingObjects import DbObject
+from System.Collections.Generic import List
+from Wms.RemotingObjects import FindableList
 # encoding: utf-8
 # module Wms.RemotingObjects.Outbound calls itself Outbound
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -721,8 +723,8 @@ class OutboundOrderLine(DbObject):
         
             checkRegistration: True if the batchnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a batch item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout 
-             the whole process).
+                    complete (means the numers are registered throughout the whole 
+             process).
                     False if the check is ignored and the item is not a batch item, or when the itemids are registered
                     during delivery only.
         """
@@ -736,8 +738,8 @@ class OutboundOrderLine(DbObject):
         
             checkRegistration: True if the serialnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a serial item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout 
-             the whole process).
+                    complete (means the numers are registered throughout the whole 
+             process).
                     False if the check is ignored and the item is not a serial item, or when the itemids are registered
                     during delivery only.
         """
@@ -1883,7 +1885,7 @@ Set: Warehouse(self: OutboundOrder) = value
     Instance = OutboundOrder()
     """hardcoded/returns an instance of the class"""
 
-class OutboundOrderLineEqualityComparer:
+class OutboundOrderLineEqualityComparer(Object):
     """ OutboundOrderLineEqualityComparer() """
     def Equals(self, *__args):
         """ Equals(self: OutboundOrderLineEqualityComparer, x: OutboundOrderLine, y: OutboundOrderLine) -> bool """
@@ -1909,7 +1911,10 @@ class OutboundOrderLineEqualityComparer:
     """hardcoded/returns an instance of the class"""
 
 class OutboundOrders(FindableList):
-    """ OutboundOrders() """
+    """
+    OutboundOrders()
+    OutboundOrders(Capacity: int)
+    """
     def Add(self, *__args):
         """
         Add(self: OutboundOrders, order: OutboundOrder) -> FindableList[OutboundOrder]
@@ -1946,6 +1951,14 @@ class OutboundOrders(FindableList):
         """ __iter__(self: IEnumerable) -> object """
         pass
 
+    @staticmethod # known case of __new__
+    def __new__(self, Capacity=None):
+        """
+        __new__(cls: type)
+        __new__(cls: type, Capacity: int)
+        """
+        pass
+
     def __reduce_ex__(self, *args): #cannot find CLR method
         pass
 
@@ -1954,9 +1967,7 @@ class OutboundOrders(FindableList):
         pass
 
     TotalRowsMatched = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: TotalRowsMatched(self: OutboundOrders) -> Int64
+    """Get: TotalRowsMatched(self: OutboundOrders) -> Int64
 
 Set: TotalRowsMatched(self: OutboundOrders) = value
 """
@@ -1968,7 +1979,7 @@ Set: TotalRowsMatched(self: OutboundOrders) = value
     Instance = OutboundOrders()
     """hardcoded/returns an instance of the class"""
 
-class OutboundOrderTypeEnum:
+class OutboundOrderTypeEnum(Object):
     """ enum OutboundOrderTypeEnum, values: ReplenishmentOrder (2), RtvOrder (3), SalesOrder (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -2011,7 +2022,7 @@ class OutboundOrderTypeEnum:
     Instance = OutboundOrderTypeEnum()
     """hardcoded/returns an instance of the class"""
 
-class PickDifferenceOptionsEnum:
+class PickDifferenceOptionsEnum(Object):
     """ enum PickDifferenceOptionsEnum, values: BasedOnMarkAsPicked (1), BasedOnNonePickedItems (2), None (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

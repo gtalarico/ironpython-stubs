@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingImplementation.Reports.RDL calls itself RDL
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -34,7 +35,7 @@ class RDLIsolatedReportRendererExecutor():
     Instance = RDLIsolatedReportRendererExecutor()
     """hardcoded/returns an instance of the class"""
 
-class RDLReportRenderer:
+class RDLReportRenderer(Object):
     """ RDLReportRenderer() """
     def Export(self, *__args):
         """

@@ -164,7 +164,7 @@ Get: Current(self: ContextStack) -> object
     Instance = ContextStack()
     """hardcoded/returns an instance of the class"""
 
-class DefaultSerializationProviderAttribute:
+class DefaultSerializationProviderAttribute(Object):
     """
     The System.ComponentModel.Design.Serialization.DefaultSerializationProviderAttribute attribute is placed on a serializer to indicate the class to use as a default provider of that type of serializer.
     
@@ -230,7 +230,7 @@ Get: Loading(self: DesignerLoader) -> bool
     Instance = DesignerLoader()
     """hardcoded/returns an instance of the class"""
 
-class DesignerSerializerAttribute:
+class DesignerSerializerAttribute(Object):
     """
     Indicates a serializer for the serialization manager to use to serialize the values of the type this attribute is applied to. This class cannot be inherited.
     
@@ -276,7 +276,7 @@ Get: TypeId(self: DesignerSerializerAttribute) -> object
     Instance = DesignerSerializerAttribute()
     """hardcoded/returns an instance of the class"""
 
-class IDesignerLoaderHost:
+class IDesignerLoaderHost(Object):
     """ Provides an interface that can extend a designer host to support loading from a serialized state. """
     def EndLoad(self, baseClassName, successful, errorCollection):
         """
@@ -303,7 +303,7 @@ class IDesignerLoaderHost:
     Instance = IDesignerLoaderHost()
     """hardcoded/returns an instance of the class"""
 
-class IDesignerLoaderHost2:
+class IDesignerLoaderHost2(Object):
     """ Provides an interface that extends System.ComponentModel.Design.Serialization.IDesignerLoaderHost to specify whether errors are tolerated while loading a design document. """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -364,7 +364,7 @@ class IDesignerLoaderService:
     Instance = IDesignerLoaderService()
     """hardcoded/returns an instance of the class"""
 
-class IDesignerSerializationManager:
+class IDesignerSerializationManager(Object):
     """ Provides an interface that can manage design-time serialization. """
     def AddSerializationProvider(self, provider):
         """
@@ -384,8 +384,8 @@ class IDesignerSerializationManager:
             type: The data type to create.
             arguments: The arguments to pass to the constructor for this type.
             name: The name of the object. This name can be used to access the object later through 
-             System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance(System.String). If null is passed, the object is still created but cannot be 
-             accessed by name.
+             System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance(System.String). If null is passed, the object is still created but cannot be accessed by 
+             name.
         
             addToContainer: If true, this object is added to the design container. The object must implement System.ComponentModel.IComponent for this to have any effect.
             Returns: The newly created object instance.
@@ -443,8 +443,7 @@ class IDesignerSerializationManager:
             Removes a custom serialization provider from the serialization manager.
         
             provider: The provider to remove. This object must have been added using 
-             System.ComponentModel.Design.Serialization.IDesignerSerializationManager.AddSerializationProvider(System.ComponentModel.Design.Serialization.IDesignerSerializationProvi
-             der).
+             System.ComponentModel.Design.Serialization.IDesignerSerializationManager.AddSerializationProvider(System.ComponentModel.Design.Serialization.IDesignerSerializationProvider).
         """
         pass
 
@@ -453,8 +452,8 @@ class IDesignerSerializationManager:
         ReportError(self: IDesignerSerializationManager, errorInformation: object)
             Reports an error in serialization.
         
-            errorInformation: The error to report. This information object can be of any object type. If it is an exception, the message of the exception is extracted and reported to the user. If 
-             it is any other type, System.Object.ToString is called to display the information to the user.
+            errorInformation: The error to report. This information object can be of any object type. If it is an exception, the message of the exception is extracted and reported to the user. If it is any 
+             other type, System.Object.ToString is called to display the information to the user.
         """
         pass
 
@@ -650,8 +649,8 @@ class MemberRelationship():
             Determines whether two System.ComponentModel.Design.Serialization.MemberRelationship instances are equal.
         
             obj: The System.ComponentModel.Design.Serialization.MemberRelationship to compare with the current System.ComponentModel.Design.Serialization.MemberRelationship.
-            Returns: true if the specified System.ComponentModel.Design.Serialization.MemberRelationship is equal to the current 
-             System.ComponentModel.Design.Serialization.MemberRelationship; otherwise, false.
+            Returns: true if the specified System.ComponentModel.Design.Serialization.MemberRelationship is equal to the current System.ComponentModel.Design.Serialization.MemberRelationship; 
+             otherwise, false.
         """
         pass
 
@@ -809,8 +808,8 @@ class ResolveNameEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -840,8 +839,8 @@ class ResolveNameEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -860,7 +859,7 @@ class ResolveNameEventHandler(MulticastDelegate):
     Instance = ResolveNameEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class RootDesignerSerializerAttribute:
+class RootDesignerSerializerAttribute(Object):
     """
     Indicates the base serializer to use for a root designer object. This class cannot be inherited.
     
@@ -913,7 +912,7 @@ Get: TypeId(self: RootDesignerSerializerAttribute) -> object
     Instance = RootDesignerSerializerAttribute()
     """hardcoded/returns an instance of the class"""
 
-class SerializationStore:
+class SerializationStore(Object):
     """ Provides the base class for storing serialization data for the System.ComponentModel.Design.Serialization.ComponentSerializationService. """
     def Close(self):
         """

@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingImplementation.Receiving calls itself Receiving
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -8,7 +9,7 @@
 # no functions
 # classes
 
-class Receiver:
+class Receiver(Object):
     """ Receiver(lines: InboundReceiveLines, args: DataFlowObject[ReceiveArgs]) """
     def Dispose(self):
         """ Dispose(self: Receiver) """
@@ -210,7 +211,7 @@ class InboundReceiveLineManager():
     Instance = InboundReceiveLineManager()
     """hardcoded/returns an instance of the class"""
 
-class ReceiverFactory:
+class ReceiverFactory(Object):
     """ ReceiverFactory(lines: InboundReceiveLines, dfObject: DataFlowObject[ReceiveArgs]) """
     def CreateReceiver(self):
         """ CreateReceiver(self: ReceiverFactory) -> Receiver """

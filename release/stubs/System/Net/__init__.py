@@ -20,8 +20,8 @@ class AuthenticationManager():
             challenge: The challenge returned by the Internet resource.
             request: The System.Net.WebRequest that initiated the authentication challenge.
             credentials: The System.Net.ICredentials associated with this request.
-            Returns: An instance of the System.Net.Authorization class containing the result of the authorization attempt. If there is no authentication module to respond to the challenge, 
-             this method returns null.
+            Returns: An instance of the System.Net.Authorization class containing the result of the authorization attempt. If there is no authentication module to respond to the challenge, this 
+             method returns null.
         """
         pass
 
@@ -69,7 +69,7 @@ class AuthenticationManager():
     Instance = AuthenticationManager()
     """hardcoded/returns an instance of the class"""
 
-class AuthenticationSchemes:
+class AuthenticationSchemes(Object):
     """
     Specifies protocols for authentication.
     
@@ -147,8 +147,8 @@ class AuthenticationSchemeSelector(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -178,8 +178,8 @@ class AuthenticationSchemeSelector(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -283,8 +283,8 @@ class BindIPEndPoint(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -314,8 +314,8 @@ class BindIPEndPoint(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -351,8 +351,8 @@ class Cookie():
         
             comparand: A reference to a System.Net.Cookie.
             Returns: Returns true if the System.Net.Cookie is equal to comparand. Two System.Net.Cookie instances are equal if their System.Net.Cookie.Name, System.Net.Cookie.Value, 
-             System.Net.Cookie.Path, System.Net.Cookie.Domain, and System.Net.Cookie.Version properties are equal. System.Net.Cookie.Name and System.Net.Cookie.Domain string 
-             comparisons are case-insensitive.
+             System.Net.Cookie.Path, System.Net.Cookie.Domain, and System.Net.Cookie.Version properties are equal. System.Net.Cookie.Name and System.Net.Cookie.Domain string comparisons are 
+             case-insensitive.
         """
         pass
 
@@ -506,7 +506,7 @@ Set: Version(self: Cookie) = value
     Instance = Cookie()
     """hardcoded/returns an instance of the class"""
 
-class CookieCollection:
+class CookieCollection(Object):
     """
     Provides a collection container for instances of the System.Net.Cookie class.
     
@@ -764,7 +764,7 @@ class CookieException(FormatException):
     Instance = CookieException()
     """hardcoded/returns an instance of the class"""
 
-class CredentialCache:
+class CredentialCache(Object):
     """
     Provides storage for multiple credentials.
     
@@ -773,16 +773,16 @@ class CredentialCache:
     def Add(self, *__args):
         """
         Add(self: CredentialCache, uriPrefix: Uri, authType: str, cred: NetworkCredential)
-            Adds a System.Net.NetworkCredential instance to the credential cache for use with protocols other than SMTP and associates it with a Uniform Resource Identifier (URI) 
-             prefix and authentication protocol.
+            Adds a System.Net.NetworkCredential instance to the credential cache for use with protocols other than SMTP and associates it with a Uniform Resource Identifier (URI) prefix and 
+             authentication protocol.
         
         
             uriPrefix: A System.Uri that specifies the URI prefix of the resources that the credential grants access to.
             authType: The authentication scheme used by the resource named in uriPrefix.
             cred: The System.Net.NetworkCredential to add to the credential cache.
         Add(self: CredentialCache, host: str, port: int, authenticationType: str, credential: NetworkCredential)
-            Adds a System.Net.NetworkCredential instance for use with SMTP to the credential cache and associates it with a host computer, port, and authentication protocol. 
-             Credentials added using this method are valid for SMTP only. This method does not work for HTTP or FTP requests.
+            Adds a System.Net.NetworkCredential instance for use with SMTP to the credential cache and associates it with a host computer, port, and authentication protocol. Credentials 
+             added using this method are valid for SMTP only. This method does not work for HTTP or FTP requests.
         
         
             host: A System.String that identifies the host computer.
@@ -824,9 +824,7 @@ class CredentialCache:
     def Remove(self, *__args):
         """
         Remove(self: CredentialCache, uriPrefix: Uri, authType: str)
-            Deletes a System.Net.NetworkCredential instance from the cache if it is associated with the specified Uniform Resource Identifier (URI) prefix and authentication 
-             protocol.
-        
+            Deletes a System.Net.NetworkCredential instance from the cache if it is associated with the specified Uniform Resource Identifier (URI) prefix and authentication protocol.
         
             uriPrefix: A System.Uri that specifies the URI prefix of the resources that the credential is used for.
             authType: The authentication scheme used by the host named in uriPrefix.
@@ -861,7 +859,7 @@ class CredentialCache:
     Instance = CredentialCache()
     """hardcoded/returns an instance of the class"""
 
-class DecompressionMethods:
+class DecompressionMethods(Object):
     """
     Represents the file compression and decompression encoding format to be used to compress the data received in response to an System.Net.HttpWebRequest.
     
@@ -1280,9 +1278,9 @@ class DnsPermission(CodeAccessPermission):
             Creates a permission instance that is the intersection of the current permission instance and the specified permission instance.
         
             target: The System.Net.DnsPermission instance to intersect with the current instance.
-            Returns: A System.Net.DnsPermission instance that represents the intersection of the current System.Net.DnsPermission instance with the specified System.Net.DnsPermission 
-             instance, or null if the intersection is empty. If both the current instance and target are unrestricted, this method returns a new System.Net.DnsPermission instance 
-             that is unrestricted; otherwise, it returns null.
+            Returns: A System.Net.DnsPermission instance that represents the intersection of the current System.Net.DnsPermission instance with the specified System.Net.DnsPermission instance, or 
+             null if the intersection is empty. If both the current instance and target are unrestricted, this method returns a new System.Net.DnsPermission instance that is unrestricted; 
+             otherwise, it returns null.
         """
         pass
 
@@ -1322,9 +1320,9 @@ class DnsPermission(CodeAccessPermission):
             Creates a permission instance that is the union of the current permission instance and the specified permission instance.
         
             target: The System.Net.DnsPermission instance to combine with the current instance.
-            Returns: A System.Net.DnsPermission instance that represents the union of the current System.Net.DnsPermission instance with the specified System.Net.DnsPermission instance. If 
-             target is null, this method returns a copy of the current instance. If the current instance or target is unrestricted, this method returns a System.Net.DnsPermission 
-             instance that is unrestricted; otherwise, it returns a System.Net.DnsPermission instance that is restricted.
+            Returns: A System.Net.DnsPermission instance that represents the union of the current System.Net.DnsPermission instance with the specified System.Net.DnsPermission instance. If target is 
+             null, this method returns a copy of the current instance. If the current instance or target is unrestricted, this method returns a System.Net.DnsPermission instance that is 
+             unrestricted; otherwise, it returns a System.Net.DnsPermission instance that is restricted.
         """
         pass
 
@@ -1416,8 +1414,8 @@ class DownloadDataCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1447,8 +1445,8 @@ class DownloadDataCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -1514,8 +1512,8 @@ class DownloadProgressChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1545,8 +1543,8 @@ class DownloadProgressChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -1605,8 +1603,8 @@ class DownloadStringCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1636,8 +1634,8 @@ class DownloadStringCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -1864,9 +1862,9 @@ class WebRequest(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2121,9 +2119,9 @@ class FileWebRequest(WebRequest):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2273,9 +2271,9 @@ class WebResponse(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2399,9 +2397,9 @@ class FileWebResponse(WebResponse):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2468,7 +2466,7 @@ Get: ResponseUri(self: FileWebResponse) -> Uri
     Instance = FileWebResponse()
     """hardcoded/returns an instance of the class"""
 
-class FtpStatusCode:
+class FtpStatusCode(Object):
     """
     Specifies the status codes returned for a File Transfer Protocol (FTP) operation.
     
@@ -2638,9 +2636,9 @@ class FtpWebRequest(WebRequest):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2856,9 +2854,9 @@ class FtpWebResponse(WebResponse):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -3000,8 +2998,8 @@ class HttpContinueDelegate(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -3031,8 +3029,8 @@ class HttpContinueDelegate(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -3051,7 +3049,7 @@ class HttpContinueDelegate(MulticastDelegate):
     Instance = HttpContinueDelegate()
     """hardcoded/returns an instance of the class"""
 
-class HttpListener:
+class HttpListener(Object):
     """
     Provides a simple, programmatically controlled HTTP protocol listener. This class cannot be inherited.
     
@@ -3343,7 +3341,7 @@ Get: ErrorCode(self: HttpListenerException) -> int
     Instance = HttpListenerException()
     """hardcoded/returns an instance of the class"""
 
-class HttpListenerPrefixCollection:
+class HttpListenerPrefixCollection(Object):
     """ Represents the collection used to store Uniform Resource Identifier (URI) prefixes for System.Net.HttpListener objects. """
     def Add(self, uriPrefix):
         """
@@ -3699,7 +3697,7 @@ Get: UserLanguages(self: HttpListenerRequest) -> Array[str]
     Instance = HttpListenerRequest()
     """hardcoded/returns an instance of the class"""
 
-class HttpListenerResponse:
+class HttpListenerResponse(Object):
     """ Represents a response to a request being handled by an System.Net.HttpListener object. """
     def Abort(self):
         """
@@ -3933,7 +3931,7 @@ Set: RequestQueue(self: HttpListenerTimeoutManager) = value
     Instance = HttpListenerTimeoutManager()
     """hardcoded/returns an instance of the class"""
 
-class HttpRequestHeader:
+class HttpRequestHeader(Object):
     """
     The HTTP headers that may be specified in a client request.
     
@@ -4018,7 +4016,7 @@ class HttpRequestHeader:
     Instance = HttpRequestHeader()
     """hardcoded/returns an instance of the class"""
 
-class HttpResponseHeader:
+class HttpResponseHeader(Object):
     """
     The HTTP headers that can be specified in a server response.
     
@@ -4092,7 +4090,7 @@ class HttpResponseHeader:
     Instance = HttpResponseHeader()
     """hardcoded/returns an instance of the class"""
 
-class HttpStatusCode:
+class HttpStatusCode(Object):
     """
     Contains the values of status codes defined for HTTP.
     
@@ -4343,9 +4341,9 @@ class HttpWebRequest(WebRequest):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -4754,9 +4752,9 @@ class HttpWebResponse(WebResponse):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -5024,8 +5022,8 @@ class ICredentialsByHost:
             host: The host computer that is authenticating the client.
             port: The port on host that the client will communicate with.
             authenticationType: The authentication protocol.
-            Returns: A System.Net.NetworkCredential for the specified host, port, and authentication protocol, or null if there are no credentials available for the specified host, port, 
-             and authentication protocol.
+            Returns: A System.Net.NetworkCredential for the specified host, port, and authentication protocol, or null if there are no credentials available for the specified host, port, and 
+             authentication protocol.
         """
         pass
 
@@ -5494,7 +5492,7 @@ class IWebRequestCreate:
     Instance = IWebRequestCreate()
     """hardcoded/returns an instance of the class"""
 
-class NetworkAccess:
+class NetworkAccess(Object):
     """
     Specifies network access permissions.
     
@@ -5540,7 +5538,7 @@ class NetworkAccess:
     Instance = NetworkAccess()
     """hardcoded/returns an instance of the class"""
 
-class NetworkCredential:
+class NetworkCredential(Object):
     """
     Provides credentials for password-based authentication schemes such as basic, digest, NTLM, and Kerberos authentication.
     
@@ -5566,8 +5564,8 @@ class NetworkCredential:
             host: The host computer that authenticates the client.
             port: The port on the host that the client communicates with.
             authenticationType: The type of authentication requested, as defined in the System.Net.IAuthenticationModule.AuthenticationType property.
-            Returns: A System.Net.NetworkCredential for the specified host, port, and authentication protocol, or null if there are no credentials available for the specified host, port, 
-             and authentication protocol.
+            Returns: A System.Net.NetworkCredential for the specified host, port, and authentication protocol, or null if there are no credentials available for the specified host, port, and 
+             authentication protocol.
         """
         pass
 
@@ -5666,8 +5664,8 @@ class OpenReadCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -5697,8 +5695,8 @@ class OpenReadCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -5757,8 +5755,8 @@ class OpenWriteCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -5788,8 +5786,8 @@ class OpenWriteCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -5808,7 +5806,7 @@ class OpenWriteCompletedEventHandler(MulticastDelegate):
     Instance = OpenWriteCompletedEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class ProtocolViolationException:
+class ProtocolViolationException(Object):
     """
     The exception that is thrown when an error is made while using a network protocol.
     
@@ -5849,7 +5847,7 @@ class ProtocolViolationException:
     Instance = ProtocolViolationException()
     """hardcoded/returns an instance of the class"""
 
-class SecurityProtocolType:
+class SecurityProtocolType(Object):
     """
     Specifies the security protocols that are supported by the Schannel security package.
     
@@ -5916,14 +5914,14 @@ class ServicePoint():
         SetTcpKeepAlive(self: ServicePoint, enabled: bool, keepAliveTime: int, keepAliveInterval: int)
             Enables or disables the keep-alive option on a TCP connection.
         
-            enabled: If set to true, then the TCP keep-alive option on a TCP connection will be enabled using the specified keepAliveTime and keepAliveInterval values. If set to false, 
-             then the TCP keep-alive option is disabled and the remaining parameters are ignored.The default value is false.
+            enabled: If set to true, then the TCP keep-alive option on a TCP connection will be enabled using the specified keepAliveTime and keepAliveInterval values. If set to false, then the TCP 
+             keep-alive option is disabled and the remaining parameters are ignored.The default value is false.
         
-            keepAliveTime: Specifies the timeout, in milliseconds, with no activity until the first keep-alive packet is sent. The value must be greater than 0.  If a value of less than or equal 
-             to zero is passed an System.ArgumentOutOfRangeException is thrown.
+            keepAliveTime: Specifies the timeout, in milliseconds, with no activity until the first keep-alive packet is sent. The value must be greater than 0.  If a value of less than or equal to zero is 
+             passed an System.ArgumentOutOfRangeException is thrown.
         
-            keepAliveInterval: Specifies the interval, in milliseconds, between when successive keep-alive packets are sent if no acknowledgement is received.The value must be greater than 0.  If a 
-             value of less than or equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
+            keepAliveInterval: Specifies the interval, in milliseconds, between when successive keep-alive packets are sent if no acknowledgement is received.The value must be greater than 0.  If a value of 
+             less than or equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
         """
         pass
 
@@ -6056,9 +6054,7 @@ class ServicePointManager():
             Returns: The System.Net.ServicePoint object that manages communications for the request.
         FindServicePoint(uriString: str, proxy: IWebProxy) -> ServicePoint
         
-            Finds an existing System.Net.ServicePoint object or creates a new System.Net.ServicePoint object to manage communications with the specified Uniform Resource 
-             Identifier (URI).
-        
+            Finds an existing System.Net.ServicePoint object or creates a new System.Net.ServicePoint object to manage communications with the specified Uniform Resource Identifier (URI).
         
             uriString: The URI of the Internet resource to be contacted.
             proxy: The proxy data for this request.
@@ -6079,14 +6075,14 @@ class ServicePointManager():
         SetTcpKeepAlive(enabled: bool, keepAliveTime: int, keepAliveInterval: int)
             Enables or disables the keep-alive option on a TCP connection.
         
-            enabled: If set to true, then the TCP keep-alive option on a TCP connection will be enabled using the specified keepAliveTime and keepAliveInterval values. If set to false, 
-             then the TCP keep-alive option is disabled and the remaining parameters are ignored.The default value is false.
+            enabled: If set to true, then the TCP keep-alive option on a TCP connection will be enabled using the specified keepAliveTime and keepAliveInterval values. If set to false, then the TCP 
+             keep-alive option is disabled and the remaining parameters are ignored.The default value is false.
         
-            keepAliveTime: Specifies the timeout, in milliseconds, with no activity until the first keep-alive packet is sent.The value must be greater than 0.  If a value of less than or equal 
-             to zero is passed an System.ArgumentOutOfRangeException is thrown.
+            keepAliveTime: Specifies the timeout, in milliseconds, with no activity until the first keep-alive packet is sent.The value must be greater than 0.  If a value of less than or equal to zero is 
+             passed an System.ArgumentOutOfRangeException is thrown.
         
-            keepAliveInterval: Specifies the interval, in milliseconds, between when successive keep-alive packets are sent if no acknowledgement is received.The value must be greater than 0.  If a 
-             value of less than or equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
+            keepAliveInterval: Specifies the interval, in milliseconds, between when successive keep-alive packets are sent if no acknowledgement is received.The value must be greater than 0.  If a value of 
+             less than or equal to zero is passed an System.ArgumentOutOfRangeException is thrown.
         """
         pass
 
@@ -6230,8 +6226,8 @@ class SocketPermission(CodeAccessPermission):
             Returns the logical intersection between two System.Net.SocketPermission instances.
         
             target: The System.Net.SocketPermission instance to intersect with the current instance.
-            Returns: The System.Net.SocketPermission instance that represents the intersection of two System.Net.SocketPermission instances. If the intersection is empty, the method 
-             returns null. If the target parameter is a null reference, the method returns null.
+            Returns: The System.Net.SocketPermission instance that represents the intersection of two System.Net.SocketPermission instances. If the intersection is empty, the method returns null. If 
+             the target parameter is a null reference, the method returns null.
         """
         pass
 
@@ -6242,8 +6238,8 @@ class SocketPermission(CodeAccessPermission):
             Determines if the current permission is a subset of the specified permission.
         
             target: A System.Net.SocketPermission that is to be tested for the subset relationship.
-            Returns: If target is null, this method returns true if the current instance defines no permissions; otherwise, false. If target is not null, this method returns true if the 
-             current instance defines a subset of target permissions; otherwise, false.
+            Returns: If target is null, this method returns true if the current instance defines no permissions; otherwise, false. If target is not null, this method returns true if the current 
+             instance defines a subset of target permissions; otherwise, false.
         """
         pass
 
@@ -6272,8 +6268,8 @@ class SocketPermission(CodeAccessPermission):
             Returns the logical union between two System.Net.SocketPermission instances.
         
             target: The System.Net.SocketPermission instance to combine with the current instance.
-            Returns: The System.Net.SocketPermission instance that represents the union of two System.Net.SocketPermission instances. If target parameter is null, it returns a copy of the 
-             current instance.
+            Returns: The System.Net.SocketPermission instance that represents the union of two System.Net.SocketPermission instances. If target parameter is null, it returns a copy of the current 
+             instance.
         """
         pass
 
@@ -6387,8 +6383,8 @@ class TransportContext():
             Retrieves the requested channel binding.
         
             kind: The type of channel binding to retrieve.
-            Returns: The requested System.Security.Authentication.ExtendedProtection.ChannelBinding, or null if the channel binding is not supported by the current transport or by the 
-             operating system.
+            Returns: The requested System.Security.Authentication.ExtendedProtection.ChannelBinding, or null if the channel binding is not supported by the current transport or by the operating 
+             system.
         """
         pass
 
@@ -6399,7 +6395,7 @@ class TransportContext():
     Instance = TransportContext()
     """hardcoded/returns an instance of the class"""
 
-class TransportType:
+class TransportType(Object):
     """
     Defines transport types for the System.Net.SocketPermission and System.Net.Sockets.Socket classes.
     
@@ -6488,8 +6484,8 @@ class UploadDataCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -6519,8 +6515,8 @@ class UploadDataCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -6579,8 +6575,8 @@ class UploadFileCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -6610,8 +6606,8 @@ class UploadFileCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -6691,8 +6687,8 @@ class UploadProgressChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -6722,8 +6718,8 @@ class UploadProgressChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -6782,8 +6778,8 @@ class UploadStringCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -6813,8 +6809,8 @@ class UploadStringCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -6873,8 +6869,8 @@ class UploadValuesCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -6904,8 +6900,8 @@ class UploadValuesCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -7067,8 +7063,7 @@ class WebClient(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
-             specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -7107,9 +7102,9 @@ class WebClient(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -7427,23 +7422,23 @@ class WebClient(Component):
         UploadFileAsync(self: WebClient, address: Uri, fileName: str)
             Uploads the specified local file to the specified resource, using the POST method. This method does not block the calling thread.
         
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a 
-             script or ASP page.
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
         
             fileName: The file to send to the resource.
         UploadFileAsync(self: WebClient, address: Uri, method: str, fileName: str)
             Uploads the specified local file to the specified resource, using the POST method. This method does not block the calling thread.
         
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a 
-             script or ASP page.
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
         
             method: The HTTP method used to send the data to the resource. If null, the default is POST for http and STOR for ftp.
             fileName: The file to send to the resource.
         UploadFileAsync(self: WebClient, address: Uri, method: str, fileName: str, userToken: object)
             Uploads the specified local file to the specified resource, using the POST method. This method does not block the calling thread.
         
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a 
-             script or ASP page.
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
         
             method: The HTTP method used to send the data to the resource. If null, the default is POST for http and STOR for ftp.
             fileName: The file to send to the resource.
@@ -7466,8 +7461,8 @@ class WebClient(Component):
         
             Uploads the specified string to the specified resource, using the POST method.
         
-            address: The URI of the resource to receive the string. For Http resources, this URI must identify a resource that can accept a request sent with the POST method, such as a 
-             script or ASP page.
+            address: The URI of the resource to receive the string. For Http resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
         
             data: The string to be uploaded.
             Returns: A System.String containing the response sent by the server.
@@ -7475,8 +7470,8 @@ class WebClient(Component):
         
             Uploads the specified string to the specified resource, using the POST method.
         
-            address: The URI of the resource to receive the string. For Http resources, this URI must identify a resource that can accept a request sent with the POST method, such as a 
-             script or ASP page.
+            address: The URI of the resource to receive the string. For Http resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
         
             data: The string to be uploaded.
             Returns: A System.String containing the response sent by the server.
@@ -7504,23 +7499,23 @@ class WebClient(Component):
         UploadStringAsync(self: WebClient, address: Uri, data: str)
             Uploads the specified string to the specified resource. This method does not block the calling thread.
         
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a 
-             script or ASP page.
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
         
             data: The string to be uploaded.
         UploadStringAsync(self: WebClient, address: Uri, method: str, data: str)
             Uploads the specified string to the specified resource. This method does not block the calling thread.
         
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a 
-             script or ASP page.
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
         
             method: The HTTP method used to send the file to the resource. If null, the default is POST for http and STOR for ftp.
             data: The string to be uploaded.
         UploadStringAsync(self: WebClient, address: Uri, method: str, data: str, userToken: object)
             Uploads the specified string to the specified resource. This method does not block the calling thread.
         
-            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a 
-             script or ASP page.
+            address: The URI of the resource to receive the file. For HTTP resources, this URI must identify a resource that can accept a request sent with the POST method, such as a script or ASP 
+             page.
         
             method: The HTTP method used to send the file to the resource. If null, the default is POST for http and STOR for ftp.
             data: The string to be uploaded.
@@ -7580,16 +7575,14 @@ class WebClient(Component):
             address: The URI of the resource to receive the collection. This URI must identify a resource that can accept a request sent with the default method. See remarks.
             data: The System.Collections.Specialized.NameValueCollection to send to the resource.
         UploadValuesAsync(self: WebClient, address: Uri, method: str, data: NameValueCollection)
-            Uploads the data in the specified name/value collection to the resource identified by the specified URI, using the specified method. This method does not block the 
-             calling thread.
-        
+            Uploads the data in the specified name/value collection to the resource identified by the specified URI, using the specified method. This method does not block the calling thread.
         
             address: The URI of the resource to receive the collection. This URI must identify a resource that can accept a request sent with the method method.
             method: The method used to send the string to the resource. If null, the default is POST for http and STOR for ftp.
             data: The System.Collections.Specialized.NameValueCollection to send to the resource.
         UploadValuesAsync(self: WebClient, address: Uri, method: str, data: NameValueCollection, userToken: object)
-            Uploads the data in the specified name/value collection to the resource identified by the specified URI, using the specified method. This method does not block the 
-             calling thread, and allows the caller to pass an object to the method that is invoked when the operation completes.
+            Uploads the data in the specified name/value collection to the resource identified by the specified URI, using the specified method. This method does not block the calling 
+             thread, and allows the caller to pass an object to the method that is invoked when the operation completes.
         
         
             address: The URI of the resource to receive the collection. This URI must identify a resource that can accept a request sent with the method method.
@@ -7745,7 +7738,7 @@ Set: UseDefaultCredentials(self: WebClient) = value
     Instance = WebClient()
     """hardcoded/returns an instance of the class"""
 
-class WebException:
+class WebException(Object):
     """
     The exception that is thrown when an error occurs while accessing the network through a pluggable protocol.
     
@@ -7807,7 +7800,7 @@ Get: Status(self: WebException) -> WebExceptionStatus
     Instance = WebException()
     """hardcoded/returns an instance of the class"""
 
-class WebExceptionStatus:
+class WebExceptionStatus(Object):
     """
     Defines status codes for the System.Net.WebException class.
     
@@ -8011,8 +8004,8 @@ class WebHeaderCollection(NameValueCollection):
     def BaseSet(self, *args): #cannot find CLR method
         """
         BaseSet(self: NameObjectCollectionBase, name: str, value: object)
-            Sets the value of the first entry with the specified key in the System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, adds an entry 
-             with the specified key and value into the System.Collections.Specialized.NameObjectCollectionBase instance.
+            Sets the value of the first entry with the specified key in the System.Collections.Specialized.NameObjectCollectionBase instance, if found; otherwise, adds an entry with the 
+             specified key and value into the System.Collections.Specialized.NameObjectCollectionBase instance.
         
         
             name: The System.String key of the entry to set. The key can be null.
@@ -8314,8 +8307,8 @@ class WebPermission(CodeAccessPermission):
             Determines whether the current System.Net.WebPermission is a subset of the specified object.
         
             target: The System.Net.WebPermission to compare to the current System.Net.WebPermission.
-            Returns: true if the current instance is a subset of the target parameter; otherwise, false. If the target is null, the method returns true for an empty current permission that 
-             is not unrestricted and false otherwise.
+            Returns: true if the current instance is a subset of the target parameter; otherwise, false. If the target is null, the method returns true for an empty current permission that is not 
+             unrestricted and false otherwise.
         """
         pass
 
@@ -8324,8 +8317,7 @@ class WebPermission(CodeAccessPermission):
         IsUnrestricted(self: WebPermission) -> bool
         
             Checks the overall permission state of the System.Net.WebPermission.
-            Returns: true if the System.Net.WebPermission was created with the System.Security.Permissions.PermissionState.UnrestrictedSystem.Security.Permissions.PermissionState; 
-             otherwise, false.
+            Returns: true if the System.Net.WebPermission was created with the System.Security.Permissions.PermissionState.UnrestrictedSystem.Security.Permissions.PermissionState; otherwise, false.
         """
         pass
 
@@ -8346,8 +8338,8 @@ class WebPermission(CodeAccessPermission):
         
             target: The System.Net.WebPermission to combine with the current System.Net.WebPermission.
             Returns: A System.Net.WebPermission that represents the union of the current instance and the target parameter. If either WebPermission is 
-             System.Security.Permissions.PermissionState.Unrestricted, the method returns a System.Net.WebPermission that is 
-             System.Security.Permissions.PermissionState.Unrestricted. If the target is null, the method returns a copy of the current System.Net.WebPermission.
+             System.Security.Permissions.PermissionState.Unrestricted, the method returns a System.Net.WebPermission that is System.Security.Permissions.PermissionState.Unrestricted. If the 
+             target is null, the method returns a copy of the current System.Net.WebPermission.
         """
         pass
 
@@ -8452,7 +8444,7 @@ Set: ConnectPattern(self: WebPermissionAttribute) = value
     Instance = WebPermissionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class WebProxy:
+class WebProxy(Object):
     """
     Contains HTTP proxy settings for the System.Net.WebRequest class.
     
@@ -8704,8 +8696,8 @@ class WriteStreamClosedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -8735,8 +8727,8 @@ class WriteStreamClosedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 

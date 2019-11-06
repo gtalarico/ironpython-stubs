@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingImplementation.Caching.Removal calls itself Removal
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -80,7 +81,7 @@ class CachedRmaReceiveLinesRemovalHandler(CacheObjectRemovalHandlerBase):
     Instance = CachedRmaReceiveLinesRemovalHandler()
     """hardcoded/returns an instance of the class"""
 
-class CacheObjectRemovalHandlerBase:
+class CacheObjectRemovalHandlerBase(Object):
     # no doc
     def Handle(self, cachable):
         """ Handle(self: CacheObjectRemovalHandlerBase[T], cachable: object)Handle(self: CacheObjectRemovalHandlerBase[T], cachable: T) """

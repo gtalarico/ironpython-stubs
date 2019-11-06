@@ -1,8 +1,10 @@
-from Wms.RemotingObjects.Inbound import *
-from Wms.RemotingObjects import *
+from Wms.RemotingObjects.Inbound import ReceiveArgs
+from Wms.RemotingObjects.Inbound import ReceiveItemIdMultiArgs
+from Wms.RemotingObjects import FindableList
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingObjects.Rma calls itself Rma
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -218,7 +220,7 @@ Set: WarehouseCode(self: GetRmaOrderLinesArgs) = value
     Instance = GetRmaOrderLinesArgs()
     """hardcoded/returns an instance of the class"""
 
-class RmaOrder:
+class RmaOrder(Object):
     """
     Represents a single RMA order. Contains all general information of a purchase order.
                 
@@ -381,7 +383,7 @@ Set: YourReference(self: HistoryRmaOrder) = value
     Instance = HistoryRmaOrder()
     """hardcoded/returns an instance of the class"""
 
-class RmaOrderLine:
+class RmaOrderLine(Object):
     """
     Represents a single order line of a RMA order.
     
@@ -752,7 +754,7 @@ class RmaOrderArgs():
     Instance = RmaOrderArgs()
     """hardcoded/returns an instance of the class"""
 
-class RmaOrderLines:
+class RmaOrderLines(Object):
     """
     Container for the Wms.RemotingObjects.Rma.RmaOrderLine objects.
     
@@ -788,7 +790,7 @@ class RmaOrderLines:
     Instance = RmaOrderLines()
     """hardcoded/returns an instance of the class"""
 
-class RmaOrders:
+class RmaOrders(Object):
     """ RmaOrders() """
     def GetCacheKey(self):
         """ GetCacheKey(self: RmaOrders) -> int """
@@ -891,7 +893,7 @@ class RmaReasons(FindableList):
     Instance = RmaReasons()
     """hardcoded/returns an instance of the class"""
 
-class RmaReceiveLine:
+class RmaReceiveLine(Object):
     """ RmaReceiveLine() """
     def Clone(self):
         """ Clone(self: RmaReceiveLine) -> object """
@@ -981,7 +983,7 @@ Get: SalesOrderAsDescription(self: RmaReceiveLine) -> str
     Instance = RmaReceiveLine()
     """hardcoded/returns an instance of the class"""
 
-class RmaReceiveLines:
+class RmaReceiveLines(Object):
     """
     RmaReceiveLines()
     RmaReceiveLines(compareHistoryOrderNumbers: bool)

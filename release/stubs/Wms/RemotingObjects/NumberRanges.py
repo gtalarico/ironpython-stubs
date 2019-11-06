@@ -1,7 +1,8 @@
-from Wms.RemotingObjects import *
+from Wms.RemotingObjects import DbObject
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingObjects.NumberRanges calls itself NumberRanges
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -329,7 +330,7 @@ Set: To(self: NumberRange) = value
     Instance = NumberRange()
     """hardcoded/returns an instance of the class"""
 
-class NumberRangeType:
+class NumberRangeType(Object):
     """ enum NumberRangeType, values: PickBatch (2), Regular (0), SSCC (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

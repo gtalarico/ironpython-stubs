@@ -1,7 +1,7 @@
-from Wms.RemotingImplementation import *
+from Wms.RemotingImplementation import DataSet
 # encoding: utf-8
 # module Wms.RemotingImplementation.Properties.DataSources calls itself DataSources
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -21,11 +21,11 @@ class DataSetPickListPtP(DataSet):
         
             Determines the System.Data.DataSet.SchemaSerializationMode for a System.Data.DataSet.
         
-                     System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext) is invoked with during deserialization in 
-             remoting scenarios.
+                     System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext) is invoked with during deserialization in remoting 
+             scenarios.
         
-                     System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext) is invoked with during deserialization in 
-             remoting scenarios.
+                     System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext) is invoked with during deserialization in remoting 
+             scenarios.
         
             Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema information has been omitted from the payload.
         DetermineSchemaSerializationMode(self: DataSet, reader: XmlReader) -> SchemaSerializationMode

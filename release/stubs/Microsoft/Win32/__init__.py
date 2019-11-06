@@ -8,7 +8,7 @@
 # no functions
 # classes
 
-class IntranetZoneCredentialPolicy:
+class IntranetZoneCredentialPolicy(Object):
     """
     Defines a credential policy to be used for resource requests that are made using System.Net.WebRequest and its derived classes.
     
@@ -88,8 +88,8 @@ class PowerModeChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -119,8 +119,8 @@ class PowerModeChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -139,7 +139,7 @@ class PowerModeChangedEventHandler(MulticastDelegate):
     Instance = PowerModeChangedEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class PowerModes:
+class PowerModes(Object):
     """
     Defines identifiers for power mode events reported by the operating system.
     
@@ -193,8 +193,8 @@ class Registry():
         """
         GetValue(keyName: str, valueName: str, defaultValue: object) -> object
         
-            Retrieves the value associated with the specified name, in the specified registry key. If the name is not found in the specified key, returns a default value that you 
-             provide, or null if the specified key does not exist.
+            Retrieves the value associated with the specified name, in the specified registry key. If the name is not found in the specified key, returns a default value that you provide, or 
+             null if the specified key does not exist.
         
         
             keyName: The full registry path of the key, beginning with a valid registry root, such as "HKEY_CURRENT_USER".
@@ -245,7 +245,7 @@ class Registry():
     Instance = Registry()
     """hardcoded/returns an instance of the class"""
 
-class RegistryHive:
+class RegistryHive(Object):
     """
     Represents the possible values for a top-level node on a foreign machine.
     
@@ -360,8 +360,8 @@ class RegistryKey(MarshalByRefObject):
             Deletes the specified subkey, and specifies whether an exception is raised if the subkey is not found.
         
             subkey: The name of the subkey to delete. This string is not case-sensitive.
-            throwOnMissingSubKey: Indicates whether an exception should be raised if the specified subkey cannot be found. If this argument is true and the specified subkey does not exist, an exception 
-             is raised. If this argument is false and the specified subkey does not exist, no action is taken.
+            throwOnMissingSubKey: Indicates whether an exception should be raised if the specified subkey cannot be found. If this argument is true and the specified subkey does not exist, an exception is raised. 
+             If this argument is false and the specified subkey does not exist, no action is taken.
         """
         pass
 
@@ -375,8 +375,8 @@ class RegistryKey(MarshalByRefObject):
             Deletes the specified subkey and any child subkeys recursively, and specifies whether an exception is raised if the subkey is not found.
         
             subkey: The name of the subkey to delete. This string is not case-sensitive.
-            throwOnMissingSubKey: Indicates whether an exception should be raised if the specified subkey cannot be found. If this argument is true and the specified subkey does not exist, an exception 
-             is raised. If this argument is false and the specified subkey does not exist, no action is taken.
+            throwOnMissingSubKey: Indicates whether an exception should be raised if the specified subkey cannot be found. If this argument is true and the specified subkey does not exist, an exception is raised. 
+             If this argument is false and the specified subkey does not exist, no action is taken.
         """
         pass
 
@@ -390,8 +390,8 @@ class RegistryKey(MarshalByRefObject):
             Deletes the specified value from this key, and specifies whether an exception is raised if the value is not found.
         
             name: The name of the value to delete.
-            throwOnMissingValue: Indicates whether an exception should be raised if the specified value cannot be found. If this argument is true and the specified value does not exist, an exception 
-             is raised. If this argument is false and the specified value does not exist, no action is taken.
+            throwOnMissingValue: Indicates whether an exception should be raised if the specified value cannot be found. If this argument is true and the specified value does not exist, an exception is raised. 
+             If this argument is false and the specified value does not exist, no action is taken.
         """
         pass
 
@@ -504,9 +504,9 @@ class RegistryKey(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -672,7 +672,7 @@ Get: View(self: RegistryKey) -> RegistryView
     Instance = RegistryKey()
     """hardcoded/returns an instance of the class"""
 
-class RegistryKeyPermissionCheck:
+class RegistryKeyPermissionCheck(Object):
     """
     Specifies whether security checks are performed when opening registry keys and accessing their name/value pairs.
     
@@ -719,7 +719,7 @@ class RegistryKeyPermissionCheck:
     Instance = RegistryKeyPermissionCheck()
     """hardcoded/returns an instance of the class"""
 
-class RegistryOptions:
+class RegistryOptions(Object):
     """
     Specifies options to use when creating a registry key.
     
@@ -765,7 +765,7 @@ class RegistryOptions:
     Instance = RegistryOptions()
     """hardcoded/returns an instance of the class"""
 
-class RegistryValueKind:
+class RegistryValueKind(Object):
     """
     Specifies the data types to use when storing values in the registry, or identifies the data type of a value in the registry.
     
@@ -817,7 +817,7 @@ class RegistryValueKind:
     Instance = RegistryValueKind()
     """hardcoded/returns an instance of the class"""
 
-class RegistryValueOptions:
+class RegistryValueOptions(Object):
     """
     Specifies optional behavior when retrieving name/value pairs from a registry key.
     
@@ -863,7 +863,7 @@ class RegistryValueOptions:
     Instance = RegistryValueOptions()
     """hardcoded/returns an instance of the class"""
 
-class RegistryView:
+class RegistryView(Object):
     """
     Specifies which registry view to target on a 64-bit operating system.
     
@@ -959,8 +959,8 @@ class SessionEndedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -990,8 +990,8 @@ class SessionEndedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -1067,8 +1067,8 @@ class SessionEndingEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1098,8 +1098,8 @@ class SessionEndingEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -1118,7 +1118,7 @@ class SessionEndingEventHandler(MulticastDelegate):
     Instance = SessionEndingEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class SessionEndReasons:
+class SessionEndReasons(Object):
     """
     Defines identifiers that represent how the current logon session is ending.
     
@@ -1213,8 +1213,8 @@ class SessionSwitchEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1244,8 +1244,8 @@ class SessionSwitchEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -1264,7 +1264,7 @@ class SessionSwitchEventHandler(MulticastDelegate):
     Instance = SessionSwitchEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class SessionSwitchReason:
+class SessionSwitchReason(Object):
     """
     Defines identifiers used to represent the type of a session switch event.
     
@@ -1418,8 +1418,8 @@ class TimerElapsedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1449,8 +1449,8 @@ class TimerElapsedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -1469,7 +1469,7 @@ class TimerElapsedEventHandler(MulticastDelegate):
     Instance = TimerElapsedEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class UserPreferenceCategory:
+class UserPreferenceCategory(Object):
     """
     Defines identifiers that represent categories of user preferences.
     
@@ -1576,8 +1576,8 @@ class UserPreferenceChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1607,8 +1607,8 @@ class UserPreferenceChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -1676,8 +1676,8 @@ class UserPreferenceChangingEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1707,8 +1707,8 @@ class UserPreferenceChangingEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 

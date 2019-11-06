@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingObjects.BatchPacking calls itself BatchPacking
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -34,7 +35,7 @@ class ItemPackScanArgs():
     Instance = ItemPackScanArgs()
     """hardcoded/returns an instance of the class"""
 
-class MoveAction:
+class MoveAction(Object):
     """ enum MoveAction, values: Ignore (0), MoveBetweenColli (3), Pack (1), Unpack (2) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -79,7 +80,18 @@ class MoveAction:
     """hardcoded/returns an instance of the class"""
 
 class MoveTransportItemsBetweenTransportPackagesArgs():
-    """ MoveTransportItemsBetweenTransportPackagesArgs() """
+    """
+    MoveTransportItemsBetweenTransportPackagesArgs()
+    MoveTransportItemsBetweenTransportPackagesArgs(moveArgs: MoveTransportPackageItemsArgs, itemsToPackArgs: GetItemsToPackArgs)
+    """
+    @staticmethod # known case of __new__
+    def __new__(self, moveArgs=None, itemsToPackArgs=None):
+        """
+        __new__(cls: type)
+        __new__(cls: type, moveArgs: MoveTransportPackageItemsArgs, itemsToPackArgs: GetItemsToPackArgs)
+        """
+        pass
+
     Action = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Action(self: MoveTransportItemsBetweenTransportPackagesArgs) -> MoveAction
 
@@ -115,48 +127,51 @@ Set: MoveArgs(self: MoveTransportItemsBetweenTransportPackagesArgs) = value
     """hardcoded/returns an instance of the class"""
 
 class MoveTransportPackageItemsArgs():
-    """ MoveTransportPackageItemsArgs() """
+    """
+    MoveTransportPackageItemsArgs()
+    MoveTransportPackageItemsArgs(cacheKey: CacheKey, fromBoxGuid: Guid, toBoxGuid: Guid)
+    MoveTransportPackageItemsArgs(cacheKey: CacheKey, fromBoxGuid: Guid, toBoxGuid: Guid, transportItems: TransportItems)
+    """
     @staticmethod
     def Validate(args):
         """ Validate(args: MoveTransportPackageItemsArgs) """
         pass
 
+    @staticmethod # known case of __new__
+    def __new__(self, cacheKey=None, fromBoxGuid=None, toBoxGuid=None, transportItems=None):
+        """
+        __new__(cls: type)
+        __new__(cls: type, cacheKey: CacheKey, fromBoxGuid: Guid, toBoxGuid: Guid)
+        __new__(cls: type, cacheKey: CacheKey, fromBoxGuid: Guid, toBoxGuid: Guid, transportItems: TransportItems)
+        """
+        pass
+
     CacheKey = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: CacheKey(self: MoveTransportPackageItemsArgs) -> CacheKey
+    """Get: CacheKey(self: MoveTransportPackageItemsArgs) -> CacheKey
 
 Set: CacheKey(self: MoveTransportPackageItemsArgs) = value
 """
 
     FromBoxGuid = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: FromBoxGuid(self: MoveTransportPackageItemsArgs) -> Guid
+    """Get: FromBoxGuid(self: MoveTransportPackageItemsArgs) -> Guid
 
 Set: FromBoxGuid(self: MoveTransportPackageItemsArgs) = value
 """
 
     OrderNumber = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: OrderNumber(self: MoveTransportPackageItemsArgs) -> str
+    """Get: OrderNumber(self: MoveTransportPackageItemsArgs) -> str
 
 Set: OrderNumber(self: MoveTransportPackageItemsArgs) = value
 """
 
     ToBoxGuid = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: ToBoxGuid(self: MoveTransportPackageItemsArgs) -> Guid
+    """Get: ToBoxGuid(self: MoveTransportPackageItemsArgs) -> Guid
 
 Set: ToBoxGuid(self: MoveTransportPackageItemsArgs) = value
 """
 
     TransportItems = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: TransportItems(self: MoveTransportPackageItemsArgs) -> TransportItems
+    """Get: TransportItems(self: MoveTransportPackageItemsArgs) -> TransportItems
 
 Set: TransportItems(self: MoveTransportPackageItemsArgs) = value
 """
@@ -211,7 +226,7 @@ Set: ScanResult(self: ScanItemPackArgsResult) = value
     Instance = ScanItemPackArgsResult()
     """hardcoded/returns an instance of the class"""
 
-class ScanItemPackResultType:
+class ScanItemPackResultType(Object):
     """ enum ScanItemPackResultType, values: InnerReference (1), Item (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -253,7 +268,7 @@ class ScanItemPackResultType:
     Instance = ScanItemPackResultType()
     """hardcoded/returns an instance of the class"""
 
-class TransportPackageScanEnum:
+class TransportPackageScanEnum(Object):
     """ enum TransportPackageScanEnum, values: None (0), Serial (2), SSCC (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

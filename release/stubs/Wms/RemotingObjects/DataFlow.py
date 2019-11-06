@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingObjects.DataFlow calls itself DataFlow
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -8,7 +9,7 @@
 # no functions
 # classes
 
-class DataFlowObject:
+class DataFlowObject(Object):
     """
     DataFlowObject[T]()
     DataFlowObject[T](subject: T)
@@ -121,7 +122,7 @@ Set: Warnings(self: DataFlowObject[T]) = value
     Instance = DataFlowObject()
     """hardcoded/returns an instance of the class"""
 
-class DataFlowResultEnum:
+class DataFlowResultEnum(Object):
     """
     Result types of Wms.RemotingObjects.DataFlow object.
     

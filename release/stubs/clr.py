@@ -216,7 +216,7 @@ class ArgChecker():
     Instance = ArgChecker()
     """hardcoded/returns an instance of the class"""
 
-class StrongBox:
+class StrongBox(Object):
     """
     StrongBox[T]()
     StrongBox[T](value: T)

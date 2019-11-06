@@ -316,6 +316,11 @@
             ]
         ]
     }, 
+    "DebugMessage": {
+        "Callback": [
+            []
+        ]
+    }, 
     "INotificationCenter": {
         "MarkAsRead": [
             [
@@ -4889,6 +4894,18 @@
             ]
         ]
     }, 
+    "ItemIdentificationNumberValidator": {
+        "Validate": [
+            [
+                "IValidatableItemIdentificationNumber", 
+                "List"
+            ], 
+            [
+                "IValidatableItemIdentificationNumber", 
+                "str"
+            ]
+        ]
+    }, 
     "Batches": {
         "GetPackableBatches": [
             [
@@ -8819,6 +8836,18 @@
             []
         ]
     }, 
+    "IItemIdentificationNumberValidator": {
+        "Validate": [
+            [
+                "IValidatableItemIdentificationNumber", 
+                "List"
+            ], 
+            [
+                "IValidatableItemIdentificationNumber", 
+                "str"
+            ]
+        ]
+    }, 
     "ConsoleCancelEventHandler": {
         "EndInvoke": [
             [
@@ -9422,18 +9451,16 @@
             []
         ]
     }, 
-    "ICentralAuthoritySystem": {
-        "WaitStartGooglePubSubServicesUntilValidServerHealth": [
-            []
+    "DebugMessageHandler": {
+        "Handle": [
+            [
+                "IMessage"
+            ]
         ], 
-        "StartRemotePublishingInboundListener": [
-            []
-        ], 
-        "StartBosInboundListener": [
-            []
-        ], 
-        "RestartGooglePubSubServices": [
-            []
+        "CanHandle": [
+            [
+                "IMessage"
+            ]
         ]
     }, 
     "Predicate": {
@@ -9503,6 +9530,20 @@
             [
                 "IMessage"
             ]
+        ]
+    }, 
+    "ICentralAuthoritySystem": {
+        "WaitStartGooglePubSubServicesUntilValidServerHealth": [
+            []
+        ], 
+        "StartRemotePublishingInboundListener": [
+            []
+        ], 
+        "StartBosInboundListener": [
+            []
+        ], 
+        "RestartGooglePubSubServices": [
+            []
         ]
     }, 
     "MarshalByRefObject": {
@@ -11849,8 +11890,8 @@
     "ItemLocationComparer": {
         "Compare": [
             [
-                "ItemLocation", 
-                "ItemLocation"
+                "IComparableItemLocation", 
+                "IComparableItemLocation"
             ]
         ]
     }, 
@@ -12144,7 +12185,7 @@
     "Messaging": {
         "ChangeMessagesStatus": [
             [
-                "List", 
+                "IEnumerable", 
                 "MessageStatus"
             ]
         ], 
@@ -12216,7 +12257,7 @@
         ], 
         "ReissueMessages": [
             [
-                "List"
+                "IEnumerable"
             ]
         ], 
         "StartMessageQueueListener": [
@@ -31448,6 +31489,49 @@
             []
         ]
     }, 
+    "ICache": {
+        "FlushAll": [
+            [
+                "str"
+            ]
+        ], 
+        "Increment": [
+            [
+                "str", 
+                "str", 
+                "UInt32"
+            ]
+        ], 
+        "Decrement": [
+            [
+                "str", 
+                "str", 
+                "UInt32"
+            ]
+        ], 
+        "GetAllKeys": [
+            [
+                "str"
+            ]
+        ], 
+        "TryRemove": [
+            [
+                "str", 
+                "str"
+            ]
+        ], 
+        "Count": [
+            [
+                "str"
+            ]
+        ], 
+        "RemoveAll": [
+            [
+                "str", 
+                "IEnumerable"
+            ]
+        ]
+    }, 
     "PurchaseOrders_GetHistoryLinesTableAdapter": {
         "GetData": [
             [
@@ -31673,6 +31757,11 @@
         "GetHistoryShipment": [
             [
                 "HistoryShipment"
+            ]
+        ], 
+        "PrintSalesOrderReports": [
+            [
+                "List"
             ]
         ], 
         "PutItemIdBackFromBatch": [
@@ -38025,7 +38114,7 @@
     "IMessaging": {
         "ChangeMessagesStatus": [
             [
-                "List", 
+                "IEnumerable", 
                 "MessageStatus"
             ]
         ], 
@@ -38094,7 +38183,7 @@
         ], 
         "ReissueMessages": [
             [
-                "List"
+                "IEnumerable"
             ]
         ], 
         "CreateMessage": [

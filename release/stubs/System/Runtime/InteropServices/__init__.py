@@ -67,7 +67,7 @@ class _Attribute:
     Instance = _Attribute()
     """hardcoded/returns an instance of the class"""
 
-class AllowReversePInvokeCallsAttribute:
+class AllowReversePInvokeCallsAttribute(Object):
     """
     Allows an unmanaged method to call a managed method.
     
@@ -80,7 +80,7 @@ class AllowReversePInvokeCallsAttribute:
     Instance = AllowReversePInvokeCallsAttribute()
     """hardcoded/returns an instance of the class"""
 
-class Architecture:
+class Architecture(Object):
     """ enum Architecture, values: Arm (2), Arm64 (3), X64 (1), X86 (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -193,7 +193,7 @@ class ArrayWithOffset():
     Instance = ArrayWithOffset()
     """hardcoded/returns an instance of the class"""
 
-class AssemblyRegistrationFlags:
+class AssemblyRegistrationFlags(Object):
     """
     Defines a set of flags used when registering assemblies.
     
@@ -239,7 +239,7 @@ class AssemblyRegistrationFlags:
     Instance = AssemblyRegistrationFlags()
     """hardcoded/returns an instance of the class"""
 
-class AutomationProxyAttribute:
+class AutomationProxyAttribute(Object):
     """
     Specifies whether the type should be marshaled using the Automation marshaler or a custom proxy and stub.
     
@@ -265,7 +265,7 @@ Get: Value(self: AutomationProxyAttribute) -> bool
     Instance = AutomationProxyAttribute()
     """hardcoded/returns an instance of the class"""
 
-class BestFitMappingAttribute:
+class BestFitMappingAttribute(Object):
     """
     Controls whether Unicode characters are converted to the closest matching ANSI characters.
     
@@ -338,7 +338,7 @@ Get: WrappedObject(self: BStrWrapper) -> str
     Instance = BStrWrapper()
     """hardcoded/returns an instance of the class"""
 
-class CALLCONV:
+class CALLCONV(Object):
     """
     Use System.Runtime.InteropServices.ComTypes.CALLCONV instead.
     
@@ -392,7 +392,7 @@ class CALLCONV:
     Instance = CALLCONV()
     """hardcoded/returns an instance of the class"""
 
-class CallingConvention:
+class CallingConvention(Object):
     """
     Specifies the calling convention required to call methods implemented in unmanaged code.
     
@@ -441,7 +441,7 @@ class CallingConvention:
     Instance = CallingConvention()
     """hardcoded/returns an instance of the class"""
 
-class CharSet:
+class CharSet(Object):
     """
     Dictates which character set marshaled strings should use.
     
@@ -489,7 +489,7 @@ class CharSet:
     Instance = CharSet()
     """hardcoded/returns an instance of the class"""
 
-class ClassInterfaceAttribute:
+class ClassInterfaceAttribute(Object):
     """
     Indicates the type of class interface to be generated for a class exposed to COM, if an interface is generated at all.
     
@@ -519,7 +519,7 @@ Get: Value(self: ClassInterfaceAttribute) -> ClassInterfaceType
     Instance = ClassInterfaceAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ClassInterfaceType:
+class ClassInterfaceType(Object):
     """
     Identifies the type of class interface that is generated for a class.
     
@@ -566,7 +566,7 @@ class ClassInterfaceType:
     Instance = ClassInterfaceType()
     """hardcoded/returns an instance of the class"""
 
-class CoClassAttribute:
+class CoClassAttribute(Object):
     """
     Specifies the class identifier of a coclass imported from a type library.
     
@@ -592,7 +592,7 @@ Get: CoClass(self: CoClassAttribute) -> Type
     Instance = CoClassAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ComAliasNameAttribute:
+class ComAliasNameAttribute(Object):
     """
     Indicates the COM alias for a parameter or field type.
     
@@ -618,7 +618,7 @@ Get: Value(self: ComAliasNameAttribute) -> str
     Instance = ComAliasNameAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ComCompatibleVersionAttribute:
+class ComCompatibleVersionAttribute(Object):
     """
     Indicates to a COM client that all classes in the current version of an assembly are compatible with classes in an earlier version of the assembly.
     
@@ -665,7 +665,7 @@ Get: RevisionNumber(self: ComCompatibleVersionAttribute) -> int
     Instance = ComCompatibleVersionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ComConversionLossAttribute:
+class ComConversionLossAttribute(Object):
     """
     Indicates that information was lost about a class or interface when it was imported from a type library to an assembly.
     
@@ -678,7 +678,7 @@ class ComConversionLossAttribute:
     Instance = ComConversionLossAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ComDefaultInterfaceAttribute:
+class ComDefaultInterfaceAttribute(Object):
     """
     Specifies a default interface to expose to COM. This class cannot be inherited.
     
@@ -704,7 +704,7 @@ Get: Value(self: ComDefaultInterfaceAttribute) -> Type
     Instance = ComDefaultInterfaceAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ComEventInterfaceAttribute:
+class ComEventInterfaceAttribute(Object):
     """
     Identifies the source interface and the class that implements the methods of the event interface that is generated when a coclass is imported from a COM type library.
     
@@ -841,8 +841,7 @@ class COMException(ExternalException):
         ToString(self: COMException) -> str
         
             Converts the contents of the exception to a string.
-            Returns: A string containing the System.Exception.HResult, System.Exception.Message, System.Exception.InnerException, and System.Exception.StackTrace properties of the 
-             exception.
+            Returns: A string containing the System.Exception.HResult, System.Exception.Message, System.Exception.InnerException, and System.Exception.StackTrace properties of the exception.
         """
         pass
 
@@ -872,7 +871,7 @@ class COMException(ExternalException):
     Instance = COMException()
     """hardcoded/returns an instance of the class"""
 
-class ComImportAttribute:
+class ComImportAttribute(Object):
     """
     Indicates that the attributed type was previously defined in COM.
     
@@ -885,7 +884,7 @@ class ComImportAttribute:
     Instance = ComImportAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ComInterfaceType:
+class ComInterfaceType(Object):
     """
     Identifies how to expose an interface to COM.
     
@@ -933,7 +932,7 @@ class ComInterfaceType:
     Instance = ComInterfaceType()
     """hardcoded/returns an instance of the class"""
 
-class ComMemberType:
+class ComMemberType(Object):
     """
     Describes the type of a COM member.
     
@@ -980,7 +979,7 @@ class ComMemberType:
     Instance = ComMemberType()
     """hardcoded/returns an instance of the class"""
 
-class ComRegisterFunctionAttribute:
+class ComRegisterFunctionAttribute(Object):
     """
     Specifies the method to call when you register an assembly for use from COM; this enables the execution of user-written code during the registration process.
     
@@ -993,7 +992,7 @@ class ComRegisterFunctionAttribute:
     Instance = ComRegisterFunctionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ComSourceInterfacesAttribute:
+class ComSourceInterfacesAttribute(Object):
     """
     Identifies a list of interfaces that are exposed as COM event sources for the attributed class.
     
@@ -1029,7 +1028,7 @@ Get: Value(self: ComSourceInterfacesAttribute) -> str
     Instance = ComSourceInterfacesAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ComUnregisterFunctionAttribute:
+class ComUnregisterFunctionAttribute(Object):
     """
     Specifies the method to call when you unregister an assembly for use from COM; this allows for the execution of user-written code during the unregistration process.
     
@@ -1042,7 +1041,7 @@ class ComUnregisterFunctionAttribute:
     Instance = ComUnregisterFunctionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ComVisibleAttribute:
+class ComVisibleAttribute(Object):
     """
     Controls accessibility of an individual managed type or member, or of all types within an assembly, to COM.
     
@@ -1097,8 +1096,8 @@ class CriticalHandle(CriticalFinalizerObject):
         ReleaseHandle(self: CriticalHandle) -> bool
         
             When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed 
-             Debugging Assistant.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging 
+             Assistant.
         """
         pass
 
@@ -1181,7 +1180,7 @@ Get: WrappedObject(self: CurrencyWrapper) -> Decimal
     Instance = CurrencyWrapper()
     """hardcoded/returns an instance of the class"""
 
-class CustomQueryInterfaceMode:
+class CustomQueryInterfaceMode(Object):
     """
     Indicates whether the System.Runtime.InteropServices.Marshal.GetComInterfaceForObject(System.Object,System.Type,System.Runtime.InteropServices.CustomQueryInterfaceMode) method's IUnknown::QueryInterface calls can use the System.Runtime.InteropServices.ICustomQueryInterface interface.
     
@@ -1227,7 +1226,7 @@ class CustomQueryInterfaceMode:
     Instance = CustomQueryInterfaceMode()
     """hardcoded/returns an instance of the class"""
 
-class CustomQueryInterfaceResult:
+class CustomQueryInterfaceResult(Object):
     """
     Provides return values for the System.Runtime.InteropServices.ICustomQueryInterface.GetInterface(System.Guid@,System.IntPtr@) method.
     
@@ -1274,7 +1273,7 @@ class CustomQueryInterfaceResult:
     Instance = CustomQueryInterfaceResult()
     """hardcoded/returns an instance of the class"""
 
-class DefaultCharSetAttribute:
+class DefaultCharSetAttribute(Object):
     """
     Specifies the value of the System.Runtime.InteropServices.CharSet enumeration. This class cannot be inherited.
     
@@ -1300,7 +1299,7 @@ Get: CharSet(self: DefaultCharSetAttribute) -> CharSet
     Instance = DefaultCharSetAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DefaultDllImportSearchPathsAttribute:
+class DefaultDllImportSearchPathsAttribute(Object):
     """ DefaultDllImportSearchPathsAttribute(paths: DllImportSearchPath) """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1320,7 +1319,7 @@ class DefaultDllImportSearchPathsAttribute:
     Instance = DefaultDllImportSearchPathsAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DefaultParameterValueAttribute:
+class DefaultParameterValueAttribute(Object):
     """
     Sets the default value of a parameter when called from a language that supports default parameters. This class cannot be inherited.
     
@@ -1346,7 +1345,7 @@ Get: Value(self: DefaultParameterValueAttribute) -> object
     Instance = DefaultParameterValueAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DESCKIND:
+class DESCKIND(Object):
     """
     Use System.Runtime.InteropServices.ComTypes.DESCKIND instead.
     
@@ -1418,7 +1417,7 @@ Get: WrappedObject(self: DispatchWrapper) -> object
     Instance = DispatchWrapper()
     """hardcoded/returns an instance of the class"""
 
-class DispIdAttribute:
+class DispIdAttribute(Object):
     """
     Specifies the COM dispatch identifier (DISPID) of a method, field, or property.
     
@@ -1454,7 +1453,7 @@ class DISPPARAMS():
     Instance = DISPPARAMS()
     """hardcoded/returns an instance of the class"""
 
-class DllImportAttribute:
+class DllImportAttribute(Object):
     """
     Indicates that the attributed method is exposed by an unmanaged dynamic-link library (DLL) as a static entry point.
     
@@ -1489,7 +1488,7 @@ Get: Value(self: DllImportAttribute) -> str
     Instance = DllImportAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DllImportSearchPath:
+class DllImportSearchPath(Object):
     """ enum (flags) DllImportSearchPath, values: ApplicationDirectory (512), AssemblyDirectory (2), LegacyBehavior (0), SafeDirectories (4096), System32 (2048), UseDllDirectoryForDependencies (256), UserDirectories (1024) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1587,7 +1586,7 @@ class EXCEPINFO():
     Instance = EXCEPINFO()
     """hardcoded/returns an instance of the class"""
 
-class ExporterEventKind:
+class ExporterEventKind(Object):
     """
     Describes the callbacks that the type library exporter makes when exporting a type library.
     
@@ -1649,7 +1648,7 @@ class ExtensibleClassFactory():
     Instance = ExtensibleClassFactory()
     """hardcoded/returns an instance of the class"""
 
-class FieldOffsetAttribute:
+class FieldOffsetAttribute(Object):
     """
     Indicates the physical position of fields within the unmanaged representation of a class or structure.
     
@@ -1701,7 +1700,7 @@ class FUNCDESC():
     Instance = FUNCDESC()
     """hardcoded/returns an instance of the class"""
 
-class FUNCFLAGS:
+class FUNCFLAGS(Object):
     """
     Use System.Runtime.InteropServices.ComTypes.FUNCFLAGS instead.
     
@@ -1758,7 +1757,7 @@ class FUNCFLAGS:
     Instance = FUNCFLAGS()
     """hardcoded/returns an instance of the class"""
 
-class FUNCKIND:
+class FUNCKIND(Object):
     """
     Use System.Runtime.InteropServices.ComTypes.FUNCKIND instead.
     
@@ -1917,7 +1916,7 @@ Set: Target(self: GCHandle) = value
     Instance = GCHandle()
     """hardcoded/returns an instance of the class"""
 
-class GCHandleType:
+class GCHandleType(Object):
     """
     Represents the types of handles the System.Runtime.InteropServices.GCHandle class can allocate.
     
@@ -1965,7 +1964,7 @@ class GCHandleType:
     Instance = GCHandleType()
     """hardcoded/returns an instance of the class"""
 
-class GuidAttribute:
+class GuidAttribute(Object):
     """
     Supplies an explicit System.Guid when an automatic GUID is undesirable.
     
@@ -2217,7 +2216,7 @@ class ICustomQueryInterface:
     Instance = ICustomQueryInterface()
     """hardcoded/returns an instance of the class"""
 
-class IDispatchImplAttribute:
+class IDispatchImplAttribute(Object):
     """
     Indicates which IDispatch implementation the common language runtime uses when exposing dual interfaces and dispinterfaces to COM.
     
@@ -2247,7 +2246,7 @@ Get: Value(self: IDispatchImplAttribute) -> IDispatchImplType
     Instance = IDispatchImplAttribute()
     """hardcoded/returns an instance of the class"""
 
-class IDispatchImplType:
+class IDispatchImplType(Object):
     """
     Indicates which IDispatch implementation to use for a particular class.
     
@@ -2302,7 +2301,7 @@ class IDLDESC():
     Instance = IDLDESC()
     """hardcoded/returns an instance of the class"""
 
-class IDLFLAG:
+class IDLFLAG(Object):
     """
     Use System.Runtime.InteropServices.ComTypes.IDLFLAG instead.
     
@@ -2351,7 +2350,7 @@ class IDLFLAG:
     Instance = IDLFLAG()
     """hardcoded/returns an instance of the class"""
 
-class IMPLTYPEFLAGS:
+class IMPLTYPEFLAGS(Object):
     """
     Use System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS instead.
     
@@ -2399,7 +2398,7 @@ class IMPLTYPEFLAGS:
     Instance = IMPLTYPEFLAGS()
     """hardcoded/returns an instance of the class"""
 
-class ImportedFromTypeLibAttribute:
+class ImportedFromTypeLibAttribute(Object):
     """
     Indicates that the types defined within an assembly were originally defined in a type library.
     
@@ -2425,7 +2424,7 @@ Get: Value(self: ImportedFromTypeLibAttribute) -> str
     Instance = ImportedFromTypeLibAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ImporterEventKind:
+class ImporterEventKind(Object):
     """
     Describes the callbacks that the type library importer makes when importing a type library.
     
@@ -2472,7 +2471,7 @@ class ImporterEventKind:
     Instance = ImporterEventKind()
     """hardcoded/returns an instance of the class"""
 
-class InAttribute:
+class InAttribute(Object):
     """
     Indicates that data should be marshaled from the caller to the callee, but not back to the caller.
     
@@ -2485,7 +2484,7 @@ class InAttribute:
     Instance = InAttribute()
     """hardcoded/returns an instance of the class"""
 
-class InterfaceTypeAttribute:
+class InterfaceTypeAttribute(Object):
     """
     Indicates whether a managed interface is dual, dispatch-only, or IUnknown -only when exposed to COM.
     
@@ -2581,7 +2580,7 @@ class InvalidOleVariantTypeException(SystemException):
     Instance = InvalidOleVariantTypeException()
     """hardcoded/returns an instance of the class"""
 
-class INVOKEKIND:
+class INVOKEKIND(Object):
     """
     Use System.Runtime.InteropServices.ComTypes.INVOKEKIND instead.
     
@@ -2768,8 +2767,8 @@ class ITypeLibConverter:
             notifySink: System.Runtime.InteropServices.ITypeLibImporterNotifySink interface implemented by the caller.
             publicKey: A byte array containing the public key.
             keyPair: A System.Reflection.StrongNameKeyPair object containing the public and private cryptographic key pair.
-            unsafeInterfaces: If true, the interfaces require link time checks for System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode permission. If false, the interfaces require run 
-             time checks that require a stack walk and are more expensive, but help provide greater protection.
+            unsafeInterfaces: If true, the interfaces require link time checks for System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode permission. If false, the interfaces require run time checks 
+             that require a stack walk and are more expensive, but help provide greater protection.
         
             Returns: An System.Reflection.Emit.AssemblyBuilder object containing the converted type library.
         """
@@ -2876,7 +2875,7 @@ class ITypeLibImporterNotifySink:
     Instance = ITypeLibImporterNotifySink()
     """hardcoded/returns an instance of the class"""
 
-class LayoutKind:
+class LayoutKind(Object):
     """
     Controls the layout of an object when it is exported to unmanaged code.
     
@@ -2923,7 +2922,7 @@ class LayoutKind:
     Instance = LayoutKind()
     """hardcoded/returns an instance of the class"""
 
-class LCIDConversionAttribute:
+class LCIDConversionAttribute(Object):
     """
     Indicates that a method's unmanaged signature expects a locale identifier (LCID) parameter.
     
@@ -2949,7 +2948,7 @@ Get: Value(self: LCIDConversionAttribute) -> int
     Instance = LCIDConversionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class LIBFLAGS:
+class LIBFLAGS(Object):
     """
     Use System.Runtime.InteropServices.ComTypes.LIBFLAGS instead.
     
@@ -2997,7 +2996,7 @@ class LIBFLAGS:
     Instance = LIBFLAGS()
     """hardcoded/returns an instance of the class"""
 
-class ManagedToNativeComInteropStubAttribute:
+class ManagedToNativeComInteropStubAttribute(Object):
     """
     Provides support for user customization of interop stubs in managed-to-COM interop scenarios.
     
@@ -3052,8 +3051,7 @@ class Marshal():
             Allocates a block of memory of specified size from the COM task memory allocator.
         
             cb: The size of the block of memory to be allocated.
-            Returns: An integer representing the address of the block of memory allocated. This memory must be released with 
-             System.Runtime.InteropServices.Marshal.FreeCoTaskMem(System.IntPtr).
+            Returns: An integer representing the address of the block of memory allocated. This memory must be released with System.Runtime.InteropServices.Marshal.FreeCoTaskMem(System.IntPtr).
         """
         pass
 
@@ -3093,8 +3091,7 @@ class Marshal():
             Gets an interface pointer identified by the specified moniker.
         
             monikerName: The moniker corresponding to the desired interface pointer.
-            Returns: An object containing a reference to the interface pointer identified by the monikerName parameter. A moniker is a name, and in this case, the moniker is defined by an 
-             interface.
+            Returns: An object containing a reference to the interface pointer identified by the monikerName parameter. A moniker is a name, and in this case, the moniker is defined by an interface.
         """
         pass
 
@@ -3105,8 +3102,7 @@ class Marshal():
             Changes the strength of an object's COM Callable Wrapper (CCW) handle.
         
             otp: The object whose CCW holds a reference counted handle. The handle is strong if the reference count on the CCW is greater than zero; otherwise, it is weak.
-            fIsWeak: true to change the strength of the handle on the otp parameter to weak, regardless of its reference count; false to reset the handle strength on otp to be reference 
-             counted.
+            fIsWeak: true to change the strength of the handle on the otp parameter to weak, regardless of its reference count; false to reset the handle strength on otp to be reference counted.
         """
         pass
 
@@ -3367,8 +3363,8 @@ class Marshal():
         GetComInterfaceForObject[(T, TInterface)](o: T) -> IntPtr
         GetComInterfaceForObject(o: object, T: Type, mode: CustomQueryInterfaceMode) -> IntPtr
         
-            Returns a pointer to an IUnknown interface that represents the specified interface on the specified object. Custom query interface access is controlled by the 
-             specified customization mode.
+            Returns a pointer to an IUnknown interface that represents the specified interface on the specified object. Custom query interface access is controlled by the specified 
+             customization mode.
         
         
             o: The object that provides the interface.
@@ -3440,8 +3436,7 @@ class Marshal():
             Retrieves the last slot in the virtual function table (v-table or VTBL) of a type when exposed to COM.
         
             t: A type that represents an interface or class.
-            Returns: The last VTBL slot of the interface when exposed to COM. If the t parameter is a class, the returned VTBL slot is the last slot in the interface that is generated from 
-             the class.
+            Returns: The last VTBL slot of the interface when exposed to COM. If the t parameter is a class, the returned VTBL slot is the last slot in the interface that is generated from the class.
         """
         pass
 
@@ -3466,13 +3461,11 @@ class Marshal():
             Returns: An object that represents the converted HRESULT.
         GetExceptionForHR(errorCode: int, errorInfo: IntPtr) -> Exception
         
-            Converts the specified HRESULT error code to a corresponding System.Exception object, with additional error information passed in an IErrorInfo interface for the 
-             exception object.
-        
+            Converts the specified HRESULT error code to a corresponding System.Exception object, with additional error information passed in an IErrorInfo interface for the exception object.
         
             errorCode: The HRESULT to be converted.
-            errorInfo: A pointer to the IErrorInfo interface that provides more information about the error. You can specify IntPtr(0) to use the current IErrorInfo interface, or IntPtr(-1) 
-             to ignore the current IErrorInfo interface and construct the exception just from the error code.
+            errorInfo: A pointer to the IErrorInfo interface that provides more information about the error. You can specify IntPtr(0) to use the current IErrorInfo interface, or IntPtr(-1) to ignore 
+             the current IErrorInfo interface and construct the exception just from the error code.
         
             Returns: An object that represents the converted HRESULT and information obtained from errorInfo.
         """
@@ -3600,8 +3593,8 @@ class Marshal():
         """
         GetLastWin32Error() -> int
         
-            Returns the error code returned by the last unmanaged function that was called using platform invoke that has the 
-             System.Runtime.InteropServices.DllImportAttribute.SetLastError flag set.
+            Returns the error code returned by the last unmanaged function that was called using platform invoke that has the System.Runtime.InteropServices.DllImportAttribute.SetLastError 
+             flag set.
         
             Returns: The last error code set by a call to the Win32 SetLastError function.
         """
@@ -4182,8 +4175,7 @@ class Marshal():
         
             pv: A pointer to memory allocated with System.Runtime.InteropServices.Marshal.AllocCoTaskMem(System.Int32).
             cb: The new size of the allocated block.
-            Returns: An integer representing the address of the reallocated block of memory. This memory must be released with 
-             System.Runtime.InteropServices.Marshal.FreeCoTaskMem(System.IntPtr).
+            Returns: An integer representing the address of the reallocated block of memory. This memory must be released with System.Runtime.InteropServices.Marshal.FreeCoTaskMem(System.IntPtr).
         """
         pass
 
@@ -4195,9 +4187,7 @@ class Marshal():
             Resizes a block of memory previously allocated with System.Runtime.InteropServices.Marshal.AllocHGlobal(System.IntPtr).
         
             pv: A pointer to memory allocated with System.Runtime.InteropServices.Marshal.AllocHGlobal(System.IntPtr).
-            cb: The new size of the allocated block. This is not a pointer; it is the byte count you are requesting, cast to type System.IntPtr. If you pass a pointer, it is treated 
-             as a size.
-        
+            cb: The new size of the allocated block. This is not a pointer; it is the byte count you are requesting, cast to type System.IntPtr. If you pass a pointer, it is treated as a size.
             Returns: A pointer to the reallocated memory. This memory must be released using System.Runtime.InteropServices.Marshal.FreeHGlobal(System.IntPtr).
         """
         pass
@@ -4222,8 +4212,8 @@ class Marshal():
             Decrements the reference count of the specified Runtime Callable Wrapper (RCW) associated with the specified COM object.
         
             o: The COM object to release.
-            Returns: The new value of the reference count of the RCW associated with o. This value is typically zero since the RCW keeps just one reference to the wrapped COM object 
-             regardless of the number of managed clients calling it.
+            Returns: The new value of the reference count of the RCW associated with o. This value is typically zero since the RCW keeps just one reference to the wrapped COM object regardless of the 
+             number of managed clients calling it.
         """
         pass
 
@@ -4421,8 +4411,8 @@ class Marshal():
         
             structure: A managed object holding the data to be marshaled. This object must be an instance of a formatted class.
             ptr: A pointer to an unmanaged block of memory, which must be allocated before this method is called.
-            fDeleteOld: true to have the System.Runtime.InteropServices.Marshal.DestroyStructure(System.IntPtr,System.Type) method called on the ptr parameter before this method executes. 
-             Note that passing false can lead to a memory leak.
+            fDeleteOld: true to have the System.Runtime.InteropServices.Marshal.DestroyStructure(System.IntPtr,System.Type) method called on the ptr parameter before this method executes. Note that 
+             passing false can lead to a memory leak.
         
         StructureToPtr[T](structure: T, ptr: IntPtr, fDeleteOld: bool)
         """
@@ -4439,8 +4429,8 @@ class Marshal():
             Throws an exception with a specific failure HRESULT, based on the specified IErrorInfo Interface interface.
         
             errorCode: The HRESULT corresponding to the desired exception.
-            errorInfo: A pointer to the IErrorInfo interface that provides more information about the error. You can specify IntPtr(0) to use the current IErrorInfo interface, or IntPtr(-1) 
-             to ignore the current IErrorInfo interface and construct the exception just from the error code.
+            errorInfo: A pointer to the IErrorInfo interface that provides more information about the error. You can specify IntPtr(0) to use the current IErrorInfo interface, or IntPtr(-1) to ignore 
+             the current IErrorInfo interface and construct the exception just from the error code.
         """
         pass
 
@@ -4614,9 +4604,7 @@ class Marshal():
     def ZeroFreeCoTaskMemUnicode(s):
         """
         ZeroFreeCoTaskMemUnicode(s: IntPtr)
-            Frees an unmanaged string pointer that was allocated using the System.Runtime.InteropServices.Marshal.SecureStringToCoTaskMemUnicode(System.Security.SecureString) 
-             method.
-        
+            Frees an unmanaged string pointer that was allocated using the System.Runtime.InteropServices.Marshal.SecureStringToCoTaskMemUnicode(System.Security.SecureString) method.
         
             s: The address of the unmanaged string to free.
         """
@@ -4626,9 +4614,7 @@ class Marshal():
     def ZeroFreeGlobalAllocAnsi(s):
         """
         ZeroFreeGlobalAllocAnsi(s: IntPtr)
-            Frees an unmanaged string pointer that was allocated using the System.Runtime.InteropServices.Marshal.SecureStringToGlobalAllocAnsi(System.Security.SecureString) 
-             method.
-        
+            Frees an unmanaged string pointer that was allocated using the System.Runtime.InteropServices.Marshal.SecureStringToGlobalAllocAnsi(System.Security.SecureString) method.
         
             s: The address of the unmanaged string to free.
         """
@@ -4638,9 +4624,7 @@ class Marshal():
     def ZeroFreeGlobalAllocUnicode(s):
         """
         ZeroFreeGlobalAllocUnicode(s: IntPtr)
-            Frees an unmanaged string pointer that was allocated using the System.Runtime.InteropServices.Marshal.SecureStringToGlobalAllocUnicode(System.Security.SecureString) 
-             method.
-        
+            Frees an unmanaged string pointer that was allocated using the System.Runtime.InteropServices.Marshal.SecureStringToGlobalAllocUnicode(System.Security.SecureString) method.
         
             s: The address of the unmanaged string to free.
         """
@@ -4761,7 +4745,7 @@ class Marshal():
     Instance = Marshal()
     """hardcoded/returns an instance of the class"""
 
-class MarshalAsAttribute:
+class MarshalAsAttribute(Object):
     """
     Indicates how to marshal the data between managed and unmanaged code.
     
@@ -4861,8 +4845,8 @@ class ObjectCreationDelegate(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -4892,8 +4876,8 @@ class ObjectCreationDelegate(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -4912,7 +4896,7 @@ class ObjectCreationDelegate(MulticastDelegate):
     Instance = ObjectCreationDelegate()
     """hardcoded/returns an instance of the class"""
 
-class OptionalAttribute:
+class OptionalAttribute(Object):
     """
     Indicates that a parameter is optional.
     
@@ -4925,7 +4909,7 @@ class OptionalAttribute:
     Instance = OptionalAttribute()
     """hardcoded/returns an instance of the class"""
 
-class OSPlatform:
+class OSPlatform(Object):
     # no doc
     @staticmethod
     def Create(osPlatform):
@@ -4972,7 +4956,7 @@ class OSPlatform:
     Instance = OSPlatform()
     """hardcoded/returns an instance of the class"""
 
-class OutAttribute:
+class OutAttribute(Object):
     """
     Indicates that data should be marshaled from callee back to caller.
     
@@ -4993,7 +4977,7 @@ class PARAMDESC():
     Instance = PARAMDESC()
     """hardcoded/returns an instance of the class"""
 
-class PARAMFLAG:
+class PARAMFLAG(Object):
     """
     Use System.Runtime.InteropServices.ComTypes.PARAMFLAG instead.
     
@@ -5045,7 +5029,7 @@ class PARAMFLAG:
     Instance = PARAMFLAG()
     """hardcoded/returns an instance of the class"""
 
-class PreserveSigAttribute:
+class PreserveSigAttribute(Object):
     """
     Indicates that the HRESULT or retval signature transformation that takes place during COM interop calls should be suppressed.
     
@@ -5058,7 +5042,7 @@ class PreserveSigAttribute:
     Instance = PreserveSigAttribute()
     """hardcoded/returns an instance of the class"""
 
-class PrimaryInteropAssemblyAttribute:
+class PrimaryInteropAssemblyAttribute(Object):
     """
     Indicates that the attributed assembly is a primary interop assembly.
     
@@ -5091,7 +5075,7 @@ Get: MinorVersion(self: PrimaryInteropAssemblyAttribute) -> int
     Instance = PrimaryInteropAssemblyAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ProgIdAttribute:
+class ProgIdAttribute(Object):
     """
     Allows the user to specify the ProgID of a class.
     
@@ -5117,7 +5101,7 @@ Get: Value(self: ProgIdAttribute) -> str
     Instance = ProgIdAttribute()
     """hardcoded/returns an instance of the class"""
 
-class RegistrationClassContext:
+class RegistrationClassContext(Object):
     """
     Specifies the set of execution contexts in which a class object will be made available for requests to construct instances.
     
@@ -5179,7 +5163,7 @@ class RegistrationClassContext:
     Instance = RegistrationClassContext()
     """hardcoded/returns an instance of the class"""
 
-class RegistrationConnectionType:
+class RegistrationConnectionType(Object):
     """
     Defines the types of connections to a class object.
     
@@ -5228,7 +5212,7 @@ class RegistrationConnectionType:
     Instance = RegistrationConnectionType()
     """hardcoded/returns an instance of the class"""
 
-class RegistrationServices:
+class RegistrationServices(Object):
     """
     Provides a set of services for registering and unregistering managed assemblies for use from COM.
     
@@ -5307,8 +5291,8 @@ class RegistrationServices:
         
         
             type: The type to check for being a COM type.
-            Returns: true if a type is marked with the System.Runtime.InteropServices.ComImportAttribute, or derives from a type marked with the 
-             System.Runtime.InteropServices.ComImportAttribute and shares the same GUID as the parent; otherwise false.
+            Returns: true if a type is marked with the System.Runtime.InteropServices.ComImportAttribute, or derives from a type marked with the System.Runtime.InteropServices.ComImportAttribute and 
+             shares the same GUID as the parent; otherwise false.
         """
         pass
 
@@ -5338,13 +5322,13 @@ class RegistrationServices:
         """
         UnregisterTypeForComClients(self: RegistrationServices, cookie: int)
             Removes references to a type registered with the 
-             System.Runtime.InteropServices.RegistrationServices.RegisterTypeForComClients(System.Type,System.Runtime.InteropServices.RegistrationClassContext,System.Runtime.Interop
-             Services.RegistrationConnectionType) method.
+             System.Runtime.InteropServices.RegistrationServices.RegisterTypeForComClients(System.Type,System.Runtime.InteropServices.RegistrationClassContext,System.Runtime.InteropServices.Re
+             gistrationConnectionType) method.
         
         
             cookie: The cookie value returned by a previous call to the 
-             System.Runtime.InteropServices.RegistrationServices.RegisterTypeForComClients(System.Type,System.Runtime.InteropServices.RegistrationClassContext,System.Runtime.Interop
-             Services.RegistrationConnectionType) method overload.
+             System.Runtime.InteropServices.RegistrationServices.RegisterTypeForComClients(System.Type,System.Runtime.InteropServices.RegistrationClassContext,System.Runtime.InteropServices.Re
+             gistrationConnectionType) method overload.
         """
         pass
 
@@ -5560,8 +5544,8 @@ class SafeHandle(CriticalFinalizerObject):
         ReleaseHandle(self: SafeHandle) -> bool
         
             When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed 
-             Debugging Assistant.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging 
+             Assistant.
         """
         pass
 
@@ -5626,8 +5610,8 @@ class SafeBuffer(SafeHandleZeroOrMinusOneIsInvalid):
         
             Obtains a pointer from a System.Runtime.InteropServices.SafeBuffer object for a block of memory.
         
-            pointer: A byte pointer, passed by reference, to receive the pointer from within the System.Runtime.InteropServices.SafeBuffer object. You must set this pointer to null before 
-             you call this method.
+            pointer: A byte pointer, passed by reference, to receive the pointer from within the System.Runtime.InteropServices.SafeBuffer object. You must set this pointer to null before you call 
+             this method.
         """
         pass
 
@@ -5670,8 +5654,8 @@ class SafeBuffer(SafeHandleZeroOrMinusOneIsInvalid):
         ReleaseHandle(self: SafeHandle) -> bool
         
             When overridden in a derived class, executes the code required to free the handle.
-            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed 
-             Debugging Assistant.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging 
+             Assistant.
         """
         pass
 
@@ -5771,7 +5755,7 @@ class SEHException(ExternalException):
     Instance = SEHException()
     """hardcoded/returns an instance of the class"""
 
-class SetWin32ContextInIDispatchAttribute:
+class SetWin32ContextInIDispatchAttribute(Object):
     """
     This attribute has been deprecated.
     
@@ -5792,9 +5776,9 @@ class StandardOleMarshalObject(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -5828,7 +5812,7 @@ class STATSTG():
     Instance = STATSTG()
     """hardcoded/returns an instance of the class"""
 
-class StructLayoutAttribute:
+class StructLayoutAttribute(Object):
     """
     Lets you control the physical layout of the data fields of a class or structure.
     
@@ -5862,7 +5846,7 @@ Get: Value(self: StructLayoutAttribute) -> LayoutKind
     Instance = StructLayoutAttribute()
     """hardcoded/returns an instance of the class"""
 
-class SYSKIND:
+class SYSKIND(Object):
     """
     Use System.Runtime.InteropServices.ComTypes.SYSKIND instead.
     
@@ -5942,7 +5926,7 @@ class TYPEDESC():
     Instance = TYPEDESC()
     """hardcoded/returns an instance of the class"""
 
-class TYPEFLAGS:
+class TYPEFLAGS(Object):
     """
     Use System.Runtime.InteropServices.ComTypes.TYPEFLAGS instead.
     
@@ -6001,7 +5985,7 @@ class TYPEFLAGS:
     Instance = TYPEFLAGS()
     """hardcoded/returns an instance of the class"""
 
-class TypeIdentifierAttribute:
+class TypeIdentifierAttribute(Object):
     """
     Provides support for type equivalence.
     
@@ -6038,7 +6022,7 @@ Get: Scope(self: TypeIdentifierAttribute) -> str
     Instance = TypeIdentifierAttribute()
     """hardcoded/returns an instance of the class"""
 
-class TYPEKIND:
+class TYPEKIND(Object):
     """
     Use System.Runtime.InteropServices.ComTypes.TYPEKIND instead.
     
@@ -6103,7 +6087,7 @@ class TYPELIBATTR():
     Instance = TYPELIBATTR()
     """hardcoded/returns an instance of the class"""
 
-class TypeLibConverter:
+class TypeLibConverter(Object):
     """
     Provides a set of services that convert a managed assembly to a COM type library and vice versa.
     
@@ -6135,8 +6119,8 @@ class TypeLibConverter:
             notifySink: System.Runtime.InteropServices.ITypeLibImporterNotifySink interface implemented by the caller.
             publicKey: A byte array containing the public key.
             keyPair: A System.Reflection.StrongNameKeyPair object containing the public and private cryptographic key pair.
-            unsafeInterfaces: If true, the interfaces require link time checks for System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode permission. If false, the interfaces require run 
-             time checks that require a stack walk and are more expensive, but help provide greater protection.
+            unsafeInterfaces: If true, the interfaces require link time checks for System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode permission. If false, the interfaces require run time checks 
+             that require a stack walk and are more expensive, but help provide greater protection.
         
             Returns: An System.Reflection.Emit.AssemblyBuilder object containing the converted type library.
         ConvertTypeLibToAssembly(self: TypeLibConverter, typeLib: object, asmFileName: str, flags: TypeLibImporterFlags, notifySink: ITypeLibImporterNotifySink, publicKey: Array[Byte], keyPair: StrongNameKeyPair, asmNamespace: str, asmVersion: Version) -> AssemblyBuilder
@@ -6180,7 +6164,7 @@ class TypeLibConverter:
     Instance = TypeLibConverter()
     """hardcoded/returns an instance of the class"""
 
-class TypeLibExporterFlags:
+class TypeLibExporterFlags(Object):
     """
     Indicates how a type library should be produced.
     
@@ -6230,7 +6214,7 @@ class TypeLibExporterFlags:
     Instance = TypeLibExporterFlags()
     """hardcoded/returns an instance of the class"""
 
-class TypeLibFuncAttribute:
+class TypeLibFuncAttribute(Object):
     """
     Contains the System.Runtime.InteropServices.FUNCFLAGS that were originally imported for this method from the COM type library.
     
@@ -6260,7 +6244,7 @@ Get: Value(self: TypeLibFuncAttribute) -> TypeLibFuncFlags
     Instance = TypeLibFuncAttribute()
     """hardcoded/returns an instance of the class"""
 
-class TypeLibFuncFlags:
+class TypeLibFuncFlags(Object):
     """
     Describes the original settings of the FUNCFLAGS in the COM type library from where this method was imported.
     
@@ -6317,7 +6301,7 @@ class TypeLibFuncFlags:
     Instance = TypeLibFuncFlags()
     """hardcoded/returns an instance of the class"""
 
-class TypeLibImportClassAttribute:
+class TypeLibImportClassAttribute(Object):
     """
     Specifies which System.Type exclusively uses an interface. This class cannot be inherited.
     
@@ -6343,7 +6327,7 @@ Get: Value(self: TypeLibImportClassAttribute) -> str
     Instance = TypeLibImportClassAttribute()
     """hardcoded/returns an instance of the class"""
 
-class TypeLibImporterFlags:
+class TypeLibImporterFlags(Object):
     """
     Indicates how an assembly should be produced.
     
@@ -6401,7 +6385,7 @@ class TypeLibImporterFlags:
     Instance = TypeLibImporterFlags()
     """hardcoded/returns an instance of the class"""
 
-class TypeLibTypeAttribute:
+class TypeLibTypeAttribute(Object):
     """
     Contains the System.Runtime.InteropServices.TYPEFLAGS that were originally imported for this type from the COM type library.
     
@@ -6431,7 +6415,7 @@ Get: Value(self: TypeLibTypeAttribute) -> TypeLibTypeFlags
     Instance = TypeLibTypeAttribute()
     """hardcoded/returns an instance of the class"""
 
-class TypeLibTypeFlags:
+class TypeLibTypeFlags(Object):
     """
     Describes the original settings of the System.Runtime.InteropServices.TYPEFLAGS in the COM type library from which the type was imported.
     
@@ -6489,7 +6473,7 @@ class TypeLibTypeFlags:
     Instance = TypeLibTypeFlags()
     """hardcoded/returns an instance of the class"""
 
-class TypeLibVarAttribute:
+class TypeLibVarAttribute(Object):
     """
     Contains the System.Runtime.InteropServices.VARFLAGS that were originally imported for this field from the COM type library.
     
@@ -6519,7 +6503,7 @@ Get: Value(self: TypeLibVarAttribute) -> TypeLibVarFlags
     Instance = TypeLibVarAttribute()
     """hardcoded/returns an instance of the class"""
 
-class TypeLibVarFlags:
+class TypeLibVarFlags(Object):
     """
     Describes the original settings of the System.Runtime.InteropServices.VARFLAGS in the COM type library from which the variable was imported.
     
@@ -6576,7 +6560,7 @@ class TypeLibVarFlags:
     Instance = TypeLibVarFlags()
     """hardcoded/returns an instance of the class"""
 
-class TypeLibVersionAttribute:
+class TypeLibVersionAttribute(Object):
     """
     Specifies the version number of an exported type library.
     
@@ -6685,9 +6669,7 @@ class UCOMIBindCtx:
     def RevokeObjectParam(self, pszKey):
         """
         RevokeObjectParam(self: UCOMIBindCtx, pszKey: str)
-            Revoke the registration of the object currently found under this key in the internally-maintained table of contextual object parameters, if any such key is currently 
-             registered.
-        
+            Revoke the registration of the object currently found under this key in the internally-maintained table of contextual object parameters, if any such key is currently registered.
         
             pszKey: The key to unregister.
         """
@@ -7073,8 +7055,8 @@ class UCOMIMoniker:
             Combines the current moniker with another moniker, creating a new composite moniker.
         
             pmkRight: A reference to the IMoniker interface on the moniker to compose onto the end of this moniker.
-            fOnlyIfNotGeneric: If true, the caller requires a nongeneric composition, so the operation proceeds only if pmkRight is a moniker class that this moniker can compose with in some way 
-             other than forming a generic composite. If false, the method can create a generic composite if necessary.
+            fOnlyIfNotGeneric: If true, the caller requires a nongeneric composition, so the operation proceeds only if pmkRight is a moniker class that this moniker can compose with in some way other than 
+             forming a generic composite. If false, the method can create a generic composite if necessary.
         """
         pass
 
@@ -7473,9 +7455,7 @@ class UCOMIStream:
     def UnlockRegion(self, libOffset, cb, dwLockType):
         """
         UnlockRegion(self: UCOMIStream, libOffset: Int64, cb: Int64, dwLockType: int)
-            Removes the access restriction on a range of bytes previously restricted with 
-             System.Runtime.InteropServices.UCOMIStream.LockRegion(System.Int64,System.Int64,System.Int32).
-        
+            Removes the access restriction on a range of bytes previously restricted with System.Runtime.InteropServices.UCOMIStream.LockRegion(System.Int64,System.Int64,System.Int32).
         
             libOffset: The byte offset for the beginning of the range.
             cb: The length, in bytes, of the range to restrict.
@@ -7490,8 +7470,8 @@ class UCOMIStream:
         
             pv: Buffer to write this stream to.
             cb: The number of bytes to write into the stream.
-            pcbWritten: On successful return, contains the actual number of bytes written to the stream object. The caller can set this pointer to null, in which case this method does not 
-             provide the actual number of bytes written.
+            pcbWritten: On successful return, contains the actual number of bytes written to the stream object. The caller can set this pointer to null, in which case this method does not provide the 
+             actual number of bytes written.
         """
         pass
 
@@ -7742,9 +7722,8 @@ class UCOMITypeLib:
         
             szNameBuf: The name to search for.
             lHashVal: A hash value to speed up the search, computed by the LHashValOfNameSys function. If lHashVal is 0, a value is computed.
-            pcFound: On entry, indicates how many instances to look for. For example, pcFound = 1 can be called to find the first occurrence. The search stops when one instance is found.On 
-             exit, indicates the number of instances that were found. If the in and out values of pcFound are identical, there might be more type descriptions that contain the 
-             name.
+            pcFound: On entry, indicates how many instances to look for. For example, pcFound = 1 can be called to find the first occurrence. The search stops when one instance is found.On exit, 
+             indicates the number of instances that were found. If the in and out values of pcFound are identical, there might be more type descriptions that contain the name.
         """
         pass
 
@@ -7863,7 +7842,7 @@ Get: WrappedObject(self: UnknownWrapper) -> object
     Instance = UnknownWrapper()
     """hardcoded/returns an instance of the class"""
 
-class UnmanagedFunctionPointerAttribute:
+class UnmanagedFunctionPointerAttribute(Object):
     """
     Controls the marshaling behavior of a delegate signature passed as an unmanaged function pointer to or from unmanaged code. This class cannot be inherited.
     
@@ -7894,7 +7873,7 @@ Get: CallingConvention(self: UnmanagedFunctionPointerAttribute) -> CallingConven
     Instance = UnmanagedFunctionPointerAttribute()
     """hardcoded/returns an instance of the class"""
 
-class UnmanagedType:
+class UnmanagedType(Object):
     """
     Identifies how to marshal parameters or fields to unmanaged code.
     
@@ -7988,7 +7967,7 @@ class VARDESC():
     Instance = VARDESC()
     """hardcoded/returns an instance of the class"""
 
-class VarEnum:
+class VarEnum(Object):
     """
     Indicates how to marshal the array elements when an array is marshaled from managed to unmanaged code as a System.Runtime.InteropServices.UnmanagedType.SafeArray.
     
@@ -8076,7 +8055,7 @@ class VarEnum:
     Instance = VarEnum()
     """hardcoded/returns an instance of the class"""
 
-class VARFLAGS:
+class VARFLAGS(Object):
     """
     Use System.Runtime.InteropServices.ComTypes.VARFLAGS instead.
     
@@ -8223,8 +8202,8 @@ class _Assembly:
             Provides COM objects with version-independent access to the System.Reflection.Assembly.CreateInstance(System.String) method.
         
             typeName: The System.Type.FullName of the type to locate.
-            Returns: An instance of System.Object representing the type, with culture, arguments, binder, and activation attributes set to null, and System.Reflection.BindingFlags set to 
-             Public or Instance, or null if typeName is not found.
+            Returns: An instance of System.Object representing the type, with culture, arguments, binder, and activation attributes set to null, and System.Reflection.BindingFlags set to Public or 
+             Instance, or null if typeName is not found.
         
         CreateInstance(self: _Assembly, typeName: str, ignoreCase: bool) -> object
         
@@ -8232,27 +8211,27 @@ class _Assembly:
         
             typeName: The System.Type.FullName of the type to locate.
             ignoreCase: true to ignore the case of the type name; otherwise, false.
-            Returns: An instance of System.Object representing the type, with culture, arguments, binder, and activation attributes set to null, and System.Reflection.BindingFlags set to 
-             Public or Instance, or null if typeName is not found.
+            Returns: An instance of System.Object representing the type, with culture, arguments, binder, and activation attributes set to null, and System.Reflection.BindingFlags set to Public or 
+             Instance, or null if typeName is not found.
         
         CreateInstance(self: _Assembly, typeName: str, ignoreCase: bool, bindingAttr: BindingFlags, binder: Binder, args: Array[object], culture: CultureInfo, activationAttributes: Array[object]) -> object
         
             Provides COM objects with version-independent access to the 
-             System.Reflection.Assembly.CreateInstance(System.String,System.Boolean,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.Cult
-             ureInfo,System.Object[]) method.
+             System.Reflection.Assembly.CreateInstance(System.String,System.Boolean,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,Sys
+             tem.Object[]) method.
         
         
             typeName: The System.Type.FullName of the type to locate.
             ignoreCase: true to ignore the case of the type name; otherwise, false.
             bindingAttr: A bitmask that affects how the search is conducted. The value is a combination of bit flags from System.Reflection.BindingFlags.
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of MemberInfo objects via reflection. If binder is null, the 
-             default binder is used.
+            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of MemberInfo objects via reflection. If binder is null, the default binder 
+             is used.
         
-            args: An array of type Object containing the arguments to be passed to the constructor. This array of arguments must match in number, order, and type the parameters of the 
-             constructor to be invoked. If the default constructor is desired, args must be an empty array or null.
+            args: An array of type Object containing the arguments to be passed to the constructor. This array of arguments must match in number, order, and type the parameters of the constructor 
+             to be invoked. If the default constructor is desired, args must be an empty array or null.
         
-            culture: An instance of CultureInfo used to govern the coercion of types. If this is null, the CultureInfo for the current thread is used. (This is necessary to convert a 
-             String that represents 1000 to a Double value, for example, since 1000 is represented differently by different cultures.)
+            culture: An instance of CultureInfo used to govern the coercion of types. If this is null, the CultureInfo for the current thread is used. (This is necessary to convert a String that 
+             represents 1000 to a Double value, for example, since 1000 is represented differently by different cultures.)
         
             activationAttributes: An array of type Object containing one or more activation attributes that can participate in the activation. An example of an activation attribute is: 
              URLAttribute(http://hostname/appname/objectURI)
@@ -8423,8 +8402,8 @@ class _Assembly:
         
             Provides COM objects with version-independent access to the System.Reflection.Assembly.GetName(System.Boolean) method.
         
-            copiedName: true to set the System.Reflection.Assembly.CodeBase to the location of the assembly after it was shadow copied; false to set System.Reflection.Assembly.CodeBase to the 
-             original location.
+            copiedName: true to set the System.Reflection.Assembly.CodeBase to the location of the assembly after it was shadow copied; false to set System.Reflection.Assembly.CodeBase to the original 
+             location.
         
             Returns: An System.Reflection.AssemblyName for this assembly.
         """
@@ -8922,10 +8901,10 @@ class _ConstructorInfo:
             binder: A Binder that defines a set of properties and enables the binding, coercion of argument types, and invocation of members using reflection. If binder is null, then 
              Binder.DefaultBinding is used.
         
-            parameters: An array of type Object used to match the number, order, and type of the parameters for this constructor, under the constraints of binder. If this constructor does not 
-             require parameters, pass an array with zero elements, as in Object[] parameters = new Object[0]. Any object in this array that is not explicitly initialized with a 
-             value will contain the default value for that object type. For reference-type elements, this value is null. For value-type elements, this value is 0, 0.0, or false, 
-             depending on the specific element type.
+            parameters: An array of type Object used to match the number, order, and type of the parameters for this constructor, under the constraints of binder. If this constructor does not require 
+             parameters, pass an array with zero elements, as in Object[] parameters = new Object[0]. Any object in this array that is not explicitly initialized with a value will contain the 
+             default value for that object type. For reference-type elements, this value is null. For value-type elements, this value is 0, 0.0, or false, depending on the specific element 
+             type.
         
             culture: A System.Globalization.CultureInfo used to govern the coercion of types. If this is null, the System.Globalization.CultureInfo for the current thread is used.
             Returns: An instance of the class associated with the constructor.
@@ -8939,11 +8918,11 @@ class _ConstructorInfo:
             Provides COM objects with version-independent access to the System.Reflection.MethodBase.Invoke(System.Object,System.Object[]) method.
         
             obj: The instance that created this method.
-            parameters: An argument list for the invoked method or constructor. This is an array of objects with the same number, order, and type as the parameters of the method or 
-             constructor to be invoked. If there are no parameters, parameters should be null.If the method or constructor represented by this instance takes a ref parameter (ByRef 
-             in Visual Basic), no special attribute is required for that parameter in order to invoke the method or constructor using this function. Any object in this array that 
-             is not explicitly initialized with a value will contain the default value for that object type. For reference-type elements, this value is null. For value-type 
-             elements, this value is 0, 0.0, or false, depending on the specific element type.
+            parameters: An argument list for the invoked method or constructor. This is an array of objects with the same number, order, and type as the parameters of the method or constructor to be 
+             invoked. If there are no parameters, parameters should be null.If the method or constructor represented by this instance takes a ref parameter (ByRef in Visual Basic), no special 
+             attribute is required for that parameter in order to invoke the method or constructor using this function. Any object in this array that is not explicitly initialized with a 
+             value will contain the default value for that object type. For reference-type elements, this value is null. For value-type elements, this value is 0, 0.0, or false, depending on 
+             the specific element type.
         
             Returns: An instance of the class associated with the constructor.
         """
@@ -8961,10 +8940,10 @@ class _ConstructorInfo:
             binder: A Binder that defines a set of properties and enables the binding, coercion of argument types, and invocation of members using reflection. If binder is null, then 
              Binder.DefaultBinding is used.
         
-            parameters: An array of type Object used to match the number, order, and type of the parameters for this constructor, under the constraints of binder. If this constructor does not 
-             require parameters, pass an array with zero elements, as in Object[] parameters = new Object[0]. Any object in this array that is not explicitly initialized with a 
-             value will contain the default value for that object type. For reference-type elements, this value is null. For value-type elements, this value is 0, 0.0, or false, 
-             depending on the specific element type.
+            parameters: An array of type Object used to match the number, order, and type of the parameters for this constructor, under the constraints of binder. If this constructor does not require 
+             parameters, pass an array with zero elements, as in Object[] parameters = new Object[0]. Any object in this array that is not explicitly initialized with a value will contain the 
+             default value for that object type. For reference-type elements, this value is null. For value-type elements, this value is 0, 0.0, or false, depending on the specific element 
+             type.
         
             culture: A System.Globalization.CultureInfo used to govern the coercion of types. If this is null, the System.Globalization.CultureInfo for the current thread is used.
             Returns: An instance of the class associated with the constructor.
@@ -8977,10 +8956,10 @@ class _ConstructorInfo:
         
             Provides COM objects with version-independent access to the System.Reflection.ConstructorInfo.Invoke(System.Object[]) method.
         
-            parameters: An array of values that matches the number, order, and type (under the constraints of the default binder) of the parameters for this constructor. If this constructor 
-             takes no parameters, then use either an array with zero elements or null, as in Object[] parameters = new Object[0]. Any object in this array that is not explicitly 
-             initialized with a value will contain the default value for that object type. For reference-type elements, this value is null. For value-type elements, this value is 
-             0, 0.0, or false, depending on the specific element type.
+            parameters: An array of values that matches the number, order, and type (under the constraints of the default binder) of the parameters for this constructor. If this constructor takes no 
+             parameters, then use either an array with zero elements or null, as in Object[] parameters = new Object[0]. Any object in this array that is not explicitly initialized with a 
+             value will contain the default value for that object type. For reference-type elements, this value is null. For value-type elements, this value is 0, 0.0, or false, depending on 
+             the specific element type.
         
             Returns: An instance of the class associated with the constructor.
         """
@@ -9613,8 +9592,8 @@ class _Exception:
         GetBaseException(self: _Exception) -> Exception
         
             Provides COM objects with version-independent access to the System.Exception.GetBaseException method.
-            Returns: The first exception thrown in a chain of exceptions. If the System.Exception.InnerException property of the current exception is a null reference (Nothing in Visual 
-             Basic), this property returns the current exception.
+            Returns: The first exception thrown in a chain of exceptions. If the System.Exception.InnerException property of the current exception is a null reference (Nothing in Visual Basic), this 
+             property returns the current exception.
         """
         pass
 
@@ -9912,16 +9891,14 @@ class _FieldInfo:
         """
         SetValue(self: _FieldInfo, obj: object, value: object, invokeAttr: BindingFlags, binder: Binder, culture: CultureInfo)
             Provides COM objects with version-independent access to the 
-             System.Reflection.PropertyInfo.SetValue(System.Object,System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.Culture
-             Info) method.
+             System.Reflection.PropertyInfo.SetValue(System.Object,System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo) 
+             method.
         
         
             obj: The object whose field value will be set.
             value: The value to assign to the field.
             invokeAttr: A field of System.Reflection.Binder that specifies the type of binding that is desired (for example, Binder.CreateInstance or Binder.ExactBinding).
-            binder: A set of properties that enables the binding, coercion of argument types, and invocation of members through reflection. If binder is null, then Binder.DefaultBinding 
-             is used.
-        
+            binder: A set of properties that enables the binding, coercion of argument types, and invocation of members through reflection. If binder is null, then Binder.DefaultBinding is used.
             culture: The software preferences of a particular culture.
         SetValue(self: _FieldInfo, obj: object, value: object)
             Provides COM objects with version-independent access to the System.Reflection.FieldInfo.SetValue(System.Object,System.Object) method.
@@ -10504,10 +10481,10 @@ class _MethodBase:
             binder: A Binder that defines a set of properties and enables the binding, coercion of argument types, and invocation of members using reflection. If binder is null, then 
              Binder.DefaultBinding is used.
         
-            parameters: An array of type Object used to match the number, order, and type of the parameters for this constructor, under the constraints of binder. If this constructor does not 
-             require parameters, pass an array with zero elements, as in Object[] parameters = new Object[0]. Any object in this array that is not explicitly initialized with a 
-             value will contain the default value for that object type. For reference type elements, this value is null. For value type elements, this value is 0, 0.0, or false, 
-             depending on the specific element type.
+            parameters: An array of type Object used to match the number, order, and type of the parameters for this constructor, under the constraints of binder. If this constructor does not require 
+             parameters, pass an array with zero elements, as in Object[] parameters = new Object[0]. Any object in this array that is not explicitly initialized with a value will contain the 
+             default value for that object type. For reference type elements, this value is null. For value type elements, this value is 0, 0.0, or false, depending on the specific element 
+             type.
         
             culture: A System.Globalization.CultureInfo object used to govern the coercion of types. If this is null, the System.Globalization.CultureInfo for the current thread is used.
             Returns: An instance of the class associated with the constructor.
@@ -10516,11 +10493,11 @@ class _MethodBase:
             Provides COM objects with version-independent access to the System.Reflection.MethodBase.Invoke(System.Object,System.Object[]) method.
         
             obj: The instance that created this method.
-            parameters: An argument list for the invoked method or constructor. This is an array of objects with the same number, order, and type as the parameters of the method or 
-             constructor to be invoked. If there are no parameters, parameters should be null.If the method or constructor represented by this instance takes a ref parameter (ByRef 
-             in Visual Basic), no special attribute is required for that parameter to invoke the method or constructor using this function. Any object in this array that is not 
-             explicitly initialized with a value will contain the default value for that object type. For reference type elements, this value is null. For value type elements, this 
-             value is 0, 0.0, or false, depending on the specific element type.
+            parameters: An argument list for the invoked method or constructor. This is an array of objects with the same number, order, and type as the parameters of the method or constructor to be 
+             invoked. If there are no parameters, parameters should be null.If the method or constructor represented by this instance takes a ref parameter (ByRef in Visual Basic), no special 
+             attribute is required for that parameter to invoke the method or constructor using this function. Any object in this array that is not explicitly initialized with a value will 
+             contain the default value for that object type. For reference type elements, this value is null. For value type elements, this value is 0, 0.0, or false, depending on the 
+             specific element type.
         
             Returns: An instance of the class associated with the constructor.
         """
@@ -10895,10 +10872,10 @@ class _MethodInfo:
             binder: A Binder that defines a set of properties and enables the binding, coercion of argument types, and invocation of members using reflection. If binder is null, then 
              Binder.DefaultBinding is used.
         
-            parameters: An array of type Object used to match the number, order, and type of the parameters for this constructor, under the constraints of binder. If this constructor does not 
-             require parameters, pass an array with zero elements, as in Object[] parameters = new Object[0]. Any object in this array that is not explicitly initialized with a 
-             value will contain the default value for that object type. For reference type elements, this value is null. For value type elements, this value is 0, 0.0, or false, 
-             depending on the specific element type.
+            parameters: An array of type Object used to match the number, order, and type of the parameters for this constructor, under the constraints of binder. If this constructor does not require 
+             parameters, pass an array with zero elements, as in Object[] parameters = new Object[0]. Any object in this array that is not explicitly initialized with a value will contain the 
+             default value for that object type. For reference type elements, this value is null. For value type elements, this value is 0, 0.0, or false, depending on the specific element 
+             type.
         
             culture: A System.Globalization.CultureInfo object used to govern the coercion of types. If this is null, the System.Globalization.CultureInfo for the current thread is used.
             Returns: An instance of the class associated with the constructor.
@@ -10907,11 +10884,11 @@ class _MethodInfo:
             Provides COM objects with version-independent access to the System.Reflection.MethodBase.Invoke(System.Object,System.Object[]) method.
         
             obj: The instance that created this method.
-            parameters: An argument list for the invoked method or constructor. This is an array of objects with the same number, order, and type as the parameters of the method or 
-             constructor to be invoked. If there are no parameters, parameters should be null.If the method or constructor represented by this instance takes a ref parameter (ByRef 
-             in Visual Basic), no special attribute is required for that parameter to invoke the method or constructor using this function. Any object in this array that is not 
-             explicitly initialized with a value will contain the default value for that object type. For reference type elements, this value is null. For value type elements, this 
-             value is 0, 0.0, or false, depending on the specific element type.
+            parameters: An argument list for the invoked method or constructor. This is an array of objects with the same number, order, and type as the parameters of the method or constructor to be 
+             invoked. If there are no parameters, parameters should be null.If the method or constructor represented by this instance takes a ref parameter (ByRef in Visual Basic), no special 
+             attribute is required for that parameter to invoke the method or constructor using this function. Any object in this array that is not explicitly initialized with a value will 
+             contain the default value for that object type. For reference type elements, this value is null. For value type elements, this value is 0, 0.0, or false, depending on the 
+             specific element type.
         
             Returns: An instance of the class associated with the constructor.
         """
@@ -11481,15 +11458,15 @@ class _PropertyInfo:
             Provides COM objects with version-independent access to the System.Reflection.PropertyInfo.GetAccessors(System.Boolean) method.
         
             nonPublic: true to include non-public methods in the returned MethodInfo array; otherwise, false.
-            Returns: An array of System.Reflection.MethodInfo objects whose elements reflect the get, set, and other accessors of the property reflected by the current instance. If the 
-             nonPublic parameter is true, this array contains public and non-public get, set, and other accessors. If nonPublic is false, this array contains only public get, set, 
-             and other accessors. If no accessors with the specified visibility are found, this method returns an array with zero (0) elements.
+            Returns: An array of System.Reflection.MethodInfo objects whose elements reflect the get, set, and other accessors of the property reflected by the current instance. If the nonPublic 
+             parameter is true, this array contains public and non-public get, set, and other accessors. If nonPublic is false, this array contains only public get, set, and other accessors. 
+             If no accessors with the specified visibility are found, this method returns an array with zero (0) elements.
         
         GetAccessors(self: _PropertyInfo) -> Array[MethodInfo]
         
             Provides COM objects with version-independent access to the System.Reflection.PropertyInfo.GetAccessors method.
-            Returns: An array of System.Reflection.MethodInfo objects that reflect the public get, set, and other accessors of the property reflected by the current instance, if accessors 
-             are found; otherwise, this method returns an array with zero (0) elements.
+            Returns: An array of System.Reflection.MethodInfo objects that reflect the public get, set, and other accessors of the property reflected by the current instance, if accessors are found; 
+             otherwise, this method returns an array with zero (0) elements.
         """
         pass
 
@@ -11518,8 +11495,8 @@ class _PropertyInfo:
             Provides COM objects with version-independent access to the System.Reflection.PropertyInfo.GetGetMethod(System.Boolean) method.
         
             nonPublic: true to return a non-public get accessor; otherwise, false.
-            Returns: A System.Reflection.MethodInfo object representing the get accessor for this property, if the nonPublic parameter is true. Or null if nonPublic is false and the get 
-             accessor is non-public, or if nonPublic is true but no get accessors exist.
+            Returns: A System.Reflection.MethodInfo object representing the get accessor for this property, if the nonPublic parameter is true. Or null if nonPublic is false and the get accessor is 
+             non-public, or if nonPublic is true but no get accessors exist.
         
         GetGetMethod(self: _PropertyInfo) -> MethodInfo
         
@@ -11567,9 +11544,9 @@ class _PropertyInfo:
             Provides COM objects with version-independent access to the System.Reflection.PropertyInfo.GetSetMethod(System.Boolean) method.
         
             nonPublic: true to return a non-public accessor; otherwise, false.
-            Returns: One of the values in the following table.Value Meaning A System.Reflection.MethodInfo object representing the Set method for this property. The set accessor is 
-             public.-or- The nonPublic parameter is true and the set accessor is non-public. nullThe nonPublic parameter is true, but the property is read-only.-or- The nonPublic 
-             parameter is false and the set accessor is non-public.-or- There is no set accessor.
+            Returns: One of the values in the following table.Value Meaning A System.Reflection.MethodInfo object representing the Set method for this property. The set accessor is public.-or- The 
+             nonPublic parameter is true and the set accessor is non-public. nullThe nonPublic parameter is true, but the property is read-only.-or- The nonPublic parameter is false and the 
+             set accessor is non-public.-or- There is no set accessor.
         
         GetSetMethod(self: _PropertyInfo) -> MethodInfo
         
@@ -11622,16 +11599,15 @@ class _PropertyInfo:
         
         
             obj: The object whose property value will be returned.
-            invokeAttr: The invocation attribute. This must be a bit flag from BindingFlags: InvokeMethod, CreateInstance, Static, GetField, SetField, GetProperty, or SetProperty. A suitable 
-             invocation attribute must be specified. If a static member will be invoked, the Static flag of BindingFlags must be set.
+            invokeAttr: The invocation attribute. This must be a bit flag from BindingFlags: InvokeMethod, CreateInstance, Static, GetField, SetField, GetProperty, or SetProperty. A suitable invocation 
+             attribute must be specified. If a static member will be invoked, the Static flag of BindingFlags must be set.
         
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of MemberInfo objects through reflection. If binder is null, the 
-             default binder is used.
+            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of MemberInfo objects through reflection. If binder is null, the default 
+             binder is used.
         
             index: Optional index values for indexed properties. This value should be null for non-indexed properties.
-            culture: The CultureInfo object that represents the culture for which the resource will be localized. Note that if the resource is not localized for this culture, the 
-             CultureInfo.Parent method will be called successively in search of a match. If this value is null, the CultureInfo is obtained from the CultureInfo.CurrentUICulture 
-             property.
+            culture: The CultureInfo object that represents the culture for which the resource will be localized. Note that if the resource is not localized for this culture, the CultureInfo.Parent 
+             method will be called successively in search of a match. If this value is null, the CultureInfo is obtained from the CultureInfo.CurrentUICulture property.
         
             Returns: The property value for the obj parameter.
         """
@@ -11681,16 +11657,15 @@ class _PropertyInfo:
         
             obj: The object whose property value will be returned.
             value: The new value for this property.
-            invokeAttr: The invocation attribute. This must be a bit flag from System.Reflection.BindingFlags: InvokeMethod, CreateInstance, Static, GetField, SetField, GetProperty, or 
-             SetProperty. A suitable invocation attribute must be specified. If a static member will be invoked, the Static flag of BindingFlags must be set.
+            invokeAttr: The invocation attribute. This must be a bit flag from System.Reflection.BindingFlags: InvokeMethod, CreateInstance, Static, GetField, SetField, GetProperty, or SetProperty. A 
+             suitable invocation attribute must be specified. If a static member will be invoked, the Static flag of BindingFlags must be set.
         
-            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects through reflection. If 
-             binder is null, the default binder is used.
+            binder: An object that enables the binding, coercion of argument types, invocation of members, and retrieval of System.Reflection.MemberInfo objects through reflection. If binder is 
+             null, the default binder is used.
         
             index: Optional index values for indexed properties. This value should be null for non-indexed properties.
-            culture: The System.Globalization.CultureInfo object that represents the culture for which the resource will be localized. Note that if the resource is not localized for this 
-             culture, the CultureInfo.Parent method will be called successively in search of a match. If this value is null, the CultureInfo is obtained from the 
-             CultureInfo.CurrentUICulture property.
+            culture: The System.Globalization.CultureInfo object that represents the culture for which the resource will be localized. Note that if the resource is not localized for this culture, the 
+             CultureInfo.Parent method will be called successively in search of a match. If this value is null, the CultureInfo is obtained from the CultureInfo.CurrentUICulture property.
         """
         pass
 
@@ -11926,8 +11901,8 @@ class _Type:
         
             filter: The System.Reflection.TypeFilter delegate that compares the interfaces against filterCriteria.
             filterCriteria: The search criteria that determines whether an interface should be included in the returned array.
-            Returns: An array of System.Type objects representing a filtered list of the interfaces implemented or inherited by the current System.Type.-or- An empty array of type 
-             System.Type, if no interfaces matching the filter are implemented or inherited by the current System.Type.
+            Returns: An array of System.Type objects representing a filtered list of the interfaces implemented or inherited by the current System.Type.-or- An empty array of type System.Type, if no 
+             interfaces matching the filter are implemented or inherited by the current System.Type.
         """
         pass
 
@@ -11941,15 +11916,15 @@ class _Type:
         
             memberType: A MemberTypes object indicating the type of member to search for.
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            filter: The delegate that does the comparisons, returning true if the member currently being inspected matches the filterCriteria and false otherwise. You can use the 
-             FilterAttribute, FilterName, and FilterNameIgnoreCase delegates supplied by this class. The first uses the fields of FieldAttributes, MethodAttributes, and 
-             MethodImplAttributes as search criteria, and the other two delegates use String objects as the search criteria.
+            filter: The delegate that does the comparisons, returning true if the member currently being inspected matches the filterCriteria and false otherwise. You can use the FilterAttribute, 
+             FilterName, and FilterNameIgnoreCase delegates supplied by this class. The first uses the fields of FieldAttributes, MethodAttributes, and MethodImplAttributes as search 
+             criteria, and the other two delegates use String objects as the search criteria.
         
-            filterCriteria: The search criteria that determines whether a member is returned in the array of MemberInfo objects.The fields of FieldAttributes, MethodAttributes, and 
-             MethodImplAttributes can be used in conjunction with the FilterAttribute delegate supplied by this class.
+            filterCriteria: The search criteria that determines whether a member is returned in the array of MemberInfo objects.The fields of FieldAttributes, MethodAttributes, and MethodImplAttributes can 
+             be used in conjunction with the FilterAttribute delegate supplied by this class.
         
-            Returns: A filtered array of System.Reflection.MemberInfo objects of the specified member type.-or- An empty array of type System.Reflection.MemberInfo, if the current 
-             System.Type does not have members of type memberType that match the filter criteria.
+            Returns: A filtered array of System.Reflection.MemberInfo objects of the specified member type.-or- An empty array of type System.Reflection.MemberInfo, if the current System.Type does 
+             not have members of type memberType that match the filter criteria.
         """
         pass
 
@@ -11967,22 +11942,22 @@ class _Type:
         GetConstructor(self: _Type, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Array[Type], modifiers: Array[ParameterModifier]) -> ConstructorInfo
         
             Provides COM objects with version-independent access to the 
-             System.Type.GetConstructor(System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifie
-             r[]) method.
+             System.Type.GetConstructor(System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[]) 
+             method.
         
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument 
-             types, and invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
         
-            callConvention: The System.Reflection.CallingConventions object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, 
-             what registers are used for arguments, and the stack is cleaned up.
+            callConvention: The System.Reflection.CallingConventions object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers 
+             are used for arguments, and the stack is cleaned up.
         
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the constructor to get.-or- An empty array of the type System.Type (that 
-             is, Type[] types = new Type[0]) to get a constructor that takes no parameters.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the constructor to get.-or- An empty array of the type System.Type (that is, Type[] 
+             types = new Type[0]) to get a constructor that takes no parameters.
         
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder 
-             does not process this parameter.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does not 
+             process this parameter.
         
             Returns: A System.Reflection.ConstructorInfo object representing the constructor that matches the specified requirements, if found; otherwise, null.
         GetConstructor(self: _Type, bindingAttr: BindingFlags, binder: Binder, types: Array[Type], modifiers: Array[ParameterModifier]) -> ConstructorInfo
@@ -11992,25 +11967,24 @@ class _Type:
         
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument 
-             types, and invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
         
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the constructor to get.-or- An empty array of the type System.Type (that 
-             is, Type[] types = new Type[0]) to get a constructor that takes no parameters.-or- System.Type.EmptyTypes.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the constructor to get.-or- An empty array of the type System.Type (that is, Type[] 
+             types = new Type[0]) to get a constructor that takes no parameters.-or- System.Type.EmptyTypes.
         
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the parameter type array. The default 
-             binder does not process this parameter.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the parameter type array. The default binder does 
+             not process this parameter.
         
             Returns: A System.Reflection.ConstructorInfo object representing the constructor that matches the specified requirements, if found; otherwise, null.
         GetConstructor(self: _Type, types: Array[Type]) -> ConstructorInfo
         
             Provides COM objects with version-independent access to the System.Type.GetConstructor(System.Type[]) method.
         
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the desired constructor.-or- An empty array of System.Type objects, to 
-             get a constructor that takes no parameters. Such an empty array is provided by the static field System.Type.EmptyTypes.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the desired constructor.-or- An empty array of System.Type objects, to get a 
+             constructor that takes no parameters. Such an empty array is provided by the static field System.Type.EmptyTypes.
         
-            Returns: A System.Reflection.ConstructorInfo object representing the public instance constructor whose parameters match the types in the parameter type array, if found; 
-             otherwise, null.
+            Returns: A System.Reflection.ConstructorInfo object representing the public instance constructor whose parameters match the types in the parameter type array, if found; otherwise, null.
         """
         pass
 
@@ -12021,17 +11995,16 @@ class _Type:
             Provides COM objects with version-independent access to the System.Type.GetConstructors(System.Reflection.BindingFlags) method.
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            Returns: An array of System.Reflection.ConstructorInfo objects representing all constructors defined for the current System.Type that match the specified binding constraints, 
-             including the type initializer if it is defined. Returns an empty array of type System.Reflection.ConstructorInfo if no constructors are defined for the current 
-             System.Type, if none of the defined constructors match the binding constraints, or if the current System.Type represents a type parameter of a generic type or method 
-             definition.
+            Returns: An array of System.Reflection.ConstructorInfo objects representing all constructors defined for the current System.Type that match the specified binding constraints, including 
+             the type initializer if it is defined. Returns an empty array of type System.Reflection.ConstructorInfo if no constructors are defined for the current System.Type, if none of the 
+             defined constructors match the binding constraints, or if the current System.Type represents a type parameter of a generic type or method definition.
         
         GetConstructors(self: _Type) -> Array[ConstructorInfo]
         
             Provides COM objects with version-independent access to the System.Type.GetConstructors method.
             Returns: An array of System.Reflection.ConstructorInfo objects representing all the public instance constructors defined for the current System.Type, but not including the type 
-             initializer (static constructor). If no public instance constructors are defined for the current System.Type, or if the current System.Type represents a type parameter 
-             of a generic type or method definition, an empty array of type System.Reflection.ConstructorInfo is returned.
+             initializer (static constructor). If no public instance constructors are defined for the current System.Type, or if the current System.Type represents a type parameter of a 
+             generic type or method definition, an empty array of type System.Reflection.ConstructorInfo is returned.
         """
         pass
 
@@ -12058,8 +12031,8 @@ class _Type:
         GetDefaultMembers(self: _Type) -> Array[MemberInfo]
         
             Provides COM objects with version-independent access to the System.Type.GetDefaultMembers method.
-            Returns: An array of System.Reflection.MemberInfo objects representing all default members of the current System.Type.-or- An empty array of type System.Reflection.MemberInfo, 
-             if the current System.Type does not have default members.
+            Returns: An array of System.Reflection.MemberInfo objects representing all default members of the current System.Type.-or- An empty array of type System.Reflection.MemberInfo, if the 
+             current System.Type does not have default members.
         """
         pass
 
@@ -12068,8 +12041,8 @@ class _Type:
         GetElementType(self: _Type) -> Type
         
             Provides COM objects with version-independent access to the System.Type.GetElementType method.
-            Returns: The System.Type of the object encompassed or referred to by the current array, pointer or reference type.-or- null if the current System.Type is not an array or a 
-             pointer, or is not passed by reference, or represents a generic type or a type parameter of a generic type or method definition.
+            Returns: The System.Type of the object encompassed or referred to by the current array, pointer or reference type.-or- null if the current System.Type is not an array or a pointer, or is 
+             not passed by reference, or represents a generic type or a type parameter of a generic type or method definition.
         """
         pass
 
@@ -12088,8 +12061,7 @@ class _Type:
         
             name: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
             Returns: An array of System.Reflection.EventInfo objects representing all events that are declared or inherited by the current System.Type that match the specified binding 
-             constraints.-or- An empty array of type System.Reflection.EventInfo, if the current System.Type does not have events, or if none of the events match the binding 
-             constraints.
+             constraints.-or- An empty array of type System.Reflection.EventInfo, if the current System.Type does not have events, or if none of the events match the binding constraints.
         """
         pass
 
@@ -12098,8 +12070,8 @@ class _Type:
         GetEvents(self: _Type) -> Array[EventInfo]
         
             Provides COM objects with version-independent access to the System.Type.GetEvents method.
-            Returns: An array of System.Reflection.EventInfo objects representing all the public events that are declared or inherited by the current System.Type.-or- An empty array of 
-             type System.Reflection.EventInfo, if the current System.Type does not have public events.
+            Returns: An array of System.Reflection.EventInfo objects representing all the public events that are declared or inherited by the current System.Type.-or- An empty array of type 
+             System.Reflection.EventInfo, if the current System.Type does not have public events.
         
         GetEvents(self: _Type, bindingAttr: BindingFlags) -> Array[EventInfo]
         
@@ -12107,8 +12079,7 @@ class _Type:
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
             Returns: An array of System.Reflection.EventInfo objects representing all events that are declared or inherited by the current System.Type that match the specified binding 
-             constraints.-or- An empty array of type System.Reflection.EventInfo, if the current System.Type does not have events, or if none of the events match the binding 
-             constraints.
+             constraints.-or- An empty array of type System.Reflection.EventInfo, if the current System.Type does not have events, or if none of the events match the binding constraints.
         """
         pass
 
@@ -12137,14 +12108,14 @@ class _Type:
             Provides COM objects with version-independent access to the System.Type.GetFields(System.Reflection.BindingFlags) method.
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            Returns: An array of System.Reflection.FieldInfo objects representing all fields defined for the current System.Type that match the specified binding constraints.-or- An empty 
-             array of type System.Reflection.FieldInfo, if no fields are defined for the current System.Type, or if none of the defined fields match the binding constraints.
+            Returns: An array of System.Reflection.FieldInfo objects representing all fields defined for the current System.Type that match the specified binding constraints.-or- An empty array of 
+             type System.Reflection.FieldInfo, if no fields are defined for the current System.Type, or if none of the defined fields match the binding constraints.
         
         GetFields(self: _Type) -> Array[FieldInfo]
         
             Provides COM objects with version-independent access to the System.Type.GetFields method.
-            Returns: An array of System.Reflection.FieldInfo objects representing all the public fields defined for the current System.Type.-or- An empty array of type 
-             System.Reflection.FieldInfo, if no public fields are defined for the current System.Type.
+            Returns: An array of System.Reflection.FieldInfo objects representing all the public fields defined for the current System.Type.-or- An empty array of type System.Reflection.FieldInfo, if 
+             no public fields are defined for the current System.Type.
         """
         pass
 
@@ -12205,8 +12176,8 @@ class _Type:
         GetInterfaces(self: _Type) -> Array[Type]
         
             Provides COM objects with version-independent access to the System.Type.GetInterfaces method.
-            Returns: An array of System.Type objects representing all the interfaces implemented or inherited by the current System.Type.-or- An empty array of type System.Type, if no 
-             interfaces are implemented or inherited by the current System.Type.
+            Returns: An array of System.Type objects representing all the interfaces implemented or inherited by the current System.Type.-or- An empty array of type System.Type, if no interfaces are 
+             implemented or inherited by the current System.Type.
         """
         pass
 
@@ -12243,15 +12214,14 @@ class _Type:
             Provides COM objects with version-independent access to the System.Type.GetMembers(System.Reflection.BindingFlags) method.
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            Returns: An array of System.Reflection.MemberInfo objects representing all members defined for the current System.Type that match the specified binding constraints.-or- An 
-             empty array of type System.Reflection.MemberInfo, if no members are defined for the current System.Type, or if none of the defined members match the binding 
-             constraints.
+            Returns: An array of System.Reflection.MemberInfo objects representing all members defined for the current System.Type that match the specified binding constraints.-or- An empty array of 
+             type System.Reflection.MemberInfo, if no members are defined for the current System.Type, or if none of the defined members match the binding constraints.
         
         GetMembers(self: _Type) -> Array[MemberInfo]
         
             Provides COM objects with version-independent access to the System.Type.GetMembers method.
-            Returns: An array of System.Reflection.MemberInfo objects representing all the public members of the current System.Type.-or- An empty array of type 
-             System.Reflection.MemberInfo, if the current System.Type does not have public members.
+            Returns: An array of System.Reflection.MemberInfo objects representing all the public members of the current System.Type.-or- An empty array of type System.Reflection.MemberInfo, if the 
+             current System.Type does not have public members.
         """
         pass
 
@@ -12265,14 +12235,14 @@ class _Type:
         
             name: The System.String containing the name of the method to get.
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument 
-             types, and invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
         
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of the type System.Type (that is, 
-             Type[] types = new Type[0]) to get a method that takes no parameters.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of the type System.Type (that is, Type[] 
+             types = new Type[0]) to get a method that takes no parameters.
         
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder 
-             does not process this parameter.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does not 
+             process this parameter.
         
             Returns: A System.Reflection.MethodInfo object representing the method that matches the specified requirements, if found; otherwise, null.
         GetMethod(self: _Type, name: str, bindingAttr: BindingFlags) -> MethodInfo
@@ -12285,23 +12255,23 @@ class _Type:
         GetMethod(self: _Type, name: str, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Array[Type], modifiers: Array[ParameterModifier]) -> MethodInfo
         
             Provides COM objects with version-independent access to the 
-             System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.Paramet
-             erModifier[]) method.
+             System.Type.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[
+             ]) method.
         
         
             name: The System.String containing the name of the method to get.
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument 
-             types, and invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
         
-            callConvention: The System.Reflection.CallingConventions object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, 
-             what registers are used for arguments, and how the stack is cleaned up.
+            callConvention: The System.Reflection.CallingConventions object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers 
+             are used for arguments, and how the stack is cleaned up.
         
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of the type System.Type (that is, 
-             Type[] types = new Type[0]) to get a method that takes no parameters.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of the type System.Type (that is, Type[] 
+             types = new Type[0]) to get a method that takes no parameters.
         
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder 
-             does not process this parameter.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does not 
+             process this parameter.
         
             Returns: A System.Reflection.MethodInfo object representing the method that matches the specified requirements, if found; otherwise, null.
         GetMethod(self: _Type, name: str, types: Array[Type], modifiers: Array[ParameterModifier]) -> MethodInfo
@@ -12309,11 +12279,11 @@ class _Type:
             Provides COM objects with version-independent access to the System.Type.GetMethod(System.String,System.Type[],System.Reflection.ParameterModifier[]) method.
         
             name: The System.String containing the name of the public method to get.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of the type System.Type (that is, 
-             Type[] types = new Type[0]) to get a method that takes no parameters.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of the type System.Type (that is, Type[] 
+             types = new Type[0]) to get a method that takes no parameters.
         
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder 
-             does not process this parameter.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does not 
+             process this parameter.
         
             Returns: A System.Reflection.MethodInfo object representing the public method that matches the specified requirements, if found; otherwise, null.
         GetMethod(self: _Type, name: str, types: Array[Type]) -> MethodInfo
@@ -12321,8 +12291,8 @@ class _Type:
             Provides COM objects with version-independent access to the System.Type.GetMethod(System.String,System.Type[]) method.
         
             name: The System.String containing the name of the public method to get.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of the type System.Type (that is, 
-             Type[] types = new Type[0]) to get a method that takes no parameters.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the method to get.-or- An empty array of the type System.Type (that is, Type[] 
+             types = new Type[0]) to get a method that takes no parameters.
         
             Returns: A System.Reflection.MethodInfo object representing the public method whose parameters match the specified argument types, if found; otherwise, null.
         GetMethod(self: _Type, name: str) -> MethodInfo
@@ -12341,15 +12311,14 @@ class _Type:
             Provides COM objects with version-independent access to the System.Type.GetMethods(System.Reflection.BindingFlags) method.
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            Returns: An array of System.Reflection.MethodInfo objects representing all methods defined for the current System.Type that match the specified binding constraints.-or- An 
-             empty array of type System.Reflection.MethodInfo, if no methods are defined for the current System.Type, or if none of the defined methods match the binding 
-             constraints.
+            Returns: An array of System.Reflection.MethodInfo objects representing all methods defined for the current System.Type that match the specified binding constraints.-or- An empty array of 
+             type System.Reflection.MethodInfo, if no methods are defined for the current System.Type, or if none of the defined methods match the binding constraints.
         
         GetMethods(self: _Type) -> Array[MethodInfo]
         
             Provides COM objects with version-independent access to the System.Type.GetMethods method.
-            Returns: An array of System.Reflection.MethodInfo objects representing all the public methods defined for the current System.Type.-or- An empty array of type 
-             System.Reflection.MethodInfo, if no public methods are defined for the current System.Type.
+            Returns: An array of System.Reflection.MethodInfo objects representing all the public methods defined for the current System.Type.-or- An empty array of type System.Reflection.MethodInfo, 
+             if no public methods are defined for the current System.Type.
         """
         pass
 
@@ -12375,19 +12344,19 @@ class _Type:
         """
         GetNestedTypes(self: _Type, bindingAttr: BindingFlags) -> Array[Type]
         
-            Provides COM objects with version-independent access to the System.Type.GetNestedTypes(System.Reflection.BindingFlags) method, and searches for the types nested within 
-             the current System.Type, using the specified binding constraints.
+            Provides COM objects with version-independent access to the System.Type.GetNestedTypes(System.Reflection.BindingFlags) method, and searches for the types nested within the 
+             current System.Type, using the specified binding constraints.
         
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            Returns: An array of System.Type objects representing all the types nested within the current System.Type that match the specified binding constraints.-or- An empty array of 
-             type System.Type, if no types are nested within the current System.Type, or if none of the nested types match the binding constraints.
+            Returns: An array of System.Type objects representing all the types nested within the current System.Type that match the specified binding constraints.-or- An empty array of type 
+             System.Type, if no types are nested within the current System.Type, or if none of the nested types match the binding constraints.
         
         GetNestedTypes(self: _Type) -> Array[Type]
         
             Provides COM objects with version-independent access to the System.Type.GetNestedTypes method.
-            Returns: An array of System.Type objects representing all the types nested within the current System.Type.-or- An empty array of type System.Type, if no types are nested within 
-             the current System.Type.
+            Returns: An array of System.Type objects representing all the types nested within the current System.Type.-or- An empty array of type System.Type, if no types are nested within the 
+             current System.Type.
         """
         pass
 
@@ -12398,14 +12367,14 @@ class _Type:
             Provides COM objects with version-independent access to the System.Type.GetProperties(System.Reflection.BindingFlags) method.
         
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            Returns: An array of System.Reflection.PropertyInfo objects representing all properties of the current System.Type that match the specified binding constraints.-or- An empty 
-             array of type System.Reflection.PropertyInfo, if the current System.Type does not have properties, or if none of the properties match the binding constraints.
+            Returns: An array of System.Reflection.PropertyInfo objects representing all properties of the current System.Type that match the specified binding constraints.-or- An empty array of type 
+             System.Reflection.PropertyInfo, if the current System.Type does not have properties, or if none of the properties match the binding constraints.
         
         GetProperties(self: _Type) -> Array[PropertyInfo]
         
             Provides COM objects with version-independent access to the System.Type.GetProperties method.
-            Returns: An array of System.Reflection.PropertyInfo objects representing all public properties of the current System.Type.-or- An empty array of type 
-             System.Reflection.PropertyInfo, if the current System.Type does not have public properties.
+            Returns: An array of System.Reflection.PropertyInfo objects representing all public properties of the current System.Type.-or- An empty array of type System.Reflection.PropertyInfo, if 
+             the current System.Type does not have public properties.
         """
         pass
 
@@ -12426,30 +12395,28 @@ class _Type:
         
             name: The System.String containing the name of the property to get.
             bindingAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted.-or- Zero, to return null.
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument 
-             types, and invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
         
             returnType: The return type of the property.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type 
-             (that is, Type[] types = new Type[0]) to get a property that is not indexed.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type (that is, 
+             Type[] types = new Type[0]) to get a property that is not indexed.
         
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder 
-             does not process this parameter.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does not 
+             process this parameter.
         
             Returns: A System.Reflection.PropertyInfo object representing the property that matches the specified requirements, if found; otherwise, null.
         GetProperty(self: _Type, name: str, returnType: Type, types: Array[Type], modifiers: Array[ParameterModifier]) -> PropertyInfo
         
-            Provides COM objects with version-independent access to the System.Type.GetProperty(System.String,System.Type,System.Type[],System.Reflection.ParameterModifier[]) 
-             method.
-        
+            Provides COM objects with version-independent access to the System.Type.GetProperty(System.String,System.Type,System.Type[],System.Reflection.ParameterModifier[]) method.
         
             name: The System.String containing the name of the public property to get.
             returnType: The return type of the property.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type 
-             (that is, Type[] types = new Type[0]) to get a property that is not indexed.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type (that is, 
+             Type[] types = new Type[0]) to get a property that is not indexed.
         
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder 
-             does not process this parameter.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the types array. The default binder does not 
+             process this parameter.
         
             Returns: A System.Reflection.PropertyInfo object representing the public property that matches the specified requirements, if found; otherwise, null.
         GetProperty(self: _Type, name: str, returnType: Type, types: Array[Type]) -> PropertyInfo
@@ -12458,8 +12425,8 @@ class _Type:
         
             name: The System.String containing the name of the public property to get.
             returnType: The return type of the property.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type 
-             (that is, Type[] types = new Type[0]) to get a property that is not indexed.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type (that is, 
+             Type[] types = new Type[0]) to get a property that is not indexed.
         
             Returns: A System.Reflection.PropertyInfo object representing the public property whose parameters match the specified argument types, if found; otherwise, null.
         GetProperty(self: _Type, name: str, types: Array[Type]) -> PropertyInfo
@@ -12467,8 +12434,8 @@ class _Type:
             Provides COM objects with version-independent access to the System.Type.GetProperty(System.String,System.Type[]) method.
         
             name: The System.String containing the name of the public property to get.
-            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type 
-             (that is, Type[] types = new Type[0]) to get a property that is not indexed.
+            types: An array of System.Type objects representing the number, order, and type of the parameters for the indexed property to get.-or- An empty array of the type System.Type (that is, 
+             Type[] types = new Type[0]) to get a property that is not indexed.
         
             Returns: A System.Reflection.PropertyInfo object representing the public property whose parameters match the specified argument types, if found; otherwise, null.
         GetProperty(self: _Type, name: str, returnType: Type) -> PropertyInfo
@@ -12537,27 +12504,26 @@ class _Type:
         InvokeMember(self: _Type, name: str, invokeAttr: BindingFlags, binder: Binder, target: object, args: Array[object], modifiers: Array[ParameterModifier], culture: CultureInfo, namedParameters: Array[str]) -> object
         
             Provides COM objects with version-independent access to the 
-             System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],Syste
-             m.Globalization.CultureInfo,System.String[]) method.
+             System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globaliza
+             tion.CultureInfo,System.String[]) method.
         
         
-            name: The System.String containing the name of the constructor, method, property, or field member to invoke.-or- An empty string ("") to invoke the default member. -or-For 
-             IDispatch members, a string representing the DispID, for example "[DispID=3]".
+            name: The System.String containing the name of the constructor, method, property, or field member to invoke.-or- An empty string ("") to invoke the default member. -or-For IDispatch 
+             members, a string representing the DispID, for example "[DispID=3]".
         
-            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted. The access can be one of the BindingFlags such as Public, 
-             NonPublic, Private, InvokeMethod, GetField, and so on. The type of lookup need not be specified. If the type of lookup is omitted, BindingFlags.Public | 
-             BindingFlags.Instance will apply.
+            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted. The access can be one of the BindingFlags such as Public, NonPublic, 
+             Private, InvokeMethod, GetField, and so on. The type of lookup need not be specified. If the type of lookup is omitted, BindingFlags.Public | BindingFlags.Instance will apply.
         
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument 
-             types, and invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
         
             target: The System.Object on which to invoke the specified member.
             args: An array containing the arguments to pass to the member to invoke.
-            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the args array. A parameter's 
-             associated attributes are stored in the member's signature. The default binder does not process this parameter.
+            modifiers: An array of System.Reflection.ParameterModifier objects representing the attributes associated with the corresponding element in the args array. A parameter's associated 
+             attributes are stored in the member's signature. The default binder does not process this parameter.
         
-            culture: The System.Globalization.CultureInfo object representing the globalization locale to use, which may be necessary for locale-specific conversions, such as converting a 
-             numeric String to a Double.-or- null to use the current thread's System.Globalization.CultureInfo.
+            culture: The System.Globalization.CultureInfo object representing the globalization locale to use, which may be necessary for locale-specific conversions, such as converting a numeric 
+             String to a Double.-or- null to use the current thread's System.Globalization.CultureInfo.
         
             namedParameters: An array containing the names of the parameters to which the values in the args array are passed.
             Returns: An System.Object representing the return value of the invoked member.
@@ -12567,20 +12533,19 @@ class _Type:
              System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Globalization.CultureInfo) method.
         
         
-            name: The System.String containing the name of the constructor, method, property, or field member to invoke.-or- An empty string ("") to invoke the default member. -or-For 
-             IDispatch members, a string representing the DispID, for example "[DispID=3]".
+            name: The System.String containing the name of the constructor, method, property, or field member to invoke.-or- An empty string ("") to invoke the default member. -or-For IDispatch 
+             members, a string representing the DispID, for example "[DispID=3]".
         
-            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted. The access can be one of the BindingFlags such as Public, 
-             NonPublic, Private, InvokeMethod, GetField, and so on. The type of lookup need not be specified. If the type of lookup is omitted, BindingFlags.Public | 
-             BindingFlags.Instance will apply.
+            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted. The access can be one of the BindingFlags such as Public, NonPublic, 
+             Private, InvokeMethod, GetField, and so on. The type of lookup need not be specified. If the type of lookup is omitted, BindingFlags.Public | BindingFlags.Instance will apply.
         
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument 
-             types, and invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
         
             target: The System.Object on which to invoke the specified member.
             args: An array containing the arguments to pass to the member to invoke.
-            culture: The System.Globalization.CultureInfo object representing the globalization locale to use, which may be necessary for locale-specific conversions, such as converting a 
-             numeric String to a Double.-or- null to use the current thread's System.Globalization.CultureInfo.
+            culture: The System.Globalization.CultureInfo object representing the globalization locale to use, which may be necessary for locale-specific conversions, such as converting a numeric 
+             String to a Double.-or- null to use the current thread's System.Globalization.CultureInfo.
         
             Returns: An System.Object representing the return value of the invoked member.
         InvokeMember(self: _Type, name: str, invokeAttr: BindingFlags, binder: Binder, target: object, args: Array[object]) -> object
@@ -12589,15 +12554,14 @@ class _Type:
              System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[]) method.
         
         
-            name: The System.String containing the name of the constructor, method, property, or field member to invoke.-or- An empty string ("") to invoke the default member. -or-For 
-             IDispatch members, a string representing the DispID, for example "[DispID=3]".
+            name: The System.String containing the name of the constructor, method, property, or field member to invoke.-or- An empty string ("") to invoke the default member. -or-For IDispatch 
+             members, a string representing the DispID, for example "[DispID=3]".
         
-            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted. The access can be one of the BindingFlags such as Public, 
-             NonPublic, Private, InvokeMethod, GetField, and so on. The type of lookup need not be specified. If the type of lookup is omitted, BindingFlags.Public | 
-             BindingFlags.Instance will apply.
+            invokeAttr: A bitmask comprised of one or more System.Reflection.BindingFlags that specify how the search is conducted. The access can be one of the BindingFlags such as Public, NonPublic, 
+             Private, InvokeMethod, GetField, and so on. The type of lookup need not be specified. If the type of lookup is omitted, BindingFlags.Public | BindingFlags.Instance will apply.
         
-            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument 
-             types, and invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
+            binder: A System.Reflection.Binder object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and 
+             invocation of a member through reflection.-or- null, to use the System.Type.DefaultBinder.
         
             target: The System.Object on which to invoke the specified member.
             args: An array containing the arguments to pass to the member to invoke.
@@ -12612,9 +12576,9 @@ class _Type:
             Provides COM objects with version-independent access to the System.Type.IsAssignableFrom(System.Type) method.
         
             c: The System.Type to compare with the current System.Type.
-            Returns: true if c and the current System.Type represent the same type, or if the current System.Type is in the inheritance hierarchy of c, or if the current System.Type is an 
-             interface that c implements, or if c is a generic type parameter and the current System.Type represents one of the constraints of c. false if none of these conditions 
-             are the case, or if c is null.
+            Returns: true if c and the current System.Type represent the same type, or if the current System.Type is in the inheritance hierarchy of c, or if the current System.Type is an interface 
+             that c implements, or if c is a generic type parameter and the current System.Type represents one of the constraints of c. false if none of these conditions are the case, or if c 
+             is null.
         """
         pass
 
@@ -12637,9 +12601,8 @@ class _Type:
             Provides COM objects with version-independent access to the System.Type.IsInstanceOfType(System.Object) method.
         
             o: The object to compare with the current System.Type.
-            Returns: true if the current System.Type is in the inheritance hierarchy of the object represented by o, or if the current System.Type is an interface that o supports. false if 
-             neither of these conditions is the case, or if o is null, or if the current System.Type is an open generic type (that is, System.Type.ContainsGenericParameters returns 
-             true).
+            Returns: true if the current System.Type is in the inheritance hierarchy of the object represented by o, or if the current System.Type is an interface that o supports. false if neither of 
+             these conditions is the case, or if o is null, or if the current System.Type is an open generic type (that is, System.Type.ContainsGenericParameters returns true).
         """
         pass
 
@@ -12650,8 +12613,8 @@ class _Type:
             Provides COM objects with version-independent access to the System.Type.IsSubclassOf(System.Type) method.
         
             c: The System.Type to compare with the current System.Type.
-            Returns: true if the System.Type represented by the c parameter and the current System.Type represent classes, and the class represented by the current System.Type derives from 
-             the class represented by c; otherwise, false. This method also returns false if c and the current System.Type represent the same class.
+            Returns: true if the System.Type represented by the c parameter and the current System.Type represent classes, and the class represented by the current System.Type derives from the class 
+             represented by c; otherwise, false. This method also returns false if c and the current System.Type represent the same class.
         """
         pass
 

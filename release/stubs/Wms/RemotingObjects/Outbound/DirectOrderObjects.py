@@ -1,8 +1,8 @@
-from Wms.RemotingObjects.Caching import *
-from Wms.RemotingObjects import *
+from Wms.RemotingObjects.Caching import CacheObject
+from Wms.RemotingObjects import HistoryFilterBase
 # encoding: utf-8
 # module Wms.RemotingObjects.Outbound.DirectOrderObjects calls itself DirectOrderObjects
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -335,6 +335,11 @@ class ErpProcessDirecOrderResult():
     """Get: OrderNumber(self: ErpProcessDirecOrderResult) -> str
 
 Set: OrderNumber(self: ErpProcessDirecOrderResult) = value
+"""
+
+    Reports = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: Reports(self: ErpProcessDirecOrderResult) -> List[Attachment]
+
 """
 
     Success = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default

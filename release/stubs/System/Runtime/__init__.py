@@ -8,7 +8,7 @@
 # no functions
 # classes
 
-class AssemblyTargetedPatchBandAttribute:
+class AssemblyTargetedPatchBandAttribute(Object):
     """
     Specifies patch band information for targeted patching of the .NET Framework.
     
@@ -34,7 +34,7 @@ Get: TargetedPatchBand(self: AssemblyTargetedPatchBandAttribute) -> str
     Instance = AssemblyTargetedPatchBandAttribute()
     """hardcoded/returns an instance of the class"""
 
-class GCLargeObjectHeapCompactionMode:
+class GCLargeObjectHeapCompactionMode(Object):
     """ enum GCLargeObjectHeapCompactionMode, values: CompactOnce (2), Default (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -76,7 +76,7 @@ class GCLargeObjectHeapCompactionMode:
     Instance = GCLargeObjectHeapCompactionMode()
     """hardcoded/returns an instance of the class"""
 
-class GCLatencyMode:
+class GCLatencyMode(Object):
     """
     Adjusts the time that the garbage collector intrudes in your application.
     
@@ -188,7 +188,7 @@ class ProfileOptimization():
     Instance = ProfileOptimization()
     """hardcoded/returns an instance of the class"""
 
-class TargetedPatchingOptOutAttribute:
+class TargetedPatchingOptOutAttribute(Object):
     """
     Indicates that the .NET Framework class library method to which this attribute is applied is unlikely to be affected by servicing releases, and therefore is eligible to be inlined across Native Image Generator (NGen) images.
     

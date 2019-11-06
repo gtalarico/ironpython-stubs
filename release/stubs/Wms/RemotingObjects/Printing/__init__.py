@@ -1,8 +1,10 @@
-from Wms.RemotingObjects import *
-from System.Collections.Generic import *
+from System.Collections.Generic import List
+from Wms.RemotingObjects import DbObject
+from Wms.RemotingObjects import FindableList
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingObjects.Printing calls itself Printing
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -583,7 +585,7 @@ Set: UnitCode(self: ItemWithItemIdPrintLine) = value
     Instance = ItemWithItemIdPrintLine()
     """hardcoded/returns an instance of the class"""
 
-class LabelFieldType:
+class LabelFieldType(Object):
     """ enum LabelFieldType, values: Barcode (2), BarcodeDescription (3), String (1), Unknown (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1409,7 +1411,7 @@ Set: SelectedPackageId(self: PrintSSCCLabelsArgs) = value
     Instance = PrintSSCCLabelsArgs()
     """hardcoded/returns an instance of the class"""
 
-class PurchaseOrderPrintLine:
+class PurchaseOrderPrintLine(Object):
     """ PurchaseOrderPrintLine() """
     CurrentBarcode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """CURRENT vendor Barcode
@@ -1577,7 +1579,7 @@ class ReportItems(List):
     Instance = ReportItems()
     """hardcoded/returns an instance of the class"""
 
-class RmaOrderPrintLine:
+class RmaOrderPrintLine(Object):
     """ RmaOrderPrintLine() """
     def GetHashCode(self):
         """ GetHashCode(self: RmaOrderPrintLine) -> int """

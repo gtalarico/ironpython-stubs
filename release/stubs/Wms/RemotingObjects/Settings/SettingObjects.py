@@ -1,8 +1,9 @@
-from System.Collections.Generic import *
-from Wms.RemotingObjects import *
+from System.Collections.Generic import List
+from System import Object
+from Wms.RemotingObjects import FindableList
 # encoding: utf-8
 # module Wms.RemotingObjects.Settings.SettingObjects calls itself SettingObjects
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -123,7 +124,7 @@ class OrderFlowLinks(List):
     Instance = OrderFlowLinks()
     """hardcoded/returns an instance of the class"""
 
-class OrderFlowOption:
+class OrderFlowOption(Object):
     """ enum OrderFlowOption, values: FulFill (2), FulFillPrintInvoice (1), PrintInvoiceFulFill (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

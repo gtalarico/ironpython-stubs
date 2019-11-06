@@ -62,8 +62,8 @@ class AddingNewEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -93,8 +93,8 @@ class AddingNewEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -113,7 +113,7 @@ class AddingNewEventHandler(MulticastDelegate):
     Instance = AddingNewEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class AmbientValueAttribute:
+class AmbientValueAttribute(Object):
     """
     Specifies the value to pass to a property to cause the property to get its value from another source. This is known as ambience. This class cannot be inherited.
     
@@ -368,9 +368,7 @@ class TypeConverter():
             Returns: An System.Object representing the given System.Collections.IDictionary, or null if the object cannot be created. This method always returns null.
         CreateInstance(self: TypeConverter, context: ITypeDescriptorContext, propertyValues: IDictionary) -> object
         
-            Creates an instance of the type that this System.ComponentModel.TypeConverter is associated with, using the specified context, given a set of property values for the 
-             object.
-        
+            Creates an instance of the type that this System.ComponentModel.TypeConverter is associated with, using the specified context, given a set of property values for the object.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             propertyValues: An System.Collections.IDictionary of new property values.
@@ -405,21 +403,21 @@ class TypeConverter():
         """
         GetCreateInstanceSupported(self: TypeConverter) -> bool
         
-            Returns whether changing a value on this object requires a call to the System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) method to 
-             create a new value.
+            Returns whether changing a value on this object requires a call to the System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) method to create a new 
+             value.
         
-            Returns: true if changing a property on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new value; 
-             otherwise, false.
+            Returns: true if changing a property on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new value; otherwise, 
+             false.
         
         GetCreateInstanceSupported(self: TypeConverter, context: ITypeDescriptorContext) -> bool
         
-            Returns whether changing a value on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new 
-             value, using the specified context.
+            Returns whether changing a value on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new value, using 
+             the specified context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true if changing a property on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new value; 
-             otherwise, false.
+            Returns: true if changing a property on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new value; otherwise, 
+             false.
         """
         pass
 
@@ -469,18 +467,15 @@ class TypeConverter():
         GetStandardValues(self: TypeConverter) -> ICollection
         
             Returns a collection of standard values from the default context for the data type this type converter is designed for.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection containing a standard set of valid values, or null if the data type does not support a standard set of 
-             values.
-        
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection containing a standard set of valid values, or null if the data type does not support a standard set of values.
         GetStandardValues(self: TypeConverter, context: ITypeDescriptorContext) -> StandardValuesCollection
         
             Returns a collection of standard values for the data type this type converter is designed for when provided with a format context.
         
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context that can be used to extract additional information about the environment from which this 
-             converter is invoked. This parameter or properties of this parameter can be null.
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context that can be used to extract additional information about the environment from which this converter 
+             is invoked. This parameter or properties of this parameter can be null.
         
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of 
-             values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of values.
         """
         pass
 
@@ -489,18 +484,18 @@ class TypeConverter():
         GetStandardValuesExclusive(self: TypeConverter) -> bool
         
             Returns whether the collection of standard values returned from System.ComponentModel.TypeConverter.GetStandardValues is an exclusive list.
-            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of 
-             possible values; false if other values are possible.
+            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible 
+             values; false if other values are possible.
         
         GetStandardValuesExclusive(self: TypeConverter, context: ITypeDescriptorContext) -> bool
         
-            Returns whether the collection of standard values returned from System.ComponentModel.TypeConverter.GetStandardValues is an exclusive list of possible values, using 
-             the specified context.
+            Returns whether the collection of standard values returned from System.ComponentModel.TypeConverter.GetStandardValues is an exclusive list of possible values, using the specified 
+             context.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of 
-             possible values; false if other values are possible.
+            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible 
+             values; false if other values are possible.
         """
         pass
 
@@ -584,8 +579,7 @@ class CollectionConverter(TypeConverter):
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             value: An System.Object that specifies the type of array to get the properties for.
             attributes: An array of type System.Attribute that will be used as a filter.
-            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for this data type, or null if there are no properties. This method always 
-             returns null.
+            Returns: A System.ComponentModel.PropertyDescriptorCollection with the properties that are exposed for this data type, or null if there are no properties. This method always returns null.
         """
         pass
 
@@ -596,8 +590,8 @@ class CollectionConverter(TypeConverter):
             Gets a value indicating whether this object supports properties.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: false because System.ComponentModel.CollectionConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[]) should not be 
-             called to find the properties of this object. This method never returns true.
+            Returns: false because System.ComponentModel.CollectionConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[]) should not be called to find 
+             the properties of this object. This method never returns true.
         """
         pass
 
@@ -644,8 +638,8 @@ class ArrayConverter(CollectionConverter):
             Gets a value indicating whether this object supports properties.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because System.ComponentModel.ArrayConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[]) should be called to find 
-             the properties of this object. This method never returns false.
+            Returns: true because System.ComponentModel.ArrayConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[]) should be called to find the 
+             properties of this object. This method never returns false.
         """
         pass
 
@@ -726,8 +720,8 @@ class AsyncCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -757,8 +751,8 @@ class AsyncCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -846,7 +840,7 @@ class AsyncOperationManager():
     Instance = AsyncOperationManager()
     """hardcoded/returns an instance of the class"""
 
-class AttributeCollection:
+class AttributeCollection(Object):
     """
     Represents a collection of attributes.
     
@@ -975,7 +969,7 @@ Get: Count(self: AttributeCollection) -> int
     Instance = AttributeCollection()
     """hardcoded/returns an instance of the class"""
 
-class AttributeProviderAttribute:
+class AttributeProviderAttribute(Object):
     """
     Enables attribute redirection. This class cannot be inherited.
     
@@ -1034,8 +1028,7 @@ class Component(MarshalByRefObject):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
-             specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -1045,9 +1038,9 @@ class Component(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -1146,8 +1139,7 @@ class BackgroundWorker(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
-             specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -1157,9 +1149,9 @@ class BackgroundWorker(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -1345,7 +1337,7 @@ class BaseNumberConverter(TypeConverter):
     Instance = BaseNumberConverter()
     """hardcoded/returns an instance of the class"""
 
-class BindableAttribute:
+class BindableAttribute(Object):
     """
     Specifies whether a member is typically used for binding. This class cannot be inherited.
     
@@ -1426,7 +1418,7 @@ Get: Direction(self: BindableAttribute) -> BindingDirection
     Instance = BindableAttribute()
     """hardcoded/returns an instance of the class"""
 
-class BindableSupport:
+class BindableSupport(Object):
     """
     Specifies values to indicate whether a property can be bound to a data element or another property.
     
@@ -1473,7 +1465,7 @@ class BindableSupport:
     Instance = BindableSupport()
     """hardcoded/returns an instance of the class"""
 
-class BindingDirection:
+class BindingDirection(Object):
     """
     Specifies whether the template can be bound one way or two ways.
     
@@ -1519,7 +1511,7 @@ class BindingDirection:
     Instance = BindingDirection()
     """hardcoded/returns an instance of the class"""
 
-class IBindingList:
+class IBindingList(Object):
     """ Provides the features required to support both complex and simple scenarios when binding to a data source. """
     def AddIndex(self, property):
         """
@@ -2008,8 +2000,7 @@ class BooleanConverter(TypeConverter):
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
-             System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list of possible values. This method never 
-             returns false.
+             System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list of possible values. This method never returns false.
         """
         pass
 
@@ -2020,15 +2011,15 @@ class BooleanConverter(TypeConverter):
             Gets a value indicating whether this object supports a standard set of values that can be picked from a list.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) can be called to find a common set of values the 
-             object supports. This method never returns false.
+            Returns: true because System.ComponentModel.BooleanConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) can be called to find a common set of values the object 
+             supports. This method never returns false.
         """
         pass
 
     Instance = BooleanConverter()
     """hardcoded/returns an instance of the class"""
 
-class BrowsableAttribute:
+class BrowsableAttribute(Object):
     """
     Specifies whether a property or event should be displayed in a Properties window.
     
@@ -2157,8 +2148,8 @@ class CancelEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -2188,8 +2179,8 @@ class CancelEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -2208,7 +2199,7 @@ class CancelEventHandler(MulticastDelegate):
     Instance = CancelEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class CategoryAttribute:
+class CategoryAttribute(Object):
     """
     Specifies the name of the category in which to group the property or event when displayed in a System.Windows.Forms.PropertyGrid control set to Categorized mode.
     
@@ -2348,7 +2339,7 @@ class CharConverter(TypeConverter):
     Instance = CharConverter()
     """hardcoded/returns an instance of the class"""
 
-class CollectionChangeAction:
+class CollectionChangeAction(Object):
     """
     Specifies how the collection is changed.
     
@@ -2451,8 +2442,8 @@ class CollectionChangeEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -2482,8 +2473,8 @@ class CollectionChangeEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -2502,7 +2493,7 @@ class CollectionChangeEventHandler(MulticastDelegate):
     Instance = CollectionChangeEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class ComplexBindingPropertiesAttribute:
+class ComplexBindingPropertiesAttribute(Object):
     """
     Specifies the data source and data member properties for a component that supports complex data binding. This class cannot be inherited.
     
@@ -2662,8 +2653,7 @@ class ReferenceConverter(TypeConverter):
             Gets a collection of standard values for the reference data type.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of 
-             values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of values.
         """
         pass
 
@@ -2671,14 +2661,14 @@ class ReferenceConverter(TypeConverter):
         """
         GetStandardValuesExclusive(self: ReferenceConverter, context: ITypeDescriptorContext) -> bool
         
-            Gets a value indicating whether the list of standard values returned from 
-             System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exclusive list.
+            Gets a value indicating whether the list of standard values returned from System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) 
+             is an exclusive list.
         
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
-             System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list of possible values. This method never 
-             returns false.
+             System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list of possible values. This method never returns 
+             false.
         """
         pass
 
@@ -2689,8 +2679,8 @@ class ReferenceConverter(TypeConverter):
             Gets a value indicating whether this object supports a standard set of values that can be picked from a list.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) can be called to find a common set of values the 
-             object supports. This method never returns false.
+            Returns: true because System.ComponentModel.ReferenceConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) can be called to find a common set of values the object 
+             supports. This method never returns false.
         """
         pass
 
@@ -2819,7 +2809,7 @@ class ComponentResourceManager(ResourceManager):
     Instance = ComponentResourceManager()
     """hardcoded/returns an instance of the class"""
 
-class Container:
+class Container(Object):
     """
     Encapsulates zero or more components.
     
@@ -3019,8 +3009,7 @@ class CultureInfoConverter(TypeConverter):
             Gets a collection of standard values for a System.Globalization.CultureInfo object using the specified context.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection containing a standard set of valid values, or null if the data type does not support a standard set of 
-             values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection containing a standard set of valid values, or null if the data type does not support a standard set of values.
         """
         pass
 
@@ -3034,8 +3023,8 @@ class CultureInfoConverter(TypeConverter):
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             Returns: false because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
-             System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is not an exhaustive list of possible values (that is, other 
-             values are possible). This method never returns true.
+             System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is not an exhaustive list of possible values (that is, other values are 
+             possible). This method never returns true.
         """
         pass
 
@@ -3046,15 +3035,15 @@ class CultureInfoConverter(TypeConverter):
             Gets a value indicating whether this object supports a standard set of values that can be picked from a list using the specified context.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) should be called to find a common set of values 
-             the object supports. This method never returns false.
+            Returns: true because System.ComponentModel.CultureInfoConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) should be called to find a common set of values the object 
+             supports. This method never returns false.
         """
         pass
 
     Instance = CultureInfoConverter()
     """hardcoded/returns an instance of the class"""
 
-class CustomTypeDescriptor:
+class CustomTypeDescriptor(Object):
     """ Provides a simple default implementation of the System.ComponentModel.ICustomTypeDescriptor interface. """
     def GetAttributes(self):
         """
@@ -3203,7 +3192,7 @@ class DataErrorsChangedEventArgs(EventArgs):
     Instance = DataErrorsChangedEventArgs()
     """hardcoded/returns an instance of the class"""
 
-class DataObjectAttribute:
+class DataObjectAttribute(Object):
     """
     Identifies a type as an object suitable for binding to an System.Web.UI.WebControls.ObjectDataSource object. This class cannot be inherited.
     
@@ -3273,7 +3262,7 @@ Get: IsDataObject(self: DataObjectAttribute) -> bool
     Instance = DataObjectAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DataObjectFieldAttribute:
+class DataObjectFieldAttribute(Object):
     """
     Provides metadata for a property representing a data field. This class cannot be inherited.
     
@@ -3355,7 +3344,7 @@ Get: PrimaryKey(self: DataObjectFieldAttribute) -> bool
     Instance = DataObjectFieldAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DataObjectMethodAttribute:
+class DataObjectMethodAttribute(Object):
     """
     Identifies a data operation method exposed by a type, what type of operation the method performs, and whether the method is the default data method. This class cannot be inherited.
     
@@ -3430,7 +3419,7 @@ Get: MethodType(self: DataObjectMethodAttribute) -> DataObjectMethodType
     Instance = DataObjectMethodAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DataObjectMethodType:
+class DataObjectMethodType(Object):
     """
     Identifies the type of data operation performed by a method, as specified by the System.ComponentModel.DataObjectMethodAttribute applied to the method.
     
@@ -3634,7 +3623,7 @@ class DecimalConverter(BaseNumberConverter):
     Instance = DecimalConverter()
     """hardcoded/returns an instance of the class"""
 
-class DefaultBindingPropertyAttribute:
+class DefaultBindingPropertyAttribute(Object):
     """
     Specifies the default binding property for a component. This class cannot be inherited.
     
@@ -3691,7 +3680,7 @@ Get: Name(self: DefaultBindingPropertyAttribute) -> str
     Instance = DefaultBindingPropertyAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DefaultEventAttribute:
+class DefaultEventAttribute(Object):
     """
     Specifies the default event for a component.
     
@@ -3746,7 +3735,7 @@ Get: Name(self: DefaultEventAttribute) -> str
     Instance = DefaultEventAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DefaultPropertyAttribute:
+class DefaultPropertyAttribute(Object):
     """
     Specifies the default property for a component.
     
@@ -3801,7 +3790,7 @@ Get: Name(self: DefaultPropertyAttribute) -> str
     Instance = DefaultPropertyAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DefaultValueAttribute:
+class DefaultValueAttribute(Object):
     """
     Specifies the default value for a property.
     
@@ -3880,7 +3869,7 @@ Get: Value(self: DefaultValueAttribute) -> object
     Instance = DefaultValueAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DescriptionAttribute:
+class DescriptionAttribute(Object):
     """
     Specifies a description for a property or event.
     
@@ -3948,7 +3937,7 @@ Get: Description(self: DescriptionAttribute) -> str
     Instance = DescriptionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DesignerAttribute:
+class DesignerAttribute(Object):
     """
     Specifies the class used to implement design-time services for a component.
     
@@ -4020,7 +4009,7 @@ Get: TypeId(self: DesignerAttribute) -> object
     Instance = DesignerAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DesignerCategoryAttribute:
+class DesignerCategoryAttribute(Object):
     """
     Specifies that the designer for a class belongs to a certain category.
     
@@ -4098,7 +4087,7 @@ Get: TypeId(self: DesignerCategoryAttribute) -> object
     Instance = DesignerCategoryAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DesignerSerializationVisibility:
+class DesignerSerializationVisibility(Object):
     """
     Specifies the visibility a property has to the design-time serializer.
     
@@ -4145,7 +4134,7 @@ class DesignerSerializationVisibility:
     Instance = DesignerSerializationVisibility()
     """hardcoded/returns an instance of the class"""
 
-class DesignerSerializationVisibilityAttribute:
+class DesignerSerializationVisibilityAttribute(Object):
     """
     Specifies the type of persistence to use when serializing a property on a component at design time.
     
@@ -4212,7 +4201,7 @@ Get: Visibility(self: DesignerSerializationVisibilityAttribute) -> DesignerSeria
     Instance = DesignerSerializationVisibilityAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DesignOnlyAttribute:
+class DesignOnlyAttribute(Object):
     """
     Specifies whether a property can only be set at design time.
     
@@ -4273,7 +4262,7 @@ Get: IsDesignOnly(self: DesignOnlyAttribute) -> bool
     Instance = DesignOnlyAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DesignTimeVisibleAttribute:
+class DesignTimeVisibleAttribute(Object):
     """
     System.ComponentModel.DesignTimeVisibleAttribute marks a component's visibility. If System.ComponentModel.DesignTimeVisibleAttribute.Yes is present, a visual designer can show this component on a designer.
     
@@ -4335,7 +4324,7 @@ Get: Visible(self: DesignTimeVisibleAttribute) -> bool
     Instance = DesignTimeVisibleAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DisplayNameAttribute:
+class DisplayNameAttribute(Object):
     """
     Specifies the display name for a property, event, or public void method which takes no arguments.
     
@@ -4474,8 +4463,8 @@ class DoWorkEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -4505,8 +4494,8 @@ class DoWorkEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -4525,7 +4514,7 @@ class DoWorkEventHandler(MulticastDelegate):
     Instance = DoWorkEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class EditorAttribute:
+class EditorAttribute(Object):
     """
     Specifies the editor to use to change a property. This class cannot be inherited.
     
@@ -4595,7 +4584,7 @@ Get: TypeId(self: EditorAttribute) -> object
     Instance = EditorAttribute()
     """hardcoded/returns an instance of the class"""
 
-class EditorBrowsableAttribute:
+class EditorBrowsableAttribute(Object):
     """
     Specifies that a property or method is viewable in an editor. This class cannot be inherited.
     
@@ -4647,7 +4636,7 @@ Get: State(self: EditorBrowsableAttribute) -> EditorBrowsableState
     Instance = EditorBrowsableAttribute()
     """hardcoded/returns an instance of the class"""
 
-class EditorBrowsableState:
+class EditorBrowsableState(Object):
     """
     Specifies the browsable state of a property or method from within an editor.
     
@@ -4758,8 +4747,7 @@ class EnumConverter(TypeConverter):
             Gets a collection of standard values for the data type this validator is designed for.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of 
-             values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of values.
         """
         pass
 
@@ -4767,13 +4755,11 @@ class EnumConverter(TypeConverter):
         """
         GetStandardValuesExclusive(self: EnumConverter, context: ITypeDescriptorContext) -> bool
         
-            Gets a value indicating whether the list of standard values returned from System.ComponentModel.TypeConverter.GetStandardValues is an exclusive list using the 
-             specified context.
-        
+            Gets a value indicating whether the list of standard values returned from System.ComponentModel.TypeConverter.GetStandardValues is an exclusive list using the specified context.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of 
-             possible values; false if other values are possible.
+            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible 
+             values; false if other values are possible.
         """
         pass
 
@@ -4906,8 +4892,8 @@ class MemberDescriptor():
         
             Gets the component on which to invoke a method.
         
-            componentClass: A System.Type representing the type of component this System.ComponentModel.MemberDescriptor is bound to. For example, if this System.ComponentModel.MemberDescriptor 
-             describes a property, this parameter should be the class that the property is declared on.
+            componentClass: A System.Type representing the type of component this System.ComponentModel.MemberDescriptor is bound to. For example, if this System.ComponentModel.MemberDescriptor describes a 
+             property, this parameter should be the class that the property is declared on.
         
             component: An instance of the object to call.
             Returns: An instance of the component to invoke. This method returns a visual designer when the property is attached to a visual designer.
@@ -5071,7 +5057,7 @@ Get: IsMulticast(self: EventDescriptor) -> bool
     Instance = EventDescriptor()
     """hardcoded/returns an instance of the class"""
 
-class EventDescriptorCollection:
+class EventDescriptorCollection(Object):
     """
     Represents a collection of System.ComponentModel.EventDescriptor objects.
     
@@ -5152,8 +5138,8 @@ class EventDescriptorCollection:
     def InternalSort(self, *args): #cannot find CLR method
         """
         InternalSort(self: EventDescriptorCollection, names: Array[str])
-            Sorts the members of this System.ComponentModel.EventDescriptorCollection. The specified order is applied first, followed by the default sort for this collection, 
-             which is usually alphabetical.
+            Sorts the members of this System.ComponentModel.EventDescriptorCollection. The specified order is applied first, followed by the default sort for this collection, which is 
+             usually alphabetical.
         
         
             names: An array of strings describing the order in which to sort the System.ComponentModel.EventDescriptor objects in this collection.
@@ -5266,7 +5252,7 @@ Get: Count(self: EventDescriptorCollection) -> int
     Instance = EventDescriptorCollection()
     """hardcoded/returns an instance of the class"""
 
-class EventHandlerList:
+class EventHandlerList(Object):
     """
     Provides a simple list of delegates. This class cannot be inherited.
     
@@ -5368,7 +5354,7 @@ class ExpandableObjectConverter(TypeConverter):
     Instance = ExpandableObjectConverter()
     """hardcoded/returns an instance of the class"""
 
-class ExtenderProvidedPropertyAttribute:
+class ExtenderProvidedPropertyAttribute(Object):
     """
     Specifies a property that is offered by an extender provider. This class cannot be inherited.
     
@@ -5553,8 +5539,8 @@ class HandledEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -5584,8 +5570,8 @@ class HandledEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -5604,7 +5590,7 @@ class HandledEventHandler(MulticastDelegate):
     Instance = HandledEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class IBindingListView:
+class IBindingListView(Object):
     """ Extends the System.ComponentModel.IBindingList interface by providing advanced sorting and filtering capabilities. """
     def ApplySort(self, sorts):
         """
@@ -5839,7 +5825,7 @@ class IComNativeDescriptorHandler:
     Instance = IComNativeDescriptorHandler()
     """hardcoded/returns an instance of the class"""
 
-class IComponent:
+class IComponent(Object):
     """ Provides functionality required by all components. """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -5859,7 +5845,7 @@ Set: Site(self: IComponent) = value
     Instance = IComponent()
     """hardcoded/returns an instance of the class"""
 
-class IContainer:
+class IContainer(Object):
     """ Provides functionality for containers. Containers are objects that logically contain zero or more components. """
     def Add(self, component, name=None):
         """
@@ -6145,7 +6131,7 @@ Get: ContainsListCollection(self: IListSource) -> bool
     Instance = IListSource()
     """hardcoded/returns an instance of the class"""
 
-class ImmutableObjectAttribute:
+class ImmutableObjectAttribute(Object):
     """
     Specifies that an object has no subproperties capable of being edited. This class cannot be inherited.
     
@@ -6209,7 +6195,7 @@ Get: Immutable(self: ImmutableObjectAttribute) -> bool
     Instance = ImmutableObjectAttribute()
     """hardcoded/returns an instance of the class"""
 
-class INestedContainer:
+class INestedContainer(Object):
     """ Provides functionality for nested containers, which logically contain zero or more other components and are owned by a parent component. """
     def __enter__(self, *args): #cannot find CLR method
         """ __enter__(self: IDisposable) -> object """
@@ -6234,7 +6220,7 @@ Get: Owner(self: INestedContainer) -> IComponent
     Instance = INestedContainer()
     """hardcoded/returns an instance of the class"""
 
-class ISite:
+class ISite(Object):
     """ Provides functionality required by sites. """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6273,7 +6259,7 @@ Set: Name(self: ISite) = value
     Instance = ISite()
     """hardcoded/returns an instance of the class"""
 
-class INestedSite:
+class INestedSite(Object):
     """ Provides the ability to retrieve the full nested name of a component. """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6290,7 +6276,7 @@ Get: FullName(self: INestedSite) -> str
     Instance = INestedSite()
     """hardcoded/returns an instance of the class"""
 
-class InheritanceAttribute:
+class InheritanceAttribute(Object):
     """
     Indicates whether the component associated with this attribute has been inherited from a base class. This class cannot be inherited.
     
@@ -6373,7 +6359,7 @@ Get: InheritanceLevel(self: InheritanceAttribute) -> InheritanceLevel
     Instance = InheritanceAttribute()
     """hardcoded/returns an instance of the class"""
 
-class InheritanceLevel:
+class InheritanceLevel(Object):
     """
     Defines identifiers for types of inheritance levels.
     
@@ -6420,7 +6406,7 @@ class InheritanceLevel:
     Instance = InheritanceLevel()
     """hardcoded/returns an instance of the class"""
 
-class InitializationEventAttribute:
+class InitializationEventAttribute(Object):
     """
     Specifies which event is raised on initialization. This class cannot be inherited.
     
@@ -6489,7 +6475,7 @@ class INotifyPropertyChanging:
     Instance = INotifyPropertyChanging()
     """hardcoded/returns an instance of the class"""
 
-class InstallerTypeAttribute:
+class InstallerTypeAttribute(Object):
     """
     Specifies the installer for a type that installs components.
     
@@ -6666,7 +6652,7 @@ class InvalidEnumArgumentException(ArgumentException):
     Instance = InvalidEnumArgumentException()
     """hardcoded/returns an instance of the class"""
 
-class IRevertibleChangeTracking:
+class IRevertibleChangeTracking(Object):
     """ Provides support for rolling back the changes """
     def RejectChanges(self):
         """
@@ -6704,7 +6690,7 @@ class ISupportInitialize:
     Instance = ISupportInitialize()
     """hardcoded/returns an instance of the class"""
 
-class ISupportInitializeNotification:
+class ISupportInitializeNotification(Object):
     """ Allows coordination of initialization for a component and its dependent properties. """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -6741,8 +6727,8 @@ class ISynchronizeInvoke:
         """
         EndInvoke(self: ISynchronizeInvoke, result: IAsyncResult) -> object
         
-            Waits until the process started by calling System.ComponentModel.ISynchronizeInvoke.BeginInvoke(System.Delegate,System.Object[]) completes, and then returns the value 
-             generated by the process.
+            Waits until the process started by calling System.ComponentModel.ISynchronizeInvoke.BeginInvoke(System.Delegate,System.Object[]) completes, and then returns the value generated 
+             by the process.
         
         
             result: An System.IAsyncResult interface that represents the asynchronous operation started by calling 
@@ -6779,7 +6765,7 @@ Get: InvokeRequired(self: ISynchronizeInvoke) -> bool
     Instance = ISynchronizeInvoke()
     """hardcoded/returns an instance of the class"""
 
-class ITypeDescriptorContext:
+class ITypeDescriptorContext(Object):
     """ Provides contextual information about a component, such as its container and property descriptor. """
     def OnComponentChanged(self):
         """
@@ -6857,7 +6843,7 @@ class ITypedList:
     Instance = ITypedList()
     """hardcoded/returns an instance of the class"""
 
-class License:
+class License(Object):
     """ Provides the abstract base class for all licenses. A license is granted to a specific instance of a component. """
     def Dispose(self):
         """
@@ -6893,7 +6879,7 @@ Get: LicenseKey(self: License) -> str
     Instance = License()
     """hardcoded/returns an instance of the class"""
 
-class LicenseContext:
+class LicenseContext(Object):
     """
     Specifies when you can use a licensed object and provides a way of obtaining additional services needed to support licenses running within its domain.
     
@@ -7120,7 +7106,7 @@ class LicenseProvider():
     Instance = LicenseProvider()
     """hardcoded/returns an instance of the class"""
 
-class LicenseProviderAttribute:
+class LicenseProviderAttribute(Object):
     """
     Specifies the System.ComponentModel.LicenseProvider to use with a class. This class cannot be inherited.
     
@@ -7188,7 +7174,7 @@ Get: TypeId(self: LicenseProviderAttribute) -> object
     Instance = LicenseProviderAttribute()
     """hardcoded/returns an instance of the class"""
 
-class LicenseUsageMode:
+class LicenseUsageMode(Object):
     """
     Specifies when the System.ComponentModel.License can be used.
     
@@ -7269,9 +7255,8 @@ class LicFileLicenseProvider(LicenseProvider):
         """
         IsKeyValid(self: LicFileLicenseProvider, key: str, type: Type) -> bool
         
-            Determines whether the key that the 
-             System.ComponentModel.LicFileLicenseProvider.GetLicense(System.ComponentModel.LicenseContext,System.Type,System.Object,System.Boolean) method retrieves is valid for 
-             the specified type.
+            Determines whether the key that the System.ComponentModel.LicFileLicenseProvider.GetLicense(System.ComponentModel.LicenseContext,System.Type,System.Object,System.Boolean) method 
+             retrieves is valid for the specified type.
         
         
             key: The System.ComponentModel.License.LicenseKey to check.
@@ -7283,7 +7268,7 @@ class LicFileLicenseProvider(LicenseProvider):
     Instance = LicFileLicenseProvider()
     """hardcoded/returns an instance of the class"""
 
-class ListBindableAttribute:
+class ListBindableAttribute(Object):
     """
     Specifies that a list can be used as a data source. A visual designer should use this attribute to determine whether to display a particular list in a data-binding picker. This class cannot be inherited.
     
@@ -7431,8 +7416,8 @@ class ListChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -7462,8 +7447,8 @@ class ListChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -7482,7 +7467,7 @@ class ListChangedEventHandler(MulticastDelegate):
     Instance = ListChangedEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class ListChangedType:
+class ListChangedType(Object):
     """
     Specifies how the list changed.
     
@@ -7565,7 +7550,7 @@ Set: SortDirection(self: ListSortDescription) = value
     Instance = ListSortDescription()
     """hardcoded/returns an instance of the class"""
 
-class ListSortDescriptionCollection:
+class ListSortDescriptionCollection(Object):
     """
     Represents a collection of System.ComponentModel.ListSortDescription objects.
     
@@ -7658,7 +7643,7 @@ Get: Count(self: ListSortDescriptionCollection) -> int
     Instance = ListSortDescriptionCollection()
     """hardcoded/returns an instance of the class"""
 
-class ListSortDirection:
+class ListSortDirection(Object):
     """
     Specifies the direction of a sort operation.
     
@@ -7704,7 +7689,7 @@ class ListSortDirection:
     Instance = ListSortDirection()
     """hardcoded/returns an instance of the class"""
 
-class LocalizableAttribute:
+class LocalizableAttribute(Object):
     """
     Specifies whether a property should be localized. This class cannot be inherited.
     
@@ -7770,7 +7755,7 @@ Get: IsLocalizable(self: LocalizableAttribute) -> bool
     Instance = LocalizableAttribute()
     """hardcoded/returns an instance of the class"""
 
-class LookupBindingPropertiesAttribute:
+class LookupBindingPropertiesAttribute(Object):
     """
     Specifies the properties that support lookup-based binding. This class cannot be inherited.
     
@@ -7850,7 +7835,7 @@ Get: ValueMember(self: LookupBindingPropertiesAttribute) -> str
     Instance = LookupBindingPropertiesAttribute()
     """hardcoded/returns an instance of the class"""
 
-class MarshalByValueComponent:
+class MarshalByValueComponent(Object):
     """
     Implements System.ComponentModel.IComponent and provides the base implementation for remotable components that are marshaled by value (a copy of the serialized object is passed).
     
@@ -7935,7 +7920,7 @@ Set: Site(self: MarshalByValueComponent) = value
     Instance = MarshalByValueComponent()
     """hardcoded/returns an instance of the class"""
 
-class MaskedTextProvider:
+class MaskedTextProvider(Object):
     """
     Represents a mask-parsing service that can be used by any number of controls that support masking, such as the System.Windows.Forms.MaskedTextBox control.
     
@@ -8030,8 +8015,7 @@ class MaskedTextProvider:
         
             position: The zero-based position in the formatted string to start the search.
             direction: A System.Boolean indicating the search direction; either true to search forward or false to search backward.
-            Returns: If successful, an System.Int32 representing the zero-based position of the first editable position encountered; otherwise 
-             System.ComponentModel.MaskedTextProvider.InvalidIndex.
+            Returns: If successful, an System.Int32 representing the zero-based position of the first editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8044,8 +8028,7 @@ class MaskedTextProvider:
             startPosition: The zero-based position in the formatted string where the search starts.
             endPosition: The zero-based position in the formatted string where the search ends.
             direction: A System.Boolean indicating the search direction; either true to search forward or false to search backward.
-            Returns: If successful, an System.Int32 representing the zero-based position of the first editable position encountered; otherwise 
-             System.ComponentModel.MaskedTextProvider.InvalidIndex.
+            Returns: If successful, an System.Int32 representing the zero-based position of the first editable position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8057,8 +8040,7 @@ class MaskedTextProvider:
         
             position: The zero-based position in the formatted string to start the search.
             direction: A System.Boolean indicating the search direction; either true to search forward or false to search backward.
-            Returns: If successful, an System.Int32 representing the zero-based position of the first literal position encountered; otherwise 
-             System.ComponentModel.MaskedTextProvider.InvalidIndex.
+            Returns: If successful, an System.Int32 representing the zero-based position of the first literal position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8071,8 +8053,7 @@ class MaskedTextProvider:
             startPosition: The zero-based position in the formatted string where the search starts.
             endPosition: The zero-based position in the formatted string where the search ends.
             direction: A System.Boolean indicating the search direction; either true to search forward or false to search backward.
-            Returns: If successful, an System.Int32 representing the zero-based position of the first literal position encountered; otherwise 
-             System.ComponentModel.MaskedTextProvider.InvalidIndex.
+            Returns: If successful, an System.Int32 representing the zero-based position of the first literal position encountered; otherwise System.ComponentModel.MaskedTextProvider.InvalidIndex.
         """
         pass
 
@@ -8262,8 +8243,8 @@ class MaskedTextProvider:
             Returns: true if the character was successfully replaced; otherwise, false.
         Replace(self: MaskedTextProvider, input: Char, startPosition: int, endPosition: int) -> (bool, int, MaskedTextResultHint)
         
-            Replaces a single character between the specified starting and ending positions with the specified character value, and then outputs the removal position and 
-             descriptive information.
+            Replaces a single character between the specified starting and ending positions with the specified character value, and then outputs the removal position and descriptive 
+             information.
         
         
             input: The System.Char value that replaces the existing value.
@@ -8286,8 +8267,8 @@ class MaskedTextProvider:
             Returns: true if all the characters were successfully replaced; otherwise, false.
         Replace(self: MaskedTextProvider, input: str, startPosition: int, endPosition: int) -> (bool, int, MaskedTextResultHint)
         
-            Replaces a range of editable characters between the specified starting and ending positions with the specified string, and then outputs the removal position and 
-             descriptive information.
+            Replaces a range of editable characters between the specified starting and ending positions with the specified string, and then outputs the removal position and descriptive 
+             information.
         
         
             input: The System.String value used to replace the existing editable characters.
@@ -8349,9 +8330,7 @@ class MaskedTextProvider:
             ignorePasswordChar: true to return the actual editable characters; otherwise, false to indicate that the System.ComponentModel.MaskedTextProvider.PasswordChar property is to be honored.
             startPosition: The zero-based position in the formatted string where the output begins.
             length: The number of characters to return.
-            Returns: If successful, a substring of the formatted System.String, which includes literals, prompts, and optionally password characters; otherwise the System.String.Empty 
-             string.
-        
+            Returns: If successful, a substring of the formatted System.String, which includes literals, prompts, and optionally password characters; otherwise the System.String.Empty string.
         ToString(self: MaskedTextProvider, includePrompt: bool, includeLiterals: bool) -> str
         
             Returns the formatted string, optionally including prompt and literal characters.
@@ -8379,8 +8358,8 @@ class MaskedTextProvider:
             includeLiterals: true to return literal characters in the return string; otherwise, false.
             startPosition: The zero-based position in the formatted string where the output begins.
             length: The number of characters to return.
-            Returns: If successful, a substring of the formatted System.String, which includes all the assigned character values and optionally includes literals, prompts, and password 
-             characters; otherwise the System.String.Empty string.
+            Returns: If successful, a substring of the formatted System.String, which includes all the assigned character values and optionally includes literals, prompts, and password characters; 
+             otherwise the System.String.Empty string.
         """
         pass
 
@@ -8612,7 +8591,7 @@ Set: SkipLiterals(self: MaskedTextProvider) = value
     Instance = MaskedTextProvider()
     """hardcoded/returns an instance of the class"""
 
-class MaskedTextResultHint:
+class MaskedTextResultHint(Object):
     """
     Specifies values that succinctly describe the results of a masked text parsing operation.
     
@@ -8671,7 +8650,7 @@ class MaskedTextResultHint:
     Instance = MaskedTextResultHint()
     """hardcoded/returns an instance of the class"""
 
-class MergablePropertyAttribute:
+class MergablePropertyAttribute(Object):
     """
     Specifies that this property can be combined with properties belonging to other objects in a Properties window.
     
@@ -8874,7 +8853,7 @@ Get: Owner(self: NestedContainer) -> IComponent
     Instance = NestedContainer()
     """hardcoded/returns an instance of the class"""
 
-class NotifyParentPropertyAttribute:
+class NotifyParentPropertyAttribute(Object):
     """
     Indicates that the parent property is notified when the value of the property that this attribute is applied to is modified. This class cannot be inherited.
     
@@ -9012,8 +8991,8 @@ class NullableConverter(TypeConverter):
         GetCreateInstanceSupported(self: NullableConverter, context: ITypeDescriptorContext) -> bool
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true if changing a property on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new value; 
-             otherwise, false.
+            Returns: true if changing a property on this object requires a call to System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary) to create a new value; otherwise, 
+             false.
         """
         pass
 
@@ -9041,11 +9020,10 @@ class NullableConverter(TypeConverter):
         """
         GetStandardValues(self: NullableConverter, context: ITypeDescriptorContext) -> StandardValuesCollection
         
-            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context that can be used to extract additional information about the environment from which this 
-             converter is invoked. This parameter or properties of this parameter can be null.
+            context: An System.ComponentModel.ITypeDescriptorContext that provides a format context that can be used to extract additional information about the environment from which this converter 
+             is invoked. This parameter or properties of this parameter can be null.
         
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of 
-             values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of values.
         """
         pass
 
@@ -9054,8 +9032,8 @@ class NullableConverter(TypeConverter):
         GetStandardValuesExclusive(self: NullableConverter, context: ITypeDescriptorContext) -> bool
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of 
-             possible values; false if other values are possible.
+            Returns: true if the System.ComponentModel.TypeConverter.StandardValuesCollection returned from System.ComponentModel.TypeConverter.GetStandardValues is an exhaustive list of possible 
+             values; false if other values are possible.
         """
         pass
 
@@ -9107,7 +9085,7 @@ Get: UnderlyingTypeConverter(self: NullableConverter) -> TypeConverter
     Instance = NullableConverter()
     """hardcoded/returns an instance of the class"""
 
-class ParenthesizePropertyNameAttribute:
+class ParenthesizePropertyNameAttribute(Object):
     """
     Indicates whether the name of the associated property is displayed with parentheses in the Properties window. This class cannot be inherited.
     
@@ -9175,7 +9153,7 @@ Get: NeedParenthesis(self: ParenthesizePropertyNameAttribute) -> bool
     Instance = ParenthesizePropertyNameAttribute()
     """hardcoded/returns an instance of the class"""
 
-class PasswordPropertyTextAttribute:
+class PasswordPropertyTextAttribute(Object):
     """
     Indicates that an object's text representation is obscured by characters such as asterisks. This class cannot be inherited.
     
@@ -9301,8 +9279,8 @@ class ProgressChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -9332,8 +9310,8 @@ class ProgressChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -9401,8 +9379,8 @@ class PropertyChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -9432,8 +9410,8 @@ class PropertyChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -9501,8 +9479,8 @@ class PropertyChangingEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -9532,8 +9510,8 @@ class PropertyChangingEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -9800,7 +9778,7 @@ Get: SupportsChangeEvents(self: PropertyDescriptor) -> bool
     Instance = PropertyDescriptor()
     """hardcoded/returns an instance of the class"""
 
-class PropertyDescriptorCollection:
+class PropertyDescriptorCollection(Object):
     """
     Represents a collection of System.ComponentModel.PropertyDescriptor objects.
     
@@ -10003,7 +9981,7 @@ Get: Count(self: PropertyDescriptorCollection) -> int
     Instance = PropertyDescriptorCollection()
     """hardcoded/returns an instance of the class"""
 
-class PropertyTabAttribute:
+class PropertyTabAttribute(Object):
     """
     Identifies the property tab or tabs to display for the specified class or classes.
     
@@ -10102,7 +10080,7 @@ Get: TabScopes(self: PropertyTabAttribute) -> Array[PropertyTabScope]
     Instance = PropertyTabAttribute()
     """hardcoded/returns an instance of the class"""
 
-class PropertyTabScope:
+class PropertyTabScope(Object):
     """
     Defines identifiers that indicate the persistence scope of a tab in the Properties window.
     
@@ -10150,7 +10128,7 @@ class PropertyTabScope:
     Instance = PropertyTabScope()
     """hardcoded/returns an instance of the class"""
 
-class ProvidePropertyAttribute:
+class ProvidePropertyAttribute(Object):
     """
     Specifies the name of the property that an implementer of System.ComponentModel.IExtenderProvider offers to other components. This class cannot be inherited
     
@@ -10221,7 +10199,7 @@ Get: TypeId(self: ProvidePropertyAttribute) -> object
     Instance = ProvidePropertyAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ReadOnlyAttribute:
+class ReadOnlyAttribute(Object):
     """
     Specifies whether the property this attribute is bound to is read-only or read/write. This class cannot be inherited
     
@@ -10287,7 +10265,7 @@ Get: IsReadOnly(self: ReadOnlyAttribute) -> bool
     Instance = ReadOnlyAttribute()
     """hardcoded/returns an instance of the class"""
 
-class RecommendedAsConfigurableAttribute:
+class RecommendedAsConfigurableAttribute(Object):
     """
     Specifies that the property can be used as an application setting.
     
@@ -10413,8 +10391,8 @@ class RefreshEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -10444,8 +10422,8 @@ class RefreshEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -10464,7 +10442,7 @@ class RefreshEventHandler(MulticastDelegate):
     Instance = RefreshEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class RefreshProperties:
+class RefreshProperties(Object):
     """
     Defines identifiers that indicate the type of a refresh of the Properties window.
     
@@ -10511,7 +10489,7 @@ class RefreshProperties:
     Instance = RefreshProperties()
     """hardcoded/returns an instance of the class"""
 
-class RefreshPropertiesAttribute:
+class RefreshPropertiesAttribute(Object):
     """
     Indicates that the property grid should refresh when the associated property value changes. This class cannot be inherited.
     
@@ -10577,7 +10555,7 @@ Get: RefreshProperties(self: RefreshPropertiesAttribute) -> RefreshProperties
     Instance = RefreshPropertiesAttribute()
     """hardcoded/returns an instance of the class"""
 
-class RunInstallerAttribute:
+class RunInstallerAttribute(Object):
     """
     Specifies whether the Visual Studio Custom Action Installer or the Installutil.exe (Installer Tool) should be invoked when the assembly is installed.
     
@@ -10699,8 +10677,8 @@ class RunWorkerCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -10730,8 +10708,8 @@ class RunWorkerCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -10759,7 +10737,7 @@ class SByteConverter(BaseNumberConverter):
     Instance = SByteConverter()
     """hardcoded/returns an instance of the class"""
 
-class SettingsBindableAttribute:
+class SettingsBindableAttribute(Object):
     """
     Specifies when a component property can be bound to an application setting.
     
@@ -10963,7 +10941,7 @@ class TimeSpanConverter(TypeConverter):
     Instance = TimeSpanConverter()
     """hardcoded/returns an instance of the class"""
 
-class ToolboxItemAttribute:
+class ToolboxItemAttribute(Object):
     """
     Represents an attribute of a toolbox item.
     
@@ -11033,7 +11011,7 @@ Get: ToolboxItemTypeName(self: ToolboxItemAttribute) -> str
     Instance = ToolboxItemAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ToolboxItemFilterAttribute:
+class ToolboxItemFilterAttribute(Object):
     """
     Specifies the filter string and filter type to use for a toolbox item.
     
@@ -11117,7 +11095,7 @@ Get: TypeId(self: ToolboxItemFilterAttribute) -> object
     Instance = ToolboxItemFilterAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ToolboxItemFilterType:
+class ToolboxItemFilterType(Object):
     """
     Defines identifiers used to indicate the type of filter that a System.ComponentModel.ToolboxItemFilterAttribute uses.
     
@@ -11165,7 +11143,7 @@ class ToolboxItemFilterType:
     Instance = ToolboxItemFilterType()
     """hardcoded/returns an instance of the class"""
 
-class TypeConverterAttribute:
+class TypeConverterAttribute(Object):
     """
     Specifies what type to use as a converter for the object this attribute is bound to.
     
@@ -11367,7 +11345,7 @@ class TypeDescriptionProvider():
     Instance = TypeDescriptionProvider()
     """hardcoded/returns an instance of the class"""
 
-class TypeDescriptionProviderAttribute:
+class TypeDescriptionProviderAttribute(Object):
     """
     Specifies the custom type description provider for a class. This class cannot be inherited.
     
@@ -11535,9 +11513,7 @@ class TypeDescriptor():
             name: The name of the property.
             type: The System.Type of the property.
             attributes: The new attributes for this property.
-            Returns: A System.ComponentModel.PropertyDescriptor that is bound to the specified type and that has the specified metadata attributes merged with the existing metadata 
-             attributes.
-        
+            Returns: A System.ComponentModel.PropertyDescriptor that is bound to the specified type and that has the specified metadata attributes merged with the existing metadata attributes.
         CreateProperty(componentType: Type, oldPropertyDescriptor: PropertyDescriptor, *attributes: Array[Attribute]) -> PropertyDescriptor
         
             Creates a new property descriptor from an existing property descriptor, using the specified existing System.ComponentModel.PropertyDescriptor and attribute array.
@@ -12029,8 +12005,7 @@ class TypeListConverter(TypeConverter):
             Gets a collection of standard values for the data type this validator is designed for.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of 
-             values.
+            Returns: A System.ComponentModel.TypeConverter.StandardValuesCollection that holds a standard set of valid values, or null if the data type does not support a standard set of values.
         """
         pass
 
@@ -12044,8 +12019,7 @@ class TypeListConverter(TypeConverter):
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
             Returns: true because the System.ComponentModel.TypeConverter.StandardValuesCollection returned from 
-             System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list of possible values. This method never 
-             returns false.
+             System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) is an exhaustive list of possible values. This method never returns false.
         """
         pass
 
@@ -12056,8 +12030,8 @@ class TypeListConverter(TypeConverter):
             Gets a value indicating whether this object supports a standard set of values that can be picked from a list using the specified context.
         
             context: An System.ComponentModel.ITypeDescriptorContext that provides a format context.
-            Returns: true because System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) should be called to find a common set of values 
-             the object supports. This method never returns false.
+            Returns: true because System.ComponentModel.TypeListConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext) should be called to find a common set of values the object 
+             supports. This method never returns false.
         """
         pass
 
@@ -12111,11 +12085,9 @@ class WarningException(SystemException):
         GetObjectData(self: WarningException, info: SerializationInfo, context: StreamingContext)
             Sets the System.Runtime.Serialization.SerializationInfo with the parameter name and additional exception information.
         
-            info: Stores the data that was being used to serialize or deserialize the object that the System.ComponentModel.Design.Serialization.CodeDomSerializer was serializing or 
-             deserializing.
-        
-            context: Describes the source and destination of the stream that generated the exception, as well as a means for serialization to retain that context and an additional 
-             caller-defined context.
+            info: Stores the data that was being used to serialize or deserialize the object that the System.ComponentModel.Design.Serialization.CodeDomSerializer was serializing or deserializing.
+            context: Describes the source and destination of the stream that generated the exception, as well as a means for serialization to retain that context and an additional caller-defined 
+             context.
         """
         pass
 

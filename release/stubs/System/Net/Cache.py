@@ -8,7 +8,7 @@
 # no functions
 # classes
 
-class HttpCacheAgeControl:
+class HttpCacheAgeControl(Object):
     """
     Specifies the meaning of time values that control caching behavior for resources obtained using System.Net.HttpWebRequest objects.
     
@@ -58,7 +58,7 @@ class HttpCacheAgeControl:
     Instance = HttpCacheAgeControl()
     """hardcoded/returns an instance of the class"""
 
-class HttpRequestCacheLevel:
+class HttpRequestCacheLevel(Object):
     """
     Specifies caching behavior for resources obtained using the Hypertext Transfer protocol (HTTP).
     
@@ -217,7 +217,7 @@ Get: MinFresh(self: HttpRequestCachePolicy) -> TimeSpan
     Instance = HttpRequestCachePolicy()
     """hardcoded/returns an instance of the class"""
 
-class RequestCacheLevel:
+class RequestCacheLevel(Object):
     """
     Specifies caching behavior for resources obtained using System.Net.WebRequest and its derived classes.
     

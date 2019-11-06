@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.EdiMessaging.QueueAbstraction calls itself QueueAbstraction
-# from Wms.EdiMessaging, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.EdiMessaging, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -13,7 +14,7 @@ def IQueue(args, kwargs): # real signature unknown
 
 # classes
 
-class IQueueListener:
+class IQueueListener(Object):
     # no doc
     def Read(self, messageHandler, cancellationtoken):
         """ Read(self: IQueueListener, messageHandler: Action[IMessage], cancellationtoken: CancellationToken) -> Task """
@@ -26,7 +27,7 @@ class IQueueListener:
     Instance = IQueueListener()
     """hardcoded/returns an instance of the class"""
 
-class IQueuePublisher:
+class IQueuePublisher(Object):
     # no doc
     def Enqueue(self, message):
         """ Enqueue(self: IQueuePublisher, message: IMessage) """

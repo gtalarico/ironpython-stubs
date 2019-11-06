@@ -8,7 +8,7 @@
 # no functions
 # classes
 
-class AttachmentBase:
+class AttachmentBase(Object):
     """ Base class that represents an email attachment. Classes System.Net.Mail.Attachment, System.Net.Mail.AlternateView, and System.Net.Mail.LinkedResource derive from this class. """
     def Dispose(self):
         """
@@ -102,9 +102,7 @@ class AlternateView(AttachmentBase):
             Returns: An System.Net.Mail.AlternateView object that represents an alternate view of an email message.
         CreateAlternateViewFromString(content: str, contentEncoding: Encoding, mediaType: str) -> AlternateView
         
-            Creates an System.Net.Mail.AlternateView of an email message using the content specified in a System.String, the specified text encoding, and MIME media type of the 
-             content.
-        
+            Creates an System.Net.Mail.AlternateView of an email message using the content specified in a System.String, the specified text encoding, and MIME media type of the content.
         
             content: A System.String that contains the content for this attachment.
             contentEncoding: An System.Text.Encoding. This value can be null.
@@ -253,9 +251,7 @@ class Attachment(AttachmentBase):
             Returns: An object of type System.Net.Mail.Attachment.
         CreateAttachmentFromString(content: str, name: str, contentEncoding: Encoding, mediaType: str) -> Attachment
         
-            Creates a mail attachment using the content from the specified string, the specified MIME content type name, character encoding, and MIME header information for the 
-             attachment.
-        
+            Creates a mail attachment using the content from the specified string, the specified MIME content type name, character encoding, and MIME header information for the attachment.
         
             content: A System.String that contains the content for this attachment.
             name: The MIME content type name value in the content type associated with this attachment.
@@ -390,7 +386,7 @@ class AttachmentCollection(Collection):
     Instance = AttachmentCollection()
     """hardcoded/returns an instance of the class"""
 
-class DeliveryNotificationOptions:
+class DeliveryNotificationOptions(Object):
     """
     Describes the delivery notification options for e-mail.
     
@@ -455,17 +451,15 @@ class LinkedResource(AttachmentBase):
         """
         CreateLinkedResourceFromString(content: str) -> LinkedResource
         
-            Creates a System.Net.Mail.LinkedResource object from a string to be included in an email attachment as an embedded resource. The default media type is plain text, and 
-             the default content type is ASCII.
+            Creates a System.Net.Mail.LinkedResource object from a string to be included in an email attachment as an embedded resource. The default media type is plain text, and the default 
+             content type is ASCII.
         
         
             content: A string that contains the embedded resource to be included in the email attachment.
             Returns: A System.Net.Mail.LinkedResource object that contains the embedded resource to be included in the email attachment.
         CreateLinkedResourceFromString(content: str, contentEncoding: Encoding, mediaType: str) -> LinkedResource
         
-            Creates a System.Net.Mail.LinkedResource object from a string to be included in an email attachment as an embedded resource, with the specified content type, and media 
-             type.
-        
+            Creates a System.Net.Mail.LinkedResource object from a string to be included in an email attachment as an embedded resource, with the specified content type, and media type.
         
             content: A string that contains the embedded resource to be included in the email attachment.
             contentEncoding: The type of the content.
@@ -473,8 +467,8 @@ class LinkedResource(AttachmentBase):
             Returns: A System.Net.Mail.LinkedResource object that contains the embedded resource to be included in the email attachment.
         CreateLinkedResourceFromString(content: str, contentType: ContentType) -> LinkedResource
         
-            Creates a System.Net.Mail.LinkedResource object from a string to be included in an email attachment as an embedded resource, with the specified content type, and media 
-             type as plain text.
+            Creates a System.Net.Mail.LinkedResource object from a string to be included in an email attachment as an embedded resource, with the specified content type, and media type as 
+             plain text.
         
         
             content: A string that contains the embedded resource to be included in the email attachment.
@@ -763,7 +757,7 @@ class MailAddressCollection(Collection):
     Instance = MailAddressCollection()
     """hardcoded/returns an instance of the class"""
 
-class MailMessage:
+class MailMessage(Object):
     """
     Represents an e-mail message that can be sent using the System.Net.Mail.SmtpClient class.
     
@@ -952,7 +946,7 @@ Get: To(self: MailMessage) -> MailAddressCollection
     Instance = MailMessage()
     """hardcoded/returns an instance of the class"""
 
-class MailPriority:
+class MailPriority(Object):
     """
     Specifies the priority of a System.Net.Mail.MailMessage.
     
@@ -1026,8 +1020,8 @@ class SendCompletedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1057,8 +1051,8 @@ class SendCompletedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -1077,7 +1071,7 @@ class SendCompletedEventHandler(MulticastDelegate):
     Instance = SendCompletedEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class SmtpAccess:
+class SmtpAccess(Object):
     """
     Specifies the level of access allowed to a Simple Mail Transport Protocol (SMTP) server.
     
@@ -1124,7 +1118,7 @@ class SmtpAccess:
     Instance = SmtpAccess()
     """hardcoded/returns an instance of the class"""
 
-class SmtpClient:
+class SmtpClient(Object):
     """
     Allows applications to send e-mail by using the Simple Mail Transfer Protocol (SMTP).
     
@@ -1135,8 +1129,7 @@ class SmtpClient:
     def Dispose(self):
         """
         Dispose(self: SmtpClient)
-            Sends a QUIT message to the SMTP server, gracefully ends the TCP connection, and releases all resources used by the current instance of the System.Net.Mail.SmtpClient 
-             class.
+            Sends a QUIT message to the SMTP server, gracefully ends the TCP connection, and releases all resources used by the current instance of the System.Net.Mail.SmtpClient class.
         """
         pass
 
@@ -1168,8 +1161,8 @@ class SmtpClient:
     def SendAsync(self, *__args):
         """
         SendAsync(self: SmtpClient, from: str, recipients: str, subject: str, body: str, userToken: object)
-            Sends an e-mail message to an SMTP server for delivery. The message sender, recipients, subject, and message body are specified using System.String objects. This 
-             method does not block the calling thread and allows the caller to pass an object to the method that is invoked when the operation completes.
+            Sends an e-mail message to an SMTP server for delivery. The message sender, recipients, subject, and message body are specified using System.String objects. This method does not 
+             block the calling thread and allows the caller to pass an object to the method that is invoked when the operation completes.
         
         
             from: A System.String that contains the address information of the message sender.
@@ -1178,8 +1171,8 @@ class SmtpClient:
             body: A System.String that contains the message body.
             userToken: A user-defined object that is passed to the method invoked when the asynchronous operation completes.
         SendAsync(self: SmtpClient, message: MailMessage, userToken: object)
-            Sends the specified e-mail message to an SMTP server for delivery. This method does not block the calling thread and allows the caller to pass an object to the method 
-             that is invoked when the operation completes.
+            Sends the specified e-mail message to an SMTP server for delivery. This method does not block the calling thread and allows the caller to pass an object to the method that is 
+             invoked when the operation completes.
         
         
             message: A System.Net.Mail.MailMessage that contains the message to send.
@@ -1324,7 +1317,7 @@ Set: UseDefaultCredentials(self: SmtpClient) = value
     Instance = SmtpClient()
     """hardcoded/returns an instance of the class"""
 
-class SmtpDeliveryFormat:
+class SmtpDeliveryFormat(Object):
     """ enum SmtpDeliveryFormat, values: International (1), SevenBit (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1366,7 +1359,7 @@ class SmtpDeliveryFormat:
     Instance = SmtpDeliveryFormat()
     """hardcoded/returns an instance of the class"""
 
-class SmtpDeliveryMethod:
+class SmtpDeliveryMethod(Object):
     """
     Specifies how email messages are delivered.
     
@@ -1621,8 +1614,8 @@ class SmtpPermission(CodeAccessPermission):
             Creates and returns a permission that is the intersection of the current permission and the specified permission.
         
             target: An System.Security.IPermission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: An System.Net.Mail.SmtpPermission that represents the intersection of the current permission and the specified permission. Returns null if the intersection is empty or 
-             target is null.
+            Returns: An System.Net.Mail.SmtpPermission that represents the intersection of the current permission and the specified permission. Returns null if the intersection is empty or target is 
+             null.
         """
         pass
 
@@ -1735,7 +1728,7 @@ Set: Access(self: SmtpPermissionAttribute) = value
     Instance = SmtpPermissionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class SmtpStatusCode:
+class SmtpStatusCode(Object):
     """
     Specifies the outcome of sending e-mail by using the System.Net.Mail.SmtpClient class.
     

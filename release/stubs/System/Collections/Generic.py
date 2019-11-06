@@ -8,20 +8,20 @@
 # no functions
 # classes
 
-class Comparer:
+class Comparer(Object):
     # no doc
     def Compare(self, x, y):
         """
         Compare(self: Comparer[T], x: T, y: T) -> int
         
-            When overridden in a derived class, performs a comparison of two objects of the same type and returns a value indicating whether one object is less than, equal to, or 
-             greater than the other.
+            When overridden in a derived class, performs a comparison of two objects of the same type and returns a value indicating whether one object is less than, equal to, or greater 
+             than the other.
         
         
             x: The first object to compare.
             y: The second object to compare.
-            Returns: A signed integer that indicates the relative values of x and y, as shown in the following table.Value Meaning Less than zero x is less than y.Zero x equals y.Greater 
-             than zero x is greater than y.
+            Returns: A signed integer that indicates the relative values of x and y, as shown in the following table.Value Meaning Less than zero x is less than y.Zero x equals y.Greater than zero x 
+             is greater than y.
         """
         pass
 
@@ -48,7 +48,7 @@ class Comparer:
     Instance = Comparer()
     """hardcoded/returns an instance of the class"""
 
-class Dictionary:
+class Dictionary(Object):
     """
     Dictionary[TKey, TValue]()
     Dictionary[TKey, TValue](capacity: int)
@@ -240,7 +240,7 @@ Get: Values(self: Dictionary[TKey, TValue]) -> ValueCollection
     Instance = Dictionary()
     """hardcoded/returns an instance of the class"""
 
-class EqualityComparer:
+class EqualityComparer(Object):
     # no doc
     def Equals(self, *__args):
         """
@@ -283,7 +283,7 @@ class EqualityComparer:
     Instance = EqualityComparer()
     """hardcoded/returns an instance of the class"""
 
-class ICollection:
+class ICollection(Object):
     # no doc
     def Add(self, item):
         """
@@ -323,8 +323,8 @@ class ICollection:
             Removes the first occurrence of a specific object from the System.Collections.Generic.ICollection.
         
             item: The object to remove from the System.Collections.Generic.ICollection.
-            Returns: true if item was successfully removed from the System.Collections.Generic.ICollection; otherwise, false. This method also returns false if item is not found in the 
-             original System.Collections.Generic.ICollection.
+            Returns: true if item was successfully removed from the System.Collections.Generic.ICollection; otherwise, false. This method also returns false if item is not found in the original 
+             System.Collections.Generic.ICollection.
         """
         pass
 
@@ -372,8 +372,8 @@ class IComparer:
         
             x: The first object to compare.
             y: The second object to compare.
-            Returns: A signed integer that indicates the relative values of x and y, as shown in the following table.Value Meaning Less than zerox is less than y.Zerox equals y.Greater 
-             than zerox is greater than y.
+            Returns: A signed integer that indicates the relative values of x and y, as shown in the following table.Value Meaning Less than zerox is less than y.Zerox equals y.Greater than zerox is 
+             greater than y.
         """
         pass
 
@@ -388,7 +388,7 @@ class IComparer:
     Instance = IComparer()
     """hardcoded/returns an instance of the class"""
 
-class IDictionary:
+class IDictionary(Object):
     # no doc
     def Add(self, key, value):
         """
@@ -418,8 +418,7 @@ class IDictionary:
             Removes the element with the specified key from the System.Collections.Generic.IDictionary.
         
             key: The key of the element to remove.
-            Returns: true if the element is successfully removed; otherwise, false.  This method also returns false if key was not found in the original 
-             System.Collections.Generic.IDictionary.
+            Returns: true if the element is successfully removed; otherwise, false.  This method also returns false if key was not found in the original System.Collections.Generic.IDictionary.
         """
         pass
 
@@ -473,7 +472,7 @@ Get: Values(self: IDictionary[TKey, TValue]) -> ICollection[TValue]
     Instance = IDictionary()
     """hardcoded/returns an instance of the class"""
 
-class IEnumerable:
+class IEnumerable(Object):
     # no doc
     def GetEnumerator(self):
         """
@@ -491,7 +490,7 @@ class IEnumerable:
     Instance = IEnumerable()
     """hardcoded/returns an instance of the class"""
 
-class IEnumerator:
+class IEnumerator(Object):
     # no doc
     def next(self, *args): #cannot find CLR method
         """ next(self: object) -> object """
@@ -560,7 +559,7 @@ class IEqualityComparer:
     Instance = IEqualityComparer()
     """hardcoded/returns an instance of the class"""
 
-class IList:
+class IList(Object):
     # no doc
     def IndexOf(self, item):
         """
@@ -626,7 +625,7 @@ class IList:
     Instance = IList()
     """hardcoded/returns an instance of the class"""
 
-class IReadOnlyCollection:
+class IReadOnlyCollection(Object):
     # no doc
     def __contains__(self, *args): #cannot find CLR method
         """ __contains__[T](enumerable: IEnumerable[T], value: T) -> bool """
@@ -649,7 +648,7 @@ class IReadOnlyCollection:
     Instance = IReadOnlyCollection()
     """hardcoded/returns an instance of the class"""
 
-class IReadOnlyDictionary:
+class IReadOnlyDictionary(Object):
     # no doc
     def ContainsKey(self, key):
         """ ContainsKey(self: IReadOnlyDictionary[TKey, TValue], key: TKey) -> bool """
@@ -689,7 +688,7 @@ class IReadOnlyDictionary:
     Instance = IReadOnlyDictionary()
     """hardcoded/returns an instance of the class"""
 
-class IReadOnlyList:
+class IReadOnlyList(Object):
     # no doc
     def __contains__(self, *args): #cannot find CLR method
         """ __contains__[T](enumerable: IEnumerable[T], value: T) -> bool """
@@ -710,7 +709,7 @@ class IReadOnlyList:
     Instance = IReadOnlyList()
     """hardcoded/returns an instance of the class"""
 
-class ISet:
+class ISet(Object):
     # no doc
     def Add(self, item):
         """
@@ -926,7 +925,7 @@ Get: Value(self: KeyValuePair[TKey, TValue]) -> TValue
     Instance = KeyValuePair()
     """hardcoded/returns an instance of the class"""
 
-class LinkedList:
+class LinkedList(Object):
     """
     LinkedList[T]()
     LinkedList[T](collection: IEnumerable[T])
@@ -1054,8 +1053,8 @@ class LinkedList:
             Implements the System.Runtime.Serialization.ISerializable interface and returns the data needed to serialize the System.Collections.Generic.LinkedList instance.
         
             info: A System.Runtime.Serialization.SerializationInfo object that contains the information required to serialize the System.Collections.Generic.LinkedList instance.
-            context: A System.Runtime.Serialization.StreamingContext object that contains the source and destination of the serialized stream associated with the 
-             System.Collections.Generic.LinkedList instance.
+            context: A System.Runtime.Serialization.StreamingContext object that contains the source and destination of the serialized stream associated with the System.Collections.Generic.LinkedList 
+             instance.
         """
         pass
 
@@ -1205,7 +1204,7 @@ Set: Value(self: LinkedListNode[T]) = value
     Instance = LinkedListNode()
     """hardcoded/returns an instance of the class"""
 
-class List:
+class List(Object):
     """
     List[T]()
     List[T](capacity: int)
@@ -1225,8 +1224,8 @@ class List:
         AddRange(self: List[T], collection: IEnumerable[T])
             Adds the elements of the specified collection to the end of the System.Collections.Generic.List.
         
-            collection: The collection whose elements should be added to the end of the System.Collections.Generic.List. The collection itself cannot be null, but it can contain elements that 
-             are null, if type T is a reference type.
+            collection: The collection whose elements should be added to the end of the System.Collections.Generic.List. The collection itself cannot be null, but it can contain elements that are null, 
+             if type T is a reference type.
         """
         pass
 
@@ -1249,16 +1248,16 @@ class List:
             count: The length of the range to search.
             item: The object to locate. The value can be null for reference types.
             comparer: The System.Collections.Generic.IComparer implementation to use when comparing elements, or null to use the default comparer System.Collections.Generic.Comparer.
-            Returns: The zero-based index of item in the sorted System.Collections.Generic.List, if item is found; otherwise, a negative number that is the bitwise complement of the index 
-             of the next element that is larger than item or, if there is no larger element, the bitwise complement of System.Collections.Generic.List.
+            Returns: The zero-based index of item in the sorted System.Collections.Generic.List, if item is found; otherwise, a negative number that is the bitwise complement of the index of the next 
+             element that is larger than item or, if there is no larger element, the bitwise complement of System.Collections.Generic.List.
         
         BinarySearch(self: List[T], item: T) -> int
         
             Searches the entire sorted System.Collections.Generic.List for an element using the default comparer and returns the zero-based index of the element.
         
             item: The object to locate. The value can be null for reference types.
-            Returns: The zero-based index of item in the sorted System.Collections.Generic.List, if item is found; otherwise, a negative number that is the bitwise complement of the index 
-             of the next element that is larger than item or, if there is no larger element, the bitwise complement of System.Collections.Generic.List.
+            Returns: The zero-based index of item in the sorted System.Collections.Generic.List, if item is found; otherwise, a negative number that is the bitwise complement of the index of the next 
+             element that is larger than item or, if there is no larger element, the bitwise complement of System.Collections.Generic.List.
         
         BinarySearch(self: List[T], item: T, comparer: IComparer[T]) -> int
         
@@ -1266,8 +1265,8 @@ class List:
         
             item: The object to locate. The value can be null for reference types.
             comparer: The System.Collections.Generic.IComparer implementation to use when comparing elements.-or-null to use the default comparer System.Collections.Generic.Comparer.
-            Returns: The zero-based index of item in the sorted System.Collections.Generic.List, if item is found; otherwise, a negative number that is the bitwise complement of the index 
-             of the next element that is larger than item or, if there is no larger element, the bitwise complement of System.Collections.Generic.List.
+            Returns: The zero-based index of item in the sorted System.Collections.Generic.List, if item is found; otherwise, a negative number that is the bitwise complement of the index of the next 
+             element that is larger than item or, if there is no larger element, the bitwise complement of System.Collections.Generic.List.
         """
         pass
 
@@ -1312,9 +1311,7 @@ class List:
         """
         Find(self: List[T], match: Predicate[T]) -> T
         
-            Searches for an element that matches the conditions defined by the specified predicate, and returns the first occurrence within the entire 
-             System.Collections.Generic.List.
-        
+            Searches for an element that matches the conditions defined by the specified predicate, and returns the first occurrence within the entire System.Collections.Generic.List.
         
             match: The System.Predicate delegate that defines the conditions of the element to search for.
             Returns: The first element that matches the conditions defined by the specified predicate, if found; otherwise, the default value for type T.
@@ -1344,16 +1341,16 @@ class List:
             match: The System.Predicate delegate that defines the conditions of the element to search for.
                 FindIndex(self: List[T], startIndex: int, match: Predicate[T]) -> int
         
-            Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-based index of the first occurrence within the range of 
-             elements in the System.Collections.Generic.List that extends from the specified index to the last element.
+            Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-based index of the first occurrence within the range of elements in 
+             the System.Collections.Generic.List that extends from the specified index to the last element.
         
         
             startIndex: The zero-based starting index of the search.
             match: The System.Predicate delegate that defines the conditions of the element to search for.
                 FindIndex(self: List[T], startIndex: int, count: int, match: Predicate[T]) -> int
         
-            Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-based index of the first occurrence within the range of 
-             elements in the System.Collections.Generic.List that starts at the specified index and contains the specified number of elements.
+            Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-based index of the first occurrence within the range of elements in 
+             the System.Collections.Generic.List that starts at the specified index and contains the specified number of elements.
         
         
             startIndex: The zero-based starting index of the search.
@@ -1366,9 +1363,7 @@ class List:
         """
         FindLast(self: List[T], match: Predicate[T]) -> T
         
-            Searches for an element that matches the conditions defined by the specified predicate, and returns the last occurrence within the entire 
-             System.Collections.Generic.List.
-        
+            Searches for an element that matches the conditions defined by the specified predicate, and returns the last occurrence within the entire System.Collections.Generic.List.
         
             match: The System.Predicate delegate that defines the conditions of the element to search for.
             Returns: The last element that matches the conditions defined by the specified predicate, if found; otherwise, the default value for type T.
@@ -1386,16 +1381,16 @@ class List:
             match: The System.Predicate delegate that defines the conditions of the element to search for.
                 FindLastIndex(self: List[T], startIndex: int, match: Predicate[T]) -> int
         
-            Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-based index of the last occurrence within the range of 
-             elements in the System.Collections.Generic.List that extends from the first element to the specified index.
+            Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-based index of the last occurrence within the range of elements in 
+             the System.Collections.Generic.List that extends from the first element to the specified index.
         
         
             startIndex: The zero-based starting index of the backward search.
             match: The System.Predicate delegate that defines the conditions of the element to search for.
                 FindLastIndex(self: List[T], startIndex: int, count: int, match: Predicate[T]) -> int
         
-            Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-based index of the last occurrence within the range of 
-             elements in the System.Collections.Generic.List that contains the specified number of elements and ends at the specified index.
+            Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-based index of the last occurrence within the range of elements in 
+             the System.Collections.Generic.List that contains the specified number of elements and ends at the specified index.
         
         
             startIndex: The zero-based starting index of the backward search.
@@ -1443,24 +1438,24 @@ class List:
             item: The object to locate in the System.Collections.Generic.List. The value can be null for reference types.
                 IndexOf(self: List[T], item: T, index: int) -> int
         
-            Searches for the specified object and returns the zero-based index of the first occurrence within the range of elements in the System.Collections.Generic.List that 
-             extends from the specified index to the last element.
+            Searches for the specified object and returns the zero-based index of the first occurrence within the range of elements in the System.Collections.Generic.List that extends from 
+             the specified index to the last element.
         
         
             item: The object to locate in the System.Collections.Generic.List. The value can be null for reference types.
             index: The zero-based starting index of the search. 0 (zero) is valid in an empty list.
-            Returns: The zero-based index of the first occurrence of item within the range of elements in the System.Collections.Generic.List that extends from index to the last element, 
+            Returns: The zero-based index of the first occurrence of item within the range of elements in the System.Collections.Generic.List that extends from index to the last element, if found; 
                 
         IndexOf(self: List[T], item: T, index: int, count: int) -> int
         
-            Searches for the specified object and returns the zero-based index of the first occurrence within the range of elements in the System.Collections.Generic.List that 
-             starts at the specified index and contains the specified number of elements.
+            Searches for the specified object and returns the zero-based index of the first occurrence within the range of elements in the System.Collections.Generic.List that starts at the 
+             specified index and contains the specified number of elements.
         
         
             item: The object to locate in the System.Collections.Generic.List. The value can be null for reference types.
             index: The zero-based starting index of the search. 0 (zero) is valid in an empty list.
             count: The number of elements in the section to search.
-            Returns: The zero-based index of the first occurrence of item within the range of elements in the System.Collections.Generic.List that starts at index and contains count number 
+            Returns: The zero-based index of the first occurrence of item within the range of elements in the System.Collections.Generic.List that starts at index and contains count number of 
                 """
         pass
 
@@ -1480,8 +1475,8 @@ class List:
             Inserts the elements of a collection into the System.Collections.Generic.List at the specified index.
         
             index: The zero-based index at which the new elements should be inserted.
-            collection: The collection whose elements should be inserted into the System.Collections.Generic.List. The collection itself cannot be null, but it can contain elements that are 
-             null, if type T is a reference type.
+            collection: The collection whose elements should be inserted into the System.Collections.Generic.List. The collection itself cannot be null, but it can contain elements that are null, if 
+             type T is a reference type.
         """
         pass
 
@@ -1494,24 +1489,24 @@ class List:
             item: The object to locate in the System.Collections.Generic.List. The value can be null for reference types.
                 LastIndexOf(self: List[T], item: T, index: int) -> int
         
-            Searches for the specified object and returns the zero-based index of the last occurrence within the range of elements in the System.Collections.Generic.List that 
-             extends from the first element to the specified index.
+            Searches for the specified object and returns the zero-based index of the last occurrence within the range of elements in the System.Collections.Generic.List that extends from 
+             the first element to the specified index.
         
         
             item: The object to locate in the System.Collections.Generic.List. The value can be null for reference types.
             index: The zero-based starting index of the backward search.
-            Returns: The zero-based index of the last occurrence of item within the range of elements in the System.Collections.Generic.List that extends from the first element to index, 
+            Returns: The zero-based index of the last occurrence of item within the range of elements in the System.Collections.Generic.List that extends from the first element to index, if found; 
                 
         LastIndexOf(self: List[T], item: T, index: int, count: int) -> int
         
-            Searches for the specified object and returns the zero-based index of the last occurrence within the range of elements in the System.Collections.Generic.List that 
-             contains the specified number of elements and ends at the specified index.
+            Searches for the specified object and returns the zero-based index of the last occurrence within the range of elements in the System.Collections.Generic.List that contains the 
+             specified number of elements and ends at the specified index.
         
         
             item: The object to locate in the System.Collections.Generic.List. The value can be null for reference types.
             index: The zero-based starting index of the backward search.
             count: The number of elements in the section to search.
-            Returns: The zero-based index of the last occurrence of item within the range of elements in the System.Collections.Generic.List that contains count number of elements and ends 
+            Returns: The zero-based index of the last occurrence of item within the range of elements in the System.Collections.Generic.List that contains count number of elements and ends at index, 
                 """
         pass
 
@@ -1612,8 +1607,8 @@ class List:
             Determines whether every element in the System.Collections.Generic.List matches the conditions defined by the specified predicate.
         
             match: The System.Predicate delegate that defines the conditions to check against the elements.
-            Returns: true if every element in the System.Collections.Generic.List matches the conditions defined by the specified predicate; otherwise, false. If the list has no elements, 
-             the return value is true.
+            Returns: true if every element in the System.Collections.Generic.List matches the conditions defined by the specified predicate; otherwise, false. If the list has no elements, the return 
+             value is true.
         """
         pass
 
@@ -1709,7 +1704,7 @@ Get: Count(self: List[T]) -> int
     Instance = List()
     """hardcoded/returns an instance of the class"""
 
-class Queue:
+class Queue(Object):
     """
     Queue[T]()
     Queue[T](capacity: int)
@@ -1834,7 +1829,7 @@ Get: Count(self: Queue[T]) -> int
     Instance = Queue()
     """hardcoded/returns an instance of the class"""
 
-class SortedDictionary:
+class SortedDictionary(Object):
     """
     SortedDictionary[TKey, TValue]()
     SortedDictionary[TKey, TValue](comparer: IComparer[TKey])
@@ -2002,7 +1997,7 @@ Get: Values(self: SortedDictionary[TKey, TValue]) -> ValueCollection
     Instance = SortedDictionary()
     """hardcoded/returns an instance of the class"""
 
-class SortedList:
+class SortedList(Object):
     """
     SortedList[TKey, TValue]()
     SortedList[TKey, TValue](capacity: int)
@@ -2088,8 +2083,7 @@ class SortedList:
             Removes the element with the specified key from the System.Collections.Generic.SortedList.
         
             key: The key of the element to remove.
-            Returns: true if the element is successfully removed; otherwise, false.  This method also returns false if key was not found in the original 
-             System.Collections.Generic.SortedList.
+            Returns: true if the element is successfully removed; otherwise, false.  This method also returns false if key was not found in the original System.Collections.Generic.SortedList.
         """
         pass
 
@@ -2213,7 +2207,7 @@ Get: Values(self: SortedList[TKey, TValue]) -> IList[TValue]
     Instance = SortedList()
     """hardcoded/returns an instance of the class"""
 
-class SortedSet:
+class SortedSet(Object):
     """
     SortedSet[T]()
     SortedSet[T](collection: IEnumerable[T])
@@ -2428,8 +2422,8 @@ class SortedSet:
     def SymmetricExceptWith(self, other):
         """
         SymmetricExceptWith(self: SortedSet[T], other: IEnumerable[T])
-            Modifies the current System.Collections.Generic.SortedSet object so that it contains only elements that are present either in the current object or in the specified 
-             collection, but not both.
+            Modifies the current System.Collections.Generic.SortedSet object so that it contains only elements that are present either in the current object or in the specified collection, 
+             but not both.
         
         
             other: The collection to compare to the current System.Collections.Generic.SortedSet object.
@@ -2443,9 +2437,7 @@ class SortedSet:
     def UnionWith(self, other):
         """
         UnionWith(self: SortedSet[T], other: IEnumerable[T])
-            Modifies the current System.Collections.Generic.SortedSet object so that it contains all elements that are present in both the current object and in the specified 
-             collection.
-        
+            Modifies the current System.Collections.Generic.SortedSet object so that it contains all elements that are present in both the current object and in the specified collection.
         
             other: The collection to compare to the current System.Collections.Generic.SortedSet object.
         """
@@ -2530,7 +2522,7 @@ Get: Min(self: SortedSet[T]) -> T
     Instance = SortedSet()
     """hardcoded/returns an instance of the class"""
 
-class Stack:
+class Stack(Object):
     """
     Stack[T]()
     Stack[T](capacity: int)

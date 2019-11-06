@@ -1,7 +1,8 @@
-from Wms.RemotingObjects import *
+from Wms.RemotingObjects import FindableList
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingObjects.Scripting.Modules calls itself Modules
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -132,7 +133,7 @@ Set: Path(self: LibContents) = value
     Instance = LibContents()
     """hardcoded/returns an instance of the class"""
 
-class LibContentType:
+class LibContentType(Object):
     """ enum LibContentType, values: File (1), Folder (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

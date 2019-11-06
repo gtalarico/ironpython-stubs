@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.SharedInfra.RuleEngine calls itself RuleEngine
-# from Wms.SharedInfra, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.SharedInfra, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -8,7 +9,7 @@
 # no functions
 # classes
 
-class Condition:
+class Condition(Object):
     """
     Condition()
     Condition(field: str, operator: str, value: str)
@@ -115,7 +116,7 @@ Set: Priority(self: IRule) = value
     Instance = IRule()
     """hardcoded/returns an instance of the class"""
 
-class OperatorEnum:
+class OperatorEnum(Object):
     """ enum OperatorEnum, values: OperatorIn (2), OperatorIs (0), OperatorIsNot (1), OperatorNotIn (3) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -159,7 +160,7 @@ class OperatorEnum:
     Instance = OperatorEnum()
     """hardcoded/returns an instance of the class"""
 
-class Rule:
+class Rule(Object):
     """ Rule() """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

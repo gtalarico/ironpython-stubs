@@ -829,7 +829,7 @@ Set: Right(self: CodeBinaryOperatorExpression) = value
     Instance = CodeBinaryOperatorExpression()
     """hardcoded/returns an instance of the class"""
 
-class CodeBinaryOperatorType:
+class CodeBinaryOperatorType(Object):
     """
     Defines identifiers for supported binary operators.
     
@@ -3171,7 +3171,7 @@ Set: Namespace(self: CodeNamespaceImport) = value
     Instance = CodeNamespaceImport()
     """hardcoded/returns an instance of the class"""
 
-class CodeNamespaceImportCollection:
+class CodeNamespaceImportCollection(Object):
     """
     Represents a collection of System.CodeDom.CodeNamespaceImport objects.
     
@@ -3677,7 +3677,7 @@ Set: RegionText(self: CodeRegionDirective) = value
     Instance = CodeRegionDirective()
     """hardcoded/returns an instance of the class"""
 
-class CodeRegionMode:
+class CodeRegionMode(Object):
     """
     Specifies the start or end of a code region.
     
@@ -5360,7 +5360,7 @@ Set: Type(self: CodeTypeReferenceExpression) = value
     Instance = CodeTypeReferenceExpression()
     """hardcoded/returns an instance of the class"""
 
-class CodeTypeReferenceOptions:
+class CodeTypeReferenceOptions(Object):
     """
     Specifies how the code type reference is to be resolved.
     
@@ -5486,7 +5486,7 @@ Set: VariableName(self: CodeVariableReferenceExpression) = value
     Instance = CodeVariableReferenceExpression()
     """hardcoded/returns an instance of the class"""
 
-class FieldDirection:
+class FieldDirection(Object):
     """
     Defines identifiers used to indicate the direction of parameter and argument declarations.
     
@@ -5533,7 +5533,7 @@ class FieldDirection:
     Instance = FieldDirection()
     """hardcoded/returns an instance of the class"""
 
-class MemberAttributes:
+class MemberAttributes(Object):
     """
     Defines member attribute identifiers for class members.
     

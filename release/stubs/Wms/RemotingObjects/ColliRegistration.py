@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingObjects.ColliRegistration calls itself ColliRegistration
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -8,7 +9,7 @@
 # no functions
 # classes
 
-class ColloReference:
+class ColloReference(Object):
     """
     ColloReference()
     ColloReference(reference: str, type: ReferenceType)
@@ -200,7 +201,7 @@ Set: WarehouseLocationCode(self: ColloReferencePair) = value
     Instance = ColloReferencePair()
     """hardcoded/returns an instance of the class"""
 
-class ReferenceType:
+class ReferenceType(Object):
     """ enum ReferenceType, values: Inner (0), Outer (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

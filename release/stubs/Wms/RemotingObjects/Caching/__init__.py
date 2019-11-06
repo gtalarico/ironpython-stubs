@@ -1,7 +1,8 @@
-from System.Collections.Generic import *
+from System.Collections.Generic import Dictionary
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingObjects.Caching calls itself Caching
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -9,7 +10,7 @@ from System.Collections.Generic import *
 # no functions
 # classes
 
-class CacheObject:
+class CacheObject(Object):
     """  """
     def IsLifeExpired(self, lifeTimeConfig):
         """ IsLifeExpired(self: CacheObject, lifeTimeConfig: Dictionary[CacheLifeTimes, int]) -> bool """
@@ -206,9 +207,7 @@ class CacheKey():
         GetHashCode(self: CacheKey) -> int
         
             Serves as a hash function for a particular type. System.Object.GetHashCode 
-                    is suitable for use in hashing algorithms and data structures like a hash 
-             table.
-        
+                    is suitable for use in hashing algorithms and data structures like a hash table.
             Returns: A hash code for the current System.Object.
         """
         pass
@@ -274,7 +273,7 @@ Get: InstanceId(self: CacheKey) -> str
     Instance = CacheKey()
     """hardcoded/returns an instance of the class"""
 
-class CacheKeyContructionOptionsEnum:
+class CacheKeyContructionOptionsEnum(Object):
     """ enum CacheKeyContructionOptionsEnum, values: Global (5), Session (2), System (1), User (0), UserSystemCombination (4), Zone (3) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -320,7 +319,7 @@ class CacheKeyContructionOptionsEnum:
     Instance = CacheKeyContructionOptionsEnum()
     """hardcoded/returns an instance of the class"""
 
-class CacheLifeTimes:
+class CacheLifeTimes(Object):
     """ enum CacheLifeTimes, values: ExpireImmediately (4), LiveIntermediate (2), LiveLong (1), LiveShort (3), NeverExpire (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

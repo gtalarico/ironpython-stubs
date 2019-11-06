@@ -113,7 +113,7 @@ Set: Enabled(self: BooleanSwitch) = value
     Instance = BooleanSwitch()
     """hardcoded/returns an instance of the class"""
 
-class ConditionalAttribute:
+class ConditionalAttribute(Object):
     """
     Indicates to compilers that a method call or attribute should be ignored unless a specified conditional compilation symbol is defined.
     
@@ -194,9 +194,9 @@ class TraceListener(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -285,9 +285,7 @@ class TraceListener(MarshalByRefObject):
             message: A message to write.
             category: A category name used to organize the output.
         Write(self: TraceListener, o: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the listener you create when you implement the System.Diagnostics.TraceListener 
-             class.
-        
+            Writes a category name and the value of the object's System.Object.ToString method to the listener you create when you implement the System.Diagnostics.TraceListener class.
         
             o: An System.Object whose fully qualified class name you want to write.
             category: A category name used to organize the output.
@@ -308,8 +306,8 @@ class TraceListener(MarshalByRefObject):
         
             message: A message to write.
         WriteLine(self: TraceListener, o: object)
-            Writes the value of the object's System.Object.ToString method to the listener you create when you implement the System.Diagnostics.TraceListener class, followed by a 
-             line terminator.
+            Writes the value of the object's System.Object.ToString method to the listener you create when you implement the System.Diagnostics.TraceListener class, followed by a line 
+             terminator.
         
         
             o: An System.Object whose fully qualified class name you want to write.
@@ -319,8 +317,8 @@ class TraceListener(MarshalByRefObject):
             message: A message to write.
             category: A category name used to organize the output.
         WriteLine(self: TraceListener, o: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the listener you create when you implement the System.Diagnostics.TraceListener 
-             class, followed by a line terminator.
+            Writes a category name and the value of the object's System.Object.ToString method to the listener you create when you implement the System.Diagnostics.TraceListener class, 
+             followed by a line terminator.
         
         
             o: An System.Object whose fully qualified class name you want to write.
@@ -461,9 +459,9 @@ class TextWriterTraceListener(TraceListener):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -492,8 +490,8 @@ class TextWriterTraceListener(TraceListener):
     def WriteLine(self, *__args):
         """
         WriteLine(self: TextWriterTraceListener, message: str)
-            Writes a message to this instance's System.Diagnostics.TextWriterTraceListener.Writer followed by a line terminator. The default line terminator is a carriage return 
-             followed by a line feed (\r\n).
+            Writes a message to this instance's System.Diagnostics.TextWriterTraceListener.Writer followed by a line terminator. The default line terminator is a carriage return followed by 
+             a line feed (\r\n).
         
         
             message: A message to write.
@@ -580,9 +578,9 @@ class ConsoleTraceListener(TextWriterTraceListener):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -1122,8 +1120,8 @@ class DataReceivedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1153,8 +1151,8 @@ class DataReceivedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -1198,8 +1196,8 @@ class Debug():
         
             condition: The conditional expression to evaluate. If the condition is true, the specified messages are not sent and the message box is not displayed.
             message: The message to send to the System.Diagnostics.Trace.Listeners collection.
-            detailMessageFormat: The composite format string (see Remarks) to send to the System.Diagnostics.Trace.Listeners collection. This message contains text intermixed with zero or more format 
-             items, which correspond to objects in the args array.
+            detailMessageFormat: The composite format string (see Remarks) to send to the System.Diagnostics.Trace.Listeners collection. This message contains text intermixed with zero or more format items, 
+             which correspond to objects in the args array.
         
             args: An object array that contains zero or more objects to format.
         """
@@ -1311,8 +1309,8 @@ class Debug():
             message: A message to write.
             category: A category name used to organize the output.
         WriteIf(condition: bool, value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a 
-             condition is true.
+            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a condition is 
+             true.
         
         
             condition: The conditional expression to evaluate. If the condition is true, the category name and value are written to the trace listeners in the collection.
@@ -1370,8 +1368,8 @@ class Debug():
             message: A message to write.
             category: A category name used to organize the output.
         WriteLineIf(condition: bool, value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a 
-             condition is true.
+            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Debug.Listeners collection if a condition is 
+             true.
         
         
             condition: The conditional expression to evaluate. If the condition is true, the category name and value are written to the trace listeners in the collection.
@@ -1401,7 +1399,7 @@ class Debug():
     Instance = Debug()
     """hardcoded/returns an instance of the class"""
 
-class DebuggableAttribute:
+class DebuggableAttribute(Object):
     """
     Modifies code generation for runtime just-in-time (JIT) debugging. This class cannot be inherited.
     
@@ -1467,8 +1465,8 @@ class Debugger():
         IsLogging() -> bool
         
             Checks to see if logging is enabled by an attached debugger.
-            Returns: true if a debugger is attached and logging is enabled; otherwise, false. The attached debugger is the registered managed debugger in the DbgManagedDebugger registry 
-             key. For more information on this key, see Enabling JIT-Attach Debugging.
+            Returns: true if a debugger is attached and logging is enabled; otherwise, false. The attached debugger is the registered managed debugger in the DbgManagedDebugger registry key. For more 
+             information on this key, see Enabling JIT-Attach Debugging.
         """
         pass
 
@@ -1508,7 +1506,7 @@ class Debugger():
     Instance = Debugger()
     """hardcoded/returns an instance of the class"""
 
-class DebuggerBrowsableAttribute:
+class DebuggerBrowsableAttribute(Object):
     """
     Determines if and how a member is displayed in the debugger variable windows. This class cannot be inherited.
     
@@ -1534,7 +1532,7 @@ Get: State(self: DebuggerBrowsableAttribute) -> DebuggerBrowsableState
     Instance = DebuggerBrowsableAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DebuggerBrowsableState:
+class DebuggerBrowsableState(Object):
     """
     Provides display instructions for the debugger.
     
@@ -1581,7 +1579,7 @@ class DebuggerBrowsableState:
     Instance = DebuggerBrowsableState()
     """hardcoded/returns an instance of the class"""
 
-class DebuggerDisplayAttribute:
+class DebuggerDisplayAttribute(Object):
     """
     Determines how a class or field is displayed in the debugger variable windows.
     
@@ -1639,7 +1637,7 @@ Get: Value(self: DebuggerDisplayAttribute) -> str
     Instance = DebuggerDisplayAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DebuggerHiddenAttribute:
+class DebuggerHiddenAttribute(Object):
     """
     Specifies the System.Diagnostics.DebuggerHiddenAttribute. This class cannot be inherited.
     
@@ -1655,7 +1653,7 @@ class DebuggerHiddenAttribute:
     Instance = DebuggerHiddenAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DebuggerNonUserCodeAttribute:
+class DebuggerNonUserCodeAttribute(Object):
     """
     Identifies a type or member that is not part of the user code for an application.
     
@@ -1671,7 +1669,7 @@ class DebuggerNonUserCodeAttribute:
     Instance = DebuggerNonUserCodeAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DebuggerStepperBoundaryAttribute:
+class DebuggerStepperBoundaryAttribute(Object):
     """
     Indicates the code following the attribute is to be executed in run, not step, mode.
     
@@ -1687,7 +1685,7 @@ class DebuggerStepperBoundaryAttribute:
     Instance = DebuggerStepperBoundaryAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DebuggerStepThroughAttribute:
+class DebuggerStepThroughAttribute(Object):
     """
     Instructs the debugger to step through the code instead of stepping into the code. This class cannot be inherited.
     
@@ -1703,7 +1701,7 @@ class DebuggerStepThroughAttribute:
     Instance = DebuggerStepThroughAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DebuggerTypeProxyAttribute:
+class DebuggerTypeProxyAttribute(Object):
     """
     Specifies the display proxy for a type.
     
@@ -1749,7 +1747,7 @@ Set: TargetTypeName(self: DebuggerTypeProxyAttribute) = value
     Instance = DebuggerTypeProxyAttribute()
     """hardcoded/returns an instance of the class"""
 
-class DebuggerVisualizerAttribute:
+class DebuggerVisualizerAttribute(Object):
     """
     Specifies that the type has a visualizer. This class cannot be inherited.
     
@@ -1862,9 +1860,9 @@ class DefaultTraceListener(TraceListener):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -1893,8 +1891,8 @@ class DefaultTraceListener(TraceListener):
     def WriteLine(self, *__args):
         """
         WriteLine(self: DefaultTraceListener, message: str)
-            Writes the output to the OutputDebugString function and to the System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String) method, followed by a carriage 
-             return and line feed (\r\n).
+            Writes the output to the OutputDebugString function and to the System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String) method, followed by a carriage return and 
+             line feed (\r\n).
         
         
             message: The message to write to OutputDebugString and System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String).
@@ -1973,9 +1971,9 @@ class DelimitedListTraceListener(TextWriterTraceListener):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2076,7 +2074,7 @@ Set: Delimiter(self: DelimitedListTraceListener) = value
     Instance = DelimitedListTraceListener()
     """hardcoded/returns an instance of the class"""
 
-class DiagnosticsConfigurationHandler:
+class DiagnosticsConfigurationHandler(Object):
     """
     Handles the diagnostics section of configuration files.
     
@@ -2159,8 +2157,8 @@ class EntryWrittenEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -2190,8 +2188,8 @@ class EntryWrittenEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -2287,26 +2285,24 @@ class EventLog(Component):
     def CreateEventSource(*__args):
         """
         CreateEventSource(source: str, logName: str)
-            Establishes the specified source name as a valid event source for writing entries to a log on the local computer. This method can also create a new custom log on the 
-             local computer.
+            Establishes the specified source name as a valid event source for writing entries to a log on the local computer. This method can also create a new custom log on the local 
+             computer.
         
         
             source: The source name by which the application is registered on the local computer.
             logName: The name of the log the source's entries are written to. Possible values include Application, System, or a custom event log.
         CreateEventSource(source: str, logName: str, machineName: str)
-            Establishes the specified source name as a valid event source for writing entries to a log on the specified computer. This method can also be used to create a new 
-             custom log on the specified computer.
+            Establishes the specified source name as a valid event source for writing entries to a log on the specified computer. This method can also be used to create a new custom log on 
+             the specified computer.
         
         
             source: The source by which the application is registered on the specified computer.
-            logName: The name of the log the source's entries are written to. Possible values include Application, System, or a custom event log. If you do not specify a value, logName 
-             defaults to Application.
+            logName: The name of the log the source's entries are written to. Possible values include Application, System, or a custom event log. If you do not specify a value, logName defaults to 
+             Application.
         
             machineName: The name of the computer to register this event source with, or "." for the local computer.
         CreateEventSource(sourceData: EventSourceCreationData)
-            Establishes a valid event source for writing localized event messages, using the specified configuration properties for the event source and the corresponding event 
-             log.
-        
+            Establishes a valid event source for writing localized event messages, using the specified configuration properties for the event source and the corresponding event log.
         
             sourceData: The configuration properties for the event source and its target event log.
         """
@@ -2365,16 +2361,16 @@ class EventLog(Component):
         
             Determines whether the log exists on the local computer.
         
-            logName: The name of the log to search for. Possible values include: Application, Security, System, other application-specific logs (such as those associated with Active 
-             Directory), or any custom log on the computer.
+            logName: The name of the log to search for. Possible values include: Application, Security, System, other application-specific logs (such as those associated with Active Directory), or 
+             any custom log on the computer.
         
             Returns: true if the log exists on the local computer; otherwise, false.
         Exists(logName: str, machineName: str) -> bool
         
             Determines whether the log exists on the specified computer.
         
-            logName: The log for which to search. Possible values include: Application, Security, System, other application-specific logs (such as those associated with Active Directory), 
-             or any custom log on the computer.
+            logName: The log for which to search. Possible values include: Application, Security, System, other application-specific logs (such as those associated with Active Directory), or any 
+             custom log on the computer.
         
             machineName: The name of the computer on which to search for the log, or "." for the local computer.
             Returns: true if the log exists on the specified computer; otherwise, false.
@@ -2404,8 +2400,7 @@ class EventLog(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
-             specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -2428,9 +2423,9 @@ class EventLog(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2522,8 +2517,8 @@ class EventLog(Component):
             eventID: The application-specific identifier for the event.
             category: The application-specific subcategory associated with the message.
         WriteEntry(source: str, message: str, type: EventLogEntryType, eventID: int, category: Int16)
-            Writes an entry with the given message text, application-defined event identifier, and application-defined category to the event log, using the specified registered 
-             event source. The category can be used by the Event Viewer to filter events in the log.
+            Writes an entry with the given message text, application-defined event identifier, and application-defined category to the event log, using the specified registered event source. 
+             The category can be used by the Event Viewer to filter events in the log.
         
         
             source: The source by which the application is registered on the specified computer.
@@ -2532,8 +2527,8 @@ class EventLog(Component):
             eventID: The application-specific identifier for the event.
             category: The application-specific subcategory associated with the message.
         WriteEntry(source: str, message: str, type: EventLogEntryType, eventID: int, category: Int16, rawData: Array[Byte])
-            Writes an entry with the given message text, application-defined event identifier, and application-defined category to the event log (using the specified registered 
-             event source) and appends binary data to the message.
+            Writes an entry with the given message text, application-defined event identifier, and application-defined category to the event log (using the specified registered event source) 
+             and appends binary data to the message.
         
         
             source: The source by which the application is registered on the specified computer.
@@ -2543,9 +2538,7 @@ class EventLog(Component):
             category: The application-specific subcategory associated with the message.
             rawData: An array of bytes that holds the binary data associated with the entry.
         WriteEntry(self: EventLog, message: str, type: EventLogEntryType, eventID: int, category: Int16, rawData: Array[Byte])
-            Writes an entry with the given message text, application-defined event identifier, and application-defined category to the event log, and appends binary data to the 
-             message.
-        
+            Writes an entry with the given message text, application-defined event identifier, and application-defined category to the event log, and appends binary data to the message.
         
             message: The string to write to the event log.
             type: One of the System.Diagnostics.EventLogEntryType values.
@@ -2735,8 +2728,7 @@ class EventLogEntry(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
-             specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -2746,9 +2738,9 @@ class EventLogEntry(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2897,15 +2889,15 @@ Get: UserName(self: EventLogEntry) -> str
     Instance = EventLogEntry()
     """hardcoded/returns an instance of the class"""
 
-class EventLogEntryCollection:
+class EventLogEntryCollection(Object):
     """ Defines size and enumerators for a collection of System.Diagnostics.EventLogEntry instances. """
     def CopyTo(self, entries, index):
         """
         CopyTo(self: EventLogEntryCollection, entries: Array[EventLogEntry], index: int)
             Copies the elements of the System.Diagnostics.EventLogEntryCollection to an array of System.Diagnostics.EventLogEntry instances, starting at a particular array index.
         
-            entries: The one-dimensional array of System.Diagnostics.EventLogEntry instances that is the destination of the elements copied from the collection. The array must have 
-             zero-based indexing.
+            entries: The one-dimensional array of System.Diagnostics.EventLogEntry instances that is the destination of the elements copied from the collection. The array must have zero-based 
+             indexing.
         
             index: The zero-based index in the array at which copying begins.
         """
@@ -2951,7 +2943,7 @@ Get: Count(self: EventLogEntryCollection) -> int
     Instance = EventLogEntryCollection()
     """hardcoded/returns an instance of the class"""
 
-class EventLogEntryType:
+class EventLogEntryType(Object):
     """
     Specifies the event type of an event log entry.
     
@@ -3084,7 +3076,7 @@ Get: PermissionEntries(self: EventLogPermission) -> EventLogPermissionEntryColle
     Instance = EventLogPermission()
     """hardcoded/returns an instance of the class"""
 
-class EventLogPermissionAccess:
+class EventLogPermissionAccess(Object):
     """
     Defines access levels used by System.Diagnostics.EventLog permission classes.
     
@@ -3445,9 +3437,9 @@ class EventLogTraceListener(TraceListener):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -3716,8 +3708,8 @@ class FileVersionInfo():
             Returns a System.Diagnostics.FileVersionInfo representing the version information associated with the specified file.
         
             fileName: The fully qualified path and name of the file to retrieve the version information for.
-            Returns: A System.Diagnostics.FileVersionInfo containing information about the file. If the file did not contain version information, the System.Diagnostics.FileVersionInfo 
-             contains only the name of the file requested.
+            Returns: A System.Diagnostics.FileVersionInfo containing information about the file. If the file did not contain version information, the System.Diagnostics.FileVersionInfo contains only 
+             the name of the file requested.
         """
         pass
 
@@ -3730,8 +3722,8 @@ class FileVersionInfo():
              System.Diagnostics.FileVersionInfo.OriginalFilename, System.Diagnostics.FileVersionInfo.FileVersion, System.Diagnostics.FileVersionInfo.FileDescription, 
              System.Diagnostics.FileVersionInfo.ProductName, System.Diagnostics.FileVersionInfo.ProductVersion, System.Diagnostics.FileVersionInfo.IsDebug, 
              System.Diagnostics.FileVersionInfo.IsPatched, System.Diagnostics.FileVersionInfo.IsPreRelease, System.Diagnostics.FileVersionInfo.IsPrivateBuild, 
-             System.Diagnostics.FileVersionInfo.IsSpecialBuild,System.Diagnostics.FileVersionInfo.Language.If the file did not contain version information, this list will contain 
-             only the name of the requested file. Boolean values will be false, and all other entries will be null.
+             System.Diagnostics.FileVersionInfo.IsSpecialBuild,System.Diagnostics.FileVersionInfo.Language.If the file did not contain version information, this list will contain only the 
+             name of the requested file. Boolean values will be false, and all other entries will be null.
         """
         pass
 
@@ -4180,8 +4172,8 @@ class InstanceDataCollectionCollection(DictionaryBase):
         """
         Contains(self: InstanceDataCollectionCollection, counterName: str) -> bool
         
-            Determines whether an instance data collection for the specified counter (identified by one of the indexed System.Diagnostics.InstanceDataCollection objects) exists in 
-             the collection.
+            Determines whether an instance data collection for the specified counter (identified by one of the indexed System.Diagnostics.InstanceDataCollection objects) exists in the 
+             collection.
         
         
             counterName: The name of the performance counter.
@@ -4368,7 +4360,7 @@ Get: Description(self: MonitoringDescriptionAttribute) -> str
     Instance = MonitoringDescriptionAttribute()
     """hardcoded/returns an instance of the class"""
 
-class OverflowAction:
+class OverflowAction(Object):
     """
     Specifies how to handle entries in an event log that has reached its maximum file size.
     
@@ -4475,8 +4467,7 @@ class PerformanceCounter(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
-             specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -4506,9 +4497,9 @@ class PerformanceCounter(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -4717,9 +4708,8 @@ class PerformanceCounterCategory():
         
             categoryName: The name of the custom performance counter category to create and register with the system.
             categoryHelp: A description of the custom category.
-            categoryType: One of the System.Diagnostics.PerformanceCounterCategoryType  values specifying whether the category is 
-             System.Diagnostics.PerformanceCounterCategoryType.MultiInstance, System.Diagnostics.PerformanceCounterCategoryType.SingleInstance, or 
-             System.Diagnostics.PerformanceCounterCategoryType.Unknown.
+            categoryType: One of the System.Diagnostics.PerformanceCounterCategoryType  values specifying whether the category is System.Diagnostics.PerformanceCounterCategoryType.MultiInstance, 
+             System.Diagnostics.PerformanceCounterCategoryType.SingleInstance, or System.Diagnostics.PerformanceCounterCategoryType.Unknown.
         
             counterName: The name of a new counter to create as part of the new category.
             counterHelp: A description of the counter that is associated with the new custom category.
@@ -4800,8 +4790,7 @@ class PerformanceCounterCategory():
             Retrieves a list of the counters in a performance counter category that contains one or more instances.
         
             instanceName: The performance object instance for which to retrieve the list of associated counters.
-            Returns: An array of System.Diagnostics.PerformanceCounter objects indicating the counters that are associated with the specified object instance of this performance counter 
-             category.
+            Returns: An array of System.Diagnostics.PerformanceCounter objects indicating the counters that are associated with the specified object instance of this performance counter category.
         """
         pass
 
@@ -4810,8 +4799,8 @@ class PerformanceCounterCategory():
         GetInstanceNames(self: PerformanceCounterCategory) -> Array[str]
         
             Retrieves the list of performance object instances that are associated with this category.
-            Returns: An array of strings representing the performance object instance names that are associated with this category or, if the category contains only one performance object 
-             instance, a single-entry array that contains an empty string ("").
+            Returns: An array of strings representing the performance object instance names that are associated with this category or, if the category contains only one performance object instance, a 
+             single-entry array that contains an empty string ("").
         """
         pass
 
@@ -4895,7 +4884,7 @@ Set: MachineName(self: PerformanceCounterCategory) = value
     Instance = PerformanceCounterCategory()
     """hardcoded/returns an instance of the class"""
 
-class PerformanceCounterCategoryType:
+class PerformanceCounterCategoryType(Object):
     """
     Indicates whether the performance counter category can have multiple instances.
     
@@ -4942,7 +4931,7 @@ class PerformanceCounterCategoryType:
     Instance = PerformanceCounterCategoryType()
     """hardcoded/returns an instance of the class"""
 
-class PerformanceCounterInstanceLifetime:
+class PerformanceCounterInstanceLifetime(Object):
     """
     Specifies the lifetime of a performance counter instance.
     
@@ -4988,7 +4977,7 @@ class PerformanceCounterInstanceLifetime:
     Instance = PerformanceCounterInstanceLifetime()
     """hardcoded/returns an instance of the class"""
 
-class PerformanceCounterManager:
+class PerformanceCounterManager(Object):
     """
     Prepares performance data for the performance.dll the system loads when working with performance counters.
     
@@ -5089,7 +5078,7 @@ Get: PermissionEntries(self: PerformanceCounterPermission) -> PerformanceCounter
     Instance = PerformanceCounterPermission()
     """hardcoded/returns an instance of the class"""
 
-class PerformanceCounterPermissionAccess:
+class PerformanceCounterPermissionAccess(Object):
     """
     Defines access levels used by System.Diagnostics.PerformanceCounter permission classes.
     
@@ -5149,8 +5138,8 @@ class PerformanceCounterPermissionAttribute(CodeAccessSecurityAttribute):
         """
         CreatePermission(self: PerformanceCounterPermissionAttribute) -> IPermission
         
-            Creates the permission based on the requested access levels that are set through the System.Diagnostics.PerformanceCounterPermissionAttribute.PermissionAccess property 
-             on the attribute.
+            Creates the permission based on the requested access levels that are set through the System.Diagnostics.PerformanceCounterPermissionAttribute.PermissionAccess property on the 
+             attribute.
         
             Returns: An System.Security.IPermission that represents the created permission.
         """
@@ -5431,7 +5420,7 @@ class PerformanceCounterPermissionEntryCollection(CollectionBase):
     Instance = PerformanceCounterPermissionEntryCollection()
     """hardcoded/returns an instance of the class"""
 
-class PerformanceCounterType:
+class PerformanceCounterType(Object):
     """
     Specifies the formula used to calculate the System.Diagnostics.PerformanceCounter.NextValue method for a System.Diagnostics.PerformanceCounter instance.
     
@@ -5549,8 +5538,8 @@ class Process(Component):
         CloseMainWindow(self: Process) -> bool
         
             Closes a process that has a user interface by sending a close message to its main window.
-            Returns: true if the close message was successfully sent; false if the associated process does not have a main window or if the main window is disabled (for example if a modal 
-             dialog is being shown).
+            Returns: true if the close message was successfully sent; false if the associated process does not have a main window or if the main window is disabled (for example if a modal dialog is 
+             being shown).
         """
         pass
 
@@ -5567,8 +5556,8 @@ class Process(Component):
     def EnterDebugMode():
         """
         EnterDebugMode()
-            Puts a System.Diagnostics.Process component in state to interact with operating system processes that run in a special mode by enabling the native property 
-             SeDebugPrivilege on the current thread.
+            Puts a System.Diagnostics.Process component in state to interact with operating system processes that run in a special mode by enabling the native property SeDebugPrivilege on 
+             the current thread.
         """
         pass
 
@@ -5622,17 +5611,13 @@ class Process(Component):
         """
         GetProcessesByName(processName: str) -> Array[Process]
         
-            Creates an array of new System.Diagnostics.Process components and associates them with all the process resources on the local computer that share the specified process 
-             name.
-        
+            Creates an array of new System.Diagnostics.Process components and associates them with all the process resources on the local computer that share the specified process name.
         
             processName: The friendly name of the process.
             Returns: An array of type System.Diagnostics.Process that represents the process resources running the specified application or file.
         GetProcessesByName(processName: str, machineName: str) -> Array[Process]
         
-            Creates an array of new System.Diagnostics.Process components and associates them with all the process resources on a remote computer that share the specified process 
-             name.
-        
+            Creates an array of new System.Diagnostics.Process components and associates them with all the process resources on a remote computer that share the specified process name.
         
             processName: The friendly name of the process.
             machineName: The name of a computer on the network.
@@ -5647,8 +5632,7 @@ class Process(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
-             specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -5673,9 +5657,9 @@ class Process(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -5703,27 +5687,25 @@ class Process(Component):
         """
         Start(self: Process) -> bool
         
-            Starts (or reuses) the process resource that is specified by the System.Diagnostics.Process.StartInfo property of this System.Diagnostics.Process component and 
-             associates it with the component.
+            Starts (or reuses) the process resource that is specified by the System.Diagnostics.Process.StartInfo property of this System.Diagnostics.Process component and associates it with 
+             the component.
         
             Returns: true if a process resource is started; false if no new process resource is started (for example, if an existing process is reused).
         Start(fileName: str, userName: str, password: SecureString, domain: str) -> Process
         
-            Starts a process resource by specifying the name of an application, a user name, a password, and a domain and associates the resource with a new 
-             System.Diagnostics.Process component.
+            Starts a process resource by specifying the name of an application, a user name, a password, and a domain and associates the resource with a new System.Diagnostics.Process 
+             component.
         
         
             fileName: The name of an application file to run in the process.
             userName: The user name to use when starting the process.
             password: A System.Security.SecureString that contains the password to use when starting the process.
             domain: The domain to use when starting the process.
-            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null if no process resource is started (for example, if an existing process 
-             is reused).
-        
+            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null if no process resource is started (for example, if an existing process is reused).
         Start(fileName: str, arguments: str, userName: str, password: SecureString, domain: str) -> Process
         
-            Starts a process resource by specifying the name of an application, a set of command-line arguments, a user name, a password, and a domain and associates the resource 
-             with a new System.Diagnostics.Process component.
+            Starts a process resource by specifying the name of an application, a set of command-line arguments, a user name, a password, and a domain and associates the resource with a new 
+             System.Diagnostics.Process component.
         
         
             fileName: The name of an application file to run in the process.
@@ -5731,37 +5713,32 @@ class Process(Component):
             userName: The user name to use when starting the process.
             password: A System.Security.SecureString that contains the password to use when starting the process.
             domain: The domain to use when starting the process.
-            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null if no process resource is started (for example, if an existing process 
-             is reused).
-        
+            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null if no process resource is started (for example, if an existing process is reused).
         Start(fileName: str) -> Process
         
             Starts a process resource by specifying the name of a document or application file and associates the resource with a new System.Diagnostics.Process component.
         
             fileName: The name of a document or application file to run in the process.
-            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null, if no process resource is started (for example, if an existing 
-             process is reused).
+            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null, if no process resource is started (for example, if an existing process is 
+             reused).
         
         Start(fileName: str, arguments: str) -> Process
         
-            Starts a process resource by specifying the name of an application and a set of command-line arguments, and associates the resource with a new 
-             System.Diagnostics.Process component.
+            Starts a process resource by specifying the name of an application and a set of command-line arguments, and associates the resource with a new System.Diagnostics.Process 
+             component.
         
         
             fileName: The name of an application file to run in the process.
             arguments: Command-line arguments to pass when starting the process.
-            Returns: A new System.Diagnostics.Process component that is associated with the process, or null, if no process resource is started (for example, if an existing process is 
-             reused).
-        
+            Returns: A new System.Diagnostics.Process component that is associated with the process, or null, if no process resource is started (for example, if an existing process is reused).
         Start(startInfo: ProcessStartInfo) -> Process
         
-            Starts the process resource that is specified by the parameter containing process start information (for example, the file name of the process to start) and associates 
-             the resource with a new System.Diagnostics.Process component.
+            Starts the process resource that is specified by the parameter containing process start information (for example, the file name of the process to start) and associates the 
+             resource with a new System.Diagnostics.Process component.
         
         
             startInfo: The System.Diagnostics.ProcessStartInfo that contains the information that is used to start the process, including the file name and any command-line arguments.
-            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null if no process resource is started (for example, if an existing process 
-             is reused).
+            Returns: A new System.Diagnostics.Process component that is associated with the process resource, or null if no process resource is started (for example, if an existing process is reused).
         """
         pass
 
@@ -5780,8 +5757,8 @@ class Process(Component):
         
             Instructs the System.Diagnostics.Process component to wait the specified number of milliseconds for the associated process to exit.
         
-            milliseconds: The amount of time, in milliseconds, to wait for the associated process to exit. The maximum is the largest possible value of a 32-bit integer, which represents 
-             infinity to the operating system.
+            milliseconds: The amount of time, in milliseconds, to wait for the associated process to exit. The maximum is the largest possible value of a 32-bit integer, which represents infinity to the 
+             operating system.
         
             Returns: true if the associated process has exited; otherwise, false.
         WaitForExit(self: Process)
@@ -5793,18 +5770,18 @@ class Process(Component):
         """
         WaitForInputIdle(self: Process, milliseconds: int) -> bool
         
-            Causes the System.Diagnostics.Process component to wait the specified number of milliseconds for the associated process to enter an idle state. This overload applies 
-             only to processes with a user interface and, therefore, a message loop.
+            Causes the System.Diagnostics.Process component to wait the specified number of milliseconds for the associated process to enter an idle state. This overload applies only to 
+             processes with a user interface and, therefore, a message loop.
         
         
-            milliseconds: A value of 1 to System.Int32.MaxValue that specifies the amount of time, in milliseconds, to wait for the associated process to become idle. A value of 0 specifies an 
-             immediate return, and a value of -1 specifies an infinite wait.
+            milliseconds: A value of 1 to System.Int32.MaxValue that specifies the amount of time, in milliseconds, to wait for the associated process to become idle. A value of 0 specifies an immediate 
+             return, and a value of -1 specifies an infinite wait.
         
             Returns: true if the associated process has reached an idle state; otherwise, false.
         WaitForInputIdle(self: Process) -> bool
         
-            Causes the System.Diagnostics.Process component to wait indefinitely for the associated process to enter an idle state. This overload applies only to processes with a 
-             user interface and, therefore, a message loop.
+            Causes the System.Diagnostics.Process component to wait indefinitely for the associated process to enter an idle state. This overload applies only to processes with a user 
+             interface and, therefore, a message loop.
         
             Returns: true if the associated process has reached an idle state.
         """
@@ -6222,8 +6199,7 @@ class ProcessModule(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
-             specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -6233,9 +6209,9 @@ class ProcessModule(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -6397,7 +6373,7 @@ class ProcessModuleCollection(ReadOnlyCollectionBase):
     Instance = ProcessModuleCollection()
     """hardcoded/returns an instance of the class"""
 
-class ProcessPriorityClass:
+class ProcessPriorityClass(Object):
     """
     Indicates the priority that the system associates with a process. This value, together with the priority value of each thread of the process, determines each thread's base priority level.
     
@@ -6655,8 +6631,7 @@ class ProcessThread(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
-             specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -6666,9 +6641,9 @@ class ProcessThread(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -6918,7 +6893,7 @@ class ProcessThreadCollection(ReadOnlyCollectionBase):
     Instance = ProcessThreadCollection()
     """hardcoded/returns an instance of the class"""
 
-class ProcessWindowStyle:
+class ProcessWindowStyle(Object):
     """
     Specified how a new window should appear when the system starts a process.
     
@@ -7007,7 +6982,7 @@ Set: Source(self: SourceFilter) = value
     Instance = SourceFilter()
     """hardcoded/returns an instance of the class"""
 
-class SourceLevels:
+class SourceLevels(Object):
     """
     Specifies the levels of trace messages filtered by the source switch and event type filter.
     
@@ -7149,9 +7124,8 @@ class StackFrame():
         """
         GetILOffset(self: StackFrame) -> int
         
-            Gets the offset from the start of the Microsoft intermediate language (MSIL) code for the method that is executing. This offset might be an approximation depending on 
-             whether or not the just-in-time (JIT) compiler is generating debugging code. The generation of this debugging information is controlled by the 
-             System.Diagnostics.DebuggableAttribute.
+            Gets the offset from the start of the Microsoft intermediate language (MSIL) code for the method that is executing. This offset might be an approximation depending on whether or 
+             not the just-in-time (JIT) compiler is generating debugging code. The generation of this debugging information is controlled by the System.Diagnostics.DebuggableAttribute.
         
             Returns: The offset from the start of the MSIL code for the method that is executing.
         """
@@ -7170,8 +7144,8 @@ class StackFrame():
         """
         GetNativeOffset(self: StackFrame) -> int
         
-            Gets the offset from the start of the native just-in-time (JIT)-compiled code for the method that is being executed. The generation of this debugging information is 
-             controlled by the System.Diagnostics.DebuggableAttribute class.
+            Gets the offset from the start of the native just-in-time (JIT)-compiled code for the method that is being executed. The generation of this debugging information is controlled by 
+             the System.Diagnostics.DebuggableAttribute class.
         
             Returns: The offset from the start of the JIT-compiled code for the method that is being executed.
         """
@@ -7409,7 +7383,7 @@ Get: IsRunning(self: Stopwatch) -> bool
     Instance = Stopwatch()
     """hardcoded/returns an instance of the class"""
 
-class SwitchAttribute:
+class SwitchAttribute(Object):
     """
     Identifies a switch used in an assembly, class, or member.
     
@@ -7464,7 +7438,7 @@ Set: SwitchType(self: SwitchAttribute) = value
     Instance = SwitchAttribute()
     """hardcoded/returns an instance of the class"""
 
-class SwitchLevelAttribute:
+class SwitchLevelAttribute(Object):
     """
     Identifies the level type for a switch.
     
@@ -7491,7 +7465,7 @@ Set: SwitchLevelType(self: SwitchLevelAttribute) = value
     Instance = SwitchLevelAttribute()
     """hardcoded/returns an instance of the class"""
 
-class ThreadPriorityLevel:
+class ThreadPriorityLevel(Object):
     """
     Specifies the priority level of a thread.
     
@@ -7542,7 +7516,7 @@ class ThreadPriorityLevel:
     Instance = ThreadPriorityLevel()
     """hardcoded/returns an instance of the class"""
 
-class ThreadState:
+class ThreadState(Object):
     """
     Specifies the current execution state of the thread.
     
@@ -7594,7 +7568,7 @@ class ThreadState:
     Instance = ThreadState()
     """hardcoded/returns an instance of the class"""
 
-class ThreadWaitReason:
+class ThreadWaitReason(Object):
     """
     Specifies the reason a thread is waiting.
     
@@ -7745,9 +7719,7 @@ class Trace():
         
             message: The informative message to write.
         TraceInformation(format: str, *args: Array[object])
-            Writes an informational message to the trace listeners in the System.Diagnostics.Trace.Listeners collection using the specified array of objects and formatting 
-             information.
-        
+            Writes an informational message to the trace listeners in the System.Diagnostics.Trace.Listeners collection using the specified array of objects and formatting information.
         
             format: A format string that contains zero or more format items, which correspond to objects in the args array.
             args: An object array containing zero or more objects to format.
@@ -7821,8 +7793,8 @@ class Trace():
             message: A message to write.
             category: A category name used to organize the output.
         WriteIf(condition: bool, value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Trace.Listeners collection if a 
-             condition is true.
+            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Trace.Listeners collection if a condition is 
+             true.
         
         
             condition: true to cause a message to be written; otherwise, false.
@@ -7875,8 +7847,8 @@ class Trace():
             message: A message to write.
             category: A category name used to organize the output.
         WriteLineIf(condition: bool, value: object, category: str)
-            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Trace.Listeners collection if a 
-             condition is true.
+            Writes a category name and the value of the object's System.Object.ToString method to the trace listeners in the System.Diagnostics.Trace.Listeners collection if a condition is 
+             true.
         
         
             condition: true to cause a message to be written; otherwise, false.
@@ -7947,7 +7919,7 @@ Get: Timestamp(self: TraceEventCache) -> Int64
     Instance = TraceEventCache()
     """hardcoded/returns an instance of the class"""
 
-class TraceEventType:
+class TraceEventType(Object):
     """
     Identifies the type of event that has caused the trace.
     
@@ -8001,7 +7973,7 @@ class TraceEventType:
     Instance = TraceEventType()
     """hardcoded/returns an instance of the class"""
 
-class TraceLevel:
+class TraceLevel(Object):
     """
     Specifies what messages to output for the System.Diagnostics.Debug, System.Diagnostics.Trace and System.Diagnostics.TraceSwitch classes.
     
@@ -8050,7 +8022,7 @@ class TraceLevel:
     Instance = TraceLevel()
     """hardcoded/returns an instance of the class"""
 
-class TraceListenerCollection:
+class TraceListenerCollection(Object):
     """ Provides a thread-safe list of System.Diagnostics.TraceListener objects. """
     def Add(self, listener):
         """
@@ -8206,7 +8178,7 @@ Get: Count(self: TraceListenerCollection) -> int
     Instance = TraceListenerCollection()
     """hardcoded/returns an instance of the class"""
 
-class TraceOptions:
+class TraceOptions(Object):
     """
     Specifies trace data options to be written to the trace output.
     
@@ -8296,9 +8268,7 @@ class TraceSource():
             id: A numeric identifier for the event.
             data: The trace data.
         TraceData(self: TraceSource, eventType: TraceEventType, id: int, *data: Array[object])
-            Writes trace data to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified event type, event identifier, and trace data 
-             array.
-        
+            Writes trace data to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified event type, event identifier, and trace data array.
         
             eventType: One of the enumeration values that specifies the event type of the trace data.
             id: A numeric identifier for the event.
@@ -8314,16 +8284,14 @@ class TraceSource():
             eventType: One of the enumeration values that specifies the event type of the trace data.
             id: A numeric identifier for the event.
         TraceEvent(self: TraceSource, eventType: TraceEventType, id: int, message: str)
-            Writes a trace event message to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified event type, event identifier, and 
-             message.
-        
+            Writes a trace event message to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified event type, event identifier, and message.
         
             eventType: One of the enumeration values that specifies the event type of the trace data.
             id: A numeric identifier for the event.
             message: The trace message to write.
         TraceEvent(self: TraceSource, eventType: TraceEventType, id: int, format: str, *args: Array[object])
-            Writes a trace event to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified event type, event identifier, and argument 
-             array and format.
+            Writes a trace event to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified event type, event identifier, and argument array and 
+             format.
         
         
             eventType: One of the enumeration values that specifies the event type of the trace data.
@@ -8340,9 +8308,7 @@ class TraceSource():
         
             message: The informative message to write.
         TraceInformation(self: TraceSource, format: str, *args: Array[object])
-            Writes an informational message to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified object array and formatting 
-             information.
-        
+            Writes an informational message to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified object array and formatting information.
         
             format: A composite format string (see Remarks) that contains text intermixed with zero or more format items, which correspond to objects in the args array.
             args: An array containing zero or more objects to format.
@@ -8352,8 +8318,8 @@ class TraceSource():
     def TraceTransfer(self, id, message, relatedActivityId):
         """
         TraceTransfer(self: TraceSource, id: int, message: str, relatedActivityId: Guid)
-            Writes a trace transfer message to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified numeric identifier, message, and 
-             related activity identifier.
+            Writes a trace transfer message to the trace listeners in the System.Diagnostics.TraceSource.Listeners collection using the specified numeric identifier, message, and related 
+             activity identifier.
         
         
             id: A numeric identifier for the event.
@@ -8520,9 +8486,9 @@ class XmlWriterTraceListener(TextWriterTraceListener):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object

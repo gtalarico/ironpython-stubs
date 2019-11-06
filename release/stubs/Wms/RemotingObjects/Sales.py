@@ -1,8 +1,14 @@
-from Wms.RemotingObjects.Outbound import *
-from Wms.RemotingObjects import *
+from Wms.RemotingObjects.Outbound import HistoryOutboundOrder
+from Wms.RemotingObjects.Outbound import OutboundOrderLines
+from Wms.RemotingObjects.Outbound import OutboundOrderLine
+from Wms.RemotingObjects.Outbound import OutboundOrders
+from Wms.RemotingObjects.Outbound import OutboundOrder
+from System import Object
+from Wms.RemotingObjects import FindableList
+from Wms.RemotingObjects.Outbound import HistoryOutboundOrders
 # encoding: utf-8
 # module Wms.RemotingObjects.Sales calls itself Sales
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -10,7 +16,7 @@ from Wms.RemotingObjects import *
 # no functions
 # classes
 
-class BatchPackProcessingModeEnum:
+class BatchPackProcessingModeEnum(Object):
     """ enum BatchPackProcessingModeEnum, values: Direct (0), Queued (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -848,7 +854,7 @@ class PackCustomers(FindableList):
     Instance = PackCustomers()
     """hardcoded/returns an instance of the class"""
 
-class PartialDeliveryTypeEnum:
+class PartialDeliveryTypeEnum(Object):
     """ enum PartialDeliveryTypeEnum, values: Allow (0), OnlyEntireLines (2), OnlyEntireOrder (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1383,7 +1389,7 @@ class SalesOrders(OutboundOrders):
     Instance = SalesOrders()
     """hardcoded/returns an instance of the class"""
 
-class SplitProcessedOutboundOrdersEnum:
+class SplitProcessedOutboundOrdersEnum(Object):
     """ enum SplitProcessedOutboundOrdersEnum, values: IntoFirstColli (2), None (0), PerOutboundOrder (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -1426,7 +1432,7 @@ class SplitProcessedOutboundOrdersEnum:
     Instance = SplitProcessedOutboundOrdersEnum()
     """hardcoded/returns an instance of the class"""
 
-class StockRegistrationForColliEnum:
+class StockRegistrationForColliEnum(Object):
     """ enum StockRegistrationForColliEnum, values: Counts (2), Disabled (0), PackageSlip (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingImplementation.Batches.Picking calls itself Picking
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -8,7 +9,7 @@
 # no functions
 # classes
 
-class RegularPicker:
+class RegularPicker(Object):
     """ RegularPicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
     def Dispose(self):
         """ Dispose(self: RegularPicker) """
@@ -175,7 +176,7 @@ class DifferentLocationPicker(DifferentLocationAndMorePicker):
     Instance = DifferentLocationPicker()
     """hardcoded/returns an instance of the class"""
 
-class ItemIdRegularPicker:
+class ItemIdRegularPicker(Object):
     """ ItemIdRegularPicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
     def AddAllocationForRollback(self, line, number, quantity):
         """ AddAllocationForRollback(self: ItemIdRegularPicker, line: OutboundOrderLine, number: str, quantity: Decimal) """
@@ -294,7 +295,7 @@ class ItemIdRegularPicker:
     Instance = ItemIdRegularPicker()
     """hardcoded/returns an instance of the class"""
 
-class ItemIdDifferentLocationAndMorePicker:
+class ItemIdDifferentLocationAndMorePicker(Object):
     """ ItemIdDifferentLocationAndMorePicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
     def DeAllocateItemIdOnNonAssignedLines(self, *args): #cannot find CLR method
         """ DeAllocateItemIdOnNonAssignedLines(self: ItemIdRegularPicker, itemIdToRemove: str, qtyToRemove: Decimal, pickLocToEdit: ItemPickLocation) -> bool """
@@ -354,7 +355,7 @@ class ItemIdDifferentLocationAndMorePicker:
     Instance = ItemIdDifferentLocationAndMorePicker()
     """hardcoded/returns an instance of the class"""
 
-class ItemIdDifferentLocationPicker:
+class ItemIdDifferentLocationPicker(Object):
     """ ItemIdDifferentLocationPicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
     def DeAllocateItemIdOnNonAssignedLines(self, *args): #cannot find CLR method
         """ DeAllocateItemIdOnNonAssignedLines(self: ItemIdRegularPicker, itemIdToRemove: str, qtyToRemove: Decimal, pickLocToEdit: ItemPickLocation) -> bool """
@@ -406,7 +407,7 @@ class ItemIdDifferentLocationPicker:
     Instance = ItemIdDifferentLocationPicker()
     """hardcoded/returns an instance of the class"""
 
-class ItemIdMorePicker:
+class ItemIdMorePicker(Object):
     """ ItemIdMorePicker(args: PickingArgs, outboundOrderLines: OutboundOrderLines, itemPickLocations: ItemPickLocations) """
     def DeAllocateItemIdOnNonAssignedLines(self, *args): #cannot find CLR method
         """ DeAllocateItemIdOnNonAssignedLines(self: ItemIdRegularPicker, itemIdToRemove: str, qtyToRemove: Decimal, pickLocToEdit: ItemPickLocation) -> bool """
@@ -510,7 +511,7 @@ class MorePicker(RegularPicker):
     Instance = MorePicker()
     """hardcoded/returns an instance of the class"""
 
-class PickerFactory:
+class PickerFactory(Object):
     """ PickerFactory(args: PickingArgs) """
     def CreateItemIdPicker(self):
         """ CreateItemIdPicker(self: PickerFactory) -> ItemIdRegularPicker """
@@ -548,7 +549,7 @@ class PickerFactory:
     Instance = PickerFactory()
     """hardcoded/returns an instance of the class"""
 
-class PickFlavour:
+class PickFlavour(Object):
     """ enum PickFlavour, values: ChangeRoute (2), DeliverMore (1), DeliverMoreAndChangeRoute (3), Regular (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

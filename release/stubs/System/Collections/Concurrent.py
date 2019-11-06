@@ -13,7 +13,7 @@ def Partitioner(args, kwargs): # real signature unknown
 
 # classes
 
-class BlockingCollection:
+class BlockingCollection(Object):
     """
     BlockingCollection[T]()
     BlockingCollection[T](boundedCapacity: int)
@@ -114,8 +114,8 @@ class BlockingCollection:
             Attempts to add the specified item to the System.Collections.Concurrent.BlockingCollection.
         
             item: The item to be added to the collection.
-            Returns: true if item could be added; otherwise false. If the item is a duplicate, and the underlying collection does not accept duplicate items, then an 
-             System.InvalidOperationException is thrown.
+            Returns: true if item could be added; otherwise false. If the item is a duplicate, and the underlying collection does not accept duplicate items, then an System.InvalidOperationException 
+             is thrown.
         
         TryAdd(self: BlockingCollection[T], item: T, timeout: TimeSpan) -> bool
         
@@ -130,8 +130,8 @@ class BlockingCollection:
         
             item: The item to be added to the collection.
             millisecondsTimeout: The number of milliseconds to wait, or System.Threading.Timeout.Infinite (-1) to wait indefinitely.
-            Returns: true if the item could be added to the collection within the specified time; otherwise, false. If the item is a duplicate, and the underlying collection does not 
-             accept duplicate items, then an System.InvalidOperationException is thrown.
+            Returns: true if the item could be added to the collection within the specified time; otherwise, false. If the item is a duplicate, and the underlying collection does not accept duplicate 
+             items, then an System.InvalidOperationException is thrown.
         
         TryAdd(self: BlockingCollection[T], item: T, millisecondsTimeout: int, cancellationToken: CancellationToken) -> bool
         
@@ -140,8 +140,8 @@ class BlockingCollection:
             item: The item to be added to the collection.
             millisecondsTimeout: The number of milliseconds to wait, or System.Threading.Timeout.Infinite (-1) to wait indefinitely.
             cancellationToken: A cancellation token to observe.
-            Returns: true if the item could be added to the collection within the specified time; otherwise, false. If the item is a duplicate, and the underlying collection does not 
-             accept duplicate items, then an System.InvalidOperationException is thrown.
+            Returns: true if the item could be added to the collection within the specified time; otherwise, false. If the item is a duplicate, and the underlying collection does not accept duplicate 
+             items, then an System.InvalidOperationException is thrown.
         """
         pass
 
@@ -248,7 +248,7 @@ Get: IsCompleted(self: BlockingCollection[T]) -> bool
     Instance = BlockingCollection()
     """hardcoded/returns an instance of the class"""
 
-class ConcurrentBag:
+class ConcurrentBag(Object):
     """
     ConcurrentBag[T]()
     ConcurrentBag[T](collection: IEnumerable[T])
@@ -345,7 +345,7 @@ Get: IsEmpty(self: ConcurrentBag[T]) -> bool
     Instance = ConcurrentBag()
     """hardcoded/returns an instance of the class"""
 
-class ConcurrentDictionary:
+class ConcurrentDictionary(Object):
     """
     ConcurrentDictionary[TKey, TValue](concurrencyLevel: int, capacity: int)
     ConcurrentDictionary[TKey, TValue]()
@@ -398,8 +398,8 @@ class ConcurrentDictionary:
         
             key: The key of the element to add.
             valueFactory: The function used to generate a value for the key
-            Returns: The value for the key. This will be either the existing value for the key if the key is already in the dictionary, or the new value for the key as returned by 
-             valueFactory if the key was not in the dictionary.
+            Returns: The value for the key. This will be either the existing value for the key if the key is already in the dictionary, or the new value for the key as returned by valueFactory if the 
+             key was not in the dictionary.
         
         GetOrAdd(self: ConcurrentDictionary[TKey, TValue], key: TKey, value: TValue) -> TValue
         
@@ -407,9 +407,7 @@ class ConcurrentDictionary:
         
             key: The key of the element to add.
             value: the value to be added, if the key does not already exist
-            Returns: The value for the key. This will be either the existing value for the key if the key is already in the dictionary, or the new value if the key was not in the 
-             dictionary.
-        
+            Returns: The value for the key. This will be either the existing value for the key if the key is already in the dictionary, or the new value if the key was not in the dictionary.
         GetOrAdd[TArg](self: ConcurrentDictionary[TKey, TValue], key: TKey, valueFactory: Func[TKey, TArg, TValue], factoryArgument: TArg) -> TValue
         """
         pass
@@ -545,7 +543,7 @@ Get: Values(self: ConcurrentDictionary[TKey, TValue]) -> ICollection[TValue]
     Instance = ConcurrentDictionary()
     """hardcoded/returns an instance of the class"""
 
-class ConcurrentQueue:
+class ConcurrentQueue(Object):
     """
     ConcurrentQueue[T]()
     ConcurrentQueue[T](collection: IEnumerable[T])
@@ -638,7 +636,7 @@ Get: IsEmpty(self: ConcurrentQueue[T]) -> bool
     Instance = ConcurrentQueue()
     """hardcoded/returns an instance of the class"""
 
-class ConcurrentStack:
+class ConcurrentStack(Object):
     """
     ConcurrentStack[T]()
     ConcurrentStack[T](collection: IEnumerable[T])
@@ -749,7 +747,7 @@ Get: IsEmpty(self: ConcurrentStack[T]) -> bool
     Instance = ConcurrentStack()
     """hardcoded/returns an instance of the class"""
 
-class EnumerablePartitionerOptions:
+class EnumerablePartitionerOptions(Object):
     """ enum (flags) EnumerablePartitionerOptions, values: NoBuffering (1), None (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -791,7 +789,7 @@ class EnumerablePartitionerOptions:
     Instance = EnumerablePartitionerOptions()
     """hardcoded/returns an instance of the class"""
 
-class IProducerConsumerCollection:
+class IProducerConsumerCollection(Object):
     # no doc
     def CopyTo(self, array, index):
         """ CopyTo(self: IProducerConsumerCollection[T], array: Array[T], index: int) """

@@ -246,7 +246,7 @@ class MediaTypeNames():
     Instance = MediaTypeNames()
     """hardcoded/returns an instance of the class"""
 
-class TransferEncoding:
+class TransferEncoding(Object):
     """
     Specifies the Content-Transfer-Encoding header information for an e-mail message attachment.
     

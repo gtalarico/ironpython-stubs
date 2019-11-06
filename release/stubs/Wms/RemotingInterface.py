@@ -1,7 +1,7 @@
-from System import *
+from System import MulticastDelegate
 # encoding: utf-8
 # module Wms.RemotingInterface calls itself RemotingInterface
-# from Wms.RemotingInterface, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingInterface, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -32,8 +32,8 @@ class DataChangedEventHandler(MulticastDelegate):
         
             Dynamically invokes (late-bound) the method represented by the current delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does 
-             not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
+             arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -63,8 +63,8 @@ class DataChangedEventHandler(MulticastDelegate):
             Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original 
-             invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
+             list.
         """
         pass
 
@@ -1818,7 +1818,7 @@ class IInventory:
 class IMessaging:
     # no doc
     def ChangeMessagesStatus(self, messageIds, newStatus):
-        """ ChangeMessagesStatus(self: IMessaging, messageIds: List[Guid], newStatus: MessageStatus) """
+        """ ChangeMessagesStatus(self: IMessaging, messageIds: IEnumerable[Guid], newStatus: MessageStatus) """
         pass
 
     def ChangeMessageStatus(self, messageId, newStatus):
@@ -1874,7 +1874,7 @@ class IMessaging:
         pass
 
     def ReissueMessages(self, messageIds):
-        """ ReissueMessages(self: IMessaging, messageIds: List[Guid]) """
+        """ ReissueMessages(self: IMessaging, messageIds: IEnumerable[Guid]) """
         pass
 
     def SaveMessageBody(self, messageId, decodeAs, messageBody):

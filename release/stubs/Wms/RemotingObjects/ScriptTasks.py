@@ -1,7 +1,9 @@
-from Wms.RemotingObjects import *
+from System import Object
+from Wms.RemotingObjects import FindableList
+from Wms.RemotingObjects import DbObject
 # encoding: utf-8
 # module Wms.RemotingObjects.ScriptTasks calls itself ScriptTasks
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -205,7 +207,7 @@ Set: ZoneId(self: ScriptTask) = value
     Instance = ScriptTask()
     """hardcoded/returns an instance of the class"""
 
-class ScriptTaskPriority:
+class ScriptTaskPriority(Object):
     """ enum ScriptTaskPriority, values: High (3), Low (1), Normal (2) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """

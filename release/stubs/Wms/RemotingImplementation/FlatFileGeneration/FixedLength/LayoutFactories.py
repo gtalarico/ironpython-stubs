@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingImplementation.FlatFileGeneration.FixedLength.LayoutFactories calls itself LayoutFactories
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -8,7 +9,7 @@
 # no functions
 # classes
 
-class DepartmentFixedLengthLayoutFactory:
+class DepartmentFixedLengthLayoutFactory(Object):
     """ DepartmentFixedLengthLayoutFactory() """
     def GetLayout(self, appVersion):
         """ GetLayout(self: DepartmentFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosDepartment] """
@@ -38,7 +39,7 @@ class IFixedLengthLayoutFactory:
     Instance = IFixedLengthLayoutFactory()
     """hardcoded/returns an instance of the class"""
 
-class KanbanBarcodeFixedLengthLayoutFactory:
+class KanbanBarcodeFixedLengthLayoutFactory(Object):
     """ KanbanBarcodeFixedLengthLayoutFactory() """
     def GetLayout(self, appVersion):
         """ GetLayout(self: KanbanBarcodeFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosKanbanBarcode] """
@@ -55,7 +56,7 @@ class KanbanBarcodeFixedLengthLayoutFactory:
     Instance = KanbanBarcodeFixedLengthLayoutFactory()
     """hardcoded/returns an instance of the class"""
 
-class KanbanProductFixedLengthLayoutFactory:
+class KanbanProductFixedLengthLayoutFactory(Object):
     """ KanbanProductFixedLengthLayoutFactory() """
     def GetLayout(self, appVersion):
         """ GetLayout(self: KanbanProductFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosKanbanProduct] """
@@ -72,7 +73,7 @@ class KanbanProductFixedLengthLayoutFactory:
     Instance = KanbanProductFixedLengthLayoutFactory()
     """hardcoded/returns an instance of the class"""
 
-class KanbanReplenishmentLineFixedLengthLayoutFactory:
+class KanbanReplenishmentLineFixedLengthLayoutFactory(Object):
     """ KanbanReplenishmentLineFixedLengthLayoutFactory() """
     def GetLayout(self, appVersion):
         """ GetLayout(self: KanbanReplenishmentLineFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosKanbanReplenishmentLine] """
@@ -89,7 +90,7 @@ class KanbanReplenishmentLineFixedLengthLayoutFactory:
     Instance = KanbanReplenishmentLineFixedLengthLayoutFactory()
     """hardcoded/returns an instance of the class"""
 
-class MetaFixedLengthLayoutFactory:
+class MetaFixedLengthLayoutFactory(Object):
     """ MetaFixedLengthLayoutFactory() """
     def GetLayout(self, appVersion):
         """ GetLayout(self: MetaFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosMeta] """
@@ -106,7 +107,7 @@ class MetaFixedLengthLayoutFactory:
     Instance = MetaFixedLengthLayoutFactory()
     """hardcoded/returns an instance of the class"""
 
-class ProductReplenishmentLineFixedLengthLayoutFactory:
+class ProductReplenishmentLineFixedLengthLayoutFactory(Object):
     """ ProductReplenishmentLineFixedLengthLayoutFactory() """
     def GetLayout(self, appVersion):
         """ GetLayout(self: ProductReplenishmentLineFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosProductReplenishmentLine] """
@@ -123,7 +124,7 @@ class ProductReplenishmentLineFixedLengthLayoutFactory:
     Instance = ProductReplenishmentLineFixedLengthLayoutFactory()
     """hardcoded/returns an instance of the class"""
 
-class ProductsFixedLengthLayoutFactory:
+class ProductsFixedLengthLayoutFactory(Object):
     """ ProductsFixedLengthLayoutFactory() """
     def GetLayout(self, appVersion):
         """ GetLayout(self: ProductsFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosProduct] """
@@ -140,7 +141,7 @@ class ProductsFixedLengthLayoutFactory:
     Instance = ProductsFixedLengthLayoutFactory()
     """hardcoded/returns an instance of the class"""
 
-class ProductsIndexFixedLengthLayoutFactory:
+class ProductsIndexFixedLengthLayoutFactory(Object):
     """ ProductsIndexFixedLengthLayoutFactory() """
     def GetLayout(self, appVersion):
         """ GetLayout(self: ProductsIndexFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[BosProductIndex] """
@@ -157,7 +158,7 @@ class ProductsIndexFixedLengthLayoutFactory:
     Instance = ProductsIndexFixedLengthLayoutFactory()
     """hardcoded/returns an instance of the class"""
 
-class UsersFixedLengthLayoutFactory:
+class UsersFixedLengthLayoutFactory(Object):
     """ UsersFixedLengthLayoutFactory() """
     def GetLayout(self, appVersion):
         """ GetLayout(self: UsersFixedLengthLayoutFactory, appVersion: str) -> IFixedLayout[UserWithSecrets] """

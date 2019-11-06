@@ -1,8 +1,10 @@
-from System.Collections.ObjectModel import *
-from Wms.RemotingObjects import *
+from System.Collections.ObjectModel import ReadOnlyCollection
+from System import Object
+from Wms.RemotingObjects import FindableList
+from Wms.RemotingObjects import DbObject
 # encoding: utf-8
 # module Wms.RemotingObjects.Barcodes calls itself Barcodes
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -311,7 +313,7 @@ Set: TotalRows(self: BarcodeStructureDefinitions) = value
     Instance = BarcodeStructureDefinitions()
     """hardcoded/returns an instance of the class"""
 
-class BarcodeStructureResultEnum:
+class BarcodeStructureResultEnum(Object):
     """ enum (flags) BarcodeStructureResultEnum, values: InputRequired (1), NoInputRequired (2), NoMatchFound (4), None (0) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -525,7 +527,7 @@ class BarcodeTypes(FindableList):
     Instance = BarcodeTypes()
     """hardcoded/returns an instance of the class"""
 
-class ExpectScanOfEnum:
+class ExpectScanOfEnum(Object):
     """
     (Flagged) Enum which allows you to specify the types of barcodes you want to check for.
     
@@ -579,7 +581,7 @@ class ExpectScanOfEnum:
     Instance = ExpectScanOfEnum()
     """hardcoded/returns an instance of the class"""
 
-class GeneratedBarcode:
+class GeneratedBarcode(Object):
     """ GeneratedBarcode(barcode: str) """
     def ToBarcode(self, includeApplicationIdentifier=None):
         """

@@ -94,8 +94,8 @@ class ICodeGenerator:
             Gets the type indicated by the specified System.CodeDom.CodeTypeReference.
         
             type: A System.CodeDom.CodeTypeReference that indicates the type to return.
-            Returns: A text representation of the specified type for the language this code generator is designed to generate code in. For example, in Visual Basic, passing in type 
-             System.Int32 will return "Integer".
+            Returns: A text representation of the specified type for the language this code generator is designed to generate code in. For example, in Visual Basic, passing in type System.Int32 will 
+             return "Integer".
         """
         pass
 
@@ -137,7 +137,7 @@ class ICodeGenerator:
     Instance = ICodeGenerator()
     """hardcoded/returns an instance of the class"""
 
-class CodeGenerator:
+class CodeGenerator(Object):
     """ Provides an example implementation of the System.CodeDom.Compiler.ICodeGenerator interface. This class is abstract. """
     def ContinueOnNewLine(self, *args): #cannot find CLR method
         """
@@ -1138,9 +1138,7 @@ class ICodeCompiler:
         """
         CompileAssemblyFromDomBatch(self: ICodeCompiler, options: CompilerParameters, compilationUnits: Array[CodeCompileUnit]) -> CompilerResults
         
-            Compiles an assembly based on the System.CodeDom trees contained in the specified array of System.CodeDom.CodeCompileUnit objects, using the specified compiler 
-             settings.
-        
+            Compiles an assembly based on the System.CodeDom trees contained in the specified array of System.CodeDom.CodeCompileUnit objects, using the specified compiler settings.
         
             options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for compilation.
             compilationUnits: An array of type System.CodeDom.CodeCompileUnit that indicates the code to compile.
@@ -2282,9 +2280,7 @@ class CodeDomProvider(Component):
         """
         CompileAssemblyFromDom(self: CodeDomProvider, options: CompilerParameters, *compilationUnits: Array[CodeCompileUnit]) -> CompilerResults
         
-            Compiles an assembly based on the System.CodeDom trees contained in the specified array of System.CodeDom.CodeCompileUnit objects, using the specified compiler 
-             settings.
-        
+            Compiles an assembly based on the System.CodeDom trees contained in the specified array of System.CodeDom.CodeCompileUnit objects, using the specified compiler settings.
         
             options: A System.CodeDom.Compiler.CompilerParameters object that indicates the settings for the compilation.
             compilationUnits: An array of type System.CodeDom.CodeCompileUnit that indicates the code to compile.
@@ -2517,8 +2513,7 @@ class CodeDomProvider(Component):
             Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the 
-             specified service.
+            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -2575,9 +2570,9 @@ class CodeDomProvider(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2715,7 +2710,7 @@ Set: VerbatimOrder(self: CodeGeneratorOptions) = value
     Instance = CodeGeneratorOptions()
     """hardcoded/returns an instance of the class"""
 
-class CodeParser:
+class CodeParser(Object):
     """ Provides an empty implementation of the System.CodeDom.Compiler.ICodeParser interface. """
     def Parse(self, codeStream):
         """
@@ -3089,8 +3084,7 @@ class CompilerInfo():
         GetHashCode(self: CompilerInfo) -> int
         
             Returns the hash code for the current instance.
-            Returns: A 32-bit signed integer hash code for the current System.CodeDom.Compiler.CompilerInfo instance, suitable for use in hashing algorithms and data structures such as a 
-             hash table.
+            Returns: A 32-bit signed integer hash code for the current System.CodeDom.Compiler.CompilerInfo instance, suitable for use in hashing algorithms and data structures such as a hash table.
         """
         pass
 
@@ -3361,8 +3355,8 @@ class Executor():
         """
         ExecWaitWithCapture(cmd: str, tempFiles: TempFileCollection, outputName: str, errorName: str) -> (int, str, str)
         
-            Executes the specified command using the specified temporary files and waits for the call to return, storing output and error information from the compiler in the 
-             specified strings.
+            Executes the specified command using the specified temporary files and waits for the call to return, storing output and error information from the compiler in the specified 
+             strings.
         
         
             cmd: The command to execute.
@@ -3372,8 +3366,8 @@ class Executor():
             Returns: The return value from the compiler.
         ExecWaitWithCapture(cmd: str, currentDir: str, tempFiles: TempFileCollection, outputName: str, errorName: str) -> (int, str, str)
         
-            Executes the specified command using the specified current directory and temporary files, and waits for the call to return, storing output and error information from 
-             the compiler in the specified strings.
+            Executes the specified command using the specified current directory and temporary files, and waits for the call to return, storing output and error information from the compiler 
+             in the specified strings.
         
         
             cmd: The command to execute.
@@ -3384,8 +3378,8 @@ class Executor():
             Returns: The return value from the compiler.
         ExecWaitWithCapture(userToken: IntPtr, cmd: str, tempFiles: TempFileCollection, outputName: str, errorName: str) -> (int, str, str)
         
-            Executes the specified command using the specified user token and temporary files, and waits for the call to return, storing output and error information from the 
-             compiler in the specified strings.
+            Executes the specified command using the specified user token and temporary files, and waits for the call to return, storing output and error information from the compiler in the 
+             specified strings.
         
         
             userToken: The token to start the compiler process with.
@@ -3396,8 +3390,8 @@ class Executor():
             Returns: The return value from the compiler.
         ExecWaitWithCapture(userToken: IntPtr, cmd: str, currentDir: str, tempFiles: TempFileCollection, outputName: str, errorName: str) -> (int, str, str)
         
-            Executes the specified command using the specified user token, current directory, and temporary files; then waits for the call to return, storing output and error 
-             information from the compiler in the specified strings.
+            Executes the specified command using the specified user token, current directory, and temporary files; then waits for the call to return, storing output and error information 
+             from the compiler in the specified strings.
         
         
             userToken: The token to start the compiler process with.
@@ -3418,7 +3412,7 @@ class Executor():
     Instance = Executor()
     """hardcoded/returns an instance of the class"""
 
-class GeneratedCodeAttribute:
+class GeneratedCodeAttribute(Object):
     """
     Identifies code generated by a tool. This class cannot be inherited.
     
@@ -3451,7 +3445,7 @@ Get: Version(self: GeneratedCodeAttribute) -> str
     Instance = GeneratedCodeAttribute()
     """hardcoded/returns an instance of the class"""
 
-class GeneratorSupport:
+class GeneratorSupport(Object):
     """
     Defines identifiers used to determine whether a code generator supports certain types of code elements.
     
@@ -3577,9 +3571,9 @@ class IndentedTextWriter(TextWriter):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a 
-             remoting boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause 
-             remoting client calls to be routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
+             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
+             routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -3794,7 +3788,7 @@ Set: NewLine(self: IndentedTextWriter) = value
     Instance = IndentedTextWriter()
     """hardcoded/returns an instance of the class"""
 
-class LanguageOptions:
+class LanguageOptions(Object):
     """
     Defines identifiers that indicate special features of a language.
     
@@ -3840,7 +3834,7 @@ class LanguageOptions:
     Instance = LanguageOptions()
     """hardcoded/returns an instance of the class"""
 
-class TempFileCollection:
+class TempFileCollection(Object):
     """
     Represents a collection of temporary files.
     

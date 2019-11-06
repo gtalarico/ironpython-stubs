@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingImplementation.BackgroundAgents calls itself BackgroundAgents
-# from Wms.RemotingImplementation, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -8,7 +9,7 @@
 # no functions
 # classes
 
-class DatabaseBackgroundAgentHealthMonitor:
+class DatabaseBackgroundAgentHealthMonitor(Object):
     """ DatabaseBackgroundAgentHealthMonitor() """
     def CreateOrUpdateBackgroundAgent(self, arg):
         """ CreateOrUpdateBackgroundAgent(self: DatabaseBackgroundAgentHealthMonitor, arg: DataFlowObject[BackgroundAgent]) -> DataFlowObject[BackgroundAgent] """
@@ -78,7 +79,7 @@ class IBackgroundAgentHealthMonitor:
     Instance = IBackgroundAgentHealthMonitor()
     """hardcoded/returns an instance of the class"""
 
-class InMemoryBackgroundAgentHealthMonitor:
+class InMemoryBackgroundAgentHealthMonitor(Object):
     """ InMemoryBackgroundAgentHealthMonitor() """
     def CreateOrUpdateBackgroundAgent(self, arg):
         """ CreateOrUpdateBackgroundAgent(self: InMemoryBackgroundAgentHealthMonitor, arg: DataFlowObject[BackgroundAgent]) -> DataFlowObject[BackgroundAgent] """

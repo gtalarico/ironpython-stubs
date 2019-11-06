@@ -1,7 +1,9 @@
-from Wms.RemotingObjects import *
+from Wms.RemotingObjects import FindableList
+from System import Object
+from Wms.RemotingObjects import DbObject
 # encoding: utf-8
 # module Wms.RemotingObjects.Counts calls itself Counts
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -31,8 +33,8 @@ class Count(DbObject):
         
             checkRegistration: True if the batchnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a batch item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout 
-             the whole process).
+                    complete (means the numers are registered throughout the whole 
+             process).
                     False if the check is ignored and the item is not a batch item, or when the itemids are registered
                     during delivery only.
         """
@@ -50,8 +52,8 @@ class Count(DbObject):
         
             checkRegistration: True if the serialnumber registration should be checked, false if just the property should be returned.
             Returns: True if the check is ignored and the item is a serial item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout 
-             the whole process).
+                    complete (means the numers are registered throughout the whole 
+             process).
                     False if the check is ignored and the item is not a serial item, or when the itemids are registered
                     during delivery only.
         """
@@ -472,7 +474,7 @@ class CountGroups(FindableList):
     Instance = CountGroups()
     """hardcoded/returns an instance of the class"""
 
-class CountGroupTypeEnum:
+class CountGroupTypeEnum(Object):
     """ enum CountGroupTypeEnum, values: ADHOC (1), COLLIREGISTRATION (0), PICKDIFF (2) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -556,7 +558,7 @@ Set: TotalRowsMatched(self: Counts) = value
     Instance = Counts()
     """hardcoded/returns an instance of the class"""
 
-class CountTypeEnum:
+class CountTypeEnum(Object):
     """
     Options: Counted, SuggestCount, Approved
     

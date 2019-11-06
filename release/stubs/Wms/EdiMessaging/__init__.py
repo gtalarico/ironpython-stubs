@@ -1,6 +1,7 @@
+from System import Object
 # encoding: utf-8
 # module Wms.EdiMessaging calls itself EdiMessaging
-# from Wms.EdiMessaging, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null, Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.EdiMessaging, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null, Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -248,7 +249,7 @@ class IQueueProvider:
     Instance = IQueueProvider()
     """hardcoded/returns an instance of the class"""
 
-class MessageBase:
+class MessageBase(Object):
     # no doc
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -360,7 +361,7 @@ Set: Type(self: MessageBase) = value
     Instance = MessageBase()
     """hardcoded/returns an instance of the class"""
 
-class MessageHandlerBase:
+class MessageHandlerBase(Object):
     # no doc
     def CanHandle(self, message):
         """ CanHandle(self: MessageHandlerBase, message: IMessage) -> bool """
@@ -413,7 +414,7 @@ Set: OnLogWarning(self: MessageHandlerBase) = value
     Instance = MessageHandlerBase()
     """hardcoded/returns an instance of the class"""
 
-class MessagePriority:
+class MessagePriority(Object):
     """ enum MessagePriority, values: AboveNormal (4), High (5), Highest (7), Low (2), Lowest (0), Normal (3), VeryHigh (6), VeryLow (1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -461,7 +462,7 @@ class MessagePriority:
     Instance = MessagePriority()
     """hardcoded/returns an instance of the class"""
 
-class MessagePublisherBase:
+class MessagePublisherBase(Object):
     # no doc
     def Start(self, onStoreMessage):
         """ Start(self: MessagePublisherBase, onStoreMessage: OnStoreMessage) """
@@ -510,7 +511,7 @@ Set: OnLogWarning(self: MessagePublisherBase) = value
     Instance = MessagePublisherBase()
     """hardcoded/returns an instance of the class"""
 
-class MessageStatus:
+class MessageStatus(Object):
     """ enum MessageStatus, values: Enqueued (10), Handled (20), HandledWithErrors (30), Handling (15), New (0), ReSubmitted (40), Undefined (-1) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -587,7 +588,7 @@ class MessagingProvidersFactory():
     Instance = MessagingProvidersFactory()
     """hardcoded/returns an instance of the class"""
 
-class MsmqProvider:
+class MsmqProvider(Object):
     """ MsmqProvider(options: MsmqOptions) """
     def GetQueueListener(self):
         """ GetQueueListener(self: MsmqProvider) -> IQueueListener """

@@ -1,7 +1,7 @@
-from Wms.RemotingObjects import *
+from Wms.RemotingObjects import FindableList
 # encoding: utf-8
 # module Wms.RemotingObjects.Connection calls itself Connection
-# from Wms.RemotingObjects, Version=1.23.1.0, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -63,40 +63,30 @@ class ConnectionEntry():
         pass
 
     Description = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: Description(self: ConnectionEntry) -> str
+    """Get: Description(self: ConnectionEntry) -> str
 
 Set: Description(self: ConnectionEntry) = value
 """
 
     FullHostAddress = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: FullHostAddress(self: ConnectionEntry) -> str
+    """Get: FullHostAddress(self: ConnectionEntry) -> str
 
 """
 
     Host = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: Host(self: ConnectionEntry) -> str
+    """Get: Host(self: ConnectionEntry) -> str
 
 Set: Host(self: ConnectionEntry) = value
 """
 
     LastLoggedInUser = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: LastLoggedInUser(self: ConnectionEntry) -> int
+    """Get: LastLoggedInUser(self: ConnectionEntry) -> int
 
 Set: LastLoggedInUser(self: ConnectionEntry) = value
 """
 
     Name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: Name(self: ConnectionEntry) -> str
+    """Get: Name(self: ConnectionEntry) -> str
 
 Set: Name(self: ConnectionEntry) = value
 """
@@ -110,9 +100,7 @@ Set: Pinned(self: ConnectionEntry) = value
 """
 
     Port = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """
-
-Get: Port(self: ConnectionEntry) -> int
+    """Get: Port(self: ConnectionEntry) -> int
 
 Set: Port(self: ConnectionEntry) = value
 """
