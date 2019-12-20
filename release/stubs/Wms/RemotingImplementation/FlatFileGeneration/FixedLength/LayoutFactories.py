@@ -26,7 +26,7 @@ class DepartmentFixedLengthLayoutFactory(Object):
     Instance = DepartmentFixedLengthLayoutFactory()
     """hardcoded/returns an instance of the class"""
 
-class IFixedLengthLayoutFactory:
+class IFixedLengthLayoutFactory(Object):
     # no doc
     def GetLayout(self, appVersion):
         """ GetLayout(self: IFixedLengthLayoutFactory[T], appVersion: str) -> IFixedLayout[T] """

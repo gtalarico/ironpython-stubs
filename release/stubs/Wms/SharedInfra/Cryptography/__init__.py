@@ -9,7 +9,7 @@ from System import Object
 # no functions
 # classes
 
-class IUniqueHashCodeProvider:
+class IUniqueHashCodeProvider(Object):
     # no doc
     def CalculateHash(self, param):
         """ CalculateHash(self: IUniqueHashCodeProvider, *param: Array[object]) -> str """

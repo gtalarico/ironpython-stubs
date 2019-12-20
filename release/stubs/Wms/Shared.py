@@ -9,7 +9,7 @@ from System import Object
 # no functions
 # classes
 
-class ILoggingService:
+class ILoggingService(Object):
     # no doc
     def Debug(self, *__args):
         """ Debug(self: ILoggingService, message: str)Debug(self: ILoggingService, format: str, *args: Array[object]) """
@@ -74,7 +74,7 @@ class ILoggingService:
     Instance = ILoggingService()
     """hardcoded/returns an instance of the class"""
 
-class ITraceLoggingService:
+class ITraceLoggingService(Object):
     # no doc
     def IsTracingEnabled(self):
         """ IsTracingEnabled(self: ITraceLoggingService) -> bool """

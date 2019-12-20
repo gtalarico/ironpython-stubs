@@ -9,7 +9,7 @@ from System import Object
 # no functions
 # classes
 
-class IStateMachineCache:
+class IStateMachineCache(Object):
     # no doc
     def ClearState(self, id):
         """ ClearState(self: IStateMachineCache, id: str) """

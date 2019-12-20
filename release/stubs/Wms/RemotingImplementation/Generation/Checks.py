@@ -43,7 +43,7 @@ class DatabaseNumberCheck(Object):
     Instance = DatabaseNumberCheck()
     """hardcoded/returns an instance of the class"""
 
-class INumberCheck:
+class INumberCheck(Object):
     # no doc
     def IsNumberUsed(self, args):
         """ IsNumberUsed(self: INumberCheck, args: UsedNumberArgs) -> bool """

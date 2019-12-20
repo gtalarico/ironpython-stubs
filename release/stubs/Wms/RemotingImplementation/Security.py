@@ -9,7 +9,7 @@ from System import Object
 # no functions
 # classes
 
-class IRemotingIdentityProvider:
+class IRemotingIdentityProvider(Object):
     # no doc
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

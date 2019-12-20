@@ -1,7 +1,8 @@
-from System import Object
 from System import Exception
-from System.Collections.Generic import List
+from System.Runtime.Remoting import RemotingException
 from System.Collections.Generic import Dictionary
+from System.Collections.Generic import List
+from System import Object
 # encoding: utf-8
 # module Wms.RemotingObjects calls itself RemotingObjects
 # from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
@@ -89,7 +90,7 @@ class AnswerOptionsEnumHelper():
     Instance = AnswerOptionsEnumHelper()
     """hardcoded/returns an instance of the class"""
 
-class IFindableList:
+class IFindableList(Object):
     # no doc
     def ExistsByProperty(self, id):
         """ ExistsByProperty(self: IFindableList, id: str) -> bool """
@@ -861,7 +862,7 @@ Set: TimeSpan(self: HistoryFilterBase) = value
     Instance = HistoryFilterBase()
     """hardcoded/returns an instance of the class"""
 
-class IDbObject:
+class IDbObject(Object):
     # no doc
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1132,7 +1133,7 @@ Get: ValidateOrders(self: ImplementedFunctionalities) -> bool
     Instance = ImplementedFunctionalities()
     """hardcoded/returns an instance of the class"""
 
-class IPagedList:
+class IPagedList(Object):
     """  """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1186,7 +1187,7 @@ class Items(FindableList):
     Instance = Items()
     """hardcoded/returns an instance of the class"""
 
-class IUniqueHashable:
+class IUniqueHashable(Object):
     """  """
     def GetUniqueHashCode(self):
         """ GetUniqueHashCode(self: IUniqueHashable) -> str """
@@ -1692,7 +1693,8 @@ class PagingParams():
         GetHashCode(self: PagingParams) -> int
         
             Unique hash depending on contents.
-                    Identical contents leads to identical hash.
+                    Identical contents leads to 
+             identical hash.
         """
         pass
 

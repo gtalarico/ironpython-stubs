@@ -98,7 +98,7 @@ class CacheObjectRemovalHandlerBase(Object):
     Instance = CacheObjectRemovalHandlerBase()
     """hardcoded/returns an instance of the class"""
 
-class ICacheObjectRemovalHandler:
+class ICacheObjectRemovalHandler(Object):
     # no doc
     def Handle(self, cachable):
         """ Handle(self: ICacheObjectRemovalHandler[T], cachable: object)Handle(self: ICacheObjectRemovalHandler[T], cachable: T) """

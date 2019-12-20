@@ -10,7 +10,7 @@ from System import Object
 # no functions
 # classes
 
-class IMessageHandler:
+class IMessageHandler(Object):
     # no doc
     def Handle(self, message):
         """ Handle(self: IMessageHandler, message: object) """

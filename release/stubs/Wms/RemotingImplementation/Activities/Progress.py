@@ -68,7 +68,7 @@ class BatchPickProgress(ProgressBase):
     Instance = BatchPickProgress()
     """hardcoded/returns an instance of the class"""
 
-class IProgress:
+class IProgress(Object):
     # no doc
     def GetActivity(self, args, value):
         """ GetActivity(self: IProgress, args: GetActivityProgressArgs, value: object) -> Activity """

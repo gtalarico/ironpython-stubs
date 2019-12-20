@@ -73,7 +73,7 @@ class EmailDigestNotificationSummary(Object):
     Instance = EmailDigestNotificationSummary()
     """hardcoded/returns an instance of the class"""
 
-class INotificationSummaryExecution:
+class INotificationSummaryExecution(Object):
     # no doc
     def ExecuteSummary(self, summary):
         """ ExecuteSummary(self: INotificationSummaryExecution, summary: ExecuteNotificationSummaryArgs) -> Task """
@@ -90,7 +90,7 @@ class INotificationSummaryExecution:
     Instance = INotificationSummaryExecution()
     """hardcoded/returns an instance of the class"""
 
-class INotificationSummarySchedule:
+class INotificationSummarySchedule(Object):
     # no doc
     def GetNextTime(self, lastTime):
         """ GetNextTime(self: INotificationSummarySchedule, lastTime: DateTime) -> DateTime """

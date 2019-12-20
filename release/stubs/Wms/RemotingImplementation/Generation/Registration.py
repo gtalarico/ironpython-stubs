@@ -26,7 +26,7 @@ class BatchRegistrator(Object):
     Instance = BatchRegistrator()
     """hardcoded/returns an instance of the class"""
 
-class INumberRegistrator:
+class INumberRegistrator(Object):
     # no doc
     def RegisterNumbers(self, data):
         """ RegisterNumbers(self: INumberRegistrator, data: object) """

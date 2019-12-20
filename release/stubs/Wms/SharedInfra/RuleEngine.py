@@ -54,7 +54,7 @@ Set: Values(self: Condition) = value
     Instance = Condition()
     """hardcoded/returns an instance of the class"""
 
-class ICondition:
+class ICondition(Object):
     # no doc
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -82,7 +82,7 @@ Set: Values(self: ICondition) = value
     Instance = ICondition()
     """hardcoded/returns an instance of the class"""
 
-class IRule:
+class IRule(Object):
     # no doc
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

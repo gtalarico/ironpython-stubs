@@ -48,7 +48,7 @@ class HashBytesExtensions():
     Instance = HashBytesExtensions()
     """hardcoded/returns an instance of the class"""
 
-class IPasswordHasher:
+class IPasswordHasher(Object):
     # no doc
     def Hash(self, password, saltLength=None, keyLength=None, iterations=None):
         """

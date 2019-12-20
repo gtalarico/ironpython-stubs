@@ -1,17 +1,17 @@
+from Wms.RemotingObjects.Outbound import HistoryOutboundOrder
+from Wms.RemotingObjects.Caching import CacheObject
+from Wms.RemotingObjects.Caching.Generics import Cachable
+from Wms.RemotingObjects.Outbound import OutboundOrders
+from System.Collections.Generic import EqualityComparer
+from Wms.RemotingObjects.Printing import PrintBaseArgs
+from Wms.RemotingObjects.Outbound import OutboundOrderLine
+from System.Collections.Generic import List
+from Wms.RemotingObjects import FindableList
+from Wms.RemotingObjects.Outbound import HistoryOutboundOrders
+from Wms.RemotingObjects.Outbound import OutboundOrder
+from Wms.RemotingObjects import DbObject
 from Wms.RemotingObjects.Outbound import OutboundOrderLines
 from System import Object
-from System.Collections.Generic import List
-from Wms.RemotingObjects.Outbound import HistoryOutboundOrder
-from Wms.RemotingObjects.Printing import PrintBaseArgs
-from Wms.RemotingObjects.Outbound import HistoryOutboundOrders
-from Wms.RemotingObjects.Caching.Generics import Cachable
-from Wms.RemotingObjects.Caching import CacheObject
-from Wms.RemotingObjects import FindableList
-from Wms.RemotingObjects import DbObject
-from Wms.RemotingObjects.Outbound import OutboundOrderLine
-from System.Collections.Generic import EqualityComparer
-from Wms.RemotingObjects.Outbound import OutboundOrder
-from Wms.RemotingObjects.Outbound import OutboundOrders
 # encoding: utf-8
 # module Wms.RemotingObjects.Inventory calls itself Inventory
 # from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
@@ -234,10 +234,13 @@ class AllocatedStockItemReference(Object):
         """
         Get(expandedReference: str) -> AllocatedStockItemReference
         
-            Returns an Wms.RemotingObjects.Inventory.AllocatedStockItemReference object created from the specified expanded name.
+            Returns an Wms.RemotingObjects.Inventory.AllocatedStockItemReference object 
+             created from the specified expanded name.
+        
         
             expandedReference: A string containing an expanded Reference name in the format: {Type}id.
-            Returns: An Wms.RemotingObjects.Inventory.AllocatedStockItemReference object constructed from the specified expanded name.
+            Returns: An Wms.RemotingObjects.Inventory.AllocatedStockItemReference object 
+             constructed from the specified expanded name.
         """
         pass
 
@@ -1694,7 +1697,7 @@ Set: WarehouseLocationCode(self: IAllocatedStockItem) = value
     Instance = IAllocatedStockItem()
     """hardcoded/returns an instance of the class"""
 
-class IComparableItemLocation:
+class IComparableItemLocation(Object):
     # no doc
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1731,12 +1734,17 @@ class Item(CacheObject):
         
             Checks if the item is a batch item.
         
-            checkRegistration: True if the batchnumber registration should be checked, false if just the property should be returned.
-            Returns: True if the check is ignored and the item is a batch item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout the whole 
-             process).
-                    False if the check is ignored and the item is not a batch item, or when the itemids are registered
-                    during delivery only.
+            checkRegistration: True if the batchnumber registration should be checked, false if just the 
+             property should be returned.
+        
+            Returns: True if the check is ignored and the item is a batch item, or when the itemid 
+             registration is set to
+                    complete (means the numers are registered 
+             throughout the whole process).
+                    False if the check is ignored and 
+             the item is not a batch item, or when the itemids are registered
+                    
+             during delivery only.
         """
         pass
 
@@ -1746,12 +1754,17 @@ class Item(CacheObject):
         
             Checks if the item is a serialnumber item.
         
-            checkRegistration: True if the serialnumber registration should be checked, false if just the property should be returned.
-            Returns: True if the check is ignored and the item is a serial item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout the whole 
-             process).
-                    False if the check is ignored and the item is not a serial item, or when the itemids are registered
-                    during delivery only.
+            checkRegistration: True if the serialnumber registration should be checked, false if just the 
+             property should be returned.
+        
+            Returns: True if the check is ignored and the item is a serial item, or when the itemid 
+             registration is set to
+                    complete (means the numers are registered 
+             throughout the whole process).
+                    False if the check is ignored and 
+             the item is not a serial item, or when the itemids are registered
+                    
+             during delivery only.
         """
         pass
 
@@ -2349,9 +2362,10 @@ class ItemIdentifications(FindableList):
     def Clear(self):
         """
         Clear(self: ItemIdentifications)
-            Clears the list, calls TrimExcess, and resets the non-public field _version to 0. This is done so
-                    the object will be back in its initial state. Used for (for 
-             example) removal of PurchaseReceiveLines.
+            Clears the list, calls TrimExcess, and resets the non-public field _version to 
+             0. This is done so
+                    the object will be back in its initial state. 
+             Used for (for example) removal of PurchaseReceiveLines.
         """
         pass
 
@@ -3150,12 +3164,17 @@ class ItemStock(Object):
         
             Checks if the item is a serial / batch item.
         
-            checkRegistration: True if the serial / batchnumber registration should be checked, false if just the property should be returned.
-            Returns: True if the check is ignored and the item is a serial / batch item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout 
-             the whole process).
-                    False if the check is ignored and the item is not a batch item, or when the itemids are registered
-                    during delivery only.
+            checkRegistration: True if the serial / batchnumber registration should be checked, false if just 
+             the property should be returned.
+        
+            Returns: True if the check is ignored and the item is a serial / batch item, or when 
+             the itemid registration is set to
+                    complete (means the numers are 
+             registered throughout the whole process).
+                    False if the check is 
+             ignored and the item is not a batch item, or when the itemids are registered
+         
+                        during delivery only.
         """
         pass
 
@@ -3836,7 +3855,7 @@ class ItemTypeEnum(Object):
     Instance = ItemTypeEnum()
     """hardcoded/returns an instance of the class"""
 
-class IValidatableItemIdentificationNumber:
+class IValidatableItemIdentificationNumber(Object):
     # no doc
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

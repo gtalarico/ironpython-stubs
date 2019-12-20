@@ -159,7 +159,7 @@ Set: Size(self: BosInboundFileUploadedEvent) = value
     Instance = BosInboundFileUploadedEvent()
     """hardcoded/returns an instance of the class"""
 
-class IGcloudInboundFileListener:
+class IGcloudInboundFileListener(Object):
     # no doc
     def PullAllMessages(self, token):
         """ PullAllMessages(self: IGcloudInboundFileListener, token: CancellationToken) -> Task[int] """

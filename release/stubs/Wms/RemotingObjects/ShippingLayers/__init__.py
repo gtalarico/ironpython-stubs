@@ -1,9 +1,9 @@
-from Wms.RemotingObjects import DbObject
 from Wms.RemotingObjects import FindableList
 from Wms.RemotingObjects import PagedList
-from Wms.RemotingObjects import HistoryFilterBase
 from System import Object
 from System.Collections.Generic import List
+from Wms.RemotingObjects import DbObject
+from Wms.RemotingObjects import HistoryFilterBase
 # encoding: utf-8
 # module Wms.RemotingObjects.ShippingLayers calls itself ShippingLayers
 # from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
@@ -1461,7 +1461,7 @@ Set: TotalRowsMatched(self: HistoryShipments) = value
     Instance = HistoryShipments()
     """hardcoded/returns an instance of the class"""
 
-class IService:
+class IService(Object):
     # no doc
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -1504,7 +1504,7 @@ Set: TransportationCharge(self: IService) = value
     Instance = IService()
     """hardcoded/returns an instance of the class"""
 
-class IShipper:
+class IShipper(Object):
     # no doc
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -2674,8 +2674,10 @@ class TransportItem(Object):
     def CopyTo(self, item, itemIds=None):
         """
         CopyTo(self: TransportItem, item: TransportItem)CopyTo(self: TransportItem, item: TransportItem, itemIds: ItemIdentifications)
-            Copies the contents of this item to the given item with only the itemidentifications given in the
+            Copies the contents of this item to the given item with only the 
+             itemidentifications given in the
                     second parameter
+        
         
             item: The item to wich the contents of this item have to be copied.
             itemIds: The itemidentifications to copy to the new item.
@@ -3186,7 +3188,9 @@ class TransportPackages(FindableList):
         Remove(self: TransportPackages, boxGuid: Guid) -> bool
         
             Returns the package needs to be empty before removal.
-                    Boxnumbers are renumbered if a package is removed in the middle
+                    Boxnumbers 
+             are renumbered if a package is removed in the middle
+        
         
             boxGuid: BoxNr
         """

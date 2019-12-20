@@ -9,7 +9,7 @@ from System import Object
 # no functions
 # classes
 
-class IReportDataArgsProvider:
+class IReportDataArgsProvider(Object):
     # no doc
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -24,7 +24,7 @@ class IReportDataArgsProvider:
     Instance = IReportDataArgsProvider()
     """hardcoded/returns an instance of the class"""
 
-class IReportExportArgsProvider:
+class IReportExportArgsProvider(Object):
     # no doc
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -39,7 +39,7 @@ class IReportExportArgsProvider:
     Instance = IReportExportArgsProvider()
     """hardcoded/returns an instance of the class"""
 
-class IReportPrintArgsProvider:
+class IReportPrintArgsProvider(Object):
     # no doc
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -54,7 +54,7 @@ class IReportPrintArgsProvider:
     Instance = IReportPrintArgsProvider()
     """hardcoded/returns an instance of the class"""
 
-class IReportRenderer:
+class IReportRenderer(Object):
     # no doc
     def Export(self, *__args):
         """

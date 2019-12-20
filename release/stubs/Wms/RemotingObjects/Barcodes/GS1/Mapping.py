@@ -15,7 +15,8 @@ class PrintLineToGS1MapperBase(Object):
         """
         ConvertToBarcode(self: PrintLineToGS1MapperBase, propertyName: str, value: object, provider: IFormatProvider) -> IGeneratedBarcode
         
-            provider: (Optional) The culture that should be used to parse the value before converting it to the barcode value
+            provider: (Optional) The culture that should be used to parse the value before 
+             converting it to the barcode value
         """
         pass
 
@@ -44,7 +45,8 @@ class HomogeneousPalletMapper(PrintLineToGS1MapperBase):
         """
         ConvertToBarcode(self: HomogeneousPalletMapper, propertyName: str, value: object, provider: IFormatProvider) -> IGeneratedBarcode
         
-            provider: (Optional) The culture that should be used to parse the value before converting it to the barcode value
+            provider: (Optional) The culture that should be used to parse the value before 
+             converting it to the barcode value
         """
         pass
 
@@ -63,7 +65,7 @@ class HomogeneousPalletMapper(PrintLineToGS1MapperBase):
     Instance = HomogeneousPalletMapper()
     """hardcoded/returns an instance of the class"""
 
-class IPrintlineToGS1Mapper:
+class IPrintlineToGS1Mapper(Object):
     # no doc
     def ConvertToBarcode(self, propertyName, value, provider):
         """ ConvertToBarcode(self: IPrintlineToGS1Mapper, propertyName: str, value: object, provider: IFormatProvider) -> IGeneratedBarcode """

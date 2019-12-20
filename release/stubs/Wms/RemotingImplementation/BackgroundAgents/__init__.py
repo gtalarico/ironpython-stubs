@@ -46,7 +46,7 @@ class DatabaseBackgroundAgentHealthMonitor(Object):
     Instance = DatabaseBackgroundAgentHealthMonitor()
     """hardcoded/returns an instance of the class"""
 
-class IBackgroundAgentHealthMonitor:
+class IBackgroundAgentHealthMonitor(Object):
     # no doc
     def CreateOrUpdateBackgroundAgent(self, arg):
         """ CreateOrUpdateBackgroundAgent(self: IBackgroundAgentHealthMonitor, arg: DataFlowObject[BackgroundAgent]) -> DataFlowObject[BackgroundAgent] """

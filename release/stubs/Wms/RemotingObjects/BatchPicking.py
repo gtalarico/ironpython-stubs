@@ -355,7 +355,8 @@ class Batch(BatchBase):
         """
         GetOrderNumbers(self: Batch, onlyVisibleOrders: bool) -> List[str]
         
-            onlyVisibleOrders: True if only the ordernumbers of visible lines should be retrieved, otherwise false.
+            onlyVisibleOrders: True if only the ordernumbers of visible lines should be retrieved, otherwise 
+             false.
         """
         pass
 

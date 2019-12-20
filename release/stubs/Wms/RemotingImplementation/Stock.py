@@ -1,6 +1,6 @@
-from System import Exception
 from Wms.RemotingImplementation.TaskScheduler import TaskBase
 from System import Object
+from System import Exception
 # encoding: utf-8
 # module Wms.RemotingImplementation.Stock calls itself Stock
 # from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
@@ -534,7 +534,7 @@ class EnhancedStockManager(Object):
     Instance = EnhancedStockManager()
     """hardcoded/returns an instance of the class"""
 
-class IAllocationSink:
+class IAllocationSink(Object):
     # no doc
     def AddLine(self, *__args):
         """ AddLine(self: IAllocationSink, line: OutboundOrderLine, loc: ItemStock)AddLine(self: IAllocationSink, orderLine: OutboundOrderLine, location: ItemStock, allocation: AllocatedStockItem) """
@@ -597,7 +597,7 @@ Set: Settings(self: IStockAllocater) = value
     Instance = IStockAllocater()
     """hardcoded/returns an instance of the class"""
 
-class IStockManager:
+class IStockManager(Object):
     # no doc
     def AllocateOutboundOrderLines(self, orderLines, allocationSettings, allocationSink):
         """ AllocateOutboundOrderLines(self: IStockManager, orderLines: IEnumerable[OutboundOrderLine], allocationSettings: AllocationSettings, allocationSink: IAllocationSink) -> bool """

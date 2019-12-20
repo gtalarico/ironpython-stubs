@@ -19,7 +19,10 @@ class ContentDisposition():
         """
         Equals(self: ContentDisposition, rparam: object) -> bool
         
-            Determines whether the content-disposition header of the specified System.Net.Mime.ContentDisposition object is equal to the content-disposition header of this object.
+            Determines whether the content-disposition header of the specified 
+             System.Net.Mime.ContentDisposition object is equal to the content-disposition 
+             header of this object.
+        
         
             rparam: The System.Net.Mime.ContentDisposition object to compare with this object.
             Returns: true if the content-disposition headers are the same; otherwise false.
@@ -30,7 +33,9 @@ class ContentDisposition():
         """
         GetHashCode(self: ContentDisposition) -> int
         
-            Determines the hash code of the specified System.Net.Mime.ContentDisposition object
+            Determines the hash code of the specified System.Net.Mime.ContentDisposition 
+             object
+        
             Returns: An integer hash value.
         """
         pass
@@ -137,7 +142,10 @@ class ContentType():
         """
         Equals(self: ContentType, rparam: object) -> bool
         
-            Determines whether the content-type header of the specified System.Net.Mime.ContentType object is equal to the content-type header of this object.
+            Determines whether the content-type header of the specified 
+             System.Net.Mime.ContentType object is equal to the content-type header of this 
+             object.
+        
         
             rparam: The System.Net.Mime.ContentType object to compare with this object.
             Returns: true if the content-type headers are the same; otherwise false.
@@ -158,7 +166,8 @@ class ContentType():
         ToString(self: ContentType) -> str
         
             Returns a string representation of this System.Net.Mime.ContentType object.
-            Returns: A System.String that contains the current settings for this System.Net.Mime.ContentType.
+            Returns: A System.String that contains the current settings for this 
+             System.Net.Mime.ContentType.
         """
         pass
 

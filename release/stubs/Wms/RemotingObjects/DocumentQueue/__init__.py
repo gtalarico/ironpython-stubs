@@ -277,7 +277,7 @@ Set: Status(self: GetPrintJobsArgs) = value
     Instance = GetPrintJobsArgs()
     """hardcoded/returns an instance of the class"""
 
-class IAddPrintJob:
+class IAddPrintJob(Object):
     """
     Interface abstraction for adding print jobs.
                 Needed for projects who can't directly use RemotingImplementation

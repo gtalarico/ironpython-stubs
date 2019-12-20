@@ -1,7 +1,7 @@
-from System.Collections.ObjectModel import ReadOnlyCollection
-from System import Object
-from Wms.RemotingObjects import FindableList
 from Wms.RemotingObjects import DbObject
+from System import Object
+from System.Collections.ObjectModel import ReadOnlyCollection
+from Wms.RemotingObjects import FindableList
 # encoding: utf-8
 # module Wms.RemotingObjects.Barcodes calls itself Barcodes
 # from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
@@ -392,7 +392,8 @@ class BarcodeStructureSerials(ReadOnlyCollection):
             Determines whether the System.Collections.IList contains a specific value.
         
             value: The object to locate in the System.Collections.IList.
-            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, false.
+            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, 
+             false.
         """
         pass
 
@@ -623,7 +624,7 @@ class GeneratedBarcode(Object):
     Instance = GeneratedBarcode()
     """hardcoded/returns an instance of the class"""
 
-class IGeneratedBarcode:
+class IGeneratedBarcode(Object):
     """  """
     def ToBarcode(self, includeApplicationIdentifier=None):
         """

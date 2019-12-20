@@ -37,7 +37,7 @@ class GeneratorBase(Object):
     Instance = GeneratorBase()
     """hardcoded/returns an instance of the class"""
 
-class IGenerator:
+class IGenerator(Object):
     # no doc
     def Generate(self, startingNumber, numbersToGenerate, ascending, prefix, suffix, length, arguments):
         """ Generate(self: IGenerator, startingNumber: int, numbersToGenerate: int, ascending: bool, prefix: str, suffix: str, length: int, *arguments: Array[object]) -> IEnumerable[IGeneratedBarcode] """

@@ -21,7 +21,8 @@ class SystemSettings():
     def AddValidValueDelegate(id, delegate):
         """
         AddValidValueDelegate(id: str, delegate: GetValidValues)
-            Adds a delegate to the internal collection of delegates for retrieving validvalues.
+            Adds a delegate to the internal collection of delegates for retrieving 
+             validvalues.
         """
         pass
 

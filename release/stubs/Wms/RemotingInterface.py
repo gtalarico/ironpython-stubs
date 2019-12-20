@@ -1,3 +1,4 @@
+from System import Object
 from System import MulticastDelegate
 # encoding: utf-8
 # module Wms.RemotingInterface calls itself RemotingInterface
@@ -19,10 +20,13 @@ class DataChangedEventHandler(MulticastDelegate):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
-            Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
+            Returns: A delegate that is the new root of the System.MulticastDelegate invocation 
+             list.
         """
         pass
 
@@ -30,10 +34,13 @@ class DataChangedEventHandler(MulticastDelegate):
         """
         DynamicInvokeImpl(self: Delegate, args: Array[object]) -> object
         
-            Dynamically invokes (late-bound) the method represented by the current delegate.
+            Dynamically invokes (late-bound) the method represented by the current 
+             delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+        
+            args: An array of objects that are the arguments to pass to the method represented 
+             by the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -60,11 +67,14 @@ class DataChangedEventHandler(MulticastDelegate):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
-             list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -83,7 +93,7 @@ class DataChangedEventHandler(MulticastDelegate):
     Instance = DataChangedEventHandler()
     """hardcoded/returns an instance of the class"""
 
-class IClientService:
+class IClientService(Object):
     # no doc
     def BeepContinuous(self):
         """ BeepContinuous(self: IClientService) """
@@ -124,7 +134,7 @@ class IClientService:
     Instance = IClientService()
     """hardcoded/returns an instance of the class"""
 
-class IDefaultItemLocationHelper:
+class IDefaultItemLocationHelper(Object):
     # no doc
     def GetDefaultItemLocationsByItemCode(self, itemCode):
         """ GetDefaultItemLocationsByItemCode(self: IDefaultItemLocationHelper, itemCode: str) -> ResultObject[FindableList[WarehouseItemLocation]] """
@@ -145,7 +155,7 @@ class IDefaultItemLocationHelper:
     Instance = IDefaultItemLocationHelper()
     """hardcoded/returns an instance of the class"""
 
-class IDocumentQueue:
+class IDocumentQueue(Object):
     # no doc
     def CopyPrintRule(self, printRuleId):
         """ CopyPrintRule(self: IDocumentQueue, printRuleId: int) -> PrintRule """
@@ -246,7 +256,7 @@ class IDocumentQueue:
     Instance = IDocumentQueue()
     """hardcoded/returns an instance of the class"""
 
-class IGeneral:
+class IGeneral(Object):
     # no doc
     def AddOrUpdateErpLock(self, lock):
         """ AddOrUpdateErpLock(self: IGeneral, lock: ErpLock) -> int """
@@ -1226,7 +1236,7 @@ Set: CurrentLicense(self: IGeneral) = value
     Instance = IGeneral()
     """hardcoded/returns an instance of the class"""
 
-class IInbound:
+class IInbound(Object):
     # no doc
     def AddOrUpdateLicensePlateToReceipt(self, cacheKey, licensePlate):
         """ AddOrUpdateLicensePlateToReceipt(self: IInbound, cacheKey: CacheKey, licensePlate: LicensePlate) -> LicensePlate """
@@ -1447,7 +1457,7 @@ class IInbound:
     Instance = IInbound()
     """hardcoded/returns an instance of the class"""
 
-class IInventory:
+class IInventory(Object):
     # no doc
     def AddCountItemIdentitification(self, key, itemId, overwriteIfExists):
         """ AddCountItemIdentitification(self: IInventory, key: CacheKey, itemId: ItemIdentification, overwriteIfExists: bool) -> bool """
@@ -1815,7 +1825,7 @@ class IInventory:
     Instance = IInventory()
     """hardcoded/returns an instance of the class"""
 
-class IMessaging:
+class IMessaging(Object):
     # no doc
     def ChangeMessagesStatus(self, messageIds, newStatus):
         """ ChangeMessagesStatus(self: IMessaging, messageIds: IEnumerable[Guid], newStatus: MessageStatus) """
@@ -1892,7 +1902,7 @@ class IMessaging:
     Instance = IMessaging()
     """hardcoded/returns an instance of the class"""
 
-class INotificationCenter:
+class INotificationCenter(Object):
     # no doc
     def AddNotification(self, notificationToInsert):
         """ AddNotification(self: INotificationCenter, notificationToInsert: InsertNotificationArgs) """
@@ -1941,7 +1951,7 @@ class INotificationCenter:
     Instance = INotificationCenter()
     """hardcoded/returns an instance of the class"""
 
-class INotificationSummary:
+class INotificationSummary(Object):
     # no doc
     def DeleteConfiguration(self, notificationSummaryId):
         """ DeleteConfiguration(self: INotificationSummary, notificationSummaryId: int) """
@@ -1982,7 +1992,7 @@ class INotificationSummary:
     Instance = INotificationSummary()
     """hardcoded/returns an instance of the class"""
 
-class INumberGeneration:
+class INumberGeneration(Object):
     # no doc
     def AddUsedNumber(self, args):
         """ AddUsedNumber(self: INumberGeneration, args: AddUsedNumberArgs) """
@@ -2027,7 +2037,7 @@ class INumberGeneration:
     Instance = INumberGeneration()
     """hardcoded/returns an instance of the class"""
 
-class IOfflineScanning:
+class IOfflineScanning(Object):
     # no doc
     def AddScanner(self, args):
         """ AddScanner(self: IOfflineScanning, args: AddScannerArgs) """
@@ -2080,7 +2090,7 @@ class IOfflineScanning:
     Instance = IOfflineScanning()
     """hardcoded/returns an instance of the class"""
 
-class IOutbound:
+class IOutbound(Object):
     # no doc
     def AddDirectOrder(self, args):
         """ AddDirectOrder(self: IOutbound, args: DirectOrderCrudArgs) -> DataFlowObject[DirectOrder] """
@@ -2513,7 +2523,7 @@ class IOutbound:
     Instance = IOutbound()
     """hardcoded/returns an instance of the class"""
 
-class IPrinting:
+class IPrinting(Object):
     # no doc
     def GetPickListsAll(self, pickLists):
         """ GetPickListsAll(self: IPrinting) -> (int, ReportItems) """
@@ -2538,7 +2548,7 @@ class IPrinting:
     Instance = IPrinting()
     """hardcoded/returns an instance of the class"""
 
-class IRemotePublishing:
+class IRemotePublishing(Object):
     # no doc
     def AddRemotePublisher(self, args):
         """ AddRemotePublisher(self: IRemotePublishing, args: AddRemotePublisherArgs) -> Publisher """

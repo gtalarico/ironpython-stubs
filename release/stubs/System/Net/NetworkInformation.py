@@ -75,7 +75,9 @@ class GatewayIPAddressInformationCollection(Object):
     def Add(self, address):
         """
         Add(self: GatewayIPAddressInformationCollection, address: GatewayIPAddressInformation)
-            Throws a System.NotSupportedException because this operation is not supported for this collection.
+            Throws a System.NotSupportedException because this operation is not supported 
+             for this collection.
+        
         
             address: The object to be added to the collection.
         """
@@ -84,7 +86,8 @@ class GatewayIPAddressInformationCollection(Object):
     def Clear(self):
         """
         Clear(self: GatewayIPAddressInformationCollection)
-            Throws a System.NotSupportedException because this operation is not supported for this collection.
+            Throws a System.NotSupportedException because this operation is not supported 
+             for this collection.
         """
         pass
 
@@ -92,17 +95,24 @@ class GatewayIPAddressInformationCollection(Object):
         """
         Contains(self: GatewayIPAddressInformationCollection, address: GatewayIPAddressInformation) -> bool
         
-            Checks whether the collection contains the specified System.Net.NetworkInformation.GatewayIPAddressInformation object.
+            Checks whether the collection contains the specified 
+             System.Net.NetworkInformation.GatewayIPAddressInformation object.
         
-            address: The System.Net.NetworkInformation.GatewayIPAddressInformation object to be searched in the collection.
-            Returns: true if the System.Net.NetworkInformation.GatewayIPAddressInformation object exists in the collection; otherwise false.
+        
+            address: The System.Net.NetworkInformation.GatewayIPAddressInformation object to be 
+             searched in the collection.
+        
+            Returns: true if the System.Net.NetworkInformation.GatewayIPAddressInformation object 
+             exists in the collection; otherwise false.
         """
         pass
 
     def CopyTo(self, array, offset):
         """
         CopyTo(self: GatewayIPAddressInformationCollection, array: Array[GatewayIPAddressInformation], offset: int)
-            Copies the elements in this collection to a one-dimensional array of type System.Net.NetworkInformation.GatewayIPAddressInformation.
+            Copies the elements in this collection to a one-dimensional array of type 
+             System.Net.NetworkInformation.GatewayIPAddressInformation.
+        
         
             array: A one-dimensional array that receives a copy of the collection.
             offset: The zero-based index in array at which the copy begins.
@@ -114,7 +124,9 @@ class GatewayIPAddressInformationCollection(Object):
         GetEnumerator(self: GatewayIPAddressInformationCollection) -> IEnumerator[GatewayIPAddressInformation]
         
             Returns an object that can be used to iterate through this collection.
-            Returns: An object that implements the System.Collections.IEnumerator interface and provides access to the System.Net.NetworkInformation.UnicastIPAddressInformation types in this 
+            Returns: An object that implements the System.Collections.IEnumerator interface and 
+             provides access to the 
+             System.Net.NetworkInformation.UnicastIPAddressInformation types in this 
              collection.
         """
         pass
@@ -123,7 +135,9 @@ class GatewayIPAddressInformationCollection(Object):
         """
         Remove(self: GatewayIPAddressInformationCollection, address: GatewayIPAddressInformation) -> bool
         
-            Throws a System.NotSupportedException because this operation is not supported for this collection.
+            Throws a System.NotSupportedException because this operation is not supported 
+             for this collection.
+        
         
             address: The object to be removed.
             Returns: Always throws a System.NotSupportedException.
@@ -599,7 +613,9 @@ class IPAddressCollection(Object):
     def Add(self, address):
         """
         Add(self: IPAddressCollection, address: IPAddress)
-            Throws a System.NotSupportedException because this operation is not supported for this collection.
+            Throws a System.NotSupportedException because this operation is not supported 
+             for this collection.
+        
         
             address: The object to be added to the collection.
         """
@@ -608,7 +624,8 @@ class IPAddressCollection(Object):
     def Clear(self):
         """
         Clear(self: IPAddressCollection)
-            Throws a System.NotSupportedException because this operation is not supported for this collection.
+            Throws a System.NotSupportedException because this operation is not supported 
+             for this collection.
         """
         pass
 
@@ -616,17 +633,22 @@ class IPAddressCollection(Object):
         """
         Contains(self: IPAddressCollection, address: IPAddress) -> bool
         
-            Checks whether the collection contains the specified System.Net.IPAddress object.
+            Checks whether the collection contains the specified System.Net.IPAddress 
+             object.
+        
         
             address: The System.Net.IPAddress object to be searched in the collection.
-            Returns: true if the System.Net.IPAddress object exists in the collection; otherwise, false.
+            Returns: true if the System.Net.IPAddress object exists in the collection; otherwise, 
+             false.
         """
         pass
 
     def CopyTo(self, array, offset):
         """
         CopyTo(self: IPAddressCollection, array: Array[IPAddress], offset: int)
-            Copies the elements in this collection to a one-dimensional array of type System.Net.IPAddress.
+            Copies the elements in this collection to a one-dimensional array of type 
+             System.Net.IPAddress.
+        
         
             array: A one-dimensional array that receives a copy of the collection.
             offset: The zero-based index in array at which the copy begins.
@@ -638,7 +660,9 @@ class IPAddressCollection(Object):
         GetEnumerator(self: IPAddressCollection) -> IEnumerator[IPAddress]
         
             Returns an object that can be used to iterate through this collection.
-            Returns: An object that implements the System.Collections.IEnumerator interface and provides access to the System.Net.NetworkInformation.IPAddressCollection types in this collection.
+            Returns: An object that implements the System.Collections.IEnumerator interface and 
+             provides access to the System.Net.NetworkInformation.IPAddressCollection types 
+             in this collection.
         """
         pass
 
@@ -646,7 +670,9 @@ class IPAddressCollection(Object):
         """
         Remove(self: IPAddressCollection, address: IPAddress) -> bool
         
-            Throws a System.NotSupportedException because this operation is not supported for this collection.
+            Throws a System.NotSupportedException because this operation is not supported 
+             for this collection.
+        
         
             address: The object to be removed.
             Returns: Always throws a System.NotSupportedException.
@@ -731,7 +757,9 @@ class IPAddressInformationCollection(Object):
     def Add(self, address):
         """
         Add(self: IPAddressInformationCollection, address: IPAddressInformation)
-            Throws a System.NotSupportedException because this operation is not supported for this collection.
+            Throws a System.NotSupportedException because this operation is not supported 
+             for this collection.
+        
         
             address: The object to be added to the collection.
         """
@@ -740,7 +768,8 @@ class IPAddressInformationCollection(Object):
     def Clear(self):
         """
         Clear(self: IPAddressInformationCollection)
-            Throws a System.NotSupportedException because this operation is not supported for this collection.
+            Throws a System.NotSupportedException because this operation is not supported 
+             for this collection.
         """
         pass
 
@@ -748,10 +777,15 @@ class IPAddressInformationCollection(Object):
         """
         Contains(self: IPAddressInformationCollection, address: IPAddressInformation) -> bool
         
-            Checks whether the collection contains the specified System.Net.NetworkInformation.IPAddressInformation object.
+            Checks whether the collection contains the specified 
+             System.Net.NetworkInformation.IPAddressInformation object.
         
-            address: The System.Net.NetworkInformation.IPAddressInformation object to be searched in the collection.
-            Returns: true if the System.Net.NetworkInformation.IPAddressInformation object exists in the collection; otherwise. false.
+        
+            address: The System.Net.NetworkInformation.IPAddressInformation object to be searched 
+             in the collection.
+        
+            Returns: true if the System.Net.NetworkInformation.IPAddressInformation object exists 
+             in the collection; otherwise. false.
         """
         pass
 
@@ -770,7 +804,9 @@ class IPAddressInformationCollection(Object):
         GetEnumerator(self: IPAddressInformationCollection) -> IEnumerator[IPAddressInformation]
         
             Returns an object that can be used to iterate through this collection.
-            Returns: An object that implements the System.Collections.IEnumerator interface and provides access to the System.Net.NetworkInformation.IPAddressInformation types in this collection.
+            Returns: An object that implements the System.Collections.IEnumerator interface and 
+             provides access to the System.Net.NetworkInformation.IPAddressInformation 
+             types in this collection.
         """
         pass
 
@@ -778,7 +814,9 @@ class IPAddressInformationCollection(Object):
         """
         Remove(self: IPAddressInformationCollection, address: IPAddressInformation) -> bool
         
-            Throws a System.NotSupportedException because this operation is not supported for this collection.
+            Throws a System.NotSupportedException because this operation is not supported 
+             for this collection.
+        
         
             address: The object to be removed.
             Returns: Always throws a System.NotSupportedException.
@@ -837,7 +875,9 @@ class IPGlobalProperties():
         """
         BeginGetUnicastAddresses(self: IPGlobalProperties, callback: AsyncCallback, state: object) -> IAsyncResult
         
-            Begins an asynchronous request to retrieve the stable unicast IP address table on the local computer.
+            Begins an asynchronous request to retrieve the stable unicast IP address table 
+             on the local computer.
+        
         
             callback: The System.AsyncCallback delegate.
             state: An object that contains state information for this request.
@@ -849,10 +889,13 @@ class IPGlobalProperties():
         """
         EndGetUnicastAddresses(self: IPGlobalProperties, asyncResult: IAsyncResult) -> UnicastIPAddressInformationCollection
         
-            Ends a pending asynchronous request to retrieve the stable unicast IP address table on the local computer.
+            Ends a pending asynchronous request to retrieve the stable unicast IP address 
+             table on the local computer.
+        
         
             asyncResult: An System.IAsyncResult that references the asynchronous request.
-            Returns: An System.IAsyncResult that stores state information and any user defined data for this asynchronous operation.
+            Returns: An System.IAsyncResult that stores state information and any user defined data 
+             for this asynchronous operation.
         """
         pass
 
@@ -860,9 +903,12 @@ class IPGlobalProperties():
         """
         GetActiveTcpConnections(self: IPGlobalProperties) -> Array[TcpConnectionInformation]
         
-            Returns information about the Internet Protocol version 4 (IPv4) and IPv6 Transmission Control Protocol (TCP) connections on the local computer.
-            Returns: A System.Net.NetworkInformation.TcpConnectionInformation array that contains objects that describe the active TCP connections, or an empty array if no active TCP connections are 
-             detected.
+            Returns information about the Internet Protocol version 4 (IPv4) and IPv6 
+             Transmission Control Protocol (TCP) connections on the local computer.
+        
+            Returns: A System.Net.NetworkInformation.TcpConnectionInformation array that contains 
+             objects that describe the active TCP connections, or an empty array if no 
+             active TCP connections are detected.
         """
         pass
 
@@ -870,8 +916,11 @@ class IPGlobalProperties():
         """
         GetActiveTcpListeners(self: IPGlobalProperties) -> Array[IPEndPoint]
         
-            Returns endpoint information about the Internet Protocol version 4 (IPv4) and IPv6 Transmission Control Protocol (TCP) listeners on the local computer.
-            Returns: A System.Net.IPEndPoint array that contains objects that describe the active TCP listeners, or an empty array, if no active TCP listeners are detected.
+            Returns endpoint information about the Internet Protocol version 4 (IPv4) and 
+             IPv6 Transmission Control Protocol (TCP) listeners on the local computer.
+        
+            Returns: A System.Net.IPEndPoint array that contains objects that describe the active 
+             TCP listeners, or an empty array, if no active TCP listeners are detected.
         """
         pass
 
@@ -879,8 +928,11 @@ class IPGlobalProperties():
         """
         GetActiveUdpListeners(self: IPGlobalProperties) -> Array[IPEndPoint]
         
-            Returns information about the Internet Protocol version 4 (IPv4) and IPv6 User Datagram Protocol (UDP) listeners on the local computer.
-            Returns: An System.Net.IPEndPoint array that contains objects that describe the UDP listeners, or an empty array if no UDP listeners are detected.
+            Returns information about the Internet Protocol version 4 (IPv4) and IPv6 User 
+             Datagram Protocol (UDP) listeners on the local computer.
+        
+            Returns: An System.Net.IPEndPoint array that contains objects that describe the UDP 
+             listeners, or an empty array if no UDP listeners are detected.
         """
         pass
 
@@ -888,8 +940,11 @@ class IPGlobalProperties():
         """
         GetIcmpV4Statistics(self: IPGlobalProperties) -> IcmpV4Statistics
         
-            Provides Internet Control Message Protocol (ICMP) version 4 statistical data for the local computer.
-            Returns: An System.Net.NetworkInformation.IcmpV4Statistics object that provides ICMP version 4 traffic statistics for the local computer.
+            Provides Internet Control Message Protocol (ICMP) version 4 statistical data 
+             for the local computer.
+        
+            Returns: An System.Net.NetworkInformation.IcmpV4Statistics object that provides ICMP 
+             version 4 traffic statistics for the local computer.
         """
         pass
 
@@ -897,8 +952,11 @@ class IPGlobalProperties():
         """
         GetIcmpV6Statistics(self: IPGlobalProperties) -> IcmpV6Statistics
         
-            Provides Internet Control Message Protocol (ICMP) version 6 statistical data for the local computer.
-            Returns: An System.Net.NetworkInformation.IcmpV6Statistics object that provides ICMP version 6 traffic statistics for the local computer.
+            Provides Internet Control Message Protocol (ICMP) version 6 statistical data 
+             for the local computer.
+        
+            Returns: An System.Net.NetworkInformation.IcmpV6Statistics object that provides ICMP 
+             version 6 traffic statistics for the local computer.
         """
         pass
 
@@ -907,8 +965,11 @@ class IPGlobalProperties():
         """
         GetIPGlobalProperties() -> IPGlobalProperties
         
-            Gets an object that provides information about the local computer's network connectivity and traffic statistics.
-            Returns: A System.Net.NetworkInformation.IPGlobalProperties object that contains information about the local computer.
+            Gets an object that provides information about the local computer's network 
+             connectivity and traffic statistics.
+        
+            Returns: A System.Net.NetworkInformation.IPGlobalProperties object that contains 
+             information about the local computer.
         """
         pass
 
@@ -916,8 +977,11 @@ class IPGlobalProperties():
         """
         GetIPv4GlobalStatistics(self: IPGlobalProperties) -> IPGlobalStatistics
         
-            Provides Internet Protocol version 4 (IPv4) statistical data for the local computer.
-            Returns: An System.Net.NetworkInformation.IPGlobalStatistics object that provides IPv4 traffic statistics for the local computer.
+            Provides Internet Protocol version 4 (IPv4) statistical data for the local 
+             computer.
+        
+            Returns: An System.Net.NetworkInformation.IPGlobalStatistics object that provides IPv4 
+             traffic statistics for the local computer.
         """
         pass
 
@@ -925,8 +989,11 @@ class IPGlobalProperties():
         """
         GetIPv6GlobalStatistics(self: IPGlobalProperties) -> IPGlobalStatistics
         
-            Provides Internet Protocol version 6 (IPv6) statistical data for the local computer.
-            Returns: An System.Net.NetworkInformation.IPGlobalStatistics object that provides IPv6 traffic statistics for the local computer.
+            Provides Internet Protocol version 6 (IPv6) statistical data for the local 
+             computer.
+        
+            Returns: An System.Net.NetworkInformation.IPGlobalStatistics object that provides IPv6 
+             traffic statistics for the local computer.
         """
         pass
 
@@ -934,8 +1001,11 @@ class IPGlobalProperties():
         """
         GetTcpIPv4Statistics(self: IPGlobalProperties) -> TcpStatistics
         
-            Provides Transmission Control Protocol/Internet Protocol version 4 (TCP/IPv4) statistical data for the local computer.
-            Returns: A System.Net.NetworkInformation.TcpStatistics object that provides TCP/IPv4 traffic statistics for the local computer.
+            Provides Transmission Control Protocol/Internet Protocol version 4 (TCP/IPv4) 
+             statistical data for the local computer.
+        
+            Returns: A System.Net.NetworkInformation.TcpStatistics object that provides TCP/IPv4 
+             traffic statistics for the local computer.
         """
         pass
 
@@ -943,8 +1013,11 @@ class IPGlobalProperties():
         """
         GetTcpIPv6Statistics(self: IPGlobalProperties) -> TcpStatistics
         
-            Provides Transmission Control Protocol/Internet Protocol version 6 (TCP/IPv6) statistical data for the local computer.
-            Returns: A System.Net.NetworkInformation.TcpStatistics object that provides TCP/IPv6 traffic statistics for the local computer.
+            Provides Transmission Control Protocol/Internet Protocol version 6 (TCP/IPv6) 
+             statistical data for the local computer.
+        
+            Returns: A System.Net.NetworkInformation.TcpStatistics object that provides TCP/IPv6 
+             traffic statistics for the local computer.
         """
         pass
 
@@ -952,8 +1025,11 @@ class IPGlobalProperties():
         """
         GetUdpIPv4Statistics(self: IPGlobalProperties) -> UdpStatistics
         
-            Provides User Datagram Protocol/Internet Protocol version 4 (UDP/IPv4) statistical data for the local computer.
-            Returns: A System.Net.NetworkInformation.UdpStatistics object that provides UDP/IPv4 traffic statistics for the local computer.
+            Provides User Datagram Protocol/Internet Protocol version 4 (UDP/IPv4) 
+             statistical data for the local computer.
+        
+            Returns: A System.Net.NetworkInformation.UdpStatistics object that provides UDP/IPv4 
+             traffic statistics for the local computer.
         """
         pass
 
@@ -961,8 +1037,11 @@ class IPGlobalProperties():
         """
         GetUdpIPv6Statistics(self: IPGlobalProperties) -> UdpStatistics
         
-            Provides User Datagram Protocol/Internet Protocol version 6 (UDP/IPv6) statistical data for the local computer.
-            Returns: A System.Net.NetworkInformation.UdpStatistics object that provides UDP/IPv6 traffic statistics for the local computer.
+            Provides User Datagram Protocol/Internet Protocol version 6 (UDP/IPv6) 
+             statistical data for the local computer.
+        
+            Returns: A System.Net.NetworkInformation.UdpStatistics object that provides UDP/IPv6 
+             traffic statistics for the local computer.
         """
         pass
 
@@ -971,7 +1050,8 @@ class IPGlobalProperties():
         GetUnicastAddresses(self: IPGlobalProperties) -> UnicastIPAddressInformationCollection
         
             Retrieves the stable unicast IP address table on the local computer.
-            Returns: A System.Net.NetworkInformation.UnicastIPAddressInformationCollection that contains a list of stable unicast IP addresses on the local computer.
+            Returns: A System.Net.NetworkInformation.UnicastIPAddressInformationCollection that 
+             contains a list of stable unicast IP addresses on the local computer.
         """
         pass
 
@@ -1184,8 +1264,11 @@ class IPInterfaceProperties():
         """
         GetIPv4Properties(self: IPInterfaceProperties) -> IPv4InterfaceProperties
         
-            Provides Internet Protocol version 4 (IPv4) configuration data for this network interface.
-            Returns: An System.Net.NetworkInformation.IPv4InterfaceProperties object that contains IPv4 configuration data, or null if no data is available for the interface.
+            Provides Internet Protocol version 4 (IPv4) configuration data for this 
+             network interface.
+        
+            Returns: An System.Net.NetworkInformation.IPv4InterfaceProperties object that contains 
+             IPv4 configuration data, or null if no data is available for the interface.
         """
         pass
 
@@ -1193,8 +1276,11 @@ class IPInterfaceProperties():
         """
         GetIPv6Properties(self: IPInterfaceProperties) -> IPv6InterfaceProperties
         
-            Provides Internet Protocol version 6 (IPv6) configuration data for this network interface.
-            Returns: An System.Net.NetworkInformation.IPv6InterfaceProperties object that contains IPv6 configuration data.
+            Provides Internet Protocol version 6 (IPv6) configuration data for this 
+             network interface.
+        
+            Returns: An System.Net.NetworkInformation.IPv6InterfaceProperties object that contains 
+             IPv6 configuration data.
         """
         pass
 
@@ -1628,7 +1714,9 @@ class MulticastIPAddressInformationCollection(Object):
     def Add(self, address):
         """
         Add(self: MulticastIPAddressInformationCollection, address: MulticastIPAddressInformation)
-            Throws a System.NotSupportedException because the collection is read-only and elements cannot be added to the collection.
+            Throws a System.NotSupportedException because the collection is read-only and 
+             elements cannot be added to the collection.
+        
         
             address: The object to be added to the collection.
         """
@@ -1637,7 +1725,8 @@ class MulticastIPAddressInformationCollection(Object):
     def Clear(self):
         """
         Clear(self: MulticastIPAddressInformationCollection)
-            Throws a System.NotSupportedException because the collection is read-only and elements cannot be removed.
+            Throws a System.NotSupportedException because the collection is read-only and 
+             elements cannot be removed.
         """
         pass
 
@@ -1645,17 +1734,24 @@ class MulticastIPAddressInformationCollection(Object):
         """
         Contains(self: MulticastIPAddressInformationCollection, address: MulticastIPAddressInformation) -> bool
         
-            Checks whether the collection contains the specified System.Net.NetworkInformation.MulticastIPAddressInformation object.
+            Checks whether the collection contains the specified 
+             System.Net.NetworkInformation.MulticastIPAddressInformation object.
         
-            address: The System.Net.NetworkInformation.MulticastIPAddressInformation object to be searched in the collection.
-            Returns: true if the System.Net.NetworkInformation.MulticastIPAddressInformation object exists in the collection; otherwise, false.
+        
+            address: The System.Net.NetworkInformation.MulticastIPAddressInformation object to be 
+             searched in the collection.
+        
+            Returns: true if the System.Net.NetworkInformation.MulticastIPAddressInformation object 
+             exists in the collection; otherwise, false.
         """
         pass
 
     def CopyTo(self, array, offset):
         """
         CopyTo(self: MulticastIPAddressInformationCollection, array: Array[MulticastIPAddressInformation], offset: int)
-            Copies the elements in this collection to a one-dimensional array of type System.Net.NetworkInformation.MulticastIPAddressInformation.
+            Copies the elements in this collection to a one-dimensional array of type 
+             System.Net.NetworkInformation.MulticastIPAddressInformation.
+        
         
             array: A one-dimensional array that receives a copy of the collection.
             offset: The zero-based index in array at which the copy begins.
@@ -1667,7 +1763,9 @@ class MulticastIPAddressInformationCollection(Object):
         GetEnumerator(self: MulticastIPAddressInformationCollection) -> IEnumerator[MulticastIPAddressInformation]
         
             Returns an object that can be used to iterate through this collection.
-            Returns: An object that implements the System.Collections.IEnumerator interface and provides access to the System.Net.NetworkInformation.UnicastIPAddressInformation types in this 
+            Returns: An object that implements the System.Collections.IEnumerator interface and 
+             provides access to the 
+             System.Net.NetworkInformation.UnicastIPAddressInformation types in this 
              collection.
         """
         pass
@@ -1676,7 +1774,9 @@ class MulticastIPAddressInformationCollection(Object):
         """
         Remove(self: MulticastIPAddressInformationCollection, address: MulticastIPAddressInformation) -> bool
         
-            Throws a System.NotSupportedException because the collection is read-only and elements cannot be removed.
+            Throws a System.NotSupportedException because the collection is read-only and 
+             elements cannot be removed.
+        
         
             address: The object to be removed.
             Returns: Always throws a System.NotSupportedException.
@@ -1792,10 +1892,13 @@ class NetworkAddressChangedEventHandler(MulticastDelegate):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
-            Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
+            Returns: A delegate that is the new root of the System.MulticastDelegate invocation 
+             list.
         """
         pass
 
@@ -1803,10 +1906,13 @@ class NetworkAddressChangedEventHandler(MulticastDelegate):
         """
         DynamicInvokeImpl(self: Delegate, args: Array[object]) -> object
         
-            Dynamically invokes (late-bound) the method represented by the current delegate.
+            Dynamically invokes (late-bound) the method represented by the current 
+             delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+        
+            args: An array of objects that are the arguments to pass to the method represented 
+             by the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1833,11 +1939,14 @@ class NetworkAddressChangedEventHandler(MulticastDelegate):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
-             list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -1870,10 +1979,13 @@ class NetworkAvailabilityChangedEventHandler(MulticastDelegate):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
-            Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
+            Returns: A delegate that is the new root of the System.MulticastDelegate invocation 
+             list.
         """
         pass
 
@@ -1881,10 +1993,13 @@ class NetworkAvailabilityChangedEventHandler(MulticastDelegate):
         """
         DynamicInvokeImpl(self: Delegate, args: Array[object]) -> object
         
-            Dynamically invokes (late-bound) the method represented by the current delegate.
+            Dynamically invokes (late-bound) the method represented by the current 
+             delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+        
+            args: An array of objects that are the arguments to pass to the method represented 
+             by the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1911,11 +2026,14 @@ class NetworkAvailabilityChangedEventHandler(MulticastDelegate):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
-             list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -2071,7 +2189,8 @@ class NetworkInformationPermission(CodeAccessPermission):
         Copy(self: NetworkInformationPermission) -> IPermission
         
             Creates and returns an identical copy of this permission.
-            Returns: A System.Net.NetworkInformation.NetworkInformationPermission that is identical to the current permission
+            Returns: A System.Net.NetworkInformation.NetworkInformationPermission that is identical 
+             to the current permission
         """
         pass
 
@@ -2080,7 +2199,8 @@ class NetworkInformationPermission(CodeAccessPermission):
         FromXml(self: NetworkInformationPermission, securityElement: SecurityElement)
             Sets the state of this permission using the specified XML encoding.
         
-            securityElement: A System.Security.SecurityElement that contains the XML encoding to use to set the state of the current permission
+            securityElement: A System.Security.SecurityElement that contains the XML encoding to use to set 
+             the state of the current permission
         """
         pass
 
@@ -2088,11 +2208,16 @@ class NetworkInformationPermission(CodeAccessPermission):
         """
         Intersect(self: NetworkInformationPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: An System.Security.IPermission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A System.Net.NetworkInformation.NetworkInformationPermission that represents the intersection of the current permission and the specified permission. This new permission is null 
-             if the intersection is empty or target is null.
+        
+            target: An System.Security.IPermission to intersect with the current permission. It 
+             must be of the same type as the current permission.
+        
+            Returns: A System.Net.NetworkInformation.NetworkInformationPermission that represents 
+             the intersection of the current permission and the specified permission. This 
+             new permission is null if the intersection is empty or target is null.
         """
         pass
 
@@ -2100,10 +2225,16 @@ class NetworkInformationPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: NetworkInformationPermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: An System.Security.IPermission that is to be tested for the subset relationship. This permission must be of the same type as the current permission
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: An System.Security.IPermission that is to be tested for the subset 
+             relationship. This permission must be of the same type as the current 
+             permission
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -2121,7 +2252,8 @@ class NetworkInformationPermission(CodeAccessPermission):
         ToXml(self: NetworkInformationPermission) -> SecurityElement
         
             Creates an XML encoding of the state of this permission.
-            Returns: A System.Security.SecurityElement that contains the XML encoding of the current permission.
+            Returns: A System.Security.SecurityElement that contains the XML encoding of the 
+             current permission.
         """
         pass
 
@@ -2129,10 +2261,15 @@ class NetworkInformationPermission(CodeAccessPermission):
         """
         Union(self: NetworkInformationPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of this permission and the specified permission.
+            Creates a permission that is the union of this permission and the specified 
+             permission.
         
-            target: A System.Net.NetworkInformation.NetworkInformationPermission  permission to combine with the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            target: A System.Net.NetworkInformation.NetworkInformationPermission  permission to 
+             combine with the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -2175,8 +2312,11 @@ class NetworkInformationPermissionAttribute(CodeAccessSecurityAttribute):
         """
         CreatePermission(self: NetworkInformationPermissionAttribute) -> IPermission
         
-            Creates and returns a new System.Net.NetworkInformation.NetworkInformationPermission object.
-            Returns: A System.Net.NetworkInformation.NetworkInformationPermission that corresponds to this attribute.
+            Creates and returns a new 
+             System.Net.NetworkInformation.NetworkInformationPermission object.
+        
+            Returns: A System.Net.NetworkInformation.NetworkInformationPermission that corresponds 
+             to this attribute.
         """
         pass
 
@@ -2212,7 +2352,9 @@ class NetworkInterface():
         GetAllNetworkInterfaces() -> Array[NetworkInterface]
         
             Returns objects that describe the network interfaces on the local computer.
-            Returns: A System.Net.NetworkInformation.NetworkInterface array that contains objects that describe the available network interfaces, or an empty array if no interfaces are detected.
+            Returns: A System.Net.NetworkInformation.NetworkInterface array that contains objects 
+             that describe the available network interfaces, or an empty array if no 
+             interfaces are detected.
         """
         pass
 
@@ -2221,7 +2363,8 @@ class NetworkInterface():
         GetIPProperties(self: NetworkInterface) -> IPInterfaceProperties
         
             Returns an object that describes the configuration of this network interface.
-            Returns: An System.Net.NetworkInformation.IPInterfaceProperties object that describes this network interface.
+            Returns: An System.Net.NetworkInformation.IPInterfaceProperties object that describes 
+             this network interface.
         """
         pass
 
@@ -2253,7 +2396,8 @@ class NetworkInterface():
         GetPhysicalAddress(self: NetworkInterface) -> PhysicalAddress
         
             Returns the Media Access Control (MAC) or physical address for this adapter.
-            Returns: A System.Net.NetworkInformation.PhysicalAddress object that contains the physical address.
+            Returns: A System.Net.NetworkInformation.PhysicalAddress object that contains the 
+             physical address.
         """
         pass
 
@@ -2261,7 +2405,9 @@ class NetworkInterface():
         """
         Supports(self: NetworkInterface, networkInterfaceComponent: NetworkInterfaceComponent) -> bool
         
-            Gets a System.Boolean value that indicates whether the interface supports the specified protocol.
+            Gets a System.Boolean value that indicates whether the interface supports the 
+             specified protocol.
+        
         
             networkInterfaceComponent: A System.Net.NetworkInformation.NetworkInterfaceComponent value.
             Returns: true if the specified protocol is supported; otherwise, false.
@@ -2512,8 +2658,11 @@ class PhysicalAddress():
         
             Compares two System.Net.NetworkInformation.PhysicalAddress instances.
         
-            comparand: The System.Net.NetworkInformation.PhysicalAddress  to compare to the current instance.
-            Returns: true if this instance and the specified instance contain the same address; otherwise false.
+            comparand: The System.Net.NetworkInformation.PhysicalAddress  to compare to the current 
+             instance.
+        
+            Returns: true if this instance and the specified instance contain the same address; 
+             otherwise false.
         """
         pass
 
@@ -2540,10 +2689,17 @@ class PhysicalAddress():
         """
         Parse(address: str) -> PhysicalAddress
         
-            Parses the specified System.String and stores its contents as the address bytes of the System.Net.NetworkInformation.PhysicalAddress returned by this method.
+            Parses the specified System.String and stores its contents as the address 
+             bytes of the System.Net.NetworkInformation.PhysicalAddress returned by this 
+             method.
         
-            address: A System.String containing the address that will be used to initialize the System.Net.NetworkInformation.PhysicalAddress instance returned by this method.
-            Returns: A System.Net.NetworkInformation.PhysicalAddress instance with the specified address.
+        
+            address: A System.String containing the address that will be used to initialize the 
+             System.Net.NetworkInformation.PhysicalAddress instance returned by this 
+             method.
+        
+            Returns: A System.Net.NetworkInformation.PhysicalAddress instance with the specified 
+             address.
         """
         pass
 
@@ -2582,9 +2738,13 @@ class Ping(Component):
     def Dispose(self):
         """
         Dispose(self: Ping, disposing: bool)
-            Releases the unmanaged resources used by the System.Net.NetworkInformation.Ping object, and optionally disposes of the managed resources.
+            Releases the unmanaged resources used by the 
+             System.Net.NetworkInformation.Ping object, and optionally disposes of the 
+             managed resources.
         
-            disposing: true to release both managed and unmanaged resources; false to releases only unmanaged resources.
+        
+            disposing: true to release both managed and unmanaged resources; false to releases only 
+             unmanaged resources.
         """
         pass
 
@@ -2592,10 +2752,14 @@ class Ping(Component):
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
+        
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the 
+             System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -2605,9 +2769,12 @@ class Ping(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
-             routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled 
+             across a remoting boundary. A value of false is usually appropriate. true to 
+             copy the current System.MarshalByRefObject object's identity to its clone, 
+             which will cause remoting client calls to be routed to the remote server 
+             object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2622,7 +2789,8 @@ class Ping(Component):
         OnPingCompleted(self: Ping, e: PingCompletedEventArgs)
             Raises the System.Net.NetworkInformation.Ping.PingCompleted event.
         
-            e: A System.Net.NetworkInformation.PingCompletedEventArgs  object that contains event data.
+            e: A System.Net.NetworkInformation.PingCompletedEventArgs  object that contains 
+             event data.
         """
         pass
 
@@ -2630,192 +2798,337 @@ class Ping(Component):
         """
         Send(self: Ping, hostNameOrAddress: str) -> PingReply
         
-            Attempts to send an Internet Control Message Protocol (ICMP) echo message to the specified computer, and receive a corresponding ICMP echo reply message from that computer.
+            Attempts to send an Internet Control Message Protocol (ICMP) echo message to 
+             the specified computer, and receive a corresponding ICMP echo reply message 
+             from that computer.
         
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
         
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message, if one was received, or provides the reason for the failure, if no 
-             message was received.
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the 
+             ICMP echo message. The value specified for this parameter can be a host name 
+             or a string representation of an IP address.
+        
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information 
+             about the ICMP echo reply message, if one was received, or provides the reason 
+             for the failure, if no message was received.
         
         Send(self: Ping, hostNameOrAddress: str, timeout: int) -> PingReply
         
-            Attempts to send an Internet Control Message Protocol (ICMP) echo message to the specified computer, and receive a corresponding ICMP echo reply message from that computer. This 
-             method allows you to specify a time-out value for the operation.
+            Attempts to send an Internet Control Message Protocol (ICMP) echo message to 
+             the specified computer, and receive a corresponding ICMP echo reply message 
+             from that computer. This method allows you to specify a time-out value for the 
+             operation.
         
         
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the 
+             ICMP echo message. The value specified for this parameter can be a host name 
+             or a string representation of an IP address.
         
-            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message if one was received, or provides the reason for the failure if no 
-             message was received.
+            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after 
+             sending the echo message) to wait for the ICMP echo reply message.
+        
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information 
+             about the ICMP echo reply message if one was received, or provides the reason 
+             for the failure if no message was received.
         
         Send(self: Ping, address: IPAddress) -> PingReply
         
-            Attempts to send an Internet Control Message Protocol (ICMP) echo message to the computer that has the specified System.Net.IPAddress, and receive a corresponding ICMP echo reply 
-             message from that computer.
+            Attempts to send an Internet Control Message Protocol (ICMP) echo message to 
+             the computer that has the specified System.Net.IPAddress, and receive a 
+             corresponding ICMP echo reply message from that computer.
         
         
-            address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message, if one was received, or describes the reason for the failure if no 
-             message was received.
+            address: An System.Net.IPAddress that identifies the computer that is the destination 
+             for the ICMP echo message.
+        
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information 
+             about the ICMP echo reply message, if one was received, or describes the 
+             reason for the failure if no message was received.
         
         Send(self: Ping, address: IPAddress, timeout: int) -> PingReply
         
-            Attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the computer that has the specified System.Net.IPAddress, and receive 
-             a corresponding ICMP echo reply message from that computer. This method allows you to specify a time-out value for the operation.
+            Attempts to send an Internet Control Message Protocol (ICMP) echo message with 
+             the specified data buffer to the computer that has the specified 
+             System.Net.IPAddress, and receive a corresponding ICMP echo reply message from 
+             that computer. This method allows you to specify a time-out value for the 
+             operation.
         
         
-            address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
-            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message if one was received, or provides the reason for the failure if no 
-             message was received.
+            address: An System.Net.IPAddress that identifies the computer that is the destination 
+             for the ICMP echo message.
+        
+            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after 
+             sending the echo message) to wait for the ICMP echo reply message.
+        
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information 
+             about the ICMP echo reply message if one was received, or provides the reason 
+             for the failure if no message was received.
         
         Send(self: Ping, hostNameOrAddress: str, timeout: int, buffer: Array[Byte]) -> PingReply
         
-            Attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the specified computer, and receive a corresponding ICMP echo reply 
-             message from that computer. This overload allows you to specify a time-out value for the operation.
+            Attempts to send an Internet Control Message Protocol (ICMP) echo message with 
+             the specified data buffer to the specified computer, and receive a 
+             corresponding ICMP echo reply message from that computer. This overload allows 
+             you to specify a time-out value for the operation.
         
         
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the 
+             ICMP echo message. The value specified for this parameter can be a host name 
+             or a string representation of an IP address.
         
-            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
-            buffer: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message if one was received, or provides the reason for the failure if no 
-             message was received.
+            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after 
+             sending the echo message) to wait for the ICMP echo reply message.
+        
+            buffer: A System.Byte array that contains data to be sent with the ICMP echo message 
+             and returned in the ICMP echo reply message. The array cannot contain more 
+             than 65,500 bytes.
+        
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information 
+             about the ICMP echo reply message if one was received, or provides the reason 
+             for the failure if no message was received.
         
         Send(self: Ping, address: IPAddress, timeout: int, buffer: Array[Byte]) -> PingReply
         
-            Attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the computer that has the specified System.Net.IPAddress, and receive 
-             a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation.
+            Attempts to send an Internet Control Message Protocol (ICMP) echo message with 
+             the specified data buffer to the computer that has the specified 
+             System.Net.IPAddress, and receive a corresponding ICMP echo reply message from 
+             that computer. This overload allows you to specify a time-out value for the 
+             operation.
         
         
-            address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
-            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
-            buffer: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message, if one was received, or provides the reason for the failure, if no 
-             message was received. The method will return System.Net.NetworkInformation.IPStatus.PacketTooBig if the packet exceeds the Maximum Transmission Unit (MTU).
+            address: An System.Net.IPAddress that identifies the computer that is the destination 
+             for the ICMP echo message.
+        
+            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after 
+             sending the echo message) to wait for the ICMP echo reply message.
+        
+            buffer: A System.Byte array that contains data to be sent with the ICMP echo message 
+             and returned in the ICMP echo reply message. The array cannot contain more 
+             than 65,500 bytes.
+        
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information 
+             about the ICMP echo reply message, if one was received, or provides the reason 
+             for the failure, if no message was received. The method will return 
+             System.Net.NetworkInformation.IPStatus.PacketTooBig if the packet exceeds the 
+             Maximum Transmission Unit (MTU).
         
         Send(self: Ping, hostNameOrAddress: str, timeout: int, buffer: Array[Byte], options: PingOptions) -> PingReply
         
-            Attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the specified computer, and receive a corresponding ICMP echo reply 
-             message from that computer. This overload allows you to specify a time-out value for the operation and control fragmentation and Time-to-Live values for the ICMP packet.
+            Attempts to send an Internet Control Message Protocol (ICMP) echo message with 
+             the specified data buffer to the specified computer, and receive a 
+             corresponding ICMP echo reply message from that computer. This overload allows 
+             you to specify a time-out value for the operation and control fragmentation 
+             and Time-to-Live values for the ICMP packet.
         
         
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the 
+             ICMP echo message. The value specified for this parameter can be a host name 
+             or a string representation of an IP address.
         
-            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
-            buffer: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
-            options: A System.Net.NetworkInformation.PingOptions  object used to control fragmentation and Time-to-Live values for the ICMP echo message packet.
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message if one was received, or provides the reason for the failure if no 
-             message was received.
+            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after 
+             sending the echo message) to wait for the ICMP echo reply message.
+        
+            buffer: A System.Byte array that contains data to be sent with the ICMP echo message 
+             and returned in the ICMP echo reply message. The array cannot contain more 
+             than 65,500 bytes.
+        
+            options: A System.Net.NetworkInformation.PingOptions  object used to control 
+             fragmentation and Time-to-Live values for the ICMP echo message packet.
+        
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information 
+             about the ICMP echo reply message if one was received, or provides the reason 
+             for the failure if no message was received.
         
         Send(self: Ping, address: IPAddress, timeout: int, buffer: Array[Byte], options: PingOptions) -> PingReply
         
-            Attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the computer that has the specified System.Net.IPAddress and receive a 
-             corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation and control fragmentation and Time-to-Live values 
-             for the ICMP echo message packet.
+            Attempts to send an Internet Control Message Protocol (ICMP) echo message with 
+             the specified data buffer to the computer that has the specified 
+             System.Net.IPAddress and receive a corresponding ICMP echo reply message from 
+             that computer. This overload allows you to specify a time-out value for the 
+             operation and control fragmentation and Time-to-Live values for the ICMP echo 
+             message packet.
         
         
-            address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
-            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
-            buffer: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
-            options: A System.Net.NetworkInformation.PingOptions  object used to control fragmentation and Time-to-Live values for the ICMP echo message packet.
-            Returns: A System.Net.NetworkInformation.PingReply object that provides information about the ICMP echo reply message, if one was received, or provides the reason for the failure, if no 
-             message was received. The method will return System.Net.NetworkInformation.IPStatus.PacketTooBig if the packet exceeds the Maximum Transmission Unit (MTU).
+            address: An System.Net.IPAddress that identifies the computer that is the destination 
+             for the ICMP echo message.
+        
+            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after 
+             sending the echo message) to wait for the ICMP echo reply message.
+        
+            buffer: A System.Byte array that contains data to be sent with the ICMP echo message 
+             and returned in the ICMP echo reply message. The array cannot contain more 
+             than 65,500 bytes.
+        
+            options: A System.Net.NetworkInformation.PingOptions  object used to control 
+             fragmentation and Time-to-Live values for the ICMP echo message packet.
+        
+            Returns: A System.Net.NetworkInformation.PingReply object that provides information 
+             about the ICMP echo reply message, if one was received, or provides the reason 
+             for the failure, if no message was received. The method will return 
+             System.Net.NetworkInformation.IPStatus.PacketTooBig if the packet exceeds the 
+             Maximum Transmission Unit (MTU).
         """
         pass
 
     def SendAsync(self, *__args):
         """
         SendAsync(self: Ping, hostNameOrAddress: str, userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message to the specified computer, and receive a corresponding ICMP echo reply message from that 
-             computer.
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) 
+             echo message to the specified computer, and receive a corresponding ICMP echo 
+             reply message from that computer.
         
         
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the 
+             ICMP echo message. The value specified for this parameter can be a host name 
+             or a string representation of an IP address.
         
-            userToken: An object that is passed to the method invoked when the asynchronous operation completes.
+            userToken: An object that is passed to the method invoked when the asynchronous operation 
+             completes.
+        
         SendAsync(self: Ping, hostNameOrAddress: str, timeout: int, userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message to the specified computer, and receive a corresponding ICMP echo reply message from that 
-             computer. This overload allows you to specify a time-out value for the operation.
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) 
+             echo message to the specified computer, and receive a corresponding ICMP echo 
+             reply message from that computer. This overload allows you to specify a 
+             time-out value for the operation.
         
         
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the 
+             ICMP echo message. The value specified for this parameter can be a host name 
+             or a string representation of an IP address.
         
-            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
-            userToken: An object that is passed to the method invoked when the asynchronous operation completes.
+            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after 
+             sending the echo message) to wait for the ICMP echo reply message.
+        
+            userToken: An object that is passed to the method invoked when the asynchronous operation 
+             completes.
+        
         SendAsync(self: Ping, address: IPAddress, userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message to the computer that has the specified System.Net.IPAddress, and receive a corresponding 
-             ICMP echo reply message from that computer.
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) 
+             echo message to the computer that has the specified System.Net.IPAddress, and 
+             receive a corresponding ICMP echo reply message from that computer.
         
         
-            address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
-            userToken: An object that is passed to the method invoked when the asynchronous operation completes.
+            address: An System.Net.IPAddress that identifies the computer that is the destination 
+             for the ICMP echo message.
+        
+            userToken: An object that is passed to the method invoked when the asynchronous operation 
+             completes.
+        
         SendAsync(self: Ping, address: IPAddress, timeout: int, userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message to the computer that has the specified System.Net.IPAddress, and receive a corresponding 
-             ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation.
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) 
+             echo message to the computer that has the specified System.Net.IPAddress, and 
+             receive a corresponding ICMP echo reply message from that computer. This 
+             overload allows you to specify a time-out value for the operation.
         
         
-            address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
-            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
-            userToken: An object that is passed to the method invoked when the asynchronous operation completes.
+            address: An System.Net.IPAddress that identifies the computer that is the destination 
+             for the ICMP echo message.
+        
+            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after 
+             sending the echo message) to wait for the ICMP echo reply message.
+        
+            userToken: An object that is passed to the method invoked when the asynchronous operation 
+             completes.
+        
         SendAsync(self: Ping, hostNameOrAddress: str, timeout: int, buffer: Array[Byte], userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the specified computer, and receive a corresponding 
-             ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation.
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) 
+             echo message with the specified data buffer to the specified computer, and 
+             receive a corresponding ICMP echo reply message from that computer. This 
+             overload allows you to specify a time-out value for the operation.
         
         
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the 
+             ICMP echo message. The value specified for this parameter can be a host name 
+             or a string representation of an IP address.
         
-            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
-            buffer: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
-            userToken: An object that is passed to the method invoked when the asynchronous operation completes.
+            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after 
+             sending the echo message) to wait for the ICMP echo reply message.
+        
+            buffer: A System.Byte array that contains data to be sent with the ICMP echo message 
+             and returned in the ICMP echo reply message. The array cannot contain more 
+             than 65,500 bytes.
+        
+            userToken: An object that is passed to the method invoked when the asynchronous operation 
+             completes.
+        
         SendAsync(self: Ping, address: IPAddress, timeout: int, buffer: Array[Byte], userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the computer that has the specified 
-             System.Net.IPAddress, and receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation.
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) 
+             echo message with the specified data buffer to the computer that has the 
+             specified System.Net.IPAddress, and receive a corresponding ICMP echo reply 
+             message from that computer. This overload allows you to specify a time-out 
+             value for the operation.
         
         
-            address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
-            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
-            buffer: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
-            userToken: An object that is passed to the method invoked when the asynchronous operation completes.
+            address: An System.Net.IPAddress that identifies the computer that is the destination 
+             for the ICMP echo message.
+        
+            timeout: An System.Int32 value that specifies the maximum number of milliseconds (after 
+             sending the echo message) to wait for the ICMP echo reply message.
+        
+            buffer: A System.Byte array that contains data to be sent with the ICMP echo message 
+             and returned in the ICMP echo reply message. The array cannot contain more 
+             than 65,500 bytes.
+        
+            userToken: An object that is passed to the method invoked when the asynchronous operation 
+             completes.
+        
         SendAsync(self: Ping, hostNameOrAddress: str, timeout: int, buffer: Array[Byte], options: PingOptions, userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the specified computer, and receive a corresponding 
-             ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation and control fragmentation and Time-to-Live values for the ICMP 
-             packet.
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) 
+             echo message with the specified data buffer to the specified computer, and 
+             receive a corresponding ICMP echo reply message from that computer. This 
+             overload allows you to specify a time-out value for the operation and control 
+             fragmentation and Time-to-Live values for the ICMP packet.
         
         
-            hostNameOrAddress: A System.String that identifies the computer that is the destination for the ICMP echo message. The value specified for this parameter can be a host name or a string 
-             representation of an IP address.
+            hostNameOrAddress: A System.String that identifies the computer that is the destination for the 
+             ICMP echo message. The value specified for this parameter can be a host name 
+             or a string representation of an IP address.
         
-            timeout: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
-            buffer: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
-            options: A System.Net.NetworkInformation.PingOptions  object used to control fragmentation and Time-to-Live values for the ICMP echo message packet.
-            userToken: An object that is passed to the method invoked when the asynchronous operation completes.
-        SendAsync(self: Ping, address: IPAddress, timeout: int, buffer: Array[Byte], options: PingOptions, userToken: object)
-            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) echo message with the specified data buffer to the computer that has the specified 
-             System.Net.IPAddress, and receive a corresponding ICMP echo reply message from that computer. This overload allows you to specify a time-out value for the operation and control 
+            timeout: A System.Byte array that contains data to be sent with the ICMP echo message 
+             and returned in the ICMP echo reply message. The array cannot contain more 
+             than 65,500 bytes.
+        
+            buffer: An System.Int32 value that specifies the maximum number of milliseconds (after 
+             sending the echo message) to wait for the ICMP echo reply message.
+        
+            options: A System.Net.NetworkInformation.PingOptions  object used to control 
              fragmentation and Time-to-Live values for the ICMP echo message packet.
         
+            userToken: An object that is passed to the method invoked when the asynchronous operation 
+             completes.
         
-            address: An System.Net.IPAddress that identifies the computer that is the destination for the ICMP echo message.
-            timeout: A System.Byte array that contains data to be sent with the ICMP echo message and returned in the ICMP echo reply message. The array cannot contain more than 65,500 bytes.
-            buffer: An System.Int32 value that specifies the maximum number of milliseconds (after sending the echo message) to wait for the ICMP echo reply message.
-            options: A System.Net.NetworkInformation.PingOptions  object used to control fragmentation and Time-to-Live values for the ICMP echo message packet.
-            userToken: An object that is passed to the method invoked when the asynchronous operation completes.
+        SendAsync(self: Ping, address: IPAddress, timeout: int, buffer: Array[Byte], options: PingOptions, userToken: object)
+            Asynchronously attempts to send an Internet Control Message Protocol (ICMP) 
+             echo message with the specified data buffer to the computer that has the 
+             specified System.Net.IPAddress, and receive a corresponding ICMP echo reply 
+             message from that computer. This overload allows you to specify a time-out 
+             value for the operation and control fragmentation and Time-to-Live values for 
+             the ICMP echo message packet.
+        
+        
+            address: An System.Net.IPAddress that identifies the computer that is the destination 
+             for the ICMP echo message.
+        
+            timeout: A System.Byte array that contains data to be sent with the ICMP echo message 
+             and returned in the ICMP echo reply message. The array cannot contain more 
+             than 65,500 bytes.
+        
+            buffer: An System.Int32 value that specifies the maximum number of milliseconds (after 
+             sending the echo message) to wait for the ICMP echo reply message.
+        
+            options: A System.Net.NetworkInformation.PingOptions  object used to control 
+             fragmentation and Time-to-Live values for the ICMP echo message packet.
+        
+            userToken: An object that is passed to the method invoked when the asynchronous operation 
+             completes.
         """
         pass
 
     def SendAsyncCancel(self):
         """
         SendAsyncCancel(self: Ping)
-            Cancels all pending asynchronous requests to send an Internet Control Message Protocol (ICMP) echo message and receives a corresponding ICMP echo reply message.
+            Cancels all pending asynchronous requests to send an Internet Control Message 
+             Protocol (ICMP) echo message and receives a corresponding ICMP echo reply 
+             message.
         """
         pass
 
@@ -2895,10 +3208,13 @@ class PingCompletedEventHandler(MulticastDelegate):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+            Combines this System.Delegate with the specified System.Delegate to form a new 
+             delegate.
+        
         
             follow: The delegate to combine with this delegate.
-            Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
+            Returns: A delegate that is the new root of the System.MulticastDelegate invocation 
+             list.
         """
         pass
 
@@ -2906,10 +3222,13 @@ class PingCompletedEventHandler(MulticastDelegate):
         """
         DynamicInvokeImpl(self: Delegate, args: Array[object]) -> object
         
-            Dynamically invokes (late-bound) the method represented by the current delegate.
+            Dynamically invokes (late-bound) the method represented by the current 
+             delegate.
         
-            args: An array of objects that are the arguments to pass to the method represented by the current delegate.-or- null, if the method represented by the current delegate does not require 
-             arguments.
+        
+            args: An array of objects that are the arguments to pass to the method represented 
+             by the current delegate.-or- null, if the method represented by the current 
+             delegate does not require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -2936,11 +3255,14 @@ class PingCompletedEventHandler(MulticastDelegate):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate 
+             that is equal to the specified delegate.
+        
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation 
-             list.
+            Returns: If value is found in the invocation list for this instance, then a new 
+             System.Delegate without value in its invocation list; otherwise, this instance 
+             with its original invocation list.
         """
         pass
 
@@ -3507,7 +3829,9 @@ class UnicastIPAddressInformationCollection(Object):
     def Add(self, address):
         """
         Add(self: UnicastIPAddressInformationCollection, address: UnicastIPAddressInformation)
-            Throws a System.NotSupportedException because this operation is not supported for this collection.
+            Throws a System.NotSupportedException because this operation is not supported 
+             for this collection.
+        
         
             address: The object to be added to the collection.
         """
@@ -3516,7 +3840,8 @@ class UnicastIPAddressInformationCollection(Object):
     def Clear(self):
         """
         Clear(self: UnicastIPAddressInformationCollection)
-            Throws a System.NotSupportedException because this operation is not supported for this collection.
+            Throws a System.NotSupportedException because this operation is not supported 
+             for this collection.
         """
         pass
 
@@ -3524,17 +3849,24 @@ class UnicastIPAddressInformationCollection(Object):
         """
         Contains(self: UnicastIPAddressInformationCollection, address: UnicastIPAddressInformation) -> bool
         
-            Checks whether the collection contains the specified System.Net.NetworkInformation.UnicastIPAddressInformation object.
+            Checks whether the collection contains the specified 
+             System.Net.NetworkInformation.UnicastIPAddressInformation object.
         
-            address: The System.Net.NetworkInformation.UnicastIPAddressInformation object to be searched in the collection.
-            Returns: true if the System.Net.NetworkInformation.UnicastIPAddressInformation object exists in the collection; otherwise, false.
+        
+            address: The System.Net.NetworkInformation.UnicastIPAddressInformation object to be 
+             searched in the collection.
+        
+            Returns: true if the System.Net.NetworkInformation.UnicastIPAddressInformation object 
+             exists in the collection; otherwise, false.
         """
         pass
 
     def CopyTo(self, array, offset):
         """
         CopyTo(self: UnicastIPAddressInformationCollection, array: Array[UnicastIPAddressInformation], offset: int)
-            Copies the elements in this collection to a one-dimensional array of type System.Net.NetworkInformation.UnicastIPAddressInformation.
+            Copies the elements in this collection to a one-dimensional array of type 
+             System.Net.NetworkInformation.UnicastIPAddressInformation.
+        
         
             array: A one-dimensional array that receives a copy of the collection.
             offset: The zero-based index in array at which the copy begins.
@@ -3546,7 +3878,9 @@ class UnicastIPAddressInformationCollection(Object):
         GetEnumerator(self: UnicastIPAddressInformationCollection) -> IEnumerator[UnicastIPAddressInformation]
         
             Returns an object that can be used to iterate through this collection.
-            Returns: An object that implements the System.Collections.IEnumerator interface and provides access to the System.Net.NetworkInformation.UnicastIPAddressInformation types in this 
+            Returns: An object that implements the System.Collections.IEnumerator interface and 
+             provides access to the 
+             System.Net.NetworkInformation.UnicastIPAddressInformation types in this 
              collection.
         """
         pass
@@ -3555,7 +3889,9 @@ class UnicastIPAddressInformationCollection(Object):
         """
         Remove(self: UnicastIPAddressInformationCollection, address: UnicastIPAddressInformation) -> bool
         
-            Throws a System.NotSupportedException because the collection is read-only and elements cannot be removed.
+            Throws a System.NotSupportedException because the collection is read-only and 
+             elements cannot be removed.
+        
         
             address: The object to be removed.
             Returns: Always throws a System.NotSupportedException.

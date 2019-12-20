@@ -1,4 +1,5 @@
 from System import Object
+from System.Runtime.Remoting.Channels import BaseChannelObjectWithProperties
 # encoding: utf-8
 # module Wms.RemotingImplementation.Scripting.Remoting calls itself Remoting
 # from Wms.RemotingImplementation, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null

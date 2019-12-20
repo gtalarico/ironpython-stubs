@@ -8,7 +8,7 @@
 # no functions
 # classes
 
-class ICommand:
+class ICommand(Object):
     # no doc
     def CanExecute(self, parameter):
         """ CanExecute(self: ICommand, parameter: object) -> bool """

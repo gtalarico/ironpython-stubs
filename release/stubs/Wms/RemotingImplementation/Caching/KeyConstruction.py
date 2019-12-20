@@ -31,7 +31,7 @@ class CountCacheKeyConstructor(Object):
     Instance = CountCacheKeyConstructor()
     """hardcoded/returns an instance of the class"""
 
-class ICacheKeyConstructor:
+class ICacheKeyConstructor(Object):
     # no doc
     def Construct(self, cachable):
         """ Construct(self: ICacheKeyConstructor[T], cachable: T) -> CacheKey """

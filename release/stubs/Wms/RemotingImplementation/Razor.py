@@ -39,7 +39,7 @@ class BasePage(Object):
     Instance = BasePage()
     """hardcoded/returns an instance of the class"""
 
-class ILocalizeable:
+class ILocalizeable(Object):
     # no doc
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """

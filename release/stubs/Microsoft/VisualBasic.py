@@ -20,7 +20,8 @@ class VBCodeProvider(CodeDomProvider):
         CreateCompiler(self: VBCodeProvider) -> ICodeCompiler
         
             Gets an instance of the Visual Basic code compiler.
-            Returns: An instance of the Visual Basic System.CodeDom.Compiler.ICodeCompiler implementation.
+            Returns: An instance of the Visual Basic System.CodeDom.Compiler.ICodeCompiler 
+             implementation.
         """
         pass
 
@@ -29,27 +30,34 @@ class VBCodeProvider(CodeDomProvider):
         CreateGenerator(self: VBCodeProvider) -> ICodeGenerator
         
             Gets an instance of the Visual Basic code generator.
-            Returns: An instance of the Visual Basic System.CodeDom.Compiler.ICodeGenerator implementation.
+            Returns: An instance of the Visual Basic System.CodeDom.Compiler.ICodeGenerator 
+             implementation.
         """
         pass
 
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
-            Releases the unmanaged resources used by the System.ComponentModel.Component and optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.ComponentModel.Component 
+             and optionally releases the managed resources.
         
-            disposing: true to release both managed and unmanaged resources; false to release only unmanaged resources.
+        
+            disposing: true to release both managed and unmanaged resources; false to release only 
+             unmanaged resources.
         """
         pass
 
     def GenerateCodeFromMember(self, member, writer, options):
         """
         GenerateCodeFromMember(self: VBCodeProvider, member: CodeTypeMember, writer: TextWriter, options: CodeGeneratorOptions)
-            Generates code for the specified class member using the specified text writer and code generator options.
+            Generates code for the specified class member using the specified text writer 
+             and code generator options.
+        
         
             member: A System.CodeDom.CodeTypeMember to generate code for.
             writer: The System.IO.TextWriter to write to.
-            options: The System.CodeDom.Compiler.CodeGeneratorOptions to use when generating the code.
+            options: The System.CodeDom.Compiler.CodeGeneratorOptions to use when generating the 
+             code.
         """
         pass
 
@@ -68,10 +76,14 @@ class VBCodeProvider(CodeDomProvider):
         """
         GetService(self: Component, service: Type) -> object
         
-            Returns an object that represents a service provided by the System.ComponentModel.Component or by its System.ComponentModel.Container.
+            Returns an object that represents a service provided by the 
+             System.ComponentModel.Component or by its System.ComponentModel.Container.
+        
         
             service: A service provided by the System.ComponentModel.Component.
-            Returns: An System.Object that represents a service provided by the System.ComponentModel.Component, or null if the System.ComponentModel.Component does not provide the specified service.
+            Returns: An System.Object that represents a service provided by the 
+             System.ComponentModel.Component, or null if the 
+             System.ComponentModel.Component does not provide the specified service.
         """
         pass
 
@@ -81,9 +93,12 @@ class VBCodeProvider(CodeDomProvider):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting 
-             boundary. A value of false is usually appropriate. true to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be 
-             routed to the remote server object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
+             will cause the object to be assigned a new identity when it is marshaled 
+             across a remoting boundary. A value of false is usually appropriate. true to 
+             copy the current System.MarshalByRefObject object's identity to its clone, 
+             which will cause remoting client calls to be routed to the remote server 
+             object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object

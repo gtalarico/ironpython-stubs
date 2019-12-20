@@ -14,7 +14,8 @@ class SecurityAttribute(Object):
         """
         CreatePermission(self: SecurityAttribute) -> IPermission
         
-            When overridden in a derived class, creates a permission object that can then be serialized into binary form and persistently stored along with the 
+            When overridden in a derived class, creates a permission object that can then 
+             be serialized into binary form and persistently stored along with the 
              System.Security.Permissions.SecurityAction in an assembly's metadata.
         
             Returns: A serializable permission object.
@@ -70,14 +71,17 @@ class CodeAccessSecurityAttribute(SecurityAttribute):
     Instance = CodeAccessSecurityAttribute()
     """hardcoded/returns an instance of the class"""
 
-class IUnrestrictedPermission:
+class IUnrestrictedPermission(Object):
     """ Allows a permission to expose an unrestricted state. """
     def IsUnrestricted(self):
         """
         IsUnrestricted(self: IUnrestrictedPermission) -> bool
         
-            Returns a value indicating whether unrestricted access to the resource protected by the permission is allowed.
-            Returns: true if unrestricted use of the resource protected by the permission is allowed; otherwise, false.
+            Returns a value indicating whether unrestricted access to the resource 
+             protected by the permission is allowed.
+        
+            Returns: true if unrestricted use of the resource protected by the permission is 
+             allowed; otherwise, false.
         """
         pass
 
@@ -98,7 +102,9 @@ class EnvironmentPermission(CodeAccessPermission):
     def AddPathList(self, flag, pathList):
         """
         AddPathList(self: EnvironmentPermission, flag: EnvironmentPermissionAccess, pathList: str)
-            Adds access for the specified environment variables to the existing state of the permission.
+            Adds access for the specified environment variables to the existing state of 
+             the permission.
+        
         
             flag: One of the System.Security.Permissions.EnvironmentPermissionAccess values.
             pathList: A list of environment variables (semicolon-separated).
@@ -127,9 +133,13 @@ class EnvironmentPermission(CodeAccessPermission):
         """
         GetPathList(self: EnvironmentPermission, flag: EnvironmentPermissionAccess) -> str
         
-            Gets all environment variables with the specified System.Security.Permissions.EnvironmentPermissionAccess.
+            Gets all environment variables with the specified 
+             System.Security.Permissions.EnvironmentPermissionAccess.
         
-            flag: One of the System.Security.Permissions.EnvironmentPermissionAccess values that represents a single type of environment variable access.
+        
+            flag: One of the System.Security.Permissions.EnvironmentPermissionAccess values that 
+             represents a single type of environment variable access.
+        
             Returns: A list of environment variables (semicolon-separated) for the selected flag.
         """
         pass
@@ -138,10 +148,16 @@ class EnvironmentPermission(CodeAccessPermission):
         """
         Intersect(self: EnvironmentPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. This new permission is null if the intersection 
+             is empty.
         """
         pass
 
@@ -149,10 +165,15 @@ class EnvironmentPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: EnvironmentPermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission that is to be tested for the subset relationship. This permission 
+             must be of the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -168,7 +189,9 @@ class EnvironmentPermission(CodeAccessPermission):
     def SetPathList(self, flag, pathList):
         """
         SetPathList(self: EnvironmentPermission, flag: EnvironmentPermissionAccess, pathList: str)
-            Sets the specified access to the specified environment variables to the existing state of the permission.
+            Sets the specified access to the specified environment variables to the 
+             existing state of the permission.
+        
         
             flag: One of the System.Security.Permissions.EnvironmentPermissionAccess values.
             pathList: A list of environment variables (semicolon-separated).
@@ -188,10 +211,15 @@ class EnvironmentPermission(CodeAccessPermission):
         """
         Union(self: EnvironmentPermission, other: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the 
+             specified permission.
         
-            other: A permission to combine with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            other: A permission to combine with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -275,7 +303,8 @@ class EnvironmentPermissionAttribute(CodeAccessSecurityAttribute):
         CreatePermission(self: EnvironmentPermissionAttribute) -> IPermission
         
             Creates and returns a new System.Security.Permissions.EnvironmentPermission.
-            Returns: An System.Security.Permissions.EnvironmentPermission that corresponds to this attribute.
+            Returns: An System.Security.Permissions.EnvironmentPermission that corresponds to this 
+             attribute.
         """
         pass
 
@@ -348,10 +377,16 @@ class FileDialogPermission(CodeAccessPermission):
         """
         Intersect(self: FileDialogPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. This new permission is null if the intersection 
+             is empty.
         """
         pass
 
@@ -359,10 +394,15 @@ class FileDialogPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: FileDialogPermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission that is to be tested for the subset relationship. This permission 
+             must be the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -388,10 +428,15 @@ class FileDialogPermission(CodeAccessPermission):
         """
         Union(self: FileDialogPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the 
+             specified permission.
         
-            target: A permission to combine with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            target: A permission to combine with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -484,7 +529,8 @@ class FileDialogPermissionAttribute(CodeAccessSecurityAttribute):
         CreatePermission(self: FileDialogPermissionAttribute) -> IPermission
         
             Creates and returns a new System.Security.Permissions.FileDialogPermission.
-            Returns: A System.Security.Permissions.FileDialogPermission that corresponds to this attribute.
+            Returns: A System.Security.Permissions.FileDialogPermission that corresponds to this 
+             attribute.
         """
         pass
 
@@ -533,14 +579,22 @@ class FileIOPermission(CodeAccessPermission):
     def AddPathList(self, access, *__args):
         """
         AddPathList(self: FileIOPermission, access: FileIOPermissionAccess, path: str)
-            Adds access for the specified file or directory to the existing state of the permission.
+            Adds access for the specified file or directory to the existing state of the 
+             permission.
         
-            access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
+        
+            access: A bitwise combination of the 
+             System.Security.Permissions.FileIOPermissionAccess values.
+        
             path: The absolute path of a file or directory.
         AddPathList(self: FileIOPermission, access: FileIOPermissionAccess, pathList: Array[str])
-            Adds access for the specified files and directories to the existing state of the permission.
+            Adds access for the specified files and directories to the existing state of 
+             the permission.
         
-            access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
+        
+            access: A bitwise combination of the 
+             System.Security.Permissions.FileIOPermissionAccess values.
+        
             pathList: An array containing the absolute paths of the files and directories.
         """
         pass
@@ -558,10 +612,16 @@ class FileIOPermission(CodeAccessPermission):
         """
         Equals(self: FileIOPermission, obj: object) -> bool
         
-            Determines whether the specified System.Security.Permissions.FileIOPermission object is equal to the current System.Security.Permissions.FileIOPermission.
+            Determines whether the specified System.Security.Permissions.FileIOPermission 
+             object is equal to the current System.Security.Permissions.FileIOPermission.
         
-            obj: The System.Security.Permissions.FileIOPermission object to compare with the current System.Security.Permissions.FileIOPermission.
-            Returns: true if the specified System.Security.Permissions.FileIOPermission is equal to the current System.Security.Permissions.FileIOPermission object; otherwise, false.
+        
+            obj: The System.Security.Permissions.FileIOPermission object to compare with the 
+             current System.Security.Permissions.FileIOPermission.
+        
+            Returns: true if the specified System.Security.Permissions.FileIOPermission is equal to 
+             the current System.Security.Permissions.FileIOPermission object; otherwise, 
+             false.
         """
         pass
 
@@ -578,8 +638,12 @@ class FileIOPermission(CodeAccessPermission):
         """
         GetHashCode(self: FileIOPermission) -> int
         
-            Gets a hash code for the System.Security.Permissions.FileIOPermission object that is suitable for use in hashing algorithms and data structures such as a hash table.
-            Returns: A hash code for the current System.Security.Permissions.FileIOPermission object.
+            Gets a hash code for the System.Security.Permissions.FileIOPermission object 
+             that is suitable for use in hashing algorithms and data structures such as a 
+             hash table.
+        
+            Returns: A hash code for the current System.Security.Permissions.FileIOPermission 
+             object.
         """
         pass
 
@@ -587,10 +651,15 @@ class FileIOPermission(CodeAccessPermission):
         """
         GetPathList(self: FileIOPermission, access: FileIOPermissionAccess) -> Array[str]
         
-            Gets all files and directories with the specified System.Security.Permissions.FileIOPermissionAccess.
+            Gets all files and directories with the specified 
+             System.Security.Permissions.FileIOPermissionAccess.
         
-            access: One of the System.Security.Permissions.FileIOPermissionAccess values that represents a single type of file access.
-            Returns: An array containing the paths of the files and directories to which access specified by the access parameter is granted.
+        
+            access: One of the System.Security.Permissions.FileIOPermissionAccess values that 
+             represents a single type of file access.
+        
+            Returns: An array containing the paths of the files and directories to which access 
+             specified by the access parameter is granted.
         """
         pass
 
@@ -598,10 +667,16 @@ class FileIOPermission(CodeAccessPermission):
         """
         Intersect(self: FileIOPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. This new permission is null if the intersection 
+             is empty.
         """
         pass
 
@@ -609,10 +684,15 @@ class FileIOPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: FileIOPermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission that is to be tested for the subset relationship. This permission 
+             must be the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -628,14 +708,22 @@ class FileIOPermission(CodeAccessPermission):
     def SetPathList(self, access, *__args):
         """
         SetPathList(self: FileIOPermission, access: FileIOPermissionAccess, path: str)
-            Sets the specified access to the specified file or directory, replacing the existing state of the permission.
+            Sets the specified access to the specified file or directory, replacing the 
+             existing state of the permission.
         
-            access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
+        
+            access: A bitwise combination of the 
+             System.Security.Permissions.FileIOPermissionAccess values.
+        
             path: The absolute path of the file or directory.
         SetPathList(self: FileIOPermission, access: FileIOPermissionAccess, pathList: Array[str])
-            Sets the specified access to the specified files and directories, replacing the current state for the specified access with the new set of paths.
+            Sets the specified access to the specified files and directories, replacing 
+             the current state for the specified access with the new set of paths.
         
-            access: A bitwise combination of the System.Security.Permissions.FileIOPermissionAccess values.
+        
+            access: A bitwise combination of the 
+             System.Security.Permissions.FileIOPermissionAccess values.
+        
             pathList: An array containing the absolute paths of the files and directories.
         """
         pass
@@ -653,10 +741,15 @@ class FileIOPermission(CodeAccessPermission):
         """
         Union(self: FileIOPermission, other: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the 
+             specified permission.
         
-            other: A permission to combine with the current permission. It must be the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            other: A permission to combine with the current permission. It must be the same type 
+             as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -769,7 +862,8 @@ class FileIOPermissionAttribute(CodeAccessSecurityAttribute):
         CreatePermission(self: FileIOPermissionAttribute) -> IPermission
         
             Creates and returns a new System.Security.Permissions.FileIOPermission.
-            Returns: A System.Security.Permissions.FileIOPermission that corresponds to this attribute.
+            Returns: A System.Security.Permissions.FileIOPermission that corresponds to this 
+             attribute.
         """
         pass
 
@@ -890,7 +984,8 @@ class GacIdentityPermission(CodeAccessPermission):
         FromXml(self: GacIdentityPermission, securityElement: SecurityElement)
             Creates a permission from an XML encoding.
         
-            securityElement: A System.Security.SecurityElement  that contains the XML encoding to use to create the permission.
+            securityElement: A System.Security.SecurityElement  that contains the XML encoding to use to 
+             create the permission.
         """
         pass
 
@@ -898,10 +993,16 @@ class GacIdentityPermission(CodeAccessPermission):
         """
         Intersect(self: GacIdentityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. The new permission is null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. The new permission is null if the intersection 
+             is empty.
         """
         pass
 
@@ -909,10 +1010,15 @@ class GacIdentityPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: GacIdentityPermission, target: IPermission) -> bool
         
-            Indicates whether the current permission is a subset of the specified permission.
+            Indicates whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission object to test for the subset relationship. The permission must be of the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission object to test for the subset relationship. The permission must 
+             be of the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -921,7 +1027,8 @@ class GacIdentityPermission(CodeAccessPermission):
         ToXml(self: GacIdentityPermission) -> SecurityElement
         
             Creates an XML encoding of the permission and its current state.
-            Returns: A System.Security.SecurityElement that represents the XML encoding of the permission, including any state information.
+            Returns: A System.Security.SecurityElement that represents the XML encoding of the 
+             permission, including any state information.
         """
         pass
 
@@ -929,10 +1036,15 @@ class GacIdentityPermission(CodeAccessPermission):
         """
         Union(self: GacIdentityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the union of the current permission and the specified permission.
+            Creates and returns a permission that is the union of the current permission 
+             and the specified permission.
         
-            target: A permission to combine with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            target: A permission to combine with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -968,7 +1080,8 @@ class GacIdentityPermissionAttribute(CodeAccessSecurityAttribute):
         CreatePermission(self: GacIdentityPermissionAttribute) -> IPermission
         
             Creates a new System.Security.Permissions.GacIdentityPermission object.
-            Returns: A System.Security.Permissions.GacIdentityPermission that corresponds to this attribute.
+            Returns: A System.Security.Permissions.GacIdentityPermission that corresponds to this 
+             attribute.
         """
         pass
 
@@ -1296,10 +1409,16 @@ class IsolatedStorageFilePermission(Object):
         """
         Intersect(self: IsolatedStorageFilePermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission object. It must be of the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission object. It must be of 
+             the same type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. This new permission is null if the intersection 
+             is empty.
         """
         pass
 
@@ -1307,10 +1426,15 @@ class IsolatedStorageFilePermission(Object):
         """
         IsSubsetOf(self: IsolatedStorageFilePermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission that is to be tested for the subset relationship. This permission 
+             must be of the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -1327,10 +1451,15 @@ class IsolatedStorageFilePermission(Object):
         """
         Union(self: IsolatedStorageFilePermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the 
+             specified permission.
         
-            target: A permission to combine with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            target: A permission to combine with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -1396,8 +1525,11 @@ class IsolatedStorageFilePermissionAttribute(Object):
         """
         CreatePermission(self: IsolatedStorageFilePermissionAttribute) -> IPermission
         
-            Creates and returns a new System.Security.Permissions.IsolatedStorageFilePermission.
-            Returns: An System.Security.Permissions.IsolatedStorageFilePermission that corresponds to this attribute.
+            Creates and returns a new 
+             System.Security.Permissions.IsolatedStorageFilePermission.
+        
+            Returns: An System.Security.Permissions.IsolatedStorageFilePermission that corresponds 
+             to this attribute.
         """
         pass
 
@@ -1438,7 +1570,8 @@ class KeyContainerPermission(CodeAccessPermission):
         FromXml(self: KeyContainerPermission, securityElement: SecurityElement)
             Reconstructs a permission with a specified state from an XML encoding.
         
-            securityElement: A System.Security.SecurityElement that contains the XML encoding used to reconstruct the permission.
+            securityElement: A System.Security.SecurityElement that contains the XML encoding used to 
+             reconstruct the permission.
         """
         pass
 
@@ -1446,10 +1579,16 @@ class KeyContainerPermission(CodeAccessPermission):
         """
         Intersect(self: KeyContainerPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. This new permission is null if the intersection 
+             is empty.
         """
         pass
 
@@ -1457,10 +1596,15 @@ class KeyContainerPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: KeyContainerPermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission to test for the subset relationship. This permission must be the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission to test for the subset relationship. This permission must be the 
+             same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -1478,7 +1622,8 @@ class KeyContainerPermission(CodeAccessPermission):
         ToXml(self: KeyContainerPermission) -> SecurityElement
         
             Creates an XML encoding of the permission and its current state.
-            Returns: A System.Security.SecurityElement that contains an XML encoding of the permission, including state information.
+            Returns: A System.Security.SecurityElement that contains an XML encoding of the 
+             permission, including state information.
         """
         pass
 
@@ -1486,10 +1631,15 @@ class KeyContainerPermission(CodeAccessPermission):
         """
         Union(self: KeyContainerPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the 
+             specified permission.
         
-            target: A permission to combine with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            target: A permission to combine with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -1542,10 +1692,17 @@ class KeyContainerPermissionAccessEntry():
         """
         Equals(self: KeyContainerPermissionAccessEntry, o: object) -> bool
         
-            Determines whether the specified System.Security.Permissions.KeyContainerPermissionAccessEntry object is equal to the current instance.
+            Determines whether the specified 
+             System.Security.Permissions.KeyContainerPermissionAccessEntry object is equal 
+             to the current instance.
         
-            o: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to compare with the currentinstance.
-            Returns: true if the specified System.Security.Permissions.KeyContainerPermissionAccessEntry is equal to the current System.Security.Permissions.KeyContainerPermissionAccessEntry object; 
+        
+            o: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to 
+             compare with the currentinstance.
+        
+            Returns: true if the specified 
+             System.Security.Permissions.KeyContainerPermissionAccessEntry is equal to the 
+             current System.Security.Permissions.KeyContainerPermissionAccessEntry object; 
              otherwise, false.
         """
         pass
@@ -1554,8 +1711,11 @@ class KeyContainerPermissionAccessEntry():
         """
         GetHashCode(self: KeyContainerPermissionAccessEntry) -> int
         
-            Gets a hash code for the current instance that is suitable for use in hashing algorithms and data structures such as a hash table.
-            Returns: A hash code for the current System.Security.Permissions.KeyContainerPermissionAccessEntry object.
+            Gets a hash code for the current instance that is suitable for use in hashing 
+             algorithms and data structures such as a hash table.
+        
+            Returns: A hash code for the current 
+             System.Security.Permissions.KeyContainerPermissionAccessEntry object.
         """
         pass
 
@@ -1633,9 +1793,13 @@ class KeyContainerPermissionAccessEntryCollection(Object):
         """
         Add(self: KeyContainerPermissionAccessEntryCollection, accessEntry: KeyContainerPermissionAccessEntry) -> int
         
-            Adds a System.Security.Permissions.KeyContainerPermissionAccessEntry object to the collection.
+            Adds a System.Security.Permissions.KeyContainerPermissionAccessEntry object to 
+             the collection.
         
-            accessEntry: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to add.
+        
+            accessEntry: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to 
+             add.
+        
             Returns: The index at which the new element was inserted.
         """
         pass
@@ -1643,16 +1807,22 @@ class KeyContainerPermissionAccessEntryCollection(Object):
     def Clear(self):
         """
         Clear(self: KeyContainerPermissionAccessEntryCollection)
-            Removes all the System.Security.Permissions.KeyContainerPermissionAccessEntry objects from the collection.
+            Removes all the System.Security.Permissions.KeyContainerPermissionAccessEntry 
+             objects from the collection.
         """
         pass
 
     def CopyTo(self, array, index):
         """
         CopyTo(self: KeyContainerPermissionAccessEntryCollection, array: Array[KeyContainerPermissionAccessEntry], index: int)
-            Copies the elements of the collection to a compatible one-dimensional array, starting at the specified index of the target array.
+            Copies the elements of the collection to a compatible one-dimensional array, 
+             starting at the specified index of the target array.
         
-            array: The one-dimensional System.Security.Permissions.KeyContainerPermissionAccessEntry array that is the destination of the elements copied from the current collection.
+        
+            array: The one-dimensional 
+             System.Security.Permissions.KeyContainerPermissionAccessEntry array that is 
+             the destination of the elements copied from the current collection.
+        
             index: The index in array at which copying begins.
         """
         pass
@@ -1661,8 +1831,12 @@ class KeyContainerPermissionAccessEntryCollection(Object):
         """
         GetEnumerator(self: KeyContainerPermissionAccessEntryCollection) -> KeyContainerPermissionAccessEntryEnumerator
         
-            Returns a System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator object that can be used to iterate through the objects in the collection.
-            Returns: A System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator object that can be used to iterate through the collection.
+            Returns a 
+             System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator object 
+             that can be used to iterate through the objects in the collection.
+        
+            Returns: A System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator 
+             object that can be used to iterate through the collection.
         """
         pass
 
@@ -1670,18 +1844,29 @@ class KeyContainerPermissionAccessEntryCollection(Object):
         """
         IndexOf(self: KeyContainerPermissionAccessEntryCollection, accessEntry: KeyContainerPermissionAccessEntry) -> int
         
-            Gets the index in the collection of the specified System.Security.Permissions.KeyContainerPermissionAccessEntry object, if it exists in the collection.
+            Gets the index in the collection of the specified 
+             System.Security.Permissions.KeyContainerPermissionAccessEntry object, if it 
+             exists in the collection.
         
-            accessEntry: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to locate.
+        
+            accessEntry: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to 
+             locate.
+        
+            Returns: The index of the specified 
+             System.Security.Permissions.KeyContainerPermissionAccessEntry object in the 
                 """
         pass
 
     def Remove(self, accessEntry):
         """
         Remove(self: KeyContainerPermissionAccessEntryCollection, accessEntry: KeyContainerPermissionAccessEntry)
-            Removes the specified System.Security.Permissions.KeyContainerPermissionAccessEntry object from thecollection.
+            Removes the specified 
+             System.Security.Permissions.KeyContainerPermissionAccessEntry object from 
+             thecollection.
         
-            accessEntry: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to remove.
+        
+            accessEntry: The System.Security.Permissions.KeyContainerPermissionAccessEntry object to 
+             remove.
         """
         pass
 
@@ -1744,7 +1929,8 @@ class KeyContainerPermissionAccessEntryEnumerator(Object):
         MoveNext(self: KeyContainerPermissionAccessEntryEnumerator) -> bool
         
             Moves to the next element in the collection.
-            Returns: true if the enumerator was successfully advanced to the next element; false if the enumerator has passed the end of the collection.
+            Returns: true if the enumerator was successfully advanced to the next element; false if 
+             the enumerator has passed the end of the collection.
         """
         pass
 
@@ -1796,7 +1982,8 @@ class KeyContainerPermissionAttribute(CodeAccessSecurityAttribute):
         CreatePermission(self: KeyContainerPermissionAttribute) -> IPermission
         
             Creates and returns a new System.Security.Permissions.KeyContainerPermission.
-            Returns: A System.Security.Permissions.KeyContainerPermission that corresponds to the attribute.
+            Returns: A System.Security.Permissions.KeyContainerPermission that corresponds to the 
+             attribute.
         """
         pass
 
@@ -2065,7 +2252,8 @@ class PrincipalPermission(Object):
     def Demand(self):
         """
         Demand(self: PrincipalPermission)
-            Determines at run time whether the current principal matches the principal specified by the current permission.
+            Determines at run time whether the current principal matches the principal 
+             specified by the current permission.
         """
         pass
 
@@ -2073,10 +2261,17 @@ class PrincipalPermission(Object):
         """
         Equals(self: PrincipalPermission, obj: object) -> bool
         
-            Determines whether the specified System.Security.Permissions.PrincipalPermission object is equal to the current System.Security.Permissions.PrincipalPermission.
+            Determines whether the specified 
+             System.Security.Permissions.PrincipalPermission object is equal to the current 
+             System.Security.Permissions.PrincipalPermission.
         
-            obj: The System.Security.Permissions.PrincipalPermission object to compare with the current System.Security.Permissions.PrincipalPermission.
-            Returns: true if the specified System.Security.Permissions.PrincipalPermission is equal to the current System.Security.Permissions.PrincipalPermission object; otherwise, false.
+        
+            obj: The System.Security.Permissions.PrincipalPermission object to compare with the 
+             current System.Security.Permissions.PrincipalPermission.
+        
+            Returns: true if the specified System.Security.Permissions.PrincipalPermission is equal 
+             to the current System.Security.Permissions.PrincipalPermission object; 
+             otherwise, false.
         """
         pass
 
@@ -2093,8 +2288,12 @@ class PrincipalPermission(Object):
         """
         GetHashCode(self: PrincipalPermission) -> int
         
-            Gets a hash code for the System.Security.Permissions.PrincipalPermission object that is suitable for use in hashing algorithms and data structures such as a hash table.
-            Returns: A hash code for the current System.Security.Permissions.PrincipalPermission object.
+            Gets a hash code for the System.Security.Permissions.PrincipalPermission 
+             object that is suitable for use in hashing algorithms and data structures such 
+             as a hash table.
+        
+            Returns: A hash code for the current System.Security.Permissions.PrincipalPermission 
+             object.
         """
         pass
 
@@ -2102,10 +2301,16 @@ class PrincipalPermission(Object):
         """
         Intersect(self: PrincipalPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission will be null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. This new permission will be null if the 
+             intersection is empty.
         """
         pass
 
@@ -2113,10 +2318,15 @@ class PrincipalPermission(Object):
         """
         IsSubsetOf(self: PrincipalPermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: The permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: The permission that is to be tested for the subset relationship. This 
+             permission must be of the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -2151,10 +2361,15 @@ class PrincipalPermission(Object):
         """
         Union(self: PrincipalPermission, other: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the 
+             specified permission.
         
-            other: A permission to combine with the current permission. This must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            other: A permission to combine with the current permission. This must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -2201,7 +2416,9 @@ class PrincipalPermissionAttribute(CodeAccessSecurityAttribute):
         """
         CreatePermission(self: PrincipalPermissionAttribute) -> IPermission
         
-            Creates and returns a new System.Security.Permissions.PrincipalPermission object.
+            Creates and returns a new System.Security.Permissions.PrincipalPermission 
+             object.
+        
             Returns: An object  that corresponds to this attribute.
         """
         pass
@@ -2275,10 +2492,16 @@ class PublisherIdentityPermission(CodeAccessPermission):
         """
         Intersect(self: PublisherIdentityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. This new permission is null if the intersection 
+             is empty.
         """
         pass
 
@@ -2286,10 +2509,15 @@ class PublisherIdentityPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: PublisherIdentityPermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission that is to be tested for the subset relationship. This permission 
+             must be of the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -2306,10 +2534,15 @@ class PublisherIdentityPermission(CodeAccessPermission):
         """
         Union(self: PublisherIdentityPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the 
+             specified permission.
         
-            target: A permission to combine with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            target: A permission to combine with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -2353,8 +2586,11 @@ class PublisherIdentityPermissionAttribute(CodeAccessSecurityAttribute):
         """
         CreatePermission(self: PublisherIdentityPermissionAttribute) -> IPermission
         
-            Creates and returns a new instance of System.Security.Permissions.PublisherIdentityPermission.
-            Returns: A System.Security.Permissions.PublisherIdentityPermission that corresponds to this attribute.
+            Creates and returns a new instance of 
+             System.Security.Permissions.PublisherIdentityPermission.
+        
+            Returns: A System.Security.Permissions.PublisherIdentityPermission that corresponds to 
+             this attribute.
         """
         pass
 
@@ -2427,10 +2663,16 @@ class ReflectionPermission(CodeAccessPermission):
         """
         Intersect(self: ReflectionPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. This new permission is null if the intersection 
+             is empty.
         """
         pass
 
@@ -2438,10 +2680,15 @@ class ReflectionPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: ReflectionPermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission that is to be tested for the subset relationship. This permission 
+             must be of the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -2467,10 +2714,15 @@ class ReflectionPermission(CodeAccessPermission):
         """
         Union(self: ReflectionPermission, other: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the 
+             specified permission.
         
-            other: A permission to combine with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            other: A permission to combine with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -2515,7 +2767,8 @@ class ReflectionPermissionAttribute(CodeAccessSecurityAttribute):
         CreatePermission(self: ReflectionPermissionAttribute) -> IPermission
         
             Creates and returns a new System.Security.Permissions.ReflectionPermission.
-            Returns: A System.Security.Permissions.ReflectionPermission that corresponds to this attribute.
+            Returns: A System.Security.Permissions.ReflectionPermission that corresponds to this 
+             attribute.
         """
         pass
 
@@ -2636,12 +2889,16 @@ class RegistryPermission(CodeAccessPermission):
     def AddPathList(self, access, *__args):
         """
         AddPathList(self: RegistryPermission, access: RegistryPermissionAccess, pathList: str)
-            Adds access for the specified registry variables to the existing state of the permission.
+            Adds access for the specified registry variables to the existing state of the 
+             permission.
+        
         
             access: One of the System.Security.Permissions.RegistryPermissionAccess values.
             pathList: A list of registry variables (semicolon-separated).
         AddPathList(self: RegistryPermission, access: RegistryPermissionAccess, control: AccessControlActions, pathList: str)
-            Adds access for the specified registry variables to the existing state of the permission, specifying registry permission access and access control actions.
+            Adds access for the specified registry variables to the existing state of the 
+             permission, specifying registry permission access and access control actions.
+        
         
             access: One of the System.Security.Permissions.RegistryPermissionAccess values.
             control: One of the System.Security.AccessControl.AccessControlActions values.
@@ -2671,10 +2928,15 @@ class RegistryPermission(CodeAccessPermission):
         """
         GetPathList(self: RegistryPermission, access: RegistryPermissionAccess) -> str
         
-            Gets paths for all registry variables with the specified System.Security.Permissions.RegistryPermissionAccess.
+            Gets paths for all registry variables with the specified 
+             System.Security.Permissions.RegistryPermissionAccess.
         
-            access: One of the System.Security.Permissions.RegistryPermissionAccess values that represents a single type of registry variable access.
-            Returns: A list of the registry variables (semicolon-separated) with the specified System.Security.Permissions.RegistryPermissionAccess.
+        
+            access: One of the System.Security.Permissions.RegistryPermissionAccess values that 
+             represents a single type of registry variable access.
+        
+            Returns: A list of the registry variables (semicolon-separated) with the specified 
+             System.Security.Permissions.RegistryPermissionAccess.
         """
         pass
 
@@ -2682,10 +2944,16 @@ class RegistryPermission(CodeAccessPermission):
         """
         Intersect(self: RegistryPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. This new permission is null if the intersection 
+             is empty.
         """
         pass
 
@@ -2693,10 +2961,15 @@ class RegistryPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: RegistryPermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission that is to be tested for the subset relationship. This permission 
+             must be of the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -2712,7 +2985,9 @@ class RegistryPermission(CodeAccessPermission):
     def SetPathList(self, access, pathList):
         """
         SetPathList(self: RegistryPermission, access: RegistryPermissionAccess, pathList: str)
-            Sets new access for the specified registry variable names to the existing state of the permission.
+            Sets new access for the specified registry variable names to the existing 
+             state of the permission.
+        
         
             access: One of the System.Security.Permissions.RegistryPermissionAccess values.
             pathList: A list of registry variables (semicolon-separated).
@@ -2732,10 +3007,15 @@ class RegistryPermission(CodeAccessPermission):
         """
         Union(self: RegistryPermission, other: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the 
+             specified permission.
         
-            other: A permission to combine with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            other: A permission to combine with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -2821,7 +3101,8 @@ class RegistryPermissionAttribute(CodeAccessSecurityAttribute):
         CreatePermission(self: RegistryPermissionAttribute) -> IPermission
         
             Creates and returns a new System.Security.Permissions.RegistryPermission.
-            Returns: A System.Security.Permissions.RegistryPermission that corresponds to this attribute.
+            Returns: A System.Security.Permissions.RegistryPermission that corresponds to this 
+             attribute.
         """
         pass
 
@@ -2937,8 +3218,12 @@ class ResourcePermissionBase(CodeAccessPermission):
         """
         GetPermissionEntries(self: ResourcePermissionBase) -> Array[ResourcePermissionBaseEntry]
         
-            Returns an array of the System.Security.Permissions.ResourcePermissionBaseEntry objects added to this permission.
-            Returns: An array of System.Security.Permissions.ResourcePermissionBaseEntry objects that were added to this permission.
+            Returns an array of the 
+             System.Security.Permissions.ResourcePermissionBaseEntry objects added to this 
+             permission.
+        
+            Returns: An array of System.Security.Permissions.ResourcePermissionBaseEntry objects 
+             that were added to this permission.
         """
         pass
 
@@ -2946,10 +3231,13 @@ class ResourcePermissionBase(CodeAccessPermission):
         """
         Intersect(self: ResourcePermissionBase, target: IPermission) -> IPermission
         
-            Creates and returns a permission object that is the intersection of the current permission object and a target permission object.
+            Creates and returns a permission object that is the intersection of the 
+             current permission object and a target permission object.
+        
         
             target: A permission object of the same type as the current permission object.
-            Returns: A new permission object that represents the intersection of the current object and the specified target. This object is null if the intersection is empty.
+            Returns: A new permission object that represents the intersection of the current object 
+             and the specified target. This object is null if the intersection is empty.
         """
         pass
 
@@ -2957,10 +3245,13 @@ class ResourcePermissionBase(CodeAccessPermission):
         """
         IsSubsetOf(self: ResourcePermissionBase, target: IPermission) -> bool
         
-            Determines whether the current permission object is a subset of the specified permission.
+            Determines whether the current permission object is a subset of the specified 
+             permission.
+        
         
             target: A permission object that is to be tested for the subset relationship.
-            Returns: true if the current permission object is a subset of the specified permission object; otherwise, false.
+            Returns: true if the current permission object is a subset of the specified permission 
+             object; otherwise, false.
         """
         pass
 
@@ -2986,7 +3277,9 @@ class ResourcePermissionBase(CodeAccessPermission):
         """
         ToXml(self: ResourcePermissionBase) -> SecurityElement
         
-            Creates and returns an XML encoding of the security object and its current state.
+            Creates and returns an XML encoding of the security object and its current 
+             state.
+        
             Returns: An XML encoding of the security object, including any state information.
         """
         pass
@@ -2995,10 +3288,15 @@ class ResourcePermissionBase(CodeAccessPermission):
         """
         Union(self: ResourcePermissionBase, target: IPermission) -> IPermission
         
-            Creates a permission object that combines the current permission object and the target permission object.
+            Creates a permission object that combines the current permission object and 
+             the target permission object.
         
-            target: A permission object to combine with the current permission object. It must be of the same type as the current permission object.
-            Returns: A new permission object that represents the union of the current permission object and the specified permission object.
+        
+            target: A permission object to combine with the current permission object. It must be 
+             of the same type as the current permission object.
+        
+            Returns: A new permission object that represents the union of the current permission 
+             object and the specified permission object.
         """
         pass
 
@@ -3152,10 +3450,16 @@ class SecurityPermission(CodeAccessPermission):
         """
         Intersect(self: SecurityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission object that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission object that represents the intersection of the current 
+             permission and the specified permission. This new permission is null if the 
+             intersection is empty.
         """
         pass
 
@@ -3163,10 +3467,15 @@ class SecurityPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: SecurityPermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission that is to be tested for the subset relationship. This permission 
+             must be of the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -3192,10 +3501,15 @@ class SecurityPermission(CodeAccessPermission):
         """
         Union(self: SecurityPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the 
+             specified permission.
         
-            target: A permission to combine with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            target: A permission to combine with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -3240,7 +3554,8 @@ class SecurityPermissionAttribute(CodeAccessSecurityAttribute):
         CreatePermission(self: SecurityPermissionAttribute) -> IPermission
         
             Creates and returns a new System.Security.Permissions.SecurityPermission.
-            Returns: A System.Security.Permissions.SecurityPermission that corresponds to this attribute.
+            Returns: A System.Security.Permissions.SecurityPermission that corresponds to this 
+             attribute.
         """
         pass
 
@@ -3469,10 +3784,16 @@ class SiteIdentityPermission(CodeAccessPermission):
         """
         Intersect(self: SiteIdentityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. This new permission is null if the intersection 
+             is empty.
         """
         pass
 
@@ -3480,10 +3801,15 @@ class SiteIdentityPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: SiteIdentityPermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission that is to be tested for the subset relationship. This permission 
+             must be of the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -3500,10 +3826,15 @@ class SiteIdentityPermission(CodeAccessPermission):
         """
         Union(self: SiteIdentityPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the 
+             specified permission.
         
-            target: A permission to combine with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            target: A permission to combine with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -3547,8 +3878,11 @@ class SiteIdentityPermissionAttribute(CodeAccessSecurityAttribute):
         """
         CreatePermission(self: SiteIdentityPermissionAttribute) -> IPermission
         
-            Creates and returns a new instance of System.Security.Permissions.SiteIdentityPermission.
-            Returns: A System.Security.Permissions.SiteIdentityPermission that corresponds to this attribute.
+            Creates and returns a new instance of 
+             System.Security.Permissions.SiteIdentityPermission.
+        
+            Returns: A System.Security.Permissions.SiteIdentityPermission that corresponds to this 
+             attribute.
         """
         pass
 
@@ -3597,7 +3931,8 @@ class StorePermission(CodeAccessPermission):
         FromXml(self: StorePermission, securityElement: SecurityElement)
             Reconstructs a permission with a specified state from an XML encoding.
         
-            securityElement: A System.Security.SecurityElement that contains the XML encoding to use to reconstruct the permission.
+            securityElement: A System.Security.SecurityElement that contains the XML encoding to use to 
+             reconstruct the permission.
         """
         pass
 
@@ -3605,10 +3940,16 @@ class StorePermission(CodeAccessPermission):
         """
         Intersect(self: StorePermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. This new permission is null if the intersection 
+             is empty.
         """
         pass
 
@@ -3616,10 +3957,15 @@ class StorePermission(CodeAccessPermission):
         """
         IsSubsetOf(self: StorePermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission to test for the subset relationship. This permission must be of the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission to test for the subset relationship. This permission must be of 
+             the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -3637,7 +3983,8 @@ class StorePermission(CodeAccessPermission):
         ToXml(self: StorePermission) -> SecurityElement
         
             Creates an XML encoding of the permission and its current state.
-            Returns: A System.Security.SecurityElement that contains an XML encoding of the permission, including any state information.
+            Returns: A System.Security.SecurityElement that contains an XML encoding of the 
+             permission, including any state information.
         """
         pass
 
@@ -3645,10 +3992,15 @@ class StorePermission(CodeAccessPermission):
         """
         Union(self: StorePermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the 
+             specified permission.
         
-            target: A permission to combine with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            target: A permission to combine with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -3693,7 +4045,8 @@ class StorePermissionAttribute(CodeAccessSecurityAttribute):
         CreatePermission(self: StorePermissionAttribute) -> IPermission
         
             Creates and returns a new System.Security.Permissions.StorePermission.
-            Returns: A System.Security.Permissions.StorePermission that corresponds to the attribute.
+            Returns: A System.Security.Permissions.StorePermission that corresponds to the 
+             attribute.
         """
         pass
 
@@ -3859,10 +4212,15 @@ class StrongNameIdentityPermission(CodeAccessPermission):
         """
         Intersect(self: StrongNameIdentityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission, or null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission, or null if the intersection is empty.
         """
         pass
 
@@ -3870,10 +4228,15 @@ class StrongNameIdentityPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: StrongNameIdentityPermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission that is to be tested for the subset relationship. This permission 
+             must be of the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -3890,10 +4253,15 @@ class StrongNameIdentityPermission(CodeAccessPermission):
         """
         Union(self: StrongNameIdentityPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the 
+             specified permission.
         
-            target: A permission to combine with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            target: A permission to combine with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -3953,8 +4321,11 @@ class StrongNameIdentityPermissionAttribute(CodeAccessSecurityAttribute):
         """
         CreatePermission(self: StrongNameIdentityPermissionAttribute) -> IPermission
         
-            Creates and returns a new System.Security.Permissions.StrongNameIdentityPermission.
-            Returns: A System.Security.Permissions.StrongNameIdentityPermission that corresponds to this attribute.
+            Creates and returns a new 
+             System.Security.Permissions.StrongNameIdentityPermission.
+        
+            Returns: A System.Security.Permissions.StrongNameIdentityPermission that corresponds to 
+             this attribute.
         """
         pass
 
@@ -4008,10 +4379,13 @@ class StrongNamePublicKeyBlob():
         """
         Equals(self: StrongNamePublicKeyBlob, obj: object) -> bool
         
-            Gets or sets a value indicating whether the current public key blob is equal to the specified public key blob.
+            Gets or sets a value indicating whether the current public key blob is equal 
+             to the specified public key blob.
+        
         
             obj: An object containing a public key blob.
-            Returns: true if the public key blob of the current object is equal to the public key blob of the obj parameter; otherwise, false.
+            Returns: true if the public key blob of the current object is equal to the public key 
+             blob of the obj parameter; otherwise, false.
         """
         pass
 
@@ -4073,8 +4447,12 @@ class TypeDescriptorPermission(CodeAccessPermission):
         """
         Intersect(self: TypeDescriptorPermission, target: IPermission) -> IPermission
         
-            target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+            target: A permission to intersect with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. This new permission is null if the intersection 
+             is empty.
         """
         pass
 
@@ -4082,8 +4460,11 @@ class TypeDescriptorPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: TypeDescriptorPermission, target: IPermission) -> bool
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+            target: A permission that is to be tested for the subset relationship. This permission 
+             must be of the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -4091,9 +4472,13 @@ class TypeDescriptorPermission(CodeAccessPermission):
         """
         IsUnrestricted(self: TypeDescriptorPermission) -> bool
         
-            Gets a value that indicates whether the type descriptor may be called from partially trusted code.
-            Returns: true if the System.Security.Permissions.TypeDescriptorPermission.Flags property is set to System.Security.Permissions.TypeDescriptorPermissionFlags.RestrictedRegistrationAccess; 
-             otherwise, false.
+            Gets a value that indicates whether the type descriptor may be called from 
+             partially trusted code.
+        
+            Returns: true if the System.Security.Permissions.TypeDescriptorPermission.Flags 
+             property is set to 
+             System.Security.Permissions.TypeDescriptorPermissionFlags.RestrictedRegistratio
+             nAccess; otherwise, false.
         """
         pass
 
@@ -4108,8 +4493,11 @@ class TypeDescriptorPermission(CodeAccessPermission):
         """
         Union(self: TypeDescriptorPermission, target: IPermission) -> IPermission
         
-            target: A permission to combine with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+            target: A permission to combine with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -4265,10 +4653,16 @@ class UIPermission(CodeAccessPermission):
         """
         Intersect(self: UIPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. This new permission is null if the intersection 
+             is empty.
         """
         pass
 
@@ -4276,10 +4670,15 @@ class UIPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: UIPermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission to test for the subset relationship. This permission must be the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission to test for the subset relationship. This permission must be the 
+             same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -4305,10 +4704,15 @@ class UIPermission(CodeAccessPermission):
         """
         Union(self: UIPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the permission and the specified permission.
+            Creates a permission that is the union of the permission and the specified 
+             permission.
         
-            target: A permission to combine with the current permission. It must be the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            target: A permission to combine with the current permission. It must be the same type 
+             as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -4523,10 +4927,16 @@ class UrlIdentityPermission(CodeAccessPermission):
         """
         Intersect(self: UrlIdentityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. This new permission is null if the intersection 
+             is empty.
         """
         pass
 
@@ -4534,10 +4944,15 @@ class UrlIdentityPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: UrlIdentityPermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission that is to be tested for the subset relationship. This permission 
+             must be of the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -4554,10 +4969,15 @@ class UrlIdentityPermission(CodeAccessPermission):
         """
         Union(self: UrlIdentityPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the 
+             specified permission.
         
-            target: A permission to combine with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            target: A permission to combine with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -4602,7 +5022,8 @@ class UrlIdentityPermissionAttribute(CodeAccessSecurityAttribute):
         CreatePermission(self: UrlIdentityPermissionAttribute) -> IPermission
         
             Creates and returns a new System.Security.Permissions.UrlIdentityPermission.
-            Returns: A System.Security.Permissions.UrlIdentityPermission that corresponds to this attribute.
+            Returns: A System.Security.Permissions.UrlIdentityPermission that corresponds to this 
+             attribute.
         """
         pass
 
@@ -4659,10 +5080,16 @@ class ZoneIdentityPermission(CodeAccessPermission):
         """
         Intersect(self: ZoneIdentityPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current 
+             permission and the specified permission.
         
-            target: A permission to intersect with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the intersection of the current permission and the specified permission. This new permission is null if the intersection is empty.
+        
+            target: A permission to intersect with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the intersection of the current permission 
+             and the specified permission. This new permission is null if the intersection 
+             is empty.
         """
         pass
 
@@ -4670,10 +5097,15 @@ class ZoneIdentityPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: ZoneIdentityPermission, target: IPermission) -> bool
         
-            Determines whether the current permission is a subset of the specified permission.
+            Determines whether the current permission is a subset of the specified 
+             permission.
         
-            target: A permission that is to be tested for the subset relationship. This permission must be of the same type as the current permission.
-            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
+        
+            target: A permission that is to be tested for the subset relationship. This permission 
+             must be of the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; 
+             otherwise, false.
         """
         pass
 
@@ -4690,10 +5122,15 @@ class ZoneIdentityPermission(CodeAccessPermission):
         """
         Union(self: ZoneIdentityPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the specified permission.
+            Creates a permission that is the union of the current permission and the 
+             specified permission.
         
-            target: A permission to combine with the current permission. It must be of the same type as the current permission.
-            Returns: A new permission that represents the union of the current permission and the specified permission.
+        
+            target: A permission to combine with the current permission. It must be of the same 
+             type as the current permission.
+        
+            Returns: A new permission that represents the union of the current permission and the 
+             specified permission.
         """
         pass
 
@@ -4738,7 +5175,8 @@ class ZoneIdentityPermissionAttribute(CodeAccessSecurityAttribute):
         CreatePermission(self: ZoneIdentityPermissionAttribute) -> IPermission
         
             Creates and returns a new System.Security.Permissions.ZoneIdentityPermission.
-            Returns: A System.Security.Permissions.ZoneIdentityPermission that corresponds to this attribute.
+            Returns: A System.Security.Permissions.ZoneIdentityPermission that corresponds to this 
+             attribute.
         """
         pass
 

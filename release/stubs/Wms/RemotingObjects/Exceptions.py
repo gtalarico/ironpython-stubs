@@ -1,4 +1,4 @@
-from Wms.RemotingObjects import RemotingException
+from System.Runtime.Remoting import RemotingException
 # encoding: utf-8
 # module Wms.RemotingObjects.Exceptions calls itself Exceptions
 # from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null

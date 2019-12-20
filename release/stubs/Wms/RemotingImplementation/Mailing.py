@@ -44,7 +44,7 @@ class FileLocationMailAttachment(Object):
     Instance = FileLocationMailAttachment()
     """hardcoded/returns an instance of the class"""
 
-class IMailAttachment:
+class IMailAttachment(Object):
     # no doc
     def GetContentBytes(self):
         """ GetContentBytes(self: IMailAttachment) -> Array[Byte] """
@@ -63,7 +63,7 @@ class IMailAttachment:
     Instance = IMailAttachment()
     """hardcoded/returns an instance of the class"""
 
-class IMailer:
+class IMailer(Object):
     # no doc
     def SendHtmlAsync(self, args, bodyHtml):
         """ SendHtmlAsync(self: IMailer, args: SendMailArgs, bodyHtml: str) -> Task """

@@ -48,7 +48,9 @@ class EnumStringHelper():
             Gets a string value for a particular enum value.
         
             value: Value.
-            Returns: String Value associated via a Wms.RemotingObjects.MetaData.EnumStringValueAttribute attribute, or null if not found.
+            Returns: String Value associated via a 
+             Wms.RemotingObjects.MetaData.EnumStringValueAttribute attribute, or null if 
+             not found.
         """
         pass
 
@@ -74,7 +76,9 @@ class EnumStringHelper():
             Return the existence of the given string value within the enum.
         
             stringValue: String value.
-            ignoreCase: Denotes whether to conduct a case-insensitive match on the supplied string value
+            ignoreCase: Denotes whether to conduct a case-insensitive match on the supplied string 
+             value
+        
             Returns: Existence of the string value
         IsStringDefined(enumType: Type, stringValue: str) -> bool
         
@@ -89,7 +93,9 @@ class EnumStringHelper():
         
             enumType: Type of enum
             stringValue: String value.
-            ignoreCase: Denotes whether to conduct a case-insensitive match on the supplied string value
+            ignoreCase: Denotes whether to conduct a case-insensitive match on the supplied string 
+             value
+        
             Returns: Existence of the string value
         """
         pass
@@ -99,7 +105,9 @@ class EnumStringHelper():
         """
         Parse(type: Type, stringValue: str) -> object
         
-            Parses the supplied enum and string value to find an associated enum value (case sensitive).
+            Parses the supplied enum and string value to find an associated enum value 
+             (case sensitive).
+        
         
             type: Type.
             stringValue: String value.
@@ -110,7 +118,9 @@ class EnumStringHelper():
         
             type: Type.
             stringValue: String value.
-            ignoreCase: Denotes whether to conduct a case-insensitive match on the supplied string value
+            ignoreCase: Denotes whether to conduct a case-insensitive match on the supplied string 
+             value
+        
             Returns: Enum value associated with the string value, or null if not found.
         """
         pass

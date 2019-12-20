@@ -123,7 +123,8 @@ class RequestCachePolicy():
         ToString(self: RequestCachePolicy) -> str
         
             Returns a string representation of this instance.
-            Returns: A System.String containing the System.Net.Cache.RequestCachePolicy.Level for this instance.
+            Returns: A System.String containing the System.Net.Cache.RequestCachePolicy.Level for 
+             this instance.
         """
         pass
 

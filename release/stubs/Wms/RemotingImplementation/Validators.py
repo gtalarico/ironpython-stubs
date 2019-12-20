@@ -9,7 +9,7 @@ from System import Object
 # no functions
 # classes
 
-class IItemIdentificationNumberValidator:
+class IItemIdentificationNumberValidator(Object):
     # no doc
     def Validate(self, item, *__args):
         """
@@ -25,7 +25,7 @@ class IItemIdentificationNumberValidator:
     Instance = IItemIdentificationNumberValidator()
     """hardcoded/returns an instance of the class"""
 
-class IReallocationValidator:
+class IReallocationValidator(Object):
     # no doc
     def Validate(self, itemCode, warehouseCode, locationCode):
         """ Validate(self: IReallocationValidator, itemCode: str, warehouseCode: str, locationCode: str) -> bool """

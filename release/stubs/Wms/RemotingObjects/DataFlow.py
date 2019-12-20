@@ -171,7 +171,7 @@ class DataFlowResultEnum(Object):
     Instance = DataFlowResultEnum()
     """hardcoded/returns an instance of the class"""
 
-class IDataFlowObject:
+class IDataFlowObject(Object):
     # no doc
     def IsValid(self):
         """ IsValid(self: IDataFlowObject[T]) -> bool """

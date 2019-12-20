@@ -1,5 +1,5 @@
-from System.Collections.Generic import Dictionary
 from System import Object
+from System.Collections.Generic import Dictionary
 # encoding: utf-8
 # module Wms.RemotingObjects.Caching calls itself Caching
 # from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
@@ -195,10 +195,13 @@ class CacheKey():
         """
         Equals(self: CacheKey, obj: object) -> bool
         
-            Determines whether the specified System.Object is equal to the current System.Object.
+            Determines whether the specified System.Object is equal to the current 
+             System.Object.
+        
         
             obj: The System.Object to compare with the current System.Object.
-            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, false.
+            Returns: true if the specified System.Object is equal to the current System.Object; 
+             otherwise, false.
         """
         pass
 
@@ -207,7 +210,10 @@ class CacheKey():
         GetHashCode(self: CacheKey) -> int
         
             Serves as a hash function for a particular type. System.Object.GetHashCode 
-                    is suitable for use in hashing algorithms and data structures like a hash table.
+          
+                       is suitable for use in hashing algorithms and data structures like a 
+             hash table.
+        
             Returns: A hash code for the current System.Object.
         """
         pass
@@ -364,7 +370,7 @@ class CacheLifeTimes(Object):
     Instance = CacheLifeTimes()
     """hardcoded/returns an instance of the class"""
 
-class ICachable:
+class ICachable(Object):
     # no doc
     def IsLifeExpired(self, lifeTimeConfig):
         """ IsLifeExpired(self: ICachable, lifeTimeConfig: Dictionary[CacheLifeTimes, int]) -> bool """

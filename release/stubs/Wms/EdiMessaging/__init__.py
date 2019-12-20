@@ -27,7 +27,7 @@ Set: Success(self: HandleResult) = value
     Instance = HandleResult()
     """hardcoded/returns an instance of the class"""
 
-class IMessage:
+class IMessage(Object):
     # no doc
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -133,7 +133,7 @@ Set: Type(self: IMessage) = value
     Instance = IMessage()
     """hardcoded/returns an instance of the class"""
 
-class IMessageHandler:
+class IMessageHandler(Object):
     # no doc
     def CanHandle(self, message):
         """ CanHandle(self: IMessageHandler, message: IMessage) -> bool """
@@ -174,7 +174,7 @@ Set: OnLogWarning(self: IMessageHandler) = value
     Instance = IMessageHandler()
     """hardcoded/returns an instance of the class"""
 
-class IMessagePublisher:
+class IMessagePublisher(Object):
     # no doc
     def Start(self, onStoreMessage):
         """ Start(self: IMessagePublisher, onStoreMessage: OnStoreMessage) """
@@ -211,7 +211,7 @@ Set: OnLogWarning(self: IMessagePublisher) = value
     Instance = IMessagePublisher()
     """hardcoded/returns an instance of the class"""
 
-class IMessagingProvider:
+class IMessagingProvider(Object):
     # no doc
     def GetHandlers(self):
         """ GetHandlers(self: IMessagingProvider) -> IEnumerable[MessageHandlerDescriptor] """
@@ -232,7 +232,7 @@ class IMessagingProvider:
     Instance = IMessagingProvider()
     """hardcoded/returns an instance of the class"""
 
-class IQueueProvider:
+class IQueueProvider(Object):
     # no doc
     def GetQueueListener(self):
         """ GetQueueListener(self: IQueueProvider) -> IQueueListener """

@@ -64,6 +64,7 @@
         "System.Web.Razor", 
         "TranCon.AfasConnection", 
         "TranCon.DynamicsNavConnection", 
+        "TranCon.Exact.Globe2003", 
         "TranCon.ExactConnection", 
         "TranCon.Printing.Interface", 
         "TranCon.Printing.Local", 

@@ -414,12 +414,17 @@ class InboundOrderLine(Object):
         
             Checks if the item is a batchnumber item.
         
-            checkRegistration: True if the batchnumber registration should be checked, false if just the property should be returned.
-            Returns: True if the check is ignored and the item is a batch item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout the whole 
-             process).
-                    False if the check is ignored and the item is not a batch item, or when the itemids are registered
-                    during delivery only.
+            checkRegistration: True if the batchnumber registration should be checked, false if just the 
+             property should be returned.
+        
+            Returns: True if the check is ignored and the item is a batch item, or when the itemid 
+             registration is set to
+                    complete (means the numers are registered 
+             throughout the whole process).
+                    False if the check is ignored and 
+             the item is not a batch item, or when the itemids are registered
+                    
+             during delivery only.
         """
         pass
 
@@ -429,12 +434,17 @@ class InboundOrderLine(Object):
         
             Checks if the item is a serialnumber item.
         
-            checkRegistration: True if the serialnumber registration should be checked, false if just the property should be returned.
-            Returns: True if the check is ignored and the item is a serial item, or when the itemid registration is set to
-                    complete (means the numers are registered throughout the whole 
-             process).
-                    False if the check is ignored and the item is not a serial item, or when the itemids are registered
-                    during delivery only.
+            checkRegistration: True if the serialnumber registration should be checked, false if just the 
+             property should be returned.
+        
+            Returns: True if the check is ignored and the item is a serial item, or when the itemid 
+             registration is set to
+                    complete (means the numers are registered 
+             throughout the whole process).
+                    False if the check is ignored and 
+             the item is not a serial item, or when the itemids are registered
+                    
+             during delivery only.
         """
         pass
 
