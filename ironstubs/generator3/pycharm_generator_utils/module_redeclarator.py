@@ -1107,8 +1107,7 @@ class ModuleRedeclarator(object):
         self.imports_buf.out(0, "") # empty line after imports
 
         with open('typedict.json', 'w') as outfile:
-            print "printing typedict"
-            print typedict
+
             json.dump(typedict, outfile,indent=4)
         with open('classlist.json', 'w') as outfile:
             json.dump(data, outfile,indent=4)
