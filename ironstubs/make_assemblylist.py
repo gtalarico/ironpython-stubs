@@ -10,10 +10,9 @@ data['assemblylist'].append("TranCon.Exact.Globe2003")
 
 
 def make_list(path_dll):
-    for path in path_dll:
-        for file_path in os.listdir(path):
-            if file_path.endswith('.dll'):
-                data['assemblylist'].append(file_path[:-4])
+    for file_path in os.listdir(path_dll):
+        if file_path.endswith('.dll'):
+            data['assemblylist'].append(file_path[:-4])
 
 
 
@@ -24,6 +23,7 @@ def make_assemblylist(path_dll):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) = 2:
+    if len(sys.argv) == 2:
+        print("making assemblylist")
         path_dll = sys.argv[1]
-        make_list(path_dll)
+        make_assemblylist(path_dll)

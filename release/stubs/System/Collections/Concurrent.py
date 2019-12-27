@@ -45,8 +45,8 @@ class BlockingCollection(Object):
     def CompleteAdding(self):
         """
         CompleteAdding(self: BlockingCollection[T])
-            Marks the System.Collections.Concurrent.BlockingCollection instances as not 
-             accepting any more additions.
+            Marks the System.Collections.Concurrent.BlockingCollection instances as not accepting any 
+             more additions.
         """
         pass
 
@@ -66,21 +66,17 @@ class BlockingCollection(Object):
         """
         GetConsumingEnumerable(self: BlockingCollection[T]) -> IEnumerable[T]
         
-            Provides a consuming System.Collections.Generics.IEnumerable for items in the 
+            Provides a consuming System.Collections.Generics.IEnumerable for items in the collection.
+            Returns: An System.Collections.Generics.IEnumerable that removes and returns items from the 
              collection.
-        
-            Returns: An System.Collections.Generics.IEnumerable that removes and returns items from 
-             the collection.
         
         GetConsumingEnumerable(self: BlockingCollection[T], cancellationToken: CancellationToken) -> IEnumerable[T]
         
-            Provides a consuming System.Collections.Generics.IEnumerable for items in the 
-             collection.
-        
+            Provides a consuming System.Collections.Generics.IEnumerable for items in the collection.
         
             cancellationToken: A cancellation token to observe.
-            Returns: An System.Collections.Generics.IEnumerable that removes and returns items from 
-             the collection.
+            Returns: An System.Collections.Generics.IEnumerable that removes and returns items from the 
+             collection.
         """
         pass
 
@@ -111,8 +107,8 @@ class BlockingCollection(Object):
         """
         ToArray(self: BlockingCollection[T]) -> Array[T]
         
-            Copies the items from the System.Collections.Concurrent.BlockingCollection 
-             instance into a new array.
+            Copies the items from the System.Collections.Concurrent.BlockingCollection instance into 
+             a new array.
         
             Returns: An array containing copies of the elements of the collection.
         """
@@ -127,8 +123,8 @@ class BlockingCollection(Object):
         
         
             item: The item to be added to the collection.
-            Returns: true if item could be added; otherwise false. If the item is a duplicate, and 
-             the underlying collection does not accept duplicate items, then an 
+            Returns: true if item could be added; otherwise false. If the item is a duplicate, and the 
+             underlying collection does not accept duplicate items, then an 
              System.InvalidOperationException is thrown.
         
         TryAdd(self: BlockingCollection[T], item: T, timeout: TimeSpan) -> bool
@@ -141,41 +137,38 @@ class BlockingCollection(Object):
             timeout: A System.TimeSpan that represents the number of milliseconds to wait, or a 
              System.TimeSpan that represents -1 milliseconds to wait indefinitely.
         
-            Returns: true if the item could be added to the collection within the specified time 
-             span; otherwise, false.
+            Returns: true if the item could be added to the collection within the specified time span; 
+             otherwise, false.
         
         TryAdd(self: BlockingCollection[T], item: T, millisecondsTimeout: int) -> bool
         
             Attempts to add the specified item to the 
-             System.Collections.Concurrent.BlockingCollection within the specified time 
-             period.
+             System.Collections.Concurrent.BlockingCollection within the specified time period.
         
         
             item: The item to be added to the collection.
-            millisecondsTimeout: The number of milliseconds to wait, or System.Threading.Timeout.Infinite (-1) 
-             to wait indefinitely.
+            millisecondsTimeout: The number of milliseconds to wait, or System.Threading.Timeout.Infinite (-1) to wait 
+             indefinitely.
         
-            Returns: true if the item could be added to the collection within the specified time; 
-             otherwise, false. If the item is a duplicate, and the underlying collection 
-             does not accept duplicate items, then an System.InvalidOperationException is 
-             thrown.
+            Returns: true if the item could be added to the collection within the specified time; otherwise, 
+             false. If the item is a duplicate, and the underlying collection does not accept 
+             duplicate items, then an System.InvalidOperationException is thrown.
         
         TryAdd(self: BlockingCollection[T], item: T, millisecondsTimeout: int, cancellationToken: CancellationToken) -> bool
         
             Attempts to add the specified item to the 
-             System.Collections.Concurrent.BlockingCollection within the specified time 
-             period, while observing a cancellation token.
+             System.Collections.Concurrent.BlockingCollection within the specified time period, while 
+             observing a cancellation token.
         
         
             item: The item to be added to the collection.
-            millisecondsTimeout: The number of milliseconds to wait, or System.Threading.Timeout.Infinite (-1) 
-             to wait indefinitely.
+            millisecondsTimeout: The number of milliseconds to wait, or System.Threading.Timeout.Infinite (-1) to wait 
+             indefinitely.
         
             cancellationToken: A cancellation token to observe.
-            Returns: true if the item could be added to the collection within the specified time; 
-             otherwise, false. If the item is a duplicate, and the underlying collection 
-             does not accept duplicate items, then an System.InvalidOperationException is 
-             thrown.
+            Returns: true if the item could be added to the collection within the specified time; otherwise, 
+             false. If the item is a duplicate, and the underlying collection does not accept 
+             duplicate items, then an System.InvalidOperationException is thrown.
         """
         pass
 
@@ -292,8 +285,8 @@ class ConcurrentBag(Object):
         Add(self: ConcurrentBag[T], item: T)
             Adds an object to the System.Collections.Concurrent.ConcurrentBag.
         
-            item: The object to be added to the System.Collections.Concurrent.ConcurrentBag. The 
-             value can be a null reference (Nothing in Visual Basic) for reference types.
+            item: The object to be added to the System.Collections.Concurrent.ConcurrentBag. The value can 
+             be a null reference (Nothing in Visual Basic) for reference types.
         """
         pass
 
@@ -308,8 +301,7 @@ class ConcurrentBag(Object):
             Returns an enumerator that iterates through the 
              System.Collections.Concurrent.ConcurrentBag.
         
-            Returns: An enumerator for the contents of the 
-             System.Collections.Concurrent.ConcurrentBag.
+            Returns: An enumerator for the contents of the System.Collections.Concurrent.ConcurrentBag.
         """
         pass
 
@@ -405,8 +397,7 @@ class ConcurrentDictionary(Object):
     def Clear(self):
         """
         Clear(self: ConcurrentDictionary[TKey, TValue])
-            Removes all keys and values from the 
-             System.Collections.Concurrent.ConcurrentDictionary.
+            Removes all keys and values from the System.Collections.Concurrent.ConcurrentDictionary.
         """
         pass
 
@@ -414,13 +405,13 @@ class ConcurrentDictionary(Object):
         """
         ContainsKey(self: ConcurrentDictionary[TKey, TValue], key: TKey) -> bool
         
-            Determines whether the System.Collections.Concurrent.ConcurrentDictionary 
-             contains the specified key.
+            Determines whether the System.Collections.Concurrent.ConcurrentDictionary contains the 
+             specified key.
         
         
             key: The key to locate in the System.Collections.Concurrent.ConcurrentDictionary.
-            Returns: true if the System.Collections.Concurrent.ConcurrentDictionary contains an 
-             element with the specified key; otherwise, false.
+            Returns: true if the System.Collections.Concurrent.ConcurrentDictionary contains an element with 
+             the specified key; otherwise, false.
         """
         pass
 
@@ -439,29 +430,26 @@ class ConcurrentDictionary(Object):
         """
         GetOrAdd(self: ConcurrentDictionary[TKey, TValue], key: TKey, valueFactory: Func[TKey, TValue]) -> TValue
         
-            Adds a key/value pair to the 
-             System.Collections.Concurrent.ConcurrentDictionary if the key does not already 
-             exist.
+            Adds a key/value pair to the System.Collections.Concurrent.ConcurrentDictionary if the 
+             key does not already exist.
         
         
             key: The key of the element to add.
             valueFactory: The function used to generate a value for the key
-            Returns: The value for the key. This will be either the existing value for the key if 
-             the key is already in the dictionary, or the new value for the key as returned 
-             by valueFactory if the key was not in the dictionary.
+            Returns: The value for the key. This will be either the existing value for the key if the key is 
+             already in the dictionary, or the new value for the key as returned by valueFactory if 
+             the key was not in the dictionary.
         
         GetOrAdd(self: ConcurrentDictionary[TKey, TValue], key: TKey, value: TValue) -> TValue
         
-            Adds a key/value pair to the 
-             System.Collections.Concurrent.ConcurrentDictionary if the key does not already 
-             exist.
+            Adds a key/value pair to the System.Collections.Concurrent.ConcurrentDictionary if the 
+             key does not already exist.
         
         
             key: The key of the element to add.
             value: the value to be added, if the key does not already exist
-            Returns: The value for the key. This will be either the existing value for the key if 
-             the key is already in the dictionary, or the new value if the key was not in 
-             the dictionary.
+            Returns: The value for the key. This will be either the existing value for the key if the key is 
+             already in the dictionary, or the new value if the key was not in the dictionary.
         
         GetOrAdd[TArg](self: ConcurrentDictionary[TKey, TValue], key: TKey, valueFactory: Func[TKey, TArg, TValue], factoryArgument: TArg) -> TValue
         """
@@ -488,12 +476,12 @@ class ConcurrentDictionary(Object):
         
         
             key: The key of the element to add.
-            value: The value of the element to add. The value can be a null reference (Nothing in 
-             Visual Basic) for reference types.
+            value: The value of the element to add. The value can be a null reference (Nothing in Visual 
+             Basic) for reference types.
         
             Returns: true if the key/value pair was added to the 
-             System.Collections.Concurrent.ConcurrentDictionary successfully. If the key 
-             already exists, this method returns false.
+             System.Collections.Concurrent.ConcurrentDictionary successfully. If the key already 
+             exists, this method returns false.
         """
         pass
 
@@ -509,17 +497,17 @@ class ConcurrentDictionary(Object):
         """
         TryUpdate(self: ConcurrentDictionary[TKey, TValue], key: TKey, newValue: TValue, comparisonValue: TValue) -> bool
         
-            Compares the existing value for the specified key with a specified value, and 
-             if they are equal, updates the key with a third value.
+            Compares the existing value for the specified key with a specified value, and if they are 
+             equal, updates the key with a third value.
         
         
             key: The key whose value is compared with comparisonValue and possibly replaced.
-            newValue: The value that replaces the value of the element with key if the comparison 
-             results in equality.
+            newValue: The value that replaces the value of the element with key if the comparison results in 
+             equality.
         
             comparisonValue: The value that is compared to the value of the element with key.
-            Returns: true if the value with key was equal to comparisonValue and replaced with 
-             newValue; otherwise, false.
+            Returns: true if the value with key was equal to comparisonValue and replaced with newValue; 
+             otherwise, false.
         """
         pass
 
@@ -527,23 +515,23 @@ class ConcurrentDictionary(Object):
         """
         __contains__(self: IDictionary[TKey, TValue], key: TKey) -> bool
         
-            Determines whether the System.Collections.Generic.IDictionary contains an 
-             element with the specified key.
+            Determines whether the System.Collections.Generic.IDictionary contains an element with 
+             the specified key.
         
         
             key: The key to locate in the System.Collections.Generic.IDictionary.
-            Returns: true if the System.Collections.Generic.IDictionary contains an element with 
-             the key; otherwise, false.
+            Returns: true if the System.Collections.Generic.IDictionary contains an element with the key; 
+             otherwise, false.
         
         __contains__(self: IDictionary, key: object) -> bool
         
-            Determines whether the System.Collections.IDictionary object contains an 
-             element with the specified key.
+            Determines whether the System.Collections.IDictionary object contains an element with the 
+             specified key.
         
         
             key: The key to locate in the System.Collections.IDictionary object.
-            Returns: true if the System.Collections.IDictionary contains an element with the key; 
-             otherwise, false.
+            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, 
+             false.
         """
         pass
 
@@ -633,9 +621,8 @@ class ConcurrentQueue(Object):
         Enqueue(self: ConcurrentQueue[T], item: T)
             Adds an object to the end of the System.Collections.Concurrent.ConcurrentQueue.
         
-            item: The object to add to the end of the 
-             System.Collections.Concurrent.ConcurrentQueue. The value can be a null 
-             reference (Nothing in Visual Basic) for reference types.
+            item: The object to add to the end of the System.Collections.Concurrent.ConcurrentQueue. The 
+             value can be a null reference (Nothing in Visual Basic) for reference types.
         """
         pass
 
@@ -646,8 +633,7 @@ class ConcurrentQueue(Object):
             Returns an enumerator that iterates through the 
              System.Collections.Concurrent.ConcurrentQueue.
         
-            Returns: An enumerator for the contents of the 
-             System.Collections.Concurrent.ConcurrentQueue.
+            Returns: An enumerator for the contents of the System.Collections.Concurrent.ConcurrentQueue.
         """
         pass
 
@@ -655,8 +641,8 @@ class ConcurrentQueue(Object):
         """
         ToArray(self: ConcurrentQueue[T]) -> Array[T]
         
-            Copies the elements stored in the 
-             System.Collections.Concurrent.ConcurrentQueue to a new array.
+            Copies the elements stored in the System.Collections.Concurrent.ConcurrentQueue to a new 
+             array.
         
             Returns: A new array containing a snapshot of elements copied from the 
              System.Collections.Concurrent.ConcurrentQueue.
@@ -750,12 +736,10 @@ class ConcurrentStack(Object):
     def Push(self, item):
         """
         Push(self: ConcurrentStack[T], item: T)
-            Inserts an object at the top of the 
-             System.Collections.Concurrent.ConcurrentStack.
+            Inserts an object at the top of the System.Collections.Concurrent.ConcurrentStack.
         
-        
-            item: The object to push onto the System.Collections.Concurrent.ConcurrentStack. The 
-             value can be a null reference (Nothing in Visual Basic) for reference types.
+            item: The object to push onto the System.Collections.Concurrent.ConcurrentStack. The value can 
+             be a null reference (Nothing in Visual Basic) for reference types.
         """
         pass
 
@@ -767,8 +751,8 @@ class ConcurrentStack(Object):
         """
         ToArray(self: ConcurrentStack[T]) -> Array[T]
         
-            Copies the items stored in the System.Collections.Concurrent.ConcurrentStack 
-             to a new array.
+            Copies the items stored in the System.Collections.Concurrent.ConcurrentStack to a new 
+             array.
         
             Returns: A new array containing a snapshot of elements copied from the 
              System.Collections.Concurrent.ConcurrentStack.
@@ -907,9 +891,7 @@ class IProducerConsumerCollection(Object):
              System.Collections.Concurrent.IProducerConsumerCollection.
         
         
-            item: The object to add to the 
-             System.Collections.Concurrent.IProducerConsumerCollection.
-        
+            item: The object to add to the System.Collections.Concurrent.IProducerConsumerCollection.
             Returns: true if the object was added successfully; otherwise, false.
         """
         pass
@@ -943,8 +925,8 @@ class OrderablePartitioner(Partitioner):
         """
         GetDynamicPartitions(self: OrderablePartitioner[TSource]) -> IEnumerable[TSource]
         
-            Creates an object that can partition the underlying collection into a variable 
-             number of partitions.
+            Creates an object that can partition the underlying collection into a variable number of 
+             partitions.
         
             Returns: An object that can create partitions over the underlying data source.
         """
@@ -954,8 +936,8 @@ class OrderablePartitioner(Partitioner):
         """
         GetOrderableDynamicPartitions(self: OrderablePartitioner[TSource]) -> IEnumerable[KeyValuePair[Int64, TSource]]
         
-            Creates an object that can partition the underlying collection into a variable 
-             number of partitions.
+            Creates an object that can partition the underlying collection into a variable number of 
+             partitions.
         
             Returns: An object that can create partitions over the underlying data source.
         """
@@ -965,9 +947,7 @@ class OrderablePartitioner(Partitioner):
         """
         GetOrderablePartitions(self: OrderablePartitioner[TSource], partitionCount: int) -> IList[IEnumerator[KeyValuePair[Int64, TSource]]]
         
-            Partitions the underlying collection into the specified number of orderable 
-             partitions.
-        
+            Partitions the underlying collection into the specified number of orderable partitions.
         
             partitionCount: The number of partitions to create.
             Returns: A list containing partitionCount enumerators.
@@ -978,9 +958,7 @@ class OrderablePartitioner(Partitioner):
         """
         GetPartitions(self: OrderablePartitioner[TSource], partitionCount: int) -> IList[IEnumerator[TSource]]
         
-            Partitions the underlying collection into the given number of ordered 
-             partitions.
-        
+            Partitions the underlying collection into the given number of ordered partitions.
         
             partitionCount: The number of partitions to create.
             Returns: A list containing partitionCount enumerators.

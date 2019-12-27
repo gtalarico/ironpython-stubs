@@ -36,8 +36,8 @@ class SSCC(Object):
         """
         Get(barcode: str) -> IGeneratedBarcode
         
-            Static function to create a Wms.RemotingObjects.Barcodes.SSCC.SSCC instance of 
-             the given System.String
+            Static function to create a Wms.RemotingObjects.Barcodes.SSCC.SSCC instance of the given 
+             System.String
         """
         pass
 
@@ -59,11 +59,11 @@ class SSCC(Object):
         IsValid(barcode: str) -> bool
         
             Checks if input is valid SSCC code.
-                    Strips expected cosmetic 
-             characters.
-                    Deprecated use 
-             Wms.RemotingObjects.Barcodes.SSCC.SSCC.TryParse(System.String,Wms.RemotingObjec
-             ts.Barcodes.SSCC.SSCC@) instead.
+                    Strips expected cosmetic characters.
+           
+                      Deprecated use 
+             Wms.RemotingObjects.Barcodes.SSCC.SSCC.TryParse(System.String,Wms.RemotingObjects.Barcodes
+             .SSCC.SSCC@) instead.
         
         
             barcode: uncleaned barcode
@@ -80,8 +80,8 @@ class SSCC(Object):
             Returns this instance as a barcode
         
             includeApplicationIdentifier: True to include the Application Identifier in 
-                    the result 
-             System.String, otherwise false
+                    the result System.String, 
+             otherwise false
         """
         pass
 
@@ -96,8 +96,8 @@ class SSCC(Object):
             Creates a readable System.String of the barcode
         
             includeApplicationIdentifier: True to include the Application Identifier in 
-                    the result 
-             System.String, otherwise false
+                    the result System.String, 
+             otherwise false
         
             Returns: System.String with the readable barcode
         """
@@ -111,32 +111,31 @@ class SSCC(Object):
         ToString(self: SSCC, format: str) -> str
         ToString(self: SSCC, format: str, provider: IFormatProvider) -> str
         
-            Formats to a string. (Capital letter does left pad, lower case just takes 
-             number).
-                    Aa - Aplicaiton identifier,
-                    Ee - Extension 
-             digit,
-                    Cc - Company prefix,
-                    Ss - Serial reference,
-         
-                        Ii - integrity check digit,
-                    Zz - Complete sscc code 
-             machine readable,
-                    Hh - human readable complete code.
-        
-        
-            format: Format to string to. following characters get replaced:
-                    Aa - 
-             Aplicaiton identifier,
+            Formats to a string. (Capital letter does left pad, lower case just takes number).
+              
+                   Aa - Aplicaiton identifier,
                     Ee - Extension digit,
                     Cc - 
              Company prefix,
                     Ss - Serial reference,
-                    Ii - 
-             integrity check digit,
+                    Ii - integrity check 
+             digit,
                     Zz - Complete sscc code machine readable,
+                    Hh - human 
+             readable complete code.
         
-                         Hh - human readable complete code.
+        
+            format: Format to string to. following characters get replaced:
+                    Aa - Aplicaiton 
+             identifier,
+                    Ee - Extension digit,
+                    Cc - Company prefix,
+                
+                 Ss - Serial reference,
+                    Ii - integrity check digit,
+                    Zz - 
+             Complete sscc code machine readable,
+                    Hh - human readable complete code.
         
             Returns: string in the format provided.
         """
@@ -148,9 +147,7 @@ class SSCC(Object):
         TryParse(input: str) -> (bool, SSCC)
         
             Tries to parse SSCC string to struct.
-                    Can only parse 18 or 20 
-             digit strings.
-        
+                    Can only parse 18 or 20 digit strings.
         
             input: un cleaned barcode/sscc string to parse
             Returns: Wether or not parsing succeeded

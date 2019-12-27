@@ -143,8 +143,8 @@ class GS1Barcode(Object):
         """
         ToBarcode(self: GS1Barcode) -> str
         
-            Converts this Wms.RemotingObjects.Barcodes.GS1.GS1Barcode to a System.String, 
-             usable for barcodes (HRI)
+            Converts this Wms.RemotingObjects.Barcodes.GS1.GS1Barcode to a System.String, usable for 
+             barcodes (HRI)
         
         ToBarcode(self: GS1Barcode, includeApplicationIdentifier: bool) -> str
         """
@@ -154,16 +154,16 @@ class GS1Barcode(Object):
         """
         ToReadableCode(self: GS1Barcode) -> str
         
-            Converts this Wms.RemotingObjects.Barcodes.GS1.GS1Barcode to a System.String, 
-             readable for humans (Non-HRI)
+            Converts this Wms.RemotingObjects.Barcodes.GS1.GS1Barcode to a System.String, readable 
+             for humans (Non-HRI)
         
         ToReadableCode(self: GS1Barcode, includeApplicationIdentifier: bool) -> str
         
             Creates a readable System.String of the barcode
         
             includeApplicationIdentifier: True to include the Application Identifier in 
-                    the result 
-             System.String, otherwise false
+                    the result System.String, 
+             otherwise false
         
             Returns: System.String with the readable barcode
         """

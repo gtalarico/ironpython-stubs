@@ -234,13 +234,13 @@ class AllocatedStockItemReference(Object):
         """
         Get(expandedReference: str) -> AllocatedStockItemReference
         
-            Returns an Wms.RemotingObjects.Inventory.AllocatedStockItemReference object 
-             created from the specified expanded name.
+            Returns an Wms.RemotingObjects.Inventory.AllocatedStockItemReference object created from 
+             the specified expanded name.
         
         
             expandedReference: A string containing an expanded Reference name in the format: {Type}id.
-            Returns: An Wms.RemotingObjects.Inventory.AllocatedStockItemReference object 
-             constructed from the specified expanded name.
+            Returns: An Wms.RemotingObjects.Inventory.AllocatedStockItemReference object constructed from the 
+             specified expanded name.
         """
         pass
 
@@ -1734,17 +1734,16 @@ class Item(CacheObject):
         
             Checks if the item is a batch item.
         
-            checkRegistration: True if the batchnumber registration should be checked, false if just the 
-             property should be returned.
+            checkRegistration: True if the batchnumber registration should be checked, false if just the property should 
+             be returned.
         
             Returns: True if the check is ignored and the item is a batch item, or when the itemid 
              registration is set to
-                    complete (means the numers are registered 
-             throughout the whole process).
-                    False if the check is ignored and 
-             the item is not a batch item, or when the itemids are registered
-                    
-             during delivery only.
+                    complete (means the numers are registered throughout 
+             the whole process).
+                    False if the check is ignored and the item is not a 
+             batch item, or when the itemids are registered
+                    during delivery only.
         """
         pass
 
@@ -1754,17 +1753,16 @@ class Item(CacheObject):
         
             Checks if the item is a serialnumber item.
         
-            checkRegistration: True if the serialnumber registration should be checked, false if just the 
-             property should be returned.
+            checkRegistration: True if the serialnumber registration should be checked, false if just the property 
+             should be returned.
         
             Returns: True if the check is ignored and the item is a serial item, or when the itemid 
              registration is set to
-                    complete (means the numers are registered 
-             throughout the whole process).
-                    False if the check is ignored and 
-             the item is not a serial item, or when the itemids are registered
-                    
-             during delivery only.
+                    complete (means the numers are registered throughout 
+             the whole process).
+                    False if the check is ignored and the item is not a 
+             serial item, or when the itemids are registered
+                    during delivery only.
         """
         pass
 
@@ -2362,10 +2360,10 @@ class ItemIdentifications(FindableList):
     def Clear(self):
         """
         Clear(self: ItemIdentifications)
-            Clears the list, calls TrimExcess, and resets the non-public field _version to 
-             0. This is done so
-                    the object will be back in its initial state. 
-             Used for (for example) removal of PurchaseReceiveLines.
+            Clears the list, calls TrimExcess, and resets the non-public field _version to 0. This is 
+             done so
+                    the object will be back in its initial state. Used for (for example) 
+             removal of PurchaseReceiveLines.
         """
         pass
 
@@ -3164,17 +3162,16 @@ class ItemStock(Object):
         
             Checks if the item is a serial / batch item.
         
-            checkRegistration: True if the serial / batchnumber registration should be checked, false if just 
-             the property should be returned.
+            checkRegistration: True if the serial / batchnumber registration should be checked, false if just the 
+             property should be returned.
         
-            Returns: True if the check is ignored and the item is a serial / batch item, or when 
-             the itemid registration is set to
-                    complete (means the numers are 
-             registered throughout the whole process).
-                    False if the check is 
-             ignored and the item is not a batch item, or when the itemids are registered
-         
-                        during delivery only.
+            Returns: True if the check is ignored and the item is a serial / batch item, or when the itemid 
+             registration is set to
+                    complete (means the numers are registered throughout 
+             the whole process).
+                    False if the check is ignored and the item is not a 
+             batch item, or when the itemids are registered
+                    during delivery only.
         """
         pass
 

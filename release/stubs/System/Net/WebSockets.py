@@ -475,13 +475,13 @@ class WebSocketException(Win32Exception):
     WebSocketException(error: WebSocketError, message: str, innerException: Exception)
     WebSocketException(nativeError: int)
     WebSocketException(nativeError: int, message: str)
-    WebSocketException(nativeError: int, innerException: Exception)
     WebSocketException(error: WebSocketError, nativeError: int)
     WebSocketException(error: WebSocketError, nativeError: int, message: str)
     WebSocketException(error: WebSocketError, nativeError: int, innerException: Exception)
     WebSocketException(error: WebSocketError, nativeError: int, message: str, innerException: Exception)
     WebSocketException(message: str)
-    WebSocketException(message: str, innerException: Exception)
+    WebSocketException(message: str, innerException: Exception)
+    WebSocketException(nativeError: int, innerException: Exception)
     """
     def GetObjectData(self, info, context):
         """ GetObjectData(self: WebSocketException, info: SerializationInfo, context: StreamingContext) """

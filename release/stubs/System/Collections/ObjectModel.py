@@ -18,9 +18,8 @@ class Collection(Object):
         Add(self: Collection[T], item: T)
             Adds an object to the end of the System.Collections.ObjectModel.Collection.
         
-            item: The object to be added to the end of the 
-             System.Collections.ObjectModel.Collection. The value can be null for reference 
-             types.
+            item: The object to be added to the end of the System.Collections.ObjectModel.Collection. The 
+             value can be null for reference types.
         """
         pass
 
@@ -42,15 +41,12 @@ class Collection(Object):
         """
         Contains(self: Collection[T], item: T) -> bool
         
-            Determines whether an element is in the 
-             System.Collections.ObjectModel.Collection.
+            Determines whether an element is in the System.Collections.ObjectModel.Collection.
         
+            item: The object to locate in the System.Collections.ObjectModel.Collection. The value can be 
+             null for reference types.
         
-            item: The object to locate in the System.Collections.ObjectModel.Collection. The 
-             value can be null for reference types.
-        
-            Returns: true if item is found in the System.Collections.ObjectModel.Collection; 
-             otherwise, false.
+            Returns: true if item is found in the System.Collections.ObjectModel.Collection; otherwise, false.
         """
         pass
 
@@ -62,9 +58,7 @@ class Collection(Object):
         """
         GetEnumerator(self: Collection[T]) -> IEnumerator[T]
         
-            Returns an enumerator that iterates through the 
-             System.Collections.ObjectModel.Collection.
-        
+            Returns an enumerator that iterates through the System.Collections.ObjectModel.Collection.
             Returns: An System.Collections.Generic.IEnumerator for the 
              System.Collections.ObjectModel.Collection.
         """
@@ -74,12 +68,12 @@ class Collection(Object):
         """
         IndexOf(self: Collection[T], item: T) -> int
         
-            Searches for the specified object and returns the zero-based index of the 
-             first occurrence within the entire System.Collections.ObjectModel.Collection.
+            Searches for the specified object and returns the zero-based index of the first 
+             occurrence within the entire System.Collections.ObjectModel.Collection.
         
         
-            item: The object to locate in the System.Collections.Generic.List. The value can be 
-             null for reference types.
+            item: The object to locate in the System.Collections.Generic.List. The value can be null for 
+             reference types.
         
             Returns: The zero-based index of the first occurrence of item within the entire 
              System.Collections.ObjectModel.Collection, if found; otherwise, -1.
@@ -89,8 +83,8 @@ class Collection(Object):
     def Insert(self, index, item):
         """
         Insert(self: Collection[T], index: int, item: T)
-            Inserts an element into the System.Collections.ObjectModel.Collection at the 
-             specified index.
+            Inserts an element into the System.Collections.ObjectModel.Collection at the specified 
+             index.
         
         
             index: The zero-based index at which item should be inserted.
@@ -101,8 +95,8 @@ class Collection(Object):
     def InsertItem(self, *args): #cannot find CLR method
         """
         InsertItem(self: Collection[T], index: int, item: T)
-            Inserts an element into the System.Collections.ObjectModel.Collection at the 
-             specified index.
+            Inserts an element into the System.Collections.ObjectModel.Collection at the specified 
+             index.
         
         
             index: The zero-based index at which item should be inserted.
@@ -118,12 +112,11 @@ class Collection(Object):
              System.Collections.ObjectModel.Collection.
         
         
-            item: The object to remove from the System.Collections.ObjectModel.Collection. The 
-             value can be null for reference types.
+            item: The object to remove from the System.Collections.ObjectModel.Collection. The value can be 
+             null for reference types.
         
-            Returns: true if item is successfully removed; otherwise, false.  This method also 
-             returns false if item was not found in the original 
-             System.Collections.ObjectModel.Collection.
+            Returns: true if item is successfully removed; otherwise, false.  This method also returns false 
+             if item was not found in the original System.Collections.ObjectModel.Collection.
         """
         pass
 
@@ -155,8 +148,8 @@ class Collection(Object):
             Replaces the element at the specified index.
         
             index: The zero-based index of the element to replace.
-            item: The new value for the element at the specified index. The value can be null 
-             for reference types.
+            item: The new value for the element at the specified index. The value can be null for reference 
+             types.
         """
         pass
 
@@ -168,21 +161,16 @@ class Collection(Object):
         """
         __contains__(self: ICollection[T], item: T) -> bool
         
-            Determines whether the System.Collections.Generic.ICollection contains a 
-             specific value.
-        
+            Determines whether the System.Collections.Generic.ICollection contains a specific value.
         
             item: The object to locate in the System.Collections.Generic.ICollection.
-            Returns: true if item is found in the System.Collections.Generic.ICollection; 
-             otherwise, false.
-        
+            Returns: true if item is found in the System.Collections.Generic.ICollection; otherwise, false.
         __contains__(self: IList, value: object) -> bool
         
             Determines whether the System.Collections.IList contains a specific value.
         
             value: The object to locate in the System.Collections.IList.
-            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, 
-             false.
+            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, false.
         """
         pass
 
@@ -263,8 +251,8 @@ class KeyedCollection(Collection):
             Determines whether the collection contains an element with the specified key.
         
             key: The key to locate in the System.Collections.ObjectModel.KeyedCollection.
-            Returns: true if the System.Collections.ObjectModel.KeyedCollection contains an element 
-             with the specified key; otherwise, false.
+            Returns: true if the System.Collections.ObjectModel.KeyedCollection contains an element with the 
+             specified key; otherwise, false.
         """
         pass
 
@@ -272,9 +260,7 @@ class KeyedCollection(Collection):
         """
         GetKeyForItem(self: KeyedCollection[TKey, TItem], item: TItem) -> TKey
         
-            When implemented in a derived class, extracts the key from the specified 
-             element.
-        
+            When implemented in a derived class, extracts the key from the specified element.
         
             item: The element from which to extract the key.
             Returns: The key for the specified element.
@@ -284,8 +270,8 @@ class KeyedCollection(Collection):
     def InsertItem(self, *args): #cannot find CLR method
         """
         InsertItem(self: KeyedCollection[TKey, TItem], index: int, item: TItem)
-            Inserts an element into the System.Collections.ObjectModel.KeyedCollection at 
-             the specified index.
+            Inserts an element into the System.Collections.ObjectModel.KeyedCollection at the 
+             specified index.
         
         
             index: The zero-based index at which item should be inserted.
@@ -302,9 +288,8 @@ class KeyedCollection(Collection):
         
         
             key: The key of the element to remove.
-            Returns: true if the element is successfully removed; otherwise, false.  This method 
-             also returns false if key is not found in the 
-             System.Collections.ObjectModel.KeyedCollection.
+            Returns: true if the element is successfully removed; otherwise, false.  This method also returns 
+             false if key is not found in the System.Collections.ObjectModel.KeyedCollection.
         """
         pass
 
@@ -440,8 +425,8 @@ class ObservableCollection(Collection):
     def OnCollectionChanged(self, *args): #cannot find CLR method
         """
         OnCollectionChanged(self: ObservableCollection[T], e: NotifyCollectionChangedEventArgs)
-            Raises the System.Collections.ObjectModel.ObservableCollection event with the 
-             provided arguments.
+            Raises the System.Collections.ObjectModel.ObservableCollection event with the provided 
+             arguments.
         
         
             e: Arguments of the event being raised.
@@ -451,8 +436,8 @@ class ObservableCollection(Collection):
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: ObservableCollection[T], e: PropertyChangedEventArgs)
-            Raises the System.Collections.ObjectModel.ObservableCollection event with the 
-             provided arguments.
+            Raises the System.Collections.ObjectModel.ObservableCollection event with the provided 
+             arguments.
         
         
             e: Arguments of the event being raised.
@@ -524,15 +509,13 @@ class ReadOnlyCollection(Object):
         """
         Contains(self: ReadOnlyCollection[T], value: T) -> bool
         
-            Determines whether an element is in the 
-             System.Collections.ObjectModel.ReadOnlyCollection.
+            Determines whether an element is in the System.Collections.ObjectModel.ReadOnlyCollection.
         
+            value: The object to locate in the System.Collections.ObjectModel.ReadOnlyCollection. The value 
+             can be null for reference types.
         
-            value: The object to locate in the System.Collections.ObjectModel.ReadOnlyCollection. 
-             The value can be null for reference types.
-        
-            Returns: true if value is found in the 
-             System.Collections.ObjectModel.ReadOnlyCollection; otherwise, false.
+            Returns: true if value is found in the System.Collections.ObjectModel.ReadOnlyCollection; 
+             otherwise, false.
         """
         pass
 
@@ -556,13 +539,12 @@ class ReadOnlyCollection(Object):
         """
         IndexOf(self: ReadOnlyCollection[T], value: T) -> int
         
-            Searches for the specified object and returns the zero-based index of the 
-             first occurrence within the entire 
-             System.Collections.ObjectModel.ReadOnlyCollection.
+            Searches for the specified object and returns the zero-based index of the first 
+             occurrence within the entire System.Collections.ObjectModel.ReadOnlyCollection.
         
         
-            value: The object to locate in the System.Collections.Generic.List. The value can be 
-             null for reference types.
+            value: The object to locate in the System.Collections.Generic.List. The value can be null for 
+             reference types.
         
             Returns: The zero-based index of the first occurrence of item within the entire 
              System.Collections.ObjectModel.ReadOnlyCollection, if found; otherwise, -1.
@@ -573,21 +555,16 @@ class ReadOnlyCollection(Object):
         """
         __contains__(self: ICollection[T], item: T) -> bool
         
-            Determines whether the System.Collections.Generic.ICollection contains a 
-             specific value.
-        
+            Determines whether the System.Collections.Generic.ICollection contains a specific value.
         
             item: The object to locate in the System.Collections.Generic.ICollection.
-            Returns: true if item is found in the System.Collections.Generic.ICollection; 
-             otherwise, false.
-        
+            Returns: true if item is found in the System.Collections.Generic.ICollection; otherwise, false.
         __contains__(self: IList, value: object) -> bool
         
             Determines whether the System.Collections.IList contains a specific value.
         
             value: The object to locate in the System.Collections.IList.
-            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, 
-             false.
+            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, false.
         """
         pass
 
@@ -653,23 +630,23 @@ class ReadOnlyDictionary(Object):
         """
         __contains__(self: IDictionary[TKey, TValue], key: TKey) -> bool
         
-            Determines whether the System.Collections.Generic.IDictionary contains an 
-             element with the specified key.
+            Determines whether the System.Collections.Generic.IDictionary contains an element with 
+             the specified key.
         
         
             key: The key to locate in the System.Collections.Generic.IDictionary.
-            Returns: true if the System.Collections.Generic.IDictionary contains an element with 
-             the key; otherwise, false.
+            Returns: true if the System.Collections.Generic.IDictionary contains an element with the key; 
+             otherwise, false.
         
         __contains__(self: IDictionary, key: object) -> bool
         
-            Determines whether the System.Collections.IDictionary object contains an 
-             element with the specified key.
+            Determines whether the System.Collections.IDictionary object contains an element with the 
+             specified key.
         
         
             key: The key to locate in the System.Collections.IDictionary object.
-            Returns: true if the System.Collections.IDictionary contains an element with the key; 
-             otherwise, false.
+            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, 
+             false.
         """
         pass
 
@@ -730,8 +707,8 @@ class ReadOnlyObservableCollection(ReadOnlyCollection):
     def OnCollectionChanged(self, *args): #cannot find CLR method
         """
         OnCollectionChanged(self: ReadOnlyObservableCollection[T], args: NotifyCollectionChangedEventArgs)
-            Raises the System.Collections.ObjectModel.ReadOnlyObservableCollection event 
-             using the provided arguments.
+            Raises the System.Collections.ObjectModel.ReadOnlyObservableCollection event using the 
+             provided arguments.
         
         
             args: Arguments of the event being raised.
@@ -741,8 +718,8 @@ class ReadOnlyObservableCollection(ReadOnlyCollection):
     def OnPropertyChanged(self, *args): #cannot find CLR method
         """
         OnPropertyChanged(self: ReadOnlyObservableCollection[T], args: PropertyChangedEventArgs)
-            Raises the System.Collections.ObjectModel.ReadOnlyObservableCollection event 
-             using the provided arguments.
+            Raises the System.Collections.ObjectModel.ReadOnlyObservableCollection event using the 
+             provided arguments.
         
         
             args: Arguments of the event being raised.

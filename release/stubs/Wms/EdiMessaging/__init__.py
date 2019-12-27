@@ -1,7 +1,7 @@
 from System import Object
 # encoding: utf-8
 # module Wms.EdiMessaging calls itself EdiMessaging
-# from Wms.EdiMessaging, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null, Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
+# from Wms.RemotingObjects, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null, Wms.EdiMessaging, Version=1.24.1.1, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports

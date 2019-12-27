@@ -96,49 +96,48 @@ class AlternateView(AttachmentBase):
         """
         CreateAlternateViewFromString(content: str) -> AlternateView
         
-            Creates a System.Net.Mail.AlternateView of an email message using the content 
-             specified in a System.String.
+            Creates a System.Net.Mail.AlternateView of an email message using the content specified 
+             in a System.String.
         
         
             content: The System.String that contains the content of the email message.
-            Returns: An System.Net.Mail.AlternateView object that represents an alternate view of 
-             an email message.
+            Returns: An System.Net.Mail.AlternateView object that represents an alternate view of an email 
+             message.
         
         CreateAlternateViewFromString(content: str, contentEncoding: Encoding, mediaType: str) -> AlternateView
         
-            Creates an System.Net.Mail.AlternateView of an email message using the content 
-             specified in a System.String, the specified text encoding, and MIME media type 
-             of the content.
+            Creates an System.Net.Mail.AlternateView of an email message using the content specified 
+             in a System.String, the specified text encoding, and MIME media type of the content.
         
         
             content: A System.String that contains the content for this attachment.
             contentEncoding: An System.Text.Encoding. This value can be null.
             mediaType: The MIME media type of the content.
-            Returns: An System.Net.Mail.AlternateView object that represents an alternate view of 
-             an email message.
+            Returns: An System.Net.Mail.AlternateView object that represents an alternate view of an email 
+             message.
         
         CreateAlternateViewFromString(content: str, contentType: ContentType) -> AlternateView
         
-            Creates an System.Net.Mail.AlternateView of an email message using the content 
-             specified in a System.String and the specified MIME media type of the content.
+            Creates an System.Net.Mail.AlternateView of an email message using the content specified 
+             in a System.String and the specified MIME media type of the content.
         
         
             content: A System.String that contains the content for this attachment.
             contentType: A System.Net.Mime.ContentType that describes the data in string.
-            Returns: An System.Net.Mail.AlternateView object that represents an alternate view of 
-             an email message.
+            Returns: An System.Net.Mail.AlternateView object that represents an alternate view of an email 
+             message.
         """
         pass
 
     def Dispose(self):
         """
         Dispose(self: AlternateView, disposing: bool)
-            Releases the unmanaged resources used by the System.Net.Mail.AlternateView and 
-             optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.Net.Mail.AlternateView and optionally 
+             releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only 
-             unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -259,40 +258,35 @@ class Attachment(AttachmentBase):
         """
         CreateAttachmentFromString(content: str, name: str) -> Attachment
         
-            Creates a mail attachment using the content from the specified string, and the 
-             specified MIME content type name.
+            Creates a mail attachment using the content from the specified string, and the specified 
+             MIME content type name.
         
         
             content: A System.String that contains the content for this attachment.
-            name: The MIME content type name value in the content type associated with this 
-             attachment.
-        
+            name: The MIME content type name value in the content type associated with this attachment.
             Returns: An object of type System.Net.Mail.Attachment.
         CreateAttachmentFromString(content: str, name: str, contentEncoding: Encoding, mediaType: str) -> Attachment
         
-            Creates a mail attachment using the content from the specified string, the 
-             specified MIME content type name, character encoding, and MIME header 
-             information for the attachment.
+            Creates a mail attachment using the content from the specified string, the specified MIME 
+             content type name, character encoding, and MIME header information for the attachment.
         
         
             content: A System.String that contains the content for this attachment.
-            name: The MIME content type name value in the content type associated with this 
-             attachment.
-        
+            name: The MIME content type name value in the content type associated with this attachment.
             contentEncoding: An System.Text.Encoding. This value can be null.
-            mediaType: A System.String that contains the MIME Content-Header information for this 
-             attachment. This value can be null.
+            mediaType: A System.String that contains the MIME Content-Header information for this attachment. 
+             This value can be null.
         
             Returns: An object of type System.Net.Mail.Attachment.
         CreateAttachmentFromString(content: str, contentType: ContentType) -> Attachment
         
-            Creates a mail attachment using the content from the specified string, and the 
-             specified System.Net.Mime.ContentType.
+            Creates a mail attachment using the content from the specified string, and the specified 
+             System.Net.Mime.ContentType.
         
         
             content: A System.String that contains the content for this attachment.
-            contentType: A System.Net.Mime.ContentType object that represents the Multipurpose Internet 
-             Mail Exchange (MIME) protocol Content-Type header to be used.
+            contentType: A System.Net.Mime.ContentType object that represents the Multipurpose Internet Mail 
+             Exchange (MIME) protocol Content-Type header to be used.
         
             Returns: An object of type System.Net.Mail.Attachment.
         """
@@ -301,12 +295,12 @@ class Attachment(AttachmentBase):
     def Dispose(self):
         """
         Dispose(self: AttachmentBase, disposing: bool)
-            Releases the unmanaged resources used by the System.Net.Mail.AttachmentBase 
-             and optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.Net.Mail.AttachmentBase and 
+             optionally releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only 
-             unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -484,57 +478,50 @@ class LinkedResource(AttachmentBase):
         """
         CreateLinkedResourceFromString(content: str) -> LinkedResource
         
-            Creates a System.Net.Mail.LinkedResource object from a string to be included 
-             in an email attachment as an embedded resource. The default media type is 
-             plain text, and the default content type is ASCII.
+            Creates a System.Net.Mail.LinkedResource object from a string to be included in an email 
+             attachment as an embedded resource. The default media type is plain text, and the default 
+             content type is ASCII.
         
         
-            content: A string that contains the embedded resource to be included in the email 
-             attachment.
-        
-            Returns: A System.Net.Mail.LinkedResource object that contains the embedded resource to 
-             be included in the email attachment.
+            content: A string that contains the embedded resource to be included in the email attachment.
+            Returns: A System.Net.Mail.LinkedResource object that contains the embedded resource to be 
+             included in the email attachment.
         
         CreateLinkedResourceFromString(content: str, contentEncoding: Encoding, mediaType: str) -> LinkedResource
         
-            Creates a System.Net.Mail.LinkedResource object from a string to be included 
-             in an email attachment as an embedded resource, with the specified content 
-             type, and media type.
+            Creates a System.Net.Mail.LinkedResource object from a string to be included in an email 
+             attachment as an embedded resource, with the specified content type, and media type.
         
         
-            content: A string that contains the embedded resource to be included in the email 
-             attachment.
-        
+            content: A string that contains the embedded resource to be included in the email attachment.
             contentEncoding: The type of the content.
             mediaType: The MIME media type of the content.
-            Returns: A System.Net.Mail.LinkedResource object that contains the embedded resource to 
-             be included in the email attachment.
+            Returns: A System.Net.Mail.LinkedResource object that contains the embedded resource to be 
+             included in the email attachment.
         
         CreateLinkedResourceFromString(content: str, contentType: ContentType) -> LinkedResource
         
-            Creates a System.Net.Mail.LinkedResource object from a string to be included 
-             in an email attachment as an embedded resource, with the specified content 
-             type, and media type as plain text.
+            Creates a System.Net.Mail.LinkedResource object from a string to be included in an email 
+             attachment as an embedded resource, with the specified content type, and media type as 
+             plain text.
         
         
-            content: A string that contains the embedded resource to be included in the email 
-             attachment.
-        
+            content: A string that contains the embedded resource to be included in the email attachment.
             contentType: The type of the content.
-            Returns: A System.Net.Mail.LinkedResource object that contains the embedded resource to 
-             be included in the email attachment.
+            Returns: A System.Net.Mail.LinkedResource object that contains the embedded resource to be 
+             included in the email attachment.
         """
         pass
 
     def Dispose(self):
         """
         Dispose(self: AttachmentBase, disposing: bool)
-            Releases the unmanaged resources used by the System.Net.Mail.AttachmentBase 
-             and optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.Net.Mail.AttachmentBase and 
+             optionally releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only 
-             unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -728,8 +715,8 @@ class MailAddressCollection(Collection):
         Add(self: MailAddressCollection, addresses: str)
             Add a list of e-mail addresses to the collection.
         
-            addresses: The e-mail addresses to add to the System.Net.Mail.MailAddressCollection. 
-             Multiple e-mail addresses must be separated with a comma character (",").
+            addresses: The e-mail addresses to add to the System.Net.Mail.MailAddressCollection. Multiple e-mail 
+             addresses must be separated with a comma character (",").
         """
         pass
 
@@ -743,8 +730,8 @@ class MailAddressCollection(Collection):
     def InsertItem(self, *args): #cannot find CLR method
         """
         InsertItem(self: MailAddressCollection, index: int, item: MailAddress)
-            Inserts an e-mail address into the System.Net.Mail.MailAddressCollection, at 
-             the specified location.
+            Inserts an e-mail address into the System.Net.Mail.MailAddressCollection, at the 
+             specified location.
         
         
             index: The location at which to insert the e-mail address that is specified by item.
@@ -821,9 +808,9 @@ class MailMessage(Object):
     Represents an e-mail message that can be sent using the System.Net.Mail.SmtpClient class.
     
     MailMessage()
-    MailMessage(from: str, to: str)
     MailMessage(from: str, to: str, subject: str, body: str)
-    MailMessage(from: MailAddress, to: MailAddress)
+    MailMessage(from: MailAddress, to: MailAddress)
+    MailMessage(from: str, to: str)
     """
     def Dispose(self):
         """
@@ -1066,13 +1053,10 @@ class SendCompletedEventHandler(MulticastDelegate):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new 
-             delegate.
-        
+            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
         
             follow: The delegate to combine with this delegate.
-            Returns: A delegate that is the new root of the System.MulticastDelegate invocation 
-             list.
+            Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
         """
         pass
 
@@ -1080,13 +1064,11 @@ class SendCompletedEventHandler(MulticastDelegate):
         """
         DynamicInvokeImpl(self: Delegate, args: Array[object]) -> object
         
-            Dynamically invokes (late-bound) the method represented by the current 
-             delegate.
+            Dynamically invokes (late-bound) the method represented by the current delegate.
         
-        
-            args: An array of objects that are the arguments to pass to the method represented 
-             by the current delegate.-or- null, if the method represented by the current 
-             delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -1113,14 +1095,14 @@ class SendCompletedEventHandler(MulticastDelegate):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate 
-             that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new 
-             System.Delegate without value in its invocation list; otherwise, this instance 
-             with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -1197,9 +1179,8 @@ class SmtpClient(Object):
     def Dispose(self):
         """
         Dispose(self: SmtpClient)
-            Sends a QUIT message to the SMTP server, gracefully ends the TCP connection, 
-             and releases all resources used by the current instance of the 
-             System.Net.Mail.SmtpClient class.
+            Sends a QUIT message to the SMTP server, gracefully ends the TCP connection, and releases 
+             all resources used by the current instance of the System.Net.Mail.SmtpClient class.
         """
         pass
 
@@ -1215,9 +1196,8 @@ class SmtpClient(Object):
     def Send(self, *__args):
         """
         Send(self: SmtpClient, from: str, recipients: str, subject: str, body: str)
-            Sends the specified e-mail message to an SMTP server for delivery. The message 
-             sender, recipients, subject, and message body are specified using 
-             System.String objects.
+            Sends the specified e-mail message to an SMTP server for delivery. The message sender, 
+             recipients, subject, and message body are specified using System.String objects.
         
         
             from: A System.String that contains the address information of the message sender.
@@ -1234,28 +1214,28 @@ class SmtpClient(Object):
     def SendAsync(self, *__args):
         """
         SendAsync(self: SmtpClient, from: str, recipients: str, subject: str, body: str, userToken: object)
-            Sends an e-mail message to an SMTP server for delivery. The message sender, 
-             recipients, subject, and message body are specified using System.String 
-             objects. This method does not block the calling thread and allows the caller 
-             to pass an object to the method that is invoked when the operation completes.
+            Sends an e-mail message to an SMTP server for delivery. The message sender, recipients, 
+             subject, and message body are specified using System.String objects. This method does not 
+             block the calling thread and allows the caller to pass an object to the method that is 
+             invoked when the operation completes.
         
         
             from: A System.String that contains the address information of the message sender.
             recipients: A System.String that contains the address that the message is sent to.
             subject: A System.String that contains the subject line for the message.
             body: A System.String that contains the message body.
-            userToken: A user-defined object that is passed to the method invoked when the 
-             asynchronous operation completes.
+            userToken: A user-defined object that is passed to the method invoked when the asynchronous 
+             operation completes.
         
         SendAsync(self: SmtpClient, message: MailMessage, userToken: object)
-            Sends the specified e-mail message to an SMTP server for delivery. This method 
-             does not block the calling thread and allows the caller to pass an object to 
-             the method that is invoked when the operation completes.
+            Sends the specified e-mail message to an SMTP server for delivery. This method does not 
+             block the calling thread and allows the caller to pass an object to the method that is 
+             invoked when the operation completes.
         
         
             message: A System.Net.Mail.MailMessage that contains the message to send.
-            userToken: A user-defined object that is passed to the method invoked when the 
-             asynchronous operation completes.
+            userToken: A user-defined object that is passed to the method invoked when the asynchronous 
+             operation completes.
         """
         pass
 
@@ -1498,13 +1478,13 @@ class SmtpException(Exception):
     def GetObjectData(self, serializationInfo, streamingContext):
         """
         GetObjectData(self: SmtpException, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo instance with the 
-             data needed to serialize the System.Net.Mail.SmtpException.
+            Populates a System.Runtime.Serialization.SerializationInfo instance with the data needed 
+             to serialize the System.Net.Mail.SmtpException.
         
         
             serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-            streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination 
-             for this serialization.
+            streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
+             serialization.
         """
         pass
 
@@ -1558,14 +1538,13 @@ class SmtpFailedRecipientException(SmtpException):
     def GetObjectData(self, serializationInfo, streamingContext):
         """
         GetObjectData(self: SmtpFailedRecipientException, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo instance with the 
-             data that is needed to serialize the 
-             System.Net.Mail.SmtpFailedRecipientException.
+            Populates a System.Runtime.Serialization.SerializationInfo instance with the data that is 
+             needed to serialize the System.Net.Mail.SmtpFailedRecipientException.
         
         
             serializationInfo: The System.Runtime.Serialization.SerializationInfo to populate with data.
-            streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination 
-             for this serialization.
+            streamingContext: A System.Runtime.Serialization.StreamingContext that specifies the destination for this 
+             serialization.
         """
         pass
 
@@ -1617,9 +1596,8 @@ class SmtpFailedRecipientsException(SmtpFailedRecipientException):
     def GetObjectData(self, serializationInfo, streamingContext):
         """
         GetObjectData(self: SmtpFailedRecipientsException, serializationInfo: SerializationInfo, streamingContext: StreamingContext)
-            Populates a System.Runtime.Serialization.SerializationInfo instance with the 
-             data that is needed to serialize the 
-             System.Net.Mail.SmtpFailedRecipientsException.
+            Populates a System.Runtime.Serialization.SerializationInfo instance with the data that is 
+             needed to serialize the System.Net.Mail.SmtpFailedRecipientsException.
         
         
             serializationInfo: The System.Runtime.Serialization.SerializationInfo to be used.
@@ -1700,16 +1678,16 @@ class SmtpPermission(CodeAccessPermission):
         """
         Intersect(self: SmtpPermission, target: IPermission) -> IPermission
         
-            Creates and returns a permission that is the intersection of the current 
-             permission and the specified permission.
+            Creates and returns a permission that is the intersection of the current permission and 
+             the specified permission.
         
         
-            target: An System.Security.IPermission to intersect with the current permission. It 
-             must be of the same type as the current permission.
+            target: An System.Security.IPermission to intersect with the current permission. It must be of 
+             the same type as the current permission.
         
-            Returns: An System.Net.Mail.SmtpPermission that represents the intersection of the 
-             current permission and the specified permission. Returns null if the 
-             intersection is empty or target is null.
+            Returns: An System.Net.Mail.SmtpPermission that represents the intersection of the current 
+             permission and the specified permission. Returns null if the intersection is empty or 
+             target is null.
         """
         pass
 
@@ -1717,16 +1695,14 @@ class SmtpPermission(CodeAccessPermission):
         """
         IsSubsetOf(self: SmtpPermission, target: IPermission) -> bool
         
-            Returns a value indicating whether the current permission is a subset of the 
-             specified permission.
-        
-        
-            target: An System.Security.IPermission that is to be tested for the subset 
-             relationship. This permission must be of the same type as the current 
+            Returns a value indicating whether the current permission is a subset of the specified 
              permission.
         
-            Returns: true if the current permission is a subset of the specified permission; 
-             otherwise, false.
+        
+            target: An System.Security.IPermission that is to be tested for the subset relationship. This 
+             permission must be of the same type as the current permission.
+        
+            Returns: true if the current permission is a subset of the specified permission; otherwise, false.
         """
         pass
 
@@ -1744,8 +1720,7 @@ class SmtpPermission(CodeAccessPermission):
         ToXml(self: SmtpPermission) -> SecurityElement
         
             Creates an XML encoding of the state of the permission.
-            Returns: A System.Security.SecurityElement that contains an XML encoding of the current 
-             permission.
+            Returns: A System.Security.SecurityElement that contains an XML encoding of the current permission.
         """
         pass
 
@@ -1753,13 +1728,13 @@ class SmtpPermission(CodeAccessPermission):
         """
         Union(self: SmtpPermission, target: IPermission) -> IPermission
         
-            Creates a permission that is the union of the current permission and the 
-             specified permission.
+            Creates a permission that is the union of the current permission and the specified 
+             permission.
         
         
             target: An System.Security.IPermission to combine with the current permission.
-            Returns: A new System.Net.Mail.SmtpPermission permission that represents the union of 
-             the current permission and the specified permission.
+            Returns: A new System.Net.Mail.SmtpPermission permission that represents the union of the current 
+             permission and the specified permission.
         """
         pass
 

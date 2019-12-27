@@ -1,5 +1,4 @@
 from System import Exception
-from System.Runtime.Remoting import RemotingException
 from System.Collections.Generic import Dictionary
 from System.Collections.Generic import List
 from System import Object
@@ -1693,8 +1692,8 @@ class PagingParams():
         GetHashCode(self: PagingParams) -> int
         
             Unique hash depending on contents.
-                    Identical contents leads to 
-             identical hash.
+                    Identical contents leads to identical 
+             hash.
         """
         pass
 

@@ -195,13 +195,11 @@ class CacheKey():
         """
         Equals(self: CacheKey, obj: object) -> bool
         
-            Determines whether the specified System.Object is equal to the current 
-             System.Object.
-        
+            Determines whether the specified System.Object is equal to the current System.Object.
         
             obj: The System.Object to compare with the current System.Object.
-            Returns: true if the specified System.Object is equal to the current System.Object; 
-             otherwise, false.
+            Returns: true if the specified System.Object is equal to the current System.Object; otherwise, 
+             false.
         """
         pass
 
@@ -210,9 +208,8 @@ class CacheKey():
         GetHashCode(self: CacheKey) -> int
         
             Serves as a hash function for a particular type. System.Object.GetHashCode 
-          
-                       is suitable for use in hashing algorithms and data structures like a 
-             hash table.
+                    
+             is suitable for use in hashing algorithms and data structures like a hash table.
         
             Returns: A hash code for the current System.Object.
         """

@@ -21,8 +21,8 @@ class ExtensionMethods():
         IsInteger(input: str) -> bool
         
             Checks if string is an integer, only contains numeric characters.
-                    
-             This also works for very, very big intergers.
+                    This also 
+             works for very, very big intergers.
         
         
             input: string to check if its an integer

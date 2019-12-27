@@ -91,8 +91,7 @@ class RemotingIdentity():
         """
         ToSession(self: RemotingIdentity) -> Session
         
-            Converts a RemotingIdentity object to a smaller, leaner Session object for 
-             storage.
+            Converts a RemotingIdentity object to a smaller, leaner Session object for storage.
         """
         pass
 

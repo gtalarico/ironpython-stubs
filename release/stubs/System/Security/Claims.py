@@ -12,11 +12,11 @@ class Claim():
     """
     Claim(reader: BinaryReader)
     Claim(reader: BinaryReader, subject: ClaimsIdentity)
-    Claim(type: str, value: str)
-    Claim(type: str, value: str, valueType: str)
     Claim(type: str, value: str, valueType: str, issuer: str)
     Claim(type: str, value: str, valueType: str, issuer: str, originalIssuer: str)
-    Claim(type: str, value: str, valueType: str, issuer: str, originalIssuer: str, subject: ClaimsIdentity)
+    Claim(type: str, value: str, valueType: str, issuer: str, originalIssuer: str, subject: ClaimsIdentity)
+    Claim(type: str, value: str)
+    Claim(type: str, value: str, valueType: str)
     """
     def Clone(self, identity=None):
         """

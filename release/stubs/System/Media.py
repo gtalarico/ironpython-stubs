@@ -19,12 +19,12 @@ class SoundPlayer(Component):
     def Dispose(self):
         """
         Dispose(self: Component, disposing: bool)
-            Releases the unmanaged resources used by the System.ComponentModel.Component 
-             and optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.ComponentModel.Component and 
+             optionally releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only 
-             unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -38,8 +38,8 @@ class SoundPlayer(Component):
         
             service: A service provided by the System.ComponentModel.Component.
             Returns: An System.Object that represents a service provided by the 
-             System.ComponentModel.Component, or null if the 
-             System.ComponentModel.Component does not provide the specified service.
+             System.ComponentModel.Component, or null if the System.ComponentModel.Component does not 
+             provide the specified service.
         """
         pass
 
@@ -63,12 +63,11 @@ class SoundPlayer(Component):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled 
-             across a remoting boundary. A value of false is usually appropriate. true to 
-             copy the current System.MarshalByRefObject object's identity to its clone, 
-             which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -108,16 +107,16 @@ class SoundPlayer(Component):
     def Play(self):
         """
         Play(self: SoundPlayer)
-            Plays the .wav file using a new thread, and loads the .wav file first if it 
-             has not been loaded.
+            Plays the .wav file using a new thread, and loads the .wav file first if it has not been 
+             loaded.
         """
         pass
 
     def PlayLooping(self):
         """
         PlayLooping(self: SoundPlayer)
-            Plays and loops the .wav file using a new thread, and loads the .wav file 
-             first if it has not been loaded.
+            Plays and loops the .wav file using a new thread, and loads the .wav file first if it has 
+             not been loaded.
         """
         pass
 

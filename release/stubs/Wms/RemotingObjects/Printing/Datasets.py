@@ -63,8 +63,7 @@ class PrintDatasetBase():
         GetTestData(self: PrintDatasetBase) -> PrintLinesBase
         
             Return value needs to be cast before usage.
-            Returns: An object that can be used to put in the cache, and to print a test page 
-             afterwards.
+            Returns: An object that can be used to put in the cache, and to print a test page afterwards.
         """
         pass
 
@@ -571,8 +570,8 @@ class RmaPrintDataset(PrintDatasetBase):
         """
         GetTestData(self: RmaPrintDataset) -> PrintLinesBase
             Returns: An RmaOrderPrintLine to be able to send to the cache, after which 
-                   
-              Broker.Inbound.PrintRmaOrderPrintLines can be called.
+                    
+             Broker.Inbound.PrintRmaOrderPrintLines can be called.
         """
         pass
 

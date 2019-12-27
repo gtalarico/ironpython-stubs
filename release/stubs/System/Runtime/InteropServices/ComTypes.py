@@ -466,8 +466,8 @@ class IAdviseSink(Object):
     def OnClose(self):
         """
         OnClose(self: IAdviseSink)
-            Notifies all registered advisory sinks that the object has changed from the 
-             running state to the loaded state.  This method is called by a server.
+            Notifies all registered advisory sinks that the object has changed from the running state 
+             to the loaded state.  This method is called by a server.
         """
         pass
 
@@ -475,26 +475,25 @@ class IAdviseSink(Object):
         """
         OnDataChange(self: IAdviseSink, format: FORMATETC, stgmedium: STGMEDIUM) -> (FORMATETC, STGMEDIUM)
         
-            Notifies all data objects currently registered advisory sinks that data in the 
-             object has changed.
+            Notifies all data objects currently registered advisory sinks that data in the object has 
+             changed.
         
         
-            format: A System.Runtime.InteropServices.ComTypes.FORMATETC, passed by reference, 
-             which describes the format, target device, rendering, and storage information 
-             of the calling data object.
+            format: A System.Runtime.InteropServices.ComTypes.FORMATETC, passed by reference, which describes 
+             the format, target device, rendering, and storage information of the calling data object.
         
-            stgmedium: A System.Runtime.InteropServices.ComTypes.STGMEDIUM, passed by reference, 
-             which defines the storage medium (global memory, disk file, storage object, 
-             stream object, Graphics Device Interface (GDI) object, or undefined) and 
-             ownership of that medium for the calling data object.
+            stgmedium: A System.Runtime.InteropServices.ComTypes.STGMEDIUM, passed by reference, which defines 
+             the storage medium (global memory, disk file, storage object, stream object, Graphics 
+             Device Interface (GDI) object, or undefined) and ownership of that medium for the calling 
+             data object.
         """
         pass
 
     def OnRename(self, moniker):
         """
         OnRename(self: IAdviseSink, moniker: IMoniker)
-            Notifies all registered advisory sinks that the object has been renamed. This 
-             method is called by a server.
+            Notifies all registered advisory sinks that the object has been renamed. This method is 
+             called by a server.
         
         
             moniker: A pointer to the IMoniker interface on the new full moniker of the object.
@@ -504,16 +503,16 @@ class IAdviseSink(Object):
     def OnSave(self):
         """
         OnSave(self: IAdviseSink)
-            Notifies all registered advisory sinks that the object has been saved. This 
-             method is called by a server.
+            Notifies all registered advisory sinks that the object has been saved. This method is 
+             called by a server.
         """
         pass
 
     def OnViewChange(self, aspect, index):
         """
         OnViewChange(self: IAdviseSink, aspect: int, index: int)
-            Notifies an object's registered advisory sinks that its view has changed. This 
-             method is called by a server.
+            Notifies an object's registered advisory sinks that its view has changed. This method is 
+             called by a server.
         
         
             aspect: The aspect, or view, of the object. Contains a value taken from the 
@@ -536,8 +535,8 @@ class IBindCtx(Object):
         """
         EnumObjectParam(self: IBindCtx) -> IEnumString
         
-            Enumerates the strings that are the keys of the internally maintained table of 
-             contextual object parameters.
+            Enumerates the strings that are the keys of the internally maintained table of contextual 
+             object parameters.
         """
         pass
 
@@ -555,8 +554,8 @@ class IBindCtx(Object):
         """
         GetObjectParam(self: IBindCtx, pszKey: str) -> object
         
-            Looks up the given key in the internally maintained table of contextual object 
-             parameters and returns the corresponding object, if one exists.
+            Looks up the given key in the internally maintained table of contextual object parameters 
+             and returns the corresponding object, if one exists.
         
         
             pszKey: The name of the object to search for.
@@ -567,16 +566,15 @@ class IBindCtx(Object):
         """
         GetRunningObjectTable(self: IBindCtx) -> IRunningObjectTable
         
-            Returns access to the Running Object Table (ROT) relevant to this binding 
-             process.
+            Returns access to the Running Object Table (ROT) relevant to this binding process.
         """
         pass
 
     def RegisterObjectBound(self, punk):
         """
         RegisterObjectBound(self: IBindCtx, punk: object)
-            Registers the passed object as one of the objects that has been bound during a 
-             moniker operation and that should be released when the operation is complete.
+            Registers the passed object as one of the objects that has been bound during a moniker 
+             operation and that should be released when the operation is complete.
         
         
             punk: The object to register for release.
@@ -586,8 +584,8 @@ class IBindCtx(Object):
     def RegisterObjectParam(self, pszKey, punk):
         """
         RegisterObjectParam(self: IBindCtx, pszKey: str, punk: object)
-            Registers the specified object pointer under the specified name in the 
-             internally maintained table of object pointers.
+            Registers the specified object pointer under the specified name in the internally 
+             maintained table of object pointers.
         
         
             pszKey: The name to register punk with.
@@ -598,10 +596,9 @@ class IBindCtx(Object):
     def ReleaseBoundObjects(self):
         """
         ReleaseBoundObjects(self: IBindCtx)
-            Releases all the objects currently registered with the bind context by using 
-             the 
-             System.Runtime.InteropServices.ComTypes.IBindCtx.RegisterObjectBound(System.Obj
-             ect) method.
+            Releases all the objects currently registered with the bind context by using the 
+             System.Runtime.InteropServices.ComTypes.IBindCtx.RegisterObjectBound(System.Object) 
+             method.
         """
         pass
 
@@ -618,14 +615,14 @@ class IBindCtx(Object):
         """
         RevokeObjectParam(self: IBindCtx, pszKey: str) -> int
         
-            Revokes the registration of the object currently found under the specified key 
-             in the internally maintained table of contextual object parameters, if that 
-             key is currently registered.
+            Revokes the registration of the object currently found under the specified key in the 
+             internally maintained table of contextual object parameters, if that key is currently 
+             registered.
         
         
             pszKey: The key to unregister.
-            Returns: An S_OKHRESULT value if the specified key was successfully removed from the 
-             table; otherwise, an S_FALSEHRESULT value.
+            Returns: An S_OKHRESULT value if the specified key was successfully removed from the table; 
+             otherwise, an S_FALSEHRESULT value.
         """
         pass
 
@@ -633,8 +630,8 @@ class IBindCtx(Object):
         """
         SetBindOptions(self: IBindCtx, pbindopts: BIND_OPTS) -> BIND_OPTS
         
-            Stores a block of parameters in the bind context. These parameters will apply 
-             to later UCOMIMoniker operations that use this bind context.
+            Stores a block of parameters in the bind context. These parameters will apply to later 
+             UCOMIMoniker operations that use this bind context.
         
         
             pbindopts: The structure containing the binding options to set.
@@ -654,12 +651,12 @@ class IConnectionPoint(Object):
         """
         Advise(self: IConnectionPoint, pUnkSink: object) -> int
         
-            Establishes an advisory connection between the connection point and the 
-             caller's sink object.
+            Establishes an advisory connection between the connection point and the caller's sink 
+             object.
         
         
-            pUnkSink: A reference to the sink to receive calls for the outgoing interface managed by 
-             this connection point.
+            pUnkSink: A reference to the sink to receive calls for the outgoing interface managed by this 
+             connection point.
         """
         pass
 
@@ -667,8 +664,8 @@ class IConnectionPoint(Object):
         """
         EnumConnections(self: IConnectionPoint) -> IEnumConnections
         
-            Creates an enumerator object for iteration through the connections that exist 
-             to this connection point.
+            Creates an enumerator object for iteration through the connections that exist to this 
+             connection point.
         """
         pass
 
@@ -684,8 +681,8 @@ class IConnectionPoint(Object):
         """
         GetConnectionPointContainer(self: IConnectionPoint) -> IConnectionPointContainer
         
-            Retrieves the IConnectionPointContainer interface pointer to the connectable 
-             object that conceptually owns this connection point.
+            Retrieves the IConnectionPointContainer interface pointer to the connectable object that 
+             conceptually owns this connection point.
         """
         pass
 
@@ -693,13 +690,13 @@ class IConnectionPoint(Object):
         """
         Unadvise(self: IConnectionPoint, dwCookie: int)
             Terminates an advisory connection previously established through the 
-             System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise(System.Object,S
-             ystem.Int32@) method.
+             System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise(System.Object,System.Int32
+             @) method.
         
         
             dwCookie: The connection cookie previously returned from the 
-             System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise(System.Object,S
-             ystem.Int32@) method.
+             System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise(System.Object,System.Int32
+             @) method.
         """
         pass
 
@@ -716,8 +713,8 @@ class IConnectionPointContainer(Object):
         """
         EnumConnectionPoints(self: IConnectionPointContainer) -> IEnumConnectionPoints
         
-            Creates an enumerator of all the connection points supported in the 
-             connectable object, one connection point per IID.
+            Creates an enumerator of all the connection points supported in the connectable object, 
+             one connection point per IID.
         """
         pass
 
@@ -725,13 +722,11 @@ class IConnectionPointContainer(Object):
         """
         FindConnectionPoint(self: IConnectionPointContainer, riid: Guid) -> (Guid, IConnectionPoint)
         
-            Asks the connectable object if it has a connection point for a particular IID, 
-             and if so, returns the IConnectionPoint interface pointer to that connection 
-             point.
+            Asks the connectable object if it has a connection point for a particular IID, and if so, 
+             returns the IConnectionPoint interface pointer to that connection point.
         
         
-            riid: A reference to the outgoing interface IID whose connection point is being 
-             requested.
+            riid: A reference to the outgoing interface IID whose connection point is being requested.
         """
         pass
 
@@ -748,29 +743,27 @@ class IDataObject(Object):
         """
         DAdvise(self: IDataObject, pFormatetc: FORMATETC, advf: ADVF, adviseSink: IAdviseSink) -> (int, FORMATETC, int)
         
-            Creates a connection between a data object and an advisory sink. This method 
-             is called by an object that supports an advisory sink and enables the advisory 
-             sink to be notified of changes in the object's data.
+            Creates a connection between a data object and an advisory sink. This method is called by 
+             an object that supports an advisory sink and enables the advisory sink to be notified of 
+             changes in the object's data.
         
         
-            pFormatetc: A System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by 
-             reference, that defines the format, target device, aspect, and medium that 
-             will be used for future notifications.
+            pFormatetc: A System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by reference, that 
+             defines the format, target device, aspect, and medium that will be used for future 
+             notifications.
         
-            advf: One of the System.Runtime.InteropServices.ComTypes.ADVF values that specifies 
-             a group of flags for controlling the advisory connection.
+            advf: One of the System.Runtime.InteropServices.ComTypes.ADVF values that specifies a group of 
+             flags for controlling the advisory connection.
         
-            adviseSink: A pointer to the System.Runtime.InteropServices.ComTypes.IAdviseSink interface 
-             on the advisory sink that will receive the change notification.
+            adviseSink: A pointer to the System.Runtime.InteropServices.ComTypes.IAdviseSink interface on the 
+             advisory sink that will receive the change notification.
         
-            Returns: This method supports the standard return values E_INVALIDARG, E_UNEXPECTED, 
-             and E_OUTOFMEMORY, as well as the following: ValueDescriptionS_OKThe advisory 
-             connection was created.E_NOTIMPLThis method is not implemented on the data 
-             object.DV_E_LINDEXThere is an invalid value for 
-             System.Runtime.InteropServices.ComTypes.FORMATETC.lindex; currently, only -1 
-             is supported.DV_E_FORMATETCThere is an invalid value for the pFormatetc 
-             parameter.OLE_E_ADVISENOTSUPPORTEDThe data object does not support change 
-             notification.
+            Returns: This method supports the standard return values E_INVALIDARG, E_UNEXPECTED, and 
+             E_OUTOFMEMORY, as well as the following: ValueDescriptionS_OKThe advisory connection was 
+             created.E_NOTIMPLThis method is not implemented on the data object.DV_E_LINDEXThere is an 
+             invalid value for System.Runtime.InteropServices.ComTypes.FORMATETC.lindex; currently, 
+             only -1 is supported.DV_E_FORMATETCThere is an invalid value for the pFormatetc 
+             parameter.OLE_E_ADVISENOTSUPPORTEDThe data object does not support change notification.
         """
         pass
 
@@ -779,12 +772,11 @@ class IDataObject(Object):
         DUnadvise(self: IDataObject, connection: int)
             Destroys a notification connection that had been previously established.
         
-            connection: A DWORD token that specifies the connection to remove. Use the value returned 
-             by 
-             System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise(System.Runtime.Inte
-             ropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.ADVF,Sy
-             stem.Runtime.InteropServices.ComTypes.IAdviseSink,System.Int32@) when the 
-             connection was originally established.
+            connection: A DWORD token that specifies the connection to remove. Use the value returned by 
+             System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise(System.Runtime.InteropServices
+             .ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.ADVF,System.Runtime.InteropSe
+             rvices.ComTypes.IAdviseSink,System.Int32@) when the connection was originally 
+             established.
         """
         pass
 
@@ -792,13 +784,11 @@ class IDataObject(Object):
         """
         EnumDAdvise(self: IDataObject) -> (int, IEnumSTATDATA)
         
-            Creates an object that can be used to enumerate the current advisory 
-             connections.
-        
+            Creates an object that can be used to enumerate the current advisory connections.
             Returns: This method supports the standard return value E_OUTOFMEMORY, as well as the 
-             following:ValueDescriptionS_OKThe enumerator object is successfully 
-             instantiated or there are no connections.OLE_E_ADVISENOTSUPPORTEDThis object 
-             does not support advisory notifications.
+             following:ValueDescriptionS_OKThe enumerator object is successfully instantiated or there 
+             are no connections.OLE_E_ADVISENOTSUPPORTEDThis object does not support advisory 
+             notifications.
         """
         pass
 
@@ -806,25 +796,21 @@ class IDataObject(Object):
         """
         EnumFormatEtc(self: IDataObject, direction: DATADIR) -> IEnumFORMATETC
         
-            Creates an object for enumerating the 
-             System.Runtime.InteropServices.ComTypes.FORMATETC structures for a data 
-             object. These structures are used in calls to 
-             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.Inte
-             ropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDI
-             UM@) or 
-             System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.Inte
-             ropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDI
-             UM@,System.Boolean).
+            Creates an object for enumerating the System.Runtime.InteropServices.ComTypes.FORMATETC 
+             structures for a data object. These structures are used in calls to 
+             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices
+             .ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@) or 
+             System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.InteropServices
+             .ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System.Boolean).
         
         
-            direction: One of the System.Runtime.InteropServices.ComTypes.DATADIR values that 
-             specifies the direction of the data.
+            direction: One of the System.Runtime.InteropServices.ComTypes.DATADIR values that specifies the 
+             direction of the data.
         
-            Returns: This method supports the standard return values E_INVALIDARG and 
-             E_OUTOFMEMORY, as well as the following:ValueDescriptionS_OKThe enumerator 
-             object was successfully created.E_NOTIMPLThe direction specified by the 
-             direction parameter is not supported.OLE_S_USEREGRequests that OLE enumerate 
-             the formats from the registry.
+            Returns: This method supports the standard return values E_INVALIDARG and E_OUTOFMEMORY, as well 
+             as the following:ValueDescriptionS_OKThe enumerator object was successfully 
+             created.E_NOTIMPLThe direction specified by the direction parameter is not 
+             supported.OLE_S_USEREGRequests that OLE enumerate the formats from the registry.
         """
         pass
 
@@ -832,29 +818,27 @@ class IDataObject(Object):
         """
         GetCanonicalFormatEtc(self: IDataObject, formatIn: FORMATETC) -> (int, FORMATETC, FORMATETC)
         
-            Provides a standard System.Runtime.InteropServices.ComTypes.FORMATETC 
-             structure that is logically equivalent to a more complex structure. Use this 
-             method to determine whether two different 
-             System.Runtime.InteropServices.ComTypes.FORMATETC structures would return the 
-             same data, removing the need for duplicate rendering.
+            Provides a standard System.Runtime.InteropServices.ComTypes.FORMATETC structure that is 
+             logically equivalent to a more complex structure. Use this method to determine whether 
+             two different System.Runtime.InteropServices.ComTypes.FORMATETC structures would return 
+             the same data, removing the need for duplicate rendering.
         
         
-            formatIn: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, 
-             passed by reference, that defines the format, medium, and target device that 
-             the caller would like to use to retrieve data in a subsequent call such as 
-             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.Inte
-             ropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDI
-             UM@). The System.Runtime.InteropServices.ComTypes.TYMED member is not 
-             significant in this case and should be ignored.
+            formatIn: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by 
+             reference, that defines the format, medium, and target device that the caller would like 
+             to use to retrieve data in a subsequent call such as 
+             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices
+             .ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@). The 
+             System.Runtime.InteropServices.ComTypes.TYMED member is not significant in this case and 
+             should be ignored.
         
-            Returns: This method supports the standard return values E_INVALIDARG, E_UNEXPECTED, 
-             and E_OUTOFMEMORY, as well as the following: ValueDescriptionS_OKThe returned 
-             System.Runtime.InteropServices.ComTypes.FORMATETC structure is different from 
-             the one that was passed.DATA_S_SAMEFORMATETCThe 
-             System.Runtime.InteropServices.ComTypes.FORMATETC structures are the same and 
-             null is returned in the formatOut parameter.DV_E_LINDEXThere is an invalid 
-             value for System.Runtime.InteropServices.ComTypes.FORMATETC.lindex; currently, 
-             only -1 is supported.DV_E_FORMATETCThere is an invalid value for the 
+            Returns: This method supports the standard return values E_INVALIDARG, E_UNEXPECTED, and 
+             E_OUTOFMEMORY, as well as the following: ValueDescriptionS_OKThe returned 
+             System.Runtime.InteropServices.ComTypes.FORMATETC structure is different from the one 
+             that was passed.DATA_S_SAMEFORMATETCThe System.Runtime.InteropServices.ComTypes.FORMATETC 
+             structures are the same and null is returned in the formatOut parameter.DV_E_LINDEXThere 
+             is an invalid value for System.Runtime.InteropServices.ComTypes.FORMATETC.lindex; 
+             currently, only -1 is supported.DV_E_FORMATETCThere is an invalid value for the 
              pFormatetc parameter.OLE_E_NOTRUNNINGThe application is not running.
         """
         pass
@@ -864,21 +848,19 @@ class IDataObject(Object):
         GetData(self: IDataObject, format: FORMATETC) -> (FORMATETC, STGMEDIUM)
         
             Obtains data from a source data object. The 
-             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.Inte
-             ropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDI
-             UM@) method, which is called by a data consumer, renders the data described in 
-             the specified System.Runtime.InteropServices.ComTypes.FORMATETC structure and 
-             transfers it through the specified 
-             System.Runtime.InteropServices.ComTypes.STGMEDIUM structure. The caller then 
+             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices
+             .ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@) method, which is 
+             called by a data consumer, renders the data described in the specified 
+             System.Runtime.InteropServices.ComTypes.FORMATETC structure and transfers it through the 
+             specified System.Runtime.InteropServices.ComTypes.STGMEDIUM structure. The caller then 
              assumes responsibility for releasing the 
              System.Runtime.InteropServices.ComTypes.STGMEDIUM structure.
         
         
-            format: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, 
-             passed by reference, that defines the format, medium, and target device to use 
-             when passing the data. It is possible to specify more than one medium by using 
-             the Boolean OR operator, allowing the method to choose the best medium among 
-             those specified.
+            format: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by 
+             reference, that defines the format, medium, and target device to use when passing the 
+             data. It is possible to specify more than one medium by using the Boolean OR operator, 
+             allowing the method to choose the best medium among those specified.
         """
         pass
 
@@ -886,34 +868,31 @@ class IDataObject(Object):
         """
         GetDataHere(self: IDataObject, format: FORMATETC, medium: STGMEDIUM) -> (FORMATETC, STGMEDIUM)
         
-            Obtains data from a source data object. This method, which is called by a data 
-             consumer, differs from the 
-             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.Inte
-             ropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDI
-             UM@) method in that the caller must allocate and free the specified storage 
-             medium.
+            Obtains data from a source data object. This method, which is called by a data consumer, 
+             differs from the 
+             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices
+             .ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@) method in that 
+             the caller must allocate and free the specified storage medium.
         
         
-            format: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, 
-             passed by reference, that defines the format, medium, and target device to use 
-             when passing the data. Only one medium can be specified in 
-             System.Runtime.InteropServices.ComTypes.TYMED, and only the following 
-             System.Runtime.InteropServices.ComTypes.TYMED values are valid: 
+            format: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by 
+             reference, that defines the format, medium, and target device to use when passing the 
+             data. Only one medium can be specified in System.Runtime.InteropServices.ComTypes.TYMED, 
+             and only the following System.Runtime.InteropServices.ComTypes.TYMED values are valid: 
              System.Runtime.InteropServices.ComTypes.TYMED.TYMED_ISTORAGE, 
              System.Runtime.InteropServices.ComTypes.TYMED.TYMED_ISTREAM, 
              System.Runtime.InteropServices.ComTypes.TYMED.TYMED_HGLOBAL, or 
              System.Runtime.InteropServices.ComTypes.TYMED.TYMED_FILE.
         
-            medium: A System.Runtime.InteropServices.ComTypes.STGMEDIUM, passed by reference, that 
-             defines the storage medium containing the data being transferred. The medium 
-             must be allocated by the caller and filled in by 
-             System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere(System.Runtime.
-             InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STG
-             MEDIUM@). The caller must also free the medium. The implementation of this 
-             method must always supply a value of null for the 
-             System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease member of the 
-             System.Runtime.InteropServices.ComTypes.STGMEDIUM structure that this 
-             parameter points to.
+            medium: A System.Runtime.InteropServices.ComTypes.STGMEDIUM, passed by reference, that defines 
+             the storage medium containing the data being transferred. The medium must be allocated by 
+             the caller and filled in by 
+             System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere(System.Runtime.InteropServ
+             ices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@). The caller 
+             must also free the medium. The implementation of this method must always supply a value 
+             of null for the System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease member 
+             of the System.Runtime.InteropServices.ComTypes.STGMEDIUM structure that this parameter 
+             points to.
         """
         pass
 
@@ -921,28 +900,25 @@ class IDataObject(Object):
         """
         QueryGetData(self: IDataObject, format: FORMATETC) -> (int, FORMATETC)
         
-            Determines whether the data object is capable of rendering the data described 
-             in the System.Runtime.InteropServices.ComTypes.FORMATETC structure. Objects 
-             attempting a paste or drop operation can call this method before calling 
-             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.Inte
-             ropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDI
-             UM@) to get an indication of whether the operation may be successful.
+            Determines whether the data object is capable of rendering the data described in the 
+             System.Runtime.InteropServices.ComTypes.FORMATETC structure. Objects attempting a paste 
+             or drop operation can call this method before calling 
+             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices
+             .ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@) to get an 
+             indication of whether the operation may be successful.
         
         
-            format: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, 
-             passed by reference, that defines the format, medium, and target device to use 
-             for the query.
+            format: A pointer to a System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by 
+             reference, that defines the format, medium, and target device to use for the query.
         
-            Returns: This method supports the standard return values E_INVALIDARG, E_UNEXPECTED, 
-             and E_OUTOFMEMORY, as well as the following: ValueDescriptionS_OKA subsequent 
-             call to 
-             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.Inte
-             ropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDI
-             UM@) would probably be successful.DV_E_LINDEXAn invalid value for 
-             System.Runtime.InteropServices.ComTypes.FORMATETC.lindex; currently, only -1 
-             is supported.DV_E_FORMATETCAn invalid value for the pFormatetc 
-             parameter.DV_E_TYMEDAn invalid 
-             System.Runtime.InteropServices.ComTypes.FORMATETC.tymed value.DV_E_DVASPECTAn 
+            Returns: This method supports the standard return values E_INVALIDARG, E_UNEXPECTED, and 
+             E_OUTOFMEMORY, as well as the following: ValueDescriptionS_OKA subsequent call to 
+             System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices
+             .ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@) would probably 
+             be successful.DV_E_LINDEXAn invalid value for 
+             System.Runtime.InteropServices.ComTypes.FORMATETC.lindex; currently, only -1 is 
+             supported.DV_E_FORMATETCAn invalid value for the pFormatetc parameter.DV_E_TYMEDAn 
+             invalid System.Runtime.InteropServices.ComTypes.FORMATETC.tymed value.DV_E_DVASPECTAn 
              invalid System.Runtime.InteropServices.ComTypes.FORMATETC.dwAspect 
              value.OLE_E_NOTRUNNINGThe application is not running.
         """
@@ -952,25 +928,24 @@ class IDataObject(Object):
         """
         SetData(self: IDataObject, formatIn: FORMATETC, medium: STGMEDIUM, release: bool) -> (FORMATETC, STGMEDIUM)
         
-            Transfers data to the object that implements this method. This method is 
-             called by an object that contains a data source.
+            Transfers data to the object that implements this method. This method is called by an 
+             object that contains a data source.
         
         
-            formatIn: A System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by 
-             reference, that defines the format used by the data object when interpreting 
-             the data contained in the storage medium.
+            formatIn: A System.Runtime.InteropServices.ComTypes.FORMATETC structure, passed by reference, that 
+             defines the format used by the data object when interpreting the data contained in the 
+             storage medium.
         
-            medium: A System.Runtime.InteropServices.ComTypes.STGMEDIUM structure, passed by 
-             reference, that defines the storage medium in which the data is being passed.
+            medium: A System.Runtime.InteropServices.ComTypes.STGMEDIUM structure, passed by reference, that 
+             defines the storage medium in which the data is being passed.
         
             release: true to specify that the data object called, which implements 
-             System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.Inte
-             ropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDI
-             UM@,System.Boolean), owns the storage medium after the call returns. This 
-             means that the data object must free the medium after it has been used by 
-             calling the ReleaseStgMedium function. false to specify that the caller 
-             retains ownership of the storage medium, and the data object called uses the 
-             storage medium for the duration of the call only.
+             System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.InteropServices
+             .ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System.Boolean), 
+             owns the storage medium after the call returns. This means that the data object must free 
+             the medium after it has been used by calling the ReleaseStgMedium function. false to 
+             specify that the caller retains ownership of the storage medium, and the data object 
+             called uses the storage medium for the duration of the call only.
         """
         pass
 
@@ -1044,8 +1019,7 @@ class IEnumConnectionPoints(Object):
         """
         Clone(self: IEnumConnectionPoints) -> IEnumConnectionPoints
         
-            Creates a new enumerator that contains the same enumeration state as the 
-             current one.
+            Creates a new enumerator that contains the same enumeration state as the current one.
         """
         pass
 
@@ -1056,11 +1030,10 @@ class IEnumConnectionPoints(Object):
             Retrieves a specified number of items in the enumeration sequence.
         
             celt: The number of IConnectionPoint references to return in rgelt.
-            pceltFetched: When this method returns, contains a reference to the actual number of 
-             connections enumerated in rgelt.
+            pceltFetched: When this method returns, contains a reference to the actual number of connections 
+             enumerated in rgelt.
         
-            Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise, 
-             S_FALSE.
+            Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise, S_FALSE.
         """
         pass
 
@@ -1078,8 +1051,7 @@ class IEnumConnectionPoints(Object):
             Skips a specified number of items in the enumeration sequence.
         
             celt: The number of elements to skip in the enumeration.
-            Returns: S_OK if the number of elements skipped equals the celt parameter; otherwise, 
-             S_FALSE.
+            Returns: S_OK if the number of elements skipped equals the celt parameter; otherwise, S_FALSE.
         """
         pass
 
@@ -1096,8 +1068,7 @@ class IEnumConnections(Object):
         """
         Clone(self: IEnumConnections) -> IEnumConnections
         
-            Creates a new enumerator that contains the same enumeration state as the 
-             current one.
+            Creates a new enumerator that contains the same enumeration state as the current one.
         """
         pass
 
@@ -1107,14 +1078,11 @@ class IEnumConnections(Object):
         
             Retrieves a specified number of items in the enumeration sequence.
         
-            celt: The number of System.Runtime.InteropServices.CONNECTDATA structures to return 
-             in rgelt.
+            celt: The number of System.Runtime.InteropServices.CONNECTDATA structures to return in rgelt.
+            pceltFetched: When this method returns, contains a reference to the actual number of connections 
+             enumerated in rgelt.
         
-            pceltFetched: When this method returns, contains a reference to the actual number of 
-             connections enumerated in rgelt.
-        
-            Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise, 
-             S_FALSE.
+            Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise, S_FALSE.
         """
         pass
 
@@ -1132,8 +1100,7 @@ class IEnumConnections(Object):
             Skips a specified number of items in the enumeration sequence.
         
             celt: The number of elements to skip in the enumeration.
-            Returns: S_OK if the number of elements skipped equals the celt parameter; otherwise, 
-             S_FALSE.
+            Returns: S_OK if the number of elements skipped equals the celt parameter; otherwise, S_FALSE.
         """
         pass
 
@@ -1150,8 +1117,8 @@ class IEnumFORMATETC(Object):
         """
         Clone(self: IEnumFORMATETC) -> IEnumFORMATETC
         
-            Creates a new enumerator that contains the same enumeration state as the 
-             current enumerator.
+            Creates a new enumerator that contains the same enumeration state as the current 
+             enumerator.
         """
         pass
 
@@ -1161,11 +1128,10 @@ class IEnumFORMATETC(Object):
         
             Retrieves a specified number of items in the enumeration sequence.
         
-            celt: The number of System.Runtime.InteropServices.ComTypes.FORMATETC references to 
-             return in rgelt.
+            celt: The number of System.Runtime.InteropServices.ComTypes.FORMATETC references to return in 
+             rgelt.
         
-            Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise, 
-             S_FALSE.
+            Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise, S_FALSE.
         """
         pass
 
@@ -1185,8 +1151,7 @@ class IEnumFORMATETC(Object):
             Skips a specified number of items in the enumeration sequence.
         
             celt: The number of elements to skip in the enumeration.
-            Returns: S_OK if the number of elements skipped equals the celt parameter; otherwise, 
-             S_FALSE.
+            Returns: S_OK if the number of elements skipped equals the celt parameter; otherwise, S_FALSE.
         """
         pass
 
@@ -1203,8 +1168,7 @@ class IEnumMoniker(Object):
         """
         Clone(self: IEnumMoniker) -> IEnumMoniker
         
-            Creates a new enumerator that contains the same enumeration state as the 
-             current one.
+            Creates a new enumerator that contains the same enumeration state as the current one.
         """
         pass
 
@@ -1215,11 +1179,10 @@ class IEnumMoniker(Object):
             Retrieves a specified number of items in the enumeration sequence.
         
             celt: The number of monikers to return in rgelt.
-            pceltFetched: When this method returns, contains a reference to the actual number of 
-             monikers enumerated in rgelt.
+            pceltFetched: When this method returns, contains a reference to the actual number of monikers 
+             enumerated in rgelt.
         
-            Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise, 
-             S_FALSE.
+            Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise, S_FALSE.
         """
         pass
 
@@ -1237,8 +1200,7 @@ class IEnumMoniker(Object):
             Skips a specified number of items in the enumeration sequence.
         
             celt: The number of elements to skip in the enumeration.
-            Returns: S_OK if the number of elements skipped equals the celt parameter; otherwise, 
-             S_FALSE.
+            Returns: S_OK if the number of elements skipped equals the celt parameter; otherwise, S_FALSE.
         """
         pass
 
@@ -1255,8 +1217,8 @@ class IEnumSTATDATA(Object):
         """
         Clone(self: IEnumSTATDATA) -> IEnumSTATDATA
         
-            Creates a new enumerator that contains the same enumeration state as the 
-             current enumerator.
+            Creates a new enumerator that contains the same enumeration state as the current 
+             enumerator.
         """
         pass
 
@@ -1266,11 +1228,10 @@ class IEnumSTATDATA(Object):
         
             Retrieves a specified number of items in the enumeration sequence.
         
-            celt: The number of System.Runtime.InteropServices.ComTypes.STATDATA references to 
-             return in rgelt.
+            celt: The number of System.Runtime.InteropServices.ComTypes.STATDATA references to return in 
+             rgelt.
         
-            Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise, 
-             S_FALSE.
+            Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise, S_FALSE.
         """
         pass
 
@@ -1290,8 +1251,7 @@ class IEnumSTATDATA(Object):
             Skips a specified number of items in the enumeration sequence.
         
             celt: The number of elements to skip in the enumeration.
-            Returns: S_OK if the number of elements skipped equals the celt parameter; otherwise, 
-             S_FALSE.
+            Returns: S_OK if the number of elements skipped equals the celt parameter; otherwise, S_FALSE.
         """
         pass
 
@@ -1308,8 +1268,7 @@ class IEnumString(Object):
         """
         Clone(self: IEnumString) -> IEnumString
         
-            Creates a new enumerator that contains the same enumeration state as the 
-             current one.
+            Creates a new enumerator that contains the same enumeration state as the current one.
         """
         pass
 
@@ -1320,11 +1279,10 @@ class IEnumString(Object):
             Retrieves a specified number of items in the enumeration sequence.
         
             celt: The number of strings to return in rgelt.
-            pceltFetched: When this method returns, contains a reference to the actual number of strings 
-             enumerated in rgelt.
+            pceltFetched: When this method returns, contains a reference to the actual number of strings enumerated 
+             in rgelt.
         
-            Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise, 
-             S_FALSE.
+            Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise, S_FALSE.
         """
         pass
 
@@ -1342,8 +1300,7 @@ class IEnumString(Object):
             Skips a specified number of items in the enumeration sequence.
         
             celt: The number of elements to skip in the enumeration.
-            Returns: S_OK if the number of elements skipped equals the celt parameter; otherwise, 
-             S_FALSE.
+            Returns: S_OK if the number of elements skipped equals the celt parameter; otherwise, S_FALSE.
         """
         pass
 
@@ -1360,11 +1317,9 @@ class IEnumVARIANT(Object):
         """
         Clone(self: IEnumVARIANT) -> IEnumVARIANT
         
-            Creates a new enumerator that contains the same enumeration state as the 
-             current one.
-        
-            Returns: An System.Runtime.InteropServices.ComTypes.IEnumVARIANT  reference to the 
-             newly created enumerator.
+            Creates a new enumerator that contains the same enumeration state as the current one.
+            Returns: An System.Runtime.InteropServices.ComTypes.IEnumVARIANT  reference to the newly created 
+             enumerator.
         """
         pass
 
@@ -1375,11 +1330,10 @@ class IEnumVARIANT(Object):
             Retrieves a specified number of items in the enumeration sequence.
         
             celt: The number of elements to return in rgelt.
-            pceltFetched: When this method returns, contains a reference to the actual number of 
-             elements enumerated in rgelt.
+            pceltFetched: When this method returns, contains a reference to the actual number of elements 
+             enumerated in rgelt.
         
-            Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise, 
-             S_FALSE.
+            Returns: S_OK if the pceltFetched parameter equals the celt parameter; otherwise, S_FALSE.
         """
         pass
 
@@ -1399,8 +1353,7 @@ class IEnumVARIANT(Object):
             Skips a specified number of items in the enumeration sequence.
         
             celt: The number of elements to skip in the enumeration.
-            Returns: S_OK if the number of elements skipped equals celt parameter; otherwise, 
-             S_FALSE.
+            Returns: S_OK if the number of elements skipped equals celt parameter; otherwise, S_FALSE.
         """
         pass
 
@@ -1419,14 +1372,14 @@ class IMoniker(Object):
         
             Uses the moniker to bind to the object that it identifies.
         
-            pbc: A reference to the IBindCtx interface on the bind context object used in this 
-             binding operation.
+            pbc: A reference to the IBindCtx interface on the bind context object used in this binding 
+             operation.
         
-            pmkToLeft: A reference to the moniker to the left of the current moniker, if the moniker 
-             is part of a composite moniker.
+            pmkToLeft: A reference to the moniker to the left of the current moniker, if the moniker is part of 
+             a composite moniker.
         
-            riidResult: The interface identifier (IID) of the interface that the client intends to use 
-             to communicate with the object that the moniker identifies.
+            riidResult: The interface identifier (IID) of the interface that the client intends to use to 
+             communicate with the object that the moniker identifies.
         """
         pass
 
@@ -1434,15 +1387,15 @@ class IMoniker(Object):
         """
         BindToStorage(self: IMoniker, pbc: IBindCtx, pmkToLeft: IMoniker, riid: Guid) -> (Guid, object)
         
-            Retrieves an interface pointer to the storage that contains the object 
-             identified by the moniker.
+            Retrieves an interface pointer to the storage that contains the object identified by the 
+             moniker.
         
         
-            pbc: A reference to the IBindCtx interface on the bind context object used during 
-             this binding operation.
+            pbc: A reference to the IBindCtx interface on the bind context object used during this binding 
+             operation.
         
-            pmkToLeft: A reference to the moniker to the left of the current moniker, if the moniker 
-             is part of a composite moniker.
+            pmkToLeft: A reference to the moniker to the left of the current moniker, if the moniker is part of 
+             a composite moniker.
         
             riid: The interface identifier (IID) of the storage interface requested.
         """
@@ -1452,12 +1405,12 @@ class IMoniker(Object):
         """
         CommonPrefixWith(self: IMoniker, pmkOther: IMoniker) -> IMoniker
         
-            Creates a new moniker based on the common prefix that this moniker shares with 
-             another moniker.
+            Creates a new moniker based on the common prefix that this moniker shares with another 
+             moniker.
         
         
-            pmkOther: A reference to the IMoniker interface on another moniker to compare with the 
-             current moniker for a common prefix.
+            pmkOther: A reference to the IMoniker interface on another moniker to compare with the current 
+             moniker for a common prefix.
         """
         pass
 
@@ -1465,17 +1418,15 @@ class IMoniker(Object):
         """
         ComposeWith(self: IMoniker, pmkRight: IMoniker, fOnlyIfNotGeneric: bool) -> IMoniker
         
-            Combines the current moniker with another moniker, creating a new composite 
+            Combines the current moniker with another moniker, creating a new composite moniker.
+        
+            pmkRight: A reference to the IMoniker interface on a moniker to append to the end of the current 
              moniker.
         
-        
-            pmkRight: A reference to the IMoniker interface on a moniker to append to the end of the 
-             current moniker.
-        
-            fOnlyIfNotGeneric: true to indicate that the caller requires a nongeneric composition. The 
-             operation proceeds only if pmkRight is a moniker class that the current 
-             moniker can combine with in some way other than forming a generic composite. 
-             false to indicate that the method can create a generic composite if necessary.
+            fOnlyIfNotGeneric: true to indicate that the caller requires a nongeneric composition. The operation 
+             proceeds only if pmkRight is a moniker class that the current moniker can combine with in 
+             some way other than forming a generic composite. false to indicate that the method can 
+             create a generic composite if necessary.
         """
         pass
 
@@ -1483,12 +1434,11 @@ class IMoniker(Object):
         """
         Enum(self: IMoniker, fForward: bool) -> IEnumMoniker
         
-            Supplies a pointer to an enumerator that can enumerate the components of a 
-             composite moniker.
+            Supplies a pointer to an enumerator that can enumerate the components of a composite 
+             moniker.
         
         
-            fForward: true to enumerate the monikers from left to right. false to enumerate from 
-             right to left.
+            fForward: true to enumerate the monikers from left to right. false to enumerate from right to left.
         """
         pass
 
@@ -1504,13 +1454,11 @@ class IMoniker(Object):
         """
         GetDisplayName(self: IMoniker, pbc: IBindCtx, pmkToLeft: IMoniker) -> str
         
-            Gets the display name, which is a user-readable representation of the current 
-             moniker.
-        
+            Gets the display name, which is a user-readable representation of the current moniker.
         
             pbc: A reference to the bind context to use in this operation.
-            pmkToLeft: A reference to the moniker to the left of the current moniker, if the moniker 
-             is part of a composite moniker.
+            pmkToLeft: A reference to the moniker to the left of the current moniker, if the moniker is part of 
+             a composite moniker.
         """
         pass
 
@@ -1526,13 +1474,13 @@ class IMoniker(Object):
         """
         GetTimeOfLastChange(self: IMoniker, pbc: IBindCtx, pmkToLeft: IMoniker) -> FILETIME
         
-            Provides a number representing the time that the object identified by the 
-             current moniker was last changed.
+            Provides a number representing the time that the object identified by the current moniker 
+             was last changed.
         
         
             pbc: A reference to the bind context to use in this binding operation.
-            pmkToLeft: A reference to the moniker to the left of the current moniker, if the moniker 
-             is part of a composite moniker.
+            pmkToLeft: A reference to the moniker to the left of the current moniker, if the moniker is part of 
+             a composite moniker.
         """
         pass
 
@@ -1548,8 +1496,8 @@ class IMoniker(Object):
         """
         Inverse(self: IMoniker) -> IMoniker
         
-            Provides a moniker that, when composed to the right of the current moniker or 
-             one of similar structure, composes to nothing.
+            Provides a moniker that, when composed to the right of the current moniker or one of 
+             similar structure, composes to nothing.
         """
         pass
 
@@ -1558,8 +1506,7 @@ class IMoniker(Object):
         IsDirty(self: IMoniker) -> int
         
             Checks the object for changes since it was last saved.
-            Returns: An S_OKHRESULT value if the object has changed; otherwise, an S_FALSEHRESULT 
-             value.
+            Returns: An S_OKHRESULT value if the object has changed; otherwise, an S_FALSEHRESULT value.
         """
         pass
 
@@ -1567,13 +1514,12 @@ class IMoniker(Object):
         """
         IsEqual(self: IMoniker, pmkOtherMoniker: IMoniker) -> int
         
-            Compares the current moniker with a specified moniker and indicates whether 
-             they are identical.
+            Compares the current moniker with a specified moniker and indicates whether they are 
+             identical.
         
         
             pmkOtherMoniker: A reference to the moniker to use for comparison.
-            Returns: An S_OKHRESULT value if the monikers are identical; otherwise, an 
-             S_FALSEHRESULT value.
+            Returns: An S_OKHRESULT value if the monikers are identical; otherwise, an S_FALSEHRESULT value.
         """
         pass
 
@@ -1581,19 +1527,17 @@ class IMoniker(Object):
         """
         IsRunning(self: IMoniker, pbc: IBindCtx, pmkToLeft: IMoniker, pmkNewlyRunning: IMoniker) -> int
         
-            Determines whether the object that is identified by the current moniker is 
-             currently loaded and running.
+            Determines whether the object that is identified by the current moniker is currently 
+             loaded and running.
         
         
             pbc: A reference to the bind context to use in this binding operation.
-            pmkToLeft: A reference to the moniker to the left of the current moniker if the current 
-             moniker is part of a composite.
+            pmkToLeft: A reference to the moniker to the left of the current moniker if the current moniker is 
+             part of a composite.
         
-            pmkNewlyRunning: A reference to the moniker most recently added to the Running Object Table 
-             (ROT).
-        
-            Returns: An S_OKHRESULT value if the moniker is running; an S_FALSEHRESULT value if the 
-             moniker is not running; or an E_UNEXPECTEDHRESULT value.
+            pmkNewlyRunning: A reference to the moniker most recently added to the Running Object Table (ROT).
+            Returns: An S_OKHRESULT value if the moniker is running; an S_FALSEHRESULT value if the moniker is 
+             not running; or an E_UNEXPECTEDHRESULT value.
         """
         pass
 
@@ -1601,11 +1545,9 @@ class IMoniker(Object):
         """
         IsSystemMoniker(self: IMoniker) -> (int, int)
         
-            Indicates whether this moniker is of one of the system-supplied moniker 
-             classes.
-        
-            Returns: An S_OKHRESULT value if the moniker is a system moniker; otherwise, an 
-             S_FALSEHRESULT value.
+            Indicates whether this moniker is of one of the system-supplied moniker classes.
+            Returns: An S_OKHRESULT value if the moniker is a system moniker; otherwise, an S_FALSEHRESULT 
+             value.
         """
         pass
 
@@ -1623,16 +1565,14 @@ class IMoniker(Object):
         ParseDisplayName(self: IMoniker, pbc: IBindCtx, pmkToLeft: IMoniker, pszDisplayName: str) -> (int, IMoniker)
         
             Reads as many characters of the specified display name as the 
-             System.Runtime.InteropServices.ComTypes.IMoniker.ParseDisplayName(System.Runtim
-             e.InteropServices.ComTypes.IBindCtx,System.Runtime.InteropServices.ComTypes.IMo
-             niker,System.String,System.Int32@,System.Runtime.InteropServices.ComTypes.IMoni
-             ker@) understands and builds a moniker corresponding to the portion read.
+             System.Runtime.InteropServices.ComTypes.IMoniker.ParseDisplayName(System.Runtime.InteropSe
+             rvices.ComTypes.IBindCtx,System.Runtime.InteropServices.ComTypes.IMoniker,System.String,Sy
+             stem.Int32@,System.Runtime.InteropServices.ComTypes.IMoniker@) understands and builds a 
+             moniker corresponding to the portion read.
         
         
             pbc: A reference to the bind context to use in this binding operation.
-            pmkToLeft: A reference to the moniker that has been built from the display name up to 
-             this point.
-        
+            pmkToLeft: A reference to the moniker that has been built from the display name up to this point.
             pszDisplayName: A reference to the string containing the remaining display name to parse.
         """
         pass
@@ -1641,13 +1581,12 @@ class IMoniker(Object):
         """
         Reduce(self: IMoniker, pbc: IBindCtx, dwReduceHowFar: int, ppmkToLeft: IMoniker) -> (IMoniker, IMoniker)
         
-            Returns a reduced moniker, which is another moniker that refers to the same 
-             object as the current moniker but can be bound with equal or greater 
-             efficiency.
+            Returns a reduced moniker, which is another moniker that refers to the same object as the 
+             current moniker but can be bound with equal or greater efficiency.
         
         
-            pbc: A reference to the IBindCtx interface on the bind context to use in this 
-             binding operation.
+            pbc: A reference to the IBindCtx interface on the bind context to use in this binding 
+             operation.
         
             dwReduceHowFar: A value that specifies how far the current moniker should be reduced.
             ppmkToLeft: A reference to the moniker to the left of the current moniker.
@@ -1658,8 +1597,8 @@ class IMoniker(Object):
         """
         RelativePathTo(self: IMoniker, pmkOther: IMoniker) -> IMoniker
         
-            Supplies a moniker that, when appended to the current moniker (or one with a 
-             similar structure), yields the specified moniker.
+            Supplies a moniker that, when appended to the current moniker (or one with a similar 
+             structure), yields the specified moniker.
         
         
             pmkOther: A reference to the moniker to which a relative path should be taken.
@@ -1793,9 +1732,8 @@ class IPersistFile(Object):
         """
         GetCurFile(self: IPersistFile) -> str
         
-            Retrieves either the absolute path to the current working file of the object 
-             or, if there is no current working file, the default file name prompt of the 
-             object.
+            Retrieves either the absolute path to the current working file of the object or, if there 
+             is no current working file, the default file name prompt of the object.
         """
         pass
 
@@ -1804,8 +1742,8 @@ class IPersistFile(Object):
         IsDirty(self: IPersistFile) -> int
         
             Checks an object for changes since it was last saved to its current file.
-            Returns: S_OK if the file has changed since it was last saved; S_FALSE if the file has 
-             not changed since it was last saved.
+            Returns: S_OK if the file has changed since it was last saved; S_FALSE if the file has not changed 
+             since it was last saved.
         """
         pass
 
@@ -1815,8 +1753,8 @@ class IPersistFile(Object):
             Opens the specified file and initializes an object from the file contents.
         
             pszFileName: A zero-terminated string containing the absolute path of the file to open.
-            dwMode: A combination of values from the STGM enumeration to indicate the access mode 
-             in which to open pszFileName.
+            dwMode: A combination of values from the STGM enumeration to indicate the access mode in which to 
+             open pszFileName.
         """
         pass
 
@@ -1825,11 +1763,10 @@ class IPersistFile(Object):
         Save(self: IPersistFile, pszFileName: str, fRemember: bool)
             Saves a copy of the object into the specified file.
         
-            pszFileName: A zero-terminated string containing the absolute path of the file to which the 
-             object is saved.
+            pszFileName: A zero-terminated string containing the absolute path of the file to which the object is 
+             saved.
         
-            fRemember: true to used the pszFileName parameter as the current working file; otherwise 
-             false.
+            fRemember: true to used the pszFileName parameter as the current working file; otherwise false.
         """
         pass
 
@@ -1863,9 +1800,7 @@ class IRunningObjectTable(Object):
         """
         GetObject(self: IRunningObjectTable, pmkObjectName: IMoniker) -> (int, object)
         
-            Returns the registered object if the supplied object name is registered as 
-             running.
-        
+            Returns the registered object if the supplied object name is registered as running.
         
             pmkObjectName: A reference to the moniker to search for in the Running Object Table (ROT).
             Returns: An HRESULT value that indicates the success or failure of the operation.
@@ -1876,8 +1811,8 @@ class IRunningObjectTable(Object):
         """
         GetTimeOfLastChange(self: IRunningObjectTable, pmkObjectName: IMoniker) -> (int, FILETIME)
         
-            Searches for this moniker in the Running Object Table (ROT) and reports the 
-             recorded time of change, if present.
+            Searches for this moniker in the Running Object Table (ROT) and reports the recorded time 
+             of change, if present.
         
         
             pmkObjectName: A reference to the moniker to search for in the Running Object Table (ROT).
@@ -1889,8 +1824,8 @@ class IRunningObjectTable(Object):
         """
         IsRunning(self: IRunningObjectTable, pmkObjectName: IMoniker) -> int
         
-            Determines whether the specified moniker is currently registered in the 
-             Running Object Table (ROT).
+            Determines whether the specified moniker is currently registered in the Running Object 
+             Table (ROT).
         
         
             pmkObjectName: A reference to the moniker to search for in the Running Object Table (ROT).
@@ -1902,8 +1837,8 @@ class IRunningObjectTable(Object):
         """
         NoteChangeTime(self: IRunningObjectTable, dwRegister: int, pfiletime: FILETIME) -> FILETIME
         
-            Notes the time that a particular object changed so 
-             IMoniker::GetTimeOfLastChange can report an appropriate change time.
+            Notes the time that a particular object changed so IMoniker::GetTimeOfLastChange can 
+             report an appropriate change time.
         
         
             dwRegister: The Running Object Table (ROT) entry of the changed object.
@@ -1917,17 +1852,15 @@ class IRunningObjectTable(Object):
         
             Registers that the supplied object has entered the running state.
         
-            grfFlags: Specifies whether the Running Object Table's (ROT) reference to punkObject is 
-             weak or strong, and controls access to the object through its entry in the 
-             ROT.
+            grfFlags: Specifies whether the Running Object Table's (ROT) reference to punkObject is weak or 
+             strong, and controls access to the object through its entry in the ROT.
         
             punkObject: A reference to the object being registered as running.
             pmkObjectName: A reference to the moniker that identifies punkObject.
             Returns: A value that can be used to identify this ROT entry in subsequent calls to 
-             System.Runtime.InteropServices.ComTypes.IRunningObjectTable.Revoke(System.Int32
-             ) or 
-             System.Runtime.InteropServices.ComTypes.IRunningObjectTable.NoteChangeTime(Syst
-             em.Int32,System.Runtime.InteropServices.ComTypes.FILETIME@).
+             System.Runtime.InteropServices.ComTypes.IRunningObjectTable.Revoke(System.Int32) or 
+             System.Runtime.InteropServices.ComTypes.IRunningObjectTable.NoteChangeTime(System.Int32,Sy
+             stem.Runtime.InteropServices.ComTypes.FILETIME@).
         """
         pass
 
@@ -1953,16 +1886,16 @@ class IStream(Object):
         """
         Clone(self: IStream) -> IStream
         
-            Creates a new stream object with its own seek pointer that references the same 
-             bytes as the original stream.
+            Creates a new stream object with its own seek pointer that references the same bytes as 
+             the original stream.
         """
         pass
 
     def Commit(self, grfCommitFlags):
         """
         Commit(self: IStream, grfCommitFlags: int)
-            Ensures that any changes made to a stream object that is open in transacted 
-             mode are reflected in the parent storage.
+            Ensures that any changes made to a stream object that is open in transacted mode are 
+             reflected in the parent storage.
         
         
             grfCommitFlags: A value that controls how the changes for the stream object are committed.
@@ -1972,15 +1905,14 @@ class IStream(Object):
     def CopyTo(self, pstm, cb, pcbRead, pcbWritten):
         """
         CopyTo(self: IStream, pstm: IStream, cb: Int64, pcbRead: IntPtr, pcbWritten: IntPtr)
-            Copies a specified number of bytes from the current seek pointer in the stream 
-             to the current seek pointer in another stream.
+            Copies a specified number of bytes from the current seek pointer in the stream to the 
+             current seek pointer in another stream.
         
         
             pstm: A reference to the destination stream.
             cb: The number of bytes to copy from the source stream.
             pcbRead: On successful return, contains the actual number of bytes read from the source.
-            pcbWritten: On successful return, contains the actual number of bytes written to the 
-             destination.
+            pcbWritten: On successful return, contains the actual number of bytes written to the destination.
         """
         pass
 
@@ -1999,13 +1931,13 @@ class IStream(Object):
         """
         Read(self: IStream, cb: int, pcbRead: IntPtr) -> Array[Byte]
         
-            Reads a specified number of bytes from the stream object into memory starting 
-             at the current seek pointer.
+            Reads a specified number of bytes from the stream object into memory starting at the 
+             current seek pointer.
         
         
             cb: The number of bytes to read from the stream object.
-            pcbRead: A pointer to a ULONG variable that receives the actual number of bytes read 
-             from the stream object.
+            pcbRead: A pointer to a ULONG variable that receives the actual number of bytes read from the 
+             stream object.
         """
         pass
 
@@ -2020,16 +1952,16 @@ class IStream(Object):
     def Seek(self, dlibMove, dwOrigin, plibNewPosition):
         """
         Seek(self: IStream, dlibMove: Int64, dwOrigin: int, plibNewPosition: IntPtr)
-            Changes the seek pointer to a new location relative to the beginning of the 
-             stream, to the end of the stream, or to the current seek pointer.
+            Changes the seek pointer to a new location relative to the beginning of the stream, to 
+             the end of the stream, or to the current seek pointer.
         
         
             dlibMove: The displacement to add to dwOrigin.
-            dwOrigin: The origin of the seek. The origin can be the beginning of the file, the 
-             current seek pointer, or the end of the file.
+            dwOrigin: The origin of the seek. The origin can be the beginning of the file, the current seek 
+             pointer, or the end of the file.
         
-            plibNewPosition: On successful return, contains the offset of the seek pointer from the 
-             beginning of the stream.
+            plibNewPosition: On successful return, contains the offset of the seek pointer from the beginning of the 
+             stream.
         """
         pass
 
@@ -2048,18 +1980,17 @@ class IStream(Object):
         
             Retrieves the System.Runtime.InteropServices.STATSTG structure for this stream.
         
-            grfStatFlag: Members in the STATSTG structure that this method does not return, thus saving 
-             some memory allocation operations.
+            grfStatFlag: Members in the STATSTG structure that this method does not return, thus saving some 
+             memory allocation operations.
         """
         pass
 
     def UnlockRegion(self, libOffset, cb, dwLockType):
         """
         UnlockRegion(self: IStream, libOffset: Int64, cb: Int64, dwLockType: int)
-            Removes the access restriction on a range of bytes previously restricted with 
-             the 
-             System.Runtime.InteropServices.ComTypes.IStream.LockRegion(System.Int64,System.
-             Int64,System.Int32) method.
+            Removes the access restriction on a range of bytes previously restricted with the 
+             System.Runtime.InteropServices.ComTypes.IStream.LockRegion(System.Int64,System.Int64,Syste
+             m.Int32) method.
         
         
             libOffset: The byte offset for the beginning of the range.
@@ -2071,15 +2002,15 @@ class IStream(Object):
     def Write(self, pv, cb, pcbWritten):
         """
         Write(self: IStream, pv: Array[Byte], cb: int, pcbWritten: IntPtr)
-            Writes a specified number of bytes into the stream object starting at the 
-             current seek pointer.
+            Writes a specified number of bytes into the stream object starting at the current seek 
+             pointer.
         
         
             pv: The buffer to write this stream to.
             cb: The number of bytes to write to the stream.
-            pcbWritten: On successful return, contains the actual number of bytes written to the 
-             stream object. If the caller sets this pointer to System.IntPtr.Zero, this 
-             method does not provide the actual number of bytes written.
+            pcbWritten: On successful return, contains the actual number of bytes written to the stream object. 
+             If the caller sets this pointer to System.IntPtr.Zero, this method does not provide the 
+             actual number of bytes written.
         """
         pass
 
@@ -2096,14 +2027,14 @@ class ITypeComp(Object):
         """
         Bind(self: ITypeComp, szName: str, lHashVal: int, wFlags: Int16) -> (ITypeInfo, DESCKIND, BINDPTR)
         
-            Maps a name to a member of a type, or binds global variables and functions 
-             contained in a type library.
+            Maps a name to a member of a type, or binds global variables and functions contained in a 
+             type library.
         
         
             szName: The name to bind.
             lHashVal: A hash value for szName computed by LHashValOfNameSys.
-            wFlags: A flags word containing one or more of the invoke flags defined in the 
-             INVOKEKIND enumeration.
+            wFlags: A flags word containing one or more of the invoke flags defined in the INVOKEKIND 
+             enumeration.
         """
         pass
 
@@ -2131,13 +2062,11 @@ class ITypeInfo(Object):
         """
         AddressOfMember(self: ITypeInfo, memid: int, invKind: INVOKEKIND) -> IntPtr
         
-            Retrieves the addresses of static functions or variables, such as those 
-             defined in a DLL.
-        
+            Retrieves the addresses of static functions or variables, such as those defined in a DLL.
         
             memid: The member ID of the static member's address to retrieve.
-            invKind: One of the System.Runtime.InteropServices.ComTypes.INVOKEKIND  values that 
-             specifies whether the member is a property, and if so, what kind.
+            invKind: One of the System.Runtime.InteropServices.ComTypes.INVOKEKIND  values that specifies 
+             whether the member is a property, and if so, what kind.
         """
         pass
 
@@ -2148,8 +2077,7 @@ class ITypeInfo(Object):
             Creates a new instance of a type that describes a component class (coclass).
         
             pUnkOuter: The object that acts as the controlling IUnknown.
-            riid: The IID of the interface that the caller uses to communicate with the 
-             resulting object.
+            riid: The IID of the interface that the caller uses to communicate with the resulting object.
         """
         pass
 
@@ -2157,30 +2085,26 @@ class ITypeInfo(Object):
         """
         GetContainingTypeLib(self: ITypeInfo) -> (ITypeLib, int)
         
-            Retrieves the type library that contains this type description and its index 
-             within that type library.
+            Retrieves the type library that contains this type description and its index within that 
+             type library.
         """
         pass
 
     def GetDllEntry(self, memid, invKind, pBstrDllName, pBstrName, pwOrdinal):
         """
         GetDllEntry(self: ITypeInfo, memid: int, invKind: INVOKEKIND, pBstrDllName: IntPtr, pBstrName: IntPtr, pwOrdinal: IntPtr)
-            Retrieves a description or specification of an entry point for a function in a 
-             DLL.
-        
+            Retrieves a description or specification of an entry point for a function in a DLL.
         
             memid: The ID of the member function whose DLL entry description is to be returned.
-            invKind: One of the System.Runtime.InteropServices.ComTypes.INVOKEKIND values that 
-             specifies the kind of member identified by memid.
+            invKind: One of the System.Runtime.InteropServices.ComTypes.INVOKEKIND values that specifies the 
+             kind of member identified by memid.
         
-            pBstrDllName: If not null, the function sets pBstrDllName to a BSTR that contains the name 
-             of the DLL.
+            pBstrDllName: If not null, the function sets pBstrDllName to a BSTR that contains the name of the DLL.
+            pBstrName: If not null, the function sets lpbstrName to a BSTR that contains the name of the entry 
+             point.
         
-            pBstrName: If not null, the function sets lpbstrName to a BSTR that contains the name of 
-             the entry point.
-        
-            pwOrdinal: If not null, and the function is defined by an ordinal, then lpwOrdinal is set 
-             to point to the ordinal.
+            pwOrdinal: If not null, and the function is defined by an ordinal, then lpwOrdinal is set to point 
+             to the ordinal.
         """
         pass
 
@@ -2188,8 +2112,8 @@ class ITypeInfo(Object):
         """
         GetDocumentation(self: ITypeInfo, index: int) -> (str, str, int, str)
         
-            Retrieves the documentation string, the complete Help file name and path, and 
-             the context ID for the Help topic for a specified type description.
+            Retrieves the documentation string, the complete Help file name and path, and the context 
+             ID for the Help topic for a specified type description.
         
         
             index: The ID of the member whose documentation is to be returned.
@@ -2200,8 +2124,8 @@ class ITypeInfo(Object):
         """
         GetFuncDesc(self: ITypeInfo, index: int) -> IntPtr
         
-            Retrieves the System.Runtime.InteropServices.FUNCDESC structure that contains 
-             information about a specified function.
+            Retrieves the System.Runtime.InteropServices.FUNCDESC structure that contains information 
+             about a specified function.
         
         
             index: The index of the function description to return.
@@ -2212,9 +2136,7 @@ class ITypeInfo(Object):
         """
         GetIDsOfNames(self: ITypeInfo, rgszNames: Array[str], cNames: int) -> Array[int]
         
-            Maps between member names and member IDs, and parameter names and parameter 
-             IDs.
-        
+            Maps between member names and member IDs, and parameter names and parameter IDs.
         
             rgszNames: An array of names to map.
             cNames: The count of names to map.
@@ -2225,8 +2147,8 @@ class ITypeInfo(Object):
         """
         GetImplTypeFlags(self: ITypeInfo, index: int) -> IMPLTYPEFLAGS
         
-            Retrieves the System.Runtime.InteropServices.IMPLTYPEFLAGS value for one 
-             implemented interface or base interface in a type description.
+            Retrieves the System.Runtime.InteropServices.IMPLTYPEFLAGS value for one implemented 
+             interface or base interface in a type description.
         
         
             index: The index of the implemented interface or base interface.
@@ -2247,9 +2169,8 @@ class ITypeInfo(Object):
         """
         GetNames(self: ITypeInfo, memid: int, cMaxNames: int) -> (Array[str], int)
         
-            Retrieves the variable with the specified member ID (or the name of the 
-             property or method and its parameters) that corresponds to the specified 
-             function ID.
+            Retrieves the variable with the specified member ID (or the name of the property or 
+             method and its parameters) that corresponds to the specified function ID.
         
         
             memid: The ID of the member whose name (or names) is to be returned.
@@ -2261,8 +2182,8 @@ class ITypeInfo(Object):
         """
         GetRefTypeInfo(self: ITypeInfo, hRef: int) -> ITypeInfo
         
-            Retrieves the referenced type descriptions if a type description references 
-             other type descriptions.
+            Retrieves the referenced type descriptions if a type description references other type 
+             descriptions.
         
         
             hRef: A handle to the referenced type description to return.
@@ -2273,8 +2194,8 @@ class ITypeInfo(Object):
         """
         GetRefTypeOfImplType(self: ITypeInfo, index: int) -> int
         
-            Retrieves the type description of the implemented interface types if a type 
-             description describes a COM class.
+            Retrieves the type description of the implemented interface types if a type description 
+             describes a COM class.
         
         
             index: The index of the implemented type whose handle is returned.
@@ -2285,8 +2206,8 @@ class ITypeInfo(Object):
         """
         GetTypeAttr(self: ITypeInfo) -> IntPtr
         
-            Retrieves a System.Runtime.InteropServices.TYPEATTR structure that contains 
-             the attributes of the type description.
+            Retrieves a System.Runtime.InteropServices.TYPEATTR structure that contains the 
+             attributes of the type description.
         """
         pass
 
@@ -2294,8 +2215,8 @@ class ITypeInfo(Object):
         """
         GetTypeComp(self: ITypeInfo) -> ITypeComp
         
-            Retrieves the ITypeComp interface for the type description, which enables a 
-             client compiler to bind to the type description's members.
+            Retrieves the ITypeComp interface for the type description, which enables a client 
+             compiler to bind to the type description's members.
         """
         pass
 
@@ -2313,20 +2234,19 @@ class ITypeInfo(Object):
         """
         Invoke(self: ITypeInfo, pvInstance: object, memid: int, wFlags: Int16, pDispParams: DISPPARAMS, pVarResult: IntPtr, pExcepInfo: IntPtr) -> (DISPPARAMS, int)
         
-            Invokes a method, or accesses a property of an object, that implements the 
-             interface described by the type description.
+            Invokes a method, or accesses a property of an object, that implements the interface 
+             described by the type description.
         
         
             pvInstance: A reference to the interface described by this type description.
             memid: A value that identifies the interface member.
             wFlags: Flags that describe the context of the invoke call.
-            pDispParams: A reference to a structure that contains an array of arguments, an array of 
-             DISPIDs for named arguments, and counts of the number of elements in each 
-             array.
+            pDispParams: A reference to a structure that contains an array of arguments, an array of DISPIDs for 
+             named arguments, and counts of the number of elements in each array.
         
-            pVarResult: A reference to the location at which the result is to be stored. If wFlags 
-             specifies DISPATCH_PROPERTYPUT or DISPATCH_PROPERTYPUTREF, pVarResult is 
-             ignored. Set to null if no result is desired.
+            pVarResult: A reference to the location at which the result is to be stored. If wFlags specifies 
+             DISPATCH_PROPERTYPUT or DISPATCH_PROPERTYPUTREF, pVarResult is ignored. Set to null if no 
+             result is desired.
         
             pExcepInfo: A pointer to an exception information structure, which is filled in only if 
              DISP_E_EXCEPTION is returned.
@@ -2336,10 +2256,9 @@ class ITypeInfo(Object):
     def ReleaseFuncDesc(self, pFuncDesc):
         """
         ReleaseFuncDesc(self: ITypeInfo, pFuncDesc: IntPtr)
-            Releases a System.Runtime.InteropServices.FUNCDESC structure previously 
-             returned by the 
-             System.Runtime.InteropServices.ComTypes.ITypeInfo.GetFuncDesc(System.Int32,Syst
-             em.IntPtr@) method.
+            Releases a System.Runtime.InteropServices.FUNCDESC structure previously returned by the 
+             System.Runtime.InteropServices.ComTypes.ITypeInfo.GetFuncDesc(System.Int32,System.IntPtr@)
+              method.
         
         
             pFuncDesc: A reference to the FUNCDESC structure to release.
@@ -2349,10 +2268,8 @@ class ITypeInfo(Object):
     def ReleaseTypeAttr(self, pTypeAttr):
         """
         ReleaseTypeAttr(self: ITypeInfo, pTypeAttr: IntPtr)
-            Releases a System.Runtime.InteropServices.TYPEATTR structure previously 
-             returned by the 
-             System.Runtime.InteropServices.ComTypes.ITypeInfo.GetTypeAttr(System.IntPtr@) 
-             method.
+            Releases a System.Runtime.InteropServices.TYPEATTR structure previously returned by the 
+             System.Runtime.InteropServices.ComTypes.ITypeInfo.GetTypeAttr(System.IntPtr@) method.
         
         
             pTypeAttr: A reference to the TYPEATTR structure to release.
@@ -2363,8 +2280,8 @@ class ITypeInfo(Object):
         """
         ReleaseVarDesc(self: ITypeInfo, pVarDesc: IntPtr)
             Releases a VARDESC structure previously returned by the 
-             System.Runtime.InteropServices.ComTypes.ITypeInfo.GetVarDesc(System.Int32,Syste
-             m.IntPtr@) method.
+             System.Runtime.InteropServices.ComTypes.ITypeInfo.GetVarDesc(System.Int32,System.IntPtr@) 
+             method.
         
         
             pVarDesc: A reference to the VARDESC structure to release.
@@ -2384,13 +2301,11 @@ class ITypeInfo2(Object):
         """
         AddressOfMember(self: ITypeInfo2, memid: int, invKind: INVOKEKIND) -> IntPtr
         
-            Retrieves the addresses of static functions or variables, such as those 
-             defined in a DLL.
-        
+            Retrieves the addresses of static functions or variables, such as those defined in a DLL.
         
             memid: The member ID of the static member's address to retrieve.
-            invKind: One of the System.Runtime.InteropServices.ComTypes.INVOKEKIND  values that 
-             specifies whether the member is a property, and if so, what kind.
+            invKind: One of the System.Runtime.InteropServices.ComTypes.INVOKEKIND  values that specifies 
+             whether the member is a property, and if so, what kind.
         """
         pass
 
@@ -2401,8 +2316,7 @@ class ITypeInfo2(Object):
             Creates a new instance of a type that describes a component class (coclass).
         
             pUnkOuter: An object that acts as the controlling IUnknown.
-            riid: The IID of the interface that the caller uses to communicate with the 
-             resulting object.
+            riid: The IID of the interface that the caller uses to communicate with the resulting object.
         """
         pass
 
@@ -2460,8 +2374,8 @@ class ITypeInfo2(Object):
         """
         GetContainingTypeLib(self: ITypeInfo2) -> (ITypeLib, int)
         
-            Retrieves the type library that contains this type description and its index 
-             within that type library.
+            Retrieves the type library that contains this type description and its index within that 
+             type library.
         """
         pass
 
@@ -2478,22 +2392,18 @@ class ITypeInfo2(Object):
     def GetDllEntry(self, memid, invKind, pBstrDllName, pBstrName, pwOrdinal):
         """
         GetDllEntry(self: ITypeInfo2, memid: int, invKind: INVOKEKIND, pBstrDllName: IntPtr, pBstrName: IntPtr, pwOrdinal: IntPtr)
-            Retrieves a description or specification of an entry point for a function in a 
-             DLL.
-        
+            Retrieves a description or specification of an entry point for a function in a DLL.
         
             memid: The ID of the member function whose DLL entry description is to be returned.
-            invKind: One of the System.Runtime.InteropServices.ComTypes.INVOKEKIND values that 
-             specifies the kind of member identified by memid.
+            invKind: One of the System.Runtime.InteropServices.ComTypes.INVOKEKIND values that specifies the 
+             kind of member identified by memid.
         
-            pBstrDllName: If not null, the function sets pBstrDllName to a BSTR that contains the name 
-             of the DLL.
+            pBstrDllName: If not null, the function sets pBstrDllName to a BSTR that contains the name of the DLL.
+            pBstrName: If not null, the function sets lpbstrName to a BSTR that contains the name of the entry 
+             point.
         
-            pBstrName: If not null, the function sets lpbstrName to a BSTR that contains the name of 
-             the entry point.
-        
-            pwOrdinal: If not null, and the function is defined by an ordinal, then lpwOrdinal is set 
-             to point to the ordinal.
+            pwOrdinal: If not null, and the function is defined by an ordinal, then lpwOrdinal is set to point 
+             to the ordinal.
         """
         pass
 
@@ -2501,8 +2411,8 @@ class ITypeInfo2(Object):
         """
         GetDocumentation(self: ITypeInfo2, index: int) -> (str, str, int, str)
         
-            Retrieves the documentation string, the complete Help file name and path, and 
-             the context ID for the Help topic for a specified type description.
+            Retrieves the documentation string, the complete Help file name and path, and the context 
+             ID for the Help topic for a specified type description.
         
         
             index: The ID of the member whose documentation is to be returned.
@@ -2514,8 +2424,8 @@ class ITypeInfo2(Object):
         GetDocumentation2(self: ITypeInfo2, memid: int) -> (str, int, str)
         
             Retrieves the documentation string, the complete Help file name and path, the 
-             localization context to use, and the context ID for the library Help topic in 
-             the Help file.
+             localization context to use, and the context ID for the library Help topic in the Help 
+             file.
         
         
             memid: The member identifier for the type description.
@@ -2537,8 +2447,8 @@ class ITypeInfo2(Object):
         """
         GetFuncDesc(self: ITypeInfo2, index: int) -> IntPtr
         
-            Retrieves the System.Runtime.InteropServices.FUNCDESC structure that contains 
-             information about a specified function.
+            Retrieves the System.Runtime.InteropServices.FUNCDESC structure that contains information 
+             about a specified function.
         
         
             index: The index of the function description to return.
@@ -2549,13 +2459,13 @@ class ITypeInfo2(Object):
         """
         GetFuncIndexOfMemId(self: ITypeInfo2, memid: int, invKind: INVOKEKIND) -> int
         
-            Binds to a specific member based on a known DISPID, where the member name is 
-             not known (for example, when binding to a default member).
+            Binds to a specific member based on a known DISPID, where the member name is not known 
+             (for example, when binding to a default member).
         
         
             memid: The member identifier.
-            invKind: One of the System.Runtime.InteropServices.ComTypes.INVOKEKIND values that 
-             specifies the kind of member identified by memid.
+            invKind: One of the System.Runtime.InteropServices.ComTypes.INVOKEKIND values that specifies the 
+             kind of member identified by memid.
         """
         pass
 
@@ -2563,9 +2473,7 @@ class ITypeInfo2(Object):
         """
         GetIDsOfNames(self: ITypeInfo2, rgszNames: Array[str], cNames: int) -> Array[int]
         
-            Maps between member names and member IDs, and parameter names and parameter 
-             IDs.
-        
+            Maps between member names and member IDs, and parameter names and parameter IDs.
         
             rgszNames: An array of names to map.
             cNames: The count of names to map.
@@ -2587,8 +2495,8 @@ class ITypeInfo2(Object):
         """
         GetImplTypeFlags(self: ITypeInfo2, index: int) -> IMPLTYPEFLAGS
         
-            Retrieves the System.Runtime.InteropServices.IMPLTYPEFLAGS value for one 
-             implemented interface or base interface in a type description.
+            Retrieves the System.Runtime.InteropServices.IMPLTYPEFLAGS value for one implemented 
+             interface or base interface in a type description.
         
         
             index: The index of the implemented interface or base interface.
@@ -2609,9 +2517,8 @@ class ITypeInfo2(Object):
         """
         GetNames(self: ITypeInfo2, memid: int, cMaxNames: int) -> (Array[str], int)
         
-            Retrieves the variable with the specified member ID (or the name of the 
-             property or method and its parameters) that corresponds to the specified 
-             function ID.
+            Retrieves the variable with the specified member ID (or the name of the property or 
+             method and its parameters) that corresponds to the specified function ID.
         
         
             memid: The ID of the member whose name (or names) is to be returned.
@@ -2635,8 +2542,8 @@ class ITypeInfo2(Object):
         """
         GetRefTypeInfo(self: ITypeInfo2, hRef: int) -> ITypeInfo
         
-            Retrieves the referenced type descriptions, if a type description references 
-             other type descriptions.
+            Retrieves the referenced type descriptions, if a type description references other type 
+             descriptions.
         
         
             hRef: A handle to the referenced type description to return.
@@ -2647,8 +2554,8 @@ class ITypeInfo2(Object):
         """
         GetRefTypeOfImplType(self: ITypeInfo2, index: int) -> int
         
-            Retrieves the type description of the implemented interface types, if a type 
-             description describes a COM class.
+            Retrieves the type description of the implemented interface types, if a type description 
+             describes a COM class.
         
         
             index: The index of the implemented type whose handle is returned.
@@ -2659,8 +2566,8 @@ class ITypeInfo2(Object):
         """
         GetTypeAttr(self: ITypeInfo2) -> IntPtr
         
-            Retrieves a System.Runtime.InteropServices.TYPEATTR structure that contains 
-             the attributes of the type description.
+            Retrieves a System.Runtime.InteropServices.TYPEATTR structure that contains the 
+             attributes of the type description.
         """
         pass
 
@@ -2668,8 +2575,8 @@ class ITypeInfo2(Object):
         """
         GetTypeComp(self: ITypeInfo2) -> ITypeComp
         
-            Retrieves the ITypeComp interface for the type description, which enables a 
-             client compiler to bind to the type description's members.
+            Retrieves the ITypeComp interface for the type description, which enables a client 
+             compiler to bind to the type description's members.
         """
         pass
 
@@ -2677,9 +2584,8 @@ class ITypeInfo2(Object):
         """
         GetTypeFlags(self: ITypeInfo2) -> int
         
-            Returns the type flags without any allocations. This method returns a DWORD 
-             type flag, which expands the type flags without growing the TYPEATTR (type 
-             attribute).
+            Returns the type flags without any allocations. This method returns a DWORD type flag, 
+             which expands the type flags without growing the TYPEATTR (type attribute).
         """
         pass
 
@@ -2716,8 +2622,8 @@ class ITypeInfo2(Object):
         """
         GetVarIndexOfMemId(self: ITypeInfo2, memid: int) -> int
         
-            Binds to a specific member based on a known DISPID, where the member name is 
-             not known (for example, when binding to a default member).
+            Binds to a specific member based on a known DISPID, where the member name is not known 
+             (for example, when binding to a default member).
         
         
             memid: The member identifier.
@@ -2728,20 +2634,19 @@ class ITypeInfo2(Object):
         """
         Invoke(self: ITypeInfo2, pvInstance: object, memid: int, wFlags: Int16, pDispParams: DISPPARAMS, pVarResult: IntPtr, pExcepInfo: IntPtr) -> (DISPPARAMS, int)
         
-            Invokes a method, or accesses a property of an object, that implements the 
-             interface described by the type description.
+            Invokes a method, or accesses a property of an object, that implements the interface 
+             described by the type description.
         
         
             pvInstance: A reference to the interface described by this type description.
             memid: Identifier of the interface member.
             wFlags: Flags describing the context of the invoke call.
-            pDispParams: A reference to a structure that contains an array of arguments, an array of 
-             DISPIDs for named arguments, and counts of the number of elements in each 
-             array.
+            pDispParams: A reference to a structure that contains an array of arguments, an array of DISPIDs for 
+             named arguments, and counts of the number of elements in each array.
         
-            pVarResult: A reference to the location at which the result is to be stored. If wFlags 
-             specifies DISPATCH_PROPERTYPUT or DISPATCH_PROPERTYPUTREF, pVarResult is 
-             ignored. Set to null if no result is desired.
+            pVarResult: A reference to the location at which the result is to be stored. If wFlags specifies 
+             DISPATCH_PROPERTYPUT or DISPATCH_PROPERTYPUTREF, pVarResult is ignored. Set to null if no 
+             result is desired.
         
             pExcepInfo: A pointer to an exception information structure, which is filled in only if 
              DISP_E_EXCEPTION is returned.
@@ -2751,10 +2656,9 @@ class ITypeInfo2(Object):
     def ReleaseFuncDesc(self, pFuncDesc):
         """
         ReleaseFuncDesc(self: ITypeInfo2, pFuncDesc: IntPtr)
-            Releases a System.Runtime.InteropServices.FUNCDESC structure previously 
-             returned by the 
-             System.Runtime.InteropServices.ComTypes.ITypeInfo.GetFuncDesc(System.Int32,Syst
-             em.IntPtr@) method.
+            Releases a System.Runtime.InteropServices.FUNCDESC structure previously returned by the 
+             System.Runtime.InteropServices.ComTypes.ITypeInfo.GetFuncDesc(System.Int32,System.IntPtr@)
+              method.
         
         
             pFuncDesc: A reference to the FUNCDESC structure to release.
@@ -2764,10 +2668,8 @@ class ITypeInfo2(Object):
     def ReleaseTypeAttr(self, pTypeAttr):
         """
         ReleaseTypeAttr(self: ITypeInfo2, pTypeAttr: IntPtr)
-            Releases a System.Runtime.InteropServices.TYPEATTR structure previously 
-             returned by the 
-             System.Runtime.InteropServices.ComTypes.ITypeInfo.GetTypeAttr(System.IntPtr@) 
-             method.
+            Releases a System.Runtime.InteropServices.TYPEATTR structure previously returned by the 
+             System.Runtime.InteropServices.ComTypes.ITypeInfo.GetTypeAttr(System.IntPtr@) method.
         
         
             pTypeAttr: A reference to the TYPEATTR structure to release.
@@ -2778,8 +2680,8 @@ class ITypeInfo2(Object):
         """
         ReleaseVarDesc(self: ITypeInfo2, pVarDesc: IntPtr)
             Releases a VARDESC structure previously returned by the 
-             System.Runtime.InteropServices.ComTypes.ITypeInfo.GetVarDesc(System.Int32,Syste
-             m.IntPtr@) method.
+             System.Runtime.InteropServices.ComTypes.ITypeInfo.GetVarDesc(System.Int32,System.IntPtr@) 
+             method.
         
         
             pVarDesc: A reference to the VARDESC structure to release.
@@ -2802,14 +2704,13 @@ class ITypeLib(Object):
             Finds occurrences of a type description in a type library.
         
             szNameBuf: The name to search for. This is an in/out parameter.
-            lHashVal: A hash value to speed up the search, computed by the LHashValOfNameSys 
-             function. If lHashVal is 0, a value is computed.
+            lHashVal: A hash value to speed up the search, computed by the LHashValOfNameSys function. If 
+             lHashVal is 0, a value is computed.
         
-            pcFound: On entry, indicates how many instances to look for. For example, pcFound = 1 
-             can be called to find the first occurrence. The search stops when one instance 
-             is found.On exit, indicates the number of instances that were found. If the in 
-             and out values of pcFound are identical, there might be more type descriptions 
-             that contain the name.
+            pcFound: On entry, indicates how many instances to look for. For example, pcFound = 1 can be 
+             called to find the first occurrence. The search stops when one instance is found.On exit, 
+             indicates the number of instances that were found. If the in and out values of pcFound 
+             are identical, there might be more type descriptions that contain the name.
         """
         pass
 
@@ -2817,8 +2718,8 @@ class ITypeLib(Object):
         """
         GetDocumentation(self: ITypeLib, index: int) -> (str, str, int, str)
         
-            Retrieves the library's documentation string, the complete Help file name and 
-             path, and the context identifier for the library Help topic in the Help file.
+            Retrieves the library's documentation string, the complete Help file name and path, and 
+             the context identifier for the library Help topic in the Help file.
         
         
             index: The index of the type description whose documentation is to be returned.
@@ -2837,8 +2738,8 @@ class ITypeLib(Object):
         """
         GetTypeComp(self: ITypeLib) -> ITypeComp
         
-            Enables a client compiler to bind to a library's types, variables, constants, 
-             and global functions.
+            Enables a client compiler to bind to a library's types, variables, constants, and global 
+             functions.
         """
         pass
 
@@ -2885,8 +2786,8 @@ class ITypeLib(Object):
         """
         IsName(self: ITypeLib, szNameBuf: str, lHashVal: int) -> bool
         
-            Indicates whether a passed-in string contains the name of a type or member 
-             described in the library.
+            Indicates whether a passed-in string contains the name of a type or member described in 
+             the library.
         
         
             szNameBuf: The string to test. This is an in/out parameter.
@@ -2898,9 +2799,8 @@ class ITypeLib(Object):
     def ReleaseTLibAttr(self, pTLibAttr):
         """
         ReleaseTLibAttr(self: ITypeLib, pTLibAttr: IntPtr)
-            Releases the System.Runtime.InteropServices.TYPELIBATTR structure originally 
-             obtained from the 
-             System.Runtime.InteropServices.ComTypes.ITypeLib.GetLibAttr(System.IntPtr@) 
+            Releases the System.Runtime.InteropServices.TYPELIBATTR structure originally obtained 
+             from the System.Runtime.InteropServices.ComTypes.ITypeLib.GetLibAttr(System.IntPtr@) 
              method.
         
         
@@ -2924,14 +2824,14 @@ class ITypeLib2(Object):
             Finds occurrences of a type description in a type library.
         
             szNameBuf: The name to search for.
-            lHashVal: A hash value to speed up the search, computed by the LHashValOfNameSys 
-             function. If lHashVal is 0, a value is computed.
+            lHashVal: A hash value to speed up the search, computed by the LHashValOfNameSys function. If 
+             lHashVal is 0, a value is computed.
         
-            pcFound: On entry, a value, passed by reference, that indicates how many instances to 
-             look for. For example, pcFound = 1 can be called to find the first occurrence. 
-             The search stops when one instance is found.On exit, indicates the number of 
-             instances that were found. If the in and out values of pcFound are identical, 
-             there might be more type descriptions that contain the name.
+            pcFound: On entry, a value, passed by reference, that indicates how many instances to look for. 
+             For example, pcFound = 1 can be called to find the first occurrence. The search stops 
+             when one instance is found.On exit, indicates the number of instances that were found. If 
+             the in and out values of pcFound are identical, there might be more type descriptions 
+             that contain the name.
         """
         pass
 
@@ -2958,8 +2858,8 @@ class ITypeLib2(Object):
         """
         GetDocumentation(self: ITypeLib2, index: int) -> (str, str, int, str)
         
-            Retrieves the library's documentation string, the complete Help file name and 
-             path, and the context identifier for the library Help topic in the Help file.
+            Retrieves the library's documentation string, the complete Help file name and path, and 
+             the context identifier for the library Help topic in the Help file.
         
         
             index: An index of the type description whose documentation is to be returned.
@@ -2970,13 +2870,13 @@ class ITypeLib2(Object):
         """
         GetDocumentation2(self: ITypeLib2, index: int) -> (str, int, str)
         
-            Retrieves the library's documentation string, the complete Help file name and 
-             path, the localization context to use, and the context ID for the library Help 
-             topic in the Help file.
+            Retrieves the library's documentation string, the complete Help file name and path, the 
+             localization context to use, and the context ID for the library Help topic in the Help 
+             file.
         
         
-            index: An index of the type description whose documentation is to be returned; if 
-             index is -1, the documentation for the library is returned.
+            index: An index of the type description whose documentation is to be returned; if index is -1, 
+             the documentation for the library is returned.
         """
         pass
 
@@ -2992,12 +2892,12 @@ class ITypeLib2(Object):
         """
         GetLibStatistics(self: ITypeLib2, pcUniqueNames: IntPtr) -> int
         
-            Returns statistics about a type library that are required for efficient sizing 
-             of hash tables.
+            Returns statistics about a type library that are required for efficient sizing of hash 
+             tables.
         
         
-            pcUniqueNames: A pointer to a count of unique names. If the caller does not need this 
-             information, set to null.
+            pcUniqueNames: A pointer to a count of unique names. If the caller does not need this information, set 
+             to null.
         """
         pass
 
@@ -3005,8 +2905,8 @@ class ITypeLib2(Object):
         """
         GetTypeComp(self: ITypeLib2) -> ITypeComp
         
-            Enables a client compiler to bind to a library's types, variables, constants, 
-             and global functions.
+            Enables a client compiler to bind to a library's types, variables, constants, and global 
+             functions.
         """
         pass
 
@@ -3035,8 +2935,8 @@ class ITypeLib2(Object):
         
             Retrieves the type description that corresponds to the specified GUID.
         
-            guid: The System.Guid, passed by reference, that represents the IID of the CLSID 
-             interface of the class whose type info is requested.
+            guid: The System.Guid, passed by reference, that represents the IID of the CLSID interface of 
+             the class whose type info is requested.
         """
         pass
 
@@ -3054,8 +2954,8 @@ class ITypeLib2(Object):
         """
         IsName(self: ITypeLib2, szNameBuf: str, lHashVal: int) -> bool
         
-            Indicates whether a passed-in string contains the name of a type or member 
-             described in the library.
+            Indicates whether a passed-in string contains the name of a type or member described in 
+             the library.
         
         
             szNameBuf: The string to test.
@@ -3067,9 +2967,8 @@ class ITypeLib2(Object):
     def ReleaseTLibAttr(self, pTLibAttr):
         """
         ReleaseTLibAttr(self: ITypeLib2, pTLibAttr: IntPtr)
-            Releases the System.Runtime.InteropServices.TYPELIBATTR structure originally 
-             obtained from the 
-             System.Runtime.InteropServices.ComTypes.ITypeLib.GetLibAttr(System.IntPtr@) 
+            Releases the System.Runtime.InteropServices.TYPELIBATTR structure originally obtained 
+             from the System.Runtime.InteropServices.ComTypes.ITypeLib.GetLibAttr(System.IntPtr@) 
              method.
         
         

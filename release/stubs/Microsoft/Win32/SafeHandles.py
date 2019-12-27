@@ -14,8 +14,8 @@ class CriticalHandleMinusOneIsInvalid(CriticalHandle):
         """
         Dispose(self: CriticalHandle, disposing: bool)
             Releases the unmanaged resources used by the 
-             System.Runtime.InteropServices.CriticalHandle class specifying whether to 
-             perform a normal dispose operation.
+             System.Runtime.InteropServices.CriticalHandle class specifying whether to perform a 
+             normal dispose operation.
         
         
             disposing: true for a normal dispose operation; false to finalize the handle.
@@ -26,12 +26,10 @@ class CriticalHandleMinusOneIsInvalid(CriticalHandle):
         """
         ReleaseHandle(self: CriticalHandle) -> bool
         
-            When overridden in a derived class, executes the code required to free the 
-             handle.
-        
-            Returns: true if the handle is released successfully; otherwise, in the event of a 
-             catastrophic failure, false. In this case, it generates a releaseHandleFailed 
-             MDA Managed Debugging Assistant.
+            When overridden in a derived class, executes the code required to free the handle.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic 
+             failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging 
+             Assistant.
         """
         pass
 
@@ -75,8 +73,8 @@ class CriticalHandleZeroOrMinusOneIsInvalid(CriticalHandle):
         """
         Dispose(self: CriticalHandle, disposing: bool)
             Releases the unmanaged resources used by the 
-             System.Runtime.InteropServices.CriticalHandle class specifying whether to 
-             perform a normal dispose operation.
+             System.Runtime.InteropServices.CriticalHandle class specifying whether to perform a 
+             normal dispose operation.
         
         
             disposing: true for a normal dispose operation; false to finalize the handle.
@@ -87,12 +85,10 @@ class CriticalHandleZeroOrMinusOneIsInvalid(CriticalHandle):
         """
         ReleaseHandle(self: CriticalHandle) -> bool
         
-            When overridden in a derived class, executes the code required to free the 
-             handle.
-        
-            Returns: true if the handle is released successfully; otherwise, in the event of a 
-             catastrophic failure, false. In this case, it generates a releaseHandleFailed 
-             MDA Managed Debugging Assistant.
+            When overridden in a derived class, executes the code required to free the handle.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic 
+             failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging 
+             Assistant.
         """
         pass
 
@@ -135,9 +131,8 @@ class SafeAccessTokenHandle(SafeHandle):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the 
-             System.Runtime.InteropServices.SafeHandle class specifying whether to perform 
-             a normal dispose operation.
+            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
+             class specifying whether to perform a normal dispose operation.
         
         
             disposing: true for a normal dispose operation; false to finalize the handle.
@@ -191,9 +186,8 @@ class SafeHandleZeroOrMinusOneIsInvalid(SafeHandle):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the 
-             System.Runtime.InteropServices.SafeHandle class specifying whether to perform 
-             a normal dispose operation.
+            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
+             class specifying whether to perform a normal dispose operation.
         
         
             disposing: true for a normal dispose operation; false to finalize the handle.
@@ -204,12 +198,10 @@ class SafeHandleZeroOrMinusOneIsInvalid(SafeHandle):
         """
         ReleaseHandle(self: SafeHandle) -> bool
         
-            When overridden in a derived class, executes the code required to free the 
-             handle.
-        
-            Returns: true if the handle is released successfully; otherwise, in the event of a 
-             catastrophic failure, false. In this case, it generates a releaseHandleFailed 
-             MDA Managed Debugging Assistant.
+            When overridden in a derived class, executes the code required to free the handle.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic 
+             failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging 
+             Assistant.
         """
         pass
 
@@ -261,9 +253,8 @@ class SafeFileHandle(SafeHandleZeroOrMinusOneIsInvalid):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the 
-             System.Runtime.InteropServices.SafeHandle class specifying whether to perform 
-             a normal dispose operation.
+            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
+             class specifying whether to perform a normal dispose operation.
         
         
             disposing: true for a normal dispose operation; false to finalize the handle.
@@ -310,9 +301,8 @@ class SafeHandleMinusOneIsInvalid(SafeHandle):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the 
-             System.Runtime.InteropServices.SafeHandle class specifying whether to perform 
-             a normal dispose operation.
+            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
+             class specifying whether to perform a normal dispose operation.
         
         
             disposing: true for a normal dispose operation; false to finalize the handle.
@@ -323,12 +313,10 @@ class SafeHandleMinusOneIsInvalid(SafeHandle):
         """
         ReleaseHandle(self: SafeHandle) -> bool
         
-            When overridden in a derived class, executes the code required to free the 
-             handle.
-        
-            Returns: true if the handle is released successfully; otherwise, in the event of a 
-             catastrophic failure, false. In this case, it generates a releaseHandleFailed 
-             MDA Managed Debugging Assistant.
+            When overridden in a derived class, executes the code required to free the handle.
+            Returns: true if the handle is released successfully; otherwise, in the event of a catastrophic 
+             failure, false. In this case, it generates a releaseHandleFailed MDA Managed Debugging 
+             Assistant.
         """
         pass
 
@@ -376,9 +364,8 @@ class SafeProcessHandle(SafeHandleZeroOrMinusOneIsInvalid):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the 
-             System.Runtime.InteropServices.SafeHandle class specifying whether to perform 
-             a normal dispose operation.
+            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
+             class specifying whether to perform a normal dispose operation.
         
         
             disposing: true for a normal dispose operation; false to finalize the handle.
@@ -429,9 +416,8 @@ class SafeRegistryHandle(SafeHandleZeroOrMinusOneIsInvalid):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the 
-             System.Runtime.InteropServices.SafeHandle class specifying whether to perform 
-             a normal dispose operation.
+            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
+             class specifying whether to perform a normal dispose operation.
         
         
             disposing: true for a normal dispose operation; false to finalize the handle.
@@ -482,9 +468,8 @@ class SafeWaitHandle(SafeHandleZeroOrMinusOneIsInvalid):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the 
-             System.Runtime.InteropServices.SafeHandle class specifying whether to perform 
-             a normal dispose operation.
+            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
+             class specifying whether to perform a normal dispose operation.
         
         
             disposing: true for a normal dispose operation; false to finalize the handle.
@@ -531,9 +516,8 @@ class SafeX509ChainHandle(SafeHandleZeroOrMinusOneIsInvalid):
     def Dispose(self):
         """
         Dispose(self: SafeHandle, disposing: bool)
-            Releases the unmanaged resources used by the 
-             System.Runtime.InteropServices.SafeHandle class specifying whether to perform 
-             a normal dispose operation.
+            Releases the unmanaged resources used by the System.Runtime.InteropServices.SafeHandle 
+             class specifying whether to perform a normal dispose operation.
         
         
             disposing: true for a normal dispose operation; false to finalize the handle.

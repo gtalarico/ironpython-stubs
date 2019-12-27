@@ -2,7 +2,7 @@ import os
 from google.cloud import storage
 _environ = dict(os.environ)  # or os.environ.copy()
 import sys
-
+from zipfile import ZipFile
 
 
 def upload_blob(bucket_name, source_file_name, destination_blob_name):
@@ -50,24 +50,22 @@ def delete_blob(bucket_name, blob_name):
     print("Blob {} deleted.".format(blob_name))
 
 
-def upload_stub(name):
+def upload_stub(filepath, name):
     try:
         bucket = 'pylint.app.boxwise.nl'
-        print(os.environ["GOOGLE_APPLICATION_CREDENTIALS"])
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.path.expanduser("~/Desktop/googleCloudCredentials.json")
-        print(os.environ["GOOGLE_APPLICATION_CREDENTIALS"])
         bloblist = list_blobs(bucket)
         for blob in bloblist:
             print blob.name
             if blob.name == name:
                 delete_blob(bucket,name)
-        filepath = os.path.expanduser("~\\Desktop\\vertaling_guide.txt")
         upload_blob(bucket,filepath,name)
     finally:
         os.environ.clear()
         os.environ.update(_environ)
 
 if __name__ == "__main__":
-    if len(sys.argv) == 2:
-        upload_stub(sys.argv[1])
-
+    if len(sys.argv) == 3:
+        upload_stub(sys.argv[1],sys.argv[2])
+    else:
+        print "incorrect number of args for uploading to cloud is:"+len(sys.argv)+" should be 2"

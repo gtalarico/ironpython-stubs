@@ -2674,8 +2674,8 @@ class TransportItem(Object):
     def CopyTo(self, item, itemIds=None):
         """
         CopyTo(self: TransportItem, item: TransportItem)CopyTo(self: TransportItem, item: TransportItem, itemIds: ItemIdentifications)
-            Copies the contents of this item to the given item with only the 
-             itemidentifications given in the
+            Copies the contents of this item to the given item with only the itemidentifications 
+             given in the
                     second parameter
         
         
@@ -3188,8 +3188,8 @@ class TransportPackages(FindableList):
         Remove(self: TransportPackages, boxGuid: Guid) -> bool
         
             Returns the package needs to be empty before removal.
-                    Boxnumbers 
-             are renumbered if a package is removed in the middle
+                    Boxnumbers are 
+             renumbered if a package is removed in the middle
         
         
             boxGuid: BoxNr

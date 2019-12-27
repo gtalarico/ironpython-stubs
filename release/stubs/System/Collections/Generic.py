@@ -14,16 +14,16 @@ class Comparer(Object):
         """
         Compare(self: Comparer[T], x: T, y: T) -> int
         
-            When overridden in a derived class, performs a comparison of two objects of 
-             the same type and returns a value indicating whether one object is less than, 
-             equal to, or greater than the other.
+            When overridden in a derived class, performs a comparison of two objects of the same type 
+             and returns a value indicating whether one object is less than, equal to, or greater than 
+             the other.
         
         
             x: The first object to compare.
             y: The second object to compare.
-            Returns: A signed integer that indicates the relative values of x and y, as shown in 
-             the following table.Value Meaning Less than zero x is less than y.Zero x 
-             equals y.Greater than zero x is greater than y.
+            Returns: A signed integer that indicates the relative values of x and y, as shown in the following 
+             table.Value Meaning Less than zero x is less than y.Zero x equals y.Greater than zero x 
+             is greater than y.
         """
         pass
 
@@ -80,13 +80,11 @@ class Dictionary(Object):
         """
         ContainsKey(self: Dictionary[TKey, TValue], key: TKey) -> bool
         
-            Determines whether the System.Collections.Generic.Dictionary contains the 
-             specified key.
-        
+            Determines whether the System.Collections.Generic.Dictionary contains the specified key.
         
             key: The key to locate in the System.Collections.Generic.Dictionary.
-            Returns: true if the System.Collections.Generic.Dictionary contains an element with the 
-             specified key; otherwise, false.
+            Returns: true if the System.Collections.Generic.Dictionary contains an element with the specified 
+             key; otherwise, false.
         """
         pass
 
@@ -94,15 +92,13 @@ class Dictionary(Object):
         """
         ContainsValue(self: Dictionary[TKey, TValue], value: TValue) -> bool
         
-            Determines whether the System.Collections.Generic.Dictionary contains a 
-             specific value.
+            Determines whether the System.Collections.Generic.Dictionary contains a specific value.
         
+            value: The value to locate in the System.Collections.Generic.Dictionary. The value can be null 
+             for reference types.
         
-            value: The value to locate in the System.Collections.Generic.Dictionary. The value 
-             can be null for reference types.
-        
-            Returns: true if the System.Collections.Generic.Dictionary contains an element with the 
-             specified value; otherwise, false.
+            Returns: true if the System.Collections.Generic.Dictionary contains an element with the specified 
+             value; otherwise, false.
         """
         pass
 
@@ -110,9 +106,7 @@ class Dictionary(Object):
         """
         GetEnumerator(self: Dictionary[TKey, TValue]) -> Enumerator
         
-            Returns an enumerator that iterates through the 
-             System.Collections.Generic.Dictionary.
-        
+            Returns an enumerator that iterates through the System.Collections.Generic.Dictionary.
             Returns: A System.Collections.Generic.Dictionary structure for the 
              System.Collections.Generic.Dictionary.
         """
@@ -121,17 +115,15 @@ class Dictionary(Object):
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: Dictionary[TKey, TValue], info: SerializationInfo, context: StreamingContext)
-            Implements the System.Runtime.Serialization.ISerializable interface and 
-             returns the data needed to serialize the System.Collections.Generic.Dictionary 
-             instance.
+            Implements the System.Runtime.Serialization.ISerializable interface and returns the data 
+             needed to serialize the System.Collections.Generic.Dictionary instance.
         
         
-            info: A System.Runtime.Serialization.SerializationInfo object that contains the 
-             information required to serialize the System.Collections.Generic.Dictionary 
-             instance.
+            info: A System.Runtime.Serialization.SerializationInfo object that contains the information 
+             required to serialize the System.Collections.Generic.Dictionary instance.
         
-            context: A System.Runtime.Serialization.StreamingContext structure that contains the 
-             source and destination of the serialized stream associated with the 
+            context: A System.Runtime.Serialization.StreamingContext structure that contains the source and 
+             destination of the serialized stream associated with the 
              System.Collections.Generic.Dictionary instance.
         """
         pass
@@ -139,8 +131,8 @@ class Dictionary(Object):
     def OnDeserialization(self, sender):
         """
         OnDeserialization(self: Dictionary[TKey, TValue], sender: object)
-            Implements the System.Runtime.Serialization.ISerializable interface and raises 
-             the deserialization event when the deserialization is complete.
+            Implements the System.Runtime.Serialization.ISerializable interface and raises the 
+             deserialization event when the deserialization is complete.
         
         
             sender: The source of the deserialization event.
@@ -151,14 +143,11 @@ class Dictionary(Object):
         """
         Remove(self: Dictionary[TKey, TValue], key: TKey) -> bool
         
-            Removes the value with the specified key from the 
-             System.Collections.Generic.Dictionary.
-        
+            Removes the value with the specified key from the System.Collections.Generic.Dictionary.
         
             key: The key of the element to remove.
-            Returns: true if the element is successfully found and removed; otherwise, false.  This 
-             method returns false if key is not found in the 
-             System.Collections.Generic.Dictionary.
+            Returns: true if the element is successfully found and removed; otherwise, false.  This method 
+             returns false if key is not found in the System.Collections.Generic.Dictionary.
         """
         pass
 
@@ -174,23 +163,23 @@ class Dictionary(Object):
         """
         __contains__(self: IDictionary[TKey, TValue], key: TKey) -> bool
         
-            Determines whether the System.Collections.Generic.IDictionary contains an 
-             element with the specified key.
+            Determines whether the System.Collections.Generic.IDictionary contains an element with 
+             the specified key.
         
         
             key: The key to locate in the System.Collections.Generic.IDictionary.
-            Returns: true if the System.Collections.Generic.IDictionary contains an element with 
-             the key; otherwise, false.
+            Returns: true if the System.Collections.Generic.IDictionary contains an element with the key; 
+             otherwise, false.
         
         __contains__(self: IDictionary, key: object) -> bool
         
-            Determines whether the System.Collections.IDictionary object contains an 
-             element with the specified key.
+            Determines whether the System.Collections.IDictionary object contains an element with the 
+             specified key.
         
         
             key: The key to locate in the System.Collections.IDictionary object.
-            Returns: true if the System.Collections.IDictionary contains an element with the key; 
-             otherwise, false.
+            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, 
+             false.
         """
         pass
 
@@ -279,9 +268,7 @@ class EqualityComparer(Object):
         """
         Equals(self: EqualityComparer[T], x: T, y: T) -> bool
         
-            When overridden in a derived class, determines whether two objects of type T 
-             are equal.
-        
+            When overridden in a derived class, determines whether two objects of type T are equal.
         
             x: The first object to compare.
             y: The second object to compare.
@@ -293,9 +280,8 @@ class EqualityComparer(Object):
         """
         GetHashCode(self: EqualityComparer[T], obj: T) -> int
         
-            When overridden in a derived class, serves as a hash function for the 
-             specified object for hashing algorithms and data structures, such as a hash 
-             table.
+            When overridden in a derived class, serves as a hash function for the specified object 
+             for hashing algorithms and data structures, such as a hash table.
         
         
             obj: The object for which to get a hash code.
@@ -343,13 +329,10 @@ class ICollection(Object):
         """
         Contains(self: ICollection[T], item: T) -> bool
         
-            Determines whether the System.Collections.Generic.ICollection contains a 
-             specific value.
-        
+            Determines whether the System.Collections.Generic.ICollection contains a specific value.
         
             item: The object to locate in the System.Collections.Generic.ICollection.
-            Returns: true if item is found in the System.Collections.Generic.ICollection; 
-             otherwise, false.
+            Returns: true if item is found in the System.Collections.Generic.ICollection; otherwise, false.
         """
         pass
 
@@ -366,9 +349,8 @@ class ICollection(Object):
         
         
             item: The object to remove from the System.Collections.Generic.ICollection.
-            Returns: true if item was successfully removed from the 
-             System.Collections.Generic.ICollection; otherwise, false. This method also 
-             returns false if item is not found in the original 
+            Returns: true if item was successfully removed from the System.Collections.Generic.ICollection; 
+             otherwise, false. This method also returns false if item is not found in the original 
              System.Collections.Generic.ICollection.
         """
         pass
@@ -413,15 +395,15 @@ class IComparer(Object):
         """
         Compare(self: IComparer[T], x: T, y: T) -> int
         
-            Compares two objects and returns a value indicating whether one is less than, 
-             equal to, or greater than the other.
+            Compares two objects and returns a value indicating whether one is less than, equal to, 
+             or greater than the other.
         
         
             x: The first object to compare.
             y: The second object to compare.
-            Returns: A signed integer that indicates the relative values of x and y, as shown in 
-             the following table.Value Meaning Less than zerox is less than y.Zerox equals 
-             y.Greater than zerox is greater than y.
+            Returns: A signed integer that indicates the relative values of x and y, as shown in the following 
+             table.Value Meaning Less than zerox is less than y.Zerox equals y.Greater than zerox is 
+             greater than y.
         """
         pass
 
@@ -454,13 +436,13 @@ class IDictionary(Object):
         """
         ContainsKey(self: IDictionary[TKey, TValue], key: TKey) -> bool
         
-            Determines whether the System.Collections.Generic.IDictionary contains an 
-             element with the specified key.
+            Determines whether the System.Collections.Generic.IDictionary contains an element with 
+             the specified key.
         
         
             key: The key to locate in the System.Collections.Generic.IDictionary.
-            Returns: true if the System.Collections.Generic.IDictionary contains an element with 
-             the key; otherwise, false.
+            Returns: true if the System.Collections.Generic.IDictionary contains an element with the key; 
+             otherwise, false.
         """
         pass
 
@@ -473,9 +455,8 @@ class IDictionary(Object):
         
         
             key: The key of the element to remove.
-            Returns: true if the element is successfully removed; otherwise, false.  This method 
-             also returns false if key was not found in the original 
-             System.Collections.Generic.IDictionary.
+            Returns: true if the element is successfully removed; otherwise, false.  This method also returns 
+             false if key was not found in the original System.Collections.Generic.IDictionary.
         """
         pass
 
@@ -536,8 +517,8 @@ class IEnumerable(Object):
         GetEnumerator(self: IEnumerable[T]) -> IEnumerator[T]
         
             Returns an enumerator that iterates through the collection.
-            Returns: A System.Collections.Generic.IEnumerator that can be used to iterate through 
-             the collection.
+            Returns: A System.Collections.Generic.IEnumerator that can be used to iterate through the 
+             collection.
         """
         pass
 
@@ -623,9 +604,7 @@ class IList(Object):
         """
         IndexOf(self: IList[T], item: T) -> int
         
-            Determines the index of a specific item in the 
-             System.Collections.Generic.IList.
-        
+            Determines the index of a specific item in the System.Collections.Generic.IList.
         
             item: The object to locate in the System.Collections.Generic.IList.
             Returns: The index of item if found in the list; otherwise, -1.
@@ -655,13 +634,10 @@ class IList(Object):
         """
         __contains__(self: ICollection[T], item: T) -> bool
         
-            Determines whether the System.Collections.Generic.ICollection contains a 
-             specific value.
-        
+            Determines whether the System.Collections.Generic.ICollection contains a specific value.
         
             item: The object to locate in the System.Collections.Generic.ICollection.
-            Returns: true if item is found in the System.Collections.Generic.ICollection; 
-             otherwise, false.
+            Returns: true if item is found in the System.Collections.Generic.ICollection; otherwise, false.
         """
         pass
 
@@ -778,13 +754,12 @@ class ISet(Object):
         """
         Add(self: ISet[T], item: T) -> bool
         
-            Adds an element to the current set and returns a value to indicate if the 
-             element was successfully added.
+            Adds an element to the current set and returns a value to indicate if the element was 
+             successfully added.
         
         
             item: The element to add to the set.
-            Returns: true if the element is added to the set; false if the element is already in 
-             the set.
+            Returns: true if the element is added to the set; false if the element is already in the set.
         """
         pass
 
@@ -800,8 +775,8 @@ class ISet(Object):
     def IntersectWith(self, other):
         """
         IntersectWith(self: ISet[T], other: IEnumerable[T])
-            Modifies the current set so that it contains only elements that are also in a 
-             specified collection.
+            Modifies the current set so that it contains only elements that are also in a specified 
+             collection.
         
         
             other: The collection to compare to the current set.
@@ -812,9 +787,7 @@ class ISet(Object):
         """
         IsProperSubsetOf(self: ISet[T], other: IEnumerable[T]) -> bool
         
-            Determines whether the current set is a proper (strict) subset of a specified 
-             collection.
-        
+            Determines whether the current set is a proper (strict) subset of a specified collection.
         
             other: The collection to compare to the current set.
             Returns: true if the current set is a proper subset of other; otherwise, false.
@@ -825,8 +798,8 @@ class ISet(Object):
         """
         IsProperSupersetOf(self: ISet[T], other: IEnumerable[T]) -> bool
         
-            Determines whether the current set is a proper (strict) superset of a 
-             specified collection.
+            Determines whether the current set is a proper (strict) superset of a specified 
+             collection.
         
         
             other: The collection to compare to the current set.
@@ -863,8 +836,7 @@ class ISet(Object):
             Determines whether the current set overlaps with the specified collection.
         
             other: The collection to compare to the current set.
-            Returns: true if the current set and other share at least one common element; 
-             otherwise, false.
+            Returns: true if the current set and other share at least one common element; otherwise, false.
         """
         pass
 
@@ -872,9 +844,7 @@ class ISet(Object):
         """
         SetEquals(self: ISet[T], other: IEnumerable[T]) -> bool
         
-            Determines whether the current set and the specified collection contain the 
-             same elements.
-        
+            Determines whether the current set and the specified collection contain the same elements.
         
             other: The collection to compare to the current set.
             Returns: true if the current set is equal to other; otherwise, false.
@@ -884,8 +854,8 @@ class ISet(Object):
     def SymmetricExceptWith(self, other):
         """
         SymmetricExceptWith(self: ISet[T], other: IEnumerable[T])
-            Modifies the current set so that it contains only elements that are present 
-             either in the current set or in the specified collection, but not both.
+            Modifies the current set so that it contains only elements that are present either in the 
+             current set or in the specified collection, but not both.
         
         
             other: The collection to compare to the current set.
@@ -895,8 +865,8 @@ class ISet(Object):
     def UnionWith(self, other):
         """
         UnionWith(self: ISet[T], other: IEnumerable[T])
-            Modifies the current set so that it contains all elements that are present in 
-             both the current set and in the specified collection.
+            Modifies the current set so that it contains all elements that are present in both the 
+             current set and in the specified collection.
         
         
             other: The collection to compare to the current set.
@@ -911,13 +881,10 @@ class ISet(Object):
         """
         __contains__(self: ICollection[T], item: T) -> bool
         
-            Determines whether the System.Collections.Generic.ICollection contains a 
-             specific value.
-        
+            Determines whether the System.Collections.Generic.ICollection contains a specific value.
         
             item: The object to locate in the System.Collections.Generic.ICollection.
-            Returns: true if item is found in the System.Collections.Generic.ICollection; 
-             otherwise, false.
+            Returns: true if item is found in the System.Collections.Generic.ICollection; otherwise, false.
         """
         pass
 
@@ -940,9 +907,9 @@ class KeyNotFoundException(SystemException):
     """
     The exception that is thrown when the key specified for accessing an element in a collection does not match any key in the collection.
     
-    KeyNotFoundException()
     KeyNotFoundException(message: str)
-    KeyNotFoundException(message: str, innerException: Exception)
+    KeyNotFoundException(message: str, innerException: Exception)
+    KeyNotFoundException()
     """
     def __init__(self, *args): #cannot find CLR method
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
@@ -975,21 +942,19 @@ class KeyValuePair():
         """
         ToString(self: KeyValuePair[TKey, TValue]) -> str
         
-            Returns a string representation of the 
-             System.Collections.Generic.KeyValuePair, using the string representations of 
-             the key and value.
+            Returns a string representation of the System.Collections.Generic.KeyValuePair, using the 
+             string representations of the key and value.
         
-            Returns: A string representation of the System.Collections.Generic.KeyValuePair, which 
-             includes the string representations of the key and value.
+            Returns: A string representation of the System.Collections.Generic.KeyValuePair, which includes 
+             the string representations of the key and value.
         """
         pass
 
     @staticmethod # known case of __new__
     def __new__(self, key, value):
         """
-        __new__[KeyValuePair`2]() -> KeyValuePair[TKey, TValue]
-        
-        __new__(cls: type, key: TKey, value: TValue)
+        __new__(cls: type, key: TKey, value: TValue)
+        __new__[KeyValuePair`2]() -> KeyValuePair[TKey, TValue]
         """
         pass
 
@@ -1029,8 +994,8 @@ class LinkedList(Object):
         
         AddAfter(self: LinkedList[T], node: LinkedListNode[T], value: T) -> LinkedListNode[T]
         
-            Adds a new node containing the specified value after the specified existing 
-             node in the System.Collections.Generic.LinkedList.
+            Adds a new node containing the specified value after the specified existing node in the 
+             System.Collections.Generic.LinkedList.
         
         
             node: The System.Collections.Generic.LinkedListNode after which to insert a new 
@@ -1045,8 +1010,8 @@ class LinkedList(Object):
         """
         AddBefore(self: LinkedList[T], node: LinkedListNode[T], value: T) -> LinkedListNode[T]
         
-            Adds a new node containing the specified value before the specified existing 
-             node in the System.Collections.Generic.LinkedList.
+            Adds a new node containing the specified value before the specified existing node in the 
+             System.Collections.Generic.LinkedList.
         
         
             node: The System.Collections.Generic.LinkedListNode before which to insert a new 
@@ -1076,9 +1041,7 @@ class LinkedList(Object):
             value: The value to add at the start of the System.Collections.Generic.LinkedList.
             Returns: The new System.Collections.Generic.LinkedListNode containing value.
         AddFirst(self: LinkedList[T], node: LinkedListNode[T])
-            Adds the specified new node at the start of the 
-             System.Collections.Generic.LinkedList.
-        
+            Adds the specified new node at the start of the System.Collections.Generic.LinkedList.
         
             node: The new System.Collections.Generic.LinkedListNode to add at the start of the 
              System.Collections.Generic.LinkedList.
@@ -1096,9 +1059,7 @@ class LinkedList(Object):
             value: The value to add at the end of the System.Collections.Generic.LinkedList.
             Returns: The new System.Collections.Generic.LinkedListNode containing value.
         AddLast(self: LinkedList[T], node: LinkedListNode[T])
-            Adds the specified new node at the end of the 
-             System.Collections.Generic.LinkedList.
-        
+            Adds the specified new node at the end of the System.Collections.Generic.LinkedList.
         
             node: The new System.Collections.Generic.LinkedListNode to add at the end of the 
              System.Collections.Generic.LinkedList.
@@ -1118,11 +1079,10 @@ class LinkedList(Object):
         
             Determines whether a value is in the System.Collections.Generic.LinkedList.
         
-            value: The value to locate in the System.Collections.Generic.LinkedList. The value 
-             can be null for reference types.
+            value: The value to locate in the System.Collections.Generic.LinkedList. The value can be null 
+             for reference types.
         
-            Returns: true if value is found in the System.Collections.Generic.LinkedList; 
-             otherwise, false.
+            Returns: true if value is found in the System.Collections.Generic.LinkedList; otherwise, false.
         """
         pass
 
@@ -1137,8 +1097,8 @@ class LinkedList(Object):
             Finds the first node that contains the specified value.
         
             value: The value to locate in the System.Collections.Generic.LinkedList.
-            Returns: The first System.Collections.Generic.LinkedListNode that contains the 
-             specified value, if found; otherwise, null.
+            Returns: The first System.Collections.Generic.LinkedListNode that contains the specified value, if 
+             found; otherwise, null.
         """
         pass
 
@@ -1149,8 +1109,8 @@ class LinkedList(Object):
             Finds the last node that contains the specified value.
         
             value: The value to locate in the System.Collections.Generic.LinkedList.
-            Returns: The last System.Collections.Generic.LinkedListNode that contains the specified 
-             value, if found; otherwise, null.
+            Returns: The last System.Collections.Generic.LinkedListNode that contains the specified value, if 
+             found; otherwise, null.
         """
         pass
 
@@ -1158,28 +1118,23 @@ class LinkedList(Object):
         """
         GetEnumerator(self: LinkedList[T]) -> Enumerator
         
-            Returns an enumerator that iterates through the 
-             System.Collections.Generic.LinkedList.
-        
-            Returns: An System.Collections.Generic.LinkedList for the 
-             System.Collections.Generic.LinkedList.
+            Returns an enumerator that iterates through the System.Collections.Generic.LinkedList.
+            Returns: An System.Collections.Generic.LinkedList for the System.Collections.Generic.LinkedList.
         """
         pass
 
     def GetObjectData(self, info, context):
         """
         GetObjectData(self: LinkedList[T], info: SerializationInfo, context: StreamingContext)
-            Implements the System.Runtime.Serialization.ISerializable interface and 
-             returns the data needed to serialize the System.Collections.Generic.LinkedList 
-             instance.
+            Implements the System.Runtime.Serialization.ISerializable interface and returns the data 
+             needed to serialize the System.Collections.Generic.LinkedList instance.
         
         
-            info: A System.Runtime.Serialization.SerializationInfo object that contains the 
-             information required to serialize the System.Collections.Generic.LinkedList 
-             instance.
+            info: A System.Runtime.Serialization.SerializationInfo object that contains the information 
+             required to serialize the System.Collections.Generic.LinkedList instance.
         
-            context: A System.Runtime.Serialization.StreamingContext object that contains the 
-             source and destination of the serialized stream associated with the 
+            context: A System.Runtime.Serialization.StreamingContext object that contains the source and 
+             destination of the serialized stream associated with the 
              System.Collections.Generic.LinkedList instance.
         """
         pass
@@ -1187,8 +1142,8 @@ class LinkedList(Object):
     def OnDeserialization(self, sender):
         """
         OnDeserialization(self: LinkedList[T], sender: object)
-            Implements the System.Runtime.Serialization.ISerializable interface and raises 
-             the deserialization event when the deserialization is complete.
+            Implements the System.Runtime.Serialization.ISerializable interface and raises the 
+             deserialization event when the deserialization is complete.
         
         
             sender: The source of the deserialization event.
@@ -1204,8 +1159,8 @@ class LinkedList(Object):
         
         
             value: The value to remove from the System.Collections.Generic.LinkedList.
-            Returns: true if the element containing value is successfully removed; otherwise, 
-             false.  This method also returns false if value was not found in the original 
+            Returns: true if the element containing value is successfully removed; otherwise, false.  This 
+             method also returns false if value was not found in the original 
              System.Collections.Generic.LinkedList.
         
         Remove(self: LinkedList[T], node: LinkedListNode[T])
@@ -1234,13 +1189,10 @@ class LinkedList(Object):
         """
         __contains__(self: ICollection[T], item: T) -> bool
         
-            Determines whether the System.Collections.Generic.ICollection contains a 
-             specific value.
-        
+            Determines whether the System.Collections.Generic.ICollection contains a specific value.
         
             item: The object to locate in the System.Collections.Generic.ICollection.
-            Returns: true if item is found in the System.Collections.Generic.ICollection; 
-             otherwise, false.
+            Returns: true if item is found in the System.Collections.Generic.ICollection; otherwise, false.
         """
         pass
 
@@ -1350,8 +1302,8 @@ class List(Object):
         Add(self: List[T], item: T)
             Adds an object to the end of the System.Collections.Generic.List.
         
-            item: The object to be added to the end of the System.Collections.Generic.List. The 
-             value can be null for reference types.
+            item: The object to be added to the end of the System.Collections.Generic.List. The value can 
+             be null for reference types.
         """
         pass
 
@@ -1363,8 +1315,8 @@ class List(Object):
         
         
             collection: The collection whose elements should be added to the end of the 
-             System.Collections.Generic.List. The collection itself cannot be null, but it 
-             can contain elements that are null, if type T is a reference type.
+             System.Collections.Generic.List. The collection itself cannot be null, but it can contain 
+             elements that are null, if type T is a reference type.
         """
         pass
 
@@ -1372,11 +1324,9 @@ class List(Object):
         """
         AsReadOnly(self: List[T]) -> ReadOnlyCollection[T]
         
-            Returns a read-only System.Collections.Generic.IList wrapper for the current 
-             collection.
-        
-            Returns: A System.Collections.ObjectModel.ReadOnlyCollection that acts as a read-only 
-             wrapper around the current System.Collections.Generic.List.
+            Returns a read-only System.Collections.Generic.IList wrapper for the current collection.
+            Returns: A System.Collections.ObjectModel.ReadOnlyCollection that acts as a read-only wrapper 
+             around the current System.Collections.Generic.List.
         """
         pass
 
@@ -1384,50 +1334,47 @@ class List(Object):
         """
         BinarySearch(self: List[T], index: int, count: int, item: T, comparer: IComparer[T]) -> int
         
-            Searches a range of elements in the sorted System.Collections.Generic.List for 
-             an element using the specified comparer and returns the zero-based index of 
-             the element.
+            Searches a range of elements in the sorted System.Collections.Generic.List for an element 
+             using the specified comparer and returns the zero-based index of the element.
         
         
             index: The zero-based starting index of the range to search.
             count: The length of the range to search.
             item: The object to locate. The value can be null for reference types.
-            comparer: The System.Collections.Generic.IComparer implementation to use when comparing 
-             elements, or null to use the default comparer 
-             System.Collections.Generic.Comparer.
+            comparer: The System.Collections.Generic.IComparer implementation to use when comparing elements, 
+             or null to use the default comparer System.Collections.Generic.Comparer.
         
-            Returns: The zero-based index of item in the sorted System.Collections.Generic.List, if 
-             item is found; otherwise, a negative number that is the bitwise complement of 
-             the index of the next element that is larger than item or, if there is no 
-             larger element, the bitwise complement of System.Collections.Generic.List.
+            Returns: The zero-based index of item in the sorted System.Collections.Generic.List, if item is 
+             found; otherwise, a negative number that is the bitwise complement of the index of the 
+             next element that is larger than item or, if there is no larger element, the bitwise 
+             complement of System.Collections.Generic.List.
         
         BinarySearch(self: List[T], item: T) -> int
         
-            Searches the entire sorted System.Collections.Generic.List for an element 
-             using the default comparer and returns the zero-based index of the element.
+            Searches the entire sorted System.Collections.Generic.List for an element using the 
+             default comparer and returns the zero-based index of the element.
         
         
             item: The object to locate. The value can be null for reference types.
-            Returns: The zero-based index of item in the sorted System.Collections.Generic.List, if 
-             item is found; otherwise, a negative number that is the bitwise complement of 
-             the index of the next element that is larger than item or, if there is no 
-             larger element, the bitwise complement of System.Collections.Generic.List.
+            Returns: The zero-based index of item in the sorted System.Collections.Generic.List, if item is 
+             found; otherwise, a negative number that is the bitwise complement of the index of the 
+             next element that is larger than item or, if there is no larger element, the bitwise 
+             complement of System.Collections.Generic.List.
         
         BinarySearch(self: List[T], item: T, comparer: IComparer[T]) -> int
         
-            Searches the entire sorted System.Collections.Generic.List for an element 
-             using the specified comparer and returns the zero-based index of the element.
+            Searches the entire sorted System.Collections.Generic.List for an element using the 
+             specified comparer and returns the zero-based index of the element.
         
         
             item: The object to locate. The value can be null for reference types.
             comparer: The System.Collections.Generic.IComparer implementation to use when comparing 
-             elements.-or-null to use the default comparer 
-             System.Collections.Generic.Comparer.
+             elements.-or-null to use the default comparer System.Collections.Generic.Comparer.
         
-            Returns: The zero-based index of item in the sorted System.Collections.Generic.List, if 
-             item is found; otherwise, a negative number that is the bitwise complement of 
-             the index of the next element that is larger than item or, if there is no 
-             larger element, the bitwise complement of System.Collections.Generic.List.
+            Returns: The zero-based index of item in the sorted System.Collections.Generic.List, if item is 
+             found; otherwise, a negative number that is the bitwise complement of the index of the 
+             next element that is larger than item or, if there is no larger element, the bitwise 
+             complement of System.Collections.Generic.List.
         """
         pass
 
@@ -1444,8 +1391,8 @@ class List(Object):
         
             Determines whether an element is in the System.Collections.Generic.List.
         
-            item: The object to locate in the System.Collections.Generic.List. The value can be 
-             null for reference types.
+            item: The object to locate in the System.Collections.Generic.List. The value can be null for 
+             reference types.
         
             Returns: true if item is found in the System.Collections.Generic.List; otherwise, false.
         """
@@ -1463,15 +1410,13 @@ class List(Object):
         """
         Exists(self: List[T], match: Predicate[T]) -> bool
         
-            Determines whether the System.Collections.Generic.List contains elements that 
-             match the conditions defined by the specified predicate.
+            Determines whether the System.Collections.Generic.List contains elements that match the 
+             conditions defined by the specified predicate.
         
         
-            match: The System.Predicate delegate that defines the conditions of the elements to 
-             search for.
-        
-            Returns: true if the System.Collections.Generic.List contains one or more elements that 
-             match the conditions defined by the specified predicate; otherwise, false.
+            match: The System.Predicate delegate that defines the conditions of the elements to search for.
+            Returns: true if the System.Collections.Generic.List contains one or more elements that match the 
+             conditions defined by the specified predicate; otherwise, false.
         """
         pass
 
@@ -1479,16 +1424,13 @@ class List(Object):
         """
         Find(self: List[T], match: Predicate[T]) -> T
         
-            Searches for an element that matches the conditions defined by the specified 
-             predicate, and returns the first occurrence within the entire 
-             System.Collections.Generic.List.
+            Searches for an element that matches the conditions defined by the specified predicate, 
+             and returns the first occurrence within the entire System.Collections.Generic.List.
         
         
-            match: The System.Predicate delegate that defines the conditions of the element to 
-             search for.
-        
-            Returns: The first element that matches the conditions defined by the specified 
-             predicate, if found; otherwise, the default value for type T.
+            match: The System.Predicate delegate that defines the conditions of the element to search for.
+            Returns: The first element that matches the conditions defined by the specified predicate, if 
+             found; otherwise, the default value for type T.
         """
         pass
 
@@ -1496,15 +1438,11 @@ class List(Object):
         """
         FindAll(self: List[T], match: Predicate[T]) -> List[T]
         
-            Retrieves all the elements that match the conditions defined by the specified 
-             predicate.
+            Retrieves all the elements that match the conditions defined by the specified predicate.
         
-        
-            match: The System.Predicate delegate that defines the conditions of the elements to 
-             search for.
-        
-            Returns: A System.Collections.Generic.List containing all the elements that match the 
-             conditions defined by the specified predicate, if found; otherwise, an empty 
+            match: The System.Predicate delegate that defines the conditions of the elements to search for.
+            Returns: A System.Collections.Generic.List containing all the elements that match the conditions 
+             defined by the specified predicate, if found; otherwise, an empty 
              System.Collections.Generic.List.
         """
         pass
@@ -1513,44 +1451,38 @@ class List(Object):
         """
         FindIndex(self: List[T], match: Predicate[T]) -> int
         
-            Searches for an element that matches the conditions defined by the specified 
-             predicate, and returns the zero-based index of the first occurrence within the 
-             entire System.Collections.Generic.List.
+            Searches for an element that matches the conditions defined by the specified predicate, 
+             and returns the zero-based index of the first occurrence within the entire 
+             System.Collections.Generic.List.
         
         
-            match: The System.Predicate delegate that defines the conditions of the element to 
-             search for.
-        
-            Returns: The zero-based index of the first occurrence of an element that matches the 
+            match: The System.Predicate delegate that defines the conditions of the element to search for.
+            Returns: The zero-based index of the first occurrence of an element that matches the conditions 
                 
         FindIndex(self: List[T], startIndex: int, match: Predicate[T]) -> int
         
-            Searches for an element that matches the conditions defined by the specified 
-             predicate, and returns the zero-based index of the first occurrence within the 
-             range of elements in the System.Collections.Generic.List that extends from the 
-             specified index to the last element.
+            Searches for an element that matches the conditions defined by the specified predicate, 
+             and returns the zero-based index of the first occurrence within the range of elements in 
+             the System.Collections.Generic.List that extends from the specified index to the last 
+             element.
         
         
             startIndex: The zero-based starting index of the search.
-            match: The System.Predicate delegate that defines the conditions of the element to 
-             search for.
-        
-            Returns: The zero-based index of the first occurrence of an element that matches the 
+            match: The System.Predicate delegate that defines the conditions of the element to search for.
+            Returns: The zero-based index of the first occurrence of an element that matches the conditions 
                 
         FindIndex(self: List[T], startIndex: int, count: int, match: Predicate[T]) -> int
         
-            Searches for an element that matches the conditions defined by the specified 
-             predicate, and returns the zero-based index of the first occurrence within the 
-             range of elements in the System.Collections.Generic.List that starts at the 
-             specified index and contains the specified number of elements.
+            Searches for an element that matches the conditions defined by the specified predicate, 
+             and returns the zero-based index of the first occurrence within the range of elements in 
+             the System.Collections.Generic.List that starts at the specified index and contains the 
+             specified number of elements.
         
         
             startIndex: The zero-based starting index of the search.
             count: The number of elements in the section to search.
-            match: The System.Predicate delegate that defines the conditions of the element to 
-             search for.
-        
-            Returns: The zero-based index of the first occurrence of an element that matches the 
+            match: The System.Predicate delegate that defines the conditions of the element to search for.
+            Returns: The zero-based index of the first occurrence of an element that matches the conditions 
                 """
         pass
 
@@ -1558,16 +1490,13 @@ class List(Object):
         """
         FindLast(self: List[T], match: Predicate[T]) -> T
         
-            Searches for an element that matches the conditions defined by the specified 
-             predicate, and returns the last occurrence within the entire 
-             System.Collections.Generic.List.
+            Searches for an element that matches the conditions defined by the specified predicate, 
+             and returns the last occurrence within the entire System.Collections.Generic.List.
         
         
-            match: The System.Predicate delegate that defines the conditions of the element to 
-             search for.
-        
-            Returns: The last element that matches the conditions defined by the specified 
-             predicate, if found; otherwise, the default value for type T.
+            match: The System.Predicate delegate that defines the conditions of the element to search for.
+            Returns: The last element that matches the conditions defined by the specified predicate, if 
+             found; otherwise, the default value for type T.
         """
         pass
 
@@ -1575,53 +1504,45 @@ class List(Object):
         """
         FindLastIndex(self: List[T], match: Predicate[T]) -> int
         
-            Searches for an element that matches the conditions defined by the specified 
-             predicate, and returns the zero-based index of the last occurrence within the 
-             entire System.Collections.Generic.List.
+            Searches for an element that matches the conditions defined by the specified predicate, 
+             and returns the zero-based index of the last occurrence within the entire 
+             System.Collections.Generic.List.
         
         
-            match: The System.Predicate delegate that defines the conditions of the element to 
-             search for.
-        
-            Returns: The zero-based index of the last occurrence of an element that matches the 
+            match: The System.Predicate delegate that defines the conditions of the element to search for.
+            Returns: The zero-based index of the last occurrence of an element that matches the conditions 
                 
         FindLastIndex(self: List[T], startIndex: int, match: Predicate[T]) -> int
         
-            Searches for an element that matches the conditions defined by the specified 
-             predicate, and returns the zero-based index of the last occurrence within the 
-             range of elements in the System.Collections.Generic.List that extends from the 
-             first element to the specified index.
+            Searches for an element that matches the conditions defined by the specified predicate, 
+             and returns the zero-based index of the last occurrence within the range of elements in 
+             the System.Collections.Generic.List that extends from the first element to the specified 
+             index.
         
         
             startIndex: The zero-based starting index of the backward search.
-            match: The System.Predicate delegate that defines the conditions of the element to 
-             search for.
-        
-            Returns: The zero-based index of the last occurrence of an element that matches the 
+            match: The System.Predicate delegate that defines the conditions of the element to search for.
+            Returns: The zero-based index of the last occurrence of an element that matches the conditions 
                 
         FindLastIndex(self: List[T], startIndex: int, count: int, match: Predicate[T]) -> int
         
-            Searches for an element that matches the conditions defined by the specified 
-             predicate, and returns the zero-based index of the last occurrence within the 
-             range of elements in the System.Collections.Generic.List that contains the 
-             specified number of elements and ends at the specified index.
+            Searches for an element that matches the conditions defined by the specified predicate, 
+             and returns the zero-based index of the last occurrence within the range of elements in 
+             the System.Collections.Generic.List that contains the specified number of elements and 
+             ends at the specified index.
         
         
             startIndex: The zero-based starting index of the backward search.
             count: The number of elements in the section to search.
-            match: The System.Predicate delegate that defines the conditions of the element to 
-             search for.
-        
-            Returns: The zero-based index of the last occurrence of an element that matches the 
+            match: The System.Predicate delegate that defines the conditions of the element to search for.
+            Returns: The zero-based index of the last occurrence of an element that matches the conditions 
                 """
         pass
 
     def ForEach(self, action):
         """
         ForEach(self: List[T], action: Action[T])
-            Performs the specified action on each element of the 
-             System.Collections.Generic.List.
-        
+            Performs the specified action on each element of the System.Collections.Generic.List.
         
             action: The System.Action delegate to perform on each element of the 
              System.Collections.Generic.List.
@@ -1632,9 +1553,7 @@ class List(Object):
         """
         GetEnumerator(self: List[T]) -> Enumerator
         
-            Returns an enumerator that iterates through the 
-             System.Collections.Generic.List.
-        
+            Returns an enumerator that iterates through the System.Collections.Generic.List.
             Returns: A System.Collections.Generic.List for the System.Collections.Generic.List.
         """
         pass
@@ -1649,8 +1568,7 @@ class List(Object):
         
             index: The zero-based System.Collections.Generic.List index at which the range starts.
             count: The number of elements in the range.
-            Returns: A shallow copy of a range of elements in the source 
-             System.Collections.Generic.List.
+            Returns: A shallow copy of a range of elements in the source System.Collections.Generic.List.
         """
         pass
 
@@ -1658,58 +1576,50 @@ class List(Object):
         """
         IndexOf(self: List[T], item: T) -> int
         
-            Searches for the specified object and returns the zero-based index of the 
-             first occurrence within the entire System.Collections.Generic.List.
+            Searches for the specified object and returns the zero-based index of the first 
+             occurrence within the entire System.Collections.Generic.List.
         
         
-            item: The object to locate in the System.Collections.Generic.List. The value can be 
-             null for reference types.
+            item: The object to locate in the System.Collections.Generic.List. The value can be null for 
+             reference types.
         
             Returns: The zero-based index of the first occurrence of item within the entire 
                 
         IndexOf(self: List[T], item: T, index: int) -> int
         
-            Searches for the specified object and returns the zero-based index of the 
-             first occurrence within the range of elements in the 
-             System.Collections.Generic.List that extends from the specified index to the 
-             last element.
+            Searches for the specified object and returns the zero-based index of the first 
+             occurrence within the range of elements in the System.Collections.Generic.List that 
+             extends from the specified index to the last element.
         
         
-            item: The object to locate in the System.Collections.Generic.List. The value can be 
-             null for reference types.
+            item: The object to locate in the System.Collections.Generic.List. The value can be null for 
+             reference types.
         
-            index: The zero-based starting index of the search. 0 (zero) is valid in an empty 
-             list.
-        
-            Returns: The zero-based index of the first occurrence of item within the range of 
-             elements in the System.Collections.Generic.List that extends from index to the 
+            index: The zero-based starting index of the search. 0 (zero) is valid in an empty list.
+            Returns: The zero-based index of the first occurrence of item within the range of elements in the 
+             System.Collections.Generic.List that extends from index to the last element, if found; 
                 
         IndexOf(self: List[T], item: T, index: int, count: int) -> int
         
-            Searches for the specified object and returns the zero-based index of the 
-             first occurrence within the range of elements in the 
-             System.Collections.Generic.List that starts at the specified index and 
-             contains the specified number of elements.
+            Searches for the specified object and returns the zero-based index of the first 
+             occurrence within the range of elements in the System.Collections.Generic.List that 
+             starts at the specified index and contains the specified number of elements.
         
         
-            item: The object to locate in the System.Collections.Generic.List. The value can be 
-             null for reference types.
+            item: The object to locate in the System.Collections.Generic.List. The value can be null for 
+             reference types.
         
-            index: The zero-based starting index of the search. 0 (zero) is valid in an empty 
-             list.
-        
+            index: The zero-based starting index of the search. 0 (zero) is valid in an empty list.
             count: The number of elements in the section to search.
-            Returns: The zero-based index of the first occurrence of item within the range of 
-             elements in the System.Collections.Generic.List that starts at index and 
+            Returns: The zero-based index of the first occurrence of item within the range of elements in the 
+             System.Collections.Generic.List that starts at index and contains count number of 
                 """
         pass
 
     def Insert(self, index, item):
         """
         Insert(self: List[T], index: int, item: T)
-            Inserts an element into the System.Collections.Generic.List at the specified 
-             index.
-        
+            Inserts an element into the System.Collections.Generic.List at the specified index.
         
             index: The zero-based index at which item should be inserted.
             item: The object to insert. The value can be null for reference types.
@@ -1719,14 +1629,14 @@ class List(Object):
     def InsertRange(self, index, collection):
         """
         InsertRange(self: List[T], index: int, collection: IEnumerable[T])
-            Inserts the elements of a collection into the System.Collections.Generic.List 
-             at the specified index.
+            Inserts the elements of a collection into the System.Collections.Generic.List at the 
+             specified index.
         
         
             index: The zero-based index at which the new elements should be inserted.
             collection: The collection whose elements should be inserted into the 
-             System.Collections.Generic.List. The collection itself cannot be null, but it 
-             can contain elements that are null, if type T is a reference type.
+             System.Collections.Generic.List. The collection itself cannot be null, but it can contain 
+             elements that are null, if type T is a reference type.
         """
         pass
 
@@ -1734,44 +1644,43 @@ class List(Object):
         """
         LastIndexOf(self: List[T], item: T) -> int
         
-            Searches for the specified object and returns the zero-based index of the last 
-             occurrence within the entire System.Collections.Generic.List.
+            Searches for the specified object and returns the zero-based index of the last occurrence 
+             within the entire System.Collections.Generic.List.
         
         
-            item: The object to locate in the System.Collections.Generic.List. The value can be 
-             null for reference types.
+            item: The object to locate in the System.Collections.Generic.List. The value can be null for 
+             reference types.
         
             Returns: The zero-based index of the last occurrence of item within the entire the 
                 
         LastIndexOf(self: List[T], item: T, index: int) -> int
         
-            Searches for the specified object and returns the zero-based index of the last 
-             occurrence within the range of elements in the System.Collections.Generic.List 
-             that extends from the first element to the specified index.
+            Searches for the specified object and returns the zero-based index of the last occurrence 
+             within the range of elements in the System.Collections.Generic.List that extends from the 
+             first element to the specified index.
         
         
-            item: The object to locate in the System.Collections.Generic.List. The value can be 
-             null for reference types.
+            item: The object to locate in the System.Collections.Generic.List. The value can be null for 
+             reference types.
         
             index: The zero-based starting index of the backward search.
-            Returns: The zero-based index of the last occurrence of item within the range of 
-             elements in the System.Collections.Generic.List that extends from the first 
+            Returns: The zero-based index of the last occurrence of item within the range of elements in the 
+             System.Collections.Generic.List that extends from the first element to index, if found; 
                 
         LastIndexOf(self: List[T], item: T, index: int, count: int) -> int
         
-            Searches for the specified object and returns the zero-based index of the last 
-             occurrence within the range of elements in the System.Collections.Generic.List 
-             that contains the specified number of elements and ends at the specified 
-             index.
+            Searches for the specified object and returns the zero-based index of the last occurrence 
+             within the range of elements in the System.Collections.Generic.List that contains the 
+             specified number of elements and ends at the specified index.
         
         
-            item: The object to locate in the System.Collections.Generic.List. The value can be 
-             null for reference types.
+            item: The object to locate in the System.Collections.Generic.List. The value can be null for 
+             reference types.
         
             index: The zero-based starting index of the backward search.
             count: The number of elements in the section to search.
-            Returns: The zero-based index of the last occurrence of item within the range of 
-             elements in the System.Collections.Generic.List that contains count number of 
+            Returns: The zero-based index of the last occurrence of item within the range of elements in the 
+             System.Collections.Generic.List that contains count number of elements and ends at index, 
                 """
         pass
 
@@ -1783,11 +1692,11 @@ class List(Object):
              System.Collections.Generic.List.
         
         
-            item: The object to remove from the System.Collections.Generic.List. The value can 
-             be null for reference types.
+            item: The object to remove from the System.Collections.Generic.List. The value can be null for 
+             reference types.
         
-            Returns: true if item is successfully removed; otherwise, false.  This method also 
-             returns false if item was not found in the System.Collections.Generic.List.
+            Returns: true if item is successfully removed; otherwise, false.  This method also returns false 
+             if item was not found in the System.Collections.Generic.List.
         """
         pass
 
@@ -1795,13 +1704,9 @@ class List(Object):
         """
         RemoveAll(self: List[T], match: Predicate[T]) -> int
         
-            Removes all the elements that match the conditions defined by the specified 
-             predicate.
+            Removes all the elements that match the conditions defined by the specified predicate.
         
-        
-            match: The System.Predicate delegate that defines the conditions of the elements to 
-             remove.
-        
+            match: The System.Predicate delegate that defines the conditions of the elements to remove.
             Returns: The number of elements removed from the System.Collections.Generic.List .
         """
         pass
@@ -1809,9 +1714,7 @@ class List(Object):
     def RemoveAt(self, index):
         """
         RemoveAt(self: List[T], index: int)
-            Removes the element at the specified index of the 
-             System.Collections.Generic.List.
-        
+            Removes the element at the specified index of the System.Collections.Generic.List.
         
             index: The zero-based index of the element to remove.
         """
@@ -1835,40 +1738,37 @@ class List(Object):
             index: The zero-based starting index of the range to reverse.
             count: The number of elements in the range to reverse.
         Reverse(self: List[T])
-            Reverses the order of the elements in the entire 
-             System.Collections.Generic.List.
+            Reverses the order of the elements in the entire System.Collections.Generic.List.
         """
         pass
 
     def Sort(self, *__args):
         """
         Sort(self: List[T])
-            Sorts the elements in the entire System.Collections.Generic.List using the 
-             default comparer.
+            Sorts the elements in the entire System.Collections.Generic.List using the default 
+             comparer.
         
         Sort(self: List[T], comparer: IComparer[T])
-            Sorts the elements in the entire System.Collections.Generic.List using the 
-             specified comparer.
+            Sorts the elements in the entire System.Collections.Generic.List using the specified 
+             comparer.
         
         
-            comparer: The System.Collections.Generic.IComparer implementation to use when comparing 
-             elements, or null to use the default comparer 
-             System.Collections.Generic.Comparer.
+            comparer: The System.Collections.Generic.IComparer implementation to use when comparing elements, 
+             or null to use the default comparer System.Collections.Generic.Comparer.
         
         Sort(self: List[T], index: int, count: int, comparer: IComparer[T])
-            Sorts the elements in a range of elements in System.Collections.Generic.List 
-             using the specified comparer.
+            Sorts the elements in a range of elements in System.Collections.Generic.List using the 
+             specified comparer.
         
         
             index: The zero-based starting index of the range to sort.
             count: The length of the range to sort.
-            comparer: The System.Collections.Generic.IComparer implementation to use when comparing 
-             elements, or null to use the default comparer 
-             System.Collections.Generic.Comparer.
+            comparer: The System.Collections.Generic.IComparer implementation to use when comparing elements, 
+             or null to use the default comparer System.Collections.Generic.Comparer.
         
         Sort(self: List[T], comparison: Comparison[T])
-            Sorts the elements in the entire System.Collections.Generic.List using the 
-             specified System.Comparison.
+            Sorts the elements in the entire System.Collections.Generic.List using the specified 
+             System.Comparison.
         
         
             comparison: The System.Comparison to use when comparing elements.
@@ -1880,8 +1780,7 @@ class List(Object):
         ToArray(self: List[T]) -> Array[T]
         
             Copies the elements of the System.Collections.Generic.List to a new array.
-            Returns: An array containing copies of the elements of the 
-             System.Collections.Generic.List.
+            Returns: An array containing copies of the elements of the System.Collections.Generic.List.
         """
         pass
 
@@ -1889,8 +1788,7 @@ class List(Object):
         """
         TrimExcess(self: List[T])
             Sets the capacity to the actual number of elements in the 
-             System.Collections.Generic.List, if that number is less than a threshold 
-             value.
+             System.Collections.Generic.List, if that number is less than a threshold value.
         """
         pass
 
@@ -1898,16 +1796,14 @@ class List(Object):
         """
         TrueForAll(self: List[T], match: Predicate[T]) -> bool
         
-            Determines whether every element in the System.Collections.Generic.List 
-             matches the conditions defined by the specified predicate.
+            Determines whether every element in the System.Collections.Generic.List matches the 
+             conditions defined by the specified predicate.
         
         
-            match: The System.Predicate delegate that defines the conditions to check against the 
-             elements.
-        
-            Returns: true if every element in the System.Collections.Generic.List matches the 
-             conditions defined by the specified predicate; otherwise, false. If the list 
-             has no elements, the return value is true.
+            match: The System.Predicate delegate that defines the conditions to check against the elements.
+            Returns: true if every element in the System.Collections.Generic.List matches the conditions 
+             defined by the specified predicate; otherwise, false. If the list has no elements, the 
+             return value is true.
         """
         pass
 
@@ -1919,21 +1815,16 @@ class List(Object):
         """
         __contains__(self: ICollection[T], item: T) -> bool
         
-            Determines whether the System.Collections.Generic.ICollection contains a 
-             specific value.
-        
+            Determines whether the System.Collections.Generic.ICollection contains a specific value.
         
             item: The object to locate in the System.Collections.Generic.ICollection.
-            Returns: true if item is found in the System.Collections.Generic.ICollection; 
-             otherwise, false.
-        
+            Returns: true if item is found in the System.Collections.Generic.ICollection; otherwise, false.
         __contains__(self: IList, value: object) -> bool
         
             Determines whether the System.Collections.IList contains a specific value.
         
             value: The object to locate in the System.Collections.IList.
-            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, 
-             false.
+            Returns: true if the System.Object is found in the System.Collections.IList; otherwise, false.
         """
         pass
 
@@ -2027,11 +1918,10 @@ class Queue(Object):
         
             Determines whether an element is in the System.Collections.Generic.Queue.
         
-            item: The object to locate in the System.Collections.Generic.Queue. The value can be 
-             null for reference types.
+            item: The object to locate in the System.Collections.Generic.Queue. The value can be null for 
+             reference types.
         
-            Returns: true if item is found in the System.Collections.Generic.Queue; otherwise, 
-             false.
+            Returns: true if item is found in the System.Collections.Generic.Queue; otherwise, false.
         """
         pass
 
@@ -2043,11 +1933,8 @@ class Queue(Object):
         """
         Dequeue(self: Queue[T]) -> T
         
-            Removes and returns the object at the beginning of the 
-             System.Collections.Generic.Queue.
-        
-            Returns: The object that is removed from the beginning of the 
-             System.Collections.Generic.Queue.
+            Removes and returns the object at the beginning of the System.Collections.Generic.Queue.
+            Returns: The object that is removed from the beginning of the System.Collections.Generic.Queue.
         """
         pass
 
@@ -2056,8 +1943,8 @@ class Queue(Object):
         Enqueue(self: Queue[T], item: T)
             Adds an object to the end of the System.Collections.Generic.Queue.
         
-            item: The object to add to the System.Collections.Generic.Queue. The value can be 
-             null for reference types.
+            item: The object to add to the System.Collections.Generic.Queue. The value can be null for 
+             reference types.
         """
         pass
 
@@ -2065,9 +1952,7 @@ class Queue(Object):
         """
         GetEnumerator(self: Queue[T]) -> Enumerator
         
-            Returns an enumerator that iterates through the 
-             System.Collections.Generic.Queue.
-        
+            Returns an enumerator that iterates through the System.Collections.Generic.Queue.
             Returns: An System.Collections.Generic.Queue for the System.Collections.Generic.Queue.
         """
         pass
@@ -2076,8 +1961,8 @@ class Queue(Object):
         """
         Peek(self: Queue[T]) -> T
         
-            Returns the object at the beginning of the System.Collections.Generic.Queue 
-             without removing it.
+            Returns the object at the beginning of the System.Collections.Generic.Queue without 
+             removing it.
         
             Returns: The object at the beginning of the System.Collections.Generic.Queue.
         """
@@ -2088,8 +1973,7 @@ class Queue(Object):
         ToArray(self: Queue[T]) -> Array[T]
         
             Copies the System.Collections.Generic.Queue elements to a new array.
-            Returns: A new array containing elements copied from the 
-             System.Collections.Generic.Queue.
+            Returns: A new array containing elements copied from the System.Collections.Generic.Queue.
         """
         pass
 
@@ -2097,8 +1981,8 @@ class Queue(Object):
         """
         TrimExcess(self: Queue[T])
             Sets the capacity to the actual number of elements in the 
-             System.Collections.Generic.Queue, if that number is less than 90 percent of 
-             current capacity.
+             System.Collections.Generic.Queue, if that number is less than 90 percent of current 
+             capacity.
         """
         pass
 
@@ -2177,13 +2061,13 @@ class SortedDictionary(Object):
         """
         ContainsKey(self: SortedDictionary[TKey, TValue], key: TKey) -> bool
         
-            Determines whether the System.Collections.Generic.SortedDictionary contains an 
-             element with the specified key.
+            Determines whether the System.Collections.Generic.SortedDictionary contains an element 
+             with the specified key.
         
         
             key: The key to locate in the System.Collections.Generic.SortedDictionary.
-            Returns: true if the System.Collections.Generic.SortedDictionary contains an element 
-             with the specified key; otherwise, false.
+            Returns: true if the System.Collections.Generic.SortedDictionary contains an element with the 
+             specified key; otherwise, false.
         """
         pass
 
@@ -2191,15 +2075,15 @@ class SortedDictionary(Object):
         """
         ContainsValue(self: SortedDictionary[TKey, TValue], value: TValue) -> bool
         
-            Determines whether the System.Collections.Generic.SortedDictionary contains an 
-             element with the specified value.
+            Determines whether the System.Collections.Generic.SortedDictionary contains an element 
+             with the specified value.
         
         
-            value: The value to locate in the System.Collections.Generic.SortedDictionary. The 
-             value can be null for reference types.
+            value: The value to locate in the System.Collections.Generic.SortedDictionary. The value can be 
+             null for reference types.
         
-            Returns: true if the System.Collections.Generic.SortedDictionary contains an element 
-             with the specified value; otherwise, false.
+            Returns: true if the System.Collections.Generic.SortedDictionary contains an element with the 
+             specified value; otherwise, false.
         """
         pass
 
@@ -2228,9 +2112,8 @@ class SortedDictionary(Object):
         
         
             key: The key of the element to remove.
-            Returns: true if the element is successfully removed; otherwise, false.  This method 
-             also returns false if key is not found in the 
-             System.Collections.Generic.SortedDictionary.
+            Returns: true if the element is successfully removed; otherwise, false.  This method also returns 
+             false if key is not found in the System.Collections.Generic.SortedDictionary.
         """
         pass
 
@@ -2246,23 +2129,23 @@ class SortedDictionary(Object):
         """
         __contains__(self: IDictionary[TKey, TValue], key: TKey) -> bool
         
-            Determines whether the System.Collections.Generic.IDictionary contains an 
-             element with the specified key.
+            Determines whether the System.Collections.Generic.IDictionary contains an element with 
+             the specified key.
         
         
             key: The key to locate in the System.Collections.Generic.IDictionary.
-            Returns: true if the System.Collections.Generic.IDictionary contains an element with 
-             the key; otherwise, false.
+            Returns: true if the System.Collections.Generic.IDictionary contains an element with the key; 
+             otherwise, false.
         
         __contains__(self: IDictionary, key: object) -> bool
         
-            Determines whether the System.Collections.IDictionary object contains an 
-             element with the specified key.
+            Determines whether the System.Collections.IDictionary object contains an element with the 
+             specified key.
         
         
             key: The key to locate in the System.Collections.IDictionary object.
-            Returns: true if the System.Collections.IDictionary contains an element with the key; 
-             otherwise, false.
+            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, 
+             false.
         """
         pass
 
@@ -2371,13 +2254,11 @@ class SortedList(Object):
         """
         ContainsKey(self: SortedList[TKey, TValue], key: TKey) -> bool
         
-            Determines whether the System.Collections.Generic.SortedList contains a 
-             specific key.
-        
+            Determines whether the System.Collections.Generic.SortedList contains a specific key.
         
             key: The key to locate in the System.Collections.Generic.SortedList.
-            Returns: true if the System.Collections.Generic.SortedList contains an element with the 
-             specified key; otherwise, false.
+            Returns: true if the System.Collections.Generic.SortedList contains an element with the specified 
+             key; otherwise, false.
         """
         pass
 
@@ -2385,15 +2266,13 @@ class SortedList(Object):
         """
         ContainsValue(self: SortedList[TKey, TValue], value: TValue) -> bool
         
-            Determines whether the System.Collections.Generic.SortedList contains a 
-             specific value.
+            Determines whether the System.Collections.Generic.SortedList contains a specific value.
         
+            value: The value to locate in the System.Collections.Generic.SortedList. The value can be null 
+             for reference types.
         
-            value: The value to locate in the System.Collections.Generic.SortedList. The value 
-             can be null for reference types.
-        
-            Returns: true if the System.Collections.Generic.SortedList contains an element with the 
-             specified value; otherwise, false.
+            Returns: true if the System.Collections.Generic.SortedList contains an element with the specified 
+             value; otherwise, false.
         """
         pass
 
@@ -2401,12 +2280,9 @@ class SortedList(Object):
         """
         GetEnumerator(self: SortedList[TKey, TValue]) -> IEnumerator[KeyValuePair[TKey, TValue]]
         
-            Returns an enumerator that iterates through the 
-             System.Collections.Generic.SortedList.
-        
-            Returns: An System.Collections.Generic.IEnumerator of type 
-             System.Collections.Generic.KeyValuePair for the 
-             System.Collections.Generic.SortedList.
+            Returns an enumerator that iterates through the System.Collections.Generic.SortedList.
+            Returns: An System.Collections.Generic.IEnumerator of type System.Collections.Generic.KeyValuePair 
+             for the System.Collections.Generic.SortedList.
         """
         pass
 
@@ -2414,13 +2290,13 @@ class SortedList(Object):
         """
         IndexOfKey(self: SortedList[TKey, TValue], key: TKey) -> int
         
-            Searches for the specified key and returns the zero-based index within the 
-             entire System.Collections.Generic.SortedList.
+            Searches for the specified key and returns the zero-based index within the entire 
+             System.Collections.Generic.SortedList.
         
         
             key: The key to locate in the System.Collections.Generic.SortedList.
-            Returns: The zero-based index of key within the entire 
-             System.Collections.Generic.SortedList, if found; otherwise, -1.
+            Returns: The zero-based index of key within the entire System.Collections.Generic.SortedList, if 
+             found; otherwise, -1.
         """
         pass
 
@@ -2428,12 +2304,12 @@ class SortedList(Object):
         """
         IndexOfValue(self: SortedList[TKey, TValue], value: TValue) -> int
         
-            Searches for the specified value and returns the zero-based index of the first 
-             occurrence within the entire System.Collections.Generic.SortedList.
+            Searches for the specified value and returns the zero-based index of the first occurrence 
+             within the entire System.Collections.Generic.SortedList.
         
         
-            value: The value to locate in the System.Collections.Generic.SortedList.  The value 
-             can be null for reference types.
+            value: The value to locate in the System.Collections.Generic.SortedList.  The value can be null 
+             for reference types.
         
             Returns: The zero-based index of the first occurrence of value within the entire 
              System.Collections.Generic.SortedList, if found; otherwise, -1.
@@ -2444,23 +2320,18 @@ class SortedList(Object):
         """
         Remove(self: SortedList[TKey, TValue], key: TKey) -> bool
         
-            Removes the element with the specified key from the 
-             System.Collections.Generic.SortedList.
-        
+            Removes the element with the specified key from the System.Collections.Generic.SortedList.
         
             key: The key of the element to remove.
-            Returns: true if the element is successfully removed; otherwise, false.  This method 
-             also returns false if key was not found in the original 
-             System.Collections.Generic.SortedList.
+            Returns: true if the element is successfully removed; otherwise, false.  This method also returns 
+             false if key was not found in the original System.Collections.Generic.SortedList.
         """
         pass
 
     def RemoveAt(self, index):
         """
         RemoveAt(self: SortedList[TKey, TValue], index: int)
-            Removes the element at the specified index of the 
-             System.Collections.Generic.SortedList.
-        
+            Removes the element at the specified index of the System.Collections.Generic.SortedList.
         
             index: The zero-based index of the element to remove.
         """
@@ -2470,8 +2341,8 @@ class SortedList(Object):
         """
         TrimExcess(self: SortedList[TKey, TValue])
             Sets the capacity to the actual number of elements in the 
-             System.Collections.Generic.SortedList, if that number is less than 90 percent 
-             of current capacity.
+             System.Collections.Generic.SortedList, if that number is less than 90 percent of current 
+             capacity.
         """
         pass
 
@@ -2487,23 +2358,23 @@ class SortedList(Object):
         """
         __contains__(self: IDictionary[TKey, TValue], key: TKey) -> bool
         
-            Determines whether the System.Collections.Generic.IDictionary contains an 
-             element with the specified key.
+            Determines whether the System.Collections.Generic.IDictionary contains an element with 
+             the specified key.
         
         
             key: The key to locate in the System.Collections.Generic.IDictionary.
-            Returns: true if the System.Collections.Generic.IDictionary contains an element with 
-             the key; otherwise, false.
+            Returns: true if the System.Collections.Generic.IDictionary contains an element with the key; 
+             otherwise, false.
         
         __contains__(self: IDictionary, key: object) -> bool
         
-            Determines whether the System.Collections.IDictionary object contains an 
-             element with the specified key.
+            Determines whether the System.Collections.IDictionary object contains an element with the 
+             specified key.
         
         
             key: The key to locate in the System.Collections.IDictionary object.
-            Returns: true if the System.Collections.IDictionary contains an element with the key; 
-             otherwise, false.
+            Returns: true if the System.Collections.IDictionary contains an element with the key; otherwise, 
+             false.
         """
         pass
 
@@ -2597,8 +2468,8 @@ class SortedSet(Object):
         """
         Add(self: SortedSet[T], item: T) -> bool
         
-            Adds an element to the set and returns a value that indicates if it was 
-             successfully added.
+            Adds an element to the set and returns a value that indicates if it was successfully 
+             added.
         
         
             item: The element to add to the set.
@@ -2633,15 +2504,14 @@ class SortedSet(Object):
         """
         CreateSetComparer() -> IEqualityComparer[SortedSet[T]]
         
-            Returns an System.Collections.IEqualityComparer object that can be used to 
-             create a collection that contains individual sets.
+            Returns an System.Collections.IEqualityComparer object that can be used to create a 
+             collection that contains individual sets.
         
             Returns: A comparer for creating a collection of sets.
         CreateSetComparer(memberEqualityComparer: IEqualityComparer[T]) -> IEqualityComparer[SortedSet[T]]
         
-            Returns an System.Collections.IEqualityComparer object, according to a 
-             specified comparer, that can be used to create a collection that contains 
-             individual sets.
+            Returns an System.Collections.IEqualityComparer object, according to a specified 
+             comparer, that can be used to create a collection that contains individual sets.
         
         
             memberEqualityComparer: The comparer to use for creating the returned comparer.
@@ -2656,8 +2526,7 @@ class SortedSet(Object):
              System.Collections.Generic.SortedSet object.
         
         
-            other: The collection of items to remove from the 
-             System.Collections.Generic.SortedSet object.
+            other: The collection of items to remove from the System.Collections.Generic.SortedSet object.
         """
         pass
 
@@ -2665,9 +2534,7 @@ class SortedSet(Object):
         """
         GetEnumerator(self: SortedSet[T]) -> Enumerator
         
-            Returns an enumerator that iterates through the 
-             System.Collections.Generic.SortedSet.
-        
+            Returns an enumerator that iterates through the System.Collections.Generic.SortedSet.
             Returns: An enumerator that iterates through the System.Collections.Generic.SortedSet.
         """
         pass
@@ -2675,17 +2542,15 @@ class SortedSet(Object):
     def GetObjectData(self, *args): #cannot find CLR method
         """
         GetObjectData(self: SortedSet[T], info: SerializationInfo, context: StreamingContext)
-            Implements the System.Runtime.Serialization.ISerializable interface and 
-             returns the data that you must have to serialize a 
-             System.Collections.Generic.SortedSet object.
+            Implements the System.Runtime.Serialization.ISerializable interface and returns the data 
+             that you must have to serialize a System.Collections.Generic.SortedSet object.
         
         
-            info: A System.Runtime.Serialization.SerializationInfo object that contains the 
-             information that is required to serialize the 
-             System.Collections.Generic.SortedSet object.
+            info: A System.Runtime.Serialization.SerializationInfo object that contains the information 
+             that is required to serialize the System.Collections.Generic.SortedSet object.
         
-            context: A System.Runtime.Serialization.StreamingContext structure that contains the 
-             source and destination of the serialized stream associated with the 
+            context: A System.Runtime.Serialization.StreamingContext structure that contains the source and 
+             destination of the serialized stream associated with the 
              System.Collections.Generic.SortedSet object.
         """
         pass
@@ -2705,12 +2570,11 @@ class SortedSet(Object):
     def IntersectWith(self, other):
         """
         IntersectWith(self: SortedSet[T], other: IEnumerable[T])
-            Modifies the current System.Collections.Generic.SortedSet object so that it 
-             contains only elements that are also in a specified collection.
+            Modifies the current System.Collections.Generic.SortedSet object so that it contains only 
+             elements that are also in a specified collection.
         
         
-            other: The collection to compare to the current System.Collections.Generic.SortedSet 
-             object.
+            other: The collection to compare to the current System.Collections.Generic.SortedSet object.
         """
         pass
 
@@ -2718,15 +2582,13 @@ class SortedSet(Object):
         """
         IsProperSubsetOf(self: SortedSet[T], other: IEnumerable[T]) -> bool
         
-            Determines whether a System.Collections.Generic.SortedSet object is a proper 
-             subset of the specified collection.
+            Determines whether a System.Collections.Generic.SortedSet object is a proper subset of 
+             the specified collection.
         
         
-            other: The collection to compare to the current System.Collections.Generic.SortedSet 
-             object.
-        
-            Returns: true if the System.Collections.Generic.SortedSet object is a proper subset of 
-             other; otherwise, false.
+            other: The collection to compare to the current System.Collections.Generic.SortedSet object.
+            Returns: true if the System.Collections.Generic.SortedSet object is a proper subset of other; 
+             otherwise, false.
         """
         pass
 
@@ -2734,15 +2596,13 @@ class SortedSet(Object):
         """
         IsProperSupersetOf(self: SortedSet[T], other: IEnumerable[T]) -> bool
         
-            Determines whether a System.Collections.Generic.SortedSet object is a proper 
-             superset of the specified collection.
+            Determines whether a System.Collections.Generic.SortedSet object is a proper superset of 
+             the specified collection.
         
         
-            other: The collection to compare to the current System.Collections.Generic.SortedSet 
-             object.
-        
-            Returns: true if the System.Collections.Generic.SortedSet object is a proper superset 
-             of other; otherwise, false.
+            other: The collection to compare to the current System.Collections.Generic.SortedSet object.
+            Returns: true if the System.Collections.Generic.SortedSet object is a proper superset of other; 
+             otherwise, false.
         """
         pass
 
@@ -2750,15 +2610,13 @@ class SortedSet(Object):
         """
         IsSubsetOf(self: SortedSet[T], other: IEnumerable[T]) -> bool
         
-            Determines whether a System.Collections.Generic.SortedSet object is a subset 
-             of the specified collection.
+            Determines whether a System.Collections.Generic.SortedSet object is a subset of the 
+             specified collection.
         
         
-            other: The collection to compare to the current System.Collections.Generic.SortedSet 
-             object.
-        
-            Returns: true if the current System.Collections.Generic.SortedSet object is a subset of 
-             other; otherwise, false.
+            other: The collection to compare to the current System.Collections.Generic.SortedSet object.
+            Returns: true if the current System.Collections.Generic.SortedSet object is a subset of other; 
+             otherwise, false.
         """
         pass
 
@@ -2766,23 +2624,21 @@ class SortedSet(Object):
         """
         IsSupersetOf(self: SortedSet[T], other: IEnumerable[T]) -> bool
         
-            Determines whether a System.Collections.Generic.SortedSet object is a superset 
-             of the specified collection.
+            Determines whether a System.Collections.Generic.SortedSet object is a superset of the 
+             specified collection.
         
         
-            other: The collection to compare to the current System.Collections.Generic.SortedSet 
-             object.
-        
-            Returns: true if the System.Collections.Generic.SortedSet object is a superset of 
-             other; otherwise, false.
+            other: The collection to compare to the current System.Collections.Generic.SortedSet object.
+            Returns: true if the System.Collections.Generic.SortedSet object is a superset of other; 
+             otherwise, false.
         """
         pass
 
     def OnDeserialization(self, *args): #cannot find CLR method
         """
         OnDeserialization(self: SortedSet[T], sender: object)
-            Implements the System.Runtime.Serialization.ISerializable interface, and 
-             raises the deserialization event when the deserialization is completed.
+            Implements the System.Runtime.Serialization.ISerializable interface, and raises the 
+             deserialization event when the deserialization is completed.
         
         
             sender: The source of the deserialization event.
@@ -2793,15 +2649,13 @@ class SortedSet(Object):
         """
         Overlaps(self: SortedSet[T], other: IEnumerable[T]) -> bool
         
-            Determines whether the current System.Collections.Generic.SortedSet object and 
-             a specified collection share common elements.
+            Determines whether the current System.Collections.Generic.SortedSet object and a 
+             specified collection share common elements.
         
         
-            other: The collection to compare to the current System.Collections.Generic.SortedSet 
-             object.
-        
-            Returns: true if the System.Collections.Generic.SortedSet object and other share at 
-             least one common element; otherwise, false.
+            other: The collection to compare to the current System.Collections.Generic.SortedSet object.
+            Returns: true if the System.Collections.Generic.SortedSet object and other share at least one 
+             common element; otherwise, false.
         """
         pass
 
@@ -2820,13 +2674,13 @@ class SortedSet(Object):
         """
         RemoveWhere(self: SortedSet[T], match: Predicate[T]) -> int
         
-            Removes all elements that match the conditions defined by the specified 
-             predicate from a System.Collections.Generic.SortedSet.
+            Removes all elements that match the conditions defined by the specified predicate from a 
+             System.Collections.Generic.SortedSet.
         
         
             match: The delegate that defines the conditions of the elements to remove.
-            Returns: The number of elements that were removed from the 
-             System.Collections.Generic.SortedSet collection..
+            Returns: The number of elements that were removed from the System.Collections.Generic.SortedSet 
+             collection..
         """
         pass
 
@@ -2837,8 +2691,8 @@ class SortedSet(Object):
             Returns an System.Collections.Generic.IEnumerable that iterates over the 
              System.Collections.Generic.SortedSet in reverse order.
         
-            Returns: An enumerator that iterates over the System.Collections.Generic.SortedSet in 
-             reverse order.
+            Returns: An enumerator that iterates over the System.Collections.Generic.SortedSet in reverse 
+             order.
         """
         pass
 
@@ -2846,28 +2700,25 @@ class SortedSet(Object):
         """
         SetEquals(self: SortedSet[T], other: IEnumerable[T]) -> bool
         
-            Determines whether the current System.Collections.Generic.SortedSet object and 
-             the specified collection contain the same elements.
+            Determines whether the current System.Collections.Generic.SortedSet object and the 
+             specified collection contain the same elements.
         
         
-            other: The collection to compare to the current System.Collections.Generic.SortedSet 
-             object.
-        
-            Returns: true if the current System.Collections.Generic.SortedSet object is equal to 
-             other; otherwise, false.
+            other: The collection to compare to the current System.Collections.Generic.SortedSet object.
+            Returns: true if the current System.Collections.Generic.SortedSet object is equal to other; 
+             otherwise, false.
         """
         pass
 
     def SymmetricExceptWith(self, other):
         """
         SymmetricExceptWith(self: SortedSet[T], other: IEnumerable[T])
-            Modifies the current System.Collections.Generic.SortedSet object so that it 
-             contains only elements that are present either in the current object or in the 
-             specified collection, but not both.
+            Modifies the current System.Collections.Generic.SortedSet object so that it contains only 
+             elements that are present either in the current object or in the specified collection, 
+             but not both.
         
         
-            other: The collection to compare to the current System.Collections.Generic.SortedSet 
-             object.
+            other: The collection to compare to the current System.Collections.Generic.SortedSet object.
         """
         pass
 
@@ -2878,13 +2729,11 @@ class SortedSet(Object):
     def UnionWith(self, other):
         """
         UnionWith(self: SortedSet[T], other: IEnumerable[T])
-            Modifies the current System.Collections.Generic.SortedSet object so that it 
-             contains all elements that are present in both the current object and in the 
-             specified collection.
+            Modifies the current System.Collections.Generic.SortedSet object so that it contains all 
+             elements that are present in both the current object and in the specified collection.
         
         
-            other: The collection to compare to the current System.Collections.Generic.SortedSet 
-             object.
+            other: The collection to compare to the current System.Collections.Generic.SortedSet object.
         """
         pass
 
@@ -2896,13 +2745,10 @@ class SortedSet(Object):
         """
         __contains__(self: ICollection[T], item: T) -> bool
         
-            Determines whether the System.Collections.Generic.ICollection contains a 
-             specific value.
-        
+            Determines whether the System.Collections.Generic.ICollection contains a specific value.
         
             item: The object to locate in the System.Collections.Generic.ICollection.
-            Returns: true if item is found in the System.Collections.Generic.ICollection; 
-             otherwise, false.
+            Returns: true if item is found in the System.Collections.Generic.ICollection; otherwise, false.
         """
         pass
 
@@ -2989,11 +2835,10 @@ class Stack(Object):
         
             Determines whether an element is in the System.Collections.Generic.Stack.
         
-            item: The object to locate in the System.Collections.Generic.Stack. The value can be 
-             null for reference types.
+            item: The object to locate in the System.Collections.Generic.Stack. The value can be null for 
+             reference types.
         
-            Returns: true if item is found in the System.Collections.Generic.Stack; otherwise, 
-             false.
+            Returns: true if item is found in the System.Collections.Generic.Stack; otherwise, false.
         """
         pass
 
@@ -3014,9 +2859,7 @@ class Stack(Object):
         """
         Peek(self: Stack[T]) -> T
         
-            Returns the object at the top of the System.Collections.Generic.Stack without 
-             removing it.
-        
+            Returns the object at the top of the System.Collections.Generic.Stack without removing it.
             Returns: The object at the top of the System.Collections.Generic.Stack.
         """
         pass
@@ -3025,9 +2868,7 @@ class Stack(Object):
         """
         Pop(self: Stack[T]) -> T
         
-            Removes and returns the object at the top of the 
-             System.Collections.Generic.Stack.
-        
+            Removes and returns the object at the top of the System.Collections.Generic.Stack.
             Returns: The object removed from the top of the System.Collections.Generic.Stack.
         """
         pass
@@ -3037,8 +2878,8 @@ class Stack(Object):
         Push(self: Stack[T], item: T)
             Inserts an object at the top of the System.Collections.Generic.Stack.
         
-            item: The object to push onto the System.Collections.Generic.Stack. The value can be 
-             null for reference types.
+            item: The object to push onto the System.Collections.Generic.Stack. The value can be null for 
+             reference types.
         """
         pass
 
@@ -3047,8 +2888,7 @@ class Stack(Object):
         ToArray(self: Stack[T]) -> Array[T]
         
             Copies the System.Collections.Generic.Stack to a new array.
-            Returns: A new array containing copies of the elements of the 
-             System.Collections.Generic.Stack.
+            Returns: A new array containing copies of the elements of the System.Collections.Generic.Stack.
         """
         pass
 
@@ -3056,8 +2896,8 @@ class Stack(Object):
         """
         TrimExcess(self: Stack[T])
             Sets the capacity to the actual number of elements in the 
-             System.Collections.Generic.Stack, if that number is less than 90 percent of 
-             current capacity.
+             System.Collections.Generic.Stack, if that number is less than 90 percent of current 
+             capacity.
         """
         pass
 

@@ -115,16 +115,16 @@ class RequestCachePolicy():
     """
     Defines an application's caching requirements for resources obtained by using System.Net.WebRequest objects.
     
-    RequestCachePolicy()
-    RequestCachePolicy(level: RequestCacheLevel)
+    RequestCachePolicy(level: RequestCacheLevel)
+    RequestCachePolicy()
     """
     def ToString(self):
         """
         ToString(self: RequestCachePolicy) -> str
         
             Returns a string representation of this instance.
-            Returns: A System.String containing the System.Net.Cache.RequestCachePolicy.Level for 
-             this instance.
+            Returns: A System.String containing the System.Net.Cache.RequestCachePolicy.Level for this 
+             instance.
         """
         pass
 
@@ -153,10 +153,10 @@ class HttpRequestCachePolicy(RequestCachePolicy):
     
     HttpRequestCachePolicy()
     HttpRequestCachePolicy(level: HttpRequestCacheLevel)
-    HttpRequestCachePolicy(cacheAgeControl: HttpCacheAgeControl, ageOrFreshOrStale: TimeSpan)
-    HttpRequestCachePolicy(cacheAgeControl: HttpCacheAgeControl, maxAge: TimeSpan, freshOrStale: TimeSpan)
     HttpRequestCachePolicy(cacheSyncDate: DateTime)
-    HttpRequestCachePolicy(cacheAgeControl: HttpCacheAgeControl, maxAge: TimeSpan, freshOrStale: TimeSpan, cacheSyncDate: DateTime)
+    HttpRequestCachePolicy(cacheAgeControl: HttpCacheAgeControl, maxAge: TimeSpan, freshOrStale: TimeSpan, cacheSyncDate: DateTime)
+    HttpRequestCachePolicy(cacheAgeControl: HttpCacheAgeControl, ageOrFreshOrStale: TimeSpan)
+    HttpRequestCachePolicy(cacheAgeControl: HttpCacheAgeControl, maxAge: TimeSpan, freshOrStale: TimeSpan)
     """
     def ToString(self):
         """

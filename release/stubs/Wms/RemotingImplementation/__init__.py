@@ -131,34 +131,28 @@ class DataSet(DataSet):
         """
         DetermineSchemaSerializationMode(self: DataSet, info: SerializationInfo, context: StreamingContext) -> SchemaSerializationMode
         
-            Determines the System.Data.DataSet.SchemaSerializationMode for a 
-             System.Data.DataSet.
+            Determines the System.Data.DataSet.SchemaSerializationMode for a System.Data.DataSet.
         
+                     System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Se
+             rialization.StreamingContext) is invoked with during deserialization in remoting 
+             scenarios.
         
-                     constructor 
-             System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System
-             .Runtime.Serialization.StreamingContext) is invoked with during 
-             deserialization in remoting scenarios.
+                     System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Se
+             rialization.StreamingContext) is invoked with during deserialization in remoting 
+             scenarios.
         
-                     constructor 
-             System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System
-             .Runtime.Serialization.StreamingContext) is invoked with during 
-             deserialization in remoting scenarios.
-        
-            Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema 
-             information has been omitted from the payload.
+            Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema information 
+             has been omitted from the payload.
         
         DetermineSchemaSerializationMode(self: DataSet, reader: XmlReader) -> SchemaSerializationMode
         
-            Determines the System.Data.DataSet.SchemaSerializationMode for a 
-             System.Data.DataSet.
-        
+            Determines the System.Data.DataSet.SchemaSerializationMode for a System.Data.DataSet.
         
             reader: The System.Xml.XmlReader instance that is passed during deserialization of the 
              System.Data.DataSet.
         
-            Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema 
-             information has been omitted from the payload.
+            Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema information 
+             has been omitted from the payload.
         """
         pass
 
@@ -166,12 +160,12 @@ class DataSet(DataSet):
         """
         Dispose(self: MarshalByValueComponent, disposing: bool)
             Releases the unmanaged resources used by the 
-             System.ComponentModel.MarshalByValueComponent and optionally releases the 
-             managed resources.
+             System.ComponentModel.MarshalByValueComponent and optionally releases the managed 
+             resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only 
-             unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -206,8 +200,8 @@ class DataSet(DataSet):
         
             info: The System.Runtime.Serialization.SerializationInfo object.
             context: The System.Runtime.Serialization.StreamingContext object.
-            Returns: true if the specified System.Runtime.Serialization.SerializationInfo 
-             represents a DataSet serialized in its binary format, false otherwise.
+            Returns: true if the specified System.Runtime.Serialization.SerializationInfo represents a DataSet 
+             serialized in its binary format, false otherwise.
         """
         pass
 
@@ -215,8 +209,8 @@ class DataSet(DataSet):
         """
         OnPropertyChanging(self: DataSet, pcevent: PropertyChangedEventArgs)
             Raises the 
-             System.Data.DataSet.OnPropertyChanging(System.ComponentModel.PropertyChangedEve
-             ntArgs) event.
+             System.Data.DataSet.OnPropertyChanging(System.ComponentModel.PropertyChangedEventArgs) 
+             event.
         
         
             pcevent: A System.ComponentModel.PropertyChangedEventArgs that contains the event data.
@@ -226,9 +220,7 @@ class DataSet(DataSet):
     def OnRemoveRelation(self, *args): #cannot find CLR method
         """
         OnRemoveRelation(self: DataSet, relation: DataRelation)
-            Occurs when a System.Data.DataRelation object is removed from a 
-             System.Data.DataTable.
-        
+            Occurs when a System.Data.DataRelation object is removed from a System.Data.DataTable.
         
             relation: The System.Data.DataRelation being removed.
         """
@@ -246,9 +238,7 @@ class DataSet(DataSet):
     def RaisePropertyChanging(self, *args): #cannot find CLR method
         """
         RaisePropertyChanging(self: DataSet, name: str)
-            Sends a notification that the specified System.Data.DataSet property is about 
-             to change.
-        
+            Sends a notification that the specified System.Data.DataSet property is about to change.
         
             name: The name of the property that is about to change.
         """
@@ -445,12 +435,11 @@ class DocumentQueue(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled 
-             across a remoting boundary. A value of false is usually appropriate. true to 
-             copy the current System.MarshalByRefObject object's identity to its clone, 
-             which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -1450,12 +1439,11 @@ class General(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled 
-             across a remoting boundary. A value of false is usually appropriate. true to 
-             copy the current System.MarshalByRefObject object's identity to its clone, 
-             which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2047,12 +2035,11 @@ class Inbound(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled 
-             across a remoting boundary. A value of false is usually appropriate. true to 
-             copy the current System.MarshalByRefObject object's identity to its clone, 
-             which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2420,12 +2407,11 @@ class Inventory(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled 
-             across a remoting boundary. A value of false is usually appropriate. true to 
-             copy the current System.MarshalByRefObject object's identity to its clone, 
-             which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2627,12 +2613,11 @@ class Messaging(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled 
-             across a remoting boundary. A value of false is usually appropriate. true to 
-             copy the current System.MarshalByRefObject object's identity to its clone, 
-             which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2725,12 +2710,11 @@ class NotificationCenter(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled 
-             across a remoting boundary. A value of false is usually appropriate. true to 
-             copy the current System.MarshalByRefObject object's identity to its clone, 
-             which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2795,12 +2779,11 @@ class NotificationSummary(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled 
-             across a remoting boundary. A value of false is usually appropriate. true to 
-             copy the current System.MarshalByRefObject object's identity to its clone, 
-             which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2873,12 +2856,11 @@ class NumberGeneration(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled 
-             across a remoting boundary. A value of false is usually appropriate. true to 
-             copy the current System.MarshalByRefObject object's identity to its clone, 
-             which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -2955,12 +2937,11 @@ class OfflineScanning(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled 
-             across a remoting boundary. A value of false is usually appropriate. true to 
-             copy the current System.MarshalByRefObject object's identity to its clone, 
-             which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -3010,13 +2991,10 @@ class OnGetDestinationLocationForLine(MulticastDelegate):
         """
         CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
         
-            Combines this System.Delegate with the specified System.Delegate to form a new 
-             delegate.
-        
+            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
         
             follow: The delegate to combine with this delegate.
-            Returns: A delegate that is the new root of the System.MulticastDelegate invocation 
-             list.
+            Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
         """
         pass
 
@@ -3024,13 +3002,11 @@ class OnGetDestinationLocationForLine(MulticastDelegate):
         """
         DynamicInvokeImpl(self: Delegate, args: Array[object]) -> object
         
-            Dynamically invokes (late-bound) the method represented by the current 
-             delegate.
+            Dynamically invokes (late-bound) the method represented by the current delegate.
         
-        
-            args: An array of objects that are the arguments to pass to the method represented 
-             by the current delegate.-or- null, if the method represented by the current 
-             delegate does not require arguments.
+            args: An array of objects that are the arguments to pass to the method represented by the 
+             current delegate.-or- null, if the method represented by the current delegate does not 
+             require arguments.
         
             Returns: The object returned by the method represented by the delegate.
         """
@@ -3057,14 +3033,14 @@ class OnGetDestinationLocationForLine(MulticastDelegate):
         """
         RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
         
-            Removes an element from the invocation list of this System.MulticastDelegate 
-             that is equal to the specified delegate.
+            Removes an element from the invocation list of this System.MulticastDelegate that is 
+             equal to the specified delegate.
         
         
             value: The delegate to search for in the invocation list.
-            Returns: If value is found in the invocation list for this instance, then a new 
-             System.Delegate without value in its invocation list; otherwise, this instance 
-             with its original invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate 
+             without value in its invocation list; otherwise, this instance with its original 
+             invocation list.
         """
         pass
 
@@ -3427,12 +3403,11 @@ class Outbound(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled 
-             across a remoting boundary. A value of false is usually appropriate. true to 
-             copy the current System.MarshalByRefObject object's identity to its clone, 
-             which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -3667,12 +3642,11 @@ class Printing(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled 
-             across a remoting boundary. A value of false is usually appropriate. true to 
-             copy the current System.MarshalByRefObject object's identity to its clone, 
-             which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object
@@ -3786,12 +3760,11 @@ class RemotePublishing(MarshalByRefObject):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled 
-             across a remoting boundary. A value of false is usually appropriate. true to 
-             copy the current System.MarshalByRefObject object's identity to its clone, 
-             which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object

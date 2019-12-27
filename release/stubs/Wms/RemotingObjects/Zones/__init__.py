@@ -94,17 +94,17 @@ class ZoneRights(DbObject):
         """
         FromString(zoneRightsString: str) -> ZoneRights
         
-            Creates a new ZoneRights object and sets the properties with the string wich 
-             is retrieved from 
+            Creates a new ZoneRights object and sets the properties with the string wich is retrieved 
+             from 
                     the database.
         
         
-            zoneRightsString: A System.String with the properties of the 
-             Wms.RemotingObjects.Zones.ZoneRights object and its
+            zoneRightsString: A System.String with the properties of the Wms.RemotingObjects.Zones.ZoneRights object 
+             and its
                     values.
         
-            Returns: A new Wms.RemotingObjects.Zones.ZoneRights with the properties wich were 
-             stored in the database.
+            Returns: A new Wms.RemotingObjects.Zones.ZoneRights with the properties wich were stored in the 
+             database.
         """
         pass
 
@@ -117,8 +117,8 @@ class ZoneRights(DbObject):
              Wms.RemotingObjects.Zones.ZoneRights object and its
                     values.
         
-            Returns: A new Wms.RemotingObjects.Zones.ZoneRights with the properties wich were 
-             stored in the database.
+            Returns: A new Wms.RemotingObjects.Zones.ZoneRights with the properties wich were stored in the 
+             database.
         """
         pass
 
@@ -127,8 +127,8 @@ class ZoneRights(DbObject):
         ToString(self: ZoneRights) -> str
         
             Creates a System.String with all rights and their values. Format for each 
-           
-                      right : '[Name]|[Value],'
+                    
+             right : '[Name]|[Value],'
         
             Returns: A System.String with all rights and their values.
         """
@@ -138,9 +138,7 @@ class ZoneRights(DbObject):
         """
         ToZoneRightViews(self: ZoneRights) -> ZoneRightViews
         
-            Creates a Wms.RemotingObjects.Zones.ZoneRightViews with all rights and their 
-             values.
-        
+            Creates a Wms.RemotingObjects.Zones.ZoneRightViews with all rights and their values.
             Returns: A Wms.RemotingObjects.Zones.ZoneRightViews with all rights and their values.
         """
         pass

@@ -19,34 +19,28 @@ class DataSetPickListPtP(DataSet):
         """
         DetermineSchemaSerializationMode(self: DataSet, info: SerializationInfo, context: StreamingContext) -> SchemaSerializationMode
         
-            Determines the System.Data.DataSet.SchemaSerializationMode for a 
-             System.Data.DataSet.
+            Determines the System.Data.DataSet.SchemaSerializationMode for a System.Data.DataSet.
         
+                     System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Se
+             rialization.StreamingContext) is invoked with during deserialization in remoting 
+             scenarios.
         
-                     constructor 
-             System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System
-             .Runtime.Serialization.StreamingContext) is invoked with during 
-             deserialization in remoting scenarios.
+                     System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Se
+             rialization.StreamingContext) is invoked with during deserialization in remoting 
+             scenarios.
         
-                     constructor 
-             System.Data.DataSet.#ctor(System.Runtime.Serialization.SerializationInfo,System
-             .Runtime.Serialization.StreamingContext) is invoked with during 
-             deserialization in remoting scenarios.
-        
-            Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema 
-             information has been omitted from the payload.
+            Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema information 
+             has been omitted from the payload.
         
         DetermineSchemaSerializationMode(self: DataSet, reader: XmlReader) -> SchemaSerializationMode
         
-            Determines the System.Data.DataSet.SchemaSerializationMode for a 
-             System.Data.DataSet.
-        
+            Determines the System.Data.DataSet.SchemaSerializationMode for a System.Data.DataSet.
         
             reader: The System.Xml.XmlReader instance that is passed during deserialization of the 
              System.Data.DataSet.
         
-            Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema 
-             information has been omitted from the payload.
+            Returns: An System.Data.SchemaSerializationMode enumeration indicating whether schema information 
+             has been omitted from the payload.
         """
         pass
 
@@ -54,12 +48,12 @@ class DataSetPickListPtP(DataSet):
         """
         Dispose(self: MarshalByValueComponent, disposing: bool)
             Releases the unmanaged resources used by the 
-             System.ComponentModel.MarshalByValueComponent and optionally releases the 
-             managed resources.
+             System.ComponentModel.MarshalByValueComponent and optionally releases the managed 
+             resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only 
-             unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -94,8 +88,8 @@ class DataSetPickListPtP(DataSet):
         
             info: The System.Runtime.Serialization.SerializationInfo object.
             context: The System.Runtime.Serialization.StreamingContext object.
-            Returns: true if the specified System.Runtime.Serialization.SerializationInfo 
-             represents a DataSet serialized in its binary format, false otherwise.
+            Returns: true if the specified System.Runtime.Serialization.SerializationInfo represents a DataSet 
+             serialized in its binary format, false otherwise.
         """
         pass
 
@@ -103,8 +97,8 @@ class DataSetPickListPtP(DataSet):
         """
         OnPropertyChanging(self: DataSet, pcevent: PropertyChangedEventArgs)
             Raises the 
-             System.Data.DataSet.OnPropertyChanging(System.ComponentModel.PropertyChangedEve
-             ntArgs) event.
+             System.Data.DataSet.OnPropertyChanging(System.ComponentModel.PropertyChangedEventArgs) 
+             event.
         
         
             pcevent: A System.ComponentModel.PropertyChangedEventArgs that contains the event data.
@@ -114,9 +108,7 @@ class DataSetPickListPtP(DataSet):
     def OnRemoveRelation(self, *args): #cannot find CLR method
         """
         OnRemoveRelation(self: DataSet, relation: DataRelation)
-            Occurs when a System.Data.DataRelation object is removed from a 
-             System.Data.DataTable.
-        
+            Occurs when a System.Data.DataRelation object is removed from a System.Data.DataTable.
         
             relation: The System.Data.DataRelation being removed.
         """
@@ -134,9 +126,7 @@ class DataSetPickListPtP(DataSet):
     def RaisePropertyChanging(self, *args): #cannot find CLR method
         """
         RaisePropertyChanging(self: DataSet, name: str)
-            Sends a notification that the specified System.Data.DataSet property is about 
-             to change.
-        
+            Sends a notification that the specified System.Data.DataSet property is about to change.
         
             name: The name of the property that is about to change.
         """

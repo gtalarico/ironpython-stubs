@@ -48,12 +48,12 @@ class PythonStdoutWriter(StreamWriter):
     def Dispose(self):
         """
         Dispose(self: StreamWriter, disposing: bool)
-            Releases the unmanaged resources used by the System.IO.StreamWriter and 
-             optionally releases the managed resources.
+            Releases the unmanaged resources used by the System.IO.StreamWriter and optionally 
+             releases the managed resources.
         
         
-            disposing: true to release both managed and unmanaged resources; false to release only 
-             unmanaged resources.
+            disposing: true to release both managed and unmanaged resources; false to release only unmanaged 
+             resources.
         """
         pass
 
@@ -63,12 +63,11 @@ class PythonStdoutWriter(StreamWriter):
         
             Creates a shallow copy of the current System.MarshalByRefObject object.
         
-            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which 
-             will cause the object to be assigned a new identity when it is marshaled 
-             across a remoting boundary. A value of false is usually appropriate. true to 
-             copy the current System.MarshalByRefObject object's identity to its clone, 
-             which will cause remoting client calls to be routed to the remote server 
-             object.
+            cloneIdentity: false to delete the current System.MarshalByRefObject object's identity, which will cause 
+             the object to be assigned a new identity when it is marshaled across a remoting boundary. 
+             A value of false is usually appropriate. true to copy the current 
+             System.MarshalByRefObject object's identity to its clone, which will cause remoting 
+             client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object

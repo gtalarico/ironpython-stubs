@@ -45,10 +45,10 @@ Function Get-The-Latest-Succesful-Build
 }
 
 
-Function Download-And-unzip($version)
+Function Download-And-unzip()
 {
     $version = Get-The-Latest-Succesful-Build
-    Color-Write -Magenta "Download voor versie ${version} wordt gestart."
+    Write-Output "Download voor versie ${version} wordt gestart."
     $wc = $(Create-TeamCity-Web-Client);
     
     # download boxwise and start setup
@@ -64,10 +64,10 @@ Function Download-And-unzip($version)
     $to = Join-Path $dir 'BOXwisePro'
     Write-Host "Extracting BOXwisePro to $to"
     # docs: https://sevenzip.osdn.jp/chm/cmdline/commands/extract_full.htm
-    &"7z" x $bwZip "-o$bwExtractDir" -r -y -aoa
+    &"7z" x $bwZip "-o $bwExtractDir" -r -y -aoa
     $releaseZipPath = (Get-ChildItem .\BOXwisePro\x86\Release).FullName
     # $to = Join-Path $dir 'BOXwisePro'
-    &"7z" x $releaseZipPath "-o$bwExtractDir" -r -y -aoa
+    &"7z" x $releaseZipPath "-o $bwExtractDir" -r -y -aoa
     $setupFile = Join-Path $bwExtractDir 'Setup.exe'
     if(Test-Path $setupFile)
     {
@@ -82,14 +82,18 @@ Function Download-And-unzip($version)
         &"7z" x $msiFile "-o$bwExtractDir" -r -y -aoa
     }    
     Remove-Item $bwZip #Delete the zip file
-    $path = (pwd).Path; (gc ironstubs\default_settings.py).Replace( 'C:\Program Files (x86)\TranCon\BOXwisePro\Server',$path+'\test') | Out-File -encoding utf8 ironstubs\default_settings.py
-    $path = (pwd).Path; (gc ironstubs\default_settings.py).Replace( '\','/') | Out-File -encoding utf8 ironstubs\default_settings.py
 
-    $path = (pwd).Path; (gc ironstubs\make_assemblylist.py).Replace( 'C:\Program Files (x86)\TranCon\BOXwisePro\Server',$path+'\test') | Out-File -encoding utf8 ironstubs\make_assemblylist.py
-    $path = (pwd).Path; (gc ironstubs\make_assemblylist.py).Replace( '\','/') | Out-File -encoding utf8 ironstubs\make_assemblylist.py
-
-	Write-Output (Get-Location).Path
-    & "ipy -m ironstubs make --all --overwrite"
-	& "python uploadToCloud.py "+  $version
+    $toBeZipped = Join-Path $dir 'release\stubs'
+	Write-Output $bwExtractDir
+    ipy -m ironstubs make Wms.RemotingImplementation,Wms.RemotingObjects,Wms.RemotingInterface,Wms.SharedInfra,Wms.EdiMessaging,TranCon.Printing.Interface --path $bwExtractDir --overwrite
+    7z a -t7z $version $toBeZipped
+    python ironstubs\make_assemblylist.py $bwExtractDir
+    python uploadToCloud.py $version $dir+"\"+$version
+	
 }
-Download-And-unzip
+#$bwdir = C:\BuildAgent\work\b5e4f665642b8a62\BOXwisePro
+
+#$zipfile = "C:\BuildAgent\work\b5e4f665642b8a62\stubs.zip"
+download-and-unzip
+
+

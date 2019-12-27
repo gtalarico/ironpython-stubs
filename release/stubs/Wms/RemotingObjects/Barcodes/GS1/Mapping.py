@@ -15,8 +15,8 @@ class PrintLineToGS1MapperBase(Object):
         """
         ConvertToBarcode(self: PrintLineToGS1MapperBase, propertyName: str, value: object, provider: IFormatProvider) -> IGeneratedBarcode
         
-            provider: (Optional) The culture that should be used to parse the value before 
-             converting it to the barcode value
+            provider: (Optional) The culture that should be used to parse the value before converting it to the 
+             barcode value
         """
         pass
 
@@ -45,8 +45,8 @@ class HomogeneousPalletMapper(PrintLineToGS1MapperBase):
         """
         ConvertToBarcode(self: HomogeneousPalletMapper, propertyName: str, value: object, provider: IFormatProvider) -> IGeneratedBarcode
         
-            provider: (Optional) The culture that should be used to parse the value before 
-             converting it to the barcode value
+            provider: (Optional) The culture that should be used to parse the value before converting it to the 
+             barcode value
         """
         pass
 

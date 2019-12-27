@@ -230,7 +230,7 @@ class SslProtocols(Object):
     """
     Defines the possible versions of System.Security.Authentication.SslProtocols.
     
-    enum (flags) SslProtocols, values: Default (240), None (0), Ssl2 (12), Ssl3 (48), Tls (192), Tls11 (768), Tls12 (3072)
+    enum (flags) SslProtocols, values: Default (240), None (0), Ssl2 (12), Ssl3 (48), Tls (192), Tls11 (768), Tls12 (3072), Tls13 (12288)
     """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
@@ -272,6 +272,7 @@ class SslProtocols(Object):
     Tls = None
     Tls11 = None
     Tls12 = None
+    Tls13 = None
     value__ = None
 
     Instance = SslProtocols()
