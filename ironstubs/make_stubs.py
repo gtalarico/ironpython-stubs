@@ -149,7 +149,7 @@ def make(output_dir, assembly_or_builtin, overwrite=False, quiet=False):
         assembly_dict = namespaces_dict
 
     if not assembly_dict:
-        raise Exception('No namspaces to process')
+        raise Exception('No namespaces to process')
 
     modules = [d.keys() for d in assembly_dict.values()]
     logger.info('Modules and Assemblies Loaded: {}'.format(modules))

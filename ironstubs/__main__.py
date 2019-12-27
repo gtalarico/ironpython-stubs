@@ -95,12 +95,12 @@ logger.debug(arguments)
 logger.debug(ASSEMBLIES)
 if arguments['make']:
     timer = Timer()
-    if not option_all:
-        ASSEMBLIES = [option_assembly_name]
+    if not option_all:        
+        ASSEMBLIES = [a.strip() for a in option_assembly_name.split(",")]
 
     for assembly_name in ASSEMBLIES:
         assembly_dict = make(release_dir, assembly_name,
-                             overwrite=option_overwrite, quiet=option_all)
+                             overwrite=option_overwrite, quiet=True)
         if option_json:
             dump_json_log(assembly_dict)
     logger.info('Done: {} seconds'.format(timer.stop()))
