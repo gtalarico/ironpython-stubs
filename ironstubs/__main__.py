@@ -104,5 +104,4 @@ if arguments['make']:
         if option_json:
             dump_json_log(assembly_dict)
     logger.info('Done: {} seconds'.format(timer.stop()))
-    make_assemblylist()
     add_references()
