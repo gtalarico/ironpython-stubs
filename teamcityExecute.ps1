@@ -88,7 +88,7 @@ Function Download-And-unzip($version)
     $path = (pwd).Path; (gc ironstubs\make_assemblylist.py).Replace( 'C:\Program Files (x86)\TranCon\BOXwisePro\Server',$path+'\test') | Out-File -encoding utf8 ironstubs\make_assemblylist.py
     $path = (pwd).Path; (gc ironstubs\make_assemblylist.py).Replace( '\','/') | Out-File -encoding utf8 ironstubs\make_assemblylist.py
 
-    Remove-Item $bwZip #Delete the zip file
+	Write-Output (Get-Location).Path
     & "ipy -m ironstubs make --all --overwrite"
 	& "python uploadToCloud.py "+  $version
 }
