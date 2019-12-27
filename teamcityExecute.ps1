@@ -90,5 +90,6 @@ Function Download-And-unzip($version)
 
     Remove-Item $bwZip #Delete the zip file
     & "ipy -m ironstubs make --all --overwrite"
+	& "python uploadToCloud.py "+  $version
 }
 Download-And-unzip
