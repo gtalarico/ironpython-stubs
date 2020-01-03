@@ -1,5 +1,4 @@
-﻿
-Function Create-TeamCity-Web-Client 
+﻿Function Create-TeamCity-Web-Client 
 {
     $wc = New-Object System.Net.WebClient;
     $wc.Proxy = [System.Net.WebRequest]::DefaultWebProxy;
@@ -61,13 +60,13 @@ Function Download-And-unzip()
     $wc.DownloadFile($ArtifactUrl,$bwZip)
 
     $bwExtractDir = Join-Path $dir 'BOXwisePro'
-    $to = Join-Path $dir 'BOXwisePro'
-    Write-Host "Extracting BOXwisePro to $to"
+
+    Write-Host "Extracting BOXwisePro to $bwExtractDir"
     # docs: https://sevenzip.osdn.jp/chm/cmdline/commands/extract_full.htm
-    &"7z" x $bwZip "-o $bwExtractDir" -r -y -aoa
+    &"7z" x $bwZip "-o$bwExtractDir" -r -y -aoa
     $releaseZipPath = (Get-ChildItem .\BOXwisePro\x86\Release).FullName
     # $to = Join-Path $dir 'BOXwisePro'
-    &"7z" x $releaseZipPath "-o $bwExtractDir" -r -y -aoa
+    &"7z" x $releaseZipPath "-o$bwExtractDir" -r -y -aoa
     $setupFile = Join-Path $bwExtractDir 'Setup.exe'
     if(Test-Path $setupFile)
     {
@@ -82,18 +81,20 @@ Function Download-And-unzip()
         &"7z" x $msiFile "-o$bwExtractDir" -r -y -aoa
     }    
     Remove-Item $bwZip #Delete the zip file
-
+    
     $toBeZipped = Join-Path $dir 'release\stubs'
 	Write-Output $bwExtractDir
-    ipy -m ironstubs make Wms.RemotingImplementation,Wms.RemotingObjects,Wms.RemotingInterface,Wms.SharedInfra,Wms.EdiMessaging,TranCon.Printing.Interface --path $bwExtractDir --overwrite
-    7z a -t7z $version $toBeZipped
     python ironstubs\make_assemblylist.py $bwExtractDir
-    python uploadToCloud.py $version $dir+"\"+$version
+    ipy -m ironstubs make Wms.RemotingImplementation,Wms.RemotingObjects --path $bwExtractDir --overwrite
+    #ipy -m ironstubs make Wms.RemotingImplementation,Wms.RemotingObjects,Wms.RemotingInterface,Wms.SharedInfra,Wms.EdiMessaging,TranCon.Printing.Interface,System,System.Globalization --path $bwExtractDir --overwrite
+    $name = $version+ ".zip"
+    $assemblyList = Join-Path $dir 'assemblylist.json'
+    7z a -tzip $name $toBeZipped $assemblylist
+    
+    $credentials = Split-Path -path $dir  | Join-Path -ChildPath "googleCloudCredentials.json"
+    
+    $pathToStubs = $dir + '\'+ $name
+    python uploadToCloud.py $pathToStubs $name $credentials
 	
 }
-#$bwdir = C:\BuildAgent\work\b5e4f665642b8a62\BOXwisePro
-
-#$zipfile = "C:\BuildAgent\work\b5e4f665642b8a62\stubs.zip"
-download-and-unzip
-
-
+Download-And-unzip

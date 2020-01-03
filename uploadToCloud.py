@@ -50,22 +50,22 @@ def delete_blob(bucket_name, blob_name):
     print("Blob {} deleted.".format(blob_name))
 
 
-def upload_stub(filepath, name):
+def upload_stub(file_path, name, credential_path):
     try:
         bucket = 'pylint.app.boxwise.nl'
-        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.path.expanduser("~/Desktop/googleCloudCredentials.json")
+        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = credential_path
         bloblist = list_blobs(bucket)
         for blob in bloblist:
             print blob.name
             if blob.name == name:
                 delete_blob(bucket,name)
-        upload_blob(bucket,filepath,name)
+        upload_blob(bucket,file_path,name)
     finally:
         os.environ.clear()
         os.environ.update(_environ)
 
 if __name__ == "__main__":
-    if len(sys.argv) == 3:
-        upload_stub(sys.argv[1],sys.argv[2])
+    if len(sys.argv) == 4:
+        upload_stub(sys.argv[1],sys.argv[2],sys.argv[3])
     else:
-        print "incorrect number of args for uploading to cloud is:"+len(sys.argv)+" should be 2"
+        print "incorrect number of args for uploading to cloud is:"+ str(len(sys.argv)) + " should be 2"
