@@ -56,8 +56,7 @@ def upload_stub(file_path, name, credential_path):
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = credential_path
         bloblist = list_blobs(bucket)
         for blob in bloblist:
-            print blob.name
-            if blob.name == name:
+            if ".".join(blob.name.split(".", 2)[:2]) == ".".join(name.split(".", 2)[:2]):
                 delete_blob(bucket,name)
         upload_blob(bucket,file_path,name)
     finally:

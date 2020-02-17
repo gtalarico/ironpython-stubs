@@ -93,6 +93,7 @@ if option_path_dir:
 logger.debug(sys.path)
 logger.debug(arguments)
 logger.debug(ASSEMBLIES)
+logger.debug(option_overwrite)
 if arguments['make']:
     timer = Timer()
     if not option_all:        
