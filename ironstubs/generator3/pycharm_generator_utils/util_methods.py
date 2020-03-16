@@ -1,6 +1,7 @@
 from constants import *
 import keyword
 import re
+from ...make_stubs import scriptOverrideables
 typedict = {}
 
 try:
@@ -459,7 +460,6 @@ def has_item_starting_with(p_seq, p_start):
 def out_docstring(out_func, docstring, indent):
     if not isinstance(docstring, str): return
     lines = docstring.strip().split("\n")
-
     bad_compiles = ["*","IDictionary","IEnumerable,T"]
     class_regex = "self: (\w+).+"
     argument_regex = "\w*:\s(\w*)"
@@ -470,14 +470,19 @@ def out_docstring(out_func, docstring, indent):
         function = line.split("(")[0]
         arguments = re.findall(argument_regex,line)
         types = re.findall(type_regex,line)
-
+        if function in scriptOverrideables:
+            print "adding"
+            print function
+            if "scriptOverrideables" not in typedict:
+                typedict["scriptOverrideables"] = {}
+            typedict["scriptOverrideables"][function]= arguments
         if doc_class and "[" not in function:
             arguments.pop(0)
 
-            if (doc_class[0] not in typedict.keys()):
+            if (doc_class[0] not in typedict):
                 typedict[doc_class[0]] = {}
             
-            if function and doc_class[0] in typedict.keys():
+            if function and doc_class[0] in typedict:
                 if function not in typedict[doc_class[0]]:
                     typedict[doc_class[0]][function] = []
                 if typedict[doc_class[0]][function] == "Exception: bad compile":

@@ -17,12 +17,14 @@ Note:
     into separate files to deal with jedi.
     These directories will show up in the stubs as (X_parts)
 
-
 MIT LICENSE
 https://github.com/gtalarico/ironpython-stubs
 Gui Talarico
 """
 
+scriptOverrideables = {}
+
+import re
 import os
 import sys
 import json
@@ -30,7 +32,6 @@ import time
 from collections import defaultdict
 from pprint import pprint
 import importlib
-
 import clr
 import System
 
@@ -84,12 +85,34 @@ def crawl_loaded_references(target_assembly_name):
     for assembly in clr.References:
         assembly_name = assembly.GetName().Name
         assembly_path = assembly.CodeBase
+        types = assembly.GetTypes()
+        methods = []
+        for typ in types:
+            methods.append(typ.GetMethods())
+        print "methods:" 
+        for method in methods:
+            for sub in method:
+                custom = sub.GetCustomAttributes(True)
+                print custom
+                for i in custom:
+                    try:
+                        if i.ToString() == "Wms.RemotingImplementation.Scripting.ScriptOverridableAttribute":
+                            print "true"
+                            regex = "[\s\S]*] ([\s\S]*)\("
+                            override = re.findall(regex, sub.ToString())[0]
+                            scriptOverrideables[override] = True
+                    except:
+                        print "boo"
+                # if len(custom) > 0:
+                #     print sub.GetCustomAttributes(type(ScriptOverridableAttribute()), True).Length > 0
+                # if sub.GetCustomAttributes(type("ScriptOverridableAttribute"), True).Length > 0:
+                #     print sub.GetCustomAttributes(True)
         assembly_filename = os.path.basename(assembly_path)
         if assembly_name == target_assembly_name:
             logger.info('Parsing Assembly: {}'.format(assembly_name))
             namespaces_dict[assembly_filename] = iter_module(assembly_name, assembly)
         else:
-            logger.debug('Assembly Skiped. Not in target list: {}'.format(assembly_name))
+            logger.debug('Assembly Skipped. Not in target list: {}'.format(assembly_name))
     return namespaces_dict
 
 

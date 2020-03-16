@@ -26,7 +26,6 @@ def processing(file, classlist):
     if add_references == []:
         return
     line_to_prepend = ""
-    print add_references
     for reference in add_references:
         line_to_prepend += reference + "\n"
 
