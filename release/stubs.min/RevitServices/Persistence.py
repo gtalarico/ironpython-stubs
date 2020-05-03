@@ -62,7 +62,7 @@ Set: CurrentUIDocument(self: DocumentManager)=value
 """
 
 
- Instance=None
+ Instance=DocumentManager
  OnLogError=None
 
 
