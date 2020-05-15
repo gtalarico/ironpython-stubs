@@ -57,6 +57,8 @@ def upload_stub(file_path, name, credential_path):
         bloblist = list_blobs(bucket)
         for blob in bloblist:
             if ".".join(blob.name.split(".", 2)[:2]) == ".".join(name.split(".", 2)[:2]):
+				print("bucket: " + bucket)
+				print("name: " + name)
                 delete_blob(bucket,name)
         upload_blob(bucket,file_path,name)
     finally:

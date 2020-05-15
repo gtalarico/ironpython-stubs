@@ -471,7 +471,7 @@ def out_docstring(out_func, docstring, indent):
         arguments = re.findall(argument_regex,line)
         types = re.findall(type_regex,line)
         if function in scriptOverrideables:
-            print "adding"
+            print "adding123"
             print function
             if "scriptOverrideables" not in typedict:
                 typedict["scriptOverrideables"] = {}
