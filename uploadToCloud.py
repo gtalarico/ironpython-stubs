@@ -59,7 +59,7 @@ def upload_stub(file_path, name, credential_path):
             if ".".join(blob.name.split(".", 2)[:2]) == ".".join(name.split(".", 2)[:2]):
                 print("bucket: " + bucket)
                 print("name: " + name)
-                delete_blob(bucket, name)
+                delete_blob(bucket, blob)
         upload_blob(bucket,file_path,name)
     finally:
         os.environ.clear()
