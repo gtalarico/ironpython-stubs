@@ -101,8 +101,11 @@ def crawl_loaded_references(target_assembly_name):
                             regex = "[\s\S]* ([\s\S]*)\("
                             try:
                                 override = re.findall(regex, sub.ToString())[0]
-                    except:
-                        print i 
+                            except Exception as e:
+                                print e
+                    except Exception as e:
+                        print i
+                        print e
         assembly_filename = os.path.basename(assembly_path)
         if assembly_name == target_assembly_name:
             logger.info('Parsing Assembly: {}'.format(assembly_name))
