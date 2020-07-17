@@ -205,6 +205,11 @@
             ]
         ]
     }, 
+    "DebugMessage": {
+        "Callback": [
+            []
+        ]
+    }, 
     "ProfilingUserNode": {
         "ToString": [
             []
@@ -555,6 +560,38 @@
         ], 
         "Clone": [
             []
+        ]
+    }, 
+    "PluginHandling": {
+        "InitializeLifetimeService": [
+            []
+        ], 
+        "LoadActivePlugins": [
+            [
+                "PluginType"
+            ]
+        ], 
+        "IsPluginActive": [
+            [
+                "PluginType", 
+                "int"
+            ]
+        ], 
+        "GetAllPlugins": [
+            []
+        ], 
+        "SetPluginActivation": [
+            [
+                "Plugin", 
+                "bool"
+            ]
+        ], 
+        "GetPluginAssemblies": [
+            [
+                "PluginType", 
+                "Type", 
+                "str"
+            ]
         ]
     }, 
     "RmaPrintDataset": {
@@ -991,6 +1028,18 @@
             [
                 "str", 
                 "str", 
+                "str"
+            ]
+        ]
+    }, 
+    "ItemIdentificationNumberValidator": {
+        "Validate": [
+            [
+                "IValidatableItemIdentificationNumber", 
+                "List"
+            ], 
+            [
+                "IValidatableItemIdentificationNumber", 
                 "str"
             ]
         ]
@@ -1439,11 +1488,6 @@
                 "AllocatedStockArgs"
             ]
         ], 
-        "SetGeneral": [
-            [
-                "IGeneral"
-            ]
-        ], 
         "GetStockTotals": [
             [
                 "str", 
@@ -1471,7 +1515,7 @@
                 "Func"
             ]
         ], 
-        "GetStockOnMatchingFilter": [
+        "GetStockByFilterMatchItemIds": [
             [
                 "GetStockManagerListArgs"
             ]
@@ -1834,11 +1878,8 @@
             []
         ]
     }, 
-    "MobileProgressBarRenderer": {
-        "Render": [
-            []
-        ], 
-        "Dispose": [
+    "ApplicationIdentity": {
+        "ToString": [
             []
         ]
     }, 
@@ -1850,8 +1891,11 @@
             ]
         ]
     }, 
-    "ApplicationIdentity": {
-        "ToString": [
+    "MobileProgressBarRenderer": {
+        "Render": [
+            []
+        ], 
+        "Dispose": [
             []
         ]
     }, 
@@ -2048,11 +2092,6 @@
         ]
     }, 
     "TaskScheduler": {
-        "Run": [
-            [
-                "CancellationToken"
-            ]
-        ], 
         "RemoveTask": [
             [
                 "TaskBase"
@@ -2063,20 +2102,17 @@
                 "str"
             ]
         ], 
-        "RunOnce": [
-            [
-                "TaskBase", 
-                "Func"
-            ]
-        ], 
-        "Start": [
-            [
-                "CancellationToken"
-            ]
-        ], 
         "Stop": [
             [
                 "bool"
+            ]
+        ], 
+        "RestartTasks": [
+            []
+        ], 
+        "RunAsync": [
+            [
+                "CancellationToken"
             ]
         ], 
         "AddDefaultTasks": [
@@ -2085,7 +2121,7 @@
         "AddTask": [
             [
                 "TaskBase", 
-                "Func"
+                "Predicate"
             ]
         ], 
         "IsTaskEnqueued": [
@@ -2093,8 +2129,10 @@
                 "int"
             ]
         ], 
-        "RestartTasksAsync": [
-            []
+        "RunOnceAsync": [
+            [
+                "TaskBase"
+            ]
         ]
     }, 
     "Details": {
@@ -2320,15 +2358,6 @@
             [
                 "str"
             ]
-        ], 
-        "IsStringDefined": [
-            [
-                "str"
-            ], 
-            [
-                "str", 
-                "bool"
-            ]
         ]
     }, 
     "OnGetSettingsHandler": {
@@ -2366,6 +2395,18 @@
         ], 
         "Clone": [
             []
+        ]
+    }, 
+    "IItemIdentificationNumberValidator": {
+        "Validate": [
+            [
+                "IValidatableItemIdentificationNumber", 
+                "List"
+            ], 
+            [
+                "IValidatableItemIdentificationNumber", 
+                "str"
+            ]
         ]
     }, 
     "ConsoleCancelEventHandler": {
@@ -2626,6 +2667,9 @@
         "IsValid": [
             []
         ], 
+        "AllQuestionPositive": [
+            []
+        ], 
         "IsVirgin": [
             []
         ]
@@ -2636,16 +2680,7 @@
         ]
     }, 
     "ICentralAuthoritySystem": {
-        "WaitStartGooglePubSubServicesUntilValidServerHealth": [
-            []
-        ], 
-        "StartRemotePublishingInboundListener": [
-            []
-        ], 
         "StartBosInboundListener": [
-            []
-        ], 
-        "RestartGooglePubSubServices": [
             []
         ]
     }, 
@@ -2665,6 +2700,18 @@
         "Invoke": [
             [
                 "T"
+            ]
+        ]
+    }, 
+    "DebugMessageHandler": {
+        "Handle": [
+            [
+                "IMessage"
+            ]
+        ], 
+        "CanHandle": [
+            [
+                "IMessage"
             ]
         ]
     }, 
@@ -3140,13 +3187,13 @@
         ]
     }, 
     "EmailDigestNotificationSummary": {
-        "GetConfigurationForm": [
-            []
-        ], 
-        "ExecuteSummary": [
+        "ExecuteSummaryAsync": [
             [
                 "ExecuteNotificationSummaryArgs"
             ]
+        ], 
+        "GetConfigurationForm": [
+            []
         ]
     }, 
     "ItemIdMorePicker": {
@@ -3402,8 +3449,8 @@
     "ItemLocationComparer": {
         "Compare": [
             [
-                "ItemLocation", 
-                "ItemLocation"
+                "IComparableItemLocation", 
+                "IComparableItemLocation"
             ]
         ]
     }, 
@@ -3550,7 +3597,7 @@
     "Messaging": {
         "ChangeMessagesStatus": [
             [
-                "List", 
+                "IEnumerable", 
                 "MessageStatus"
             ]
         ], 
@@ -3585,6 +3632,11 @@
             [
                 "Guid", 
                 "MessageBodyDecodeAs"
+            ]
+        ], 
+        "GetMessageByReferenceId": [
+            [
+                "Guid"
             ]
         ], 
         "GetMessagePublishers": [
@@ -3622,7 +3674,7 @@
         ], 
         "ReissueMessages": [
             [
-                "List"
+                "IEnumerable"
             ]
         ], 
         "StartMessageQueueListener": [
@@ -5215,6 +5267,11 @@
             ]
         ]
     }, 
+    "PythonScriptTask": {
+        "Run": [
+            []
+        ]
+    }, 
     "TypeLoadException": {
         "GetObjectData": [
             [
@@ -5232,19 +5289,19 @@
             []
         ]
     }, 
+    "BosProduct": {
+        "CreateAlternativeIndex": [
+            [
+                "str"
+            ]
+        ]
+    }, 
     "PurchaseOrders": {
         "GetCacheKey": [
             []
         ], 
         "GetHashCode": [
             []
-        ]
-    }, 
-    "BosProduct": {
-        "CreateAlternativeIndex": [
-            [
-                "str"
-            ]
         ]
     }, 
     "StackDriverLoggingTarget": {
@@ -5674,11 +5731,13 @@
     }, 
     "ShipmentBase": {
         "Validate": [
-            []
+            [
+                "ProcessShipmentArgs"
+            ]
         ], 
         "Process": [
             [
-                "bool"
+                "ProcessShipmentArgs"
             ]
         ], 
         "GetPossibleServices": [
@@ -5989,43 +6048,6 @@
             []
         ], 
         "GetCreateCountForPickDifferencesOption": [
-            []
-        ]
-    }, 
-    "NotificationSummary": {
-        "InitializeLifetimeService": [
-            []
-        ], 
-        "GetAllConfigurations": [
-            []
-        ], 
-        "DeleteConfiguration": [
-            [
-                "int"
-            ]
-        ], 
-        "SaveConfiguration": [
-            [
-                "NotificationSummaryConfiguration"
-            ]
-        ], 
-        "GetConfigurationForm": [
-            [
-                "str"
-            ]
-        ], 
-        "DeleteConfigurations": [
-            [
-                "List"
-            ]
-        ], 
-        "GetAllExecutionTypes": [
-            []
-        ], 
-        "ExecuteSummaries": [
-            []
-        ], 
-        "GetAllExecutionSchedules": [
             []
         ]
     }, 
@@ -7134,13 +7156,13 @@
         ]
     }, 
     "INotificationSummaryExecution": {
-        "GetConfigurationForm": [
-            []
-        ], 
-        "ExecuteSummary": [
+        "ExecuteSummaryAsync": [
             [
                 "ExecuteNotificationSummaryArgs"
             ]
+        ], 
+        "GetConfigurationForm": [
+            []
         ]
     }, 
     "RmaOrderPrintLine": {
@@ -7299,6 +7321,29 @@
             ]
         ]
     }, 
+    "OnLogCategoryMessage": {
+        "EndInvoke": [
+            [
+                "IAsyncResult"
+            ]
+        ], 
+        "BeginInvoke": [
+            [
+                "object", 
+                "str", 
+                "LogEventTypes", 
+                "AsyncCallback", 
+                "object"
+            ]
+        ], 
+        "Invoke": [
+            [
+                "object", 
+                "str", 
+                "LogEventTypes"
+            ]
+        ]
+    }, 
     "INumberRegistrator": {
         "RegisterNumbers": [
             [
@@ -7365,9 +7410,6 @@
                 "int", 
                 "int"
             ]
-        ], 
-        "AddTaskNotificationSummaryTasks": [
-            []
         ], 
         "DeleteNotificationGroup": [
             [
@@ -7520,13 +7562,6 @@
     "DynamicClass": {
         "ToString": [
             []
-        ]
-    }, 
-    "DirectOrderLogger": {
-        "Log": [
-            [
-                "DirectOrder"
-            ]
         ]
     }, 
     "SalesOrder": {
@@ -7795,6 +7830,76 @@
             ]
         ]
     }, 
+    "BarcodeHandling": {
+        "InitializeLifetimeService": [
+            []
+        ], 
+        "DeleteBarcodeStructureDefinition": [
+            [
+                "BarcodeStructureDefinition"
+            ]
+        ], 
+        "ResetItemBarcodeSyncCounts": [
+            []
+        ], 
+        "DeleteIsAllowed": [
+            [
+                "ItemBarcodes"
+            ]
+        ], 
+        "GetBarcodeStructureDefinitions": [
+            [
+                "BarcodeStructureDefinitionFilter", 
+                "PagingParams"
+            ]
+        ], 
+        "GetBarcodeStructure": [
+            [
+                "str", 
+                "ExpectScanOfEnum"
+            ]
+        ], 
+        "ExecuteBarcodeSyncTask": [
+            []
+        ], 
+        "GetItemInfoFromBarcode": [
+            [
+                "str"
+            ]
+        ], 
+        "UpdateIsAllowed": [
+            [
+                "ItemBarcodes"
+            ]
+        ], 
+        "GetBarcodesWithItemDescription": [
+            [
+                "GetBarcodesArgs"
+            ]
+        ], 
+        "ChangeItemBarcodes": [
+            [
+                "ItemBarcodes", 
+                "str"
+            ]
+        ], 
+        "CreateBarcodeStructureDefinition": [
+            [
+                "BarcodeStructureDefinition"
+            ]
+        ], 
+        "GetBarcodesByItemcode": [
+            [
+                "GetBarcodesArgs"
+            ]
+        ], 
+        "RemoveItemBarcodes": [
+            [
+                "ItemBarcodes", 
+                "bool"
+            ]
+        ]
+    }, 
     "SSCCHeterogeneousPrintLine": {
         "GetHashCode": [
             []
@@ -7947,11 +8052,6 @@
                 "AllocatedStockArgs"
             ]
         ], 
-        "SetGeneral": [
-            [
-                "IGeneral"
-            ]
-        ], 
         "GetStockTotals": [
             [
                 "str", 
@@ -7989,7 +8089,7 @@
                 "GetStockManagerListArgs"
             ]
         ], 
-        "GetStockOnMatchingFilter": [
+        "GetStockByFilterMatchItemIds": [
             [
                 "GetStockManagerListArgs"
             ]
@@ -8127,6 +8227,43 @@
                 "OutboundOrderLine", 
                 "str"
             ]
+        ]
+    }, 
+    "NotificationSummaryHandling": {
+        "InitializeLifetimeService": [
+            []
+        ], 
+        "GetAllConfigurations": [
+            []
+        ], 
+        "DeleteConfiguration": [
+            [
+                "int"
+            ]
+        ], 
+        "GetAllNotificationTypes": [
+            []
+        ], 
+        "SaveConfiguration": [
+            [
+                "NotificationSummaryConfiguration"
+            ]
+        ], 
+        "GetConfigurationForm": [
+            [
+                "str"
+            ]
+        ], 
+        "DeleteConfigurations": [
+            [
+                "List"
+            ]
+        ], 
+        "GetAllNotificationSchedules": [
+            []
+        ], 
+        "ExecuteSummaries": [
+            []
         ]
     }, 
     "MachineSetting": {
@@ -8465,11 +8602,6 @@
                 "str"
             ]
         ], 
-        "GetStockOnMatchingFilter": [
-            [
-                "GetStockManagerListArgs"
-            ]
-        ], 
         "CreateOrUpdateLicensePlateItem": [
             [
                 "int", 
@@ -8625,6 +8757,11 @@
                 "int", 
                 "str", 
                 "Decimal"
+            ]
+        ], 
+        "GetStockByFilterMatchItemIds": [
+            [
+                "GetStockManagerListArgs"
             ]
         ], 
         "DeleteCountGroup": [
@@ -8794,34 +8931,6 @@
             ]
         ]
     }, 
-    "NotificationTypeContainer": {
-        "ResolveSchedule": [
-            [
-                "str"
-            ]
-        ], 
-        "ResolveExcution": [
-            [
-                "str"
-            ]
-        ], 
-        "RegisterSchedule": [
-            [
-                "Type", 
-                "str", 
-                "NotificationTypeContainer", 
-                "str"
-            ]
-        ], 
-        "RegisterExecution": [
-            [
-                "Type", 
-                "str", 
-                "NotificationTypeContainer", 
-                "str"
-            ]
-        ]
-    }, 
     "RmaOrder": {
         "GetHashCode": [
             []
@@ -8896,6 +9005,12 @@
                 "GetScriptArgs"
             ]
         ], 
+        "GetTranslationsForCulture": [
+            [
+                "str", 
+                "str"
+            ]
+        ], 
         "PrintPrintLinesByObject": [
             [
                 "PrintLinesBase", 
@@ -8924,11 +9039,6 @@
         "CreateLocationClassification": [
             [
                 "LocationClassification"
-            ]
-        ], 
-        "DeleteZone": [
-            [
-                "Zone"
             ]
         ], 
         "GetWarehouseLayoutBySetting": [
@@ -8970,9 +9080,6 @@
                 "BarcodeTypes"
             ]
         ], 
-        "GetPrintersTable": [
-            []
-        ], 
         "GetWarehouseLayoutSettings": [
             [
                 "WarehouseLayoutSettingFilter"
@@ -8990,6 +9097,12 @@
         ], 
         "GetErpLocks": [
             []
+        ], 
+        "GetResourcesOfTranslationForPortal": [
+            [
+                "str", 
+                "str"
+            ]
         ], 
         "GetCacheObjectAsXml": [
             [
@@ -9017,9 +9130,6 @@
                 "Mappings"
             ]
         ], 
-        "GetBarcodeStructureActive": [
-            []
-        ], 
         "CreateColliPreset": [
             [
                 "ColliPreset"
@@ -9036,30 +9146,25 @@
                 "ViewUsersInZone"
             ]
         ], 
-        "GetItemInfoFromBarcode": [
-            [
-                "str"
-            ]
-        ], 
         "ResetBarcodeSettingsToDefault": [
             []
         ], 
-        "StopMarshalledObjectFactories": [
-            []
+        "Logout": [
+            [
+                "bool"
+            ]
         ], 
         "GetWarehouseByCode": [
             [
                 "str"
             ]
         ], 
+        "StopMarshalledObjectFactories": [
+            []
+        ], 
         "CreateShipperServiceLink": [
             [
                 "ShipperServiceLink"
-            ]
-        ], 
-        "GenerateSerialNumbers": [
-            [
-                "ItemIdGenerateArgs"
             ]
         ], 
         "GetItemExistsOnLocation": [
@@ -9067,6 +9172,11 @@
                 "str", 
                 "str", 
                 "str"
+            ]
+        ], 
+        "GenerateSerialNumbers": [
+            [
+                "ItemIdGenerateArgs"
             ]
         ], 
         "GetPrintLabelByName": [
@@ -9083,12 +9193,14 @@
                 "int"
             ]
         ], 
-        "AddTaskNotificationCleanupTask": [
-            []
-        ], 
         "CreateDevice": [
             [
                 "Device"
+            ]
+        ], 
+        "UploadModule": [
+            [
+                "AddModuleArgs"
             ]
         ], 
         "GetLibContent": [
@@ -9099,14 +9211,6 @@
         "GetScriptSnippets": [
             []
         ], 
-        "LogoutClient": [
-            []
-        ], 
-        "UploadModule": [
-            [
-                "AddModuleArgs"
-            ]
-        ], 
         "DeleteBackgroundAgent": [
             [
                 "BackgroundAgent"
@@ -9116,9 +9220,6 @@
             [
                 "LocationClassificationsFilter"
             ]
-        ], 
-        "AddTaskAutoDisposeTask": [
-            []
         ], 
         "GetColliPresetById": [
             [
@@ -9141,11 +9242,6 @@
                 "str"
             ]
         ], 
-        "GetZoneUsers": [
-            [
-                "int"
-            ]
-        ], 
         "CheckLicenseFile": [
             [
                 "str"
@@ -9155,11 +9251,6 @@
             [
                 "CacheKey", 
                 "GetItemIdentificationArgs"
-            ]
-        ], 
-        "ChangeItemBarcode": [
-            [
-                "ChangeBarcodeArgs"
             ]
         ], 
         "GetProgressOfActivity": [
@@ -9235,16 +9326,10 @@
                 "PrintLineBase"
             ]
         ], 
-        "GetZonesActiveOfCurrentUser": [
-            []
-        ], 
         "DisposeCachedObjects": [
             []
         ], 
         "PurgeProfilingLog": [
-            []
-        ], 
-        "AddTaskErpLockingTask": [
             []
         ], 
         "LoadSettings": [
@@ -9254,9 +9339,6 @@
                 "SystemSettings"
             ]
         ], 
-        "AddTaskCacheBackgroundTasks": [
-            []
-        ], 
         "SetUserCacheData": [
             [
                 "str", 
@@ -9265,12 +9347,6 @@
         ], 
         "GetSessions": [
             []
-        ], 
-        "SetZoneRightsOfZone": [
-            [
-                "int", 
-                "ZoneRightViews"
-            ]
         ], 
         "GetScreenshot": [
             [
@@ -9320,11 +9396,6 @@
                 "str"
             ]
         ], 
-        "DeleteBarcodeStructureDefinition": [
-            [
-                "BarcodeStructureDefinition"
-            ]
-        ], 
         "GetDefaultColliPreset": [
             []
         ], 
@@ -9334,12 +9405,6 @@
         "CreateSnippetModule": [
             [
                 "ModuleArgs"
-            ]
-        ], 
-        "RemoveUserFromZone": [
-            [
-                "Zone", 
-                "User"
             ]
         ], 
         "GetItemLocationDefault": [
@@ -9393,11 +9458,6 @@
                 "int"
             ]
         ], 
-        "CheckZoneRightAddReferenceOnTransfer": [
-            [
-                "CacheKey"
-            ]
-        ], 
         "SaveCache": [
             []
         ], 
@@ -9410,20 +9470,6 @@
             [
                 "TagTarget"
             ]
-        ], 
-        "GetZonesOfUser": [
-            [
-                "User", 
-                "bool"
-            ]
-        ], 
-        "AuthenticateUserForZone": [
-            [
-                "Zone"
-            ]
-        ], 
-        "AuthenticateUserForDefaultZone": [
-            []
         ], 
         "GetScripts": [
             [
@@ -9454,11 +9500,6 @@
         "GetTranslationsAvailablePerSet": [
             [
                 "str"
-            ]
-        ], 
-        "GetItemsAll": [
-            [
-                "GetItemsOnLocationArgs"
             ]
         ], 
         "GetCountriesActive": [
@@ -9493,20 +9534,10 @@
         "StartProfiler": [
             []
         ], 
-        "CreateZone": [
-            [
-                "Zone"
-            ]
-        ], 
         "GetWarehousesInactive": [
             []
         ], 
         "GetColliPresetSpecificationCodes": [
-            [
-                "str"
-            ]
-        ], 
-        "GetZoneByName": [
             [
                 "str"
             ]
@@ -9538,19 +9569,9 @@
                 "int"
             ]
         ], 
-        "GetBarcodeStructureDefinitionById": [
-            [
-                "int"
-            ]
-        ], 
         "SaveDefaultInboundLocation": [
             [
                 "Warehouse"
-            ]
-        ], 
-        "GetZonesActive": [
-            [
-                "bool"
             ]
         ], 
         "SendMouseClick": [
@@ -9583,14 +9604,6 @@
                 "ModuleArgs"
             ]
         ], 
-        "LogoutUser": [
-            []
-        ], 
-        "CreateBarcodeStructureDefinition": [
-            [
-                "BarcodeStructureDefinition"
-            ]
-        ], 
         "GetDeviceByName": [
             [
                 "str"
@@ -9618,23 +9631,9 @@
                 "CacheKey"
             ]
         ], 
-        "GetBarcodeStructureInOrder": [
-            [
-                "str", 
-                "List"
-            ]
-        ], 
-        "AddTaskLogCleanupTask": [
-            []
-        ], 
         "DeletePrintLabel": [
             [
                 "PrintLabel"
-            ]
-        ], 
-        "GetZoneById": [
-            [
-                "int"
             ]
         ], 
         "AddOrUpdateErpLockDirect": [
@@ -9689,6 +9688,12 @@
                 "str"
             ]
         ], 
+        "GetTranslationsOfEnum": [
+            [
+                "str", 
+                "Type"
+            ]
+        ], 
         "GetWarehousesActive": [
             []
         ], 
@@ -9706,9 +9711,6 @@
             []
         ], 
         "GetUsersActive": [
-            []
-        ], 
-        "GetZonesAll": [
             []
         ], 
         "PrintPrintLine": [
@@ -9803,13 +9805,13 @@
                 "str"
             ]
         ], 
+        "GetErpSettings": [
+            []
+        ], 
         "ExecuteScript": [
             [
                 "str"
             ]
-        ], 
-        "GetErpSettings": [
-            []
         ], 
         "SaveModule": [
             [
@@ -9832,9 +9834,6 @@
                 "str", 
                 "object"
             ]
-        ], 
-        "AddTaskMessageQueueCleanupTask": [
-            []
         ], 
         "GetPrintDatasetInstance": [
             [
@@ -9872,19 +9871,8 @@
                 "str"
             ]
         ], 
-        "GetZoneRightsOfZone": [
-            [
-                "int"
-            ]
-        ], 
         "GetDevicesAll": [
             []
-        ], 
-        "AddUserToZone": [
-            [
-                "Zone", 
-                "User"
-            ]
         ], 
         "MoveModuleOrDirectory": [
             [
@@ -9932,6 +9920,11 @@
         "GetVersion": [
             []
         ], 
+        "GetItemDescription": [
+            [
+                "str"
+            ]
+        ], 
         "RestartScriptEngine": [
             []
         ], 
@@ -9973,12 +9966,6 @@
                 "CacheKey"
             ]
         ], 
-        "GetBarcodeStructureDefinitions": [
-            [
-                "BarcodeStructureDefinitionFilter", 
-                "PagingParams"
-            ]
-        ], 
         "ValidateItemIdentification": [
             [
                 "str", 
@@ -9987,15 +9974,6 @@
             ]
         ], 
         "GetCurrentIdentity": [
-            []
-        ], 
-        "GetResourcesOfTranslation": [
-            [
-                "str", 
-                "str"
-            ]
-        ], 
-        "AuthenticateUserForFirstZone": [
             []
         ], 
         "SendMessage": [
@@ -10033,11 +10011,6 @@
             [
                 "int", 
                 "bool"
-            ]
-        ], 
-        "GetZonesActiveOfUser": [
-            [
-                "User"
             ]
         ], 
         "GetDeviceInformation": [
@@ -10111,12 +10084,6 @@
         "GetTranslationsAvailable": [
             []
         ], 
-        "GetBarcodeStructure": [
-            [
-                "str", 
-                "ExpectScanOfEnum"
-            ]
-        ], 
         "GetLogLines": [
             [
                 "GetLogLinesArgs"
@@ -10137,27 +10104,16 @@
         ]
     }, 
     "TaskBase": {
-        "CalculateSchedule": [
-            []
-        ], 
-        "StartAsync": [
-            [
-                "CancellationToken", 
-                "AlreadyRunningBehaviour"
-            ]
-        ], 
-        "RunAsync": [
-            [
-                "CancellationToken"
-            ]
-        ], 
         "CalculateNextMoment": [
             []
         ], 
-        "ToCronTabFormat": [
+        "CalculateSchedule": [
             []
         ], 
         "Run": [
+            []
+        ], 
+        "ToCronTabFormat": [
             []
         ]
     }, 
@@ -10553,12 +10509,22 @@
         "SetQuantityOriginal": [
             []
         ], 
+        "IsBatchNumberItemCheck": [
+            [
+                "bool"
+            ]
+        ], 
         "Clone": [
             []
         ], 
         "CloneWithSpecificOutboundOrder": [
             [
                 "str"
+            ]
+        ], 
+        "IsSerialNumberItemCheck": [
+            [
+                "bool"
             ]
         ]
     }, 
@@ -10615,6 +10581,49 @@
         ], 
         "Clone": [
             []
+        ]
+    }, 
+    "ICache": {
+        "FlushAll": [
+            [
+                "str"
+            ]
+        ], 
+        "Increment": [
+            [
+                "str", 
+                "str", 
+                "UInt32"
+            ]
+        ], 
+        "Decrement": [
+            [
+                "str", 
+                "str", 
+                "UInt32"
+            ]
+        ], 
+        "GetAllKeys": [
+            [
+                "str"
+            ]
+        ], 
+        "TryRemove": [
+            [
+                "str", 
+                "str"
+            ]
+        ], 
+        "Count": [
+            [
+                "str"
+            ]
+        ], 
+        "RemoveAll": [
+            [
+                "str", 
+                "IEnumerable"
+            ]
         ]
     }, 
     "DefaultLocationHelper": {
@@ -10776,6 +10785,11 @@
         "GetHistoryShipment": [
             [
                 "HistoryShipment"
+            ]
+        ], 
+        "PrintSalesOrderReports": [
+            [
+                "List"
             ]
         ], 
         "PutItemIdBackFromBatch": [
@@ -11170,6 +11184,9 @@
             ]
         ], 
         "InitializeLifetimeService": [
+            []
+        ], 
+        "InitializeShippers": [
             []
         ], 
         "GetOutboundOrdersBatchable": [
@@ -12194,11 +12211,6 @@
             ]
         ]
     }, 
-    "GeneralTask": {
-        "Run": [
-            []
-        ]
-    }, 
     "CacheKey": {
         "GetHashCode": [
             []
@@ -12290,13 +12302,13 @@
         ]
     }, 
     "SlackWebDigestNotificationSummary": {
-        "GetConfigurationForm": [
-            []
-        ], 
-        "ExecuteSummary": [
+        "ExecuteSummaryAsync": [
             [
                 "ExecuteNotificationSummaryArgs"
             ]
+        ], 
+        "GetConfigurationForm": [
+            []
         ]
     }, 
     "StockLock": {
@@ -12313,6 +12325,9 @@
         ]
     }, 
     "DataFlowObject": {
+        "AllQuestionPositive": [
+            []
+        ], 
         "IsValid": [
             []
         ], 
@@ -12458,6 +12473,11 @@
             ]
         ]
     }, 
+    "BarcodeSyncTask": {
+        "Run": [
+            []
+        ]
+    }, 
     "InboundReceiveLine": {
         "Receive": [
             [
@@ -12558,6 +12578,13 @@
             ]
         ]
     }, 
+    "IncludeValueInDisplayField": {
+        "UpdateInfo": [
+            [
+                "SystemSettingsTableRow"
+            ]
+        ]
+    }, 
     "PackCustomer": {
         "GetHashCode": [
             []
@@ -12654,76 +12681,538 @@
         ]
     }, 
     "scriptOverrideables": {
-        "GetPurchaseReceiveLines": [
-            "PurchaseOrders", 
+        "OnPythonEngineBooted": [], 
+        "GetStorageAssignmentClassificationById": [
+            "int"
+        ], 
+        "PrintPrintLinesByObject": [
+            "PrintLinesBase", 
+            "PrintLabel"
+        ], 
+        "DeleteReplenishmentOrders": [
+            "ReplenishmentOrders"
+        ], 
+        "GetRmaOrder": [
+            "RmaOrderArgs"
+        ], 
+        "CancelPendingPurchaseOrderReceipts": [
+            "PurchaseOrders"
+        ], 
+        "OpenTransferPackagesForShipping": [
+            "CacheKey"
+        ], 
+        "TransferItems": [
+            "WarehouseTransfer"
+        ], 
+        "VoidShipment": [
+            "HistoryShipment"
+        ], 
+        "PrintRmaReceipt": [
+            "Guid"
+        ], 
+        "GetHistoryShipmentsAll": [
+            "PagingParams"
+        ], 
+        "GetWarehousesActiveByLocation": [
             "str"
+        ], 
+        "GetDefaultBatchSink": [], 
+        "PrintDuplicateLabels": [
+            "PrintDuplicateLabelArgs"
+        ], 
+        "ProcessSalesOrder": [
+            "ProcessSalesOrderLinesArgs", 
+            "KeyValuePair"
+        ], 
+        "PrintPrintLinesByObjectAndPrinter": [
+            "PrintLinesBase", 
+            "PrintLabel", 
+            "PrintBaseArgs"
+        ], 
+        "GetPreReceiptLines": [
+            "PreReceiptLinesArgs"
+        ], 
+        "GetWarehouseLayoutSettings": [
+            "WarehouseLayoutSettingFilter"
+        ], 
+        "GetVendors": [
+            "GetVendorsArgs"
+        ], 
+        "GetPackages": [
+            "CacheKey"
+        ], 
+        "GenerateReplenishmentOrders": [
+            "GenerateReplenishmentOrdersArgs"
+        ], 
+        "CancelPendingRmaOrderReceipts": [
+            "RmaOrders"
+        ], 
+        "IsValidItemInCountGroup": [
+            "str", 
+            "CountGroup"
+        ], 
+        "GetItemLocations": [
+            "GetItemLocationsArgs"
+        ], 
+        "DetermineRoute": [
+            "BatchPickLocations"
+        ], 
+        "GetPurchaseOrder": [
+            "PurchaseOrderArgs"
+        ], 
+        "GetPrintJobTypes": [], 
+        "GetHistoryShipment": [
+            "HistoryShipment"
+        ], 
+        "CreatePreReceiptLines": [
+            "CreatePreReceiptArgs"
+        ], 
+        "GetDefaultAllocationSettings": [], 
+        "GetWarehouseByCode": [
+            "str"
+        ], 
+        "GetPurchaseOrdersByFilter": [
+            "PurchaseOrderArgs"
+        ], 
+        "GetItemExistsOnLocation": [
+            "str", 
+            "str", 
+            "str"
+        ], 
+        "UpdateTransportPackagesHeader": [
+            "CacheKey", 
+            "UpdateTransportPackagesHeaderArgs"
+        ], 
+        "GetVendorsWithPendingPreReceipts": [
+            "InboundOrderArgsBase"
+        ], 
+        "UpdateDefaultItemLocation": [
+            "UpdateItemDefaultLocationArgs"
+        ], 
+        "UpdatePackageData": [
+            "UpdateTransportPackageArgs", 
+            "TransportPackage"
+        ], 
+        "GetLocationClassifications": [
+            "LocationClassificationsFilter"
+        ], 
+        "PrepareWarehouseTransferItem": [
+            "str", 
+            "str", 
+            "str", 
+            "str", 
+            "str"
+        ], 
+        "AddWarehouseTransferQuantity": [
+            "CacheKey", 
+            "AddWarehouseTransferQuantityArgs"
+        ], 
+        "GetItemIdentificationExists": [
+            "str", 
+            "str"
+        ], 
+        "RemovePackage": [
+            "Guid", 
+            "GetItemsToPackArgs"
+        ], 
+        "GetHistoryRmaOrderLines": [
+            "GetHistoryRmaOrderLinesArgs"
+        ], 
+        "GetReplenishmentOrders": [
+            "ReplenishmentOrderArgs"
+        ], 
+        "ProcessReplenishmentOrder": [
+            "bool", 
+            "ReplenishmentOrder", 
+            "List"
+        ], 
+        "GetSalesOrderCostLines": [
+            "SalesOrderLinesArgs"
+        ], 
+        "GetShipperServiceLevelsByShipperId": [
+            "str"
+        ], 
+        "AddWarehouseTransferQuantities": [
+            "CacheKey", 
+            "WarehouseTransferItems", 
+            "bool"
+        ], 
+        "GetRmaReceiveLinesByKey": [
+            "CacheKey"
+        ], 
+        "RemoveCountItemIdentification": [
+            "CacheKey", 
+            "str"
+        ], 
+        "AddWarehouseTransferItems": [
+            "CacheKey", 
+            "List", 
+            "bool"
+        ], 
+        "GetWarehouseLocations": [
+            "GetWarehouseLocationsArgs"
+        ], 
+        "GetItemImageSmall": [
+            "str"
+        ], 
+        "GetRmaCustomersExpectedByFilter": [
+            "GetRmaOrderCustomersArgs"
+        ], 
+        "PrepareWarehouseTransferToMultiReceived": [
+            "List", 
+            "str", 
+            "str", 
+            "str"
+        ], 
+        "GetVendorsExpectedByFilter": [
+            "GetPurchaseOrderVendorArgs"
+        ], 
+        "GetCustomersPending": [], 
+        "CreatePreReceipt": [
+            "CreatePreReceiptArgs"
         ], 
         "GetRmaReceiveLines": [
             "RmaOrders", 
             "str"
         ], 
-        "TransferItems": [
-            "WarehouseTransfer"
+        "GetBatchesWithPendingPackages": [
+            "BatchFilterArgs"
         ], 
-        "CreatePreReceiptLines": [
+        "GetItemStockList": [
+            "GetItemStockListArgs"
+        ], 
+        "GetRmaOrdersAll": [], 
+        "GetOutboundOrderLinesBatchableByOrders": [
+            "List"
+        ], 
+        "PreCreatePreReceipt": [
             "CreatePreReceiptArgs"
         ], 
-        "ProcessShipment": [
-            "ProcessShipmentArgs"
+        "GetHistoryOutboundOrderCustomers": [
+            "GetHistoryOutboundOrderCustomersArgs"
         ], 
-        "ProcessDirectOrder": [
-            "DirectOrderCrudArgs"
+        "GetRmaOrderItemIdentifications": [
+            "int", 
+            "int"
         ], 
-        "ProcessBatchPacking": [
-            "ProcessBatchPackingArgs"
+        "GetItemLocationDefault": [
+            "GetItemLocationsArgs"
         ], 
-        "GetItemImageSmall": [
-            "str"
-        ], 
-        "UpdateQuantityReceiveLine": [
-            "ReceiveArgs"
-        ], 
-        "PrintPickBatchLabel": [
-            "PrintPickbatchLabelArgs"
+        "GetHistoryPurchaseOrderPrintLines": [
+            "GetHistoryPurchaseOrderPrintLinesArgs"
         ], 
         "ProcessShipmentInfo": [
             "ShipmentBase", 
             "TransportPackages", 
             "ProcessShipmentArgs"
         ], 
-        "GetItemImageLarge": [
+        "AddPrintJobScriptOverride": [
+            "AddPrintJob", 
+            "int", 
             "str"
-        ], 
-        "DeleteReplenishmentOrders": [
-            "ReplenishmentOrders"
-        ], 
-        "VoidShipment": [
-            "HistoryShipment"
-        ], 
-        "ProcessPendingReceiveLines": [
-            "ProcessInboundReceiveLinesArgs"
-        ], 
-        "UpdateDefaultItemLocation": [
-            "UpdateItemDefaultLocationArgs"
-        ], 
-        "PreCreatePreReceipt": [
-            "CreatePreReceiptArgs"
-        ], 
-        "GetCacheKeyOfTransportPackages": [
-            "GetItemsToPackArgs"
-        ], 
-        "CreatePreReceipt": [
-            "CreatePreReceiptArgs"
         ], 
         "LogAndCleanupShipment": [
             "ShipmentBase", 
             "TransportPackages", 
             "ProcessShipmentArgs"
         ], 
+        "CheckZoneRightAddReferenceOnTransfer": [
+            "CacheKey"
+        ], 
+        "PrintPickList": [
+            "PrintPickingListArgs"
+        ], 
+        "GetRmaReasons": [], 
+        "InitOrderMatchesCustomerValidator": [], 
+        "ProcessDirectOrder": [
+            "DirectOrderCrudArgs"
+        ], 
+        "GetPurchaseOrderPrintLines": [
+            "CacheKey"
+        ], 
+        "GetHistoryRmaOrdersByFilter": [
+            "HistoryPurchaseOrdersFilter", 
+            "PagingParams"
+        ], 
+        "PrintPrintLines": [
+            "CacheKey", 
+            "PrintLabel"
+        ], 
+        "GetCustomersPendingByFilter": [
+            "GetCustomersPendingArgs"
+        ], 
+        "DeleteBatches": [
+            "Batches"
+        ], 
+        "ExecuteMessageHandler": [
+            "ExecuteMessageHandlerArgs"
+        ], 
+        "PrepareInboundReceiveLines": [
+            "PrepareInboundReceiveLinesArgs"
+        ], 
+        "GetWarehousesInactive": [], 
+        "GetPurchaseOrdersAll": [], 
+        "PrepareWarehouseTransferFrom": [
+            "str", 
+            "str", 
+            "str"
+        ], 
+        "GetShipperById": [
+            "str"
+        ], 
+        "ProcessBatchPacking": [
+            "ProcessBatchPackingArgs"
+        ], 
+        "GetMobileShipperById": [
+            "str"
+        ], 
+        "ProcessCounts": [
+            "str", 
+            "int", 
+            "str", 
+            "DateTime", 
+            "str"
+        ], 
+        "ProcessPendingReceiveLines": [
+            "ProcessInboundReceiveLinesArgs"
+        ], 
+        "GenerateReplenishmentOrder": [
+            "str"
+        ], 
+        "GetCacheKeyOfTransportPackages": [
+            "GetItemsToPackArgs"
+        ], 
+        "ExecuteMessagePublisher": [
+            "ExecuteMessagePublisherArgs"
+        ], 
+        "GetWarehousesActiveWithDefaultInboundLocation": [], 
+        "GetCustomers": [
+            "GetCustomersArgs"
+        ], 
+        "GetPurchaseReceiveLinesByKey": [
+            "CacheKey"
+        ], 
+        "GetItem": [
+            "str"
+        ], 
+        "UpdateWarehouseTransfer": [
+            "CacheKey", 
+            "str", 
+            "str", 
+            "str", 
+            "str"
+        ], 
+        "HandleColliForStockRegistration": [
+            "TransportPackages"
+        ], 
+        "GetItemsOnDefaultInboundLocation": [
+            "str", 
+            "str"
+        ], 
+        "GetHistoryShipmentsByFilter": [
+            "HistoryShipmentFilter", 
+            "PagingParams"
+        ], 
+        "GetWarehousesActive": [], 
+        "GetWarehousesAll": [], 
+        "PrintPrintLine": [
+            "PrintLineBase", 
+            "PrintLabel"
+        ], 
+        "ValidateOrder": [
+            "str", 
+            "OrderTypeEnum"
+        ], 
+        "GetReplenishmentOrder": [
+            "ReplenishmentOrderArgs"
+        ], 
+        "GetRmaOrderPrintLines": [
+            "CacheKey"
+        ], 
+        "GetWarehouseLayoutsBySetting": [
+            "WarehouseLayoutSetting"
+        ], 
+        "UpdateBatchWithSettings": [
+            "Guid", 
+            "BatchUpdateArgs"
+        ], 
         "ProcessBatchPicking": [
             "ProcessBatchPickingArgs"
         ], 
-        "GetPrintJobTypes": []
+        "GetPurchaseOrderLines": [
+            "GetPurchaseOrderLinesArgs"
+        ], 
+        "GetItemsOnLocation": [
+            "GetItemsOnLocationArgs"
+        ], 
+        "AddWarehouseTransferItemIdentitifications": [
+            "CacheKey", 
+            "AddWarehouseTransferItemIdentitificationArgs"
+        ], 
+        "PrepareWarehouseTransferToMultiTransport": [
+            "List", 
+            "str", 
+            "str"
+        ], 
+        "GetItems": [
+            "GetItemsArgs", 
+            "PagingParams"
+        ], 
+        "GetRmaOrderLines": [
+            "GetRmaOrderLinesArgs"
+        ], 
+        "GetVendorsExpected": [], 
+        "GetSalesOrderLines": [
+            "SalesOrderLinesArgs"
+        ], 
+        "AddPackageUsingPreset": [
+            "AddTransportPackageArgs"
+        ], 
+        "GetHistoryPurchaseReceiptsByFilter": [
+            "HistoryPurchaseOrdersFilter", 
+            "PagingParams"
+        ], 
+        "GetPrintAllocationSettings": [], 
+        "GetStorageAssignmentClassifications": [
+            "StorageAssignmentClassificationsFilter"
+        ], 
+        "ProcessAdhocRmaOrderLines": [
+            "str", 
+            "bool", 
+            "str", 
+            "RmaOrderLines", 
+            "str"
+        ], 
+        "GetHistoryPurchaseOrdersByFilter": [
+            "HistoryPurchaseOrdersFilter", 
+            "PagingParams"
+        ], 
+        "GetItemsOnTransportLocation": [
+            "str"
+        ], 
+        "GetPurchaseReceiveLines": [
+            "PurchaseOrders", 
+            "str"
+        ], 
+        "GetItemExistsOnDefaultInboundLocation": [
+            "str", 
+            "str"
+        ], 
+        "OpenBatchForPickingById": [
+            "str"
+        ], 
+        "ChangeItemBarcodes": [
+            "ItemBarcodes", 
+            "str"
+        ], 
+        "GetShippers": [], 
+        "GetSalesOrdersAll": [], 
+        "GetAdhocRmaCustomersByFilter": [
+            "GetHistoryOutboundOrderCustomersArgs"
+        ], 
+        "GetOutboundOrdersBatchable": [
+            "GetOutboundOrdersBatchableArgs"
+        ], 
+        "GetLocationClassificationById": [
+            "int"
+        ], 
+        "GetSalesOrder": [
+            "SalesOrderArgs"
+        ], 
+        "GetItemImageLarge": [
+            "str"
+        ], 
+        "GetSalesOrdersByFilter": [
+            "SalesOrderArgs"
+        ], 
+        "GetShipmentServices": [
+            "str", 
+            "CacheKey"
+        ], 
+        "PrintPickBatchLabel": [
+            "PrintPickbatchLabelArgs"
+        ], 
+        "ValidateItemIdentification": [
+            "str", 
+            "str", 
+            "bool"
+        ], 
+        "PrintPurchaseReceipt": [
+            "Guid", 
+            "str", 
+            "PrintingOptions"
+        ], 
+        "MergeErpStock": [
+            "IEnumerable"
+        ], 
+        "GetPreReceipts": [
+            "PreReceiptArgs"
+        ], 
+        "PrepareWarehouseTransferToMulti": [
+            "List", 
+            "str", 
+            "str", 
+            "str", 
+            "str"
+        ], 
+        "GetBatchesIncomplete": [], 
+        "GetWarehouseLayoutSettingById": [
+            "int"
+        ], 
+        "RemoveWarehouseTransferItemIdentification": [
+            "CacheKey", 
+            "str", 
+            "str"
+        ], 
+        "PrepareWarehouseTransferReceived": [
+            "str", 
+            "str", 
+            "str", 
+            "str"
+        ], 
+        "SubtractWarehouseTransferQuantities": [
+            "CacheKey", 
+            "WarehouseTransferItems"
+        ], 
+        "GetItemIdentifications": [
+            "GetItemIdentificationArgs", 
+            "ItemIdentifications"
+        ], 
+        "ProcessShipment": [
+            "ProcessShipmentArgs"
+        ], 
+        "UpdateQuantityReceiveLine": [
+            "ReceiveArgs"
+        ], 
+        "GetReplenishmentOrderLines": [
+            "ReplenishmentOrderLinesArgs"
+        ], 
+        "PrepareWarehouseTransferTo": [
+            "str", 
+            "str", 
+            "str"
+        ], 
+        "GetBatchesAll": [], 
+        "GetRmaOrdersByFilter": [
+            "RmaOrderArgs"
+        ], 
+        "GetItemsToPack": [
+            "GetItemsToPackArgs"
+        ], 
+        "GetBarcodeStructure": [
+            "str", 
+            "ExpectScanOfEnum"
+        ], 
+        "GetItemStockTotals": [
+            "GetItemStockTotalsArgs"
+        ], 
+        "PrepareWarehouseTransfer": [
+            "str", 
+            "str", 
+            "str", 
+            "str", 
+            "WarehouseTransferType"
+        ]
     }, 
     "ICollection": {
         "__contains__": [
@@ -12781,6 +13270,19 @@
         "CheckSecuritySettings": [
             [
                 "SecurityState"
+            ]
+        ]
+    }, 
+    "ItemBarcode": {
+        "GetHashCode": [
+            []
+        ], 
+        "ToItemInfo": [
+            []
+        ], 
+        "Equals": [
+            [
+                "object"
             ]
         ]
     }, 
@@ -12989,6 +13491,134 @@
         ], 
         "Clone": [
             []
+        ]
+    }, 
+    "ZoneHandling": {
+        "RemoveZoneFilter": [
+            [
+                "ZoneFilter"
+            ]
+        ], 
+        "GetFilterFields": [
+            [
+                "FilterTypeEnum"
+            ]
+        ], 
+        "AuthenticateUserForZone": [
+            [
+                "Zone"
+            ]
+        ], 
+        "GetZoneByName": [
+            [
+                "str"
+            ]
+        ], 
+        "GetZonesActiveOfUser": [
+            [
+                "User"
+            ]
+        ], 
+        "AuthenticateUserForFirstAvailableZone": [
+            []
+        ], 
+        "CheckZoneRightAddReferenceOnTransfer": [
+            [
+                "CacheKey"
+            ]
+        ], 
+        "GetFilterConfigurationValues": [
+            [
+                "FilterTypeEnum", 
+                "FilterFieldEnum"
+            ]
+        ], 
+        "GetZonesActive": [
+            [
+                "bool"
+            ]
+        ], 
+        "AuthenticateUserForDefaultZone": [
+            []
+        ], 
+        "CopyZone": [
+            [
+                "int"
+            ]
+        ], 
+        "RemoveUserFromZone": [
+            [
+                "Zone", 
+                "User"
+            ]
+        ], 
+        "InitializeLifetimeService": [
+            []
+        ], 
+        "AddUserToZone": [
+            [
+                "Zone", 
+                "User"
+            ]
+        ], 
+        "CreateZone": [
+            [
+                "Zone"
+            ]
+        ], 
+        "DeleteZone": [
+            [
+                "Zone"
+            ]
+        ], 
+        "GetZonesAll": [
+            []
+        ], 
+        "GetZoneUsers": [
+            [
+                "int"
+            ]
+        ], 
+        "GetZonesActiveOfCurrentUser": [
+            []
+        ], 
+        "GetZoneRightsOfZone": [
+            [
+                "int"
+            ]
+        ], 
+        "GetZoneById": [
+            [
+                "int"
+            ]
+        ], 
+        "GetZonesOfUser": [
+            [
+                "User", 
+                "bool"
+            ]
+        ], 
+        "SetZoneRightsOfZone": [
+            [
+                "int", 
+                "ZoneRightViews"
+            ]
+        ], 
+        "GetZoneFilters": [
+            [
+                "int", 
+                "FilterTypeEnum"
+            ]
+        ], 
+        "UpdateZoneFilter": [
+            [
+                "ZoneFilter"
+            ]
+        ], 
+        "AddZoneFilter": [
+            [
+                "ZoneFilter"
+            ]
         ]
     }, 
     "Packages": {
@@ -13291,11 +13921,6 @@
             [
                 "HistoryPurchaseOrdersFilter", 
                 "PagingParams"
-            ]
-        ], 
-        "GetItemVendors": [
-            [
-                "GetItemVendorsArgs"
             ]
         ], 
         "GetRmaOrderItemIdentifications": [

@@ -470,6 +470,7 @@ def out_docstring(out_func, docstring, indent):
         function = line.split("(")[0]
         arguments = re.findall(argument_regex,line)
         types = re.findall(type_regex,line)
+        print function
         if function in scriptOverrideables:
             print "adding123"
             print function

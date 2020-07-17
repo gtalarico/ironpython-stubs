@@ -82,30 +82,27 @@ def iter_module(module_name, module, module_path=None, namespaces=None):
 def crawl_loaded_references(target_assembly_name):
     """ Crawl Loaded assemblies to get Namespaces. """
     namespaces_dict = {}
+    f= 0
     for assembly in clr.References:
         assembly_name = assembly.GetName().Name
         assembly_path = assembly.CodeBase
+        
         types = assembly.GetTypes()
         methods = []
         for typ in types:
             methods.append(typ.GetMethods())
         for method in methods:
             for sub in method:
+                f+=1
                 custom = sub.GetCustomAttributes(True)
                 for i in custom:
                     try:
                         if "scriptoverridableattribute" in i.ToString().lower():
-                            print "true"
-                            regex = "[\s\S]*] ([\s\S]*)\("
+                            regex = "[\s\S]* ([\s\S]*)\("
                             override = re.findall(regex, sub.ToString())[0]
                             scriptOverrideables[override] = True
-                    except Exception as e:
-                        print "boo"
-                        print e
-                # if len(custom) > 0:
-                #     print sub.GetCustomAttributes(type(ScriptOverridableAttribute()), True).Length > 0
-                # if sub.GetCustomAttributes(type("ScriptOverridableAttribute"), True).Length > 0:
-                #     print sub.GetCustomAttributes(True)
+                    except:
+                        print i 
         assembly_filename = os.path.basename(assembly_path)
         if assembly_name == target_assembly_name:
             logger.info('Parsing Assembly: {}'.format(assembly_name))
