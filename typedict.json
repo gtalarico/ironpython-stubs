@@ -205,11 +205,6 @@
             ]
         ]
     }, 
-    "DebugMessage": {
-        "Callback": [
-            []
-        ]
-    }, 
     "ProfilingUserNode": {
         "ToString": [
             []
@@ -996,18 +991,6 @@
             [
                 "str", 
                 "str", 
-                "str"
-            ]
-        ]
-    }, 
-    "ItemIdentificationNumberValidator": {
-        "Validate": [
-            [
-                "IValidatableItemIdentificationNumber", 
-                "List"
-            ], 
-            [
-                "IValidatableItemIdentificationNumber", 
                 "str"
             ]
         ]
@@ -2385,18 +2368,6 @@
             []
         ]
     }, 
-    "IItemIdentificationNumberValidator": {
-        "Validate": [
-            [
-                "IValidatableItemIdentificationNumber", 
-                "List"
-            ], 
-            [
-                "IValidatableItemIdentificationNumber", 
-                "str"
-            ]
-        ]
-    }, 
     "ConsoleCancelEventHandler": {
         "EndInvoke": [
             [
@@ -2694,18 +2665,6 @@
         "Invoke": [
             [
                 "T"
-            ]
-        ]
-    }, 
-    "DebugMessageHandler": {
-        "Handle": [
-            [
-                "IMessage"
-            ]
-        ], 
-        "CanHandle": [
-            [
-                "IMessage"
             ]
         ]
     }, 
@@ -3443,8 +3402,8 @@
     "ItemLocationComparer": {
         "Compare": [
             [
-                "IComparableItemLocation", 
-                "IComparableItemLocation"
+                "ItemLocation", 
+                "ItemLocation"
             ]
         ]
     }, 
@@ -3591,7 +3550,7 @@
     "Messaging": {
         "ChangeMessagesStatus": [
             [
-                "IEnumerable", 
+                "List", 
                 "MessageStatus"
             ]
         ], 
@@ -3663,7 +3622,7 @@
         ], 
         "ReissueMessages": [
             [
-                "IEnumerable"
+                "List"
             ]
         ], 
         "StartMessageQueueListener": [
@@ -10658,49 +10617,6 @@
             []
         ]
     }, 
-    "ICache": {
-        "FlushAll": [
-            [
-                "str"
-            ]
-        ], 
-        "Increment": [
-            [
-                "str", 
-                "str", 
-                "UInt32"
-            ]
-        ], 
-        "Decrement": [
-            [
-                "str", 
-                "str", 
-                "UInt32"
-            ]
-        ], 
-        "GetAllKeys": [
-            [
-                "str"
-            ]
-        ], 
-        "TryRemove": [
-            [
-                "str", 
-                "str"
-            ]
-        ], 
-        "Count": [
-            [
-                "str"
-            ]
-        ], 
-        "RemoveAll": [
-            [
-                "str", 
-                "IEnumerable"
-            ]
-        ]
-    }, 
     "DefaultLocationHelper": {
         "InitializeLifetimeService": [
             []
@@ -10860,11 +10776,6 @@
         "GetHistoryShipment": [
             [
                 "HistoryShipment"
-            ]
-        ], 
-        "PrintSalesOrderReports": [
-            [
-                "List"
             ]
         ], 
         "PutItemIdBackFromBatch": [
@@ -12741,6 +12652,78 @@
                 "DateTime"
             ]
         ]
+    }, 
+    "scriptOverrideables": {
+        "GetPurchaseReceiveLines": [
+            "PurchaseOrders", 
+            "str"
+        ], 
+        "GetRmaReceiveLines": [
+            "RmaOrders", 
+            "str"
+        ], 
+        "TransferItems": [
+            "WarehouseTransfer"
+        ], 
+        "CreatePreReceiptLines": [
+            "CreatePreReceiptArgs"
+        ], 
+        "ProcessShipment": [
+            "ProcessShipmentArgs"
+        ], 
+        "ProcessDirectOrder": [
+            "DirectOrderCrudArgs"
+        ], 
+        "ProcessBatchPacking": [
+            "ProcessBatchPackingArgs"
+        ], 
+        "GetItemImageSmall": [
+            "str"
+        ], 
+        "UpdateQuantityReceiveLine": [
+            "ReceiveArgs"
+        ], 
+        "PrintPickBatchLabel": [
+            "PrintPickbatchLabelArgs"
+        ], 
+        "ProcessShipmentInfo": [
+            "ShipmentBase", 
+            "TransportPackages", 
+            "ProcessShipmentArgs"
+        ], 
+        "GetItemImageLarge": [
+            "str"
+        ], 
+        "DeleteReplenishmentOrders": [
+            "ReplenishmentOrders"
+        ], 
+        "VoidShipment": [
+            "HistoryShipment"
+        ], 
+        "ProcessPendingReceiveLines": [
+            "ProcessInboundReceiveLinesArgs"
+        ], 
+        "UpdateDefaultItemLocation": [
+            "UpdateItemDefaultLocationArgs"
+        ], 
+        "PreCreatePreReceipt": [
+            "CreatePreReceiptArgs"
+        ], 
+        "GetCacheKeyOfTransportPackages": [
+            "GetItemsToPackArgs"
+        ], 
+        "CreatePreReceipt": [
+            "CreatePreReceiptArgs"
+        ], 
+        "LogAndCleanupShipment": [
+            "ShipmentBase", 
+            "TransportPackages", 
+            "ProcessShipmentArgs"
+        ], 
+        "ProcessBatchPicking": [
+            "ProcessBatchPickingArgs"
+        ], 
+        "GetPrintJobTypes": []
     }, 
     "ICollection": {
         "__contains__": [

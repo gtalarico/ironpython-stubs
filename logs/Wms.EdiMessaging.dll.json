@@ -1,12 +1,12 @@
 {
   "Wms.EdiMessaging.dll": {
-    "Wms.EdiMessaging.QueueAbstraction": "<module 'QueueAbstraction' (CLS module from Wms.EdiMessaging, Version=1.25.1.6, Culture=neutral, PublicKeyToken=null)>", 
-    "Wms.EdiMessaging.Extensions": "<module 'Extensions' (CLS module from Wms.EdiMessaging, Version=1.25.1.6, Culture=neutral, PublicKeyToken=null)>", 
-    "Wms": "<module 'Wms' (CLS module from Wms.EdiMessaging, Version=1.25.1.6, Culture=neutral, PublicKeyToken=null)>", 
-    "Wms.EdiMessaging.QueueImplementations.Msmq": "<module 'Msmq' (CLS module from Wms.EdiMessaging, Version=1.25.1.6, Culture=neutral, PublicKeyToken=null)>", 
-    "Wms.EdiMessaging.QueueImplementations": "<module 'QueueImplementations' (CLS module from Wms.EdiMessaging, Version=1.25.1.6, Culture=neutral, PublicKeyToken=null)>", 
-    "Wms.EdiMessaging.Processor": "<module 'Processor' (CLS module from Wms.EdiMessaging, Version=1.25.1.6, Culture=neutral, PublicKeyToken=null)>", 
-    "Wms.EdiMessaging.QueueImplementations.Msmq.Formatting": "<module 'Formatting' (CLS module from Wms.EdiMessaging, Version=1.25.1.6, Culture=neutral, PublicKeyToken=null)>", 
-    "Wms.EdiMessaging": "<module 'EdiMessaging' (CLS module from Wms.EdiMessaging, Version=1.25.1.6, Culture=neutral, PublicKeyToken=null)>"
+    "Wms.EdiMessaging.QueueAbstraction": "<module 'QueueAbstraction' (CLS module from Wms.EdiMessaging, Version=1.23.1.4, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.EdiMessaging.Extensions": "<module 'Extensions' (CLS module from Wms.EdiMessaging, Version=1.23.1.4, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms": "<module 'Wms' (CLS module from Wms.EdiMessaging, Version=1.23.1.4, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.EdiMessaging.QueueImplementations.Msmq": "<module 'Msmq' (CLS module from Wms.EdiMessaging, Version=1.23.1.4, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.EdiMessaging.QueueImplementations": "<module 'QueueImplementations' (CLS module from Wms.EdiMessaging, Version=1.23.1.4, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.EdiMessaging.Processor": "<module 'Processor' (CLS module from Wms.EdiMessaging, Version=1.23.1.4, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.EdiMessaging.QueueImplementations.Msmq.Formatting": "<module 'Formatting' (CLS module from Wms.EdiMessaging, Version=1.23.1.4, Culture=neutral, PublicKeyToken=null)>", 
+    "Wms.EdiMessaging": "<module 'EdiMessaging' (CLS module from Wms.EdiMessaging, Version=1.23.1.4, Culture=neutral, PublicKeyToken=null)>"
   }
 }
