@@ -1,6 +1,0 @@
-{
-  "Wms.ErpConnection.dll": {
-    "Wms": "<module 'Wms' (CLS module from Wms.ErpConnection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
-    "Wms.ErpConnection": "<module 'ErpConnection' (CLS module from Wms.ErpConnection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)>"
-  }
-}
