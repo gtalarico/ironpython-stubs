@@ -72,8 +72,11 @@ Function Push-PythonStubs()
     $dir = (pwd).Path
     $PythonStubsFolder = Join-Path $dir "release/stubs"
     $LogFolder = Join-Path $dir "logs"
-    $AssemblyList = Join-Path $dir "assemblylist.json"
     $GCloudCredentialsPath = Split-Path -path $dir  | Join-Path -ChildPath "googleCloudCredentials.json"
+
+    $AssemblyListFile = Join-Path $dir "assemblylist.json"
+    $ClassListFile = Join-Path $dir "classlist.json"
+    $TypeDictFile = Join-Path $dir "typedict.json"
 
     $BwExtractDir, $Version = Download-BuildOutput
     $ZipFileName = "boxwise_linter_$Version.zip"
@@ -87,7 +90,7 @@ Function Push-PythonStubs()
 
     ipy -m ironstubs make Wms.RemotingImplementation,Wms.RemotingObjects,Wms.RemotingInterface,Wms.SharedInfra,Wms.EdiMessaging,TranCon.Printing.Interface,System,System.Globalization --path $BwExtractDir --overwrite
 
-    7z a -tzip $ZipFileName $PythonStubsFolder $Assemblylist
+    7z a -tzip $ZipFileName $PythonStubsFolder $AssemblylistFile $ClassListFile $TypeDictFile
 
     python uploadToCloud.py $ZipFilePath $ZipFileName $GCloudCredentialsPath
     rm $ZipFilePath
