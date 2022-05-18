@@ -57,6 +57,7 @@ __doc__ = """
         --no-json               Disables Json Log
         --debug                 Enables Debug Messages
         -h, --help              Show this screen.
+        --quiet                 Don't show a confirmation prompt (also implied by --all)
 
     """.format(out_dir='stubs', version=__version__)
 
@@ -70,6 +71,7 @@ option_output_dir = arguments['--output']
 option_path_dir = arguments['--path']
 option_json = not arguments['--no-json']
 option_overwrite = arguments['--overwrite']
+option_quiet = arguments['--quiet']
 
 if arguments['--debug']:
     logger.enable_debug()
@@ -98,7 +100,7 @@ if arguments['make']:
 
     for assembly_name in ASSEMBLIES:
         assembly_dict = make(release_dir, assembly_name,
-                             overwrite=option_overwrite, quiet=option_all)
+                             overwrite=option_overwrite, quiet=option_all or option_quiet)
         if option_json:
             dump_json_log(assembly_dict)
     logger.info('Done: {} seconds'.format(timer.stop()))
