@@ -1,8 +1,6 @@
-import os
+import os, sys
 from google.cloud import storage
 _environ = dict(os.environ)  # or os.environ.copy()
-import sys
-from zipfile import ZipFile
 
 
 def upload_blob(bucket_name, source_file_name, destination_blob_name):
@@ -17,11 +15,7 @@ def upload_blob(bucket_name, source_file_name, destination_blob_name):
 
     blob.upload_from_filename(source_file_name)
 
-    print(
-        "File {} uploaded to {}.".format(
-            source_file_name, destination_blob_name
-        )
-    )
+    print("File {} uploaded to {}.".format(source_file_name, destination_blob_name))
 
 
 def list_blobs(bucket_name):
@@ -58,7 +52,7 @@ def upload_stub(file_path, name, credential_path):
         for blob in bloblist:
             if ".".join(blob.name.split(".", 2)[:2]) == ".".join(name.split(".", 2)[:2]):
                 delete_blob(bucket, blob.name)
-        upload_blob(bucket,file_path,name)
+        upload_blob(bucket, file_path, name)
     finally:
         os.environ.clear()
         os.environ.update(_environ)
@@ -67,4 +61,4 @@ if __name__ == "__main__":
     if len(sys.argv) == 4:
         upload_stub(sys.argv[1],sys.argv[2],sys.argv[3])
     else:
-        print "incorrect number of args for uploading to cloud is:"+ str(len(sys.argv)) + " should be 2"
+        print "incorrect number of args for uploading to cloud is: {}. Should be 4".format(str(len(sys.argv)))

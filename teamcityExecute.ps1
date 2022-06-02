@@ -1,100 +1,99 @@
-﻿Function Create-TeamCity-Web-Client 
+﻿Function CreateTc-WebClient()
 {
-    $wc = New-Object System.Net.WebClient;
-    $wc.Proxy = [System.Net.WebRequest]::DefaultWebProxy;
-    $wc.Proxy.Credentials = [System.Net.CredentialCache]::DefaultNetworkCredentials;
-    $wc.Headers.Add("Authorization","Basic c2NyaXB0aW5nOk1DdlJNS1dGanhIamNHbkoxd0U5");
-    Write-Host "credentials added"
-    return $wc;
-    
+    $client = New-Object System.Net.WebClient
+
+    $client.Proxy = [System.Net.WebRequest]::DefaultWebProxy
+    $client.Proxy.Credentials = [System.Net.CredentialCache]::DefaultNetworkCredentials
+    $client.Headers.Add("Authorization","Basic c2NyaXB0aW5nOk1DdlJNS1dGanhIamNHbkoxd0U5")
+
+    return $client;
 }
 
-Function Get-The-Latest-Succesful-Build
+Function Get-ArtefactInfo()
 {
-    $wc = $(Create-TeamCity-Web-Client);
-    $wc.Headers.Add("Accept","application/json");
+    # Format: https://teamcity.trancon.nl/repository/download/BoxwiseProNuke_Release/$ReleaseId:id/Setup-$ShortVersion.zip!/Setup.exe
+    # ReleaseId: int
+    # ShortVersion: 1.34.2
 
-    $r = $wc.DownloadString('https://teamcity.trancon.nl/httpAuth/app/rest/builds/?locator=buildType:(id:wmspro_release),status:SUCCESS,branch:refs/heads/master,count:20')
-    $j = $r | ConvertFrom-Json
+    $client = $(CreateTc-WebClient)
+    $client.Headers.Add("Accept", "application/json")
 
-    $major_minors = @{}
-    $versions = @{}
-    
-    $options = New-Object System.Collections.ObjectModel.Collection[System.Management.Automation.Host.ChoiceDescription]
-    $options.Add((New-Object System.Management.Automation.Host.ChoiceDescription "&Latest", 'Latest')) 
-    $count = 1
-    foreach ($build in $j.build) {
-        $major_minor = $($build.number -split '\.')[0,1,2] -join '.'
-        if ($major_minors.ContainsKey($major_minor)) {
-            continue
-        }
-        $major_minors.Add($major_minor, $null)
-        $versions.Add($build.number, $build.id)
-        $choice = [char]$(64+$count)
-        $options.Add((New-Object System.Management.Automation.Host.ChoiceDescription "&${choice} => $($build.number)", $build.number))
-        $count++
-    }
+    $TcResponse = $client.DownloadString("https://teamcity.trancon.nl/httpAuth/app/rest/builds/?locator=buildType:(id:BoxwiseProNuke_Release),status:SUCCESS,branch:refs/heads/master,count:1") | ConvertFrom-Json
 
-    $selection = $options[1]
-    
-    if ($selection.HelpMessage -eq "Latest") {
-        return 'latest.lastSuccessful'
-    }
-    return $selection.HelpMessage
+    $ReleaseId = $TcResponse.build.id
+    $NetVersion = New-Object -TypeName System.Version -ArgumentList $TcResponse.build.number
+    # Nuke version number omits $NetVersion.Build
+    $ShortVersion = "$($NetVersion.Major).$($NetVersion.Minor).$($NetVersion.Revision)"
+
+    $FullUrl = "https://teamcity.trancon.nl/repository/download/BoxwiseProNuke_Release/$($ReleaseId):id/Setup-$ShortVersion.zip!/Setup.exe"
+    $LongVersion = "$($NetVersion.Major).$($NetVersion.Minor).$($NetVersion.Build).$($NetVersion.Revision)"
+
+    return @($FullUrl, $LongVersion)
 }
 
-
-Function Download-And-unzip()
+Function Download-BuildOutput()
 {
-    $version = Get-The-Latest-Succesful-Build
-    Write-Output "Download voor versie ${version} wordt gestart."
-    $wc = $(Create-TeamCity-Web-Client);
-    
-    # download boxwise and start setup
-    # expects 7z.exe to be available in Path (automatic on choco install 7zip.install -y)
-    $ArtifactUrl = "https://teamcity.trancon.nl/httpAuth/repository/downloadAll/BOXwisePro_WmsproRelease/${version}?branch=refs/heads/master";
-    
-    Write-Host "Downloading version of BOXwisePro from: $ArtifactUrl"
-    $dir = (Get-Location).Path;
-    $bwZip = Join-Path $dir 'BOXwisePro.zip'
-    $wc.DownloadFile($ArtifactUrl,$bwZip)
+    $dir = (pwd).Path
+    $BwSetupFile = Join-Path $dir "Setup.exe"
+    $BwExtractDir = Join-Path $dir "boxwise"
+    $SetupFile = Join-Path $BwExtractDir "Setup.exe"
+    $MsiFile = Join-Path $BwExtractDir "Wms.Setup.msi"
 
-    $bwExtractDir = Join-Path $dir 'BOXwisePro'
+    $client = $(CreateTc-WebClient)
 
-    Write-Host "Extracting BOXwisePro to $bwExtractDir"
+    # Download boxwise and extract Setup.exe/Wms.Setup.msi
+    # expects 7z.exe to be available in $env:PATH
+    $ArtefactUrl, $Version = Get-ArtefactInfo
+
+    Write-Host "Downloading version $Version of boxwise from: $ArtefactUrl"
+    $client.DownloadFile($ArtefactUrl, $BwSetupFile)
+
+    Write-Host "Extracting boxwise to $BwExtractDir"
     # docs: https://sevenzip.osdn.jp/chm/cmdline/commands/extract_full.htm
-    &"7z" x $bwZip "-o$bwExtractDir" -r -y -aoa
-    $releaseZipPath = (Get-ChildItem .\BOXwisePro\x86\Release).FullName
-    # $to = Join-Path $dir 'BOXwisePro'
-    &"7z" x $releaseZipPath "-o$bwExtractDir" -r -y -aoa
-    $setupFile = Join-Path $bwExtractDir 'Setup.exe'
-    if(Test-Path $setupFile)
+    7z x $BwSetupFile "-o$BwExtractDir" -r -y -aoa | Out-Null
+
+    if(Test-Path $SetupFile)
     {
-        Write-Host  'if succes'
-        &"7z" x $setupFile "-o$bwExtractDir" -r -y -aoa
+        7z x $SetupFile "-o$BwExtractDir" -r -y -aoa | Out-Null
     }
 
-    $msiFile = Join-Path $bwExtractDir 'Wms.Setup.msi'
-    if(Test-Path $msiFile)
+    if(Test-Path $MsiFile)
     {
-        Write-Host  'if succes'
-        &"7z" x $msiFile "-o$bwExtractDir" -r -y -aoa
-    }    
-    Remove-Item $bwZip #Delete the zip file
-    
-    $toBeZipped = Join-Path $dir 'release\stubs'
-	Write-Output $bwExtractDir
-    python ironstubs\make_assemblylist.py $bwExtractDir
-    ipy -m ironstubs make Wms.RemotingImplementation,Wms.RemotingObjects --path $bwExtractDir --overwrite
-    #ipy -m ironstubs make Wms.RemotingImplementation,Wms.RemotingObjects,Wms.RemotingInterface,Wms.SharedInfra,Wms.EdiMessaging,TranCon.Printing.Interface,System,System.Globalization --path $bwExtractDir --overwrite
-    $name = $version+ ".zip"
-    $assemblyList = Join-Path $dir 'assemblylist.json'
-    7z a -tzip $name $toBeZipped $assemblylist
-    
-    $credentials = Split-Path -path $dir  | Join-Path -ChildPath "googleCloudCredentials.json"
-    
-    $pathToStubs = $dir + '\'+ $name
-    python uploadToCloud.py $pathToStubs $name $credentials
-	
+        7z x $MsiFile "-o$BwExtractDir" -r -y -aoa | Out-Null
+    }
+
+    rm $BwSetupFile
+
+    return @($BwExtractDir, $Version)
 }
-Download-And-unzip
+
+Function Push-PythonStubs()
+{
+    $dir = (pwd).Path
+    $PythonStubsFolder = Join-Path $dir "release/stubs"
+    $LogFolder = Join-Path $dir "logs"
+    $GCloudCredentialsPath = Split-Path -path $dir  | Join-Path -ChildPath "googleCloudCredentials.json"
+
+    $AssemblyListFile = Join-Path $dir "assemblylist.json"
+    $ClassListFile = Join-Path $dir "classlist.json"
+    $TypeDictFile = Join-Path $dir "typedict.json"
+
+    $BwExtractDir, $Version = Download-BuildOutput
+    $ZipFileName = "boxwise_linter_$Version.zip"
+    $ZipFilePath = "$dir\$ZipFileName"
+
+    if(-not(Test-Path $LogFolder)) {
+        md $LogFolder
+    }
+
+    python ironstubs\make_assemblylist.py $BwExtractDir
+
+    ipy -m ironstubs make Wms.RemotingImplementation,Wms.RemotingObjects,Wms.RemotingInterface,Wms.SharedInfra,Wms.EdiMessaging,TranCon.Printing.Interface,System,System.Globalization --path $BwExtractDir --overwrite
+
+    7z a -tzip $ZipFileName $PythonStubsFolder $AssemblylistFile $ClassListFile $TypeDictFile
+
+    python uploadToCloud.py $ZipFilePath $ZipFileName $GCloudCredentialsPath
+    rm $ZipFilePath
+}
+
+Push-PythonStubs

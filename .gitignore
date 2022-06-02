@@ -3,3 +3,7 @@ __pycache__
 *.pyc
 release/testing
 release/stubs/
+.vs/*
+BOXwisePro/*
+boxwise/*
+logs/.*
