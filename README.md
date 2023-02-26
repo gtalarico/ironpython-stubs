@@ -52,6 +52,6 @@ WIP
 This project is a fork of the repository started by Gary Edwards on [Gitlab](https://gitlab.com/reje/revit-python-stubs).
 Thank you for your work Gary - and thank you [Ehsan](https://github.com/eirannejad) for pointing me to it.
 
-It uses PyCharm's [Generator3](https://github.com/JetBrains/intellij-community/blob/master/python/helpers/generator3.py)
+It uses PyCharm's [Generator3](https://github.com/JetBrains/intellij-community/blob/master/python/helpers/generator3/__main__.py)
 to create the stubs.
 
